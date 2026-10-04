@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f6e7a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Prova Paulista">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>[hidden]{display:none!important}body{margin:0}</style>
 <title>Painel Prova Paulista 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -590,7 +598,7 @@ async function openApp(session){
   $("authLoading").hidden=false;
   const { data, error } = await sb.from("painel_dados").select("dados").eq("id","main").maybeSingle();
   $("authLoading").hidden=true;
-  if(error || !data){ showLogin(); msg("Não foi possível carregar os dados ("+(error?error.message:"sem permissão")+")."); return; }
+  if(error || !data){ showLogin(); msg(!navigator.onLine?"Sem internet. Conecte-se para carregar os dados (eles não ficam guardados no aparelho).":"Não foi possível carregar os dados ("+(error?error.message:"sem permissão")+")."); return; }
   DATA=decode(data.dados);
   $("whoEmail").textContent=email; $("authView").hidden=true; $("appView").hidden=false; msg("");
   startDashboard();
@@ -637,6 +645,15 @@ sb.auth.onAuthStateChange((ev, session)=>{ if(ev==="PASSWORD_RECOVERY" && sessio
   if(location.hash.includes("access_token")) history.replaceState(null,"",location.pathname);
   if(data.session) openApp(data.session); else showLogin();
 })();
+</script>
+
+<button type="button" id="bInstalar" hidden style="position:fixed;right:16px;bottom:16px;z-index:30;font:inherit;font-weight:700;border:0;border-radius:999px;padding:10px 16px;background:var(--accent);color:var(--surface);box-shadow:var(--shadow);cursor:pointer">⤓ Instalar app</button>
+<script>
+if("serviceWorker" in navigator){ window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{})); }
+let pedidoInstalar=null; const bI=document.getElementById("bInstalar");
+window.addEventListener("beforeinstallprompt",e=>{ e.preventDefault(); pedidoInstalar=e; bI.hidden=false; });
+bI.addEventListener("click",async()=>{ if(!pedidoInstalar) return; pedidoInstalar.prompt(); await pedidoInstalar.userChoice; pedidoInstalar=null; bI.hidden=true; });
+window.addEventListener("appinstalled",()=>{ bI.hidden=true; });
 </script>
 
 </body>

@@ -26,3 +26,7 @@ Site estático (`index.html`) publicado no Vercel a cada push na branch `main`.
 ## Plano de recomposição
 
 O painel "Plano de recomposição · Guias Priorizados" cruza, para cada turma e componente, os descritores da Prova Paulista com acerto da turma abaixo de 50% com as aprendizagens dos Guias Priorizados 2026 (Ciências AF, Biologia EM, Química EM). Mostra habilidade, objetos de conhecimento, estratégias e pré-requisitos; agrupa os alunos pelo nível do 3º bimestre; e monta um cronograma semanal até a prova de referência (SARESP 2026 para 6º–9º ano, Provão Paulista Seriado para o Ensino Médio). As informações dos Guias ficam no próprio HTML (não têm dados de alunos); os nomes continuam vindo do Supabase após o login.
+
+## Aplicativo (PWA)
+
+O painel pode ser instalado como aplicativo (Android, Chrome/Edge no computador e iPhone pelo Safari → Compartilhar → Adicionar à Tela de Início). Arquivos: `manifest.webmanifest`, `sw.js` e ícones. O service worker guarda apenas a estrutura do app; as respostas do Supabase (dados dos alunos) nunca são guardadas no aparelho.
