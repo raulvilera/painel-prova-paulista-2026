@@ -206,6 +206,25 @@ svg text{fill:var(--muted);font-family:var(--f-body)}
   body.printing .pq{border:0;padding:0}
 }
 @media (max-width:900px){.pl-week{grid-template-columns:1fr}.pq dl{grid-template-columns:1fr}.pl-next li{grid-template-columns:1fr}}
+/* pizza 3D por nível com fatia ampliada e nomes */
+.pz{width:100%;height:auto;display:block;overflow:visible}
+.pz .slice{cursor:pointer;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.pz .slice:hover .top{filter:brightness(1.08)}
+.pz .slice:focus-visible{outline:none}
+.pz .slice:focus-visible .top{stroke:var(--fg);stroke-width:2}
+.pz .side{filter:brightness(.72)}
+.pz .lbl{font-family:var(--f-data);font-weight:700;pointer-events:none}
+.pz .lead{opacity:0;animation:pzIn .45s ease-out .25s forwards}
+.pz .lead path{fill:none;stroke:var(--muted);stroke-width:1.1}
+.pz .lead circle{stroke:var(--surface);stroke-width:1.2}
+.pz .lead text{font-family:var(--f-body);font-size:12.5px;fill:var(--fg);cursor:pointer}
+.pz .lead text:hover{text-decoration:underline}
+.pz .lead text.me{font-weight:700}
+.pz .lead .ttl{font-family:var(--f-display);font-weight:700;font-size:13px}
+@keyframes pzIn{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.pz .slice{transition:none}.pz .lead{animation:none;opacity:1}}
+.pz-wrap{display:flex;flex-direction:column;gap:6px}
+.pz-hint{font-size:.8rem;color:var(--muted);text-align:center}
 footer{margin-top:18px}
 @media (max-width:900px){.card{grid-column:span 12}.cols4{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.dboxes{grid-template-columns:1fr}.pies{gap:4px}.cols4{grid-template-columns:1fr}.legend{margin-left:0}}
@@ -354,8 +373,8 @@ function fillComp(){ const cs=compsOf(S.t); if(!cs.includes(S.comp)) S.comp=cs[0
   fC.innerHTML = cs.map(c=>`<option ${c===S.comp?"selected":""}>${c}</option>`).join(""); }
 function fillAluno(){ const as=alunosOf(S.t); if(!as.includes(S.aluno)) S.aluno=as[0];
   fA.innerHTML = as.map(a=>`<option value="${esc(a)}" ${a===S.aluno?"selected":""}>${esc(title(a))}</option>`).join(""); }
-fT.onchange=()=>{ S.t=+fT.value; fillComp(); fillAluno(); renderAll(); };
-fC.onchange=()=>{ S.comp=fC.value; renderAll(); };
+fT.onchange=()=>{ S.pieSel=null; S.t=+fT.value; fillComp(); fillAluno(); renderAll(); };
+fC.onchange=()=>{ S.pieSel=null; S.comp=fC.value; renderAll(); };
 fA.onchange=()=>{ S.aluno=fA.value; renderAll(); };
 function select(t,c,a){ if(t!=null){S.t=t; fT.value=t;} fillComp(); if(c) {S.comp=c; fC.value=c;} if(a){S.aluno=a;} fillAluno(); renderAll(); }
 
@@ -446,15 +465,84 @@ function descView(big){
   }));
   return h+`</tbody></table></div><p class="note">Reforço individual: descritor fraco na turma e aluno em Abaixo do Básico/Básico. Retomar com a turma: descritor fraco na turma, aluno bem. Revisar com o aluno: turma bem, aluno fraco.</p>`;
 }
+
+/* ---------- pizza 3D por nível (clique na fatia: ampliar e ligar aos nomes) ---------- */
+function pieNiveis(t,c,b,big){
+  const st=stats(t,c,b); if(!st.n) return `<p class="muted">Sem dados neste bimestre.</p>`;
+  const sel = big ? S.pieSel : null;
+  const narrow = big && window.innerWidth<700;
+  const W=narrow?430:big?1040:440, rx=narrow?92:big?175:150, ry=rx*.52, dep=rx*.17;
+  const selN = sel!=null ? st.names[sel].length : 0;
+  const H = big ? Math.max(narrow?260:430, selN*(narrow?16:17)+(narrow?70:110)) : 250;
+  let cx=W/2; const cy=big? Math.max(H/2-10, narrow?110:200) : 112;
+  const P=(a,r=1)=>[cx+rx*r*Math.cos(a), cy+ry*r*Math.sin(a)];
+  const f=n=>n.toFixed(1);
+  let a=-Math.PI/2; const sl=[];
+  st.cnt.forEach((n,i)=>{ if(!n) return; const a1=a+n/st.n*2*Math.PI; sl.push({i,n,a0:a,a1}); a=a1; });
+  if(narrow && sel!=null){ const s0=sl.find(s=>s.i===sel); if(s0){ const sh=-(s0.a0+s0.a1)/2; sl.forEach(s=>{ s.a0+=sh; s.a1+=sh; }); } }
+  const off=big?(narrow?14:26):14;
+  if(sel!=null && big){ const s0=sl.find(s=>s.i===sel); if(s0){ const dirS=Math.cos((s0.a0+s0.a1)/2)>=0?1:-1; cx = narrow ? rx+16 : W/2 - dirS*120; } }
+  sl.forEach(s=>{ const m=(s.a0+s.a1)/2; s.m=m; s.dx = s.i===sel? off*Math.cos(m) : 0; s.dy = s.i===sel? off*.62*Math.sin(m) : 0; });
+  const topPath=s=>{ const [x0,y0]=P(s.a0),[x1,y1]=P(s.a1), lg=(s.a1-s.a0)>Math.PI?1:0;
+    return sl.length===1 ? `M${f(cx-rx)} ${f(cy)}A${f(rx)} ${f(ry)} 0 1 1 ${f(cx+rx)} ${f(cy)}A${f(rx)} ${f(ry)} 0 1 1 ${f(cx-rx)} ${f(cy)}Z`
+      : `M${f(cx)} ${f(cy)}L${f(x0)} ${f(y0)}A${f(rx)} ${f(ry)} 0 ${lg} 1 ${f(x1)} ${f(y1)}Z`; };
+  const sidePaths=s=>{ // parte frontal da borda (ângulos com seno > 0)
+    const out=[]; for(let k=-1;k<=2;k++){ const lo=Math.max(s.a0,k*2*Math.PI), hi=Math.min(s.a1,k*2*Math.PI+Math.PI); if(hi-lo<1e-4) continue;
+      const [x0,y0]=P(lo),[x1,y1]=P(hi), lg=(hi-lo)>Math.PI?1:0;
+      out.push(`M${f(x0)} ${f(y0)}A${f(rx)} ${f(ry)} 0 ${lg} 1 ${f(x1)} ${f(y1)}L${f(x1)} ${f(y1+dep)}A${f(rx)} ${f(ry)} 0 ${lg} 0 ${f(x0)} ${f(y0+dep)}Z`); }
+    return out; };
+  const radial=s=>{ // paredes laterais da fatia destacada
+    if(s.i!==sel || sl.length===1) return "";
+    return [s.a0,s.a1].map(an=>{ const [x,y]=P(an); return `<path class="side" d="M${f(cx)} ${f(cy)}L${f(x)} ${f(y)}L${f(x)} ${f(y+dep)}L${f(cx)} ${f(cy+dep)}Z" style="fill:var(--lv${s.i})"/>`; }).join(""); };
+  const sliceG=s=>{ const [lx,ly]=P(s.m,.62), pc=Math.round(s.n/st.n*100), dark = s.i===1;
+    return `<g class="slice ${s.i===sel?"on":""}" data-slice="${s.i}" tabindex="0" role="button" aria-label="${LV[s.i]}: ${s.n} alunos (${pc}%)" style="transform:translate(${f(s.dx)}px,${f(s.dy)}px)">
+      ${radial(s)}${sidePaths(s).map(d=>`<path class="side" d="${d}" style="fill:var(--lv${s.i})"/>`).join("")}
+      <path class="top" d="${topPath(s)}" style="fill:var(--lv${s.i});stroke:var(--surface);stroke-width:1.5"/>
+      ${(s.a1-s.a0)>0.3?`<text class="lbl" x="${f(lx)}" y="${f(ly)}" text-anchor="middle" font-size="${narrow?11:big?15:12}" style="fill:${dark?"#2b1d03":"#fff"}">${pc}%</text>`:""}${(s.a1-s.a0)>0.75 && !narrow?`<text class="lbl" x="${f(lx)}" y="${f(ly+(big?16:13))}" text-anchor="middle" font-size="${big?11.5:10}" style="fill:${dark?"#2b1d03":"#fff"};font-weight:500">${s.n} aluno${s.n>1?"s":""}</text>`:""}
+    </g>`; };
+  // ordem de pintura: fatias de trás primeiro; a destacada por último
+  const order=sl.filter(s=>s.i!==sel).sort((p,q)=>Math.sin(p.m)-Math.sin(q.m)).concat(sl.filter(s=>s.i===sel));
+  let svg=`<svg class="pz" viewBox="0 0 ${W} ${H}" role="img" aria-label="Distribuição da turma por nível no ${BIM[b]}">`;
+  svg+=order.map(sliceG).join("");
+  // linhas e nomes da fatia selecionada
+  const S0=sl.find(s=>s.i===sel);
+  if(S0){
+    const right=Math.cos(S0.m)>=0, dir=right?1:-1;
+    let lo=S0.a0, hi=S0.a1;
+    // restringe as âncoras à metade do lado escolhido
+    const norm=x=>{ x%=2*Math.PI; return x<0?x+2*Math.PI:x; };
+    const onSide=x=>{ const c=Math.cos(x); return right? c>=-0.05 : c<=0.05; };
+    const N=st.names[sel].length, cand=[];
+    for(let k=0;k<200;k++){ const x=lo+(hi-lo)*(k+.5)/200; if(onSide(x)) cand.push(x); }
+    const use=cand.length?cand:[S0.m];
+    const anchors=st.names[sel].map((r,k)=>{ const an=use[Math.floor((k+.5)/N*use.length)]; const [x,y]=P(an); return {r,an,x:x+S0.dx,y:y+S0.dy}; });
+    anchors.sort((p,q)=>p.y-q.y);
+    const gap=narrow?16:Math.min(19, Math.max(15,(H-60)/Math.max(N,1)));
+    const total=(N-1)*gap; let y0=cy+S0.dy*0 - total/2; y0=Math.max(34, Math.min(y0, H-26-total));
+    const tx = right? cx+rx+ (narrow?42:big?70:60) : cx-rx-(narrow?42:big?70:60);
+    let g=`<g class="lead">`;
+    g+=`<text class="ttl" x="${f(tx)}" y="${f(y0-20)}" text-anchor="${right?"start":"end"}" style="fill:var(--lv${sel})">${LV[sel]} · ${N}</text>`;
+    const busX = right? Math.max(cx+rx+S0.dx+14, tx-30) : Math.min(cx-rx+S0.dx-14, tx+30);
+    anchors.forEach((p,k)=>{ const ty=y0+k*gap; const [rx2,ry2]=P(p.an,1.1); const ex=rx2+S0.dx, ey=ry2+S0.dy;
+      g+=`<path d="M${f(p.x)} ${f(p.y)}L${f(ex)} ${f(ey)}L${f(busX)} ${f(ty-4)}L${f(tx-dir*6)} ${f(ty-4)}"/>`;
+      g+=`<circle cx="${f(p.x)}" cy="${f(p.y)}" r="3" style="fill:var(--lv${sel})"/>`;
+      g+=`<text x="${f(tx)}" y="${f(ty)}" text-anchor="${right?"start":"end"}" class="${p.r[2]===S.aluno?"me":""}" data-aluno="${esc(p.r[2])}">${esc(title(p.r[2]))} <tspan style="fill:var(--muted);font-family:var(--f-data);font-size:11px">${pct(p.r[3+b])}</tspan></text>`; });
+    g+=`</g>`; svg+=g;
+  }
+  svg+=`</svg>`;
+  return `<div class="pz-wrap">${svg}<div class="pz-hint">${big? (sel==null?"Clique numa fatia para ampliar e ver os alunos daquele nível.":"Clique de novo na fatia para recolher, ou noutra fatia para trocar. Clique num nome para abrir o aluno.") : "Clique numa fatia para ver os alunos (3º bimestre)."}</div></div>`;
+}
+
 function turmaView(big){
   const T=DATA.T[S.t]; let h=`<div class="muted">${esc(T.n)} · ${S.comp} · ${esc(T.e)}</div>`;
   h+=[0,1,2].map(b=>{ const st=stats(S.t,S.comp,b);
     if(!st.n) return `<div class="sbar"><span>${BIM[b]}</span><div class="track"></div><span class="muted">sem dados</span></div>`;
     return `<div class="sbar"><span>${BIM[b]}</span><div class="track">${st.cnt.map((c,i)=>c?`<div class="seg s${i}" style="flex:${c}" title="${LV[i]}: ${c}">${c}</div>`:"").join("")}</div><span class="num">${pct(st.mean)}</span></div>`; }).join("");
   if(!big){ const st=stats(S.t,S.comp,2); const l=lvOf((rec(S.t,S.comp,S.aluno)||[])[5]);
-    return h+`<div class="note">3º bim: ${st.cnt.map((c,i)=>`${c} ${LV[i].toLowerCase()}`).join(" · ")}${l>=0?` · ${esc(short(title(S.aluno)))} está em <b>${LV[l]}</b>`:""}. Amplie para ver os nomes.</div>`; }
+    return h+pieNiveis(S.t,S.comp,2,false)+`<div class="note">3º bim: ${st.cnt.map((c,i)=>`${c} ${LV[i].toLowerCase()}`).join(" · ")}${l>=0?` · ${esc(short(title(S.aluno)))} está em <b>${LV[l]}</b>`:""}. Amplie para ver os nomes.</div>`; }
   const st=stats(S.t,S.comp,S.bimTab);
   h+=`<div class="tabs" role="group" aria-label="Bimestre">${BIM.map((b,i)=>`<button class="tab" type="button" data-bim="${i}" aria-pressed="${i===S.bimTab}">${b}</button>`).join("")}</div>`;
+  h+=pieNiveis(S.t,S.comp,S.bimTab,true);
   h+=`<div class="cols4">${LV.map((lv,i)=>`<div class="lvcol l${i}"><h4><span>${lv}</span><span class="num">${st.cnt[i]}</span></h4><ol>${st.names[i].map(r=>`<li><span class="clk ${r[2]===S.aluno?"me":""}" tabindex="0" data-aluno="${esc(r[2])}">${esc(title(r[2]))}</span> <span class="num muted">${pct(r[3+S.bimTab])}</span></li>`).join("")||"<li class='muted' style='list-style:none'>—</li>"}</ol></div>`).join("")}</div>`;
   return h+`<p class="note">Clique num nome para abrir o aluno.</p>`;
 }
@@ -795,11 +883,21 @@ document.getElementById("mClose").onclick=closeModal;
 ov.addEventListener("click",e=>{ if(e.target===ov) closeModal(); });
 document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&S.modal) closeModal(); });
 
+
+function pzAnimar(){
+  const g=document.querySelector("#mBody .pz .slice.on"); if(!g) return;
+  const fin=g.style.transform; g.style.transition="none"; g.style.transform="translate(0px,0px)";
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{ g.style.transition=""; g.style.transform=fin; }));
+}
 function handleInner(e){
   if(plClick(e)) return true;
   const row=e.target.closest("tr.row"); if(row){ e.stopPropagation(); select(+row.dataset.t,row.dataset.c,null); return true; }
   const al=e.target.closest("[data-aluno]"); if(al){ e.stopPropagation(); S.aluno=al.dataset.aluno; fillAluno(); renderAll(); if(S.modal==="turma") openModal("aluno"); return true; }
-  const tb=e.target.closest("[data-bim]"); if(tb){ e.stopPropagation(); S.bimTab=+tb.dataset.bim; renderAll(); return true; }
+  const tb=e.target.closest("[data-bim]"); if(tb){ e.stopPropagation(); S.bimTab=+tb.dataset.bim; S.pieSel=null; renderAll(); return true; }
+  const sl=e.target.closest("[data-slice]"); if(sl){ e.stopPropagation(); const v=+sl.dataset.slice;
+    if(S.modal!=="turma"){ S.bimTab=2; S.pieSel=v; openModal("turma"); }
+    else { S.pieSel = S.pieSel===v ? null : v; renderModal(); }
+    pzAnimar(); return true; }
   if(e.target.closest("a")){ e.stopPropagation(); return true; }
   return false;
 }
