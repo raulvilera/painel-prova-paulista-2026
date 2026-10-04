@@ -30,3 +30,7 @@ O painel "Plano de recomposição · Guias Priorizados" cruza, para cada turma e
 ## Aplicativo (PWA)
 
 O painel pode ser instalado como aplicativo (Android, Chrome/Edge no computador e iPhone pelo Safari → Compartilhar → Adicionar à Tela de Início). Arquivos: `manifest.webmanifest`, `sw.js` e ícones. O service worker guarda apenas a estrutura do app; as respostas do Supabase (dados dos alunos) nunca são guardadas no aparelho.
+
+## Planejamento de aulas
+
+O painel "Planejamento de aulas" distribui as aulas do material digital do 4º bimestre pelo horário do professor (Tarde, Noite e Manhã/2ª DS), de 05/10 a 18/12/2026, pulando feriados e dias sem aula do calendário e sinalizando SARESP, Provão Paulista e semanas de recuperação. Mostra a semana, a sequência de cada turma (com "Não houve aula" para empurrar a sequência e "a turma está na aula nº") e gera o plano quinzenal no modelo da escola, para imprimir ou salvar em PDF. Os ajustes ficam na tabela `planejamento_ajustes` do Supabase, com acesso só do e-mail do professor.
