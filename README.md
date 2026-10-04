@@ -13,7 +13,11 @@ Clique em qualquer painel para ampliar.
 
 Fonte: Escola Total / SEDUC-SP (painéis da Prova Paulista 2026), coletados em 03/10/2026. Níveis por faixa de acertos no componente: Abaixo do Básico < 25%, Básico 25–49%, Adequado 50–74%, Avançado ≥ 75% (critério de trabalho, não é nível oficial).
 
-**Uso interno.** O arquivo contém nomes e resultados de alunos menores de idade (LGPD). Mantenha este repositório privado e o site com acesso protegido.
+**Uso interno.** Os dados (nomes e resultados de alunos menores de idade, LGPD) **não ficam neste repositório**: estão no Supabase (projeto `painel-prova-paulista`, tabela `painel_dados`), com Row Level Security liberando a leitura só para `vilera@prof.educacao.sp.gov.br`.
+
+## Acesso
+
+Tela de login com e-mail institucional e senha (Supabase Auth). No primeiro acesso, ou se esquecer a senha, use "receber link no e-mail": o link chega no e-mail institucional e abre a tela para criar a senha.
 
 ## Deploy
 
