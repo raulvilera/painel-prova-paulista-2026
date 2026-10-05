@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<base target="_top">
+<meta charset="utf-8">
+<style>
+  :root{--verde:#145A32;--fundo:#F4F6F3;--cartao:#FFFFFF;--tinta:#1C2420;--suave:#5A6660;--linha:#D5DCD7}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fundo);color:var(--tinta);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:860px;margin:0 auto;padding:16px}
+  header.cab{background:var(--verde);color:#fff;border-radius:14px;padding:18px 20px;margin-bottom:16px}
+  header.cab .esc{font-weight:800;letter-spacing:.02em;font-size:1.05rem}
+  header.cab h1{margin:6px 0 2px;font-size:1.25rem}
+  header.cab .sub{opacity:.85;font-size:.9rem}
+  .ident{background:var(--cartao);border:1px solid var(--linha);border-radius:14px;padding:16px;display:grid;grid-template-columns:1fr 2fr .7fr;gap:12px;margin-bottom:16px}
+  .ident label{display:block;font-size:.8rem;font-weight:700;color:var(--suave);margin-bottom:4px;text-transform:uppercase;letter-spacing:.04em}
+  .ident select,.ident input{width:100%;font:inherit;padding:10px;border:1px solid var(--linha);border-radius:10px;background:#fff;color:var(--tinta)}
+  .ident input[readonly]{background:#F1F3F1;font-weight:700;text-align:center}
+  @media (max-width:640px){.ident{grid-template-columns:1fr}}
+  .q{background:var(--cartao);border:1px solid var(--linha);border-radius:14px;padding:18px;margin-bottom:16px}
+  .q .num{font-weight:800;color:var(--verde)}
+  .q .tag{display:inline-block;font-size:.75rem;color:var(--suave);border:1px solid var(--linha);border-radius:999px;padding:1px 8px;margin-left:6px}
+  .q .enun{margin:8px 0 4px}
+  .q .cmd{font-weight:700;margin:0 0 10px}
+  .fig{margin:10px 0 14px;text-align:center;background:#FAFBFA;border:1px dashed var(--linha);border-radius:12px;padding:10px;min-height:120px;display:flex;align-items:center;justify-content:center}
+  .fig img{max-width:100%;max-height:420px;border-radius:8px}
+  .fig .car{color:var(--suave);font-size:.9rem}
+  .alts{display:grid;gap:10px}
+  .alternativa{display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;font:inherit;color:var(--tinta);background:#fff;border:1px solid #E3E7E4;border-radius:12px;padding:12px 14px;
+    box-shadow:4px 4px 8px rgba(0,0,0,0.3),-2px -2px 6px rgba(255,255,255,0.6);transition:all .15s ease-in-out;cursor:pointer}
+  .alternativa .l{font-weight:800;min-width:1.4em}
+  .alternativa:focus-visible{outline:3px solid #7FB08F;outline-offset:2px}
+  .alternativa.selecionada{box-shadow:inset 3px 3px 6px rgba(0,0,0,0.4);transform:translateY(2px);background-color:#145A32;color:#FFFFFF;font-weight:bold;border-color:#145A32}
+  textarea{width:100%;min-height:120px;font:inherit;padding:12px;border:1px solid var(--linha);border-radius:12px;resize:vertical}
+  .enviar{display:block;width:100%;font:inherit;font-weight:800;font-size:1.05rem;color:#fff;background:var(--verde);border:0;border-radius:14px;padding:16px;cursor:pointer;box-shadow:4px 4px 8px rgba(0,0,0,.3)}
+  .enviar:disabled{opacity:.6;cursor:wait}
+  .msg{margin:12px 0;padding:12px 14px;border-radius:12px;display:none}
+  .msg.ok{display:block;background:#E3F1E7;border:1px solid #9FCDAE}
+  .msg.erro{display:block;background:#FBE6E6;border:1px solid #E3A3A3}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="cab">
+    <div class="esc"><?= escola ?></div>
+    <h1 id="tit"></h1>
+    <div class="sub" id="sub"></div>
+  </header>
+
+  <section class="ident" aria-label="Identificação">
+    <div><label for="turma">Turma</label><select id="turma"></select></div>
+    <div><label for="nome">Nome</label><select id="nome" disabled><option value="">Escolha a turma primeiro</option></select></div>
+    <div><label for="num">Nº</label><input id="num" readonly placeholder="—"></div>
+  </section>
+
+  <div id="qs"></div>
+  <div class="msg" id="msg" role="status"></div>
+  <button class="enviar" id="btn" type="button">Enviar respostas</button>
+</div>
+
+<script>
+const A = <?!= dados ?>;
+</script>
+<script>
+(function(){
+  const D = A;
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  $('#tit').textContent = D.titulo || 'Atividade';
+  $('#sub').textContent = [D.comp, D.serie, D.aula ? 'Aula ' + D.aula : '', D.tema].filter(Boolean).join(' · ');
+
+  // cascata Turma → Nome → Nº
+  const fT = $('#turma'), fN = $('#nome'), fNum = $('#num');
+  fT.innerHTML = '<option value="">Selecione</option>' + (D.turmas || []).map(t => `<option>${esc(t.turma)}</option>`).join('');
+  if ((D.turmas || []).length === 1) { fT.value = D.turmas[0].turma; }
+  function carregaNomes(){
+    const t = (D.turmas || []).find(x => x.turma === fT.value);
+    fNum.value = '';
+    if (!t) { fN.disabled = true; fN.innerHTML = '<option value="">Escolha a turma primeiro</option>'; return; }
+    fN.disabled = false;
+    fN.innerHTML = '<option value="">Selecione seu nome</option>' + t.alunos.slice().sort((a,b)=>a.nome.localeCompare(b.nome,'pt')).map(a => `<option value="${esc(a.n)}|${esc(a.nome)}">${esc(a.nome)}</option>`).join('');
+  }
+  fT.onchange = carregaNomes; carregaNomes();
+  fN.onchange = () => { fNum.value = fN.value ? fN.value.split('|')[0] : ''; };
+
+  // questões: enunciado → imagem → alternativas / resposta
+  const resp = D.questoes.map(() => null);
+  $('#qs').innerHTML = D.questoes.map((q, i) => `
+    <article class="q" id="q${i}">
+      <div><span class="num">Questão ${i + 1}</span><span class="tag">${q.tipo === 'obj' ? 'Objetiva' : 'Dissertativa'}</span>${q.hab ? `<span class="tag">${esc(q.hab)}</span>` : ''}</div>
+      <p class="enun">${esc(q.enunciado)}</p>
+      ${q.temImg ? `<div class="fig" id="f${i}"><span class="car">Carregando imagem…</span></div>` : ''}
+      ${q.comando ? `<p class="cmd">${esc(q.comando)}</p>` : ''}
+      ${q.tipo === 'obj'
+        ? `<div class="alts" role="radiogroup" aria-label="Alternativas da questão ${i + 1}">${q.alts.map((t, k) => `<button type="button" class="alternativa" role="radio" aria-checked="false" data-q="${i}" data-k="${k}"><span class="l">${'ABCDE'[k]})</span><span>${esc(t)}</span></button>`).join('')}</div>`
+        : `<textarea data-q="${i}" aria-label="Resposta da questão ${i + 1}" placeholder="Escreva sua resposta com suas palavras."></textarea>`}
+    </article>`).join('');
+
+  document.addEventListener('click', e => {
+    const b = e.target.closest('.alternativa'); if (!b) return;
+    const i = +b.dataset.q, k = +b.dataset.k; resp[i] = k;
+    document.querySelectorAll(`.alternativa[data-q="${i}"]`).forEach(x => { const on = x === b; x.classList.toggle('selecionada', on); x.setAttribute('aria-checked', on); });
+  });
+  document.addEventListener('input', e => { if (e.target.matches('textarea[data-q]')) resp[+e.target.dataset.q] = e.target.value; });
+
+  // imagens (uma por vez para não sobrecarregar)
+  const fila = D.questoes.map((q, i) => q.temImg ? i : -1).filter(i => i >= 0);
+  (function prox(){
+    const i = fila.shift(); if (i == null) return;
+    google.script.run.withSuccessHandler(src => {
+      const f = document.getElementById('f' + i);
+      f.innerHTML = src ? `<img alt="Imagem da questão ${i + 1}, usada na aula" src="${src}">` : '<span class="car">Imagem indisponível</span>';
+      prox();
+    }).withFailureHandler(() => { document.getElementById('f' + i).innerHTML = '<span class="car">Imagem indisponível</span>'; prox(); }).imagemQuestao(D.id, i);
+  })();
+
+  const msg = (t, ok) => { const m = $('#msg'); m.className = 'msg ' + (ok ? 'ok' : 'erro'); m.textContent = t; m.scrollIntoView({behavior:'smooth', block:'center'}); };
+  $('#btn').onclick = () => {
+    if (!fT.value || !fN.value) return msg('Escolha a sua turma e o seu nome antes de enviar.', false);
+    const falta = D.questoes.map((q, i) => (resp[i] == null || resp[i] === '') ? i + 1 : 0).filter(Boolean);
+    if (falta.length && !confirm('Faltam as questões ' + falta.join(', ') + '. Enviar mesmo assim?')) return;
+    const [n, ...nm] = fN.value.split('|');
+    const b = $('#btn'); b.disabled = true; b.textContent = 'Enviando…';
+    google.script.run.withSuccessHandler(r => {
+      b.textContent = 'Respostas enviadas ✓';
+      msg(`Pronto, ${nm.join('|').split(' ')[0]}! Suas respostas foram registradas. Objetivas: ${r.acertos} de ${r.total} corretas. As dissertativas serão corrigidas pelo professor.`, true);
+    }).withFailureHandler(err => { b.disabled = false; b.textContent = 'Enviar respostas'; msg('Não foi possível enviar: ' + (err && err.message || err) + '. Tente de novo.', false); })
+      .enviar({ id: D.id, turma: fT.value, n: n, nome: nm.join('|'), respostas: resp });
+  };
+})();
+</script>
+</body>
+</html>
