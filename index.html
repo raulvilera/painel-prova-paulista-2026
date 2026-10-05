@@ -601,9 +601,9 @@ const EXAMS = {
   "2ª SÉRIE":["Provão Paulista Seriado","2026-11-10","10/11 (Ciências da Natureza no 1º dia)"],
   "3ª SÉRIE":["Provão Paulista Seriado","2026-11-04","04/11 (Ciências da Natureza no 1º dia)"]
 };
-const SIMULADO_URL = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu_dupRvY-GzoHPNZhL2ft3KpSK7odGF0amqn7Yc7P/exec";
+const SIMULADO_URL = "/simulado/";
 const simSerie = se => /^[6-9]º ANO$/.test(String(se||"").trim());
-const simBtn = se => simSerie(se) ? `<a class="sim-btn" href="${SIMULADO_URL}" target="_blank" rel="noopener">📝 Simulado SARESP da turma</a><span class="sim-note">Mesmo link para todas as turmas · o aluno entra com a conta @al</span>` : "";
+const simBtn = se => simSerie(se) ? `<a class="sim-btn" href="${SIMULADO_URL}" target="_blank" rel="noopener">📝 Simulado SARESP da turma</a><span class="sim-note">Mesmo link para todas as turmas: painel-prova-paulista-2026.vercel.app/simulado</span>` : "";
 const serieOf = t => (DATA.T[t].n.match(/\d[ºª] (ANO|SÉRIE)/)||[""])[0];
 const fmtD = d => d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"});
 function guiaOf(t,d){ return GUIA.G[serieOf(t)+"|"+d[2]+"|"+String(d[3]).trim()] || null; }
