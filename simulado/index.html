@@ -74,14 +74,24 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const fT = $('#turma'), fN = $('#nome'), fNum = $('#num'), fRa = $('#ra');
   let D = null, resp = [], TURMAS = [];
-  async function api(q){ const r = await fetch(API + '?' + new URLSearchParams(q), { redirect: 'follow' }); const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro'); return j; }
-  async function post(body){ const r = await fetch(API, { method: 'POST', body: JSON.stringify(body), headers: { 'Content-Type': 'text/plain;charset=utf-8' }, redirect: 'follow' }); const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro'); return j; }
-  const falhaRede = e => /Failed to fetch|NetworkError|Load failed|JSON/i.test(String(e && e.message || e)) ? 'sem conexão com a planilha (verifique a internet)' : (e && e.message || e);
+  const espera = ms => new Promise(r => setTimeout(r, ms));
+  async function api(q){
+    let ult;
+    for (let k = 0; k < 4; k++) {                       // até 4 tentativas (o servidor do Google às vezes demora para "acordar")
+      try {
+        const r = await fetch(API + '?' + new URLSearchParams(Object.assign({ nc: Date.now() }, q)), { redirect: 'follow', cache: 'no-store', credentials: 'omit' });
+        const j = await r.json(); if (!j.ok) throw Object.assign(new Error(j.erro || 'erro'), { srv: true }); return j;
+      } catch (e) { ult = e; if (e.srv) throw e; await espera(1500 * (k + 1)); }
+    }
+    throw ult;
+  }
+  async function post(body){ const r = await fetch(API, { method: 'POST', body: JSON.stringify(body), headers: { 'Content-Type': 'text/plain;charset=utf-8' }, redirect: 'follow', credentials: 'omit' }); const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro'); return j; }
+  const falhaRede = e => /Failed to fetch|NetworkError|Load failed|JSON/i.test(String(e && e.message || e)) ? 'sem conexão com a planilha. Verifique a internet; se estiver usando bloqueador de anúncios ou extensões, abra numa janela anônima [' + String(e && e.message || e).slice(0, 60) + ']' : (e && e.message || e);
 
   fT.innerHTML = '<option value="">Carregando turmas…</option>'; fT.disabled = true;
   api({ api: 'turmas' }).then(j => { TURMAS = j.turmas; fT.disabled = false;
     fT.innerHTML = '<option value="">Selecione</option>' + TURMAS.map(t => `<option>${esc(t.id)}</option>`).join(''); })
-    .catch(e => { fT.innerHTML = '<option value="">Indisponível</option>'; $('#qs').innerHTML = `<p class="vazio">Não foi possível abrir o simulado: ${esc(falhaRede(e))}. Recarregue a página.</p>`; });
+    .catch(e => { fT.innerHTML = '<option value="">Indisponível</option>'; $('#qs').innerHTML = `<p class="vazio">Não foi possível abrir o simulado: ${esc(falhaRede(e))}.<br><button type="button" class="enviar" style="max-width:260px;margin:14px auto 0" onclick="location.reload()">Tentar de novo</button></p>`; });
 
   function limpar(){ fN.disabled = true; fN.innerHTML = '<option value="">Escolha a turma primeiro</option>'; fNum.value = ''; fRa.value = ''; fRa.readOnly = true; }
   fT.onchange = () => {
