@@ -232,6 +232,9 @@ svg text{fill:var(--muted);font-family:var(--f-body)}
 .ai-sec h4{margin:0 0 8px;font-family:var(--f-display);font-size:1rem}
 .ai-row{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end}
 .ai-row .btn2{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;padding:7px 12px;cursor:pointer;text-decoration:none;display:inline-block}
+.sim-btn{display:inline-block;margin-top:6px;font:inherit;font-size:.82rem;font-weight:700;text-decoration:none;background:var(--accent);color:var(--surface);border-radius:8px;padding:6px 12px}
+.sim-btn:hover{filter:brightness(1.08)}
+.sim-note{font-size:.75rem;color:var(--muted);display:block;margin-top:4px}
 .ai-row .btn2.pri{background:var(--accent);border-color:var(--accent);color:var(--surface);font-weight:700}
 .ai-row .btn2:disabled{opacity:.55;cursor:wait}
 .ai-sec summary{cursor:pointer}
@@ -598,6 +601,9 @@ const EXAMS = {
   "2ª SÉRIE":["Provão Paulista Seriado","2026-11-10","10/11 (Ciências da Natureza no 1º dia)"],
   "3ª SÉRIE":["Provão Paulista Seriado","2026-11-04","04/11 (Ciências da Natureza no 1º dia)"]
 };
+const SIMULADO_URL = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu_dupRvY-GzoHPNZhL2ft3KpSK7odGF0amqn7Yc7P/exec";
+const simSerie = se => /^[6-9]º ANO$/.test(String(se||"").trim());
+const simBtn = se => simSerie(se) ? `<a class="sim-btn" href="${SIMULADO_URL}" target="_blank" rel="noopener">📝 Simulado SARESP da turma</a><span class="sim-note">Mesmo link para todas as turmas · o aluno entra com a conta @al</span>` : "";
 const serieOf = t => (DATA.T[t].n.match(/\d[ºª] (ANO|SÉRIE)/)||[""])[0];
 const fmtD = d => d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"});
 function guiaOf(t,d){ return GUIA.G[serieOf(t)+"|"+d[2]+"|"+String(d[3]).trim()] || null; }
@@ -632,7 +638,7 @@ function planoView(big){
   const t=S.t, c=S.comp, se=serieOf(t), P=prioridades(t,c), W=semanas(t), {g,queda}=grupos(t,c);
   const crit=P.filter(d=>d[4]<.35).length;
   let h=`<div class="plan-top">`;
-  if(W){ h+=`<div class="exam"><b>${W.ex[0]} · ${se}</b><span>${W.ex[2]}</span></div>
+  if(W){ h+=`<div class="exam"><b>${W.ex[0]} · ${se}</b><span>${W.ex[2]}</span>${simBtn(se)}</div>
     <div class="kpi"><b>${W.dias>0?W.dias:0}</b><span>dias até a prova</span></div>
     <div class="kpi"><b>${W.ws.length}</b><span>semanas de aula</span></div>`; }
   h+=`<div class="kpi"><b>${P.length}</b><span>descritores prioritários</span></div>
@@ -807,6 +813,7 @@ function plTurmaView(){
   const exD=PL.c==="Ciências"? (PLAN.exam||{})[serieN(PL.tn)] : null;
   if(exD){ const pre=ss.filter(s=>s.dt<exD && (s.tipo==="aula"||s.tipo==="rev"));
     h+=`<div class="kpis"><div class="kpi"><b>${dm(dOf(exD))}</b><span>SARESP desta série</span></div><div class="kpi"><b>${pre.length}</b><span>aulas até a prova</span></div><div class="kpi"><b>${pre.filter(s=>s.tipo==="aula"&&s.L.s===1).length}</b><span>aulas novas que caem no SARESP</span></div><div class="kpi"><b>${pre.filter(s=>s.tipo==="rev").length}</b><span>recomposição até a prova</span></div></div>`;
+    if(simSerie(serieN(PL.tn))) h+=`<div class="pl-bar">${simBtn(serieN(PL.tn))}</div>`;
     h+= (PLAN.intercala||{})[serieN(PL.tn)] ? `<p class="note">Até o SARESP, as aulas alternam recomposição dos descritores mais fracos da turma com as aulas do 4º bimestre que caem na prova (Sistema Solar, estrelas, leituras do céu, vida fora da Terra). As aulas de movimento (cinemática), que não caem no SARESP, ficam para depois da prova.</p>` : `<p class="note">Aulas marcadas "SARESP" cobrem descritores do Mapa SARESP do Guia Priorizado. As aulas livres antes da prova viram recomposição dos descritores mais fracos.</p>`; }
   if(nAul<seq.length-((aj.ini||1)-1)) h+=`<p class="note" style="color:var(--danger-ink)">Faltam ${seq.length-((aj.ini||1)-1)-nAul} aulas do material para caber no bimestre: junte aulas curtas ou priorize as habilidades do Guia.</p>`;
   h+=`<div class="tbl-wrap"><table class="dtable pl-tbl"><thead><tr><th>Data</th><th>Horário</th><th>Aula do material</th><th></th></tr></thead><tbody>`;
