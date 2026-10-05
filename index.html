@@ -181,6 +181,8 @@ svg text{fill:var(--muted);font-family:var(--f-body)}
 .pl-tbl td .m{font-size:.82rem;color:var(--muted)}
 .pl-tbl tr.off td{opacity:.5}
 .pl-tbl tr.today td{background:var(--accent-soft)}
+.pl-tbl tr.clk{cursor:pointer}
+.pl-tbl tr.clk:hover td{background:var(--surface-2)}
 .pl-tbl tr.foco td{background:var(--accent-soft);box-shadow:inset 0 2px 0 var(--accent),inset 0 -2px 0 var(--accent)}
 .pl-next li.pl-clk{cursor:pointer}
 .pl-next li.pl-clk:hover{background:var(--surface-2)}
@@ -830,7 +832,8 @@ function plTurmaView(){
     if(s.tipo==="aula") body=`<div class="t">Aula ${esc(s.L.a)} · ${esc(s.L.t)} ${plSa(s.L)}</div>${s.L.h?`<span class="code">${esc(s.L.h)}</span> `:""}<span class="m">${esc(s.L.o)}</span>${s.L.at?`<div class="m"><b>Em sala:</b> ${esc(s.L.at)}</div>`:""}${s.L.l?`<div class="m"><a href="${esc(s.L.l)}" target="_blank" rel="noopener">abrir slides</a> · <button type="button" class="pl-skip" data-ai-open="${seq.indexOf(s.L)}">🖼️ atividade com imagens</button></div>`:""}`;
     else if(s.tipo==="rev") body=`<div class="t">${s.pre?"Recomposição para o SARESP":"Recomposição / revisão"}</div><span class="m">Retomar: ${esc(s.R)} (descritor fraco da turma na Prova Paulista)</span>${s.K&&ATIV[s.K]?`<div class="m"><b>Atividade:</b> ${esc(ATIV[s.K].nome)} · Abaixo do Básico: ${esc(ATIV[s.K].ab)} · Básico: ${esc(ATIV[s.K].b)}</div><div class="m"><button type="button" class="pl-skip" data-ativ-open="${esc(s.K)}">ver atividade completa</button></div>`:""}`;
     else body=`<div class="m">${s.tipo==="fer"?esc(s.fer):"Marcada como sem aula; a sequência foi empurrada."}</div>`;
-    h+=`<tr class="${s.tipo==="skip"||s.tipo==="fer"?"off":""} ${s.dt===hoje?"today":""} ${s.key===PL.foco?"foco":""}"><td class="num">${DIAS[d.getDay()]} ${dm(d)}</td><td class="num">${s.a}ª</td><td>${body} ${ev}</td><td>${s.tipo==="fer"?"":`<button type="button" class="pl-skip" data-pl-skip="${s.key}">${s.tipo==="skip"?"Desfazer":"Não houve aula"}</button>`}</td></tr>`; });
+    const lk = s.tipo==="aula"&&s.L.l ? ` data-pl-url="${esc(s.L.l)}" title="Clique para abrir os slides desta aula"` : s.tipo==="rev"&&s.K&&ATIV[s.K] ? ` data-pl-ativ="${esc(s.K)}" title="Clique para abrir a atividade"` : "";
+    h+=`<tr class="${s.tipo==="skip"||s.tipo==="fer"?"off":""} ${s.dt===hoje?"today":""} ${s.key===PL.foco?"foco":""} ${lk?"clk":""}"${lk}><td class="num">${DIAS[d.getDay()]} ${dm(d)}</td><td class="num">${s.a}ª</td><td>${body} ${ev}</td><td>${s.tipo==="fer"?"":`<button type="button" class="pl-skip" data-pl-skip="${s.key}">${s.tipo==="skip"?"Desfazer":"Não houve aula"}</button>`}</td></tr>`; });
   return h+`</tbody></table></div><p class="note">Fonte da sequência: ${esc(PLAN.fontes[PL.c+"|"+serieN(PL.tn)]||"")}. Marcar "Não houve aula" empurra as aulas seguintes; os ajustes ficam salvos na sua conta.</p>`;
 }
 function plQuinzView(){
@@ -889,6 +892,8 @@ function plClick(e){
   const op=e.target.closest("[data-pl-open]"); if(op){ e.stopPropagation(); const [tn,c]=op.dataset.plOpen.split("|"); PL.tn=tn; PL.c=c; PL.tab="turma"; PL.foco=op.dataset.plDt||null; if(S.modal!=="aulas") openModal("aulas"); else renderModal();
     setTimeout(()=>{ const r=document.querySelector(".pl-tbl tr.foco"); if(r) r.scrollIntoView({block:"center"}); },60); return true; }
   const sk=e.target.closest("[data-pl-skip]"); if(sk){ e.stopPropagation(); const k=plKey(PL.tn,PL.c), aj=PL.aj[k]=PL.aj[k]||{}; const set=new Set(aj.skip||[]); const v=sk.dataset.plSkip; set.has(v)?set.delete(v):set.add(v); aj.skip=[...set]; plSalvar(k); renderAll(); return true; }
+  const rw=e.target.closest("tr[data-pl-url],tr[data-pl-ativ]"); if(rw && !e.target.closest("a,button,input,select")){ e.stopPropagation();
+    if(rw.dataset.plUrl) window.open(rw.dataset.plUrl,"_blank","noopener"); else { S.voltar=S.modal; ativAbrir(rw.dataset.plAtiv); } return true; }
   const b=e.target.closest("[data-pl]"); if(!b) return false; e.stopPropagation(); const a=b.dataset.pl;
   if(a==="sem-") PL.semana--; else if(a==="sem+") PL.semana++; else if(a==="sem0") PL.semana=0;
   else if(a==="todas") PL.todas=true; else if(a==="so") PL.todas=false;
