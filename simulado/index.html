@@ -110,7 +110,7 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
   const codGuardado = () => { try { return sessionStorage.getItem('cod_' + fT.value) || ''; } catch (e) { return ''; } };
   function carregarNomes(t, cod) {
     const sel = fN.value;
-    fN.disabled = true; fN.innerHTML = '<option value="">Carregando nomes…</option>';
+    fN.disabled = true; fN.innerHTML = '<option value="">Carregando nomes… (pode levar até 30 segundos na primeira vez; leia as questões enquanto isso)</option>';
     return api(Object.assign({ api: 'alunos', id: t.id }, cod ? { cod } : {}))
       .catch(e => /api desconhecida/.test(e.message) ? api({ api: 'turma', id: t.id }) : Promise.reject(e))
       .then(d => {
