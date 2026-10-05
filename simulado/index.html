@@ -42,6 +42,15 @@
   .msg.ok{display:block;background:#E3F1E7;border:1px solid #9FCDAE}
   .msg.erro{display:block;background:#FBE6E6;border:1px solid #E3A3A3}
   .vazio{text-align:center;color:var(--suave);padding:30px 10px}
+  .foto{margin:10px 0 6px;border-radius:12px;overflow:hidden;border:1px solid var(--linha);background:#fff}
+  .foto img{display:block;width:100%;max-height:340px;object-fit:cover;background:#E8ECE8}
+  .foto figcaption{font-size:.82rem;color:var(--suave);padding:6px 10px}
+  .foto figcaption a{color:inherit}
+  .codra{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.85rem;color:var(--suave)}
+  .codra[hidden]{display:none}
+  .codra input{width:130px !important;text-transform:uppercase;letter-spacing:.1em}
+  .codra button{font:inherit;font-weight:700;border:0;border-radius:10px;padding:9px 14px;background:var(--verde);color:#fff;cursor:pointer}
+  .carreg{font-size:.8rem;color:var(--suave);margin-left:6px}
 </style>
 </head>
 <body>
@@ -57,6 +66,7 @@
     <div class="nome"><label for="nome">Nome</label><select id="nome" disabled><option value="">Escolha a turma primeiro</option></select></div>
     <div><label for="num">Nº</label><input id="num" readonly placeholder="—"></div>
     <div><label for="ra">RA</label><input id="ra" readonly placeholder="—" inputmode="numeric"></div>
+    <div class="codra" id="codra" hidden><label for="cod" style="margin:0;text-transform:none;letter-spacing:0;font-weight:600">Para ver o RA completo, digite o código da turma (o professor informa):</label><input id="cod" maxlength="8" autocomplete="off" placeholder="código"><button type="button" id="codok">Ver RA</button><span id="codmsg"></span></div>
   </section>
 
   <div id="qs"><p class="vazio">As questões aparecem aqui depois que você escolher a turma.</p></div>
@@ -64,6 +74,7 @@
   <button class="enviar" id="btn" type="button" hidden>Enviar respostas</button>
 </div>
 
+<script src="questoes.js?v=1"></script>
 <script>
 /* Página do aluno hospedada na plataforma. Os dados vêm do Apps Script (planilha "Revisão Saresp"). */
 const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu_dupRvY-GzoHPNZhL2ft3KpSK7odGF0amqn7Yc7P/exec";
@@ -73,7 +84,7 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
   const $ = s => document.querySelector(s);
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const fT = $('#turma'), fN = $('#nome'), fNum = $('#num'), fRa = $('#ra');
-  let D = null, resp = [], TURMAS = [];
+  let D = null, Q = [], resp = [], TURMAS = [];
   const espera = ms => new Promise(r => setTimeout(r, ms));
   async function api(q){
     let ult;
@@ -88,27 +99,51 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
   async function post(body){ const r = await fetch(API, { method: 'POST', body: JSON.stringify(body), headers: { 'Content-Type': 'text/plain;charset=utf-8' }, redirect: 'follow', credentials: 'omit' }); const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro'); return j; }
   const falhaRede = e => /Failed to fetch|NetworkError|Load failed|JSON/i.test(String(e && e.message || e)) ? 'sem conexão com a planilha. Verifique a internet; se estiver usando bloqueador de anúncios ou extensões, abra numa janela anônima [' + String(e && e.message || e).slice(0, 60) + ']' : (e && e.message || e);
 
-  fT.innerHTML = '<option value="">Carregando turmas…</option>'; fT.disabled = true;
-  api({ api: 'turmas' }).then(j => { TURMAS = j.turmas; fT.disabled = false;
-    fT.innerHTML = '<option value="">Selecione</option>' + TURMAS.map(t => `<option>${esc(t.id)}</option>`).join(''); })
-    .catch(e => { fT.innerHTML = '<option value="">Indisponível</option>'; $('#qs').innerHTML = `<p class="vazio">Não foi possível abrir o simulado: ${esc(falhaRede(e))}.<br><button type="button" class="enviar" style="max-width:260px;margin:14px auto 0" onclick="location.reload()">Tentar de novo</button></p>`; });
+  const WANDA = 'E.E. PROFª WANDA MASCAGNI DE SÁ', LYDIA = 'E.E. PROFª LYDIA KITZ MOREIRA';
+  TURMAS = [['6º Ano A','6',WANDA],['6º Ano C','6',WANDA],['6º Ano A (Lydia)','6',LYDIA],['6º Ano B (Lydia)','6',LYDIA],['6º Ano C (Lydia)','6',LYDIA],
+    ['7º Ano A','7',WANDA],['7º Ano B','7',WANDA],['8º Ano A','8',WANDA],['8º Ano B','8',WANDA],['9º Ano A','9',WANDA],['9º Ano B','9',WANDA]]
+    .map(([id, serie, escola]) => ({ id, serie, escola }));
+  fT.innerHTML = '<option value="">Selecione</option>' + TURMAS.map(t => `<option>${esc(t.id)}</option>`).join('');
+  api({ api: 'turmas' }).catch(() => {});            // "acorda" o servidor da planilha enquanto o aluno escolhe a turma
 
   function limpar(){ fN.disabled = true; fN.innerHTML = '<option value="">Escolha a turma primeiro</option>'; fNum.value = ''; fRa.value = ''; fRa.readOnly = true; }
+  const codGuardado = () => { try { return sessionStorage.getItem('cod_' + fT.value) || ''; } catch (e) { return ''; } };
+  function carregarNomes(t, cod) {
+    const sel = fN.value;
+    fN.disabled = true; fN.innerHTML = '<option value="">Carregando nomes…</option>';
+    return api(Object.assign({ api: 'alunos', id: t.id }, cod ? { cod } : {}))
+      .catch(e => /api desconhecida/.test(e.message) ? api({ api: 'turma', id: t.id }) : Promise.reject(e))
+      .then(d => {
+        if (fT.value !== t.id) return;
+        D = { alunos: d.alunos, codOk: !!d.codOk };
+        fN.disabled = false;
+        fN.innerHTML = '<option value="">Selecione o seu nome</option>' + d.alunos.slice().sort((a,b) => a.nome.localeCompare(b.nome,'pt'))
+          .map(a => `<option value="${esc(a.n)}|${esc(a.nome)}">${esc(a.nome)}</option>`).join('');
+        if (sel) { fN.value = sel; fN.onchange(); }
+        $('#codra').hidden = !!d.codOk || !('codOk' in d);
+        return d;
+      })
+      .catch(e => { fN.innerHTML = '<option value="">Nomes indisponíveis</option>'; msg('Não foi possível carregar os nomes: ' + falhaRede(e) + '.', false); });
+  }
+
   fT.onchange = () => {
-    limpar(); D = null; $('#btn').hidden = true; $('#msg').className = 'msg';
+    limpar(); D = null; $('#btn').hidden = true; $('#msg').className = 'msg'; $('#codra').hidden = true; $('#codmsg').textContent = ''; $('#cod').value = '';
     if (!fT.value) { $('#qs').innerHTML = '<p class="vazio">As questões aparecem aqui depois que você escolher a turma.</p>'; return; }
     const t = TURMAS.find(x => x.id === fT.value);
     $('#esc').textContent = t.escola;
-    $('#qs').innerHTML = '<p class="vazio">Carregando as questões da sua turma…</p>';
-    api({ api: 'turma', id: t.id }).then(d => {
-      if (fT.value !== t.id) return;
-      D = d; resp = d.questoes.map(() => null);
-      $('#sub').textContent = `${t.id} · ${d.serie}º ano · temas dos 4 bimestres que caem no SARESP`;
-      fN.disabled = false;
-      fN.innerHTML = '<option value="">Selecione o seu nome</option>' + d.alunos.slice().sort((a,b) => a.nome.localeCompare(b.nome,'pt'))
-        .map(a => `<option value="${esc(a.n)}|${esc(a.nome)}">${esc(a.nome)}</option>`).join('');
-      desenhar();
-    }).catch(e => { $('#qs').innerHTML = `<p class="vazio">Não foi possível carregar: ${esc(falhaRede(e))}. Recarregue a página.</p>`; });
+    $('#sub').textContent = `${t.id} · ${t.serie}º ano · temas dos 4 bimestres que caem no SARESP`;
+    Q = (window.QUESTOES_PUB || {})[t.serie] || []; resp = Q.map(() => null);
+    desenhar();                                       // questões aparecem na hora (vêm da própria plataforma)
+    carregarNomes(t, codGuardado());                  // nomes chegam da planilha em paralelo
+  };
+  $('#codok').onclick = () => {
+    const t = TURMAS.find(x => x.id === fT.value); const c = $('#cod').value.trim().toUpperCase(); if (!t || !c) return;
+    $('#codmsg').textContent = 'conferindo…';
+    carregarNomes(t, c).then(d => {
+      if (!d) return;
+      if (d.codOk) { try { sessionStorage.setItem('cod_' + t.id, c); } catch (e) {} $('#codmsg').textContent = ''; }
+      else $('#codmsg').textContent = 'código incorreto';
+    });
   };
   fN.onchange = () => {
     const [n, ...nm] = fN.value.split('|'); const a = D && D.alunos.find(x => String(x.n) === n && x.nome === nm.join('|'));
@@ -119,10 +154,11 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
   };
 
   function desenhar(){
-    $('#qs').innerHTML = D.questoes.map((q, i) => `
+    $('#qs').innerHTML = Q.map((q, i) => `
       <article class="q" id="q${i}">
         <div class="top"><span class="num">Questão ${i+1}</span><span class="tag">${q.tipo === 'obj' ? 'Objetiva' : 'Dissertativa'}</span><span class="tag">${esc(q.hab)}</span><span class="tag">${esc(q.bim)}</span></div>
         <p class="enun">${esc(q.enunciado)}</p>
+        ${q.foto ? `<figure class="foto"><img src="${esc(q.foto.src)}" alt="${esc(q.foto.leg)}" loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async"><figcaption>${esc(q.foto.leg)} · Foto: <a href="${esc(q.foto.url)}" target="_blank" rel="noopener">${esc(q.foto.cred)}</a></figcaption></figure>` : ''}
         <div class="fig">${q.img}</div>
         <p class="cmd">${esc(q.comando)}</p>
         ${q.tipo === 'obj'
@@ -140,7 +176,7 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
 
   const msg = (t, ok) => { const m = $('#msg'); m.className = 'msg ' + (ok ? 'ok' : 'erro'); m.textContent = t; m.scrollIntoView({behavior:'smooth', block:'center'}); };
   $('#btn').onclick = () => {
-    if (!fT.value || !fN.value) return msg('Escolha a sua turma e o seu nome antes de enviar.', false);
+    if (!fT.value || !fN.value || !D) return msg('Escolha a sua turma e o seu nome antes de enviar.', false);
     const falta = resp.map((r, i) => (r === null || r === '') ? i + 1 : 0).filter(Boolean);
     if (falta.length && !confirm('Faltam as questões ' + falta.join(', ') + '. Enviar mesmo assim?')) return;
     const [n, ...nm] = fN.value.split('|');
