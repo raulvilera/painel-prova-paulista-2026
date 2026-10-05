@@ -227,6 +227,32 @@ svg text{fill:var(--muted);font-family:var(--f-body)}
 @media (prefers-reduced-motion:reduce){.pz .slice{transition:none}.pz .lead{animation:none;opacity:1}}
 .pz-wrap{display:flex;flex-direction:column;gap:6px}
 .pz-hint{font-size:.8rem;color:var(--muted);text-align:center}
+/* atividade com imagens da aula */
+.ai-sec{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:14px;background:var(--surface)}
+.ai-sec h4{margin:0 0 8px;font-family:var(--f-display);font-size:1rem}
+.ai-row{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end}
+.ai-row .btn2{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;padding:7px 12px;cursor:pointer;text-decoration:none;display:inline-block}
+.ai-row .btn2.pri{background:var(--accent);border-color:var(--accent);color:var(--surface);font-weight:700}
+.ai-row .btn2:disabled{opacity:.55;cursor:wait}
+.ai-sec summary{cursor:pointer}
+.ai-row .field{flex:1 1 220px}
+.ai-in{font:inherit;width:100%;padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg)}
+textarea.ai-in{min-height:58px;resize:vertical}
+.ai-st{font-size:.85rem;color:var(--muted);margin-top:6px}
+.ai-st.err{color:var(--danger-ink)}
+.ai-st.ok{color:var(--ok-ink,var(--fg))}
+.ai-q{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:12px;display:grid;grid-template-columns:200px 1fr;gap:12px}
+@media (max-width:700px){.ai-q{grid-template-columns:1fr}}
+.ai-q .im{background:var(--bg);border:1px dashed var(--line);border-radius:10px;min-height:120px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.ai-q .im img{max-width:100%;max-height:180px;display:block}
+.ai-q .hd{font-weight:700;margin-bottom:6px}
+.ai-q .hd small{font-weight:400;color:var(--muted)}
+.ai-alt{display:flex;gap:6px;align-items:center;margin:4px 0}
+.ai-alt input[type=radio]{accent-color:#145A32;width:18px;height:18px}
+.ai-alt b{min-width:1.2em}
+.ai-link{word-break:break-all;font-family:var(--f-data);font-size:.85rem;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px}
+.ai-chk{display:flex;flex-wrap:wrap;gap:14px}
+.ai-chk label{display:flex;gap:6px;align-items:center}
 footer{margin-top:18px}
 @media (max-width:900px){.card{grid-column:span 12}.cols4{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.dboxes{grid-template-columns:1fr}.pies{gap:4px}.cols4{grid-template-columns:1fr}.legend{margin-left:0}}
@@ -786,7 +812,7 @@ function plTurmaView(){
   h+=`<div class="tbl-wrap"><table class="dtable pl-tbl"><thead><tr><th>Data</th><th>Horário</th><th>Aula do material</th><th></th></tr></thead><tbody>`;
   ss.forEach(s=>{ const d=dOf(s.dt), ev=plEventos(s.dt,PL.tn).map(e=>`<span class="pl-ev">${esc(e.x)}</span>`).join(" ");
     let body;
-    if(s.tipo==="aula") body=`<div class="t">Aula ${esc(s.L.a)} · ${esc(s.L.t)} ${plSa(s.L)}</div>${s.L.h?`<span class="code">${esc(s.L.h)}</span> `:""}<span class="m">${esc(s.L.o)}</span>${s.L.at?`<div class="m"><b>Em sala:</b> ${esc(s.L.at)}</div>`:""}${s.L.l?`<div class="m"><a href="${esc(s.L.l)}" target="_blank" rel="noopener">abrir slides</a></div>`:""}`;
+    if(s.tipo==="aula") body=`<div class="t">Aula ${esc(s.L.a)} · ${esc(s.L.t)} ${plSa(s.L)}</div>${s.L.h?`<span class="code">${esc(s.L.h)}</span> `:""}<span class="m">${esc(s.L.o)}</span>${s.L.at?`<div class="m"><b>Em sala:</b> ${esc(s.L.at)}</div>`:""}${s.L.l?`<div class="m"><a href="${esc(s.L.l)}" target="_blank" rel="noopener">abrir slides</a> · <button type="button" class="pl-skip" data-ai-open="${seq.indexOf(s.L)}">🖼️ atividade com imagens</button></div>`:""}`;
     else if(s.tipo==="rev") body=`<div class="t">${s.pre?"Recomposição para o SARESP":"Recomposição / revisão"}</div><span class="m">Retomar: ${esc(s.R)} (descritor fraco da turma na Prova Paulista)</span>${s.K&&ATIV[s.K]?`<div class="m"><b>Atividade:</b> ${esc(ATIV[s.K].nome)} · Abaixo do Básico: ${esc(ATIV[s.K].ab)} · Básico: ${esc(ATIV[s.K].b)}</div><div class="m"><button type="button" class="pl-skip" data-ativ-open="${esc(s.K)}">ver atividade completa</button></div>`:""}`;
     else body=`<div class="m">${s.tipo==="fer"?esc(s.fer):"Marcada como sem aula; a sequência foi empurrada."}</div>`;
     h+=`<tr class="${s.tipo==="skip"||s.tipo==="fer"?"off":""} ${s.dt===hoje?"today":""}"><td class="num">${DIAS[d.getDay()]} ${dm(d)}</td><td class="num">${s.a}ª</td><td>${body} ${ev}</td><td>${s.tipo==="fer"?"":`<button type="button" class="pl-skip" data-pl-skip="${s.key}">${s.tipo==="skip"?"Desfazer":"Não houve aula"}</button>`}</td></tr>`; });
@@ -856,11 +882,203 @@ document.addEventListener("change",e=>{
   if(e.target.id==="plQ"){ PL.quinz=+e.target.value; renderModal(); }
 });
 
+/* ---------- atividade com imagens da aula (associação imagem ↔ informação) ---------- */
+const AI = { ctx:null, cfg:null, itens:null, q:null, thumbs:{}, st:"", stCls:"", pub:null, rost:null, turmas:null, busy:false };
+const AI_CFG_ID = "__cfg_ativimg";
+const aiDeck = L => { const m=String(L&&L.l||"").match(/\/d\/([\w-]{20,})/); return m? m[1] : null; };
+const aiTurmaLbl = tn => tn.replace(/ (MANHÃ|TARDE|NOITE).*$/,"").replace(/^(\d)º ANO (\w)$/,"$1º Ano $2").replace(/^(\d)ª SÉRIE (\w)$/,"$1ª Série $2") + (/Des\. Sistemas/.test(tn)?" (DS)":"");
+function aiCfg(){ if(!AI.cfg) AI.cfg = Object.assign({url:"",token:""}, PL.aj[AI_CFG_ID]||{}); return AI.cfg; }
+async function aiRost(){
+  if(AI.rost) return AI.rost; AI.rost={};
+  try{ if(typeof sb!=="undefined"){ const {data}=await sb.from("turmas_alunos").select("turma,alunos"); (data||[]).forEach(r=>AI.rost[r.turma]=r.alunos||[]); } }catch(e){}
+  return AI.rost;
+}
+async function aiApi(body){
+  const c=aiCfg(); if(!c.url||!c.token) throw new Error("Configure o endereço do Apps Script e o token primeiro.");
+  const r=await fetch(c.url,{method:"POST",body:JSON.stringify({...body,token:c.token})});
+  const j=await r.json(); if(!j.ok) throw new Error(j.erro||"Falha no Apps Script"); return j;
+}
+function aiAbrir(tn,c,i){
+  const L=(PLAN.seq[c+"|"+serieN(tn)]||[])[i]; if(!L) return;
+  AI.ctx={tn,c,L,se:serieN(tn)}; AI.itens=null; AI.q=null; AI.pub=null; AI.st=""; AI.stCls="";
+  const pares=plPares().filter(([t,cc])=>cc===c && serieN(t)===serieN(tn)).map(p=>p[0]);
+  AI.turmas=Object.fromEntries(pares.map(t=>[t,t===tn]));
+  S.voltar=S.modal; if(S.modal) { S.modal="aimg"; renderModal(); } else openModal("aimg");
+  aiRost().then(()=>{ if(S.modal==="aimg") renderModal(); });
+  const dk=aiDeck(L); if(dk && aiCfg().url && aiCfg().token) aiExtrair(false);
+}
+const AI_GEN=/^(relembre|pause e responda|na pr[aá]tica|para come[cç]ar|objetivos?( da aula)?|hora da pr[aá]tica|foco no conte[uú]do|encerramento|o que aprendemos|refer[eê]ncias|saiba mais|vamos praticar|atividade|desafio|responda|registre|discuta|tempo|ci[eê]ncias|biologia|qu[ií]mica|aula \d+|\d+[ºª] (ano|s[ée]rie))\b/i;
+function aiLinhas(it){ return (it.textos||[]).flatMap(t=>String(t).split(/\n+|\u000b/)).map(x=>x.replace(/\s+/g," ").trim())
+  .filter(x=>x.length>=18 && !AI_GEN.test(x) && !/https?:|www\.|©|dispon[ií]vel em|acesso em|elaborado (para|pelo)|fonte:/i.test(x)); }
+function aiCorta(x,n){ x=x.replace(/\s+/g," ").trim(); if(x.length<=n) return x; const c=x.slice(0,n); return c.slice(0,c.lastIndexOf(" "))+"…"; }
+function aiInfo(it){
+  const ls=aiLinhas(it); if(!ls.length) return "";
+  const sc=x=>{ const n=x.length; return (n>=40&&n<=200?3:n<40?1:2) + (/[.:;]$/.test(x)?1:0) + (/\b(é|são|forma|formam|ocorre|permite|chamad[oa]s?|representa|mostra|transforma|produz|responsável)\b/i.test(x)?2:0) - (/\?$/.test(x)?3:0); };
+  return aiCorta(ls.slice().sort((a,b)=>sc(b)-sc(a))[0].replace(/^[•\-–\d.)\s]+/,""),190);
+}
+function aiTit(it){ const ls=(it.textos||[]).flatMap(t=>String(t).split(/\n+/)).map(x=>x.trim()).filter(x=>x.length>=3&&x.length<=60&&!AI_GEN.test(x)&&!/[.?]$/.test(x)); return ls[0]||""; }
+function aiRng(seed){ let x=(seed||7)>>>0; return ()=>{ x=(x+0x6D2B79F5)>>>0; let t=x; t=Math.imul(t^(t>>>15),t|1); t^=t+Math.imul(t^(t>>>7),t|61); return ((t^(t>>>14))>>>0)/4294967296; }; }
+function aiGuia(){ const {c,se,L}=AI.ctx; const B4=(GUIA.B4||{})[c+"|"+se]||[]; const hs=String(L.h||"").split(/,\s*/);
+  const m=B4.find(x=>x[0]&&hs.some(h=>x[0].split(/,\s*/).some(z=>h.startsWith(z)))); return m? m[1] : (L.o||""); }
+function aiConceitos(){ return String(AI.ctx.L.c||"").split(/[;,]\s*/).map(x=>x.replace(/\.$/,"").trim()).filter(x=>x.length>2).slice(0,3); }
+function aiMontar(){
+  const {L}=AI.ctx, rnd=aiRng((+L.n||1)*97+String(AI.ctx.tn).length);
+  const cand=(AI.itens||[]).map(it=>({...it,info:aiInfo(it),tit:aiTit(it)})).filter(it=>it.info);
+  const tot=Math.max(1,...(AI.itens||[]).map(x=>x.slide||1));
+  // prioriza slides de conteúdo (evita capa e encerramento) e espalha pela aula
+  let pool=cand.filter(it=>it.slide>2 && it.slide<tot-1); if(pool.length<4) pool=cand;
+  const uniq=[]; const seen=new Set(); pool.forEach(it=>{ if(!seen.has(it.info)){ seen.add(it.info); uniq.push(it);} });
+  const pick=n=>{ if(uniq.length<=n) return uniq.slice(); const out=[]; for(let k=0;k<n;k++) out.push(uniq[Math.floor((k+.5)*uniq.length/n)]); return out; };
+  const imgs=pick(10), extras=aiConceitos(), hab=L.h||"", pp=aiGuia(), sar=L.s===1? "Mapa SARESP (Guia Priorizado): "+hab : "Não aplicável ao SARESP";
+  const infos=uniq.map(x=>x.info);
+  const alts=(certa,i)=>{ let d=infos.filter(x=>x!==certa); for(let k=d.length-1;k>0;k--){ const j=Math.floor(rnd()*(k+1)); [d[k],d[j]]=[d[j],d[k]]; }
+    d=d.slice(0,4); let p=0; while(d.length<4){ d.push(["Representa um processo que não foi estudado nesta aula.","Mostra apenas um elemento decorativo, sem relação com o tema.","Indica um fenômeno que ocorre somente fora da Terra.","Representa o oposto do que foi explicado na aula."][p++]); }
+    const pos=POS[i%POS.length]; d.splice(pos,0,certa); return {alts:d,correta:pos}; };
+  const POS=[0,1,2,3,4,Math.floor(rnd()*5),Math.floor(rnd()*5)]; for(let k=POS.length-1;k>0;k--){ const j=Math.floor(rnd()*(k+1)); [POS[k],POS[j]]=[POS[j],POS[k]]; }
+  const objE=[
+    ["G1","Identificar",`Esta imagem foi apresentada na aula "${L.t}".`,"Qual informação corresponde ao que a imagem representa?"],
+    ["G1","Reconhecer","Observe com atenção a imagem abaixo, usada nos slides da aula.","Qual afirmação descreve corretamente o que a imagem mostra?"],
+    ["G1","Identificar","A imagem a seguir foi usada pelo professor para explicar um conceito da aula.","Qual informação está associada a essa imagem?"],
+    ["G2","Relacionar",`Observe a imagem usada na aula para explicar ${"%TIT%"}.`,"Associe a imagem à informação correta."],
+    ["G2","Relacionar","Relacione a imagem abaixo com o conteúdo estudado na aula.","Qual informação explica a relação entre a imagem e o conteúdo?"],
+    ["G2","Comparar","Compare a imagem abaixo com as informações apresentadas nas alternativas.","Qual delas corresponde de fato ao que a imagem representa?"],
+    ["G3","Analisar","Analise a imagem e as afirmações a seguir. Algumas parecem corretas, mas tratam de outras partes da aula.","Qual afirmação explica corretamente o que esta imagem mostra?"]];
+  const q=[];
+  for(let i=0;i<7;i++){ const it=imgs[i%Math.max(1,imgs.length)]; if(!it) break; const [g,v,e,cmd]=objE[i]; const {alts:a,correta}=alts(it.info,i);
+    q.push({tipo:"obj",grupo:g,verbo:v,hab,pp,saresp:sar,enunciado:e.replace("%TIT%",it.tit? `"${it.tit}"` : `o tema "${L.t}"`),comando:cmd,img:it.fid,slide:it.slide,alts:a,correta,ref:it.info}); }
+  const dis=[
+    ["G2","Explicar","Observe a imagem apresentada na aula.",`Explique o que a imagem mostra e como ela se relaciona com o tema da aula: ${L.t}.`],
+    ["G3","Justificar","A imagem abaixo resume uma ideia importante da aula.",`Explique, com suas palavras, a informação que esta imagem ajuda a entender${extras.length?`. Use pelo menos dois destes termos: ${extras.join(", ")}`:""}.`],
+    ["G3","Propor","Observe a imagem e pense no seu dia a dia.","Descreva uma situação do cotidiano em que o que a imagem mostra aparece ou é importante, e justifique a sua escolha."]];
+  for(let k=0;k<3;k++){ const it=imgs[(7+k)%Math.max(1,imgs.length)]; if(!it) break; const [g,v,e,cmd]=dis[k];
+    q.push({tipo:"dis",grupo:g,verbo:v,hab,pp,saresp:sar,enunciado:e,comando:cmd,img:it.fid,slide:it.slide,ref:it.info,conceitos:extras,
+      criterios:"0,0–0,3: não responde ou resposta sem relação · 0,4–0,6: parcial, conceitos incompletos · 0,7–0,9: adequada, falta algum detalhe · 1,0: completa, conceitos corretos e contextualizada"}); }
+  AI.q=q;
+}
+async function aiExtrair(refazer){
+  const dk=aiDeck(AI.ctx.L); if(!dk){ AI.st="Esta aula não tem link de slides do material."; AI.stCls="err"; renderModal(); return; }
+  AI.busy=true; AI.st="Lendo os slides da aula no seu Google Drive (na primeira vez pode levar até 1 minuto)…"; AI.stCls=""; if(S.modal==="aimg") renderModal();
+  try{ const r=await aiApi({acao:"extrair",deckId:dk,refazer:!!refazer}); AI.itens=r.itens||[]; aiMontar();
+    AI.st=`${AI.itens.length} imagens encontradas em ${r.total} slides. Revise as questões abaixo antes de publicar.`; AI.stCls="ok";
+  }catch(e){ AI.st=String(e.message||e); AI.stCls="err"; }
+  AI.busy=false; if(S.modal==="aimg"){ renderModal(); aiThumbs(); }
+}
+async function aiThumbs(){
+  const ids=[...new Set((AI.q||[]).map(q=>q.img).concat((AI.itens||[]).map(i=>i.fid)))].filter(id=>id&&!AI.thumbs[id]);
+  for(const id of ids){ if(S.modal!=="aimg") return; AI.thumbs[id]="…";
+    try{ const r=await aiApi({acao:"img",id,sz:360}); AI.thumbs[id]=r.src; }catch(e){ AI.thumbs[id]=""; }
+    document.querySelectorAll(`[data-ai-im="${id}"]`).forEach(el=>{ el.innerHTML=AI.thumbs[id]&&AI.thumbs[id]!=="…"?`<img alt="Imagem do slide" src="${AI.thumbs[id]}">`:`<span class="muted">sem prévia</span>`; }); }
+}
+function aiPrompt(){
+  const {tn,c,se,L}=AI.ctx, R=AI.rost||{}, tur=Object.keys(AI.turmas||{}).filter(t=>AI.turmas[t]);
+  const lista=tur.map(t=>`"${aiTurmaLbl(t)}": [\n${(R[t]||[]).map(a=>`  {"n": ${a.n}, "nome": "${a.nome}"}`).join(",\n")}\n]`).join(",\n");
+  const ims=(AI.itens||[]).map(it=>({...it,info:aiInfo(it)})).filter(it=>it.info).slice(0,16).map(it=>`- Slide ${it.slide}: ${it.info}`).join("\n");
+  return `Use o prompt unificado de Ciências (Guia Priorizado 2026 / skill ciencias-atividade-guia-priorizado) para criar a atividade abaixo.
+
+ESCOLA: E.E. PROFª WANDA MASCAGNI DE SÁ
+COMPONENTE: ${c} · ${se} · 4º bimestre de 2026
+AULA ${L.a}: ${L.t}
+OBJETIVO: ${L.o||""}
+CONTEÚDOS: ${L.c||""}
+HABILIDADE PRIORIZADA: ${L.h||""}
+APRENDIZAGEM ESSENCIAL (Prova Paulista): ${aiGuia()}
+SARESP: ${L.s===1?"conteúdo do Mapa SARESP (prova da série em "+(((PLAN.exam||{})[se])||"novembro")+")":"não aplicável ao SARESP"}
+SLIDES DA AULA: ${L.l||""}
+
+TIPO DE ATIVIDADE: associação entre as IMAGENS APRESENTADAS NA AULA e as INFORMAÇÕES do conteúdo.
+- 7 objetivas (5 alternativas) + 3 dissertativas, grupos de Bloom conforme o prompt.
+- Cada questão usa uma imagem dos slides desta aula, entre o enunciado e as alternativas.
+- O aluno deve associar a imagem à informação correta; os distratores são informações de outras imagens da mesma aula.
+${ims?`- Imagens e textos dos slides (use-os como referência):\n${ims}\n`:""}
+CABEÇALHO: escola fixa; cascata Turma → Nome → Nº de chamada (o Nº de chamada substitui o RA).
+Use exatamente esta relação de alunos (série/turma, nº de chamada e nome):
+const TURMAS = {
+${lista}
+};
+
+ENVIO: Google Apps Script (doPost) gravando na planilha de respostas, com azul para resposta correta e vermelho para incorreta.${aiCfg().url?`\nURL do Apps Script já publicado: ${aiCfg().url}`:""}`;
+}
+function aiView(){
+  const ctx=AI.ctx; if(!ctx) return `<p class="muted">Abra a partir de uma aula do planejamento.</p>`;
+  const {tn,c,L}=ctx, cfg=aiCfg(), R=AI.rost, dk=aiDeck(L);
+  let h=`<div class="ai-sec"><h4>Aula ${esc(L.a)} · ${esc(L.t)} ${plSa(L)}</h4><div class="m">${esc(c)} · ${esc(tn)}${L.h?` · <span class="code">${esc(L.h)}</span>`:""}</div><div class="m">${esc(L.o||"")}</div>${L.l?`<div class="m"><a href="${esc(L.l)}" target="_blank" rel="noopener">abrir slides</a></div>`:""}</div>`;
+  // turmas
+  h+=`<div class="ai-sec"><h4>Turmas que vão fazer a atividade</h4><div class="ai-chk">${Object.keys(AI.turmas||{}).map(t=>`<label><input type="checkbox" data-ai-turma="${esc(t)}" ${AI.turmas[t]?"checked":""}> ${esc(aiTurmaLbl(t))} <span class="muted">(${R? (R[t]||[]).length+" alunos" : "carregando…"})</span></label>`).join("")}</div>
+    <p class="ai-st">Lista com nº de chamada e nome (Lista de Presença do 3º bimestre/26, sem transferidos). Fica só na sua conta; vai para a página da atividade apenas a turma escolhida.</p></div>`;
+  // conexão
+  const conectado=cfg.url&&cfg.token;
+  h+=`<details class="ai-sec" ${conectado?"":"open"}><summary><b>Conexão com a planilha de respostas (Apps Script)</b> ${conectado?'<span class="muted">· configurada</span>':'<span class="muted">· falta configurar</span>'}</summary>
+    <div class="ai-row" style="margin-top:10px"><div class="field"><label for="aiUrl">URL do app da Web (termina em /exec)</label><input id="aiUrl" class="ai-in" value="${esc(cfg.url)}" placeholder="https://script.google.com/macros/s/…/exec"></div>
+    <div class="field" style="flex:0 1 260px"><label for="aiTok">Token (aparece ao rodar configurar())</label><input id="aiTok" class="ai-in" value="${esc(cfg.token)}"></div>
+    <button class="btn2 pri" type="button" data-ai="cfg">Salvar e testar</button></div>
+    <p class="ai-st">Passo a passo em <i>LEIA-ME.md</i> do pacote do Apps Script: crie a planilha, cole os 3 arquivos, rode configurar() e implante como app da Web (Executar como: eu · Acesso: qualquer pessoa).</p></details>`;
+  // geração
+  h+=`<div class="ai-sec"><h4>1. Imagens da aula</h4><div class="ai-row">
+    <button class="btn2 pri" type="button" data-ai="extrair" ${!dk||AI.busy?"disabled":""}>${AI.itens?"Recarregar imagens":"Buscar imagens dos slides"}</button>
+    ${AI.itens?`<button class="btn2" type="button" data-ai="remontar">Gerar questões de novo</button><button class="btn2" type="button" data-ai="refazer" ${AI.busy?"disabled":""}>Reconverter slides</button>`:""}
+    <button class="btn2" type="button" data-ai="prompt">Copiar prompt (com nomes e nº de chamada)</button></div>
+    ${AI.st?`<p class="ai-st ${AI.stCls}" role="status">${esc(AI.st)}</p>`:""}
+    ${!dk?`<p class="ai-st err">Esta aula não tem os slides do material vinculados.</p>`:""}</div>`;
+  if(AI.q&&AI.q.length){
+    const opts=(AI.itens||[]).map(it=>`<option value="${esc(it.fid)}">slide ${it.slide}</option>`).join("");
+    h+=`<div class="ai-sec"><h4>2. Revise as questões</h4><p class="ai-st">Edite os textos à vontade. Na objetiva, marque a alternativa correta. A imagem pode ser trocada por outra da aula.</p>`;
+    AI.q.forEach((q,i)=>{ const th=AI.thumbs[q.img];
+      h+=`<div class="ai-q"><div><div class="im" data-ai-im="${esc(q.img)}">${th&&th!=="…"?`<img alt="Imagem do slide ${q.slide}" src="${th}">`:`<span class="muted">prévia…</span>`}</div>
+        <select class="ai-in" style="margin-top:6px" data-ai-q="${i}" data-f="img" aria-label="Imagem da questão ${i+1}">${opts.replace(`value="${q.img}"`,`value="${q.img}" selected`)}</select></div>
+        <div><div class="hd">Questão ${i+1} · ${q.tipo==="obj"?"Objetiva":"Dissertativa"} <small>· ${q.grupo} (${esc(q.verbo)}) · ${esc(q.hab)}</small></div>
+        <textarea class="ai-in" rows="2" style="min-height:0" data-ai-q="${i}" data-f="enunciado" aria-label="Enunciado">${esc(q.enunciado)}</textarea>
+        <textarea class="ai-in" rows="2" style="min-height:0;margin-top:6px;font-weight:700" data-ai-q="${i}" data-f="comando" aria-label="Comando">${esc(q.comando)}</textarea>
+        ${q.tipo==="obj"? q.alts.map((a,k)=>`<div class="ai-alt"><input type="radio" name="aiC${i}" data-ai-q="${i}" data-f="correta" value="${k}" ${k===q.correta?"checked":""} aria-label="Marcar ${"ABCDE"[k]} como correta"><b>${"ABCDE"[k]}</b><input class="ai-in" data-ai-q="${i}" data-f="alt" data-k="${k}" value="${esc(a)}"></div>`).join("")
+          : `<label class="ai-st" for="aiR${i}">Resposta esperada (só para você)</label><textarea id="aiR${i}" class="ai-in" data-ai-q="${i}" data-f="ref">${esc(q.ref)}</textarea>`}
+        </div></div>`; });
+    const tur=Object.keys(AI.turmas).filter(t=>AI.turmas[t]);
+    h+=`</div><div class="ai-sec"><h4>3. Publicar para os alunos</h4><div class="ai-row"><button class="btn2 pri" type="button" data-ai="publicar" ${AI.busy||!tur.length?"disabled":""}>Publicar para ${tur.map(aiTurmaLbl).join(" e ")||"…"}</button></div>
+      ${AI.pub?`<p class="ai-st ok">Publicada. Envie este link no Classroom ou no grupo da turma:</p><div class="ai-link" id="aiLink">${esc(AI.pub.link)}</div><div class="ai-row" style="margin-top:8px"><button class="btn2" type="button" data-ai="copiar">Copiar link</button><a class="btn2" href="${esc(AI.pub.link)}" target="_blank" rel="noopener">Abrir como aluno</a><a class="btn2" href="${esc(AI.pub.planilha)}" target="_blank" rel="noopener">Ver respostas na planilha</a></div>`:""}
+      <p class="ai-st">As respostas entram na aba da atividade, uma linha por aluno: azul quando a objetiva está certa, vermelho quando está errada. O gabarito não vai para a página do aluno.</p></div>`;
+  }
+  return h;
+}
+function aiClick(e){
+  if(e.type==="keydown") return false;
+  const ao=e.target.closest("[data-ai-open]"); if(ao){ e.stopPropagation(); aiAbrir(PL.tn,PL.c,+ao.dataset.aiOpen); return true; }
+  if(S.modal!=="aimg") return false;
+  const b=e.target.closest("[data-ai]"); if(!b) return false; e.stopPropagation(); const a=b.dataset.ai;
+  if(a==="cfg"){ const u=document.getElementById("aiUrl").value.trim(), t=document.getElementById("aiTok").value.trim(); AI.cfg={url:u,token:t}; PL.aj[AI_CFG_ID]=AI.cfg; plSalvar(AI_CFG_ID);
+    AI.st="Testando conexão…"; AI.stCls=""; renderModal();
+    aiApi({acao:"ping"}).then(r=>{ AI.st="Conectado à planilha de respostas ✓"; AI.stCls="ok"; renderModal(); if(!AI.itens&&aiDeck(AI.ctx.L)) aiExtrair(false); })
+      .catch(err=>{ AI.st="Não conectou: "+(err.message||err); AI.stCls="err"; renderModal(); }); return true; }
+  if(a==="extrair"||a==="refazer"){ aiExtrair(a==="refazer"); return true; }
+  if(a==="remontar"){ aiMontar(); renderModal(); aiThumbs(); return true; }
+  if(a==="prompt"){ aiRost().then(()=>{ const tx=aiPrompt(); (navigator.clipboard?navigator.clipboard.writeText(tx):Promise.reject()).then(()=>{ b.textContent="Prompt copiado ✓"; }).catch(()=>{ AI.st="Não deu para copiar automaticamente; o prompt foi aberto numa nova aba."; renderModal(); const w=window.open("","_blank"); if(w){ w.document.body.innerText=tx; } }); }); return true; }
+  if(a==="copiar"){ (navigator.clipboard?navigator.clipboard.writeText(AI.pub.link):Promise.reject()).then(()=>{ b.textContent="Copiado ✓"; }).catch(()=>{ b.textContent="Selecione o link e copie"; }); return true; }
+  if(a==="publicar"){ aiPublicar(); return true; }
+  return true;
+}
+async function aiPublicar(){
+  const {tn,c,se,L}=AI.ctx, R=await aiRost(), tur=Object.keys(AI.turmas).filter(t=>AI.turmas[t]);
+  const sem=tur.filter(t=>!(R[t]||[]).length); if(sem.length){ AI.st="Sem lista de alunos para: "+sem.join(", "); AI.stCls="err"; renderModal(); return; }
+  const at={ titulo:`Atividade com imagens · Aula ${L.a}: ${L.t}`, comp:c, serie:se, aula:L.a, tema:L.t, hab:L.h||"",
+    turmas:tur.map(t=>({turma:aiTurmaLbl(t), alunos:R[t]})), questoes:AI.q };
+  AI.busy=true; AI.st="Publicando…"; AI.stCls=""; renderModal();
+  try{ AI.pub=await aiApi({acao:"publicar",atividade:at}); AI.st=""; }catch(e){ AI.st=String(e.message||e); AI.stCls="err"; }
+  AI.busy=false; renderModal();
+}
+document.addEventListener("input",e=>{ const el=e.target.closest("[data-ai-q]"); if(!el||!AI.q) return; const q=AI.q[+el.dataset.aiQ], f=el.dataset.f;
+  if(f==="alt") q.alts[+el.dataset.k]=el.value; else if(f==="enunciado"||f==="comando"||f==="ref") q[f]=el.value; });
+document.addEventListener("change",e=>{
+  const el=e.target.closest("[data-ai-q]");
+  if(el&&AI.q){ const q=AI.q[+el.dataset.aiQ], f=el.dataset.f;
+    if(f==="correta") q.correta=+el.value;
+    if(f==="img"){ q.img=el.value; const it=(AI.itens||[]).find(x=>x.fid===el.value); if(it){ q.slide=it.slide; const inf=aiInfo(it); if(inf){ if(q.tipo==="obj") q.alts[q.correta]=inf; q.ref=inf; } } renderModal(); aiThumbs(); } }
+  const tc=e.target.closest("[data-ai-turma]"); if(tc){ AI.turmas[tc.dataset.aiTurma]=tc.checked; renderModal(); }
+});
+
 const VIEWS={ aluno:["Aluno","Desempenho por bimestre",alunoView], desc:["Descritores","Descritores não atingidos e ações",descView],
   turma:["Turma","Alunos por nível de proficiência",turmaView], pano:["Panorama","Todas as turmas e componentes",panoView],
   plano:["Plano de recomposição","Plano de recomposição até a prova",planoView],
   aulas:["Planejamento","Planejamento de aulas do 4º bimestre",aulasView],
-  ativ:["Atividade de recomposição","Atividade diferenciada: Abaixo do Básico e Básico",ativView] };
+  ativ:["Atividade de recomposição","Atividade diferenciada: Abaixo do Básico e Básico",ativView],
+  aimg:["Atividade com imagens","Associação: imagens da aula ↔ informações",aiView] };
 
 function renderAll(){
   document.getElementById("cAluno").innerHTML=alunoView(false);
@@ -874,14 +1092,14 @@ function renderAll(){
 }
 function renderModal(){
   const [eb,tt,fn]=VIEWS[S.modal];
-  document.getElementById("mEyebrow").textContent= S.modal==="ativ" ? eb+" · "+String(S.ativ||"").split("|")[0] : S.modal==="aulas" ? eb+" · 4º bimestre 2026" : eb+" · "+DATA.T[S.t].n+" · "+S.comp;
+  document.getElementById("mEyebrow").textContent= S.modal==="ativ" ? eb+" · "+String(S.ativ||"").split("|")[0] : S.modal==="aulas" ? eb+" · 4º bimestre 2026" : S.modal==="aimg" ? eb+" · "+(AI.ctx? aiTurmaLbl(AI.ctx.tn)+" · "+AI.ctx.c : "") : eb+" · "+DATA.T[S.t].n+" · "+S.comp;
   document.getElementById("mTitle").textContent= S.modal==="aluno"||S.modal==="desc" ? tt+" · "+title(S.aluno) : tt;
   document.getElementById("mBody").innerHTML=fn(true);
   drawPies(document.getElementById("mBody"));
 }
 const ov=document.getElementById("ov"); let lastFocus=null;
 function openModal(v){ S.modal=v; lastFocus=document.activeElement; ov.hidden=false; document.body.style.overflow="hidden"; renderModal(); document.getElementById("mClose").focus(); }
-function closeModal(){ if(S.modal==="ativ" && S.voltar){ S.modal=S.voltar; S.voltar=null; renderModal(); return; } S.modal=null; ov.hidden=true; document.body.style.overflow=""; if(lastFocus) lastFocus.focus(); }
+function closeModal(){ if((S.modal==="ativ"||S.modal==="aimg") && S.voltar){ S.modal=S.voltar; S.voltar=null; renderModal(); return; } S.modal=null; ov.hidden=true; document.body.style.overflow=""; if(lastFocus) lastFocus.focus(); }
 document.getElementById("mClose").onclick=closeModal;
 ov.addEventListener("click",e=>{ if(e.target===ov) closeModal(); });
 document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&S.modal) closeModal(); });
@@ -893,6 +1111,7 @@ function pzAnimar(){
   requestAnimationFrame(()=>requestAnimationFrame(()=>{ g.style.transition=""; g.style.transform=fin; }));
 }
 function handleInner(e){
+  if(aiClick(e)) return true;
   if(plClick(e)) return true;
   const row=e.target.closest("tr.row"); if(row){ e.stopPropagation(); select(+row.dataset.t,row.dataset.c,null); return true; }
   const al=e.target.closest("[data-aluno]"); if(al){ e.stopPropagation(); S.aluno=al.dataset.aluno; fillAluno(); renderAll(); if(S.modal==="turma") openModal("aluno"); return true; }
