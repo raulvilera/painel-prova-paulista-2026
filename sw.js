@@ -1,7 +1,7 @@
 /* Service worker do Painel Prova Paulista.
    Guarda só a "casca" do app (HTML, ícones, biblioteca de login).
    Nunca guarda respostas do Supabase: dados de alunos não ficam no aparelho. */
-const VERSAO = "pp-v9";
+const VERSAO = "pp-v10";
 const CASCA = ["/", "/manifest.webmanifest", "/icon-192.png", "/icon-512.png", "/apple-touch-icon.png"];
 const EXTRA = ["https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"];
 
@@ -17,6 +17,8 @@ self.addEventListener("fetch", e => {
   if (req.method !== "GET") return;
   if (url.hostname.endsWith("supabase.co")) return;            // dados e login: sempre direto da rede
   if (req.mode === "navigate") {                                // página: rede primeiro, cópia guardada se offline
+    const raiz = url.pathname === "/" || url.pathname === "/index.html";
+    if (!raiz) return;                                          // outras páginas (ex.: /simulado/) sempre da rede
     e.respondWith(fetch(req).then(r => { const c = r.clone(); caches.open(VERSAO).then(x => x.put("/", c)); return r; })
       .catch(() => caches.match("/")));
     return;
