@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Simulado SARESP 2026 · Ciências</title>
+<style>
+  :root{--verde:#145A32;--fundo:#F3F6F2;--cartao:#FFFFFF;--tinta:#1B2420;--suave:#5A6660;--linha:#D5DCD7}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fundo);color:var(--tinta);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:880px;margin:0 auto;padding:16px}
+  header.cab{background:var(--verde);color:#fff;border-radius:16px;padding:18px 20px;margin-bottom:16px}
+  .esc{font-weight:800;letter-spacing:.03em;font-size:1.1rem}
+  header.cab h1{margin:6px 0 2px;font-size:1.3rem}
+  .sub{opacity:.88;font-size:.92rem}
+  .ident{background:var(--cartao);border:1px solid var(--linha);border-radius:16px;padding:16px;display:grid;grid-template-columns:1.1fr 2fr .6fr 1fr;gap:12px;margin-bottom:16px}
+  @media (max-width:720px){.ident{grid-template-columns:1fr 1fr}.ident .nome{grid-column:1 / -1}}
+  .ident label{display:block;font-size:.78rem;font-weight:800;color:var(--suave);margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em}
+  .ident select,.ident input{width:100%;font:inherit;padding:10px;border:1px solid var(--linha);border-radius:10px;background:#fff;color:var(--tinta)}
+  .ident input[readonly]{background:#EEF2EE;font-weight:700}
+  .aviso{background:#FFF8E1;border:1px solid #F3D27A;border-radius:12px;padding:10px 14px;margin-bottom:16px;font-size:.92rem}
+  .q{background:var(--cartao);border:1px solid var(--linha);border-radius:16px;padding:18px;margin-bottom:16px}
+  .q .top{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .q .num{font-weight:800;color:var(--verde);margin-right:4px}
+  .tag{font-size:.74rem;color:var(--suave);border:1px solid var(--linha);border-radius:999px;padding:1px 9px}
+  .enun{margin:10px 0 6px}
+  .fig{margin:10px 0 14px;background:#FAFBFA;border:1px solid var(--linha);border-radius:12px;padding:8px;display:flex;justify-content:center}
+  .fig svg{width:100%;max-width:560px;height:auto;display:block}
+  .cmd{font-weight:700;margin:0 0 10px}
+  .alts{display:grid;gap:10px}
+  .alternativa{display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;font:inherit;color:var(--tinta);background:#fff;border:1px solid #E3E7E4;border-radius:12px;padding:12px 14px;cursor:pointer;
+    box-shadow:4px 4px 8px rgba(0,0,0,0.3),-2px -2px 6px rgba(255,255,255,0.6);transition:all .15s ease-in-out}
+  .alternativa .l{font-weight:800;min-width:1.5em}
+  .alternativa:focus-visible{outline:3px solid #7FB08F;outline-offset:2px}
+  .alternativa.selecionada{box-shadow:inset 3px 3px 6px rgba(0,0,0,0.4);transform:translateY(2px);background-color:#145A32;color:#FFFFFF;font-weight:bold;border-color:#145A32}
+  textarea{width:100%;min-height:130px;font:inherit;padding:12px;border:1px solid var(--linha);border-radius:12px;resize:vertical}
+  .enviar{display:block;width:100%;font:inherit;font-weight:800;font-size:1.05rem;color:#fff;background:var(--verde);border:0;border-radius:14px;padding:16px;cursor:pointer;box-shadow:4px 4px 8px rgba(0,0,0,.3)}
+  .enviar:disabled{opacity:.6;cursor:wait}
+  .msg{margin:12px 0;padding:12px 14px;border-radius:12px;display:none}
+  .msg.ok{display:block;background:#E3F1E7;border:1px solid #9FCDAE}
+  .msg.erro{display:block;background:#FBE6E6;border:1px solid #E3A3A3}
+  .vazio{text-align:center;color:var(--suave);padding:30px 10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="cab">
+    <div class="esc" id="esc">E.E. PROFª WANDA MASCAGNI DE SÁ</div>
+    <h1>Simulado SARESP 2026 · Ciências</h1>
+    <div class="sub" id="sub">Escolha a sua turma para carregar as questões.</div>
+  </header>
+
+  <section class="ident" aria-label="Identificação do aluno">
+    <div><label for="turma">Turma</label><select id="turma"></select></div>
+    <div class="nome"><label for="nome">Nome</label><select id="nome" disabled><option value="">Escolha a turma primeiro</option></select></div>
+    <div><label for="num">Nº</label><input id="num" readonly placeholder="—"></div>
+    <div><label for="ra">RA</label><input id="ra" readonly placeholder="—" inputmode="numeric"></div>
+  </section>
+
+  <div id="qs"><p class="vazio">As questões aparecem aqui depois que você escolher a turma.</p></div>
+  <div class="msg" id="msg" role="status"></div>
+  <button class="enviar" id="btn" type="button" hidden>Enviar respostas</button>
+</div>
+
+<script>
+/* Página do aluno hospedada na plataforma. Os dados vêm do Apps Script (planilha "Revisão Saresp"). */
+const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu_dupRvY-GzoHPNZhL2ft3KpSK7odGF0amqn7Yc7P/exec";
+</script>
+<script>
+(function(){
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const fT = $('#turma'), fN = $('#nome'), fNum = $('#num'), fRa = $('#ra');
+  let D = null, resp = [], TURMAS = [];
+  async function api(q){ const r = await fetch(API + '?' + new URLSearchParams(q), { redirect: 'follow' }); const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro'); return j; }
+  async function post(body){ const r = await fetch(API, { method: 'POST', body: JSON.stringify(body), headers: { 'Content-Type': 'text/plain;charset=utf-8' }, redirect: 'follow' }); const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro'); return j; }
+  const falhaRede = e => /Failed to fetch|NetworkError|Load failed|JSON/i.test(String(e && e.message || e)) ? 'sem conexão com a planilha (verifique a internet)' : (e && e.message || e);
+
+  fT.innerHTML = '<option value="">Carregando turmas…</option>'; fT.disabled = true;
+  api({ api: 'turmas' }).then(j => { TURMAS = j.turmas; fT.disabled = false;
+    fT.innerHTML = '<option value="">Selecione</option>' + TURMAS.map(t => `<option>${esc(t.id)}</option>`).join(''); })
+    .catch(e => { fT.innerHTML = '<option value="">Indisponível</option>'; $('#qs').innerHTML = `<p class="vazio">Não foi possível abrir o simulado: ${esc(falhaRede(e))}. Recarregue a página.</p>`; });
+
+  function limpar(){ fN.disabled = true; fN.innerHTML = '<option value="">Escolha a turma primeiro</option>'; fNum.value = ''; fRa.value = ''; fRa.readOnly = true; }
+  fT.onchange = () => {
+    limpar(); D = null; $('#btn').hidden = true; $('#msg').className = 'msg';
+    if (!fT.value) { $('#qs').innerHTML = '<p class="vazio">As questões aparecem aqui depois que você escolher a turma.</p>'; return; }
+    const t = TURMAS.find(x => x.id === fT.value);
+    $('#esc').textContent = t.escola;
+    $('#qs').innerHTML = '<p class="vazio">Carregando as questões da sua turma…</p>';
+    api({ api: 'turma', id: t.id }).then(d => {
+      if (fT.value !== t.id) return;
+      D = d; resp = d.questoes.map(() => null);
+      $('#sub').textContent = `${t.id} · ${d.serie}º ano · temas dos 4 bimestres que caem no SARESP`;
+      fN.disabled = false;
+      fN.innerHTML = '<option value="">Selecione o seu nome</option>' + d.alunos.slice().sort((a,b) => a.nome.localeCompare(b.nome,'pt'))
+        .map(a => `<option value="${esc(a.n)}|${esc(a.nome)}">${esc(a.nome)}</option>`).join('');
+      desenhar();
+    }).catch(e => { $('#qs').innerHTML = `<p class="vazio">Não foi possível carregar: ${esc(falhaRede(e))}. Recarregue a página.</p>`; });
+  };
+  fN.onchange = () => {
+    const [n, ...nm] = fN.value.split('|'); const a = D && D.alunos.find(x => String(x.n) === n && x.nome === nm.join('|'));
+    fNum.value = a ? a.n : '';
+    fRa.value = a && a.ra ? a.ra : '';
+    fRa.readOnly = !!(a && a.ra);
+    fRa.placeholder = a && !a.ra ? 'digite seu RA' : '—';
+  };
+
+  function desenhar(){
+    $('#qs').innerHTML = D.questoes.map((q, i) => `
+      <article class="q" id="q${i}">
+        <div class="top"><span class="num">Questão ${i+1}</span><span class="tag">${q.tipo === 'obj' ? 'Objetiva' : 'Dissertativa'}</span><span class="tag">${esc(q.hab)}</span><span class="tag">${esc(q.bim)}</span></div>
+        <p class="enun">${esc(q.enunciado)}</p>
+        <div class="fig">${q.img}</div>
+        <p class="cmd">${esc(q.comando)}</p>
+        ${q.tipo === 'obj'
+          ? `<div class="alts" role="radiogroup" aria-label="Alternativas da questão ${i+1}">${q.alts.map((t, k) => `<button type="button" class="alternativa" role="radio" aria-checked="false" data-q="${i}" data-k="${k}"><span class="l">${'ABCDE'[k]})</span><span>${esc(t)}</span></button>`).join('')}</div>`
+          : `<textarea data-q="${i}" aria-label="Resposta da questão ${i+1}" placeholder="Escreva sua resposta com as suas palavras."></textarea>`}
+      </article>`).join('');
+    $('#btn').hidden = false; $('#btn').disabled = false; $('#btn').textContent = 'Enviar respostas';
+  }
+  document.addEventListener('click', e => {
+    const b = e.target.closest('.alternativa'); if (!b) return;
+    const i = +b.dataset.q, k = +b.dataset.k; resp[i] = k;
+    document.querySelectorAll(`.alternativa[data-q="${i}"]`).forEach(x => { const on = x === b; x.classList.toggle('selecionada', on); x.setAttribute('aria-checked', on); });
+  });
+  document.addEventListener('input', e => { if (e.target.matches('textarea[data-q]')) resp[+e.target.dataset.q] = e.target.value; });
+
+  const msg = (t, ok) => { const m = $('#msg'); m.className = 'msg ' + (ok ? 'ok' : 'erro'); m.textContent = t; m.scrollIntoView({behavior:'smooth', block:'center'}); };
+  $('#btn').onclick = () => {
+    if (!fT.value || !fN.value) return msg('Escolha a sua turma e o seu nome antes de enviar.', false);
+    const falta = resp.map((r, i) => (r === null || r === '') ? i + 1 : 0).filter(Boolean);
+    if (falta.length && !confirm('Faltam as questões ' + falta.join(', ') + '. Enviar mesmo assim?')) return;
+    const [n, ...nm] = fN.value.split('|');
+    const b = $('#btn'); b.disabled = true; b.textContent = 'Enviando e corrigindo…';
+    post({ acao: 'enviar', turma: fT.value, n: n, nome: nm.join('|'), ra: fRa.value, respostas: resp }).then(r => {
+      b.textContent = 'Respostas enviadas ✓';
+      const nd=(r.notasDis||[]).filter(x=>x!==''&&x!=null); msg(`Pronto, ${nm.join('|').split(' ')[0]}! Suas respostas foram registradas. Objetivas: ${r.acertos} de ${r.total} corretas.` + (nd.length===(r.notasDis||[]).length && nd.length ? ` Dissertativas (corrigidas pela IA): ${nd.map(x=>String(x).replace('.',',')).join(' · ')}. Nota final: ${String(r.notaFinal).replace('.',',')} de 10.` : ' As dissertativas serão corrigidas em seguida.'), true);
+    }).catch(err => { b.disabled = false; b.textContent = 'Enviar respostas'; msg('Não foi possível enviar: ' + falhaRede(err) + '. Tente de novo.', false); });
+  };
+})();
+</script>
+</body>
+</html>
