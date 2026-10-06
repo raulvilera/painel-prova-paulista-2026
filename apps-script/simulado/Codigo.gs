@@ -18,6 +18,7 @@
 const PLANILHA_ID = '10d95NLcsH7jjQQMiR14licXUpTJlot0S00BaGg8rIDY';   // Revisão Saresp
 const MODELO_IA = 'gemini-3.5-flash-lite';
 const ABA_ALUNOS = 'Alunos_Simulado';
+const LINK_ALUNO = 'https://painel-prova-paulista-2026.vercel.app/simulado/';
 const N_OBJ = 7, N_DIS = 3;
 const WANDA = 'E.E. PROFª WANDA MASCAGNI DE SÁ', LYDIA = 'E.E. PROFª LYDIA KITZ MOREIRA';
 const TURMAS_CFG = [
@@ -38,15 +39,76 @@ const COL = { data: 1, escola: 2, turma: 3, n: 4, nome: 5, ra: 6, obj: 7 };   //
 const COL_DIS = COL.obj + N_OBJ;              // N: Q8 resposta, O: nota, P: comentário, Q: Q9 ...
 const COL_FIM = COL_DIS + N_DIS * 3;          // acertos objetivas, nota dissertativas, nota final, status IA
 
-/* ---------------- página ---------------- */
-function doGet() {
-  const t = HtmlService.createTemplateFromFile('Simulado');
-  t.turmas = JSON.stringify(TURMAS_CFG.map(x => ({ id: x.id, serie: x.serie, escola: x.escola })));
-  return t.evaluate()
-    .setTitle('Simulado SARESP 2026 · Ciências')
-    .addMetaTag('viewport', 'width=device-width, initial-scale=1')
-    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+/* ---------------- página e API ----------------
+   A página do aluno fica na própria plataforma (painel-prova-paulista-2026.vercel.app/simulado/)
+   e conversa com este script:
+     GET  ?api=turmas            → lista de turmas
+     GET  ?api=turma&id=6º Ano A → questões (sem gabarito) + nomes da turma (sem o RA completo)
+     POST {acao:'enviar', ...}   → corrige e grava na aba da turma
+   Sem ?api, o próprio link /exec continua abrindo a página antiga (Simulado.html). */
+function doGet(e) {
+  const api = e && e.parameter && e.parameter.api;
+  if (api) {
+    try {
+      if (api === 'turmas') return json_({ ok: true, turmas: listaTurmas_() });
+      if (api === 'recomp') return json_(recompPub_(String(e.parameter.k || '')));
+      if (api === 'alunos') return json_(alunosPub_(String(e.parameter.id || ''), String(e.parameter.cod || '')));
+      if (api === 'turma') return json_(Object.assign({ ok: true }, carregarTurma(String(e.parameter.id || ''))));
+      return json_({ ok: false, erro: 'api desconhecida' });
+    } catch (err) { return json_({ ok: false, erro: String(err.message || err) }); }
+  }
+  // Sem ?api: leva o aluno para a página do simulado na plataforma.
+  return HtmlService.createHtmlOutput('<meta http-equiv="refresh" content="0;url=' + LINK_ALUNO + '">' +
+    '<p style="font-family:sans-serif">Abrindo o simulado… <a href="' + LINK_ALUNO + '" target="_top">clique aqui</a> se não abrir.</p>')
+    .setTitle('Simulado SARESP 2026 · Ciências');
 }
+
+function doPost(e) {
+  try {
+    const p = JSON.parse((e && e.postData && e.postData.contents) || '{}');
+    if (p.acao === 'enviarRecomp') return json_(enviarRecomp_(p));
+    if (p.acao !== 'enviar') return json_({ ok: false, erro: 'ação desconhecida' });
+    return json_(enviar(p));
+  } catch (err) { return json_({ ok: false, erro: String(err.message || err) }); }
+}
+
+/* Nomes da turma para a página. O RA só vem completo com o código da turma
+   (o professor informa em sala; veja a aba "Códigos" da planilha). */
+function alunosPub_(id, cod) {
+  cfg_(id);
+  const ok = !!cod && cod.trim().toUpperCase() === (codigos_()[id] || '');
+  return { ok: true, codOk: ok, alunos: alunos_(id).map(a => ({ n: a.n, nome: a.nome, ra: ok ? a.ra : mascaraRA_(a.ra) })) };
+}
+
+/* Um código curto por turma, guardado nas propriedades do script. */
+function codigos_() {
+  const pr = PropertiesService.getScriptProperties();
+  let c = {}; try { c = JSON.parse(pr.getProperty('CODIGOS_TURMA') || '{}'); } catch (e) { c = {}; }
+  let mudou = false;
+  const L = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+  TURMAS_CFG.forEach(t => {
+    if (!c[t.id]) { let s = ''; for (let i = 0; i < 6; i++) s += L[Math.floor(Math.random() * L.length)]; c[t.id] = s; mudou = true; }
+  });
+  if (mudou) pr.setProperty('CODIGOS_TURMA', JSON.stringify(c));
+  return c;
+}
+
+/* Escreve a aba "Códigos" (para o professor) e mostra no registro. */
+function mostrarCodigos() {
+  const c = codigos_();
+  const ss = SpreadsheetApp.openById(PLANILHA_ID);
+  let sh = ss.getSheetByName('Códigos'); if (!sh) sh = ss.insertSheet('Códigos'); else sh.clear();
+  const linhas = TURMAS_CFG.map(t => [t.id, c[t.id]]);
+  sh.getRange(1, 1, 1, 2).setValues([['Turma', 'Código (para o aluno ver o RA completo)']]).setFontWeight('bold');
+  sh.getRange(2, 1, linhas.length, 2).setValues(linhas);
+  sh.setColumnWidth(1, 160); sh.setColumnWidth(2, 300);
+  linhas.forEach(l => Logger.log(l[0] + ': ' + l[1]));
+}
+
+function json_(o) { return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON); }
+function listaTurmas_() { return TURMAS_CFG.map(x => ({ id: x.id, serie: x.serie, escola: x.escola })); }
+/* O RA completo nunca sai do script: a página só recebe os 3 últimos dígitos. */
+function mascaraRA_(ra) { ra = String(ra || ''); return ra ? '•••' + ra.slice(-3) : ''; }
 
 function cfg_(id) { const c = TURMAS_CFG.find(x => x.id === id); if (!c) throw new Error('Turma não encontrada'); return c; }
 
@@ -70,7 +132,8 @@ function alunos_(id) {
 function carregarTurma(id) {
   const t = cfg_(id);
   return {
-    escola: t.escola, serie: t.serie, alunos: alunos_(id),
+    escola: t.escola, serie: t.serie,
+    alunos: alunos_(id).map(a => ({ n: a.n, nome: a.nome, ra: mascaraRA_(a.ra) })),
     questoes: QUESTOES[t.serie].map(q => ({
       tipo: q.tipo, grupo: q.grupo, hab: q.hab, bim: q.bim, saresp: q.saresp,
       enunciado: q.enunciado, img: q.img, comando: q.comando, alts: q.alts || []
@@ -83,6 +146,7 @@ function enviar(p) {
   const t = cfg_(p.turma);
   const a = alunos_(p.turma).find(x => x.nome === p.nome);
   if (!a) throw new Error('Aluno não encontrado nesta turma');
+  if (!Array.isArray(p.respostas)) throw new Error('Respostas inválidas');
   const Q = QUESTOES[t.serie];
   const ra = a.ra || String(p.ra || '').replace(/[^\dXx-]/g, '').slice(0, 14);
   let ac = 0;
@@ -224,6 +288,7 @@ function prepararPlanilha() {
   if (linhas.length) sh.getRange(2, 1, linhas.length, 5).setValues(linhas);
   sh.setFrozenRows(1);
   TURMAS_CFG.forEach(t => abaTurma_(t.id));
+  mostrarCodigos();
   TURMAS_CFG.forEach(t => CacheService.getScriptCache().remove('al_' + Utilities.base64EncodeWebSafe(t.id)));
   const key = PropertiesService.getScriptProperties().getProperty('GEMINI_API_KEY');
   Logger.log(linhas.length + ' alunos; ' + linhas.filter(l => l[3]).length + ' com RA; ' + TURMAS_CFG.length + ' abas de respostas.');
