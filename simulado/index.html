@@ -69,14 +69,15 @@
     <div class="codra" id="codra" hidden><label for="cod" style="margin:0;text-transform:none;letter-spacing:0;font-weight:600">Para ver o RA completo, digite o código da turma (o professor informa):</label><input id="cod" maxlength="8" autocomplete="off" placeholder="código"><button type="button" id="codok">Ver RA</button><span id="codmsg"></span></div>
   </section>
 
+  <p class="aviso">Leia o enunciado e as imagens com atenção. Compare todas as alternativas antes de escolher: algumas apresentam explicações próximas, mas apenas uma responde corretamente ao que foi solicitado.</p>
   <div id="qs"><p class="vazio">As questões aparecem aqui depois que você escolher a turma.</p></div>
   <div class="msg" id="msg" role="status"></div>
   <button class="enviar" id="btn" type="button" hidden>Enviar respostas</button>
 </div>
 
-<script src="questoes.js?v=1"></script>
+<script src="questoes.js?v=20261009"></script>
 <script>
-/* Página do aluno hospedada na plataforma. Os dados vêm do Apps Script (planilha "Revisão Saresp"). */
+/* Acesso independente do aluno. Nomes e registro de respostas usam o Apps Script existente. */
 const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu_dupRvY-GzoHPNZhL2ft3KpSK7odGF0amqn7Yc7P/exec";
 </script>
 <script>
@@ -133,7 +134,7 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
     $('#esc').textContent = t.escola;
     $('#sub').textContent = `${t.id} · ${t.serie}º ano · temas dos 4 bimestres que caem no SARESP`;
     Q = (window.QUESTOES_PUB || {})[t.serie] || []; resp = Q.map(() => null);
-    desenhar();                                       // questões aparecem na hora (vêm da própria plataforma)
+    desenhar();                                       // questões aparecem na hora (vêm do próprio simulado)
     carregarNomes(t, codGuardado());                  // nomes chegam da planilha em paralelo
   };
   $('#codok').onclick = () => {
