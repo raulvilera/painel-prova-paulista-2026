@@ -607,8 +607,14 @@ const EXAMS = {
   "3ª SÉRIE":["Provão Paulista Seriado","2026-11-04","04/11 (Ciências da Natureza no 1º dia)"]
 };
 const SIMULADO_URL = "https://simulado-saresp-ciencias-2026.vercel.app/";
-const simSerie = se => /^[6-9]º ANO$/.test(String(se||"").trim());
-const simBtn = se => simSerie(se) ? `<a class="sim-btn" href="${SIMULADO_URL}" target="_blank" rel="noopener">Simulado SARESP · acesso dos alunos</a><span class="sim-note">Link independente para compartilhar com os alunos: simulado-saresp-ciencias-2026.vercel.app</span>` : "";
+const simSerie = se => /^[6-9]º ANO$/.test(String(se||"").trim()) || /^[23]ª SÉRIE$/.test(String(se||"").trim());
+const simBtn = se => {
+  if (!simSerie(se)) return "";
+  const em = /^[23]ª SÉRIE$/.test(String(se||"").trim());
+  const url = em ? SIMULADO_URL + "ensino-medio/?serie=" + String(se).trim().charAt(0) : SIMULADO_URL;
+  const titulo = em ? "Avaliações do Ensino Médio · Biologia e Química" : "Simulado SARESP · acesso dos alunos";
+  return `<a class="sim-btn" href="${url}" target="_blank" rel="noopener">${titulo}</a><span class="sim-note">Link independente para os alunos: ${url.replace("https://", "")}</span>`;
+};
 const serieOf = t => (DATA.T[t].n.match(/\d[ºª] (ANO|SÉRIE)/)||[""])[0];
 const fmtD = d => d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"});
 function guiaOf(t,d){ return GUIA.G[serieOf(t)+"|"+d[2]+"|"+String(d[3]).trim()] || null; }
