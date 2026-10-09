@@ -1,15 +1,51 @@
 {
   "headers": [
-    { "source": "/(.*)", "headers": [
-      { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
-      { "key": "Referrer-Policy", "value": "no-referrer" }
-    ] },
-    { "source": "/sw.js", "headers": [
-      { "key": "Cache-Control", "value": "no-cache" },
-      { "key": "Service-Worker-Allowed", "value": "/" }
-    ] },
-    { "source": "/manifest.webmanifest", "headers": [
-      { "key": "Content-Type", "value": "application/manifest+json" }
-    ] }
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
+        }
+      ]
+    },
+    {
+      "source": "/manifest.webmanifest",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/simulado",
+      "destination": "https://simulado-saresp-ciencias-2026.vercel.app/",
+      "permanent": false
+    },
+    {
+      "source": "/simulado/",
+      "destination": "https://simulado-saresp-ciencias-2026.vercel.app/",
+      "permanent": false
+    }
   ]
 }
