@@ -537,7 +537,7 @@
   function motivoRegistro(data) {
     const r = (data && data.registro) || {};
     if (r.motivo === 'nao-configurado') return ' (motivo: variáveis EM_APPS_SCRIPT_URL / EM_SEGREDO não configuradas na Vercel)';
-    if (r.motivo === 'indisponivel') return ' (motivo: o Apps Script não respondeu a tempo ou o endereço está incorreto)';
+    if (r.motivo === 'indisponivel') return ' (motivo: ' + (r.detalhe ? String(r.detalhe).slice(0, 140) : 'o Apps Script não respondeu a tempo ou o endereço está incorreto') + ')';
     if (r.motivo === 'recusado') return ' (motivo: o Apps Script recusou' + (r.detalhe ? ': ' + String(r.detalhe).slice(0, 120) : '') + ')';
     return '';
   }

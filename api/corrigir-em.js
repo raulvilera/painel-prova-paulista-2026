@@ -602,11 +602,16 @@ async function registrarNaPlanilha(dados) {
       redirect: 'follow',
       signal: controle.signal
     });
-    const retorno = await resposta.json();
+    const texto = await resposta.text();
+    let retorno = null;
+    try { retorno = JSON.parse(texto); } catch (e) {
+      const login = /accounts\.google|ServiceLogin|Fazer login|Sign in/i.test(texto);
+      return { ok: false, motivo: 'indisponivel', detalhe: login ? 'HTTP ' + resposta.status + ': o Google pediu login (implantação não está como "Qualquer pessoa")' : 'HTTP ' + resposta.status + ': resposta não é JSON (' + limpar(texto, 60) + ')' };
+    }
     if (!(retorno && retorno.ok === true)) return { ok: false, motivo: 'recusado', detalhe: limpar(retorno && retorno.erro, 120) };
     return { ok: true, dissertativas: Array.isArray(retorno.dissertativas) ? retorno.dissertativas : null };
   } catch (erro) {
-    return { ok: false, motivo: 'indisponivel' };
+    return { ok: false, motivo: 'indisponivel', detalhe: erro && erro.name === 'AbortError' ? 'tempo esgotado' : 'falha de rede: ' + limpar(erro && erro.message, 80) };
   } finally {
     clearTimeout(relogio);
   }
