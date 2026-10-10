@@ -40,6 +40,10 @@
     {
       "source": "/api/corrigir-em",
       "destination": "https://painel-prova-paulista-2026.vercel.app/api/corrigir-em"
+    },
+    {
+      "source": "/api/alunos-em",
+      "destination": "https://painel-prova-paulista-2026.vercel.app/api/alunos-em"
     }
   ]
 }

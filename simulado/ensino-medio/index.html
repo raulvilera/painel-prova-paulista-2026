@@ -52,9 +52,11 @@
             </select>
           </div>
           <div class="campo campo-nome">
-            <label for="nome">Nome completo <span>(obrigatório)</span></label>
-            <input id="nome" name="nome" type="text" maxlength="120" autocomplete="off" placeholder="Como aparece na chamada" required>
-            <small>Será registrado na planilha do professor e aparecerá no comprovante.</small>
+            <label for="nome">Seu nome <span>(obrigatório)</span></label>
+            <select id="nome" name="nome" required disabled>
+              <option value="">Escolha a turma primeiro</option>
+            </select>
+            <small>Escolha seu nome na lista da turma. Ele será registrado na planilha do professor e aparecerá no comprovante.</small>
           </div>
         </div>
 

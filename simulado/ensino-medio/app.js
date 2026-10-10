@@ -68,8 +68,40 @@
     return 'em-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 12);
   }
 
+  /* O aluno escolhe o nome na lista da turma (vinda do servidor). Aqui: nome mostrado / nº de chamada escolhido. */
   function nomeInformado() {
-    return String(refs.nome.value || '').replace(/\s+/g, ' ').trim();
+    const opt = refs.nome.selectedOptions && refs.nome.selectedOptions[0];
+    return refs.nome.value && opt ? String(opt.textContent || '').replace(/\s*·\s*RA\s.*$/, '').replace(/^\d+\s*[–-]\s*/, '').replace(/\s+/g, ' ').trim() : '';
+  }
+
+  function alunoEscolhido() {
+    const n = Number(refs.nome.value);
+    return Number.isInteger(n) && n > 0 ? n : null;
+  }
+
+  let alunosToken = 0;
+  async function carregarAlunos() {
+    const token = ++alunosToken;
+    const turma = TURMAS.find((item) => item.value === refs.turma.value);
+    clear(refs.nome);
+    if (!turma) { option(refs.nome, '', 'Escolha a turma primeiro'); refs.nome.disabled = true; return; }
+    option(refs.nome, '', 'Carregando a lista de alunos…');
+    refs.nome.disabled = true;
+    try {
+      const response = await fetch('/api/alunos-em?turma=' + encodeURIComponent(turma.value), { credentials: 'same-origin' });
+      const data = await response.json();
+      if (token !== alunosToken) return;
+      if (!response.ok || !data || data.ok !== true || !Array.isArray(data.alunos)) throw new Error('lista indisponível');
+      clear(refs.nome);
+      option(refs.nome, '', 'Selecione seu nome');
+      data.alunos.forEach((a) => option(refs.nome, String(a.n), a.n + ' – ' + a.nome + (a.ra ? ' · RA ' + a.ra : '')));
+      refs.nome.disabled = false;
+    } catch (error) {
+      if (token !== alunosToken) return;
+      clear(refs.nome);
+      option(refs.nome, '', 'Não foi possível carregar a lista. Escolha a turma de novo.');
+      refs.nome.disabled = true;
+    }
   }
 
   function text(node, value) {
@@ -224,6 +256,7 @@
 
   function onTurmaChange() {
     populateComponentes();
+    carregarAlunos();
     clear(refs.prova);
     option(refs.prova, '', 'Escolha o componente primeiro');
     refs.prova.disabled = true;
@@ -437,8 +470,8 @@
   }
 
   function validateAnswers() {
-    if (nomeInformado().length < 3) {
-      showMessage('Informe seu nome completo antes de enviar. Ele será registrado na planilha do professor.', 'erro');
+    if (!alunoEscolhido()) {
+      showMessage('Escolha seu nome na lista antes de enviar. Ele será registrado na planilha do professor.', 'erro');
       refs.nome.focus();
       refs.nome.scrollIntoView?.({ behavior: 'smooth', block: 'center' });
       return false;
@@ -477,7 +510,7 @@
       avaliacao: String(state.assessment.id || assessmentId()),
       respostas: state.objectiveAnswers.map((answer) => Number(answer)),
       turma: turma ? turma.value : '',
-      nome: nomeInformado(),
+      aluno: alunoEscolhido(),
       dissertativas: state.dissertativeAnswers.map((answer) => String(answer || '')),
       envioId: state.envioId
     };
@@ -626,7 +659,7 @@
     const receipt = element('section', 'comprovante', '');
     receipt.appendChild(element('h3', null, 'Comprovante do treino'));
     receipt.appendChild(definitionList([
-      ['Nome', refs.nome.value.trim() || 'Não informado'],
+      ['Nome', nomeInformado() || 'Não informado'],
       ['Turma', turma ? turma.label : 'Não informada'],
       ['Componente', componente ? componente.label : 'Não informado'],
       ['Prova-alvo', prova ? prova.label : 'Não informada'],
@@ -721,7 +754,7 @@
     const payload = {
       tipo: 'comprovante-treino-ensino-medio',
       avaliacao: String(state.assessment.id || assessmentId()),
-      nome: refs.nome.value.trim(),
+      nome: nomeInformado(),
       turma: turma ? turma.label : '',
       componente: componente ? componente.label : '',
       prova: prova ? prova.label : '',
@@ -775,7 +808,7 @@
     refs.turma.disabled = false;
     refs.componente.disabled = false;
     refs.prova.disabled = false;
-    refs.nome.disabled = false;
+    refs.nome.disabled = refs.nome.options.length < 2;
     refs.iniciar.hidden = false;
     refs.mudar.hidden = true;
     refs.iniciar.textContent = 'Iniciar treino';
@@ -805,8 +838,8 @@
       showMessage(invalidReason, 'erro');
       return;
     }
-    if (nomeInformado().length < 3) {
-      showMessage('Informe seu nome completo para iniciar. Ele será registrado na planilha do professor.', 'erro');
+    if (!alunoEscolhido()) {
+      showMessage('Escolha seu nome na lista para iniciar. Ele será registrado na planilha do professor.', 'erro');
       refs.nome.focus();
       return;
     }

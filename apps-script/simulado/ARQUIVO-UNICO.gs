@@ -737,7 +737,7 @@ const ALUNOS = {
    ============================================================================ */
 const EM_PREFIXO_ABA = 'EM · ';
 const EM_N_OBJ = 12, EM_N_DIS = 2;
-const EM_COL = { data: 1, turma: 2, componente: 3, prova: 4, nome: 5, obj: 6 };   // Q1..Q12 em F..Q
+const EM_COL = { data: 1, turma: 2, componente: 3, prova: 4, n: 5, nome: 6, ra: 7, obj: 8 };   // Q1..Q12 em H..S
 const EM_COL_FIM_OBJ = EM_COL.obj + EM_N_OBJ;                                      // R: acertos
 const EM_COL_DIS = EM_COL_FIM_OBJ + 2;                                             // T: Q13 resposta, U: nota, V: comentário IA, W: Q14 ...
 const EM_POR_DIS = 3;                                                              // colunas por dissertativa
@@ -781,6 +781,8 @@ function emValidar_(p) {
   });
   const nome = String(p.nome || '').trim();
   if (nome.length < 3 || nome.length > 120) throw new Error('nome inválido');
+  if (!Number.isInteger(p.n) || p.n < 1 || p.n > 99) throw new Error('nº de chamada inválido');
+  if (!/^[0-9]{1,12}[0-9Xx]?$/.test(String(p.ra || ''))) throw new Error('RA inválido');
   ['turma', 'componente', 'prova'].forEach(k => { if (!String(p[k] || '').trim() || String(p[k]).length > 80) throw new Error(k + ' inválido'); });
 }
 
@@ -864,7 +866,7 @@ function enviarEM_(p) {
   const corr = emCorrigirLote_(p.dissertativas);                                            // fora do lock: pode levar alguns segundos
   const resultado = corr.map(c => c ? { nota: c.nota, comentario: c.comentario, status: 'corrigido' } : { nota: null, comentario: '', status: 'pendente' });
   const todas = resultado.every(r => r.status === 'corrigido');
-  const linha = [new Date(), emSeguro_(p.turma), emSeguro_(p.componente), emSeguro_(p.prova), emSeguro_(String(p.nome).trim())]
+  const linha = [new Date(), emSeguro_(p.turma), emSeguro_(p.componente), emSeguro_(p.prova), p.n, emSeguro_(String(p.nome).trim()), emSeguro_(String(p.ra))]
     .concat(p.respostas.map(String));
   linha.push(Number(p.acertos), Number(p.notaObjetiva));
   p.dissertativas.forEach((d, k) => linha.push(emSeguro_(String(d.resposta).slice(0, 3000)),
@@ -922,7 +924,7 @@ function emAba_(avaliacao, gabarito) {
   let sh = ss.getSheetByName(nome);
   if (sh) return sh;
   sh = ss.insertSheet(nome);
-  const cab = ['Data/hora', 'Turma', 'Componente', 'Prova', 'Nome'], gab = ['GABARITO', '', '', '', ''];
+  const cab = ['Data/hora', 'Turma', 'Componente', 'Prova', 'Nº', 'Nome', 'RA'], gab = ['GABARITO', '', '', '', '', '', ''];
   gabarito.forEach((letra, i) => { cab.push('Q' + (i + 1)); gab.push(letra); });
   cab.push('Acertos objetivas (de ' + EM_N_OBJ + ')', 'Nota objetivas (0–10)');
   gab.push('', '');
@@ -934,7 +936,7 @@ function emAba_(avaliacao, gabarito) {
   gab.push('', '', '');
   sh.getRange(1, 1, 1, cab.length).setValues([cab]).setFontWeight('bold').setBackground('#145A32').setFontColor('#FFFFFF').setWrap(true);
   sh.getRange(2, 1, 1, cab.length).setValues([gab]).setFontStyle('italic').setBackground('#EEEEEE');
-  sh.setFrozenRows(2); sh.setFrozenColumns(5);
+  sh.setFrozenRows(2); sh.setFrozenColumns(6);
   sh.setColumnWidth(EM_COL.nome, 260);
   for (let k = 0; k < EM_N_DIS; k++) { sh.setColumnWidth(EM_COL_DIS + k * EM_POR_DIS, 320); sh.setColumnWidth(EM_COL_DIS + k * EM_POR_DIS + 2, 320); }
   sh.setColumnWidth(EM_COL_STATUS, 130);
@@ -945,7 +947,7 @@ function emAba_(avaliacao, gabarito) {
       .setHelpText('Nota da dissertativa: de 0 a 1 (use vírgula para decimais).').build();
     sh.getRange(3, EM_COL_DIS + k * EM_POR_DIS + 1, 998, 1).setDataValidation(regraNota);
   }
-  const faixa = sh.getRange(3, EM_COL.obj, 998, EM_N_OBJ), c = 'F';
+  const faixa = sh.getRange(3, EM_COL.obj, 998, EM_N_OBJ), c = emLetra_(EM_COL.obj);
   sh.setConditionalFormatRules([
     SpreadsheetApp.newConditionalFormatRule().whenFormulaSatisfied('=AND(' + c + '3<>"",' + c + '3=' + c + '$2)')
       .setBackground('#1E63B5').setFontColor('#FFFFFF').setBold(true).setRanges([faixa]).build(),

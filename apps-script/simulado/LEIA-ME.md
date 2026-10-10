@@ -52,6 +52,7 @@ Settings → Environment Variables (marque Production):
 Depois faça um novo deploy (Deployments → ⋯ → Redeploy) para as variáveis valerem.
 
 ## 3. Como fica na planilha
+- Alunos: o aluno escolhe o nome numa lista da turma (`api/_alunos-em.js`, vinda das listas de chamada). A planilha ganha as colunas **Nº** e **RA**; a página só mostra os 3 últimos dígitos do RA. Para atualizar uma turma, edite esse arquivo e faça novo deploy.
 - Uma aba por avaliação: `EM · bio-2-paulista`, `EM · bio-2-provao`, `EM · qui-3-provao` etc., criada sozinha no primeiro envio.
 - Linha 2: gabarito. Q1–Q12: azul = certa, vermelho = errada.
 - Colunas de acertos e **nota das objetivas (0–10)**.

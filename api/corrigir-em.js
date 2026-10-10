@@ -534,6 +534,7 @@ const PROVAS = { paulista: 'Prova Paulista (4º bimestre)', provao: 'Provão Pau
 const MAX_CORPO = 32768;
 const N_DISSERTATIVAS = 2;
 const TEMPO_REGISTRO_MS = 50000;   // inclui a correção das dissertativas pela IA no Apps Script
+const ALUNOS = require('./_alunos-em.js');   // listas de chamada (nome + RA ficam só no servidor)
 const CONTEXTO_DIS = require('./_dissertativas-em.js');   // enunciado + descritores oficiais de cada dissertativa
 
 function limpar(texto, max) {
@@ -546,9 +547,9 @@ function limpar(texto, max) {
 
 /* Lê os campos de identificação. Devolve {registro} (pronto para enviar), {semRegistro:true} ou {erro}. */
 function lerIdentificacao(body, id) {
-  const extras = ['turma', 'nome', 'dissertativas', 'envioId'].filter(k => Object.prototype.hasOwnProperty.call(body, k));
+  const extras = ['turma', 'aluno', 'dissertativas', 'envioId'].filter(k => Object.prototype.hasOwnProperty.call(body, k));
   if (!extras.length) return { semRegistro: true };
-  if (extras.length !== 4) return { erro: 'Para registrar na planilha, envie turma, nome, dissertativas e envioId.' };
+  if (extras.length !== 4) return { erro: 'Para registrar na planilha, envie turma, aluno, dissertativas e envioId.' };
   const partes = /^(bio|qui)-([23])-(paulista|provao)$/.exec(id);
   if (!partes) return { erro: 'Avaliação desconhecida.' };
   const componente = COMPONENTES[partes[1]];
@@ -557,8 +558,9 @@ function lerIdentificacao(body, id) {
   if (turma.serie !== partes[2] || !turma.componentes.includes(componente.chave)) {
     return { erro: 'Esta avaliação não pertence à turma escolhida.' };
   }
-  const nome = limpar(body.nome, 120).replace(/\s+/g, ' ');
-  if (nome.length < 3) return { erro: 'Informe seu nome completo para registrar na planilha.' };
+  const lista = ALUNOS[body.turma] || [];
+  const aluno = Number.isInteger(body.aluno) ? lista.find(a => a.n === body.aluno) : null;
+  if (!aluno) return { erro: 'Escolha seu nome na lista da turma para registrar na planilha.' };
   if (typeof body.envioId !== 'string' || !/^[A-Za-z0-9-]{8,64}$/.test(body.envioId)) return { erro: 'Identificador de envio inválido.' };
   const dis = body.dissertativas;
   if (!Array.isArray(dis) || dis.length !== N_DISSERTATIVAS || !dis.every(x => typeof x === 'string')) {
@@ -577,7 +579,9 @@ function lerIdentificacao(body, id) {
       turma: turma.label,
       componente: componente.label,
       prova: PROVAS[partes[3]],
-      nome,
+      n: aluno.n,
+      nome: aluno.nome,
+      ra: aluno.ra,
       dissertativas
     }
   };
@@ -625,7 +629,7 @@ module.exports = async function corrigirEM(req, res) {
       body = JSON.parse(body);
     }
     if (!body || typeof body !== 'object' || Array.isArray(body)) return reply(400, {ok:false, erro:'Solicitação inválida.'});
-    const permitidas = ['avaliacao', 'respostas', 'turma', 'nome', 'dissertativas', 'envioId'];
+    const permitidas = ['avaliacao', 'respostas', 'turma', 'aluno', 'dissertativas', 'envioId'];
     if (!Object.keys(body).every(k => permitidas.includes(k)) || !('avaliacao' in body) || !('respostas' in body)) {
       return reply(400, {ok:false, erro:'Solicitação inválida: campos não reconhecidos.'});
     }
