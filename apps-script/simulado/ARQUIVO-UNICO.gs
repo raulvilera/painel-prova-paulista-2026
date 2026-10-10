@@ -1080,3 +1080,29 @@ function emAba_(avaliacao, gabarito) {
   ]);
   return sh;
 }
+
+/* TESTE para rodar no editor (selecione "testarEM" e clique em Executar; depois leia o "Registro de execução").
+   Grava UMA linha de teste na aba "EM · bio-2-paulista" (aluno nº 1 da 2ª C) — apague a linha depois.
+   Mostra exatamente onde falha: propriedades ausentes, aba, colunas, IA etc. */
+function testarEM() {
+  const props = PropertiesService.getScriptProperties();
+  Logger.log('EM_SEGREDO: ' + (props.getProperty('EM_SEGREDO') ? 'configurado' : 'AUSENTE'));
+  Logger.log('GEMINI_API_KEY: ' + (props.getProperty('GEMINI_API_KEY') ? 'configurada' : 'AUSENTE (as dissertativas ficam pendentes)'));
+  const p = {
+    acao: 'enviarEM', segredo: props.getProperty('EM_SEGREDO'), envioId: 'teste-' + new Date().getTime(),
+    avaliacao: 'bio-2-paulista', turmaId: '2c-noite', turma: '2ª Série C Noite', componente: 'Biologia', prova: 'Prova Paulista (4º bimestre)',
+    n: 1, nome: 'TESTE', ra: '0',
+    respostas: 'AAAAAAAAAAAA'.split(''), gabarito: 'CAEBDACEBDAE'.split(''), acertos: 3, total: 12, notaObjetiva: 2.5,
+    dissertativas: [
+      { resposta: 'Resposta de teste 1', qid: 'bio-2-paulista-13', contexto: 'ENUNCIADO: teste\nCOMANDO: teste\nDESCRITORES:\n1. Reconhecer as principais IST.' },
+      { resposta: 'Resposta de teste 2', qid: 'bio-2-paulista-14', contexto: 'ENUNCIADO: teste\nCOMANDO: teste\nDESCRITORES:\n1. Identificar medidas de prevenção de protozooses.' }
+    ]
+  };
+  try {
+    Logger.log('Resultado: ' + JSON.stringify(enviarEM_(p)));
+    Logger.log('OK: veja a aba "' + EM_PREFIXO_ABA + 'bio-2-paulista" e apague a linha de teste.');
+  } catch (e) {
+    Logger.log('ERRO: ' + (e && e.message ? e.message : e));
+    throw e;
+  }
+}
