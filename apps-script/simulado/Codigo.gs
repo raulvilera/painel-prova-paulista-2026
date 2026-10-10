@@ -67,6 +67,7 @@ function doPost(e) {
   try {
     const p = JSON.parse((e && e.postData && e.postData.contents) || '{}');
     if (p.acao === 'enviarRecomp') return json_(enviarRecomp_(p));
+    if (p.acao === 'enviarEM') return json_(enviarEM_(p));          // Ensino Médio: veja EnsinoMedio.gs
     if (p.acao !== 'enviar') return json_({ ok: false, erro: 'ação desconhecida' });
     return json_(enviar(p));
   } catch (err) { return json_({ ok: false, erro: String(err.message || err) }); }

@@ -25,7 +25,9 @@
     resultado: $('resultado'),
     resultadoConteudo: $('resultado-conteudo'),
     baixar: $('baixar'),
-    imprimir: $('imprimir')
+    imprimir: $('imprimir'),
+    retentar: $('retentar'),
+    notaRegistro: $('nota-registro')
   };
 
   const COMPONENTES = {
@@ -53,8 +55,22 @@
     submitting: false,
     submitted: false,
     submittedAt: null,
-    result: null
+    result: null,
+    envioId: null,
+    registro: null
   };
+
+  /* Identificador do envio: se o registro precisar ser repetido, a planilha não duplica a linha. */
+  function novoEnvioId() {
+    try {
+      if (window.crypto && typeof window.crypto.randomUUID === 'function') return window.crypto.randomUUID();
+    } catch (error) { /* usa o plano B abaixo */ }
+    return 'em-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 12);
+  }
+
+  function nomeInformado() {
+    return String(refs.nome.value || '').replace(/\s+/g, ' ').trim();
+  }
 
   function text(node, value) {
     node.textContent = value == null ? '' : String(value);
@@ -421,6 +437,12 @@
   }
 
   function validateAnswers() {
+    if (nomeInformado().length < 3) {
+      showMessage('Informe seu nome completo antes de enviar. Ele será registrado na planilha do professor.', 'erro');
+      refs.nome.focus();
+      refs.nome.scrollIntoView?.({ behavior: 'smooth', block: 'center' });
+      return false;
+    }
     const objectiveMissing = state.objectiveAnswers.some((answer) => !Number.isInteger(answer) || answer < 0 || answer > 4);
     if (objectiveMissing) {
       showMessage('Responda as 12 questões objetivas antes de enviar. Use a revisão para localizar as pendentes.', 'erro');
@@ -450,17 +472,42 @@
   }
 
   function submitPayload() {
+    const turma = TURMAS.find((item) => item.value === refs.turma.value);
     return {
       avaliacao: String(state.assessment.id || assessmentId()),
-      respostas: state.objectiveAnswers.map((answer) => Number(answer))
+      respostas: state.objectiveAnswers.map((answer) => Number(answer)),
+      turma: turma ? turma.value : '',
+      nome: nomeInformado(),
+      dissertativas: state.dissertativeAnswers.map((answer) => String(answer || '')),
+      envioId: state.envioId
     };
+  }
+
+  /* Envia ao servidor, que corrige as objetivas e registra na planilha. Devolve a resposta validada. */
+  async function enviarAoServidor() {
+    const response = await fetch('/api/corrigir-em', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify(submitPayload())
+    });
+    let data = null;
+    try { data = await response.json(); } catch (error) { data = null; }
+    if (!response.ok || !data || data.ok !== true) {
+      throw new Error(data && (data.erro || data.mensagem) ? String(data.erro || data.mensagem) : 'O servidor recusou o envio (' + response.status + ').');
+    }
+    if (data.avaliacao !== state.assessment.id || !Array.isArray(data.devolutiva) || data.devolutiva.length !== 12 || !Number.isFinite(data.notaObjetiva)) throw new Error('Devolutiva incompleta. Tente novamente.');
+    return data;
+  }
+
+  function registroConfirmado(data) {
+    return !!(data && data.registro && data.registro.ok === true);
   }
 
   async function sendAnswers() {
     if (state.submitting || state.submitted || !validateAnswers()) return;
-    showMessage('Você está prestes a enviar somente as 12 alternativas para correção. Nome e respostas dissertativas não serão enviados; as dissertativas ficarão apenas no comprovante.', 'informacao');
     const confirmed = typeof window.confirm === 'function'
-      ? window.confirm('Confirmar envio das 12 objetivas? A correção ocorre agora; o módulo não registra automaticamente na planilha.')
+      ? window.confirm('Confirmar envio? Suas 12 objetivas serão corrigidas agora e seu nome e suas respostas (inclusive as dissertativas) serão registrados na planilha do professor. Depois de enviar, não dá para alterar.')
       : true;
     if (!confirmed) {
       showMessage('Envio cancelado. Suas respostas continuam nesta tela.', 'informacao');
@@ -468,23 +515,16 @@
     }
 
     state.submitting = true;
+    state.envioId = state.envioId || novoEnvioId();
     refs.enviar.disabled = true;
     refs.enviar.textContent = 'Enviando e corrigindo…';
     lockInputs(true);
-    showMessage('Enviando as objetivas e aguardando a correção…', 'informacao');
+    showMessage('Enviando suas respostas e aguardando a correção. Pode levar alguns segundos…', 'informacao');
 
     try {
-      const response = await fetch('/api/corrigir-em', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'same-origin',
-        body: JSON.stringify(submitPayload())
-      });
-      if (response && response.ok === false) throw new Error('O servidor recusou o envio (' + response.status + ').');
-      const data = await response.json();
-      if (!data || data.ok !== true) throw new Error(data && (data.erro || data.mensagem) ? String(data.erro || data.mensagem) : 'A correção não foi concluída.');
-      if (data.avaliacao !== state.assessment.id || !Array.isArray(data.devolutiva) || data.devolutiva.length !== 12 || !Number.isFinite(data.notaObjetiva)) throw new Error('Devolutiva incompleta. Tente novamente.');
+      const data = await enviarAoServidor();
       state.result = data;
+      state.registro = data.registro || { ok: false };
       state.submitted = true;
       state.submittedAt = new Date();
       state.submitting = false;
@@ -492,7 +532,11 @@
       refs.enviar.textContent = 'Respostas enviadas';
       lockInputs(true);
       renderResult();
-      showMessage('Envio concluído. A nota abaixo é somente das objetivas; as dissertativas aguardam correção manual.', 'sucesso');
+      if (registroConfirmado(data)) {
+        showMessage('Envio concluído e registrado na planilha do professor. A nota abaixo é somente das objetivas; as dissertativas aguardam correção manual.', 'sucesso');
+      } else {
+        showMessage('Suas objetivas foram corrigidas, mas o registro na planilha não foi concluído. Use "Tentar registrar novamente" ou baixe o comprovante e entregue ao professor.', 'erro');
+      }
       refs.resultado.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
     } catch (error) {
       state.submitting = false;
@@ -500,6 +544,33 @@
       refs.enviar.textContent = 'Tentar enviar novamente';
       lockInputs(false);
       showMessage('Não foi possível enviar: ' + (error && error.message ? String(error.message) : 'verifique a conexão.') + ' Suas respostas continuam nesta tela; tente novamente.', 'erro');
+    }
+  }
+
+  /* Repete o envio com o mesmo identificador; a planilha ignora a repetição se a linha já tiver sido gravada. */
+  async function retentarRegistro() {
+    if (!state.submitted || state.submitting || registroConfirmado(state.result)) return;
+    state.submitting = true;
+    refs.retentar.disabled = true;
+    refs.retentar.textContent = 'Registrando…';
+    showMessage('Tentando registrar na planilha do professor. Pode levar alguns segundos…', 'informacao');
+    try {
+      const data = await enviarAoServidor();
+      state.result = data;
+      state.registro = data.registro || { ok: false };
+      if (registroConfirmado(data)) state.submittedAt = new Date();
+      renderResult();
+      if (registroConfirmado(data)) {
+        showMessage('Registro concluído na planilha do professor.', 'sucesso');
+      } else {
+        showMessage('Ainda não foi possível registrar na planilha. Tente de novo em instantes ou baixe o comprovante e entregue ao professor.', 'erro');
+      }
+    } catch (error) {
+      showMessage('Não foi possível registrar agora: ' + (error && error.message ? String(error.message) : 'verifique a conexão.') + ' Seu comprovante continua disponível.', 'erro');
+    } finally {
+      state.submitting = false;
+      refs.retentar.disabled = false;
+      refs.retentar.textContent = 'Tentar registrar novamente';
     }
   }
 
@@ -575,8 +646,10 @@
       dissertativeList.appendChild(li);
     });
     receipt.appendChild(dissertativeList);
-    receipt.appendChild(element('p', 'aviso-manual', 'As dissertativas estão guardadas neste comprovante para correção manual do professor; não receberam nota automática.'));
-    receipt.appendChild(element('p', 'aviso-manual', 'Este comprovante não representa registro na planilha.'));
+    receipt.appendChild(element('p', 'aviso-manual', 'As dissertativas não receberam nota automática: o professor fará a correção manual.'));
+    receipt.appendChild(element('p', 'aviso-manual', registroConfirmado(state.result)
+      ? 'Registrado na planilha do professor.'
+      : 'ATENÇÃO: este envio ainda não está registrado na planilha. Entregue este comprovante ao professor.'));
     return receipt;
   }
 
@@ -600,6 +673,11 @@
     }
     refs.resultadoConteudo.appendChild(feedbackSection);
     refs.resultadoConteudo.appendChild(buildReceipt());
+    const registrado = registroConfirmado(data);
+    refs.retentar.hidden = registrado;
+    text(refs.notaRegistro, registrado
+      ? 'Seu nome e suas respostas estão na planilha do professor. Guarde o comprovante se quiser.'
+      : 'O registro na planilha ainda não foi concluído. Tente registrar novamente ou entregue o comprovante ao professor.');
     refs.resultado.hidden = false;
   }
 
@@ -625,7 +703,10 @@
         mensagem: state.result.mensagem || '',
         devolutiva: Array.isArray(state.result.devolutiva) ? state.result.devolutiva : []
       },
-      aviso: 'Este arquivo é um comprovante de treino e não representa registro automático na planilha.'
+      registradoNaPlanilha: registroConfirmado(state.result),
+      aviso: registroConfirmado(state.result)
+        ? 'Comprovante de treino. Este envio foi registrado na planilha do professor.'
+        : 'Comprovante de treino. Este envio NÃO foi registrado na planilha: entregue este arquivo ao professor.'
     };
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json;charset=utf-8' });
     const url = URL.createObjectURL(blob);
@@ -654,6 +735,9 @@
     state.submitted = false;
     state.submittedAt = null;
     state.result = null;
+    state.envioId = null;
+    state.registro = null;
+    refs.retentar.hidden = true;
     refs.turma.disabled = false;
     refs.componente.disabled = false;
     refs.prova.disabled = false;
@@ -687,6 +771,11 @@
       showMessage(invalidReason, 'erro');
       return;
     }
+    if (nomeInformado().length < 3) {
+      showMessage('Informe seu nome completo para iniciar. Ele será registrado na planilha do professor.', 'erro');
+      refs.nome.focus();
+      return;
+    }
     state.assessment = assessment;
     state.questions = assessment.questoes.slice();
     state.objectiveAnswers = state.questions.filter((question) => question.tipo === 'obj').map(() => null);
@@ -696,6 +785,8 @@
     state.submitted = false;
     state.result = null;
     state.submittedAt = null;
+    state.envioId = null;
+    state.registro = null;
     const turma = TURMAS.find((item) => item.value === refs.turma.value);
     const componente = COMPONENTES[refs.componente.value];
     const prova = PROVAS[refs.prova.value];
@@ -723,6 +814,7 @@
   refs.enviar.addEventListener('click', sendAnswers);
   refs.mudar.addEventListener('click', changeAssessment);
   refs.baixar.addEventListener('click', downloadReceipt);
+  refs.retentar.addEventListener('click', retentarRegistro);
   refs.imprimir.addEventListener('click', function () { window.print(); });
 
   window.addEventListener('beforeunload', function (event) {

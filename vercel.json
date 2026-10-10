@@ -1,4 +1,7 @@
 {
+  "functions": {
+    "api/corrigir-em.js": { "maxDuration": 30 }
+  },
   "headers": [
     {
       "source": "/(.*)",

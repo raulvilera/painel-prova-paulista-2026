@@ -29,3 +29,35 @@ Implantar → **Gerenciar implantações** → lápis → Versão: **Nova versã
 - Acertos objetivas, nota das dissertativas (0–3) e **nota final (0–10)**.
 - Se a IA falhar (chave ausente, limite de uso), a linha fica "pendente": rode **corrigirPendentes** (ou crie um acionador de hora em hora para ela).
 - Você pode alterar qualquer nota da IA direto na planilha.
+
+---
+
+# Ensino Médio · registro online na planilha
+
+A página `/ensino-medio/` agora registra na planilha. Quem corrige as 12 objetivas continua sendo a função da Vercel (`api/corrigir-em.js`, que guarda o gabarito); depois de corrigir, ela chama este Apps Script com uma senha e ele grava uma linha.
+
+Arquivos: `EnsinoMedio.gs` (NOVO) e `Codigo.gs` (mudou só 1 linha no `doPost`).
+
+## 1. No Apps Script
+1. Crie o arquivo **EnsinoMedio** (tipo Script) e cole o conteúdo de `EnsinoMedio.gs`.
+2. Atualize `Código.gs` com o `Codigo.gs` deste repositório.
+3. Configurações do projeto → **Propriedades do script** → adicione `EM_SEGREDO` com uma senha longa e aleatória (não reutilize outra senha).
+4. Implantar → **Gerenciar implantações** → lápis → Versão: **Nova versão** → Implantar. O endereço `/exec` continua o mesmo.
+
+## 2. Na Vercel (projeto **painel-prova-paulista-2026**, onde fica a pasta `api/`)
+Settings → Environment Variables (marque Production):
+- `EM_APPS_SCRIPT_URL` = o endereço `/exec` do passo 1 (é o mesmo usado na constante `API` de `simulado/index.html`)
+- `EM_SEGREDO` = a MESMA senha do passo 1
+
+Depois faça um novo deploy (Deployments → ⋯ → Redeploy) para as variáveis valerem.
+
+## 3. Como fica na planilha
+- Uma aba por avaliação: `EM · bio-2-paulista`, `EM · bio-2-provao`, `EM · qui-3-provao` etc., criada sozinha no primeiro envio.
+- Linha 2: gabarito. Q1–Q12: azul = certa, vermelho = errada.
+- Colunas de acertos e **nota das objetivas (0–10)**.
+- Q13 e Q14: texto do aluno e uma coluna **nota (professor)** em branco, para a correção manual. A nota final não é calculada: a composição objetivas + dissertativas fica a critério do professor.
+- Se o mesmo envio for repetido (ex.: "Tentar registrar novamente"), a planilha não duplica a linha.
+
+## 4. Se algo falhar
+- Sem as variáveis na Vercel, a página continua corrigindo e mostra "Tentar registrar novamente" + o comprovante para o aluno entregar.
+- `EM_SEGREDO` diferente nos dois lados → o Apps Script responde "não autorizado" e nada é gravado.

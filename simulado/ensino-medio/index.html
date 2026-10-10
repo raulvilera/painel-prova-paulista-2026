@@ -28,7 +28,7 @@
       </div>
 
       <div class="aviso aviso-principal" role="note">
-        <strong>Antes de iniciar:</strong> este é um treino autoral, não uma prova oficial. As objetivas são corrigidas depois do envio; as dissertativas recebem correção manual do professor. Este módulo não registra automaticamente na planilha: baixe ou imprima o comprovante e entregue-o ao professor.
+        <strong>Antes de iniciar:</strong> este é um treino autoral, não uma prova oficial. As objetivas são corrigidas assim que você enviar; as dissertativas recebem correção manual do professor. Ao enviar, seu nome e suas respostas são registrados na planilha do professor. Você também recebe um comprovante para baixar ou imprimir.
       </div>
 
       <form id="form-configuracao" novalidate>
@@ -52,9 +52,9 @@
             </select>
           </div>
           <div class="campo campo-nome">
-            <label for="nome">Nome <span>(facultativo)</span></label>
-            <input id="nome" name="nome" type="text" maxlength="120" autocomplete="off" placeholder="Para o comprovante">
-            <small>Fica somente nesta página e no comprovante; não é enviado ao servidor.</small>
+            <label for="nome">Nome completo <span>(obrigatório)</span></label>
+            <input id="nome" name="nome" type="text" maxlength="120" autocomplete="off" placeholder="Como aparece na chamada" required>
+            <small>Será registrado na planilha do professor e aparecerá no comprovante.</small>
           </div>
         </div>
 
@@ -85,7 +85,7 @@
 
       <div id="acoes-prova" class="acoes-prova">
         <p class="texto-suave">Confira a revisão acima antes de entregar. As 12 objetivas e as 2 dissertativas precisam estar respondidas.</p>
-        <button id="enviar" class="botao botao-principal botao-enviar" type="button">Enviar e corrigir objetivas</button>
+        <button id="enviar" class="botao botao-principal botao-enviar" type="button">Enviar e registrar</button>
       </div>
     </section>
 
@@ -101,10 +101,11 @@
       </div>
       <div id="resultado-conteudo"></div>
       <div class="acoes-resultado screen-only">
+        <button id="retentar" class="botao botao-principal" type="button" hidden>Tentar registrar novamente</button>
         <button id="baixar" class="botao botao-principal" type="button">Baixar comprovante (JSON)</button>
         <button id="imprimir" class="botao botao-secundario" type="button">Imprimir comprovante</button>
       </div>
-      <p class="nota-comprovante screen-only">O download ou a impressão não representam registro na planilha. Entregue o comprovante ao professor.</p>
+      <p id="nota-registro" class="nota-comprovante screen-only"></p>
     </section>
   </main>
 

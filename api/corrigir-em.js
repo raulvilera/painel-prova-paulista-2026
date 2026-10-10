@@ -518,7 +518,89 @@ const GABARITO = {
     }
   ]
 };
-module.exports = function corrigirEM(req, res) {
+
+/* ---- Registro na planilha: este servidor repassa o resultado ao Apps Script ----
+   Variáveis de ambiente (projeto painel-prova-paulista-2026 na Vercel):
+     EM_APPS_SCRIPT_URL  endereço /exec da implantação do Apps Script
+     EM_SEGREDO          mesma senha da propriedade EM_SEGREDO do Apps Script
+   Sem elas, a correção continua funcionando e o aluno recebe o comprovante para entregar. */
+const TURMAS = {
+  '2a-manha': { label: '2ª Série A Manhã (Des. Sistemas)', serie: '2', componentes: ['biologia'] },
+  '2c-noite': { label: '2ª Série C Noite', serie: '2', componentes: ['biologia', 'quimica'] },
+  '3f-noite': { label: '3ª Série F Noite', serie: '3', componentes: ['biologia', 'quimica'] }
+};
+const COMPONENTES = { bio: { chave: 'biologia', label: 'Biologia' }, qui: { chave: 'quimica', label: 'Química' } };
+const PROVAS = { paulista: 'Prova Paulista (4º bimestre)', provao: 'Provão Paulista' };
+const MAX_CORPO = 32768;
+const N_DISSERTATIVAS = 2;
+const TEMPO_REGISTRO_MS = 25000;
+
+function limpar(texto, max) {
+  return String(texto == null ? '' : texto)
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '')
+    .replace(/\r\n?/g, '\n')
+    .trim()
+    .slice(0, max);
+}
+
+/* Lê os campos de identificação. Devolve {registro} (pronto para enviar), {semRegistro:true} ou {erro}. */
+function lerIdentificacao(body, id) {
+  const extras = ['turma', 'nome', 'dissertativas', 'envioId'].filter(k => Object.prototype.hasOwnProperty.call(body, k));
+  if (!extras.length) return { semRegistro: true };
+  if (extras.length !== 4) return { erro: 'Para registrar na planilha, envie turma, nome, dissertativas e envioId.' };
+  const partes = /^(bio|qui)-([23])-(paulista|provao)$/.exec(id);
+  if (!partes) return { erro: 'Avaliação desconhecida.' };
+  const componente = COMPONENTES[partes[1]];
+  const turma = Object.prototype.hasOwnProperty.call(TURMAS, body.turma) ? TURMAS[body.turma] : null;
+  if (!turma) return { erro: 'Turma desconhecida.' };
+  if (turma.serie !== partes[2] || !turma.componentes.includes(componente.chave)) {
+    return { erro: 'Esta avaliação não pertence à turma escolhida.' };
+  }
+  const nome = limpar(body.nome, 120).replace(/\s+/g, ' ');
+  if (nome.length < 3) return { erro: 'Informe seu nome completo para registrar na planilha.' };
+  if (typeof body.envioId !== 'string' || !/^[A-Za-z0-9-]{8,64}$/.test(body.envioId)) return { erro: 'Identificador de envio inválido.' };
+  const dis = body.dissertativas;
+  if (!Array.isArray(dis) || dis.length !== N_DISSERTATIVAS || !dis.every(x => typeof x === 'string')) {
+    return { erro: 'Envie as 2 respostas dissertativas.' };
+  }
+  const dissertativas = dis.map(x => limpar(x, 3000));
+  if (dissertativas.some(x => !x)) return { erro: 'Responda as 2 questões dissertativas antes de entregar.' };
+  return {
+    registro: {
+      envioId: body.envioId,
+      turma: turma.label,
+      componente: componente.label,
+      prova: PROVAS[partes[3]],
+      nome,
+      dissertativas
+    }
+  };
+}
+
+async function registrarNaPlanilha(dados) {
+  const url = process.env.EM_APPS_SCRIPT_URL || '';
+  const segredo = process.env.EM_SEGREDO || '';
+  if (!url || !segredo) return { ok: false, motivo: 'nao-configurado' };
+  const controle = new AbortController();
+  const relogio = setTimeout(() => controle.abort(), TEMPO_REGISTRO_MS);
+  try {
+    const resposta = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(Object.assign({ acao: 'enviarEM', segredo }, dados)),
+      redirect: 'follow',
+      signal: controle.signal
+    });
+    const retorno = await resposta.json();
+    return retorno && retorno.ok === true ? { ok: true } : { ok: false, motivo: 'recusado' };
+  } catch (erro) {
+    return { ok: false, motivo: 'indisponivel' };
+  } finally {
+    clearTimeout(relogio);
+  }
+}
+
+module.exports = async function corrigirEM(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -529,30 +611,48 @@ module.exports = function corrigirEM(req, res) {
   }
   try {
     const contentLength = Number(req.headers && req.headers['content-length'] || 0);
-    if (contentLength > 8192) return reply(413, {ok:false, erro:'Solicitação muito grande.'});
+    if (contentLength > MAX_CORPO) return reply(413, {ok:false, erro:'Solicitação muito grande.'});
     let body = req.body;
     if (typeof body === 'string') {
-      if (Buffer.byteLength(body, 'utf8') > 8192) return reply(413, {ok:false, erro:'Solicitação muito grande.'});
+      if (Buffer.byteLength(body, 'utf8') > MAX_CORPO) return reply(413, {ok:false, erro:'Solicitação muito grande.'});
       body = JSON.parse(body);
     }
     if (!body || typeof body !== 'object' || Array.isArray(body)) return reply(400, {ok:false, erro:'Solicitação inválida.'});
-    if (Object.keys(body).length !== 2 || !Object.keys(body).every(k => k === 'avaliacao' || k === 'respostas')) return reply(400, {ok:false, erro:'Envie apenas o ID da avaliação e as alternativas, sem nome, RA ou textos.'});
+    const permitidas = ['avaliacao', 'respostas', 'turma', 'nome', 'dissertativas', 'envioId'];
+    if (!Object.keys(body).every(k => permitidas.includes(k)) || !('avaliacao' in body) || !('respostas' in body)) {
+      return reply(400, {ok:false, erro:'Solicitação inválida: campos não reconhecidos.'});
+    }
     const id = body.avaliacao;
     if (typeof id !== 'string' || !Object.prototype.hasOwnProperty.call(GABARITO, id)) return reply(400, {ok:false, erro:'Avaliação desconhecida.'});
     const q = GABARITO[id], respostas = body.respostas;
     if (!Array.isArray(respostas) || respostas.length !== q.length || !respostas.every(r => Number.isInteger(r) && r >= 0 && r <= 4)) {
       return reply(422, {ok:false, erro:'Responda todas as 12 questões objetivas antes de entregar.'});
     }
+    const ident = lerIdentificacao(body, id);
+    if (ident.erro) return reply(422, {ok:false, erro:ident.erro});
+
     const devolutiva = q.map((item, i) => ({
       id:item.id, resposta:respostas[i], correta:item.correta,
       acertou:respostas[i] === item.correta, justificativa:item.justificativa,
       objeto:item.objeto, referencia:item.referencia
     }));
     const acertos = devolutiva.filter(x => x.acertou).length;
+    const notaObjetiva = Math.round(acertos / q.length * 100) / 10;
+
+    let registro = { ok: false, motivo: 'sem-identificacao' };
+    if (ident.registro) {
+      registro = await registrarNaPlanilha(Object.assign({}, ident.registro, {
+        avaliacao: id,
+        respostas: respostas.map(r => 'ABCDE'[r]),
+        gabarito: q.map(item => 'ABCDE'[item.correta]),
+        acertos, total: q.length, notaObjetiva
+      }));
+    }
+    const mensagem = registro.ok
+      ? 'Nota das objetivas. Dissertativas: correção manual do professor. Resultado registrado na planilha do professor.'
+      : 'Nota das objetivas. Dissertativas: correção manual do professor. Não foi possível registrar na planilha: tente registrar de novo ou entregue o comprovante ao professor.';
     return reply(200, {ok:true, avaliacao:id, acertos, total:q.length,
-      notaObjetiva:Math.round(acertos / q.length * 100) / 10,
-      devolutiva,
-      mensagem:'Nota das objetivas. Dissertativas: correção manual do professor. Este resultado não foi registrado na planilha.'});
+      notaObjetiva, devolutiva, registro, mensagem});
   } catch (error) {
     return reply(400, {ok:false, erro:'Não foi possível interpretar a solicitação. Revise as respostas e tente novamente.'});
   }
