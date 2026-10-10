@@ -603,7 +603,7 @@ async function registrarNaPlanilha(dados) {
       signal: controle.signal
     });
     const retorno = await resposta.json();
-    if (!(retorno && retorno.ok === true)) return { ok: false, motivo: 'recusado' };
+    if (!(retorno && retorno.ok === true)) return { ok: false, motivo: 'recusado', detalhe: limpar(retorno && retorno.erro, 120) };
     return { ok: true, dissertativas: Array.isArray(retorno.dissertativas) ? retorno.dissertativas : null };
   } catch (erro) {
     return { ok: false, motivo: 'indisponivel' };

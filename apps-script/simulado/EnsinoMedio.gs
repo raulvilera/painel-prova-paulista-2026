@@ -202,8 +202,8 @@ function emAba_(avaliacao, gabarito) {
   const ss = SpreadsheetApp.openById(PLANILHA_ID);
   const nome = EM_PREFIXO_ABA + avaliacao;
   let sh = ss.getSheetByName(nome);
-  if (sh) return sh;
-  sh = ss.insertSheet(nome);
+  if (sh && String(sh.getRange(1, 1).getValue()) !== '') return sh;      // já montada
+  if (!sh) sh = ss.insertSheet(nome);                                    // (aba criada pela metade numa tentativa anterior é refeita)
   const cab = ['Data/hora', 'Turma', 'Componente', 'Prova', 'Nº', 'Nome', 'RA'], gab = ['GABARITO', '', '', '', '', '', ''];
   gabarito.forEach((letra, i) => { cab.push('Q' + (i + 1)); gab.push(letra); });
   cab.push('Acertos objetivas (de ' + EM_N_OBJ + ')', 'Nota objetivas (0–10)');
@@ -214,6 +214,7 @@ function emAba_(avaliacao, gabarito) {
   }
   cab.push('Correção IA', 'Nota final (0–10)', 'Observações do professor');
   gab.push('', '', '');
+  if (sh.getMaxColumns() < cab.length) sh.insertColumnsAfter(sh.getMaxColumns(), cab.length - sh.getMaxColumns());   // aba nova tem só 26 colunas
   sh.getRange(1, 1, 1, cab.length).setValues([cab]).setFontWeight('bold').setBackground('#145A32').setFontColor('#FFFFFF').setWrap(true);
   sh.getRange(2, 1, 1, cab.length).setValues([gab]).setFontStyle('italic').setBackground('#EEEEEE');
   sh.setFrozenRows(2); sh.setFrozenColumns(6);
