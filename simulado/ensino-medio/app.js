@@ -533,6 +533,15 @@
     return data;
   }
 
+  /* Motivo técnico da falha de registro, para o professor saber o que ajustar. */
+  function motivoRegistro(data) {
+    const r = (data && data.registro) || {};
+    if (r.motivo === 'nao-configurado') return ' (motivo: variáveis EM_APPS_SCRIPT_URL / EM_SEGREDO não configuradas na Vercel)';
+    if (r.motivo === 'indisponivel') return ' (motivo: o Apps Script não respondeu a tempo ou o endereço está incorreto)';
+    if (r.motivo === 'recusado') return ' (motivo: o Apps Script recusou' + (r.detalhe ? ': ' + String(r.detalhe).slice(0, 120) : '') + ')';
+    return '';
+  }
+
   function registroConfirmado(data) {
     return !!(data && data.registro && data.registro.ok === true);
   }
@@ -568,7 +577,7 @@
       if (registroConfirmado(data)) {
         showMessage('Envio concluído e registrado na planilha do professor. Veja abaixo a nota e a devolutiva.', 'sucesso');
       } else {
-        showMessage('Suas objetivas foram corrigidas, mas o registro na planilha não foi concluído. Use "Tentar registrar novamente" ou baixe o comprovante e entregue ao professor.', 'erro');
+        showMessage('Suas objetivas foram corrigidas, mas o registro na planilha não foi concluído. Use "Tentar registrar novamente" ou baixe o comprovante e entregue ao professor.' + motivoRegistro(data), 'erro');
       }
       refs.resultado.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
     } catch (error) {
@@ -596,7 +605,7 @@
       if (registroConfirmado(data)) {
         showMessage('Registro concluído na planilha do professor.', 'sucesso');
       } else {
-        showMessage('Ainda não foi possível registrar na planilha. Tente de novo em instantes ou baixe o comprovante e entregue ao professor.', 'erro');
+        showMessage('Ainda não foi possível registrar na planilha. Tente de novo em instantes ou baixe o comprovante e entregue ao professor.' + motivoRegistro(data), 'erro');
       }
     } catch (error) {
       showMessage('Não foi possível registrar agora: ' + (error && error.message ? String(error.message) : 'verifique a conexão.') + ' Seu comprovante continua disponível.', 'erro');
