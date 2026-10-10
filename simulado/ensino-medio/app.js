@@ -455,7 +455,7 @@
     }
     const dissertativeMissing = state.dissertativeAnswers.some((answer) => !String(answer || '').trim());
     if (dissertativeMissing) {
-      showMessage('Responda as 2 questões dissertativas antes de enviar. Elas serão guardadas para correção manual.', 'erro');
+      showMessage('Responda as 2 questões dissertativas antes de enviar. Elas serão corrigidas automaticamente com base nos descritores da avaliação.', 'erro');
       const index = firstMissingQuestion();
       const target = index >= 0 ? document.getElementById('q' + index) : null;
       target?.classList.add('questao-invalida');
@@ -533,7 +533,7 @@
       lockInputs(true);
       renderResult();
       if (registroConfirmado(data)) {
-        showMessage('Envio concluído e registrado na planilha do professor. A nota abaixo é somente das objetivas; as dissertativas aguardam correção manual.', 'sucesso');
+        showMessage('Envio concluído e registrado na planilha do professor. Veja abaixo a nota e a devolutiva.', 'sucesso');
       } else {
         showMessage('Suas objetivas foram corrigidas, mas o registro na planilha não foi concluído. Use "Tentar registrar novamente" ou baixe o comprovante e entregue ao professor.', 'erro');
       }
@@ -646,11 +646,27 @@
       dissertativeList.appendChild(li);
     });
     receipt.appendChild(dissertativeList);
-    receipt.appendChild(element('p', 'aviso-manual', 'As dissertativas não receberam nota automática: o professor fará a correção manual.'));
+    const dis = iaDissertativas(state.result);
+    if (dis) {
+      receipt.appendChild(element('h4', null, 'Correção automática das dissertativas (provisória)'));
+      const iaList = document.createElement('ul');
+      dis.forEach((d, index) => iaList.appendChild(element('li', null, 'Dissertativa ' + (index + 1) + ': ' + (d.nota === null ? 'correção pendente' : formatNumber(d.nota) + ' / 1' + (d.comentario ? ' — ' + d.comentario : '')))));
+      receipt.appendChild(iaList);
+    }
+    receipt.appendChild(element('p', 'aviso-manual', 'A correção das dissertativas é feita por IA com base nos descritores e pode ser revisada pelo professor.'));
     receipt.appendChild(element('p', 'aviso-manual', registroConfirmado(state.result)
       ? 'Registrado na planilha do professor.'
       : 'ATENÇÃO: este envio ainda não está registrado na planilha. Entregue este comprovante ao professor.'));
     return receipt;
+  }
+
+  function iaDissertativas(data) {
+    const d = data && data.dissertativas;
+    if (!Array.isArray(d) || d.length !== 2) return null;
+    return d.map((x) => ({
+      nota: x && Number.isFinite(Number(x.nota)) && x.nota !== null ? Number(x.nota) : null,
+      comentario: x && typeof x.comentario === 'string' ? x.comentario : ''
+    }));
   }
 
   function renderResult() {
@@ -658,8 +674,11 @@
     clear(refs.resultadoConteudo);
     const nota = Number.isFinite(Number(data.notaObjetiva)) ? formatNumber(data.notaObjetiva) + ' / 10' : 'indisponível';
     const summary = element('div', 'resumo-resultado');
-    summary.appendChild(element('p', 'nota-grande', 'Nota das objetivas: ' + nota));
-    summary.appendChild(element('p', null, 'Acertos: ' + String(data.acertos == null ? '—' : data.acertos) + ' de ' + String(data.total == null ? 12 : data.total) + '. A nota não combina as dissertativas.'));
+    const ia = iaDissertativas(data);
+    const temFinal = data.notaFinal != null && Number.isFinite(Number(data.notaFinal));
+    if (temFinal) summary.appendChild(element('p', 'nota-grande', 'Nota final (provisória): ' + formatNumber(data.notaFinal) + ' / 10'));
+    summary.appendChild(element(temFinal ? 'p' : 'p', temFinal ? null : 'nota-grande', 'Nota das objetivas: ' + nota + ' (' + String(data.acertos == null ? '—' : data.acertos) + ' de ' + String(data.total == null ? 12 : data.total) + ' acertos)'));
+    if (!temFinal) summary.appendChild(element('p', null, 'A nota final (0 a 10) inclui as 2 dissertativas, que ainda não foram corrigidas automaticamente.'));
     if (data.mensagem) summary.appendChild(element('p', 'texto-suave', data.mensagem));
     refs.resultadoConteudo.appendChild(summary);
 
@@ -672,6 +691,19 @@
       feedback.forEach((item, index) => feedbackSection.appendChild(buildFeedbackItem(item || {}, index)));
     }
     refs.resultadoConteudo.appendChild(feedbackSection);
+    if (ia) {
+      const disSection = element('section', 'devolutiva');
+      disSection.appendChild(element('h3', null, 'Dissertativas · correção automática (provisória)'));
+      ia.forEach((d, index) => {
+        const q = state.dissertativeQuestions[index];
+        const item = element('article', 'feedback-dis');
+        item.appendChild(element('h4', null, 'Questão ' + (q ? state.questions.indexOf(q) + 1 : 13 + index) + ' · ' + (d.nota === null ? 'correção pendente' : 'nota ' + formatNumber(d.nota) + ' / 1')));
+        item.appendChild(element('p', null, d.nota === null ? 'A correção automática não foi concluída; o professor fará a correção.' : d.comentario));
+        disSection.appendChild(item);
+      });
+      disSection.appendChild(element('p', 'texto-suave', 'Critério: se a resposta atingiu o que pedem os descritores da avaliação. A nota é provisória e pode ser revisada pelo professor.'));
+      refs.resultadoConteudo.appendChild(disSection);
+    }
     refs.resultadoConteudo.appendChild(buildReceipt());
     const registrado = registroConfirmado(data);
     refs.retentar.hidden = registrado;
@@ -700,6 +732,8 @@
         acertos: state.result.acertos,
         total: state.result.total,
         notaObjetiva: state.result.notaObjetiva,
+        notaFinalProvisoria: state.result.notaFinal == null ? null : state.result.notaFinal,
+        dissertativasIA: iaDissertativas(state.result),
         mensagem: state.result.mensagem || '',
         devolutiva: Array.isArray(state.result.devolutiva) ? state.result.devolutiva : []
       },

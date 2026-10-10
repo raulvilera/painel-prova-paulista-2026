@@ -41,7 +41,7 @@ Arquivos: `EnsinoMedio.gs` (NOVO) e `Codigo.gs` (mudou só 1 linha no `doPost`).
 ## 1. No Apps Script
 1. Crie o arquivo **EnsinoMedio** (tipo Script) e cole o conteúdo de `EnsinoMedio.gs`.
 2. Atualize `Código.gs` com o `Codigo.gs` deste repositório.
-3. Configurações do projeto → **Propriedades do script** → adicione `EM_SEGREDO` com uma senha longa e aleatória (não reutilize outra senha).
+3. Configurações do projeto → **Propriedades do script** → adicione `EM_SEGREDO` com uma senha longa e aleatória (não reutilize outra senha). A `GEMINI_API_KEY` é a mesma já usada no simulado do Fundamental (a correção das dissertativas usa a IA).
 4. Implantar → **Gerenciar implantações** → lápis → Versão: **Nova versão** → Implantar. O endereço `/exec` continua o mesmo.
 
 ## 2. Na Vercel (projeto **painel-prova-paulista-2026**, onde fica a pasta `api/`)
@@ -55,9 +55,15 @@ Depois faça um novo deploy (Deployments → ⋯ → Redeploy) para as variávei
 - Uma aba por avaliação: `EM · bio-2-paulista`, `EM · bio-2-provao`, `EM · qui-3-provao` etc., criada sozinha no primeiro envio.
 - Linha 2: gabarito. Q1–Q12: azul = certa, vermelho = errada.
 - Colunas de acertos e **nota das objetivas (0–10)**.
-- Q13 e Q14: texto do aluno e uma coluna **nota (professor, 0–1)** em branco, para a correção manual (a planilha só aceita valores de 0 a 1).
-- **Nota final (0–10)**: calculada sozinha quando você preenche as notas das duas dissertativas. As 14 questões valem igual: `(acertos + nota Q13 + nota Q14) ÷ 14 × 10`, com uma casa decimal. Enquanto faltar alguma nota, a célula fica vazia. Se quiser outro peso, é só editar a fórmula na coluna X (ou pedir para ajustar `emFormulaFinal_` em `EnsinoMedio.gs`).
+- Q13 e Q14: texto do aluno, **nota (IA, 0–1)** e **comentário da IA**. Você pode digitar outra nota por cima (a planilha só aceita 0 a 1). A coluna **Correção IA** mostra `corrigido pela IA` ou `pendente`.
+- **Nota final (0–10)**: calculada sozinha quando as duas notas das dissertativas existem (da IA ou suas). As 14 questões valem igual: `(acertos + nota Q13 + nota Q14) ÷ 14 × 10`, com uma casa decimal. Enquanto faltar alguma nota, a célula fica vazia. Se quiser outro peso, é só editar a fórmula na coluna AA (ou pedir para ajustar `emFormulaFinal_` em `EnsinoMedio.gs`).
 - Se o mesmo envio for repetido (ex.: "Tentar registrar novamente"), a planilha não duplica a linha.
+
+## 3b. Correção automática das dissertativas (IA)
+- Critério: os **descritores oficiais** do Guia do Currículo Priorizado. Prova Paulista → alvo de aprendizagem + habilidade + descritores da Matriz. Provão Paulista → os **objetos de conhecimento** da série (o Guia não traz descritores para o Provão). A IA verifica se a resposta atingiu o que eles pedem e o que o comando da questão solicita. Os critérios de cada questão ficam na aba `EM · Critérios`.
+- A nota (0–1) e o comentário aparecem para o aluno como **provisórios**; o professor pode alterar a nota na planilha.
+- Se a IA falhar (chave ausente, limite de uso), a linha fica `pendente` e o aluno vê "correção pendente". Para corrigir depois: rode `corrigirPendentesEM` no editor ou agende em **Acionadores** (a cada 1 hora). Notas que você já digitou não são sobrescritas.
+- Os textos dos critérios vêm de `tools/descritores-em.js`; para regenerar `api/_dissertativas-em.js`: `node tools/gerar-dissertativas-em.js`. Atenção: o texto de EM13CNT308 não consta no Guia (só o código); foi usado o texto da BNCC.
 
 ## 4. Se algo falhar
 - Sem as variáveis na Vercel, a página continua corrigindo e mostra "Tentar registrar novamente" + o comprovante para o aluno entregar.

@@ -585,7 +585,8 @@ th {
   margin-bottom: 22px;
 }
 
-.feedback-item {
+.feedback-item,
+.feedback-dis {
   margin-bottom: 11px;
   padding: 13px 14px;
   border: 1px solid var(--linha);
@@ -605,7 +606,8 @@ th {
   background: #fffdfd;
 }
 
-.feedback-item h4 {
+.feedback-item h4,
+.feedback-dis h4 {
   color: var(--verde-escuro);
 }
 

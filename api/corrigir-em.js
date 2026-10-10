@@ -533,7 +533,8 @@ const COMPONENTES = { bio: { chave: 'biologia', label: 'Biologia' }, qui: { chav
 const PROVAS = { paulista: 'Prova Paulista (4º bimestre)', provao: 'Provão Paulista' };
 const MAX_CORPO = 32768;
 const N_DISSERTATIVAS = 2;
-const TEMPO_REGISTRO_MS = 25000;
+const TEMPO_REGISTRO_MS = 50000;   // inclui a correção das dissertativas pela IA no Apps Script
+const CONTEXTO_DIS = require('./_dissertativas-em.js');   // enunciado + descritores oficiais de cada dissertativa
 
 function limpar(texto, max) {
   return String(texto == null ? '' : texto)
@@ -563,8 +564,13 @@ function lerIdentificacao(body, id) {
   if (!Array.isArray(dis) || dis.length !== N_DISSERTATIVAS || !dis.every(x => typeof x === 'string')) {
     return { erro: 'Envie as 2 respostas dissertativas.' };
   }
-  const dissertativas = dis.map(x => limpar(x, 3000));
-  if (dissertativas.some(x => !x)) return { erro: 'Responda as 2 questões dissertativas antes de entregar.' };
+  const textos = dis.map(x => limpar(x, 3000));
+  if (textos.some(x => !x)) return { erro: 'Responda as 2 questões dissertativas antes de entregar.' };
+  const dissertativas = textos.map((resposta, k) => {
+    const qid = id + '-' + (12 + k + 1);
+    return { resposta, qid, contexto: CONTEXTO_DIS[qid] || '' };
+  });
+  if (dissertativas.some(d => !d.contexto)) return { erro: 'Critérios da dissertativa não encontrados.' };
   return {
     registro: {
       envioId: body.envioId,
@@ -592,7 +598,8 @@ async function registrarNaPlanilha(dados) {
       signal: controle.signal
     });
     const retorno = await resposta.json();
-    return retorno && retorno.ok === true ? { ok: true } : { ok: false, motivo: 'recusado' };
+    if (!(retorno && retorno.ok === true)) return { ok: false, motivo: 'recusado' };
+    return { ok: true, dissertativas: Array.isArray(retorno.dissertativas) ? retorno.dissertativas : null };
   } catch (erro) {
     return { ok: false, motivo: 'indisponivel' };
   } finally {
@@ -648,11 +655,24 @@ module.exports = async function corrigirEM(req, res) {
         acertos, total: q.length, notaObjetiva
       }));
     }
-    const mensagem = registro.ok
-      ? 'Nota das objetivas. Dissertativas: correção manual do professor. Resultado registrado na planilha do professor.'
-      : 'Nota das objetivas. Dissertativas: correção manual do professor. Não foi possível registrar na planilha: tente registrar de novo ou entregue o comprovante ao professor.';
+    // Correção das dissertativas pela IA (feita no Apps Script com os descritores). Nota 0–1 cada; provisória até o professor revisar.
+    let dissertativas = null, notaFinal = null;
+    if (registro.ok && registro.dissertativas && registro.dissertativas.length === N_DISSERTATIVAS) {
+      dissertativas = registro.dissertativas.map(d => {
+        const nota = d && d.status === 'corrigido' && typeof d.nota === 'number' && d.nota >= 0 && d.nota <= 1 ? Math.round(d.nota * 10) / 10 : null;
+        return { nota, comentario: nota === null ? '' : limpar(d.comentario, 500), status: nota === null ? 'pendente' : 'corrigido' };
+      });
+      if (dissertativas.every(d => d.nota !== null)) {
+        notaFinal = Math.round((acertos + dissertativas[0].nota + dissertativas[1].nota) / (q.length + N_DISSERTATIVAS) * 100) / 10;
+      }
+    }
+    delete registro.dissertativas;
+    let mensagem;
+    if (!registro.ok) mensagem = 'Nota das objetivas. Não foi possível registrar na planilha: tente registrar de novo ou entregue o comprovante ao professor. As dissertativas serão corrigidas pelo professor.';
+    else if (notaFinal !== null) mensagem = 'Resultado registrado na planilha do professor. Nota final provisória calculada com a correção automática das dissertativas; o professor pode revisá-la.';
+    else mensagem = 'Resultado registrado na planilha do professor. A correção automática das dissertativas ainda está pendente; a nota final sai depois.';
     return reply(200, {ok:true, avaliacao:id, acertos, total:q.length,
-      notaObjetiva, devolutiva, registro, mensagem});
+      notaObjetiva, dissertativas, notaFinal, devolutiva, registro, mensagem});
   } catch (error) {
     return reply(400, {ok:false, erro:'Não foi possível interpretar a solicitação. Revise as respostas e tente novamente.'});
   }
