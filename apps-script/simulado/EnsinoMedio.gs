@@ -58,8 +58,11 @@ function emValidar_(p) {
   });
   const nome = String(p.nome || '').trim();
   if (nome.length < 3 || nome.length > 120) throw new Error('nome inválido');
-  if (!Number.isInteger(p.n) || p.n < 1 || p.n > 99) throw new Error('nº de chamada inválido');
-  if (!/^[0-9]{1,12}[0-9Xx]?$/.test(String(p.ra || ''))) throw new Error('RA inválido');
+  // O aluno precisa existir na lista da turma; nome e RA gravados são os da lista (não os enviados).
+  const lista = Object.prototype.hasOwnProperty.call(ALUNOS_EM, p.turmaId) ? ALUNOS_EM[p.turmaId] : null;
+  const reg = lista && Number.isInteger(p.n) ? lista.find(x => x[0] === p.n) : null;
+  if (!reg) throw new Error('aluno não encontrado na lista da turma');
+  p.nome = reg[1]; p.ra = reg[2];
   ['turma', 'componente', 'prova'].forEach(k => { if (!String(p[k] || '').trim() || String(p[k]).length > 80) throw new Error(k + ' inválido'); });
 }
 

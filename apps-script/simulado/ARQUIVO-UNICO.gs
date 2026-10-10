@@ -2,7 +2,7 @@
    ARQUIVO ÚNICO do Simulado SARESP 2026 · Ciências
    Apague TODO o conteúdo de "Código.gs" e cole este arquivo inteiro.
    Contém: (1) código, (2) questões de cada série, (3) nomes dos alunos por turma,
-           (4) Ensino Médio: registro online + correção por IA das dissertativas (seção no fim).
+           (4) Ensino Médio: listas de chamada, registro online e correção por IA das dissertativas (fim do arquivo).
    Depois: Implantar → Gerenciar implantações → lápis → Nova versão → Implantar.
    ============================================================================ */
 
@@ -735,6 +735,126 @@ const ALUNOS = {
    Seção independente: não altera nada do Ensino Fundamental acima.
    Propriedade do script necessária: EM_SEGREDO (a mesma da variável EM_SEGREDO na Vercel).
    ============================================================================ */
+/* Listas de chamada do Ensino Médio (Nº, nome e RA completo). Ficam só no Apps Script e na Vercel; a página mostra apenas os 3 últimos dígitos do RA.
+   Para atualizar uma turma: edite aqui e também em api/_alunos-em.js (Vercel). Formato: [Nº, 'NOME', 'RA com dígito']. */
+const ALUNOS_EM = {
+  // 2ª Série A Manhã (Des. Sistemas)
+  '2a-manha': [
+    [1, "ALAN EDUARDO DOS SANTOS BARBOSA", '111875511X'],
+    [3, "ANA BEATRIZ DE LIMA TOMAZ", '1132100719'],
+    [4, "ANA BEATRIZ MOURA AMARO OLIVEIRA", '1102123821'],
+    [6, "ANDRÉ DOS REIS ARAÚJO", '1118801192'],
+    [7, "ANNY LUIZA MARQUES DE SOUZA", '1117945509'],
+    [8, "ARTUR SANTOS DE OLIVEIRA", '1132217027'],
+    [9, "BEATRIZ TEODORO FURLAN", '1141639798'],
+    [10, "CATHARINA KESS RUBIO MENDES", '1150222815'],
+    [11, "DANIEL FERREIRA DOS SANTOS", '1122226202'],
+    [15, "FELIPE AUGUSTO DE SOUZA ALCARAZ", '1126006403'],
+    [16, "GEOVANNA DOS SANTOS MENDES", '1141647837'],
+    [17, "HENRY ALVES TOZZI DA SILVA PIRES", '1132181409'],
+    [20, "JUHAN DOS SANTOS MARIN", '114240559X'],
+    [21, "JULIA ARAUJO DE LIMA", '1117221118'],
+    [22, "JULIANA SILVA DE LIMA NEVES", '1117723872'],
+    [25, "LEANDRO MACIEL CORRÊA", '1138056327'],
+    [26, "LEONARDO LIMA DE JESUS", '1122106014'],
+    [27, "MARIAH LUIZA DO NASCIMENTO CARVALHO", '1141562467'],
+    [29, "MISAEL MARTINS DE ANDRADE JUNIOR", '1132110014'],
+    [30, "MURILO GABRIEL RIOS LEAO", '1122260210'],
+    [31, "NATAN SANTOS XAVIER", '1122198802'],
+    [35, "PIETRO COELHO MARTINS", '1151100377'],
+    [38, "RAPHAEL DA SILVA TAVARES", '1150835709'],
+    [40, "VICTOR DANIEL GARCIA SANCHEZ", '1210007927'],
+    [42, "VITOR HUGO SILVA RIO BRANCO", '1132099833'],
+    [43, "VITOR VINICIUS PEREIRA VASCONCELOS", '1103353871'],
+    [45, "ESTELA RODRIGUES DE OLIVEIRA", '1142418078'],
+  ],
+  // 2ª Série C Noite
+  '2c-noite': [
+    [1, "ANA CLARA FERNANDES DA SILVA", '1127336885'],
+    [2, "BARBARA VITÓRIA SANTOS SOUZA", '1122296435'],
+    [3, "GABRIEL FREITAS DE BARROS", '1122268245'],
+    [4, "GUILHERME XAVIER DE MACÊDO", '1141474864'],
+    [5, "JAQUELINE LEMOS CUNHA DE AMORIM", '1151077604'],
+    [7, "KAIQUE SORACE MOTA SILVA", '1131534207'],
+    [8, "LUANA DA SILVA ROCHA DOS SANTOS", '1132116909'],
+    [9, "LUIZA AVELA ORTEGA", '1122286788'],
+    [10, "MIRELA DE OLIVEIRA MARTINS", '1122216294'],
+    [11, "ALICIA KEMILLY SULINO REIS", '1104964636'],
+    [12, "MARIAH EDUARDA PEDROSO MARTINS", '1122169024'],
+    [13, "HELIO HENRIQUE LAMBERT VIEIRA", '1141624515'],
+    [14, "PEDRO HENRIQUE VITORINO TOMAZ DOS SANTOS", '113206613X'],
+    [15, "MARCOS VINICIUS DE SOUZA ALVES", '1142398456'],
+    [16, "GUILHERME FAGUNDES DE ARAUJO", '111895869X'],
+    [17, "LARA BARROS DA SILVA", '1119316947'],
+    [19, "MATHEUS FELIPE SILVA SOUZA", '1117176617'],
+    [20, "PEDRO HENRIQUE CORDEIRO MACEDO", '1165983011'],
+    [22, "ANA BEATRIZ OLIVEIRA ALVES", '1151070506'],
+    [23, "ARTHUR RIBEIRO SOARES LUZ", '1155566233'],
+    [24, "SAMUEL RIBEIRO SOARES LUZ", '1155567717'],
+    [27, "ANDRÉ RICARDO BUENO EMILIO FILHO", '1141459516'],
+    [28, "GIOVANNA SOUZA DE ALBUQUERQUE", '1155463122'],
+    [29, "PABLO VINICIUS SILVA DE LIMA", '1132081993'],
+    [30, "DESIREE RODRIGUES DE AMORIM", '1121176136'],
+    [31, "MARIANA LOPES GRAÇA", '112025243X'],
+    [32, "VITOR DORICE DOS SANTOS", '1141571985'],
+    [33, "INARA BEZERRA DA SILVA", '110498121X'],
+    [34, "ASHELEY DE PAULA PEREIRA GARCIA", '1122168901'],
+    [36, "LAIS MIKAELLY ROCHA SILVA", '1141568962'],
+    [37, "YASMIN VITORIA SIQUEIRA FERNANDES", '1122280373'],
+    [38, "PEDRO PAULO DE SOUZA NEVES", '111931821X'],
+    [39, "ISABELLA DE SOUZA BARROS", '1147270752'],
+    [40, "MARIA EDUARDA CHAGAS GONÇALVES", '112216421X'],
+    [41, "CARLOS EDUARDO DE FREITAS PINHEIRO LOPES", '1133580300'],
+    [42, "LUCAS PERES DE SOUZA", '1111269245'],
+    [43, "ERIK TAVARES AUGUSTO", '110062207X'],
+    [44, "DAVÍ ALMEIDA LIMA", '1132041739'],
+    [45, "LUIZ EDUARDO QUINTINO PINA", '1141437338'],
+  ],
+  // 3ª Série F Noite
+  '3f-noite': [
+    [2, "GABRIEL RONDINI DA SILVA", '1122089314'],
+    [3, "GUSTAVO HENRIQUE FIGUEREDO CARVALHO", '1203693588'],
+    [4, "JOAO MARCOS DANTAS DA SILVA", '1122127960'],
+    [5, "MIGUEL DE OLIVEIRA AQUINO", '1122280397'],
+    [6, "PEDRO HENRIQUE FAGUNDES DE LIMA", '1122218515'],
+    [7, "PEDRO MIGUEL ALMEIDA DO NASCIMENTO", '1111289724'],
+    [8, "WILLIAN ROBERTO DUARTE", '1114016883'],
+    [9, "YGOR BRYAN SILVA OLIVEIRA", '1214926708'],
+    [11, "ANA JÚLLIA LIMA CLAUDIO", '1122208042'],
+    [12, "AYSHILLA PEREIRA DOS SANTOS", '1120392305'],
+    [13, "HYAGO SANTOS XAVIER", '113206434X'],
+    [14, "JULIA DARRIBA CESTARI", '1132074666'],
+    [15, "JULIANA CRISTINA ARAUJO OLIVEIRA", '1132164266'],
+    [16, "KAUANY COSTA HELUANY", '1104586642'],
+    [17, "LUDIMILA NEVES DA SILVA", '1122171857'],
+    [18, "MATHEUS CRISTHOFER OLIVEIRA DE SOUZA RAMOS", '1141563873'],
+    [19, "PABLO HENRIQUE DA PAIXÃO TEIXEIRA", '1209941673'],
+    [20, "YAGO COLDI BELI AZEVEDO DA SILVA", '1120493717'],
+    [23, "JOÃO MANOEL DO NASCIMENTO MENEZES", '1120960757'],
+    [24, "IAGO FELIPE SANDRIN BERTIN", '1141864708'],
+    [25, "ANDRE FRANCESCHINI SOARES", '1130590252'],
+    [27, "ANA JULIA ROCHA DE JESUS", '111403521X'],
+    [28, "JULIA DE CASTRO CARDOSO", '1132093557'],
+    [29, "MANUELA TELES DE OLIVEIRA", '1104981324'],
+    [30, "RAISSA VITORIA LENARES SANTOS", '1141515015'],
+    [32, "BRENO APARECIDO DE SOUSA NASCIMENTO", '1141466260'],
+    [34, "YASMIN CABRAL KELER DOMINGUES", '1122139007'],
+    [35, "MARIA CLARA COSTA MARTINS", '1132081166'],
+    [36, "JOAO VICTOR DE CARVALHO SANTOS", '1094851966'],
+    [37, "MYLLENA CARDOZO FERREIRA", '1132126125'],
+    [38, "LUDMILA SILVA FELICIANO", '1124960892'],
+    [40, "LEONARDO RIKELME NUNES", '1132087764'],
+    [42, "GABRIEL FELIPO DE MORAIS", '1122193579'],
+    [43, "MIKAELLI PARMEGIANI MATHIAS", '1122226615'],
+    [44, "EMILLY FERNANDES", '1117136899'],
+    [45, "LOHAYNI VICTORIA TAVARES DOS SANTOS", '113851262X'],
+    [47, "MAISSA QUERCIA GALLO", '1121317261'],
+    [48, "MANUELA LEDIER DE ABREU", '1151257059'],
+    [49, "IASMIN DE SOUZA ALBERTO", '1115716049'],
+    [50, "LIVIA SOUZA DA SILVA", '1111276079'],
+  ],
+};
+
 const EM_PREFIXO_ABA = 'EM · ';
 const EM_N_OBJ = 12, EM_N_DIS = 2;
 const EM_COL = { data: 1, turma: 2, componente: 3, prova: 4, n: 5, nome: 6, ra: 7, obj: 8 };   // Q1..Q12 em H..S
@@ -781,8 +901,11 @@ function emValidar_(p) {
   });
   const nome = String(p.nome || '').trim();
   if (nome.length < 3 || nome.length > 120) throw new Error('nome inválido');
-  if (!Number.isInteger(p.n) || p.n < 1 || p.n > 99) throw new Error('nº de chamada inválido');
-  if (!/^[0-9]{1,12}[0-9Xx]?$/.test(String(p.ra || ''))) throw new Error('RA inválido');
+  // O aluno precisa existir na lista da turma; nome e RA gravados são os da lista (não os enviados).
+  const lista = Object.prototype.hasOwnProperty.call(ALUNOS_EM, p.turmaId) ? ALUNOS_EM[p.turmaId] : null;
+  const reg = lista && Number.isInteger(p.n) ? lista.find(x => x[0] === p.n) : null;
+  if (!reg) throw new Error('aluno não encontrado na lista da turma');
+  p.nome = reg[1]; p.ra = reg[2];
   ['turma', 'componente', 'prova'].forEach(k => { if (!String(p[k] || '').trim() || String(p[k]).length > 80) throw new Error(k + ' inválido'); });
 }
 

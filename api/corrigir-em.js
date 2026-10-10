@@ -576,6 +576,7 @@ function lerIdentificacao(body, id) {
   return {
     registro: {
       envioId: body.envioId,
+      turmaId: body.turma,
       turma: turma.label,
       componente: componente.label,
       prova: PROVAS[partes[3]],
