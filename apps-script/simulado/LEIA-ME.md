@@ -36,7 +36,7 @@ Implantar → **Gerenciar implantações** → lápis → Versão: **Nova versã
 
 A página `/ensino-medio/` agora registra na planilha. Quem corrige as 12 objetivas continua sendo a função da Vercel (`api/corrigir-em.js`, que guarda o gabarito); depois de corrigir, ela chama este Apps Script com uma senha e ele grava uma linha.
 
-Arquivos: `EnsinoMedio.gs` (NOVO) e `Codigo.gs` (mudou só 1 linha no `doPost`).
+Arquivos: `EnsinoMedio.gs` (NOVO) e `Codigo.gs` (mudou só 1 linha no `doPost`). **Se o seu Apps Script é um arquivo único** (como o "ARQUIVO ÚNICO"), use só `ARQUIVO-UNICO.gs`: apague tudo do `Código.gs` e cole esse arquivo inteiro (já inclui o Ensino Fundamental intacto + Ensino Médio).
 
 ## 1. No Apps Script
 1. Crie o arquivo **EnsinoMedio** (tipo Script) e cole o conteúdo de `EnsinoMedio.gs`.
