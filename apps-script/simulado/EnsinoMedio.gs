@@ -14,7 +14,21 @@ const EM_N_OBJ = 12, EM_N_DIS = 2;
 const EM_COL = { data: 1, turma: 2, componente: 3, prova: 4, nome: 5, obj: 6 };   // Q1..Q12 em F..Q
 const EM_COL_FIM_OBJ = EM_COL.obj + EM_N_OBJ;                                      // R: acertos
 const EM_COL_DIS = EM_COL_FIM_OBJ + 2;                                             // T: Q13 resposta, U: Q13 nota, V: Q14 ...
-const EM_COL_OBS = EM_COL_DIS + EM_N_DIS * 2;
+const EM_COL_FINAL = EM_COL_DIS + EM_N_DIS * 2;                                     // X: nota final (fórmula)
+const EM_COL_OBS = EM_COL_FINAL + 1;
+
+/* Letra da coluna (1 → A). */
+function emLetra_(n) { let s = ''; while (n > 0) { const m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = Math.floor((n - 1) / 26); } return s; }
+
+/* Nota final (0–10): as 14 questões valem igual. Objetivas: 1 ponto por acerto; dissertativas: nota 0–1 do professor.
+   Só aparece depois que o professor preenche as duas notas das dissertativas. */
+function emFormulaFinal_(linha) {
+  const acertos = emLetra_(EM_COL_FIM_OBJ) + linha;
+  const notas = [];
+  for (let k = 0; k < EM_N_DIS; k++) notas.push(emLetra_(EM_COL_DIS + k * 2 + 1) + linha);
+  const todas = notas.map(c => c + '<>""').join(',');
+  return '=IF(AND(' + todas + '),ROUND((' + acertos + '+' + notas.join('+') + ')/' + (EM_N_OBJ + EM_N_DIS) + '*10,1),"")';
+}
 
 /* Evita que um texto digitado pelo aluno seja interpretado como fórmula pela planilha. */
 function emSeguro_(valor) {
@@ -45,12 +59,14 @@ function enviarEM_(p) {
     .concat(p.respostas.map(String));
   linha.push(Number(p.acertos), Number(p.notaObjetiva));
   p.dissertativas.forEach(texto => linha.push(emSeguro_(String(texto).slice(0, 3000)), ''));   // resposta + nota (professor)
-  linha.push('');
+  linha.push('', '');                                                                        // nota final (fórmula, preenchida abaixo) + observações
   const lock = LockService.getScriptLock();
   lock.waitLock(20000);
   try {
     if (cache.get(chave)) return { ok: true, repetido: true };
-    emAba_(p.avaliacao, p.gabarito).appendRow(linha);
+    const aba = emAba_(p.avaliacao, p.gabarito);
+    linha[EM_COL_FINAL - 1] = emFormulaFinal_(aba.getLastRow() + 1);
+    aba.appendRow(linha);
     cache.put(chave, '1', 21600);
   } finally { lock.releaseLock(); }
   return { ok: true };
@@ -67,17 +83,23 @@ function emAba_(avaliacao, gabarito) {
   cab.push('Acertos objetivas (de ' + EM_N_OBJ + ')', 'Nota objetivas (0–10)');
   gab.push('', '');
   for (let k = 0; k < EM_N_DIS; k++) {
-    cab.push('Q' + (EM_N_OBJ + k + 1) + ' resposta', 'Q' + (EM_N_OBJ + k + 1) + ' nota (professor)');
+    cab.push('Q' + (EM_N_OBJ + k + 1) + ' resposta', 'Q' + (EM_N_OBJ + k + 1) + ' nota (professor, 0–1)');
     gab.push('', '');
   }
-  cab.push('Observações do professor');
-  gab.push('');
+  cab.push('Nota final (0–10)', 'Observações do professor');
+  gab.push('', '');
   sh.getRange(1, 1, 1, cab.length).setValues([cab]).setFontWeight('bold').setBackground('#145A32').setFontColor('#FFFFFF').setWrap(true);
   sh.getRange(2, 1, 1, cab.length).setValues([gab]).setFontStyle('italic').setBackground('#EEEEEE');
   sh.setFrozenRows(2); sh.setFrozenColumns(5);
   sh.setColumnWidth(EM_COL.nome, 260);
   for (let k = 0; k < EM_N_DIS; k++) sh.setColumnWidth(EM_COL_DIS + k * 2, 320);
+  sh.setColumnWidth(EM_COL_FINAL, 110);
   sh.setColumnWidth(EM_COL_OBS, 260);
+  for (let k = 0; k < EM_N_DIS; k++) {                    // só aceita nota de 0 a 1 nas dissertativas
+    const regraNota = SpreadsheetApp.newDataValidation().requireNumberBetween(0, 1).setAllowInvalid(false)
+      .setHelpText('Nota da dissertativa: de 0 a 1 (use vírgula para decimais).').build();
+    sh.getRange(3, EM_COL_DIS + k * 2 + 1, 998, 1).setDataValidation(regraNota);
+  }
   const faixa = sh.getRange(3, EM_COL.obj, 998, EM_N_OBJ), c = 'F';
   sh.setConditionalFormatRules([
     SpreadsheetApp.newConditionalFormatRule().whenFormulaSatisfied('=AND(' + c + '3<>"",' + c + '3=' + c + '$2)')

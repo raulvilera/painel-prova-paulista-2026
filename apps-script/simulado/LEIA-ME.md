@@ -55,7 +55,8 @@ Depois faça um novo deploy (Deployments → ⋯ → Redeploy) para as variávei
 - Uma aba por avaliação: `EM · bio-2-paulista`, `EM · bio-2-provao`, `EM · qui-3-provao` etc., criada sozinha no primeiro envio.
 - Linha 2: gabarito. Q1–Q12: azul = certa, vermelho = errada.
 - Colunas de acertos e **nota das objetivas (0–10)**.
-- Q13 e Q14: texto do aluno e uma coluna **nota (professor)** em branco, para a correção manual. A nota final não é calculada: a composição objetivas + dissertativas fica a critério do professor.
+- Q13 e Q14: texto do aluno e uma coluna **nota (professor, 0–1)** em branco, para a correção manual (a planilha só aceita valores de 0 a 1).
+- **Nota final (0–10)**: calculada sozinha quando você preenche as notas das duas dissertativas. As 14 questões valem igual: `(acertos + nota Q13 + nota Q14) ÷ 14 × 10`, com uma casa decimal. Enquanto faltar alguma nota, a célula fica vazia. Se quiser outro peso, é só editar a fórmula na coluna X (ou pedir para ajustar `emFormulaFinal_` em `EnsinoMedio.gs`).
 - Se o mesmo envio for repetido (ex.: "Tentar registrar novamente"), a planilha não duplica a linha.
 
 ## 4. Se algo falhar
