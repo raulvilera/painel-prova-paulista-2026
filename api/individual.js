@@ -9,9 +9,11 @@ async function rest(path, opt) {
   const t = await r.text(); if (!r.ok) throw new Error('Supabase ' + r.status + ': ' + t.slice(0, 160));
   return t ? JSON.parse(t) : null;
 }
+/* O login do professor é o do Supabase da plataforma (outro projeto); os dados desta atividade ficam em SUPABASE_URL. */
+const LOGIN_URL = process.env.PAINEL_SUPABASE_URL || 'https://ykrjfjepnqeoqlgupsbe.supabase.co', LOGIN_KEY = process.env.PAINEL_SUPABASE_KEY || 'sb_publishable_FbMU5x7WBpxzHmmVzOfh2g_0M1xxAh5';
 async function professor(req) {
   const m = /^Bearer (.+)$/.exec(req.headers.authorization || ''); if (!m) return false;
-  const r = await fetch(SB + '/auth/v1/user', { headers: { apikey: KEY, Authorization: 'Bearer ' + m[1] } });
+  const r = await fetch(LOGIN_URL + '/auth/v1/user', { headers: { apikey: LOGIN_KEY, Authorization: 'Bearer ' + m[1] } });
   return r.ok;
 }
 const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim().toUpperCase();
@@ -123,8 +125,14 @@ module.exports = async function individual(req, res) {
     }
 
     /* ----- professor (precisa estar logado na plataforma) ----- */
-    if (!['status', 'gerar', 'liberar', 'ver'].includes(acao)) return erro(400, 'Ação desconhecida.');
+    if (!['status', 'gerar', 'liberar', 'ver', 'plano'].includes(acao)) return erro(400, 'Ação desconhecida.');
     if (!(await professor(req))) return erro(401, 'Entre na plataforma como professor.');
+    if (acao === 'plano') {
+      const L = (Array.isArray(b.linhas) ? b.linhas : []).slice(0, 200).filter(x => x && x.turma && x.nome).map(x => ({ turma: String(x.turma), nome: String(x.nome), itens: (Array.isArray(x.itens) ? x.itens : []).filter(i => CAT[i.k]).map(i => ({ k: i.k, niv: Number(i.niv) || 0, t: i.t === 'b4' ? 'b4' : 'gap' })), resumo: String(x.resumo || '').slice(0, 300), atualizado: new Date().toISOString() }));
+      if (!L.length) return erro(400, 'Nenhuma linha.');
+      await rest('indiv_plano?on_conflict=turma,nome', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify(L) });
+      return ok({ n: L.length });
+    }
     if (acao === 'status') {
       const r = await rest('indiv_banco?select=k,liberada'); const B = {}; (r || []).forEach(x => B[x.k] = x.liberada);
       return ok({ chaves: Object.keys(CAT).map(k => ({ k, nome: CAT[k].nome, bim: CAT[k].bim, serie: CAT[k].serie, desc: CAT[k].desc, tem: k in B, liberada: !!B[k] })) });

@@ -863,9 +863,8 @@ function indvAbrir(){
     }catch(er){ box.textContent="erro: "+er.message; } };
   $("#indPub").onclick=async()=>{
     const m=$("#indPubM"); m.textContent="publicando…";
-    try{ for(let i=0;i<L.length;i+=80){ const lote=L.slice(i,i+80).map(x=>({turma:x.turma,nome:x.nome,itens:x.itens,resumo:x.resumo,atualizado:new Date().toISOString()}));
-        const {error}=await sb.from("indiv_plano").upsert(lote,{onConflict:"turma,nome"}); if(error) throw new Error(error.message); m.textContent=`publicando… ${Math.min(i+80,L.length)}/${L.length}`; }
-      m.textContent=`✓ ${L.length} alunos publicados`; }catch(e){ m.textContent="erro: "+e.message+" (as tabelas foram criadas com supabase/indiv.sql?)"; }
+    try{ for(let i=0;i<L.length;i+=80){ await indvApi("plano",{linhas:L.slice(i,i+80)}); m.textContent=`publicando… ${Math.min(i+80,L.length)}/${L.length}`; }
+      m.textContent=`✓ ${L.length} alunos publicados`; }catch(e){ m.textContent="erro: "+e.message; }
   };
   $("#indGer").onclick=async()=>{
     const falta=ST.filter(x=>!x.tem); if(!falta.length){ $("#indSt").textContent+=" · nada a gerar"; return; }
