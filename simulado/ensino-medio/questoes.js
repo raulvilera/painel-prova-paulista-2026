@@ -11,12 +11,7 @@ window.AVALIACOES_EM = {
     "questoes": [
       {
         "id": "bio-2-paulista-01",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Overview_condoms_of_different_brands.jpg?width=640",
-          "leg": "Preservativos de diferentes marcas.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Overview_condoms_of_different_brands.jpg"
-        },
+        "foto": {"src":"img/bio-2-paulista-01.svg","leg":"Oficina escolar sobre prevenção às IST: quadro com as quatro afirmações a analisar.","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "IST, prevenção e preservativos",
         "hab": "EM13CNT207",
@@ -426,12 +421,7 @@ window.AVALIACOES_EM = {
     "questoes": [
       {
         "id": "qui-2-paulista-01",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Lemon_battery_experiment.JPG?width=640",
-          "leg": "Experimento com eletrodos metálicos inseridos em um limão.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Lemon_battery_experiment.JPG"
-        },
+        "foto": {"src":"img/qui-2-paulista-01.svg","leg":"Esquema da célula de Daniell: eletrodos de Zn e Cu, soluções, ponte salina e fio externo.","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Oxirredução; ânodo, cátodo e fluxo de elétrons em pilha",
         "hab": "EM13CNT107; EM13CNT308",

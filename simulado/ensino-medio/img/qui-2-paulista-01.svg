@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" font-family="Segoe UI,Arial,sans-serif" font-size="16">
+<title>Célula galvânica de Daniell: eletrodo de zinco, eletrodo de cobre, ponte salina e fio externo</title>
+<rect width="760" height="360" fill="#f6f9fb"/>
+<!-- fio externo -->
+<path d="M205 150 V52 H555 V150" fill="none" stroke="#37474f" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="380" cy="52" r="26" fill="#fff" stroke="#37474f" stroke-width="3"/><text x="380" y="59" text-anchor="middle" font-size="20" font-weight="700" fill="#37474f">V</text>
+<text x="380" y="20" text-anchor="middle" fill="#37474f">fio externo</text>
+<!-- béqueres -->
+<g stroke="#546e7a" stroke-width="3" fill="none"><path d="M110 150 V318 Q110 330 122 330 H288 Q300 330 300 318 V150"/><path d="M460 150 V318 Q460 330 472 330 H638 Q650 330 650 318 V150"/></g>
+<rect x="112" y="200" width="186" height="128" fill="#d6e6f2" opacity=".9"/>
+<rect x="462" y="200" width="186" height="128" fill="#bfe3ee" opacity=".9"/>
+<!-- eletrodos -->
+<rect x="190" y="140" width="30" height="170" rx="3" fill="#9aa5ab" stroke="#546e7a" stroke-width="2"/>
+<rect x="540" y="140" width="30" height="170" rx="3" fill="#c97b3c" stroke="#7a431a" stroke-width="2"/>
+<text x="205" y="350" text-anchor="middle" font-weight="700" fill="#263238">Zn(s)</text>
+<text x="555" y="350" text-anchor="middle" font-weight="700" fill="#263238">Cu(s)</text>
+<text x="130" y="228" fill="#263238">Zn²⁺(aq)</text>
+<text x="580" y="228" fill="#263238">Cu²⁺(aq)</text>
+<!-- ponte salina -->
+<path d="M262 200 V128 Q262 108 282 108 H478 Q498 108 498 128 V200" fill="none" stroke="#e0b64a" stroke-width="22" stroke-linecap="butt"/>
+<path d="M262 200 V128 Q262 108 282 108 H478 Q498 108 498 128 V200" fill="none" stroke="#fff6d6" stroke-width="14"/>
+<text x="380" y="146" text-anchor="middle" fill="#263238">ponte salina</text>
+</svg>

@@ -128,7 +128,7 @@
     img.decoding = 'async';
     img.referrerPolicy = 'no-referrer';
     img.addEventListener('error', function () { figure.hidden = true; });
-    const caption = element('figcaption', null, (foto.leg || '') + ' · Foto: ');
+    const caption = element('figcaption', null, (foto.leg || '') + (foto.ilustracao ? ' · ' : ' · Foto: '));
     if (foto.url && safeUrl(foto.url)) {
       const a = element('a', null, foto.cred || 'Wikimedia Commons');
       a.href = safeUrl(foto.url); a.target = '_blank'; a.rel = 'noopener noreferrer';
