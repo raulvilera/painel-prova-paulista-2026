@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Minha atividade · Ciências</title>
+<style>
+  :root{--verde:#145A32;--fundo:#F3F6F2;--cartao:#FFFFFF;--tinta:#1B2420;--suave:#5A6660;--linha:#D5DCD7}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fundo);color:var(--tinta);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:880px;margin:0 auto;padding:16px}
+  header.cab{background:var(--verde);color:#fff;border-radius:16px;padding:18px 20px;margin-bottom:16px}
+  .esc{font-weight:800;letter-spacing:.03em;font-size:1.1rem}
+  header.cab h1{margin:6px 0 2px;font-size:1.3rem}
+  .sub{opacity:.88;font-size:.92rem}
+  .ident{background:var(--cartao);border:1px solid var(--linha);border-radius:16px;padding:16px;display:grid;grid-template-columns:1.1fr 2fr .6fr 1fr;gap:12px;margin-bottom:16px}
+  @media (max-width:720px){.ident{grid-template-columns:1fr 1fr}.ident .nome{grid-column:1 / -1}}
+  .ident label{display:block;font-size:.78rem;font-weight:800;color:var(--suave);margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em}
+  .ident select,.ident input{width:100%;font:inherit;padding:10px;border:1px solid var(--linha);border-radius:10px;background:#fff;color:var(--tinta)}
+  .ident input[readonly]{background:#EEF2EE;font-weight:700}
+  .aviso{background:#FFF8E1;border:1px solid #F3D27A;border-radius:12px;padding:10px 14px;margin-bottom:16px;font-size:.92rem}
+  .q{background:var(--cartao);border:1px solid var(--linha);border-radius:16px;padding:18px;margin-bottom:16px}
+  .q .top{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .q .num{font-weight:800;color:var(--verde);margin-right:4px}
+  .tag{font-size:.74rem;color:var(--suave);border:1px solid var(--linha);border-radius:999px;padding:1px 9px}
+  .enun{margin:10px 0 6px}
+  .fig{margin:10px 0 14px;background:#FAFBFA;border:1px solid var(--linha);border-radius:12px;padding:8px;display:flex;justify-content:center}
+  .fig svg{width:100%;max-width:560px;height:auto;display:block}
+  .cmd{font-weight:700;margin:0 0 10px}
+  .alts{display:grid;gap:10px}
+  .alternativa{display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;font:inherit;color:var(--tinta);background:#fff;border:1px solid #E3E7E4;border-radius:12px;padding:12px 14px;cursor:pointer;
+    box-shadow:4px 4px 8px rgba(0,0,0,0.3),-2px -2px 6px rgba(255,255,255,0.6);transition:all .15s ease-in-out}
+  .alternativa .l{font-weight:800;min-width:1.5em}
+  .alternativa:focus-visible{outline:3px solid #7FB08F;outline-offset:2px}
+  .alternativa.selecionada{box-shadow:inset 3px 3px 6px rgba(0,0,0,0.4);transform:translateY(2px);background-color:#145A32;color:#FFFFFF;font-weight:bold;border-color:#145A32}
+  textarea{width:100%;min-height:130px;font:inherit;padding:12px;border:1px solid var(--linha);border-radius:12px;resize:vertical}
+  .enviar{display:block;width:100%;font:inherit;font-weight:800;font-size:1.05rem;color:#fff;background:var(--verde);border:0;border-radius:14px;padding:16px;cursor:pointer;box-shadow:4px 4px 8px rgba(0,0,0,.3)}
+  .enviar:disabled{opacity:.6;cursor:wait}
+  .enviar[hidden]{display:none}
+  .msg{margin:12px 0;padding:12px 14px;border-radius:12px;display:none}
+  .msg.ok{display:block;background:#E3F1E7;border:1px solid #9FCDAE}
+  .msg.erro{display:block;background:#FBE6E6;border:1px solid #E3A3A3}
+  .vazio{text-align:center;color:var(--suave);padding:30px 10px}
+  .foto{margin:10px 0 6px;border-radius:12px;overflow:hidden;border:1px solid var(--linha);background:#fff}
+  .foto img{display:block;width:100%;max-height:340px;object-fit:cover;background:#E8ECE8}
+  .foto figcaption{font-size:.82rem;color:var(--suave);padding:6px 10px}
+  .foto figcaption a{color:inherit}
+  .codra{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.85rem;color:var(--suave)}
+  .codra[hidden]{display:none}
+  .codra input{width:130px !important;text-transform:uppercase;letter-spacing:.1em}
+  .codra button{font:inherit;font-weight:700;border:0;border-radius:10px;padding:9px 14px;background:var(--verde);color:#fff;cursor:pointer}
+  .carreg{font-size:.8rem;color:var(--suave);margin-left:6px}
+  .desc{background:#E8F3EC;border:1px solid #B9DCC5;border-radius:12px;padding:10px 14px;margin-bottom:16px;font-size:.92rem}
+  .alternativa.certa{outline:3px solid #1E63B5}
+  .feedback{margin-top:8px;font-size:.88rem;color:var(--suave)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="cab">
+    <div class="esc" id="esc">Ciências · Ensino Fundamental</div>
+    <h1>Minha atividade de Ciências</h1>
+    <div class="sub" id="sub">Escolha a sua turma e o seu nome para abrir as questões preparadas para você.</div>
+  </header>
+  <section class="ident" aria-label="Identificação do aluno">
+    <div><label for="turma">Turma</label><select id="turma"></select></div>
+    <div class="nome"><label for="nome">Nome</label><select id="nome" disabled><option value="">Escolha a turma primeiro</option></select></div>
+  </section>
+  <div class="desc" id="desc" hidden></div>
+  <div id="qs"></div>
+  <div class="msg" id="msg" role="status"></div>
+  <button class="enviar" id="btn" type="button" hidden>Enviar respostas</button>
+</div>
+<script>
+const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu_dupRvY-GzoHPNZhL2ft3KpSK7odGF0amqn7Yc7P/exec";
+(function(){
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const TURMAS = ["6º Ano A","6º Ano C","6º Ano A (Lydia)","6º Ano B (Lydia)","6º Ano C (Lydia)","7º Ano A","7º Ano B","8º Ano A","8º Ano B","9º Ano A","9º Ano B"];
+  const fT = $('#turma'), fN = $('#nome');
+  let Q = [], resp = [];
+  const espera = ms => new Promise(r => setTimeout(r, ms));
+  async function api(q){
+    let ult;
+    for (let k = 0; k < 4; k++) {
+      try {
+        const r = await fetch(API + '?' + new URLSearchParams(Object.assign({ nc: Date.now() }, q)), { redirect: 'follow', cache: 'no-store', credentials: 'omit' });
+        const j = await r.json(); if (!j.ok) throw Object.assign(new Error(j.erro || 'erro'), { srv: true }); return j;
+      } catch (e) { ult = e; if (e.srv) throw e; await espera(1500 * (k + 1)); }
+    }
+    throw ult;
+  }
+  async function post(body){ const r = await fetch(API, { method: 'POST', body: JSON.stringify(body), headers: { 'Content-Type': 'text/plain;charset=utf-8' }, redirect: 'follow', credentials: 'omit' }); const j = await r.json(); if (!j.ok) throw Object.assign(new Error(j.erro || 'erro'), { srv: true }); return j; }
+  const falha = e => e && e.srv ? e.message : 'sem conexão com a planilha. Verifique a internet e tente de novo';
+  const msg = (t, ok) => { const m = $('#msg'); m.className = 'msg ' + (ok ? 'ok' : 'erro'); m.textContent = t; m.scrollIntoView({behavior:'smooth', block:'center'}); };
+
+  fT.innerHTML = '<option value="">Selecione</option>' + TURMAS.map(t => `<option>${esc(t)}</option>`).join('');
+  function zerar(){ Q = []; resp = []; $('#qs').innerHTML = ''; $('#desc').hidden = true; $('#btn').hidden = true; $('#msg').className = 'msg'; }
+  fT.onchange = () => {
+    zerar(); fN.disabled = true; fN.innerHTML = '<option value="">Carregando nomes…</option>';
+    if (!fT.value) { fN.innerHTML = '<option value="">Escolha a turma primeiro</option>'; return; }
+    const t = fT.value;
+    api({ api: 'indivalunos', id: t }).then(d => {
+      if (fT.value !== t) return;
+      fN.disabled = false; fN.innerHTML = '<option value="">Selecione o seu nome</option>' + d.nomes.map(n => `<option>${esc(n)}</option>`).join('');
+    }).catch(e => { fN.innerHTML = '<option value="">Nomes indisponíveis</option>'; msg('Não foi possível carregar os nomes: ' + falha(e) + '.', false); });
+  };
+  fN.onchange = () => {
+    zerar(); if (!fN.value) return;
+    const t = fT.value, n = fN.value;
+    $('#qs').innerHTML = '<p class="vazio">Preparando as suas questões…</p>';
+    api({ api: 'meuplano', id: t, nome: n }).then(a => {
+      if (fT.value !== t || fN.value !== n) return;
+      if (a.aviso || !a.itens.length) { $('#qs').innerHTML = `<p class="vazio">${esc(a.aviso || 'Sem atividade por enquanto.')}</p>`; return; }
+      Q = a.itens; resp = Q.map(() => null);
+      $('#sub').textContent = `${a.nome.split(' ')[0]}, estas questões foram preparadas para você · ${Q.length} questões`;
+      const ds = []; Q.forEach(q => { if (ds.indexOf(q.desc) < 0) ds.push(q.desc); });
+      $('#desc').hidden = false; $('#desc').innerHTML = '<b>O que vamos retomar:</b><ul style="margin:6px 0 0 18px;padding:0">' + ds.map(d => `<li>${esc(d)}</li>`).join('') + '</ul>';
+      desenhar();
+    }).catch(e => { $('#qs').innerHTML = `<p class="vazio">Não foi possível abrir a atividade: ${esc(falha(e))}.</p>`; });
+  };
+  function desenhar(){
+    $('#qs').innerHTML = Q.map((q, i) => `
+      <article class="q" id="q${i}">
+        <div class="top"><span class="num">Questão ${i+1}</span><span class="tag">${q.tipo === 'obj' ? 'Objetiva' : 'Dissertativa'}</span></div>
+        <p class="enun">${esc(q.enunciado)}</p>
+        <p class="cmd">${esc(q.comando)}</p>
+        ${q.tipo === 'obj'
+          ? `<div class="alts" role="radiogroup" aria-label="Alternativas da questão ${i+1}">${q.alts.map((t, k) => `<button type="button" class="alternativa" role="radio" aria-checked="false" data-q="${i}" data-k="${k}"><span class="l">${'ABCD'[k]}</span><span>${esc(t)}</span></button>`).join('')}</div>`
+          : `<textarea data-q="${i}" aria-label="Resposta da questão ${i+1}" placeholder="Escreva sua resposta com as suas palavras."></textarea>`}
+        <div class="feedback" id="fb${i}"></div>
+      </article>`).join('');
+    $('#btn').hidden = false; $('#btn').disabled = false; $('#btn').textContent = 'Enviar respostas';
+  }
+  document.addEventListener('click', e => {
+    const b = e.target.closest('.alternativa'); if (!b) return;
+    const i = +b.dataset.q, k = +b.dataset.k; resp[i] = k;
+    document.querySelectorAll(`.alternativa[data-q="${i}"]`).forEach(x => { const on = x === b; x.classList.toggle('selecionada', on); x.setAttribute('aria-checked', on); });
+  });
+  document.addEventListener('input', e => { if (e.target.matches('textarea[data-q]')) resp[+e.target.dataset.q] = e.target.value; });
+  $('#btn').onclick = () => {
+    if (!fT.value || !fN.value || !Q.length) return msg('Escolha a sua turma e o seu nome.', false);
+    const falta = resp.map((r, i) => (r === null || r === '') ? i + 1 : 0).filter(Boolean);
+    if (falta.length && !confirm('Faltam as questões ' + falta.join(', ') + '. Enviar mesmo assim?')) return;
+    const b = $('#btn'); b.disabled = true; b.textContent = 'Enviando e corrigindo…';
+    post({ acao: 'enviarIndiv', turma: fT.value, nome: fN.value, respostas: resp }).then(r => {
+      b.textContent = 'Respostas enviadas ✓';
+      let oi = 0, di = 0;
+      Q.forEach((q, i) => {
+        if (q.tipo === 'obj') {
+          const g = (r.gabarito || [])[oi++]; if (!g) return;
+          const bt = document.querySelector(`.alternativa[data-q="${i}"][data-k="${g.correta}"]`); if (bt) bt.classList.add('certa');
+          $('#fb' + i).textContent = (resp[i] === g.correta ? '✓ Certo! ' : '✗ A correta é a ' + 'ABCD'[g.correta] + '. ') + (g.explicacao || '');
+        } else { const nt = (r.notasDis || [])[di++]; if (nt !== '' && nt != null) $('#fb' + i).textContent = 'Nota da IA: ' + String(nt).replace('.', ',') + ' de 1'; }
+      });
+      document.querySelectorAll('.alternativa, textarea').forEach(x => x.disabled = true);
+      msg(`Pronto, ${fN.value.split(' ')[0]}! Suas respostas foram registradas. Objetivas: ${r.acertos} de ${r.total} corretas.` + (r.notaFinal !== '' && r.notaFinal != null ? ` Nota: ${String(r.notaFinal).replace('.', ',')}.` : ' A correção das dissertativas ficou pendente.'), true);
+    }).catch(err => { b.disabled = false; b.textContent = 'Enviar respostas'; msg('Não foi possível enviar: ' + falha(err) + '. Tente de novo.', false); });
+  };
+})();
+</script>
+</body>
+</html>

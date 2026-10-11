@@ -59,6 +59,8 @@ function doGet(e) {
   if (api) {
     try {
       if (api === 'turmas') return json_({ ok: true, turmas: listaTurmas_() });
+      if (api === 'indivalunos') return json_({ ok: true, nomes: alunos_(String(e.parameter.id || '')).map(x => x.nome).sort((x, y) => x.localeCompare(y, 'pt')) });
+      if (api === 'meuplano') return json_(indivPub_(String(e.parameter.id || ''), String(e.parameter.nome || '')));   // atividade individual (Individual.gs)
       if (api === 'turma') return json_(Object.assign({ ok: true }, carregarTurma(String(e.parameter.id || ''))));
       return json_({ ok: false, erro: 'api desconhecida' });
     } catch (err) { return json_({ ok: false, erro: String(err.message || err) }); }
@@ -72,6 +74,7 @@ function doGet(e) {
 function doPost(e) {
   try {
     const p = JSON.parse((e && e.postData && e.postData.contents) || '{}');
+    if (p.acao === 'enviarIndiv') return json_(enviarIndiv_(p));   // atividade individual (Individual.gs)
     if (p.acao === 'enviarEM') return json_(enviarEM_(p));   // Ensino Médio (ver seção no fim do arquivo)
     if (p.acao !== 'enviar') return json_({ ok: false, erro: 'ação desconhecida' });
     return json_(enviar(p));

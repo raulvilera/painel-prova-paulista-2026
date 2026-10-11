@@ -802,6 +802,45 @@ async function plSalvar(k){
   try{ if(typeof sb==="undefined") return; await sb.from("planejamento_ajustes").upsert({id:k, dados:PL.aj[k], atualizado_em:new Date().toISOString()}); }catch(e){}
 }
 function plEsc(tn){ const g=PLAN.grade.find(x=>x.tn===tn); return g && /Lydia/.test(g.e) ? " (Lydia)" : ""; }
+
+/* ---------- atividade individual: plano por aluno (privado: vai para a planilha, não para o site) ---------- */
+const INDV_NIV=["Abaixo do Básico","Básico","Adequado","Avançado"];
+function planoIndiv(){
+  const linhas=[], sem=[]; let alunos=0;
+  const aluno=new Map();
+  DATA.A.forEach(r=>{ if(/^[6-9]º ANO/.test(serieOf(r[0]))) aluno.set(r[0]+"|"+r[2],r); });
+  aluno.forEach(r=>{
+    const t=r[0], tn=DATA.T[t].n, se=serieOf(t), id=aiTurmaLbl(tn)+plEsc(tn); alunos++;
+    const cand=[];
+    [3,4,5].forEach((ix,i)=>{
+      const v=r[ix]; if(v==null||v>=.75) return;
+      const ds=descs(t,r[1],i).map(d=>({k:se+"|"+(i+1)+"|"+d[3],d,gap:1-v,score:(1-v)*(1-d[4]),niv:lvOf(v),b:i+1})).filter(x=>ATIV[x.k]);
+      ds.sort((a,b)=>b.score-a.score); cand.push(ds);
+    });
+    const esc_=[]; cand.slice().sort((a,b)=>(b[0]?b[0].gap:0)-(a[0]?a[0].gap:0)).forEach(c=>{ if(c[0]&&esc_.length<3) esc_.push(c[0]); });
+    if(esc_.length<3){ const resto=[].concat(...cand).filter(x=>!esc_.includes(x)).sort((a,b)=>b.score-a.score); while(esc_.length<3&&resto.length) esc_.push(resto.shift()); }
+    const resumo=[3,4,5].map((ix,i)=>`${i+1}º bim: ${r[ix]==null?"—":Math.round(r[ix]*100)+"% ("+INDV_NIV[lvOf(r[ix])]+")"}`).join(" · ");
+    if(!esc_.length){ sem.push(r[2]); return; }
+    const row=[id,r[2]]; for(let i=0;i<3;i++) row.push(esc_[i]?esc_[i].k:"", esc_[i]?esc_[i].niv:""); row.push(resumo);
+    linhas.push(row);
+  });
+  return {linhas,sem,alunos};
+}
+function indvAbrir(){
+  const P=planoIndiv(), tsv=P.linhas.map(r=>r.join("\t")).join("\n");
+  const ov=document.createElement("div");
+  ov.style.cssText="position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px";
+  ov.innerHTML=`<div style="background:#fff;color:#1B2420;border-radius:14px;max-width:760px;width:100%;max-height:90vh;overflow:auto;padding:18px">
+    <h3 style="margin:0 0 6px">Plano individual · Ensino Fundamental</h3>
+    <p style="margin:0 0 8px;font-size:.92rem">${P.linhas.length} de ${P.alunos} alunos com descritores prioritários (até 3 por aluno, a partir dos níveis dos bimestres 1, 2 e 3 combinados com o desempenho da turma em cada descritor). ${P.sem.length?P.sem.length+" sem lacuna (todos os bimestres ≥ 75%) ou sem atividade no catálogo.":""}</p>
+    <ol style="font-size:.9rem;margin:0 0 8px 18px;padding:0"><li>Clique em <b>Copiar</b>.</li><li>Na planilha de recomposição, aba <b>Plano individual</b>, clique na célula <b>A2</b> e cole.</li><li>No Apps Script rode <b>gerarBancoPlano</b>, confira a aba Banco e rode <b>liberarBancoIndiv</b>.</li></ol>
+    <textarea readonly style="width:100%;height:150px;font:11px monospace">${esc(tsv)}</textarea>
+    <div style="margin-top:10px;display:flex;gap:8px"><button type="button" class="btn2 pri" id="indCop">Copiar</button><button type="button" class="btn2" id="indFec">Fechar</button><span id="indMsg" style="align-self:center;font-size:.9rem"></span></div></div>`;
+  document.body.appendChild(ov);
+  ov.querySelector("#indFec").onclick=()=>ov.remove();
+  ov.querySelector("#indCop").onclick=async()=>{ const ta=ov.querySelector("textarea"); try{ await navigator.clipboard.writeText(tsv); }catch(e){ ta.select(); document.execCommand("copy"); } ov.querySelector("#indMsg").textContent="Copiado ✓"; };
+}
+document.addEventListener("click",e=>{ if(e.target.closest("#indPlano")) indvAbrir(); });
 function plTnSel(){ return DATA && DATA.T[S.t] ? DATA.T[S.t].n : null; }
 function plInit(){ const ps=plPares(); const tnS=plTnSel(), sk=tnS+"|"+S.comp;
   if(PL.sync!==sk){ PL.sync=sk; const m=ps.find(p=>p[0]===tnS && p[1]===S.comp)||ps.find(p=>p[0]===tnS); if(m){ PL.tn=m[0]; PL.c=m[1]; } else if(!PL.tn){ PL.tn=ps[0][0]; PL.c=ps[0][1]; } }
@@ -1118,7 +1157,7 @@ const VIEWS={ aluno:["Aluno","Desempenho por bimestre",alunoView], desc:["Descri
 
 function renderAll(){
   const seT=serieOf(S.t);
-  document.getElementById("cAtiv").innerHTML=simSerie(seT)?`<b>Atividades dos alunos · ${esc(DATA.T[S.t].n)}</b>${simBtn(seT)}`:"";
+  document.getElementById("cAtiv").innerHTML=simSerie(seT)?`<b>Atividades dos alunos · ${esc(DATA.T[S.t].n)}</b>${simBtn(seT)}${/^[6-9]º ANO/.test(serieOf(S.t))?` <button type="button" class="pl-skip" id="indPlano" title="Gera o plano individual (descritores prioritários de cada aluno) para colar na planilha">🎯 plano individual</button> <a class="pl-skip" style="text-decoration:none;display:inline-block" href="/atividade-individual/" target="_blank" rel="noopener">link do aluno</a>`:""}`:"";
   document.getElementById("cAluno").innerHTML=alunoView(false);
   document.getElementById("cDesc").innerHTML=descView(false);
   document.getElementById("cTurma").innerHTML=turmaView(false);
