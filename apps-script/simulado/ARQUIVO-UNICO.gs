@@ -1001,8 +1001,11 @@ function enviarEM_(p) {
     const ja = cache.get(chave);
     if (ja) return { ok: true, repetido: true, dissertativas: JSON.parse(ja) };
     const aba = emAba_(p.avaliacao, p.gabarito);
-    linha[EM_COL_FINAL - 1] = emFormulaFinal_(aba.getLastRow() + 1);
+    const nlinha = aba.getLastRow() + 1;
+    linha[EM_COL_FINAL - 1] = '';
     aba.appendRow(linha);
+    // setFormula usa sempre a sintaxe em inglês (vírgulas), independente do idioma da planilha (appendRow dava #ERROR! em pt-BR)
+    aba.getRange(nlinha, EM_COL_FINAL).setFormula(emFormulaFinal_(nlinha));
     emSalvarContexto_(p.dissertativas);
     cache.put(chave, JSON.stringify(resultado), 21600);
   } finally { lock.releaseLock(); }
@@ -1105,4 +1108,15 @@ function testarEM() {
     Logger.log('ERRO: ' + (e && e.message ? e.message : e));
     throw e;
   }
+}
+
+
+/* Rode UMA vez no editor: refaz a fórmula da nota final nas linhas já gravadas que ficaram com #ERROR!. */
+function corrigirFormulasEM() {
+  const ss = SpreadsheetApp.openById(PLANILHA_ID);
+  let n = 0;
+  ss.getSheets().filter(sh => sh.getName().indexOf(EM_PREFIXO_ABA) === 0 && sh.getName() !== EM_ABA_CRITERIOS).forEach(sh => {
+    for (let linha = 3; linha <= sh.getLastRow(); linha++) { sh.getRange(linha, EM_COL_FINAL).setFormula(emFormulaFinal_(linha)); n++; }
+  });
+  Logger.log(n + ' fórmulas refeitas.');
 }
