@@ -1,0 +1,41 @@
+:root{--bg:#eef2f3;--surface:#fff;--surface-2:#f5f8f8;--fg:#13262b;--muted:#5b6f74;--line:#d5dfe1;--accent:#0f6e7a;
+--lv0:#d64545;--lv1:#e8a23a;--lv2:#4f9a4a;--lv3:#2f6fb7;--lv0-soft:#fbe4e4;--lv1-soft:#fdf1dc;--lv2-soft:#e5f2e3;--lv3-soft:#e1ecf8;
+--shadow:0 1px 2px rgba(19,38,43,.06),0 6px 18px rgba(19,38,43,.06)}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1719;--surface:#142226;--surface-2:#1a2b30;--fg:#e3eeef;--muted:#93a8ac;--line:#2a3f44;--accent:#5cc2cf;
+--lv0-soft:#3a1f20;--lv1-soft:#3a2d16;--lv2-soft:#1f3320;--lv3-soft:#182a3d;--shadow:none}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 "Source Sans 3","Segoe UI",system-ui,sans-serif;padding:0 16px 40px}
+.wrap{max-width:1180px;margin:0 auto}
+header{padding:18px 0 8px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;justify-content:space-between}
+h1{margin:0;font-size:1.35rem}h2{margin:0 0 4px;font-size:1.05rem}h3{margin:14px 0 6px;font-size:.95rem}
+.muted{color:var(--muted)}.sm{font-size:.85rem}
+nav a{color:var(--accent);margin-right:14px;font-weight:600;text-decoration:none}nav a:hover{text-decoration:underline}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:end;padding:10px 0 14px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.field label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+select{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px;max-width:100%;min-width:180px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.card{grid-column:span 12;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:16px 18px}
+.card.half{grid-column:span 6}@media(max-width:860px){.card.half{grid-column:span 12}}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kpi{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.kpi b{display:block;font-size:1.6rem;line-height:1.1}.kpi span{font-size:.8rem;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:6px 0 10px;font-size:.85rem}
+.legend i,.chip i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.stack{display:flex;height:30px;border-radius:8px;overflow:hidden;background:var(--surface-2);gap:2px}
+.stack div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.85rem;min-width:0;border-radius:3px}
+.bar{display:grid;grid-template-columns:minmax(120px,38%) 1fr 74px;gap:10px;align-items:center;padding:5px 0;border-bottom:1px solid var(--line)}
+.bar:last-child{border-bottom:0}
+.bar .nm{font-size:.86rem;line-height:1.25}.bar .nm small{display:block;color:var(--muted);font-size:.74rem}
+.track{position:relative;height:14px;background:var(--surface-2);border-radius:7px}
+.fill{position:absolute;left:0;top:0;bottom:0;border-radius:7px}
+.tick{position:absolute;top:-3px;bottom:-3px;width:3px;background:var(--fg);border-radius:2px;opacity:.75}
+.val{font-variant-numeric:tabular-nums;font-size:.85rem;text-align:right}
+.chip{display:inline-block;padding:1px 8px;border-radius:999px;font-size:.78rem;font-weight:700;border:1px solid var(--line)}
+.lv0{background:var(--lv0-soft)}.lv1{background:var(--lv1-soft)}.lv2{background:var(--lv2-soft)}.lv3{background:var(--lv3-soft)}
+table{border-collapse:collapse;width:100%}th{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:6px;border-bottom:1px solid var(--line)}
+td{padding:6px;border-bottom:1px solid var(--line);vertical-align:middle}tr.row{cursor:pointer}tr.row:hover td,tr.row.sel td{background:var(--surface-2)}
+.wrapt{max-height:420px;overflow:auto}
+.items{display:grid;gap:6px;margin-top:6px}.it{display:flex;gap:8px;font-size:.84rem;align-items:flex-start}
+.ok{color:#2e7d32;font-weight:700}.no{color:#c62828;font-weight:700}
+.msg{padding:30px 16px;text-align:center}.msg a{color:var(--accent);font-weight:700}
+button.lk{font:inherit;background:none;border:0;color:var(--accent);cursor:pointer;padding:0;text-decoration:underline}

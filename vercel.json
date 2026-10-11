@@ -1,7 +1,8 @@
 {
   "functions": {
     "api/corrigir-em.js": { "maxDuration": 60 },
-    "api/individual.js": { "maxDuration": 60 }
+    "api/individual.js": { "maxDuration": 60 },
+    "api/resultados.js": { "maxDuration": 30 }
   },
   "headers": [
     {

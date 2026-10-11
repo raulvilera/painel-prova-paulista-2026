@@ -450,6 +450,23 @@ async function registrarNaPlanilha(dados) {
   }
 }
 
+/* Guarda o resultado do aluno no Supabase (para o dashboard do professor). Nunca derruba o envio: se falhar, só não aparece no dashboard. */
+async function gravarResultado(ident, id, q, respostas, acertos, notaObjetiva, dissertativas, notaFinal) {
+  const base = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), chave = process.env.SUPABASE_SERVICE_KEY || '';
+  if (!base || !chave || !ident || !ident.registro) return;
+  const r = ident.registro;
+  const itens = q.map((item, i) => ({ id: item.id, tipo: 'obj', resp: 'ABCDE'[respostas[i]], acerto: respostas[i] === item.correta }))
+    .concat((dissertativas || []).map((d, k) => ({ id: id + '-' + (QID_DIS_BASE + k + 1), tipo: 'dis', nota: d.nota, status: d.status })));
+  const linha = { envio_id: r.envioId, avaliacao: id, turma_id: r.turmaId, turma: r.turma, componente: r.componente, prova: r.prova, n: r.n, nome: r.nome, ra: r.ra || '',
+    itens, acertos, total_obj: q.length, nota_obj: notaObjetiva, nota_final: notaFinal, status: notaFinal === null ? 'pendente' : 'corrigido pela IA' };
+  try {
+    const c = new AbortController(), t = setTimeout(() => c.abort(), 6000);
+    await fetch(base + '/rest/v1/em_respostas?on_conflict=envio_id', { method: 'POST', signal: c.signal,
+      headers: { apikey: chave, Authorization: 'Bearer ' + chave, 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify(linha) });
+    clearTimeout(t);
+  } catch (e) { /* silencioso */ }
+}
+
 module.exports = async function corrigirEM(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -509,6 +526,7 @@ module.exports = async function corrigirEM(req, res) {
         notaFinal = Math.round((acertos + dissertativas[0].nota + dissertativas[1].nota) / (q.length + N_DISSERTATIVAS) * 100) / 10;
       }
     }
+    await gravarResultado(ident, id, q, respostas, acertos, notaObjetiva, dissertativas, notaFinal);
     delete registro.dissertativas;
     let mensagem;
     if (!registro.ok) mensagem = 'Nota das objetivas. Não foi possível registrar na planilha: tente registrar de novo ou entregue o comprovante ao professor. As dissertativas serão corrigidas pelo professor.';
