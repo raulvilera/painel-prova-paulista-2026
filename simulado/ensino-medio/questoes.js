@@ -11,6 +11,12 @@ window.AVALIACOES_EM = {
     "questoes": [
       {
         "id": "bio-2-paulista-01",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Overview_condoms_of_different_brands.jpg?width=640",
+          "leg": "Preservativos de diferentes marcas.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Overview_condoms_of_different_brands.jpg"
+        },
         "tipo": "obj",
         "objeto": "IST, prevenção e preservativos",
         "hab": "EM13CNT207",
@@ -29,6 +35,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-02",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Pilule_contraceptive.jpg?width=640",
+          "leg": "Cartela de medicamento hormonal em uso oral.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Pilule_contraceptive.jpg"
+        },
         "tipo": "obj",
         "objeto": "Sistema endócrino, ciclo ovariano e contracepção hormonal",
         "hab": "EM13CNT207",
@@ -72,6 +84,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-03",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Mirena_IUD_with_hand.jpg?width=640",
+          "leg": "Dispositivo de uso contraceptivo.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Mirena_IUD_with_hand.jpg"
+        },
         "tipo": "obj",
         "objeto": "Métodos contraceptivos e prevenção de IST",
         "hab": "EM13CNT207",
@@ -90,6 +108,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-04",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_brain_preserved_in_formaldehyde.jpg?width=640",
+          "leg": "Encéfalo humano preservado para estudo.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Human_brain_preserved_in_formaldehyde.jpg"
+        },
         "tipo": "obj",
         "objeto": "Drogas psicoativas, sistema nervoso e dependência",
         "hab": "EM13CNT207",
@@ -132,6 +156,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-05",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Hookah_0890.jpg?width=640",
+          "leg": "Narguilé.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Hookah_0890.jpg"
+        },
         "tipo": "obj",
         "objeto": "Tabaco, nicotina, narguilé e cigarro eletrônico",
         "hab": "EM13CNT207",
@@ -150,6 +180,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-06",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercado_de_frutas_y_verduras.jpg?width=640",
+          "leg": "Banca de frutas e verduras em um mercado.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Mercado_de_frutas_y_verduras.jpg"
+        },
         "tipo": "obj",
         "objeto": "Alimentação, balanço energético e saúde",
         "hab": "EM13CNT310",
@@ -196,6 +232,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-07",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Testing_Blood_Sugar_Levels.jpg?width=640",
+          "leg": "Medição de glicose no sangue.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Testing_Blood_Sugar_Levels.jpg"
+        },
         "tipo": "obj",
         "objeto": "Insulina, glicemia e diabetes tipo 2",
         "hab": "EM13CNT310",
@@ -242,6 +284,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-08",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_beans_and_rice.jpg?width=640",
+          "leg": "Prato com arroz e feijão.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Red_beans_and_rice.jpg"
+        },
         "tipo": "obj",
         "objeto": "Carboidratos, fibras e disponibilidade de glicose",
         "hab": "EM13CNT310",
@@ -280,6 +328,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-09",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Raw_chicken.jpg?width=640",
+          "leg": "Carne de frango crua.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Raw_chicken.jpg"
+        },
         "tipo": "obj",
         "objeto": "Higiene dos alimentos e contaminação cruzada",
         "hab": "EM13CNT310",
@@ -322,6 +376,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-10",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Giardia_lamblia_SEM_8698_lores.jpg?width=640",
+          "leg": "Protozoário visto ao microscópio eletrônico.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Giardia_lamblia_SEM_8698_lores.jpg"
+        },
         "tipo": "obj",
         "objeto": "Protozooses: giardíase, amebíase e transmissão",
         "hab": "EM13CNT310",
@@ -362,6 +422,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-11",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Open_sewer_(2731597018).jpg?width=640",
+          "leg": "Esgoto a céu aberto em área urbana.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Open_sewer_(2731597018).jpg"
+        },
         "tipo": "obj",
         "objeto": "Saneamento, incidência e interpretação de dados",
         "hab": "EM13CNT310",
@@ -412,6 +478,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-12",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/1_rio_de_janeiro_slum_2010.JPG?width=640",
+          "leg": "Moradias em uma comunidade urbana.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:1_rio_de_janeiro_slum_2010.JPG"
+        },
         "tipo": "obj",
         "objeto": "Diagnóstico local, saneamento e promoção da saúde",
         "hab": "EM13CNT310",
@@ -462,6 +534,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-13",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Package_of_Lutera_Birth_Control_Pills.jpg?width=640",
+          "leg": "Embalagem de medicamento de uso hormonal.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Package_of_Lutera_Birth_Control_Pills.jpg"
+        },
         "tipo": "dis",
         "objeto": "Sistema endócrino e reprodutor; contraceptivos hormonais e prevenção de IST",
         "hab": "EM13CNT207",
@@ -474,6 +552,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-14",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa%C3%BAde_street_Market,_S%C3%A3o_Paulo,_Brazil.jpg?width=640",
+          "leg": "Feira livre em São Paulo.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Sa%C3%BAde_street_Market,_S%C3%A3o_Paulo,_Brazil.jpg"
+        },
         "tipo": "dis",
         "objeto": "Alimentação, insulina/diabetes tipo 2, protozooses e saneamento",
         "hab": "EM13CNT310",
@@ -522,6 +606,12 @@ window.AVALIACOES_EM = {
     "questoes": [
       {
         "id": "qui-2-paulista-01",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Lemon_battery_experiment.JPG?width=640",
+          "leg": "Experimento com eletrodos metálicos inseridos em um limão.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Lemon_battery_experiment.JPG"
+        },
         "tipo": "obj",
         "objeto": "Oxirredução; ânodo, cátodo e fluxo de elétrons em pilha",
         "hab": "EM13CNT107; EM13CNT308",
@@ -540,6 +630,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-02",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Zinc_and_copper_sulfate.JPG?width=640",
+          "leg": "Metal em contato com solução aquosa.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Zinc_and_copper_sulfate.JPG"
+        },
         "tipo": "obj",
         "objeto": "Potenciais-padrão de redução; reatividade e ddp de pilhas",
         "hab": "EM13CNT107; EM13CNT308",
@@ -577,6 +673,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-03",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniell_cell_picture.JPG?width=640",
+          "leg": "Montagem experimental com dois recipientes e eletrodos.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Daniell_cell_picture.JPG"
+        },
         "tipo": "obj",
         "objeto": "Semirreações; determinação de ânodo, cátodo e ddp",
         "hab": "EM13CNT107; EM13CNT308",
@@ -595,6 +697,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-04",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Salt_-_close-up.jpg?width=640",
+          "leg": "Cristais de sal de cozinha.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Salt_-_close-up.jpg"
+        },
         "tipo": "obj",
         "objeto": "Condutividade elétrica de soluções; espécies carregadas móveis",
         "hab": "EM13CNT107; EM13CNT308",
@@ -642,6 +750,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-05",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Elektrolyse1.jpg?width=640",
+          "leg": "Montagem de laboratório com fonte de energia elétrica.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Elektrolyse1.jpg"
+        },
         "tipo": "obj",
         "objeto": "Eletrólise aquosa; estequiometria de elétrons e carga elétrica",
         "hab": "EM13CNT107; EM13CNT308",
@@ -680,6 +794,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-06",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Nickel_Nodule_obtained_by_Electroplating.jpg?width=640",
+          "leg": "Metal depositado sobre um eletrodo.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Nickel_Nodule_obtained_by_Electroplating.jpg"
+        },
         "tipo": "obj",
         "objeto": "Primeira lei da eletrólise; relação entre corrente, tempo, carga e massa",
         "hab": "EM13CNT107; EM13CNT308",
@@ -726,6 +846,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-07",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Rusted_chain.jpg?width=640",
+          "leg": "Corrente de ferro enferrujada.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Rusted_chain.jpg"
+        },
         "tipo": "obj",
         "objeto": "Corrosão do ferro; efeito da água, do oxigênio e da condutividade do meio",
         "hab": "EM13CNT107; EM13CNT308",
@@ -768,6 +894,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-08",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Photo-CarBattery.jpg?width=640",
+          "leg": "Bateria automotiva.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Photo-CarBattery.jpg"
+        },
         "tipo": "obj",
         "objeto": "Bateria; ddp terminal e resistência interna",
         "hab": "EM13CNT107; EM13CNT308",
@@ -786,6 +918,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-09",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Batteries_for_recycling.JPG?width=640",
+          "leg": "Pilhas e baterias usadas.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Batteries_for_recycling.JPG"
+        },
         "tipo": "obj",
         "objeto": "Impactos ambientais; descarte e reciclagem de pilhas e baterias",
         "hab": "EM13CNT107; EM13CNT308",
@@ -804,6 +942,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-10",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Lithium-ion_polymer_battery.jpg?width=640",
+          "leg": "Bateria recarregável de dispositivo eletrônico.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Lithium-ion_polymer_battery.jpg"
+        },
         "tipo": "obj",
         "objeto": "Desempenho de baterias; capacidade, resistência interna e tensão sob carga",
         "hab": "EM13CNT107; EM13CNT308",
@@ -844,6 +988,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-11",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratsk_Aluminium_Smelter_(34988213595).jpg?width=640",
+          "leg": "Complexo industrial de produção de alumínio.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Bratsk_Aluminium_Smelter_(34988213595).jpg"
+        },
         "tipo": "obj",
         "objeto": "Eletrólise ígnea e aquosa; competição entre íons e água",
         "hab": "EM13CNT107; EM13CNT308",
@@ -862,6 +1012,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-12",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/PCB_copper_layer_electroplating_machine.jpg?width=640",
+          "leg": "Linha industrial de revestimento metálico.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:PCB_copper_layer_electroplating_machine.jpg"
+        },
         "tipo": "obj",
         "objeto": "Galvanoplastia; polaridade dos eletrodos e deposição metálica",
         "hab": "EM13CNT107; EM13CNT308",
@@ -880,6 +1036,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-13",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/LR44_Button_Cell_Battery.jpg?width=640",
+          "leg": "Pilha em formato de botão.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:LR44_Button_Cell_Battery.jpg"
+        },
         "tipo": "dis",
         "objeto": "Pilha galvânica; semirreações, reação global, fluxo de elétrons e ddp",
         "hab": "EM13CNT107; EM13CNT308",
@@ -892,6 +1054,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-14",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Electro-etching_on_copper_plate_with_copper_sulphate_solution_(electrolyte)_and_small_battery_charge.jpg?width=640",
+          "leg": "Placa de cobre em solução ligada a uma pequena bateria.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Electro-etching_on_copper_plate_with_copper_sulphate_solution_(electrolyte)_and_small_battery_charge.jpg"
+        },
         "tipo": "dis",
         "objeto": "Eletrólise e galvanoplastia; lei de Faraday; sustentabilidade",
         "hab": "EM13CNT107; EM13CNT308",
@@ -915,6 +1083,12 @@ window.AVALIACOES_EM = {
     "questoes": [
       {
         "id": "bio-2-provao-01",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Lion_eat_zebra.jpg?width=640",
+          "leg": "Leão alimentando-se de uma zebra na savana.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Lion_eat_zebra.jpg"
+        },
         "tipo": "obj",
         "objeto": "Ecologia — produtividade, fluxo de energia e teias alimentares",
         "hab": "",
@@ -961,6 +1135,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-02",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Swarm_of_Locusts.JPG?width=640",
+          "leg": "Enxame de gafanhotos.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Swarm_of_Locusts.JPG"
+        },
         "tipo": "obj",
         "objeto": "Ecologia — regulação populacional, relações ecológicas e estudos de caso",
         "hab": "",
@@ -1013,6 +1193,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-03",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Onion_Epidermis_Cells_W.M._40x_-_026.jpg?width=640",
+          "leg": "Células da epiderme de cebola ao microscópio.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Onion_Epidermis_Cells_W.M._40x_-_026.jpg"
+        },
         "tipo": "obj",
         "objeto": "Estudo celular — membrana plasmática, osmose e troca de substâncias",
         "hab": "",
@@ -1055,6 +1241,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-04",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/NHGRI_researcher_uses_a_pipette_to_remove_DNA_from_a_micro_test_tube.jpg?width=640",
+          "leg": "Pesquisador manipulando amostra de DNA em laboratório.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:NHGRI_researcher_uses_a_pipette_to_remove_DNA_from_a_micro_test_tube.jpg"
+        },
         "tipo": "obj",
         "objeto": "Biologia molecular — transcrição, RNA e tradução",
         "hab": "",
@@ -1087,6 +1279,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-05",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Thermal_cycler_for_PCR.jpg?width=640",
+          "leg": "Equipamento de laboratório de biologia molecular.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Thermal_cycler_for_PCR.jpg"
+        },
         "tipo": "obj",
         "objeto": "Biotecnologia e biologia forense — PCR e interpretação de perfis",
         "hab": "",
@@ -1145,6 +1343,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-06",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/The_process_of_meiosis_under_microscope.jpg?width=640",
+          "leg": "Células em divisão observadas ao microscópio.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:The_process_of_meiosis_under_microscope.jpg"
+        },
         "tipo": "obj",
         "objeto": "Divisão celular — meiose, ploidia e organização cromossômica",
         "hab": "",
@@ -1163,6 +1367,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-07",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Pisum_sativum_subsp_sativum_var_macrocarpon_-_Flowers.jpg?width=640",
+          "leg": "Flores de ervilha.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Pisum_sativum_subsp_sativum_var_macrocarpon_-_Flowers.jpg"
+        },
         "tipo": "obj",
         "objeto": "Hereditariedade — segregação mendeliana e análise de situação-problema",
         "hab": "",
@@ -1197,6 +1407,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-08",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Influenza_vaccine_syringes.jpg?width=640",
+          "leg": "Seringas com vacina.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Influenza_vaccine_syringes.jpg"
+        },
         "tipo": "obj",
         "objeto": "Saúde — substâncias psicoativas, neuroadaptação e imunidade",
         "hab": "",
@@ -1234,6 +1450,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-09",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Ortho_tricyclen.jpg?width=640",
+          "leg": "Cartela de medicamento de uso hormonal.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Ortho_tricyclen.jpg"
+        },
         "tipo": "obj",
         "objeto": "Saúde reprodutiva — regulação endócrina, ciclo ovariano e contracepção hormonal",
         "hab": "",
@@ -1280,6 +1502,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-10",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Glucose_meters.jpg?width=640",
+          "leg": "Aparelhos de medição de glicose.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Glucose_meters.jpg"
+        },
         "tipo": "obj",
         "objeto": "Saúde e metabolismo — alimentação, insulina e diabetes tipo 2",
         "hab": "",
@@ -1326,6 +1554,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-11",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Open_sewer_system_(5933160345).jpg?width=640",
+          "leg": "Valeta de esgoto a céu aberto.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Open_sewer_system_(5933160345).jpg"
+        },
         "tipo": "obj",
         "objeto": "Saúde coletiva — saneamento, higiene e protozooses de transmissão fecal-oral",
         "hab": "",
@@ -1376,6 +1610,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-12",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Oiled_Pelicans.jpg?width=640",
+          "leg": "Aves marinhas atingidas por derramamento de petróleo.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Oiled_Pelicans.jpg"
+        },
         "tipo": "obj",
         "objeto": "Ecologia — poluição, bioacumulação, biomagnificação e conservação",
         "hab": "",
@@ -1428,6 +1668,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-13",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Double_block_PCR_thermocycler.jpg?width=640",
+          "leg": "Equipamento de laboratório de biotecnologia.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Double_block_PCR_thermocycler.jpg"
+        },
         "tipo": "dis",
         "objeto": "Biologia molecular e biotecnologia — expressão gênica, edição de DNA e validação experimental",
         "hab": "",
@@ -1440,6 +1686,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-provao-14",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Slum_and_dirty_river.jpg?width=640",
+          "leg": "Moradias às margens de um curso de água poluído.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Slum_and_dirty_river.jpg"
+        },
         "tipo": "dis",
         "objeto": "Saúde coletiva — saneamento, protozooses, alimentação e regulação da glicemia",
         "hab": "",
@@ -1491,6 +1743,12 @@ window.AVALIACOES_EM = {
     "questoes": [
       {
         "id": "qui-2-provao-01",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Alka-Seltzer_tablet_sinking_in_glass.jpg?width=640",
+          "leg": "Comprimido efervescente em um copo com água.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Alka-Seltzer_tablet_sinking_in_glass.jpg"
+        },
         "tipo": "obj",
         "objeto": "Cinética química — lei da rapidez, ordem de reação e concentração",
         "hab": "",
@@ -1537,6 +1795,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-02",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/NO2_N2O4_evenwicht.jpg?width=640",
+          "leg": "Tubos de vidro fechados com gás colorido.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:NO2_N2O4_evenwicht.jpg"
+        },
         "tipo": "obj",
         "objeto": "Equilíbrio químico — Kc, quociente de reação e perturbação de volume",
         "hab": "",
@@ -1571,6 +1835,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-03",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/PH_indicator_paper_with_multiple_colours.jpg?width=640",
+          "leg": "Tiras de papel indicador com cores diferentes.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:PH_indicator_paper_with_multiple_colours.jpg"
+        },
         "tipo": "obj",
         "objeto": "Equilíbrio iônico — produto iônico da água, pH e pOH",
         "hab": "",
@@ -1589,6 +1859,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-04",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Burning_Bunsen_burner.jpg?width=640",
+          "leg": "Bico de Bunsen aceso em laboratório.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Burning_Bunsen_burner.jpg"
+        },
         "tipo": "obj",
         "objeto": "Termoquímica — entalpia, equações termoquímicas e Lei de Hess",
         "hab": "",
@@ -1626,6 +1902,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-05",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Lemon_battery_(2).JPG?width=640",
+          "leg": "Limões ligados por fios a um dispositivo.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Lemon_battery_(2).JPG"
+        },
         "tipo": "obj",
         "objeto": "Eletroquímica — oxirredução, potenciais-padrão, pilha e fluxo de elétrons",
         "hab": "",
@@ -1660,6 +1942,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-06",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Cobalt-cathode.jpg?width=640",
+          "leg": "Metal obtido por processo industrial elétrico.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Cobalt-cathode.jpg"
+        },
         "tipo": "obj",
         "objeto": "Eletroquímica — eletrólise, quantidade de carga e primeira lei de Faraday",
         "hab": "",
@@ -1702,6 +1990,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-07",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Geiger_counter_in_use.jpg?width=640",
+          "leg": "Detector de radiação em uso.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Geiger_counter_in_use.jpg"
+        },
         "tipo": "obj",
         "objeto": "Transformações nucleares — meia-vida, atividade e decaimento radioativo",
         "hab": "",
@@ -1720,6 +2014,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-08",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Filling_station_refueling_a_car.jpg?width=640",
+          "leg": "Abastecimento de um automóvel em posto.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Filling_station_refueling_a_car.jpg"
+        },
         "tipo": "obj",
         "objeto": "Compostos de carbono — função orgânica, fórmula estrutural e propriedades",
         "hab": "",
@@ -1738,6 +2038,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-09",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Orange_peel.jpg?width=640",
+          "leg": "Casca de laranja.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Orange_peel.jpg"
+        },
         "tipo": "obj",
         "objeto": "Estudo dos compostos de carbono — isomeria plana e espacial geométrica",
         "hab": "",
@@ -1780,6 +2086,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-10",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Shopping_plastic_bags.jpg?width=640",
+          "leg": "Sacolas plásticas.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Shopping_plastic_bags.jpg"
+        },
         "tipo": "obj",
         "objeto": "Macromoléculas — monômeros, polímeros sintéticos e polimerização por adição",
         "hab": "",
@@ -1798,6 +2110,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-11",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Reaction_of_zinc_metal_and_copper(II)_sulfate.jpg?width=640",
+          "leg": "Metal em solução aquosa colorida.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Reaction_of_zinc_metal_and_copper(II)_sulfate.jpg"
+        },
         "tipo": "obj",
         "objeto": "Transformações químicas — evidências macroscópicas, representação e energia",
         "hab": "",
@@ -1816,6 +2134,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-12",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sedimentation_tank.jpg?width=640",
+          "leg": "Tanque de uma estação de tratamento de água.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Sedimentation_tank.jpg"
+        },
         "tipo": "obj",
         "objeto": "Química e meio ambiente — tratamento de água, partículas, microrganismos e substâncias dissolvidas",
         "hab": "",
@@ -1834,6 +2158,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-13",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Gas_stove_blue_flames.jpg?width=640",
+          "leg": "Chamas de um fogão a gás.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Gas_stove_blue_flames.jpg"
+        },
         "tipo": "dis",
         "objeto": "Transformações químicas e energia — entalpia de combustão, poder energético e gases de efeito estufa",
         "hab": "",
@@ -1865,6 +2195,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-provao-14",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Coin_cell_CR2032_H_by_Hitachi_Maxell-7730.jpg?width=640",
+          "leg": "Pilha em formato de moeda.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Coin_cell_CR2032_H_by_Hitachi_Maxell-7730.jpg"
+        },
         "tipo": "dis",
         "objeto": "Transformações químicas e energia elétrica — pilha, semirreações, ddp e sustentabilidade",
         "hab": "",
@@ -1904,6 +2240,12 @@ window.AVALIACOES_EM = {
     "questoes": [
       {
         "id": "bio-3-provao-01",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Zebras_and_gnus.jpg?width=640",
+          "leg": "Zebras e gnus em uma área de savana.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Zebras_and_gnus.jpg"
+        },
         "tipo": "obj",
         "objeto": "Cadeias, teias alimentares, níveis tróficos e fluxo energético",
         "hab": "",
@@ -1946,6 +2288,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-02",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Eutrophication_in_Lake_Erie.jpg?width=640",
+          "leg": "Água esverdeada em um lago.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Eutrophication_in_Lake_Erie.jpg"
+        },
         "tipo": "obj",
         "objeto": "Ciclos biogeoquímicos, ameaças antrópicas e eutrofização",
         "hab": "",
@@ -1989,6 +2337,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-03",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Plasmolysis_of_red_onion_(Allium_cepa)_cells.jpg?width=640",
+          "leg": "Células vegetais observadas ao microscópio.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Plasmolysis_of_red_onion_(Allium_cepa)_cells.jpg"
+        },
         "tipo": "obj",
         "objeto": "Membrana plasmática, troca de substâncias e osmose",
         "hab": "",
@@ -2031,6 +2385,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-04",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Risen_bread_dough_in_tin.jpg?width=640",
+          "leg": "Massa de pão após descanso.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Risen_bread_dough_in_tin.jpg"
+        },
         "tipo": "obj",
         "objeto": "Metabolismo energético, respiração aeróbia e fermentação; procedimentos de investigação",
         "hab": "",
@@ -2081,6 +2441,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-05",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Laboratory_microcentrifuge_tubes_and_pipette_tips_02.jpg?width=640",
+          "leg": "Tubos e ponteiras de laboratório.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Laboratory_microcentrifuge_tubes_and_pipette_tips_02.jpg"
+        },
         "tipo": "obj",
         "objeto": "DNA e RNA, transcrição, código genético e tradução",
         "hab": "",
@@ -2099,6 +2465,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-06",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Lily_anther.jpg?width=640",
+          "leg": "Antera de lírio.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Lily_anther.jpg"
+        },
         "tipo": "obj",
         "objeto": "Mitose, meiose e reprodução celular",
         "hab": "",
@@ -2117,6 +2489,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-07",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/African_Animals.jpg?width=640",
+          "leg": "Animais de grupos diferentes.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:African_Animals.jpg"
+        },
         "tipo": "obj",
         "objeto": "Classificação biológica, sistemática moderna e cladogramas",
         "hab": "",
@@ -2135,6 +2513,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-08",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Gills_(esox).jpg?width=640",
+          "leg": "Brânquias de um peixe.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Gills_(esox).jpg"
+        },
         "tipo": "obj",
         "objeto": "Fisiologia animal: integração entre respiração e circulação",
         "hab": "",
@@ -2172,6 +2556,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-09",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Bloodbags.jpg?width=640",
+          "leg": "Bolsas de sangue em banco de sangue.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Bloodbags.jpg"
+        },
         "tipo": "obj",
         "objeto": "Hereditariedade, alelos múltiplos e sistemas ABO e Rh",
         "hab": "",
@@ -2190,6 +2580,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-10",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Large_Ground_Finch.jpg?width=640",
+          "leg": "Ave das ilhas Galápagos.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Large_Ground_Finch.jpg"
+        },
         "tipo": "obj",
         "objeto": "Evolução biológica, seleção natural e método científico",
         "hab": "",
@@ -2208,6 +2604,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-11",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Engerix_B_(Hepatitis_B)_vaccine.jpg?width=640",
+          "leg": "Frasco e seringa de vacina.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Engerix_B_(Hepatitis_B)_vaccine.jpg"
+        },
         "tipo": "obj",
         "objeto": "Vírus, imunidade ativa e passiva e saúde",
         "hab": "",
@@ -2248,6 +2650,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-12",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/PMNM_-_sea_turtle_hatchlings_(28128852695).jpg?width=640",
+          "leg": "Filhotes de tartaruga-marinha na praia.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:PMNM_-_sea_turtle_hatchlings_(28128852695).jpg"
+        },
         "tipo": "obj",
         "objeto": "Fisiologia dos animais: reprodução e relação com condições ambientais",
         "hab": "",
@@ -2266,6 +2674,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-13",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Algal_bloom_in_Lake_Erie_(8740853887).jpg?width=640",
+          "leg": "Água de um lago com aspecto esverdeado.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Algal_bloom_in_Lake_Erie_(8740853887).jpg"
+        },
         "tipo": "dis",
         "objeto": "Ciclos biogeoquímicos, eutrofização, teias alimentares e investigação científica",
         "hab": "",
@@ -2312,6 +2726,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-3-provao-14",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Thermocycler2.JPG?width=640",
+          "leg": "Equipamento de laboratório de biologia molecular.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Thermocycler2.JPG"
+        },
         "tipo": "dis",
         "objeto": "DNA, RNA, expressão gênica, síntese proteica e procedimento experimental",
         "hab": "",
@@ -2357,6 +2777,12 @@ window.AVALIACOES_EM = {
     "questoes": [
       {
         "id": "qui-3-provao-01",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Paper_filter_folding_and_filtration.JPG?width=640",
+          "leg": "Filtração em laboratório.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Paper_filter_folding_and_filtration.JPG"
+        },
         "tipo": "obj",
         "objeto": "Materiais: misturas e métodos de separação",
         "hab": "",
@@ -2399,6 +2825,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-02",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Magnesium_ribbon_burning.jpg?width=640",
+          "leg": "Fita de metal queimando.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Magnesium_ribbon_burning.jpg"
+        },
         "tipo": "obj",
         "objeto": "Equações químicas, leis ponderais, reagente limitante e rendimento",
         "hab": "",
@@ -2441,6 +2873,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-03",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Universal_Indicator_test_in_lemon_juice.JPG?width=640",
+          "leg": "Indicador de pH em contato com um líquido.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Universal_Indicator_test_in_lemon_juice.JPG"
+        },
         "tipo": "obj",
         "objeto": "Funções inorgânicas, neutralização e concentração de soluções",
         "hab": "",
@@ -2459,6 +2897,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-04",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Geiger_counter.jpg?width=640",
+          "leg": "Detector de radiação.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Geiger_counter.jpg"
+        },
         "tipo": "obj",
         "objeto": "Transformações nucleares, emissões e radioisótopos",
         "hab": "",
@@ -2477,6 +2921,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-05",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Water_and_oil.jpg?width=640",
+          "leg": "Água e óleo em um mesmo recipiente.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Water_and_oil.jpg"
+        },
         "tipo": "obj",
         "objeto": "Ligações químicas, polaridade, interações e propriedades das substâncias",
         "hab": "",
@@ -2515,6 +2965,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-06",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Volumetric_flasks.jpg?width=640",
+          "leg": "Balões volumétricos de laboratório.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Volumetric_flasks.jpg"
+        },
         "tipo": "obj",
         "objeto": "Soluções aquosas, concentração e operações de diluição",
         "hab": "",
@@ -2533,6 +2989,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-07",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Alka_Seltzer_in_water.JPG?width=640",
+          "leg": "Comprimido efervescente reagindo na água.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Alka_Seltzer_in_water.JPG"
+        },
         "tipo": "obj",
         "objeto": "Cinética química, lei da rapidez, energia de ativação e catalisadores",
         "hab": "",
@@ -2585,6 +3047,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-08",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/NO2-N2O4.jpg?width=640",
+          "leg": "Frascos com gás de coloração característica.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:NO2-N2O4.jpg"
+        },
         "tipo": "obj",
         "objeto": "Equilíbrio químico, constante de equilíbrio e deslocamento",
         "hab": "",
@@ -2627,6 +3095,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-09",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Gas_stove_burner_flame.jpg?width=640",
+          "leg": "Chama de um fogão a gás.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Gas_stove_burner_flame.jpg"
+        },
         "tipo": "obj",
         "objeto": "Transformações químicas e energia térmica; entalpia e Lei de Hess",
         "hab": "",
@@ -2669,6 +3143,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-10",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Electric_batteries.jpg?width=640",
+          "leg": "Pilhas de diferentes tipos.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Electric_batteries.jpg"
+        },
         "tipo": "obj",
         "objeto": "Oxirredução, pilhas, potenciais-padrão e fluxo de elétrons",
         "hab": "",
@@ -2687,6 +3167,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-11",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratsk_Aluminium_Smelter_(34824709112).jpg?width=640",
+          "leg": "Indústria de produção de metal.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Bratsk_Aluminium_Smelter_(34824709112).jpg"
+        },
         "tipo": "obj",
         "objeto": "Eletrólise, oxirredução e aspectos quantitativos da transformação elétrica",
         "hab": "",
@@ -2705,6 +3191,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-12",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunoco_Gas_Pump.jpg?width=640",
+          "leg": "Bomba de combustível em posto.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Sunoco_Gas_Pump.jpg"
+        },
         "tipo": "obj",
         "objeto": "Compostos de carbono, funções orgânicas, propriedades e isomeria plana",
         "hab": "",
@@ -2723,6 +3215,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-13",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Gladstone_Water_Treatment_Plant_(28610326850).jpg?width=640",
+          "leg": "Estação de tratamento de água.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Gladstone_Water_Treatment_Plant_(28610326850).jpg"
+        },
         "tipo": "dis",
         "objeto": "Química e meio ambiente: água, soluções, funções inorgânicas e tratamento",
         "hab": "",
@@ -2763,6 +3261,12 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-3-provao-14",
+        "foto": {
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Plastic_objects.jpg?width=640",
+          "leg": "Objetos de plástico de uso cotidiano.",
+          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
+          "url": "https://commons.wikimedia.org/wiki/File:Plastic_objects.jpg"
+        },
         "tipo": "dis",
         "objeto": "Compostos de carbono, macromoléculas naturais e sintéticas, polimerização e sustentabilidade",
         "hab": "",

@@ -127,6 +127,7 @@
     img.loading = eager ? 'eager' : 'lazy';
     img.decoding = 'async';
     img.referrerPolicy = 'no-referrer';
+    img.addEventListener('error', function () { figure.hidden = true; });
     const caption = element('figcaption', null, (foto.leg || '') + ' · Foto: ');
     if (foto.url && safeUrl(foto.url)) {
       const a = element('a', null, foto.cred || 'Wikimedia Commons');
