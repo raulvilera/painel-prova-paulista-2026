@@ -212,19 +212,6 @@
     fillSelect(refs.prova, turma ? 'Selecione a prova-alvo' : 'Escolha o componente primeiro', options, !turma || !refs.componente.value);
   }
 
-  function renderSource(parent, assessment) {
-    const source = safeUrl(assessment && assessment.fonteUrl);
-    if (!source) return;
-    const line = element('p', 'fonte');
-    const label = element('span', null, 'Fonte: Guia Priorizado de ' + (COMPONENTES[refs.componente.value] || {}).label);
-    const link = element('a', null, ' abrir documento');
-    link.href = source;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    line.append(label, link);
-    parent.appendChild(line);
-  }
-
   function renderSummary() {
     clear(refs.resumo);
     const assessment = selectedAssessment();
@@ -233,7 +220,7 @@
       refs.iniciar.disabled = true;
       refs.iniciar.hidden = false;
       const chosen = refs.turma.value && refs.componente.value && refs.prova.value;
-      text(refs.resumo, chosen ? 'A avaliação escolhida não está disponível neste banco.' : 'Selecione turma, componente e prova para ver a duração sugerida e a fonte do Guia.');
+      text(refs.resumo, chosen ? 'A avaliação escolhida não está disponível neste banco.' : 'Selecione turma, componente e prova para ver a duração sugerida.');
       refs.resumo.className = 'resumo-avaliacao' + (chosen ? ' resumo-erro' : '');
       return;
     }
@@ -244,7 +231,6 @@
     const duration = Number(assessment.duracaoMin);
     const detail = element('p', 'resumo-detalhe', '12 objetivas + 2 dissertativas · duração sugerida: ' + (Number.isFinite(duration) && duration > 0 ? duration + ' minutos' : 'não informada'));
     box.append(title, detail);
-    renderSource(box, assessment);
     if (invalidReason) {
       const problem = element('p', 'resumo-erro', invalidReason);
       box.appendChild(problem);

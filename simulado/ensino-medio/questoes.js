@@ -8,7 +8,6 @@ window.AVALIACOES_EM = {
     "prova": "Prova Paulista — 4º bimestre",
     "foco": "Saúde e bem-estar na adolescência: IST e prevenção, sistema endócrino e reprodutor, contracepção, drogas e tabagismo; alimentação, insulina e diabetes tipo 2, higiene, saneamento e protozooses.",
     "duracaoMin": 60,
-    "fonteUrl": "https://drive.google.com/file/d/18MEm1G2KuszXWm3MqQF3zp5MayV7rsos/view",
     "questoes": [
       {
         "id": "bio-2-paulista-01",
@@ -520,7 +519,6 @@ window.AVALIACOES_EM = {
     "prova": "Prova Paulista — 4º bimestre",
     "foco": "Eletroquímica: oxirredução, pilhas e baterias, diferença de potencial (ddp), eletrólise, galvanoplastia, corrosão e impactos do descarte.",
     "duracaoMin": 60,
-    "fonteUrl": "https://drive.google.com/file/d/1ODTXVRZ-b2Kpe7lxC6Q9UwNWJEaFabMR/view",
     "questoes": [
       {
         "id": "qui-2-paulista-01",
@@ -914,7 +912,6 @@ window.AVALIACOES_EM = {
     "prova": "Provão Paulista",
     "foco": "Avaliação autoral do Mapa Provão Paulista da 2ª série, articulando ecologia e conservação; fluxo de energia e biomagnificação; organização e transporte celular; mitose e meiose; DNA, RNA, expressão gênica, PCR e edição; hereditariedade; fisiologia humana, saúde adolescente, substâncias psicoativas, regulação endócrina e reprodução; alimentação, insulina, saneamento e protozooses.",
     "duracaoMin": 60,
-    "fonteUrl": "https://drive.google.com/file/d/18MEm1G2KuszXWm3MqQF3zp5MayV7rsos/view",
     "questoes": [
       {
         "id": "bio-2-provao-01",
@@ -1491,7 +1488,6 @@ window.AVALIACOES_EM = {
     "prova": "Provão Paulista",
     "foco": "Mapa da 2ª série: evidências e representação de transformações; química e meio ambiente (gases de efeito estufa, água e tratamento); cinética e equilíbrio químico (incluindo pH/pOH); termoquímica e Lei de Hess; eletroquímica (oxirredução, potenciais, pilhas, eletrólise e descarte); radioatividade; compostos de carbono, funções orgânicas, isomeria, combustíveis e macromoléculas.",
     "duracaoMin": 60,
-    "fonteUrl": "https://drive.google.com/file/d/1ODTXVRZ-b2Kpe7lxC6Q9UwNWJEaFabMR/view",
     "questoes": [
       {
         "id": "qui-2-provao-01",
@@ -1905,7 +1901,6 @@ window.AVALIACOES_EM = {
     "prova": "Provão Paulista",
     "foco": "Avaliação cumulativa autoral da 3ª série: ecologia e ciclos biogeoquímicos; fluxo de energia e sucessão; organização celular e transporte; metabolismo energético; DNA, RNA e síntese proteica; divisão celular; classificação e cladogramas; fisiologia animal; imunidade e saúde; hereditariedade ABO/Rh; evolução e investigação científica.",
     "duracaoMin": 60,
-    "fonteUrl": "https://drive.google.com/file/d/18MEm1G2KuszXWm3MqQF3zp5MayV7rsos/view",
     "questoes": [
       {
         "id": "bio-3-provao-01",
@@ -2359,7 +2354,6 @@ window.AVALIACOES_EM = {
     "prova": "Provão Paulista",
     "foco": "Mapa cumulativo da 3ª série: materiais e separação de misturas; evidências, representação, balanceamento, leis ponderais e estequiometria; funções inorgânicas, soluções e água; estrutura atômica, periodicidade e radioatividade; ligações, polaridade e propriedades; cinética, equilíbrio e pH; termoquímica; oxirredução, pilhas, ddp e eletrólise; compostos de carbono, isomeria e polímeros, com ênfase em interpretação de dados, procedimentos e impactos socioambientais.",
     "duracaoMin": 60,
-    "fonteUrl": "https://drive.google.com/file/d/1ODTXVRZ-b2Kpe7lxC6Q9UwNWJEaFabMR/view",
     "questoes": [
       {
         "id": "qui-3-provao-01",
