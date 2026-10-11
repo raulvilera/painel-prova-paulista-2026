@@ -7,7 +7,7 @@ window.AVALIACOES_EM = {
     "componente": "Biologia",
     "prova": "Prova Paulista — 4º bimestre",
     "foco": "Saúde e bem-estar na adolescência: IST e prevenção, sistema endócrino e reprodutor, contracepção, drogas e tabagismo; alimentação, insulina e diabetes tipo 2, higiene, saneamento e protozooses.",
-    "duracaoMin": 60,
+    "duracaoMin": 45,
     "questoes": [
       {
         "id": "bio-2-paulista-01",
@@ -83,30 +83,6 @@ window.AVALIACOES_EM = {
         ]
       },
       {
-        "id": "bio-2-paulista-03",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Mirena_IUD_with_hand.jpg?width=640",
-          "leg": "Dispositivo de uso contraceptivo.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Mirena_IUD_with_hand.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Métodos contraceptivos e prevenção de IST",
-        "hab": "EM13CNT207",
-        "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE8), p. 61; Escopo-Sequência, p. 51",
-        "pagina": 61,
-        "grupo": "G3",
-        "enunciado": "A primeira semana de fevereiro é a Semana Nacional de Prevenção da Gravidez na Adolescência (Lei 13.798/2019), período em que escolas e unidades de saúde promovem campanhas. Uma campanha escolar compara mecanismos de métodos contraceptivos sem indicar uma escolha individual. O quadro de estudo registra: um método hormonal atua sobre a fisiologia reprodutiva; um método de barreira reduz o contato entre secreções e mucosas; e nenhum método é descrito como proteção absoluta.",
-        "comando": "Qual mensagem preserva a distinção entre prevenção da gravidez e redução do risco de IST?",
-        "alts": [
-          "Como ambos previnem gravidez, método hormonal e método de barreira oferecem a mesma proteção contra IST.",
-          "O método de barreira só interfere na fecundação, pois vírus e bactérias não participam do contato entre mucosas.",
-          "A ação hormonal bloqueia diretamente todos os microrganismos, mesmo quando não há barreira física.",
-          "Se um método falhar, outro método também falhará, pois todos dependem exclusivamente do ciclo ovariano.",
-          "O método de barreira pode reduzir a exposição a IST, enquanto o hormonal atua principalmente na reprodução e não substitui essa barreira."
-        ]
-      },
-      {
         "id": "bio-2-paulista-04",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_brain_preserved_in_formaldehyde.jpg?width=640",
@@ -176,58 +152,6 @@ window.AVALIACOES_EM = {
           "Como os produtos têm composições diferentes, nenhum deles pode produzir efeitos no sistema nervoso ou dependência.",
           "A ausência de combustão não torna o aerossol inofensivo; nicotina e outros componentes podem manter exposição e dependência.",
           "Todos os produtos têm exatamente a mesma dose, a mesma toxicidade e o mesmo mecanismo de absorção no organismo."
-        ]
-      },
-      {
-        "id": "bio-2-paulista-06",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercado_de_frutas_y_verduras.jpg?width=640",
-          "leg": "Banca de frutas e verduras em um mercado.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Mercado_de_frutas_y_verduras.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Alimentação, balanço energético e saúde",
-        "hab": "EM13CNT310",
-        "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE9), p. 61; Escopo-Sequência, p. 52",
-        "pagina": 61,
-        "grupo": "G3",
-        "enunciado": "O Guia Alimentar para a População Brasileira, do Ministério da Saúde, orienta priorizar alimentos in natura e minimamente processados e limitar os ultraprocessados. Para discutir o equilíbrio entre o que se come e o que se gasta, os dados abaixo (valores ilustrativos) resumem três dias de um grupo, sem pretender diagnosticar qualquer pessoa. O balanço energético diário foi calculado como ingestão menos gasto estimado.",
-        "comando": "Qual conclusão é compatível com os dados, sem transformar uma média curta em diagnóstico?",
-        "tabela": {
-          "colunas": [
-            "Dia",
-            "Ingestão estimada (kcal)",
-            "Gasto estimado (kcal)",
-            "Balanço (kcal)"
-          ],
-          "linhas": [
-            [
-              "1",
-              "2400",
-              "2100",
-              "+300"
-            ],
-            [
-              "2",
-              "2200",
-              "2300",
-              "−100"
-            ],
-            [
-              "3",
-              "2600",
-              "2500",
-              "+100"
-            ]
-          ]
-        },
-        "alts": [
-          "A média do período foi de +100 kcal por dia; isso indica pequeno saldo positivo na amostra, mas não diagnostica obesidade nem resume a qualidade da alimentação.",
-          "O saldo foi positivo nos três dias, portanto qualquer participante necessariamente apresentou aumento de massa corporal.",
-          "A média foi de −100 kcal por dia, porque o gasto do segundo dia representa todo o período observado.",
-          "O saldo positivo prova desnutrição, pois toda ingestão acima do gasto revela falta de nutrientes essenciais.",
-          "Como o total ingerido foi maior que o total gasto, a alimentação foi nutricionalmente adequada para todas as pessoas do grupo."
         ]
       },
       {
@@ -324,54 +248,6 @@ window.AVALIACOES_EM = {
           "A fibra aumentou a liberação de açúcares, pois acrescentou um novo substrato às enzimas digestivas.",
           "A glicose não pode ser comparada ao amido, porque os dois resultados estão expressos na mesma unidade.",
           "No ensaio, a presença de fibra reduziu em 7 mg a liberação em relação ao amido, cerca de 38,9%; isso indica atraso no processamento, não desaparecimento do carboidrato."
-        ]
-      },
-      {
-        "id": "bio-2-paulista-09",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Raw_chicken.jpg?width=640",
-          "leg": "Carne de frango crua.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Raw_chicken.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Higiene dos alimentos e contaminação cruzada",
-        "hab": "EM13CNT310",
-        "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE9), p. 61; Escopo-Sequência, p. 52",
-        "pagina": 61,
-        "grupo": "G2",
-        "enunciado": "Após as enchentes de 2024 no Rio Grande do Sul, o Ministério da Saúde reforçou orientações de higiene e de armazenamento de alimentos para evitar doenças transmitidas por alimentos e água. Para discutir a contaminação cruzada, um laboratório escolar contou microrganismos em placas após etapas simuladas de preparo (valores ilustrativos). O valor zero é o controle do laboratório, e as contagens são indicadores do crescimento nas condições do ensaio, não uma identificação de espécie patogênica.",
-        "comando": "Qual procedimento responde melhor ao risco revelado pelo conjunto de resultados?",
-        "tabela": {
-          "colunas": [
-            "Etapa simulada",
-            "Contagem relativa na placa (u.a.)"
-          ],
-          "linhas": [
-            [
-              "Controle estéril",
-              "0"
-            ],
-            [
-              "Folha não lavada",
-              "100"
-            ],
-            [
-              "Folha lavada antes do preparo",
-              "12"
-            ],
-            [
-              "Folha lavada que depois tocou tábua de frango cru",
-              "76"
-            ]
-          ]
-        },
-        "alts": [
-          "Manter a mesma tábua para alimentos crus e prontos, pois a lavagem inicial já removeu a maior parte da contagem.",
-          "Separar utensílios e superfícies de alimentos crus e prontos, além de higienizar as mãos, porque uma etapa posterior pode reintroduzir microrganismos.",
-          "Refrigerar o alimento depois do contato cruzado, pois a baixa temperatura esteriliza a superfície contaminada.",
-          "Considerar a folha segura após a lavagem, pois uma contagem menor prova a ausência de todos os agentes causadores de doença.",
-          "Lavar apenas a tábua ao final, mantendo as mãos e o alimento pronto em contato com a superfície usada para o alimento cru."
         ]
       },
       {
@@ -477,62 +353,6 @@ window.AVALIACOES_EM = {
         ]
       },
       {
-        "id": "bio-2-paulista-12",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/1_rio_de_janeiro_slum_2010.JPG?width=640",
-          "leg": "Moradias em uma comunidade urbana.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:1_rio_de_janeiro_slum_2010.JPG"
-        },
-        "tipo": "obj",
-        "objeto": "Diagnóstico local, saneamento e promoção da saúde",
-        "hab": "EM13CNT310",
-        "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE9), p. 61; Escopo-Sequência, p. 52",
-        "pagina": 61,
-        "grupo": "G3",
-        "enunciado": "O Marco Legal do Saneamento exige que os municípios planejem a expansão dos serviços a partir de diagnósticos locais. Um diagnóstico comunitário (valores ilustrativos) reúne indicadores de três bairros com população de 1.000 habitantes em cada um. A taxa de protozooses é apresentada por 1.000 habitantes e os demais indicadores são percentuais do bairro.",
-        "comando": "Qual prioridade de intervenção é mais justificável pelos dados e pelo princípio de promoção coletiva da saúde?",
-        "tabela": {
-          "colunas": [
-            "Bairro",
-            "Protozooses (casos/1000)",
-            "Cobertura de água segura",
-            "Coleta irregular de resíduos",
-            "Consumo diário de bebidas açucaradas"
-          ],
-          "linhas": [
-            [
-              "L",
-              "12",
-              "98%",
-              "10%",
-              "22%"
-            ],
-            [
-              "M",
-              "22",
-              "70%",
-              "40%",
-              "58%"
-            ],
-            [
-              "N",
-              "8",
-              "90%",
-              "35%",
-              "46%"
-            ]
-          ]
-        },
-        "alts": [
-          "Priorizar L apenas com campanhas de exercícios, pois a maior cobertura de água torna o saneamento irrelevante.",
-          "Priorizar N somente com distribuição de alimentos, pois resíduos não têm relação com transmissão de doenças.",
-          "Tratar todos os bairros exatamente da mesma forma, sem usar incidência ou cobertura de serviços para definir ações.",
-          "Priorizar M apenas com testagem individual, sem modificar água, resíduos, higiene ou acesso a informações confiáveis.",
-          "Priorizar M com água segura, manejo de esgoto e resíduos, higiene de alimentos e mãos, educação alimentar e monitoramento das taxas, articulando ações sem culpar moradores."
-        ]
-      },
-      {
         "id": "bio-2-paulista-13",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Package_of_Lutera_Birth_Control_Pills.jpg?width=640",
@@ -602,7 +422,7 @@ window.AVALIACOES_EM = {
     "componente": "Química",
     "prova": "Prova Paulista — 4º bimestre",
     "foco": "Eletroquímica: oxirredução, pilhas e baterias, diferença de potencial (ddp), eletrólise, galvanoplastia, corrosão e impactos do descarte.",
-    "duracaoMin": 60,
+    "duracaoMin": 45,
     "questoes": [
       {
         "id": "qui-2-paulista-01",
@@ -670,30 +490,6 @@ window.AVALIACOES_EM = {
             ]
           ]
         }
-      },
-      {
-        "id": "qui-2-paulista-03",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniell_cell_picture.JPG?width=640",
-          "leg": "Montagem experimental com dois recipientes e eletrodos.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Daniell_cell_picture.JPG"
-        },
-        "tipo": "obj",
-        "objeto": "Semirreações; determinação de ânodo, cátodo e ddp",
-        "hab": "EM13CNT107; EM13CNT308",
-        "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aulas 3–5, p. 47",
-        "pagina": 57,
-        "grupo": "G3",
-        "enunciado": "O Brasil produz níquel em Goiás e no Pará, metal cada vez mais procurado para baterias de veículos elétricos. Em condições padrão: Ni²⁺(aq) + 2e⁻ → Ni(s), E°red = −0,25 V; Pb²⁺(aq) + 2e⁻ → Pb(s), E°red = −0,13 V. A célula é montada para operar como pilha espontânea, sem outras semirreações relevantes.",
-        "comando": "Qual conjunto descreve corretamente os eletrodos e a ddp padrão da célula Ni/Pb?",
-        "alts": [
-          "Ni é o cátodo, Pb é o ânodo e E°pilha = +0,12 V.",
-          "Ni é o ânodo, Pb é o cátodo e E°pilha = −0,12 V.",
-          "Ni é o ânodo, Pb é o cátodo e E°pilha = +0,38 V.",
-          "Pb é o ânodo, Ni é o cátodo e E°pilha = +0,12 V.",
-          "Pb é o cátodo, Ni é o ânodo e E°pilha = +0,12 V."
-        ]
       },
       {
         "id": "qui-2-paulista-04",
@@ -793,58 +589,6 @@ window.AVALIACOES_EM = {
         }
       },
       {
-        "id": "qui-2-paulista-06",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Nickel_Nodule_obtained_by_Electroplating.jpg?width=640",
-          "leg": "Metal depositado sobre um eletrodo.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Nickel_Nodule_obtained_by_Electroplating.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Primeira lei da eletrólise; relação entre corrente, tempo, carga e massa",
-        "hab": "EM13CNT107; EM13CNT308",
-        "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aula 11, p. 48",
-        "pagina": 48,
-        "grupo": "G3",
-        "enunciado": "A Resolução Conama 430/2011 define condições para o lançamento de efluentes, como os de galvanoplastias, que podem conter metais dissolvidos. Em uma galvanoplastia didática, toda a carga que passa deposita cobre no cátodo pela semirreação Cu²⁺ + 2e⁻ → Cu. A corrente constante é 2,0 A durante 15,0 min. Considere M(Cu) = 63,5 g·mol⁻¹, F = 9,65 × 10⁴ C·mol⁻¹ e use m = M·I·t/(zF), com t em segundos.",
-        "comando": "Qual massa de cobre é depositada no modelo ideal descrito?",
-        "alts": [
-          "0,296 g",
-          "0,500 g",
-          "0,592 g",
-          "1,184 g",
-          "5,920 g"
-        ],
-        "tabela": {
-          "colunas": [
-            "Dado",
-            "Valor"
-          ],
-          "linhas": [
-            [
-              "I",
-              "2,0 A"
-            ],
-            [
-              "t",
-              "15,0 min"
-            ],
-            [
-              "M(Cu)",
-              "63,5 g·mol⁻¹"
-            ],
-            [
-              "z na semirreação",
-              "2"
-            ],
-            [
-              "F",
-              "9,65 × 10⁴ C·mol⁻¹"
-            ]
-          ]
-        }
-      },
-      {
         "id": "qui-2-paulista-07",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Rusted_chain.jpg?width=640",
@@ -914,30 +658,6 @@ window.AVALIACOES_EM = {
           "r = 0,65 Ω; a resistência interna corresponde à soma de E e V dividida pela corrente.",
           "r = 2,60 Ω; a resistência interna é obtida dividindo E pela tensão terminal e pela corrente.",
           "r = 0,40 Ω; a queda interna é 0,20 V, igual a rI para a corrente de 0,50 A."
-        ]
-      },
-      {
-        "id": "qui-2-paulista-09",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Batteries_for_recycling.JPG?width=640",
-          "leg": "Pilhas e baterias usadas.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Batteries_for_recycling.JPG"
-        },
-        "tipo": "obj",
-        "objeto": "Impactos ambientais; descarte e reciclagem de pilhas e baterias",
-        "hab": "EM13CNT107; EM13CNT308",
-        "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aula 12, p. 48",
-        "pagina": 48,
-        "grupo": "G1",
-        "enunciado": "A Resolução Conama 401/2008 e a Política Nacional de Resíduos Sólidos exigem que pilhas e baterias usadas sejam recolhidas por logística reversa, em vez de irem para o lixo comum. Uma escola acumulou pilhas descartáveis e baterias recarregáveis usadas. Há um ponto de coleta que recebe esses materiais. Algumas unidades estão íntegras e secas; nenhuma deve ser aberta pelos estudantes.",
-        "comando": "Qual procedimento combina melhor segurança, sustentabilidade e encaminhamento adequado?",
-        "alts": [
-          "Separar as unidades do lixo comum, mantê-las íntegras e secas e entregá-las ao ponto de coleta autorizado.",
-          "Abrir as unidades, separar metais manualmente e misturar o restante aos recicláveis secos da escola.",
-          "Enviar as unidades ao lixo comum quando não houver vazamento visível, pois a embalagem impede qualquer impacto ambiental.",
-          "Queimar as baterias em recipiente aberto para eliminar a carcaça antes de encaminhar os metais recuperados.",
-          "Lavar unidades que apresentem vazamento na pia e depois colocá-las junto das embalagens de vidro para reciclagem."
         ]
       },
       {
@@ -1011,30 +731,6 @@ window.AVALIACOES_EM = {
         ]
       },
       {
-        "id": "qui-2-paulista-12",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/PCB_copper_layer_electroplating_machine.jpg?width=640",
-          "leg": "Linha industrial de revestimento metálico.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:PCB_copper_layer_electroplating_machine.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Galvanoplastia; polaridade dos eletrodos e deposição metálica",
-        "hab": "EM13CNT107; EM13CNT308",
-        "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aulas 9–10, p. 48",
-        "pagina": 48,
-        "grupo": "G3",
-        "enunciado": "O polo de joias folheadas de Limeira (SP) e a indústria automotiva usam a galvanoplastia para revestir peças com camadas metálicas. Deseja-se revestir uma peça metálica com cobre em uma solução aquosa de CuSO₄. A fonte externa mantém a corrente no sentido necessário, e uma placa de cobre pode ser consumida para repor Cu²⁺. Considere desprezíveis reações laterais.",
-        "comando": "Qual montagem e justificativa descrevem corretamente a galvanoplastia?",
-        "alts": [
-          "A peça é ligada ao polo positivo e funciona como ânodo, onde Cu²⁺ é reduzido e o revestimento cresce.",
-          "A peça é ligada ao polo negativo e funciona como cátodo; Cu²⁺ + 2e⁻ → Cu ocorre na peça, enquanto o ânodo de cobre pode se dissolver.",
-          "A peça e a placa de cobre são ligadas ao polo negativo, pois a deposição exige dois cátodos na mesma solução.",
-          "A placa de cobre é ligada ao polo negativo para se oxidar, e a peça positiva recebe cobre por redução espontânea.",
-          "A peça pode ser mergulhada apenas em água, sem íons Cu²⁺, porque a fonte transforma elétrons diretamente em cobre metálico."
-        ]
-      },
-      {
         "id": "qui-2-paulista-13",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/LR44_Button_Cell_Battery.jpg?width=640",
@@ -1079,7 +775,7 @@ window.AVALIACOES_EM = {
     "componente": "Biologia",
     "prova": "Provão Paulista",
     "foco": "Avaliação autoral do Mapa Provão Paulista da 2ª série, articulando ecologia e conservação; fluxo de energia e biomagnificação; organização e transporte celular; mitose e meiose; DNA, RNA, expressão gênica, PCR e edição; hereditariedade; fisiologia humana, saúde adolescente, substâncias psicoativas, regulação endócrina e reprodução; alimentação, insulina, saneamento e protozooses.",
-    "duracaoMin": 60,
+    "duracaoMin": 45,
     "questoes": [
       {
         "id": "bio-2-provao-01",
@@ -1192,54 +888,6 @@ window.AVALIACOES_EM = {
         }
       },
       {
-        "id": "bio-2-provao-03",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Onion_Epidermis_Cells_W.M._40x_-_026.jpg?width=640",
-          "leg": "Células da epiderme de cebola ao microscópio.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Onion_Epidermis_Cells_W.M._40x_-_026.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Estudo celular — membrana plasmática, osmose e troca de substâncias",
-        "hab": "",
-        "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 65",
-        "pagina": 65,
-        "grupo": "G2",
-        "enunciado": "Na epidemia de dengue de 2024, o Ministério da Saúde reforçou a hidratação como cuidado essencial, e o equilíbrio de água entre o meio externo e as células depende da osmose. Para estudar o princípio, tiras de batata com 50,0 g foram mantidas pelo mesmo tempo em soluções de sacarose (valores ilustrativos). A parede celular permaneceu íntegra e a massa foi medida após retirar o excesso de líquido da superfície.",
-        "comando": "Qual leitura relaciona corretamente as variações de massa ao gradiente osmótico?",
-        "alts": [
-          "A solução de 0,0 mol L−1 foi hipertônica, pois a tira ganhou massa; a de 0,6 mol L−1 foi isotônica.",
-          "As três soluções foram isotônicas, porque a batata manteve sua composição química durante o ensaio.",
-          "A solução de 0,3 mol L−1 foi hipertônica, pois a massa final ficou igual; a de 0,0 mol L−1 provocou transporte ativo.",
-          "A diferença resultou de transporte ativo de sacarose, pois a célula vegetal usa energia para equilibrar as concentrações.",
-          "A solução de 0,0 mol L−1 foi hipotônica, a de 0,3 mol L−1 aproximadamente isotônica e a de 0,6 mol L−1 hipertônica."
-        ],
-        "tabela": {
-          "colunas": [
-            "Sacarose (mol L−1)",
-            "Massa final da tira (g)",
-            "Variação observada"
-          ],
-          "linhas": [
-            [
-              "0,0",
-              "55,0",
-              "ganho de massa"
-            ],
-            [
-              "0,3",
-              "50,0",
-              "sem variação detectável"
-            ],
-            [
-              "0,6",
-              "46,0",
-              "perda de massa"
-            ]
-          ]
-        }
-      },
-      {
         "id": "bio-2-provao-04",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/NHGRI_researcher_uses_a_pipette_to_remove_DNA_from_a_micro_test_tube.jpg?width=640",
@@ -1342,30 +990,6 @@ window.AVALIACOES_EM = {
         }
       },
       {
-        "id": "bio-2-provao-06",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/The_process_of_meiosis_under_microscope.jpg?width=640",
-          "leg": "Células em divisão observadas ao microscópio.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:The_process_of_meiosis_under_microscope.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Divisão celular — meiose, ploidia e organização cromossômica",
-        "hab": "",
-        "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 65",
-        "pagina": 65,
-        "grupo": "G2",
-        "enunciado": "O Dia Internacional da Síndrome de Down é celebrado em 21 de março, data que remete aos três cromossomos 21 presentes nas células dessas pessoas, resultado de uma falha na separação de cromossomos na formação dos gametas. Para entender como o número de cromossomos é reduzido na meiose, observe uma espécie com 2n = 6: duas células observadas após uma divisão têm três cromossomos cada. Cada cromossomo ainda possui duas cromátides-irmãs, e os pares de homólogos já não estão reunidos na mesma célula.",
-        "comando": "Qual processo e consequência explicam melhor a observação?",
-        "alts": [
-          "Primeira divisão meiótica; os homólogos se separaram, reduzindo a ploidia, embora o DNA de cada cromossomo ainda esteja duplicado.",
-          "Mitose após a replicação; a separação de homólogos reduz a ploidia sem alterar o número cromossômico das células filhas.",
-          "Segunda divisão meiótica; as cromátides-irmãs já se separaram, mas continuam visíveis como duas cópias.",
-          "Crossing-over; a troca de segmentos, por si só, transforma células diploides em haploides sem uma divisão nuclear.",
-          "Divisão citoplasmática ao fim da mitose; a separação dos homólogos reduziria a ploidia mesmo sem duas divisões meióticas."
-        ]
-      },
-      {
         "id": "bio-2-provao-07",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Pisum_sativum_subsp_sativum_var_macrocarpon_-_Flowers.jpg?width=640",
@@ -1444,58 +1068,6 @@ window.AVALIACOES_EM = {
               "II",
               "resposta tardia e células de memória após antígeno",
               "imunização ativa"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "bio-2-provao-09",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Ortho_tricyclen.jpg?width=640",
-          "leg": "Cartela de medicamento de uso hormonal.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Ortho_tricyclen.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Saúde reprodutiva — regulação endócrina, ciclo ovariano e contracepção hormonal",
-        "hab": "",
-        "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 66",
-        "pagina": 66,
-        "grupo": "G3",
-        "enunciado": "O dia 26 de setembro é o Dia Mundial da Contracepção, data usada por serviços de saúde para informar sobre os métodos disponíveis. Para entender a ação dos contraceptivos hormonais, os valores abaixo (relativos e ilustrativos) representam uma série temporal de um ciclo sem intervenção hormonal. A equipe não usa esses dados para decidir condutas individuais.",
-        "comando": "Qual interpretação integra adequadamente o pico hormonal e a ação esperada de um contraceptivo hormonal combinado?",
-        "alts": [
-          "A ovulação ocorre no dia 21 porque a progesterona está alta; o pico de LH é consequência da menstruação.",
-          "O dia 14 é necessariamente a menstruação, pois o LH elevado impede a liberação do ovócito.",
-          "O pico de LH próximo ao dia 14 é compatível com ovulação, e a progesterona elevada no dia 21 sugere fase lútea; contraceptivos combinados podem suprimir esse pico.",
-          "A progesterona elevada no dia 21 demonstra que FSH foi o único hormônio responsável pela ovulação do mesmo dia.",
-          "Os dados mostram que contraceptivos hormonais aumentam sempre o pico de LH para tornar a fecundação mais provável."
-        ],
-        "tabela": {
-          "colunas": [
-            "Dia do ciclo",
-            "Estradiol (unid. relativas)",
-            "LH (unid. relativas)",
-            "Progesterona (unid. relativas)"
-          ],
-          "linhas": [
-            [
-              "12",
-              "180",
-              "10",
-              "2"
-            ],
-            [
-              "14",
-              "150",
-              "42",
-              "3"
-            ],
-            [
-              "21",
-              "70",
-              "6",
-              "18"
             ]
           ]
         }
@@ -1609,64 +1181,6 @@ window.AVALIACOES_EM = {
         }
       },
       {
-        "id": "bio-2-provao-12",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Oiled_Pelicans.jpg?width=640",
-          "leg": "Aves marinhas atingidas por derramamento de petróleo.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Oiled_Pelicans.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Ecologia — poluição, bioacumulação, biomagnificação e conservação",
-        "hab": "",
-        "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 65",
-        "pagina": 65,
-        "grupo": "G3",
-        "enunciado": "Um estudo da Fiocruz divulgado em 2020 encontrou mercúrio, associado ao garimpo ilegal, em indígenas Munduruku do Tapajós (PA); o metal chega às pessoas pela alimentação, sobretudo por peixes. Para entender como um contaminante se acumula ao longo da cadeia alimentar, a concentração de um contaminante persistente foi medida em água e em organismos de níveis tróficos sucessivos de uma lagoa (valores ilustrativos). As amostras foram coletadas no mesmo período.",
-        "comando": "Qual interpretação e medida de gestão são mais bem sustentadas pelos dados?",
-        "alts": [
-          "A concentração diminui ao longo da cadeia; a melhor medida é aumentar o número de predadores de topo.",
-          "O contaminante é produzido pelos peixes maiores; retirar aves encerra a transferência para a teia.",
-          "A água é o único compartimento relevante, pois organismos apenas acumulam substâncias solúveis em seu corpo.",
-          "O aumento em níveis tróficos superiores é compatível com biomagnificação; é necessário controlar a fonte e monitorar a biota, sobretudo predadores.",
-          "A elevação na ave demonstra que o contaminante é um nutriente; a fertilização da lagoa diluiria seus efeitos."
-        ],
-        "tabela": {
-          "colunas": [
-            "Compartimento/organismo",
-            "Nível trófico aproximado",
-            "Contaminante (µg kg−1)"
-          ],
-          "linhas": [
-            [
-              "Água",
-              "—",
-              "0,02"
-            ],
-            [
-              "Algas",
-              "produtor",
-              "0,15"
-            ],
-            [
-              "Zooplâncton",
-              "consumidor primário",
-              "0,90"
-            ],
-            [
-              "Peixe pequeno",
-              "consumidor secundário",
-              "4,50"
-            ],
-            [
-              "Ave piscívora",
-              "consumidor terciário",
-              "18,00"
-            ]
-          ]
-        }
-      },
-      {
         "id": "bio-2-provao-13",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Double_block_PCR_thermocycler.jpg?width=640",
@@ -1739,7 +1253,7 @@ window.AVALIACOES_EM = {
     "componente": "Química",
     "prova": "Provão Paulista",
     "foco": "Mapa da 2ª série: evidências e representação de transformações; química e meio ambiente (gases de efeito estufa, água e tratamento); cinética e equilíbrio químico (incluindo pH/pOH); termoquímica e Lei de Hess; eletroquímica (oxirredução, potenciais, pilhas, eletrólise e descarte); radioatividade; compostos de carbono, funções orgânicas, isomeria, combustíveis e macromoléculas.",
-    "duracaoMin": 60,
+    "duracaoMin": 45,
     "questoes": [
       {
         "id": "qui-2-provao-01",
@@ -1834,30 +1348,6 @@ window.AVALIACOES_EM = {
         }
       },
       {
-        "id": "qui-2-provao-03",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/PH_indicator_paper_with_multiple_colours.jpg?width=640",
-          "leg": "Tiras de papel indicador com cores diferentes.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:PH_indicator_paper_with_multiple_colours.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Equilíbrio iônico — produto iônico da água, pH e pOH",
-        "hab": "",
-        "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 61",
-        "pagina": 61,
-        "grupo": "G2",
-        "enunciado": "Água sanitária e desentupidores são soluções alcalinas que causam acidentes domésticos, e os centros de informação toxicológica registram esses casos todos os anos. Considere uma solução aquosa de um desses produtos, analisada a 25 °C, com [OH⁻] = 2,0 × 10⁻³ mol L⁻¹. Considere Kw = 1,0 × 10⁻¹⁴ e as definições pOH = −log[OH⁻] e pH + pOH = 14,00.",
-        "comando": "Determine, com aproximação a duas casas decimais, o par pOH e pH da solução.",
-        "alts": [
-          "pOH = 3,00 e pH = 11,00.",
-          "pOH = 2,70 e pH = 11,30.",
-          "pOH = 11,30 e pH = 2,70.",
-          "pOH = 2,00 e pH = 12,00.",
-          "pOH = 0,30 e pH = 13,70."
-        ]
-      },
-      {
         "id": "qui-2-provao-04",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Burning_Bunsen_burner.jpg?width=640",
@@ -1941,54 +1431,6 @@ window.AVALIACOES_EM = {
         }
       },
       {
-        "id": "qui-2-provao-06",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Cobalt-cathode.jpg?width=640",
-          "leg": "Metal obtido por processo industrial elétrico.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Cobalt-cathode.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Eletroquímica — eletrólise, quantidade de carga e primeira lei de Faraday",
-        "hab": "",
-        "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 62",
-        "pagina": 62,
-        "grupo": "G3",
-        "enunciado": "O furto de cabos de cobre é frequentemente noticiado no país, e o cobre recuperado ou reciclado precisa ser refinado, processo que usa eletrólise. Em um experimento eletrolítico (valores ilustrativos), uma solução aquosa de CuCl₂ é submetida a corrente contínua entre eletrodos inertes. Para este problema, considere que Cu²⁺ é reduzido no cátodo, Cl⁻ é oxidado no ânodo, o rendimento de corrente é 100% e não ocorrem reações paralelas. Use F = 96 500 C mol⁻¹ e M(Cu) = 63,5 g mol⁻¹.",
-        "comando": "Qual massa de cobre metálico se deposita no cátodo após o tempo indicado?",
-        "alts": [
-          "0,318 g, porque cada mol de cobre exigiria apenas um mol de elétrons.",
-          "0,635 g, pois 0,0200 mol de elétrons formam 0,0100 mol de Cu²⁺ reduzido.",
-          "1,27 g, porque a carga deve ser multiplicada por dois elétrons.",
-          "1,93 g, correspondente diretamente à massa de um mol de cobre por 965 s.",
-          "0,0100 g, porque a massa deve ser igual à quantidade de matéria de elétrons."
-        ],
-        "tabela": {
-          "colunas": [
-            "Grandeza",
-            "Valor"
-          ],
-          "linhas": [
-            [
-              "Corrente I",
-              "2,00 A"
-            ],
-            [
-              "Tempo t",
-              "965 s"
-            ],
-            [
-              "Semirreação catódica",
-              "Cu²⁺ + 2e⁻ → Cu(s)"
-            ],
-            [
-              "Constante de Faraday F",
-              "96 500 C mol⁻¹"
-            ]
-          ]
-        }
-      },
-      {
         "id": "qui-2-provao-07",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Geiger_counter_in_use.jpg?width=640",
@@ -2037,54 +1479,6 @@ window.AVALIACOES_EM = {
         ]
       },
       {
-        "id": "qui-2-provao-09",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Orange_peel.jpg?width=640",
-          "leg": "Casca de laranja.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Orange_peel.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Estudo dos compostos de carbono — isomeria plana e espacial geométrica",
-        "hab": "",
-        "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 62",
-        "pagina": 62,
-        "grupo": "G2",
-        "enunciado": "Desde 2023, a Anvisa proíbe o uso de óleos parcialmente hidrogenados, principal fonte de gorduras trans, nos alimentos industrializados (RDC 332/2019), pois as gorduras trans são isômeros geométricos associados a riscos cardiovasculares. Considere os compostos orgânicos representados abaixo. A pergunta trata especificamente da possibilidade de isomeria geométrica em torno de uma ligação dupla.",
-        "comando": "Qual afirmação interpreta corretamente uma das estruturas?",
-        "alts": [
-          "III pode apresentar formas cis e trans, pois o carbono da dupla possui dois grupos metila equivalentes.",
-          "IV pode apresentar formas cis e trans, pois toda ligação dupla em uma cadeia aberta impede rotação.",
-          "I pode apresentar formas cis e trans, pois a rotação em torno da ligação simples fixa duas posições.",
-          "II pode apresentar formas cis e trans, pois cada carbono da ligação dupla tem dois substituintes diferentes.",
-          "I e II são isômeros geométricos, pois têm o mesmo número de carbonos e massas molares diferentes."
-        ],
-        "tabela": {
-          "colunas": [
-            "Estrutura",
-            "Representação condensada"
-          ],
-          "linhas": [
-            [
-              "I",
-              "CH₃–CH₂–CH₂–CH₃"
-            ],
-            [
-              "II",
-              "CH₃–CH=CH–CH₃"
-            ],
-            [
-              "III",
-              "CH₂=C(CH₃)₂"
-            ],
-            [
-              "IV",
-              "CH₂=CH–CH₂–CH₃"
-            ]
-          ]
-        }
-      },
-      {
         "id": "qui-2-provao-10",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Shopping_plastic_bags.jpg?width=640",
@@ -2130,30 +1524,6 @@ window.AVALIACOES_EM = {
           "A equação 2 H₂(g) + 2 O₂(g) → 2 H₂O(l) é a representação balanceada, pois há dois gases reagentes.",
           "A massa foi destruída quando os gases desapareceram, já que um sistema fechado não conserva matéria durante uma combustão.",
           "Formou-se água em uma reação química exotérmica; 2 H₂(g) + O₂(g) → 2 H₂O(l) representa a conservação dos átomos."
-        ]
-      },
-      {
-        "id": "qui-2-provao-12",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sedimentation_tank.jpg?width=640",
-          "leg": "Tanque de uma estação de tratamento de água.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Sedimentation_tank.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Química e meio ambiente — tratamento de água, partículas, microrganismos e substâncias dissolvidas",
-        "hab": "",
-        "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 61",
-        "pagina": 61,
-        "grupo": "G3",
-        "enunciado": "Nas enchentes de 2024 no Rio Grande do Sul, a água de abastecimento foi comprometida em vários municípios, e autoridades de saúde orientaram a desinfecção da água com cloro quando não havia garantia de segurança. Uma estação de tratamento recebeu uma água bruta com turbidez elevada, presença de bactérias indicadoras e concentração relevante de nitrato dissolvido. O tratamento convencional considerado tem as etapas: (1) coagulação/floculação, (2) decantação, (3) filtração e (4) desinfecção. Para este caso, não se atribui a essas quatro etapas a remoção completa do nitrato dissolvido.",
-        "comando": "Qual interpretação relaciona adequadamente as etapas às características que se pretende controlar?",
-        "alts": [
-          "Filtração inativa todos os microrganismos, enquanto a desinfecção precipita nitrato dissolvido e substitui a coagulação.",
-          "Coagulação agrega coloides; decantação remove flocos; filtração retém partículas; desinfecção reduz microrganismos; nitrato requer etapa específica.",
-          "Decantação transforma nitrato em gás, e a coagulação elimina bactérias por aquecimento da água em repouso.",
-          "A desinfecção remove principalmente sólidos suspensos, por isso deve ocorrer antes da decantação para formar os flocos.",
-          "A sequência é suficiente para qualquer contaminante, pois partículas, bactérias e íons dissolvidos respondem ao mesmo mecanismo físico."
         ]
       },
       {
@@ -2236,7 +1606,7 @@ window.AVALIACOES_EM = {
     "componente": "Biologia",
     "prova": "Provão Paulista",
     "foco": "Avaliação cumulativa autoral da 3ª série: ecologia e ciclos biogeoquímicos; fluxo de energia e sucessão; organização celular e transporte; metabolismo energético; DNA, RNA e síntese proteica; divisão celular; classificação e cladogramas; fisiologia animal; imunidade e saúde; hereditariedade ABO/Rh; evolução e investigação científica.",
-    "duracaoMin": 60,
+    "duracaoMin": 45,
     "questoes": [
       {
         "id": "bio-3-provao-01",
@@ -2336,54 +1706,6 @@ window.AVALIACOES_EM = {
         }
       },
       {
-        "id": "bio-3-provao-03",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Plasmolysis_of_red_onion_(Allium_cepa)_cells.jpg?width=640",
-          "leg": "Células vegetais observadas ao microscópio.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Plasmolysis_of_red_onion_(Allium_cepa)_cells.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Membrana plasmática, troca de substâncias e osmose",
-        "hab": "",
-        "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 67",
-        "pagina": 67,
-        "grupo": "G2",
-        "enunciado": "A conservação de carnes e peixes com sal, como no charque e no bacalhau, baseia-se na perda de água dos microrganismos por osmose. Para estudar o fenômeno, tiras de batata de massas iniciais semelhantes foram mantidas por 60 minutos em soluções de sacarose. O percentual é a variação média da massa em relação ao início (valores ilustrativos) e a membrana celular foi considerada seletivamente permeável à água nessas condições.",
-        "comando": "Qual conclusão é sustentada pela tabela?",
-        "alts": [
-          "A solução de 0,50 M é hipotônica para as células, pois a perda de massa mostra entrada de água por osmose.",
-          "A variação em 0,33 M prova que a sacarose atravessou livremente a membrana e igualou as concentrações internas.",
-          "A água sempre se desloca para o meio menos concentrado, independentemente da concentração de solutos não permeantes.",
-          "Como a massa variou em todas as soluções, não é possível estimar uma condição de equilíbrio osmótico.",
-          "A solução de 0,33 M é aproximadamente isotônica; em 0,50 M, a água tende a sair das células, explicando a perda de massa."
-        ],
-        "tabela": {
-          "colunas": [
-            "Sacarose (M)",
-            "Variação média da massa"
-          ],
-          "linhas": [
-            [
-              "0,00",
-              "+8%"
-            ],
-            [
-              "0,20",
-              "+2%"
-            ],
-            [
-              "0,33",
-              "0%"
-            ],
-            [
-              "0,50",
-              "−6%"
-            ]
-          ]
-        }
-      },
-      {
         "id": "bio-3-provao-04",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Risen_bread_dough_in_tin.jpg?width=640",
@@ -2464,30 +1786,6 @@ window.AVALIACOES_EM = {
         ]
       },
       {
-        "id": "bio-3-provao-06",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Lily_anther.jpg?width=640",
-          "leg": "Antera de lírio.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Lily_anther.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Mitose, meiose e reprodução celular",
-        "hab": "",
-        "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 67",
-        "pagina": 67,
-        "grupo": "G2",
-        "enunciado": "O Instituto Nacional de Câncer (INCA) estima mais de 700 mil novos casos de câncer por ano no Brasil, doença que tem origem em falhas no controle da divisão celular. Para comparar a divisão que forma células do corpo com a que forma gametas, considere uma célula germinativa com 2n = 8. Considere uma mitose completa e uma meiose completa, sem falha de segregação; a variabilidade da meiose inclui recombinação e distribuição independente dos cromossomos.",
-        "comando": "Qual comparação entre os produtos das duas divisões é correta?",
-        "alts": [
-          "A mitose origina duas células 2n = 8 geneticamente muito semelhantes; a meiose origina quatro células n = 4, com potencial de variabilidade.",
-          "A mitose origina quatro células n = 4, e a meiose conserva duas células 2n = 8 para manter a espécie.",
-          "Ambas originam duas células 2n = 8, mas somente a mitose envolve separação de cromossomos homólogos.",
-          "A mitose reduz o número cromossômico pela metade, enquanto a meiose produz células diploides idênticas ao início.",
-          "A meiose origina quatro células 2n = 8 porque a recombinação duplica os cromossomos antes da fecundação."
-        ]
-      },
-      {
         "id": "bio-3-provao-07",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/African_Animals.jpg?width=640",
@@ -2553,30 +1851,6 @@ window.AVALIACOES_EM = {
             ]
           ]
         }
-      },
-      {
-        "id": "bio-3-provao-09",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Bloodbags.jpg?width=640",
-          "leg": "Bolsas de sangue em banco de sangue.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Bloodbags.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Hereditariedade, alelos múltiplos e sistemas ABO e Rh",
-        "hab": "",
-        "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 68",
-        "pagina": 68,
-        "grupo": "G2",
-        "enunciado": "O Dia Mundial do Doador de Sangue, 14 de junho, é usado por hemocentros para pedir doações e lembrar que a compatibilidade entre os sistemas ABO e Rh é essencial nas transfusões. Considere um cruzamento com loci independentes. Um genitor tem genótipo Iᴬi Rr e o outro Iᴮi rr; Iᴬ e Iᴮ são codominantes, i é recessivo, R determina Rh positivo e r determina Rh negativo.",
-        "comando": "Quais fenótipos sanguíneos podem aparecer na descendência?",
-        "alts": [
-          "Somente A positivo e B negativo, porque cada genitor transmite apenas o alelo dominante do seu sistema ABO.",
-          "A positivo, A negativo, B positivo, B negativo, AB positivo, AB negativo, O positivo e O negativo.",
-          "A positivo, B positivo, AB positivo e O positivo, porque o alelo R impede qualquer fenótipo Rh negativo.",
-          "Somente AB positivo e O negativo, pois a codominância elimina os fenótipos intermediários.",
-          "A positivo, B positivo, AB negativo e O negativo, sem as combinações restantes de ABO e Rh."
-        ]
       },
       {
         "id": "bio-3-provao-10",
@@ -2647,30 +1921,6 @@ window.AVALIACOES_EM = {
             ]
           ]
         }
-      },
-      {
-        "id": "bio-3-provao-12",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/PMNM_-_sea_turtle_hatchlings_(28128852695).jpg?width=640",
-          "leg": "Filhotes de tartaruga-marinha na praia.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:PMNM_-_sea_turtle_hatchlings_(28128852695).jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Fisiologia dos animais: reprodução e relação com condições ambientais",
-        "hab": "",
-        "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 68",
-        "pagina": 68,
-        "grupo": "G2",
-        "enunciado": "Em 2018, pesquisadores relataram que cerca de 99% dos filhotes de tartaruga-verde do norte da Grande Barreira de Corais estavam nascendo fêmeas, efeito atribuído ao aquecimento da areia onde os ovos se desenvolvem. Para comparar estratégias reprodutivas, considere duas espécies que ocupam ambientes distintos. A espécie X libera gametas na água; seus ovos são gelatinosos e há fase larval aquática. A espécie Y realiza transferência de espermatozoides no interior do corpo; seus ovos têm envoltório resistente e o desenvolvimento é direto.",
-        "comando": "Qual inferência é sustentada pelos dados sem transformar uma adaptação em escala de progresso evolutivo?",
-        "alts": [
-          "X necessariamente tem fecundação mais eficiente em qualquer ambiente, pois produz gametas fora do corpo.",
-          "Y não realiza reprodução sexuada, porque o encontro dos gametas ocorre dentro do corpo parental.",
-          "O envoltório resistente de Y prova que seus descendentes são geneticamente idênticos ao adulto.",
-          "A fase larval de X demonstra que a espécie é menos complexa e está evolutivamente destinada a desaparecer.",
-          "A fecundação externa de X depende mais de água livre; a fecundação interna e o envoltório de Y reduzem a exposição do embrião à dessecação, sem indicar superioridade universal."
-        ]
       },
       {
         "id": "bio-3-provao-13",
@@ -2773,7 +2023,7 @@ window.AVALIACOES_EM = {
     "componente": "Química",
     "prova": "Provão Paulista",
     "foco": "Mapa cumulativo da 3ª série: materiais e separação de misturas; evidências, representação, balanceamento, leis ponderais e estequiometria; funções inorgânicas, soluções e água; estrutura atômica, periodicidade e radioatividade; ligações, polaridade e propriedades; cinética, equilíbrio e pH; termoquímica; oxirredução, pilhas, ddp e eletrólise; compostos de carbono, isomeria e polímeros, com ênfase em interpretação de dados, procedimentos e impactos socioambientais.",
-    "duracaoMin": 60,
+    "duracaoMin": 45,
     "questoes": [
       {
         "id": "qui-3-provao-01",
@@ -2872,30 +2122,6 @@ window.AVALIACOES_EM = {
         }
       },
       {
-        "id": "qui-3-provao-03",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Universal_Indicator_test_in_lemon_juice.JPG?width=640",
-          "leg": "Indicador de pH em contato com um líquido.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Universal_Indicator_test_in_lemon_juice.JPG"
-        },
-        "tipo": "obj",
-        "objeto": "Funções inorgânicas, neutralização e concentração de soluções",
-        "hab": "",
-        "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 63",
-        "pagina": 63,
-        "grupo": "G2",
-        "enunciado": "Nos anos 1980, Cubatão (SP) ficou conhecida como “Vale da Morte” pela poluição do ar, que incluía chuva ácida associada a óxidos de enxofre e à formação de ácido sulfúrico. Para entender como se neutraliza um ácido, considere uma titulação: 25,00 mL de solução contendo H₂SO₄ 0,0200 mol/L são titulados com NaOH 0,100 mol/L. Admita dissociação completa, ausência de outros ácidos ou bases e a equação H₂SO₄ + 2 NaOH → Na₂SO₄ + 2 H₂O.",
-        "comando": "Qual volume de NaOH é necessário para a neutralização total da amostra?",
-        "alts": [
-          "2,50 mL, porque a concentração do titulante é cinco vezes maior que a do ácido.",
-          "5,00 mL, porque cada mol de H₂SO₄ reage com apenas um mol de NaOH.",
-          "7,50 mL, porque se deve multiplicar diretamente o volume do ácido pela razão entre as concentrações.",
-          "20,00 mL, porque a estequiometria exige o dobro do volume de ácido antes de considerar a concentração.",
-          "10,00 mL, porque 25,00 mL contêm 0,000500 mol de H₂SO₄ e isso exige 0,001000 mol de NaOH."
-        ]
-      },
-      {
         "id": "qui-3-provao-04",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Geiger_counter.jpg?width=640",
@@ -2962,30 +2188,6 @@ window.AVALIACOES_EM = {
             ]
           ]
         }
-      },
-      {
-        "id": "qui-3-provao-06",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Volumetric_flasks.jpg?width=640",
-          "leg": "Balões volumétricos de laboratório.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Volumetric_flasks.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Soluções aquosas, concentração e operações de diluição",
-        "hab": "",
-        "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 64",
-        "pagina": 64,
-        "grupo": "G3",
-        "enunciado": "O soro fisiológico, solução de NaCl a 0,9% (m/V), é um dos medicamentos mais usados no SUS. Para entender como se prepara uma solução de concentração conhecida, considere uma solução estoque de NaCl com concentração 0,400 mol/L. Pipetam-se 250 mL dessa solução, completa-se o volume para 1,000 L e, depois, misturam-se 100 mL da solução diluída com 100 mL de água, sem reação química e sem perda de soluto.",
-        "comando": "Qual é a concentração final de NaCl na mistura?",
-        "alts": [
-          "0,0100 mol/L, porque o volume inicial de 250 mL é convertido diretamente para litros.",
-          "0,0250 mol/L, porque a segunda adição de água reduz quatro vezes a concentração estoque.",
-          "0,100 mol/L, porque somente a primeira diluição altera a concentração da solução estoque.",
-          "0,0500 mol/L, porque 0,100 mol de NaCl são distribuídos inicialmente em 1,000 L e a alíquota é dobrada de volume.",
-          "0,200 mol/L, porque a água adicionada não contém soluto e, portanto, não altera a concentração molar."
-        ]
       },
       {
         "id": "qui-3-provao-07",
@@ -3094,54 +2296,6 @@ window.AVALIACOES_EM = {
         }
       },
       {
-        "id": "qui-3-provao-09",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Gas_stove_burner_flame.jpg?width=640",
-          "leg": "Chama de um fogão a gás.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Gas_stove_burner_flame.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Transformações químicas e energia térmica; entalpia e Lei de Hess",
-        "hab": "",
-        "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 65",
-        "pagina": 65,
-        "grupo": "G2",
-        "enunciado": "Em 2021, o Brasil aderiu ao Compromisso Global do Metano, que busca reduzir emissões de um gás de efeito estufa que também é o principal componente do gás natural e do biogás. Considere entalpias padrão de formação (valores de referência para a atividade), em kJ/mol: CH₄(g) = −75, CO₂(g) = −394, H₂O(l) = −286 e O₂(g) = 0. Considere a combustão CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l).",
-        "comando": "Qual é a variação de entalpia para a reação como escrita e o que seu sinal indica?",
-        "alts": [
-          "−891 kJ/mol; a reação libera energia na forma de calor nas condições consideradas.",
-          "−966 kJ/mol; o valor é a soma direta das entalpias dos produtos, sem considerar o reagente CH₄.",
-          "−319 kJ/mol; basta subtrair a entalpia de formação da água da do dióxido de carbono.",
-          "+891 kJ/mol; a combustão absorve calor porque quebra ligações nos reagentes.",
-          "−572 kJ/mol; o oxigênio tem entalpia zero e por isso também se elimina o termo do metano."
-        ],
-        "tabela": {
-          "colunas": [
-            "Espécie",
-            "ΔHf° (kJ/mol)"
-          ],
-          "linhas": [
-            [
-              "CH₄(g)",
-              "−75"
-            ],
-            [
-              "CO₂(g)",
-              "−394"
-            ],
-            [
-              "H₂O(l)",
-              "−286"
-            ],
-            [
-              "O₂(g)",
-              "0"
-            ]
-          ]
-        }
-      },
-      {
         "id": "qui-3-provao-10",
         "foto": {
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Electric_batteries.jpg?width=640",
@@ -3187,30 +2341,6 @@ window.AVALIACOES_EM = {
           "1,27 g, porque cada mol de Cu²⁺ recebe dois mols de elétrons e ambos devem ser convertidos em massa.",
           "6,35 g, porque a corrente em ampères é numericamente igual à massa depositada em gramas após 1.000 s.",
           "0,0635 g, porque se deve dividir a massa molar por 1000 s antes de aplicar a carga."
-        ]
-      },
-      {
-        "id": "qui-3-provao-12",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunoco_Gas_Pump.jpg?width=640",
-          "leg": "Bomba de combustível em posto.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Sunoco_Gas_Pump.jpg"
-        },
-        "tipo": "obj",
-        "objeto": "Compostos de carbono, funções orgânicas, propriedades e isomeria plana",
-        "hab": "",
-        "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 65",
-        "pagina": 65,
-        "grupo": "G3",
-        "enunciado": "O etanol da cana é o combustível renovável mais usado no Brasil, e o éter dimetílico é estudado como combustível alternativo; as duas substâncias têm a mesma fórmula molecular, C₂H₆O. Considere duas substâncias puras de fórmula molecular C₂H₆O. A amostra I é CH₃CH₂OH, tem ponto de ebulição 78,4 °C e é miscível em água; a amostra II é CH₃OCH₃, tem ponto de ebulição −24,8 °C e apresenta solubilidade aquosa menor nas mesmas condições.",
-        "comando": "Qual interpretação explica conjuntamente a relação estrutural e a diferença de propriedades?",
-        "alts": [
-          "São isômeros de função: I é álcool, II é éter, e as ligações de hidrogênio de I favorecem maior ebulição e miscibilidade.",
-          "São isômeros de posição: ambos têm a mesma função álcool, mas o grupo O–H muda de carbono.",
-          "São isômeros geométricos: a rotação em torno da ligação C–C cria as duas propriedades observadas.",
-          "Não são isômeros, pois fórmulas moleculares iguais exigem sempre as mesmas propriedades físicas.",
-          "I é um hidrocarboneto e II é um ácido carboxílico; a diferença de ebulição decorre apenas da massa molar."
         ]
       },
       {

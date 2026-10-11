@@ -33,6 +33,7 @@
     biologia: { label: 'Biologia', sigla: 'bio' },
     quimica: { label: 'Química', sigla: 'qui' }
   };
+  const N_OBJ = 8, QID_BASE = 8;   // 8 objetivas + 2 dissertativas = 10 questões
   const PROVAS = {
     paulista: { label: 'Prova Paulista (4º bimestre)' },
     provao: { label: 'Provão Paulista' }
@@ -187,7 +188,7 @@
     }
     const objectives = assessment.questoes.filter((question) => question && question.tipo === 'obj');
     const dissertatives = assessment.questoes.filter((question) => question && question.tipo === 'dis');
-    if (objectives.length !== 12 || dissertatives.length !== 2) {
+    if (objectives.length !== N_OBJ || dissertatives.length !== 2) {
       return 'Esta avaliação ainda não está pronta para iniciar. Tente novamente mais tarde.';
     }
     if (objectives.some((question) => !Array.isArray(question.alts) || question.alts.length !== 5)) {
@@ -250,7 +251,7 @@
     const box = element('div');
     const title = element('p', 'resumo-titulo', assessment.titulo || PROVAS[refs.prova.value].label);
     const duration = Number(assessment.duracaoMin);
-    const detail = element('p', 'resumo-detalhe', '12 objetivas + 2 dissertativas · duração sugerida: ' + (Number.isFinite(duration) && duration > 0 ? duration + ' minutos' : 'não informada'));
+    const detail = element('p', 'resumo-detalhe', N_OBJ + ' objetivas + 2 dissertativas · duração sugerida: ' + (Number.isFinite(duration) && duration > 0 ? duration + ' minutos' : 'não informada'));
     box.append(title, detail);
     if (invalidReason) {
       const problem = element('p', 'resumo-erro', invalidReason);
@@ -375,8 +376,8 @@
   function renderDissertativeAnswer(article, question, dissertativeIndex) {
     const label = element('label', 'rotulo-dissertativa', 'Resposta da questão ' + (state.questions.indexOf(question) + 1));
     const textarea = document.createElement('textarea');
-    textarea.id = 'resposta-q' + (12 + dissertativeIndex);
-    textarea.name = 'q' + (12 + dissertativeIndex);
+    textarea.id = 'resposta-q' + (QID_BASE + dissertativeIndex);
+    textarea.name = 'q' + (QID_BASE + dissertativeIndex);
     textarea.maxLength = 3000;
     textarea.required = true;
     textarea.rows = 7;
@@ -428,7 +429,7 @@
     if (!state.started) return;
     const objectiveCount = countObjectiveAnswers();
     const dissertativeCount = countDissertativeAnswers();
-    text(refs.progresso, 'Respondidas: ' + (objectiveCount + dissertativeCount) + '/14 · objetivas: ' + objectiveCount + '/12 · dissertativas: ' + dissertativeCount + '/2');
+    text(refs.progresso, 'Respondidas: ' + (objectiveCount + dissertativeCount) + '/' + (N_OBJ + 2) + ' · objetivas: ' + objectiveCount + '/' + N_OBJ + ' · dissertativas: ' + dissertativeCount + '/2');
     clear(refs.revisao);
     const missingObjectives = state.objectiveAnswers.map((answer, index) => answer == null ? index : -1).filter((index) => index >= 0);
     const missingDissertatives = state.dissertativeAnswers.map((answer, index) => !String(answer || '').trim() ? index : -1).filter((index) => index >= 0);
@@ -486,7 +487,7 @@
     }
     const objectiveMissing = state.objectiveAnswers.some((answer) => !Number.isInteger(answer) || answer < 0 || answer > 4);
     if (objectiveMissing) {
-      showMessage('Responda as 12 questões objetivas antes de enviar. Use a revisão para localizar as pendentes.', 'erro');
+      showMessage('Responda as ' + N_OBJ + ' questões objetivas antes de enviar. Use a revisão para localizar as pendentes.', 'erro');
       const index = firstMissingQuestion();
       const target = index >= 0 ? document.getElementById('q' + index) : null;
       target?.classList.add('questao-invalida');
@@ -537,7 +538,7 @@
     if (!response.ok || !data || data.ok !== true) {
       throw new Error(data && (data.erro || data.mensagem) ? String(data.erro || data.mensagem) : 'O servidor recusou o envio (' + response.status + ').');
     }
-    if (data.avaliacao !== state.assessment.id || !Array.isArray(data.devolutiva) || data.devolutiva.length !== 12 || !Number.isFinite(data.notaObjetiva)) throw new Error('Devolutiva incompleta. Tente novamente.');
+    if (data.avaliacao !== state.assessment.id || !Array.isArray(data.devolutiva) || data.devolutiva.length !== N_OBJ || !Number.isFinite(data.notaObjetiva)) throw new Error('Devolutiva incompleta. Tente novamente.');
     return data;
   }
 
@@ -557,7 +558,7 @@
   async function sendAnswers() {
     if (state.submitting || state.submitted || !validateAnswers()) return;
     const confirmed = typeof window.confirm === 'function'
-      ? window.confirm('Confirmar envio? Suas 12 objetivas serão corrigidas agora e seu nome e suas respostas (inclusive as dissertativas) serão registrados na planilha do professor. Depois de enviar, não dá para alterar.')
+      ? window.confirm('Confirmar envio? Suas ' + N_OBJ + ' objetivas serão corrigidas agora e seu nome e suas respostas (inclusive as dissertativas) serão registrados na planilha do professor. Depois de enviar, não dá para alterar.')
       : true;
     if (!confirmed) {
       showMessage('Envio cancelado. Suas respostas continuam nesta tela.', 'informacao');

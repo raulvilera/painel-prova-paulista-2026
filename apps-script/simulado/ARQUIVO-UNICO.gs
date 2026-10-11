@@ -856,8 +856,8 @@ const ALUNOS_EM = {
 };
 
 const EM_PREFIXO_ABA = 'EM · ';
-const EM_N_OBJ = 12, EM_N_DIS = 2;
-const EM_COL = { data: 1, turma: 2, componente: 3, prova: 4, n: 5, nome: 6, ra: 7, obj: 8 };   // Q1..Q12 em H..S
+const EM_N_OBJ = 8, EM_N_DIS = 2, EM_QID_BASE = 12;   // 8 objetivas + 2 dissertativas; ids das dissertativas seguem -13 e -14
+const EM_COL = { data: 1, turma: 2, componente: 3, prova: 4, n: 5, nome: 6, ra: 7, obj: 8 };   // Q1..Q8 em H..O
 const EM_COL_FIM_OBJ = EM_COL.obj + EM_N_OBJ;                                      // R: acertos
 const EM_COL_DIS = EM_COL_FIM_OBJ + 2;                                             // T: Q13 resposta, U: nota, V: comentário IA, W: Q14 ...
 const EM_POR_DIS = 3;                                                              // colunas por dissertativa
@@ -869,7 +869,7 @@ const EM_ABA_CRITERIOS = 'EM · Critérios';                                    
 /* Letra da coluna (1 → A). */
 function emLetra_(n) { let s = ''; while (n > 0) { const m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = Math.floor((n - 1) / 26); } return s; }
 
-/* Nota final (0–10): as 14 questões valem igual. Objetivas: 1 ponto por acerto; dissertativas: nota 0–1 do professor.
+/* Nota final (0–10): as 10 questões valem igual. Objetivas: 1 ponto por acerto; dissertativas: nota 0–1 do professor.
    Só aparece depois que o professor preenche as duas notas das dissertativas. */
 function emFormulaFinal_(linha) {
   const acertos = emLetra_(EM_COL_FIM_OBJ) + linha;
@@ -1017,7 +1017,7 @@ function corrigirPendentesEM() {
   const ss = SpreadsheetApp.openById(PLANILHA_ID);
   ss.getSheets().forEach(sh => {
     const nome = sh.getName();
-    if (nome.indexOf(EM_PREFIXO_ABA) !== 0 || nome === EM_ABA_CRITERIOS || sh.getLastRow() < 3) return;
+    if (nome.indexOf(EM_PREFIXO_ABA) !== 0 || nome === EM_ABA_CRITERIOS || nome.indexOf('(antiga') >= 0 || sh.getLastRow() < 3) return;
     const avaliacao = nome.substring(EM_PREFIXO_ABA.length);
     const dados = sh.getRange(3, 1, sh.getLastRow() - 2, EM_COL_OBS).getValues();
     dados.forEach((r, i) => {
@@ -1025,7 +1025,7 @@ function corrigirPendentesEM() {
       try {
         const itens = [];
         for (let k = 0; k < EM_N_DIS; k++) {
-          const qid = avaliacao + '-' + (EM_N_OBJ + k + 1);
+          const qid = avaliacao + '-' + (EM_QID_BASE + k + 1);
           itens.push({ qid: qid, resposta: String(r[EM_COL_DIS - 1 + k * EM_POR_DIS] || '').replace(/^'/, ''), contexto: emContexto_(qid) });
         }
         if (itens.some(it => !it.contexto || !it.resposta.trim())) return;
@@ -1048,7 +1048,14 @@ function emAba_(avaliacao, gabarito) {
   const ss = SpreadsheetApp.openById(PLANILHA_ID);
   const nome = EM_PREFIXO_ABA + avaliacao;
   let sh = ss.getSheetByName(nome);
-  if (sh && String(sh.getRange(1, 1).getValue()) !== '') return sh;      // já montada
+  if (sh && String(sh.getRange(1, 1).getValue()) !== '') {
+    // aba no layout atual (8 objetivas): usa. Se for do layout antigo (12 objetivas), guarda como "(antiga)" e cria uma nova.
+    if (/^Acertos/.test(String(sh.getRange(1, EM_COL_FIM_OBJ).getValue()))) return sh;
+    let nomeAntigo = nome + ' (antiga)', n = 2;
+    while (ss.getSheetByName(nomeAntigo)) nomeAntigo = nome + ' (antiga ' + (n++) + ')';
+    sh.setName(nomeAntigo);
+    sh = null;
+  }
   if (!sh) sh = ss.insertSheet(nome);                                    // (aba criada pela metade numa tentativa anterior é refeita)
   const cab = ['Data/hora', 'Turma', 'Componente', 'Prova', 'Nº', 'Nome', 'RA'], gab = ['GABARITO', '', '', '', '', '', ''];
   gabarito.forEach((letra, i) => { cab.push('Q' + (i + 1)); gab.push(letra); });
@@ -1095,7 +1102,7 @@ function testarEM() {
     acao: 'enviarEM', segredo: props.getProperty('EM_SEGREDO'), envioId: 'teste-' + new Date().getTime(),
     avaliacao: 'bio-2-paulista', turmaId: '2c-noite', turma: '2ª Série C Noite', componente: 'Biologia', prova: 'Prova Paulista (4º bimestre)',
     n: 1, nome: 'TESTE', ra: '0',
-    respostas: 'AAAAAAAAAAAA'.split(''), gabarito: 'CAEBDACEBDAE'.split(''), acertos: 3, total: 12, notaObjetiva: 2.5,
+    respostas: 'AAAAAAAA'.split(''), gabarito: 'CAEBDACE'.split(''), acertos: 3, total: 8, notaObjetiva: 3.8,
     dissertativas: [
       { resposta: 'Resposta de teste 1', qid: 'bio-2-paulista-13', contexto: 'ENUNCIADO: teste\nCOMANDO: teste\nDESCRITORES:\n1. Reconhecer as principais IST.' },
       { resposta: 'Resposta de teste 2', qid: 'bio-2-paulista-14', contexto: 'ENUNCIADO: teste\nCOMANDO: teste\nDESCRITORES:\n1. Identificar medidas de prevenção de protozooses.' }
@@ -1115,7 +1122,7 @@ function testarEM() {
 function corrigirFormulasEM() {
   const ss = SpreadsheetApp.openById(PLANILHA_ID);
   let n = 0;
-  ss.getSheets().filter(sh => sh.getName().indexOf(EM_PREFIXO_ABA) === 0 && sh.getName() !== EM_ABA_CRITERIOS).forEach(sh => {
+  ss.getSheets().filter(sh => sh.getName().indexOf(EM_PREFIXO_ABA) === 0 && sh.getName() !== EM_ABA_CRITERIOS && sh.getName().indexOf('(antiga') < 0).forEach(sh => {
     for (let linha = 3; linha <= sh.getLastRow(); linha++) { sh.getRange(linha, EM_COL_FINAL).setFormula(emFormulaFinal_(linha)); n++; }
   });
   Logger.log(n + ' fórmulas refeitas.');

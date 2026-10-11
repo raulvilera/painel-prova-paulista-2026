@@ -1,7 +1,7 @@
 /* ======================================================================
    AVALIAÇÕES AUTORAIS · ENSINO MÉDIO (Biologia e Química, 2ª e 3ª séries)
    - A página fica em simulado-saresp-ciencias-2026.vercel.app/ensino-medio/.
-   - Quem corrige as 12 objetivas é a função /api/corrigir-em (Vercel), que guarda
+   - Quem corrige as 8 objetivas é a função /api/corrigir-em (Vercel), que guarda
      o gabarito. Depois de corrigir, ela chama este script (servidor → servidor)
      com a senha EM_SEGREDO e este script grava uma linha na aba da avaliação.
    - Uma aba por avaliação: "EM · bio-2-paulista", "EM · qui-3-provao" etc.
@@ -13,7 +13,7 @@
      EM_SEGREDO = uma senha longa (a mesma da variável EM_SEGREDO na Vercel).
    ====================================================================== */
 const EM_PREFIXO_ABA = 'EM · ';
-const EM_N_OBJ = 12, EM_N_DIS = 2;
+const EM_N_OBJ = 8, EM_N_DIS = 2;
 const EM_COL = { data: 1, turma: 2, componente: 3, prova: 4, n: 5, nome: 6, ra: 7, obj: 8 };   // Q1..Q12 em H..S
 const EM_COL_FIM_OBJ = EM_COL.obj + EM_N_OBJ;                                      // R: acertos
 const EM_COL_DIS = EM_COL_FIM_OBJ + 2;                                             // T: Q13 resposta, U: nota, V: comentário IA, W: Q14 ...
@@ -26,7 +26,7 @@ const EM_ABA_CRITERIOS = 'EM · Critérios';                                    
 /* Letra da coluna (1 → A). */
 function emLetra_(n) { let s = ''; while (n > 0) { const m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = Math.floor((n - 1) / 26); } return s; }
 
-/* Nota final (0–10): as 14 questões valem igual. Objetivas: 1 ponto por acerto; dissertativas: nota 0–1 do professor.
+/* Nota final (0–10): as 10 questões valem igual. Objetivas: 1 ponto por acerto; dissertativas: nota 0–1 do professor.
    Só aparece depois que o professor preenche as duas notas das dissertativas. */
 function emFormulaFinal_(linha) {
   const acertos = emLetra_(EM_COL_FIM_OBJ) + linha;
