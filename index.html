@@ -802,59 +802,6 @@ async function plSalvar(k){
   try{ if(typeof sb==="undefined") return; await sb.from("planejamento_ajustes").upsert({id:k, dados:PL.aj[k], atualizado_em:new Date().toISOString()}); }catch(e){}
 }
 function plEsc(tn){ const g=PLAN.grade.find(x=>x.tn===tn); return g && /Lydia/.test(g.e) ? " (Lydia)" : ""; }
-
-/* ---------- atividade individual: o aluno escolhe turma e nome e recebe questões dos seus descritores com defasagem (bim. 1–3) + conteúdo do 4º bimestre ---------- */
-const INDV_NIV=["Abaixo do Básico","Básico","Adequado","Avançado"];
-function indvHash(s){ let h=0; for(const c of String(s)) h=(h*31+c.charCodeAt(0))>>>0; return h; }
-function planoIndiv(){
-  const linhas=[], aluno=new Map();
-  DATA.A.forEach(r=>{ if(/^[6-9]º ANO/.test(serieOf(r[0]))) aluno.set(r[0]+"|"+r[2],r); });
-  aluno.forEach(r=>{
-    const t=r[0], tn=DATA.T[t].n, se=serieOf(t), turma=aiTurmaLbl(tn)+plEsc(tn);
-    const cand=[];
-    [3,4,5].forEach((ix,i)=>{
-      const v=r[ix]; if(v==null||v>=.75) return;
-      const ds=descs(t,r[1],i).map(d=>({k:se+"|"+(i+1)+"|"+d[3],gap:1-v,score:(1-v)*(1-d[4]),niv:lvOf(v)})).filter(x=>ATIV[x.k]);
-      ds.sort((a,b)=>b.score-a.score); cand.push(ds);
-    });
-    const esc_=[]; cand.slice().sort((a,b)=>(b[0]?b[0].gap:0)-(a[0]?a[0].gap:0)).forEach(c=>{ if(c[0]&&esc_.length<3) esc_.push(c[0]); });
-    if(esc_.length<3){ const resto=[].concat(...cand).filter(x=>!esc_.includes(x)).sort((a,b)=>b.score-a.score); while(esc_.length<3&&resto.length) esc_.push(resto.shift()); }
-    const vals=[r[3],r[4],r[5]].filter(v=>v!=null), media=vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:.5, nivMed=Math.max(0,lvOf(media));
-    const itens=esc_.map(x=>({k:x.k,niv:x.niv,t:"gap"}));
-    const aulas=((PLAN.seq["Ciências|"+se])||[]).filter(l=>l.s);
-    if(aulas.length){ const h=indvHash(r[2]); [0,Math.ceil(aulas.length/2)].forEach(o=>{ const l=aulas[(h+o)%aulas.length]; if(!itens.some(i=>i.k==="4B|"+se+"|"+l.n)) itens.push({k:"4B|"+se+"|"+l.n,niv:nivMed,t:"b4"}); }); }
-    const resumo=[3,4,5].map((ix,i)=>`${i+1}º bim: ${r[ix]==null?"—":Math.round(r[ix]*100)+"% ("+INDV_NIV[lvOf(r[ix])]+")"}`).join(" · ");
-    linhas.push({turma,nome:r[2],itens,resumo});
-  });
-  return linhas;
-}
-async function indvTok(){ const {data}=await sb.auth.getSession(); return data&&data.session?data.session.access_token:""; }
-async function indvApi(acao,body,q){
-  const tok=await indvTok(), url="/api/individual?acao="+acao+(q||"");
-  const r=await fetch(url,body?{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+tok},body:JSON.stringify(Object.assign({acao},body))}:{headers:{Authorization:"Bearer "+tok}});
-  const j=await r.json().catch(()=>({ok:false,erro:"resposta inválida do servidor (HTTP "+r.status+")"})); if(!j.ok) throw new Error(j.erro||"erro"); return j;
-}
-/* Automático: ao abrir o painel, o plano dos alunos é publicado (se mudou) e as questões que faltam são geradas em segundo plano. O aluno só escolhe turma e nome. */
-let INDV_RODOU=false;
-function indvMsg(t){ const e=document.getElementById("indStatus"); if(e) e.textContent=t; INDV_ULT=t; }
-let INDV_ULT="";
-async function indvAuto(){
-  if(INDV_RODOU) return; INDV_RODOU=true;
-  try{
-    const L=planoIndiv(); if(!L.length) return;
-    const hash=String(indvHash(JSON.stringify(L.map(x=>[x.turma,x.nome,x.itens]))));
-    let ant=""; try{ ant=localStorage.getItem("indv_hash")||""; }catch(e){}
-    if(ant!==hash){
-      for(let i=0;i<L.length;i+=80){ indvMsg(`publicando plano ${Math.min(i+80,L.length)}/${L.length}…`); await indvApi("plano",{linhas:L.slice(i,i+80)}); }
-      try{ localStorage.setItem("indv_hash",hash); }catch(e){}
-    }
-    const st=await indvApi("status"); const falta=st.chaves.filter(x=>!x.tem);
-    let i=0, feitas=0;
-    const w=async()=>{ while(i<falta.length){ const x=falta[i++]; try{ await indvApi("gerar",{k:x.k}); }catch(e){} feitas++; indvMsg(`preparando questões ${feitas}/${falta.length}…`); } };
-    await Promise.all([w(),w(),w()]);
-    indvMsg(`✓ ${L.length} alunos prontos`);
-  }catch(e){ indvMsg("erro: "+e.message); INDV_RODOU=false; }
-}
 function plTnSel(){ return DATA && DATA.T[S.t] ? DATA.T[S.t].n : null; }
 function plInit(){ const ps=plPares(); const tnS=plTnSel(), sk=tnS+"|"+S.comp;
   if(PL.sync!==sk){ PL.sync=sk; const m=ps.find(p=>p[0]===tnS && p[1]===S.comp)||ps.find(p=>p[0]===tnS); if(m){ PL.tn=m[0]; PL.c=m[1]; } else if(!PL.tn){ PL.tn=ps[0][0]; PL.c=ps[0][1]; } }
@@ -1171,7 +1118,7 @@ const VIEWS={ aluno:["Aluno","Desempenho por bimestre",alunoView], desc:["Descri
 
 function renderAll(){
   const seT=serieOf(S.t);
-  document.getElementById("cAtiv").innerHTML=simSerie(seT)?`<b>Atividades dos alunos · ${esc(DATA.T[S.t].n)}</b>${simBtn(seT)}${/^[6-9]º ANO/.test(serieOf(S.t))?` <span id="indStatus" style="font-size:.85rem;opacity:.8">${esc(INDV_ULT)}</span> <a class="pl-skip" style="text-decoration:none;display:inline-block" href="/atividade-individual/" target="_blank" rel="noopener">atividade individual (alunos)</a>`:""}`:"";
+  document.getElementById("cAtiv").innerHTML=simSerie(seT)?`<b>Atividades dos alunos · ${esc(DATA.T[S.t].n)}</b>${simBtn(seT)}`:"";
   document.getElementById("cAluno").innerHTML=alunoView(false);
   document.getElementById("cDesc").innerHTML=descView(false);
   document.getElementById("cTurma").innerHTML=turmaView(false);
@@ -1262,7 +1209,6 @@ async function openApp(session){
   DATA=decode(data.dados);
   $("whoEmail").textContent=email; $("authView").hidden=true; $("appView").hidden=false; msg("");
   startDashboard();
-  setTimeout(indvAuto,2500);
 }
 $("fLogin").addEventListener("submit", async e=>{
   e.preventDefault(); msg("");

@@ -1,7 +1,7 @@
 /* Service worker do Painel Prova Paulista.
    Guarda só a "casca" do app (HTML, ícones, biblioteca de login).
    Nunca guarda respostas do Supabase: dados de alunos não ficam no aparelho. */
-const VERSAO = "pp-v17";
+const VERSAO = "pp-v18";
 const CASCA = ["/", "/manifest.webmanifest", "/icon-192.png", "/icon-512.png", "/apple-touch-icon.png"];
 const EXTRA = ["https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"];
 
