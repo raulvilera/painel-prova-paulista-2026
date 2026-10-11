@@ -25,7 +25,6 @@
     resultado: $('resultado'),
     resultadoConteudo: $('resultado-conteudo'),
     baixar: $('baixar'),
-    imprimir: $('imprimir'),
     retentar: $('retentar'),
     notaRegistro: $('nota-registro')
   };
@@ -758,8 +757,9 @@
     refs.resultadoConteudo.appendChild(buildReceipt());
     const registrado = registroConfirmado(data);
     refs.retentar.hidden = registrado;
+    refs.baixar.hidden = registrado;   // o comprovante só aparece se o registro falhar (garantia para o aluno)
     text(refs.notaRegistro, registrado
-      ? 'Seu nome e suas respostas estão na planilha do professor. Guarde o comprovante se quiser.'
+      ? 'Suas respostas foram registradas na planilha do professor.'
       : 'O registro na planilha ainda não foi concluído. Tente registrar novamente ou entregue o comprovante ao professor.');
     refs.resultado.hidden = false;
   }
@@ -900,7 +900,6 @@
   refs.mudar.addEventListener('click', changeAssessment);
   refs.baixar.addEventListener('click', downloadReceipt);
   refs.retentar.addEventListener('click', retentarRegistro);
-  refs.imprimir.addEventListener('click', function () { window.print(); });
 
   window.addEventListener('beforeunload', function (event) {
     if (state.started && hasAnswers() && !state.submitted) {
