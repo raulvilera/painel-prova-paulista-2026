@@ -3,6 +3,7 @@
    Variáveis na Vercel: SUPABASE_URL, SUPABASE_SERVICE_KEY (as mesmas da atividade individual). */
 const CAT = require('./_catalogo-indiv.js');
 const META_EM = require('./_meta-em.js');
+const META_SIM = require('./_meta-simulado.js');
 const ALUNOS_EM = require('./_alunos-em.js');
 const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.env.SUPABASE_SERVICE_KEY || '';
 const LOGIN_URL = process.env.PAINEL_SUPABASE_URL || 'https://ykrjfjepnqeoqlgupsbe.supabase.co', LOGIN_KEY = process.env.PAINEL_SUPABASE_KEY || 'sb_publishable_FbMU5x7WBpxzHmmVzOfh2g_0M1xxAh5';
@@ -39,6 +40,19 @@ module.exports = async function resultados(req, res) {
       const plano = await rest('indiv_plano?select=turma,nome&limit=2000');
       const roster = {}; plano.forEach(p => { (roster[p.turma] = roster[p.turma] || []).push(p.nome); });
       return out(200, { ok: true, rows, meta, roster });
+    }
+    if (fonte === 'simulado') {   // Simulado SARESP (Fundamental): lê as abas da planilha pelo Apps Script
+      const url = process.env.EM_APPS_SCRIPT_URL || '', segredo = process.env.EM_SEGREDO || '';
+      if (!url || !segredo) return out(500, { ok: false, erro: 'Planilha não configurada na Vercel (EM_APPS_SCRIPT_URL / EM_SEGREDO).' });
+      const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 25000);
+      let j;
+      try {
+        const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ acao: 'resultadosEF', segredo }), redirect: 'follow', signal: ctl.signal });
+        j = await r.json();
+      } catch (e) { return out(502, { ok: false, erro: 'Não foi possível ler a planilha agora. Confira se o Apps Script foi atualizado e reimplantado.' }); }
+      finally { clearTimeout(t); }
+      if (!j || !j.ok) return out(502, { ok: false, erro: 'A planilha respondeu: ' + String((j && j.erro) || 'erro') + (/ação desconhecida/.test(String(j && j.erro)) ? ' — cole o ARQUIVO-UNICO.gs atualizado no Apps Script e crie uma nova versão da implantação.' : '') });
+      return out(200, { ok: true, rows: j.rows, meta: META_SIM, roster: j.roster });
     }
     return out(400, { ok: false, erro: 'Fonte inválida.' });
   } catch (e) { return out(500, { ok: false, erro: String(e.message || e).slice(0, 200) }); }

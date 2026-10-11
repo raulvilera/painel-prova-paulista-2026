@@ -72,10 +72,39 @@ function doGet(e) {
 function doPost(e) {
   try {
     const p = JSON.parse((e && e.postData && e.postData.contents) || '{}');
+    if (p.acao === 'resultadosEF') return json_(resultadosEF_(p));   // relatório do professor (somente leitura)
     if (p.acao === 'enviarEM') return json_(enviarEM_(p));   // Ensino Médio (ver seção no fim do arquivo)
     if (p.acao !== 'enviar') return json_({ ok: false, erro: 'ação desconhecida' });
     return json_(enviar(p));
   } catch (err) { return json_({ ok: false, erro: String(err.message || err) }); }
+}
+
+/* Relatório do professor (Fundamental): devolve as respostas das abas 'Respostas · <turma>' já classificadas
+   (objetiva: certo/errado; dissertativa: nota 0–1). Exige a senha EM_SEGREDO. Não altera nada. */
+function resultadosEF_(p) {
+  const segredo = PropertiesService.getScriptProperties().getProperty('EM_SEGREDO');
+  if (!segredo || String(p.segredo || '') !== segredo) throw new Error('não autorizado');
+  const ss = SpreadsheetApp.openById(PLANILHA_ID), rows = [], roster = {};
+  const num = v => { if (typeof v === 'number') return v; const n = parseFloat(String(v).replace(',', '.')); return isNaN(n) ? null : n; };
+  TURMAS_CFG.forEach(t => {
+    roster[t.id] = alunos_(t.id).map(a => a.nome);
+    const sh = ss.getSheetByName(nomeAba_(t.id)); if (!sh || sh.getLastRow() < 3) return;
+    const Q = QUESTOES[t.serie], v = sh.getRange(3, 1, sh.getLastRow() - 2, COL_FIM).getValues();
+    v.forEach(r => {
+      if (!r[COL.nome - 1]) return;
+      let io = 0, id = 0;
+      const itens = Q.map((q, i) => {
+        if (q.tipo === 'obj') {
+          const l = String(r[COL.obj - 1 + io++] || '');
+          return { k: t.serie + '-' + i, tipo: 'obj', resp: l, acerto: l !== '' && l === 'ABCDE'[q.correta] };
+        }
+        const nota = num(r[COL_DIS + id * 3]); id++;   // coluna da nota (resposta, NOTA, comentário)
+        return { k: t.serie + '-' + i, tipo: 'dis', nota: nota };
+      });
+      rows.push({ criado: r[COL.data - 1] instanceof Date ? r[COL.data - 1].toISOString() : '', turma: t.id, nome: String(r[COL.nome - 1]), itens: itens });
+    });
+  });
+  return { ok: true, rows: rows, roster: roster };
 }
 
 function json_(o) { return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON); }

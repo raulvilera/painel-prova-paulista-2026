@@ -19,7 +19,7 @@
     const ult = new Map();
     (j.rows || []).forEach(r => {   // só o último envio de cada aluno em cada avaliação
       const turma = CFG.fonte === 'em' ? (r.turma || r.turma_id) : r.turma;
-      const aval = CFG.fonte === 'em' ? r.avaliacao : 'atividade';
+      const aval = CFG.fonte === 'em' ? r.avaliacao : (CFG.fonte === 'simulado' ? 'simulado' : 'atividade');
       ult.set(turma + '|' + r.nome + '|' + aval, { r, turma, aval });
     });
     return [...ult.values()].map(({ r, turma, aval }) => {
@@ -34,7 +34,7 @@
         else itens.push({ v, ae: (m.hab ? m.hab + ' · ' : '') + (m.ae || '—'), desc: m.desc || '—', bim: m.bim || '', rot: m.desc });
       });
       const parcial = (r.itens || []).some(i => i.tipo === 'dis' && typeof i.nota !== 'number');
-      const rotAval = CFG.fonte === 'em' ? [r.componente, r.prova, (r.avaliacao.split('-')[1] || '') + 'ª série'].filter(Boolean).join(' · ') : 'Atividade individual';
+      const rotAval = CFG.fonte === 'em' ? [r.componente, r.prova, (r.avaliacao.split('-')[1] || '') + 'ª série'].filter(Boolean).join(' · ') : (CFG.fonte === 'simulado' ? 'Simulado SARESP' : 'Atividade individual');
       return { turma, aluno: r.nome, aval, rotAval, itens, parcial, nota: itens.length ? media(itens.map(i => i.v)) * 10 : null, criado: r.criado };
     });
   }
@@ -171,7 +171,7 @@
       if (!j.ok) return msg(esc(j.erro || 'Erro ao carregar.') + (r.status === 401 ? '<br><br><a href="/">Abrir o painel</a>' : ''));
       ROSTER = {};
       if (CFG.fonte === 'em') Object.values(j.roster || {}).forEach(t => ROSTER[t.turma] = t.alunos.map(a => a.nome));
-      else ROSTER = j.roster || {};
+      else ROSTER = j.roster || {};   // individual e simulado: {turma:[nomes]}
       TENT = norm(j);
       if (CFG.fonte === 'em') { const av = new Map(); TENT.forEach(x => av.set(x.aval, x.rotAval)); opcoes($('fFiltro'), [...av.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR')), S.filtro, 'Todas as avaliações'); }
       else opcoes($('fFiltro'), [['1', '1º bimestre'], ['2', '2º bimestre'], ['3', '3º bimestre'], ['4', '4º bimestre (Saresp)']], S.filtro, 'Todos os bimestres');

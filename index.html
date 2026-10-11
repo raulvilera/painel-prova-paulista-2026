@@ -320,7 +320,7 @@ footer{margin-top:18px}
       <h1>Ciências, Biologia e Química</h1>
       <div class="sub">EE Lydia Kitz Moreira e EE Profª Wanda Mascagni de Sá · clique em qualquer painel para ampliar</div>
     </div>
-    <nav class="relat" aria-label="Relatórios de resultados dos alunos"><a href="/resultados/ensino-medio/" target="_blank" rel="noopener">Resultados · Ensino Médio</a><a href="/resultados/individual/" target="_blank" rel="noopener">Resultados · Atividade individual</a></nav>
+    <nav class="relat" aria-label="Relatórios de resultados dos alunos"><a href="/resultados/simulado/" target="_blank" rel="noopener">Resultados · Simulado SARESP (Fundamental)</a><a href="/resultados/ensino-medio/" target="_blank" rel="noopener">Resultados · Ensino Médio</a><a href="/resultados/individual/" target="_blank" rel="noopener">Resultados · Atividade individual</a></nav>
     <div class="who"><span id="whoEmail"></span><button type="button" id="bSair">Sair</button></div>
   </header>
 
@@ -1120,7 +1120,7 @@ const VIEWS={ aluno:["Aluno","Desempenho por bimestre",alunoView], desc:["Descri
 
 function renderAll(){
   const seT=serieOf(S.t);
-  document.getElementById("cAtiv").innerHTML=simSerie(seT)?`<b>Atividades dos alunos · ${esc(DATA.T[S.t].n)}</b>${simBtn(seT)}${/^[6-9]º ANO/.test(seT)?` <a href="/atividade-individual/" target="_blank" rel="noopener" style="font-size:.85rem;margin-left:8px">Atividade individual (alunos)</a>`:""} <a href="/resultados/" target="_blank" rel="noopener" style="font-size:.85rem;margin-left:8px">Resultados dos alunos</a>`:"";
+  document.getElementById("cAtiv").innerHTML=simSerie(seT)?`<b>Atividades dos alunos · ${esc(DATA.T[S.t].n)}</b>${simBtn(seT)}${/^[6-9]º ANO/.test(seT)?` <a class="sim-btn" href="/atividade-individual/" target="_blank" rel="noopener" style="margin-left:8px">Atividade individual (alunos)</a>`:""}`:"";
   document.getElementById("cAluno").innerHTML=alunoView(false);
   document.getElementById("cDesc").innerHTML=descView(false);
   document.getElementById("cTurma").innerHTML=turmaView(false);
