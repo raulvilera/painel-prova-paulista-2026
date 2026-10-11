@@ -110,7 +110,7 @@
   fN.onchange = () => {
     zerar(); if (!fN.value) return;
     const t = fT.value, n = fN.value;
-    $('#qs').innerHTML = '<p class="vazio">Preparando as suas questões…</p>';
+    $('#qs').innerHTML = '<p class="vazio">Preparando as suas questões… na primeira vez pode levar até 1 minuto.</p>';
     get({ acao: 'atividade', turma: t, nome: n }).then(a => {
       if (fT.value !== t || fN.value !== n) return;
       if (a.aviso || !a.itens.length) { $('#qs').innerHTML = `<p class="vazio">${esc(a.aviso || 'Sem atividade por enquanto.')}</p>`; return; }

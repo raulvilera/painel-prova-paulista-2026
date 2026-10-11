@@ -65,12 +65,24 @@ async function corrigir(q, resposta, k) {
 
 /* ---------- montagem das questões de um aluno ---------- */
 const ESC = { 0: { o: [0, 1], d: [0] }, 1: { o: [2, 3], d: [2] }, 2: { o: [3, 4], d: [3] }, 3: { o: [3, 4], d: [4] } };
-async function montar(turma, nome) {
+async function guardar(k, Q, liberada) {
+  await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=ignore-duplicates,return=minimal' }, body: JSON.stringify({ k, questoes: Q, liberada: liberada !== false, gerado_em: new Date().toISOString() }) });
+}
+/* Monta as questões do aluno. Com gerar=true, as questões que ainda não existem são criadas pela IA na hora e já ficam liberadas. */
+async function montar(turma, nome, gerar) {
   const pl = await rest('indiv_plano?select=nome,itens&turma=eq.' + enc(turma));
   const lin = (pl || []).find(r => norm(r.nome) === norm(nome)); if (!lin) return { aluno: null, itens: [] };
-  const itens = lin.itens || [], ks = itens.map(i => i.k).filter(k => CAT[k]);
-  const bn = ks.length ? await rest('indiv_banco?select=k,questoes&liberada=eq.true&k=in.' + inLista(ks)) : [];
-  const B = {}; (bn || []).forEach(r => B[r.k] = r.questoes);
+  const itens = lin.itens || [], ks = [...new Set(itens.map(i => i.k).filter(k => CAT[k]))];
+  const bn = ks.length ? await rest('indiv_banco?select=k,questoes,liberada&k=in.' + inLista(ks)) : [];
+  const B = {}, existe = {}; (bn || []).forEach(r => { existe[r.k] = 1; if (r.liberada) B[r.k] = r.questoes; });
+  let falhou = 0;
+  if (gerar) {
+    const falta = ks.filter(k => !existe[k]);
+    const rs = await Promise.allSettled(falta.map(async k => { const Q = await gerarQuestoes(k); await guardar(k, Q, true); return [k, Q]; }));
+    rs.forEach(r => { if (r.status !== 'fulfilled') falhou++; });
+    // relê o que ficou gravado: se duas pessoas geraram a mesma chave ao mesmo tempo, vale a primeira gravada (a mesma que o envio vai usar)
+    if (falta.length) { const rel = await rest('indiv_banco?select=k,questoes,liberada&k=in.' + inLista(falta)); (rel || []).forEach(r => { if (r.liberada) B[r.k] = r.questoes; }); }
+  }
   const out = []; let primB4 = true;
   itens.forEach(it => {
     const Q = B[it.k]; if (!Q) return;
@@ -79,7 +91,7 @@ async function montar(turma, nome) {
     if (it.t === 'b4') { const base = niv <= 1 ? 0 : 2; add(objs[base], 'b4'); if (primB4) { add(dis[niv <= 1 ? 0 : 3], 'b4'); primB4 = false; } }
     else { const e = ESC[niv]; e.o.forEach(i => add(objs[i], 'gap')); e.d.forEach(i => add(dis[i], 'gap')); }
   });
-  return { aluno: lin.nome, itens: out };
+  return { aluno: lin.nome, itens: out, falhou };
 }
 
 module.exports = async function individual(req, res) {
@@ -99,12 +111,12 @@ module.exports = async function individual(req, res) {
       const r = await rest('indiv_plano?select=nome&turma=eq.' + enc(String(q.turma || ''))); return ok({ nomes: (r || []).map(x => x.nome).sort((x, y) => x.localeCompare(y, 'pt')) });
     }
     if (req.method === 'GET' && acao === 'atividade') {
-      const m = await montar(String(q.turma || ''), String(q.nome || '')); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
-      return ok({ nome: m.aluno, aviso: m.itens.length ? '' : 'Sua atividade ainda não foi liberada pelo professor.',
+      const m = await montar(String(q.turma || ''), String(q.nome || ''), true); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
+      return ok({ nome: m.aluno, aviso: m.itens.length ? '' : (m.falhou ? 'Estamos preparando suas questões. Tente de novo em 1 minuto.' : 'Ainda não há atividade para você. Fale com o professor.'),
         itens: m.itens.map(i => ({ desc: i.desc, tipo: i.q.tipo, enunciado: i.q.enunciado, comando: i.q.comando, alts: i.q.tipo === 'obj' ? i.q.alts : [] })) });
     }
     if (req.method === 'POST' && acao === 'enviar') {
-      const m = await montar(String(b.turma || ''), String(b.nome || '')); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
+      const m = await montar(String(b.turma || ''), String(b.nome || ''), false); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
       if (!m.itens.length) return erro(409, 'Atividade ainda não liberada.'); if (!Array.isArray(b.respostas)) return erro(400, 'Respostas inválidas.');
       let ac = 0, nObj = 0, soma = 0, status = 'corrigido pela IA'; const gab = [], notas = [];
       const det = await Promise.all(m.itens.map(async (it, i) => {
@@ -139,7 +151,7 @@ module.exports = async function individual(req, res) {
     }
     if (acao === 'gerar') {
       const k = String(b.k || ''); const Q = await gerarQuestoes(k);
-      await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify({ k, questoes: Q, liberada: false, gerado_em: new Date().toISOString() }) });
+      await guardar(k, Q, true);
       return ok({ k });
     }
     if (acao === 'liberar') {

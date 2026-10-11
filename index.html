@@ -834,49 +834,27 @@ async function indvApi(acao,body,q){
   const r=await fetch(url,body?{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+tok},body:JSON.stringify(Object.assign({acao},body))}:{headers:{Authorization:"Bearer "+tok}});
   const j=await r.json().catch(()=>({ok:false,erro:"resposta inválida do servidor (HTTP "+r.status+")"})); if(!j.ok) throw new Error(j.erro||"erro"); return j;
 }
-function indvAbrir(){
-  const L=planoIndiv(), ov=document.createElement("div");
-  ov.style.cssText="position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px";
-  ov.innerHTML=`<div style="background:#fff;color:#1B2420;border-radius:14px;max-width:820px;width:100%;max-height:90vh;overflow:auto;padding:18px">
-    <h3 style="margin:0 0 6px">Atividade individual · Ensino Fundamental</h3>
-    <p style="margin:0 0 10px;font-size:.92rem">Cada aluno recebe questões dos descritores em que teve defasagem nos bimestres 1, 2 e 3 (até 3) e de dois conteúdos do 4º bimestre cobrados no Saresp. O aluno só escolhe turma e nome em <b>/atividade-individual/</b>.</p>
-    <div style="border:1px solid #D5DCD7;border-radius:10px;padding:10px;margin-bottom:10px"><b>1. Plano dos alunos</b> · ${L.length} alunos<br><button type="button" class="btn2 pri" id="indPub" style="margin-top:6px">Publicar / atualizar plano</button> <span id="indPubM" style="font-size:.9rem"></span></div>
-    <div style="border:1px solid #D5DCD7;border-radius:10px;padding:10px"><b>2. Questões</b> <span id="indSt" style="font-size:.9rem">carregando…</span><br>
-      <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap"><button type="button" class="btn2 pri" id="indGer">Gerar as que faltam</button><button type="button" class="btn2" id="indLib">Liberar todas as geradas</button></div>
-      <div id="indLista" style="margin-top:8px;max-height:260px;overflow:auto;font-size:.85rem"></div></div>
-    <div style="margin-top:10px"><button type="button" class="btn2" id="indFec">Fechar</button></div></div>`;
-  document.body.appendChild(ov);
-  const $=s=>ov.querySelector(s); let ST=[];
-  $("#indFec").onclick=()=>ov.remove();
-  async function atualiza(){
-    try{ const j=await indvApi("status"); ST=j.chaves;
-      const ger=ST.filter(x=>x.tem).length, lib=ST.filter(x=>x.liberada).length;
-      $("#indSt").textContent=`${ger} de ${ST.length} geradas · ${lib} liberadas`;
-      $("#indLista").innerHTML=ST.map(x=>`<div style="padding:3px 0;border-bottom:1px solid #eee"><span style="display:inline-block;width:14px">${x.liberada?"✅":x.tem?"🟡":"⚪"}</span> <b>${esc(x.serie)}º · ${x.bim==="4"?"4º bim":x.bim+"º bim"}</b> ${esc(x.nome)} — ${esc(x.desc).slice(0,110)} ${x.tem?`<button type="button" class="pl-skip" data-ver="${esc(x.k)}">ver</button>`:""}<div class="ver" data-v="${esc(x.k)}"></div></div>`).join("");
-    }catch(e){ $("#indSt").textContent="erro: "+e.message; }
-  }
-  atualiza();
-  $("#indLista").onclick=async e=>{ const b=e.target.closest("[data-ver]"); if(!b) return; const box=$("#indLista").querySelector(`.ver[data-v="${CSS.escape(b.dataset.ver)}"]`);
-    if(box.innerHTML){ box.innerHTML=""; return; } box.textContent="carregando…";
-    try{ const j=await indvApi("ver",null,"&k="+encodeURIComponent(b.dataset.ver));
-      box.innerHTML=(j.banco?j.banco.questoes:[]).map((q,i)=>`<div style="margin:6px 0;padding:6px;background:#F3F6F2;border-radius:8px"><b>${i+1}. ${esc(q.enunciado)}</b> ${esc(q.comando)}<br>${q.tipo==="obj"?q.alts.map((t,k)=>`<span style="${k===q.correta?"font-weight:700;color:#145A32":""}">${"ABCD"[k]}) ${esc(t)}</span>`).join("<br>")+"<br><i>"+esc(q.explicacao)+"</i>":"<i>Esperado: "+esc(q.ref)+"</i>"}</div>`).join("");
-    }catch(er){ box.textContent="erro: "+er.message; } };
-  $("#indPub").onclick=async()=>{
-    const m=$("#indPubM"); m.textContent="publicando…";
-    try{ for(let i=0;i<L.length;i+=80){ await indvApi("plano",{linhas:L.slice(i,i+80)}); m.textContent=`publicando… ${Math.min(i+80,L.length)}/${L.length}`; }
-      m.textContent=`✓ ${L.length} alunos publicados`; }catch(e){ m.textContent="erro: "+e.message; }
-  };
-  $("#indGer").onclick=async()=>{
-    const falta=ST.filter(x=>!x.tem); if(!falta.length){ $("#indSt").textContent+=" · nada a gerar"; return; }
-    const btn=$("#indGer"); btn.disabled=true; let feitas=0, falhas=0, i=0;
-    const worker=async()=>{ while(i<falta.length){ const x=falta[i++]; try{ await indvApi("gerar",{k:x.k}); }catch(e){ falhas++; } feitas++; $("#indSt").textContent=`gerando… ${feitas}/${falta.length}${falhas?" ("+falhas+" falhas)":""}`; } };
-    await Promise.all([worker(),worker(),worker()]); btn.disabled=false; await atualiza(); if(falhas) $("#indSt").textContent+=` · ${falhas} falharam: clique de novo para repetir`;
-  };
-  $("#indLib").onclick=async()=>{ const ks=ST.filter(x=>x.tem&&!x.liberada).map(x=>x.k); if(!ks.length) return;
-    if(!confirm(`Liberar ${ks.length} conjuntos de questões para os alunos? Confira antes (botão "ver") se quiser.`)) return;
-    try{ await indvApi("liberar",{ks,valor:true}); }catch(e){ $("#indSt").textContent="erro: "+e.message; return; } atualiza(); };
+/* Automático: ao abrir o painel, o plano dos alunos é publicado (se mudou) e as questões que faltam são geradas em segundo plano. O aluno só escolhe turma e nome. */
+let INDV_RODOU=false;
+function indvMsg(t){ const e=document.getElementById("indStatus"); if(e) e.textContent=t; INDV_ULT=t; }
+let INDV_ULT="";
+async function indvAuto(){
+  if(INDV_RODOU) return; INDV_RODOU=true;
+  try{
+    const L=planoIndiv(); if(!L.length) return;
+    const hash=String(indvHash(JSON.stringify(L.map(x=>[x.turma,x.nome,x.itens]))));
+    let ant=""; try{ ant=localStorage.getItem("indv_hash")||""; }catch(e){}
+    if(ant!==hash){
+      for(let i=0;i<L.length;i+=80){ indvMsg(`publicando plano ${Math.min(i+80,L.length)}/${L.length}…`); await indvApi("plano",{linhas:L.slice(i,i+80)}); }
+      try{ localStorage.setItem("indv_hash",hash); }catch(e){}
+    }
+    const st=await indvApi("status"); const falta=st.chaves.filter(x=>!x.tem);
+    let i=0, feitas=0;
+    const w=async()=>{ while(i<falta.length){ const x=falta[i++]; try{ await indvApi("gerar",{k:x.k}); }catch(e){} feitas++; indvMsg(`preparando questões ${feitas}/${falta.length}…`); } };
+    await Promise.all([w(),w(),w()]);
+    indvMsg(`✓ ${L.length} alunos prontos`);
+  }catch(e){ indvMsg("erro: "+e.message); INDV_RODOU=false; }
 }
-document.addEventListener("click",e=>{ if(e.target.closest("#indPlano")) indvAbrir(); });
 function plTnSel(){ return DATA && DATA.T[S.t] ? DATA.T[S.t].n : null; }
 function plInit(){ const ps=plPares(); const tnS=plTnSel(), sk=tnS+"|"+S.comp;
   if(PL.sync!==sk){ PL.sync=sk; const m=ps.find(p=>p[0]===tnS && p[1]===S.comp)||ps.find(p=>p[0]===tnS); if(m){ PL.tn=m[0]; PL.c=m[1]; } else if(!PL.tn){ PL.tn=ps[0][0]; PL.c=ps[0][1]; } }
@@ -1193,7 +1171,7 @@ const VIEWS={ aluno:["Aluno","Desempenho por bimestre",alunoView], desc:["Descri
 
 function renderAll(){
   const seT=serieOf(S.t);
-  document.getElementById("cAtiv").innerHTML=simSerie(seT)?`<b>Atividades dos alunos · ${esc(DATA.T[S.t].n)}</b>${simBtn(seT)}${/^[6-9]º ANO/.test(serieOf(S.t))?` <button type="button" class="pl-skip" id="indPlano" title="Publica o plano individual e gerencia as questões">🎯 atividade individual</button> <a class="pl-skip" style="text-decoration:none;display:inline-block" href="/atividade-individual/" target="_blank" rel="noopener">link do aluno</a>`:""}`:"";
+  document.getElementById("cAtiv").innerHTML=simSerie(seT)?`<b>Atividades dos alunos · ${esc(DATA.T[S.t].n)}</b>${simBtn(seT)}${/^[6-9]º ANO/.test(serieOf(S.t))?` <span id="indStatus" style="font-size:.85rem;opacity:.8">${esc(INDV_ULT)}</span> <a class="pl-skip" style="text-decoration:none;display:inline-block" href="/atividade-individual/" target="_blank" rel="noopener">atividade individual (alunos)</a>`:""}`:"";
   document.getElementById("cAluno").innerHTML=alunoView(false);
   document.getElementById("cDesc").innerHTML=descView(false);
   document.getElementById("cTurma").innerHTML=turmaView(false);
@@ -1284,6 +1262,7 @@ async function openApp(session){
   DATA=decode(data.dados);
   $("whoEmail").textContent=email; $("authView").hidden=true; $("appView").hidden=false; msg("");
   startDashboard();
+  setTimeout(indvAuto,2500);
 }
 $("fLogin").addEventListener("submit", async e=>{
   e.preventDefault(); msg("");
