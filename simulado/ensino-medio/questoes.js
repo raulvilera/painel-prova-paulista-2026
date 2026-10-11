@@ -23,7 +23,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE8), p. 61; Escopo-Sequência, p. 51",
         "pagina": 61,
         "grupo": "G2",
-        "enunciado": "Em uma oficina escolar, a turma analisa quatro afirmações sobre infecções sexualmente transmissíveis. O material informa que a ausência de sintomas não exclui infecção e que o uso de preservativo reduz a exposição a secreções, mas não substitui vacinação ou testagem quando indicadas pelos serviços de saúde.",
+        "enunciado": "Boletins epidemiológicos do Ministério da Saúde registram aumento dos casos de sífilis adquirida no Brasil na última década, o que reforçou campanhas de prevenção em escolas e serviços de saúde. Em uma oficina escolar, a turma analisa quatro afirmações sobre infecções sexualmente transmissíveis. O material informa que a ausência de sintomas não exclui infecção e que o uso de preservativo reduz a exposição a secreções, mas não substitui vacinação ou testagem quando indicadas pelos serviços de saúde.",
         "comando": "Assinale a conclusão mais adequada para orientar uma campanha de prevenção.",
         "alts": [
           "Se não há sintomas, a pessoa pode dispensar preservativo e vacinação durante relações sexuais.",
@@ -47,7 +47,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE8), p. 61; Escopo-Sequência, p. 51",
         "pagina": 61,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos e rotulados foram obtidos em dois grupos sob condições padronizadas. As concentrações estão em unidades arbitrárias; o marcador de ovulação é apenas um indicador do protocolo, não um exame clínico.",
+        "enunciado": "Em 2025, o Ministério da Saúde anunciou a oferta do implante contraceptivo hormonal pelo SUS, o que reacendeu o debate sobre como os hormônios atuam na ovulação. Para estudar o princípio, uma equipe comparou dois grupos sob condições padronizadas; as concentrações da tabela estão em unidades arbitrárias (valores ilustrativos) e o marcador de ovulação é apenas um indicador do protocolo, não um exame clínico.",
         "comando": "Considerando a relação entre hormônios e ovulação, qual interpretação é mais consistente com a tabela?",
         "tabela": {
           "colunas": [
@@ -96,7 +96,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE8), p. 61; Escopo-Sequência, p. 51",
         "pagina": 61,
         "grupo": "G3",
-        "enunciado": "Uma campanha escolar compara mecanismos de métodos contraceptivos sem indicar uma escolha individual. O quadro de estudo registra: um método hormonal atua sobre a fisiologia reprodutiva; um método de barreira reduz o contato entre secreções e mucosas; e nenhum método é descrito como proteção absoluta.",
+        "enunciado": "A primeira semana de fevereiro é a Semana Nacional de Prevenção da Gravidez na Adolescência (Lei 13.798/2019), período em que escolas e unidades de saúde promovem campanhas. Uma campanha escolar compara mecanismos de métodos contraceptivos sem indicar uma escolha individual. O quadro de estudo registra: um método hormonal atua sobre a fisiologia reprodutiva; um método de barreira reduz o contato entre secreções e mucosas; e nenhum método é descrito como proteção absoluta.",
         "comando": "Qual mensagem preserva a distinção entre prevenção da gravidez e redução do risco de IST?",
         "alts": [
           "Como ambos previnem gravidez, método hormonal e método de barreira oferecem a mesma proteção contra IST.",
@@ -120,7 +120,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE8), p. 61; Escopo-Sequência, p. 51–52",
         "pagina": 61,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos e rotulados foram obtidos após bebidas diferentes em grupos equivalentes. O tempo de reação é uma medida comportamental; quanto maior o valor, mais lenta foi a resposta. A escala de alerta é autorreferida e não mede diretamente a coordenação motora.",
+        "enunciado": "A Lei Seca, em vigor desde 2008 e endurecida em 2012, pune quem dirige após consumir álcool, justamente porque a substância atua no sistema nervoso central e prejudica a atenção e a coordenação. Para discutir esse efeito, um grupo escolar analisou resultados (valores ilustrativos) obtidos após bebidas diferentes em grupos equivalentes. O tempo de reação é uma medida comportamental; quanto maior o valor, mais lenta foi a resposta. A escala de alerta é autorreferida e não mede diretamente a coordenação motora.",
         "comando": "Qual interpretação dos resultados é cientificamente sustentada?",
         "tabela": {
           "colunas": [
@@ -168,7 +168,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE8), p. 61; Escopo-Sequência, p. 52",
         "pagina": 61,
         "grupo": "G2",
-        "enunciado": "Em um debate, estudantes comparam cigarro convencional, narguilé e cigarro eletrônico. Eles observam que os dispositivos diferem quanto à combustão e à composição do que é inalado, mas que a nicotina pode estar presente em mais de uma dessas formas de consumo.",
+        "enunciado": "Em abril de 2024, a Anvisa manteve a proibição da comercialização de cigarros eletrônicos no Brasil (RDC 855/2024), enquanto o narguilé segue como tema de campanhas de saúde entre jovens. Em um debate, estudantes comparam cigarro convencional, narguilé e cigarro eletrônico. Eles observam que os dispositivos diferem quanto à combustão e à composição do que é inalado, mas que a nicotina pode estar presente em mais de uma dessas formas de consumo.",
         "comando": "Qual conclusão evita tanto a equivalência simplista quanto a ideia de segurança absoluta?",
         "alts": [
           "Se não há combustão em um dispositivo, o aerossol é apenas vapor de água e não oferece risco de dependência.",
@@ -192,7 +192,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE9), p. 61; Escopo-Sequência, p. 52",
         "pagina": 61,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos e rotulados resumem três dias de um grupo, sem pretender diagnosticar qualquer pessoa. O balanço energético diário foi calculado como ingestão menos gasto estimado.",
+        "enunciado": "O Guia Alimentar para a População Brasileira, do Ministério da Saúde, orienta priorizar alimentos in natura e minimamente processados e limitar os ultraprocessados. Para discutir o equilíbrio entre o que se come e o que se gasta, os dados abaixo (valores ilustrativos) resumem três dias de um grupo, sem pretender diagnosticar qualquer pessoa. O balanço energético diário foi calculado como ingestão menos gasto estimado.",
         "comando": "Qual conclusão é compatível com os dados, sem transformar uma média curta em diagnóstico?",
         "tabela": {
           "colunas": [
@@ -244,7 +244,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE9), p. 61; Escopo-Sequência, p. 52",
         "pagina": 61,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos e rotulados mostram a resposta de dois grupos a uma mesma carga de glicose. As concentrações de insulina são relativas ao início do protocolo e os valores não constituem critérios clínicos de diagnóstico.",
+        "enunciado": "Segundo a Federação Internacional de Diabetes, o Brasil está entre os dez países com mais adultos com diabetes, e o dia 14 de novembro é o Dia Mundial do Diabetes. Para entender o papel da insulina, os dados abaixo (valores ilustrativos) mostram a resposta de dois grupos a uma mesma carga de glicose. As concentrações de insulina são relativas ao início do protocolo e os valores não constituem critérios clínicos de diagnóstico.",
         "comando": "Qual leitura relaciona corretamente glicemia e atuação da insulina?",
         "tabela": {
           "colunas": [
@@ -296,7 +296,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE9), p. 61; Aprendizagem Essencial AE9, p. 35",
         "pagina": 61,
         "grupo": "G2",
-        "enunciado": "Em um ensaio in vitro hipotético e rotulado, porções equivalentes foram incubadas com enzimas digestivas. A quantidade medida corresponde aos miligramas de açúcares redutores liberados ao final de 20 minutos; não representa absorção em uma pessoa.",
+        "enunciado": "Desde 2022, a rotulagem nutricional frontal dos alimentos industrializados alerta o consumidor para o alto teor de açúcar adicionado, gordura saturada e sódio. Para comparar como diferentes alimentos liberam açúcares na digestão, um ensaio de laboratório (valores ilustrativos) incubou porções equivalentes com enzimas digestivas. A quantidade medida corresponde aos miligramas de açúcares redutores liberados ao final de 20 minutos; não representa absorção em uma pessoa.",
         "comando": "Qual conclusão é sustentada pela comparação dos tratamentos?",
         "tabela": {
           "colunas": [
@@ -340,7 +340,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE9), p. 61; Escopo-Sequência, p. 52",
         "pagina": 61,
         "grupo": "G2",
-        "enunciado": "Dados experimentais hipotéticos e rotulados foram obtidos em placas de contagem após etapas simuladas de preparo. O valor zero é o controle do laboratório, e as contagens são indicadores do crescimento nas condições do ensaio, não uma identificação de espécie patogênica.",
+        "enunciado": "Após as enchentes de 2024 no Rio Grande do Sul, o Ministério da Saúde reforçou orientações de higiene e de armazenamento de alimentos para evitar doenças transmitidas por alimentos e água. Para discutir a contaminação cruzada, um laboratório escolar contou microrganismos em placas após etapas simuladas de preparo (valores ilustrativos). O valor zero é o controle do laboratório, e as contagens são indicadores do crescimento nas condições do ensaio, não uma identificação de espécie patogênica.",
         "comando": "Qual procedimento responde melhor ao risco revelado pelo conjunto de resultados?",
         "tabela": {
           "colunas": [
@@ -388,7 +388,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE9), p. 61; Escopo-Sequência, p. 52",
         "pagina": 61,
         "grupo": "G2",
-        "enunciado": "Em um levantamento hipotético e rotulado, duas áreas com população semelhante foram acompanhadas durante um mesmo período. A área 1 não tinha coleta de esgoto regular e usava água sem tratamento; a área 2 tinha abastecimento tratado e coleta regular.",
+        "enunciado": "Giardíase e amebíase fazem parte das doenças relacionadas ao saneamento ambiental inadequado, grupo monitorado pelo Ministério da Saúde e que pesa nos atendimentos do SUS. Em um levantamento com valores ilustrativos, duas áreas com população semelhante foram acompanhadas durante um mesmo período. A área 1 não tinha coleta de esgoto regular e usava água sem tratamento; a área 2 tinha abastecimento tratado e coleta regular.",
         "comando": "Qual interpretação articula os dados com uma medida de prevenção sem transformar associação em diagnóstico individual?",
         "tabela": {
           "colunas": [
@@ -434,7 +434,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE9), p. 61; Escopo-Sequência, p. 52",
         "pagina": 61,
         "grupo": "G3",
-        "enunciado": "Dados hipotéticos e rotulados mostram casos notificados antes e depois de intervenções de saneamento. Para comparar períodos, use incidência = casos/população × 1.000 e redução percentual = (incidência antes − incidência depois)/incidência antes × 100.",
+        "enunciado": "O Marco Legal do Saneamento (Lei 14.026/2020) fixou a meta de levar água tratada a 99% e coleta e tratamento de esgoto a 90% da população até 2033. Para avaliar o efeito de obras desse tipo, os dados abaixo (valores ilustrativos) mostram casos notificados antes e depois de intervenções de saneamento. Para comparar períodos, use incidência = casos/população × 1.000 e redução percentual = (incidência antes − incidência depois)/incidência antes × 100.",
         "comando": "Qual leitura resulta dos cálculos pedidos?",
         "tabela": {
           "colunas": [
@@ -490,7 +490,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE9), p. 61; Escopo-Sequência, p. 52",
         "pagina": 61,
         "grupo": "G3",
-        "enunciado": "Um diagnóstico comunitário hipotético e rotulado reúne indicadores de três bairros com população de 1.000 habitantes em cada um. A taxa de protozooses é apresentada por 1.000 habitantes e os demais indicadores são percentuais do bairro.",
+        "enunciado": "O Marco Legal do Saneamento exige que os municípios planejem a expansão dos serviços a partir de diagnósticos locais. Um diagnóstico comunitário (valores ilustrativos) reúne indicadores de três bairros com população de 1.000 habitantes em cada um. A taxa de protozooses é apresentada por 1.000 habitantes e os demais indicadores são percentuais do bairro.",
         "comando": "Qual prioridade de intervenção é mais justificável pelos dados e pelo princípio de promoção coletiva da saúde?",
         "tabela": {
           "colunas": [
@@ -546,7 +546,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE8), p. 61; Escopo-Sequência, p. 51",
         "pagina": 61,
         "grupo": "G3",
-        "enunciado": "Uma postagem para adolescentes afirma: “A pílula hormonal protege contra todas as IST; por isso, o preservativo é desnecessário”. A equipe de comunicação da escola quer corrigir a mensagem sem expor ou orientar individualmente nenhum estudante.",
+        "enunciado": "Informações incorretas sobre saúde sexual circulam com facilidade nas redes sociais, embora o SUS ofereça gratuitamente preservativos e métodos contraceptivos. Uma postagem para adolescentes afirma: “A pílula hormonal protege contra todas as IST; por isso, o preservativo é desnecessário”. A equipe de comunicação da escola quer corrigir a mensagem sem expor ou orientar individualmente nenhum estudante.",
         "comando": "Redija uma resposta curta para a equipe, explicando o mecanismo geral dos contraceptivos hormonais, a diferença em relação ao preservativo e como uma comunicação responsável deve abordar prevenção e acesso a serviços de saúde.",
         "alts": []
       },
@@ -564,7 +564,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026 — Matriz da Prova Paulista, 2ª série, 4º bimestre (AE9), p. 61; Escopo-Sequência, p. 52",
         "pagina": 61,
         "grupo": "G3",
-        "enunciado": "Dados comunitários hipotéticos e rotulados foram reunidos para orientar um plano escolar de promoção da saúde. Os percentuais são indicadores agregados; não permitem diagnosticar indivíduos nem provar que um único hábito causou uma doença.",
+        "enunciado": "O Ministério da Saúde associa o consumo frequente de ultraprocessados e bebidas açucaradas ao risco de obesidade e diabetes tipo 2, enquanto a falta de saneamento mantém doenças como as protozooses. Dados comunitários (valores ilustrativos) foram reunidos para orientar um plano escolar de promoção da saúde. Os percentuais são indicadores agregados; não permitem diagnosticar indivíduos nem provar que um único hábito causou uma doença.",
         "comando": "Compare os bairros X e Y e proponha um plano com pelo menos duas ações de saneamento/higiene e duas ações de alimentação/educação em saúde. Explique como o consumo frequente de bebidas açucaradas pode aumentar a demanda de regulação da glicose pela insulina e por que isso é um fator de risco, não uma causa determinística de diabetes tipo 2.",
         "tabela": {
           "colunas": [
@@ -618,7 +618,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aulas 2–4, p. 47",
         "pagina": 57,
         "grupo": "G1",
-        "enunciado": "Dados experimentais hipotéticos: uma célula galvânica é montada como Zn(s)|Zn²⁺(aq) || Cu²⁺(aq)|Cu(s), com as soluções conectadas por uma ponte salina e os eletrodos ligados por um fio externo. As semirreações disponíveis são Zn(s) → Zn²⁺(aq) + 2e⁻ e Cu²⁺(aq) + 2e⁻ → Cu(s). Considerando a célula em funcionamento espontâneo, analise o que ocorre no circuito externo.",
+        "enunciado": "Reportagens sobre celulares e carros elétricos colocam as baterias no centro da vida cotidiana, mas o princípio de toda pilha já aparece na célula de Daniell. Uma célula galvânica é montada como Zn(s)|Zn²⁺(aq) || Cu²⁺(aq)|Cu(s), com as soluções conectadas por uma ponte salina e os eletrodos ligados por um fio externo. As semirreações disponíveis são Zn(s) → Zn²⁺(aq) + 2e⁻ e Cu²⁺(aq) + 2e⁻ → Cu(s). Considerando a célula em funcionamento espontâneo, analise o que ocorre no circuito externo.",
         "comando": "Qual interpretação é compatível com os processos de oxidação e redução e com o fluxo de elétrons nessa pilha?",
         "alts": [
           "O cobre metálico é oxidado no cátodo, e os elétrons seguem do Cu para o Zn pelo fio externo.",
@@ -642,7 +642,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aulas 2–5, p. 47",
         "pagina": 57,
         "grupo": "G2",
-        "enunciado": "Dados hipotéticos em condições padrão. Para uma pilha espontânea, o eletrodo com maior potencial-padrão de redução funciona como cátodo. Compare os dois pares da tabela.",
+        "enunciado": "A BYD começou a produzir carros elétricos em Camaçari (BA) em 2025, e a escolha dos metais dos eletrodos define a tensão que uma pilha pode fornecer. Em condições padrão, para uma pilha espontânea, o eletrodo com maior potencial-padrão de redução funciona como cátodo. Compare os dois pares da tabela (valores de potencial-padrão usados na atividade).",
         "comando": "Qual alternativa identifica a pilha com maior ddp padrão e o metal que funciona como ânodo?",
         "alts": [
           "O par I; Mg é oxidado no ânodo e a ddp padrão é 3,17 V.",
@@ -685,7 +685,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aulas 3–5, p. 47",
         "pagina": 57,
         "grupo": "G3",
-        "enunciado": "Dados hipotéticos em condições padrão: Ni²⁺(aq) + 2e⁻ → Ni(s), E°red = −0,25 V; Pb²⁺(aq) + 2e⁻ → Pb(s), E°red = −0,13 V. A célula é montada para operar como pilha espontânea, sem outras semirreações relevantes.",
+        "enunciado": "O Brasil produz níquel em Goiás e no Pará, metal cada vez mais procurado para baterias de veículos elétricos. Em condições padrão: Ni²⁺(aq) + 2e⁻ → Ni(s), E°red = −0,25 V; Pb²⁺(aq) + 2e⁻ → Pb(s), E°red = −0,13 V. A célula é montada para operar como pilha espontânea, sem outras semirreações relevantes.",
         "comando": "Qual conjunto descreve corretamente os eletrodos e a ddp padrão da célula Ni/Pb?",
         "alts": [
           "Ni é o cátodo, Pb é o ânodo e E°pilha = +0,12 V.",
@@ -709,7 +709,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aula 2, p. 47",
         "pagina": 57,
         "grupo": "G2",
-        "enunciado": "Dados experimentais hipotéticos, obtidos com o mesmo aparelho e à mesma temperatura. As soluções de glicose, NaCl e CuSO₄ têm concentração nominal de 0,20 mol·L⁻¹; a água destilada é o controle.",
+        "enunciado": "A condutividade elétrica é um dos parâmetros usados por órgãos ambientais, como a Cetesb, para monitorar a qualidade da água de rios e reservatórios, pois indica a quantidade de íons dissolvidos. Para entender o princípio, mediram-se soluções com o mesmo aparelho e à mesma temperatura (valores ilustrativos). As soluções de glicose, NaCl e CuSO₄ têm concentração nominal de 0,20 mol·L⁻¹; a água destilada é o controle.",
         "comando": "Qual explicação interpreta melhor a diferença de condutividade registrada?",
         "alts": [
           "A glicose apresenta a maior condutividade porque cada molécula neutra libera elétrons para o líquido.",
@@ -762,7 +762,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aula 8, p. 48",
         "pagina": 48,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos: numa célula com solução aquosa de CuCl₂ e eletrodos inertes, o modelo operacional adotado considera Cu²⁺ preferencialmente descarregado no cátodo e Cl⁻ preferencialmente descarregado no ânodo. Pretende-se reduzir 0,30 mol de Cu²⁺. Use F = 9,65 × 10⁴ C·mol⁻¹ de elétrons.",
+        "enunciado": "Parte do cobre usado em fios e equipamentos elétricos é purificada industrialmente por eletrólise. Em uma célula com solução aquosa de CuCl₂ e eletrodos inertes, o modelo operacional adotado considera Cu²⁺ preferencialmente descarregado no cátodo e Cl⁻ preferencialmente descarregado no ânodo. Pretende-se reduzir 0,30 mol de Cu²⁺. Use F = 9,65 × 10⁴ C·mol⁻¹ de elétrons.",
         "comando": "Qual carga elétrica deve atravessar a célula para produzir a redução completa dessa quantidade de Cu²⁺, segundo o modelo fornecido?",
         "alts": [
           "28.950 C, pois cada mol de Cu²⁺ exige apenas meio mol de elétrons.",
@@ -806,7 +806,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aula 11, p. 48",
         "pagina": 48,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos: em uma galvanoplastia, toda a carga que passa deposita cobre no cátodo pela semirreação Cu²⁺ + 2e⁻ → Cu. A corrente constante é 2,0 A durante 15,0 min. Considere M(Cu) = 63,5 g·mol⁻¹, F = 9,65 × 10⁴ C·mol⁻¹ e use m = M·I·t/(zF), com t em segundos.",
+        "enunciado": "A Resolução Conama 430/2011 define condições para o lançamento de efluentes, como os de galvanoplastias, que podem conter metais dissolvidos. Em uma galvanoplastia didática, toda a carga que passa deposita cobre no cátodo pela semirreação Cu²⁺ + 2e⁻ → Cu. A corrente constante é 2,0 A durante 15,0 min. Considere M(Cu) = 63,5 g·mol⁻¹, F = 9,65 × 10⁴ C·mol⁻¹ e use m = M·I·t/(zF), com t em segundos.",
         "comando": "Qual massa de cobre é depositada no modelo ideal descrito?",
         "alts": [
           "0,296 g",
@@ -858,7 +858,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aula 7 e aula 9, p. 47–48",
         "pagina": 47,
         "grupo": "G1",
-        "enunciado": "Dados experimentais hipotéticos: pregos de aço de mesma massa inicial foram mantidos por sete dias em condições diferentes. A perda de massa foi usada como indicador de corrosão; outras variáveis foram controladas.",
+        "enunciado": "A corrosão causa prejuízos bilionários à indústria e ameaça pontes, navios e construções no litoral, onde a maresia acelera o processo. Para investigar o fenômeno, pregos de aço de mesma massa inicial foram mantidos por sete dias em condições diferentes (valores ilustrativos). A perda de massa foi usada como indicador de corrosão; outras variáveis foram controladas.",
         "comando": "Qual conclusão é mais bem sustentada pelos dados e orienta uma ação de proteção para o aço?",
         "alts": [
           "O ar seco é o meio mais agressivo, pois o oxigênio sozinho substitui a função da água no processo corrosivo.",
@@ -906,7 +906,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aulas 4–7, p. 47",
         "pagina": 57,
         "grupo": "G2",
-        "enunciado": "Dados experimentais hipotéticos: uma bateria apresenta E = 1,50 V quando o circuito está aberto. Sob uma carga que mantém I = 0,50 A, a tensão medida nos terminais cai para V = 1,30 V. Use o modelo V = E − rI, em que r é a resistência interna constante.",
+        "enunciado": "Em 2016, a Samsung recolheu o Galaxy Note 7 após casos de superaquecimento e incêndio de baterias, episódio que mostrou a importância de entender o funcionamento e as perdas internas de uma bateria. Considere uma bateria que apresenta E = 1,50 V quando o circuito está aberto. Sob uma carga que mantém I = 0,50 A, a tensão medida nos terminais cai para V = 1,30 V. Use o modelo V = E − rI, em que r é a resistência interna constante.",
         "comando": "Qual valor de r e qual interpretação da queda de tensão são compatíveis com o modelo?",
         "alts": [
           "r = 0,20 Ω; a bateria perde 0,20 V por não haver corrente no circuito.",
@@ -930,7 +930,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aula 12, p. 48",
         "pagina": 48,
         "grupo": "G1",
-        "enunciado": "Situação hipotética: uma escola acumulou pilhas descartáveis e baterias recarregáveis usadas. Há um ponto de coleta que recebe esses materiais por logística reversa. Algumas unidades estão íntegras e secas; nenhuma deve ser aberta pelos estudantes.",
+        "enunciado": "A Resolução Conama 401/2008 e a Política Nacional de Resíduos Sólidos exigem que pilhas e baterias usadas sejam recolhidas por logística reversa, em vez de irem para o lixo comum. Uma escola acumulou pilhas descartáveis e baterias recarregáveis usadas. Há um ponto de coleta que recebe esses materiais. Algumas unidades estão íntegras e secas; nenhuma deve ser aberta pelos estudantes.",
         "comando": "Qual procedimento combina melhor segurança, sustentabilidade e encaminhamento adequado?",
         "alts": [
           "Separar as unidades do lixo comum, mantê-las íntegras e secas e entregá-las ao ponto de coleta autorizado.",
@@ -954,7 +954,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aulas 4–7, p. 47",
         "pagina": 57,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos de duas baterias submetidas à mesma carga de I = 0,60 A. No modelo simplificado, use Vterminal = E − rI e tempo ideal de funcionamento t = capacidade/I; despreze o corte de tensão e outras perdas além das indicadas.",
+        "enunciado": "A fábrica da BYD em Camaçari (BA), que iniciou a produção em 2025, reforçou o interesse do consumidor brasileiro por carros elétricos, e a autonomia é um dos critérios mais citados na compra. Para comparar baterias, considere duas delas (valores ilustrativos) submetidas à mesma carga de I = 0,60 A. No modelo simplificado, use Vterminal = E − rI e tempo ideal de funcionamento t = capacidade/I; despreze o corte de tensão e outras perdas além das indicadas.",
         "comando": "Qual conjunto de valores é compatível com a tensão terminal e o tempo ideal de cada bateria nessa carga?",
         "alts": [
           "A: 3,90 V e 2,4 h; B: 3,63 V e 1,8 h.",
@@ -1000,7 +1000,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aula 8, p. 48",
         "pagina": 48,
         "grupo": "G2",
-        "enunciado": "Dados experimentais hipotéticos: dois recipientes têm NaCl como eletrólito e eletrodos inertes. Um contém NaCl fundido; o outro, solução aquosa. Para o cátodo da solução aquosa, o modelo do ensaio informa que a água é reduzida preferencialmente. Compare especificamente os produtos catódicos.",
+        "enunciado": "Em Maceió, a extração de sal-gema (NaCl) pela Braskem esteve no centro de um desastre geológico que levou à desocupação de bairros inteiros; o NaCl é matéria-prima da indústria cloro-álcali, que o submete à eletrólise. Considere dois recipientes com NaCl como eletrólito e eletrodos inertes. Um contém NaCl fundido; o outro, solução aquosa. Para o cátodo da solução aquosa, o modelo do ensaio informa que a água é reduzida preferencialmente. Compare especificamente os produtos catódicos.",
         "comando": "Qual previsão respeita a diferença entre os dois meios?",
         "alts": [
           "No NaCl fundido forma-se H₂ no cátodo; na solução aquosa forma-se Na metálico, pois a água não participa da eletrólise.",
@@ -1024,7 +1024,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aulas 9–10, p. 48",
         "pagina": 48,
         "grupo": "G3",
-        "enunciado": "Dados hipotéticos: deseja-se revestir uma peça metálica com cobre em uma solução aquosa de CuSO₄. A fonte externa mantém a corrente no sentido necessário, e uma placa de cobre pode ser consumida para repor Cu²⁺. Considere desprezíveis reações laterais.",
+        "enunciado": "O polo de joias folheadas de Limeira (SP) e a indústria automotiva usam a galvanoplastia para revestir peças com camadas metálicas. Deseja-se revestir uma peça metálica com cobre em uma solução aquosa de CuSO₄. A fonte externa mantém a corrente no sentido necessário, e uma placa de cobre pode ser consumida para repor Cu²⁺. Considere desprezíveis reações laterais.",
         "comando": "Qual montagem e justificativa descrevem corretamente a galvanoplastia?",
         "alts": [
           "A peça é ligada ao polo positivo e funciona como ânodo, onde Cu²⁺ é reduzido e o revestimento cresce.",
@@ -1048,7 +1048,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aulas 3–5, p. 47",
         "pagina": 47,
         "grupo": "G3",
-        "enunciado": "Dados hipotéticos em condições padrão: E°red(Zn²⁺/Zn) = −0,76 V e E°red(Cu²⁺/Cu) = +0,34 V. Monte conceitualmente uma pilha Zn/Cu com ponte salina e circuito externo, supondo que ela opere espontaneamente.",
+        "enunciado": "Reportagens sobre a transição energética destacam que o armazenamento em baterias é um dos gargalos para o uso de energia solar e eólica. Em condições padrão, E°red(Zn²⁺/Zn) = −0,76 V e E°red(Cu²⁺/Cu) = +0,34 V. Monte conceitualmente uma pilha Zn/Cu com ponte salina e circuito externo, supondo que ela opere espontaneamente.",
         "comando": "Registre as semirreações de oxidação e redução, identifique ânodo e cátodo, indique o sentido dos elétrons no fio, escreva a reação global balanceada e calcule a ddp padrão com unidade. Interprete o sinal obtido em termos de conversão de energia.",
         "alts": []
       },
@@ -1066,7 +1066,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Matriz Prova Paulista 2ª série, 4º bimestre, p. 57; Escopo-Sequência, aulas 8–12, p. 48",
         "pagina": 48,
         "grupo": "G3",
-        "enunciado": "Dados hipotéticos: uma galvanoplastia usa solução aquosa de CuSO₄, uma peça a ser revestida e uma placa de cobre solúvel. A corrente constante é 2,50 A durante 20,0 min. Admita que toda a carga deposite cobre na peça, sem reações laterais. Considere Cu²⁺ + 2e⁻ → Cu, M(Cu) = 63,5 g·mol⁻¹ e F = 9,65 × 10⁴ C·mol⁻¹ de elétrons.",
+        "enunciado": "Resíduos contendo metais pesados são classificados como perigosos pela norma ABNT NBR 10004 e exigem destinação adequada. Uma galvanoplastia didática usa solução aquosa de CuSO₄, uma peça a ser revestida e uma placa de cobre solúvel. A corrente constante é 2,50 A durante 20,0 min. Admita que toda a carga deposite cobre na peça, sem reações laterais. Considere Cu²⁺ + 2e⁻ → Cu, M(Cu) = 63,5 g·mol⁻¹ e F = 9,65 × 10⁴ C·mol⁻¹ de elétrons.",
         "comando": "Identifique o eletrodo da peça e sua polaridade, calcule a massa de cobre depositada e indique um procedimento ambientalmente adequado para o eventual resíduo de solução contendo íons metálicos.",
         "alts": []
       }
@@ -1095,7 +1095,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 65",
         "pagina": 65,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos: em três lagos de área comparável, a equipe estimou a produtividade dos produtores e a produtividade média dos consumidores primários. A razão produtividade dos consumidores/produtividade dos produtores é usada apenas como indicador comparativo de transferência anual de matéria e energia, não como eficiência ecológica completa.",
+        "enunciado": "Em 2020, incêndios devastaram grande parte do Pantanal, planície alagável cuja fauna depende da produtividade das plantas e das cadeias alimentares que elas sustentam. Para comparar ambientes aquáticos, uma equipe estimou (valores ilustrativos) em três lagos de área comparável a produtividade dos produtores e a produtividade média dos consumidores primários. A razão produtividade dos consumidores/produtividade dos produtores é usada apenas como indicador comparativo de transferência anual de matéria e energia, não como eficiência ecológica completa.",
         "comando": "Qual conclusão é mais compatível com a tabela, sem atribuir causalidade que o desenho não permite?",
         "alts": [
           "O Lago C apresenta simultaneamente a maior produtividade e a maior fração transferida aos consumidores.",
@@ -1147,7 +1147,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 65",
         "pagina": 65,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos de um fragmento: uma estiagem reduziu a cobertura vegetal; no mesmo período, a abundância de aves de rapina caiu após a perda de locais de nidificação. A população de roedores foi monitorada em quatro anos.",
+        "enunciado": "Em 2020, nuvens de gafanhotos vindas da Argentina chegaram ao Rio Grande do Sul, lembrando que o tamanho de uma população depende de alimento, clima e predadores. Em um fragmento florestal, uma estiagem reduziu a cobertura vegetal; no mesmo período, a abundância de aves de rapina caiu após a perda de locais de nidificação. A população de roedores foi monitorada em quatro anos (valores ilustrativos).",
         "comando": "Qual interpretação e próximo procedimento formam a conclusão mais defensável?",
         "alts": [
           "O aumento dos roedores prova uma mudança genética; basta coletar indivíduos para confirmar a hipótese.",
@@ -1205,7 +1205,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 65",
         "pagina": 65,
         "grupo": "G2",
-        "enunciado": "Dados experimentais hipotéticos: tiras de batata com 50,0 g foram mantidas pelo mesmo tempo em soluções de sacarose. A parede celular permaneceu íntegra e a massa foi medida após retirar o excesso de líquido da superfície.",
+        "enunciado": "Na epidemia de dengue de 2024, o Ministério da Saúde reforçou a hidratação como cuidado essencial, e o equilíbrio de água entre o meio externo e as células depende da osmose. Para estudar o princípio, tiras de batata com 50,0 g foram mantidas pelo mesmo tempo em soluções de sacarose (valores ilustrativos). A parede celular permaneceu íntegra e a massa foi medida após retirar o excesso de líquido da superfície.",
         "comando": "Qual leitura relaciona corretamente as variações de massa ao gradiente osmótico?",
         "alts": [
           "A solução de 0,0 mol L−1 foi hipertônica, pois a tira ganhou massa; a de 0,6 mol L−1 foi isotônica.",
@@ -1253,7 +1253,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 65",
         "pagina": 65,
         "grupo": "G2",
-        "enunciado": "Dados experimentais hipotéticos: um laboratório informa a sequência da fita molde de um gene, escrita no sentido em que a RNA-polimerase a percorre. O trecho termina em um códon de parada.",
+        "enunciado": "Em 2023, o Nobel de Fisiologia ou Medicina premiou Katalin Karikó e Drew Weissman pelas descobertas que permitiram as vacinas de RNA mensageiro contra a covid-19. Para entender como um gene vira proteína, um laboratório informa a sequência da fita molde de um gene, escrita no sentido em que a RNA-polimerase a percorre. O trecho termina em um códon de parada.",
         "comando": "Qual produto corresponde ao RNA mensageiro e à cadeia polipeptídica produzida antes da parada?",
         "alts": [
           "mRNA 5′-UAC CCG AAA AUU-3′, traduzido como tirosina–prolina–lisina–isoleucina.",
@@ -1291,7 +1291,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 65",
         "pagina": 65,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos: uma amostra de uma cena apresentou três amplicons, medidos por eletroforese. O laboratório considerou apenas esses três loci, assumiu uma única fonte biológica e incluiu um controle negativo sem DNA.",
+        "enunciado": "No Brasil, a Rede Integrada de Bancos de Perfis Genéticos, criada pela Lei 12.654/2012, reúne perfis de DNA para apoiar investigações criminais, e a técnica de PCR é uma das etapas dessas análises. Em um caso didático (valores ilustrativos), uma amostra de uma cena apresentou três amplicons, medidos por eletroforese. O laboratório considerou apenas esses três loci, assumiu uma única fonte biológica e incluiu um controle negativo sem DNA.",
         "comando": "Qual conclusão é permitida pelos dados, mantendo a distinção entre compatibilidade de perfil e identificação definitiva?",
         "alts": [
           "O suspeito 1 é compatível, pois dois amplicons coincidem e o terceiro pode ser ruído experimental.",
@@ -1355,7 +1355,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 65",
         "pagina": 65,
         "grupo": "G2",
-        "enunciado": "Dados experimentais hipotéticos: em uma espécie com 2n = 6, duas células observadas após uma divisão têm três cromossomos cada. Cada cromossomo ainda possui duas cromátides-irmãs, e os pares de homólogos já não estão reunidos na mesma célula.",
+        "enunciado": "O Dia Internacional da Síndrome de Down é celebrado em 21 de março, data que remete aos três cromossomos 21 presentes nas células dessas pessoas, resultado de uma falha na separação de cromossomos na formação dos gametas. Para entender como o número de cromossomos é reduzido na meiose, observe uma espécie com 2n = 6: duas células observadas após uma divisão têm três cromossomos cada. Cada cromossomo ainda possui duas cromátides-irmãs, e os pares de homólogos já não estão reunidos na mesma célula.",
         "comando": "Qual processo e consequência explicam melhor a observação?",
         "alts": [
           "Primeira divisão meiótica; os homólogos se separaram, reduzindo a ploidia, embora o DNA de cada cromossomo ainda esteja duplicado.",
@@ -1379,7 +1379,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 66",
         "pagina": 66,
         "grupo": "G2",
-        "enunciado": "Dados hipotéticos de uma família: uma condição autossômica recessiva manifesta-se quando o indivíduo é aa. Dois adultos fenotipicamente não afetados tiveram um filho afetado; não há evidência de penetrância incompleta ou de influência do sexo na manifestação.",
+        "enunciado": "A Lei 14.154/2021 ampliou o Teste do Pezinho no SUS, que passou a rastrear mais doenças genéticas, muitas delas de herança autossômica recessiva. Em uma família, uma condição autossômica recessiva manifesta-se quando o indivíduo é aa. Dois adultos fenotipicamente não afetados tiveram um filho afetado; não há evidência de penetrância incompleta ou de influência do sexo na manifestação.",
         "comando": "Considerando que cada gestação é independente, qual é a probabilidade de o próximo filho ser afetado?",
         "alts": [
           "0%, porque o nascimento do primeiro filho afetado esgota a possibilidade de outro evento igual.",
@@ -1419,7 +1419,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 66",
         "pagina": 66,
         "grupo": "G3",
-        "enunciado": "Dados hipotéticos de dois relatos experimentais, sem finalidade diagnóstica. No caso I, uma substância que aumenta a sinalização de recompensa produz efeito menor após exposições repetidas, levando o participante a buscar doses maiores. No caso II, uma preparação com antígenos provoca resposta após alguns dias e deixa células de memória, sem fornecer anticorpos prontos.",
+        "enunciado": "Em novembro de 2024, o Brasil recuperou da OPAS o certificado de eliminação do sarampo, resultado de campanhas de vacinação, e a Pesquisa Nacional de Saúde do Escolar (PeNSE), do IBGE, acompanha o uso de substâncias por adolescentes. Dois relatos ilustram conceitos distintos, sem finalidade diagnóstica. No caso I, uma substância que aumenta a sinalização de recompensa produz efeito menor após exposições repetidas, levando o participante a buscar doses maiores. No caso II, uma preparação com antígenos provoca resposta após alguns dias e deixa células de memória, sem fornecer anticorpos prontos.",
         "comando": "Qual interpretação articula corretamente os dois casos?",
         "alts": [
           "O caso I descreve imunidade passiva e o caso II descreve dependência química sem participação do sistema imune.",
@@ -1462,7 +1462,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 66",
         "pagina": 66,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos: os valores abaixo são relativos e foram obtidos em uma série temporal de um ciclo sem intervenção hormonal. A equipe não usa esses dados para decidir condutas individuais.",
+        "enunciado": "O dia 26 de setembro é o Dia Mundial da Contracepção, data usada por serviços de saúde para informar sobre os métodos disponíveis. Para entender a ação dos contraceptivos hormonais, os valores abaixo (relativos e ilustrativos) representam uma série temporal de um ciclo sem intervenção hormonal. A equipe não usa esses dados para decidir condutas individuais.",
         "comando": "Qual interpretação integra adequadamente o pico hormonal e a ação esperada de um contraceptivo hormonal combinado?",
         "alts": [
           "A ovulação ocorre no dia 21 porque a progesterona está alta; o pico de LH é consequência da menstruação.",
@@ -1514,7 +1514,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 66",
         "pagina": 66,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos de uma curva pós-refeição padronizada; os valores servem apenas para comparação entre respostas fisiológicas e não constituem diagnóstico individual.",
+        "enunciado": "O SUS fornece gratuitamente insulina e materiais para monitorar a glicemia de pessoas com diabetes. Para entender como o corpo regula a glicose, observe uma curva pós-refeição padronizada (valores ilustrativos); os valores servem apenas para comparação entre respostas fisiológicas e não constituem diagnóstico individual.",
         "comando": "Qual conclusão é compatível com o conjunto de glicose e insulina, respeitando os limites do experimento?",
         "alts": [
           "O participante B apresenta resposta compatível com menor sensibilidade à insulina; seriam necessárias avaliações padronizadas adicionais para concluir clinicamente.",
@@ -1566,7 +1566,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 66",
         "pagina": 66,
         "grupo": "G3",
-        "enunciado": "Dados de vigilância hipotéticos: os percentuais abaixo são registros populacionais de episódios compatíveis, não diagnósticos individuais. Os bairros diferem no tratamento da água e em práticas de manipulação de alimentos.",
+        "enunciado": "O Instituto Trata Brasil divulga anualmente um ranking do saneamento nas maiores cidades do país, mostrando como a falta de água tratada e de esgoto se relaciona com doenças. Em dados de vigilância (valores ilustrativos), os percentuais abaixo são registros populacionais de episódios compatíveis, não diagnósticos individuais. Os bairros diferem no tratamento da água e em práticas de manipulação de alimentos.",
         "comando": "Para reduzir de modo sustentável os episódios de giardíase e amebíase no Bairro A, qual pacote de ações é mais coerente com a via de transmissão?",
         "alts": [
           "Priorizar inseticida contra mosquitos e manter a água sem tratamento, pois protozoários dependem de vetores voadores.",
@@ -1622,7 +1622,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 65",
         "pagina": 65,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos: a concentração de um contaminante persistente foi medida em água e em organismos de níveis tróficos sucessivos de uma lagoa. As amostras foram coletadas no mesmo período.",
+        "enunciado": "Um estudo da Fiocruz divulgado em 2020 encontrou mercúrio, associado ao garimpo ilegal, em indígenas Munduruku do Tapajós (PA); o metal chega às pessoas pela alimentação, sobretudo por peixes. Para entender como um contaminante se acumula ao longo da cadeia alimentar, a concentração de um contaminante persistente foi medida em água e em organismos de níveis tróficos sucessivos de uma lagoa (valores ilustrativos). As amostras foram coletadas no mesmo período.",
         "comando": "Qual interpretação e medida de gestão são mais bem sustentadas pelos dados?",
         "alts": [
           "A concentração diminui ao longo da cadeia; a melhor medida é aumentar o número de predadores de topo.",
@@ -1680,7 +1680,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 65",
         "pagina": 65,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos: a fita molde normal de um gene é 3′-TAC GGA CTT ACT-5′. Em uma linhagem editada, o códon molde CTT foi trocado por CAT. A PCR produziu uma banda do tamanho esperado na linhagem editada, e o controle negativo, sem DNA, não produziu banda.",
+        "enunciado": "Em 2020, o Nobel de Química premiou Emmanuelle Charpentier e Jennifer Doudna pela ferramenta de edição de genes CRISPR-Cas9. Em um experimento didático, a fita molde normal de um gene é 3′-TAC GGA CTT ACT-5′. Em uma linhagem editada, o códon molde CTT foi trocado por CAT. A PCR produziu uma banda do tamanho esperado na linhagem editada, e o controle negativo, sem DNA, não produziu banda.",
         "comando": "Explique, com base nos dados, a sequência de mRNA e de aminoácidos antes e depois da edição; descreva o fluxo DNA–RNA–proteína e indique por que a PCR, embora necessária, não demonstra sozinha que a proteína editada funciona nem que não houve edição fora do alvo.",
         "alts": []
       },
@@ -1698,7 +1698,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 2ª, p. 66",
         "pagina": 66,
         "grupo": "G3",
-        "enunciado": "Dados de vigilância hipotéticos, agregados por bairro e não diagnósticos individuais: o Bairro X tem poços sem tratamento, esgoto incompleto, 7% de registros compatíveis com giardíase, 5% com amebíase e 22% das famílias relatando consumo frequente de bebidas açucaradas e ultraprocessados. O Bairro Y tem água e esgoto regulares, 1% e 1% desses registros e 25% de consumo frequente dos mesmos produtos; seu indicador populacional de alterações glicêmicas é 9%, contra 8% no Bairro X.",
+        "enunciado": "O Brasil convive com uma dupla carga de doenças: de um lado, enfermidades ligadas à falta de saneamento; de outro, o crescimento de doenças crônicas como obesidade e diabetes. Dados de vigilância (valores ilustrativos), agregados por bairro e não diagnósticos individuais: o Bairro X tem poços sem tratamento, esgoto incompleto, 7% de registros compatíveis com giardíase, 5% com amebíase e 22% das famílias relatando consumo frequente de bebidas açucaradas e ultraprocessados. O Bairro Y tem água e esgoto regulares, 1% e 1% desses registros e 25% de consumo frequente dos mesmos produtos; seu indicador populacional de alterações glicêmicas é 9%, contra 8% no Bairro X.",
         "comando": "Proponha um plano de promoção da saúde para os dois bairros. Relacione os dados às vias de transmissão das protozooses e explique como alimentação, insulina e glucagon participam do controle da glicose, sem transformar os indicadores em diagnóstico individual.",
         "alts": [],
         "tabela": {
@@ -1755,7 +1755,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 61",
         "pagina": 61,
         "grupo": "G3",
-        "enunciado": "Em um reator aquoso hipotético, a transformação A + B → produtos foi acompanhada no início da reação. A temperatura, o volume e o procedimento de mistura foram mantidos constantes. Os dados experimentais abaixo são hipotéticos e foram rotulados para esta questão.",
+        "enunciado": "Durante a pandemia de covid-19, a necessidade de armazenar certas vacinas a temperaturas muito baixas mostrou como a rapidez das transformações químicas depende das condições do meio. Para estudar a influência da concentração, acompanhou-se, em um reator aquoso, a transformação A + B → produtos no início da reação (valores ilustrativos). A temperatura, o volume e o procedimento de mistura foram mantidos constantes.",
         "comando": "Adotando r = k[A]^m[B]^n, qual previsão é compatível com os dados e com [A] = 0,20 mol L⁻¹ e [B] = 0,30 mol L⁻¹?",
         "alts": [
           "A ordem é 2 em A e 1 em B; a rapidez prevista é 2,4 × 10⁻² mol L⁻¹ s⁻¹.",
@@ -1807,7 +1807,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 61",
         "pagina": 61,
         "grupo": "G3",
-        "enunciado": "Em um recipiente fechado e termostatado, com êmbolo móvel, a reação N₂O₄(g) ⇌ 2 NO₂(g) atingiu equilíbrio a temperatura constante. Nesse instante, as concentrações eram as indicadas na tabela. Em seguida, o volume foi reduzido instantaneamente à metade, antes de o sistema se reajustar.",
+        "enunciado": "Os motores a combustão emitem óxidos de nitrogênio, poluentes monitorados pela Cetesb nas cidades paulistas; o NO₂ participa de um equilíbrio com o N₂O₄. Em um recipiente fechado e termostatado, com êmbolo móvel, a reação N₂O₄(g) ⇌ 2 NO₂(g) atingiu equilíbrio a temperatura constante. Nesse instante, as concentrações eram as indicadas na tabela (valores ilustrativos). Em seguida, o volume foi reduzido instantaneamente à metade, antes de o sistema se reajustar.",
         "comando": "Qual alternativa combina o Kc no equilíbrio original, o Qc imediatamente após a compressão e o sentido predominante do reajuste?",
         "alts": [
           "Kc = 1,60; Qc = 0,80; o sistema se desloca para a direita, formando mais NO₂.",
@@ -1847,7 +1847,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 61",
         "pagina": 61,
         "grupo": "G2",
-        "enunciado": "Uma solução aquosa hipotética, analisada a 25 °C, apresenta [OH⁻] = 2,0 × 10⁻³ mol L⁻¹. Considere Kw = 1,0 × 10⁻¹⁴ e as definições pOH = −log[OH⁻] e pH + pOH = 14,00.",
+        "enunciado": "Água sanitária e desentupidores são soluções alcalinas que causam acidentes domésticos, e os centros de informação toxicológica registram esses casos todos os anos. Considere uma solução aquosa de um desses produtos, analisada a 25 °C, com [OH⁻] = 2,0 × 10⁻³ mol L⁻¹. Considere Kw = 1,0 × 10⁻¹⁴ e as definições pOH = −log[OH⁻] e pH + pOH = 14,00.",
         "comando": "Determine, com aproximação a duas casas decimais, o par pOH e pH da solução.",
         "alts": [
           "pOH = 3,00 e pH = 11,00.",
@@ -1871,7 +1871,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 62",
         "pagina": 62,
         "grupo": "G3",
-        "enunciado": "As duas equações abaixo representam dados hipotéticos de entalpia para a formação de óxidos de carbono, nas mesmas condições de referência. A soma de equações pode ser usada para obter uma reação-alvo.",
+        "enunciado": "O monóxido de carbono, formado na combustão incompleta, é o gás responsável por intoxicações domésticas noticiadas todos os anos, sobretudo com aquecedores a gás mal ventilados. Para calcular a energia da combustão completa do carbono, as duas equações abaixo representam entalpias (valores ilustrativos) para a formação de óxidos de carbono, nas mesmas condições de referência. A soma de equações pode ser usada para obter uma reação-alvo.",
         "comando": "Qual é a variação de entalpia para C(s) + O₂(g) → CO₂(g), usando apenas os dados fornecidos?",
         "alts": [
           "ΔH = +393,5 kJ mol⁻¹; a reação-alvo absorve 393,5 kJ por mol de CO₂ formado.",
@@ -1914,7 +1914,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 62",
         "pagina": 62,
         "grupo": "G3",
-        "enunciado": "Uma pilha galvânica hipotética Zn/Cu opera em condições padrão. Os potenciais-padrão de redução das semirreações estão na tabela; os eletrodos estão conectados externamente e as soluções permanecem eletricamente compensadas por uma ponte salina.",
+        "enunciado": "As vendas de carros elétricos e híbridos bateram recorde no Brasil em 2024, aumentando o interesse por baterias e pilhas. Uma pilha galvânica Zn/Cu opera em condições padrão. Os potenciais-padrão de redução das semirreações estão na tabela; os eletrodos estão conectados externamente e as soluções permanecem eletricamente compensadas por uma ponte salina.",
         "comando": "Qual conjunto descreve corretamente a pilha e sua força eletromotriz padrão?",
         "alts": [
           "Zn é o ânodo e sofre oxidação; Cu²⁺ é reduzido no cátodo; elétrons fluem de Zn para Cu; E° = 1,10 V.",
@@ -1954,7 +1954,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 62",
         "pagina": 62,
         "grupo": "G3",
-        "enunciado": "Em um experimento eletrolítico hipotético e rotulado, uma solução aquosa de CuCl₂ é submetida a corrente contínua entre eletrodos inertes. Para este problema, considere que Cu²⁺ é reduzido no cátodo, Cl⁻ é oxidado no ânodo, o rendimento de corrente é 100% e não ocorrem reações paralelas. Use F = 96 500 C mol⁻¹ e M(Cu) = 63,5 g mol⁻¹.",
+        "enunciado": "O furto de cabos de cobre é frequentemente noticiado no país, e o cobre recuperado ou reciclado precisa ser refinado, processo que usa eletrólise. Em um experimento eletrolítico (valores ilustrativos), uma solução aquosa de CuCl₂ é submetida a corrente contínua entre eletrodos inertes. Para este problema, considere que Cu²⁺ é reduzido no cátodo, Cl⁻ é oxidado no ânodo, o rendimento de corrente é 100% e não ocorrem reações paralelas. Use F = 96 500 C mol⁻¹ e M(Cu) = 63,5 g mol⁻¹.",
         "comando": "Qual massa de cobre metálico se deposita no cátodo após o tempo indicado?",
         "alts": [
           "0,318 g, porque cada mol de cobre exigiria apenas um mol de elétrons.",
@@ -2002,7 +2002,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 62",
         "pagina": 62,
         "grupo": "G2",
-        "enunciado": "Uma amostra hipotética de um radioisótopo X tem meia-vida de 8 dias e atividade inicial de 640 Bq. Considere que não há produção de X na amostra e que a atividade é proporcional ao número de núcleos ainda não desintegrados.",
+        "enunciado": "O iodo-131, usado em tratamentos de tireoide e liberado em acidentes nucleares como os de Chernobyl (1986) e Fukushima (2011), tem meia-vida de cerca de 8 dias. Considere uma amostra de um radioisótopo X, de comportamento semelhante, com meia-vida de 8 dias e atividade inicial de 640 Bq. Considere que não há produção de X na amostra e que a atividade é proporcional ao número de núcleos ainda não desintegrados.",
         "comando": "Qual atividade e fração aproximada da amostra permanecem após 24 dias?",
         "alts": [
           "320 Bq e 50%, pois passaram-se dois períodos de 4 dias.",
@@ -2026,7 +2026,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 62",
         "pagina": 62,
         "grupo": "G2",
-        "enunciado": "Em uma análise hipotética de um composto usado como aromatizante, a fórmula estrutural condensada obtida foi CH₃–C(=O)–O–CH₂–CH₃. A identificação deve considerar a conectividade dos átomos, e não apenas a presença isolada de oxigênio.",
+        "enunciado": "O acetato de etila é um solvente presente em removedores de esmalte e responsável por aromas de frutas em produtos industrializados, e a identificação de substâncias em rótulos exige ler a fórmula estrutural. Em uma análise de um composto usado como aromatizante, a fórmula estrutural condensada obtida foi CH₃–C(=O)–O–CH₂–CH₃. A identificação deve considerar a conectividade dos átomos, e não apenas a presença isolada de oxigênio.",
         "comando": "Qual interpretação estrutural é cientificamente compatível com o composto?",
         "alts": [
           "É um ácido carboxílico: possui carbonila acompanhada de um grupo OH ligado ao mesmo carbono.",
@@ -2050,7 +2050,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 62",
         "pagina": 62,
         "grupo": "G2",
-        "enunciado": "Considere os compostos orgânicos hipotéticos representados abaixo. A pergunta trata especificamente da possibilidade de isomeria geométrica em torno de uma ligação dupla.",
+        "enunciado": "Desde 2023, a Anvisa proíbe o uso de óleos parcialmente hidrogenados, principal fonte de gorduras trans, nos alimentos industrializados (RDC 332/2019), pois as gorduras trans são isômeros geométricos associados a riscos cardiovasculares. Considere os compostos orgânicos representados abaixo. A pergunta trata especificamente da possibilidade de isomeria geométrica em torno de uma ligação dupla.",
         "comando": "Qual afirmação interpreta corretamente uma das estruturas?",
         "alts": [
           "III pode apresentar formas cis e trans, pois o carbono da dupla possui dois grupos metila equivalentes.",
@@ -2098,7 +2098,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 62",
         "pagina": 62,
         "grupo": "G2",
-        "enunciado": "Em um processo hipotético de síntese, o monômero M é CH₂=CHCl e o produto P é representado por [–CH₂–CHCl–]ₙ. Não se observa eliminação de uma molécula pequena durante a formação da cadeia.",
+        "enunciado": "Em dezembro de 2024, em Busan (Coreia do Sul), os países não chegaram a um acordo para o tratado global contra a poluição por plásticos. Em um processo de síntese de um desses plásticos, o monômero M é CH₂=CHCl e o produto P é representado por [–CH₂–CHCl–]ₙ. Não se observa eliminação de uma molécula pequena durante a formação da cadeia.",
         "comando": "Qual identificação relaciona corretamente o monômero, o polímero e o tipo de transformação?",
         "alts": [
           "M é cloroeteno (vinil cloreto), P é PVC; ocorre adição e o Cl permanece na unidade repetitiva.",
@@ -2122,7 +2122,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 61",
         "pagina": 61,
         "grupo": "G1",
-        "enunciado": "Em um frasco rígido e fechado, gases H₂(g) e O₂(g), inicialmente incolores, foram submetidos a uma faísca. Depois do evento, observaram-se gotículas líquidas nas paredes e aquecimento do frasco. O relato é um experimento hipotético, não uma instrução de execução.",
+        "enunciado": "O Brasil investe em projetos de hidrogênio verde, como o hub do Porto do Pecém (CE), que pretende usar o H₂ como combustível. Para entender a transformação química envolvida, considere um relato de laboratório: em um frasco rígido e fechado, gases H₂(g) e O₂(g), inicialmente incolores, foram submetidos a uma faísca. Depois do evento, observaram-se gotículas líquidas nas paredes e aquecimento do frasco. O relato não é uma instrução de execução.",
         "comando": "Qual interpretação articula melhor as evidências e a representação da transformação?",
         "alts": [
           "Ocorreu apenas condensação física, pois a presença de gotículas impede concluir que novas substâncias se formaram.",
@@ -2146,7 +2146,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 61",
         "pagina": 61,
         "grupo": "G3",
-        "enunciado": "Uma estação hipotética recebeu uma água bruta com turbidez elevada, presença de bactérias indicadoras e concentração relevante de nitrato dissolvido. O tratamento convencional considerado tem as etapas: (1) coagulação/floculação, (2) decantação, (3) filtração e (4) desinfecção. Para este caso, não se atribui a essas quatro etapas a remoção completa do nitrato dissolvido.",
+        "enunciado": "Nas enchentes de 2024 no Rio Grande do Sul, a água de abastecimento foi comprometida em vários municípios, e autoridades de saúde orientaram a desinfecção da água com cloro quando não havia garantia de segurança. Uma estação de tratamento recebeu uma água bruta com turbidez elevada, presença de bactérias indicadoras e concentração relevante de nitrato dissolvido. O tratamento convencional considerado tem as etapas: (1) coagulação/floculação, (2) decantação, (3) filtração e (4) desinfecção. Para este caso, não se atribui a essas quatro etapas a remoção completa do nitrato dissolvido.",
         "comando": "Qual interpretação relaciona adequadamente as etapas às características que se pretende controlar?",
         "alts": [
           "Filtração inativa todos os microrganismos, enquanto a desinfecção precipita nitrato dissolvido e substitui a coagulação.",
@@ -2170,7 +2170,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 62",
         "pagina": 62,
         "grupo": "G3",
-        "enunciado": "Os dados abaixo são hipotéticos e foram rotulados para comparar combustões completas. Considere massas molares: M(CO₂) = 44 g mol⁻¹. Admita, apenas para comparar emissões diretas por energia liberada, que toda a energia indicada seria aproveitada pelo dispositivo.",
+        "enunciado": "Desde 1º de agosto de 2025, a gasolina vendida no Brasil contém 30% de etanol (E30), medida ligada à redução de emissões de gases de efeito estufa. Os dados abaixo (valores ilustrativos) permitem comparar combustões completas. Considere massas molares: M(CO₂) = 44 g mol⁻¹. Admita, apenas para comparar emissões diretas por energia liberada, que toda a energia indicada seria aproveitada pelo dispositivo.",
         "comando": "Calcule a massa de CO₂ emitida por megajoule liberado para cada combustível, indique qual apresenta menor emissão direta por unidade de energia e explique por que esse indicador isolado não encerra a avaliação de sustentabilidade.",
         "alts": [],
         "tabela": {
@@ -2207,7 +2207,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão 2ª, p. real 62",
         "pagina": 62,
         "grupo": "G3",
-        "enunciado": "Uma célula galvânica hipotética e idealizada opera em condições padrão usando os pares Mg²⁺/Mg e Ni²⁺/Ni. Os potenciais-padrão de redução fornecidos são E°(Mg²⁺/Mg) = −2,37 V e E°(Ni²⁺/Ni) = −0,25 V. O enunciado é um modelo de análise, não um procedimento de montagem.",
+        "enunciado": "A Resolução Conama 401/2008 obriga fabricantes e importadores a receber de volta pilhas e baterias usadas, como forma de reduzir seus impactos ambientais. Considere uma célula galvânica idealizada que opera em condições padrão usando os pares Mg²⁺/Mg e Ni²⁺/Ni. Os potenciais-padrão de redução fornecidos são E°(Mg²⁺/Mg) = −2,37 V e E°(Ni²⁺/Ni) = −0,25 V. O enunciado é um modelo de análise, não um procedimento de montagem.",
         "comando": "Escreva as semirreações que ocorrem, obtenha a reação global, calcule E° da célula, indique o sentido dos elétrons no circuito externo e proponha uma ação de descarte ou recuperação que reduza impactos de pilhas e baterias.",
         "alts": [],
         "tabela": {
@@ -2252,7 +2252,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 67",
         "pagina": 67,
         "grupo": "G2",
-        "enunciado": "Em um modelo experimental hipotético, a energia química disponível foi estimada em quatro níveis tróficos de uma mesma teia. Considere a aproximação fornecida E(n+1) = 0,10 × E(n), em que E é a energia disponível no nível seguinte. Os valores não representam biomassa nem a energia total do ecossistema.",
+        "enunciado": "As secas extremas de 2023 e 2024 na Amazônia reduziram rios e afetaram a fauna aquática, mostrando como a energia que sustenta uma teia alimentar depende do ambiente. Em um modelo, a energia química disponível foi estimada (valores ilustrativos) em quatro níveis tróficos de uma mesma teia. Considere a aproximação fornecida E(n+1) = 0,10 × E(n), em que E é a energia disponível no nível seguinte. Os valores não representam biomassa nem a energia total do ecossistema.",
         "comando": "Qual interpretação combina os dados da tabela com a diferença entre fluxo de energia e ciclagem da matéria?",
         "alts": [
           "A energia dos consumidores retorna integralmente aos produtores, enquanto os nutrientes são eliminados como calor.",
@@ -2300,7 +2300,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 67",
         "pagina": 67,
         "grupo": "G3",
-        "enunciado": "Dois trechos de um mesmo reservatório foram monitorados durante a estação chuvosa. Os dados são hipotéticos; as medições de oxigênio dissolvido foram feitas ao amanhecer, quando a respiração noturna já ocorreu.",
+        "enunciado": "Em janeiro de 2020, moradores do Rio de Janeiro relataram água com gosto e cheiro de terra, associados à geosmina, substância produzida por microrganismos em águas ricas em nutrientes e poluídas por esgoto. Dois trechos de um mesmo reservatório foram monitorados durante a estação chuvosa (valores ilustrativos). As medições de oxigênio dissolvido foram feitas ao amanhecer, quando a respiração noturna já ocorreu.",
         "comando": "Qual cadeia causal e medida de mitigação são mais compatíveis com a comparação?",
         "alts": [
           "O escoamento de fertilizantes elevou nutrientes, favoreceu a proliferação de algas e a decomposição consumiu oxigênio; reduzir a entrada de nutrientes atua na origem.",
@@ -2349,7 +2349,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 67",
         "pagina": 67,
         "grupo": "G2",
-        "enunciado": "Tiras de batata de massas iniciais semelhantes foram mantidas por 60 minutos em soluções de sacarose. O percentual é a variação média da massa em relação ao início; os dados são hipotéticos e a membrana celular foi considerada seletivamente permeável à água nessas condições.",
+        "enunciado": "A conservação de carnes e peixes com sal, como no charque e no bacalhau, baseia-se na perda de água dos microrganismos por osmose. Para estudar o fenômeno, tiras de batata de massas iniciais semelhantes foram mantidas por 60 minutos em soluções de sacarose. O percentual é a variação média da massa em relação ao início (valores ilustrativos) e a membrana celular foi considerada seletivamente permeável à água nessas condições.",
         "comando": "Qual conclusão é sustentada pela tabela?",
         "alts": [
           "A solução de 0,50 M é hipotônica para as células, pois a perda de massa mostra entrada de água por osmose.",
@@ -2397,7 +2397,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 67",
         "pagina": 67,
         "grupo": "G3",
-        "enunciado": "Em três frascos de levedura, mantiveram-se constantes volume, temperatura e concentração inicial de células. Os frascos foram fechados após receberem os tratamentos indicados. Os dados de CO₂ e etanol são hipotéticos.",
+        "enunciado": "O Brasil é um dos maiores produtores de etanol, obtido pela fermentação do caldo da cana por leveduras, e a mistura de 30% de etanol na gasolina, em vigor desde 2025, ampliou o interesse pelo processo. Em um experimento didático, três frascos de levedura mantiveram constantes volume, temperatura e concentração inicial de células. Os frascos foram fechados após receberem os tratamentos indicados. Os dados de CO₂ e etanol são ilustrativos.",
         "comando": "Qual conclusão e papel do frasco C são metodologicamente adequados?",
         "alts": [
           "O frasco A prova que o etanol é produzido sempre que há glicose, e C demonstra que oxigênio é o produto final.",
@@ -2453,7 +2453,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 67",
         "pagina": 67,
         "grupo": "G2",
-        "enunciado": "Considere a fita molde de um gene hipotético escrita como 3′–TAC CGA ATT–5′. Use pareamento complementar com U no RNA e considere que a leitura do RNA mensageiro ocorre de 5′ para 3′. AUG inicia a tradução e UAA é códon de parada.",
+        "enunciado": "A Rede Genômica da Fiocruz sequenciou genomas do SARS-CoV-2 no Brasil para acompanhar o surgimento de variantes, trabalho que depende de entender como a informação do ácido nucleico vira proteína. Considere a fita molde de um gene escrita como 3′–TAC CGA ATT–5′. Use pareamento complementar com U no RNA e considere que a leitura do RNA mensageiro ocorre de 5′ para 3′. AUG inicia a tradução e UAA é códon de parada.",
         "comando": "Qual produto de transcrição e resultado de tradução são compatíveis com essas premissas?",
         "alts": [
           "RNA 3′–AUG GCU UAA–5′, produzindo Ala-Gly e ignorando o códon de parada.",
@@ -2477,7 +2477,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 67",
         "pagina": 67,
         "grupo": "G2",
-        "enunciado": "Uma célula germinativa hipotética tem 2n = 8. Considere uma mitose completa e uma meiose completa, sem falha de segregação; a variabilidade da meiose inclui recombinação e distribuição independente dos cromossomos.",
+        "enunciado": "O Instituto Nacional de Câncer (INCA) estima mais de 700 mil novos casos de câncer por ano no Brasil, doença que tem origem em falhas no controle da divisão celular. Para comparar a divisão que forma células do corpo com a que forma gametas, considere uma célula germinativa com 2n = 8. Considere uma mitose completa e uma meiose completa, sem falha de segregação; a variabilidade da meiose inclui recombinação e distribuição independente dos cromossomos.",
         "comando": "Qual comparação entre os produtos das duas divisões é correta?",
         "alts": [
           "A mitose origina duas células 2n = 8 geneticamente muito semelhantes; a meiose origina quatro células n = 4, com potencial de variabilidade.",
@@ -2501,7 +2501,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 67",
         "pagina": 67,
         "grupo": "G2",
-        "enunciado": "Um cladograma hipotético, enraizado à esquerda, é representado por (A,(B,(C,D))). As letras representam táxons atuais; os ramos indicam relações de ancestralidade comum, não uma escala de tamanho ou de progresso.",
+        "enunciado": "Em 2024, cientistas descreveram uma nova espécie de sucuri na Amazônia, Eunectes akayima, a partir de comparações genéticas que indicaram divergência evolutiva em relação à sucuri-verde já conhecida; relações desse tipo são representadas em cladogramas. Considere um cladograma enraizado à esquerda, representado por (A,(B,(C,D))). As letras representam táxons atuais; os ramos indicam relações de ancestralidade comum, não uma escala de tamanho ou de progresso.",
         "comando": "Qual inferência é obrigatória a partir dessa representação?",
         "alts": [
           "A surgiu diretamente de B, pois aparece antes na escrita do cladograma.",
@@ -2525,7 +2525,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 68",
         "pagina": 68,
         "grupo": "G2",
-        "enunciado": "Em um estudo hipotético, uma pessoa saudável passou do repouso a exercício intenso; o método mediu ventilação pulmonar e frequência cardíaca, mas não pretende diagnosticar indivíduos. As duas medidas foram feitas em condições comparáveis.",
+        "enunciado": "Em setembro de 2024, a fumaça de queimadas deixou o ar de várias cidades brasileiras com qualidade ruim e aumentou os atendimentos por problemas respiratórios. Para entender como respiração e circulação se ajustam à demanda do corpo, um estudo (valores ilustrativos) acompanhou uma pessoa saudável que passou do repouso a exercício intenso; o método mediu ventilação pulmonar e frequência cardíaca, mas não pretende diagnosticar indivíduos. As duas medidas foram feitas em condições comparáveis.",
         "comando": "Qual interpretação fisiológica explica melhor a mudança observada?",
         "alts": [
           "A ventilação diminui a oxigenação porque cada inspiração retira oxigênio dos alvéolos para o ambiente.",
@@ -2568,7 +2568,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 68",
         "pagina": 68,
         "grupo": "G2",
-        "enunciado": "Para um cruzamento hipotético, considere os loci independentes. Um genitor tem genótipo Iᴬi Rr e o outro Iᴮi rr; Iᴬ e Iᴮ são codominantes, i é recessivo, R determina Rh positivo e r determina Rh negativo.",
+        "enunciado": "O Dia Mundial do Doador de Sangue, 14 de junho, é usado por hemocentros para pedir doações e lembrar que a compatibilidade entre os sistemas ABO e Rh é essencial nas transfusões. Considere um cruzamento com loci independentes. Um genitor tem genótipo Iᴬi Rr e o outro Iᴮi rr; Iᴬ e Iᴮ são codominantes, i é recessivo, R determina Rh positivo e r determina Rh negativo.",
         "comando": "Quais fenótipos sanguíneos podem aparecer na descendência?",
         "alts": [
           "Somente A positivo e B negativo, porque cada genitor transmite apenas o alelo dominante do seu sistema ABO.",
@@ -2592,7 +2592,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 68",
         "pagina": 68,
         "grupo": "G3",
-        "enunciado": "Dados hipotéticos de um experimento de seleção: cinco culturas bacterianas independentes cresceram sem antibiótico até atingir a mesma densidade. Somente depois, cada cultura foi espalhada em placas com o antibiótico. O número de colônias resistentes foi 0, 12, 1, 8 e 0, respectivamente; placas sem antibiótico confirmaram crescimento semelhante das culturas.",
+        "enunciado": "A Organização Mundial da Saúde considera a resistência aos antimicrobianos uma das dez maiores ameaças à saúde global, e o uso excessivo de antibióticos é um dos fatores que favorecem bactérias resistentes. Em um experimento de seleção (valores ilustrativos), cinco culturas bacterianas independentes cresceram sem antibiótico até atingir a mesma densidade. Somente depois, cada cultura foi espalhada em placas com o antibiótico. O número de colônias resistentes foi 0, 12, 1, 8 e 0, respectivamente; placas sem antibiótico confirmaram crescimento semelhante das culturas.",
         "comando": "Qual interpretação e procedimento adicional respeitam o que o desenho permite concluir?",
         "alts": [
           "O antibiótico direcionou a mesma mutação em todas as bactérias, e não é necessário grupo sem antibiótico.",
@@ -2616,7 +2616,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 68",
         "pagina": 68,
         "grupo": "G2",
-        "enunciado": "Em uma comparação experimental hipotética, os níveis de anticorpos e a presença de células de memória foram acompanhados após duas intervenções gerais. Não se trata de recomendação individual nem de diagnóstico.",
+        "enunciado": "Em 2022, o Ministério da Saúde alertou para o risco de a poliomielite voltar ao Brasil por causa da queda da cobertura vacinal. Para entender por que a vacinação protege, compararam-se (valores ilustrativos) os níveis de anticorpos e a presença de células de memória após duas intervenções gerais. Não se trata de recomendação individual nem de diagnóstico.",
         "comando": "Qual interpretação da tabela distingue adequadamente as respostas?",
         "alts": [
           "A intervenção com vacina induz resposta ativa, que pode ser mais lenta no início e formar memória; o soro fornece anticorpos prontos, com proteção passiva e temporária.",
@@ -2662,7 +2662,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 68",
         "pagina": 68,
         "grupo": "G2",
-        "enunciado": "Duas espécies hipotéticas ocupam ambientes distintos. A espécie X libera gametas na água; seus ovos são gelatinosos e há fase larval aquática. A espécie Y realiza transferência de espermatozoides no interior do corpo; seus ovos têm envoltório resistente e o desenvolvimento é direto.",
+        "enunciado": "Em 2018, pesquisadores relataram que cerca de 99% dos filhotes de tartaruga-verde do norte da Grande Barreira de Corais estavam nascendo fêmeas, efeito atribuído ao aquecimento da areia onde os ovos se desenvolvem. Para comparar estratégias reprodutivas, considere duas espécies que ocupam ambientes distintos. A espécie X libera gametas na água; seus ovos são gelatinosos e há fase larval aquática. A espécie Y realiza transferência de espermatozoides no interior do corpo; seus ovos têm envoltório resistente e o desenvolvimento é direto.",
         "comando": "Qual inferência é sustentada pelos dados sem transformar uma adaptação em escala de progresso evolutivo?",
         "alts": [
           "X necessariamente tem fecundação mais eficiente em qualquer ambiente, pois produz gametas fora do corpo.",
@@ -2686,7 +2686,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 67",
         "pagina": 67,
         "grupo": "G3",
-        "enunciado": "Dados hipotéticos foram coletados em uma área úmida antes e três meses depois da instalação de uma plantação a montante. As demais condições observadas foram registradas, mas não houve ainda um trecho-controle. O oxigênio dissolvido foi medido ao amanhecer.",
+        "enunciado": "Mortandades de peixes em lagoas e reservatórios, noticiadas com frequência no verão, estão ligadas à queda do oxigênio dissolvido quando há excesso de nutrientes na água. Dados coletados em uma área úmida (valores ilustrativos) foram obtidos antes e três meses depois da instalação de uma plantação a montante. As demais condições observadas foram registradas, mas não houve ainda um trecho-controle. O oxigênio dissolvido foi medido ao amanhecer.",
         "comando": "Explique uma hipótese para o padrão, relacione-a ao ciclo do nitrogênio e ao fluxo de matéria e energia do ecossistema, proponha uma intervenção e descreva um acompanhamento que diferencie correlação de efeito da intervenção.",
         "alts": [],
         "tabela": {
@@ -2738,7 +2738,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Biologia 2026, Mapa Provão 3ª, p. 67",
         "pagina": 67,
         "grupo": "G3",
-        "enunciado": "Em uma comparação hipotética, a sequência abaixo é a fita codificadora escrita de 5′ para 3′. As amostras foram processadas com o mesmo protocolo e os dados são apresentados apenas para o trecho analisado.",
+        "enunciado": "Em dezembro de 2023, a agência regulatória dos Estados Unidos aprovou o primeiro tratamento baseado em edição de genes com CRISPR, destinado à anemia falciforme, doença causada por uma alteração em um gene da hemoglobina. Em uma comparação didática (valores ilustrativos), a sequência abaixo é a fita codificadora escrita de 5′ para 3′. As amostras foram processadas com o mesmo protocolo e os dados são apresentados apenas para o trecho analisado.",
         "comando": "Use a tabela para identificar a etapa molecular alterada, prever a consequência na sequência de aminoácidos e propor um controle que teste se a diferença observada está no DNA e não apenas na expressão ou na tradução.",
         "alts": [],
         "tabela": {
@@ -2789,7 +2789,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 63",
         "pagina": 63,
         "grupo": "G2",
-        "enunciado": "Dados experimentais hipotéticos — bancada didática, 25 °C: uma amostra contém limalha de ferro, areia, cloreto de sódio e água. O ferro é atraído por ímã; a areia é insolúvel em água; o NaCl permanece dissolvido; e a água entra em ebulição antes do NaCl. O objetivo é recuperar cada componente sem transformar quimicamente os materiais.",
+        "enunciado": "O Brasil é um dos maiores exportadores de minério de ferro, material que passa por etapas de separação, como a magnética, antes de ser vendido. Em uma bancada didática, a 25 °C, uma amostra contém limalha de ferro, areia, cloreto de sódio e água. O ferro é atraído por ímã; a areia é insolúvel em água; o NaCl permanece dissolvido; e a água entra em ebulição antes do NaCl. O objetivo é recuperar cada componente sem transformar quimicamente os materiais.",
         "comando": "Qual sequência de operações atende ao objetivo com base nessas propriedades?",
         "alts": [
           "Filtrar a amostra, imantar o filtrado, destilar o resíduo sólido e evaporar a água retida.",
@@ -2837,7 +2837,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 63",
         "pagina": 63,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos — alto-forno em escala didática: considere Fe₂O₃(s) + 3 CO(g) → 2 Fe(s) + 3 CO₂(g). Um lote de minério tem 200 g, dos quais 160 g são Fe₂O₃ e 40 g são material inerte. Entram 84 g de CO. As massas molares são Fe₂O₃ = 160 g/mol, CO = 28 g/mol e Fe = 56 g/mol. O processo alcança 80% de rendimento sobre o produto teórico.",
+        "enunciado": "O aço brasileiro é produzido principalmente em altos-fornos, que reduzem o óxido de ferro com monóxido de carbono. Em uma simulação em escala didática, considere Fe₂O₃(s) + 3 CO(g) → 2 Fe(s) + 3 CO₂(g). Um lote de minério tem 200 g, dos quais 160 g são Fe₂O₃ e 40 g são material inerte. Entram 84 g de CO. As massas molares são Fe₂O₃ = 160 g/mol, CO = 28 g/mol e Fe = 56 g/mol. O processo alcança 80% de rendimento sobre o produto teórico.",
         "comando": "Qual massa de Fe é obtida e como se caracteriza a relação entre os reagentes que efetivamente reagem?",
         "alts": [
           "112,0 g; o CO é limitante e o material inerte aumenta a quantidade de Fe formada.",
@@ -2885,7 +2885,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 63",
         "pagina": 63,
         "grupo": "G2",
-        "enunciado": "Dados experimentais hipotéticos — titulação de uma amostra: 25,00 mL de solução contendo H₂SO₄ 0,0200 mol/L são titulados com NaOH 0,100 mol/L. Admita dissociação completa, ausência de outros ácidos ou bases e a equação H₂SO₄ + 2 NaOH → Na₂SO₄ + 2 H₂O.",
+        "enunciado": "Nos anos 1980, Cubatão (SP) ficou conhecida como “Vale da Morte” pela poluição do ar, que incluía chuva ácida associada a óxidos de enxofre e à formação de ácido sulfúrico. Para entender como se neutraliza um ácido, considere uma titulação: 25,00 mL de solução contendo H₂SO₄ 0,0200 mol/L são titulados com NaOH 0,100 mol/L. Admita dissociação completa, ausência de outros ácidos ou bases e a equação H₂SO₄ + 2 NaOH → Na₂SO₄ + 2 H₂O.",
         "comando": "Qual volume de NaOH é necessário para a neutralização total da amostra?",
         "alts": [
           "2,50 mL, porque a concentração do titulante é cinco vezes maior que a do ácido.",
@@ -2909,7 +2909,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 65",
         "pagina": 65,
         "grupo": "G2",
-        "enunciado": "Dados experimentais hipotéticos — identificação nuclear: um núcleo de urânio-238 (²³⁸₉₂U) sofre uma emissão alfa e, em seguida, uma emissão beta menos (β⁻). Considere que a emissão alfa reduz o número de massa em 4 e o número atômico em 2, enquanto a emissão β⁻ mantém A e aumenta Z em 1.",
+        "enunciado": "As Indústrias Nucleares do Brasil extraem urânio em Caetité (BA), minério cujo isótopo mais abundante é o urânio-238. Considere uma sequência de decaimentos: um núcleo de urânio-238 (²³⁸₉₂U) sofre uma emissão alfa e, em seguida, uma emissão beta menos (β⁻). Considere que a emissão alfa reduz o número de massa em 4 e o número atômico em 2, enquanto a emissão β⁻ mantém A e aumenta Z em 1.",
         "comando": "Qual núcleo é identificado ao final da sequência?",
         "alts": [
           "²³⁴₉₀Th, pois somente a emissão alfa altera o núcleo considerado.",
@@ -2933,7 +2933,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 64",
         "pagina": 64,
         "grupo": "G2",
-        "enunciado": "Dados experimentais hipotéticos — três amostras puras: A é um sólido quebradiço, tem alto ponto de fusão, não conduz no estado sólido e conduz quando fundido; B é um sólido maleável que conduz eletricidade no estado sólido e no líquido; C é um líquido molecular, miscível em água, não conduz corrente de modo apreciável e apresenta grupo O–H.",
+        "enunciado": "Durante a pandemia de covid-19, o álcool 70% em gel virou item de higiene em todo o país; ele convive no cotidiano com o sal de cozinha e com os metais das panelas, substâncias de naturezas muito diferentes. Considere três amostras puras: A é um sólido quebradiço, tem alto ponto de fusão, não conduz no estado sólido e conduz quando fundido; B é um sólido maleável que conduz eletricidade no estado sólido e no líquido; C é um líquido molecular, miscível em água, não conduz corrente de modo apreciável e apresenta grupo O–H.",
         "comando": "Qual interpretação articula corretamente o tipo de ligação predominante e a propriedade observada?",
         "alts": [
           "A é metálica, B é iônica e C é uma rede covalente, pois todos os materiais contêm elétrons compartilhados.",
@@ -2977,7 +2977,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 64",
         "pagina": 64,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos — preparo de uma solução: uma solução estoque de NaCl tem concentração 0,400 mol/L. Pipetam-se 250 mL dessa solução, completa-se o volume para 1,000 L e, depois, misturam-se 100 mL da solução diluída com 100 mL de água, sem reação química e sem perda de soluto.",
+        "enunciado": "O soro fisiológico, solução de NaCl a 0,9% (m/V), é um dos medicamentos mais usados no SUS. Para entender como se prepara uma solução de concentração conhecida, considere uma solução estoque de NaCl com concentração 0,400 mol/L. Pipetam-se 250 mL dessa solução, completa-se o volume para 1,000 L e, depois, misturam-se 100 mL da solução diluída com 100 mL de água, sem reação química e sem perda de soluto.",
         "comando": "Qual é a concentração final de NaCl na mistura?",
         "alts": [
           "0,0100 mol/L, porque o volume inicial de 250 mL é convertido diretamente para litros.",
@@ -3001,7 +3001,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 64",
         "pagina": 64,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos — reação A → produtos, em temperatura constante. As velocidades iniciais foram medidas com o mesmo volume e os mesmos demais reagentes.",
+        "enunciado": "Desde os anos 1990, os carros novos vendidos no Brasil saem de fábrica com catalisadores, exigência do Proconve para reduzir poluentes. Para entender o papel de um catalisador, considere a reação A → produtos, em temperatura constante, com velocidades iniciais medidas (valores ilustrativos) com o mesmo volume e os mesmos demais reagentes.",
         "comando": "Qual conclusão é compatível simultaneamente com a série sem catalisador e com o ensaio catalisado?",
         "alts": [
           "v = k[A]² para a série sem catalisador; o ensaio catalisado revela maior rapidez, compatível com menor energia de ativação, sem determinar nova ordem.",
@@ -3059,7 +3059,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 64",
         "pagina": 64,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos — em um recipiente fechado a 298 K ocorre N₂O₄(g) ⇌ 2 NO₂(g). No equilíbrio inicial, [N₂O₄]=0,50 mol/L e [NO₂]=0,10 mol/L. Em seguida, adiciona-se instantaneamente N₂O₄ até aumentar sua concentração em 0,20 mol/L, mantendo a temperatura constante.",
+        "enunciado": "A Resolução Conama 491/2018 fixou padrões nacionais de qualidade do ar, que incluem o dióxido de nitrogênio (NO₂), poluente emitido por veículos. Em um recipiente fechado a 298 K ocorre N₂O₄(g) ⇌ 2 NO₂(g). No equilíbrio inicial, [N₂O₄]=0,50 mol/L e [NO₂]=0,10 mol/L. Em seguida, adiciona-se instantaneamente N₂O₄ até aumentar sua concentração em 0,20 mol/L, mantendo a temperatura constante.",
         "comando": "Após o novo equilíbrio, qual combinação descreve o sistema?",
         "alts": [
           "O equilíbrio se desloca para a esquerda, Kc aumenta e a concentração de NO₂ diminui em relação ao estado inicial.",
@@ -3107,7 +3107,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 65",
         "pagina": 65,
         "grupo": "G2",
-        "enunciado": "Dados experimentais hipotéticos — entalpias padrão de formação, em kJ/mol: CH₄(g) = −75, CO₂(g) = −394, H₂O(l) = −286 e O₂(g) = 0. Considere a combustão CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l).",
+        "enunciado": "Em 2021, o Brasil aderiu ao Compromisso Global do Metano, que busca reduzir emissões de um gás de efeito estufa que também é o principal componente do gás natural e do biogás. Considere entalpias padrão de formação (valores de referência para a atividade), em kJ/mol: CH₄(g) = −75, CO₂(g) = −394, H₂O(l) = −286 e O₂(g) = 0. Considere a combustão CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l).",
         "comando": "Qual é a variação de entalpia para a reação como escrita e o que seu sinal indica?",
         "alts": [
           "−891 kJ/mol; a reação libera energia na forma de calor nas condições consideradas.",
@@ -3155,7 +3155,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 65",
         "pagina": 65,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos — uma pilha opera em condições padrão com os pares Mg²⁺/Mg e Cu²⁺/Cu. Os potenciais-padrão de redução são E°(Cu²⁺/Cu)=+0,34 V e E°(Mg²⁺/Mg)=−2,37 V. Considere os eletrodos metálicos conectados por circuito externo e ponte salina.",
+        "enunciado": "Em 2019, o Prêmio Nobel de Química reconheceu o desenvolvimento das baterias de íons de lítio, que hoje alimentam celulares e carros elétricos. O funcionamento de qualquer pilha depende dos potenciais de seus eletrodos. Considere uma pilha em condições padrão com os pares Mg²⁺/Mg e Cu²⁺/Cu. Os potenciais-padrão de redução são E°(Cu²⁺/Cu)=+0,34 V e E°(Mg²⁺/Mg)=−2,37 V. Considere os eletrodos metálicos conectados por circuito externo e ponte salina.",
         "comando": "Qual descrição é compatível com uma pilha espontânea formada por esses pares?",
         "alts": [
           "Mg é o cátodo, Cu é o ânodo, os elétrons fluem de Mg para Cu e E°cel = −2,71 V.",
@@ -3179,7 +3179,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 65",
         "pagina": 65,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos — numa eletrólise de Cu²⁺(aq), a semirreação catódica é Cu²⁺ + 2 e⁻ → Cu(s). Uma corrente constante de 1,93 A atravessa a célula durante 1.000 s. Use F=9,65×10⁴ C/mol de elétrons e M(Cu)=63,5 g/mol; suponha rendimento de corrente de 100%.",
+        "enunciado": "O Brasil produz cobre no Pará, e o metal destinado à indústria elétrica é refinado por eletrólise. Para calcular a quantidade de metal depositada, considere uma eletrólise de Cu²⁺(aq) cuja semirreação catódica é Cu²⁺ + 2 e⁻ → Cu(s). Uma corrente constante de 1,93 A atravessa a célula durante 1.000 s. Use F=9,65×10⁴ C/mol de elétrons e M(Cu)=63,5 g/mol; suponha rendimento de corrente de 100%.",
         "comando": "Qual massa de cobre é depositada no cátodo?",
         "alts": [
           "0,3175 g, porque a carga transferida corresponde a 0,0100 mol de elétrons.",
@@ -3203,7 +3203,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 65",
         "pagina": 65,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos — duas substâncias puras têm fórmula molecular C₂H₆O. A amostra I é CH₃CH₂OH, tem ponto de ebulição 78,4 °C e é miscível em água; a amostra II é CH₃OCH₃, tem ponto de ebulição −24,8 °C e apresenta solubilidade aquosa menor nas mesmas condições.",
+        "enunciado": "O etanol da cana é o combustível renovável mais usado no Brasil, e o éter dimetílico é estudado como combustível alternativo; as duas substâncias têm a mesma fórmula molecular, C₂H₆O. Considere duas substâncias puras de fórmula molecular C₂H₆O. A amostra I é CH₃CH₂OH, tem ponto de ebulição 78,4 °C e é miscível em água; a amostra II é CH₃OCH₃, tem ponto de ebulição −24,8 °C e apresenta solubilidade aquosa menor nas mesmas condições.",
         "comando": "Qual interpretação explica conjuntamente a relação estrutural e a diferença de propriedades?",
         "alts": [
           "São isômeros de função: I é álcool, II é éter, e as ligações de hidrogênio de I favorecem maior ebulição e miscibilidade.",
@@ -3227,7 +3227,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 63",
         "pagina": 63,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos — monitoramento de um córrego: após uma chuva intensa, foram comparados os valores no ponto de captação e 2 h depois do evento. Não se deve inferir, apenas a partir da tabela, a origem única dos poluentes.",
+        "enunciado": "O monitoramento de rios após chuvas intensas faz parte da rotina de órgãos como a Cetesb e de companhias de saneamento, pois a chuva leva sedimentos, esgoto e nutrientes para a água que depois será captada. Em um córrego monitorado (valores ilustrativos), após uma chuva intensa, foram comparados os valores no ponto de captação e 2 h depois do evento. Não se deve inferir, apenas a partir da tabela, a origem única dos poluentes.",
         "comando": "Analise o caso: (1) descreva o que os dados sugerem sobre acidificação, sólidos suspensos e aporte de nutrientes; (2) proponha uma sequência de tratamento para tornar a água potável, indicando por que uma etapa convencional não basta para o nitrato; (3) escreva uma equação molecular ou iônica coerente para a correção da acidez com carbonato/bicarbonato; e (4) indique uma medida de prevenção na bacia hidrográfica.",
         "alts": [],
         "tabela": {
@@ -3273,7 +3273,7 @@ window.AVALIACOES_EM = {
         "referencia": "Guia Química 2026, Mapa Provão Paulista 3ª série, p. 65",
         "pagina": 65,
         "grupo": "G3",
-        "enunciado": "Dados experimentais hipotéticos — projeto de embalagens (as propriedades abaixo são condições do estudo, não uma generalização para todos os produtos comerciais). Material P é obtido de CH₂=CHCl e apresenta unidade repetitiva [–CH₂–CHCl–]ₙ; no estudo não se detecta molécula pequena liberada na formação da cadeia e o material persiste no ambiente. Material Q é obtido de HO–CH(CH₃)–COOH; a formação da cadeia contém ligações éster e libera H₂O por etapa, e sua hidrólise é mais rápida em condições controladas de compostagem industrial.",
+        "enunciado": "O Dia Mundial do Meio Ambiente de 2023 teve como tema a poluição por plásticos, e as embalagens estão entre os resíduos mais visíveis nas cidades. Em um projeto de embalagens, as propriedades abaixo são condições do estudo, não uma generalização para todos os produtos comerciais. Material P é obtido de CH₂=CHCl e apresenta unidade repetitiva [–CH₂–CHCl–]ₙ; no estudo não se detecta molécula pequena liberada na formação da cadeia e o material persiste no ambiente. Material Q é obtido de HO–CH(CH₃)–COOH; a formação da cadeia contém ligações éster e libera H₂O por etapa, e sua hidrólise é mais rápida em condições controladas de compostagem industrial.",
         "comando": "Compare P e Q: classifique o tipo de polimerização indicado por cada conjunto de dados, relacione monômero e ligação característica, avalie por que a hidrólise de Q não autoriza descarte irrestrito e proponha um encaminhamento de fim de vida coerente com os dados.",
         "alts": [],
         "tabela": {
