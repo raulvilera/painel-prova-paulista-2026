@@ -239,6 +239,9 @@ svg text{fill:var(--muted);font-family:var(--f-body)}
 .ai-row .btn2{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;padding:7px 12px;cursor:pointer;text-decoration:none;display:inline-block}
 .sim-btn{display:inline-block;margin-top:6px;font:inherit;font-size:.82rem;font-weight:700;text-decoration:none;background:var(--accent);color:var(--surface);border-radius:8px;padding:6px 12px}
 .sim-btn:hover{filter:brightness(1.08)}
+.ativ-bar:empty{display:none}
+.ativ-bar{margin:0 0 12px;padding:10px 14px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.ativ-bar b{display:block;font-size:.85rem;margin-bottom:2px}
 .sim-note{font-size:.75rem;color:var(--muted);display:block;margin-top:4px}
 .ai-row .btn2.pri{background:var(--accent);border-color:var(--accent);color:var(--surface);font-weight:700}
 .ai-row .btn2:disabled{opacity:.55;cursor:wait}
@@ -330,6 +333,8 @@ footer{margin-top:18px}
       <span class="chip l3"><i></i>Avançado ≥75%</span>
     </div>
   </div>
+
+  <div id="cAtiv" class="ativ-bar"></div>
 
   <main class="grid">
     <section class="card wide" data-view="aulas" tabindex="0" role="button" aria-label="Ampliar planejamento de aulas">
@@ -1112,6 +1117,8 @@ const VIEWS={ aluno:["Aluno","Desempenho por bimestre",alunoView], desc:["Descri
   aimg:["Atividade com imagens","Associação: imagens da aula ↔ informações",aiView] };
 
 function renderAll(){
+  const seT=serieOf(S.t);
+  document.getElementById("cAtiv").innerHTML=simSerie(seT)?`<b>Atividades dos alunos · ${esc(DATA.T[S.t].n)}</b>${simBtn(seT)}`:"";
   document.getElementById("cAluno").innerHTML=alunoView(false);
   document.getElementById("cDesc").innerHTML=descView(false);
   document.getElementById("cTurma").innerHTML=turmaView(false);
