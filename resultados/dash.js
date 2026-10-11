@@ -9,7 +9,7 @@
   const pct = v => Math.round(v * 100) + '%';
   const media = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : 0;
   const nf = n => (Math.round(n * 10) / 10).toString().replace('.', ',');
-  const S = { turma: '', filtro: '', aluno: '' };
+  const S = { turma: '', filtro: '', aluno: '', status: '', busca: '' };
   let TENT = [], ROSTER = {};
 
   function msg(html) { $('app').innerHTML = '<div class="card msg">' + html + '</div>'; }
@@ -59,8 +59,8 @@
   const chip = n => { const lv = nivel(n / 10); return '<span class="chip ' + NIVEIS[lv][1] + '"><i style="background:var(--' + NIVEIS[lv][1] + ')"></i>' + NIVEIS[lv][0] + '</span>'; };
 
   /* ---------- filtros ---------- */
-  function filtrar() {
-    let t = TENT.filter(x => !S.turma || x.turma === S.turma);
+  function filtrar(todasTurmas) {
+    let t = TENT.filter(x => todasTurmas || !S.turma || x.turma === S.turma);
     if (S.filtro) {
       if (CFG.fonte === 'em') t = t.filter(x => x.aval === S.filtro);
       else t = t.map(x => Object.assign({}, x, { itens: x.itens.filter(i => i.bim === S.filtro) })).filter(x => x.itens.length).map(x => Object.assign(x, { nota: media(x.itens.map(i => i.v)) * 10 }));
@@ -69,6 +69,73 @@
   }
   function opcoes(sel, lista, atual, todas) {
     sel.innerHTML = '<option value="">' + todas + '</option>' + lista.map(([v, r]) => '<option value="' + esc(v) + '"' + (v === atual ? ' selected' : '') + '>' + esc(r) + '</option>').join('');
+  }
+
+
+  /* ---------- panorama geral das turmas ---------- */
+  function resumoTurma(t, dados) {
+    const mine = dados.filter(x => x.turma === t), ros = ROSTER[t] || [];
+    const alunos = new Map();
+    mine.forEach(x => { const o = alunos.get(x.aluno) || { notas: [], itens: [] }; if (x.nota !== null) o.notas.push(x.nota); o.itens.push(...x.itens); alunos.set(x.aluno, o); });
+    const niv = [0, 0, 0, 0], notas = [];
+    alunos.forEach(o => { if (o.notas.length) { const n = media(o.notas); notas.push(n); niv[nivel(n / 10)]++; } });
+    const total = Math.max(ros.length, alunos.size), itens = [...alunos.values()].flatMap(o => o.itens);
+    return { t, total, resp: alunos.size, notas, niv, apr: itens.length ? media(itens.map(i => i.v)) : null };
+  }
+  function miniNiveis(niv) {
+    const tot = niv.reduce((x, y) => x + y, 0);
+    if (!tot) return '<span class="muted sm">—</span>';
+    return '<div class="mini" role="img" aria-label="' + NIVEIS.map((n, i) => n[0] + ': ' + niv[i]).join(', ') + '">' + niv.map((n, i) => n ? '<i style="flex:' + n + ';background:var(--' + NIVEIS[i][1] + ')" title="' + NIVEIS[i][0] + ': ' + n + ' aluno(s)"></i>' : '').join('') + '</div>';
+  }
+  function panorama() {
+    const dados = filtrar(true);
+    const turmas = [...new Set(Object.keys(ROSTER).concat(TENT.map(x => x.turma)))].sort((a, b) => a.localeCompare(b, 'pt-BR', { numeric: true }));
+    const R = turmas.map(t => resumoTurma(t, dados));
+    const tot = R.reduce((s, r) => s + r.total, 0), resp = R.reduce((s, r) => s + r.resp, 0);
+    const linha = r => {
+      const part = r.total ? r.resp / r.total : 0, nm = r.notas.length ? media(r.notas) : null;
+      return '<tr class="row' + (r.t === S.turma ? ' sel' : '') + '" data-turma="' + esc(r.t) + '" title="Clique para ver os detalhes da turma">' +
+        '<td><b>' + esc(r.t) + '</b></td>' +
+        '<td><div class="part"><div class="track"><div class="fill" style="width:' + Math.round(part * 100) + '%;background:var(--accent)"></div></div><span><b>' + r.resp + '</b> de ' + r.total + ' · ' + Math.round(part * 100) + '%</span></div></td>' +
+        '<td class="num">' + (nm === null ? '—' : '<b>' + nf(nm) + '</b>') + '</td>' +
+        '<td>' + miniNiveis(r.niv) + '</td>' +
+        '<td class="num">' + (r.apr === null ? '—' : pct(r.apr)) + '</td>' +
+        '<td>' + (nm === null ? '<span class="muted sm">sem envios</span>' : chip(nm)) + '</td></tr>';
+    };
+    const g = R.flatMap(r => r.notas), gn = [0, 0, 0, 0]; R.forEach(r => r.niv.forEach((n, i) => gn[i] += n));
+    return '<section class="card"><h2>Panorama geral das turmas</h2><p class="muted sm">Clique numa turma para ver o detalhamento. Participação = alunos que já realizaram a atividade.</p>' + legenda() +
+      '<div class="wrapt" style="max-height:none"><table class="pan"><thead><tr><th>Turma</th><th>Participação</th><th class="num">Nota média</th><th>Alunos por nível</th><th class="num">Aproveitamento</th><th>Nível da turma</th></tr></thead><tbody>' +
+      R.map(linha).join('') +
+      '</tbody><tfoot><tr><td><b>Geral</b></td><td><div class="part"><div class="track"><div class="fill" style="width:' + (tot ? Math.round(resp / tot * 100) : 0) + '%;background:var(--accent)"></div></div><span><b>' + resp + '</b> de ' + tot + ' · ' + (tot ? Math.round(resp / tot * 100) : 0) + '%</span></div></td><td class="num">' + (g.length ? '<b>' + nf(media(g)) + '</b>' : '—') + '</td><td>' + miniNiveis(gn) + '</td><td class="num">—</td><td>' + (g.length ? chip(media(g)) : '') + '</td></tr></tfoot></table></div></section>';
+  }
+
+  /* ---------- lista de alunos, por turma, com situação (realizou / pendente) ---------- */
+  function listaAlunos(dados) {
+    const porAluno = new Map();
+    dados.forEach(x => { const k = x.turma + '|' + x.aluno; const o = porAluno.get(k) || { notas: [], itens: [] }; if (x.nota !== null) o.notas.push(x.nota); o.itens.push(...x.itens); porAluno.set(k, o); });
+    const turmas = [...new Set(Object.keys(ROSTER).concat(dados.map(x => x.turma)))].filter(t => !S.turma || t === S.turma).sort((a, b) => a.localeCompare(b, 'pt-BR', { numeric: true }));
+    const q = S.busca.trim().toUpperCase();
+    let h = '<section class="card"><h2>Alunos' + (S.turma ? ' · ' + esc(S.turma) : ' por turma') + '</h2><p class="muted sm"><span class="st ok">✓ Realizou</span> a atividade já foi enviada · <span class="st pend">Pendente</span> ainda não enviou. Clique no aluno para ver o detalhamento.</p>';
+    let algum = false;
+    turmas.forEach(t => {
+      const nomes = [...new Set((ROSTER[t] || []).concat(dados.filter(x => x.turma === t).map(x => x.aluno)))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+      const feitos = nomes.filter(n => porAluno.has(t + '|' + n)).length;
+      let lin = nomes.map(n => ({ n, o: porAluno.get(t + '|' + n) }));
+      if (S.status === 'ok') lin = lin.filter(x => x.o); else if (S.status === 'pend') lin = lin.filter(x => !x.o);
+      if (q) lin = lin.filter(x => x.n.toUpperCase().indexOf(q) >= 0);
+      if (!lin.length) return; algum = true;
+      const abre = S.turma === t || !!q || !!S.status;
+      h += '<details class="tg"' + (abre ? ' open' : '') + '><summary><b>' + esc(t) + '</b><span class="muted sm"> · ' + feitos + ' de ' + nomes.length + ' realizaram</span>' +
+        '<span class="part sm"><span class="track"><span class="fill" style="width:' + (nomes.length ? Math.round(feitos / nomes.length * 100) : 0) + '%;background:var(--accent)"></span></span></span></summary>' +
+        '<div class="wrapt"><table><thead><tr><th style="width:34px">Nº</th><th>Aluno</th><th>Situação</th><th class="num">Nota</th><th>Nível</th><th class="num">Aproveitamento</th></tr></thead><tbody>' +
+        lin.map((x, i) => { const nn = x.o && x.o.notas.length ? media(x.o.notas) : null;
+          return '<tr class="row' + (x.n === S.aluno && t === S.turma ? ' sel' : '') + (x.o ? '' : ' pendr') + '" data-a="' + esc(x.n) + '" data-t="' + esc(t) + '"><td class="muted">' + (i + 1) + '</td><td>' + esc(x.n) + '</td>' +
+            '<td>' + (x.o ? '<span class="st ok">✓ Realizou</span>' : '<span class="st pend">Pendente</span>') + '</td>' +
+            '<td class="num">' + (nn === null ? '—' : '<b>' + nf(nn) + '</b>') + '</td><td>' + (nn === null ? '—' : chip(nn)) + '</td><td class="num">' + (x.o && x.o.itens.length ? pct(media(x.o.itens.map(i => i.v))) : '—') + '</td></tr>'; }).join('') +
+        '</tbody></table></div></details>';
+    });
+    if (!algum) h += '<p class="muted">Nenhum aluno encontrado para este filtro.</p>';
+    return h + '</section>';
   }
 
   function desenha() {
@@ -99,6 +166,8 @@
       '<div class="kpi"><b>' + (itensTurma.length ? pct(media(itensTurma.map(i => i.v))) : '—') + '</b><span>aproveitamento geral</span></div>' +
       '<div class="kpi"><b>' + dados.length + '</b><span>envios considerados</span></div></div></section>';
 
+    h += panorama();
+
     h += '<section class="card"><h2>Alunos por nível de proficiência' + (S.turma ? ' · ' + esc(S.turma) : '') + '</h2>' + legenda();
     h += notas.length ? '<div class="stack" role="img" aria-label="Distribuição dos alunos por nível">' + niv.map((n, i) => n ? '<div style="flex:' + n + ';background:var(--' + NIVEIS[i][1] + ')" title="' + NIVEIS[i][0] + ': ' + n + ' aluno(s)">' + n + '</div>' : '').join('') + '</div>' : '<p class="muted sm">Ainda não há envios para este filtro.</p>';
     h += '</section>';
@@ -122,23 +191,19 @@
       h += '<section class="card"><h2>Questões do aluno</h2><div class="items">' + meus.flatMap(x => x.itens.map(i => '<div class="it"><span class="' + (i.v >= .75 ? 'ok' : i.v >= .5 ? '' : 'no') + '">' + (i.v >= .75 ? '✓' : i.v >= .5 ? '◐' : '✗') + '</span><span><b>' + pct(i.v) + '</b> · ' + esc(i.desc) + '</span></div>')).join('') + '</div></section>';
     }
 
-    // tabela de alunos (inclui quem ainda não respondeu)
-    const porAluno = new Map(); dados.forEach(x => { const k = x.turma + '|' + x.aluno; (porAluno.get(k) || porAluno.set(k, { turma: x.turma, aluno: x.aluno, notas: [], itens: [] }).get(k)); const o = porAluno.get(k); if (x.nota !== null) o.notas.push(x.nota); o.itens.push(...x.itens); });
-    const linhas = [...porAluno.values()].sort((a, b) => a.turma.localeCompare(b.turma, 'pt-BR', { numeric: true }) || a.aluno.localeCompare(b.aluno, 'pt-BR'));
-    const faltam = [];
-    Object.keys(ROSTER).filter(t => !S.turma || t === S.turma).forEach(t => (ROSTER[t] || []).forEach(nm => { if (!porAluno.has(t + '|' + nm)) faltam.push([t, nm]); }));
-    h += '<section class="card"><h2>Alunos' + (S.turma ? ' · ' + esc(S.turma) : '') + '</h2><div class="wrapt"><table><thead><tr><th>Turma</th><th>Aluno</th><th>Nota</th><th>Nível</th><th>Aproveitamento</th></tr></thead><tbody>' +
-      linhas.map(l => { const n = l.notas.length ? media(l.notas) : null; return '<tr class="row' + (l.aluno === S.aluno ? ' sel' : '') + '" data-a="' + esc(l.aluno) + '" data-t="' + esc(l.turma) + '"><td>' + esc(l.turma) + '</td><td>' + esc(l.aluno) + '</td><td>' + (n === null ? '—' : nf(n)) + '</td><td>' + (n === null ? '—' : chip(n)) + '</td><td>' + (l.itens.length ? pct(media(l.itens.map(i => i.v))) : '—') + '</td></tr>'; }).join('') +
-      '</tbody></table></div>' + (faltam.length ? '<h3>Ainda não responderam (' + faltam.length + ')</h3><p class="muted sm">' + faltam.slice(0, 80).map(f => esc(f[1]) + (S.turma ? '' : ' (' + esc(f[0]) + ')')).join(' · ') + (faltam.length > 80 ? ' …' : '') + '</p>' : '') + '</section>';
+    h += listaAlunos(dados);
     h += '</div>';
     $('app').innerHTML = h;
-    $('app').querySelectorAll('tr.row').forEach(tr => tr.onclick = () => { S.turma = tr.dataset.t; S.aluno = tr.dataset.a; desenha(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    $('app').querySelectorAll('tr.row[data-turma]').forEach(tr => tr.onclick = () => { S.turma = tr.dataset.turma; S.aluno = ''; desenha(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    $('app').querySelectorAll('tr.row[data-a]').forEach(tr => tr.onclick = () => { S.turma = tr.dataset.t; S.aluno = tr.dataset.a; desenha(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
   }
 
   async function iniciar() {
     $('fTurma').onchange = e => { S.turma = e.target.value; S.aluno = ''; desenha(); };
     $('fFiltro').onchange = e => { S.filtro = e.target.value; desenha(); };
     $('fAluno').onchange = e => { S.aluno = e.target.value; desenha(); };
+    $('fStatus').onchange = e => { S.status = e.target.value; desenha(); };
+    $('fBusca').oninput = e => { S.busca = e.target.value; desenha(); };
     if (!window.supabase) return msg('Não foi possível carregar o login. Atualize a página.');
     const sb = window.supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, detectSessionInUrl: false, flowType: 'implicit' } });
     const { data } = await sb.auth.getSession();

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Resultados · Atividade individual</title>
-<link rel="stylesheet" href="../dash.css?v=1">
+<link rel="stylesheet" href="../dash.css?v=2">
 </head>
 <body>
 <div class="wrap">
@@ -15,11 +15,13 @@
 <div class="field"><label for="fTurma">Turma</label><select id="fTurma"></select></div>
 <div class="field"><label for="fFiltro">Bimestre do conteúdo</label><select id="fFiltro"></select></div>
 <div class="field"><label for="fAluno">Aluno</label><select id="fAluno"></select></div>
+<div class="field"><label for="fStatus">Situação</label><select id="fStatus"><option value="">Todos</option><option value="ok">Realizaram</option><option value="pend">Pendentes</option></select></div>
+<div class="field"><label for="fBusca">Buscar aluno</label><input id="fBusca" type="search" placeholder="Digite o nome" autocomplete="off"></div>
 </div>
 <main id="app"><div class="card msg">Carregando…</div></main>
 </div>
 <script>window.RES_CFG={fonte:'individual'};</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-<script src="../dash.js?v=1"></script>
+<script src="../dash.js?v=2"></script>
 </body>
 </html>
