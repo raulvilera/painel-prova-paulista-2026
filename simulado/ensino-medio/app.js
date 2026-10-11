@@ -116,6 +116,27 @@
     return node;
   }
 
+  /* Foto real da questão (Wikimedia Commons), entre o enunciado e as alternativas / o campo de resposta. */
+  function renderFoto(parent, foto, eager) {
+    const src = foto && safeUrl(foto.src);
+    if (!src) return;
+    const figure = element('figure', 'foto-questao');
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = foto.leg || 'Fotografia relacionada à questão';
+    img.loading = eager ? 'eager' : 'lazy';
+    img.decoding = 'async';
+    img.referrerPolicy = 'no-referrer';
+    const caption = element('figcaption', null, (foto.leg || '') + ' · Foto: ');
+    if (foto.url && safeUrl(foto.url)) {
+      const a = element('a', null, foto.cred || 'Wikimedia Commons');
+      a.href = safeUrl(foto.url); a.target = '_blank'; a.rel = 'noopener noreferrer';
+      caption.appendChild(a);
+    } else caption.appendChild(document.createTextNode(foto.cred || 'Wikimedia Commons'));
+    figure.append(img, caption);
+    parent.appendChild(figure);
+  }
+
   function clear(node) {
     while (node.firstChild) node.removeChild(node.firstChild);
   }
@@ -382,6 +403,7 @@
       article.appendChild(element('p', 'enunciado', question.enunciado));
       const table = renderTable(question.tabela);
       if (table) article.appendChild(table);
+      renderFoto(article, question.foto, questionIndex < 2);
       if (question.comando) article.appendChild(element('p', 'comando', question.comando));
       if (question.tipo === 'obj') {
         renderObjectiveChoices(article, question, objectiveIndex);
