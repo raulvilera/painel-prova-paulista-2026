@@ -69,10 +69,3 @@ Depois faça um novo deploy (Deployments → ⋯ → Redeploy) para as variávei
 ## 4. Se algo falhar
 - Sem as variáveis na Vercel, a página continua corrigindo e mostra "Tentar registrar novamente" + o comprovante para o aluno entregar.
 - `EM_SEGREDO` diferente nos dois lados → o Apps Script responde "não autorizado" e nada é gravado.
-
-## Atividade individual (Ensino Fundamental)
-Arquivos do Apps Script: **Recomp.gs**, **RecompCat.gs** e **Individual.gs** (além do Código.gs com as rotas `meuplano`, `indivalunos` e `enviarIndiv`). Depois: Implantar → Nova versão.
-1. No painel, escolha uma turma do Fundamental → **🎯 plano individual** → Copiar.
-2. Na planilha de recomposição, aba **Plano individual** (criada ao rodar `gerarBancoPlano`), cole em **A2**.
-3. No editor rode **gerarBancoPlano** (repita se parar), confira a aba **Banco** e rode **liberarBancoIndiv**.
-4. O aluno abre `/atividade-individual/`, escolhe turma e nome e recebe 3 descritores × (2 objetivas + 1 dissertativa). As respostas vão para a aba **Atividades individuais**.

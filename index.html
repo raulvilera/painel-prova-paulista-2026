@@ -803,42 +803,79 @@ async function plSalvar(k){
 }
 function plEsc(tn){ const g=PLAN.grade.find(x=>x.tn===tn); return g && /Lydia/.test(g.e) ? " (Lydia)" : ""; }
 
-/* ---------- atividade individual: plano por aluno (privado: vai para a planilha, não para o site) ---------- */
+/* ---------- atividade individual: o aluno escolhe turma e nome e recebe questões dos seus descritores com defasagem (bim. 1–3) + conteúdo do 4º bimestre ---------- */
 const INDV_NIV=["Abaixo do Básico","Básico","Adequado","Avançado"];
+function indvHash(s){ let h=0; for(const c of String(s)) h=(h*31+c.charCodeAt(0))>>>0; return h; }
 function planoIndiv(){
-  const linhas=[], sem=[]; let alunos=0;
-  const aluno=new Map();
+  const linhas=[], aluno=new Map();
   DATA.A.forEach(r=>{ if(/^[6-9]º ANO/.test(serieOf(r[0]))) aluno.set(r[0]+"|"+r[2],r); });
   aluno.forEach(r=>{
-    const t=r[0], tn=DATA.T[t].n, se=serieOf(t), id=aiTurmaLbl(tn)+plEsc(tn); alunos++;
+    const t=r[0], tn=DATA.T[t].n, se=serieOf(t), turma=aiTurmaLbl(tn)+plEsc(tn);
     const cand=[];
     [3,4,5].forEach((ix,i)=>{
       const v=r[ix]; if(v==null||v>=.75) return;
-      const ds=descs(t,r[1],i).map(d=>({k:se+"|"+(i+1)+"|"+d[3],d,gap:1-v,score:(1-v)*(1-d[4]),niv:lvOf(v),b:i+1})).filter(x=>ATIV[x.k]);
+      const ds=descs(t,r[1],i).map(d=>({k:se+"|"+(i+1)+"|"+d[3],gap:1-v,score:(1-v)*(1-d[4]),niv:lvOf(v)})).filter(x=>ATIV[x.k]);
       ds.sort((a,b)=>b.score-a.score); cand.push(ds);
     });
     const esc_=[]; cand.slice().sort((a,b)=>(b[0]?b[0].gap:0)-(a[0]?a[0].gap:0)).forEach(c=>{ if(c[0]&&esc_.length<3) esc_.push(c[0]); });
     if(esc_.length<3){ const resto=[].concat(...cand).filter(x=>!esc_.includes(x)).sort((a,b)=>b.score-a.score); while(esc_.length<3&&resto.length) esc_.push(resto.shift()); }
+    const vals=[r[3],r[4],r[5]].filter(v=>v!=null), media=vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:.5, nivMed=Math.max(0,lvOf(media));
+    const itens=esc_.map(x=>({k:x.k,niv:x.niv,t:"gap"}));
+    const aulas=((PLAN.seq["Ciências|"+se])||[]).filter(l=>l.s);
+    if(aulas.length){ const h=indvHash(r[2]); [0,Math.ceil(aulas.length/2)].forEach(o=>{ const l=aulas[(h+o)%aulas.length]; if(!itens.some(i=>i.k==="4B|"+se+"|"+l.n)) itens.push({k:"4B|"+se+"|"+l.n,niv:nivMed,t:"b4"}); }); }
     const resumo=[3,4,5].map((ix,i)=>`${i+1}º bim: ${r[ix]==null?"—":Math.round(r[ix]*100)+"% ("+INDV_NIV[lvOf(r[ix])]+")"}`).join(" · ");
-    if(!esc_.length){ sem.push(r[2]); return; }
-    const row=[id,r[2]]; for(let i=0;i<3;i++) row.push(esc_[i]?esc_[i].k:"", esc_[i]?esc_[i].niv:""); row.push(resumo);
-    linhas.push(row);
+    linhas.push({turma,nome:r[2],itens,resumo});
   });
-  return {linhas,sem,alunos};
+  return linhas;
+}
+async function indvTok(){ const {data}=await sb.auth.getSession(); return data&&data.session?data.session.access_token:""; }
+async function indvApi(acao,body,q){
+  const tok=await indvTok(), url="/api/individual?acao="+acao+(q||"");
+  const r=await fetch(url,body?{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+tok},body:JSON.stringify(Object.assign({acao},body))}:{headers:{Authorization:"Bearer "+tok}});
+  const j=await r.json().catch(()=>({ok:false,erro:"resposta inválida do servidor (HTTP "+r.status+")"})); if(!j.ok) throw new Error(j.erro||"erro"); return j;
 }
 function indvAbrir(){
-  const P=planoIndiv(), tsv=P.linhas.map(r=>r.join("\t")).join("\n");
-  const ov=document.createElement("div");
+  const L=planoIndiv(), ov=document.createElement("div");
   ov.style.cssText="position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px";
-  ov.innerHTML=`<div style="background:#fff;color:#1B2420;border-radius:14px;max-width:760px;width:100%;max-height:90vh;overflow:auto;padding:18px">
-    <h3 style="margin:0 0 6px">Plano individual · Ensino Fundamental</h3>
-    <p style="margin:0 0 8px;font-size:.92rem">${P.linhas.length} de ${P.alunos} alunos com descritores prioritários (até 3 por aluno, a partir dos níveis dos bimestres 1, 2 e 3 combinados com o desempenho da turma em cada descritor). ${P.sem.length?P.sem.length+" sem lacuna (todos os bimestres ≥ 75%) ou sem atividade no catálogo.":""}</p>
-    <ol style="font-size:.9rem;margin:0 0 8px 18px;padding:0"><li>Clique em <b>Copiar</b>.</li><li>Na planilha de recomposição, aba <b>Plano individual</b>, clique na célula <b>A2</b> e cole.</li><li>No Apps Script rode <b>gerarBancoPlano</b>, confira a aba Banco e rode <b>liberarBancoIndiv</b>.</li></ol>
-    <textarea readonly style="width:100%;height:150px;font:11px monospace">${esc(tsv)}</textarea>
-    <div style="margin-top:10px;display:flex;gap:8px"><button type="button" class="btn2 pri" id="indCop">Copiar</button><button type="button" class="btn2" id="indFec">Fechar</button><span id="indMsg" style="align-self:center;font-size:.9rem"></span></div></div>`;
+  ov.innerHTML=`<div style="background:#fff;color:#1B2420;border-radius:14px;max-width:820px;width:100%;max-height:90vh;overflow:auto;padding:18px">
+    <h3 style="margin:0 0 6px">Atividade individual · Ensino Fundamental</h3>
+    <p style="margin:0 0 10px;font-size:.92rem">Cada aluno recebe questões dos descritores em que teve defasagem nos bimestres 1, 2 e 3 (até 3) e de dois conteúdos do 4º bimestre cobrados no Saresp. O aluno só escolhe turma e nome em <b>/atividade-individual/</b>.</p>
+    <div style="border:1px solid #D5DCD7;border-radius:10px;padding:10px;margin-bottom:10px"><b>1. Plano dos alunos</b> · ${L.length} alunos<br><button type="button" class="btn2 pri" id="indPub" style="margin-top:6px">Publicar / atualizar plano</button> <span id="indPubM" style="font-size:.9rem"></span></div>
+    <div style="border:1px solid #D5DCD7;border-radius:10px;padding:10px"><b>2. Questões</b> <span id="indSt" style="font-size:.9rem">carregando…</span><br>
+      <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap"><button type="button" class="btn2 pri" id="indGer">Gerar as que faltam</button><button type="button" class="btn2" id="indLib">Liberar todas as geradas</button></div>
+      <div id="indLista" style="margin-top:8px;max-height:260px;overflow:auto;font-size:.85rem"></div></div>
+    <div style="margin-top:10px"><button type="button" class="btn2" id="indFec">Fechar</button></div></div>`;
   document.body.appendChild(ov);
-  ov.querySelector("#indFec").onclick=()=>ov.remove();
-  ov.querySelector("#indCop").onclick=async()=>{ const ta=ov.querySelector("textarea"); try{ await navigator.clipboard.writeText(tsv); }catch(e){ ta.select(); document.execCommand("copy"); } ov.querySelector("#indMsg").textContent="Copiado ✓"; };
+  const $=s=>ov.querySelector(s); let ST=[];
+  $("#indFec").onclick=()=>ov.remove();
+  async function atualiza(){
+    try{ const j=await indvApi("status"); ST=j.chaves;
+      const ger=ST.filter(x=>x.tem).length, lib=ST.filter(x=>x.liberada).length;
+      $("#indSt").textContent=`${ger} de ${ST.length} geradas · ${lib} liberadas`;
+      $("#indLista").innerHTML=ST.map(x=>`<div style="padding:3px 0;border-bottom:1px solid #eee"><span style="display:inline-block;width:14px">${x.liberada?"✅":x.tem?"🟡":"⚪"}</span> <b>${esc(x.serie)}º · ${x.bim==="4"?"4º bim":x.bim+"º bim"}</b> ${esc(x.nome)} — ${esc(x.desc).slice(0,110)} ${x.tem?`<button type="button" class="pl-skip" data-ver="${esc(x.k)}">ver</button>`:""}<div class="ver" data-v="${esc(x.k)}"></div></div>`).join("");
+    }catch(e){ $("#indSt").textContent="erro: "+e.message; }
+  }
+  atualiza();
+  $("#indLista").onclick=async e=>{ const b=e.target.closest("[data-ver]"); if(!b) return; const box=$("#indLista").querySelector(`.ver[data-v="${CSS.escape(b.dataset.ver)}"]`);
+    if(box.innerHTML){ box.innerHTML=""; return; } box.textContent="carregando…";
+    try{ const j=await indvApi("ver",null,"&k="+encodeURIComponent(b.dataset.ver));
+      box.innerHTML=(j.banco?j.banco.questoes:[]).map((q,i)=>`<div style="margin:6px 0;padding:6px;background:#F3F6F2;border-radius:8px"><b>${i+1}. ${esc(q.enunciado)}</b> ${esc(q.comando)}<br>${q.tipo==="obj"?q.alts.map((t,k)=>`<span style="${k===q.correta?"font-weight:700;color:#145A32":""}">${"ABCD"[k]}) ${esc(t)}</span>`).join("<br>")+"<br><i>"+esc(q.explicacao)+"</i>":"<i>Esperado: "+esc(q.ref)+"</i>"}</div>`).join("");
+    }catch(er){ box.textContent="erro: "+er.message; } };
+  $("#indPub").onclick=async()=>{
+    const m=$("#indPubM"); m.textContent="publicando…";
+    try{ for(let i=0;i<L.length;i+=80){ const lote=L.slice(i,i+80).map(x=>({turma:x.turma,nome:x.nome,itens:x.itens,resumo:x.resumo,atualizado:new Date().toISOString()}));
+        const {error}=await sb.from("indiv_plano").upsert(lote,{onConflict:"turma,nome"}); if(error) throw new Error(error.message); m.textContent=`publicando… ${Math.min(i+80,L.length)}/${L.length}`; }
+      m.textContent=`✓ ${L.length} alunos publicados`; }catch(e){ m.textContent="erro: "+e.message+" (as tabelas foram criadas com supabase/indiv.sql?)"; }
+  };
+  $("#indGer").onclick=async()=>{
+    const falta=ST.filter(x=>!x.tem); if(!falta.length){ $("#indSt").textContent+=" · nada a gerar"; return; }
+    const btn=$("#indGer"); btn.disabled=true; let feitas=0, falhas=0, i=0;
+    const worker=async()=>{ while(i<falta.length){ const x=falta[i++]; try{ await indvApi("gerar",{k:x.k}); }catch(e){ falhas++; } feitas++; $("#indSt").textContent=`gerando… ${feitas}/${falta.length}${falhas?" ("+falhas+" falhas)":""}`; } };
+    await Promise.all([worker(),worker(),worker()]); btn.disabled=false; await atualiza(); if(falhas) $("#indSt").textContent+=` · ${falhas} falharam: clique de novo para repetir`;
+  };
+  $("#indLib").onclick=async()=>{ const ks=ST.filter(x=>x.tem&&!x.liberada).map(x=>x.k); if(!ks.length) return;
+    if(!confirm(`Liberar ${ks.length} conjuntos de questões para os alunos? Confira antes (botão "ver") se quiser.`)) return;
+    try{ await indvApi("liberar",{ks,valor:true}); }catch(e){ $("#indSt").textContent="erro: "+e.message; return; } atualiza(); };
 }
 document.addEventListener("click",e=>{ if(e.target.closest("#indPlano")) indvAbrir(); });
 function plTnSel(){ return DATA && DATA.T[S.t] ? DATA.T[S.t].n : null; }
@@ -1157,7 +1194,7 @@ const VIEWS={ aluno:["Aluno","Desempenho por bimestre",alunoView], desc:["Descri
 
 function renderAll(){
   const seT=serieOf(S.t);
-  document.getElementById("cAtiv").innerHTML=simSerie(seT)?`<b>Atividades dos alunos · ${esc(DATA.T[S.t].n)}</b>${simBtn(seT)}${/^[6-9]º ANO/.test(serieOf(S.t))?` <button type="button" class="pl-skip" id="indPlano" title="Gera o plano individual (descritores prioritários de cada aluno) para colar na planilha">🎯 plano individual</button> <a class="pl-skip" style="text-decoration:none;display:inline-block" href="/atividade-individual/" target="_blank" rel="noopener">link do aluno</a>`:""}`:"";
+  document.getElementById("cAtiv").innerHTML=simSerie(seT)?`<b>Atividades dos alunos · ${esc(DATA.T[S.t].n)}</b>${simBtn(seT)}${/^[6-9]º ANO/.test(serieOf(S.t))?` <button type="button" class="pl-skip" id="indPlano" title="Publica o plano individual e gerencia as questões">🎯 atividade individual</button> <a class="pl-skip" style="text-decoration:none;display:inline-block" href="/atividade-individual/" target="_blank" rel="noopener">link do aluno</a>`:""}`:"";
   document.getElementById("cAluno").innerHTML=alunoView(false);
   document.getElementById("cDesc").innerHTML=descView(false);
   document.getElementById("cTurma").innerHTML=turmaView(false);
