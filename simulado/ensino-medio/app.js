@@ -240,7 +240,7 @@
     state.assessment = assessment;
     if (!assessment) {
       refs.iniciar.disabled = true;
-      refs.iniciar.hidden = false;
+      refs.iniciar.hidden = true;
       const chosen = refs.turma.value && refs.componente.value && refs.prova.value;
       text(refs.resumo, chosen ? 'A avaliação escolhida não está disponível neste banco.' : 'Selecione turma, componente e prova para ver a duração sugerida.');
       refs.resumo.className = 'resumo-avaliacao' + (chosen ? ' resumo-erro' : '');
@@ -828,7 +828,7 @@
     refs.componente.disabled = false;
     refs.prova.disabled = false;
     refs.nome.disabled = refs.nome.options.length < 2;
-    refs.iniciar.hidden = false;
+    refs.iniciar.hidden = true;
     refs.mudar.hidden = true;
     refs.iniciar.textContent = 'Iniciar treino';
     refs.provaSecao.hidden = true;
@@ -896,6 +896,19 @@
   refs.turma.addEventListener('change', onTurmaChange);
   refs.componente.addEventListener('change', onComponenteChange);
   refs.prova.addEventListener('change', onProvaChange);
+  /* Começa sozinho: assim que turma, componente, prova e nome estão escolhidos (o nome é obrigatório para registrar na planilha). */
+  function autoIniciar() {
+    if (state.started || state.submitting) return;
+    const assessment = selectedAssessment();
+    if (!assessment || validateAssessment(assessment)) return;
+    if (!alunoEscolhido()) {
+      if (refs.prova.value) showMessage('Agora escolha seu nome na lista para as questões carregarem.', 'informacao');
+      return;
+    }
+    startTraining({ preventDefault: function () {} });
+  }
+  refs.prova.addEventListener('change', function () { setTimeout(autoIniciar, 0); });
+  refs.nome.addEventListener('change', function () { hideMessage(); autoIniciar(); });
   refs.form.addEventListener('submit', startTraining);
   refs.enviar.addEventListener('click', sendAnswers);
   refs.mudar.addEventListener('click', changeAssessment);
