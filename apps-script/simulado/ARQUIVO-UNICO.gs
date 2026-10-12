@@ -1159,34 +1159,43 @@ function corrigirFormulasEM() {
 }
 
 
-/* Atividade individual (Fundamental): grava uma linha por envio na aba 'Individual · <turma>', com colunas por questão. */
+/* Atividade individual (Fundamental): grava uma linha por envio na aba 'Individual · <turma>', com colunas por questão,
+   células azuis (certo) e vermelhas (errado) e a justificativa de cada resposta. */
 function individualPlanilha_(p) {
   const segredo = PropertiesService.getScriptProperties().getProperty('EM_SEGREDO');
   if (!segredo || String(p.segredo || '') !== segredo) throw new Error('não autorizado');
-  const NQ = 12, lock = LockService.getScriptLock(); lock.waitLock(20000);
+  const NQ = 12, NC = 5, AZUL = '#c9ddf7', VERMELHO = '#f6c6c6';
+  const lock = LockService.getScriptLock(); lock.waitLock(20000);
   try {
     const ss = SpreadsheetApp.openById(PLANILHA_ID);
-    const aba = ('Individual · ' + String(p.turma || 'sem turma').replace(/[\[\]\*\?:\/\\]/g, ' ')).slice(0, 99);
+    const aba = ('Individual · ' + String(p.turma || 'sem turma').replace(/[\[\]\*\?:\/\\]/g, ' ')).slice(0, 90);
     let sh = ss.getSheetByName(aba);
     const cab = ['Data/hora', 'Turma', 'Aluno', 'Acertos (obj.)', 'Total obj.', 'Nota final', 'Status'];
-    for (let i = 1; i <= NQ; i++) cab.push('Q' + i + ' · Descritor', 'Q' + i + ' · Tipo', 'Q' + i + ' · Resposta do aluno', 'Q' + i + ' · Resultado');
-    if (sh && String(sh.getRange(1, 8).getValue()).indexOf('Detalhe') === 0) { sh.clear(); }   // layout antigo (teste): refaz
+    for (let i = 1; i <= NQ; i++) cab.push('Q' + i + ' · Descritor', 'Q' + i + ' · Tipo', 'Q' + i + ' · Resposta do aluno', 'Q' + i + ' · Resultado', 'Q' + i + ' · Justificativa (correção)');
+    if (sh && String(sh.getRange(1, 12).getValue()) !== 'Q1 · Justificativa (correção)') { sh.setName((aba + ' (antiga)').slice(0, 99)); sh = null; }   // layout antigo: guarda os dados e começa a aba nova
     if (!sh) sh = ss.insertSheet(aba);
     if (sh.getLastRow() === 0) { sh.getRange(1, 1, 1, cab.length).setValues([cab]).setFontWeight('bold'); sh.setFrozenRows(1); sh.setFrozenColumns(3); }
     const sanea = v => { const s = String(v == null ? '' : v); return /^[=+\-@\t\r]/.test(s) ? "'" + s : s; };
-    const L = 'ABCDEFGH', linha = [new Date(), sanea(p.turma), sanea(p.nome), p.acertos, p.total, p.nota == null ? '' : p.nota, sanea(p.status)];
+    const L = 'ABCDEFGH', linha = [new Date(), p.turma, p.nome, p.acertos, p.total, p.nota == null ? '' : p.nota, p.status], cor = {};
     const itens = Array.isArray(p.itens) ? p.itens : [];
     for (let i = 0; i < NQ; i++) {
-      const it = itens[i];
-      if (!it) { linha.push('', '', '', ''); continue; }
+      const it = itens[i], c0 = 8 + i * NC;
+      if (!it) { for (let k = 0; k < NC; k++) linha.push(''); continue; }
       if (it.tipo === 'obj') {
-        const resp = it.resp == null ? '(em branco)' : L.charAt(it.resp) + ') ' + (it.textoResp || '');
-        linha.push(sanea(String(it.desc || '').slice(0, 120)), 'Objetiva', sanea(resp.slice(0, 300)), it.resp == null ? 'em branco' : (it.acerto ? 'Certo' : 'Errado'));
+        const branco = it.resp == null, certo = !branco && !!it.acerto;
+        const resp = branco ? '(em branco)' : L.charAt(it.resp) + ') ' + (it.textoResp || '');
+        const just = (certo ? 'Correto. ' : 'Resposta correta: ' + L.charAt(it.letraCorreta) + ') ' + (it.textoCorreta || '') + '. ') + (it.explicacao || '');
+        linha.push(it.desc || '', 'Objetiva', resp, branco ? 'Errado (em branco)' : (certo ? 'Certo' : 'Errado'), just);
+        cor[c0 + 2] = cor[c0 + 3] = certo ? AZUL : VERMELHO;
       } else {
-        linha.push(sanea(String(it.desc || '').slice(0, 120)), 'Dissertativa', sanea(String(it.resp || '').slice(0, 1500)), 'Nota ' + (it.nota === '' || it.nota == null ? '—' : it.nota) + (it.comentario ? ' · ' + String(it.comentario).slice(0, 200) : ''));
+        const n = it.nota === '' || it.nota == null ? null : Number(it.nota), ok = n !== null && n >= 0.5;
+        linha.push(it.desc || '', 'Dissertativa', String(it.resp || '').slice(0, 1500), n === null ? 'Sem nota' : (ok ? 'Certo' : 'Errado') + ' · nota ' + n, it.comentario || '');
+        if (n !== null) cor[c0 + 2] = cor[c0 + 3] = ok ? AZUL : VERMELHO;
       }
     }
-    sh.appendRow(linha.map(v => typeof v === 'string' ? sanea(v.replace(/^'/, '')) : v));
+    sh.appendRow(linha.map(sanea).map((v, k) => (k === 0 || (k >= 3 && k <= 5 && typeof linha[k] === 'number')) ? linha[k] : v));
+    const r = sh.getLastRow();
+    Object.keys(cor).forEach(c => sh.getRange(r, Number(c)).setBackground(cor[c]));
     return { ok: true };
   } finally { lock.releaseLock(); }
 }

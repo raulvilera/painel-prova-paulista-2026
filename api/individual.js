@@ -220,7 +220,7 @@ module.exports = async function individual(req, res) {
       try {
         const url = process.env.EM_APPS_SCRIPT_URL || '', segredo = process.env.EM_SEGREDO || '';
         if (url && segredo) {
-          const itensP = det.map((d, i) => { const q = m.itens[i].q; return Object.assign({ desc: CAT[m.itens[i].k].desc, enun: String(q.enunciado || '').slice(0, 200), textoResp: d.tipo === 'obj' && d.resp != null && q.alts ? q.alts[d.resp] : undefined }, d); });
+          const itensP = det.map((d, i) => { const q = m.itens[i].q; return Object.assign({ desc: CAT[m.itens[i].k].desc, enun: String(q.enunciado || '').slice(0, 200), textoResp: d.tipo === 'obj' && d.resp != null && q.alts ? q.alts[d.resp] : undefined, textoCorreta: d.tipo === 'obj' && q.alts ? q.alts[q.correta] : undefined, letraCorreta: d.tipo === 'obj' ? q.correta : undefined, explicacao: d.tipo === 'obj' ? String(q.explicacao || '').slice(0, 400) : undefined }, d); });
           const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 12000);
           const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, redirect: 'follow', signal: ctl.signal, body: JSON.stringify({ acao: 'individual', segredo, turma: b.turma, nome: m.aluno, acertos: ac, total: nObj, nota, status, itens: itensP }) });
           clearTimeout(t); const j = await r.json(); planilha = !!(j && j.ok);
