@@ -55,19 +55,27 @@
     $('go').disabled = !falta.length;
   }
   async function gerar(){
-    $('go').disabled = true; parar = false;
-    for (const k of falta.slice()) {
-      if (parar) break;
-      let ok = false;
-      for (let t = 0; t < 4 && !ok; t++) {
-        try { await api('gerar', { k }); ok = true; log('✓ ' + k.slice(0, 70)); }
-        catch (e) { log('… tentando de novo (' + String(e.message).slice(0, 80) + ')'); await esperar(20000); }
-      }
-      if (!ok) log('✗ não gerou: ' + k.slice(0, 70));
+    $('go').disabled = true; $('go').textContent = 'Gerando…'; parar = false;
+    let pausa = 10000;   // pausa entre conjuntos: sobe quando a IA reclama (429) e desce quando está tudo certo
+    for (let rodada = 1; rodada <= 8 && !parar; rodada++) {
       await verificar();
-      await esperar(8000);   // pausa para não estourar o limite da IA
+      if (!falta.length) break;
+      if (rodada > 1) log('— Rodada ' + rodada + ': faltam ' + falta.length);
+      for (const k of falta.slice()) {
+        if (parar) break;
+        try { await api('gerar', { k }); log('✓ ' + k.slice(0, 70)); pausa = Math.max(10000, pausa - 5000); }
+        catch (e) {
+          const limite = /429|ocupada|limite/i.test(String(e.message));
+          pausa = limite ? Math.min(90000, pausa * 2) : pausa;
+          log((limite ? '⏳ IA no limite, esperando ' + Math.round(pausa / 1000) + 's' : '✗ falhou (' + String(e.message).slice(0, 60) + ')') + ' · ' + k.slice(0, 40));
+        }
+        await verificar();
+        await esperar(pausa);
+      }
     }
-    log('Fim desta rodada.'); await verificar();
+    await verificar();
+    log(falta.length ? 'Parou com ' + falta.length + ' faltando. Clique de novo para continuar.' : 'Tudo pronto!');
+    $('go').textContent = 'Gerar o que falta'; $('go').disabled = !falta.length;
   }
   (async function(){
     if (!window.supabase) { $('res').textContent = 'Não foi possível carregar o login. Atualize a página.'; return; }

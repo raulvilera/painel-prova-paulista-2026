@@ -40,7 +40,7 @@ async function gemini(prompt, temp) {
     const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/' + MODELO + ':generateContent?key=' + enc(GKEY), {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: temp, responseMimeType: 'application/json' } }) });
-    if (!r.ok) { ult = 'IA respondeu ' + r.status; await new Promise(x => setTimeout(x, 1500 * (t + 1))); continue; }
+    if (!r.ok) { ult = 'IA respondeu ' + r.status; const ra = Number(r.headers.get('retry-after')) || 0; await new Promise(x => setTimeout(x, r.status === 429 ? Math.min(12000, Math.max(4000, ra * 1000)) : 1500 * (t + 1))); continue; }
     try { const j = await r.json(); const txt = j.candidates[0].content.parts.map(x => x.text || '').join(''); return lerJSON(txt); }
     catch (e) { ult = String(e.message || e); }
   }
