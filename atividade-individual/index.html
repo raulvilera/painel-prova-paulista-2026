@@ -8,7 +8,7 @@
 <style>
   :root{--verde:#145A32;--fundo:#F3F6F2;--cartao:#FFFFFF;--tinta:#1B2420;--suave:#5A6660;--linha:#D5DCD7}
   *{box-sizing:border-box}
-  body{margin:0;background:var(--fundo);color:var(--tinta);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  body{margin:0;min-height:100vh;background:#1E5FA8 linear-gradient(180deg,#0A2150 0%,#164A94 45%,#5BA3E0 100%) fixed;color:var(--tinta);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
   .wrap{max-width:880px;margin:0 auto;padding:16px}
   header.cab{background:var(--verde);color:#fff;border-radius:16px;padding:18px 20px;margin-bottom:16px}
   .esc{font-weight:800;letter-spacing:.03em;font-size:1.1rem}
@@ -25,9 +25,9 @@
   .q .num{font-weight:800;color:var(--verde);margin-right:4px}
   .tag{font-size:.74rem;color:var(--suave);border:1px solid var(--linha);border-radius:999px;padding:1px 9px}
   .enun{margin:10px 0 6px}
-  .fig{margin:8px 0 12px;padding:10px 12px;border:1px solid #D5DDD5;border-radius:10px;background:#F6F9F6}
-  .fig figcaption{font-weight:700;font-size:.9rem;margin-bottom:8px}
-  .fig table{width:100%;border-collapse:collapse;font-size:.9rem}.fig th,.fig td{border:1px solid #CBD5CB;padding:6px 8px;text-align:left}.fig th{background:#E3ECE3}
+  .infog{margin:8px 0 12px;padding:10px 12px;border:1px solid #D5DDD5;border-radius:10px;background:#F6F9F6}
+  .infog figcaption{font-weight:700;font-size:.9rem;margin-bottom:8px}
+  .infog table{width:100%;border-collapse:collapse;font-size:.9rem}.infog th,.infog td{border:1px solid #CBD5CB;padding:6px 8px;text-align:left}.infog th{background:#E3ECE3}
   .bars .b{display:grid;grid-template-columns:minmax(80px,32%) 1fr auto;gap:8px;align-items:center;margin:5px 0;font-size:.88rem}
   .bars .bt{height:16px;background:#E3ECE3;border-radius:4px;overflow:hidden}.bars .bt i{display:block;height:100%;background:#2E7D6B}
   .steps{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;counter-reset:s}
@@ -49,7 +49,7 @@
   .msg{margin:12px 0;padding:12px 14px;border-radius:12px;display:none}
   .msg.ok{display:block;background:#E3F1E7;border:1px solid #9FCDAE}
   .msg.erro{display:block;background:#FBE6E6;border:1px solid #E3A3A3}
-  .vazio{text-align:center;color:var(--suave);padding:30px 10px}
+  .vazio{text-align:center;color:#fff;padding:30px 10px}
   .foto{margin:10px 0 6px;border-radius:12px;overflow:hidden;border:1px solid var(--linha);background:#fff}
   .foto img{display:block;width:100%;max-height:340px;object-fit:cover;background:#E8ECE8}
   .foto figcaption{font-size:.82rem;color:var(--suave);padding:6px 10px}
@@ -133,12 +133,12 @@
   function figura(f){
     if(!f) return '';
     const cap = f.titulo ? `<figcaption>${esc(f.titulo)}</figcaption>` : '';
-    if(f.tipo === 'tabela') return `<figure class="fig">${cap}<table><thead><tr>${f.colunas.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${f.linhas.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></figure>`;
+    if(f.tipo === 'tabela') return `<figure class="infog">${cap}<table><thead><tr>${f.colunas.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${f.linhas.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></figure>`;
     if(f.tipo === 'barras'){
       const max = Math.max(...f.itens.map(i => i.valor)) || 1;
-      return `<figure class="fig">${cap}<div class="bars" role="img" aria-label="${esc(f.titulo || 'Gráfico de barras')}">${f.itens.map(i => `<div class="b"><span class="bn">${esc(i.rotulo)}</span><span class="bt"><i style="width:${Math.max(3, i.valor / max * 100)}%"></i></span><span class="bv">${esc(String(i.valor).replace('.', ','))}${f.unidade ? ' ' + esc(f.unidade) : ''}</span></div>`).join('')}</div></figure>`;
+      return `<figure class="infog">${cap}<div class="bars" role="img" aria-label="${esc(f.titulo || 'Gráfico de barras')}">${f.itens.map(i => `<div class="b"><span class="bn">${esc(i.rotulo)}</span><span class="bt"><i style="width:${Math.max(3, i.valor / max * 100)}%"></i></span><span class="bv">${esc(String(i.valor).replace('.', ','))}${f.unidade ? ' ' + esc(f.unidade) : ''}</span></div>`).join('')}</div></figure>`;
     }
-    if(f.tipo === 'etapas') return `<figure class="fig">${cap}<ol class="steps">${f.etapas.map(e => `<li>${esc(e)}</li>`).join('')}</ol></figure>`;
+    if(f.tipo === 'etapas') return `<figure class="infog">${cap}<ol class="steps">${f.etapas.map(e => `<li>${esc(e)}</li>`).join('')}</ol></figure>`;
     return '';
   }
   function desenhar(){
