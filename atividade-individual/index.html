@@ -25,6 +25,14 @@
   .q .num{font-weight:800;color:var(--verde);margin-right:4px}
   .tag{font-size:.74rem;color:var(--suave);border:1px solid var(--linha);border-radius:999px;padding:1px 9px}
   .enun{margin:10px 0 6px}
+  .fig{margin:8px 0 12px;padding:10px 12px;border:1px solid #D5DDD5;border-radius:10px;background:#F6F9F6}
+  .fig figcaption{font-weight:700;font-size:.9rem;margin-bottom:8px}
+  .fig table{width:100%;border-collapse:collapse;font-size:.9rem}.fig th,.fig td{border:1px solid #CBD5CB;padding:6px 8px;text-align:left}.fig th{background:#E3ECE3}
+  .bars .b{display:grid;grid-template-columns:minmax(80px,32%) 1fr auto;gap:8px;align-items:center;margin:5px 0;font-size:.88rem}
+  .bars .bt{height:16px;background:#E3ECE3;border-radius:4px;overflow:hidden}.bars .bt i{display:block;height:100%;background:#2E7D6B}
+  .steps{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;counter-reset:s}
+  .steps li{counter-increment:s;flex:1 1 130px;position:relative;padding:8px 10px 8px 34px;background:#fff;border:1px solid #CBD5CB;border-radius:8px;font-size:.88rem}
+  .steps li::before{content:counter(s);position:absolute;left:8px;top:8px;width:20px;height:20px;border-radius:50%;background:#2E7D6B;color:#fff;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
   .fig{margin:10px 0 14px;background:#FAFBFA;border:1px solid var(--linha);border-radius:12px;padding:8px;display:flex;justify-content:center}
   .fig svg{width:100%;max-width:560px;height:auto;display:block}
   .cmd{font-weight:700;margin:0 0 10px}
@@ -121,11 +129,24 @@
       desenhar();
     }).catch(e => { $('#qs').innerHTML = `<p class="vazio">Não foi possível abrir a atividade: ${esc(falha(e))}.</p>`; });
   };
+  /* infográfico opcional da questão (tabela, barras ou etapas), desenhado a partir de dados validados no servidor */
+  function figura(f){
+    if(!f) return '';
+    const cap = f.titulo ? `<figcaption>${esc(f.titulo)}</figcaption>` : '';
+    if(f.tipo === 'tabela') return `<figure class="fig">${cap}<table><thead><tr>${f.colunas.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${f.linhas.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></figure>`;
+    if(f.tipo === 'barras'){
+      const max = Math.max(...f.itens.map(i => i.valor)) || 1;
+      return `<figure class="fig">${cap}<div class="bars" role="img" aria-label="${esc(f.titulo || 'Gráfico de barras')}">${f.itens.map(i => `<div class="b"><span class="bn">${esc(i.rotulo)}</span><span class="bt"><i style="width:${Math.max(3, i.valor / max * 100)}%"></i></span><span class="bv">${esc(String(i.valor).replace('.', ','))}${f.unidade ? ' ' + esc(f.unidade) : ''}</span></div>`).join('')}</div></figure>`;
+    }
+    if(f.tipo === 'etapas') return `<figure class="fig">${cap}<ol class="steps">${f.etapas.map(e => `<li>${esc(e)}</li>`).join('')}</ol></figure>`;
+    return '';
+  }
   function desenhar(){
     $('#qs').innerHTML = Q.map((q, i) => `
       <article class="q" id="q${i}">
         <div class="top"><span class="num">Questão ${i+1}</span><span class="tag">${q.tipo === 'obj' ? 'Objetiva' : 'Dissertativa'}</span></div>
         <p class="enun">${esc(q.enunciado)}</p>
+        ${figura(q.figura)}
         <p class="cmd">${esc(q.comando)}</p>
         ${q.tipo === 'obj'
           ? `<div class="alts" role="radiogroup" aria-label="Alternativas da questão ${i+1}">${q.alts.map((t, k) => `<button type="button" class="alternativa" role="radio" aria-checked="false" data-q="${i}" data-k="${k}"><span class="l">${'ABCD'[k]}</span><span>${esc(t)}</span></button>`).join('')}</div>`

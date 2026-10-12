@@ -34,22 +34,45 @@ async function gemini(prompt, temp) {
   }
   throw new Error(ult);
 }
+/* Figura opcional (infográfico) de uma questão: a IA só descreve dados simples; aqui o formato é validado e a página desenha. */
+function limpaFigura(f) {
+  if (!f || typeof f !== 'object') return null;
+  const t = x => String(x == null ? '' : x).replace(/\s+/g, ' ').trim().slice(0, 90), titulo = t(f.titulo);
+  if (f.tipo === 'tabela') {
+    const colunas = (Array.isArray(f.colunas) ? f.colunas : []).slice(0, 4).map(t);
+    const linhas = (Array.isArray(f.linhas) ? f.linhas : []).slice(0, 6).map(r => (Array.isArray(r) ? r : []).map(t));
+    if (colunas.length < 2 || linhas.length < 2 || linhas.some(r => r.length !== colunas.length)) return null;
+    return { tipo: 'tabela', titulo, colunas, linhas };
+  }
+  if (f.tipo === 'barras') {
+    const itens = (Array.isArray(f.itens) ? f.itens : []).slice(0, 6).map(i => ({ rotulo: t(i && i.rotulo), valor: Number(i && i.valor) })).filter(i => i.rotulo && isFinite(i.valor) && i.valor >= 0);
+    if (itens.length < 2 || itens.every(i => i.valor === 0)) return null;
+    return { tipo: 'barras', titulo, unidade: t(f.unidade), itens };
+  }
+  if (f.tipo === 'etapas') {
+    const etapas = (Array.isArray(f.etapas) ? f.etapas : []).slice(0, 6).map(t).filter(Boolean);
+    return etapas.length >= 3 ? { tipo: 'etapas', titulo, etapas } : null;
+  }
+  return null;
+}
 async function gerarQuestoes(k) {
   const c = CAT[k]; if (!c) throw new Error('Chave desconhecida');
   const o = await gemini(
     'Você é especialista em avaliação de Ciências do Ensino Fundamental (SEDUC-SP, Guia Priorizado 2026, SARESP).\n' +
     'Crie 10 questões para alunos do ' + c.serie + 'º ano: as 5 primeiras OBJETIVAS (4 alternativas, só 1 correta, distratores com erros conceituais típicos) e as 5 últimas DISSERTATIVAS (resposta curta).\n' +
     'Progressão: objetivas 1–2 e dissertativas 1–2 de reconhecer/identificar (Abaixo do Básico); objetivas 3–4 e dissertativa 3 de aplicar/relacionar; objetiva 5 e dissertativas 4–5 de analisar/justificar.\n' +
-    'Contextos do cotidiano de alunos de escola pública paulista; de preferência ligados a fatos reais. Linguagem simples, enunciados com no máximo 3 linhas. Sem imagens: tudo respondível só com o texto.\n\n' +
+    'Contextos do cotidiano de alunos de escola pública paulista; de preferência ligados a fatos reais. Linguagem simples, enunciados com no máximo 3 linhas. Cada questão pode ter uma "figura" (infográfico simples) que ajude a compreender o enunciado; use null quando não houver ganho real.\n\n' +
     'CONTEÚDO/DESCRITOR: ' + c.desc + '\nHABILIDADE: ' + c.hab + ' — ' + c.habTxt + '\nAULA/ATIVIDADE DE REFERÊNCIA: "' + c.nome + '". ' + (c.concreta || '') + '\n\n' +
     'Responda APENAS em JSON: {"questoes":[{"tipo":"obj","enunciado":"...","comando":"...","alts":["...","...","...","..."],"correta":0,"explicacao":"..."},{"tipo":"dis","enunciado":"...","comando":"...","ref":"resposta esperada","conceitos":["...","..."]}]}\n' +
-    'Regras: "correta" é o índice (0 a 3); varie a posição da correta; não escreva letras (A, B...) dentro das alternativas.', 0.5);
+    'Regras: "correta" é o índice (0 a 3); varie a posição da correta; não escreva letras (A, B...) dentro das alternativas.\n' +
+    'FIGURA (opcional, campo "figura" em cada questão): um destes formatos, ou null: {"tipo":"tabela","titulo":"...","colunas":["...","..."],"linhas":[["...","..."],["...","..."]]} | {"tipo":"barras","titulo":"...","unidade":"...","itens":[{"rotulo":"...","valor":0}]} | {"tipo":"etapas","titulo":"...","etapas":["...","...","..."]}. ' +
+    'Regras da figura: só dados e situações que já estão no enunciado, dentro do contexto do conteúdo; NUNCA revele nem sugira a resposta, nem destaque uma alternativa; rótulos neutros e curtos, adequados à idade do ' + c.serie + 'º ano; cientificamente corretos; números plausíveis e simples (se forem de um experimento fictício, diga no título "Dados do experimento"); não use "etapas" quando a questão pedir para ordenar ou explicar o processo; no máximo 6 itens, linhas ou etapas.', 0.5);
   const Q = o.questoes; if (!Array.isArray(Q)) throw new Error('formato inválido');
   const limpa = s => String(s || '').replace(/^\s*[A-Da-d][\)\.]\s+/, '').trim();
   const obj = Q.filter(q => q && q.tipo === 'obj').slice(0, 5), dis = Q.filter(q => q && q.tipo === 'dis').slice(0, 5);
   if (obj.length < 5 || dis.length < 5) throw new Error('faltam questões (' + obj.length + ' obj, ' + dis.length + ' dis)');
-  const O = obj.map(q => { const alts = (q.alts || []).slice(0, 4).map(limpa), cor = Number(q.correta); if (alts.length !== 4 || !(cor >= 0 && cor <= 3) || !q.enunciado) throw new Error('objetiva incompleta'); return { tipo: 'obj', enunciado: String(q.enunciado), comando: String(q.comando || ''), alts, correta: cor, explicacao: String(q.explicacao || '') }; });
-  const D = dis.map(q => { if (!q.enunciado) throw new Error('dissertativa incompleta'); return { tipo: 'dis', enunciado: String(q.enunciado), comando: String(q.comando || ''), ref: String(q.ref || ''), conceitos: (q.conceitos || []).map(String).slice(0, 4) }; });
+  const O = obj.map(q => { const alts = (q.alts || []).slice(0, 4).map(limpa), cor = Number(q.correta); if (alts.length !== 4 || !(cor >= 0 && cor <= 3) || !q.enunciado) throw new Error('objetiva incompleta'); return { tipo: 'obj', enunciado: String(q.enunciado), comando: String(q.comando || ''), alts, correta: cor, explicacao: String(q.explicacao || ''), figura: limpaFigura(q.figura) }; });
+  const D = dis.map(q => { if (!q.enunciado) throw new Error('dissertativa incompleta'); return { tipo: 'dis', enunciado: String(q.enunciado), comando: String(q.comando || ''), ref: String(q.ref || ''), conceitos: (q.conceitos || []).map(String).slice(0, 4), figura: limpaFigura(q.figura) }; });
   return O.concat(D);
 }
 async function corrigir(q, resposta, k) {
@@ -113,7 +136,7 @@ module.exports = async function individual(req, res) {
     if (req.method === 'GET' && acao === 'atividade') {
       const m = await montar(String(q.turma || ''), String(q.nome || ''), true); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
       return ok({ nome: m.aluno, aviso: m.itens.length ? '' : (m.falhou ? 'Estamos preparando suas questões. Tente de novo em 1 minuto.' : 'Ainda não há atividade para você. Fale com o professor.'),
-        itens: m.itens.map(i => ({ desc: i.desc, tipo: i.q.tipo, enunciado: i.q.enunciado, comando: i.q.comando, alts: i.q.tipo === 'obj' ? i.q.alts : [] })) });
+        itens: m.itens.map(i => ({ desc: i.desc, tipo: i.q.tipo, enunciado: i.q.enunciado, comando: i.q.comando, figura: i.q.figura || null, alts: i.q.tipo === 'obj' ? i.q.alts : [] })) });
     }
     if (req.method === 'POST' && acao === 'enviar') {
       const m = await montar(String(b.turma || ''), String(b.nome || ''), false); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
