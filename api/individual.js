@@ -74,8 +74,10 @@ async function gerarQuestoes(k) {
   const todas = O.concat(D);
   let diag;   // diagnóstico guardado junto do conjunto (não aparece para o aluno)
   for (let t = 0; t < 2 && !(diag && diag.erro === undefined); t++) {
+    if (t) await new Promise(x => setTimeout(x, 6000));
     try { diag = await adicionarFiguras(todas, c); } catch (e) { diag = { erro: String(e.message || e).slice(0, 160) }; }   // sem figuras é melhor que questão com figura errada
   }
+  if (diag && /\b(429|5\d\d)\b/.test(String(diag.erro || ''))) throw new Error('figuras: IA ocupada (' + diag.erro + ')');   // limite temporário: não guarda o conjunto sem figuras; o aluno tenta de novo em 1 minuto
   todas[0].figDiag = diag;
   return todas;
 }
