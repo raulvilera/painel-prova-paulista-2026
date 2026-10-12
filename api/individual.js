@@ -72,7 +72,11 @@ async function gerarQuestoes(k) {
   const O = obj.map(q => { const alts = (q.alts || []).slice(0, 4).map(limpa), cor = Number(q.correta); if (alts.length !== 4 || !(cor >= 0 && cor <= 3) || !q.enunciado) throw new Error('objetiva incompleta'); return { tipo: 'obj', enunciado: String(q.enunciado), comando: String(q.comando || ''), alts, correta: cor, explicacao: String(q.explicacao || ''), figura: null }; });
   const D = dis.map(q => { if (!q.enunciado) throw new Error('dissertativa incompleta'); return { tipo: 'dis', enunciado: String(q.enunciado), comando: String(q.comando || ''), ref: String(q.ref || ''), conceitos: (q.conceitos || []).map(String).slice(0, 4), figura: null }; });
   const todas = O.concat(D);
-  try { await adicionarFiguras(todas, c); } catch (e) { /* sem figuras é melhor que questão com figura errada */ }
+  let diag;   // diagnóstico guardado junto do conjunto (não aparece para o aluno)
+  for (let t = 0; t < 2 && !(diag && diag.erro === undefined); t++) {
+    try { diag = await adicionarFiguras(todas, c); } catch (e) { diag = { erro: String(e.message || e).slice(0, 160) }; }   // sem figuras é melhor que questão com figura errada
+  }
+  todas[0].figDiag = diag;
   return todas;
 }
 /* Segunda etapa: uma chamada só para desenhar as figuras das 10 questões e outra para revisar se alguma entrega a resposta. */
@@ -88,12 +92,13 @@ async function adicionarFiguras(Q, c) {
   const F = Q.map(() => null);
   (Array.isArray(o.figuras) ? o.figuras : []).forEach(x => { const i = Number(x && x.i); if (i >= 0 && i < Q.length) F[i] = limpaFigura(x.figura); });
   const com = F.map((f, i) => f ? { i, enunciado: Q[i].enunciado, comando: Q[i].comando, resposta_correta: Q[i].tipo === 'obj' ? Q[i].alts[Q[i].correta] : Q[i].ref, figura: f } : null).filter(Boolean);
-  if (!com.length) return;
+  if (!com.length) return { desenhadas: 0 };
   const r = await gemini(
     'Você é revisor pedagógico de Ciências (Ensino Fundamental). Para cada item, diga se a figura é ADEQUADA. Reprove (ok=false) se a figura: (a) contém ou deixa óbvia a resposta correta, o conceito pedido ou uma conclusão; (b) repete texto de uma alternativa; (c) não tem relação direta com o enunciado; (d) tem erro científico ou é inadequada para a idade.\n\nITENS: ' + JSON.stringify(com) +
     '\n\nResponda APENAS em JSON: {"revisao":[{"i":0,"ok":true}, ...]}', 0.1);
   const ok = new Set((Array.isArray(r.revisao) ? r.revisao : []).filter(x => x && x.ok === true).map(x => Number(x.i)));
   F.forEach((f, i) => { if (f && ok.has(i)) Q[i].figura = f; });
+  return { desenhadas: com.length, aprovadas: Q.filter(q => q.figura).length, revisao: (Array.isArray(r.revisao) ? r.revisao : []).map(x => x && x.ok === true ? 1 : 0).join('') };
 }
 async function corrigir(q, resposta, k) {
   const c = CAT[k] || {};
