@@ -1159,15 +1159,16 @@ function corrigirFormulasEM() {
 }
 
 
-/* Atividade individual (Fundamental): grava uma linha por envio na aba 'Atividade individual'. */
+/* Atividade individual (Fundamental): grava uma linha por envio na aba 'Individual · <turma>'. */
 function individualPlanilha_(p) {
   const segredo = PropertiesService.getScriptProperties().getProperty('EM_SEGREDO');
   if (!segredo || String(p.segredo || '') !== segredo) throw new Error('não autorizado');
   const lock = LockService.getScriptLock(); lock.waitLock(20000);
   try {
     const ss = SpreadsheetApp.openById(PLANILHA_ID);
-    let sh = ss.getSheetByName('Atividade individual');
-    if (!sh) { sh = ss.insertSheet('Atividade individual'); sh.appendRow(['Data/hora', 'Turma', 'Aluno', 'Acertos (obj.)', 'Total obj.', 'Nota final', 'Status', 'Detalhe (descritor | tipo | resposta | acerto/nota)']); sh.setFrozenRows(1); sh.getRange(1, 1, 1, 8).setFontWeight('bold'); }
+    const aba = ('Individual · ' + String(p.turma || 'sem turma').replace(/[\[\]\*\?:\/\\]/g, ' ')).slice(0, 99);   // uma aba por turma
+    let sh = ss.getSheetByName(aba);
+    if (!sh) { sh = ss.insertSheet(aba); sh.appendRow(['Data/hora', 'Turma', 'Aluno', 'Acertos (obj.)', 'Total obj.', 'Nota final', 'Status', 'Detalhe (descritor | tipo | resposta | acerto/nota)']); sh.setFrozenRows(1); sh.getRange(1, 1, 1, 8).setFontWeight('bold'); }
     const sanea = v => { const s = String(v == null ? '' : v); return /^[=+\-@\t\r]/.test(s) ? "'" + s : s; };
     const det = (Array.isArray(p.itens) ? p.itens : []).map(i => [String(i.desc || '').slice(0, 80), i.tipo, String(i.resp == null ? '' : i.resp).slice(0, 300), i.tipo === 'obj' ? (i.acerto ? 'certo' : (i.resp == null ? 'em branco' : 'errado')) : i.nota].join(' | ')).join('\n');
     sh.appendRow([new Date(), sanea(p.turma), sanea(p.nome), p.acertos, p.total, p.nota == null ? '' : p.nota, sanea(p.status), sanea(det).slice(0, 45000)]);
