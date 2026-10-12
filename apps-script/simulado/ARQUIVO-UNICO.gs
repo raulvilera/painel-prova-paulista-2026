@@ -1175,6 +1175,7 @@ function individualPlanilha_(p) {
     if (sh && String(sh.getRange(1, 12).getValue()) !== 'Q1 · Justificativa (correção)') { sh.setName((aba + ' (antiga)').slice(0, 99)); sh = null; }   // layout antigo: guarda os dados e começa a aba nova
     if (!sh) sh = ss.insertSheet(aba);
     if (sh.getLastRow() === 0) { sh.getRange(1, 1, 1, cab.length).setValues([cab]).setFontWeight('bold'); sh.setFrozenRows(1); sh.setFrozenColumns(3); }
+    formatarIndividual_(sh);   // regras de formatação condicional (azul = certo, vermelho = errado)
     const sanea = v => { const s = String(v == null ? '' : v); return /^[=+\-@\t\r]/.test(s) ? "'" + s : s; };
     const L = 'ABCDEFGH', linha = [new Date(), p.turma, p.nome, p.acertos, p.total, p.nota == null ? '' : p.nota, p.status], cor = {};
     const itens = Array.isArray(p.itens) ? p.itens : [];
@@ -1194,8 +1195,37 @@ function individualPlanilha_(p) {
       }
     }
     sh.appendRow(linha.map(sanea).map((v, k) => (k === 0 || (k >= 3 && k <= 5 && typeof linha[k] === 'number')) ? linha[k] : v));
-    const r = sh.getLastRow();
-    Object.keys(cor).forEach(c => sh.getRange(r, Number(c)).setBackground(cor[c]));
     return { ok: true };
   } finally { lock.releaseLock(); }
+}
+
+/* Formatação condicional da aba da turma: Resposta + Resultado ficam azuis quando o resultado começa com "Certo" e vermelhos quando começa com "Errado".
+   Cria as regras uma única vez por aba. */
+function formatarIndividual_(sh) {
+  const NQ = 12, NC = 5, AZUL = '#c9ddf7', VERMELHO = '#f6c6c6';
+  const col = n => { let s = ''; while (n > 0) { const m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = Math.floor((n - 1) / 26); } return s; };
+  const regras = sh.getConditionalFormatRules();
+  if (regras.some(r => { const c = r.getBooleanCondition(); return c && String(c.getCriteriaValues()[0] || '').indexOf('"Certo"') > -1; })) return;
+  const novas = [];
+  for (let i = 0; i < NQ; i++) {
+    const cResp = 8 + i * NC + 2, cRes = cResp + 1, Lt = col(cRes), rng = sh.getRange(2, cResp, 2000, 2);
+    novas.push(SpreadsheetApp.newConditionalFormatRule().whenFormulaSatisfied('=LEFT($' + Lt + '2,5)="Certo"').setBackground(AZUL).setRanges([rng]).build());
+    novas.push(SpreadsheetApp.newConditionalFormatRule().whenFormulaSatisfied('=LEFT($' + Lt + '2,6)="Errado"').setBackground(VERMELHO).setRanges([rng]).build());
+  }
+  sh.setConditionalFormatRules(regras.concat(novas));
+}
+
+/* Rode UMA vez no editor para testar: cria a aba "Individual · TESTE" com um aluno fictício (pode apagar a aba depois). */
+function testarIndividual() {
+  const r = individualPlanilha_({
+    segredo: PropertiesService.getScriptProperties().getProperty('EM_SEGREDO'),
+    turma: 'TESTE', nome: 'ALUNO DE TESTE', acertos: 1, total: 2, nota: 6.5, status: 'corrigido automático (IA indisponível)',
+    itens: [
+      { desc: 'Descritor de teste 1', tipo: 'obj', resp: 1, acerto: true, textoResp: 'Alternativa certa', textoCorreta: 'Alternativa certa', letraCorreta: 1, explicacao: 'Explicação de por que está certa.' },
+      { desc: 'Descritor de teste 2', tipo: 'obj', resp: 0, acerto: false, textoResp: 'Alternativa errada', textoCorreta: 'Alternativa certa', letraCorreta: 2, explicacao: 'Explicação de por que a outra está certa.' },
+      { desc: 'Descritor de teste 3', tipo: 'dis', resp: 'Resposta escrita pelo aluno', nota: 0.8, comentario: 'Boa resposta.' },
+      { desc: 'Descritor de teste 4', tipo: 'dis', resp: 'não sei', nota: 0.1, comentario: 'Faltou explicar.' }
+    ]
+  });
+  Logger.log(JSON.stringify(r) + ' - veja a aba "Individual · TESTE"');
 }
