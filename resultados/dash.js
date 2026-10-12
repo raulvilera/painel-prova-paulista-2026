@@ -24,14 +24,16 @@
     });
     return [...ult.values()].map(({ r, turma, aval }) => {
       const itens = [];
-      (r.itens || []).forEach(i => {
+      (r.itens || []).forEach((i, ix) => {
         let v = null;
         if (i.tipo === 'obj') v = i.resp === null || i.resp === undefined || i.resp === '' ? 0 : (i.acerto ? 1 : 0);
         else if (typeof i.nota === 'number') v = Math.max(0, Math.min(1, i.nota));
-        if (v === null) return;
         const m = j.meta[CFG.fonte === 'em' ? i.id : i.k] || {};
-        if (CFG.fonte === 'em') itens.push({ v, ae: m.ae ? m.ae + (m.hab ? ' · ' + m.hab : '') : (m.hab || 'Mapa do Provão'), desc: m.objeto || '—', bim: '', rot: m.objeto });
-        else itens.push({ v, ae: (m.hab ? m.hab + ' · ' : '') + (m.ae || '—'), desc: m.desc || '—', bim: m.bim || '', rot: m.desc });
+        const q = { n: m.n || ix + 1, tipo: i.tipo, enun: m.enun || '', cor: m.cor || '', coment: i.comentario || '', nota: typeof i.nota === 'number' ? i.nota : null,
+          marcou: i.tipo === 'obj' ? (typeof i.resp === 'number' ? 'ABCDE'[i.resp] : (i.resp || '')) : '', texto: i.tipo === 'dis' ? String(i.resp || i.resposta || '') : '' };
+        if (v === null) return;   // dissertativa ainda sem nota: entra assim que for corrigida
+        if (CFG.fonte === 'em') itens.push({ v, q, ae: m.ae ? m.ae + (m.hab ? ' · ' + m.hab : '') : (m.hab || 'Mapa do Provão'), desc: m.objeto || '—', bim: '', rot: m.objeto });
+        else itens.push({ v, q, ae: (m.hab ? m.hab + ' · ' : '') + (m.ae || '—'), desc: m.desc || '—', bim: m.bim || '', rot: m.desc });
       });
       const parcial = (r.itens || []).some(i => i.tipo === 'dis' && typeof i.nota !== 'number');
       const rotAval = CFG.fonte === 'em' ? [r.componente, r.prova, (r.avaliacao.split('-')[1] || '') + 'ª série'].filter(Boolean).join(' · ') : (CFG.fonte === 'simulado' ? 'Simulado SARESP' : 'Atividade individual');
@@ -97,6 +99,28 @@
   }
 
   /* gráfico do aluno: descritores/aprendizagens atingidos (≥50%) e não atingidos (<50%), com a média da turma como referência */
+  /* questões do aluno: acertou/errou, o que respondeu, descritor e aprendizagem essencial */
+  function questoes(a) {
+    const L = a.itens.filter(i => i.q).slice().sort((x, y) => x.q.n - y.q.n);
+    if (!L.length) return '';
+    const linha = i => {
+      const q = i.q; let st, tx;
+      if (q.tipo === 'obj') {
+        const ok = i.v === 1; st = ok ? 'ok' : 'er';
+        tx = !q.marcou ? 'Não respondeu' : 'Marcou <b>' + esc(q.marcou) + '</b>' + (q.cor ? ' · Correta <b>' + esc(q.cor) + '</b>' : '');
+      } else {
+        st = i.v >= .7 ? 'ok' : i.v >= .4 ? 'pa' : 'er';
+        tx = 'Dissertativa · nota <b>' + nf(i.v) + '</b> de 1' + (q.texto ? '' : ' · sem resposta');
+      }
+      return '<div class="qr"><span class="qb ' + st + '" title="' + (st === 'ok' ? 'Acertou' : st === 'pa' ? 'Parcial' : 'Errou') + '">' + (st === 'ok' ? '✓' : st === 'pa' ? '~' : '✗') + '</span><div class="qc">' +
+        '<div><b>Questão ' + q.n + '</b> <span class="muted">· ' + tx + '</span></div>' +
+        '<div class="qd"><b>Aprendizagem/habilidade:</b> ' + esc(i.ae) + '</div><div class="qd"><b>Descritor:</b> ' + esc(i.desc) + '</div>' +
+        (q.enun ? '<div class="qe">' + esc(q.enun) + (q.enun.length >= 255 ? '…' : '') + '</div>' : '') +
+        (q.texto ? '<blockquote class="qt">' + esc(q.texto) + '</blockquote>' : '') + (q.coment ? '<div class="qd muted"><b>Comentário da correção:</b> ' + esc(q.coment) + '</div>' : '') + '</div></div>';
+    };
+    const ac = L.filter(i => i.v >= .5).length;
+    return '<details class="qs"><summary>Questões respondidas · ' + ac + ' acerto(s) e ' + (L.length - ac) + ' erro(s)</summary>' + L.map(linha).join('') + '</details>';
+  }
   function graficoAluno(a, tm) {
     if (!a.feito) return '<p class="muted">Este aluno ainda não realizou a atividade.</p>';
     const dim = (chave, ref) => {
@@ -104,7 +128,7 @@
       return (nao.length ? '<h4 class="gn">✗ Não atingidos (' + nao.length + ')</h4>' + barras(nao, ref) : '') + (ok.length ? '<h4 class="ga">✓ Atingidos (' + ok.length + ')</h4>' + barras(ok, ref) : '') || '<p class="muted sm">Sem dados.</p>';
     };
     const refAe = new Map(agrega(tm.itens, 'ae').map(x => [x.k, x.p])), refDs = new Map(agrega(tm.itens, 'desc').map(x => [x.k, x.p]));
-    return '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
+    return questoes(a) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
       '<p class="muted sm">Barra = aproveitamento do aluno; traço preto = média da turma. Atingido: aproveitamento a partir de 50% (Adequado ou Avançado).' + (a.parcial ? ' Nota parcial: dissertativa ainda em correção.' : '') + '</p>';
   }
   function corpoTurma(tm) {

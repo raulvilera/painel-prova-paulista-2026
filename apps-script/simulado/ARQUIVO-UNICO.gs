@@ -98,8 +98,8 @@ function resultadosEF_(p) {
           const l = String(r[COL.obj - 1 + io++] || '');
           return { k: t.serie + '-' + i, tipo: 'obj', resp: l, acerto: l !== '' && l === 'ABCDE'[q.correta] };
         }
-        const nota = num(r[COL_DIS + id * 3]); id++;   // coluna da nota (resposta, NOTA, comentário)
-        return { k: t.serie + '-' + i, tipo: 'dis', nota: nota };
+        const base = COL_DIS - 1 + id * 3; id++;   // colunas: resposta, NOTA, comentário
+        return { k: t.serie + '-' + i, tipo: 'dis', nota: num(r[base + 1]), resp: String(r[base] || '').slice(0, 1500), comentario: String(r[base + 2] || '').slice(0, 500) };
       });
       rows.push({ criado: r[COL.data - 1] instanceof Date ? r[COL.data - 1].toISOString() : '', turma: t.id, nome: String(r[COL.nome - 1]), itens: itens });
     });

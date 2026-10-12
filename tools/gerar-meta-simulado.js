@@ -8,7 +8,7 @@ const CAT = require('../api/_catalogo-indiv.js'), txt = {};
 Object.values(CAT).forEach(c => { if (c.hab && c.habTxt) txt[c.hab] = c.habTxt; });
 const out = {};
 Object.keys(Q).forEach(serie => Q[serie].forEach((q, i) => {
-  out[serie + '-' + i] = { serie, bim: String(parseInt(q.bim, 10)), hab: q.hab, ae: txt[q.hab] || '', desc: q.saresp || '', tipo: q.tipo };
+  out[serie + '-' + i] = { serie, bim: String(parseInt(q.bim, 10)), hab: q.hab, ae: txt[q.hab] || '', desc: q.saresp || '', tipo: q.tipo, n: i + 1, enun: String(q.enunciado || '').slice(0, 260), cor: q.tipo === 'obj' ? 'ABCDE'[q.correta] : '' };
 }));
 fs.writeFileSync(__dirname + '/../api/_meta-simulado.js', '/* GERADO por tools/gerar-meta-simulado.js — não editar à mão */\nmodule.exports = ' + JSON.stringify(out) + ';\n');
 console.log(Object.keys(out).length + ' questões');

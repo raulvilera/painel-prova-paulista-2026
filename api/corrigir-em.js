@@ -456,7 +456,7 @@ async function gravarResultado(ident, id, q, respostas, acertos, notaObjetiva, d
   if (!base || !chave || !ident || !ident.registro) return;
   const r = ident.registro;
   const itens = q.map((item, i) => ({ id: item.id, tipo: 'obj', resp: 'ABCDE'[respostas[i]], acerto: respostas[i] === item.correta }))
-    .concat((dissertativas || []).map((d, k) => ({ id: id + '-' + (QID_DIS_BASE + k + 1), tipo: 'dis', nota: d.nota, status: d.status })));
+    .concat((dissertativas || []).map((d, k) => ({ id: id + '-' + (QID_DIS_BASE + k + 1), tipo: 'dis', nota: d.nota, status: d.status, resposta: String(((r.dissertativas || [])[k] || {}).resposta || '').slice(0, 3000) })));
   const linha = { envio_id: r.envioId, avaliacao: id, turma_id: r.turmaId, turma: r.turma, componente: r.componente, prova: r.prova, n: r.n, nome: r.nome, ra: r.ra || '',
     itens, acertos, total_obj: q.length, nota_obj: notaObjetiva, nota_final: notaFinal, status: notaFinal === null ? 'pendente' : 'corrigido pela IA' };
   try {
