@@ -75,23 +75,31 @@ async function gerarQuestoes(k) {
     'Progressão: objetivas 1–2 e dissertativas 1–2 de reconhecer/identificar (Abaixo do Básico); objetivas 3–4 e dissertativa 3 de aplicar/relacionar; objetiva 5 e dissertativas 4–5 de analisar/justificar.\n' +
     'Contextos do cotidiano de alunos de escola pública paulista; de preferência ligados a fatos reais. Linguagem simples, enunciados com no máximo 3 linhas.\n\n' +
     'CONTEÚDO/DESCRITOR: ' + c.desc + '\nHABILIDADE: ' + c.hab + ' — ' + c.habTxt + '\nAULA/ATIVIDADE DE REFERÊNCIA: "' + c.nome + '". ' + (c.concreta || '') + '\n\n' +
-    'Responda APENAS em JSON: {"questoes":[{"tipo":"obj","enunciado":"...","comando":"...","alts":["...","...","...","..."],"correta":0,"explicacao":"..."},{"tipo":"dis","enunciado":"...","comando":"...","ref":"resposta esperada","conceitos":["...","..."]}]}\n' +
+    'Cada questão traz o campo "figura": um infográfico simples que ajuda a entender a situação do enunciado, em UM destes formatos: ' +
+    '{"tipo":"tabela","titulo":"...","colunas":["...","..."],"linhas":[["...","..."],["...","..."]]} ou {"tipo":"barras","titulo":"...","unidade":"...","itens":[{"rotulo":"...","valor":0}]} ou {"tipo":"etapas","titulo":"...","etapas":["...","...","..."]}. ' +
+    'A figura mostra só dados, observações ou a sequência de uma situação (medidas de um experimento, registros de uma observação, etapas de um procedimento) — NUNCA a resposta, o conceito pedido, uma conclusão ou texto parecido com uma alternativa; rótulos neutros e curtos; números simples e plausíveis (se fictícios, título começando com "Dados do experimento"); de 2 a 6 linhas, itens ou etapas. Coloque figura em pelo menos 8 das 10 questões; use null só quando ela entregaria a resposta.\n' +
+    'Responda APENAS em JSON: {"questoes":[{"tipo":"obj","enunciado":"...","comando":"...","figura":{...},"alts":["...","...","...","..."],"correta":0,"explicacao":"..."},{"tipo":"dis","enunciado":"...","comando":"...","figura":{...},"ref":"resposta esperada","conceitos":["...","..."]}]}\n' +
     'Regras: "correta" é o índice (0 a 3); varie a posição da correta; não escreva letras (A, B...) dentro das alternativas.', 0.5);
   const Q = o.questoes; if (!Array.isArray(Q)) throw new Error('formato inválido');
   const limpa = s => String(s || '').replace(/^\s*[A-Da-d][\)\.]\s+/, '').trim();
   const obj = Q.filter(q => q && q.tipo === 'obj').slice(0, 5), dis = Q.filter(q => q && q.tipo === 'dis').slice(0, 5);
   if (obj.length < 5 || dis.length < 5) throw new Error('faltam questões (' + obj.length + ' obj, ' + dis.length + ' dis)');
-  const O = obj.map(q => { const alts = (q.alts || []).slice(0, 4).map(limpa), cor = Number(q.correta); if (alts.length !== 4 || !(cor >= 0 && cor <= 3) || !q.enunciado) throw new Error('objetiva incompleta'); return { tipo: 'obj', enunciado: String(q.enunciado), comando: String(q.comando || ''), alts, correta: cor, explicacao: String(q.explicacao || ''), figura: null }; });
-  const D = dis.map(q => { if (!q.enunciado) throw new Error('dissertativa incompleta'); return { tipo: 'dis', enunciado: String(q.enunciado), comando: String(q.comando || ''), ref: String(q.ref || ''), conceitos: (q.conceitos || []).map(String).slice(0, 4), figura: null }; });
+  const O = obj.map(q => { const alts = (q.alts || []).slice(0, 4).map(limpa), cor = Number(q.correta); if (alts.length !== 4 || !(cor >= 0 && cor <= 3) || !q.enunciado) throw new Error('objetiva incompleta'); return { tipo: 'obj', enunciado: String(q.enunciado), comando: String(q.comando || ''), alts, correta: cor, explicacao: String(q.explicacao || ''), figura: limpaFigura(q.figura) }; });
+  const D = dis.map(q => { if (!q.enunciado) throw new Error('dissertativa incompleta'); return { tipo: 'dis', enunciado: String(q.enunciado), comando: String(q.comando || ''), ref: String(q.ref || ''), conceitos: (q.conceitos || []).map(String).slice(0, 4), figura: limpaFigura(q.figura) }; });
   const todas = O.concat(D);
-  let diag;   // diagnóstico guardado junto do conjunto (não aparece para o aluno)
-  for (let t = 0; t < 2 && !(diag && diag.erro === undefined); t++) {
-    if (t) await new Promise(x => setTimeout(x, 6000));
-    try { diag = await adicionarFiguras(todas, c); } catch (e) { diag = { erro: String(e.message || e).slice(0, 160) }; }   // sem figuras é melhor que questão com figura errada
-  }
-  if (diag && /\b(429|5\d\d)\b/.test(String(diag.erro || ''))) throw new Error('figuras: IA ocupada (' + diag.erro + ')');   // limite temporário: não guarda o conjunto sem figuras; o aluno tenta de novo em 1 minuto
-  todas[0].figDiag = diag;
+  let cortadas = 0;   // trava automática: figura que repete a resposta correta ou uma alternativa é descartada
+  todas.forEach(q => { if (q.figura && entregaResposta(q)) { q.figura = null; cortadas++; } });
+  todas[0].figDiag = { unica: true, com: todas.filter(q => q.figura).length, cortadas };
   return todas;
+}
+const PALAVRAS = t => String(t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').split(/[^a-z0-9]+/).filter(w => w.length >= 4);
+function entregaResposta(q) {
+  const f = q.figura, texto = new Set(PALAVRAS(JSON.stringify(f)));
+  const alvo = q.tipo === 'obj' ? [q.alts[q.correta]] : [q.ref].concat(q.conceitos || []);
+  const parecido = t => { const w = PALAVRAS(t); return w.length >= 2 && w.filter(x => texto.has(x)).length / w.length >= 0.6; };
+  if (alvo.some(parecido)) return true;
+  if (q.tipo === 'obj' && q.alts.some((a, i) => i !== q.correta && parecido(a))) return true;   // também não repete alternativas erradas
+  return false;
 }
 /* Segunda etapa: uma chamada só para desenhar as figuras das 10 questões e outra para revisar se alguma entrega a resposta. */
 async function adicionarFiguras(Q, c) {

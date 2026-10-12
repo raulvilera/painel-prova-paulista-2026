@@ -56,17 +56,17 @@
   }
   async function gerar(){
     $('go').disabled = true; $('go').textContent = 'Gerando…'; parar = false;
-    let pausa = 10000;   // pausa entre conjuntos: sobe quando a IA reclama (429) e desce quando está tudo certo
+    let pausa = 3000;   // pausa entre conjuntos: sobe quando a IA reclama (429) e desce quando está tudo certo
     for (let rodada = 1; rodada <= 8 && !parar; rodada++) {
       await verificar();
       if (!falta.length) break;
       if (rodada > 1) log('— Rodada ' + rodada + ': faltam ' + falta.length);
       for (const k of falta.slice()) {
         if (parar) break;
-        try { await api('gerar', { k }); log('✓ ' + k.slice(0, 70)); pausa = Math.max(10000, pausa - 5000); }
+        try { await api('gerar', { k }); log('✓ ' + k.slice(0, 70)); pausa = Math.max(3000, pausa - 3000); }
         catch (e) {
           const limite = /429|ocupada|limite/i.test(String(e.message));
-          pausa = limite ? Math.min(90000, pausa * 2) : pausa;
+          pausa = limite ? Math.min(90000, Math.max(15000, pausa * 2)) : pausa;
           log((limite ? '⏳ IA no limite, esperando ' + Math.round(pausa / 1000) + 's' : '✗ falhou (' + String(e.message).slice(0, 60) + ')') + ' · ' + k.slice(0, 40));
         }
         await verificar();
