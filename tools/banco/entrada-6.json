@@ -1,0 +1,82 @@
+{
+ "7º ANO|2|Relacionar os impactos das atividades humanas com as mudanças climáticas globais e seus efeitos socioambientais.": {
+  "serie": "7",
+  "desc": "Relacionar os impactos das atividades humanas com as mudanças climáticas globais e seus efeitos socioambientais.",
+  "hab": "EF07CI05",
+  "habTxt": "Analisar impactos socioambientais de combustíveis fósseis, queimadas e desmatamento (AE6).",
+  "nome": "Corrente de causas",
+  "concreta": "Montar uma corrente de papel com elos: queima de combustíveis/desmatamento/queimadas → mais gás carbônico → efeito estufa intensificado → aquecimento → eventos extremos → impactos sociais."
+ },
+ "8º ANO|1|Comparar os processos reprodutivos das plantas.": {
+  "serie": "8",
+  "desc": "Comparar os processos reprodutivos das plantas.",
+  "hab": "EF08CI07",
+  "habTxt": "Comparar reprodução assexuada e sexuada em vegetais e animais com base em mecanismos evolutivos e adaptativos (AE2).",
+  "nome": "Flor por dentro",
+  "concreta": "Observação de uma flor aberta com lupa (pétalas, estame, pistilo/ovário) e comparação com pinha de pinheiro (semente nua) e tomate (semente dentro do fruto). Um galho é posto na água: reprodução assexuada."
+ },
+ "9º ANO|1|Identificar substâncias, misturas e transformações da matéria.": {
+  "serie": "9",
+  "desc": "Identificar substâncias, misturas e transformações da matéria.",
+  "hab": "EF09CI01",
+  "habTxt": "Explicar mudanças de estado físico pela estrutura molecular, organização da matéria e temperaturas de fusão e ebulição (AE3).",
+  "nome": "Mistura ou substância?",
+  "concreta": "Copos com água, água+sal, água+óleo e água+areia: a turma observa as fases. Depois compara dissolver sal (transformação física) com vinagre+bicarbonato, que forma gás (transformação química)."
+ },
+ "9º ANO|3|Analisar evidências da ocorrência de evolução convergente e divergente em imagens, esquemas ou modelos comparativos de organismos.": {
+  "serie": "9",
+  "desc": "Analisar evidências da ocorrência de evolução convergente e divergente em imagens, esquemas ou modelos comparativos de organismos.",
+  "hab": "EF09CI11, EF09CI10",
+  "habTxt": "Analisar a evolução e a diversidade das espécies a partir de evidências científicas e processos evolutivos (AE10).",
+  "nome": "Parecidos, mas nem tanto",
+  "concreta": "Observação de pares de imagens: o professor pinta os mesmos ossos (úmero, rádio, ulna) em braço, nadadeira e asa (homólogos/divergência) e compara com asas de inseto e ave (análogos/convergência)."
+ },
+ "4B|6º ANO|2": {
+  "serie": "6",
+  "desc": "Identificar órgãos e estruturas do sistema nervoso usando esquemas e ilustrações.",
+  "hab": "EF06CI07",
+  "habTxt": "Encéfalo, medula espinal, nervos e gânglios; estímulo e resposta; neurônios, impulso nervoso e sinapse; rede de comunicação.",
+  "nome": "Sistema nervoso",
+  "concreta": "Situação da xícara quente; Pause e responda (V ou F); Na prática: leitura sobre neurônios e questões sobre estímulo e resposta."
+ },
+ "4B|6º ANO|15": {
+  "serie": "6",
+  "desc": "Associar o consumo de drogas a danos graves à saúde e à qualidade de vida.",
+  "hab": "EF06CI10",
+  "habTxt": "Substâncias que alteram a consciência; conceito de droga; drogas estimulantes, depressoras e perturbadoras; efeitos no sistema nervoso.",
+  "nome": "Efeitos das drogas no organismo",
+  "concreta": "Relembre (prova e ansiedade); Pause e responda (álcool, V ou F); Na prática: situação-problema da confeiteira e a cafeína."
+ },
+ "4B|7º ANO|9": {
+  "serie": "7",
+  "desc": "Justificar a importância do sistema imune para a saúde física, discutindo os impactos de sua ausência.",
+  "hab": "EF07CI10B",
+  "habTxt": "Imunidade humoral (linfócitos B, anticorpos) e celular (linfócitos T); antígenos; imunização ativa e passiva (natural e artificial); hábitos que fortalecem a imunidade.",
+  "nome": "Sistema imune humano: resposta imune",
+  "concreta": "Relembre linhas de defesa; Pause e responda; Na prática: texto e gráfico sobre amamentação e imunização passiva."
+ },
+ "4B|8º ANO|3": {
+  "serie": "8",
+  "desc": "Discutir como a energia se transforma em diferentes contextos, com base no princípio da conservação da energia.",
+  "hab": "EF08CI03",
+  "habTxt": "Transformação e conservação da energia; exemplo da montanha-russa (potencial e cinética); transformações cotidianas; energia dissipada como calor.",
+  "nome": "Transformação de energia",
+  "concreta": "Usam o simulador PhET \"Formas de energia e transformações\" e preenchem tabela com energias presentes e transformações em cada sistema."
+ },
+ "4B|8º ANO|16": {
+  "serie": "8",
+  "desc": "Compreender a função dos componentes e comparar circuitos em série, em paralelo e mistos.",
+  "hab": "EF08CI02",
+  "habTxt": "Associação de resistores em série, paralelo e mista; medição de corrente e tensão; resistência equivalente; aplicação residencial.",
+  "nome": "Simulador de um circuito elétrico – Parte 2",
+  "concreta": "Montagem no PhET de circuitos em série, paralelo e mistos, medindo e comparando corrente e tensão em cada um."
+ },
+ "4B|9º ANO|14": {
+  "serie": "9",
+  "desc": "Reconhecer constelações como convenções culturais e comparar a evolução histórica dos instrumentos de observação astronômica.",
+  "hab": "EF09CI15",
+  "habTxt": "Astronomia; luneta de Galileu; telescópios Hubble e James Webb; sondas Mariner 2, Voyager, Kepler; lixo espacial; constelações e asterismos; bandeira do Brasil.",
+  "nome": "Observação do céu",
+  "concreta": "Respondem teste sobre telescópios e sondas e analisam texto da Fapesp sobre a rede brasileira de monitoramento de lixo espacial."
+ }
+}

@@ -1,6 +1,7 @@
 /* Atividade individual (Fundamental): turma + nome -> questões dos descritores com defasagem (bim. 1–3) + conteúdo do 4º bimestre.
    Variáveis na Vercel: SUPABASE_URL, SUPABASE_SERVICE_KEY, GEMINI_API_KEY (opcional MODELO_IA). O gabarito e o nível nunca saem para o aluno. */
 const CAT = require('./_catalogo-indiv.js');
+let BANCO = {}; try { BANCO = require('./_banco-indiv.js'); } catch (e) { BANCO = {}; }
 const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.env.SUPABASE_SERVICE_KEY || '', GKEY = process.env.GEMINI_API_KEY || '';
 const MODELO = process.env.MODELO_IA || 'gemini-3.5-flash-lite';
 
@@ -145,6 +146,7 @@ async function montar(turma, nome, gerar) {
   const itens = lin.itens || [], ks = [...new Set(itens.map(i => i.k).filter(k => CAT[k]))];
   const bn = ks.length ? await rest('indiv_banco?select=k,questoes,liberada&k=in.' + inLista(ks)) : [];
   const B = {}, existe = {}; (bn || []).forEach(r => { existe[r.k] = 1; if (r.liberada) B[r.k] = r.questoes; });
+  ks.forEach(k => { if (!existe[k] && BANCO[k]) { existe[k] = 1; B[k] = BANCO[k]; } });   // banco embutido: sem espera, sem IA
   let falhou = 0;
   if (gerar) {
     const falta = ks.filter(k => !existe[k]);
@@ -233,3 +235,4 @@ module.exports = async function individual(req, res) {
     if (acao === 'ver') { const r = await rest('indiv_banco?select=questoes,liberada&k=eq.' + enc(String(q.k || ''))); return ok({ banco: r && r[0] || null, cat: CAT[String(q.k || '')] || null }); }
   } catch (e) { return erro(500, String(e.message || e).slice(0, 300)); }
 };
+module.exports.limpaFigura = limpaFigura; module.exports.entregaResposta = entregaResposta;

@@ -1,0 +1,2960 @@
+{
+ "7º ANO|2|Relacionar os impactos das atividades humanas com as mudanças climáticas globais e seus efeitos socioambientais.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Muitos alunos vão à escola de ônibus ou de carro, veículos que queimam gasolina e diesel.",
+   "comando": "Qual gás liberado nessa queima aumenta o efeito estufa?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados da pesquisa: como os alunos vão à escola",
+    "unidade": "alunos",
+    "itens": [
+     {
+      "rotulo": "Ônibus",
+      "valor": 18
+     },
+     {
+      "rotulo": "Carro",
+      "valor": 7
+     },
+     {
+      "rotulo": "Bicicleta",
+      "valor": 5
+     },
+     {
+      "rotulo": "A pé",
+      "valor": 10
+     }
+    ]
+   },
+   "alts": [
+    "Gás hélio",
+    "Gás carbônico",
+    "Gás oxigênio",
+    "Gás nitrogênio"
+   ],
+   "correta": 1,
+   "explicacao": "A queima de combustíveis fósseis libera gás carbônico, que retém calor na atmosfera."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois de uma queimada perto da escola, a fumaça cobriu o bairro por dias.",
+   "comando": "Qual é uma consequência das queimadas e do desmatamento para o ar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação da área",
+    "colunas": [
+     "Dia",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Mata com muitas árvores"
+     ],
+     [
+      "2",
+      "Fogo se espalhando na vegetação"
+     ],
+     [
+      "3",
+      "Terreno sem árvores e com solo exposto"
+     ]
+    ]
+   },
+   "alts": [
+    "Diminuição da temperatura do planeta",
+    "Fim do efeito estufa natural",
+    "Aumento do oxigênio liberado pelas árvores queimadas",
+    "Aumento do gás carbônico na atmosfera"
+   ],
+   "correta": 3,
+   "explicacao": "A queima e a perda das árvores aumentam o gás carbônico, intensificando o efeito estufa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma cidade tem cada vez mais carros a gasolina e mais gás carbônico no ar a cada ano.",
+   "comando": "O que se espera que aconteça com o efeito estufa nessa cidade?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento de simulação: cidade modelo",
+    "colunas": [
+     "Ano",
+     "Carros (mil)",
+     "Gás carbônico (mil t)"
+    ],
+    "linhas": [
+     [
+      "2010",
+      "20",
+      "60"
+     ],
+     [
+      "2015",
+      "35",
+      "105"
+     ],
+     [
+      "2020",
+      "50",
+      "150"
+     ]
+    ]
+   },
+   "alts": [
+    "Ficar mais intenso, pois o gás retém mais calor",
+    "Diminuir, pois o gás carbônico esfria o ar",
+    "Acabar, pois os carros produzem calor",
+    "Não mudar, pois esse gás não retém calor"
+   ],
+   "correta": 0,
+   "explicacao": "Mais gás carbônico retém mais calor e intensifica o efeito estufa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na corrente de papel da aula, cada elo é consequência do anterior.",
+   "comando": "Qual elo vem logo depois de 'efeito estufa intensificado'?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Elos já colocados na corrente",
+    "etapas": [
+     "Queima de combustíveis e desmatamento",
+     "Mais gás carbônico no ar",
+     "Efeito estufa intensificado"
+    ]
+   },
+   "alts": [
+    "Resfriamento dos polos",
+    "Aumento da fotossíntese nas florestas",
+    "Aquecimento da Terra",
+    "Fim das queimadas"
+   ],
+   "correta": 2,
+   "explicacao": "Com o efeito estufa mais forte, a atmosfera retém mais calor e o planeta esquenta."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois bairros foram comparados num dia de verão.",
+   "comando": "Qual explicação relaciona melhor os dados com as ações humanas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: dois bairros no mesmo dia",
+    "colunas": [
+     "Bairro",
+     "Árvores",
+     "Carros",
+     "Temperatura"
+    ],
+    "linhas": [
+     [
+      "Norte",
+      "Muitas",
+      "Poucos",
+      "30 °C"
+     ],
+     [
+      "Sul",
+      "Poucas",
+      "Muitos",
+      "34 °C"
+     ]
+    ]
+   },
+   "alts": [
+    "No Sul o calor vem só das árvores, que esquentam o ar",
+    "No Sul há menos árvores para absorver gás carbônico e mais carros para liberá-lo, o que contribui para o calor",
+    "A temperatura não tem relação com árvores nem carros",
+    "No Norte há mais carros e por isso é mais fresco"
+   ],
+   "correta": 1,
+   "explicacao": "Menos vegetação e mais queima de combustíveis favorecem mais gás carbônico e calor."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Todos os dias usamos combustíveis para transporte e cozinha.",
+   "comando": "Cite um exemplo de combustível fóssil.",
+   "figura": null,
+   "ref": "Petróleo, gasolina, diesel, gás natural ou carvão mineral.",
+   "conceitos": [
+    "combustível fóssil",
+    "petróleo e derivados"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na corrente de papel, o elo 'aquecimento' leva a um novo elo.",
+   "comando": "Cite um evento extremo que pode ocorrer com o aquecimento da Terra.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Corrente de papel (elos já montados)",
+    "etapas": [
+     "Queima de combustíveis",
+     "Mais gás carbônico",
+     "Efeito estufa intensificado",
+     "Aquecimento da Terra"
+    ]
+   },
+   "ref": "Secas prolongadas, enchentes, ondas de calor ou tempestades fortes.",
+   "conceitos": [
+    "eventos extremos",
+    "aquecimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma prefeitura derrubou as árvores de um parque para fazer um estacionamento.",
+   "comando": "Explique como isso pode contribuir para o aquecimento da Terra.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do parque",
+    "colunas": [
+     "Situação",
+     "Árvores",
+     "Carros estacionados"
+    ],
+    "linhas": [
+     [
+      "Antes",
+      "120",
+      "5"
+     ],
+     [
+      "Depois",
+      "0",
+      "80"
+     ]
+    ]
+   },
+   "ref": "Sem as árvores, menos gás carbônico é absorvido na fotossíntese; com mais carros, mais gás é liberado. O acúmulo intensifica o efeito estufa.",
+   "conceitos": [
+    "menos árvores",
+    "mais gás carbônico",
+    "efeito estufa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um morador diz que queimar lixo no quintal não afeta o clima do planeta.",
+   "comando": "Você concorda? Justifique.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento de simulação: queimas em um bairro",
+    "unidade": "queimas por semana",
+    "itens": [
+     {
+      "rotulo": "Segunda a quarta",
+      "valor": 12
+     },
+     {
+      "rotulo": "Quinta e sexta",
+      "valor": 18
+     },
+     {
+      "rotulo": "Fim de semana",
+      "valor": 30
+     }
+    ]
+   },
+   "ref": "Não. Cada queima libera gás carbônico e outros gases; somadas em muitos quintais, aumentam o efeito estufa e o aquecimento global.",
+   "conceitos": [
+    "queima libera gás carbônico",
+    "soma de muitas ações",
+    "efeito estufa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em chuvas fortes, famílias de encostas sofrem mais com deslizamentos.",
+   "comando": "Explique como eventos extremos ligados ao aquecimento podem causar impactos sociais.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de chuva em uma cidade",
+    "colunas": [
+     "Mês",
+     "Chuva (mm)"
+    ],
+    "linhas": [
+     [
+      "Janeiro",
+      "150"
+     ],
+     [
+      "Fevereiro",
+      "310"
+     ],
+     [
+      "Março",
+      "120"
+     ]
+    ]
+   },
+   "ref": "Chuvas muito intensas causam enchentes e deslizamentos; famílias em áreas de risco perdem casas, saúde e trabalho, o que aumenta a desigualdade.",
+   "conceitos": [
+    "eventos extremos",
+    "áreas de risco",
+    "impactos sociais"
+   ]
+  }
+ ],
+ "8º ANO|1|Comparar os processos reprodutivos das plantas.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Com uma lupa, a turma observou uma flor aberta e achou uma parte que guarda os óvulos.",
+   "comando": "Qual parte da flor contém o ovário?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Partes observadas com lupa",
+    "colunas": [
+     "Parte",
+     "Aparência"
+    ],
+    "linhas": [
+     [
+      "Pétala",
+      "Colorida e macia"
+     ],
+     [
+      "Estame",
+      "Fio fino com pontinha de pó amarelo"
+     ],
+     [
+      "Pistilo",
+      "Parte central, mais comprida"
+     ],
+     [
+      "Sépala",
+      "Pequena e verde, na base"
+     ]
+    ]
+   },
+   "alts": [
+    "Estame",
+    "Pétala",
+    "Pistilo",
+    "Sépala"
+   ],
+   "correta": 2,
+   "explicacao": "O ovário fica na base do pistilo, a parte feminina da flor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma comparou uma pinha de pinheiro e um tomate.",
+   "comando": "Qual estrutura envolve e protege as sementes do tomateiro?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações das plantas",
+    "colunas": [
+     "Planta",
+     "Onde estão as sementes"
+    ],
+    "linhas": [
+     [
+      "Pinheiro",
+      "Sobre as escamas da pinha, expostas"
+     ],
+     [
+      "Tomateiro",
+      "Dentro de uma parte carnuda"
+     ]
+    ]
+   },
+   "alts": [
+    "Fruto",
+    "Pinha",
+    "Estame",
+    "Raiz"
+   ],
+   "correta": 0,
+   "explicacao": "As sementes das angiospermas ficam dentro do fruto, que as protege."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um galho foi colocado na água e, depois de alguns dias, surgiram raízes.",
+   "comando": "Que tipo de reprodução esse resultado mostra?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do galho na água",
+    "colunas": [
+     "Dia",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Galho sem raízes"
+     ],
+     [
+      "5",
+      "Pontos esbranquiçados na base"
+     ],
+     [
+      "10",
+      "Raízes de 2 cm"
+     ],
+     [
+      "15",
+      "Raízes de 5 cm"
+     ]
+    ]
+   },
+   "alts": [
+    "Sexuada, pois surgiram raízes",
+    "Sexuada, pois a água fecundou o galho",
+    "Assexuada, pois houve fecundação pelo pólen",
+    "Assexuada, pois a nova planta vem de um só indivíduo"
+   ],
+   "correta": 3,
+   "explicacao": "Uma nova planta vinda de parte de outra, sem gametas, é reprodução assexuada."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma abelha visita flores e leva pólen de uma flor para outra.",
+   "comando": "Como se chama o transporte do pólen até o pistilo?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Sequência observada no jardim",
+    "etapas": [
+     "Abelha pousa na flor 1",
+     "Pólen gruda no corpo da abelha",
+     "Abelha voa até a flor 2",
+     "Pólen encosta no pistilo"
+    ]
+   },
+   "alts": [
+    "Germinação",
+    "Polinização",
+    "Dispersão de sementes",
+    "Fotossíntese"
+   ],
+   "correta": 1,
+   "explicacao": "A polinização leva o pólen do estame ao pistilo, passo da reprodução sexuada."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um agricultor comparou dois plantios de batata durante um surto de fungo.",
+   "comando": "Qual explicação é correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: dois plantios",
+    "colunas": [
+     "Plantio",
+     "Origem das plantas",
+     "Plantas mortas"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Pedaços de batata (todas iguais)",
+      "90 de 100"
+     ],
+     [
+      "2",
+      "Sementes (plantas diferentes)",
+      "30 de 100"
+     ]
+    ]
+   },
+   "alts": [
+    "A reprodução assexuada gera plantas diferentes, por isso todas morrem",
+    "A reprodução sexuada gera clones, que resistem",
+    "A reprodução sexuada gera variabilidade e alguns indivíduos resistem ao fungo",
+    "O fungo só ataca plantas que nascem de sementes"
+   ],
+   "correta": 2,
+   "explicacao": "A variabilidade da reprodução sexuada aumenta a chance de sobrevivência."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma observou uma flor aberta.",
+   "comando": "Cite duas partes de uma flor.",
+   "figura": null,
+   "ref": "Pétala, sépala, estame, pistilo (ovário) ou antera.",
+   "conceitos": [
+    "partes da flor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao cortar um tomate, a turma anotou o que viu.",
+   "comando": "Qual é a função do fruto para a planta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do tomate cortado",
+    "colunas": [
+     "Parte",
+     "O que se vê"
+    ],
+    "linhas": [
+     [
+      "Casca",
+      "Vermelha e lisa"
+     ],
+     [
+      "Polpa",
+      "Macia e com água"
+     ],
+     [
+      "Sementes",
+      "Pequenas, dentro da polpa"
+     ]
+    ]
+   },
+   "ref": "Proteger as sementes e ajudar a espalhá-las, pois animais comem o fruto.",
+   "conceitos": [
+    "proteção das sementes",
+    "dispersão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Maria cortou um pedaço de planta e plantou na terra; nasceu uma nova planta.",
+   "comando": "Isso é reprodução sexuada ou assexuada? Explique.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Passos de Maria",
+    "etapas": [
+     "Cortar um galho",
+     "Colocar na água",
+     "Esperar as raízes",
+     "Plantar na terra"
+    ]
+   },
+   "ref": "Assexuada: a nova planta nasce de um só indivíduo, sem sementes nem fecundação, e é igual à planta de origem.",
+   "conceitos": [
+    "assexuada",
+    "um só indivíduo",
+    "clone"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um agricultor quer canteiros de cana todos iguais e usa pedaços do caule.",
+   "comando": "Por que ele faz isso e qual risco isso traz?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: dois canteiros com a mesma doença",
+    "colunas": [
+     "Canteiro",
+     "Origem",
+     "Plantas doentes"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Pedaços do caule",
+      "40 de 50"
+     ],
+     [
+      "2",
+      "Sementes",
+      "12 de 50"
+     ]
+    ]
+   },
+   "ref": "Os pedaços geram plantas iguais à original, com características desejadas. O risco é que todas sejam igualmente vulneráveis à mesma doença.",
+   "conceitos": [
+    "clones",
+    "pouca variabilidade",
+    "doença"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma laranjeira floresce na primavera e dá laranjas meses depois.",
+   "comando": "Explique por que a flor precisa ser polinizada para originar o fruto.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Sequência numa laranjeira",
+    "etapas": [
+     "Flor aberta e perfumada",
+     "Visita de insetos",
+     "Pétalas murcham e caem",
+     "Base da flor incha",
+     "Fruta madura"
+    ]
+   },
+   "ref": "O pólen chega ao pistilo e fecunda o óvulo; o ovário se desenvolve em fruto e o óvulo em semente.",
+   "conceitos": [
+    "polinização",
+    "fecundação",
+    "fruto e semente"
+   ]
+  }
+ ],
+ "9º ANO|1|Identificar substâncias, misturas e transformações da matéria.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em quatro copos foram colocados: água; água e sal; água e óleo; água e areia.",
+   "comando": "Qual copo contém uma mistura homogênea?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações nos copos",
+    "colunas": [
+     "Copo",
+     "Conteúdo",
+     "Fases vistas"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Água",
+      "Uma"
+     ],
+     [
+      "2",
+      "Água e sal",
+      "Uma"
+     ],
+     [
+      "3",
+      "Água e óleo",
+      "Duas"
+     ],
+     [
+      "4",
+      "Água e areia",
+      "Duas"
+     ]
+    ]
+   },
+   "alts": [
+    "Copo 1 (só água)",
+    "Copo 2 (água e sal)",
+    "Copo 3 (água e óleo)",
+    "Copo 4 (água e areia)"
+   ],
+   "correta": 1,
+   "explicacao": "Água e sal formam uma só fase; a água sozinha é substância, não mistura."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A professora separou materiais para a aula.",
+   "comando": "Qual destes materiais é uma substância pura?",
+   "figura": null,
+   "alts": [
+    "Água do mar",
+    "Ar da sala",
+    "Água destilada",
+    "Granito"
+   ],
+   "correta": 2,
+   "explicacao": "Água destilada tem só um tipo de substância; os demais são misturas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao misturar vinagre e bicarbonato, a turma viu bolhas e espuma.",
+   "comando": "Por que isso é uma transformação química?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento da turma",
+    "etapas": [
+     "Colocar vinagre no copo",
+     "Adicionar bicarbonato",
+     "Observar o copo",
+     "Anotar o que aconteceu"
+    ]
+   },
+   "alts": [
+    "Houve apenas mudança de estado físico",
+    "Os materiais só mudaram de forma",
+    "Surgiram novas substâncias, como um gás",
+    "A mistura voltou a ser como antes"
+   ],
+   "correta": 2,
+   "explicacao": "Formação de gás indica novas substâncias, ou seja, reação química."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma água salgada foi aquecida até secar e sobrou sal branco no fundo.",
+   "comando": "Dissolver sal e depois evaporar a água é qual tipo de transformação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das etapas",
+    "colunas": [
+     "Etapa",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Início",
+      "Sal sólido e água"
+     ],
+     [
+      "Mistura",
+      "Líquido transparente e salgado"
+     ],
+     [
+      "Após ferver",
+      "Sólido branco e salgado no fundo"
+     ]
+    ]
+   },
+   "alts": [
+    "Física, pois o sal e a água continuam sendo as mesmas substâncias",
+    "Química, pois o sal sumiu na água",
+    "Química, pois a água ferveu",
+    "Física, pois surgiu uma substância nova"
+   ],
+   "correta": 0,
+   "explicacao": "Não houve formação de novas substâncias."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Observe as temperaturas de mudança de estado de algumas substâncias.",
+   "comando": "A 25 °C, qual substância está no estado gasoso?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Temperaturas de mudança de estado",
+    "colunas": [
+     "Substância",
+     "Fusão (°C)",
+     "Ebulição (°C)"
+    ],
+    "linhas": [
+     [
+      "Água",
+      "0",
+      "100"
+     ],
+     [
+      "Álcool",
+      "-114",
+      "78"
+     ],
+     [
+      "Ferro",
+      "1538",
+      "2862"
+     ],
+     [
+      "Oxigênio",
+      "-218",
+      "-183"
+     ]
+    ]
+   },
+   "alts": [
+    "Água",
+    "Álcool",
+    "Ferro",
+    "Oxigênio"
+   ],
+   "correta": 3,
+   "explicacao": "A 25 °C o oxigênio está acima de sua ebulição (-183 °C), logo é gás."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma mistura de água e areia foi preparada num copo.",
+   "comando": "Ela é homogênea ou heterogênea? Justifique.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento",
+    "etapas": [
+     "Colocar água no copo",
+     "Adicionar areia",
+     "Mexer e esperar 5 minutos",
+     "Observar"
+    ]
+   },
+   "ref": "Heterogênea, pois se vê mais de uma fase (areia no fundo e água por cima).",
+   "conceitos": [
+    "mistura heterogênea",
+    "fases"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em outra aula, a turma mexeu vinagre com bicarbonato.",
+   "comando": "Cite uma evidência de que ocorreu transformação química.",
+   "figura": null,
+   "ref": "Formação de gás (bolhas), mudança de cor, liberação de luz ou calor, ou formação de sólido.",
+   "conceitos": [
+    "evidências de reação química"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ana dissolveu açúcar em água.",
+   "comando": "Isso forma substância ou mistura? É transformação física ou química?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: açúcar que dissolve em 100 mL de água",
+    "unidade": "g",
+    "itens": [
+     {
+      "rotulo": "20 °C",
+      "valor": 204
+     },
+     {
+      "rotulo": "40 °C",
+      "valor": 238
+     },
+     {
+      "rotulo": "60 °C",
+      "valor": 287
+     }
+    ]
+   },
+   "ref": "Forma uma mistura homogênea; é transformação física, pois o açúcar continua sendo açúcar.",
+   "conceitos": [
+    "mistura homogênea",
+    "transformação física"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A água fervendo e o papel queimando são mudanças diferentes.",
+   "comando": "Explique a diferença entre elas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação",
+    "colunas": [
+     "Fenômeno",
+     "O que se viu"
+    ],
+    "linhas": [
+     [
+      "Água fervendo",
+      "Vapor sobe da panela"
+     ],
+     [
+      "Papel queimando",
+      "Papel escurece e vira cinza"
+     ]
+    ]
+   },
+   "ref": "Na fervura só muda o estado físico; a água continua água. Na queima surgem novas substâncias (cinzas e gases), uma transformação química.",
+   "conceitos": [
+    "mudança de estado",
+    "novas substâncias"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um gelo foi aquecido e a temperatura foi medida a cada 2 minutos.",
+   "comando": "Explique por que a temperatura ficou em 0 °C entre 2 e 6 minutos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: gelo aquecido",
+    "colunas": [
+     "Tempo (min)",
+     "Temperatura (°C)",
+     "Aspecto"
+    ],
+    "linhas": [
+     [
+      "0",
+      "-10",
+      "Só gelo"
+     ],
+     [
+      "2",
+      "0",
+      "Gelo e água"
+     ],
+     [
+      "4",
+      "0",
+      "Mais água"
+     ],
+     [
+      "6",
+      "0",
+      "Quase só água"
+     ],
+     [
+      "8",
+      "6",
+      "Só água"
+     ]
+    ]
+   },
+   "ref": "É a temperatura de fusão: a energia recebida rompe a organização das partículas do gelo, em vez de aumentar a temperatura, até derreter tudo.",
+   "conceitos": [
+    "temperatura de fusão",
+    "energia e organização das partículas"
+   ]
+  }
+ ],
+ "9º ANO|3|Analisar evidências da ocorrência de evolução convergente e divergente em imagens, esquemas ou modelos comparativos de organismos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "O braço humano, a nadadeira da baleia e a asa do morcego têm úmero, rádio e ulna.",
+   "comando": "Como se chamam estruturas de mesma origem evolutiva?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Ossos pintados nas imagens",
+    "colunas": [
+     "Animal",
+     "Membro",
+     "Ossos pintados"
+    ],
+    "linhas": [
+     [
+      "Humano",
+      "Braço",
+      "Úmero, rádio, ulna"
+     ],
+     [
+      "Baleia",
+      "Nadadeira",
+      "Úmero, rádio, ulna"
+     ],
+     [
+      "Morcego",
+      "Asa",
+      "Úmero, rádio, ulna"
+     ]
+    ]
+   },
+   "alts": [
+    "Homólogas",
+    "Análogas",
+    "Vestigiais",
+    "Convergentes"
+   ],
+   "correta": 0,
+   "explicacao": "Estruturas com mesma origem evolutiva são homólogas, mesmo com funções diferentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Insetos e aves têm asas para voar.",
+   "comando": "As asas de um inseto e de uma ave são chamadas de",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação das asas",
+    "colunas": [
+     "Característica",
+     "Asa de ave",
+     "Asa de inseto"
+    ],
+    "linhas": [
+     [
+      "Esqueleto interno",
+      "Ossos",
+      "Sem ossos"
+     ],
+     [
+      "Material",
+      "Penas",
+      "Membrana com quitina"
+     ],
+     [
+      "Função",
+      "Voar",
+      "Voar"
+     ]
+    ]
+   },
+   "alts": [
+    "Homólogas",
+    "Vestigiais",
+    "Análogas",
+    "Idênticas"
+   ],
+   "correta": 2,
+   "explicacao": "Têm função semelhante, mas origens diferentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O tubarão é um peixe e o golfinho é um mamífero, e ambos têm corpo em forma de torpedo.",
+   "comando": "Essa semelhança se explica por",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação dos animais",
+    "colunas": [
+     "Animal",
+     "Grupo",
+     "Respira por"
+    ],
+    "linhas": [
+     [
+      "Tubarão",
+      "Peixe",
+      "Brânquias"
+     ],
+     [
+      "Golfinho",
+      "Mamífero",
+      "Pulmões"
+     ]
+    ]
+   },
+   "alts": [
+    "parentesco muito próximo entre eles",
+    "o golfinho descender do tubarão",
+    "o golfinho ter copiado o tubarão",
+    "evolução convergente: ambientes parecidos favoreceram formas parecidas"
+   ],
+   "correta": 3,
+   "explicacao": "Seres sem parentesco próximo podem ficar parecidos ao viver em ambientes semelhantes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Braço, nadadeira e asa têm os mesmos ossos, mas formas bem diferentes.",
+   "comando": "Por que isso acontece?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Uso do membro",
+    "colunas": [
+     "Animal",
+     "Para que usa"
+    ],
+    "linhas": [
+     [
+      "Humano",
+      "Segurar objetos"
+     ],
+     [
+      "Baleia",
+      "Nadar"
+     ],
+     [
+      "Morcego",
+      "Voar"
+     ]
+    ]
+   },
+   "alts": [
+    "Surgiram de ancestrais diferentes e ficaram iguais",
+    "Vêm de um ancestral comum e se adaptaram a modos de vida diferentes (divergência)",
+    "Cada animal criou seus ossos sozinho",
+    "Os ossos mudam durante a vida do animal"
+   ],
+   "correta": 1,
+   "explicacao": "Divergência: mesma origem, adaptação a ambientes diferentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Asa de ave e asa de morcego servem para voar e têm os mesmos ossos do membro.",
+   "comando": "Qual afirmação é correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação das asas",
+    "colunas": [
+     "Estrutura",
+     "Ossos do membro",
+     "Superfície da asa"
+    ],
+    "linhas": [
+     [
+      "Ave",
+      "Úmero, rádio, ulna",
+      "Penas"
+     ],
+     [
+      "Morcego",
+      "Úmero, rádio, ulna",
+      "Pele esticada"
+     ]
+    ]
+   },
+   "alts": [
+    "Os ossos são análogos, pois são iguais",
+    "As asas são homólogas porque ambas voam",
+    "Os ossos são homólogos, e a superfície para voar surgiu de forma independente",
+    "Não há relação evolutiva entre os ossos"
+   ],
+   "correta": 2,
+   "explicacao": "Ossos têm mesma origem; a adaptação para voar surgiu separadamente."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Compare as imagens do braço humano e da asa do morcego.",
+   "comando": "O que são estruturas homólogas?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Atividade com imagens",
+    "etapas": [
+     "Observar as imagens",
+     "Pintar o úmero",
+     "Pintar o rádio e a ulna",
+     "Comparar os pares"
+    ]
+   },
+   "ref": "Estruturas com a mesma origem evolutiva, podendo ter funções diferentes.",
+   "conceitos": [
+    "mesma origem",
+    "funções diferentes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Algumas estruturas servem para a mesma coisa em animais diferentes.",
+   "comando": "Dê um exemplo de estruturas análogas.",
+   "figura": null,
+   "ref": "Asa de inseto e asa de ave, ou nadadeira de peixe e de golfinho.",
+   "conceitos": [
+    "estruturas análogas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A baleia tem nadadeira e o ser humano tem braço.",
+   "comando": "Por que são consideradas estruturas homólogas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Ossos dos membros",
+    "colunas": [
+     "Animal",
+     "Ossos"
+    ],
+    "linhas": [
+     [
+      "Humano",
+      "Úmero, rádio e ulna"
+     ],
+     [
+      "Baleia",
+      "Úmero, rádio e ulna"
+     ]
+    ]
+   },
+   "ref": "Porque têm a mesma origem evolutiva (ancestral comum) e a mesma organização de ossos, ainda que sirvam para funções diferentes.",
+   "conceitos": [
+    "ancestral comum",
+    "mesma organização óssea"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cactos da América e eufórbias da África são parecidos, mas não são parentes próximos.",
+   "comando": "Explique por que ficaram parecidos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação das plantas",
+    "colunas": [
+     "Planta",
+     "Continente",
+     "Ambiente",
+     "Folhas"
+    ],
+    "linhas": [
+     [
+      "Cacto",
+      "América",
+      "Seco",
+      "Espinhos"
+     ],
+     [
+      "Eufórbia",
+      "África",
+      "Seco",
+      "Espinhos"
+     ]
+    ]
+   },
+   "ref": "Evolução convergente: ambientes secos semelhantes favoreceram, de forma independente, caules carnosos e espinhos.",
+   "conceitos": [
+    "evolução convergente",
+    "seleção pelo ambiente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aluno disse: 'asa de morcego e asa de inseto são homólogas porque as duas voam'.",
+   "comando": "Corrija essa afirmação.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação das asas",
+    "colunas": [
+     "Estrutura",
+     "Esqueleto interno",
+     "Material"
+    ],
+    "linhas": [
+     [
+      "Asa de morcego",
+      "Ossos",
+      "Pele esticada"
+     ],
+     [
+      "Asa de inseto",
+      "Sem ossos",
+      "Quitina"
+     ]
+    ]
+   },
+   "ref": "São análogas: têm a mesma função, mas origens diferentes. A semelhança é resultado de convergência, e a função não define homologia.",
+   "conceitos": [
+    "análogas",
+    "origem diferente",
+    "convergência"
+   ]
+  }
+ ],
+ "4B|6º ANO|2": [
+  {
+   "tipo": "obj",
+   "enunciado": "Ao encostar numa xícara quente, Lia tirou a mão rapidamente.",
+   "comando": "Qual parte do sistema nervoso recebe e interpreta as informações dos sentidos?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Situação da xícara",
+    "etapas": [
+     "Mão encosta na xícara",
+     "Pele percebe o calor",
+     "Informação viaja pelo corpo",
+     "Mão se afasta"
+    ]
+   },
+   "alts": [
+    "Estômago",
+    "Pulmão",
+    "Encéfalo",
+    "Osso do braço"
+   ],
+   "correta": 2,
+   "explicacao": "O encéfalo recebe e interpreta as informações e coordena as respostas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao microscópio, a turma viu três tipos de células.",
+   "comando": "Qual célula transmite impulsos nervosos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Células observadas",
+    "colunas": [
+     "Célula",
+     "Aspecto"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Corpo com muitos prolongamentos"
+     ],
+     [
+      "2",
+      "Disco achatado sem núcleo"
+     ],
+     [
+      "3",
+      "Alongada, com várias fibras"
+     ]
+    ]
+   },
+   "alts": [
+    "Neurônio",
+    "Hemácia",
+    "Célula do osso",
+    "Célula da pele"
+   ],
+   "correta": 0,
+   "explicacao": "O neurônio é a célula especializada em conduzir impulsos nervosos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rita estava na sala quando sentiu um aroma de bolo vindo da cozinha e foi até lá.",
+   "comando": "Qual foi o estímulo nessa situação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da situação",
+    "colunas": [
+     "Momento",
+     "O que aconteceu"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Rita estava na sala"
+     ],
+     [
+      "2",
+      "Um aroma vinha da cozinha"
+     ],
+     [
+      "3",
+      "Rita sentiu fome"
+     ],
+     [
+      "4",
+      "Rita foi à cozinha"
+     ]
+    ]
+   },
+   "alts": [
+    "A fome",
+    "A ida até a cozinha",
+    "A saliva na boca",
+    "O aroma do bolo"
+   ],
+   "correta": 3,
+   "explicacao": "Estímulo é o que vem do ambiente e é percebido; a ida à cozinha é a resposta."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Num teste, o professor tocou partes do corpo de um aluno.",
+   "comando": "Qual é a função dos nervos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Teste de toque",
+    "colunas": [
+     "Local tocado",
+     "Resposta"
+    ],
+    "linhas": [
+     [
+      "Dedo",
+      "Tirou a mão"
+     ],
+     [
+      "Pé",
+      "Mexeu os dedos do pé"
+     ]
+    ]
+   },
+   "alts": [
+    "Bombear o sangue",
+    "Levar impulsos entre o corpo, a medula e o encéfalo",
+    "Produzir os ossos",
+    "Guardar energia como gordura"
+   ],
+   "correta": 1,
+   "explicacao": "Os nervos formam a rede que leva informações nos dois sentidos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro machucou um nervo do braço e não sente toques na mão, mas enxerga normalmente.",
+   "comando": "Por que ele ainda enxerga?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Testes feitos em Pedro",
+    "colunas": [
+     "Teste",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Tocar a mão",
+      "Não sente"
+     ],
+     [
+      "Mostrar um objeto",
+      "Descreve o objeto"
+     ],
+     [
+      "Falar perto dele",
+      "Responde"
+     ]
+    ]
+   },
+   "alts": [
+    "O nervo do braço também leva a visão",
+    "Os olhos não dependem do sistema nervoso",
+    "Os nervos da visão são outros e continuam levando informações ao encéfalo",
+    "O encéfalo parou de receber qualquer informação"
+   ],
+   "correta": 2,
+   "explicacao": "Cada nervo cuida de uma região; só o do braço foi afetado."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O sistema nervoso é formado por várias partes.",
+   "comando": "Cite duas partes do sistema nervoso.",
+   "figura": null,
+   "ref": "Encéfalo, medula espinal, nervos ou gânglios.",
+   "conceitos": [
+    "partes do sistema nervoso"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na sala, a porta bateu forte e um aluno virou a cabeça.",
+   "comando": "O que é um estímulo? Dê um exemplo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação",
+    "colunas": [
+     "Situação",
+     "Reação do aluno"
+    ],
+    "linhas": [
+     [
+      "Uma porta bateu forte",
+      "Virou a cabeça"
+     ],
+     [
+      "O professor o chamou",
+      "Respondeu"
+     ]
+    ]
+   },
+   "ref": "É uma mudança no ambiente que o corpo percebe, como um barulho, luz ou calor.",
+   "conceitos": [
+    "estímulo",
+    "exemplo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao pisar em um objeto pontiagudo, uma pessoa tira o pé rapidamente.",
+   "comando": "Descreva o caminho da informação até a resposta.",
+   "figura": null,
+   "ref": "Os receptores da pele percebem o estímulo; os nervos levam o impulso à medula/encéfalo; este envia resposta pelos nervos aos músculos, que movem o pé.",
+   "conceitos": [
+    "receptores",
+    "nervos",
+    "encéfalo e medula",
+    "músculos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Num teste, um aluno devia segurar uma régua que caía.",
+   "comando": "Por que o tempo foi maior com distração?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: tempo para segurar a régua",
+    "colunas": [
+     "Situação",
+     "Tempo (s)"
+    ],
+    "linhas": [
+     [
+      "Com atenção",
+      "0,2"
+     ],
+     [
+      "Distraído",
+      "0,4"
+     ]
+    ]
+   },
+   "ref": "Distraído, o encéfalo demora mais a perceber e processar o estímulo e a comandar os músculos, atrasando a resposta.",
+   "conceitos": [
+    "processamento no encéfalo",
+    "atenção",
+    "resposta"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os neurônios formam uma 'rede de comunicação' no corpo.",
+   "comando": "Por que se usa esse nome? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Estruturas do sistema nervoso",
+    "colunas": [
+     "Estrutura",
+     "Característica"
+    ],
+    "linhas": [
+     [
+      "Neurônio",
+      "Célula alongada"
+     ],
+     [
+      "Sinapse",
+      "Pequeno espaço entre dois neurônios"
+     ],
+     [
+      "Nervo",
+      "Feixe de fibras"
+     ]
+    ]
+   },
+   "ref": "Porque os neurônios se ligam por sinapses e passam impulsos de um para outro, conectando receptores, encéfalo e músculos por todo o corpo.",
+   "conceitos": [
+    "neurônios",
+    "sinapse",
+    "comunicação"
+   ]
+  }
+ ],
+ "4B|6º ANO|15": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula falou-se de café, bebida alcoólica e cigarro.",
+   "comando": "O que é uma droga?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Substâncias citadas na aula",
+    "colunas": [
+     "Substância",
+     "Onde é encontrada"
+    ],
+    "linhas": [
+     [
+      "Cafeína",
+      "Café"
+     ],
+     [
+      "Álcool",
+      "Bebidas"
+     ],
+     [
+      "Nicotina",
+      "Cigarro"
+     ]
+    ]
+   },
+   "alts": [
+    "Qualquer alimento",
+    "Substância que altera o funcionamento do organismo",
+    "Só o que é ilegal",
+    "Só remédio de farmácia"
+   ],
+   "correta": 1,
+   "explicacao": "Droga é qualquer substância que modifica o funcionamento do corpo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O café contém cafeína, que deixa a pessoa mais desperta e agitada.",
+   "comando": "A cafeína é uma droga do tipo",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Cafeína por porção",
+    "unidade": "mg",
+    "itens": [
+     {
+      "rotulo": "Café",
+      "valor": 95
+     },
+     {
+      "rotulo": "Chá preto",
+      "valor": 40
+     },
+     {
+      "rotulo": "Refrigerante de cola",
+      "valor": 35
+     },
+     {
+      "rotulo": "Chocolate",
+      "valor": 10
+     }
+    ]
+   },
+   "alts": [
+    "depressora",
+    "perturbadora",
+    "estimulante",
+    "calmante"
+   ],
+   "correta": 2,
+   "explicacao": "Aumenta a atividade do sistema nervoso, por isso é estimulante."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Caio bebeu álcool numa festa.",
+   "comando": "O que o álcool provoca no sistema nervoso?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observação de Caio",
+    "colunas": [
+     "Momento",
+     "Fala",
+     "Reação"
+    ],
+    "linhas": [
+     [
+      "Antes",
+      "Clara",
+      "Rápida"
+     ],
+     [
+      "Depois",
+      "Arrastada",
+      "Lenta"
+     ]
+    ]
+   },
+   "alts": [
+    "Diminui a atividade, deixando reflexos lentos",
+    "Aumenta a rapidez dos reflexos",
+    "Fortalece os neurônios",
+    "Deixa a pessoa mais atenta"
+   ],
+   "correta": 0,
+   "explicacao": "O álcool é depressor do sistema nervoso."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Três substâncias foram descritas na aula.",
+   "comando": "Qual alternativa classifica corretamente cada substância?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Efeitos descritos",
+    "colunas": [
+     "Substância",
+     "Efeito"
+    ],
+    "linhas": [
+     [
+      "X",
+      "Agitação e falta de sono"
+     ],
+     [
+      "Y",
+      "Lentidão e sonolência"
+     ],
+     [
+      "Z",
+      "Alucinações"
+     ]
+    ]
+   },
+   "alts": [
+    "X depressora, Y estimulante, Z perturbadora",
+    "X perturbadora, Y depressora, Z estimulante",
+    "X estimulante, Y perturbadora, Z depressora",
+    "X estimulante, Y depressora, Z perturbadora"
+   ],
+   "correta": 3,
+   "explicacao": "Cada efeito caracteriza um tipo de droga."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Antes da prova, um colega tomou energético para não dormir e depois sentiu as mãos tremendo e o coração disparado.",
+   "comando": "Qual é a melhor conclusão?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Sintomas relatados",
+    "colunas": [
+     "Horário",
+     "Sintoma"
+    ],
+    "linhas": [
+     [
+      "20h",
+      "Tomou o energético"
+     ],
+     [
+      "21h",
+      "Mãos tremendo"
+     ],
+     [
+      "22h",
+      "Coração acelerado"
+     ],
+     [
+      "1h",
+      "Sem sono e ansioso"
+     ]
+    ]
+   },
+   "alts": [
+    "Estimulantes sempre melhoram a memória",
+    "Estimulantes podem aumentar a ansiedade e atrapalhar a concentração e o sono",
+    "Só causam problemas se forem ilegais",
+    "Não têm efeito no corpo"
+   ],
+   "correta": 1,
+   "explicacao": "Estimulantes em excesso causam ansiedade, tremores e insônia."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Algumas drogas são vendidas legalmente.",
+   "comando": "Cite um exemplo de droga lícita.",
+   "figura": null,
+   "ref": "Álcool, nicotina (cigarro) ou cafeína.",
+   "conceitos": [
+    "droga lícita"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O álcool aparece em bebidas.",
+   "comando": "O álcool é estimulante ou depressor? Explique.",
+   "figura": null,
+   "ref": "Depressor: diminui a atividade do sistema nervoso, deixando os reflexos e a coordenação mais lentos.",
+   "conceitos": [
+    "depressor",
+    "sistema nervoso"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma confeiteira toma seis cafés por dia e está com insônia e coração acelerado.",
+   "comando": "Por que ela deve reduzir o café?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Rotina da confeiteira",
+    "colunas": [
+     "Semana",
+     "Cafés por dia",
+     "Horas de sono"
+    ],
+    "linhas": [
+     [
+      "1",
+      "2",
+      "7"
+     ],
+     [
+      "2",
+      "4",
+      "6"
+     ],
+     [
+      "3",
+      "6",
+      "4"
+     ]
+    ]
+   },
+   "ref": "A cafeína estimula o sistema nervoso; em excesso causa insônia e aceleração do coração, prejudicando a saúde.",
+   "conceitos": [
+    "cafeína estimulante",
+    "insônia",
+    "efeitos no corpo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Alguns jovens misturam energético com álcool.",
+   "comando": "Por que essa mistura é perigosa?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Relatos comparados",
+    "colunas": [
+     "Pessoa",
+     "Sensação",
+     "Reflexos"
+    ],
+    "linhas": [
+     [
+      "Só álcool",
+      "Sono",
+      "Lentos"
+     ],
+     [
+      "Álcool e energético",
+      "Acordada",
+      "Lentos"
+     ]
+    ]
+   },
+   "ref": "O energético estimulante disfarça o sono e a embriaguez, mas o álcool continua prejudicando; a pessoa se arrisca mais.",
+   "conceitos": [
+    "efeitos opostos",
+    "mascara embriaguez",
+    "risco"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Beber e dirigir é perigoso.",
+   "comando": "Explique por que, usando o conceito de reflexos.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: distância até frear a 60 km/h",
+    "unidade": "m",
+    "itens": [
+     {
+      "rotulo": "Reflexos normais",
+      "valor": 15
+     },
+     {
+      "rotulo": "Reflexos lentos",
+      "valor": 25
+     }
+    ]
+   },
+   "ref": "O álcool diminui a atividade do sistema nervoso e deixa os reflexos lentos; o motorista demora a frear e percorre mais distância, aumentando o risco de acidente.",
+   "conceitos": [
+    "álcool depressor",
+    "reflexos lentos",
+    "acidentes"
+   ]
+  }
+ ],
+ "4B|7º ANO|9": [
+  {
+   "tipo": "obj",
+   "enunciado": "O exame de sangue de Bia, que estava com infecção, mostrou muitos leucócitos.",
+   "comando": "Qual é a função geral dos leucócitos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Resultado do exame de sangue",
+    "colunas": [
+     "Componente",
+     "Resultado",
+     "Referência"
+    ],
+    "linhas": [
+     [
+      "Hemácias",
+      "4,8 milhões",
+      "4,0 a 5,2 milhões"
+     ],
+     [
+      "Leucócitos",
+      "14.000",
+      "4.000 a 11.000"
+     ]
+    ]
+   },
+   "alts": [
+    "Transportar oxigênio",
+    "Coagular o sangue",
+    "Defender o corpo contra microrganismos",
+    "Digerir alimentos"
+   ],
+   "correta": 2,
+   "explicacao": "Leucócitos são as células de defesa do sangue."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No posto de saúde, a enfermeira explicou as formas de proteção.",
+   "comando": "Qual é um exemplo de imunização ativa artificial?",
+   "figura": null,
+   "alts": [
+    "Tomar uma vacina",
+    "Receber anticorpos do leite materno",
+    "Ter sarampo e se curar",
+    "Receber soro com anticorpos prontos"
+   ],
+   "correta": 0,
+   "explicacao": "A vacina estimula o corpo a produzir os próprios anticorpos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um estudo comparou bebês de 6 meses.",
+   "comando": "Qual explicação para menos infecções nos bebês amamentados?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: infecções em 100 bebês",
+    "unidade": "infecções",
+    "itens": [
+     {
+      "rotulo": "Só mamadeira",
+      "valor": 40
+     },
+     {
+      "rotulo": "Aleitamento materno",
+      "valor": 15
+     }
+    ]
+   },
+   "alts": [
+    "O leite faz o bebê produzir vacinas",
+    "Os anticorpos do leite passam ao bebê (imunização passiva natural)",
+    "O leite materno mata todos os vírus",
+    "O bebê produz anticorpos sozinho desde o nascimento"
+   ],
+   "correta": 1,
+   "explicacao": "Os anticorpos da mãe protegem o bebê temporariamente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma pessoa tomou duas doses de uma vacina.",
+   "comando": "Qual alternativa explica o aumento de anticorpos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: anticorpos no sangue",
+    "colunas": [
+     "Dia",
+     "Anticorpos (unidades)"
+    ],
+    "linhas": [
+     [
+      "0 (1ª dose)",
+      "0"
+     ],
+     [
+      "14",
+      "20"
+     ],
+     [
+      "28 (2ª dose)",
+      "20"
+     ],
+     [
+      "42",
+      "80"
+     ]
+    ]
+   },
+   "alts": [
+    "A vacina contém anticorpos prontos que se somam",
+    "Os glóbulos vermelhos viram anticorpos",
+    "O vírus da vacina se multiplica sem controle",
+    "Linfócitos de memória reconhecem o antígeno e produzem mais anticorpos"
+   ],
+   "correta": 3,
+   "explicacao": "A memória imunológica gera resposta mais rápida e intensa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Duas crianças foram acompanhadas por um ano.",
+   "comando": "Qual conclusão é correta?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: infecções em um ano",
+    "unidade": "infecções",
+    "itens": [
+     {
+      "rotulo": "Criança com sistema imune normal",
+      "valor": 3
+     },
+     {
+      "rotulo": "Criança com defesas muito fracas",
+      "valor": 14
+     }
+    ]
+   },
+   "alts": [
+    "As barreiras do corpo bastam, sem sistema imune",
+    "Doenças só surgem por falta de higiene",
+    "Sem o sistema imune funcionando bem, até microrganismos comuns causam doenças graves",
+    "Defesas fracas protegem contra infecções"
+   ],
+   "correta": 2,
+   "explicacao": "A falta de defesas deixa o corpo vulnerável a infecções."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Durante uma infecção, o corpo produz anticorpos.",
+   "comando": "Qual é a função dos anticorpos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: vírus e anticorpos",
+    "colunas": [
+     "Dia",
+     "Vírus",
+     "Anticorpos"
+    ],
+    "linhas": [
+     [
+      "1",
+      "500",
+      "0"
+     ],
+     [
+      "4",
+      "900",
+      "10"
+     ],
+     [
+      "8",
+      "200",
+      "80"
+     ],
+     [
+      "12",
+      "5",
+      "120"
+     ]
+    ]
+   },
+   "ref": "Combater os antígenos: ligam-se a eles e ajudam a neutralizá-los e eliminá-los.",
+   "conceitos": [
+    "anticorpos",
+    "antígenos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Existem formas de proteção que não são vacina.",
+   "comando": "Cite uma forma de imunização passiva.",
+   "figura": null,
+   "ref": "Anticorpos do leite materno, da placenta ou soro com anticorpos prontos.",
+   "conceitos": [
+    "imunização passiva"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma criança foi picada por cobra e recebeu soro no posto de saúde.",
+   "comando": "A imunização é ativa ou passiva? Por que a proteção dura pouco?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Atendimento",
+    "etapas": [
+     "Picada de cobra",
+     "Ida ao posto de saúde",
+     "Aplicação do soro",
+     "Melhora do quadro"
+    ]
+   },
+   "ref": "Passiva artificial: recebe anticorpos prontos; o corpo não os produz nem guarda memória, e a proteção é temporária.",
+   "conceitos": [
+    "passiva artificial",
+    "anticorpos prontos",
+    "sem memória"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Quando muita gente se vacina, a doença circula menos.",
+   "comando": "Explique por que isso protege também quem não pode se vacinar.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: sarampo em 1000 pessoas",
+    "colunas": [
+     "Vacinados",
+     "Casos"
+    ],
+    "linhas": [
+     [
+      "95%",
+      "2"
+     ],
+     [
+      "70%",
+      "40"
+     ],
+     [
+      "40%",
+      "150"
+     ]
+    ]
+   },
+   "ref": "Com mais vacinados, o vírus encontra poucos hospedeiros e circula menos, protegendo indiretamente quem não pode ser vacinado.",
+   "conceitos": [
+    "imunidade coletiva",
+    "menor circulação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rafael teve catapora aos 5 anos e nunca mais teve.",
+   "comando": "Explique por que, usando linfócitos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Relato de Rafael",
+    "colunas": [
+     "Ano",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "2018",
+      "Teve catapora e melhorou"
+     ],
+     [
+      "2020",
+      "Contato com colega doente e não adoeceu"
+     ]
+    ]
+   },
+   "ref": "Linfócitos de memória guardam o antígeno e, no novo contato, produzem anticorpos rapidamente, evitando a doença.",
+   "conceitos": [
+    "linfócitos de memória",
+    "anticorpos",
+    "segunda exposição"
+   ]
+  }
+ ],
+ "4B|8º ANO|3": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma montanha-russa, o carrinho passa por vários pontos do trilho.",
+   "comando": "Em qual ponto a energia potencial é maior?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Pontos do trilho",
+    "colunas": [
+     "Posição",
+     "Altura (m)"
+    ],
+    "linhas": [
+     [
+      "Topo da primeira subida",
+      "40"
+     ],
+     [
+      "Base da descida",
+      "0"
+     ],
+     [
+      "Meio da descida",
+      "20"
+     ],
+     [
+      "Topo da segunda subida",
+      "25"
+     ]
+    ]
+   },
+   "alts": [
+    "Topo da primeira subida",
+    "Base da descida",
+    "Meio da descida",
+    "Topo da segunda subida"
+   ],
+   "correta": 0,
+   "explicacao": "Quanto maior a altura, maior a energia potencial gravitacional."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador, a turma ligou uma lâmpada incandescente e sentiu que ela esquentava.",
+   "comando": "Qual energia é dissipada, sem ser aproveitada, na lâmpada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Sistemas do simulador",
+    "colunas": [
+     "Sistema",
+     "Energia que entra"
+    ],
+    "linhas": [
+     [
+      "Painel solar",
+      "Luz"
+     ],
+     [
+      "Lâmpada",
+      "Elétrica"
+     ],
+     [
+      "Ventilador",
+      "Elétrica"
+     ]
+    ]
+   },
+   "alts": [
+    "Sonora",
+    "Térmica (calor)",
+    "Química",
+    "Nuclear"
+   ],
+   "correta": 1,
+   "explicacao": "Parte da energia elétrica vira calor, que se espalha."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um carrinho desce de uma altura de 30 m.",
+   "comando": "O que ocorre com as energias na descida?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do carrinho na descida",
+    "colunas": [
+     "Altura (m)",
+     "Velocidade (m/s)"
+    ],
+    "linhas": [
+     [
+      "30",
+      "0"
+     ],
+     [
+      "20",
+      "14"
+     ],
+     [
+      "10",
+      "20"
+     ],
+     [
+      "0",
+      "24"
+     ]
+    ]
+   },
+   "alts": [
+    "As duas aumentam",
+    "A potencial aumenta e a cinética diminui",
+    "As duas diminuem",
+    "A potencial diminui e a cinética aumenta"
+   ],
+   "correta": 3,
+   "explicacao": "A energia potencial se transforma em cinética."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O carrinho freou e parou no fim do trilho.",
+   "comando": "Para onde foi a energia do movimento?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do freio",
+    "colunas": [
+     "Momento",
+     "Velocidade (m/s)",
+     "Temperatura do freio"
+    ],
+    "linhas": [
+     [
+      "Antes",
+      "15",
+      "25 °C"
+     ],
+     [
+      "Depois",
+      "0",
+      "40 °C"
+     ]
+    ]
+   },
+   "alts": [
+    "Desapareceu",
+    "Transformou-se em energia térmica, que se espalha no ambiente",
+    "Virou energia potencial",
+    "Foi criada uma energia nova"
+   ],
+   "correta": 1,
+   "explicacao": "A energia se conserva: o movimento virou calor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois sistemas receberam 100 J de energia no início.",
+   "comando": "Qual afirmação é correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Sistema",
+     "Energia no início (J)",
+     "Energia útil no fim (J)"
+    ],
+    "linhas": [
+     [
+      "Sem atrito",
+      "100",
+      "100"
+     ],
+     [
+      "Com atrito",
+      "100",
+      "80"
+     ]
+    ]
+   },
+   "alts": [
+    "No sistema com atrito, 20 J de energia foram destruídos",
+    "No sistema sem atrito, energia foi criada",
+    "No sistema com atrito, 20 J viraram energia térmica e a energia total se conservou",
+    "No sistema com atrito a energia total diminuiu"
+   ],
+   "correta": 2,
+   "explicacao": "A energia não se perde: se transforma."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No simulador aparecem fontes e aparelhos.",
+   "comando": "Cite duas formas de energia.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Elementos do simulador",
+    "colunas": [
+     "Tipo",
+     "Exemplos"
+    ],
+    "linhas": [
+     [
+      "Fonte",
+      "Sol, água, bicicleta"
+     ],
+     [
+      "Aparelho",
+      "Lâmpada, ventilador"
+     ]
+    ]
+   },
+   "ref": "Cinética, potencial, térmica, elétrica, luminosa ou química.",
+   "conceitos": [
+    "formas de energia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Parte da energia de um aparelho não é aproveitada.",
+   "comando": "O que é energia dissipada?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: 100 J fornecidos a um ventilador",
+    "unidade": "J",
+    "itens": [
+     {
+      "rotulo": "Movimento das pás",
+      "valor": 70
+     },
+     {
+      "rotulo": "Som",
+      "valor": 5
+     },
+     {
+      "rotulo": "Outras formas",
+      "valor": 25
+     }
+    ]
+   },
+   "ref": "É a parte da energia que se transforma em formas não aproveitadas, como calor, e se espalha no ambiente.",
+   "conceitos": [
+    "energia dissipada",
+    "calor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No simulador, uma pessoa pedala e acende uma lâmpada por um dínamo.",
+   "comando": "Descreva as transformações de energia.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Sequência do simulador",
+    "etapas": [
+     "Ciclista pedala",
+     "Roda do dínamo gira",
+     "Lâmpada acende"
+    ]
+   },
+   "ref": "Energia química do corpo vira cinética; no dínamo vira elétrica; na lâmpada vira luminosa e térmica.",
+   "conceitos": [
+    "química",
+    "cinética",
+    "elétrica",
+    "luminosa e térmica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma montanha-russa sem motor não alcança mais a altura da primeira subida.",
+   "comando": "Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Alturas das subidas",
+    "colunas": [
+     "Subida",
+     "Altura (m)"
+    ],
+    "linhas": [
+     [
+      "1ª",
+      "40"
+     ],
+     [
+      "2ª",
+      "30"
+     ],
+     [
+      "3ª",
+      "22"
+     ]
+    ]
+   },
+   "ref": "Atrito e ar transformam parte da energia em calor e som, que se dissipam; a energia mecânica diminui, embora a total se conserve.",
+   "conceitos": [
+    "atrito",
+    "energia dissipada",
+    "conservação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma criança diz que a energia acabou quando a bola parou de quicar.",
+   "comando": "Corrija essa ideia.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Altura dos quiques",
+    "colunas": [
+     "Quique",
+     "Altura (cm)"
+    ],
+    "linhas": [
+     [
+      "1º",
+      "100"
+     ],
+     [
+      "2º",
+      "70"
+     ],
+     [
+      "3º",
+      "49"
+     ],
+     [
+      "4º",
+      "34"
+     ]
+    ]
+   },
+   "ref": "A energia não acaba: vira térmica e sonora, aquecendo a bola e o chão. Pelo princípio da conservação, a energia total permanece.",
+   "conceitos": [
+    "conservação da energia",
+    "energia térmica e sonora"
+   ]
+  }
+ ],
+ "4B|8º ANO|16": [
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador, a turma montou um circuito simples.",
+   "comando": "Qual componente fornece energia ao circuito?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Componentes montados",
+    "colunas": [
+     "Componente",
+     "Aspecto"
+    ],
+    "linhas": [
+     [
+      "Bateria",
+      "Dois terminais, + e -"
+     ],
+     [
+      "Lâmpada",
+      "Filamento fino"
+     ],
+     [
+      "Fio",
+      "Metal coberto de plástico"
+     ],
+     [
+      "Interruptor",
+      "Peça móvel"
+     ]
+    ]
+   },
+   "alts": [
+    "Bateria",
+    "Lâmpada",
+    "Fio",
+    "Interruptor"
+   ],
+   "correta": 0,
+   "explicacao": "A bateria fornece a energia elétrica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois circuitos foram testados queimando uma lâmpada em cada um.",
+   "comando": "Como são os circuitos 1 e 2?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Teste no simulador",
+    "colunas": [
+     "Circuito",
+     "Lâmpada queimada",
+     "Outras lâmpadas"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Uma",
+      "Todas apagaram"
+     ],
+     [
+      "2",
+      "Uma",
+      "Continuaram acesas"
+     ]
+    ]
+   },
+   "alts": [
+    "1 em paralelo e 2 em série",
+    "Ambos em série",
+    "1 em série e 2 em paralelo",
+    "Ambos em paralelo"
+   ],
+   "correta": 2,
+   "explicacao": "Em série há um só caminho; em paralelo há caminhos independentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Duas lâmpadas iguais foram ligadas a uma bateria de 6 V.",
+   "comando": "O que se conclui sobre a corrente?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: circuito em série",
+    "colunas": [
+     "Ponto",
+     "Tensão (V)",
+     "Corrente (A)"
+    ],
+    "linhas": [
+     [
+      "Lâmpada 1",
+      "3",
+      "0,5"
+     ],
+     [
+      "Lâmpada 2",
+      "3",
+      "0,5"
+     ],
+     [
+      "Bateria",
+      "6",
+      "0,5"
+     ]
+    ]
+   },
+   "alts": [
+    "Aumenta a cada lâmpada",
+    "É a mesma em todo o circuito em série",
+    "Divide-se entre as lâmpadas",
+    "Soma-se nas lâmpadas"
+   ],
+   "correta": 1,
+   "explicacao": "Em série a corrente é igual e a tensão se divide."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Duas lâmpadas iguais foram ligadas em paralelo a uma bateria de 6 V.",
+   "comando": "Qual afirmação descreve o circuito?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: circuito em paralelo",
+    "colunas": [
+     "Ponto",
+     "Tensão (V)",
+     "Corrente (A)"
+    ],
+    "linhas": [
+     [
+      "Lâmpada 1",
+      "6",
+      "0,6"
+     ],
+     [
+      "Lâmpada 2",
+      "6",
+      "0,6"
+     ],
+     [
+      "Bateria",
+      "6",
+      "1,2"
+     ]
+    ]
+   },
+   "alts": [
+    "A tensão se divide entre as lâmpadas",
+    "A corrente é a mesma e não se divide",
+    "A tensão nas lâmpadas é nula",
+    "Cada lâmpada recebe a tensão da bateria e as correntes se somam"
+   ],
+   "correta": 3,
+   "explicacao": "Em paralelo a tensão é a mesma e as correntes somam."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois resistores de 10 ohms foram ligados a uma bateria de 12 V, um circuito em série e outro em paralelo.",
+   "comando": "Qual afirmação explica os resultados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Circuito",
+     "Corrente medida (A)"
+    ],
+    "linhas": [
+     [
+      "Série",
+      "0,6"
+     ],
+     [
+      "Paralelo",
+      "2,4"
+     ]
+    ]
+   },
+   "alts": [
+    "No paralelo a resistência equivalente é maior",
+    "Em série a corrente é maior porque as resistências se somam",
+    "No paralelo a resistência equivalente é menor, por isso a corrente é maior",
+    "As correntes diferem porque a tensão muda de valor"
+   ],
+   "correta": 2,
+   "explicacao": "Série: 20 ohms e 0,6 A. Paralelo: 5 ohms e 2,4 A."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O interruptor aparece em muitos circuitos.",
+   "comando": "Para que serve o interruptor?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem do circuito",
+    "etapas": [
+     "Ligar a bateria ao interruptor",
+     "Ligar o interruptor à lâmpada",
+     "Ligar a lâmpada à bateria",
+     "Observar a lâmpada"
+    ]
+   },
+   "ref": "Abre ou fecha o caminho da corrente, ligando ou desligando o circuito.",
+   "conceitos": [
+    "interruptor",
+    "caminho da corrente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma casa há geladeira, ventilador e lâmpadas ligados ao mesmo tempo.",
+   "comando": "Como estão ligados os aparelhos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Estado dos aparelhos",
+    "colunas": [
+     "Aparelho",
+     "Estado"
+    ],
+    "linhas": [
+     [
+      "Geladeira",
+      "Ligada"
+     ],
+     [
+      "Ventilador",
+      "Desligado"
+     ],
+     [
+      "Lâmpada",
+      "Acesa"
+     ]
+    ]
+   },
+   "ref": "Em paralelo: cada aparelho recebe a tensão da rede e funciona de forma independente.",
+   "conceitos": [
+    "circuito em paralelo",
+    "independência"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lâmpadas iguais foram ligadas em série a uma bateria.",
+   "comando": "O que acontece com o brilho ao colocar mais lâmpadas? Explique.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: corrente em série",
+    "unidade": "A",
+    "itens": [
+     {
+      "rotulo": "1 lâmpada",
+      "valor": 0.6
+     },
+     {
+      "rotulo": "2 lâmpadas",
+      "valor": 0.3
+     },
+     {
+      "rotulo": "3 lâmpadas",
+      "valor": 0.2
+     }
+    ]
+   },
+   "ref": "O brilho diminui: a resistência total aumenta e a corrente fica menor.",
+   "conceitos": [
+    "resistência total",
+    "corrente menor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em enfeites antigos, uma lâmpada queimada apagava todas.",
+   "comando": "Explique esse problema e como o paralelo o evita.",
+   "figura": null,
+   "ref": "Em série há um único caminho e uma lâmpada queimada o interrompe. Em paralelo há caminhos independentes, e as outras continuam acesas.",
+   "conceitos": [
+    "circuito em série",
+    "caminho único",
+    "paralelo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois circuitos têm a mesma bateria e duas lâmpadas iguais, ligadas de maneiras diferentes.",
+   "comando": "Em qual circuito a bateria acaba primeiro? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Circuito",
+     "Corrente na bateria (A)"
+    ],
+    "linhas": [
+     [
+      "1",
+      "0,3"
+     ],
+     [
+      "2",
+      "1,2"
+     ]
+    ]
+   },
+   "ref": "No circuito 2 (paralelo): a resistência equivalente é menor e a corrente maior, descarregando a bateria mais rápido.",
+   "conceitos": [
+    "paralelo",
+    "resistência equivalente",
+    "corrente"
+   ]
+  }
+ ],
+ "4B|9º ANO|14": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma estudou o Cruzeiro do Sul.",
+   "comando": "O que são constelações?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Distância das estrelas do Cruzeiro do Sul à Terra",
+    "colunas": [
+     "Estrela",
+     "Anos-luz (aprox.)"
+    ],
+    "linhas": [
+     [
+      "Acrux",
+      "320"
+     ],
+     [
+      "Mimosa",
+      "280"
+     ],
+     [
+      "Gacrux",
+      "88"
+     ]
+    ]
+   },
+   "alts": [
+    "Grupos de estrelas realmente próximas",
+    "Figuras imaginadas por povos ao ligar estrelas no céu",
+    "Galáxias vizinhas",
+    "Conjuntos de planetas"
+   ],
+   "correta": 1,
+   "explicacao": "São convenções culturais; as estrelas podem estar a distâncias diferentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma montou uma linha do tempo de instrumentos de observação.",
+   "comando": "Qual alternativa mostra a ordem do mais antigo para o mais novo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Instrumentos e anos",
+    "colunas": [
+     "Instrumento",
+     "Ano"
+    ],
+    "linhas": [
+     [
+      "Hubble",
+      "1990"
+     ],
+     [
+      "Luneta de Galileu",
+      "1609"
+     ],
+     [
+      "James Webb",
+      "2021"
+     ]
+    ]
+   },
+   "alts": [
+    "Luneta de Galileu, Hubble, James Webb",
+    "Hubble, luneta de Galileu, James Webb",
+    "James Webb, Hubble, luneta de Galileu",
+    "Luneta de Galileu, James Webb, Hubble"
+   ],
+   "correta": 0,
+   "explicacao": "A luneta é de 1609, o Hubble de 1990 e o Webb de 2021."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois telescópios espaciais foram comparados.",
+   "comando": "Qual é uma diferença correta entre eles?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Telescópios espaciais",
+    "colunas": [
+     "Telescópio",
+     "Posição",
+     "Luz principal"
+    ],
+    "linhas": [
+     [
+      "Hubble",
+      "Órbita a cerca de 540 km da Terra",
+      "Visível e ultravioleta"
+     ],
+     [
+      "James Webb",
+      "Cerca de 1,5 milhão de km da Terra",
+      "Infravermelho"
+     ]
+    ]
+   },
+   "alts": [
+    "O Hubble fica mais longe e observa infravermelho",
+    "Os dois observam só luz visível",
+    "O Webb observa principalmente o infravermelho e fica muito mais longe da Terra",
+    "O Webb está em órbita baixa da Terra"
+   ],
+   "correta": 2,
+   "explicacao": "O Webb usa infravermelho e está a 1,5 milhão de km."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma rede brasileira monitora lixo espacial, como pedaços de foguetes e satélites antigos.",
+   "comando": "Por que esse monitoramento é importante?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Objetos em órbita baixa",
+    "colunas": [
+     "Objeto",
+     "Tamanho",
+     "Velocidade (km/s)"
+    ],
+    "linhas": [
+     [
+      "Satélite ativo",
+      "5 m",
+      "7,5"
+     ],
+     [
+      "Peça de foguete",
+      "1 m",
+      "7,5"
+     ],
+     [
+      "Parafuso solto",
+      "2 cm",
+      "7,5"
+     ]
+    ]
+   },
+   "alts": [
+    "Ele cai todo dia nas cidades",
+    "Faz as estrelas sumirem",
+    "Muda a duração do dia",
+    "Fragmentos em alta velocidade podem colidir com satélites"
+   ],
+   "correta": 3,
+   "explicacao": "Em alta velocidade, até objetos pequenos causam grandes danos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Três sondas espaciais foram estudadas.",
+   "comando": "Qual conclusão a tabela permite?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Sondas espaciais",
+    "colunas": [
+     "Sonda",
+     "Lançamento",
+     "Alvo"
+    ],
+    "linhas": [
+     [
+      "Mariner 2",
+      "1962",
+      "Vênus"
+     ],
+     [
+      "Voyager 1",
+      "1977",
+      "Planetas externos e espaço interestelar"
+     ],
+     [
+      "Kepler",
+      "2009",
+      "Estrelas distantes"
+     ]
+    ]
+   },
+   "alts": [
+    "Todas visitaram Vênus",
+    "O alcance aumentou: de um planeta vizinho a estrelas distantes",
+    "Kepler foi lançada antes da Mariner 2",
+    "Voyager 1 estudou só a Lua"
+   ],
+   "correta": 1,
+   "explicacao": "A tabela mostra exploração cada vez mais distante."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Telescópios podem ficar na Terra ou no espaço.",
+   "comando": "Cite um telescópio espacial.",
+   "figura": null,
+   "ref": "Hubble ou James Webb.",
+   "conceitos": [
+    "telescópio espacial"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A bandeira do Brasil tem várias estrelas.",
+   "comando": "O que representam as estrelas da bandeira?",
+   "figura": null,
+   "ref": "Os estados e o Distrito Federal, agrupados em constelações como o Cruzeiro do Sul.",
+   "conceitos": [
+    "estados e DF",
+    "constelações"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Galileu apontou uma luneta para as Plêiades.",
+   "comando": "O que a luneta faz que permite ver mais estrelas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Contagem de estrelas nas Plêiades",
+    "colunas": [
+     "Modo de observar",
+     "Estrelas vistas"
+    ],
+    "linhas": [
+     [
+      "A olho nu",
+      "6 a 7"
+     ],
+     [
+      "Com luneta",
+      "36"
+     ]
+    ]
+   },
+   "ref": "Reúne mais luz e amplia a imagem, permitindo ver objetos fracos e distantes.",
+   "conceitos": [
+    "luneta",
+    "mais luz",
+    "ampliação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um parafuso solto orbita a Terra a 7,5 km/s.",
+   "comando": "Ele pode danificar um satélite? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Objeto",
+     "Massa (kg)",
+     "Velocidade (m/s)"
+    ],
+    "linhas": [
+     [
+      "Parafuso",
+      "0,02",
+      "7500"
+     ],
+     [
+      "Satélite",
+      "500",
+      "7500"
+     ]
+    ]
+   },
+   "ref": "Sim: a alta velocidade dá muita energia ao parafuso, e a colisão pode danificar o satélite e gerar mais fragmentos.",
+   "conceitos": [
+    "alta velocidade",
+    "energia",
+    "colisão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cada aluno ligou pontos de estrelas e deu um nome à figura.",
+   "comando": "Por que as constelações são convenções culturais?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Atividade com estrelas no papel",
+    "etapas": [
+     "Marcar 10 pontos",
+     "Cada aluno liga como quiser",
+     "Dar um nome à figura",
+     "Comparar as figuras"
+    ]
+   },
+   "ref": "Porque são desenhos imaginados; povos diferentes ligam as estrelas de formas diferentes, e elas podem estar a distâncias distintas.",
+   "conceitos": [
+    "figuras imaginadas",
+    "culturas diferentes"
+   ]
+  }
+ ]
+}

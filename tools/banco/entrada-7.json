@@ -1,0 +1,82 @@
+{
+ "7º ANO|1|Avaliar a qualidade do ar e seus efeitos sobre o ambiente e a saúde.": {
+  "serie": "7",
+  "desc": "Avaliar a qualidade do ar e seus efeitos sobre o ambiente e a saúde.",
+  "hab": "EF07CI12",
+  "habTxt": "Identificar a composição da atmosfera e fatores naturais/humanos que a alteram, com impactos no ambiente e na saúde respiratória (AE2).",
+  "nome": "Cartão pega-poeira",
+  "concreta": "Comparar com lupa cartões com vaselina deixados uma semana antes em locais diferentes (portão perto da rua, pátio, sala), contando pontinhos de partículas em uma grade."
+ },
+ "8º ANO|3|Analisar o papel da inclinação do eixo de rotação da Terra em relação à sua órbita na ocorrência das estações do ano.": {
+  "serie": "8",
+  "desc": "Analisar o papel da inclinação do eixo de rotação da Terra em relação à sua órbita na ocorrência das estações do ano.",
+  "hab": "EF08CI12, EF08CI13",
+  "habTxt": "Explicar fenômenos astronômicos cíclicos pelos movimentos de Sol, Terra e Lua e pela inclinação do eixo terrestre (AE8).",
+  "nome": "Globo inclinado",
+  "concreta": "A bola inclinada dá a volta na lanterna mantendo o palito sempre na mesma direção. A turma observa qual hemisfério recebe luz mais direta em cada posição."
+ },
+ "9º ANO|3|Relacionar a evolução biológica à formação da biodiversidade ao longo do tempo.": {
+  "serie": "9",
+  "desc": "Relacionar a evolução biológica à formação da biodiversidade ao longo do tempo.",
+  "hab": "EF09CI11, EF09CI10",
+  "habTxt": "Analisar a evolução e a diversidade das espécies a partir de evidências científicas e processos evolutivos (AE10).",
+  "nome": "Jogo dos bicos",
+  "concreta": "Grupos usam 'bicos' (pregador, colher ou pinça) para pegar grãos por 30 s, em 3 rodadas, e anotam quantos pegaram. Os bicos que pegam pouco 'não sobrevivem'."
+ },
+ "9º ANO|3|Reconhecer a especiação como processo de formação de novas espécies a partir do isolamento reprodutivo associado, ou não, ao isolamento geográfico.": {
+  "serie": "9",
+  "desc": "Reconhecer a especiação como processo de formação de novas espécies a partir do isolamento reprodutivo associado, ou não, ao isolamento geográfico.",
+  "hab": "EF09CI11, EF09CI10",
+  "habTxt": "Analisar a evolução e a diversidade das espécies a partir de evidências científicas e processos evolutivos (AE10).",
+  "nome": "O rio que separou",
+  "concreta": "A turma é uma 'população'; uma fita (rio) a divide em dois grupos. Em cada lado, sorteiam-se feijões que mudam características ao longo de 'gerações'. Ao fim, os grupos estão diferentes demais para se cruzar."
+ },
+ "4B|6º ANO|4": {
+  "serie": "6",
+  "desc": "Reconhecer as principais estruturas do sistema nervoso central e suas funções.",
+  "hab": "EF06CI07",
+  "habTxt": "SNC e SNP; encéfalo (cérebro, cerebelo, tronco encefálico); medula espinal; ato reflexo e reflexo patelar.",
+  "nome": "Sistema nervoso central",
+  "concreta": "Relembre identificando partes na figura; Pause e responda (cerebelo); Na prática: texto sobre atos reflexos e questões."
+ },
+ "4B|6º ANO|16": {
+  "serie": "6",
+  "desc": "Reconhecer efeitos das substâncias psicoativas no sistema nervoso e estratégias de prevenção e cuidado com a saúde.",
+  "hab": "EF06CI10",
+  "habTxt": "Drogas lícitas e ilícitas; dependência; efeitos no sistema nervoso; prevenção.",
+  "nome": "Efeitos das drogas no organismo – Parte 2",
+  "concreta": "Discussão orientada de casos e produção de mensagem de prevenção para a escola."
+ },
+ "4B|7º ANO|10": {
+  "serie": "7",
+  "desc": "Reconhecer a vacinação como ação de promoção da saúde individual e coletiva, contextualizando a história de seu desenvolvimento.",
+  "hab": "EF07CI09",
+  "habTxt": "Vacina como imunização ativa; variolação, Jenner e Pasteur; Revolta da Vacina (1904); tipos de vacinas; liberação (PNI, ANVISA); esquema vacinal.",
+  "nome": "Vacinas",
+  "concreta": "Relembre (tipo de imunização); Pause e responda; Na prática: estudo de caso da família Ribeiro e desinformação sobre vacinas."
+ },
+ "4B|8º ANO|4": {
+  "serie": "8",
+  "desc": "Compreender a importância das energias renováveis, analisando prós e contras de cada fonte.",
+  "hab": "EF08CI01, EF08CI18*",
+  "habTxt": "Fontes renováveis: solar, eólica, hidrelétrica, biomassa, geotérmica e oceânica; vantagens e desvantagens (intermitência, custo, espaço, impacto local).",
+  "nome": "Energias renováveis",
+  "concreta": "Em grupos, planejam um bairro sustentável no interior de SP, escolhem fontes de energia e justificam a escolha em um parágrafo com prós e contras."
+ },
+ "4B|8º ANO|17": {
+  "serie": "8",
+  "desc": "Explicar corrente, tensão e potência elétrica e relacioná-las ao consumo de diferentes eletrodomésticos.",
+  "hab": "EF08CI03",
+  "habTxt": "Circuito elétrico doméstico; corrente (A), tensão (V) e potência (W); P = U × I; eletrodomésticos de baixo, médio e alto consumo; conversões de energia.",
+  "nome": "Classificação dos aparelhos eletrônicos",
+  "concreta": "Calculam a potência de geladeira, TV e chuveiro em rede de 220 V e verificam se o sistema de 5.000 W suporta o uso simultâneo."
+ },
+ "4B|9º ANO|15": {
+  "serie": "9",
+  "desc": "Valorizar a relevância das constelações e da observação do céu para os povos originários.",
+  "hab": "EF09CI15",
+  "habTxt": "Etnoastronomia; 88 constelações da UAI; gnômon e relógio de sol; calendário natural; céu guarani (tempo novo e velho); Ema, Homem Velho, Anta, Veado.",
+  "nome": "Constelações indígenas",
+  "concreta": "Relacionam as datas de aparição da Ema e do Homem Velho às estações, à chuva/seca e a atividades como plantio, colheita, caça e pesca."
+ }
+}

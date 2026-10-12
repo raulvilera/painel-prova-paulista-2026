@@ -1,0 +1,82 @@
+{
+ "7º ANO|2|Reconhecer o conceito de sustentabilidade e sua aplicação nas ações humanas e políticas ambientais.": {
+  "serie": "7",
+  "desc": "Reconhecer o conceito de sustentabilidade e sua aplicação nas ações humanas e políticas ambientais.",
+  "hab": "EF07CI06",
+  "habTxt": "Analisar impactos sociais, econômicos e culturais das inovações tecnológicas e o uso consciente, incluindo sustentabilidade (AE5).",
+  "nome": "Tripé que não cai",
+  "concreta": "Montar um tripé com 3 lápis presos por elástico (ambiental, social, econômico) e mostrar que sem uma perna ele cai; depois ler cartões (horta escolar, lixo no córrego, cooperativa de reciclagem) e decidir se sustentam o tripé."
+ },
+ "8º ANO|2|Reconhecer os órgãos do sistema respiratório e suas funções no processo de inspiração e expiração.": {
+  "serie": "8",
+  "desc": "Reconhecer os órgãos do sistema respiratório e suas funções no processo de inspiração e expiração.",
+  "hab": "EF05CI06B, EF08CI08B",
+  "habTxt": "Explicar o funcionamento do sistema respiratório e fatores que o comprometem, como poluição e doenças (AE6).",
+  "nome": "Pulmão de garrafa",
+  "concreta": "O professor monta o modelo (garrafa = caixa torácica, bexiga de baixo = diafragma, bexiga de dentro = pulmão). Ao puxar o diafragma, o balão enche (inspiração); ao soltar, esvazia (expiração)."
+ },
+ "8º ANO|2|Reconhecer a função dos nutrientes no organismo humano.": {
+  "serie": "8",
+  "desc": "Reconhecer a função dos nutrientes no organismo humano.",
+  "hab": "EF05CI06A, EF08CI08B",
+  "habTxt": "Descrever estruturas e funções do sistema digestório e dos nutrientes, relacionando à classificação dos alimentos (in natura, processados, ultraprocessados) (AE5).",
+  "nome": "Prato com função",
+  "concreta": "Em grupos, os alunos separam figuras de alimentos em 3 montes: energéticos (carboidratos/gorduras), construtores (proteínas) e reguladores (vitaminas, minerais) e leem um rótulo juntos."
+ },
+ "9º ANO|3|Analisar a importância do tratamento de água e esgoto para a qualidade ambiental e a saúde humana.": {
+  "serie": "9",
+  "desc": "Analisar a importância do tratamento de água e esgoto para a qualidade ambiental e a saúde humana.",
+  "hab": "EF09CI13, EF09CI12A, EF09CI12B",
+  "habTxt": "Propor iniciativas para problemas ambientais com consumo consciente e uso sustentável de recursos, considerando UCs e bacias hidrográficas (AE11).",
+  "nome": "Da torneira ao rio",
+  "concreta": "Um copo de água com terra fica parado (decantação) enquanto outro passa pelo filtro de PET (filtração). A turma compara a turbidez; o professor alerta que a água filtrada ainda não é potável sem desinfecção."
+ },
+ "9º ANO|3|Reconhecer o conceito de pegada ecológica como indicador do impacto das atividades humanas sobre o meio ambiente.": {
+  "serie": "9",
+  "desc": "Reconhecer o conceito de pegada ecológica como indicador do impacto das atividades humanas sobre o meio ambiente.",
+  "hab": "EF09CI13, EF09CI12A, EF09CI12B",
+  "habTxt": "Propor iniciativas para problemas ambientais com consumo consciente e uso sustentável de recursos, considerando UCs e bacias hidrográficas (AE11).",
+  "nome": "Quanto planeta eu uso?",
+  "concreta": "Os alunos respondem questionário simples de hábitos, somam pontos e recortam uma 'pegada' do tamanho correspondente; o professor explica que a pegada estima a área de natureza que cada estilo de vida usa."
+ },
+ "4B|6º ANO|9": {
+  "serie": "6",
+  "desc": "Descrever o papel da pele e de outros órgãos no tato, destacando os diferentes tipos de receptores.",
+  "hab": "EF06CI07",
+  "habTxt": "Pele como órgão do tato; receptores de pressão, temperatura, textura e dor; sensibilidade das regiões; Braille e recursos táteis de acessibilidade.",
+  "nome": "Sentido do tato",
+  "concreta": "Para começar (quente ou frio sem termômetro); Pause e responda; Na prática: situação da panela quente e receptores envolvidos."
+ },
+ "4B|7º ANO|5": {
+  "serie": "7",
+  "desc": "Investigar e comparar características de algumas doenças bacterianas, indicando formas de prevenção.",
+  "hab": "EF07CI10A, EF07CI10B",
+  "habTxt": "Infecções bacterianas e saúde pública; tuberculose, tétano, coqueluche; E. coli e infecção urinária; antibióticos e resistência bacteriana; vacinas.",
+  "nome": "Doenças causadas por bactérias",
+  "concreta": "Para começar (doenças bacterianas conhecidas); Pause e responda (tuberculose); Na prática: leitura sobre resistência a antibióticos e gráfico por idade."
+ },
+ "4B|7º ANO|15": {
+  "serie": "7",
+  "desc": "Apresentar as características do saneamento básico e analisar desigualdades no acesso.",
+  "hab": "EF07CI09",
+  "habTxt": "Dados de saneamento por região e estado; municípios de SP; causas e consequências da falta de saneamento; ODS 6; Marco Legal.",
+  "nome": "Saneamento básico – Parte 2",
+  "concreta": "Identificar serviços no trajeto à escola; análise de infográficos; questões sobre foto de Paraisópolis e ações do ODS 6."
+ },
+ "4B|8º ANO|12": {
+  "serie": "8",
+  "desc": "Apresentar os principais componentes de um circuito elétrico e explicar a função de cada um.",
+  "hab": "EF08CI18*",
+  "habTxt": "Conceito de circuito; fonte, condutores e cargas; resistores, capacitores, indutores; interruptores e disjuntores; miniaturização e microchips.",
+  "nome": "Circuitos elétricos",
+  "concreta": "Respondem por escrito o que são condutores, por que usam materiais específicos e como seria a vida sem eles; listam três componentes com função e exemplo."
+ },
+ "4B|9º ANO|10": {
+  "serie": "9",
+  "desc": "Comparar a transição do geocentrismo ao heliocentrismo, destacando a construção coletiva da ciência e o papel das evidências.",
+  "hab": "EF09CI14",
+  "habTxt": "Geocentrismo (Aristóteles, Hiparco, Ptolomeu e epiciclos); heliocentrismo (Copérnico); órbitas elípticas (Kepler); luneta de Galileu; inércia.",
+  "nome": "Modelos geocêntrico e heliocêntrico: a construção do conhecimento científico ao longo do tempo",
+  "concreta": "Respondem teste sobre o geocentrismo e preenchem tabela-síntese com as ideias de Aristóteles, Hiparco, Ptolomeu, Copérnico, Kepler e Galileu."
+ }
+}

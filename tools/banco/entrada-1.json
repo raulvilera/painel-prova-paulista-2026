@@ -1,0 +1,82 @@
+{
+ "6º ANO|2|Relacionar os impactos das ações humanas à qualidade e à saúde do solo.": {
+  "serie": "6",
+  "desc": "Relacionar os impactos das ações humanas à qualidade e à saúde do solo.",
+  "hab": "EF06CI12",
+  "habTxt": "Classificar rochas, seus processos de formação e a formação/transformação do solo, incluindo a fossilização em rochas sedimentares (AE3).",
+  "nome": "Erosão na garrafa",
+  "concreta": "Regar igualmente duas garrafas PET deitadas com terra, uma coberta por grama/folhas e outra descoberta, e comparar a água recolhida nos copos: a do solo descoberto sai barrenta, carregando solo (erosão)."
+ },
+ "8º ANO|3|Analisar os efeitos do aquecimento global no planeta.": {
+  "serie": "8",
+  "desc": "Analisar os efeitos do aquecimento global no planeta.",
+  "hab": "EF08CI16",
+  "habTxt": "Discutir iniciativas para mitigar alterações climáticas causadas por ações humanas e restabelecer o equilíbrio ambiental (AE10).",
+  "nome": "Estufa no pote",
+  "concreta": "Os dois potes com termômetro ficam ao sol; só um é coberto com filme plástico. A turma lê as temperaturas a cada 5 min. O filme retém o calor, como os gases de efeito estufa (CO₂) retêm calor na atmosfera."
+ },
+ "8º ANO|3|Relacionar padrões de circulação atmosférica e oceânica aos climas regionais.": {
+  "serie": "8",
+  "desc": "Relacionar padrões de circulação atmosférica e oceânica aos climas regionais.",
+  "hab": "EF08CI14",
+  "habTxt": "Relacionar climas regionais à circulação atmosférica e oceânica e usar variáveis meteorológicas na previsão do tempo (AE9).",
+  "nome": "Correntes no copo",
+  "concreta": "No copo de água em temperatura ambiente, pinga-se água gelada com corante (desce) e depois água morna com outra cor (sobe): convecção, base da circulação do ar e dos oceanos."
+ },
+ "9º ANO|1|Analisar fenômenos relacionados às ondas mecânicas e eletromagnéticas em situações do cotidiano.": {
+  "serie": "9",
+  "desc": "Analisar fenômenos relacionados às ondas mecânicas e eletromagnéticas em situações do cotidiano.",
+  "hab": "EF09CI05, EF09CI04",
+  "habTxt": "Investigar ondas mecânicas e eletromagnéticas e como esse conhecimento transformou a comunicação humana (AE6).",
+  "nome": "Onda na corda e na luz",
+  "concreta": "Com a corda/mola, os alunos produzem ondas mecânicas; o lápis no copo d'água parece 'quebrado' (refração) e a lanterna no espelho mostra a reflexão."
+ },
+ "9º ANO|3|Analisar os impactos das ações humanas sobre a biodiversidade.": {
+  "serie": "9",
+  "desc": "Analisar os impactos das ações humanas sobre a biodiversidade.",
+  "hab": "EF09CI13, EF09CI12A, EF09CI12B",
+  "habTxt": "Propor iniciativas para problemas ambientais com consumo consciente e uso sustentável de recursos, considerando UCs e bacias hidrográficas (AE11).",
+  "nome": "Teia em perigo",
+  "concreta": "Alunos seguram cartões e ligam-se com barbante formando uma teia; ao sortear um impacto (ex.: desmatamento), quem é atingido solta o fio e todos veem a teia se desfazer."
+ },
+ "4B|6º ANO|8": {
+  "serie": "6",
+  "desc": "Descrever o papel dos quimiorreceptores na percepção de odores e sabores e o envio ao SNC.",
+  "hab": "EF06CI07",
+  "habTxt": "Quimiorreceptores do nariz e da língua, sabores básicos, integração olfato-paladar e interpretação pelo encéfalo.",
+  "nome": "Sentidos do paladar e do olfato",
+  "concreta": "Discussão inicial sobre cheiro e gosto, Pause e responda, leitura sobre perda de olfato/paladar na covid com questões e encerramento."
+ },
+ "4B|7º ANO|4": {
+  "serie": "7",
+  "desc": "Explicar a constituição geral e as principais características das bactérias como seres procariontes.",
+  "hab": "EF07CI10A",
+  "habTxt": "Unicelulares procariontes; estrutura e formas (cocos, bacilos, espiraladas); ambientes e microbiota; nutrição; fissão binária; decomposição e ciclo do nitrogênio; usos.",
+  "nome": "Bactérias",
+  "concreta": "Para começar (microbiologia); Pause e responda; Na prática: relacionar conceitos (procariontes, microbiota, fissão binária etc.) às definições."
+ },
+ "4B|7º ANO|14": {
+  "serie": "7",
+  "desc": "Comparar e associar programas de saúde pública e indicadores de saúde, destacando a importância do saneamento básico.",
+  "hab": "EF07CI09",
+  "habTxt": "Componentes do saneamento: água potável, esgoto, limpeza urbana/resíduos e drenagem pluvial; poluição hídrica; educação ambiental.",
+  "nome": "Saneamento básico: impactos na vida cotidiana",
+  "concreta": "Para começar (rio Pinheiros); Pause e responda; Na prática: análise de dados de saneamento no Brasil e em SP e comparação urbano x rural."
+ },
+ "4B|8º ANO|11": {
+  "serie": "8",
+  "desc": "Apresentar a matriz energética e elétrica brasileira e explicar o percurso da energia da usina até o consumidor.",
+  "hab": "EF08CI06A",
+  "habTxt": "Matriz energética e elétrica do Brasil (BEN); usinas no estado de SP; tensões 127 V/220 V e transformadores; geração, transmissão, distribuição e consumo.",
+  "nome": "Distribuição de energia",
+  "concreta": "Interpretam a tabela de oferta interna de energia do BEN e respondem sobre participação de fontes renováveis, petróleo, solar e nuclear."
+ },
+ "4B|8º ANO|21": {
+  "serie": "8",
+  "desc": "Discutir o papel de consumidores, governos e empresas na construção de uma sociedade sustentável.",
+  "hab": "EF08CI01, EF08CI17*, EF08CI18*, EF08CI05",
+  "habTxt": "Repensar o consumo; papel do consumidor, do governo (políticas públicas) e das empresas (economia circular); desafios culturais, econômicos e estruturais.",
+  "nome": "Consumo e desenvolvimento sustentável",
+  "concreta": "Debatem quem é responsável pela sustentabilidade e escrevem texto com ao menos duas ações do governo para promover o consumo sustentável."
+ }
+}

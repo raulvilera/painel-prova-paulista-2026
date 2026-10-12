@@ -1,0 +1,82 @@
+{
+ "7º ANO|3|Analisar os impactos das ações humanas nos biomas brasileiros e suas implicações para a preservação ambiental.": {
+  "serie": "7",
+  "desc": "Analisar os impactos das ações humanas nos biomas brasileiros e suas implicações para a preservação ambiental.",
+  "hab": "EF07CI07",
+  "habTxt": "Caracterizar ecossistemas/biomas brasileiros e impactos de catástrofes naturais ou alterações em seus componentes (AE10).",
+  "nome": "Mapa das ameaças",
+  "concreta": "Colar no mapa dos biomas ícones de ameaças a partir de cards (desmatamento na Amazônia, queimadas no Cerrado e Pantanal, cidades na Mata Atlântica, desertificação na Caatinga, monoculturas no Pampa) e discutir consequências."
+ },
+ "8º ANO|3|Diferenciar os eclipses solar e lunar com base nas posições relativas entre Sol, Terra e Lua.": {
+  "serie": "8",
+  "desc": "Diferenciar os eclipses solar e lunar com base nas posições relativas entre Sol, Terra e Lua.",
+  "hab": "EF08CI12",
+  "habTxt": "Explicar fenômenos astronômicos cíclicos pelos movimentos de Sol, Terra e Lua e pela inclinação do eixo terrestre (AE8).",
+  "nome": "Quem fica no meio?",
+  "concreta": "Com a sala escura, alinha-se lanterna, Lua e Terra (sombra da Lua na Terra = eclipse solar) e depois lanterna, Terra e Lua (Lua entra na sombra da Terra = eclipse lunar)."
+ },
+ "9º ANO|3|Relacionar evidências fósseis à ideia de ancestralidade comum proposta pela teoria da evolução.": {
+  "serie": "9",
+  "desc": "Relacionar evidências fósseis à ideia de ancestralidade comum proposta pela teoria da evolução.",
+  "hab": "EF09CI11, EF09CI10",
+  "habTxt": "Analisar a evolução e a diversidade das espécies a partir de evidências científicas e processos evolutivos (AE10).",
+  "nome": "Camadas do tempo",
+  "concreta": "No pote, montam-se camadas de terra/areia com uma concha em cada: as camadas de baixo são mais antigas. Depois, a turma observa a sequência de fósseis de ancestrais da baleia com patas."
+ },
+ "9º ANO|2|Reconhecer a função, composição e estrutura do DNA.": {
+  "serie": "9",
+  "desc": "Reconhecer a função, composição e estrutura do DNA.",
+  "hab": "EF09CI08",
+  "habTxt": "Explicar hereditariedade e aplicações da biotecnologia articulando genética clássica e evolução (AE7).",
+  "nome": "Escada do DNA",
+  "concreta": "Grupos montam uma 'escada' com tiras: laterais = açúcar e fosfato, degraus = pares de bases (A com T, C com G); ao torcer, obtém-se a dupla-hélice."
+ },
+ "4B|6º ANO|5": {
+  "serie": "6",
+  "desc": "Reconhecer as principais funções das estruturas que formam o sistema nervoso periférico.",
+  "hab": "EF06CI07",
+  "habTxt": "Nervos e gânglios; nervos sensoriais e motores; sistema somático e autônomo; simpático e parassimpático.",
+  "nome": "Sistema nervoso periférico",
+  "concreta": "Relembre divisão do sistema nervoso; Pause e responda (V ou F); Na prática: indicar SNC/SNP na imagem e divisões do SNP e SNA."
+ },
+ "4B|7º ANO|1": {
+  "serie": "7",
+  "desc": "Usar o conceito de saúde da OMS e relacioná-lo ao direito à saúde, às políticas públicas, à qualidade de vida e ao papel do SUS.",
+  "hab": "EF07CI10B, EF07CI11",
+  "habTxt": "Conceito de saúde (OMS); saúde como direito (CF/1988); SUS e níveis de atenção; qualidade de vida; determinantes sociais; saúde individual, coletiva e ambiental; ANVISA.",
+  "nome": "Saúde",
+  "concreta": "Para começar (rotina e saúde); Pause e responda (conceito OMS); Na prática: análise de gráficos de Atenção Primária por região."
+ },
+ "4B|7º ANO|11": {
+  "serie": "7",
+  "desc": "Investigar a fabricação e o desenvolvimento de vacinas como mecanismos de promoção da saúde individual, coletiva e ambiental.",
+  "hab": "EF07CI09, EF07CI10B",
+  "habTxt": "Instituto Butantan e Fiocruz; vacinas atenuadas, de subunidade e de mRNA; produção da vacina da influenza em ovos; segurança e controle; SUS.",
+  "nome": "Processo de fabricação de vacinas",
+  "concreta": "Pause e responda; Na prática: tour virtual pelo Museu da Vacina do Butantan em 3 etapas (história, produção, papel do instituto) com questões."
+ },
+ "4B|8º ANO|8": {
+  "serie": "8",
+  "desc": "Explicar a corrente elétrica e sua relação com a tensão e a resistência por meio da 1ª Lei de Ohm.",
+  "hab": "EF08CI18*",
+  "habTxt": "Resistência elétrica (Ω) e fatores que a alteram; corrente (A); tensão (V); 1ª Lei de Ohm I=V/R; aquecimento e segurança em circuitos.",
+  "nome": "Corrente elétrica",
+  "concreta": "Estudo de caso: calcular a corrente de um aquecedor (220 V, 8 Ω) e escolher a espessura de fio adequada em tabela."
+ },
+ "4B|8º ANO|18": {
+  "serie": "8",
+  "desc": "Avaliar o gasto mensal de eletrodomésticos, relacionando-o ao selo de eficiência energética.",
+  "hab": "EF08CI04",
+  "habTxt": "Eficiência energética; etiqueta INMETRO/ENCE e selo Procel; potência P=U×I; consumo diário e mensal (kWh); custo pela tarifa.",
+  "nome": "Consumo dos aparelhos eletrônicos",
+  "concreta": "Cálculo do consumo mensal e do custo de um ar-condicionado e de uma TV usando a tarifa por kWh."
+ },
+ "4B|9º ANO|16": {
+  "serie": "9",
+  "desc": "Comparar conhecimentos sobre a observação do céu usando um planetário virtual.",
+  "hab": "EF09CI15",
+  "habTxt": "Planetário virtual Stellarium; pontos cardeais; planetas e estrelas visíveis; constelações; variação sazonal do céu; zodíaco e eclíptica; astrologia x astronomia.",
+  "nome": "Planetário virtual",
+  "concreta": "Exploram o Stellarium Web: identificam astros e constelações, comparam Cruzeiro do Sul e Centauro em julho e fevereiro e localizam o Sol no zodíaco."
+ }
+}

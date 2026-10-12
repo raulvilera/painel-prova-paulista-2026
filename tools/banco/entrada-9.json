@@ -1,0 +1,82 @@
+{
+ "7º ANO|1|Reconhecer fenômenos geológicos (vulcanismo, terremotos e tsunamis) e seus impactos na superfície da Terra.": {
+  "serie": "7",
+  "desc": "Reconhecer fenômenos geológicos (vulcanismo, terremotos e tsunamis) e seus impactos na superfície da Terra.",
+  "hab": "EF07CI15, EF07CI16",
+  "habTxt": "Investigar a deriva continental relacionando o encaixe das costas do Brasil e da África à tectônica de placas (AE1).",
+  "nome": "Terremoto na bandeja",
+  "concreta": "Construir 'prédios' de palitos e caixinhas sobre a bandeja com areia e sacudi-la simulando ondas sísmicas; depois sobrepor o mapa de vulcões e terremotos ao mapa dos limites das placas."
+ },
+ "8º ANO|3|Identificar variáveis meteorológicas relacionadas à previsão do tempo e os instrumentos utilizados para medi-las.": {
+  "serie": "8",
+  "desc": "Identificar variáveis meteorológicas relacionadas à previsão do tempo e os instrumentos utilizados para medi-las.",
+  "hab": "EF08CI14, EF08CI15",
+  "habTxt": "Relacionar climas regionais à circulação atmosférica e oceânica e usar variáveis meteorológicas na previsão do tempo (AE9).",
+  "nome": "Miniestação do tempo",
+  "concreta": "O professor mostra pluviômetro de PET e biruta montados e um termômetro; em grupos, leem uma previsão real identificando temperatura, umidade, chuva, vento e pressão."
+ },
+ "9º ANO|1|Aplicar as Leis Ponderais em reações químicas.": {
+  "serie": "9",
+  "desc": "Aplicar as Leis Ponderais em reações químicas.",
+  "hab": "EF09CI02",
+  "habTxt": "Analisar transformações químicas e relações entre reagentes e produtos aplicando as leis ponderais (AE4).",
+  "nome": "A massa sumiu?",
+  "concreta": "Pouco bicarbonato vai no balão e o vinagre na garrafa; pesa-se tudo, vira-se o balão e pesa-se de novo: em sistema fechado a massa se conserva (Lavoisier). Repetir aberto mostra perda do gás."
+ },
+ "9º ANO|3|Relacionar a gestão e reciclagem de resíduos sólidos às formas de destinação final e ao ciclo de vida dos materiais.": {
+  "serie": "9",
+  "desc": "Relacionar a gestão e reciclagem de resíduos sólidos às formas de destinação final e ao ciclo de vida dos materiais.",
+  "hab": "EF09CI13, EF09CI12A, EF09CI12B",
+  "habTxt": "Propor iniciativas para problemas ambientais com consumo consciente e uso sustentável de recursos, considerando UCs e bacias hidrográficas (AE11).",
+  "nome": "Auditoria do lixo",
+  "concreta": "De luvas, a turma separa lixo seco limpo em papel, plástico, metal e vidro e discute o ciclo de vida de uma garrafa PET (extração, fabricação, uso, descarte)."
+ },
+ "4B|6º ANO|6": {
+  "serie": "6",
+  "desc": "Explicar a estrutura do olho e a formação da imagem, incluindo a percepção de luz e cores, com esquemas simples.",
+  "hab": "EF06CI08",
+  "habTxt": "Fonte de luz, objeto e observador; reflexão e absorção; luz branca e espectro; partes do olho; imagem invertida na retina; nervo óptico.",
+  "nome": "Sentido da visão",
+  "concreta": "Relembre (flores de Holambra); Pause e responda (V ou F); Na prática: nomear estruturas do olho e explicar a formação da imagem."
+ },
+ "4B|7º ANO|2": {
+  "serie": "7",
+  "desc": "Identificar características e replicação dos vírus e discutir se são seres vivos à luz da teoria celular.",
+  "hab": "EF07CI10A",
+  "habTxt": "Tamanho e diversidade dos vírus; teoria celular; parasitas intracelulares obrigatórios; capsídeo, material genético e envelope; ciclos lítico e lisogênico.",
+  "nome": "Vírus",
+  "concreta": "Para começar (o que é vírus?); Pause e responda; Na prática: leitura de texto da Pesquisa Fapesp e questões sobre vivo/não vivo."
+ },
+ "4B|7º ANO|12": {
+  "serie": "7",
+  "desc": "Apresentar a importância do PNI como política pública de saúde.",
+  "hab": "EF07CI09, EF07CI10B",
+  "habTxt": "Histórico do PNI (1973), Zé Gotinha, Dias Nacionais de Vacinação; calendário vacinal; objetivos; erradicação da pólio e caso do sarampo.",
+  "nome": "Programa Nacional de Imunização (PNI)",
+  "concreta": "Relembre em duplas; leitura de trecho sobre mortalidade infantil com questões escritas; questão sobre PNI."
+ },
+ "4B|8º ANO|9": {
+  "serie": "8",
+  "desc": "Analisar corrente alternada e contínua, os modelos de transmissão de energia e o papel dos geradores.",
+  "hab": "EF08CI18*",
+  "habTxt": "Bateria e corrente contínua; corrente alternada e frequência (Hz); indução eletromagnética; geradores, alternadores; painéis fotovoltaicos.",
+  "nome": "Corrente alternada e corrente contínua",
+  "concreta": "Situação-problema: propor soluções de energia (CC e CA) para uma escola-abrigo sem fornecimento elétrico."
+ },
+ "4B|8º ANO|19": {
+  "serie": "8",
+  "desc": "Interpretar uma conta de luz, problematizando as bandeiras tarifárias e promovendo práticas sustentáveis de economia.",
+  "hab": "EF08CI17*",
+  "habTxt": "Leitura da conta de energia (kWh, tarifa, impostos); bandeiras verde, amarela e vermelha; benefícios e ações para reduzir o consumo.",
+  "nome": "Ações de economia de eletricidade",
+  "concreta": "Cálculo do valor de uma conta com bandeira vermelha 1 (500 kWh) a partir de notícia sobre a Aneel."
+ },
+ "4B|9º ANO|19": {
+  "serie": "9",
+  "desc": "Discutir a viabilidade da vida e da sobrevivência humana fora do planeta Terra.",
+  "hab": "EF09CI16",
+  "habTxt": "Condições para a vida (gravidade, atmosfera, ozônio, efeito estufa, água líquida); zona habitável; viagens espaciais; astrobiologia; Marte, Europa, Encélado, exoplanetas.",
+  "nome": "Vida fora da Terra",
+  "concreta": "Respondem teste sobre condições para a vida e refletem por escrito sobre frases de Carl Sagan relacionando-as à astrobiologia."
+ }
+}

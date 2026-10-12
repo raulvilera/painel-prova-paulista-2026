@@ -1,0 +1,82 @@
+{
+ "7º ANO|2|Reconhecer as principais características dos grupos de seres vivos invertebrados e vertebrados e seus papéis ecológicos.": {
+  "serie": "7",
+  "desc": "Reconhecer as principais características dos grupos de seres vivos invertebrados e vertebrados e seus papéis ecológicos.",
+  "hab": "EF07CI07",
+  "habTxt": "Caracterizar ecossistemas brasileiros relacionando fatores bióticos e abióticos à fauna e à flora, com foco na biodiversidade (AE9).",
+  "nome": "Chave dos bichos",
+  "concreta": "A turma monta na lousa uma chave simples de sim/não ('tem coluna vertebral?', 'tem penas?', 'tem pelos?') e passa cada card por ela; discute o papel ecológico (abelha poliniza, minhoca areja o solo, morcego dispersa sementes)."
+ },
+ "8º ANO|3|Relacionar os movimentos da Lua com sua dinâmica em relação à Terra.": {
+  "serie": "8",
+  "desc": "Relacionar os movimentos da Lua com sua dinâmica em relação à Terra.",
+  "hab": "EF08CI12",
+  "habTxt": "Explicar fenômenos astronômicos cíclicos pelos movimentos de Sol, Terra e Lua e pela inclinação do eixo terrestre (AE8).",
+  "nome": "A Lua que não vira as costas",
+  "concreta": "Um aluno (Lua) com um X de papel colado na camiseta dá a volta em outro (Terra) sempre olhando para ele: ele gira 1 vez em torno de si ao completar 1 volta. A lanterna mostra as fases."
+ },
+ "8º ANO|1|Diferenciar métodos contraceptivos e estratégias de prevenção para a saúde.": {
+  "serie": "8",
+  "desc": "Diferenciar métodos contraceptivos e estratégias de prevenção para a saúde.",
+  "hab": "EF08CI10, EF08CI09",
+  "habTxt": "Analisar formas de prevenção de ISTs e da gravidez precoce, reconhecendo práticas de saúde sexual e reprodutiva (AE3).",
+  "nome": "Quadro dos métodos",
+  "concreta": "Montagem coletiva de um quadro: método × tipo (barreira, hormonal, dispositivo) × evita gravidez? × previne ISTs? O professor destaca que só a camisinha marca 'sim' nas duas colunas."
+ },
+ "9º ANO|2|Analisar a aplicação da genética e da biotecnologia na sociedade, considerando aspectos éticos, científicos e tecnológicos.": {
+  "serie": "9",
+  "desc": "Analisar a aplicação da genética e da biotecnologia na sociedade, considerando aspectos éticos, científicos e tecnológicos.",
+  "hab": "EF09CI09, EF09CI08",
+  "habTxt": "Explicar a transmissão de características hereditárias pelas ideias de Mendel, usando heredogramas (AE8).",
+  "nome": "Tribunal da biotecnologia",
+  "concreta": "Grupos leem manchetes e o professor explica transgênico, clonagem e insulina humana produzida por bactérias modificadas; em seguida, cada grupo assume um papel para o debate."
+ },
+ "9º ANO|2|Analisar os efeitos e aplicações das radiações ionizantes no organismo humano e na área médica.": {
+  "serie": "9",
+  "desc": "Analisar os efeitos e aplicações das radiações ionizantes no organismo humano e na área médica.",
+  "hab": "EF09CI06, EF09CI07",
+  "habTxt": "Classificar radiações eletromagnéticas por frequência e aplicações tecnológicas, reconhecendo implicações para a saúde (AE5).",
+  "nome": "Radiação: amiga ou perigo?",
+  "concreta": "Observando uma radiografia contra a janela, a turma discute como o raio X atravessa tecidos moles e é barrado pelos ossos; no espectro, destacam-se as radiações ionizantes (UV de alta energia, raios X e gama)."
+ },
+ "4B|6º ANO|13": {
+  "serie": "6",
+  "desc": "Construir a base de uma mão biônica seguindo roteiro ilustrado e relacioná-la à importância da acessibilidade.",
+  "hab": "EF06CI09",
+  "habTxt": "Conceito de acessibilidade; próteses, órteses e tecnologias assistivas; articulações e falanges dos dedos; ciência e qualidade de vida.",
+  "nome": "Mão biônica: acessibilidade",
+  "concreta": "Discussão sobre acessibilidade; Na prática: checklist, materiais e montagem em papelão da 1ª parte da mão biônica (passos 1 a 6)."
+ },
+ "4B|7º ANO|7": {
+  "serie": "7",
+  "desc": "Investigar e comparar, por meio de modelos, o processo de transmissão de doenças.",
+  "hab": "EF07CI09, EF07CI10B",
+  "habTxt": "Características de vírus e bactérias; surto, epidemia e pandemia; curvas de infectados, recuperados e mortes; medidas de prevenção e papel da OMS.",
+  "nome": "Como as pandemias se espalham?",
+  "concreta": "Estudo de caso com simulador (Simufísica) do vírus fictício NVX-25: análise de gráficos em 4 situações, do início ao fim da pandemia."
+ },
+ "4B|8º ANO|1": {
+  "serie": "8",
+  "desc": "Compreender o conceito de energia e reconhecer suas diferentes formas de manifestação no dia a dia.",
+  "hab": "EF08CI03",
+  "habTxt": "Energia como capacidade de realizar trabalho; formas elétrica, sonora, nuclear, química, térmica, cinética, potencial e mecânica.",
+  "nome": "Energia no cotidiano",
+  "concreta": "Leitura do texto da EPE \"O que é energia?\" e respostas sobre o uso da energia ao longo da história humana."
+ },
+ "4B|8º ANO|14": {
+  "serie": "8",
+  "desc": "Conscientizar sobre os perigos da eletricidade e divulgar boas práticas no uso e manuseio de aparelhos elétricos.",
+  "hab": "EF08CI18*",
+  "habTxt": "Riscos: choque, curto-circuito, redes de transmissão; acidentes domésticos; proteção contra choques; fusíveis e disjuntores; aterramento; boas práticas.",
+  "nome": "Cuidados em relação à eletricidade",
+  "concreta": "Discutem práticas inseguras com eletricidade e explicam por escrito a função do aterramento e como identificá-lo nas tomadas."
+ },
+ "4B|9º ANO|12": {
+  "serie": "9",
+  "desc": "Compreender as características dos planetas rochosos: constituição, distância ao Sol e condições ambientais.",
+  "hab": "EF09CI14",
+  "habTxt": "Mercúrio, Vênus, Terra e Marte; estrutura interna (crosta, manto, núcleo); distâncias em escala; atmosfera; origem dos nomes.",
+  "nome": "Planetas rochosos e gasosos",
+  "concreta": "Retomada da formação dos planetas; questão de múltipla escolha; atividade escrita sobre por que Mercúrio, Vênus e Marte não são habitáveis."
+ }
+}

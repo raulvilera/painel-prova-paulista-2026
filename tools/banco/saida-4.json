@@ -1,0 +1,2678 @@
+{
+ "7º ANO|2|Reconhecer as principais características dos grupos de seres vivos invertebrados e vertebrados e seus papéis ecológicos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma separou os animais do pátio em dois grupos: com e sem coluna vertebral.",
+   "comando": "Qual dos animais abaixo tem coluna vertebral?",
+   "figura": null,
+   "alts": [
+    "Aranha",
+    "Minhoca",
+    "Sapo",
+    "Caramujo"
+   ],
+   "correta": 2,
+   "explicacao": "O sapo é um anfíbio, vertebrado. Os outros são invertebrados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na chave da lousa, um aluno respondeu \"sim\" para coluna vertebral, \"não\" para penas e \"sim\" para pelos.",
+   "comando": "A que grupo pertence esse animal?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Chave montada na lousa",
+    "etapas": [
+     "Tem coluna vertebral?",
+     "Tem penas?",
+     "Tem pelos?"
+    ]
+   },
+   "alts": [
+    "Peixes",
+    "Mamíferos",
+    "Aves",
+    "Insetos"
+   ],
+   "correta": 1,
+   "explicacao": "Coluna vertebral e pelos são características dos mamíferos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A horta da escola tinha solo duro. Após aparecerem minhocas, a água passou a entrar mais rápido no canteiro.",
+   "comando": "Qual é o papel das minhocas nesse caso?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: água que entrou no solo em 10 minutos",
+    "unidade": "mL",
+    "itens": [
+     {
+      "rotulo": "Canteiro sem minhocas",
+      "valor": 80
+     },
+     {
+      "rotulo": "Canteiro com minhocas",
+      "valor": 200
+     }
+    ]
+   },
+   "alts": [
+    "Deixam o solo mais compactado",
+    "Produzem as sementes das hortaliças",
+    "Fazem fotossíntese dentro das galerias",
+    "Abrem galerias que arejam o solo e deixam a água entrar"
+   ],
+   "correta": 3,
+   "explicacao": "As galerias das minhocas arejam o solo e facilitam a infiltração da água."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na escola, duas roseiras foram observadas. Em uma, as flores ficaram descobertas; na outra, foram cobertas com tela.",
+   "comando": "Qual é o papel das abelhas nessa situação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: frutos formados",
+    "colunas": [
+     "Roseira",
+     "Frutos"
+    ],
+    "linhas": [
+     [
+      "Flores descobertas",
+      "40"
+     ],
+     [
+      "Flores cobertas com tela",
+      "5"
+     ]
+    ]
+   },
+   "alts": [
+    "Transportam pólen entre as flores",
+    "Produzem as sementes sozinhas",
+    "Absorvem a água do solo",
+    "Fazem fotossíntese nas flores"
+   ],
+   "correta": 0,
+   "explicacao": "As abelhas polinizam: levam o pólen de uma flor a outra, o que permite formar frutos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em dois canteiros do jardim, só um tinha sapos. Os alunos contaram os insetos durante uma semana.",
+   "comando": "Por que há mais insetos no canteiro sem sapos?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: insetos contados em uma semana",
+    "unidade": "insetos",
+    "itens": [
+     {
+      "rotulo": "Canteiro com sapos",
+      "valor": 30
+     },
+     {
+      "rotulo": "Canteiro sem sapos",
+      "valor": 90
+     }
+    ]
+   },
+   "alts": [
+    "Sapos soltam ovos de inseto no solo",
+    "Insetos precisam de sapos para respirar",
+    "Sem esse predador, a população de insetos cresce mais",
+    "Sapos disputam as folhas com os insetos"
+   ],
+   "correta": 2,
+   "explicacao": "Sapos comem insetos e controlam sua população."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O professor mostrou dois cards: um de beija-flor e outro de joaninha.",
+   "comando": "Qual deles tem coluna vertebral? Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Cards da aula",
+    "colunas": [
+     "Card",
+     "Onde vive"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Jardim, perto das flores"
+     ],
+     [
+      "2",
+      "Folhas de plantas"
+     ]
+    ]
+   },
+   "ref": "O beija-flor é vertebrado, pois tem coluna vertebral (esqueleto interno com vértebras). A joaninha é invertebrada.",
+   "conceitos": [
+    "vertebrado",
+    "coluna vertebral",
+    "invertebrado"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma observou um animal do card 3 e anotou o que viu.",
+   "comando": "Qual é o grupo de vertebrados desse animal? Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Anotações sobre o card 3",
+    "colunas": [
+     "Característica",
+     "Registro"
+    ],
+    "linhas": [
+     [
+      "Cobertura do corpo",
+      "Penas"
+     ],
+     [
+      "Locomoção",
+      "Voa"
+     ],
+     [
+      "Reprodução",
+      "Ovos com casca"
+     ]
+    ]
+   },
+   "ref": "É uma ave: tem penas, voa e põe ovos com casca.",
+   "conceitos": [
+    "aves",
+    "penas",
+    "ovos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um animal tem coluna vertebral, pele úmida e sem pelos nem penas. Quando jovem, vive na água.",
+   "comando": "A que grupo ele pertence? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações do card 4",
+    "colunas": [
+     "Característica",
+     "Registro"
+    ],
+    "linhas": [
+     [
+      "Coluna vertebral",
+      "Presente"
+     ],
+     [
+      "Pele",
+      "Úmida, lisa"
+     ],
+     [
+      "Fase jovem",
+      "Vive na água"
+     ]
+    ]
+   },
+   "ref": "Anfíbio: é vertebrado de pele úmida, sem pelos nem penas, e passa a fase jovem na água.",
+   "conceitos": [
+    "anfíbios",
+    "pele úmida",
+    "vertebrado"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma mata, os morcegos que comem frutos dormem em um poleiro. Os alunos contaram mudas de plantas em três áreas.",
+   "comando": "Explique por que há mais mudas sob o poleiro.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: mudas contadas",
+    "unidade": "mudas",
+    "itens": [
+     {
+      "rotulo": "Sob a árvore-mãe",
+      "valor": 2
+     },
+     {
+      "rotulo": "Sob o poleiro dos morcegos",
+      "valor": 14
+     },
+     {
+      "rotulo": "Área sem árvores",
+      "valor": 0
+     }
+    ]
+   },
+   "ref": "Os morcegos comem frutos e soltam as sementes nas fezes sob o poleiro; assim dispersam sementes e nascem mais mudas.",
+   "conceitos": [
+    "dispersão de sementes",
+    "morcego",
+    "fezes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aluno disse: \"minhoca não serve para nada, nem osso ela tem\". A turma comparou dois canteiros.",
+   "comando": "Você concorda com ele? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: tempo para folhas secas sumirem",
+    "colunas": [
+     "Canteiro",
+     "Semanas"
+    ],
+    "linhas": [
+     [
+      "Com minhocas",
+      "2"
+     ],
+     [
+      "Sem minhocas",
+      "6"
+     ]
+    ]
+   },
+   "ref": "Não. As minhocas ajudam a decompor folhas, adubam e arejam o solo. Não ter ossos não tira sua importância ecológica.",
+   "conceitos": [
+    "decomposição",
+    "minhoca",
+    "solo",
+    "papel ecológico"
+   ]
+  }
+ ],
+ "8º ANO|3|Relacionar os movimentos da Lua com sua dinâmica em relação à Terra.": [
+  {
+   "tipo": "obj",
+   "enunciado": "A turma anotou o aspecto da Lua em quatro noites de um mesmo mês.",
+   "comando": "Pelo registro, qual fase foi vista no dia 15?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da turma",
+    "colunas": [
+     "Dia",
+     "O que se viu"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Lua sem brilho visível"
+     ],
+     [
+      "8",
+      "Metade do disco iluminada"
+     ],
+     [
+      "15",
+      "Disco inteiro iluminado"
+     ],
+     [
+      "22",
+      "Metade do disco iluminada"
+     ]
+    ]
+   },
+   "alts": [
+    "Lua cheia",
+    "Lua nova",
+    "Quarto crescente",
+    "Quarto minguante"
+   ],
+   "correta": 0,
+   "explicacao": "Disco inteiro iluminado é a Lua cheia."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na quadra, um aluno (Terra) fica parado. Outro aluno (Lua) anda em volta dele.",
+   "comando": "O movimento do aluno-Lua representa qual movimento da Lua?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Atividade na quadra",
+    "etapas": [
+     "Aluno-Terra fica parado no centro",
+     "Aluno-Lua anda em volta dele",
+     "Aluno-Lua volta ao ponto de partida"
+    ]
+   },
+   "alts": [
+    "Rotação",
+    "Precessão",
+    "Translação",
+    "Eclipse"
+   ],
+   "correta": 2,
+   "explicacao": "Andar em volta da Terra representa o movimento de translação (órbita) da Lua."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O aluno-Lua tem um X de papel na camiseta e anda em volta do aluno-Terra, sempre com o X voltado para ele.",
+   "comando": "Quantas vezes ele gira em torno de si ao completar uma volta?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Passos do modelo",
+    "etapas": [
+     "Aluno-Terra fica parado",
+     "Aluno-Lua anda mantendo o X voltado para ele",
+     "Aluno-Lua completa uma volta e para"
+    ]
+   },
+   "alts": [
+    "Nenhuma vez",
+    "Duas vezes",
+    "Quatro vezes",
+    "Uma vez"
+   ],
+   "correta": 3,
+   "explicacao": "Para manter o X sempre voltado para o centro, ele gira uma vez ao completar a volta."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Da Terra, as pessoas veem sempre as mesmas manchas da Lua, como o desenho do \"coelho\".",
+   "comando": "Por que vemos sempre a mesma face da Lua?",
+   "figura": null,
+   "alts": [
+    "A Lua gira em torno de si no mesmo tempo que leva para orbitar a Terra",
+    "A Lua não gira em torno de si",
+    "A sombra da Terra cobre sempre a outra face",
+    "A Lua gira muito mais rápido do que orbita"
+   ],
+   "correta": 0,
+   "explicacao": "Rotação e translação duram quase o mesmo tempo, então a mesma face fica voltada para a Terra."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No modelo, uma lanterna acesa (Sol) ilumina uma bola (Lua) que um aluno (Terra) vê ao girar a bola em torno de si.",
+   "comando": "Por que a fase da Lua muda ao longo do mês?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: o que o aluno-Terra vê na bola",
+    "colunas": [
+     "Posição da bola",
+     "Parte clara vista"
+    ],
+    "linhas": [
+     [
+      "Entre a lanterna e o aluno",
+      "Nenhuma"
+     ],
+     [
+      "Ao lado do aluno",
+      "Metade"
+     ],
+     [
+      "Do lado oposto à lanterna",
+      "Toda"
+     ]
+    ]
+   },
+   "alts": [
+    "A sombra da Terra cobre uma parte diferente a cada noite",
+    "A Lua muda de tamanho ao longo do mês",
+    "Muda a parte iluminada voltada para a Terra conforme a posição da Lua na órbita",
+    "As nuvens escondem parte da Lua a cada noite"
+   ],
+   "correta": 2,
+   "explicacao": "A metade iluminada pelo Sol é sempre a mesma; o que muda é quanto dela vemos da Terra."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A Lua dá voltas em torno da Terra.",
+   "comando": "Como se chama esse movimento da Lua? Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Translação (ou revolução): a Lua orbita a Terra.",
+   "conceitos": [
+    "translação",
+    "órbita"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na quadra, a bola (Lua) fica entre a lanterna (Sol) e o aluno (Terra).",
+   "comando": "Qual fase da Lua esse modelo representa? Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem do modelo",
+    "etapas": [
+     "Lanterna acesa em um lado",
+     "Aluno-Terra no centro",
+     "Bola entre o aluno e a lanterna"
+    ]
+   },
+   "ref": "Lua nova: a face voltada para a Terra fica sem iluminação.",
+   "conceitos": [
+    "lua nova",
+    "posição entre Terra e Sol"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O aluno-Lua anda em volta do aluno-Terra e mantém o X da camiseta voltado para ele.",
+   "comando": "Explique por que isso mostra que vemos sempre a mesma face da Lua.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do modelo",
+    "colunas": [
+     "Posição do aluno-Lua",
+     "X aponta para"
+    ],
+    "linhas": [
+     [
+      "Norte",
+      "O aluno-Terra"
+     ],
+     [
+      "Leste",
+      "O aluno-Terra"
+     ],
+     [
+      "Sul",
+      "O aluno-Terra"
+     ],
+     [
+      "Oeste",
+      "O aluno-Terra"
+     ]
+    ]
+   },
+   "ref": "O aluno gira uma vez em torno de si enquanto dá uma volta; assim a mesma face fica sempre voltada para o centro, como a Lua para a Terra (rotação e translação têm o mesmo tempo).",
+   "conceitos": [
+    "rotação",
+    "translação",
+    "mesma face"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um colega disse: \"a Lua não gira, pois sempre vemos a mesma face\".",
+   "comando": "Ele está certo? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de quem observou de fora do círculo",
+    "colunas": [
+     "Observador",
+     "O que viu do X"
+    ],
+    "linhas": [
+     [
+      "No centro (Terra)",
+      "Sempre o X"
+     ],
+     [
+      "Fora, ao norte",
+      "X de frente e depois de costas"
+     ],
+     [
+      "Fora, ao sul",
+      "X de frente e depois de costas"
+     ]
+    ]
+   },
+   "ref": "Não. A Lua gira, sim, uma vez a cada volta em torno da Terra; por isso, de fora, veríamos todas as faces, mas da Terra vemos sempre a mesma.",
+   "conceitos": [
+    "rotação",
+    "mesma face",
+    "ponto de vista"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em outro modelo, a bola ocupa quatro posições em volta do aluno, com a lanterna sempre no mesmo lugar.",
+   "comando": "Explique como a posição da Lua em relação ao Sol e à Terra determina a fase.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: parte clara vista pelo aluno",
+    "colunas": [
+     "Posição da bola",
+     "Parte clara vista"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Nenhuma"
+     ],
+     [
+      "B",
+      "Metade"
+     ],
+     [
+      "C",
+      "Toda"
+     ],
+     [
+      "D",
+      "Metade"
+     ]
+    ]
+   },
+   "ref": "A Lua sempre tem metade iluminada pelo Sol, mas conforme ela se move na órbita, o aluno vê mais ou menos dessa metade clara, o que gera as fases.",
+   "conceitos": [
+    "fases da Lua",
+    "posição relativa",
+    "metade iluminada"
+   ]
+  }
+ ],
+ "8º ANO|1|Diferenciar métodos contraceptivos e estratégias de prevenção para a saúde.": [
+  {
+   "tipo": "obj",
+   "enunciado": "No posto de saúde, a enfermeira explicou que alguns métodos funcionam como uma barreira física.",
+   "comando": "Qual método é de barreira?",
+   "figura": null,
+   "alts": [
+    "Pílula",
+    "DIU",
+    "Camisinha",
+    "Injeção"
+   ],
+   "correta": 2,
+   "explicacao": "Camisinha impede o contato com secreções e é método de barreira."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na roda de conversa, o professor falou sobre infecções transmitidas por relações sexuais.",
+   "comando": "Qual das doenças abaixo é uma IST?",
+   "figura": null,
+   "alts": [
+    "Sífilis",
+    "Gripe",
+    "Dengue",
+    "Conjuntivite"
+   ],
+   "correta": 0,
+   "explicacao": "A sífilis é uma infecção sexualmente transmissível."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma analisou o objetivo de dois casais fictícios em uma atividade.",
+   "comando": "Qual método o casal 2 deve usar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Ficha dos casais",
+    "colunas": [
+     "Casal",
+     "Objetivo"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Evitar gravidez"
+     ],
+     [
+      "2",
+      "Evitar gravidez e IST"
+     ]
+    ]
+   },
+   "alts": [
+    "Só pílula",
+    "Camisinha",
+    "Só DIU",
+    "Só injeção"
+   ],
+   "correta": 1,
+   "explicacao": "Só a camisinha evita gravidez e protege contra IST ao mesmo tempo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana tem 17 anos e toma pílula todos os dias, mas não usa camisinha.",
+   "comando": "Ela está protegida contra IST?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Caso lido em sala",
+    "colunas": [
+     "Pessoa",
+     "Método usado",
+     "Frequência"
+    ],
+    "linhas": [
+     [
+      "Ana",
+      "Comprimido",
+      "Todos os dias"
+     ]
+    ]
+   },
+   "alts": [
+    "Sim, pois a pílula age em todo o corpo",
+    "Sim, se tomar sempre no mesmo horário",
+    "Só se tomar também antibiótico",
+    "Não, a pílula evita a gravidez, mas não protege contra IST"
+   ],
+   "correta": 3,
+   "explicacao": "A pílula atua sobre a ovulação; não impede a passagem de vírus ou bactérias."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No quadro da lousa, cada tipo de método recebeu sim ou não nas duas colunas.",
+   "comando": "Qual afirmação é correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Quadro da lousa",
+    "colunas": [
+     "Tipo",
+     "Evita gravidez",
+     "Previne IST"
+    ],
+    "linhas": [
+     [
+      "Barreira",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Hormonal",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Dispositivo",
+      "Sim",
+      "Não"
+     ]
+    ]
+   },
+   "alts": [
+    "Pílula e DIU protegem contra IST",
+    "Todos os métodos previnem IST",
+    "Só a camisinha evita a gravidez e previne IST",
+    "DIU previne IST, mas não gravidez"
+   ],
+   "correta": 2,
+   "explicacao": "Entre os exemplos, só a camisinha (barreira) protege contra as duas coisas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Muitos cartazes do posto de saúde usam a sigla IST.",
+   "comando": "O que significa IST? Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Roteiro do cartaz",
+    "etapas": [
+     "Título do cartaz",
+     "Lista de infecções",
+     "Onde buscar atendimento"
+    ]
+   },
+   "ref": "Infecção sexualmente transmissível.",
+   "conceitos": [
+    "infecção",
+    "transmissão sexual"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na atividade, cada grupo recebeu cartões de métodos e classificou em tipos.",
+   "comando": "Cite um método contraceptivo hormonal.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Passos da atividade",
+    "etapas": [
+     "Cada grupo recebe os cartões",
+     "Grupo classifica por tipo",
+     "Cartões são colados no quadro"
+    ]
+   },
+   "ref": "Pílula, injeção, adesivo ou anel (qualquer hormonal).",
+   "conceitos": [
+    "hormonal",
+    "pílula"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas amigas querem evitar gravidez e IST. Uma delas toma pílula.",
+   "comando": "Por que ela ainda precisa da camisinha?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Ficha das amigas",
+    "colunas": [
+     "Pessoa",
+     "Objetivo",
+     "Método usado"
+    ],
+    "linhas": [
+     [
+      "Lia",
+      "Evitar gravidez e IST",
+      "Comprimido diário"
+     ]
+    ]
+   },
+   "ref": "A pílula só evita gravidez; a camisinha é necessária para proteger contra IST.",
+   "conceitos": [
+    "pílula",
+    "camisinha",
+    "IST"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O professor destacou que, no quadro, só um método marca \"sim\" nas duas colunas.",
+   "comando": "Por que a camisinha protege contra gravidez e IST?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Quadro da lousa",
+    "colunas": [
+     "Tipo",
+     "Evita gravidez",
+     "Previne IST"
+    ],
+    "linhas": [
+     [
+      "Barreira",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Hormonal",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Dispositivo",
+      "Sim",
+      "Não"
+     ]
+    ]
+   },
+   "ref": "Ela é uma barreira física que impede o contato com secreções e a passagem do esperma, evitando gravidez e a transmissão de microrganismos.",
+   "conceitos": [
+    "barreira física",
+    "secreções",
+    "prevenção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois casais dizem usar camisinha. Veja quantas vezes cada um usou em 10 relações.",
+   "comando": "Qual casal está mais protegido? Justifique.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: uso da camisinha em 10 relações (fictício)",
+    "unidade": "relações",
+    "itens": [
+     {
+      "rotulo": "Casal X",
+      "valor": 10
+     },
+     {
+      "rotulo": "Casal Y",
+      "valor": 5
+     }
+    ]
+   },
+   "ref": "O casal X, pois usou em todas as relações. Usar só às vezes deixa o casal exposto a gravidez e IST; é preciso usar sempre e de forma correta.",
+   "conceitos": [
+    "uso correto",
+    "todas as relações",
+    "prevenção"
+   ]
+  }
+ ],
+ "9º ANO|2|Analisar a aplicação da genética e da biotecnologia na sociedade, considerando aspectos éticos, científicos e tecnológicos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "A professora disse que a biotecnologia usa seres vivos para fazer produtos úteis.",
+   "comando": "O que é biotecnologia?",
+   "figura": null,
+   "alts": [
+    "Estudo apenas das rochas",
+    "Uso de seres vivos ou partes deles para produzir bens úteis",
+    "Uso de máquinas sem seres vivos",
+    "Estudo dos astros"
+   ],
+   "correta": 1,
+   "explicacao": "Biotecnologia usa organismos, como bactérias e fungos, para gerar produtos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma manchete lida pela turma, uma planta recebeu um gene de outra espécie.",
+   "comando": "Como se chama esse tipo de organismo?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Atividade em grupo",
+    "etapas": [
+     "Grupos leem as manchetes",
+     "Professor explica os termos",
+     "Grupos assumem papéis"
+    ]
+   },
+   "alts": [
+    "Clone",
+    "Híbrido natural",
+    "Transgênico",
+    "Mutante"
+   ],
+   "correta": 2,
+   "explicacao": "Organismo com gene de outra espécie é transgênico."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois campos de milho foram comparados: um comum e outro com gene de bactéria que mata lagartas.",
+   "comando": "O que os dados mostram?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: plantas atacadas por lagartas",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Milho comum",
+      "valor": 45
+     },
+     {
+      "rotulo": "Milho com gene de bactéria",
+      "valor": 5
+     }
+    ]
+   },
+   "alts": [
+    "Menos plantas atacadas, o que pode diminuir o uso de inseticida",
+    "Mais plantas atacadas",
+    "Nenhuma diferença entre os campos",
+    "Plantas que crescem sem água"
+   ],
+   "correta": 0,
+   "explicacao": "O gene protege a planta, reduzindo ataques e a necessidade de inseticida."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma viu como se produz insulina humana com bactérias.",
+   "comando": "Por que as bactérias conseguem fazer insulina?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Produção de insulina",
+    "etapas": [
+     "Gene humano da insulina é isolado",
+     "Gene é colocado no DNA da bactéria",
+     "Bactérias se multiplicam em tanques",
+     "Insulina é extraída e purificada"
+    ]
+   },
+   "alts": [
+    "Comem açúcar e o transformam em insulina",
+    "Têm pâncreas",
+    "São naturalmente humanas",
+    "Receberam o gene humano com a instrução para produzi-la"
+   ],
+   "correta": 3,
+   "explicacao": "Com o gene humano no DNA, a bactéria produz a proteína insulina."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No debate, um grupo defendeu que alimentos transgênicos devem trazer um símbolo no rótulo.",
+   "comando": "Qual argumento apoia essa ideia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Papéis do debate",
+    "colunas": [
+     "Grupo",
+     "Papel"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Agricultores"
+     ],
+     [
+      "2",
+      "Consumidores"
+     ],
+     [
+      "3",
+      "Cientistas"
+     ],
+     [
+      "4",
+      "Empresa"
+     ]
+    ]
+   },
+   "alts": [
+    "O rótulo deixa o alimento mais barato",
+    "O consumidor tem direito de saber o que está comprando",
+    "O rótulo muda o gene do alimento",
+    "O rótulo elimina a necessidade de testes"
+   ],
+   "correta": 1,
+   "explicacao": "A rotulagem garante informação e liberdade de escolha ao consumidor."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma manchete dizia que a biotecnologia ajudou a saúde das pessoas.",
+   "comando": "Cite uma aplicação da biotecnologia na saúde.",
+   "figura": null,
+   "ref": "Produção de insulina por bactérias, de vacinas ou de hormônios de crescimento.",
+   "conceitos": [
+    "insulina",
+    "vacinas",
+    "saúde"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cientistas criaram um arroz com gene extra para fabricar mais vitamina A.",
+   "comando": "Qual é o benefício dessa mudança?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: vitamina A por porção",
+    "colunas": [
+     "Arroz",
+     "Vitamina A (microgramas)"
+    ],
+    "linhas": [
+     [
+      "Comum",
+      "0"
+     ],
+     [
+      "Com gene extra",
+      "30"
+     ]
+    ]
+   },
+   "ref": "Ajuda a combater a falta de vitamina A na alimentação de quem come muito arroz.",
+   "conceitos": [
+    "transgênico",
+    "vitamina A",
+    "benefício"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para clonar uma ovelha, os cientistas seguiram as etapas abaixo.",
+   "comando": "A cria nasce igual a qual ovelha? Explique.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da clonagem",
+    "etapas": [
+     "Célula da ovelha A é retirada",
+     "Seu núcleo vai para um óvulo de B sem núcleo",
+     "O embrião é colocado no útero de C"
+    ]
+   },
+   "ref": "Igual à ovelha A, pois o DNA do núcleo veio dela; é um clone.",
+   "conceitos": [
+    "clonagem",
+    "núcleo",
+    "DNA"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aluno disse: \"todo transgênico faz mal\". O outro grupo discordou.",
+   "comando": "Dê um argumento contra essa generalização.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Opiniões do debate",
+    "colunas": [
+     "Grupo",
+     "Posição"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Contra todo transgênico"
+     ],
+     [
+      "2",
+      "A favor, com testes"
+     ]
+    ]
+   },
+   "ref": "Não se pode generalizar: cada transgênico é testado por órgãos de controle, e seus riscos e benefícios são avaliados caso a caso.",
+   "conceitos": [
+    "testes",
+    "avaliação de risco",
+    "benefício"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cientistas querem clonar um animal ameaçado de extinção, cuja população caiu.",
+   "comando": "Dê um argumento a favor e uma preocupação.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: indivíduos na natureza (fictício)",
+    "unidade": "indivíduos",
+    "itens": [
+     {
+      "rotulo": "Ano 1",
+      "valor": 40
+     },
+     {
+      "rotulo": "Ano 5",
+      "valor": 25
+     },
+     {
+      "rotulo": "Ano 10",
+      "valor": 12
+     }
+    ]
+   },
+   "ref": "A favor: pode ajudar a recuperar a espécie. Preocupação: os clones têm pouca variedade genética e a clonagem é cara e não resolve a perda do ambiente.",
+   "conceitos": [
+    "conservação",
+    "variabilidade genética",
+    "ética"
+   ]
+  }
+ ],
+ "9º ANO|2|Analisar os efeitos e aplicações das radiações ionizantes no organismo humano e na área médica.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma olhou uma radiografia contra a janela e viu os ossos claros.",
+   "comando": "Que radiação é usada para fazer uma radiografia?",
+   "figura": null,
+   "alts": [
+    "Raios X",
+    "Ondas de rádio",
+    "Micro-ondas",
+    "Luz visível"
+   ],
+   "correta": 0,
+   "explicacao": "A radiografia usa raios X."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma família foi à UBS fazer exames de imagem.",
+   "comando": "Qual exame NÃO usa radiação ionizante?",
+   "figura": null,
+   "alts": [
+    "Radiografia",
+    "Ultrassom",
+    "Tomografia",
+    "Raio X do tórax"
+   ],
+   "correta": 1,
+   "explicacao": "O ultrassom usa ondas sonoras, não radiação ionizante."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma técnica de radiologia usa um avental especial. Veja quanto da radiação passa por três placas testadas.",
+   "comando": "Por que ela usa esse avental?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: radiação que passa pela placa",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Placa 1 (papel)",
+      "valor": 90
+     },
+     {
+      "rotulo": "Placa 2 (alumínio)",
+      "valor": 40
+     },
+     {
+      "rotulo": "Placa 3 (chumbo)",
+      "valor": 1
+     }
+    ]
+   },
+   "alts": [
+    "O avental é pesado e a mantém no lugar",
+    "O avental amplia a radiação",
+    "O material do avental barra quase toda a radiação que chega",
+    "O avental deixa a radiação passar"
+   ],
+   "correta": 2,
+   "explicacao": "Materiais densos, como o chumbo, absorvem radiação e protegem."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A aula de Educação Física será ao ar livre. O índice de radiação UV muda ao longo do dia.",
+   "comando": "Qual cuidado é mais adequado?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Índice UV ao longo do dia",
+    "unidade": "índice",
+    "itens": [
+     {
+      "rotulo": "8h",
+      "valor": 2
+     },
+     {
+      "rotulo": "10h",
+      "valor": 6
+     },
+     {
+      "rotulo": "12h",
+      "valor": 11
+     },
+     {
+      "rotulo": "14h",
+      "valor": 9
+     },
+     {
+      "rotulo": "16h",
+      "valor": 4
+     }
+    ]
+   },
+   "alts": [
+    "Fazer a aula cedo ou no fim da tarde, com protetor solar e boné",
+    "Fazer a aula ao meio-dia sem proteção",
+    "Usar roupas escuras e ficar ao sol por horas",
+    "Não beber água para evitar suor"
+   ],
+   "correta": 0,
+   "explicacao": "O UV é mais intenso no meio do dia; evitar esse horário e se proteger reduz riscos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na radiografia, os ossos aparecem claros e os tecidos moles, mais escuros.",
+   "comando": "Por que isso acontece?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: raios X que atravessam",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Pele e músculo",
+      "valor": 90
+     },
+     {
+      "rotulo": "Osso",
+      "valor": 20
+     }
+    ]
+   },
+   "alts": [
+    "O osso emite raios X",
+    "Os músculos barram quase todos os raios",
+    "O osso está sempre mais quente",
+    "O osso barra mais raios X, e menos radiação chega ao filme nessa região"
+   ],
+   "correta": 3,
+   "explicacao": "Regiões que absorvem mais radiação deixam o filme claro; os raios atravessam melhor os tecidos moles."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No quadro de aparelhos citados, o professor explicou que alguns usam radiação ionizante.",
+   "comando": "Cite uma radiação ionizante usada na medicina.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Aparelhos citados",
+    "colunas": [
+     "Aparelho",
+     "Para que serve"
+    ],
+    "linhas": [
+     [
+      "Radiografia",
+      "Ver fraturas"
+     ],
+     [
+      "Forno de micro-ondas",
+      "Aquecer comida"
+     ],
+     [
+      "Controle de TV",
+      "Mudar de canal"
+     ]
+    ]
+   },
+   "ref": "Raios X (também raios gama ou UV de alta energia).",
+   "conceitos": [
+    "raios X",
+    "raios gama",
+    "radiação ionizante"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cientistas expuseram células a radiação ionizante por diferentes tempos.",
+   "comando": "Qual o risco de ficar muito exposto?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: células vivas após exposição (fictício)",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Sem exposição",
+      "valor": 100
+     },
+     {
+      "rotulo": "10 minutos",
+      "valor": 80
+     },
+     {
+      "rotulo": "30 minutos",
+      "valor": 40
+     }
+    ]
+   },
+   "ref": "Pode danificar as células e o DNA, causando queimaduras e câncer.",
+   "conceitos": [
+    "danos às células",
+    "DNA",
+    "câncer"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Antes do raio X, o posto pede que a paciente preencha uma ficha e use avental.",
+   "comando": "Por que a gestante deve avisar antes do exame?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas do exame",
+    "etapas": [
+     "Recepção",
+     "Ficha com perguntas",
+     "Colocação do avental",
+     "Posicionamento",
+     "Disparo"
+    ]
+   },
+   "ref": "O embrião tem células em divisão rápida, muito sensíveis; a radiação pode causar danos.",
+   "conceitos": [
+    "gestante",
+    "radiação",
+    "células sensíveis"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A tomografia mostra imagens mais detalhadas, mas o médico só pede quando necessário.",
+   "comando": "Explique por quê.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: dose relativa por exame (fictício)",
+    "unidade": "unidades",
+    "itens": [
+     {
+      "rotulo": "Radiografia de tórax",
+      "valor": 1
+     },
+     {
+      "rotulo": "Tomografia de tórax",
+      "valor": 70
+     }
+    ]
+   },
+   "ref": "A tomografia dá dose muito maior; o risco se acumula, então só se faz quando o benefício supera o risco.",
+   "conceitos": [
+    "dose",
+    "risco acumulado",
+    "benefício"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Luz visível e micro-ondas não ionizam, mas raios X e gama sim.",
+   "comando": "Explique a diferença.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Frequência relativa da radiação",
+    "colunas": [
+     "Radiação",
+     "Frequência"
+    ],
+    "linhas": [
+     [
+      "Micro-ondas",
+      "1"
+     ],
+     [
+      "Luz visível",
+      "1 000"
+     ],
+     [
+      "UV",
+      "10 000"
+     ],
+     [
+      "Raios X",
+      "1 000 000"
+     ]
+    ]
+   },
+   "ref": "As ionizantes têm frequência e energia muito altas, capazes de arrancar elétrons dos átomos; as de baixa frequência não têm essa energia.",
+   "conceitos": [
+    "frequência",
+    "energia",
+    "ionização"
+   ]
+  }
+ ],
+ "4B|6º ANO|13": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma conversou sobre como a escola pode receber bem todas as pessoas.",
+   "comando": "O que é acessibilidade?",
+   "figura": null,
+   "alts": [
+    "Um tipo de remédio",
+    "Condições para que todas as pessoas usem os espaços e serviços com autonomia",
+    "Uma regra só para atletas",
+    "Um aparelho de som"
+   ],
+   "correta": 1,
+   "explicacao": "Acessibilidade é garantir acesso e autonomia a todos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao desenhar a mão no papelão, o grupo marcou as dobras dos dedos.",
+   "comando": "Cada dedo, exceto o polegar, tem quantas falanges?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Passos 1 a 3 do roteiro",
+    "etapas": [
+     "Desenhar a mão no papelão",
+     "Recortar",
+     "Marcar as dobras"
+    ]
+   },
+   "alts": [
+    "Uma",
+    "Duas",
+    "Três",
+    "Quatro"
+   ],
+   "correta": 2,
+   "explicacao": "Dedos têm três falanges; o polegar tem duas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rafa perdeu a mão em um acidente. Bia tem o punho fraco e usa um suporte.",
+   "comando": "Qual aparelho Bia usa?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dois casos",
+    "colunas": [
+     "Pessoa",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Rafa",
+      "Não tem a mão"
+     ],
+     [
+      "Bia",
+      "Punho fraco, usa suporte"
+     ]
+    ]
+   },
+   "alts": [
+    "Órtese",
+    "Prótese",
+    "Vacina",
+    "Cadeira de banho"
+   ],
+   "correta": 0,
+   "explicacao": "A órtese apoia uma parte do corpo; a prótese substitui uma parte ausente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na mão de papelão, o grupo dobrou o dedo nas marcas feitas.",
+   "comando": "Por que as dobras ficam onde estão as articulações?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Passos 4 a 6",
+    "etapas": [
+     "Dobrar o papelão nas marcas",
+     "Passar o fio pelos dedos",
+     "Puxar o fio e ver o dedo dobrar"
+    ]
+   },
+   "alts": [
+    "Ali os ossos são mais moles",
+    "Nas articulações os ossos se encontram e permitem o movimento",
+    "Ali o dedo é mais comprido",
+    "Ali não existem músculos"
+   ],
+   "correta": 1,
+   "explicacao": "Articulações são junções entre ossos que permitem dobrar."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os alunos listaram barreiras da escola para um colega cadeirante.",
+   "comando": "Qual ação melhora o acesso?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Levantamento na escola",
+    "colunas": [
+     "Local",
+     "Barreira"
+    ],
+    "linhas": [
+     [
+      "Quadra",
+      "Degrau na entrada"
+     ],
+     [
+      "Biblioteca",
+      "Corredor estreito"
+     ],
+     [
+      "Pátio",
+      "Piso irregular"
+     ]
+    ]
+   },
+   "alts": [
+    "Colocar mais carteiras no corredor",
+    "Fechar a porta da quadra",
+    "Retirar o corrimão",
+    "Instalar rampa, alargar passagens e nivelar o piso"
+   ],
+   "correta": 3,
+   "explicacao": "Rampas, passagens largas e piso nivelado removem barreiras."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pessoas com deficiência usam recursos que ajudam a fazer tarefas do dia a dia.",
+   "comando": "Cite um exemplo de tecnologia assistiva.",
+   "figura": null,
+   "ref": "Cadeira de rodas, prótese, bengala, leitor de tela ou rampa.",
+   "conceitos": [
+    "tecnologia assistiva",
+    "autonomia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O grupo marcou as dobras de cada dedo no papelão, sempre uma a menos que o número de falanges.",
+   "comando": "Quantas falanges tem o polegar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dobras marcadas",
+    "colunas": [
+     "Dedo",
+     "Dobras"
+    ],
+    "linhas": [
+     [
+      "Polegar",
+      "1"
+     ],
+     [
+      "Indicador",
+      "2"
+     ],
+     [
+      "Médio",
+      "2"
+     ]
+    ]
+   },
+   "ref": "Duas falanges (uma dobra + 1).",
+   "conceitos": [
+    "falanges",
+    "polegar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rafa perdeu a mão em um acidente. Bia tem o punho fraco e usa um suporte.",
+   "comando": "Quem usa prótese e quem usa órtese? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dois casos",
+    "colunas": [
+     "Pessoa",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Rafa",
+      "Não tem a mão"
+     ],
+     [
+      "Bia",
+      "Punho fraco, usa suporte"
+     ]
+    ]
+   },
+   "ref": "Rafa usa prótese, que substitui a parte ausente. Bia usa órtese, que apoia uma parte que existe.",
+   "conceitos": [
+    "prótese",
+    "órtese",
+    "tecnologia assistiva"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No modelo, canudos nos dedos guiam um fio que, ao ser puxado, dobra o dedo.",
+   "comando": "Que parte do corpo o fio representa?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem da mão",
+    "etapas": [
+     "Colar canudos nos dedos",
+     "Passar o fio pelos canudos",
+     "Prender o fio na palma",
+     "Puxar o fio"
+    ]
+   },
+   "ref": "O tendão, que liga o músculo ao osso e puxa o dedo ao se contrair.",
+   "conceitos": [
+    "tendão",
+    "músculo",
+    "movimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola instalou uma rampa. Veja quem usou a rampa em um dia.",
+   "comando": "Por que a acessibilidade ajuda todos?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: usuários da rampa em um dia (fictício)",
+    "unidade": "pessoas",
+    "itens": [
+     {
+      "rotulo": "Cadeirante",
+      "valor": 2
+     },
+     {
+      "rotulo": "Carrinho de bebê",
+      "valor": 5
+     },
+     {
+      "rotulo": "Idosos",
+      "valor": 4
+     },
+     {
+      "rotulo": "Alunos com mala",
+      "valor": 20
+     }
+    ]
+   },
+   "ref": "Além de quem tem deficiência, muita gente usa a rampa; acessibilidade torna o espaço melhor para todos.",
+   "conceitos": [
+    "acessibilidade",
+    "inclusão",
+    "todos"
+   ]
+  }
+ ],
+ "4B|7º ANO|7": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em um simulador, o vírus fictício NVX-25 foi registrado em diferentes semanas.",
+   "comando": "Na semana 6, como se classifica a doença?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do simulador",
+    "colunas": [
+     "Semana",
+     "Onde há casos"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Uma cidade"
+     ],
+     [
+      "3",
+      "Vários estados"
+     ],
+     [
+      "6",
+      "Todos os continentes"
+     ]
+    ]
+   },
+   "alts": [
+    "Surto",
+    "Endemia local",
+    "Pandemia",
+    "Epidemia"
+   ],
+   "correta": 2,
+   "explicacao": "Doença que se espalha por todo o mundo é pandemia."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O professor falou de doenças causadas por vírus e por bactérias.",
+   "comando": "Qual doença é causada por bactéria?",
+   "figura": null,
+   "alts": [
+    "Gripe",
+    "Tuberculose",
+    "Dengue",
+    "Covid-19"
+   ],
+   "correta": 1,
+   "explicacao": "Tuberculose é bacteriana; as outras são virais."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador, a turma registrou os infectados do NVX-25 por semana sem medidas de prevenção.",
+   "comando": "Em qual semana houve mais infectados?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: infectados por semana",
+    "unidade": "pessoas",
+    "itens": [
+     {
+      "rotulo": "Semana 1",
+      "valor": 10
+     },
+     {
+      "rotulo": "Semana 2",
+      "valor": 40
+     },
+     {
+      "rotulo": "Semana 3",
+      "valor": 120
+     },
+     {
+      "rotulo": "Semana 4",
+      "valor": 200
+     },
+     {
+      "rotulo": "Semana 5",
+      "valor": 90
+     },
+     {
+      "rotulo": "Semana 6",
+      "valor": 30
+     }
+    ]
+   },
+   "alts": [
+    "Semana 1",
+    "Semana 3",
+    "Semana 6",
+    "Semana 4"
+   ],
+   "correta": 3,
+   "explicacao": "O maior valor do gráfico é na semana 4."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O simulador testou quatro situações e mediu o pico de infectados.",
+   "comando": "Qual conclusão os dados permitem?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: pico de infectados",
+    "unidade": "pessoas",
+    "itens": [
+     {
+      "rotulo": "Situação 1",
+      "valor": 200
+     },
+     {
+      "rotulo": "Situação 2",
+      "valor": 120
+     },
+     {
+      "rotulo": "Situação 3",
+      "valor": 70
+     },
+     {
+      "rotulo": "Situação 4",
+      "valor": 25
+     }
+    ]
+   },
+   "alts": [
+    "Quanto mais medidas combinadas, menor o pico de infectados",
+    "As medidas não alteram o pico",
+    "O pico aumenta com mais medidas",
+    "Só a situação 1 reduz casos"
+   ],
+   "correta": 0,
+   "explicacao": "Situação 4 tem mais medidas e o menor pico."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A cidade tem 100 leitos de hospital. Veja o pico de doentes em duas situações.",
+   "comando": "Por que a situação 2 evita colapso nos hospitais?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: pico de pessoas doentes",
+    "colunas": [
+     "Situação",
+     "Pico"
+    ],
+    "linhas": [
+     [
+      "1: sem medidas",
+      "200"
+     ],
+     [
+      "2: com medidas",
+      "70"
+     ]
+    ]
+   },
+   "alts": [
+    "O pico é maior que os leitos",
+    "Os leitos aumentam sozinhos",
+    "O pico fica abaixo do número de leitos disponíveis",
+    "A doença some em um dia"
+   ],
+   "correta": 2,
+   "explicacao": "Com 70 doentes e 100 leitos há vaga para todos."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O vírus NVX-25 se espalha pelo ar e por contato.",
+   "comando": "Cite uma medida de prevenção.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Como o vírus passa",
+    "etapas": [
+     "Pessoa infectada tosse",
+     "Gotículas ficam no ar",
+     "Outra pessoa respira ou toca nelas"
+    ]
+   },
+   "ref": "Lavar as mãos, usar máscara, vacinar-se ou evitar aglomerações.",
+   "conceitos": [
+    "prevenção",
+    "vacina",
+    "higiene"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os casos do NVX-25 aumentaram e foi emitido um alerta para vários países.",
+   "comando": "Qual órgão mundial de saúde faz esses alertas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Linha do tempo do NVX-25",
+    "colunas": [
+     "Mês",
+     "Fato"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Primeiro caso"
+     ],
+     [
+      "2",
+      "Casos em 3 países"
+     ],
+     [
+      "3",
+      "Alerta para os países"
+     ]
+    ]
+   },
+   "ref": "A OMS (Organização Mundial da Saúde).",
+   "conceitos": [
+    "OMS",
+    "saúde global"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No simulador, a turma viu infectados diminuírem e recuperados aumentarem.",
+   "comando": "O que isso indica?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: pessoas por semana",
+    "colunas": [
+     "Semana",
+     "Infectados",
+     "Recuperados"
+    ],
+    "linhas": [
+     [
+      "1",
+      "200",
+      "20"
+     ],
+     [
+      "4",
+      "120",
+      "100"
+     ],
+     [
+      "8",
+      "30",
+      "230"
+     ]
+    ]
+   },
+   "ref": "A doença está sob controle: passou o pico e mais pessoas estão se curando.",
+   "conceitos": [
+    "recuperados",
+    "queda de casos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aluno propôs tomar antibiótico contra o NVX-25, que é um vírus. A professora mostrou um teste.",
+   "comando": "Por que antibiótico não resolve?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: colônias de bactérias na placa",
+    "colunas": [
+     "Placa",
+     "Colônias"
+    ],
+    "linhas": [
+     [
+      "Com antibiótico",
+      "0"
+     ],
+     [
+      "Sem antibiótico",
+      "50"
+     ]
+    ]
+   },
+   "ref": "Antibióticos agem em bactérias; vírus não são células e se multiplicam dentro das células do hospedeiro.",
+   "conceitos": [
+    "antibiótico",
+    "vírus",
+    "bactérias"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O simulador comparou duas situações, uma com aglomeração e outra com distanciamento.",
+   "comando": "Explique por que os números diferem.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: pico de infectados",
+    "unidade": "pessoas",
+    "itens": [
+     {
+      "rotulo": "Com aglomeração",
+      "valor": 220
+     },
+     {
+      "rotulo": "Com distanciamento",
+      "valor": 90
+     }
+    ]
+   },
+   "ref": "Com aglomeração há mais contato entre pessoas, então o vírus se transmite mais e o pico é maior.",
+   "conceitos": [
+    "transmissão",
+    "contato",
+    "distanciamento"
+   ]
+  }
+ ],
+ "4B|8º ANO|1": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma bola rolando na quadra tem uma forma de energia ligada ao seu movimento.",
+   "comando": "Qual é essa energia?",
+   "figura": null,
+   "alts": [
+    "Nuclear",
+    "Química",
+    "Sonora",
+    "Cinética"
+   ],
+   "correta": 3,
+   "explicacao": "Energia do movimento é cinética."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma leu o texto \"O que é energia?\", sobre o uso da energia ao longo da história.",
+   "comando": "Segundo o texto, energia é a capacidade de:",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Uso da energia na história",
+    "etapas": [
+     "Fogo",
+     "Força animal",
+     "Máquina a vapor",
+     "Eletricidade"
+    ]
+   },
+   "alts": [
+    "Realizar trabalho e causar transformações",
+    "Ficar parado",
+    "Desaparecer",
+    "Criar matéria do nada"
+   ],
+   "correta": 0,
+   "explicacao": "Energia é a capacidade de realizar trabalho."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O chuveiro elétrico da escola esquenta a água da pia.",
+   "comando": "Que transformação ocorre?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Funcionamento do chuveiro",
+    "etapas": [
+     "Corrente passa pelo resistor",
+     "Resistor esquenta",
+     "Água recebe calor"
+    ]
+   },
+   "alts": [
+    "De energia térmica em elétrica",
+    "De energia elétrica em térmica",
+    "De energia sonora em luminosa",
+    "De energia nuclear em química"
+   ],
+   "correta": 1,
+   "explicacao": "A resistência converte energia elétrica em calor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma hidrelétrica, a água fica represada no alto antes de cair.",
+   "comando": "Que energia a água tem antes de cair?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da usina",
+    "etapas": [
+     "Água represada no alto",
+     "Cai pelo duto",
+     "Gira a turbina",
+     "Gira o gerador"
+    ]
+   },
+   "alts": [
+    "Cinética",
+    "Sonora",
+    "Potencial gravitacional",
+    "Nuclear"
+   ],
+   "correta": 2,
+   "explicacao": "Água no alto tem energia potencial, que vira cinética ao cair."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma bola foi solta de 2 m de altura. A turma mediu a velocidade em três alturas.",
+   "comando": "O que ocorre com as energias durante a queda?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: bola em queda",
+    "colunas": [
+     "Altura (m)",
+     "Velocidade (m/s)"
+    ],
+    "linhas": [
+     [
+      "2,0",
+      "0"
+     ],
+     [
+      "1,0",
+      "4,5"
+     ],
+     [
+      "0",
+      "6,3"
+     ]
+    ]
+   },
+   "alts": [
+    "A energia potencial diminui e se transforma em cinética",
+    "A cinética diminui e vira potencial",
+    "As duas desaparecem",
+    "A energia aumenta sem origem"
+   ],
+   "correta": 0,
+   "explicacao": "Ao cair, perde altura e ganha velocidade."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A professora pediu exemplos de energia do dia a dia.",
+   "comando": "Cite duas formas de energia.",
+   "figura": null,
+   "ref": "Elétrica, térmica, sonora, cinética, química, nuclear ou potencial.",
+   "conceitos": [
+    "formas de energia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na casa de Ana, a caixa de som ligada à tomada toca música.",
+   "comando": "Que transformação de energia ocorre?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Aparelhos em uso",
+    "colunas": [
+     "Aparelho",
+     "O que faz"
+    ],
+    "linhas": [
+     [
+      "Caixa na tomada",
+      "Emite música"
+     ]
+    ]
+   },
+   "ref": "Energia elétrica em energia sonora.",
+   "conceitos": [
+    "energia elétrica",
+    "energia sonora"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma usina nuclear, ocorrem as etapas abaixo.",
+   "comando": "Qual transformação ocorre na etapa 1?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da usina",
+    "etapas": [
+     "Átomos se dividem",
+     "Água vira vapor",
+     "Vapor gira a turbina",
+     "Gerador produz eletricidade"
+    ]
+   },
+   "ref": "Energia nuclear em térmica (calor).",
+   "conceitos": [
+    "energia nuclear",
+    "energia térmica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma bola quica cada vez menos até parar.",
+   "comando": "A energia da bola desapareceu? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: altura de cada quique",
+    "colunas": [
+     "Quique",
+     "Altura (m)"
+    ],
+    "linhas": [
+     [
+      "1",
+      "1,0"
+     ],
+     [
+      "2",
+      "0,6"
+     ],
+     [
+      "3",
+      "0,3"
+     ]
+    ]
+   },
+   "ref": "Não. A energia se transformou em térmica e sonora, que se espalham no ambiente; a energia se conserva.",
+   "conceitos": [
+    "conservação",
+    "energia térmica",
+    "energia sonora"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola trocou lâmpadas do tipo 1 por lâmpadas do tipo 2 e economizou na conta.",
+   "comando": "Explique por que houve economia.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: calor liberado (% da energia elétrica)",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Lâmpada tipo 1",
+      "valor": 90
+     },
+     {
+      "rotulo": "Lâmpada tipo 2",
+      "valor": 20
+     }
+    ]
+   },
+   "ref": "A lâmpada tipo 2 desperdiça menos energia como calor e usa mais da energia elétrica para iluminar.",
+   "conceitos": [
+    "eficiência",
+    "calor",
+    "energia elétrica"
+   ]
+  }
+ ],
+ "4B|8º ANO|14": [
+  {
+   "tipo": "obj",
+   "enunciado": "No quadro de energia elétrica da escola há uma peça que desliga o circuito quando a corrente é alta demais.",
+   "comando": "Como se chama essa peça?",
+   "figura": null,
+   "alts": [
+    "Interruptor de luz",
+    "Lâmpada",
+    "Disjuntor",
+    "Plugue"
+   ],
+   "correta": 2,
+   "explicacao": "Disjuntores e fusíveis protegem o circuito."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Durante uma conversa sobre segurança, o professor perguntou quem sabe o que é choque elétrico.",
+   "comando": "O que é choque elétrico?",
+   "figura": null,
+   "alts": [
+    "Faísca da lâmpada acesa",
+    "Passagem de corrente elétrica pelo corpo",
+    "Barulho do trovão",
+    "Calor do sol"
+   ],
+   "correta": 1,
+   "explicacao": "O choque ocorre quando a corrente atravessa o corpo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A sala tem duas tomadas. Um aparelho tem plugue com três pinos.",
+   "comando": "Em qual tomada ligar com segurança?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Tomadas da sala",
+    "colunas": [
+     "Tomada",
+     "Número de furos"
+    ],
+    "linhas": [
+     [
+      "A",
+      "2"
+     ],
+     [
+      "B",
+      "3"
+     ]
+    ]
+   },
+   "alts": [
+    "Tomada B, que tem o furo do fio terra",
+    "Tomada A, pois tem menos furos",
+    "Qualquer uma, com adaptador",
+    "Nenhuma tomada serve"
+   ],
+   "correta": 0,
+   "explicacao": "O terceiro pino liga o aparelho ao fio terra."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Maria quase tomou choque ao ligar o ventilador com as mãos molhadas.",
+   "comando": "Por que as mãos molhadas aumentam o risco?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: resistência do corpo",
+    "colunas": [
+     "Condição",
+     "Resistência (kΩ)"
+    ],
+    "linhas": [
+     [
+      "Pele seca",
+      "100"
+     ],
+     [
+      "Pele molhada",
+      "1"
+     ]
+    ]
+   },
+   "alts": [
+    "A água isola a mão",
+    "A água com sais conduz melhor a corrente, que passa mais fácil pelo corpo",
+    "A água diminui a corrente elétrica",
+    "A água não influencia"
+   ],
+   "correta": 1,
+   "explicacao": "Menor resistência permite maior corrente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um aluno ligou três aparelhos num único benjamim. A tomada suporta no máximo 1 500 W.",
+   "comando": "O que pode acontecer?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Potência dos aparelhos",
+    "colunas": [
+     "Aparelho",
+     "Potência (W)"
+    ],
+    "linhas": [
+     [
+      "Ferro de passar",
+      "1 000"
+     ],
+     [
+      "Micro-ondas",
+      "1 200"
+     ],
+     [
+      "Ventilador",
+      "100"
+     ]
+    ]
+   },
+   "alts": [
+    "Nada, pois os aparelhos se dividem a energia",
+    "Os aparelhos funcionam com a metade da energia",
+    "A soma passa do limite, o fio esquenta e há risco de incêndio",
+    "O fio fica mais frio"
+   ],
+   "correta": 2,
+   "explicacao": "Total de 2 300 W excede 1 500 W: sobrecarga."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A professora falou sobre como a energia chega às casas.",
+   "comando": "Cite um acidente doméstico com eletricidade.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Caminho da energia",
+    "etapas": [
+     "Usina",
+     "Linhas de transmissão",
+     "Transformador",
+     "Poste",
+     "Casa"
+    ]
+   },
+   "ref": "Choque elétrico, curto-circuito ou incêndio por sobrecarga.",
+   "conceitos": [
+    "choque",
+    "curto-circuito"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma viu duas situações perigosas no vídeo.",
+   "comando": "Escreva uma atitude correta para evitar um desses riscos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Situações do vídeo",
+    "colunas": [
+     "Situação",
+     "O que ocorre"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Desliga o aparelho puxando pelo fio"
+     ],
+     [
+      "2",
+      "Liga o aparelho com a mão molhada"
+     ]
+    ]
+   },
+   "ref": "Desligar segurando o plugue (não o fio) ou secar as mãos antes de mexer em aparelhos.",
+   "conceitos": [
+    "boas práticas",
+    "segurança"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O professor pediu que a turma inspecionasse as tomadas da sala.",
+   "comando": "Como identificar uma tomada com aterramento?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Roteiro de inspeção",
+    "etapas": [
+     "Ver se não há nada ligado",
+     "Olhar a tomada de frente",
+     "Observar os furos"
+    ]
+   },
+   "ref": "Ela tem três orifícios (dois chatos e um redondo), sendo um deles para o fio terra.",
+   "conceitos": [
+    "aterramento",
+    "fio terra",
+    "tomada"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um chuveiro com defeito encosta a parte elétrica na carcaça metálica. Veja a corrente que passa no corpo de quem toca.",
+   "comando": "Qual a função do fio terra?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: corrente no corpo",
+    "unidade": "mA",
+    "itens": [
+     {
+      "rotulo": "Sem fio terra",
+      "valor": 20
+     },
+     {
+      "rotulo": "Com fio terra",
+      "valor": 1
+     }
+    ]
+   },
+   "ref": "Leva a corrente para a terra, evitando que passe pelo corpo e causando choque.",
+   "conceitos": [
+    "aterramento",
+    "corrente",
+    "proteção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um curto-circuito, a temperatura do fio sobe rapidamente.",
+   "comando": "Por que o disjuntor deve desligar logo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: temperatura do fio",
+    "colunas": [
+     "Tempo (s)",
+     "Temperatura (°C)"
+    ],
+    "linhas": [
+     [
+      "0",
+      "25"
+     ],
+     [
+      "10",
+      "60"
+     ],
+     [
+      "20",
+      "120"
+     ],
+     [
+      "30",
+      "200"
+     ]
+    ]
+   },
+   "ref": "Para interromper a corrente antes de o fio superaquecer e provocar incêndio.",
+   "conceitos": [
+    "curto-circuito",
+    "disjuntor",
+    "incêndio"
+   ]
+  }
+ ],
+ "4B|9º ANO|12": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma estudou planetas feitos principalmente de rocha.",
+   "comando": "Qual é um planeta rochoso?",
+   "figura": null,
+   "alts": [
+    "Júpiter",
+    "Marte",
+    "Saturno",
+    "Netuno"
+   ],
+   "correta": 1,
+   "explicacao": "Marte é rochoso; os outros são gasosos ou gelados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O professor mostrou um corte da Terra com três camadas numeradas da superfície ao centro.",
+   "comando": "Qual é o nome da camada 2?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Espessura aproximada das camadas",
+    "unidade": "km",
+    "itens": [
+     {
+      "rotulo": "Camada 1",
+      "valor": 35
+     },
+     {
+      "rotulo": "Camada 2",
+      "valor": 2900
+     },
+     {
+      "rotulo": "Camada 3",
+      "valor": 3400
+     }
+    ]
+   },
+   "alts": [
+    "Crosta",
+    "Núcleo",
+    "Manto",
+    "Atmosfera"
+   ],
+   "correta": 2,
+   "explicacao": "A sequência é crosta, manto e núcleo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Para desenhar o Sistema Solar em escala, cada 1 cm representa 50 milhões de km.",
+   "comando": "Quantos centímetros desenhar da Terra ao Sol?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Distância ao Sol",
+    "colunas": [
+     "Planeta",
+     "Milhões de km"
+    ],
+    "linhas": [
+     [
+      "Mercúrio",
+      "58"
+     ],
+     [
+      "Vênus",
+      "108"
+     ],
+     [
+      "Terra",
+      "150"
+     ],
+     [
+      "Marte",
+      "228"
+     ]
+    ]
+   },
+   "alts": [
+    "1 cm",
+    "2 cm",
+    "5 cm",
+    "3 cm"
+   ],
+   "correta": 3,
+   "explicacao": "150 ÷ 50 = 3."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Mercúrio tem dias muito quentes e noites muito frias.",
+   "comando": "Por que a temperatura varia tanto?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Temperaturas aproximadas",
+    "colunas": [
+     "Planeta",
+     "Dia (°C)",
+     "Noite (°C)"
+    ],
+    "linhas": [
+     [
+      "Mercúrio",
+      "430",
+      "-180"
+     ],
+     [
+      "Vênus",
+      "465",
+      "465"
+     ],
+     [
+      "Terra",
+      "25",
+      "10"
+     ]
+    ]
+   },
+   "alts": [
+    "Quase não tem atmosfera para reter o calor",
+    "Tem atmosfera muito densa",
+    "Fica longe do Sol",
+    "Tem muita água líquida"
+   ],
+   "correta": 0,
+   "explicacao": "Sem atmosfera, o calor escapa à noite."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Vênus está mais longe do Sol que Mercúrio, mas é mais quente.",
+   "comando": "Qual é a explicação?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Temperatura média",
+    "unidade": "°C",
+    "itens": [
+     {
+      "rotulo": "Mercúrio",
+      "valor": 167
+     },
+     {
+      "rotulo": "Vênus",
+      "valor": 465
+     },
+     {
+      "rotulo": "Terra",
+      "valor": 15
+     },
+     {
+      "rotulo": "Marte",
+      "valor": -60
+     }
+    ]
+   },
+   "alts": [
+    "Vênus não tem atmosfera",
+    "Vênus está mais perto do Sol",
+    "A atmosfera densa de gás carbônico retém muito calor (efeito estufa)",
+    "Vênus tem oceanos quentes"
+   ],
+   "correta": 2,
+   "explicacao": "O efeito estufa intenso aquece Vênus."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os planetas rochosos ficam mais perto do Sol.",
+   "comando": "Cite os quatro planetas rochosos.",
+   "figura": null,
+   "ref": "Mercúrio, Vênus, Terra e Marte.",
+   "conceitos": [
+    "Mercúrio",
+    "Vênus",
+    "Terra",
+    "Marte"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma sonda imaginária viaja da superfície da Terra até o centro.",
+   "comando": "Dê o nome das camadas atravessadas.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Viagem da sonda",
+    "etapas": [
+     "Rocha sólida fina",
+     "Rocha quente e pastosa",
+     "Parte central de metal"
+    ]
+   },
+   "ref": "Crosta, manto e núcleo.",
+   "conceitos": [
+    "crosta",
+    "manto",
+    "núcleo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marte é mais frio que a Terra.",
+   "comando": "Cite um motivo para isso.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados dos planetas",
+    "colunas": [
+     "Planeta",
+     "Distância ao Sol (milhões km)",
+     "Temperatura média (°C)"
+    ],
+    "linhas": [
+     [
+      "Terra",
+      "150",
+      "15"
+     ],
+     [
+      "Marte",
+      "228",
+      "-60"
+     ]
+    ]
+   },
+   "ref": "Marte está mais longe do Sol e recebe menos calor e luz; sua atmosfera fina retém pouco calor.",
+   "conceitos": [
+    "distância",
+    "atmosfera",
+    "temperatura"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os alunos compararam a pressão atmosférica de quatro planetas.",
+   "comando": "Explique por que Mercúrio não é habitável.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Pressão atmosférica (Terra = 100)",
+    "unidade": "unidade",
+    "itens": [
+     {
+      "rotulo": "Mercúrio",
+      "valor": 0
+     },
+     {
+      "rotulo": "Vênus",
+      "valor": 9200
+     },
+     {
+      "rotulo": "Terra",
+      "valor": 100
+     },
+     {
+      "rotulo": "Marte",
+      "valor": 1
+     }
+    ]
+   },
+   "ref": "Praticamente não tem atmosfera, tem temperaturas extremas e não tem água líquida.",
+   "conceitos": [
+    "atmosfera",
+    "temperatura",
+    "água"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Vênus tem tamanho parecido com o da Terra.",
+   "comando": "Por que não é habitável?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação",
+    "colunas": [
+     "Item",
+     "Vênus",
+     "Terra"
+    ],
+    "linhas": [
+     [
+      "Diâmetro (km)",
+      "12 100",
+      "12 700"
+     ],
+     [
+      "Temperatura média (°C)",
+      "465",
+      "15"
+     ]
+    ]
+   },
+   "ref": "Apesar do tamanho parecido, tem atmosfera densa de gás carbônico, efeito estufa intenso e temperatura muito alta.",
+   "conceitos": [
+    "efeito estufa",
+    "atmosfera",
+    "temperatura"
+   ]
+  }
+ ]
+}

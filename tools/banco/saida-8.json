@@ -1,0 +1,2764 @@
+{
+ "7º ANO|3|Analisar os impactos das ações humanas nos biomas brasileiros e suas implicações para a preservação ambiental.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Lucas viu imagens de satélite do Norte do país com grandes áreas de floresta derrubadas para criar pasto.",
+   "comando": "Qual bioma sofre mais com esse tipo de desmatamento?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Dados de observação: imagens de satélite da mesma região",
+    "etapas": [
+     "Ano 2000: área verde contínua",
+     "Ano 2010: clareiras em faixas e estradas",
+     "Ano 2020: pasto e solo exposto"
+    ]
+   },
+   "alts": [
+    "Pampa",
+    "Amazônia",
+    "Caatinga",
+    "Pantanal"
+   ],
+   "correta": 1,
+   "explicacao": "O avanço do pasto sobre a floresta no Norte é uma das maiores ameaças à Amazônia."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, os alunos observaram um bioma de árvores de troncos retorcidos que sofre com queimadas na época seca.",
+   "comando": "Qual é esse bioma?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de observação: clima do local",
+    "colunas": [
+     "Mês",
+     "Chuva (mm)"
+    ],
+    "linhas": [
+     [
+      "Janeiro",
+      "230"
+     ],
+     [
+      "Abril",
+      "120"
+     ],
+     [
+      "Julho",
+      "5"
+     ],
+     [
+      "Outubro",
+      "90"
+     ]
+    ]
+   },
+   "alts": [
+    "Mata Atlântica",
+    "Pampa",
+    "Pantanal",
+    "Cerrado"
+   ],
+   "correta": 3,
+   "explicacao": "O Cerrado tem estação seca marcada, vegetação de troncos retorcidos e sofre muito com queimadas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma cidade litorânea cresceu e substituiu a vegetação das encostas por casas e ruas.",
+   "comando": "Qual consequência é mais provável para os rios da região?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados de observação: vegetação que restou no bairro",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Ano 1980",
+      "valor": 60
+     },
+     {
+      "rotulo": "Ano 2000",
+      "valor": 35
+     },
+     {
+      "rotulo": "Ano 2020",
+      "valor": 12
+     }
+    ]
+   },
+   "alts": [
+    "Mais erosão e acúmulo de terra no leito dos rios",
+    "Mais nascentes protegidas",
+    "Aumento da fertilidade do solo das encostas",
+    "Menos enchentes na época de chuva"
+   ],
+   "correta": 0,
+   "explicacao": "Sem vegetação, a chuva arrasta terra para os rios (assoreamento) e a água infiltra menos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma propriedade do sertão nordestino, o número de cabras aumentou e a vegetação nativa foi sendo retirada.",
+   "comando": "Qual processo ameaça a Caatinga nessa situação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de observação: propriedade rural",
+    "colunas": [
+     "Ano",
+     "Cabras",
+     "Solo com vegetação (%)"
+    ],
+    "linhas": [
+     [
+      "2010",
+      "20",
+      "80"
+     ],
+     [
+      "2015",
+      "60",
+      "50"
+     ],
+     [
+      "2020",
+      "120",
+      "20"
+     ]
+    ]
+   },
+   "alts": [
+    "Aumento da umidade do ar",
+    "Formação de florestas densas",
+    "Desertificação, com solo cada vez mais pobre e exposto",
+    "Aumento de rios permanentes"
+   ],
+   "correta": 2,
+   "explicacao": "Pastoreio excessivo e retirada da vegetação deixam o solo exposto e degradado, levando à desertificação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma fazenda trocou os campos nativos do Pampa por plantação de soja em toda a área.",
+   "comando": "Por que isso ameaça a biodiversidade do bioma?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados de observação: espécies de plantas por parcela",
+    "unidade": "espécies",
+    "itens": [
+     {
+      "rotulo": "Campo nativo",
+      "valor": 45
+     },
+     {
+      "rotulo": "Plantação de soja",
+      "valor": 1
+     }
+    ]
+   },
+   "alts": [
+    "Porque a soja é um animal que se alimenta das plantas",
+    "Porque a monocultura elimina o hábitat de muitas espécies de plantas e animais dos campos",
+    "Porque os campos não têm nenhum animal, só mudam a paisagem",
+    "Porque a soja sempre aumenta a variedade de espécies"
+   ],
+   "correta": 1,
+   "explicacao": "Monoculturas substituem muitas espécies por uma só, reduzindo alimento e abrigo da fauna nativa."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na atividade, Ana colou o card de queimadas no Cerrado e no Pantanal.",
+   "comando": "O que são queimadas e o que acontece com os animais da região?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Atividade Mapa das ameaças",
+    "etapas": [
+     "Receber os cards de ameaças",
+     "Colar cada card no bioma",
+     "Discutir as consequências"
+    ]
+   },
+   "ref": "Queimadas são incêndios que destroem a vegetação. Os animais perdem alimento e abrigo, fogem ou morrem.",
+   "conceitos": [
+    "incêndio",
+    "vegetação destruída",
+    "perda de abrigo e alimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A Mata Atlântica, que cobria grande parte do litoral, hoje tem pouca floresta.",
+   "comando": "Cite uma ação humana que causou essa perda.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados de observação: cobertura da Mata Atlântica",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Original",
+      "valor": 100
+     },
+     {
+      "rotulo": "Hoje (aprox.)",
+      "valor": 12
+     }
+    ]
+   },
+   "ref": "O crescimento das cidades e o desmatamento para ocupação e plantações.",
+   "conceitos": [
+    "crescimento urbano",
+    "desmatamento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma maquete, derrubou-se a vegetação de um morro e depois se despejou água sobre ele.",
+   "comando": "Por que desmatar o Cerrado pode diminuir a água de rios e nascentes?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: água que infiltrou no solo",
+    "colunas": [
+     "Área",
+     "Água infiltrada (%)"
+    ],
+    "linhas": [
+     [
+      "Com vegetação",
+      "40"
+     ],
+     [
+      "Sem vegetação",
+      "10"
+     ]
+    ]
+   },
+   "ref": "Sem vegetação, a água escorre e infiltra pouco no solo; assim, os lençóis e nascentes recebem menos água.",
+   "conceitos": [
+    "infiltração",
+    "nascentes",
+    "raízes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cidades distantes da Amazônia, como as do Sudeste, dependem de chuvas que vêm de outras regiões.",
+   "comando": "Explique como o desmatamento da Amazônia pode afetar a chuva em outras regiões.",
+   "figura": null,
+   "ref": "A floresta libera muito vapor de água, que forma nuvens e leva umidade a outras regiões. Com menos floresta, há menos vapor e menos chuva.",
+   "conceitos": [
+    "vapor de água",
+    "nuvens",
+    "chuva em outras regiões"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma cooperativa do Pampa analisa três propostas para a sua área de campos.",
+   "comando": "Qual proposta ajuda mais a preservar o bioma? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados das propostas",
+    "colunas": [
+     "Proposta",
+     "Uso do campo"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Trocar todo o campo por soja"
+     ],
+     [
+      "2",
+      "Manter parte do campo nativo e fazer rodízio do gado"
+     ],
+     [
+      "3",
+      "Queimar todo o campo a cada ano"
+     ]
+    ]
+   },
+   "ref": "A proposta 2, pois mantém a vegetação e o hábitat nativos e permite o uso sem destruir o solo e as espécies.",
+   "conceitos": [
+    "campo nativo",
+    "hábitat",
+    "uso sustentável"
+   ]
+  }
+ ],
+ "8º ANO|3|Diferenciar os eclipses solar e lunar com base nas posições relativas entre Sol, Terra e Lua.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na sala escura, a turma usou uma lanterna, uma bola pequena e uma bola maior para estudar eclipses.",
+   "comando": "Durante um eclipse solar, o que acontece com a luz do Sol em uma região da Terra?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem do experimento",
+    "etapas": [
+     "Acender a lanterna",
+     "Alinhar os três objetos",
+     "Observar onde aparece sombra"
+    ]
+   },
+   "alts": [
+    "É bloqueada pela sombra da Terra",
+    "O Sol se apaga por alguns minutos",
+    "É bloqueada pela Lua, que projeta sua sombra sobre a região",
+    "É absorvida pelas nuvens"
+   ],
+   "correta": 2,
+   "explicacao": "No eclipse solar a Lua fica entre o Sol e a Terra e sua sombra cai sobre uma parte da Terra."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No experimento, a lanterna ficou numa ponta, a bola maior na outra e a bola pequena entrou na sombra da bola maior.",
+   "comando": "No eclipse lunar, qual astro fica entre os outros dois?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de observação: o que cada objeto representa",
+    "colunas": [
+     "Objeto",
+     "Representa"
+    ],
+    "linhas": [
+     [
+      "Lanterna",
+      "Sol"
+     ],
+     [
+      "Bola pequena",
+      "Lua"
+     ],
+     [
+      "Bola maior",
+      "Terra"
+     ]
+    ]
+   },
+   "alts": [
+    "A Terra",
+    "O Sol",
+    "A Lua",
+    "Nenhum, os três ficam separados"
+   ],
+   "correta": 0,
+   "explicacao": "No eclipse lunar a Terra fica entre o Sol e a Lua, e a Lua entra na sombra da Terra."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um jornal avisou que haverá um eclipse solar amanhã.",
+   "comando": "Em qual fase a Lua estará nesse dia?",
+   "figura": null,
+   "alts": [
+    "Lua cheia",
+    "Quarto crescente",
+    "Quarto minguante",
+    "Lua nova"
+   ],
+   "correta": 3,
+   "explicacao": "O eclipse solar só ocorre na Lua nova, quando ela está entre o Sol e a Terra."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marina assistiu a um eclipse lunar total e a Lua ficou avermelhada.",
+   "comando": "Por que muita gente, em lugares diferentes, vê o mesmo eclipse lunar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de um eclipse lunar",
+    "colunas": [
+     "Horário",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "21h",
+      "Um lado da Lua escurece"
+     ],
+     [
+      "22h",
+      "Lua toda avermelhada"
+     ],
+     [
+      "23h",
+      "Lua volta a clarear"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque a Lua fica mais perto da Terra",
+    "Porque todos que estão no lado noturno da Terra veem a Lua na sombra",
+    "Porque a sombra cobre o planeta inteiro",
+    "Porque o eclipse lunar dura vários dias"
+   ],
+   "correta": 1,
+   "explicacao": "A Lua fica na sombra da Terra e pode ser vista de todo o lado da Terra onde é noite."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A Lua passa entre o Sol e a Terra uma vez por mês, mas eclipses solares são raros.",
+   "comando": "Por que não há eclipse solar todo mês?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados de observação: em um ano",
+    "unidade": "ocorrências",
+    "itens": [
+     {
+      "rotulo": "Luas novas",
+      "valor": 12
+     },
+     {
+      "rotulo": "Eclipses solares",
+      "valor": 2
+     }
+    ]
+   },
+   "alts": [
+    "Porque a Lua some em alguns meses",
+    "Porque a Terra para de girar",
+    "Porque o Sol muda de lugar a cada mês",
+    "Porque a órbita da Lua é inclinada e nem sempre Sol, Lua e Terra ficam alinhados"
+   ],
+   "correta": 3,
+   "explicacao": "A órbita da Lua é inclinada em relação à da Terra; o alinhamento exato só acontece de vez em quando."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na sala escura, a turma usou uma lanterna, uma bola pequena e uma bola maior.",
+   "comando": "Qual objeto representa o Sol e qual representa a Lua?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: objetos usados",
+    "colunas": [
+     "Objeto",
+     "Característica"
+    ],
+    "linhas": [
+     [
+      "Lanterna",
+      "Emite luz"
+     ],
+     [
+      "Bola pequena",
+      "Não emite luz, é pequena"
+     ],
+     [
+      "Bola maior",
+      "Não emite luz, é grande"
+     ]
+    ]
+   },
+   "ref": "A lanterna representa o Sol e a bola pequena representa a Lua.",
+   "conceitos": [
+    "lanterna = Sol",
+    "bola pequena = Lua"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na primeira posição testada, a bola pequena ficou entre a lanterna e a bola maior.",
+   "comando": "Qual é o nome do eclipse que a sombra da Lua sobre a Terra representa?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da posição testada",
+    "colunas": [
+     "Posição",
+     "Resultado observado"
+    ],
+    "linhas": [
+     [
+      "Lanterna, bola pequena, bola maior",
+      "Sombra da bola pequena na bola maior"
+     ]
+    ]
+   },
+   "ref": "Eclipse solar.",
+   "conceitos": [
+    "eclipse solar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Nos dias de eclipse solar, muita gente quer olhar o Sol.",
+   "comando": "Por que não se deve olhar o Sol diretamente durante um eclipse sem proteção?",
+   "figura": null,
+   "ref": "Porque a luz do Sol continua muito intensa e pode queimar a retina e causar danos à visão; é preciso usar filtro apropriado.",
+   "conceitos": [
+    "luz intensa",
+    "retina",
+    "proteção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um eclipse solar total, a cidade A viu o Sol totalmente coberto, mas outras cidades viram menos.",
+   "comando": "Explique por que poucos lugares veem o eclipse solar total.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de três cidades",
+    "colunas": [
+     "Cidade",
+     "Distância da cidade A",
+     "O que viram"
+    ],
+    "linhas": [
+     [
+      "A",
+      "0 km",
+      "Sol totalmente coberto"
+     ],
+     [
+      "B",
+      "200 km",
+      "Sol parcialmente coberto"
+     ],
+     [
+      "C",
+      "2000 km",
+      "Sol normal"
+     ]
+    ]
+   },
+   "ref": "A sombra da Lua é pequena e cobre só uma faixa estreita da Terra; fora dela vê-se o eclipse parcial ou nada.",
+   "conceitos": [
+    "sombra da Lua",
+    "faixa estreita",
+    "eclipse parcial"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aluno disse que o eclipse lunar do mês aconteceu no dia 1.",
+   "comando": "Ele está certo? Justifique usando a tabela.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Fases da Lua no mês",
+    "colunas": [
+     "Dia",
+     "Fase"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Lua nova"
+     ],
+     [
+      "8",
+      "Quarto crescente"
+     ],
+     [
+      "15",
+      "Lua cheia"
+     ],
+     [
+      "22",
+      "Quarto minguante"
+     ]
+    ]
+   },
+   "ref": "Não. O eclipse lunar acontece na Lua cheia (dia 15), quando a Terra está entre o Sol e a Lua e a Lua pode entrar na sombra.",
+   "conceitos": [
+    "Lua cheia",
+    "Terra entre Sol e Lua"
+   ]
+  }
+ ],
+ "9º ANO|3|Relacionar evidências fósseis à ideia de ancestralidade comum proposta pela teoria da evolução.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma montou um pote com camadas de terra e areia e colocou uma concha em cada camada.",
+   "comando": "O que é um fóssil?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento do pote",
+    "etapas": [
+     "Colocar a primeira camada de areia",
+     "Colocar uma concha e cobrir com terra",
+     "Repetir até encher o pote"
+    ]
+   },
+   "alts": [
+    "Resto ou marca de um ser vivo do passado preservado em rocha",
+    "Um animal vivo que mora em rochas",
+    "Uma rocha que tem formato de animal",
+    "Qualquer objeto velho encontrado na terra"
+   ],
+   "correta": 0,
+   "explicacao": "Fósseis são restos ou vestígios de seres que viveram há muito tempo, preservados nas rochas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Fábio cavou o pote até o fundo e retirou as conchas, uma de cada camada.",
+   "comando": "Onde está a concha mais antiga?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de observação: camadas do pote",
+    "colunas": [
+     "Camada",
+     "Posição"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Topo do pote"
+     ],
+     [
+      "2",
+      "Meio do pote"
+     ],
+     [
+      "3",
+      "Fundo do pote"
+     ]
+    ]
+   },
+   "alts": [
+    "Na camada 1, do topo",
+    "Na camada 2, do meio",
+    "Na camada 3, do fundo",
+    "Todas têm a mesma idade"
+   ],
+   "correta": 2,
+   "explicacao": "As camadas de baixo foram depositadas primeiro, por isso contêm os fósseis mais antigos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma observou fósseis de ancestrais da baleia, ordenados do mais antigo ao mais novo.",
+   "comando": "Que ideia da evolução essa sequência apoia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de observação: fósseis de ancestrais da baleia",
+    "colunas": [
+     "Fóssil",
+     "Idade (milhões de anos)",
+     "Patas"
+    ],
+    "linhas": [
+     [
+      "A",
+      "50",
+      "4 patas fortes"
+     ],
+     [
+      "B",
+      "49",
+      "4 patas, nadava"
+     ],
+     [
+      "C",
+      "40",
+      "Patas traseiras pequenas"
+     ],
+     [
+      "Baleia atual",
+      "0",
+      "Sem patas externas"
+     ]
+    ]
+   },
+   "alts": [
+    "As baleias surgiram prontas, sem ancestrais",
+    "As baleias descendem de animais terrestres com patas, que mudaram ao longo do tempo",
+    "Os animais mudam em uma única geração",
+    "Todos os fósseis são de animais iguais aos atuais"
+   ],
+   "correta": 1,
+   "explicacao": "A sequência mostra mudanças graduais, indicando ancestralidade comum entre animais terrestres e baleias."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O fóssil de Archaeopteryx foi achado numa rocha antiga.",
+   "comando": "O que suas características sugerem sobre aves e répteis?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de observação: Archaeopteryx",
+    "colunas": [
+     "Característica",
+     "Presente?"
+    ],
+    "linhas": [
+     [
+      "Penas",
+      "Sim"
+     ],
+     [
+      "Dentes",
+      "Sim"
+     ],
+     [
+      "Cauda longa com ossos",
+      "Sim"
+     ],
+     [
+      "Asas",
+      "Sim"
+     ]
+    ]
+   },
+   "alts": [
+    "Aves surgiram sem relação com outros animais",
+    "Todo réptil virou ave de uma geração para outra",
+    "O fóssil é de dois animais colados",
+    "Aves e répteis têm um ancestral comum"
+   ],
+   "correta": 3,
+   "explicacao": "Misturar características de aves (penas) e de répteis (dentes, cauda) indica parentesco e ancestral comum."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um aluno disse: 'Fósseis só mostram animais antigos, não provam evolução'.",
+   "comando": "Qual dado responde melhor a essa dúvida?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados de observação: tamanho das patas traseiras nos fósseis",
+    "unidade": "cm",
+    "itens": [
+     {
+      "rotulo": "Fóssil de 50 milhões de anos",
+      "valor": 30
+     },
+     {
+      "rotulo": "Fóssil de 45 milhões de anos",
+      "valor": 15
+     },
+     {
+      "rotulo": "Fóssil de 40 milhões de anos",
+      "valor": 5
+     }
+    ]
+   },
+   "alts": [
+    "Formas intermediárias em camadas sucessivas mostram mudanças graduais",
+    "Fósseis de animais iguais em todas as camadas",
+    "Uma grande quantidade de fósseis na mesma camada",
+    "O tamanho maior de fósseis mais velhos"
+   ],
+   "correta": 0,
+   "explicacao": "Fósseis intermediários em camadas de idades diferentes evidenciam mudança ao longo do tempo."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na montagem do pote, as camadas foram colocadas na ordem abaixo.",
+   "comando": "Qual concha é a mais nova? Por quê?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Ordem de colocação das camadas",
+    "etapas": [
+     "Areia e concha A",
+     "Terra e concha B",
+     "Areia e concha C"
+    ]
+   },
+   "ref": "A concha C, pois a camada foi colocada por último e fica no topo.",
+   "conceitos": [
+    "camada de cima",
+    "mais nova"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Fósseis são encontrados mais em alguns tipos de rocha do que em outros.",
+   "comando": "Em que tipo de rocha os fósseis costumam se formar?",
+   "figura": null,
+   "ref": "Em rochas sedimentares, formadas por camadas de sedimentos.",
+   "conceitos": [
+    "rochas sedimentares",
+    "camadas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Geólogos acharam um fóssil de peixe no alto de uma serra, longe do mar.",
+   "comando": "O que esse achado indica sobre o local no passado?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do achado",
+    "colunas": [
+     "Item",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Local",
+      "Serra, 800 m de altitude"
+     ],
+     [
+      "Rocha",
+      "Arenito em camadas"
+     ],
+     [
+      "Fóssil",
+      "Peixe com escamas"
+     ]
+    ]
+   },
+   "ref": "Que o local já esteve coberto por água (mar ou lago) e que o ambiente mudou ao longo do tempo.",
+   "conceitos": [
+    "ambiente aquático",
+    "mudança ambiental"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os cientistas comparam fósseis de ancestrais da baleia de idades diferentes.",
+   "comando": "Por que os fósseis de formas intermediárias ajudam a mostrar a ancestralidade comum?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de observação: fósseis",
+    "colunas": [
+     "Fóssil",
+     "Idade (milhões de anos)",
+     "Posição da narina"
+    ],
+    "linhas": [
+     [
+      "A",
+      "50",
+      "Ponta do focinho"
+     ],
+     [
+      "B",
+      "45",
+      "Meio do focinho"
+     ],
+     [
+      "C",
+      "40",
+      "Alto da cabeça"
+     ]
+    ]
+   },
+   "ref": "Porque mostram etapas das mudanças entre o grupo antigo (terrestre) e as baleias atuais, ligando-os por um ancestral comum.",
+   "conceitos": [
+    "formas intermediárias",
+    "mudança gradual",
+    "ancestral comum"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um colega disse que a evolução 'é só uma ideia, sem provas'.",
+   "comando": "Use os fósseis para responder ao colega.",
+   "figura": null,
+   "ref": "Fósseis em camadas mostram a sequência de mudanças ao longo do tempo e formas intermediárias, o que sustenta a evolução e a origem comum.",
+   "conceitos": [
+    "camadas",
+    "formas intermediárias",
+    "evidência científica"
+   ]
+  }
+ ],
+ "9º ANO|2|Reconhecer a função, composição e estrutura do DNA.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Os alunos estudam uma célula e querem saber onde o DNA fica guardado.",
+   "comando": "Onde fica o DNA nas células de animais e plantas?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem da escada de DNA",
+    "etapas": [
+     "Cortar duas tiras longas",
+     "Prender tiras curtas entre elas",
+     "Torcer a escada"
+    ]
+   },
+   "alts": [
+    "Na membrana",
+    "Na parede celular",
+    "Fora da célula",
+    "No núcleo"
+   ],
+   "correta": 3,
+   "explicacao": "Nas células de animais e plantas o DNA fica dentro do núcleo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A professora disse que o DNA é 'o manual de instruções' da célula.",
+   "comando": "Qual é a principal função do DNA?",
+   "figura": null,
+   "alts": [
+    "Fornecer energia",
+    "Guardar as informações genéticas",
+    "Proteger a célula",
+    "Digerir alimentos"
+   ],
+   "correta": 1,
+   "explicacao": "O DNA guarda as instruções para o funcionamento do organismo e a hereditariedade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na escada de DNA, uma fita tem a sequência abaixo e a outra deve se encaixar nela.",
+   "comando": "Qual é a sequência da fita complementar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Fita montada pelo grupo",
+    "colunas": [
+     "Posição",
+     "Base"
+    ],
+    "linhas": [
+     [
+      "1",
+      "A"
+     ],
+     [
+      "2",
+      "T"
+     ],
+     [
+      "3",
+      "C"
+     ],
+     [
+      "4",
+      "G"
+     ]
+    ]
+   },
+   "alts": [
+    "T, A, C, G",
+    "A, T, C, G",
+    "T, A, G, C",
+    "C, G, A, T"
+   ],
+   "correta": 2,
+   "explicacao": "A pareia com T e C pareia com G, portanto a sequência complementar é T, A, G, C."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na maquete, há tiras amarelas (açúcar e fosfato) e tiras verdes (bases nitrogenadas).",
+   "comando": "Que parte do DNA cada cor forma?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Materiais da maquete",
+    "colunas": [
+     "Cor",
+     "Composição"
+    ],
+    "linhas": [
+     [
+      "Amarela",
+      "Açúcar e fosfato"
+     ],
+     [
+      "Verde",
+      "Bases A, T, C e G"
+     ]
+    ]
+   },
+   "alts": [
+    "Amarelas formam as laterais e verdes formam os degraus",
+    "Amarelas formam os degraus e verdes as laterais",
+    "Ambas formam só as laterais",
+    "Ambas formam só os degraus"
+   ],
+   "correta": 0,
+   "explicacao": "Açúcar e fosfato formam as laterais; as bases pareadas formam os degraus."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um laboratório analisou uma amostra de DNA de dupla fita.",
+   "comando": "Se 30% das bases são adenina (A), quais são as porcentagens de T, C e G?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados da análise",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Adenina (A)",
+      "valor": 30
+     },
+     {
+      "rotulo": "Total de bases",
+      "valor": 100
+     }
+    ]
+   },
+   "alts": [
+    "T 20%, C 30% e G 20%",
+    "T 30%, C 30% e G 10%",
+    "T 30%, C 20% e G 20%",
+    "T 70%, C 0% e G 0%"
+   ],
+   "correta": 2,
+   "explicacao": "A pareia com T (30%); sobram 40% divididos igualmente entre C e G (20% cada)."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na maquete, as peças vermelhas formam as laterais da escada.",
+   "comando": "De que substâncias são formadas as laterais do DNA?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Peças da maquete",
+    "colunas": [
+     "Peça",
+     "Posição"
+    ],
+    "linhas": [
+     [
+      "Tira longa vermelha",
+      "Lateral"
+     ],
+     [
+      "Tira curta azul",
+      "Degrau"
+     ]
+    ]
+   },
+   "ref": "De açúcar (desoxirribose) e fosfato.",
+   "conceitos": [
+    "açúcar",
+    "fosfato"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao final da montagem, os alunos torceram a escada.",
+   "comando": "Qual é o nome do formato do DNA obtido?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Passos da montagem",
+    "etapas": [
+     "Montar a escada plana",
+     "Prender as pontas",
+     "Torcer a escada"
+    ]
+   },
+   "ref": "Dupla-hélice.",
+   "conceitos": [
+    "dupla-hélice"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma fita de DNA tem a sequência da tabela.",
+   "comando": "Escreva a sequência da fita complementar.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Fita do grupo 2",
+    "colunas": [
+     "Posição",
+     "Base"
+    ],
+    "linhas": [
+     [
+      "1",
+      "A"
+     ],
+     [
+      "2",
+      "A"
+     ],
+     [
+      "3",
+      "C"
+     ],
+     [
+      "4",
+      "G"
+     ],
+     [
+      "5",
+      "T"
+     ]
+    ]
+   },
+   "ref": "T, T, G, C, A.",
+   "conceitos": [
+    "A com T",
+    "C com G"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na maquete, só encaixam A com T e C com G.",
+   "comando": "Por que as bases se pareiam sempre dessa forma?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados: pontes de hidrogênio entre bases",
+    "unidade": "ligações",
+    "itens": [
+     {
+      "rotulo": "Par A e T",
+      "valor": 2
+     },
+     {
+      "rotulo": "Par C e G",
+      "valor": 3
+     }
+    ]
+   },
+   "ref": "Porque cada base só se encaixa com a sua complementar, por ligações específicas entre elas; isso garante cópia fiel do DNA.",
+   "conceitos": [
+    "pareamento",
+    "bases complementares",
+    "cópia fiel"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois irmãos têm DNA muito parecido, mas não idêntico.",
+   "comando": "Explique por que irmãos são parecidos, mas diferentes.",
+   "figura": null,
+   "ref": "Cada um herda metade do DNA de cada genitor, em combinações diferentes; a sequência de bases determina as características.",
+   "conceitos": [
+    "hereditariedade",
+    "combinação",
+    "sequência de bases"
+   ]
+  }
+ ],
+ "4B|6º ANO|5": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma pintou uma imagem do corpo humano com duas cores para separar partes do sistema nervoso.",
+   "comando": "Qual dessas estruturas faz parte do sistema nervoso periférico?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Atividade com a imagem",
+    "etapas": [
+     "Observar a imagem do corpo",
+     "Pintar de azul o sistema nervoso central",
+     "Pintar de vermelho o restante"
+    ]
+   },
+   "alts": [
+    "Cérebro",
+    "Nervos",
+    "Cerebelo",
+    "Medula espinhal"
+   ],
+   "correta": 1,
+   "explicacao": "O sistema nervoso periférico é formado por nervos e gânglios; cérebro, cerebelo e medula são do central."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na cantina, Carla sentiu o cheiro do bolo saindo do forno.",
+   "comando": "Que tipo de nervo leva essa informação até o encéfalo?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Situação na cantina",
+    "etapas": [
+     "O bolo sai do forno",
+     "O cheiro chega ao nariz",
+     "A informação segue até o encéfalo"
+    ]
+   },
+   "alts": [
+    "Nervo motor",
+    "Nervo que só atua nos músculos",
+    "Nervo sensorial",
+    "Nervo que só atua na digestão"
+   ],
+   "correta": 2,
+   "explicacao": "Nervos sensoriais levam informações dos sentidos ao sistema nervoso central."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "João encostou o dedo numa panela quente e o afastou rapidamente.",
+   "comando": "O que os nervos motores fazem nessa situação?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Sequência do episódio",
+    "etapas": [
+     "Dedo encosta na panela quente",
+     "Dedo é afastado"
+    ]
+   },
+   "alts": [
+    "Levam a ordem do sistema nervoso central até os músculos",
+    "Sentem o calor na pele",
+    "Guardam a lembrança da dor",
+    "Produzem o calor da panela"
+   ],
+   "correta": 0,
+   "explicacao": "Nervos motores levam ordens do SNC aos músculos, que se contraem para afastar o dedo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na corrida da escola, o coração de Bia acelerou sem que ela precisasse mandar.",
+   "comando": "Qual divisão do sistema nervoso autônomo atuou?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de observação: batimentos de Bia",
+    "colunas": [
+     "Situação",
+     "Batimentos por minuto"
+    ],
+    "linhas": [
+     [
+      "Repouso",
+      "70"
+     ],
+     [
+      "Durante a corrida",
+      "150"
+     ]
+    ]
+   },
+   "alts": [
+    "Parassimpático",
+    "Somático",
+    "Sensorial",
+    "Simpático"
+   ],
+   "correta": 3,
+   "explicacao": "O sistema simpático prepara o corpo para esforço, acelerando o coração."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Joana escreve no caderno porque decide fazê-lo, mas a digestão do lanche acontece sem ela pensar.",
+   "comando": "Qual afirmação explica melhor essa diferença?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de ações de Joana",
+    "colunas": [
+     "Ação",
+     "Joana decide?"
+    ],
+    "linhas": [
+     [
+      "Escrever no caderno",
+      "Sim"
+     ],
+     [
+      "Digerir o lanche",
+      "Não"
+     ],
+     [
+      "Piscar sem perceber",
+      "Não"
+     ]
+    ]
+   },
+   "alts": [
+    "Ambas dependem só do sistema somático",
+    "Escrever depende do sistema somático (voluntário) e a digestão, do autônomo (involuntário)",
+    "Ambas dependem só do autônomo",
+    "Escrever é autônomo e digerir é somático"
+   ],
+   "correta": 1,
+   "explicacao": "O somático controla ações voluntárias; o autônomo controla funções internas involuntárias."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na imagem, o cérebro e a medula estão em azul e os fios que saem delas para o corpo, em vermelho.",
+   "comando": "Qual sistema o vermelho representa e quais estruturas o formam?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Legenda da imagem",
+    "colunas": [
+     "Cor",
+     "Partes"
+    ],
+    "linhas": [
+     [
+      "Azul",
+      "Cérebro e medula"
+     ],
+     [
+      "Vermelho",
+      "Fios que ligam a medula ao corpo"
+     ]
+    ]
+   },
+   "ref": "O sistema nervoso periférico, formado por nervos e gânglios.",
+   "conceitos": [
+    "sistema nervoso periférico",
+    "nervos",
+    "gânglios"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Veja o registro de dois nervos.",
+   "comando": "Qual nervo é sensorial e qual é motor?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de dois nervos",
+    "colunas": [
+     "Nervo",
+     "O que faz"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Leva ao cérebro a informação de que o chão está frio"
+     ],
+     [
+      "B",
+      "Leva a ordem para a perna dar um passo"
+     ]
+    ]
+   },
+   "ref": "O nervo A é sensorial e o nervo B é motor.",
+   "conceitos": [
+    "sensorial",
+    "motor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Beto levantou a mão para perguntar e, ao mesmo tempo, o coração dele batia.",
+   "comando": "Classifique cada ação em somático ou autônomo.",
+   "figura": null,
+   "ref": "Levantar a mão é somático (voluntário); o batimento do coração é autônomo (involuntário).",
+   "conceitos": [
+    "somático",
+    "autônomo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao levar um susto, Rita notou o coração disparar e a boca ficar seca.",
+   "comando": "Explique o que causou essas reações e qual divisão atua.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro antes e depois do susto",
+    "colunas": [
+     "Medida",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Batimentos (por min)",
+      "75",
+      "120"
+     ],
+     [
+      "Pupila",
+      "Normal",
+      "Dilatada"
+     ],
+     [
+      "Saliva",
+      "Normal",
+      "Pouca"
+     ]
+    ]
+   },
+   "ref": "O sistema nervoso autônomo, pela divisão simpática, prepara o corpo para reagir, de forma involuntária.",
+   "conceitos": [
+    "autônomo",
+    "simpático",
+    "involuntário"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um acidente, o nervo motor da perna de um homem foi cortado.",
+   "comando": "O que acontece com a perna? Justifique.",
+   "figura": null,
+   "ref": "A perna não se move, pois a ordem do sistema nervoso central não chega ao músculo; a sensibilidade pode continuar se os nervos sensoriais estiverem íntegros.",
+   "conceitos": [
+    "nervo motor",
+    "ordem ao músculo",
+    "nervo sensorial"
+   ]
+  }
+ ],
+ "4B|7º ANO|1": [
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro nunca ficou doente, mas vive triste, isolado e sem amigos.",
+   "comando": "Segundo a OMS, o que é saúde?",
+   "figura": null,
+   "alts": [
+    "Bem-estar físico, mental e social, e não apenas ausência de doença",
+    "Apenas não ter doenças",
+    "Apenas ter um corpo forte",
+    "Apenas tomar remédios quando necessário"
+   ],
+   "correta": 0,
+   "explicacao": "A OMS define saúde como bem-estar físico, mental e social."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em aula, a professora falou sobre a Constituição de 1988.",
+   "comando": "O que ela estabelece sobre a saúde?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Linha do tempo",
+    "etapas": [
+     "1988: nova Constituição do Brasil",
+     "1990: Lei Orgânica da Saúde"
+    ]
+   },
+   "alts": [
+    "A saúde é um serviço só para quem paga",
+    "A saúde é responsabilidade só da família",
+    "A saúde é um favor do governo",
+    "A saúde é direito de todos e dever do Estado"
+   ],
+   "correta": 3,
+   "explicacao": "A Constituição de 1988 garante a saúde como direito de todos e dever do Estado."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Léo está com dor de garganta leve e quer ser atendido pelo SUS.",
+   "comando": "Onde é melhor ir primeiro?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Locais de atendimento",
+    "colunas": [
+     "Local",
+     "Distância da casa de Léo"
+    ],
+    "linhas": [
+     [
+      "UBS",
+      "300 m"
+     ],
+     [
+      "UPA",
+      "5 km"
+     ],
+     [
+      "Hospital de alta complexidade",
+      "12 km"
+     ]
+    ]
+   },
+   "alts": [
+    "No hospital de alta complexidade",
+    "Direto na UTI",
+    "Na UBS, atenção primária",
+    "Em nenhum lugar, ficar em casa"
+   ],
+   "correta": 2,
+   "explicacao": "A UBS é a porta de entrada do SUS e resolve casos simples, como dor de garganta leve."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Veja o gráfico de cobertura da Atenção Primária em cinco regiões.",
+   "comando": "Qual região teria mais dificuldade de acesso à saúde básica?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: cobertura da Atenção Primária",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Norte",
+      "valor": 72
+     },
+     {
+      "rotulo": "Nordeste",
+      "valor": 85
+     },
+     {
+      "rotulo": "Sudeste",
+      "valor": 70
+     },
+     {
+      "rotulo": "Sul",
+      "valor": 78
+     },
+     {
+      "rotulo": "Centro-Oeste",
+      "valor": 75
+     }
+    ]
+   },
+   "alts": [
+    "Nordeste",
+    "Sudeste",
+    "Sul",
+    "Centro-Oeste"
+   ],
+   "correta": 1,
+   "explicacao": "A região com menor percentual de cobertura tem mais dificuldade de acesso."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois bairros foram comparados quanto a casos de diarreia.",
+   "comando": "Por que o bairro B teve mais casos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: bairros",
+    "colunas": [
+     "Bairro",
+     "Esgoto tratado (%)",
+     "Casos por ano"
+    ],
+    "linhas": [
+     [
+      "A",
+      "90",
+      "10"
+     ],
+     [
+      "B",
+      "20",
+      "85"
+     ]
+    ]
+   },
+   "alts": [
+    "A saúde depende também de saneamento, moradia e renda, os determinantes sociais",
+    "Só depende de remédios",
+    "Só depende da sorte",
+    "Só depende de cada pessoa se cuidar"
+   ],
+   "correta": 0,
+   "explicacao": "Saneamento e outros fatores sociais influenciam a saúde da população."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pense em como você se sente quando está bem.",
+   "comando": "Escreva com suas palavras o conceito de saúde da OMS.",
+   "figura": null,
+   "ref": "Saúde é o completo bem-estar físico, mental e social, não só a ausência de doença.",
+   "conceitos": [
+    "bem-estar físico",
+    "bem-estar mental",
+    "bem-estar social"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Júlia foi à UBS e recebeu vacina e consulta sem pagar.",
+   "comando": "Que direito esse atendimento mostra? Explique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Atendimento de Júlia",
+    "colunas": [
+     "Serviço",
+     "Valor pago"
+    ],
+    "linhas": [
+     [
+      "Vacina",
+      "R$ 0"
+     ],
+     [
+      "Consulta",
+      "R$ 0"
+     ]
+    ]
+   },
+   "ref": "O direito à saúde, garantido pela Constituição e feito pelo SUS, gratuito e para todos.",
+   "conceitos": [
+    "direito à saúde",
+    "SUS",
+    "gratuidade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No bairro há lixo acumulado e água parada, e os casos de dengue aumentaram.",
+   "comando": "Que tipo de saúde está envolvido e o que se pode fazer?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: casos de dengue no bairro",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Janeiro",
+      "valor": 5
+     },
+     {
+      "rotulo": "Fevereiro",
+      "valor": 20
+     },
+     {
+      "rotulo": "Março",
+      "valor": 45
+     }
+    ]
+   },
+   "ref": "Saúde ambiental e coletiva; descartar o lixo corretamente e eliminar água parada.",
+   "conceitos": [
+    "saúde ambiental",
+    "saúde coletiva",
+    "prevenção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas regiões foram comparadas quanto a UBS e internações.",
+   "comando": "Explique por que a região B tem mais internações.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: duas regiões",
+    "colunas": [
+     "Região",
+     "UBS por 10 mil hab.",
+     "Internações por pneumonia"
+    ],
+    "linhas": [
+     [
+      "A",
+      "2",
+      "4"
+     ],
+     [
+      "B",
+      "0,5",
+      "11"
+     ]
+    ]
+   },
+   "ref": "Com menos UBS há menos prevenção e diagnóstico precoce; a doença se agrava e a pessoa vai ao hospital.",
+   "conceitos": [
+    "atenção primária",
+    "prevenção",
+    "diagnóstico precoce"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A ANVISA fiscaliza alimentos, remédios e cosméticos vendidos no país.",
+   "comando": "Por que essa fiscalização é importante? Justifique.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Caminho de um lote de leite",
+    "etapas": [
+     "Fábrica produz o lote",
+     "Amostras são analisadas",
+     "Lote é liberado para venda"
+    ]
+   },
+   "ref": "Protege a saúde coletiva, evitando produtos contaminados, falsificados ou perigosos.",
+   "conceitos": [
+    "ANVISA",
+    "saúde coletiva",
+    "segurança"
+   ]
+  }
+ ],
+ "4B|7º ANO|11": [
+  {
+   "tipo": "obj",
+   "enunciado": "A turma fez um tour virtual pelo Museu da Vacina do Butantan.",
+   "comando": "O que uma vacina faz no corpo?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Tour virtual em 3 etapas",
+    "etapas": [
+     "História das vacinas",
+     "Produção das vacinas",
+     "Papel do instituto"
+    ]
+   },
+   "alts": [
+    "Cura qualquer doença já instalada",
+    "Mata os vírus que estão no ar",
+    "Prepara o corpo para reconhecer e combater o micro-organismo",
+    "Substitui as defesas do corpo"
+   ],
+   "correta": 2,
+   "explicacao": "A vacina treina o sistema imune para reagir rapidamente ao micro-organismo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Muitas vacinas usadas no Brasil são produzidas por institutos públicos.",
+   "comando": "Quais instituições produzem vacinas para o SUS?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Instituições de pesquisa",
+    "colunas": [
+     "Instituição",
+     "Cidade"
+    ],
+    "linhas": [
+     [
+      "Instituto Butantan",
+      "São Paulo"
+     ],
+     [
+      "Fiocruz",
+      "Rio de Janeiro"
+     ]
+    ]
+   },
+   "alts": [
+    "Apenas farmácias particulares",
+    "Instituto Butantan e Fiocruz",
+    "Apenas supermercados",
+    "Apenas escolas"
+   ],
+   "correta": 1,
+   "explicacao": "Butantan e Fiocruz são grandes produtores de vacinas do SUS."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A vacina da gripe (influenza) é produzida em ovos de galinha fertilizados.",
+   "comando": "Por que se usam ovos na produção?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da produção",
+    "etapas": [
+     "Ovos férteis são selecionados",
+     "O vírus é injetado nos ovos",
+     "O líquido do ovo é coletado",
+     "O vírus é inativado e purificado"
+    ]
+   },
+   "alts": [
+    "Porque a clara do ovo mata o vírus",
+    "Porque o ovo é a fonte de proteína da vacina",
+    "Porque o ovo substitui os testes de segurança",
+    "Porque o vírus se multiplica dentro do ovo fértil"
+   ],
+   "correta": 3,
+   "explicacao": "O vírus se multiplica no ovo; depois é inativado e purificado para virar vacina."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na vacina de mRNA, a célula recebe uma mensagem química.",
+   "comando": "O que as células recebem nesse tipo de vacina?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Três vacinas do tour",
+    "colunas": [
+     "Tipo",
+     "Exemplo de doença"
+    ],
+    "linhas": [
+     [
+      "mRNA",
+      "Covid-19"
+     ],
+     [
+      "Atenuada",
+      "Sarampo"
+     ],
+     [
+      "Subunidade",
+      "Hepatite B"
+     ]
+    ]
+   },
+   "alts": [
+    "Uma instrução para produzir uma proteína do vírus",
+    "O vírus inteiro e vivo",
+    "Anticorpos prontos",
+    "Um antibiótico"
+   ],
+   "correta": 0,
+   "explicacao": "O mRNA instrui as células a fazer uma proteína do vírus, que treina o sistema imune."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Antes de chegar ao SUS, uma vacina passa por várias fases de testes.",
+   "comando": "Por que esses testes são necessários?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: fases de teste",
+    "colunas": [
+     "Fase",
+     "Voluntários"
+    ],
+    "linhas": [
+     [
+      "1",
+      "50"
+     ],
+     [
+      "2",
+      "500"
+     ],
+     [
+      "3",
+      "20 mil"
+     ]
+    ]
+   },
+   "alts": [
+    "Para deixar a vacina mais cara",
+    "Para treinar os pesquisadores",
+    "Para garantir que todos fiquem doentes",
+    "Para verificar segurança e eficácia em grupos cada vez maiores"
+   ],
+   "correta": 3,
+   "explicacao": "Os testes em fases garantem que a vacina seja segura e funcione antes de ser liberada."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na etapa de produção do tour, os alunos viram o trabalho de um instituto paulista.",
+   "comando": "Qual instituto de São Paulo produz vacinas para o SUS?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Tour virtual",
+    "etapas": [
+     "História",
+     "Produção",
+     "Papel do instituto"
+    ]
+   },
+   "ref": "O Instituto Butantan.",
+   "conceitos": [
+    "Butantan"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O tour mostrou vários tipos de vacina.",
+   "comando": "Cite um tipo de vacina e diga o que ela contém.",
+   "figura": null,
+   "ref": "Atenuada: vírus vivo enfraquecido; subunidade: um pedaço do micro-organismo; mRNA: instrução para produzir uma proteína do vírus.",
+   "conceitos": [
+    "atenuada",
+    "subunidade",
+    "mRNA"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma cidade, quase todos se vacinaram contra o sarampo.",
+   "comando": "Por que vacinar muita gente protege também quem não pode se vacinar?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: casos de sarampo",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Cobertura de 95%",
+      "valor": 2
+     },
+     {
+      "rotulo": "Cobertura de 70%",
+      "valor": 40
+     }
+    ]
+   },
+   "ref": "Com mais gente imune, o micro-organismo circula menos e é mais difícil que chegue a quem não foi vacinado.",
+   "conceitos": [
+    "imunidade coletiva",
+    "circulação do vírus"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A vacina da gripe precisa ser tomada todo ano.",
+   "comando": "Explique por que a vacina da gripe é atualizada.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de três anos",
+    "colunas": [
+     "Ano",
+     "Vírus mais comum"
+    ],
+    "linhas": [
+     [
+      "2022",
+      "Cepa X"
+     ],
+     [
+      "2023",
+      "Cepa Y"
+     ],
+     [
+      "2024",
+      "Cepa Z"
+     ]
+    ]
+   },
+   "ref": "O vírus da gripe muda com frequência, surgindo novas cepas; por isso a vacina é atualizada.",
+   "conceitos": [
+    "mutação",
+    "novas cepas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma mensagem falsa diz que a vacina causa a doença que previne.",
+   "comando": "Use o que aprendeu para responder à mensagem.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: efeitos após vacina em 1.000 pessoas",
+    "colunas": [
+     "Efeito",
+     "Pessoas"
+    ],
+    "linhas": [
+     [
+      "Dor no braço",
+      "120"
+     ],
+     [
+      "Febre baixa",
+      "30"
+     ],
+     [
+      "Doença grave",
+      "0"
+     ]
+    ]
+   },
+   "ref": "As vacinas usam vírus enfraquecido, pedaço ou instrução, e passam por testes; causam só efeitos leves, não a doença.",
+   "conceitos": [
+    "segurança",
+    "testes",
+    "efeitos leves"
+   ]
+  }
+ ],
+ "4B|8º ANO|8": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em um circuito elétrico, usam-se letras diferentes para cada grandeza.",
+   "comando": "Qual é a unidade da resistência elétrica?",
+   "figura": null,
+   "alts": [
+    "Ampère (A)",
+    "Volt (V)",
+    "Watt (W)",
+    "Ohm (Ω)"
+   ],
+   "correta": 3,
+   "explicacao": "A resistência elétrica é medida em ohms (Ω)."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A 1ª Lei de Ohm relaciona três grandezas.",
+   "comando": "Qual é a expressão da 1ª Lei de Ohm?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Grandezas e unidades",
+    "colunas": [
+     "Grandeza",
+     "Símbolo e unidade"
+    ],
+    "linhas": [
+     [
+      "Corrente",
+      "I (A)"
+     ],
+     [
+      "Tensão",
+      "V (V)"
+     ],
+     [
+      "Resistência",
+      "R (Ω)"
+     ]
+    ]
+   },
+   "alts": [
+    "I = V / R",
+    "I = V × R",
+    "I = R / V",
+    "I = V + R"
+   ],
+   "correta": 0,
+   "explicacao": "A corrente é a tensão dividida pela resistência: I = V/R."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um aquecedor é ligado em 220 V e tem resistência de 8 Ω.",
+   "comando": "Qual é a corrente elétrica nele?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do aquecedor",
+    "colunas": [
+     "Grandeza",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tensão",
+      "220 V"
+     ],
+     [
+      "Resistência",
+      "8 Ω"
+     ]
+    ]
+   },
+   "alts": [
+    "1760 A",
+    "27,5 A",
+    "0,036 A",
+    "212 A"
+   ],
+   "correta": 1,
+   "explicacao": "I = V/R = 220/8 = 27,5 A."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Com a mesma tensão de 220 V, o fio do aquecedor foi trocado por outro de resistência maior.",
+   "comando": "Qual a corrente com resistência de 16 Ω?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: duas situações",
+    "colunas": [
+     "Resistência (Ω)",
+     "Tensão (V)"
+    ],
+    "linhas": [
+     [
+      "8",
+      "220"
+     ],
+     [
+      "16",
+      "220"
+     ]
+    ]
+   },
+   "alts": [
+    "27,5 A",
+    "3520 A",
+    "13,75 A",
+    "55 A"
+   ],
+   "correta": 2,
+   "explicacao": "I = 220/16 = 13,75 A; dobrando a resistência, a corrente cai pela metade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na instalação do aquecedor, a corrente é 27,5 A. O eletricista deve escolher o fio.",
+   "comando": "Qual é a menor espessura que suporta essa corrente com segurança?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Tabela de fios",
+    "colunas": [
+     "Espessura (mm²)",
+     "Corrente máxima (A)"
+    ],
+    "linhas": [
+     [
+      "1,5",
+      "17,5"
+     ],
+     [
+      "2,5",
+      "24"
+     ],
+     [
+      "4",
+      "32"
+     ],
+     [
+      "6",
+      "41"
+     ]
+    ]
+   },
+   "alts": [
+    "1,5 mm²",
+    "4 mm²",
+    "2,5 mm²",
+    "6 mm², pois é o único que serve"
+   ],
+   "correta": 1,
+   "explicacao": "O fio de 4 mm² suporta 32 A, acima de 27,5 A; os menores esquentariam demais."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A tabela mostra o chuveiro de uma casa.",
+   "comando": "Qual é o nome e símbolo da unidade da corrente elétrica?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do chuveiro",
+    "colunas": [
+     "Grandeza",
+     "Valor",
+     "Unidade"
+    ],
+    "linhas": [
+     [
+      "Tensão",
+      "220",
+      "V"
+     ],
+     [
+      "Resistência",
+      "11",
+      "Ω"
+     ],
+     [
+      "Corrente",
+      "20",
+      "?"
+     ]
+    ]
+   },
+   "ref": "Ampère (A).",
+   "conceitos": [
+    "ampère",
+    "A"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um circuito foi montado com tensão constante e resistências diferentes.",
+   "comando": "O que acontece com a corrente quando a resistência aumenta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: tensão de 20 V",
+    "colunas": [
+     "Resistência (Ω)",
+     "Corrente (A)"
+    ],
+    "linhas": [
+     [
+      "10",
+      "2"
+     ],
+     [
+      "20",
+      "1"
+     ],
+     [
+      "40",
+      "0,5"
+     ]
+    ]
+   },
+   "ref": "A corrente diminui.",
+   "conceitos": [
+    "resistência",
+    "corrente diminui"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma lâmpada de 110 V tem resistência de 220 Ω.",
+   "comando": "Calcule a corrente elétrica que passa nela.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados da lâmpada",
+    "colunas": [
+     "Grandeza",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tensão",
+      "110 V"
+     ],
+     [
+      "Resistência",
+      "220 Ω"
+     ]
+    ]
+   },
+   "ref": "I = 110 / 220 = 0,5 A.",
+   "conceitos": [
+    "I = V/R",
+    "0,5 A"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois fios de espessuras diferentes foram ligados à mesma corrente.",
+   "comando": "Por que o fio fino pode causar incêndio?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: corrente de 25 A por 5 min",
+    "colunas": [
+     "Fio",
+     "Espessura (mm²)",
+     "Temperatura (°C)"
+    ],
+    "linhas": [
+     [
+      "A",
+      "1,5",
+      "80"
+     ],
+     [
+      "B",
+      "6",
+      "35"
+     ]
+    ]
+   },
+   "ref": "O fio fino tem maior resistência e esquenta mais com a passagem da corrente; pode derreter o isolamento e causar incêndio.",
+   "conceitos": [
+    "resistência",
+    "aquecimento",
+    "segurança"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aquecedor de 220 V e 8 Ω será ligado em uma extensão.",
+   "comando": "É seguro? Justifique com cálculo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Aquecedor",
+      "220 V e 8 Ω"
+     ],
+     [
+      "Corrente máxima da extensão",
+      "15 A"
+     ]
+    ]
+   },
+   "ref": "Não. A corrente é 220/8 = 27,5 A, maior que 15 A; a extensão esquentaria e poderia causar incêndio.",
+   "conceitos": [
+    "I = V/R",
+    "27,5 A",
+    "limite do fio"
+   ]
+  }
+ ],
+ "4B|8º ANO|18": [
+  {
+   "tipo": "obj",
+   "enunciado": "Ao comprar uma geladeira, Rita viu um selo Procel na etiqueta.",
+   "comando": "O que esse selo indica?",
+   "figura": null,
+   "alts": [
+    "Que o aparelho é mais barato",
+    "Que o aparelho tem boa eficiência energética",
+    "Que o aparelho tem garantia maior",
+    "Que o aparelho é mais leve"
+   ],
+   "correta": 1,
+   "explicacao": "O selo Procel indica aparelhos que gastam menos energia para o mesmo serviço."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na conta de luz, a energia consumida aparece em uma unidade específica.",
+   "comando": "Qual é essa unidade?",
+   "figura": null,
+   "alts": [
+    "kWh (quilowatt-hora)",
+    "kW (quilowatt)",
+    "V (volt)",
+    "A (ampère)"
+   ],
+   "correta": 0,
+   "explicacao": "A energia consumida é cobrada em kWh; kW é unidade de potência."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma TV de 100 W fica ligada 5 horas por dia.",
+   "comando": "Qual é o consumo diário dela em kWh?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados da TV",
+    "colunas": [
+     "Grandeza",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Potência",
+      "100 W"
+     ],
+     [
+      "Uso",
+      "5 h por dia"
+     ]
+    ]
+   },
+   "alts": [
+    "500 kWh",
+    "0,05 kWh",
+    "0,5 kWh",
+    "5 kWh"
+   ],
+   "correta": 2,
+   "explicacao": "100 W = 0,1 kW; 0,1 × 5 = 0,5 kWh."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A mesma TV é usada todos os dias do mês, e a tarifa é R$ 0,80 por kWh.",
+   "comando": "Qual é o custo mensal dela?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados da TV",
+    "colunas": [
+     "Grandeza",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Potência",
+      "100 W"
+     ],
+     [
+      "Uso",
+      "5 h por dia"
+     ],
+     [
+      "Tarifa",
+      "R$ 0,80 por kWh"
+     ]
+    ]
+   },
+   "alts": [
+    "R$ 4,00",
+    "R$ 0,40",
+    "R$ 120,00",
+    "R$ 12,00"
+   ],
+   "correta": 3,
+   "explicacao": "0,5 kWh × 30 = 15 kWh; 15 × 0,80 = R$ 12,00."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois ares-condicionados serão usados 8 h por dia, 30 dias, com tarifa de R$ 0,80 por kWh.",
+   "comando": "Quanto se economiza por mês escolhendo o aparelho A?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados dos aparelhos",
+    "colunas": [
+     "Aparelho",
+     "Potência",
+     "Selo"
+    ],
+    "linhas": [
+     [
+      "A",
+      "1000 W",
+      "A"
+     ],
+     [
+      "B",
+      "1500 W",
+      "C"
+     ]
+    ]
+   },
+   "alts": [
+    "R$ 48,00",
+    "R$ 192,00",
+    "R$ 96,00",
+    "R$ 288,00"
+   ],
+   "correta": 2,
+   "explicacao": "A: 1 × 8 × 30 = 240 kWh (R$ 192); B: 360 kWh (R$ 288); diferença R$ 96."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na loja, duas geladeiras têm etiquetas diferentes.",
+   "comando": "Para que serve comparar a classe de eficiência na etiqueta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Etiquetas de duas geladeiras",
+    "colunas": [
+     "Modelo",
+     "Consumo (kWh/mês)",
+     "Classe"
+    ],
+    "linhas": [
+     [
+      "X",
+      "28",
+      "A"
+     ],
+     [
+      "Y",
+      "45",
+      "C"
+     ]
+    ]
+   },
+   "ref": "Serve para saber qual aparelho gasta menos energia e escolher o mais econômico.",
+   "conceitos": [
+    "etiqueta",
+    "classe de eficiência",
+    "consumo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para calcular o consumo, é preciso conhecer a potência elétrica.",
+   "comando": "Escreva a fórmula que relaciona potência, tensão e corrente.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Grandezas e símbolos",
+    "colunas": [
+     "Grandeza",
+     "Símbolo"
+    ],
+    "linhas": [
+     [
+      "Potência",
+      "P"
+     ],
+     [
+      "Tensão",
+      "U"
+     ],
+     [
+      "Corrente",
+      "I"
+     ]
+    ]
+   },
+   "ref": "P = U × I.",
+   "conceitos": [
+    "P = U × I"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um chuveiro funciona com os valores abaixo.",
+   "comando": "Calcule a potência do chuveiro.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do chuveiro",
+    "colunas": [
+     "Grandeza",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tensão",
+      "220 V"
+     ],
+     [
+      "Corrente",
+      "20 A"
+     ]
+    ]
+   },
+   "ref": "P = 220 × 20 = 4400 W.",
+   "conceitos": [
+    "P = U × I",
+    "4400 W"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um ferro de 1000 W é usado 1 h por dia e um ventilador de 100 W fica 8 h por dia, durante 30 dias.",
+   "comando": "Qual gasta mais energia no mês? Justifique com cálculo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados dos aparelhos",
+    "colunas": [
+     "Aparelho",
+     "Potência",
+     "Uso por dia"
+    ],
+    "linhas": [
+     [
+      "Ferro",
+      "1000 W",
+      "1 h"
+     ],
+     [
+      "Ventilador",
+      "100 W",
+      "8 h"
+     ]
+    ]
+   },
+   "ref": "O ferro: 1 × 1 × 30 = 30 kWh; o ventilador: 0,1 × 8 × 30 = 24 kWh.",
+   "conceitos": [
+    "consumo em kWh",
+    "potência × tempo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma família escolhe uma TV e a tarifa é R$ 0,80 por kWh.",
+   "comando": "Em 1 ano, compensa pagar mais pela TV A? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: duas TVs",
+    "colunas": [
+     "Modelo",
+     "Preço",
+     "Consumo (kWh/mês)"
+    ],
+    "linhas": [
+     [
+      "A",
+      "R$ 1800",
+      "10"
+     ],
+     [
+      "B",
+      "R$ 1500",
+      "25"
+     ]
+    ]
+   },
+   "ref": "Não. A economia é 15 kWh × R$ 0,80 = R$ 12 por mês, ou R$ 144 em um ano, menos que os R$ 300 de diferença.",
+   "conceitos": [
+    "economia mensal",
+    "custo por kWh",
+    "retorno"
+   ]
+  }
+ ],
+ "4B|9º ANO|16": [
+  {
+   "tipo": "obj",
+   "enunciado": "A turma explorou o Stellarium Web no laboratório de informática.",
+   "comando": "Para que serve o Stellarium Web?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Passos no Stellarium Web",
+    "etapas": [
+     "Abrir o site",
+     "Escolher cidade e data",
+     "Observar os astros"
+    ]
+   },
+   "alts": [
+    "Medir a temperatura do ar",
+    "Gravar músicas",
+    "Simular o céu e mostrar os astros visíveis",
+    "Prever o resultado de jogos"
+   ],
+   "correta": 2,
+   "explicacao": "O Stellarium é um planetário virtual que simula o céu."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os alunos usaram o Stellarium para observar o Sol ao amanhecer.",
+   "comando": "Em qual ponto cardeal o Sol nasce?",
+   "figura": null,
+   "alts": [
+    "Oeste",
+    "Norte",
+    "Sul",
+    "Leste"
+   ],
+   "correta": 3,
+   "explicacao": "O Sol nasce aproximadamente no leste."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma acompanhou dois astros por três semanas.",
+   "comando": "Qual conclusão está correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação",
+    "colunas": [
+     "Astro",
+     "Posição entre as estrelas vizinhas"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Muda de lugar a cada semana"
+     ],
+     [
+      "B",
+      "Sempre no mesmo lugar"
+     ]
+    ]
+   },
+   "alts": [
+    "A é um planeta e B é uma estrela",
+    "A é uma estrela e B é um planeta",
+    "Ambos são estrelas",
+    "Ambos são planetas"
+   ],
+   "correta": 0,
+   "explicacao": "Planetas mudam de posição em relação às estrelas, que parecem fixas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma aluna colocou o Sol nas datas de cada mês no Stellarium e anotou a constelação ao fundo.",
+   "comando": "Como se chama o caminho aparente do Sol no céu ao longo do ano?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Posição do Sol no Stellarium",
+    "colunas": [
+     "Data",
+     "Constelação atrás do Sol"
+    ],
+    "linhas": [
+     [
+      "10 de janeiro",
+      "Sagitário"
+     ],
+     [
+      "1º de março",
+      "Aquário"
+     ],
+     [
+      "10 de julho",
+      "Gêmeos"
+     ],
+     [
+      "15 de outubro",
+      "Virgem"
+     ]
+    ]
+   },
+   "alts": [
+    "Equador",
+    "Eclíptica",
+    "Meridiano",
+    "Horizonte"
+   ],
+   "correta": 1,
+   "explicacao": "A eclíptica é o caminho aparente do Sol; o zodíaco fica ao longo dela."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um colega disse que o signo de nascimento define a personalidade das pessoas.",
+   "comando": "Como a ciência avalia essa ideia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: 100 pessoas do mesmo signo",
+    "colunas": [
+     "Característica",
+     "Pessoas"
+    ],
+    "linhas": [
+     [
+      "Tímidas",
+      "31"
+     ],
+     [
+      "Comunicativas",
+      "34"
+     ],
+     [
+      "Calmas",
+      "35"
+     ]
+    ]
+   },
+   "alts": [
+    "A astrologia não tem comprovação científica; a astronomia usa observação e testes",
+    "A astrologia é ciência comprovada",
+    "A astronomia e a astrologia são iguais",
+    "A posição dos astros muda o caráter de forma comprovada"
+   ],
+   "correta": 0,
+   "explicacao": "Testes não mostram relação entre signo e personalidade; astronomia é ciência baseada em observação."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os alunos identificaram a Lua, Sirius, Vênus e Júpiter no Stellarium.",
+   "comando": "Qual deles é uma estrela?",
+   "figura": null,
+   "ref": "Sirius. A Lua é satélite; Vênus e Júpiter são planetas.",
+   "conceitos": [
+    "estrela",
+    "planeta",
+    "satélite"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No mapa do céu aparece uma bússola com algumas direções.",
+   "comando": "Qual ponto cardeal está faltando?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Pontos cardeais e ângulos",
+    "colunas": [
+     "Direção",
+     "Ângulo"
+    ],
+    "linhas": [
+     [
+      "Norte",
+      "0°"
+     ],
+     [
+      "Leste",
+      "90°"
+     ],
+     [
+      "?",
+      "180°"
+     ],
+     [
+      "Oeste",
+      "270°"
+     ]
+    ]
+   },
+   "ref": "O Sul.",
+   "conceitos": [
+    "Sul",
+    "pontos cardeais"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os alunos compararam o céu às 21h em duas datas.",
+   "comando": "Explique por que o Cruzeiro do Sul aparece em posições diferentes.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do Cruzeiro do Sul às 21h",
+    "colunas": [
+     "Data",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "15 de julho",
+      "Visível a oeste"
+     ],
+     [
+      "15 de fevereiro",
+      "Ainda não nasceu"
+     ]
+    ]
+   },
+   "ref": "Porque a Terra se move ao redor do Sol; a parte do céu visível à noite muda ao longo do ano.",
+   "conceitos": [
+    "translação",
+    "variação sazonal"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No Stellarium, em 10 de julho o Sol está na constelação de Gêmeos.",
+   "comando": "Por que não vemos as estrelas de Gêmeos à noite nessa data?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Horários em 10 de julho",
+    "colunas": [
+     "Evento",
+     "Horário"
+    ],
+    "linhas": [
+     [
+      "Nascer do Sol",
+      "06h35"
+     ],
+     [
+      "Nascer da constelação de Gêmeos",
+      "06h30"
+     ]
+    ]
+   },
+   "ref": "Porque Gêmeos está na mesma direção do Sol e fica no céu de dia, ofuscada pela luz solar.",
+   "conceitos": [
+    "constelação",
+    "luz do Sol",
+    "dia e noite"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma testou as previsões do Stellarium comparando com o céu real.",
+   "comando": "Qual é mais científica, a astronomia ou a astrologia? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: previsões do Stellarium",
+    "colunas": [
+     "Previsão",
+     "Noites testadas",
+     "Acertos"
+    ],
+    "linhas": [
+     [
+      "Posição da Lua",
+      "10",
+      "10"
+     ],
+     [
+      "Horário do pôr do Sol",
+      "10",
+      "10"
+     ]
+    ]
+   },
+   "ref": "A astronomia, porque faz previsões que podem ser testadas e confirmadas; a astrologia não tem comprovação.",
+   "conceitos": [
+    "método científico",
+    "observação",
+    "previsões"
+   ]
+  }
+ ]
+}

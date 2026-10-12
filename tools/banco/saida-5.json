@@ -1,0 +1,2913 @@
+{
+ "7º ANO|2|Reconhecer o efeito estufa como fenômeno natural e os impactos das ações humanas que o intensificam.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a professora disse que o efeito estufa é um fenômeno natural. Qual é a importância dele para a vida na Terra?",
+   "comando": "Marque a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Produz a chuva ácida das cidades.",
+    "Ajuda a manter a temperatura do planeta adequada para os seres vivos.",
+    "Faz o planeta ficar sempre congelado.",
+    "Impede que a luz do Sol chegue à Terra."
+   ],
+   "correta": 1,
+   "explicacao": "Os gases de efeito estufa retêm parte do calor e mantêm a Terra numa temperatura média adequada à vida."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma turma montou o experimento 'Estufa no copo' e quer entender o modelo.",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas do experimento",
+    "etapas": [
+     "Dois copos com a mesma água",
+     "Um copo coberto com saco plástico",
+     "Os dois copos ao sol por 15 minutos",
+     "Medir a temperatura da água de cada copo"
+    ]
+   },
+   "alts": [
+    "O Sol que aquece a água.",
+    "O solo da Terra.",
+    "Os gases da atmosfera que retêm calor.",
+    "As nuvens de chuva."
+   ],
+   "correta": 2,
+   "explicacao": "No modelo, o saco plástico faz o papel dos gases da atmosfera que retêm calor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Veja as temperaturas medidas no experimento. O que os dados mostram?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Copo",
+     "Início (°C)",
+     "Após 15 min (°C)"
+    ],
+    "linhas": [
+     [
+      "Descoberto",
+      "25",
+      "31"
+     ],
+     [
+      "Coberto com plástico",
+      "25",
+      "38"
+     ]
+    ]
+   },
+   "alts": [
+    "O copo coberto reteve mais calor que o descoberto.",
+    "O copo descoberto esquentou mais.",
+    "Os dois copos esquentaram igual.",
+    "A água do copo coberto esfriou."
+   ],
+   "correta": 0,
+   "explicacao": "O copo coberto subiu 13 °C e o descoberto 6 °C, mostrando maior retenção de calor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma cidade quer reduzir os gases que intensificam o efeito estufa. Veja de onde eles vêm.",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Gás carbônico emitido por fonte em uma cidade",
+    "unidade": "mil toneladas por ano",
+    "itens": [
+     {
+      "rotulo": "Carros e motos a combustível",
+      "valor": 40
+     },
+     {
+      "rotulo": "Indústrias",
+      "valor": 30
+     },
+     {
+      "rotulo": "Queimadas",
+      "valor": 20
+     },
+     {
+      "rotulo": "Residências",
+      "valor": 10
+     }
+    ]
+   },
+   "alts": [
+    "Trocar as lâmpadas das casas.",
+    "Queimar o lixo no quintal.",
+    "Construir mais estacionamentos no centro.",
+    "Incentivar ônibus, metrô e bicicletas no lugar de carros."
+   ],
+   "correta": 3,
+   "explicacao": "A maior fonte são os veículos; reduzir seu uso diminui mais as emissões."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Veja como o gás carbônico no ar mudou. Por que isso intensifica o efeito estufa?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Gás carbônico no ar",
+    "unidade": "partes por milhão",
+    "itens": [
+     {
+      "rotulo": "Ano 1900",
+      "valor": 296
+     },
+     {
+      "rotulo": "Ano 1950",
+      "valor": 311
+     },
+     {
+      "rotulo": "Ano 2000",
+      "valor": 369
+     },
+     {
+      "rotulo": "Ano 2020",
+      "valor": 413
+     }
+    ]
+   },
+   "alts": [
+    "Mais gás retém mais calor, e queimar combustíveis e desmatar liberam esse gás.",
+    "O efeito estufa só passou a existir depois de 1900.",
+    "Mais gás carbônico reflete a luz do Sol e esfria o planeta.",
+    "A camada de ozônio aumentou e aprisiona mais calor."
+   ],
+   "correta": 0,
+   "explicacao": "O aumento do CO2 vem de queima de combustíveis e desmatamento e reforça a retenção de calor."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite dois gases que contribuem para o efeito estufa.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": null,
+   "ref": "Gás carbônico (CO2) e metano (CH4); também vale vapor de água ou óxido nitroso.",
+   "conceitos": [
+    "gás carbônico",
+    "metano",
+    "gases de efeito estufa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Observe os dados. Que fenômeno natural explica a diferença de temperatura?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Temperatura média da superfície da Terra",
+    "colunas": [
+     "Situação",
+     "Temperatura"
+    ],
+    "linhas": [
+     [
+      "Cálculo sem gases na atmosfera",
+      "−18 °C"
+     ],
+     [
+      "Valor medido hoje",
+      "15 °C"
+     ]
+    ]
+   },
+   "ref": "O efeito estufa: gases da atmosfera retêm parte do calor e deixam a Terra mais quente.",
+   "conceitos": [
+    "efeito estufa",
+    "gases retêm calor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Relacione o que aconteceu no copo coberto ao efeito estufa na Terra.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: temperatura após 15 min",
+    "unidade": "°C",
+    "itens": [
+     {
+      "rotulo": "Copo sem cobertura",
+      "valor": 31
+     },
+     {
+      "rotulo": "Copo com cobertura",
+      "valor": 38
+     }
+    ]
+   },
+   "ref": "O plástico dificulta a saída do calor, como os gases da atmosfera retêm calor na Terra.",
+   "conceitos": [
+    "retenção de calor",
+    "modelo da atmosfera"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite duas ações humanas que intensificam o efeito estufa e explique por quê.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Emissões de gases por setor no Brasil (valores aproximados)",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Mudança no uso da terra",
+      "valor": 46
+     },
+     {
+      "rotulo": "Agropecuária",
+      "valor": 27
+     },
+     {
+      "rotulo": "Energia",
+      "valor": 18
+     },
+     {
+      "rotulo": "Processos industriais",
+      "valor": 5
+     },
+     {
+      "rotulo": "Resíduos",
+      "valor": 4
+     }
+    ]
+   },
+   "ref": "Desmatar/queimar florestas e queimar combustíveis fósseis liberam gás carbônico, que aumenta a retenção de calor.",
+   "conceitos": [
+    "desmatamento",
+    "combustíveis fósseis",
+    "aumento dos gases"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma escola quer diminuir sua contribuição para o efeito estufa. Proponha duas atitudes e justifique.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Levantamento da escola (fictício)",
+    "colunas": [
+     "Item",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Energia elétrica",
+      "2.400 kWh por mês"
+     ],
+     [
+      "Papel",
+      "80 resmas por mês"
+     ],
+     [
+      "Deslocamento dos alunos",
+      "maioria de carro"
+     ],
+     [
+      "Árvores no pátio",
+      "poucas"
+     ]
+    ]
+   },
+   "ref": "Economizar energia, reduzir papel, ir a pé/ônibus, plantar árvores; menos emissão e mais absorção de CO2.",
+   "conceitos": [
+    "reduzir emissões",
+    "consumo consciente",
+    "plantar árvores"
+   ]
+  }
+ ],
+ "8º ANO|1|Associar as principais ISTs (HPV, Sífilis, HIV/Aids) aos seus sintomas, formas de transmissão e métodos de prevenção.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual vírus causa a Aids?",
+   "comando": "Marque a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "HIV",
+    "HPV",
+    "Vírus da gripe (influenza)",
+    "Bactéria Treponema pallidum"
+   ],
+   "correta": 0,
+   "explicacao": "A Aids é causada pelo HIV; HPV é outro vírus e a sífilis é causada por bactéria."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual método ajuda a prevenir várias ISTs durante a relação sexual?",
+   "comando": "Marque a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Pílula anticoncepcional.",
+    "Lavar-se após a relação.",
+    "Uso correto de preservativo (camisinha).",
+    "Tomar antibiótico antes."
+   ],
+   "correta": 2,
+   "explicacao": "Só o preservativo protege contra gravidez e várias ISTs ao mesmo tempo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma analisou cartões do jogo 'Mito ou verdade'. Qual cartão traz uma informação verdadeira?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Cartões lidos na aula",
+    "colunas": [
+     "Cartão",
+     "Frase"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Abraço transmite o HIV"
+     ],
+     [
+      "2",
+      "Seringa compartilhada pode transmitir o HIV"
+     ],
+     [
+      "3",
+      "Picada de mosquito transmite o HIV"
+     ],
+     [
+      "4",
+      "Dividir talheres transmite o HIV"
+     ]
+    ]
+   },
+   "alts": [
+    "Cartão 2",
+    "Cartão 1",
+    "Cartão 3",
+    "Cartão 4"
+   ],
+   "correta": 0,
+   "explicacao": "O HIV passa por sangue, sêmen, secreções e leite materno, não por abraço, talher ou mosquito."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "João teve relação sem camisinha e não tem sintoma nenhum. O que é mais adequado?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Atendimento em uma UBS (fictício)",
+    "etapas": [
+     "Acolhimento",
+     "Conversa com o profissional",
+     "Teste rápido",
+     "Resultado e orientação"
+    ]
+   },
+   "alts": [
+    "Esperar aparecerem sintomas.",
+    "Procurar a UBS para testes gratuitos, pois algumas ISTs não dão sintomas no início.",
+    "Tomar antibiótico por conta própria.",
+    "Nada, pois sem sintomas não há IST."
+   ],
+   "correta": 1,
+   "explicacao": "Muitas ISTs são silenciosas; o teste permite tratar e evitar transmissão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os casos de sífilis aumentaram numa cidade. Qual medida é mais adequada?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Casos de sífilis em cidade fictícia",
+    "unidade": "casos por ano",
+    "itens": [
+     {
+      "rotulo": "2019",
+      "valor": 120
+     },
+     {
+      "rotulo": "2020",
+      "valor": 150
+     },
+     {
+      "rotulo": "2021",
+      "valor": 210
+     },
+     {
+      "rotulo": "2022",
+      "valor": 300
+     }
+    ]
+   },
+   "alts": [
+    "Isolar os doentes na escola.",
+    "Aplicar uma vacina contra sífilis.",
+    "Proibir conversas sobre sexo.",
+    "Campanhas, uso de camisinha, testagem e tratamento dos parceiros."
+   ],
+   "correta": 3,
+   "explicacao": "Informação, prevenção, diagnóstico e tratamento reduzem a transmissão; não existe vacina contra sífilis."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Classifique cada cartão como verdadeiro ou falso.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Cartões da atividade",
+    "colunas": [
+     "Cartão",
+     "Frase"
+    ],
+    "linhas": [
+     [
+      "A",
+      "HIV passa por abraço ou talher"
+     ],
+     [
+      "B",
+      "Vacina do HPV é gratuita no SUS"
+     ]
+    ]
+   },
+   "ref": "A é falso; B é verdadeiro.",
+   "conceitos": [
+    "mito x verdade",
+    "transmissão do HIV",
+    "vacina HPV no SUS"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Responda às perguntas 2 e 3 da caixa anônima.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Perguntas da caixa anônima",
+    "colunas": [
+     "Nº",
+     "Pergunta"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Dá para pegar HIV na piscina?"
+     ],
+     [
+      "2",
+      "Como evitar o HPV?"
+     ],
+     [
+      "3",
+      "A sífilis tem cura?"
+     ]
+    ]
+   },
+   "ref": "2: vacina e camisinha. 3: sim, com antibiótico, se tratada corretamente.",
+   "conceitos": [
+    "vacina HPV",
+    "preservativo",
+    "sífilis tem cura com antibiótico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em quais situações há risco de transmissão do HIV? Explique.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Situações do dia a dia",
+    "colunas": [
+     "Situação",
+     "Exemplo"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Nadar na mesma piscina"
+     ],
+     [
+      "2",
+      "Beijo no rosto"
+     ],
+     [
+      "3",
+      "Usar a mesma seringa"
+     ],
+     [
+      "4",
+      "Relação sexual sem camisinha"
+     ]
+    ]
+   },
+   "ref": "3 e 4, pois o HIV passa por sangue e secreções sexuais, não por piscina ou beijo no rosto.",
+   "conceitos": [
+    "sangue",
+    "secreções sexuais",
+    "sem risco no contato comum"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Qual cidade deve ter menos casos de doenças causadas pelo HPV? Justifique.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Adolescentes vacinados contra HPV",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Cidade A",
+      "valor": 20
+     },
+     {
+      "rotulo": "Cidade B",
+      "valor": 80
+     }
+    ]
+   },
+   "ref": "Cidade B, pois a vacina previne a infecção pelos tipos de HPV ligados a verrugas e câncer.",
+   "conceitos": [
+    "vacinação",
+    "prevenção do HPV",
+    "cobertura vacinal"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em qual frase a maioria da turma errou? Justifique.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Votação da turma",
+    "colunas": [
+     "Frase",
+     "Verdade",
+     "Mito"
+    ],
+    "linhas": [
+     [
+      "Camisinha protege contra várias ISTs",
+      "24",
+      "6"
+     ],
+     [
+      "Quem parece saudável não tem IST",
+      "21",
+      "9"
+     ]
+    ]
+   },
+   "ref": "Na segunda: muitas ISTs não causam sintomas e a pessoa pode transmitir sem saber.",
+   "conceitos": [
+    "IST sem sintomas",
+    "transmissão silenciosa",
+    "testagem"
+   ]
+  }
+ ],
+ "8º ANO|3|Diferenciar os movimentos da Terra (rotação, translação e/ou precessão) com base em suas características e efeitos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual movimento da Terra explica a sucessão de dia e noite?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Movimentos da Terra",
+    "colunas": [
+     "Movimento",
+     "Duração aproximada"
+    ],
+    "linhas": [
+     [
+      "A",
+      "24 horas"
+     ],
+     [
+      "B",
+      "365 dias"
+     ],
+     [
+      "C",
+      "26 mil anos"
+     ]
+    ]
+   },
+   "alts": [
+    "Rotação",
+    "Translação",
+    "Precessão",
+    "Movimento da Lua ao redor da Terra"
+   ],
+   "correta": 0,
+   "explicacao": "O giro da Terra em torno do próprio eixo (cerca de 24 h) alterna dia e noite."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A Terra dá uma volta completa em torno do Sol em cerca de quanto tempo?",
+   "comando": "Marque a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "24 horas",
+    "30 dias",
+    "365 dias (um ano)",
+    "26 mil anos"
+   ],
+   "correta": 2,
+   "explicacao": "A translação dura cerca de 365 dias."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, uma bola gira lentamente diante de uma lanterna. Um ponto marcado passa do lado iluminado para o escuro. O que isso representa?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem com lanterna e bola",
+    "etapas": [
+     "Lanterna acesa, fixa sobre a mesa",
+     "Bola girando devagar sobre o próprio eixo",
+     "Ponto marcado na bola",
+     "Observar lado claro e lado escuro"
+    ]
+   },
+   "alts": [
+    "O início do verão.",
+    "O anoitecer naquele local.",
+    "Um eclipse.",
+    "A mudança de estação."
+   ],
+   "correta": 1,
+   "explicacao": "Quando o local sai da face iluminada, anoitece."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A Terra gira 360° em 24 horas. Quantos graus ela gira em 1 hora?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do giro da Terra",
+    "colunas": [
+     "Tempo",
+     "Ângulo percorrido"
+    ],
+    "linhas": [
+     [
+      "24 h",
+      "360°"
+     ],
+     [
+      "12 h",
+      "180°"
+     ],
+     [
+      "6 h",
+      "90°"
+     ]
+    ]
+   },
+   "alts": [
+    "30°",
+    "24°",
+    "60°",
+    "15°"
+   ],
+   "correta": 3,
+   "explicacao": "360° ÷ 24 h = 15° por hora."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em dezembro o dia é mais longo que em junho no Brasil. Por que isso ocorre?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Horas de luz do dia em São Paulo (aprox.)",
+    "unidade": "horas",
+    "itens": [
+     {
+      "rotulo": "Dezembro",
+      "valor": 13.4
+     },
+     {
+      "rotulo": "Março",
+      "valor": 12
+     },
+     {
+      "rotulo": "Junho",
+      "valor": 10.6
+     },
+     {
+      "rotulo": "Setembro",
+      "valor": 12
+     }
+    ]
+   },
+   "alts": [
+    "A Terra fica muito mais perto do Sol em dezembro.",
+    "O eixo da Terra é inclinado e, na translação, o Hemisfério Sul recebe luz mais direta em dezembro.",
+    "A rotação fica mais lenta em dezembro.",
+    "A precessão muda a duração do dia a cada mês."
+   ],
+   "correta": 1,
+   "explicacao": "A inclinação do eixo, combinada à translação, causa as estações e a variação do dia."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Qual movimento da Terra causa cada observação?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações",
+    "colunas": [
+     "Observação",
+     "Quando se repete"
+    ],
+    "linhas": [
+     [
+      "Dia e noite",
+      "1 dia"
+     ],
+     [
+      "Estações do ano",
+      "1 ano"
+     ]
+    ]
+   },
+   "ref": "Dia e noite: rotação. Estações: translação com eixo inclinado.",
+   "conceitos": [
+    "rotação",
+    "translação",
+    "inclinação do eixo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Qual movimento da Terra lembra o bamboleio do eixo de um pião girando e dura cerca de 26 mil anos?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": null,
+   "ref": "A precessão.",
+   "conceitos": [
+    "precessão",
+    "bamboleio do eixo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que representa a volta completa da bola em torno da lanterna? Quanto tempo dura na Terra?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem do modelo",
+    "etapas": [
+     "Lanterna fixa no centro",
+     "Bola percorre um círculo em torno da lanterna",
+     "Bola gira sobre si mesma durante o percurso"
+    ]
+   },
+   "ref": "A translação, que dura cerca de 365 dias (um ano).",
+   "conceitos": [
+    "translação",
+    "365 dias"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Explique por que o Sol parece se deslocar no céu de leste a oeste.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação em um dia",
+    "colunas": [
+     "Hora",
+     "Posição do Sol"
+    ],
+    "linhas": [
+     [
+      "6 h",
+      "Lado leste, baixo"
+     ],
+     [
+      "12 h",
+      "Bem alto"
+     ],
+     [
+      "18 h",
+      "Lado oeste, baixo"
+     ]
+    ]
+   },
+   "ref": "É aparente: a Terra gira de oeste para leste (rotação), e o Sol parece se mover ao contrário.",
+   "conceitos": [
+    "rotação",
+    "movimento aparente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ana disse que as estações existem porque a Terra se aproxima e se afasta do Sol. Concorda? Justifique.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Distância Terra-Sol",
+    "unidade": "milhões de km",
+    "itens": [
+     {
+      "rotulo": "Janeiro",
+      "valor": 147
+     },
+     {
+      "rotulo": "Julho",
+      "valor": 152
+     }
+    ]
+   },
+   "ref": "Não. A diferença de distância é pequena; as estações vêm da inclinação do eixo durante a translação, e os hemisférios têm estações opostas.",
+   "conceitos": [
+    "inclinação do eixo",
+    "translação",
+    "estações opostas"
+   ]
+  }
+ ],
+ "9º ANO|1|Relacionar a organização dos átomos aos estados físicos da matéria e suas propriedades.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na atividade com bolinhas em caixas, o grupo anotou o que viu em cada caixa. A caixa 1 representa qual estado físico?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das caixas",
+    "colunas": [
+     "Caixa",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Bolinhas encostadas, só tremendo"
+     ],
+     [
+      "2",
+      "Bolinhas deslizando umas sobre as outras"
+     ],
+     [
+      "3",
+      "Bolinhas espalhadas, sacudindo forte"
+     ]
+    ]
+   },
+   "alts": [
+    "Gasoso",
+    "Sólido",
+    "Líquido",
+    "Nenhum, pois bolinhas não representam partículas"
+   ],
+   "correta": 1,
+   "explicacao": "No sólido as partículas ficam muito próximas e apenas vibram."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um professor testou três materiais. Qual deles é um líquido?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações de três materiais",
+    "colunas": [
+     "Material",
+     "O que se observou"
+    ],
+    "linhas": [
+     [
+      "X",
+      "Mantém forma e volume"
+     ],
+     [
+      "Y",
+      "Volume fixo, forma do copo"
+     ],
+     [
+      "Z",
+      "Ocupa todo o recipiente"
+     ]
+    ]
+   },
+   "alts": [
+    "Material Y",
+    "Material X",
+    "Material Z",
+    "Nenhum deles"
+   ],
+   "correta": 0,
+   "explicacao": "Líquido tem volume definido e assume a forma do recipiente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um cubo de gelo derrete no copo. O que acontece com as partículas?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Gelo no copo sobre a mesa",
+    "etapas": [
+     "Gelo tirado do freezer",
+     "Colocado no copo",
+     "Após 20 min, parte virou água",
+     "Após 40 min, só água"
+    ]
+   },
+   "alts": [
+    "Ficam menores.",
+    "Desaparecem.",
+    "Recebem energia, vibram mais e passam a deslizar umas sobre as outras.",
+    "Param de se mexer."
+   ],
+   "correta": 2,
+   "explicacao": "Na fusão o aumento de energia permite que as partículas deslizem."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um dia de 25 °C, qual substância da tabela está no estado líquido?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Temperaturas de mudança de estado",
+    "colunas": [
+     "Substância",
+     "Fusão (°C)",
+     "Ebulição (°C)"
+    ],
+    "linhas": [
+     [
+      "Álcool etílico",
+      "−114",
+      "78"
+     ],
+     [
+      "Ferro",
+      "1538",
+      "2862"
+     ],
+     [
+      "Oxigênio",
+      "−218",
+      "−183"
+     ],
+     [
+      "Chumbo",
+      "327",
+      "1749"
+     ]
+    ]
+   },
+   "alts": [
+    "Álcool etílico",
+    "Ferro",
+    "Oxigênio",
+    "Chumbo"
+   ],
+   "correta": 0,
+   "explicacao": "25 °C está entre −114 °C e 78 °C, então o álcool é líquido."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Gelo foi aquecido e a temperatura foi anotada. Entre 2 e 6 minutos ela ficou em 0 °C. Por quê?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Tempo (min)",
+     "Temperatura (°C)"
+    ],
+    "linhas": [
+     [
+      "0",
+      "−10"
+     ],
+     [
+      "2",
+      "0"
+     ],
+     [
+      "4",
+      "0"
+     ],
+     [
+      "6",
+      "0"
+     ],
+     [
+      "8",
+      "30"
+     ]
+    ]
+   },
+   "alts": [
+    "O aquecedor parou de funcionar.",
+    "A energia recebida está sendo usada para soltar as partículas do sólido (fusão).",
+    "O gelo não recebe energia.",
+    "As partículas já estão no estado gasoso."
+   ],
+   "correta": 1,
+   "explicacao": "Durante a mudança de estado a energia altera a organização das partículas, não a temperatura."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Indique o estado físico de cada exemplo.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Exemplos do cotidiano",
+    "colunas": [
+     "Exemplo",
+     "Onde está"
+    ],
+    "linhas": [
+     [
+      "Cubo de gelo",
+      "No freezer"
+     ],
+     [
+      "Água",
+      "Na torneira"
+     ],
+     [
+      "Vapor",
+      "Na panela de arroz"
+     ]
+    ]
+   },
+   "ref": "Gelo: sólido; água: líquido; vapor: gasoso.",
+   "conceitos": [
+    "sólido",
+    "líquido",
+    "gasoso"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na encenação, em qual etapa as partículas estão mais afastadas? Descreva o movimento delas.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Encenação das partículas na quadra",
+    "etapas": [
+     "Alunos de braços dados, bem juntos",
+     "Alunos soltos, andando devagar, perto uns dos outros",
+     "Alunos espalhados, correndo pela quadra"
+    ]
+   },
+   "ref": "Na última etapa (gás): partículas bem afastadas, movendo-se livremente em todas as direções.",
+   "conceitos": [
+    "gás",
+    "partículas afastadas",
+    "movimento livre"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Explique o derretimento do gelo no copo usando as partículas.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: gelo restante no copo",
+    "unidade": "gramas",
+    "itens": [
+     {
+      "rotulo": "0 min",
+      "valor": 100
+     },
+     {
+      "rotulo": "10 min",
+      "valor": 70
+     },
+     {
+      "rotulo": "20 min",
+      "valor": 35
+     },
+     {
+      "rotulo": "30 min",
+      "valor": 0
+     }
+    ]
+   },
+   "ref": "O gelo recebe energia do ambiente; as partículas vibram mais, soltam-se da posição fixa e passam a deslizar (líquido).",
+   "conceitos": [
+    "fusão",
+    "energia",
+    "partículas deslizam"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um dia de 25 °C, por que o mercúrio é líquido e o enxofre é sólido? Use as temperaturas.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Temperaturas de mudança de estado",
+    "colunas": [
+     "Substância",
+     "Fusão (°C)",
+     "Ebulição (°C)"
+    ],
+    "linhas": [
+     [
+      "Mercúrio",
+      "−39",
+      "357"
+     ],
+     [
+      "Enxofre",
+      "115",
+      "445"
+     ],
+     [
+      "Nitrogênio",
+      "−210",
+      "−196"
+     ]
+    ]
+   },
+   "ref": "25 °C está acima da fusão do mercúrio (−39 °C) e abaixo da ebulição (357 °C), então é líquido; para o enxofre está abaixo de 115 °C, então é sólido.",
+   "conceitos": [
+    "temperatura de fusão",
+    "temperatura de ebulição",
+    "estado físico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Explique, usando as partículas, por que o vapor ocupa muito mais espaço que a mesma massa de água líquida.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Volume de 1 g de água",
+    "unidade": "mL",
+    "itens": [
+     {
+      "rotulo": "Estado líquido",
+      "valor": 1
+     },
+     {
+      "rotulo": "Estado de vapor",
+      "valor": 1700
+     }
+    ]
+   },
+   "ref": "No vapor as partículas estão muito afastadas, com muito espaço vazio entre elas; no líquido estão próximas.",
+   "conceitos": [
+    "distância entre partículas",
+    "gás ocupa todo o espaço",
+    "estrutura da matéria"
+   ]
+  }
+ ],
+ "9º ANO|3|Relacionar práticas humanas às fontes de poluição da água e às alterações na qualidade dos ambientes aquáticos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "No experimento, a turma observou a mancha no copo 2. A mancha de óleo lembra qual problema real?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observação dos copos",
+    "colunas": [
+     "Copo",
+     "Material colocado",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Terra",
+      "Água turva"
+     ],
+     [
+      "2",
+      "Óleo",
+      "Mancha na superfície"
+     ],
+     [
+      "3",
+      "Detergente",
+      "Espuma"
+     ]
+    ]
+   },
+   "alts": [
+    "Erosão do solo sem mata ciliar",
+    "Descarte de óleo de cozinha na pia",
+    "Chuva ácida",
+    "Lançamento de esgoto com detergente"
+   ],
+   "correta": 1,
+   "explicacao": "O óleo jogado na pia chega aos rios e forma película na superfície."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A água do copo ficou turva após misturar terra. Isso representa qual problema nos rios?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Passos do teste",
+    "etapas": [
+     "Encher o copo com água",
+     "Adicionar terra",
+     "Mexer",
+     "Pôr papel branco atrás",
+     "Observar"
+    ]
+   },
+   "alts": [
+    "Esgoto doméstico.",
+    "Vazamento de petróleo.",
+    "Gás carbônico dissolvido.",
+    "Solo levado pela erosão das margens sem vegetação."
+   ],
+   "correta": 3,
+   "explicacao": "A terra carregada pela chuva deixa a água turva e assoreia o rio."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual copo serve de comparação (controle) no experimento?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos copos após 5 minutos",
+    "colunas": [
+     "Copo",
+     "Material",
+     "Aparência"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Detergente",
+      "Espuma"
+     ],
+     [
+      "B",
+      "Óleo",
+      "Mancha"
+     ],
+     [
+      "C",
+      "Terra",
+      "Água turva"
+     ],
+     [
+      "D",
+      "Só água",
+      "Transparente"
+     ]
+    ]
+   },
+   "alts": [
+    "Copo A",
+    "Copo B",
+    "Copo C",
+    "Copo D"
+   ],
+   "correta": 3,
+   "explicacao": "O copo só com água mostra como a água limpa se parece."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um rio recebe esgoto sem tratamento. Por que o oxigênio caiu no ponto do lançamento?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Oxigênio dissolvido em pontos do rio",
+    "unidade": "mg/L",
+    "itens": [
+     {
+      "rotulo": "Antes da cidade",
+      "valor": 8
+     },
+     {
+      "rotulo": "No lançamento",
+      "valor": 3
+     },
+     {
+      "rotulo": "5 km depois",
+      "valor": 5
+     },
+     {
+      "rotulo": "20 km depois",
+      "valor": 7
+     }
+    ]
+   },
+   "alts": [
+    "Microrganismos decompõem a matéria orgânica do esgoto e consomem oxigênio.",
+    "O esgoto adiciona oxigênio à água.",
+    "A água do rio ferve.",
+    "Os peixes produzem oxigênio demais."
+   ],
+   "correta": 0,
+   "explicacao": "A decomposição consome oxigênio, prejudicando peixes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um córrego tem os problemas abaixo. Qual conjunto de ações enfrenta os três?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Levantamento do córrego (fictício)",
+    "colunas": [
+     "Ponto",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Lixo na margem"
+     ],
+     [
+      "2",
+      "Esgoto de casas lançado direto"
+     ],
+     [
+      "3",
+      "Margens sem árvores"
+     ]
+    ]
+   },
+   "alts": [
+    "Jogar cloro no córrego.",
+    "Cobrir o córrego com concreto.",
+    "Coleta de lixo, tratamento de esgoto e replantio de árvores nas margens.",
+    "Retirar os peixes."
+   ],
+   "correta": 2,
+   "explicacao": "Cada ação trata uma causa; cloro ou concreto não resolvem."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite duas ações humanas que poluem rios e lagos.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": null,
+   "ref": "Lançar esgoto sem tratamento, jogar lixo, descartar óleo, desmatar margens, uso de agrotóxicos.",
+   "conceitos": [
+    "esgoto",
+    "lixo",
+    "óleo",
+    "erosão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que se coloca papel branco atrás dos copos?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento do experimento",
+    "etapas": [
+     "Copos com água",
+     "Adicionar um material em cada copo",
+     "Colocar o papel branco atrás",
+     "Observar turbidez, espuma e manchas"
+    ]
+   },
+   "ref": "O fundo branco contrasta e facilita ver turbidez, espuma e manchas.",
+   "conceitos": [
+    "observação",
+    "turbidez",
+    "contraste"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que o óleo de cozinha não deve ser jogado na pia?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Estimativa citada em campanhas de coleta",
+    "unidade": "litros de água",
+    "itens": [
+     {
+      "rotulo": "Água que 1 litro de óleo pode poluir",
+      "valor": 25000
+     }
+    ]
+   },
+   "ref": "O óleo forma película que reduz a troca de oxigênio e a luz, prejudicando a vida aquática; deve ir a pontos de coleta.",
+   "conceitos": [
+    "película de óleo",
+    "falta de oxigênio",
+    "descarte correto"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que trechos sem árvores nas margens ficam mais turvos depois da chuva? Justifique.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Turbidez após chuva forte",
+    "unidade": "NTU",
+    "itens": [
+     {
+      "rotulo": "Trecho A (margens com árvores)",
+      "valor": 12
+     },
+     {
+      "rotulo": "Trecho B (barranco exposto)",
+      "valor": 85
+     }
+    ]
+   },
+   "ref": "As raízes seguram o solo; sem elas a chuva leva terra ao rio, causando turbidez e assoreamento.",
+   "conceitos": [
+    "mata ciliar",
+    "erosão",
+    "assoreamento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Proponha duas iniciativas para a escola proteger o rio do bairro e justifique.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Levantamento do bairro",
+    "colunas": [
+     "Item",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Coleta de lixo",
+      "2 vezes por semana"
+     ],
+     [
+      "Esgoto",
+      "Parte das casas sem rede"
+     ],
+     [
+      "Óleo de cozinha",
+      "Jogado na pia"
+     ],
+     [
+      "Margens do rio",
+      "Poucas árvores"
+     ]
+    ]
+   },
+   "ref": "Ex.: coleta de óleo na escola e plantio de árvores na margem, pois reduzem poluentes e erosão.",
+   "conceitos": [
+    "consumo consciente",
+    "descarte correto",
+    "recuperação das margens"
+   ]
+  }
+ ],
+ "4B|6º ANO|14": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na mão biônica de papelão, os barbantes são puxados para dobrar os dedos. Eles representam qual parte do corpo?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Roteiro da aula",
+    "etapas": [
+     "Retomar o checklist",
+     "Passar os barbantes",
+     "Acoplar à mão",
+     "Testar segurando objetos"
+    ]
+   },
+   "alts": [
+    "Ossos",
+    "Tendões",
+    "Nervos",
+    "Vasos sanguíneos"
+   ],
+   "correta": 1,
+   "explicacao": "Os tendões ligam músculos a ossos e puxam os dedos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O que é uma prótese?",
+   "comando": "Marque a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Peça artificial que substitui uma parte do corpo ou sua função.",
+    "Um remédio para dor.",
+    "Uma doença dos ossos.",
+    "Um exame de imagem."
+   ],
+   "correta": 0,
+   "explicacao": "Próteses substituem membros ou funções, como a mão biônica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No modelo, ao puxar o barbante o dedo dobra. No corpo, quais estruturas puxam os tendões?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações do teste",
+    "colunas": [
+     "Ação",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Puxar o barbante",
+      "Dedo dobra"
+     ],
+     [
+      "Soltar o barbante",
+      "Dedo estica"
+     ]
+    ]
+   },
+   "alts": [
+    "Os ossos.",
+    "Os pelos.",
+    "Os músculos, ao se contraírem.",
+    "A pele."
+   ],
+   "correta": 2,
+   "explicacao": "Os músculos se contraem e puxam os tendões."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O dedo 2 não dobrou no teste. Qual ajuste melhoraria o modelo?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Teste dos dedos",
+    "colunas": [
+     "Dedo",
+     "Dobrou?"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Sim"
+     ],
+     [
+      "2",
+      "Não"
+     ],
+     [
+      "3",
+      "Sim"
+     ]
+    ]
+   },
+   "alts": [
+    "Trocar a cor do barbante.",
+    "Soltar os barbantes dos outros dedos.",
+    "Cortar o dedo de papelão.",
+    "Esticar e prender melhor o barbante do dedo 2."
+   ],
+   "correta": 3,
+   "explicacao": "Como os outros dobraram, o problema está na ligação do dedo 2."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O grupo testou a mão com vários objetos. O que os resultados mostram sobre os limites do modelo?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Teste com objetos",
+    "colunas": [
+     "Objeto",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Copo plástico",
+      "Segurou"
+     ],
+     [
+      "Lápis",
+      "Segurou"
+     ],
+     [
+      "Ovo",
+      "Quebrou"
+     ],
+     [
+      "Folha de papel",
+      "Não segurou"
+     ]
+    ]
+   },
+   "alts": [
+    "Falta controle da força e sensibilidade, ao contrário da mão real.",
+    "O modelo é melhor que a mão real.",
+    "Só segura objetos duros.",
+    "Funciona com pilhas."
+   ],
+   "correta": 0,
+   "explicacao": "A mão real ajusta a força e sente o objeto."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que o barbante representa no corpo e como o dedo se move no modelo?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem de um dedo",
+    "etapas": [
+     "Medir o barbante",
+     "Passar pelo canudo do dedo",
+     "Fixar na ponta",
+     "Prender no punho"
+    ]
+   },
+   "ref": "Representa o tendão; ao puxar, o dedo dobra.",
+   "conceitos": [
+    "tendão",
+    "puxar e dobrar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que significa acessibilidade? Dê um exemplo na escola.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": null,
+   "ref": "Condições para todos usarem espaços e recursos com autonomia; ex.: rampa.",
+   "conceitos": [
+    "acessibilidade",
+    "inclusão",
+    "rampa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que o movimento de pegar a garrafa é voluntário? Quem controla o movimento no corpo?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Teste do aluno",
+    "etapas": [
+     "Aluno decide pegar a garrafa",
+     "Puxa o barbante",
+     "Dedos fecham",
+     "Garrafa é segurada"
+    ]
+   },
+   "ref": "É decidido pela pessoa; no corpo o cérebro envia comandos pelos nervos aos músculos.",
+   "conceitos": [
+    "movimento voluntário",
+    "cérebro",
+    "músculos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Como adaptações e próteses ajudam na inclusão? Justifique.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dificuldades relatadas pela turma",
+    "colunas": [
+     "Situação",
+     "Alunos"
+    ],
+    "linhas": [
+     [
+      "Abrir portas pesadas",
+      "8"
+     ],
+     [
+      "Escrever com lápis curto",
+      "5"
+     ],
+     [
+      "Segurar bandeja",
+      "6"
+     ]
+    ]
+   },
+   "ref": "Permitem realizar tarefas com autonomia, reduzindo barreiras.",
+   "conceitos": [
+    "inclusão",
+    "autonomia",
+    "acessibilidade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite uma semelhança e uma limitação da mão do modelo em relação à mão real.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação feita pelo grupo",
+    "colunas": [
+     "Item",
+     "Modelo",
+     "Mão real"
+    ],
+    "linhas": [
+     [
+      "Material",
+      "Papelão e barbante",
+      "Ossos, músculos e pele"
+     ],
+     [
+      "Dedos",
+      "5",
+      "5"
+     ],
+     [
+      "Quem puxa",
+      "Mão livre da pessoa",
+      "Músculos do antebraço"
+     ]
+    ]
+   },
+   "ref": "Semelhança: cinco dedos que dobram pela tração de cordas/tendões. Limite: não sente nem controla a força.",
+   "conceitos": [
+    "modelo",
+    "tendões",
+    "limites do modelo"
+   ]
+  }
+ ],
+ "4B|7º ANO|8": [
+  {
+   "tipo": "obj",
+   "enunciado": "Onde os leucócitos, células de defesa do sangue, são produzidos?",
+   "comando": "Marque a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Medula óssea",
+    "Fígado",
+    "Estômago",
+    "Pulmões"
+   ],
+   "correta": 0,
+   "explicacao": "A medula óssea produz as células do sangue, inclusive os leucócitos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual é a primeira linha de defesa do corpo contra microrganismos (imunidade inata)?",
+   "comando": "Marque a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Anticorpos de uma vacina anterior",
+    "Barreiras como a pele e as mucosas",
+    "Memória dos linfócitos",
+    "Remédios"
+   ],
+   "correta": 1,
+   "explicacao": "A imunidade inata inclui pele, mucosas, lágrimas e muco."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois tipos de resposta foram comparados. Qual é a imunidade adaptativa?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação",
+    "colunas": [
+     "Tipo",
+     "Início da ação",
+     "Lembra do invasor?"
+    ],
+    "linhas": [
+     [
+      "X",
+      "Minutos a horas",
+      "Não"
+     ],
+     [
+      "Y",
+      "Dias",
+      "Sim"
+     ]
+    ]
+   },
+   "alts": [
+    "X, porque age rápido e é específica.",
+    "X, porque guarda memória.",
+    "Y, porque aprende e responde melhor numa segunda infecção.",
+    "Y, porque não tem memória."
+   ],
+   "correta": 2,
+   "explicacao": "A adaptativa é lenta na primeira vez, mas guarda memória (linfócitos B e T)."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Maria ralou o joelho no pátio e há terra no machucado. Qual é o primeiro cuidado?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "O que aconteceu",
+    "etapas": [
+     "Maria cai no pátio",
+     "Ralou o joelho",
+     "Há terra no ferimento"
+    ]
+   },
+   "alts": [
+    "Cobrir sem lavar.",
+    "Passar pó de café.",
+    "Furar a bolha.",
+    "Lavar com água corrente e sabão."
+   ],
+   "correta": 3,
+   "explicacao": "Lavar remove sujeira e microrganismos e reduz o risco de infecção."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Veja a resposta do corpo a um mesmo vírus em dois contatos. Por que foi maior no segundo?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Anticorpos no sangue",
+    "unidade": "unidades",
+    "itens": [
+     {
+      "rotulo": "1º contato",
+      "valor": 10
+     },
+     {
+      "rotulo": "2º contato",
+      "valor": 80
+     }
+    ]
+   },
+   "alts": [
+    "Os anticorpos do 1º contato ficam no sangue para sempre.",
+    "Linfócitos de memória reconhecem o vírus rapidamente.",
+    "A pele barra melhor o vírus.",
+    "A medula óssea parou de funcionar."
+   ],
+   "correta": 1,
+   "explicacao": "A memória imunológica gera resposta mais rápida e forte."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite duas barreiras naturais do corpo que dificultam a entrada de microrganismos.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Entradas possíveis para microrganismos",
+    "colunas": [
+     "Entrada",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Pele",
+      "Joelho ralado"
+     ],
+     [
+      "Nariz",
+      "Respirando poeira"
+     ],
+     [
+      "Olhos",
+      "Coçar com a mão suja"
+     ]
+    ]
+   },
+   "ref": "Pele, mucosas/muco, lágrimas, cílios.",
+   "conceitos": [
+    "pele",
+    "muco",
+    "lágrimas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Qual dessas células faz parte do sistema imune? Onde é produzida?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Contagem no exame de sangue",
+    "unidade": "mil por mm³",
+    "itens": [
+     {
+      "rotulo": "Hemácias",
+      "valor": 5000
+     },
+     {
+      "rotulo": "Plaquetas",
+      "valor": 250
+     },
+     {
+      "rotulo": "Leucócitos",
+      "valor": 7
+     }
+    ]
+   },
+   "ref": "Os leucócitos, produzidos na medula óssea.",
+   "conceitos": [
+    "leucócitos",
+    "medula óssea"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Explique por que Pedro não adoeceu ao ter contato com o colega.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de saúde de Pedro",
+    "colunas": [
+     "Ano",
+     "Ocorrência"
+    ],
+    "linhas": [
+     [
+      "2018",
+      "Teve sarampo"
+     ],
+     [
+      "2022",
+      "Contato com colega com sarampo, sem adoecer"
+     ]
+    ]
+   },
+   "ref": "Linfócitos B e T guardaram memória do vírus e reagiram rápido, produzindo anticorpos.",
+   "conceitos": [
+    "memória imunológica",
+    "linfócitos",
+    "anticorpos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Analise os dados e justifique por que vacinas protegem.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de duas cidades",
+    "colunas": [
+     "Cidade",
+     "Vacinados (%)",
+     "Casos de sarampo"
+    ],
+    "linhas": [
+     [
+      "A",
+      "95",
+      "2"
+     ],
+     [
+      "B",
+      "50",
+      "40"
+     ]
+    ]
+   },
+   "ref": "A vacina treina o sistema imune, que cria memória; com mais vacinados, menos casos.",
+   "conceitos": [
+    "vacina",
+    "memória",
+    "proteção coletiva"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que pode ocorrer com uma pessoa de sistema imune muito enfraquecido? Justifique.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Linfócitos T no sangue",
+    "unidade": "por mm³",
+    "itens": [
+     {
+      "rotulo": "Pessoa 1",
+      "valor": 1000
+     },
+     {
+      "rotulo": "Pessoa 2",
+      "valor": 150
+     }
+    ]
+   },
+   "ref": "Adoece com facilidade e de forma grave, pois poucos linfócitos coordenam mal a defesa.",
+   "conceitos": [
+    "infecções",
+    "linfócitos T",
+    "defesa enfraquecida"
+   ]
+  }
+ ],
+ "4B|8º ANO|2": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual das fontes de energia é renovável?",
+   "comando": "Marque a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Carvão mineral",
+    "Petróleo",
+    "Energia do vento (eólica)",
+    "Gás natural"
+   ],
+   "correta": 2,
+   "explicacao": "O vento se renova continuamente; os demais são fósseis."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual alternativa traz apenas fontes não renováveis?",
+   "comando": "Marque a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Petróleo, carvão mineral e gás natural",
+    "Sol, vento e petróleo",
+    "Etanol, carvão e água",
+    "Biomassa, vento e gás natural"
+   ],
+   "correta": 0,
+   "explicacao": "Combustíveis fósseis levam milhões de anos para se formar."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Veja a matriz elétrica do Brasil. Qual afirmação está correta?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Matriz elétrica brasileira (valores aproximados)",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Hidrelétrica",
+      "valor": 58
+     },
+     {
+      "rotulo": "Eólica",
+      "valor": 13
+     },
+     {
+      "rotulo": "Solar",
+      "valor": 8
+     },
+     {
+      "rotulo": "Biomassa",
+      "valor": 8
+     },
+     {
+      "rotulo": "Gás natural",
+      "valor": 7
+     },
+     {
+      "rotulo": "Outras",
+      "valor": 6
+     }
+    ]
+   },
+   "alts": [
+    "A maior parte vem do carvão.",
+    "O gás natural é a principal fonte.",
+    "Solar e eólica juntas superam a hidrelétrica.",
+    "A maior parte da eletricidade vem de fontes renováveis."
+   ],
+   "correta": 3,
+   "explicacao": "Hidrelétrica, eólica, solar e biomassa somam cerca de 87%."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma cidade quer trocar a usina de carvão. Pelos dados, qual troca reduz mais as emissões?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Gás carbônico emitido por energia gerada",
+    "unidade": "g de CO2 por kWh",
+    "itens": [
+     {
+      "rotulo": "Carvão",
+      "valor": 820
+     },
+     {
+      "rotulo": "Gás natural",
+      "valor": 490
+     },
+     {
+      "rotulo": "Solar",
+      "valor": 45
+     },
+     {
+      "rotulo": "Eólica",
+      "valor": 12
+     }
+    ]
+   },
+   "alts": [
+    "Por usina a gás natural",
+    "Por usina eólica",
+    "Por outra usina a carvão",
+    "Por nenhuma, pois todas emitem igual"
+   ],
+   "correta": 1,
+   "explicacao": "A eólica tem o menor valor entre as fontes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O consumo de energia cresce e os combustíveis fósseis são finitos e poluentes. Qual conclusão é adequada?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Consumo mundial de energia (aprox.)",
+    "unidade": "exajoules",
+    "itens": [
+     {
+      "rotulo": "Ano 2000",
+      "valor": 420
+     },
+     {
+      "rotulo": "Ano 2010",
+      "valor": 530
+     },
+     {
+      "rotulo": "Ano 2020",
+      "valor": 580
+     },
+     {
+      "rotulo": "Ano 2023",
+      "valor": 620
+     }
+    ]
+   },
+   "alts": [
+    "É preciso ampliar as renováveis para atender à demanda reduzindo emissões e a dependência de recursos finitos.",
+    "Basta extrair mais fósseis, pois são infinitos.",
+    "Renováveis não têm impacto ambiental.",
+    "Diminuir a população elimina a necessidade."
+   ],
+   "correta": 0,
+   "explicacao": "A transição energética combina demanda crescente, finitude e emissões."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Diferencie fonte renovável de não renovável com um exemplo de cada.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Fontes citadas no texto",
+    "colunas": [
+     "Fonte",
+     "Uso"
+    ],
+    "linhas": [
+     [
+      "Vento",
+      "Geração de eletricidade"
+     ],
+     [
+      "Petróleo",
+      "Gasolina e diesel"
+     ],
+     [
+      "Sol",
+      "Painéis"
+     ]
+    ]
+   },
+   "ref": "Renovável se recompõe rápido (vento); não renovável é finita (petróleo).",
+   "conceitos": [
+    "renovável",
+    "não renovável"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite dois impactos negativos da queima de combustíveis fósseis.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Veículos em uma avenida em 1 hora",
+    "colunas": [
+     "Tipo",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Carros a gasolina",
+      "600"
+     ],
+     [
+      "Ônibus a diesel",
+      "120"
+     ],
+     [
+      "Motos",
+      "200"
+     ],
+     [
+      "Bicicletas",
+      "40"
+     ]
+    ]
+   },
+   "ref": "Poluição do ar e aumento do efeito estufa; também chuva ácida e derramamentos.",
+   "conceitos": [
+    "poluição do ar",
+    "efeito estufa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Explique como esses recursos ajudam na transição energética do Brasil.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Recursos naturais",
+    "colunas": [
+     "Recurso",
+     "Característica"
+    ],
+    "linhas": [
+     [
+      "Rios",
+      "Muitos e extensos"
+     ],
+     [
+      "Sol",
+      "Forte no Nordeste"
+     ],
+     [
+      "Vento",
+      "Constante no litoral nordestino"
+     ]
+    ]
+   },
+   "ref": "Permitem hidrelétricas, usinas solares e eólicas, que reduzem o uso de fósseis.",
+   "conceitos": [
+    "fontes renováveis",
+    "redução de fósseis"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que a matriz elétrica brasileira é mais renovável que a matriz energética total?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Matriz energética do Brasil (aprox.)",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Petróleo e derivados",
+      "valor": 34
+     },
+     {
+      "rotulo": "Biomassa",
+      "valor": 31
+     },
+     {
+      "rotulo": "Hidráulica",
+      "valor": 12
+     },
+     {
+      "rotulo": "Gás natural",
+      "valor": 10
+     },
+     {
+      "rotulo": "Carvão",
+      "valor": 5
+     },
+     {
+      "rotulo": "Outras",
+      "valor": 8
+     }
+    ]
+   },
+   "ref": "A eletricidade vem muito de hidrelétricas, enquanto transporte usa petróleo.",
+   "conceitos": [
+    "matriz elétrica",
+    "hidrelétricas",
+    "transportes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Proponha uma medida para a escola usar energia renovável e justifique.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados da escola (fictícios)",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Telhado livre",
+      "400 m²"
+     ],
+     [
+      "Conta de luz",
+      "R$ 6.000 por mês"
+     ],
+     [
+      "Sol por dia",
+      "cerca de 6 horas"
+     ]
+    ]
+   },
+   "ref": "Instalar painéis solares no telhado; reduz a conta e não emite gases.",
+   "conceitos": [
+    "energia solar",
+    "economia",
+    "menos emissões"
+   ]
+  }
+ ],
+ "4B|8º ANO|15": [
+  {
+   "tipo": "obj",
+   "enunciado": "Veja a montagem no simulador. Qual componente permite ligar e desligar o circuito?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem no simulador",
+    "etapas": [
+     "Arrastar a bateria",
+     "Conectar os fios",
+     "Adicionar a lâmpada",
+     "Adicionar o componente de ligar e desligar"
+    ]
+   },
+   "alts": [
+    "Resistor",
+    "Interruptor",
+    "Amperímetro",
+    "Voltímetro"
+   ],
+   "correta": 1,
+   "explicacao": "O interruptor abre e fecha o caminho da corrente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O medidor 1 mostra 0,5 A. Qual é o nome desse instrumento?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Leituras do simulador",
+    "colunas": [
+     "Medidor",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "1",
+      "0,5 A"
+     ],
+     [
+      "2",
+      "3 V"
+     ]
+    ]
+   },
+   "alts": [
+    "Voltímetro",
+    "Termômetro",
+    "Resistor",
+    "Amperímetro"
+   ],
+   "correta": 3,
+   "explicacao": "A corrente, em ampères, é medida pelo amperímetro."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual é a corrente do circuito?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Componente",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Bateria",
+      "6 V"
+     ],
+     [
+      "Resistor",
+      "3 Ω"
+     ]
+    ]
+   },
+   "alts": [
+    "2 A",
+    "0,5 A",
+    "9 A",
+    "18 A"
+   ],
+   "correta": 0,
+   "explicacao": "I = U/R = 6/3 = 2 A."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual será a corrente com um resistor de 12 Ω na mesma bateria?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento (bateria de 12 V)",
+    "colunas": [
+     "Resistência (Ω)",
+     "Corrente (A)"
+    ],
+    "linhas": [
+     [
+      "2",
+      "6"
+     ],
+     [
+      "4",
+      "3"
+     ],
+     [
+      "6",
+      "2"
+     ]
+    ]
+   },
+   "alts": [
+    "12 A",
+    "2 A",
+    "1 A",
+    "0,5 A"
+   ],
+   "correta": 2,
+   "explicacao": "I = 12/12 = 1 A."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Por que a corrente foi muito maior na montagem 2?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Medidas no simulador",
+    "colunas": [
+     "Montagem",
+     "Corrente (A)"
+    ],
+    "linhas": [
+     [
+      "1 (com lâmpada)",
+      "0,5"
+     ],
+     [
+      "2 (fio direto nos polos)",
+      "50"
+     ]
+    ]
+   },
+   "alts": [
+    "O fio aumentou a tensão da bateria.",
+    "A resistência ficou quase nula, gerando corrente muito grande (curto-circuito).",
+    "A lâmpada produz mais corrente.",
+    "O fio é um bom isolante."
+   ],
+   "correta": 1,
+   "explicacao": "Sem resistência, a corrente dispara."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite a função de dois componentes de um circuito elétrico.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Peças usadas no simulador",
+    "colunas": [
+     "Peça",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Bateria",
+      "1"
+     ],
+     [
+      "Fio",
+      "4"
+     ],
+     [
+      "Interruptor",
+      "1"
+     ],
+     [
+      "Resistor",
+      "1"
+     ]
+    ]
+   },
+   "ref": "Bateria fornece tensão; fio conduz; interruptor liga e desliga; resistor limita a corrente.",
+   "conceitos": [
+    "bateria",
+    "fio",
+    "interruptor",
+    "resistor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Que grandeza cada aparelho mede e como se chama?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Leituras do simulador",
+    "colunas": [
+     "Aparelho",
+     "Leitura"
+    ],
+    "linhas": [
+     [
+      "1",
+      "9 V"
+     ],
+     [
+      "2",
+      "1,5 A"
+     ]
+    ]
+   },
+   "ref": "1: voltímetro, tensão; 2: amperímetro, corrente.",
+   "conceitos": [
+    "voltímetro",
+    "amperímetro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Calcule a corrente em um resistor de 4 Ω ligado a 12 V. Mostre a conta.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Bateria",
+      "12 V"
+     ],
+     [
+      "Resistor",
+      "4 Ω"
+     ]
+    ]
+   },
+   "ref": "I = U/R = 12/4 = 3 A.",
+   "conceitos": [
+    "Lei de Ohm",
+    "3 A"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que duas lâmpadas em série brilham menos que uma?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Montagem",
+     "Corrente (A)"
+    ],
+    "linhas": [
+     [
+      "1 lâmpada",
+      "1,0"
+     ],
+     [
+      "2 lâmpadas em série",
+      "0,5"
+     ]
+    ]
+   },
+   "ref": "A resistência total aumenta e, com a mesma bateria, a corrente diminui.",
+   "conceitos": [
+    "resistência total",
+    "corrente menor",
+    "série"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que o curto-circuito é perigoso? Como evitar?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Corrente no circuito",
+    "unidade": "A",
+    "itens": [
+     {
+      "rotulo": "Circuito normal",
+      "valor": 2
+     },
+     {
+      "rotulo": "Fio ligando os polos",
+      "valor": 60
+     }
+    ]
+   },
+   "ref": "Corrente enorme aquece fios e pode causar incêndio; evitar com fios isolados e fusíveis.",
+   "conceitos": [
+    "curto-circuito",
+    "corrente alta",
+    "fusível"
+   ]
+  }
+ ],
+ "4B|9º ANO|13": [
+  {
+   "tipo": "obj",
+   "enunciado": "De onde vem a energia do Sol?",
+   "comando": "Marque a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Da queima de carvão",
+    "Da combustão de gases",
+    "Da fusão do hidrogênio em hélio no núcleo",
+    "Da fissão do urânio"
+   ],
+   "correta": 2,
+   "explicacao": "No núcleo solar ocorre fusão nuclear."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Onde as estrelas nascem?",
+   "comando": "Marque a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Em buracos negros",
+    "Em nebulosas",
+    "Em planetas gigantes",
+    "Em cometas"
+   ],
+   "correta": 1,
+   "explicacao": "Nuvens de gás e poeira se condensam em protoestrelas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O que os dados indicam sobre massa e tempo de vida?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Tempo de vida aproximado",
+    "unidade": "milhões de anos",
+    "itens": [
+     {
+      "rotulo": "0,5 massa solar",
+      "valor": 60000
+     },
+     {
+      "rotulo": "1 massa solar (Sol)",
+      "valor": 10000
+     },
+     {
+      "rotulo": "10 massas solares",
+      "valor": 20
+     }
+    ]
+   },
+   "alts": [
+    "Quanto maior a massa, maior o tempo de vida.",
+    "A massa não influencia.",
+    "Todas vivem o mesmo tempo.",
+    "Quanto maior a massa, menor o tempo de vida."
+   ],
+   "correta": 3,
+   "explicacao": "Estrelas massivas gastam combustível rápido."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual é o destino final do Sol depois da gigante vermelha?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Fases da vida do Sol",
+    "etapas": [
+     "Nebulosa",
+     "Protoestrela",
+     "Estrela estável (hoje)",
+     "Gigante vermelha",
+     "Fase final"
+    ]
+   },
+   "alts": [
+    "Anã branca",
+    "Buraco negro",
+    "Supernova",
+    "Estrela de nêutrons"
+   ],
+   "correta": 0,
+   "explicacao": "O Sol não tem massa para supernova."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual estrela deve ter vida mais curta e terminar em supernova?",
+   "comando": "Marque a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Três estrelas",
+    "colunas": [
+     "Estrela",
+     "Massa (Sol = 1)",
+     "Cor"
+    ],
+    "linhas": [
+     [
+      "X",
+      "0,3",
+      "Vermelha"
+     ],
+     [
+      "Y",
+      "1",
+      "Amarela"
+     ],
+     [
+      "Z",
+      "20",
+      "Azul"
+     ]
+    ]
+   },
+   "alts": [
+    "X, por ser menor e gastar mais rápido.",
+    "Z, pois a grande massa gasta o combustível rápido e pode explodir.",
+    "Y, por ser como o Sol.",
+    "Todas terminam como buraco negro."
+   ],
+   "correta": 1,
+   "explicacao": "Estrelas muito massivas vivem pouco e explodem."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Coloque na ordem as fases da vida do Sol.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Fases embaralhadas",
+    "colunas": [
+     "Fase",
+     "Letra"
+    ],
+    "linhas": [
+     [
+      "Gigante vermelha",
+      "A"
+     ],
+     [
+      "Nebulosa",
+      "B"
+     ],
+     [
+      "Anã branca",
+      "C"
+     ],
+     [
+      "Estrela estável",
+      "D"
+     ],
+     [
+      "Protoestrela",
+      "E"
+     ]
+    ]
+   },
+   "ref": "B, E, D, A, C.",
+   "conceitos": [
+    "nebulosa",
+    "protoestrela",
+    "gigante vermelha",
+    "anã branca"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Explique de forma simples como o Sol produz energia a partir desses elementos.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Composição do Sol",
+    "colunas": [
+     "Elemento",
+     "Porcentagem"
+    ],
+    "linhas": [
+     [
+      "Hidrogênio",
+      "73"
+     ],
+     [
+      "Hélio",
+      "25"
+     ],
+     [
+      "Outros",
+      "2"
+     ]
+    ]
+   },
+   "ref": "Núcleos de hidrogênio se fundem formando hélio e liberando energia (fusão nuclear).",
+   "conceitos": [
+    "fusão nuclear",
+    "hidrogênio",
+    "hélio"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que uma estrela grande vive menos que uma pequena?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Tempo de vida",
+    "unidade": "milhões de anos",
+    "itens": [
+     {
+      "rotulo": "0,5 massa solar",
+      "valor": 60000
+     },
+     {
+      "rotulo": "5 massas solares",
+      "valor": 100
+     },
+     {
+      "rotulo": "20 massas solares",
+      "valor": 8
+     }
+    ]
+   },
+   "ref": "Consome o hidrogênio muito mais rápido por ter temperatura e pressão maiores.",
+   "conceitos": [
+    "massa",
+    "consumo rápido"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Compare o fim do Sol com o de uma estrela de 20 massas solares.",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Estrelas comparadas",
+    "colunas": [
+     "Estrela",
+     "Massa (Sol = 1)"
+    ],
+    "linhas": [
+     [
+      "Sol",
+      "1"
+     ],
+     [
+      "W",
+      "20"
+     ]
+    ]
+   },
+   "ref": "Sol: gigante vermelha e anã branca. W: supernova e estrela de nêutrons ou buraco negro.",
+   "conceitos": [
+    "anã branca",
+    "supernova",
+    "buraco negro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que dizemos que somos feitos de poeira de estrelas?",
+   "comando": "Responda com uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Elementos do corpo humano",
+    "colunas": [
+     "Elemento",
+     "% da massa"
+    ],
+    "linhas": [
+     [
+      "Oxigênio",
+      "65"
+     ],
+     [
+      "Carbono",
+      "18"
+     ],
+     [
+      "Hidrogênio",
+      "10"
+     ],
+     [
+      "Nitrogênio",
+      "3"
+     ]
+    ]
+   },
+   "ref": "Esses elementos foram formados por fusão em estrelas e espalhados por supernovas.",
+   "conceitos": [
+    "fusão",
+    "supernova",
+    "reaproveitamento"
+   ]
+  }
+ ]
+}

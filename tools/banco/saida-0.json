@@ -1,0 +1,3117 @@
+{
+ "6º ANO|3|Associar células, tecidos, órgãos e sistemas aos níveis de organização dos seres vivos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma aluna observou ao microscópio um pedaço fino de cebola e viu pequenos compartimentos lado a lado. O que são eles?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Preparo da lâmina",
+    "etapas": [
+     "Retirar a película da cebola",
+     "Colocar sobre a lâmina",
+     "Pingar o corante",
+     "Cobrir com a lamínula",
+     "Observar no microscópio"
+    ]
+   },
+   "alts": [
+    "Células",
+    "Órgãos",
+    "Sistemas",
+    "Organismos"
+   ],
+   "correta": 0,
+   "explicacao": "Os compartimentos vistos são as células, unidade básica dos seres vivos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O músculo da perna de um frango é formado por muitas células parecidas que realizam a mesma função. Esse conjunto é chamado de:",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observação do músculo de frango",
+    "colunas": [
+     "Amostra",
+     "Aparência das células",
+     "Quantidade vista"
+    ],
+    "linhas": [
+     [
+      "Fibra 1",
+      "Alongada",
+      "Muitas"
+     ],
+     [
+      "Fibra 2",
+      "Alongada",
+      "Muitas"
+     ],
+     [
+      "Fibra 3",
+      "Alongada",
+      "Muitas"
+     ]
+    ]
+   },
+   "alts": [
+    "Órgão",
+    "Tecido",
+    "Sistema",
+    "Organismo"
+   ],
+   "correta": 1,
+   "explicacao": "Conjunto de células semelhantes com a mesma função forma um tecido."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O estômago tem parede muscular, revestimento interno, vasos e nervos. Em qual nível de organização ele se encaixa?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Anotações da aula sobre o estômago",
+    "colunas": [
+     "Parte",
+     "Tipo de tecido"
+    ],
+    "linhas": [
+     [
+      "Parede",
+      "Muscular"
+     ],
+     [
+      "Revestimento interno",
+      "Epitelial"
+     ],
+     [
+      "Vasos",
+      "Conectivo"
+     ],
+     [
+      "Nervos",
+      "Nervoso"
+     ]
+    ]
+   },
+   "alts": [
+    "Célula",
+    "Tecido",
+    "Órgão",
+    "Sistema"
+   ],
+   "correta": 2,
+   "explicacao": "Um órgão é formado por vários tecidos que trabalham juntos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual sequência vai do menor para o maior nível de organização do coração?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Cartões do varal (sem ordem)",
+    "colunas": [
+     "Cartão",
+     "Comprimento aproximado"
+    ],
+    "linhas": [
+     [
+      "Coração",
+      "12 cm"
+     ],
+     [
+      "Célula muscular",
+      "0,1 mm"
+     ],
+     [
+      "Sistema circulatório",
+      "1 m"
+     ],
+     [
+      "Tecido muscular",
+      "2 cm"
+     ]
+    ]
+   },
+   "alts": [
+    "Tecido muscular, célula muscular, coração, sistema circulatório",
+    "Coração, tecido muscular, célula muscular, sistema circulatório",
+    "Célula muscular, coração, tecido muscular, sistema circulatório",
+    "Célula muscular, tecido muscular, coração, sistema circulatório"
+   ],
+   "correta": 3,
+   "explicacao": "Células formam tecidos, tecidos formam órgãos e órgãos formam sistemas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A bactéria do iogurte não tem tecidos, órgãos nem sistemas. Por quê?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Seres observados",
+    "colunas": [
+     "Ser vivo",
+     "Número de células"
+    ],
+    "linhas": [
+     [
+      "Bactéria do iogurte",
+      "1"
+     ],
+     [
+      "Cebola",
+      "Milhões"
+     ],
+     [
+      "Formiga",
+      "Milhões"
+     ]
+    ]
+   },
+   "alts": [
+    "Ela é pequena demais para ter células",
+    "Ela tem uma única célula que realiza todas as funções",
+    "Ela é um órgão de outro ser vivo",
+    "Ela tem tecidos, mas não os vemos"
+   ],
+   "correta": 1,
+   "explicacao": "Seres unicelulares têm uma célula que faz tudo; tecidos e órgãos existem em multicelulares."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Qual é o nome da menor unidade que forma todos os seres vivos?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Célula.",
+   "conceitos": [
+    "célula"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que é um tecido?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Conjunto de células semelhantes que realizam a mesma função.",
+   "conceitos": [
+    "conjunto de células",
+    "mesma função"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O pulmão, a traqueia e os brônquios trabalham juntos na respiração. Explique a diferença entre órgão e sistema.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Partes do corpo citadas na aula",
+    "colunas": [
+     "Parte",
+     "Localização"
+    ],
+    "linhas": [
+     [
+      "Pulmão",
+      "Tórax"
+     ],
+     [
+      "Traqueia",
+      "Pescoço e tórax"
+     ],
+     [
+      "Brônquios",
+      "Tórax"
+     ]
+    ]
+   },
+   "ref": "Órgão é uma parte formada por tecidos com uma função (como o pulmão); sistema é o conjunto de órgãos que atuam juntos numa função maior (respiratório).",
+   "conceitos": [
+    "órgão formado por tecidos",
+    "sistema é conjunto de órgãos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que um ser multicelular precisa de células organizadas em tecidos, órgãos e sistemas?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Funções registradas no corpo",
+    "colunas": [
+     "Função",
+     "Partes envolvidas"
+    ],
+    "linhas": [
+     [
+      "Digestão",
+      "Estômago e intestino"
+     ],
+     [
+      "Circulação",
+      "Coração e vasos"
+     ],
+     [
+      "Respiração",
+      "Pulmões e vias aéreas"
+     ]
+    ]
+   },
+   "ref": "Para dividir o trabalho: cada parte se especializa em uma função e todas atuam de forma integrada, mantendo o organismo vivo.",
+   "conceitos": [
+    "divisão de funções",
+    "especialização",
+    "integração"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No varal, Ana pôs o coração depois do tecido muscular. Justifique essa posição.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Cartões do varal",
+    "colunas": [
+     "Cartão",
+     "Tamanho aproximado"
+    ],
+    "linhas": [
+     [
+      "Célula muscular",
+      "0,1 mm"
+     ],
+     [
+      "Tecido muscular",
+      "2 cm"
+     ],
+     [
+      "Coração",
+      "12 cm"
+     ],
+     [
+      "Sistema circulatório",
+      "1 m"
+     ]
+    ]
+   },
+   "ref": "O coração é um órgão formado por vários tecidos, entre eles o muscular, que por sua vez é formado por células; por isso ele é maior e vem depois.",
+   "conceitos": [
+    "órgão formado por tecidos",
+    "tecido formado por células"
+   ]
+  }
+ ],
+ "7º ANO|3|Diferenciar Unidades de Conservação de proteção integral e de uso sustentável com base em seus objetivos e formas de uso.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual é o principal objetivo de uma Unidade de Conservação de proteção integral, como o Parque Estadual da Serra do Mar?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Anotações da visita ao parque",
+    "colunas": [
+     "Observação",
+     "Registro"
+    ],
+    "linhas": [
+     [
+      "Trilha",
+      "Apenas com monitor"
+     ],
+     [
+      "Pesquisa",
+      "Equipe de cientistas"
+     ],
+     [
+      "Placa na entrada",
+      "Proibido retirar plantas"
+     ]
+    ]
+   },
+   "alts": [
+    "Preservar a natureza, permitindo só usos que não a consumam, como pesquisa e visitação",
+    "Produzir madeira para vender",
+    "Permitir moradias e plantações",
+    "Criar áreas de pasto"
+   ],
+   "correta": 0,
+   "explicacao": "Proteção integral preserva a natureza com uso indireto."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na APA Cananéia-Iguape-Peruíbe vivem pessoas que pescam e plantam. Isso é possível porque ela é uma unidade de:",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Atividades vistas na região",
+    "colunas": [
+     "Atividade",
+     "Quem faz"
+    ],
+    "linhas": [
+     [
+      "Pesca artesanal",
+      "Moradores"
+     ],
+     [
+      "Plantio de banana",
+      "Famílias"
+     ],
+     [
+      "Passeios de barco",
+      "Turistas"
+     ]
+    ]
+   },
+   "alts": [
+    "Proteção integral",
+    "Uso sustentável",
+    "Proibição total",
+    "Reserva científica fechada"
+   ],
+   "correta": 1,
+   "explicacao": "Unidades de uso sustentável conciliam conservação e uso dos recursos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual atividade pode ocorrer em uma Unidade de Conservação de proteção integral?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Visitantes do parque por mês",
+    "unidade": "pessoas",
+    "itens": [
+     {
+      "rotulo": "Janeiro",
+      "valor": 800
+     },
+     {
+      "rotulo": "Fevereiro",
+      "valor": 650
+     },
+     {
+      "rotulo": "Março",
+      "valor": 900
+     }
+    ]
+   },
+   "alts": [
+    "Criação de gado",
+    "Corte de árvores para venda",
+    "Pesquisa científica autorizada",
+    "Construção de loteamentos"
+   ],
+   "correta": 2,
+   "explicacao": "Em proteção integral só é permitido uso indireto, como pesquisa e educação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma comunidade quer coletar palmito de modo planejado, sem acabar com a floresta. Qual unidade é adequada?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da comunidade",
+    "colunas": [
+     "Item",
+     "Informação"
+    ],
+    "linhas": [
+     [
+      "Famílias",
+      "40"
+     ],
+     [
+      "Atividade",
+      "Coleta de palmito"
+     ],
+     [
+      "Área",
+      "Floresta preservada"
+     ]
+    ]
+   },
+   "alts": [
+    "Estação Ecológica",
+    "Reserva Biológica",
+    "Parque Estadual",
+    "Reserva Extrativista"
+   ],
+   "correta": 3,
+   "explicacao": "Reserva Extrativista é de uso sustentável e permite extração manejada."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Com base na tabela, qual é a classificação correta dos locais A e B?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Regras de dois locais",
+    "colunas": [
+     "Local",
+     "Moradores",
+     "Coleta de recursos",
+     "Visitação"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Não",
+      "Proibida",
+      "Só com monitor"
+     ],
+     [
+      "B",
+      "Sim",
+      "Permitida com manejo",
+      "Livre"
+     ]
+    ]
+   },
+   "alts": [
+    "A é de proteção integral e B é de uso sustentável",
+    "A é de uso sustentável e B é de proteção integral",
+    "Os dois são de proteção integral",
+    "Os dois são de uso sustentável"
+   ],
+   "correta": 0,
+   "explicacao": "Restrições fortes indicam proteção integral; presença de moradores e manejo indicam uso sustentável."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite um exemplo de Unidade de Conservação de proteção integral.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Parque estadual ou nacional, Estação Ecológica ou Reserva Biológica.",
+   "conceitos": [
+    "parque",
+    "estação ecológica",
+    "reserva biológica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que significa uso sustentável em uma Unidade de Conservação?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Usar os recursos naturais de modo que não se esgotem, conciliando conservação e uso pelas pessoas.",
+   "conceitos": [
+    "recursos não se esgotam",
+    "conservação e uso"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pode-se construir um hotel dentro do Parque Estadual da Serra do Mar? E na APA? Explique.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Locais citados na excursão",
+    "colunas": [
+     "Local",
+     "Região"
+    ],
+    "linhas": [
+     [
+      "Serra do Mar",
+      "Litoral e serra"
+     ],
+     [
+      "APA Cananéia-Iguape-Peruíbe",
+      "Litoral sul"
+     ]
+    ]
+   },
+   "ref": "No parque não, pois é de proteção integral; na APA pode, com licença e regras, pois é de uso sustentável.",
+   "conceitos": [
+    "proteção integral",
+    "uso sustentável",
+    "licenciamento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que há regras para a pesca mesmo em uma unidade de uso sustentável?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Peixe capturado por ano em uma comunidade",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Ano 1",
+      "valor": 500
+     },
+     {
+      "rotulo": "Ano 3",
+      "valor": 380
+     },
+     {
+      "rotulo": "Ano 5",
+      "valor": 250
+     }
+    ]
+   },
+   "ref": "Para que a quantidade pescada não supere a reposição dos peixes, evitando que o recurso acabe e a comunidade perca seu sustento.",
+   "conceitos": [
+    "reposição dos recursos",
+    "sustentabilidade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma equipe propôs visitas de 200 pessoas por dia em uma Reserva Biológica; outra propôs agricultura orgânica em uma APA. Julgue cada proposta.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Propostas das equipes",
+    "colunas": [
+     "Equipe",
+     "Local",
+     "Proposta"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Reserva Biológica",
+      "200 visitantes por dia"
+     ],
+     [
+      "2",
+      "APA",
+      "Agricultura orgânica"
+     ]
+    ]
+   },
+   "ref": "A 1 é inadequada: reserva biológica é de proteção integral e visitação em massa causa impacto. A 2 é compatível: APA é de uso sustentável e permite atividades de baixo impacto.",
+   "conceitos": [
+    "proteção integral restringe visitação",
+    "uso sustentável permite manejo"
+   ]
+  }
+ ],
+ "8º ANO|2|Associar os efeitos da poluição atmosférica na saúde do sistema respiratório.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Os carros liberam gases pelo escapamento. Qual deles é poluente e prejudica a respiração?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Caminho do ar ao respirar",
+    "etapas": [
+     "Nariz",
+     "Faringe",
+     "Laringe",
+     "Traqueia",
+     "Brônquios",
+     "Pulmões"
+    ]
+   },
+   "alts": [
+    "Oxigênio",
+    "Monóxido de carbono",
+    "Nitrogênio",
+    "Vapor de água"
+   ],
+   "correta": 1,
+   "explicacao": "O monóxido de carbono é poluente liberado na queima de combustíveis."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Fitas adesivas coladas por 3 dias ficaram com cores diferentes. O que a fita escura indica?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Fitas coladas por 3 dias",
+    "colunas": [
+     "Local",
+     "Cor da fita"
+    ],
+    "linhas": [
+     [
+      "Janela da rua",
+      "Escura"
+     ],
+     [
+      "Pátio",
+      "Pouco escura"
+     ],
+     [
+      "Sala",
+      "Quase limpa"
+     ]
+    ]
+   },
+   "alts": [
+    "Que o local é mais quente",
+    "Que há mais oxigênio",
+    "Presença de muitas partículas no ar do local",
+    "Que a fita estragou com a luz"
+   ],
+   "correta": 2,
+   "explicacao": "As partículas do ar grudam na fita e a escurecem."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual a melhor atitude para reduzir o contato com partículas no local com mais sujeira?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Partículas contadas com lupa em 1 cm² de fita",
+    "unidade": "partículas",
+    "itens": [
+     {
+      "rotulo": "Janela da rua",
+      "valor": 32
+     },
+     {
+      "rotulo": "Pátio",
+      "valor": 15
+     },
+     {
+      "rotulo": "Sala",
+      "valor": 6
+     }
+    ]
+   },
+   "alts": [
+    "Abrir ainda mais a janela da rua",
+    "Usar o pátio só para correr",
+    "Varrer a sala com a porta aberta para o ar entrar",
+    "Manter a janela da rua fechada nos horários de trânsito intenso"
+   ],
+   "correta": 3,
+   "explicacao": "A janela da rua teve mais partículas; reduzir a entrada de ar poluído diminui a exposição."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em semanas de queimadas, aumentam os atendimentos por falta de ar. Por que a fumaça piora a respiração?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Atendimentos por falta de ar por semana",
+    "unidade": "atendimentos",
+    "itens": [
+     {
+      "rotulo": "Semana 1",
+      "valor": 10
+     },
+     {
+      "rotulo": "Semana 2",
+      "valor": 12
+     },
+     {
+      "rotulo": "Semana 3 (queimadas)",
+      "valor": 28
+     },
+     {
+      "rotulo": "Semana 4 (queimadas)",
+      "valor": 35
+     }
+    ]
+   },
+   "alts": [
+    "Partículas e gases irritam e inflamam as vias respiratórias",
+    "A fumaça aumenta o oxigênio do ar",
+    "A fumaça entope o estômago",
+    "A fumaça impede o coração de bater"
+   ],
+   "correta": 0,
+   "explicacao": "A fumaça irrita brônquios e pulmões, causando tosse e falta de ar."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O que os dados dos três bairros sugerem?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registros de três bairros",
+    "colunas": [
+     "Bairro",
+     "Partículas no ar (µg/m³)",
+     "Casos de bronquite no ano"
+    ],
+    "linhas": [
+     [
+      "A",
+      "20",
+      "15"
+     ],
+     [
+      "B",
+      "45",
+      "38"
+     ],
+     [
+      "C",
+      "80",
+      "70"
+     ]
+    ]
+   },
+   "alts": [
+    "Poluição não tem relação com doenças",
+    "Quanto mais partículas no ar, mais casos de doenças respiratórias",
+    "Quanto menos partículas, mais casos",
+    "Só idosos têm bronquite"
+   ],
+   "correta": 1,
+   "explicacao": "Os casos aumentam junto com as partículas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite um poluente do ar que prejudica a respiração.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Fumaça de veículos, monóxido de carbono, fuligem ou partículas de queimadas.",
+   "conceitos": [
+    "poluente",
+    "fumaça ou partículas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Qual a função dos pelos e do muco do nariz no sistema respiratório?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Filtrar o ar, retendo poeira e microrganismos antes de chegarem aos pulmões.",
+   "conceitos": [
+    "filtrar o ar",
+    "reter poeira"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro disse que o ar da sala é limpo porque não enxerga sujeira. Por que ele pode estar errado?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Fita da sala",
+    "colunas": [
+     "Forma de observar",
+     "O que se vê"
+    ],
+    "linhas": [
+     [
+      "A olho nu",
+      "Nada visível"
+     ],
+     [
+      "Com lupa",
+      "Pontos escuros pequenos"
+     ]
+    ]
+   },
+   "ref": "As partículas são muito pequenas para serem vistas a olho nu, mas ficam na fita e aparecem com a lupa.",
+   "conceitos": [
+    "partículas pequenas",
+    "uso da lupa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Explique como o ar poluído pode causar tosse e falta de ar.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Caminho do ar poluído",
+    "etapas": [
+     "Entra pelo nariz",
+     "Passa pela traqueia",
+     "Chega aos pulmões"
+    ]
+   },
+   "ref": "Partículas e gases irritam e inflamam as vias aéreas e os pulmões, dificultando a passagem do ar e a troca de gases.",
+   "conceitos": [
+    "irritação",
+    "inflamação",
+    "dificuldade de trocar gases"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em março circularam menos carros e os casos de falta de ar caíram. Justifique essa relação.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Casos de falta de ar por mês",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Janeiro",
+      "valor": 40
+     },
+     {
+      "rotulo": "Fevereiro",
+      "valor": 38
+     },
+     {
+      "rotulo": "Março",
+      "valor": 22
+     }
+    ]
+   },
+   "ref": "Com menos carros há menos poluentes no ar, logo menos irritação das vias respiratórias e menos casos.",
+   "conceitos": [
+    "menos poluentes",
+    "menos doenças respiratórias"
+   ]
+  }
+ ],
+ "9º ANO|1|Identificar os modelos atômicos considerando sua historicidade e pesquisa científica.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual cientista propôs que o átomo é uma esfera maciça e indivisível?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Linha do tempo montada pelo grupo",
+    "colunas": [
+     "Ano",
+     "Modelo de massinha"
+    ],
+    "linhas": [
+     [
+      "1803",
+      "Esfera lisa"
+     ],
+     [
+      "1904",
+      "Massa com passas"
+     ],
+     [
+      "1911",
+      "Núcleo e elétrons ao redor"
+     ],
+     [
+      "1913",
+      "Elétrons em camadas"
+     ]
+    ]
+   },
+   "alts": [
+    "Thomson",
+    "Rutherford",
+    "Dalton",
+    "Bohr"
+   ],
+   "correta": 2,
+   "explicacao": "O modelo de Dalton é a esfera maciça."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No modelo de Thomson, o átomo é uma massa com passas. O que as passas representam?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Materiais da maquete",
+    "colunas": [
+     "Material",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Massa de modelar",
+      "1 bola"
+     ],
+     [
+      "Passas",
+      "8 unidades"
+     ]
+    ]
+   },
+   "alts": [
+    "Os elétrons",
+    "Os prótons",
+    "Os nêutrons",
+    "O núcleo"
+   ],
+   "correta": 0,
+   "explicacao": "As passas representam elétrons, de carga negativa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rutherford lançou partículas em uma folha de ouro. Que conclusão os resultados permitem?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento da lâmina de ouro (em 10 000 lançadas)",
+    "unidade": "partículas",
+    "itens": [
+     {
+      "rotulo": "Atravessaram em linha reta",
+      "valor": 9900
+     },
+     {
+      "rotulo": "Desviaram pouco",
+      "valor": 99
+     },
+     {
+      "rotulo": "Voltaram",
+      "valor": 1
+     }
+    ]
+   },
+   "alts": [
+    "O átomo é uma esfera maciça",
+    "O átomo tem um núcleo pequeno e denso e muito espaço vazio",
+    "As partículas são todas absorvidas",
+    "Os elétrons ficam dentro do núcleo"
+   ],
+   "correta": 1,
+   "explicacao": "A maioria passou; poucas desviaram, indicando núcleo pequeno."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual modelo explica as cores dos fogos de artifício, com elétrons que mudam de camada e liberam luz?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Fogos observados na festa",
+    "colunas": [
+     "Cor",
+     "Substância usada"
+    ],
+    "linhas": [
+     [
+      "Vermelho",
+      "Sal de estrôncio"
+     ],
+     [
+      "Verde",
+      "Sal de bário"
+     ],
+     [
+      "Azul",
+      "Sal de cobre"
+     ]
+    ]
+   },
+   "alts": [
+    "Modelo de Dalton",
+    "Modelo de Thomson",
+    "Modelo de bola de bilhar",
+    "Modelo de Bohr"
+   ],
+   "correta": 3,
+   "explicacao": "Em Bohr, elétrons saltam entre camadas emitindo luz."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Por que o modelo de Thomson foi substituído pelo de Rutherford?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Previsão e resultado",
+    "colunas": [
+     "Situação",
+     "O que ocorreu"
+    ],
+    "linhas": [
+     [
+      "Previsto por Thomson",
+      "Todas as partículas atravessam sem desvio"
+     ],
+     [
+      "Obtido no experimento",
+      "Algumas desviam e outras voltam"
+     ]
+    ]
+   },
+   "alts": [
+    "Thomson errou a conta",
+    "Ninguém acreditava em átomos",
+    "O experimento mostrou algo que o modelo de Thomson não explicava",
+    "Rutherford descobriu a esfera maciça"
+   ],
+   "correta": 2,
+   "explicacao": "Novas evidências levam à troca do modelo."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Quem propôs o modelo do átomo como esfera maciça?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "John Dalton.",
+   "conceitos": [
+    "Dalton"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Que partícula Thomson descobriu e qual é sua carga?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "O elétron, de carga negativa.",
+   "conceitos": [
+    "elétron",
+    "carga negativa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Qual a diferença entre o modelo de Rutherford e o de Thomson?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Montagem em aula",
+    "colunas": [
+     "Modelo",
+     "Material"
+    ],
+    "linhas": [
+     [
+      "Thomson",
+      "Massa com passas"
+     ],
+     [
+      "Rutherford",
+      "Bolinha central e bolinhas em volta"
+     ]
+    ]
+   },
+   "ref": "Em Thomson os elétrons ficam espalhados numa massa; em Rutherford há um núcleo pequeno e positivo com elétrons ao redor.",
+   "conceitos": [
+    "núcleo",
+    "elétrons ao redor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que os modelos atômicos mudaram ao longo do tempo?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Linha do tempo",
+    "etapas": [
+     "1803: modelo de Dalton",
+     "1904: modelo de Thomson",
+     "1911: modelo de Rutherford",
+     "1913: modelo de Bohr"
+    ]
+   },
+   "ref": "Porque novos experimentos e evidências mostravam fatos que o modelo anterior não explicava; a ciência se atualiza.",
+   "conceitos": [
+    "novas evidências",
+    "ciência é construção histórica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que o modelo de Bohr acrescentou ao de Rutherford?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Montagem de Bohr",
+    "colunas": [
+     "Camada",
+     "Bolinhas"
+    ],
+    "linhas": [
+     [
+      "1ª",
+      "2"
+     ],
+     [
+      "2ª",
+      "8"
+     ],
+     [
+      "3ª",
+      "1"
+     ]
+    ]
+   },
+   "ref": "Elétrons em camadas de energia definidas, que podem saltar entre elas emitindo ou absorvendo luz.",
+   "conceitos": [
+    "camadas",
+    "níveis de energia"
+   ]
+  }
+ ],
+ "9º ANO|2|Aplicar os mecanismos da hereditariedade na explicação da transmissão das características genéticas segundo as Leis de Mendel e outros padrões de dominância.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma pessoa com genótipo Aa tem dois alelos diferentes. Como se chama esse genótipo?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Moedas dos pais",
+    "colunas": [
+     "Face",
+     "Alelo"
+    ],
+    "linhas": [
+     [
+      "Cara",
+      "A"
+     ],
+     [
+      "Coroa",
+      "a"
+     ]
+    ]
+   },
+   "alts": [
+    "Homozigoto dominante",
+    "Homozigoto recessivo",
+    "Heterozigoto",
+    "Haploide"
+   ],
+   "correta": 2,
+   "explicacao": "Alelos diferentes: heterozigoto."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Quem é considerado o pai da genética por seus experimentos com ervilhas?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Ervilhas estudadas",
+    "colunas": [
+     "Característica",
+     "Variações"
+    ],
+    "linhas": [
+     [
+      "Cor da semente",
+      "Amarela ou verde"
+     ],
+     [
+      "Textura",
+      "Lisa ou rugosa"
+     ]
+    ]
+   },
+   "alts": [
+    "Gregor Mendel",
+    "Charles Darwin",
+    "Louis Pasteur",
+    "Isaac Newton"
+   ],
+   "correta": 0,
+   "explicacao": "Mendel estudou ervilhas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em 20 lançamentos, quantos filhos têm fenótipo dominante (pelo menos um A)?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Filhos anotados",
+    "colunas": [
+     "Genótipo",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "AA",
+      "6"
+     ],
+     [
+      "Aa",
+      "9"
+     ],
+     [
+      "aa",
+      "5"
+     ]
+    ]
+   },
+   "alts": [
+    "5",
+    "9",
+    "6",
+    "15"
+   ],
+   "correta": 3,
+   "explicacao": "6+9=15."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No cruzamento Aa x Aa, qual a proporção esperada de filhos aa?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento da dupla",
+    "etapas": [
+     "Cada pai lança sua moeda",
+     "Anota o par de faces",
+     "Repete 20 vezes",
+     "Conta cada combinação"
+    ]
+   },
+   "alts": [
+    "0%",
+    "1/4 (25%)",
+    "1/2 (50%)",
+    "3/4 (75%)"
+   ],
+   "correta": 1,
+   "explicacao": "Esperado 1 AA : 2 Aa : 1 aa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O esperado era 5 AA : 10 Aa : 5 aa, mas saiu algo diferente. Por que?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Esperado e obtido em 20 lançamentos",
+    "colunas": [
+     "Genótipo",
+     "Esperado",
+     "Obtido"
+    ],
+    "linhas": [
+     [
+      "AA",
+      "5",
+      "6"
+     ],
+     [
+      "Aa",
+      "10",
+      "9"
+     ],
+     [
+      "aa",
+      "5",
+      "5"
+     ]
+    ]
+   },
+   "alts": [
+    "As moedas tinham defeito",
+    "Mendel errou",
+    "A combinação é ao acaso e, com poucos lançamentos, o resultado varia",
+    "Os pais deixaram de ser Aa"
+   ],
+   "correta": 2,
+   "explicacao": "Mais lançamentos aproximam do esperado."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que são alelos?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Formas diferentes de um mesmo gene.",
+   "conceitos": [
+    "formas do gene"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Qual o genótipo de um indivíduo homozigoto recessivo?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "aa.",
+   "conceitos": [
+    "aa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cruzando Aa x Aa, com A roxa e a branca, que proporção de filhos terá flor roxa?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Alelos dos pais",
+    "colunas": [
+     "Item",
+     "Informação"
+    ],
+    "linhas": [
+     [
+      "Pai 1",
+      "Aa"
+     ],
+     [
+      "Pai 2",
+      "Aa"
+     ],
+     [
+      "A",
+      "Flor roxa"
+     ],
+     [
+      "a",
+      "Flor branca"
+     ]
+    ]
+   },
+   "ref": "3/4 (75%), pois AA e Aa são roxos.",
+   "conceitos": [
+    "3/4",
+    "dominância"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um casal de pele normal tem um filho albino (recessivo). Como isso é possível?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Família",
+    "colunas": [
+     "Pessoa",
+     "Fenótipo"
+    ],
+    "linhas": [
+     [
+      "Mãe",
+      "Normal"
+     ],
+     [
+      "Pai",
+      "Normal"
+     ],
+     [
+      "Filho",
+      "Albino"
+     ]
+    ]
+   },
+   "ref": "Os pais são Aa (portadores); cada um passou o alelo a e o filho é aa.",
+   "conceitos": [
+    "heterozigotos",
+    "alelo recessivo",
+    "aa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois heterozigotos tiveram 4 filhos aa. Qual o genótipo possível do 5º? Justifique.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Filhos anteriores",
+    "colunas": [
+     "Filho",
+     "Genótipo"
+    ],
+    "linhas": [
+     [
+      "1",
+      "aa"
+     ],
+     [
+      "2",
+      "aa"
+     ],
+     [
+      "3",
+      "aa"
+     ],
+     [
+      "4",
+      "aa"
+     ]
+    ]
+   },
+   "ref": "Pode ser AA (1/4), Aa (1/2) ou aa (1/4); cada filho é um evento independente.",
+   "conceitos": [
+    "independência",
+    "probabilidade"
+   ]
+  }
+ ],
+ "4B|6º ANO|7": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual parte do olho tem células que captam a luz e enviam sinais ao cérebro?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Trajeto da luz no simulador",
+    "etapas": [
+     "Entra pela córnea",
+     "Passa pela pupila",
+     "Atravessa o cristalino",
+     "Atinge o fundo do olho"
+    ]
+   },
+   "alts": [
+    "Córnea",
+    "Retina",
+    "Pupila",
+    "Íris"
+   ],
+   "correta": 1,
+   "explicacao": "A retina tem as células sensíveis à luz."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador, uma lâmpada branca vista por um filtro vermelho ficou vermelha. Por quê?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do simulador",
+    "colunas": [
+     "Lâmpada",
+     "Filtro",
+     "Cor vista"
+    ],
+    "linhas": [
+     [
+      "Branca",
+      "Nenhum",
+      "Branca"
+     ],
+     [
+      "Branca",
+      "Vermelho",
+      "Vermelha"
+     ],
+     [
+      "Branca",
+      "Azul",
+      "Azul"
+     ]
+    ]
+   },
+   "alts": [
+    "O filtro deixa passar só a luz vermelha e retém as outras",
+    "O filtro cria luz vermelha",
+    "O filtro esquenta a lâmpada",
+    "A lâmpada muda de cor sozinha"
+   ],
+   "correta": 0,
+   "explicacao": "Filtro transmite sua cor e absorve as demais."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador RGB, as lâmpadas vermelha e verde foram ligadas juntas. Que cor apareceu?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Testes já feitos",
+    "colunas": [
+     "Lâmpadas ligadas",
+     "Cor vista"
+    ],
+    "linhas": [
+     [
+      "Só vermelha",
+      "Vermelho"
+     ],
+     [
+      "Só verde",
+      "Verde"
+     ],
+     [
+      "Vermelha e azul",
+      "Magenta"
+     ]
+    ]
+   },
+   "alts": [
+    "Branco",
+    "Ciano",
+    "Amarelo",
+    "Marrom"
+   ],
+   "correta": 2,
+   "explicacao": "Vermelho mais verde dá amarelo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma luz verde passou por um filtro vermelho. O que se vê?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Testes do simulador",
+    "colunas": [
+     "Luz",
+     "Filtro",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Vermelha",
+      "Vermelho",
+      "Vermelho"
+     ],
+     [
+      "Azul",
+      "Azul",
+      "Azul"
+     ]
+    ]
+   },
+   "alts": [
+    "Luz vermelha",
+    "Luz amarela",
+    "Luz verde mais clara",
+    "Quase escuro, pois o filtro não deixa passar a luz verde"
+   ],
+   "correta": 3,
+   "explicacao": "O filtro vermelho bloqueia o verde."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma maçã parece vermelha sob luz branca e quase preta sob luz verde. Por quê?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Maçã sob diferentes luzes",
+    "colunas": [
+     "Luz",
+     "Cor vista"
+    ],
+    "linhas": [
+     [
+      "Branca",
+      "Vermelha"
+     ],
+     [
+      "Vermelha",
+      "Vermelha"
+     ],
+     [
+      "Verde",
+      "Quase preta"
+     ]
+    ]
+   },
+   "alts": [
+    "Ela produz luz vermelha",
+    "Ela reflete a luz vermelha e absorve as outras; sem vermelho na luz, nada é refletido",
+    "Ela reflete toda luz verde",
+    "Ela muda de cor com a temperatura"
+   ],
+   "correta": 1,
+   "explicacao": "A cor do objeto depende da luz que ele reflete."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite as três cores primárias da luz no simulador RGB.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Vermelho, verde e azul.",
+   "conceitos": [
+    "vermelho",
+    "verde",
+    "azul"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que é luz monocromática?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Luz de uma única cor (um só comprimento de onda).",
+   "conceitos": [
+    "uma cor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Que cor se vê quando as lâmpadas verde e azul acendem juntas?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Combinações já registradas",
+    "colunas": [
+     "Lâmpadas",
+     "Cor"
+    ],
+    "linhas": [
+     [
+      "Vermelha e verde",
+      "Amarela"
+     ],
+     [
+      "Vermelha e azul",
+      "Magenta"
+     ]
+    ]
+   },
+   "ref": "Ciano (azul-esverdeado).",
+   "conceitos": [
+    "ciano",
+    "soma de luzes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No simulador, as três lâmpadas acesas formaram luz branca. Explique por quê.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Intensidade das lâmpadas",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Vermelha",
+      "valor": 100
+     },
+     {
+      "rotulo": "Verde",
+      "valor": 100
+     },
+     {
+      "rotulo": "Azul",
+      "valor": 100
+     }
+    ]
+   },
+   "ref": "A soma das luzes vermelha, verde e azul estimula os três tipos de cones da retina por igual, e o cérebro interpreta como branco.",
+   "conceitos": [
+    "soma aditiva",
+    "cones",
+    "cérebro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aluno não distingue vermelho de verde. Relacione isso com a retina.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Teste de visão de cores",
+    "colunas": [
+     "Cartão",
+     "Aluno A viu",
+     "Aluno B viu"
+    ],
+    "linhas": [
+     [
+      "Vermelho",
+      "Vermelho",
+      "Marrom"
+     ],
+     [
+      "Verde",
+      "Verde",
+      "Marrom"
+     ],
+     [
+      "Azul",
+      "Azul",
+      "Azul"
+     ]
+    ]
+   },
+   "ref": "Faltam ou funcionam diferente os cones sensíveis ao vermelho ou ao verde; o cérebro recebe sinais parecidos e percebe a mesma cor.",
+   "conceitos": [
+    "cones",
+    "retina",
+    "cérebro"
+   ]
+  }
+ ],
+ "4B|7º ANO|3": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual doença é causada por vírus e transmitida pelo mosquito Aedes aegypti?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Casos suspeitos de doença transmitida por mosquito no bairro",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Dezembro",
+      "valor": 5
+     },
+     {
+      "rotulo": "Janeiro",
+      "valor": 18
+     },
+     {
+      "rotulo": "Fevereiro",
+      "valor": 40
+     }
+    ]
+   },
+   "alts": [
+    "Dengue",
+    "Tuberculose",
+    "Malária",
+    "Giardíase"
+   ],
+   "correta": 0,
+   "explicacao": "A dengue é viral e transmitida pelo Aedes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual é a forma mais eficaz de prevenir o sarampo, doença viral com febre e manchas vermelhas?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Sintomas relatados em uma sala",
+    "colunas": [
+     "Sintoma",
+     "Alunos"
+    ],
+    "linhas": [
+     [
+      "Febre",
+      "5"
+     ],
+     [
+      "Manchas vermelhas",
+      "4"
+     ],
+     [
+      "Tosse",
+      "6"
+     ],
+     [
+      "Olhos vermelhos",
+      "3"
+     ]
+    ]
+   },
+   "alts": [
+    "Tomar antibiótico",
+    "Usar repelente",
+    "Tomar a vacina tríplice viral",
+    "Lavar as frutas"
+   ],
+   "correta": 2,
+   "explicacao": "A vacina previne o sarampo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Lia está com gripe e a mãe quer dar antibiótico. O que se deve dizer?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Caso de Lia",
+    "colunas": [
+     "Dia",
+     "Sintoma"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Febre"
+     ],
+     [
+      "2",
+      "Dor no corpo"
+     ],
+     [
+      "3",
+      "Tosse"
+     ]
+    ]
+   },
+   "alts": [
+    "Antibiótico cura qualquer doença",
+    "Antibiótico não age contra vírus; é preciso orientação médica",
+    "Antibiótico previne a gripe",
+    "Antibiótico mata o vírus mais rápido"
+   ],
+   "correta": 1,
+   "explicacao": "Antibióticos atuam contra bactérias."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual medida evita a dengue no quintal?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Vistoria do quintal",
+    "colunas": [
+     "Local",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Pneu velho",
+      "Com água"
+     ],
+     [
+      "Vaso de planta",
+      "Prato com água"
+     ],
+     [
+      "Caixa d’água",
+      "Tampada"
+     ],
+     [
+      "Ralo",
+      "Limpo"
+     ]
+    ]
+   },
+   "alts": [
+    "Usar antibiótico",
+    "Deixar os pneus ao sol sem esvaziar",
+    "Acender fogueira ao entardecer",
+    "Retirar a água acumulada em pneus e pratos de vasos"
+   ],
+   "correta": 3,
+   "explicacao": "Sem água parada não há criadouro."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um bairro teve queda nos casos de dengue em 2025 após mutirões de limpeza. Qual conclusão é mais adequada?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Casos de dengue no bairro",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "2023",
+      "valor": 120
+     },
+     {
+      "rotulo": "2024",
+      "valor": 480
+     },
+     {
+      "rotulo": "2025",
+      "valor": 90
+     }
+    ]
+   },
+   "alts": [
+    "A dengue foi erradicada",
+    "Só a vacina explica a queda",
+    "A queda é compatível com a eliminação de criadouros, mas outros fatores também influenciam",
+    "O mosquito deixou de transmitir"
+   ],
+   "correta": 2,
+   "explicacao": "Prevenção ajuda, mas há outros fatores."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite uma doença causada por vírus.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Dengue, gripe, sarampo, febre amarela ou AIDS.",
+   "conceitos": [
+    "doença viral"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Como o vírus da dengue é transmitido?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Pela picada da fêmea do mosquito Aedes aegypti infectada.",
+   "conceitos": [
+    "mosquito Aedes",
+    "picada"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Carlos teve dengue em 2022 e de novo em 2024. Como isso é possível?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Histórico de Carlos",
+    "colunas": [
+     "Ano",
+     "Dengue"
+    ],
+    "linhas": [
+     [
+      "2022",
+      "Sorotipo 1"
+     ],
+     [
+      "2024",
+      "Sorotipo 2"
+     ]
+    ]
+   },
+   "ref": "Existem quatro sorotipos; a imunidade vale só para o tipo que ele já teve.",
+   "conceitos": [
+    "sorotipos",
+    "imunidade específica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Como tampar caixas d’água ajuda a prevenir a dengue?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Ciclo do mosquito",
+    "etapas": [
+     "Ovo",
+     "Larva",
+     "Pupa",
+     "Adulto"
+    ]
+   },
+   "ref": "Impede a fêmea de pôr ovos na água; sem água parada, ovos e larvas não se desenvolvem.",
+   "conceitos": [
+    "criadouro",
+    "ciclo do mosquito"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que o preservativo previne o HIV e um abraço não transmite?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dúvidas da turma",
+    "colunas": [
+     "Pergunta",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Abraço"
+     ],
+     [
+      "2",
+      "Compartilhar copo"
+     ],
+     [
+      "3",
+      "Relação sexual"
+     ]
+    ]
+   },
+   "ref": "O HIV passa por fluidos como sêmen e sangue; o preservativo é barreira, e abraço não troca fluidos.",
+   "conceitos": [
+    "fluidos",
+    "barreira",
+    "sem contato com fluidos"
+   ]
+  }
+ ],
+ "4B|7º ANO|13": [
+  {
+   "tipo": "obj",
+   "enunciado": "O que a vacina faz no corpo?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Carteira de vacinação de Bia",
+    "colunas": [
+     "Vacina",
+     "Dose"
+    ],
+    "linhas": [
+     [
+      "Tríplice viral",
+      "1ª"
+     ],
+     [
+      "Poliomielite",
+      "3ª"
+     ],
+     [
+      "Hepatite B",
+      "3ª"
+     ]
+    ]
+   },
+   "alts": [
+    "Mata os microrganismos do sangue",
+    "Cura a doença já instalada",
+    "Estimula as defesas a produzir anticorpos sem causar a doença",
+    "Dá defesa pronta por alimentos"
+   ],
+   "correta": 2,
+   "explicacao": "A vacina treina o sistema imunológico."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual doença que causa paralisia foi eliminada do Brasil pela vacina da “gotinha”?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Crianças vacinadas na UBS (em cada 100)",
+    "unidade": "crianças",
+    "itens": [
+     {
+      "rotulo": "Ano 1",
+      "valor": 95
+     },
+     {
+      "rotulo": "Ano 3",
+      "valor": 88
+     },
+     {
+      "rotulo": "Ano 5",
+      "valor": 80
+     }
+    ]
+   },
+   "alts": [
+    "Poliomielite",
+    "Dengue",
+    "Gripe",
+    "Catapora"
+   ],
+   "correta": 0,
+   "explicacao": "A pólio foi eliminada por vacinação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Chegou à escola um aluno com sarampo. Em qual turma o vírus se espalharia com mais facilidade?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Alunos vacinados por turma",
+    "colunas": [
+     "Turma",
+     "Vacinados (%)"
+    ],
+    "linhas": [
+     [
+      "7A",
+      "96"
+     ],
+     [
+      "7B",
+      "62"
+     ],
+     [
+      "7C",
+      "90"
+     ]
+    ]
+   },
+   "alts": [
+    "7A, onde há mais vacinados",
+    "7C, onde há menos alunos",
+    "Em todas igualmente",
+    "7B, onde há menos vacinados"
+   ],
+   "correta": 3,
+   "explicacao": "Menor cobertura facilita a circulação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Famílias que atrasam ou recusam vacinas, mesmo com o posto aberto, mostram:",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Crianças vacinadas na UBS por ano",
+    "unidade": "crianças",
+    "itens": [
+     {
+      "rotulo": "2019",
+      "valor": 480
+     },
+     {
+      "rotulo": "2021",
+      "valor": 390
+     },
+     {
+      "rotulo": "2023",
+      "valor": 310
+     }
+    ]
+   },
+   "alts": [
+    "Imunidade coletiva",
+    "Epidemia",
+    "Hesitação vacinal",
+    "Erradicação"
+   ],
+   "correta": 2,
+   "explicacao": "A hesitação vacinal reduz a cobertura."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Por que a queda da vacinação pode fazer o sarampo voltar?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Casos de sarampo no bairro",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "2021",
+      "valor": 0
+     },
+     {
+      "rotulo": "2023",
+      "valor": 2
+     },
+     {
+      "rotulo": "2025",
+      "valor": 14
+     }
+    ]
+   },
+   "alts": [
+    "Com menos pessoas imunes, o vírus circula mais",
+    "O vírus ficou mais fraco",
+    "As pessoas ficaram mais resistentes",
+    "A doença só afeta adultos"
+   ],
+   "correta": 0,
+   "explicacao": "Menos imunes, mais circulação."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite uma doença que a vacina previne.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Sarampo, poliomielite, hepatite B, gripe ou outras.",
+   "conceitos": [
+    "doença prevenida"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que é imunidade coletiva?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Proteção da comunidade quando muitas pessoas estão imunes, dificultando a circulação do agente.",
+   "conceitos": [
+    "muitos imunizados",
+    "menor circulação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que vacinar protege também um bebê de 2 meses que ainda não pode se vacinar?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Pessoas da família",
+    "colunas": [
+     "Pessoa",
+     "Idade",
+     "Vacinada"
+    ],
+    "linhas": [
+     [
+      "Mãe",
+      "35 anos",
+      "Sim"
+     ],
+     [
+      "Pai",
+      "38 anos",
+      "Sim"
+     ],
+     [
+      "Bebê",
+      "2 meses",
+      "Não"
+     ],
+     [
+      "Avó",
+      "70 anos",
+      "Sim"
+     ]
+    ]
+   },
+   "ref": "Quem está vacinado não adoece nem transmite, reduzindo a chance de o vírus chegar ao bebê.",
+   "conceitos": [
+    "imunidade coletiva",
+    "redução da transmissão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Explique por que a vacinação é uma ação de saúde coletiva e não só individual.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Casos de sarampo no bairro",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Antes da campanha",
+      "valor": 30
+     },
+     {
+      "rotulo": "Depois da campanha",
+      "valor": 3
+     }
+    ]
+   },
+   "ref": "Além de proteger quem toma, a vacina reduz a circulação do vírus e protege toda a comunidade.",
+   "conceitos": [
+    "proteção individual",
+    "proteção coletiva"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um colega diz que a vacina causa a doença. Responda com argumento científico.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Reações após 100 doses na UBS",
+    "colunas": [
+     "Reação",
+     "Pessoas"
+    ],
+    "linhas": [
+     [
+      "Dor no local",
+      "20"
+     ],
+     [
+      "Febre baixa",
+      "8"
+     ],
+     [
+      "Manchas leves",
+      "1"
+     ]
+    ]
+   },
+   "ref": "As vacinas usam microrganismos inativados, enfraquecidos ou partes deles, que não causam a doença; podem dar reações leves.",
+   "conceitos": [
+    "agente inativado ou enfraquecido",
+    "reações leves"
+   ]
+  }
+ ],
+ "4B|8º ANO|10": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual material é usado dentro dos fios por conduzir bem a eletricidade?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem do circuito de teste",
+    "etapas": [
+     "Ligar a pilha ao fio",
+     "Ligar o fio à lâmpada",
+     "Encostar o material nos dois fios",
+     "Observar a lâmpada"
+    ]
+   },
+   "alts": [
+    "Borracha",
+    "Cobre",
+    "Plástico",
+    "Vidro"
+   ],
+   "correta": 1,
+   "explicacao": "O cobre é bom condutor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Por que o fio elétrico tem revestimento de plástico?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Fio cortado",
+    "colunas": [
+     "Parte",
+     "Aparência"
+    ],
+    "linhas": [
+     [
+      "Interna",
+      "Metálica e brilhante"
+     ],
+     [
+      "Externa",
+      "Colorida e flexível"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque conduz melhor",
+    "Porque deixa o fio mais pesado",
+    "Porque esquenta o cobre",
+    "Porque o plástico é isolante e evita choques e curtos"
+   ],
+   "correta": 3,
+   "explicacao": "Isolante impede a passagem de corrente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "De qual material devem ser as luvas de um eletricista?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Ferramentas do eletricista",
+    "colunas": [
+     "Ferramenta",
+     "Parte que se segura"
+    ],
+    "linhas": [
+     [
+      "Alicate",
+      "Cabo"
+     ],
+     [
+      "Chave de fenda",
+      "Cabo"
+     ],
+     [
+      "Fita",
+      "Rolo"
+     ]
+    ]
+   },
+   "alts": [
+    "Borracha",
+    "Alumínio",
+    "Ferro",
+    "Cobre"
+   ],
+   "correta": 0,
+   "explicacao": "Borracha é isolante."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Por que a água com sais conduz corrente e a água pura quase não?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Teste com lâmpada",
+    "colunas": [
+     "Líquido",
+     "Brilho da lâmpada"
+    ],
+    "linhas": [
+     [
+      "Água destilada",
+      "Nenhum"
+     ],
+     [
+      "Água com sal",
+      "Forte"
+     ],
+     [
+      "Óleo",
+      "Nenhum"
+     ]
+    ]
+   },
+   "alts": [
+    "A água pura é mais quente",
+    "O sal esfria a água",
+    "Os sais dissolvidos formam íons que conduzem a corrente",
+    "O sal cria elétrons novos"
+   ],
+   "correta": 2,
+   "explicacao": "Íons carregam a corrente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois fios com a mesma pilha: o de cobre acende a lâmpada e o de vidro não. Por quê?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação de dois fios",
+    "colunas": [
+     "Fio",
+     "Lâmpada"
+    ],
+    "linhas": [
+     [
+      "Cobre",
+      "Acende"
+     ],
+     [
+      "Vidro",
+      "Não acende"
+     ]
+    ]
+   },
+   "alts": [
+    "O vidro tem mais elétrons livres",
+    "No metal há elétrons livres; no vidro eles ficam presos aos átomos",
+    "O cobre é isolante",
+    "A pilha só funciona com vidro"
+   ],
+   "correta": 1,
+   "explicacao": "Elétrons livres permitem a corrente."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite dois materiais isolantes elétricos.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Borracha, plástico, vidro, PVC ou cerâmica.",
+   "conceitos": [
+    "isolantes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite um material condutor e um uso.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Cobre nos fios (ou alumínio, ferro).",
+   "conceitos": [
+    "condutor",
+    "uso"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que, no banheiro, a fiação precisa de revestimento isolante e proteção contra umidade?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Casos de estudo",
+    "colunas": [
+     "Cômodo",
+     "Condição"
+    ],
+    "linhas": [
+     [
+      "Varanda",
+      "Sol e chuva"
+     ],
+     [
+      "Área interna",
+      "Seco"
+     ],
+     [
+      "Cozinha",
+      "Calor e respingos"
+     ],
+     [
+      "Banheiro",
+      "Vapor e água"
+     ]
+    ]
+   },
+   "ref": "A água com sais conduz eletricidade; sem proteção, a corrente pode passar pelo corpo e causar choque.",
+   "conceitos": [
+    "água com sais conduz",
+    "risco de choque"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que são elétrons livres e por que os metais conduzem corrente?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Teste com pilha e lâmpada",
+    "colunas": [
+     "Material",
+     "Lâmpada"
+    ],
+    "linhas": [
+     [
+      "Ferro",
+      "Acende"
+     ],
+     [
+      "Cerâmica",
+      "Não acende"
+     ]
+    ]
+   },
+   "ref": "São elétrons que se movem entre os átomos do metal; ao se moverem em conjunto formam a corrente.",
+   "conceitos": [
+    "elétrons livres",
+    "movimento ordenado"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aluno diz: se é água, sempre conduz. Corrija usando água pura e com sais.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: corrente medida",
+    "unidade": "mA",
+    "itens": [
+     {
+      "rotulo": "Água destilada",
+      "valor": 0
+     },
+     {
+      "rotulo": "Água da torneira",
+      "valor": 3
+     },
+     {
+      "rotulo": "Água salgada",
+      "valor": 20
+     }
+    ]
+   },
+   "ref": "A água pura conduz muito mal; conduz quando tem sais dissolvidos que formam íons, como a da torneira.",
+   "conceitos": [
+    "água pura",
+    "íons dos sais"
+   ]
+  }
+ ],
+ "4B|8º ANO|20": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual unidade aparece na conta de luz para medir o consumo de energia?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Conta de luz da casa",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Mês",
+      "Junho"
+     ],
+     [
+      "Consumo",
+      "220"
+     ],
+     [
+      "Bandeira",
+      "Verde"
+     ]
+    ]
+   },
+   "alts": [
+    "Quilowatt-hora (kWh)",
+    "Quilograma (kg)",
+    "Litro (L)",
+    "Metro (m)"
+   ],
+   "correta": 0,
+   "explicacao": "Consumo se mede em kWh."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual destes aparelhos tem a maior potência?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Aparelhos da casa-modelo",
+    "colunas": [
+     "Aparelho",
+     "Horas de uso por dia"
+    ],
+    "linhas": [
+     [
+      "Chuveiro elétrico",
+      "0,5"
+     ],
+     [
+      "Geladeira",
+      "24"
+     ],
+     [
+      "Televisão",
+      "4"
+     ],
+     [
+      "Lâmpadas",
+      "5"
+     ]
+    ]
+   },
+   "alts": [
+    "Geladeira",
+    "Chuveiro elétrico",
+    "Televisão",
+    "Lâmpadas"
+   ],
+   "correta": 1,
+   "explicacao": "O chuveiro tem potência de milhares de watts."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma lâmpada de 100 W fica ligada 5 horas por dia durante 30 dias. Quanto consome?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Lâmpada da sala",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Potência",
+      "100 W"
+     ],
+     [
+      "Uso",
+      "5 h por dia"
+     ],
+     [
+      "Dias",
+      "30"
+     ]
+    ]
+   },
+   "alts": [
+    "0,5 kWh",
+    "5 kWh",
+    "15 kWh",
+    "150 kWh"
+   ],
+   "correta": 2,
+   "explicacao": "0,1 kW x 150 h = 15 kWh."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um chuveiro de 5 kW passa de 30 para 15 minutos de uso por dia. Quanto se economiza por dia?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Perfis de uso",
+    "colunas": [
+     "Perfil",
+     "Tempo no banho"
+    ],
+    "linhas": [
+     [
+      "Padrão",
+      "30 min"
+     ],
+     [
+      "Econômico",
+      "15 min"
+     ]
+    ]
+   },
+   "alts": [
+    "0,25 kWh",
+    "2,5 kWh",
+    "5 kWh",
+    "1,25 kWh"
+   ],
+   "correta": 3,
+   "explicacao": "5 kW x 0,25 h = 1,25 kWh."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Com os dados, qual afirmação é correta?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Consumo do mês por perfil",
+    "unidade": "kWh",
+    "itens": [
+     {
+      "rotulo": "Padrão",
+      "valor": 300
+     },
+     {
+      "rotulo": "Econômico",
+      "valor": 210
+     }
+    ]
+   },
+   "alts": [
+    "O perfil econômico gastou 90 kWh a menos, cerca de 30%",
+    "O perfil econômico gastou 10 kWh a menos",
+    "O consumo foi igual",
+    "O perfil econômico gastou metade"
+   ],
+   "correta": 0,
+   "explicacao": "300-210=90, que é 30% de 300."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite um hábito que ajuda a economizar energia elétrica em casa.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Apagar luzes ao sair, banho mais curto, desligar aparelhos da tomada ou usar lâmpadas LED.",
+   "conceitos": [
+    "hábito econômico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Qual a unidade usada na conta de luz para o consumo?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Quilowatt-hora (kWh).",
+   "conceitos": [
+    "kWh"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma TV de 100 W fica ligada 4 horas por dia. Quantos kWh consome em 30 dias?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "TV da sala",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Potência",
+      "100 W"
+     ],
+     [
+      "Uso",
+      "4 h por dia"
+     ],
+     [
+      "Dias",
+      "30"
+     ]
+    ]
+   },
+   "ref": "12 kWh (0,1 kW x 120 h).",
+   "conceitos": [
+    "energia = potência x tempo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A geladeira (150 W), ligada o dia todo, ou o chuveiro (5 000 W), por 0,5 h, consome mais por dia? Justifique.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Aparelhos",
+    "colunas": [
+     "Aparelho",
+     "Potência",
+     "Horas por dia"
+    ],
+    "linhas": [
+     [
+      "Geladeira",
+      "150 W",
+      "24"
+     ],
+     [
+      "Chuveiro",
+      "5 000 W",
+      "0,5"
+     ]
+    ]
+   },
+   "ref": "Geladeira: 3,6 kWh; chuveiro: 2,5 kWh. A geladeira consome mais pelo tempo ligada: energia = potência x tempo.",
+   "conceitos": [
+    "potência x tempo",
+    "comparar consumos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em qual cômodo houve maior redução do perfil padrão para o econômico? Que ação poderia explicar?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Consumo por cômodo",
+    "colunas": [
+     "Cômodo",
+     "Padrão (kWh)",
+     "Econômico (kWh)"
+    ],
+    "linhas": [
+     [
+      "Banheiro",
+      "120",
+      "60"
+     ],
+     [
+      "Cozinha",
+      "80",
+      "70"
+     ],
+     [
+      "Sala",
+      "50",
+      "35"
+     ]
+    ]
+   },
+   "ref": "No banheiro (60 kWh a menos); banhos mais curtos ou chuveiro em modo econômico.",
+   "conceitos": [
+    "banheiro",
+    "redução de 60 kWh",
+    "ação coerente"
+   ]
+  }
+ ],
+ "4B|9º ANO|20": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual foi o primeiro satélite artificial a orbitar a Terra, em 1957?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Marcos da exploração espacial",
+    "colunas": [
+     "Ano",
+     "Ocorrido"
+    ],
+    "linhas": [
+     [
+      "1961",
+      "Primeiro humano no espaço"
+     ],
+     [
+      "1969",
+      "Chegada à Lua"
+     ]
+    ]
+   },
+   "alts": [
+    "Apollo 11",
+    "Amazônia-1",
+    "Sputnik 1",
+    "Perseverance"
+   ],
+   "correta": 2,
+   "explicacao": "O Sputnik 1 abriu a era espacial."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Quem foi a primeira mulher a ir ao espaço, em 1963?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Missões de 1961 a 1963",
+    "colunas": [
+     "Ano",
+     "Missão"
+    ],
+    "linhas": [
+     [
+      "1961",
+      "Vostok 1"
+     ],
+     [
+      "1963",
+      "Vostok 6"
+     ]
+    ]
+   },
+   "alts": [
+    "Valentina Tereshkova",
+    "Marie Curie",
+    "Neil Armstrong",
+    "Yuri Gagarin"
+   ],
+   "correta": 0,
+   "explicacao": "Tereshkova voou na Vostok 6."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual tecnologia do dia a dia depende de satélites em órbita?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Uso do celular de Ana",
+    "colunas": [
+     "Atividade",
+     "Recurso"
+    ],
+    "linhas": [
+     [
+      "Ir à escola",
+      "Mapa"
+     ],
+     [
+      "Ver o tempo",
+      "Previsão"
+     ],
+     [
+      "Falar com a avó",
+      "Chamada de vídeo"
+     ]
+    ]
+   },
+   "alts": [
+    "A lanterna de pilha",
+    "A localização por GPS",
+    "O relógio de ponteiros",
+    "O ventilador"
+   ],
+   "correta": 1,
+   "explicacao": "O GPS usa satélites."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual satélite foi projetado e operado pelo Brasil para observar a Amazônia, lançado em 2021?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Satélites do Brasil",
+    "colunas": [
+     "Satélite",
+     "Uso"
+    ],
+    "linhas": [
+     [
+      "SGDC",
+      "Comunicações"
+     ],
+     [
+      "CBERS",
+      "Imagens da Terra"
+     ]
+    ]
+   },
+   "alts": [
+    "Sputnik 1",
+    "Perseverance",
+    "Apollo 11",
+    "Amazônia-1"
+   ],
+   "correta": 3,
+   "explicacao": "Amazônia-1 é brasileiro."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Com base nos dados, por que pessoas não poderiam sair sem equipamento em Marte?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Terra e Marte",
+    "colunas": [
+     "Característica",
+     "Terra",
+     "Marte"
+    ],
+    "linhas": [
+     [
+      "Temperatura média",
+      "15 °C",
+      "-60 °C"
+     ],
+     [
+      "Oxigênio no ar",
+      "21%",
+      "0,1%"
+     ],
+     [
+      "Gravidade",
+      "9,8 m/s²",
+      "3,7 m/s²"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque lá a gravidade é maior",
+    "Porque o ar tem mais oxigênio",
+    "Frio extremo e ar com pouco oxigênio exigem trajes e abrigos",
+    "Porque lá faz mais calor"
+   ],
+   "correta": 2,
+   "explicacao": "Temperatura baixa e pouco O2."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Quem foi o primeiro ser humano a ir ao espaço?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Yuri Gagarin, em 1961.",
+   "conceitos": [
+    "Gagarin"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que é a ISS?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": null,
+   "ref": "Estação Espacial Internacional: laboratório em órbita onde astronautas vivem e pesquisam.",
+   "conceitos": [
+    "laboratório orbital"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite duas tecnologias do cotidiano ligadas à pesquisa espacial e explique uma.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Objetos no quarto de Lia",
+    "colunas": [
+     "Objeto",
+     "Uso"
+    ],
+    "linhas": [
+     [
+      "Celular",
+      "Mapa e chamadas"
+     ],
+     [
+      "Óculos de sol",
+      "Proteger os olhos"
+     ],
+     [
+      "Calculadora solar",
+      "Funciona com luz"
+     ],
+     [
+      "Caneta",
+      "Escrever"
+     ]
+    ]
+   },
+   "ref": "GPS, filtro UV e painéis solares; por exemplo, painéis solares geram eletricidade a partir da luz.",
+   "conceitos": [
+    "spin-offs",
+    "exemplo explicado"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que enviar rovers a Marte antes de humanos?",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados da missão",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Viagem",
+      "7 meses"
+     ],
+     [
+      "Sinal de rádio",
+      "5 a 20 minutos"
+     ],
+     [
+      "Duração",
+      "2 anos"
+     ]
+    ]
+   },
+   "ref": "Rovers coletam dados sem risco de vida e com menor custo, preparando futuras missões.",
+   "conceitos": [
+    "menor risco",
+    "coleta de dados"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite uma motivação e um risco de colonizar Marte.",
+   "comando": "Responda em uma ou duas frases.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de Marte",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Distância média da Terra",
+      "225 milhões de km"
+     ],
+     [
+      "Radiação",
+      "Alta"
+     ],
+     [
+      "Gravidade",
+      "3,7 m/s²"
+     ]
+    ]
+   },
+   "ref": "Motivação: ampliar o conhecimento ou obter recursos. Risco: radiação, ar sem oxigênio, saúde e custo.",
+   "conceitos": [
+    "motivação",
+    "risco"
+   ]
+  }
+ ]
+}

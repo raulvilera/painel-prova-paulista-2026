@@ -1,0 +1,82 @@
+{
+ "7º ANO|2|Reconhecer o efeito estufa como fenômeno natural e os impactos das ações humanas que o intensificam.": {
+  "serie": "7",
+  "desc": "Reconhecer o efeito estufa como fenômeno natural e os impactos das ações humanas que o intensificam.",
+  "hab": "EF07CI13A",
+  "habTxt": "Identificar o efeito estufa como fenômeno natural e as ações humanas que o intensificam (AE7).",
+  "nome": "Estufa no copo",
+  "concreta": "Colocar ao sol dois copos com a mesma água, um coberto com saco plástico; após 15 min comparar a temperatura: o coberto retém mais calor. É um modelo de como certos gases da atmosfera retêm calor."
+ },
+ "8º ANO|1|Associar as principais ISTs (HPV, Sífilis, HIV/Aids) aos seus sintomas, formas de transmissão e métodos de prevenção.": {
+  "serie": "8",
+  "desc": "Associar as principais ISTs (HPV, Sífilis, HIV/Aids) aos seus sintomas, formas de transmissão e métodos de prevenção.",
+  "hab": "EF08CI10, EF08CI09",
+  "habTxt": "Analisar formas de prevenção de ISTs e da gravidez precoce, reconhecendo práticas de saúde sexual e reprodutiva (AE3).",
+  "nome": "Mito ou verdade? ISTs",
+  "concreta": "Leitura de cartões (ex.: 'HIV passa por abraço ou talher' – falso; 'vacina do HPV é gratuita no SUS' – verdadeiro) com votação e explicação do professor. Dúvidas vão para a caixa anônima."
+ },
+ "8º ANO|3|Diferenciar os movimentos da Terra (rotação, translação e/ou precessão) com base em suas características e efeitos.": {
+  "serie": "8",
+  "desc": "Diferenciar os movimentos da Terra (rotação, translação e/ou precessão) com base em suas características e efeitos.",
+  "hab": "EF08CI12, EF08CI13",
+  "habTxt": "Explicar fenômenos astronômicos cíclicos pelos movimentos de Sol, Terra e Lua e pela inclinação do eixo terrestre (AE8).",
+  "nome": "Gira, roda e bamboleia",
+  "concreta": "Com lanterna e bola, mostra-se a rotação (24 h, dia e noite) e a translação (≈365 dias, ano). O pião girando mostra o 'bamboleio' do eixo: a precessão (≈26 mil anos)."
+ },
+ "9º ANO|1|Relacionar a organização dos átomos aos estados físicos da matéria e suas propriedades.": {
+  "serie": "9",
+  "desc": "Relacionar a organização dos átomos aos estados físicos da matéria e suas propriedades.",
+  "hab": "EF09CI01",
+  "habTxt": "Explicar mudanças de estado físico pela estrutura molecular, organização da matéria e temperaturas de fusão e ebulição (AE3).",
+  "nome": "Dança das partículas",
+  "concreta": "Bolinhas na caixa: bem juntas e só tremendo (sólido), deslizando (líquido) e espalhadas sacudindo forte (gás). Alunos também 'encenam' as partículas. O gelo derretendo no copo serve de exemplo."
+ },
+ "9º ANO|3|Relacionar práticas humanas às fontes de poluição da água e às alterações na qualidade dos ambientes aquáticos.": {
+  "serie": "9",
+  "desc": "Relacionar práticas humanas às fontes de poluição da água e às alterações na qualidade dos ambientes aquáticos.",
+  "hab": "EF09CI13, EF09CI12B",
+  "habTxt": "Propor iniciativas para problemas ambientais com consumo consciente e uso sustentável de recursos, considerando UCs e bacias hidrográficas (AE11).",
+  "nome": "Investigando o rio",
+  "concreta": "Em copos, simulam fontes de poluição (terra = erosão, óleo = descarte doméstico, detergente = esgoto) e observam turbidez, mancha de óleo e espuma contra papel branco."
+ },
+ "4B|6º ANO|14": {
+  "serie": "6",
+  "desc": "Finalizar a mão biônica seguindo roteiro ilustrado, relacionando o processo à importância da acessibilidade.",
+  "hab": "EF06CI09",
+  "habTxt": "Tendões representados por barbantes; movimentos voluntários da mão; próteses, acessibilidade, inclusão e limites do modelo.",
+  "nome": "Mão biônica: finalização",
+  "concreta": "Retomar checklist, passar barbantes (tendões), acoplar à mão e testar segurando objetos; reflexão escrita sobre acessibilidade."
+ },
+ "4B|7º ANO|8": {
+  "serie": "7",
+  "desc": "Explicar a importância do sistema imune para a saúde, discutindo os impactos de sua ausência.",
+  "hab": "EF07CI10B",
+  "habTxt": "Sistema imunológico; órgãos linfoides; medula óssea e leucócitos; imunidade inata (barreiras) e adaptativa (linfócitos B e T, memória); higiene de ferimentos.",
+  "nome": "Sistema imune humano: principais características",
+  "concreta": "Para começar (como o corpo se protege?); Pause e responda; Na prática: tabela comparativa entre imunidade inata e adaptativa."
+ },
+ "4B|8º ANO|2": {
+  "serie": "8",
+  "desc": "Diferenciar fontes renováveis e não renováveis, discutindo impactos, importância estratégica e a necessidade da transição energética.",
+  "hab": "EF08CI01; EF08CI06B",
+  "habTxt": "Fontes renováveis e não renováveis; impactos dos combustíveis fósseis; matriz energética mundial e brasileira; matriz elétrica.",
+  "nome": "Fontes de energia",
+  "concreta": "Leitura de texto do Jornal da USP sobre transição energética e respostas sobre impactos, cenários futuros e desafios."
+ },
+ "4B|8º ANO|15": {
+  "serie": "8",
+  "desc": "Compreender a função dos componentes de um circuito elétrico por meio de simulação.",
+  "hab": "EF08CI02",
+  "habTxt": "Bateria, resistor, fio, interruptor, amperímetro e voltímetro; circuito simples e em série; Lei de Ohm aplicada; curto-circuito.",
+  "nome": "Simulador de um circuito elétrico – Parte 1",
+  "concreta": "Montagem de circuitos no simulador PhET, alterando e removendo componentes e medindo corrente e tensão."
+ },
+ "4B|9º ANO|13": {
+  "serie": "9",
+  "desc": "Explicar as principais etapas do ciclo de vida de uma estrela, do nascimento na nebulosa ao destino final.",
+  "hab": "EF09CI17",
+  "habTxt": "Nebulosas e protoestrelas; fusão nuclear H→He; massa x tempo de vida e cor; gigante vermelha, supernova, anã branca, estrela de nêutrons, buraco negro.",
+  "nome": "Ciclo de vida das estrelas",
+  "concreta": "Discutem a origem da energia do Sol, respondem teste sobre fusão nuclear e leem texto da Fiocruz respondendo questões sobre formação e destino das estrelas."
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "6º ANO|3|Associar células, tecidos, órgãos e sistemas aos níveis de organização dos seres vivos.": {
+  "serie": "6",
+  "desc": "Associar células, tecidos, órgãos e sistemas aos níveis de organização dos seres vivos.",
+  "hab": "EF06CI06",
+  "habTxt": "Analisar a organização de células em tecidos, órgãos e sistemas nos seres multicelulares (AE6).",
+  "nome": "Zoom no corpo",
+  "concreta": "Encaixar potes de tamanhos diferentes (célula dentro de tecido, dentro de órgão…) e pendurar no varal o 'zoom' do coração: célula muscular → tecido muscular → coração → sistema circulatório → organismo."
+ },
+ "7º ANO|3|Diferenciar Unidades de Conservação de proteção integral e de uso sustentável com base em seus objetivos e formas de uso.": {
+  "serie": "7",
+  "desc": "Diferenciar Unidades de Conservação de proteção integral e de uso sustentável com base em seus objetivos e formas de uso.",
+  "hab": "EF07CI07",
+  "habTxt": "Caracterizar ecossistemas/biomas brasileiros e impactos de catástrofes naturais ou alterações em seus componentes (AE10).",
+  "nome": "Parque ou reserva?",
+  "concreta": "O professor mostra fotos do Parque Estadual da Serra do Mar (proteção integral) e da APA Cananéia-Iguape-Peruíbe (uso sustentável); para cada card de atividade, a turma decide em qual delas ela é permitida."
+ },
+ "8º ANO|2|Associar os efeitos da poluição atmosférica na saúde do sistema respiratório.": {
+  "serie": "8",
+  "desc": "Associar os efeitos da poluição atmosférica na saúde do sistema respiratório.",
+  "hab": "EF05CI06B, EF08CI08B",
+  "habTxt": "Explicar o funcionamento do sistema respiratório e fatores que o comprometem, como poluição e doenças (AE6).",
+  "nome": "Filtro do ar",
+  "concreta": "Coladas fitas adesivas em locais da escola (janela da rua, pátio, sala), coletadas na aula e observadas com lupa sobre papel branco: a sujeira mostra partículas no ar que respiramos."
+ },
+ "9º ANO|1|Identificar os modelos atômicos considerando sua historicidade e pesquisa científica.": {
+  "serie": "9",
+  "desc": "Identificar os modelos atômicos considerando sua historicidade e pesquisa científica.",
+  "hab": "EF09CI03",
+  "habTxt": "Identificar modelos da estrutura da matéria, a evolução histórica dos modelos atômicos e a classificação periódica (AE2).",
+  "nome": "Linha do tempo do átomo",
+  "concreta": "Grupos montam com massinha: esfera maciça (Dalton), massa com 'passas' (Thomson), núcleo pequeno com elétrons ao redor (Rutherford) e elétrons em camadas (Bohr), e os colocam numa linha do tempo."
+ },
+ "9º ANO|2|Aplicar os mecanismos da hereditariedade na explicação da transmissão das características genéticas segundo as Leis de Mendel e outros padrões de dominância.": {
+  "serie": "9",
+  "desc": "Aplicar os mecanismos da hereditariedade na explicação da transmissão das características genéticas segundo as Leis de Mendel e outros padrões de dominância.",
+  "hab": "EF09CI09",
+  "habTxt": "Explicar a transmissão de características hereditárias pelas ideias de Mendel, usando heredogramas (AE8).",
+  "nome": "Moeda genética",
+  "concreta": "Cada dupla tem 2 'pais' Aa (moedas: cara = A, coroa = a). Lançam as duas moedas 20 vezes, anotam os filhos e comparam com o esperado 1 AA : 2 Aa : 1 aa."
+ },
+ "4B|6º ANO|7": {
+  "serie": "6",
+  "desc": "Justificar, com simuladores, a resposta do olho humano à luz de diferentes comprimentos de onda.",
+  "hab": "EF06CI08",
+  "habTxt": "Luz policromática e monocromática; filtros de cor; combinação aditiva RGB; percepção de cores pela retina e cérebro.",
+  "nome": "Simulador: funcionamento do olho humano",
+  "concreta": "Simulador PhET Color Vision: testes com uma lâmpada e filtros e com lâmpadas RGB; registro em tabelas e questões."
+ },
+ "4B|7º ANO|3": {
+  "serie": "7",
+  "desc": "Explicar e diferenciar as principais doenças virais, com destaque para doenças tropicais e ISTs, e suas formas de prevenção.",
+  "hab": "EF07CI10A, EF08CI10B",
+  "habTxt": "Infecção viral e Virologia; dengue e sorotipos; gripe; febre amarela (ciclos silvestre e urbano); sarampo; HIV/AIDS; prevenção e vacinação.",
+  "nome": "Doenças causadas por vírus",
+  "concreta": "Para começar (zoonoses e aquecimento global); Pause e responda; Na prática: análise de dados de dengue em SP 2024-2025 e ações de prevenção."
+ },
+ "4B|7º ANO|13": {
+  "serie": "7",
+  "desc": "Defender a vacinação como ação de saúde individual, coletiva e ambiental.",
+  "hab": "EF07CI09, EF07CI10B",
+  "habTxt": "Queda da vacinação infantil e hesitação vacinal; cobertura vacinal e imunidade coletiva; erradicação da poliomielite; retorno do sarampo; desafios da vacinação.",
+  "nome": "A importância da vacina: reflexão",
+  "concreta": "Relembre (vacinação na infância); Pause e responda; Na prática: notícia e gráfico de casos de sarampo em SP (2018-2026)."
+ },
+ "4B|8º ANO|10": {
+  "serie": "8",
+  "desc": "Explicar e exemplificar materiais condutores e isolantes elétricos e o comportamento dos elétrons em cada um.",
+  "hab": "EF08CI18*",
+  "habTxt": "Fios condutores e revestimento; elétrons livres; isolantes (borracha, plástico, vidro); usos e aplicações; água pura x água com sais; segurança em locais úmidos.",
+  "nome": "Condutores e isolantes",
+  "concreta": "Resolvem estudo de caso: elaboram relatório escolhendo isolantes (plástico, borracha, PVC, cerâmica) para varanda, área interna, cozinha e banheiro."
+ },
+ "4B|8º ANO|20": {
+  "serie": "8",
+  "desc": "Analisar o consumo de energia elétrica de uma residência por meio de um simulador.",
+  "hab": "EF08CI18*; EF08CI03",
+  "habTxt": "Consumo elétrico por aparelho e por cômodo; tempo de uso; comparação entre uso padrão e uso econômico.",
+  "nome": "Simulador: ações de economia de eletricidade",
+  "concreta": "Uso do simulador do Museu Light para comparar perfis de uso padrão e econômico de uma casa-modelo."
+ },
+ "4B|9º ANO|20": {
+  "serie": "9",
+  "desc": "Traçar o histórico e a situação atual da exploração espacial e seus impactos tecnológicos no cotidiano.",
+  "hab": "EF09CI20*",
+  "habTxt": "Sputnik 1, Gagarin, Tereshkova, Apollo 11, ISS, rovers em Marte; Brasil no espaço (SGDC, CBERS, Amazônia-1); mulheres na ciência; spin-offs (GPS, filtro UV, painéis solares).",
+  "nome": "Exploração espacial",
+  "concreta": "Respondem verdadeiro/falso sobre o Sputnik e analisam texto sobre os problemas de colonizar Marte, discutindo motivações e riscos."
+ }
+}

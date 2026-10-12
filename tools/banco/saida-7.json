@@ -1,0 +1,2713 @@
+{
+ "7º ANO|1|Avaliar a qualidade do ar e seus efeitos sobre o ambiente e a saúde.": [
+  {
+   "tipo": "obj",
+   "enunciado": "O ar que respiramos é uma mistura de gases chamada atmosfera.",
+   "comando": "Qual é o gás mais abundante na atmosfera?",
+   "figura": null,
+   "alts": [
+    "Oxigênio",
+    "Nitrogênio",
+    "Gás carbônico",
+    "Hidrogênio"
+   ],
+   "correta": 1,
+   "explicacao": "O nitrogênio forma cerca de 78% do ar; o oxigênio, cerca de 21%."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma conversou sobre o que deixa o ar sujo perto das ruas.",
+   "comando": "Qual destas é uma fonte de partículas no ar causada pela atividade humana?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Dados do experimento: cartão pega-poeira",
+    "etapas": [
+     "Passar vaselina no cartão",
+     "Fixar o cartão em cada local",
+     "Esperar uma semana",
+     "Contar os pontinhos com lupa"
+    ]
+   },
+   "alts": [
+    "Fumaça de ônibus e caminhões",
+    "Pólen das flores",
+    "Vapor de água de uma poça",
+    "Oxigênio liberado pelas árvores"
+   ],
+   "correta": 0,
+   "explicacao": "Veículos queimam combustível e lançam fumaça e partículas; as outras opções são naturais."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma contou os pontinhos de poeira presos na vaselina de cada cartão.",
+   "comando": "Em qual local o ar tinha mais partículas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: pontinhos por cartão",
+    "colunas": [
+     "Local",
+     "Pontinhos contados"
+    ],
+    "linhas": [
+     [
+      "Sala de aula",
+      "9"
+     ],
+     [
+      "Pátio",
+      "21"
+     ],
+     [
+      "Portão perto da rua",
+      "48"
+     ]
+    ]
+   },
+   "alts": [
+    "Sala de aula",
+    "Pátio",
+    "Portão perto da rua",
+    "Todos têm a mesma quantidade"
+   ],
+   "correta": 2,
+   "explicacao": "Quanto mais pontinhos, mais partículas no ar; o maior número foi no portão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Caio tem asma e fica todos os dias esperando o ônibus no portão da escola, perto da rua.",
+   "comando": "O que o ar com muita poeira e fumaça pode causar nele?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: pontinhos por cartão",
+    "unidade": "pontinhos",
+    "itens": [
+     {
+      "rotulo": "Sala de aula",
+      "valor": 9
+     },
+     {
+      "rotulo": "Pátio",
+      "valor": 21
+     },
+     {
+      "rotulo": "Portão",
+      "valor": 48
+     }
+    ]
+   },
+   "alts": [
+    "Respiração mais fácil, pois as partículas filtram o ar",
+    "Mais oxigênio no sangue",
+    "Visão mais nítida",
+    "Mais tosse e irritação nas vias respiratórias"
+   ],
+   "correta": 3,
+   "explicacao": "Partículas irritam nariz, garganta e pulmões e podem piorar a asma."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os cartões ficaram expostos por tempos diferentes. A sala ficou apenas 3 dias.",
+   "comando": "Por que isso atrapalha a comparação entre os locais?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: tempo e pontinhos",
+    "colunas": [
+     "Local",
+     "Dias expostos",
+     "Pontinhos"
+    ],
+    "linhas": [
+     [
+      "Portão",
+      "7",
+      "48"
+     ],
+     [
+      "Pátio",
+      "7",
+      "21"
+     ],
+     [
+      "Sala de aula",
+      "3",
+      "9"
+     ]
+    ]
+   },
+   "alts": [
+    "O cartão da sala pode ter menos pontinhos só por ter ficado menos dias",
+    "O cartão da sala fica mais sujo quando está fechado",
+    "A vaselina muda de cor com o tempo",
+    "O número de dias não altera a quantidade de partículas"
+   ],
+   "correta": 0,
+   "explicacao": "Para comparar, só o local pode mudar; o tempo de exposição deve ser igual."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois alunos conversam sobre o que pode sujar o ar.",
+   "comando": "Cite uma fonte natural e uma fonte humana de partículas no ar.",
+   "figura": null,
+   "ref": "Natural: poeira levantada pelo vento, pólen, cinzas de vulcão. Humana: fumaça de carros, queimadas, fábricas.",
+   "conceitos": [
+    "fonte natural",
+    "fonte humana",
+    "partículas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marina leu que respirar ar com muita poeira e fumaça faz mal.",
+   "comando": "Cite dois problemas de saúde que o ar poluído pode causar.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: pontinhos por cartão",
+    "unidade": "pontinhos",
+    "itens": [
+     {
+      "rotulo": "Sala de aula",
+      "valor": 9
+     },
+     {
+      "rotulo": "Pátio",
+      "valor": 21
+     },
+     {
+      "rotulo": "Portão",
+      "valor": 48
+     }
+    ]
+   },
+   "ref": "Tosse, irritação nos olhos e garganta, crises de asma, bronquite, falta de ar.",
+   "conceitos": [
+    "saúde respiratória",
+    "poluição do ar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A diretora quer diminuir a poeira que entra pelo portão.",
+   "comando": "Sugira duas ações para melhorar o ar perto do portão.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: pontinhos por cartão",
+    "colunas": [
+     "Local",
+     "Pontinhos contados"
+    ],
+    "linhas": [
+     [
+      "Sala de aula",
+      "9"
+     ],
+     [
+      "Pátio",
+      "21"
+     ],
+     [
+      "Portão perto da rua",
+      "48"
+     ]
+    ]
+   },
+   "ref": "Plantar árvores ou arbustos como barreira, evitar motores ligados parados, molhar o chão de terra, cobrir áreas sem calçamento.",
+   "conceitos": [
+    "reduzir fontes",
+    "barreira vegetal"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O cartão do portão foi contado em uma semana de chuva e em uma semana seca.",
+   "comando": "Por que o resultado de uma semana não representa o ano todo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: portão em duas semanas",
+    "colunas": [
+     "Semana",
+     "Pontinhos"
+    ],
+    "linhas": [
+     [
+      "Semana 1 (com chuva)",
+      "15"
+     ],
+     [
+      "Semana 2 (sem chuva)",
+      "52"
+     ]
+    ]
+   },
+   "ref": "A qualidade do ar muda com o clima; a chuva limpa o ar e na seca há mais poeira. Por isso são necessárias várias medições.",
+   "conceitos": [
+    "variação",
+    "clima",
+    "repetição das medidas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A sala de aula e o portão ficam na mesma escola, mas os cartões ficaram muito diferentes.",
+   "comando": "Explique por que a sala teve menos partículas que o portão.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: pontinhos por cartão",
+    "unidade": "pontinhos",
+    "itens": [
+     {
+      "rotulo": "Sala de aula",
+      "valor": 9
+     },
+     {
+      "rotulo": "Portão",
+      "valor": 48
+     }
+    ]
+   },
+   "ref": "A sala fica longe da rua, que é a fonte de fumaça e poeira, e é mais protegida do vento; o portão recebe diretamente as partículas dos veículos.",
+   "conceitos": [
+    "distância da fonte",
+    "ambiente protegido",
+    "fontes de poluição"
+   ]
+  }
+ ],
+ "8º ANO|3|Analisar o papel da inclinação do eixo de rotação da Terra em relação à sua órbita na ocorrência das estações do ano.": [
+  {
+   "tipo": "obj",
+   "enunciado": "A Terra gira em torno do próprio eixo e também se move ao redor do Sol.",
+   "comando": "Qual movimento da Terra leva cerca de 365 dias?",
+   "figura": null,
+   "alts": [
+    "Rotação",
+    "Translação",
+    "Refração",
+    "Eclipse"
+   ],
+   "correta": 1,
+   "explicacao": "A translação é a volta da Terra em torno do Sol, que dura cerca de um ano."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a bola representa a Terra e a lanterna representa o Sol.",
+   "comando": "Qual é, aproximadamente, a inclinação do eixo da Terra em relação à sua órbita?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Dados do experimento: montagem do modelo",
+    "etapas": [
+     "Espetar o palito na bola, inclinado",
+     "Colocar a lanterna no centro da mesa",
+     "Mover a bola em volta da lanterna",
+     "Observar onde a luz chega"
+    ]
+   },
+   "alts": [
+    "0°",
+    "45°",
+    "90°",
+    "23,5°"
+   ],
+   "correta": 3,
+   "explicacao": "O eixo da Terra tem cerca de 23,5° de inclinação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma posição do modelo, o hemisfério Sul recebe a luz mais direta e os dias lá são mais longos.",
+   "comando": "Que estação ocorre no Brasil nessa posição?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: observação do modelo",
+    "colunas": [
+     "Posição",
+     "Luz mais direta em"
+    ],
+    "linhas": [
+     [
+      "A",
+      "hemisfério Sul"
+     ],
+     [
+      "B",
+      "hemisfério Norte"
+     ]
+    ]
+   },
+   "alts": [
+    "Inverno",
+    "Verão",
+    "Outono",
+    "Primavera"
+   ],
+   "correta": 1,
+   "explicacao": "Quando o hemisfério Sul recebe luz mais direta, lá é verão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em dezembro é verão em São Paulo.",
+   "comando": "Qual estação ocorre ao mesmo tempo em Tóquio, no hemisfério Norte?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Cidades e hemisférios",
+    "colunas": [
+     "Cidade",
+     "Hemisfério"
+    ],
+    "linhas": [
+     [
+      "São Paulo",
+      "Sul"
+     ],
+     [
+      "Tóquio",
+      "Norte"
+     ],
+     [
+      "Lisboa",
+      "Norte"
+     ]
+    ]
+   },
+   "alts": [
+    "Inverno",
+    "Verão, pois a Terra é redonda",
+    "Verão, pois o Sol está igualmente perto",
+    "Primavera, porque o Japão é perto do Equador"
+   ],
+   "correta": 0,
+   "explicacao": "Os hemisférios têm estações opostas por causa da inclinação do eixo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um aluno disse: \"É verão porque a Terra fica mais perto do Sol\".",
+   "comando": "Por que essa ideia não explica as estações?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de janeiro",
+    "colunas": [
+     "Cidade",
+     "Clima",
+     "Distância do Sol"
+    ],
+    "linhas": [
+     [
+      "São Paulo",
+      "calor, dias longos",
+      "147 milhões km"
+     ],
+     [
+      "Lisboa",
+      "frio, dias curtos",
+      "147 milhões km"
+     ]
+    ]
+   },
+   "alts": [
+    "A Terra fica sempre colada ao Sol",
+    "Lisboa e São Paulo estão em planetas diferentes",
+    "No mesmo mês a distância é igual, mas as estações são opostas nos dois hemisférios",
+    "A distância ao Sol muda todo dia e isso sempre causa o verão"
+   ],
+   "correta": 2,
+   "explicacao": "A distância é a mesma para a Terra toda; o que muda é a inclinação dos raios solares."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em casa, falamos de calor e frio ao longo do ano.",
+   "comando": "Cite o nome das quatro estações do ano.",
+   "figura": null,
+   "ref": "Verão, outono, inverno e primavera.",
+   "conceitos": [
+    "estações do ano"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na montagem do modelo, o aluno inclina o palito na bola.",
+   "comando": "O que o palito representa na Terra?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Dados do experimento: montagem do modelo",
+    "etapas": [
+     "Espetar o palito na bola, inclinado",
+     "Colocar a lanterna no centro da mesa",
+     "Mover a bola em volta da lanterna",
+     "Observar onde a luz chega"
+    ]
+   },
+   "ref": "O eixo de rotação da Terra, que é inclinado.",
+   "conceitos": [
+    "eixo de rotação",
+    "inclinação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na posição B do modelo, o hemisfério Norte recebe luz mais direta.",
+   "comando": "Qual estação ocorre no Brasil nessa posição? Explique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: observação do modelo",
+    "colunas": [
+     "Posição",
+     "Luz mais direta em"
+    ],
+    "linhas": [
+     [
+      "A",
+      "hemisfério Sul"
+     ],
+     [
+      "B",
+      "hemisfério Norte"
+     ]
+    ]
+   },
+   "ref": "Inverno no Brasil, pois o hemisfério Sul recebe a luz mais inclinada e tem dias mais curtos.",
+   "conceitos": [
+    "hemisfério Sul",
+    "luz inclinada",
+    "inverno"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao mover a bola em volta da lanterna, o palito deve apontar sempre para o mesmo lado.",
+   "comando": "Por que isso é importante no modelo?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Dados do experimento: movimento da bola",
+    "etapas": [
+     "Bola na posição A",
+     "Bola um quarto da volta depois",
+     "Bola meia volta depois",
+     "Bola três quartos da volta depois"
+    ]
+   },
+   "ref": "Porque o eixo da Terra mantém a mesma direção durante a translação; é isso que faz cada hemisfério receber mais luz em uma época do ano.",
+   "conceitos": [
+    "eixo mantém direção",
+    "translação",
+    "inclinação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em dezembro, o Sol fica no céu por cerca de 13 horas em São Paulo e 9 horas em Lisboa.",
+   "comando": "Explique por que a duração do dia é diferente nas duas cidades.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Horas de luz do Sol em dezembro",
+    "colunas": [
+     "Cidade",
+     "Horas de luz"
+    ],
+    "linhas": [
+     [
+      "São Paulo",
+      "13 h 30 min"
+     ],
+     [
+      "Lisboa",
+      "9 h 30 min"
+     ]
+    ]
+   },
+   "ref": "Por causa da inclinação do eixo, em dezembro o hemisfério Sul fica mais voltado ao Sol e tem dias mais longos; o hemisfério Norte fica menos voltado.",
+   "conceitos": [
+    "inclinação do eixo",
+    "hemisférios",
+    "duração do dia"
+   ]
+  }
+ ],
+ "9º ANO|3|Relacionar a evolução biológica à formação da biodiversidade ao longo do tempo.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Charles Darwin estudou aves e outros seres vivos e explicou como as espécies mudam ao longo do tempo.",
+   "comando": "Qual foi a ideia central que ele propôs?",
+   "figura": null,
+   "alts": [
+    "A geração espontânea",
+    "A seleção natural",
+    "A herança de características adquiridas",
+    "A fixidez das espécies"
+   ],
+   "correta": 1,
+   "explicacao": "Para Darwin, indivíduos mais adaptados deixam mais descendentes: seleção natural."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No jogo dos bicos, cada grupo usa um objeto (pregador, colher ou pinça) para pegar grãos em 30 s.",
+   "comando": "O que os grãos representam na natureza?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Dados do experimento: regras do jogo",
+    "etapas": [
+     "Cada grupo escolhe um bico",
+     "Pegar grãos por 30 s",
+     "Anotar quantos grãos pegou",
+     "Bicos que pegam pouco saem"
+    ]
+   },
+   "alts": [
+    "O predador",
+    "O calor do ambiente",
+    "O alimento disponível",
+    "A água"
+   ],
+   "correta": 2,
+   "explicacao": "Os grãos são o alimento; quem consegue mais alimento sobrevive."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Veja o resultado da primeira rodada.",
+   "comando": "Qual bico tem mais chance de sobreviver e deixar descendentes?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: grãos pegos em 30 s",
+    "colunas": [
+     "Tipo de bico",
+     "Grãos pegos"
+    ],
+    "linhas": [
+     [
+      "Pregador",
+      "18"
+     ],
+     [
+      "Colher",
+      "9"
+     ],
+     [
+      "Pinça",
+      "3"
+     ]
+    ]
+   },
+   "alts": [
+    "Pregador",
+    "Colher",
+    "Pinça",
+    "Todos têm a mesma chance"
+   ],
+   "correta": 0,
+   "explicacao": "O bico que pega mais alimento tem mais chance de sobreviver e se reproduzir."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao longo de muitas rodadas, os bicos que pegam pouco saem do jogo.",
+   "comando": "O que se espera da população de aves?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: grãos pegos em 30 s",
+    "unidade": "grãos",
+    "itens": [
+     {
+      "rotulo": "Pregador",
+      "valor": 18
+     },
+     {
+      "rotulo": "Colher",
+      "valor": 9
+     },
+     {
+      "rotulo": "Pinça",
+      "valor": 3
+     }
+    ]
+   },
+   "alts": [
+    "Todos os bicos mudam por esforço das aves",
+    "Todos os bicos desaparecem",
+    "O bico de pinça se torna o mais comum",
+    "Aumenta a proporção de aves com o bico mais eficiente"
+   ],
+   "correta": 3,
+   "explicacao": "A seleção natural favorece as características que ajudam a sobreviver naquele ambiente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O ambiente mudou: agora só há grãos pequenos e finos.",
+   "comando": "Que bico passa a ter vantagem?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: grãos pegos em 30 s",
+    "colunas": [
+     "Tipo de grão",
+     "Pregador",
+     "Colher",
+     "Pinça"
+    ],
+    "linhas": [
+     [
+      "Grão grande",
+      "18",
+      "9",
+      "3"
+     ],
+     [
+      "Grão pequeno",
+      "2",
+      "5",
+      "16"
+     ]
+    ]
+   },
+   "alts": [
+    "Pregador, pois é o mais forte em qualquer ambiente",
+    "Pinça, e essa característica tende a ficar comum nas gerações seguintes",
+    "Colher, pois fica no meio-termo",
+    "Nenhum, pois a variação não pode ser herdada"
+   ],
+   "correta": 1,
+   "explicacao": "Quando o ambiente muda, muda também quem é favorecido pela seleção natural."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na atividade, o bico que pega poucos grãos \"não sobrevive\".",
+   "comando": "O que isso representa na natureza?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: grãos pegos em 30 s",
+    "colunas": [
+     "Tipo de bico",
+     "Grãos pegos"
+    ],
+    "linhas": [
+     [
+      "Pregador",
+      "18"
+     ],
+     [
+      "Colher",
+      "9"
+     ],
+     [
+      "Pinça",
+      "3"
+     ]
+    ]
+   },
+   "ref": "O indivíduo não consegue alimento suficiente, morre ou não deixa descendentes.",
+   "conceitos": [
+    "sobrevivência",
+    "reprodução"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cientistas estudam fósseis e comparam animais atuais.",
+   "comando": "Cite uma evidência científica de que as espécies mudam ao longo do tempo.",
+   "figura": null,
+   "ref": "Fósseis, anatomia comparada (estruturas parecidas), semelhanças no DNA ou embriões parecidos.",
+   "conceitos": [
+    "fósseis",
+    "evidências da evolução"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No início do jogo, cada grupo tinha bicos diferentes.",
+   "comando": "Por que a variação entre os bicos é importante para a seleção natural?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: bicos no início",
+    "colunas": [
+     "Tipo de bico",
+     "Quantidade de aves"
+    ],
+    "linhas": [
+     [
+      "Pregador",
+      "4"
+     ],
+     [
+      "Colher",
+      "4"
+     ],
+     [
+      "Pinça",
+      "4"
+     ]
+    ]
+   },
+   "ref": "Sem variação, não haveria diferença de sobrevivência; a seleção natural age sobre as diferenças existentes.",
+   "conceitos": [
+    "variação",
+    "seleção natural"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aluno disse: \"O bico de pinça virou pregador porque precisava de mais grãos\".",
+   "comando": "Corrija a ideia do aluno usando os dados.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: aves por rodada",
+    "colunas": [
+     "Rodada",
+     "Com pinça",
+     "Com pregador"
+    ],
+    "linhas": [
+     [
+      "1",
+      "4",
+      "4"
+     ],
+     [
+      "2",
+      "2",
+      "6"
+     ],
+     [
+      "3",
+      "1",
+      "7"
+     ]
+    ]
+   },
+   "ref": "Os bicos não se transformam por necessidade; quem tinha pregador sobreviveu e se reproduziu mais, e por isso ele ficou mais comum.",
+   "conceitos": [
+    "seleção natural",
+    "herança",
+    "sobrevivência diferencial"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em ilhas diferentes vivem aves com bicos muito variados.",
+   "comando": "Como a seleção natural, ao longo de milhares de anos, pode originar essa diversidade?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Dados do experimento: rodadas do jogo",
+    "etapas": [
+     "Rodada 1: todos os bicos pegam grãos",
+     "Quem pega pouco sai do jogo",
+     "Rodada 2: restam os mais eficientes",
+     "Rodada 3: o processo se repete"
+    ]
+   },
+   "ref": "Cada ambiente favorece certos bicos; ao longo de muitas gerações as populações acumulam diferenças e podem formar espécies diversas.",
+   "conceitos": [
+    "ambientes diferentes",
+    "acúmulo de diferenças",
+    "biodiversidade"
+   ]
+  }
+ ],
+ "9º ANO|3|Reconhecer a especiação como processo de formação de novas espécies a partir do isolamento reprodutivo associado, ou não, ao isolamento geográfico.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em Ciências, o conceito de espécie é muito usado.",
+   "comando": "Uma espécie é um grupo de seres que:",
+   "figura": null,
+   "alts": [
+    "se cruzam na natureza e têm descendentes férteis",
+    "têm exatamente a mesma cor",
+    "vivem sempre no mesmo lugar",
+    "têm o mesmo tamanho"
+   ],
+   "correta": 0,
+   "explicacao": "O conceito biológico de espécie envolve cruzamento e descendentes férteis."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na atividade, a turma foi dividida por uma fita no chão, como um rio.",
+   "comando": "O que a fita representa?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Dados do experimento: etapas da atividade",
+    "etapas": [
+     "Turma reunida como uma população",
+     "Fita divide a turma em dois lados",
+     "Sorteio de feijões em cada lado",
+     "Comparação dos grupos ao fim"
+    ]
+   },
+   "alts": [
+    "O tempo de vida",
+    "Um predador",
+    "A reprodução dos indivíduos",
+    "Uma barreira geográfica que separa a população"
+   ],
+   "correta": 3,
+   "explicacao": "A fita separa os grupos como um rio ou uma montanha faria na natureza."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um grupo de aves foi separado por um rio durante milhares de anos. Depois, os dois lados voltaram a se encontrar.",
+   "comando": "O que indicaria que viraram espécies diferentes?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: aves dos dois lados",
+    "colunas": [
+     "Característica",
+     "Lado A",
+     "Lado B"
+    ],
+    "linhas": [
+     [
+      "Cor das penas",
+      "marrom",
+      "azulada"
+     ],
+     [
+      "Tamanho",
+      "12 cm",
+      "15 cm"
+     ],
+     [
+      "Canto",
+      "grave",
+      "agudo"
+     ]
+    ]
+   },
+   "alts": [
+    "Têm cores diferentes",
+    "Não se acasalam ou não têm filhotes férteis",
+    "Têm tamanhos diferentes",
+    "Vivem em lados diferentes"
+   ],
+   "correta": 1,
+   "explicacao": "O critério é o isolamento reprodutivo, não só diferenças de aparência."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma represa dividiu uma população de peixes em dois grupos, em ambientes diferentes.",
+   "comando": "O que provavelmente ocorrerá ao longo de muitas gerações?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: ambientes",
+    "colunas": [
+     "Lado",
+     "Água",
+     "Alimento"
+    ],
+    "linhas": [
+     [
+      "Esquerdo",
+      "fria e rápida",
+      "insetos"
+     ],
+     [
+      "Direito",
+      "quente e parada",
+      "algas"
+     ]
+    ]
+   },
+   "alts": [
+    "Os dois grupos ficarão sempre iguais",
+    "Os peixes mudarão por vontade própria",
+    "Cada grupo acumula mudanças diferentes e pode se tornar uma espécie distinta",
+    "O grupo menor sempre desaparece"
+   ],
+   "correta": 2,
+   "explicacao": "Mutações e seleção natural diferentes em cada ambiente levam à divergência."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um lago, dois grupos de peixes vivem juntos, mas um se reproduz em março e outro em setembro.",
+   "comando": "Por que podem formar espécies diferentes mesmo sem barreira geográfica?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: peixes do lago",
+    "colunas": [
+     "Grupo",
+     "Época de reprodução",
+     "Local"
+    ],
+    "linhas": [
+     [
+      "1",
+      "março",
+      "mesmo lago"
+     ],
+     [
+      "2",
+      "setembro",
+      "mesmo lago"
+     ]
+    ]
+   },
+   "alts": [
+    "A reprodução em épocas diferentes impede o cruzamento entre os grupos",
+    "Peixes do mesmo lago sempre se cruzam",
+    "O lago muda a cor dos peixes",
+    "Só barreiras geográficas formam espécies"
+   ],
+   "correta": 0,
+   "explicacao": "O isolamento reprodutivo pode ocorrer sem isolamento geográfico."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma população pode ser separada por um rio ou uma serra.",
+   "comando": "O que é isolamento geográfico? Dê um exemplo.",
+   "figura": null,
+   "ref": "É a separação de uma população por uma barreira física, como rio, montanha ou represa.",
+   "conceitos": [
+    "barreira",
+    "população separada"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na atividade, uma fita no chão divide a turma em dois grupos.",
+   "comando": "O que a fita representa na natureza? Cite um exemplo.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Dados do experimento: etapas da atividade",
+    "etapas": [
+     "Turma reunida como uma população",
+     "Fita divide a turma em dois lados",
+     "Sorteio de feijões em cada lado",
+     "Comparação dos grupos ao fim"
+    ]
+   },
+   "ref": "Uma barreira geográfica, como um rio ou uma montanha.",
+   "conceitos": [
+    "barreira geográfica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Depois de várias gerações, os dois grupos ficaram tão diferentes que não conseguem se cruzar.",
+   "comando": "O que esse resultado representa na natureza?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: sorteio por geração",
+    "colunas": [
+     "Geração",
+     "Lado A",
+     "Lado B"
+    ],
+    "linhas": [
+     [
+      "1",
+      "feijões claros",
+      "feijões claros"
+     ],
+     [
+      "5",
+      "feijões médios",
+      "feijões escuros"
+     ],
+     [
+      "10",
+      "feijões escuros",
+      "feijões pintados"
+     ]
+    ]
+   },
+   "ref": "A formação de novas espécies, chamada especiação.",
+   "conceitos": [
+    "especiação",
+    "nova espécie"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O sorteio de feijões foi igual nos dois lados, mas os resultados ficaram diferentes.",
+   "comando": "Por que cada lado mudou de forma diferente?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: sorteio por geração",
+    "colunas": [
+     "Geração",
+     "Lado A",
+     "Lado B"
+    ],
+    "linhas": [
+     [
+      "1",
+      "feijões claros",
+      "feijões claros"
+     ],
+     [
+      "5",
+      "feijões médios",
+      "feijões escuros"
+     ],
+     [
+      "10",
+      "feijões escuros",
+      "feijões pintados"
+     ]
+    ]
+   },
+   "ref": "Cada lado sofreu mutações e pressões do ambiente diferentes; sem cruzamento entre eles, as diferenças se acumularam separadamente.",
+   "conceitos": [
+    "mutações",
+    "seleção natural",
+    "isolamento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cavalo e jumento se cruzam e têm uma mula, que não gera filhotes.",
+   "comando": "Cavalo e jumento são a mesma espécie? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Cromossomos",
+    "colunas": [
+     "Animal",
+     "Nº de cromossomos"
+    ],
+    "linhas": [
+     [
+      "Cavalo",
+      "64"
+     ],
+     [
+      "Jumento",
+      "62"
+     ],
+     [
+      "Mula",
+      "63"
+     ]
+    ]
+   },
+   "ref": "Não, são espécies diferentes, pois a mula é estéril e o cruzamento não gera descendentes férteis.",
+   "conceitos": [
+    "conceito de espécie",
+    "descendentes férteis",
+    "isolamento reprodutivo"
+   ]
+  }
+ ],
+ "4B|6º ANO|4": [
+  {
+   "tipo": "obj",
+   "enunciado": "O sistema nervoso central fica protegido por ossos e envia mensagens para o corpo.",
+   "comando": "Qual parte fica dentro da coluna vertebral e leva mensagens entre o encéfalo e o corpo?",
+   "figura": null,
+   "alts": [
+    "Cerebelo",
+    "Medula espinal",
+    "Estômago",
+    "Cérebro"
+   ],
+   "correta": 1,
+   "explicacao": "A medula espinal passa pela coluna e conecta o encéfalo ao resto do corpo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Caio bateu a parte de trás da cabeça. Depois disso, teve estas dificuldades.",
+   "comando": "Qual parte do encéfalo provavelmente foi afetada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação de Caio",
+    "colunas": [
+     "Atividade",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Andar em linha reta",
+      "tropeça"
+     ],
+     [
+      "Ficar em um pé só",
+      "cai"
+     ],
+     [
+      "Falar",
+      "normal"
+     ],
+     [
+      "Lembrar nomes",
+      "normal"
+     ]
+    ]
+   },
+   "alts": [
+    "Medula espinal",
+    "Cérebro, responsável pela fala",
+    "Tronco encefálico, que controla a respiração",
+    "Cerebelo"
+   ],
+   "correta": 3,
+   "explicacao": "O cerebelo coordena os movimentos e o equilíbrio."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao encostar na panela quente, a mão se afasta antes de a pessoa pensar.",
+   "comando": "Por que essa resposta é tão rápida?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados: tempo de resposta",
+    "colunas": [
+     "Situação",
+     "Tempo"
+    ],
+    "linhas": [
+     [
+      "Tirar a mão de uma panela quente",
+      "0,1 s"
+     ],
+     [
+      "Escolher qual roupa vestir",
+      "3 s"
+     ]
+    ]
+   },
+   "alts": [
+    "A medula comanda a resposta sem esperar uma decisão do cérebro",
+    "O cérebro pensa mais rápido nessa hora",
+    "O braço decide sozinho sem nervos",
+    "A pele sente o calor só depois"
+   ],
+   "correta": 0,
+   "explicacao": "No ato reflexo o caminho é curto, passando pela medula."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No consultório, o médico bate no joelho de Marta com um martelinho.",
+   "comando": "Esse movimento da perna é:",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de observação",
+    "etapas": [
+     "Marta senta com a perna solta",
+     "O médico bate no joelho",
+     "A perna se estica"
+    ]
+   },
+   "alts": [
+    "ato voluntário, decidido pelo cérebro",
+    "ação do cerebelo para manter o equilíbrio",
+    "ato reflexo, involuntário e rápido",
+    "ato que só ocorre durante o sono"
+   ],
+   "correta": 2,
+   "explicacao": "É o reflexo patelar, um ato reflexo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Após um acidente nas costas, João pensa e respira normalmente, mas não sente nem mexe as pernas.",
+   "comando": "Qual explicação é adequada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do caso de João",
+    "colunas": [
+     "Função",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Pensar e falar",
+      "normal"
+     ],
+     [
+      "Respirar",
+      "normal"
+     ],
+     [
+      "Sentir as pernas",
+      "ausente"
+     ],
+     [
+      "Mexer as pernas",
+      "ausente"
+     ]
+    ]
+   },
+   "alts": [
+    "O encéfalo parou de funcionar",
+    "A medula lesionada não leva mais mensagens entre o encéfalo e as pernas",
+    "O cerebelo foi destruído",
+    "O tronco encefálico parou de enviar sangue"
+   ],
+   "correta": 1,
+   "explicacao": "O encéfalo funciona, mas a ligação feita pela medula foi interrompida."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O encéfalo tem partes com funções diferentes.",
+   "comando": "Cite duas partes do encéfalo.",
+   "figura": null,
+   "ref": "Cérebro, cerebelo e tronco encefálico (duas delas).",
+   "conceitos": [
+    "cérebro",
+    "cerebelo",
+    "tronco encefálico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Durante o sono, Ana não se mexe de propósito, mas continua respirando e o coração bate.",
+   "comando": "Qual parte do encéfalo controla essas atividades?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Ana dormindo",
+    "colunas": [
+     "Atividade",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Respiração",
+      "16 por minuto"
+     ],
+     [
+      "Batimentos",
+      "60 por minuto"
+     ],
+     [
+      "Movimentos voluntários",
+      "nenhum"
+     ]
+    ]
+   },
+   "ref": "O tronco encefálico.",
+   "conceitos": [
+    "tronco encefálico",
+    "funções involuntárias"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para andar de bicicleta, a escola recomenda usar capacete.",
+   "comando": "Relacione o capacete com a proteção do sistema nervoso central.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: ovos quebrados em 5 quedas",
+    "unidade": "ovos",
+    "itens": [
+     {
+      "rotulo": "Sem proteção",
+      "valor": 5
+     },
+     {
+      "rotulo": "Com espuma",
+      "valor": 1
+     }
+    ]
+   },
+   "ref": "O capacete protege o crânio e, assim, o encéfalo contra pancadas, evitando lesões graves.",
+   "conceitos": [
+    "crânio",
+    "encéfalo",
+    "proteção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao pisar em um prego, a pessoa tira o pé antes de pensar.",
+   "comando": "Por que o ato reflexo é útil para o corpo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados: tempo de resposta",
+    "colunas": [
+     "Resposta",
+     "Tempo"
+    ],
+    "linhas": [
+     [
+      "Reflexo",
+      "0,05 s"
+     ],
+     [
+      "Decisão pensada",
+      "0,4 s"
+     ]
+    ]
+   },
+   "ref": "Ele é muito rápido e protege o corpo de danos antes de o cérebro decidir.",
+   "conceitos": [
+    "rapidez",
+    "proteção",
+    "medula"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Chutar uma bola de propósito e o reflexo do joelho são movimentos diferentes.",
+   "comando": "Qual dos dois depende de decisão do cérebro? Justifique.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de observação",
+    "etapas": [
+     "Ver a bola",
+     "Decidir chutar",
+     "Perna se move"
+    ]
+   },
+   "ref": "Chutar a bola, pois é voluntário e planejado pelo cérebro; o reflexo patelar é automático e passa pela medula.",
+   "conceitos": [
+    "ato voluntário",
+    "ato reflexo",
+    "cérebro"
+   ]
+  }
+ ],
+ "4B|6º ANO|16": [
+  {
+   "tipo": "obj",
+   "enunciado": "Algumas substâncias podem ser compradas por adultos de forma legal.",
+   "comando": "Qual destas é droga lícita para adultos?",
+   "figura": null,
+   "alts": [
+    "Cocaína",
+    "Crack",
+    "Cigarro (nicotina)",
+    "Heroína"
+   ],
+   "correta": 2,
+   "explicacao": "Cigarro e bebidas alcoólicas são drogas lícitas para adultos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Substâncias psicoativas mudam o modo de agir e de sentir das pessoas.",
+   "comando": "Em qual sistema elas atuam principalmente?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Efeitos relatados",
+    "colunas": [
+     "Substância",
+     "Efeito"
+    ],
+    "linhas": [
+     [
+      "Bebida alcoólica",
+      "reflexos mais lentos"
+     ],
+     [
+      "Energético",
+      "agitação"
+     ],
+     [
+      "Tabaco",
+      "sensação de relaxamento rápido"
+     ]
+    ]
+   },
+   "alts": [
+    "Sistema nervoso",
+    "Sistema digestório",
+    "Sistema esquelético",
+    "Sistema urinário"
+   ],
+   "correta": 0,
+   "explicacao": "Essas substâncias alteram o funcionamento do sistema nervoso."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro fuma há meses. Quando fica sem cigarro, sente irritação e mal-estar.",
+   "comando": "O que isso mostra?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Pedro",
+    "colunas": [
+     "Mês",
+     "Cigarros por dia"
+    ],
+    "linhas": [
+     [
+      "1",
+      "2"
+     ],
+     [
+      "3",
+      "6"
+     ],
+     [
+      "6",
+      "12"
+     ]
+    ]
+   },
+   "alts": [
+    "Que a nicotina fortalece o corpo",
+    "Que ele está se curando",
+    "Que cigarro só afeta quem tem mais de 18 anos",
+    "Que ele desenvolveu dependência e precisa de doses cada vez maiores"
+   ],
+   "correta": 3,
+   "explicacao": "Dependência causa abstinência e aumento do uso."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma festa, um colega de 14 anos oferece um vaporizador (cigarro eletrônico).",
+   "comando": "Qual é a melhor atitude?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Situação na festa",
+    "etapas": [
+     "Colega oferece o vaporizador",
+     "O grupo olha para você",
+     "Você precisa decidir"
+    ]
+   },
+   "alts": [
+    "Experimentar só uma vez",
+    "Recusar com firmeza e procurar um adulto de confiança se insistirem",
+    "Aceitar para não ser excluído",
+    "Pegar para guardar para outro dia"
+   ],
+   "correta": 1,
+   "explicacao": "Recusar protege a saúde; apoio de adultos ajuda."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um motorista bebeu e depois freou o carro tarde demais.",
+   "comando": "Por que beber antes de dirigir aumenta o risco de acidente?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: simulador de direção",
+    "colunas": [
+     "Condição",
+     "Tempo para frear"
+    ],
+    "linhas": [
+     [
+      "Sem álcool",
+      "0,7 s"
+     ],
+     [
+      "Após beber",
+      "1,2 s"
+     ]
+    ]
+   },
+   "alts": [
+    "O álcool melhora os reflexos",
+    "O álcool deixa o carro mais leve",
+    "O álcool deixa a reação mais lenta e o carro anda mais antes de frear",
+    "O álcool não afeta o sistema nervoso"
+   ],
+   "correta": 2,
+   "explicacao": "O álcool deprime o sistema nervoso e aumenta o tempo de reação."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No mercado, vendem produtos que causam dependência.",
+   "comando": "Cite duas drogas lícitas.",
+   "figura": null,
+   "ref": "Álcool, cigarro (nicotina), cafeína, medicamentos com receita.",
+   "conceitos": [
+    "drogas lícitas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Numa festa, uma pessoa que bebeu fala enrolado e anda sem equilíbrio.",
+   "comando": "O que isso mostra sobre o efeito do álcool no sistema nervoso?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações na festa",
+    "colunas": [
+     "Ação",
+     "Como estava"
+    ],
+    "linhas": [
+     [
+      "Falar",
+      "enrolado"
+     ],
+     [
+      "Andar",
+      "cambaleando"
+     ],
+     [
+      "Reagir",
+      "devagar"
+     ]
+    ]
+   },
+   "ref": "O álcool deprime o sistema nervoso, prejudicando coordenação, fala e reflexos.",
+   "conceitos": [
+    "sistema nervoso",
+    "álcool",
+    "reflexos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola vai fazer cartazes de prevenção sobre drogas.",
+   "comando": "Escreva uma mensagem curta de prevenção para o cartaz.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas do projeto",
+    "etapas": [
+     "Discutir casos em grupo",
+     "Escolher o público: estudantes",
+     "Escrever a mensagem curta",
+     "Fazer o cartaz"
+    ]
+   },
+   "ref": "Mensagem sobre os riscos e a busca de ajuda, como \"Droga não é saída: converse com alguém de confiança\".",
+   "conceitos": [
+    "prevenção",
+    "cuidado",
+    "apoio"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro tentou parar de fumar e não conseguiu.",
+   "comando": "Por que é difícil parar quando há dependência?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados: cigarros por dia de Pedro",
+    "unidade": "cigarros",
+    "itens": [
+     {
+      "rotulo": "Mês 1",
+      "valor": 2
+     },
+     {
+      "rotulo": "Mês 3",
+      "valor": 6
+     },
+     {
+      "rotulo": "Mês 6",
+      "valor": 12
+     }
+    ]
+   },
+   "ref": "O corpo se acostuma à droga e sente mal-estar sem ela, o que leva à vontade de usar de novo.",
+   "conceitos": [
+    "dependência",
+    "abstinência"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cigarro e bebida são vendidos legalmente, mas fazem mal.",
+   "comando": "Justifique por que droga lícita também é perigosa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do caso de João",
+    "colunas": [
+     "Dado",
+     "Informação"
+    ],
+    "linhas": [
+     [
+      "Substância",
+      "cigarro"
+     ],
+     [
+      "Início do uso",
+      "15 anos de idade"
+     ],
+     [
+      "Tempo de uso",
+      "20 anos"
+     ],
+     [
+      "Problema",
+      "tosse crônica"
+     ]
+    ]
+   },
+   "ref": "Ser legal não significa ser seguro: causam dependência e doenças, e atingem o sistema nervoso e outros órgãos.",
+   "conceitos": [
+    "lícita não é segura",
+    "dependência",
+    "danos à saúde"
+   ]
+  }
+ ],
+ "4B|7º ANO|10": [
+  {
+   "tipo": "obj",
+   "enunciado": "Ao tomar uma vacina, o corpo é preparado para combater um microrganismo.",
+   "comando": "O que a vacina estimula o corpo a produzir?",
+   "figura": null,
+   "alts": [
+    "Vitaminas",
+    "Antibióticos",
+    "Hormônios",
+    "Anticorpos"
+   ],
+   "correta": 3,
+   "explicacao": "A vacina é imunização ativa: o corpo produz anticorpos e memória."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em 1796, um médico notou que ordenhadoras que tinham pegado varíola bovina não pegavam varíola humana.",
+   "comando": "Quem desenvolveu a primeira vacina a partir dessa observação?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Linha do tempo",
+    "etapas": [
+     "Ordenhadoras têm varíola bovina",
+     "Elas não pegam varíola humana",
+     "O médico testa o material em um menino",
+     "Surge a primeira vacina"
+    ]
+   },
+   "alts": [
+    "Louis Pasteur",
+    "Edward Jenner",
+    "Oswaldo Cruz",
+    "Alexander Fleming"
+   ],
+   "correta": 1,
+   "explicacao": "Edward Jenner criou a vacina contra varíola."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A família Ribeiro levou o cartão de vacinação do filho ao posto.",
+   "comando": "O que deve ser feito?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Cartão de vacinação do filho",
+    "colunas": [
+     "Vacina",
+     "Doses previstas",
+     "Doses tomadas"
+    ],
+    "linhas": [
+     [
+      "Tríplice viral",
+      "2",
+      "1"
+     ],
+     [
+      "Hepatite B",
+      "3",
+      "3"
+     ],
+     [
+      "Poliomielite",
+      "3",
+      "2"
+     ]
+    ]
+   },
+   "alts": [
+    "Completar as doses que faltam no posto de saúde",
+    "Esperar adoecer para vacinar",
+    "Repetir as vacinas já tomadas",
+    "Não fazer nada, pois uma dose basta"
+   ],
+   "correta": 0,
+   "explicacao": "O esquema deve ser completado para dar proteção."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Veja o número de casos de sarampo em três cidades.",
+   "comando": "O que os dados mostram?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: casos de sarampo",
+    "colunas": [
+     "Cidade",
+     "Vacinados",
+     "Casos"
+    ],
+    "linhas": [
+     [
+      "A",
+      "95%",
+      "0"
+     ],
+     [
+      "B",
+      "70%",
+      "12"
+     ],
+     [
+      "C",
+      "40%",
+      "150"
+     ]
+    ]
+   },
+   "alts": [
+    "Quanto maior a vacinação, mais casos",
+    "A vacinação não muda os casos",
+    "Quanto maior a vacinação, menos casos da doença",
+    "O número de casos depende do nome da cidade"
+   ],
+   "correta": 2,
+   "explicacao": "Alta cobertura vacinal protege a comunidade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No grupo da família circula a mensagem \"vacina dá a doença\".",
+   "comando": "Qual é a melhor forma de verificar essa informação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Mensagens recebidas",
+    "colunas": [
+     "Mensagem",
+     "Fonte"
+    ],
+    "linhas": [
+     [
+      "Vacina faz mal",
+      "Grupo de WhatsApp sem autor"
+     ],
+     [
+      "Calendário de vacinação",
+      "Secretaria da Saúde, com data"
+     ]
+    ]
+   },
+   "alts": [
+    "Repassar para outras pessoas",
+    "Consultar fontes oficiais, como a Secretaria da Saúde",
+    "Acreditar na mensagem mais curta",
+    "Acreditar na mensagem mais compartilhada"
+   ],
+   "correta": 1,
+   "explicacao": "Fontes oficiais usam estudos científicos e evitam desinformação."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Muitas doenças graves podem ser evitadas com vacina.",
+   "comando": "Cite duas doenças evitadas por vacinas.",
+   "figura": null,
+   "ref": "Sarampo, poliomielite, hepatite B, tétano, febre amarela, covid-19 (duas delas).",
+   "conceitos": [
+    "doenças evitáveis",
+    "vacinação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em casa, guardamos um documento com as vacinas tomadas.",
+   "comando": "Para que serve o cartão de vacinação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Cartão de vacinação (parte)",
+    "colunas": [
+     "Vacina",
+     "Data"
+    ],
+    "linhas": [
+     [
+      "Hepatite B",
+      "ao nascer"
+     ],
+     [
+      "Tríplice viral",
+      "12 meses"
+     ]
+    ]
+   },
+   "ref": "Registra as vacinas e as datas, para acompanhar o esquema vacinal.",
+   "conceitos": [
+    "cartão",
+    "esquema vacinal"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A vacina da hepatite B tem três doses em datas diferentes.",
+   "comando": "Por que algumas vacinas exigem mais de uma dose?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Calendário",
+    "colunas": [
+     "Dose",
+     "Quando"
+    ],
+    "linhas": [
+     [
+      "1ª",
+      "ao nascer"
+     ],
+     [
+      "2ª",
+      "1 mês"
+     ],
+     [
+      "3ª",
+      "6 meses"
+     ]
+    ]
+   },
+   "ref": "Para reforçar a resposta de defesa e garantir proteção duradoura.",
+   "conceitos": [
+    "reforço",
+    "memória imunológica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em 1904, no Rio de Janeiro, muita gente protestou contra a vacinação obrigatória.",
+   "comando": "Cite um motivo da Revolta da Vacina e uma ação que poderia ter evitado.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Revolta da Vacina",
+    "etapas": [
+     "A lei obriga a vacina",
+     "Agentes entram nas casas",
+     "Falta explicar à população",
+     "Protestos nas ruas"
+    ]
+   },
+   "ref": "Falta de informação e imposição. Poderia ter havido campanha de esclarecimento.",
+   "conceitos": [
+    "desinformação",
+    "educação em saúde"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Algumas pessoas não podem tomar vacina, mas ficam protegidas se os outros se vacinam.",
+   "comando": "Explique por que isso acontece.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: casos por 1000 pessoas",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "95% vacinados",
+      "valor": 1
+     },
+     {
+      "rotulo": "70% vacinados",
+      "valor": 9
+     },
+     {
+      "rotulo": "40% vacinados",
+      "valor": 30
+     }
+    ]
+   },
+   "ref": "Com muita gente imune, a doença circula menos; é a imunidade coletiva.",
+   "conceitos": [
+    "imunidade coletiva",
+    "circulação da doença"
+   ]
+  }
+ ],
+ "4B|8º ANO|4": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre energia, a professora pediu exemplos de fontes que se repõem na natureza.",
+   "comando": "Qual destas é uma fonte renovável?",
+   "figura": null,
+   "alts": [
+    "Carvão mineral",
+    "Petróleo",
+    "Vento",
+    "Gás natural"
+   ],
+   "correta": 2,
+   "explicacao": "O vento se renova continuamente; carvão, petróleo e gás são fósseis."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A escola mediu a energia gerada no telhado durante o dia.",
+   "comando": "Qual fonte gera energia assim?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados: energia gerada pela escola",
+    "unidade": "kWh",
+    "itens": [
+     {
+      "rotulo": "8 h",
+      "valor": 2
+     },
+     {
+      "rotulo": "12 h",
+      "valor": 9
+     },
+     {
+      "rotulo": "16 h",
+      "valor": 4
+     },
+     {
+      "rotulo": "20 h",
+      "valor": 0
+     }
+    ]
+   },
+   "alts": [
+    "Solar fotovoltaica",
+    "Eólica",
+    "Hidrelétrica",
+    "Geotérmica"
+   ],
+   "correta": 0,
+   "explicacao": "A geração aumenta com o Sol e cai a zero à noite."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um bairro do interior de SP, uma usina de açúcar sobra muito bagaço de cana.",
+   "comando": "Qual fonte pode aproveitar esse resíduo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Recursos do bairro",
+    "colunas": [
+     "Recurso",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Bagaço de cana",
+      "500 t por mês"
+     ],
+     [
+      "Horas de sol",
+      "7 por dia"
+     ],
+     [
+      "Vento médio",
+      "8 km/h"
+     ]
+    ]
+   },
+   "alts": [
+    "Geotérmica",
+    "Oceânica",
+    "Eólica",
+    "Biomassa"
+   ],
+   "correta": 3,
+   "explicacao": "A queima do bagaço gera calor e eletricidade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No planejamento do bairro, os alunos comparam a geração com o consumo.",
+   "comando": "Qual desvantagem aparece nos dados da energia solar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Energia por horário",
+    "colunas": [
+     "Hora",
+     "Gerada",
+     "Consumida"
+    ],
+    "linhas": [
+     [
+      "12 h",
+      "9",
+      "4"
+     ],
+     [
+      "20 h",
+      "0",
+      "6"
+     ]
+    ]
+   },
+   "alts": [
+    "Gera mais à noite",
+    "Intermitência: não gera à noite, quando há consumo",
+    "Faz barulho forte",
+    "Usa muita água"
+   ],
+   "correta": 1,
+   "explicacao": "A intermitência exige baterias ou outras fontes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um bairro pequeno, com pouco espaço livre, precisa escolher uma fonte.",
+   "comando": "Qual fonte é melhor e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação",
+    "colunas": [
+     "Fonte",
+     "Custo inicial",
+     "Área",
+     "Impacto local"
+    ],
+    "linhas": [
+     [
+      "Hidrelétrica",
+      "alto",
+      "grande, com alagamento",
+      "alto"
+     ],
+     [
+      "Solar",
+      "médio",
+      "telhados",
+      "baixo"
+     ]
+    ]
+   },
+   "alts": [
+    "Hidrelétrica, pois alaga áreas e é barata",
+    "Carvão, por ser renovável",
+    "Solar nos telhados, pois usa áreas já construídas e tem pouco impacto",
+    "Nenhuma, porque todas causam o mesmo impacto"
+   ],
+   "correta": 2,
+   "explicacao": "Fontes com menor área e impacto são mais adequadas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na turma, falamos sobre energia limpa.",
+   "comando": "Cite duas fontes renováveis de energia.",
+   "figura": null,
+   "ref": "Solar, eólica, hidrelétrica, biomassa, geotérmica, oceânica (duas delas).",
+   "conceitos": [
+    "fontes renováveis"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola quer instalar painéis no telhado.",
+   "comando": "Cite uma vantagem da energia solar.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Horas de sol em São Paulo",
+    "unidade": "horas por dia",
+    "itens": [
+     {
+      "rotulo": "Janeiro",
+      "valor": 7
+     },
+     {
+      "rotulo": "Abril",
+      "valor": 6
+     },
+     {
+      "rotulo": "Julho",
+      "valor": 6
+     },
+     {
+      "rotulo": "Outubro",
+      "valor": 7
+     }
+    ]
+   },
+   "ref": "É renovável, não emite gases poluentes ao gerar e pode ser instalada no telhado.",
+   "conceitos": [
+    "renovável",
+    "baixa emissão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu grupo planeja um bairro sustentável no interior de SP.",
+   "comando": "Escolha uma fonte de energia e justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Recursos do bairro",
+    "colunas": [
+     "Recurso",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Sol",
+      "7 h por dia"
+     ],
+     [
+      "Vento",
+      "15 km/h"
+     ],
+     [
+      "Rio",
+      "pequeno e seco em parte do ano"
+     ]
+    ]
+   },
+   "ref": "Resposta coerente com os dados, apontando prós e contras.",
+   "conceitos": [
+    "escolha",
+    "justificativa",
+    "prós e contras"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Toda fonte de energia tem vantagens e desvantagens.",
+   "comando": "Cite uma desvantagem da hidrelétrica e uma da eólica.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação",
+    "colunas": [
+     "Fonte",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Hidrelétrica",
+      "represa grande"
+     ],
+     [
+      "Eólica",
+      "vento variável"
+     ]
+    ]
+   },
+   "ref": "Hidrelétrica: alagamento e impacto no rio. Eólica: depende do vento e pode causar barulho ou afetar aves.",
+   "conceitos": [
+    "impacto",
+    "intermitência"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O bairro tem painéis solares e turbinas eólicas.",
+   "comando": "Por que combinar duas fontes é vantajoso?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Energia por horário",
+    "colunas": [
+     "Hora",
+     "Solar",
+     "Eólica"
+    ],
+    "linhas": [
+     [
+      "12 h",
+      "9",
+      "2"
+     ],
+     [
+      "22 h",
+      "0",
+      "6"
+     ]
+    ]
+   },
+   "ref": "As fontes se complementam: quando uma gera pouco, a outra pode gerar mais, reduzindo falhas.",
+   "conceitos": [
+    "complementaridade",
+    "intermitência"
+   ]
+  }
+ ],
+ "4B|8º ANO|17": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na conta de luz, cada aparelho tem uma medida de potência.",
+   "comando": "Qual é a unidade de potência elétrica?",
+   "figura": null,
+   "alts": [
+    "Volt",
+    "Ampere",
+    "Watt",
+    "Joule"
+   ],
+   "correta": 2,
+   "explicacao": "A potência é medida em watts (W)."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Veja a potência de três aparelhos.",
+   "comando": "Qual deles consome mais energia por hora?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Potência",
+    "colunas": [
+     "Aparelho",
+     "Potência"
+    ],
+    "linhas": [
+     [
+      "Lâmpada LED",
+      "10 W"
+     ],
+     [
+      "TV",
+      "110 W"
+     ],
+     [
+      "Chuveiro",
+      "4.400 W"
+     ]
+    ]
+   },
+   "alts": [
+    "Lâmpada LED",
+    "Chuveiro",
+    "TV",
+    "Todos consomem igual"
+   ],
+   "correta": 1,
+   "explicacao": "Maior potência significa maior consumo por hora."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O chuveiro tem potência de 4.400 W e funciona em uma rede de 220 V.",
+   "comando": "Qual é a corrente elétrica dele? (P = U × I)",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Chuveiro",
+    "colunas": [
+     "Dado",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Potência",
+      "4.400 W"
+     ],
+     [
+      "Tensão",
+      "220 V"
+     ]
+    ]
+   },
+   "alts": [
+    "2 A",
+    "200 A",
+    "4.620 A",
+    "20 A"
+   ],
+   "correta": 3,
+   "explicacao": "I = 4.400 ÷ 220 = 20 A."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma casa tem sistema de 5.000 W. Ao mesmo tempo ficam ligados geladeira, TV e chuveiro.",
+   "comando": "O sistema suporta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Aparelhos em 220 V",
+    "colunas": [
+     "Aparelho",
+     "Potência"
+    ],
+    "linhas": [
+     [
+      "Geladeira",
+      "220 W"
+     ],
+     [
+      "TV",
+      "110 W"
+     ],
+     [
+      "Chuveiro",
+      "4.400 W"
+     ]
+    ]
+   },
+   "alts": [
+    "Sim, o total é 4.730 W, menor que 5.000 W",
+    "Não, o total é 5.730 W",
+    "Não, pois o chuveiro sozinho usa 5.000 W",
+    "Sim, pois a potência não se soma"
+   ],
+   "correta": 0,
+   "explicacao": "220 + 110 + 4.400 = 4.730 W."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ligam também um ferro de 1.000 W ao mesmo tempo, no sistema de 5.000 W.",
+   "comando": "O que provavelmente acontece?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Aparelhos em uso",
+    "colunas": [
+     "Aparelho",
+     "Potência"
+    ],
+    "linhas": [
+     [
+      "Geladeira",
+      "220 W"
+     ],
+     [
+      "TV",
+      "110 W"
+     ],
+     [
+      "Chuveiro",
+      "4.400 W"
+     ],
+     [
+      "Ferro",
+      "1.000 W"
+     ]
+    ]
+   },
+   "alts": [
+    "A tensão da rede aumenta",
+    "Nada, pois a potência não importa",
+    "O disjuntor desarma, pois o total de 5.730 W passa do limite",
+    "Os aparelhos funcionam pela metade"
+   ],
+   "correta": 2,
+   "explicacao": "A soma ultrapassa 5.000 W e a corrente passa do limite."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Medimos a corrente elétrica de aparelhos.",
+   "comando": "Qual é a unidade de corrente elétrica?",
+   "figura": null,
+   "ref": "Ampere (A).",
+   "conceitos": [
+    "ampere"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A fórmula relaciona potência, tensão e corrente.",
+   "comando": "Escreva a relação entre P, U e I.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Aparelhos em 220 V",
+    "colunas": [
+     "Aparelho",
+     "Potência"
+    ],
+    "linhas": [
+     [
+      "Geladeira",
+      "220 W"
+     ],
+     [
+      "TV",
+      "110 W"
+     ],
+     [
+      "Chuveiro",
+      "4.400 W"
+     ]
+    ]
+   },
+   "ref": "P = U × I (potência é tensão vezes corrente).",
+   "conceitos": [
+    "P = U × I"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma geladeira de 220 W é ligada em 220 V.",
+   "comando": "Calcule a corrente que ela usa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Aparelhos em 220 V",
+    "colunas": [
+     "Aparelho",
+     "Potência"
+    ],
+    "linhas": [
+     [
+      "Geladeira",
+      "220 W"
+     ],
+     [
+      "TV",
+      "110 W"
+     ],
+     [
+      "Chuveiro",
+      "4.400 W"
+     ]
+    ]
+   },
+   "ref": "I = 220 ÷ 220 = 1 A.",
+   "conceitos": [
+    "P = U × I",
+    "1 A"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em 1 hora, o chuveiro e a TV estão ligados.",
+   "comando": "Explique por que o chuveiro consome mais energia que a TV.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Potência",
+    "unidade": "W",
+    "itens": [
+     {
+      "rotulo": "TV",
+      "valor": 110
+     },
+     {
+      "rotulo": "Chuveiro",
+      "valor": 4400
+     }
+    ]
+   },
+   "ref": "Tem maior potência: transforma mais energia elétrica em térmica por segundo.",
+   "conceitos": [
+    "potência",
+    "conversão de energia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um banho de 10 min usa cerca de 0,73 kWh; um de 5 min, 0,37 kWh.",
+   "comando": "Dê uma atitude para reduzir o consumo e justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Chuveiro de 4.400 W",
+    "colunas": [
+     "Tempo do banho",
+     "Energia"
+    ],
+    "linhas": [
+     [
+      "10 min",
+      "0,73 kWh"
+     ],
+     [
+      "5 min",
+      "0,37 kWh"
+     ]
+    ]
+   },
+   "ref": "Reduzir o tempo do banho: menos tempo ligado, menos energia.",
+   "conceitos": [
+    "tempo de uso",
+    "economia"
+   ]
+  }
+ ],
+ "4B|9º ANO|15": [
+  {
+   "tipo": "obj",
+   "enunciado": "Astrônomos organizaram o céu em regiões chamadas constelações.",
+   "comando": "Quantas constelações oficiais a União Astronômica Internacional reconhece?",
+   "figura": null,
+   "alts": [
+    "12",
+    "88",
+    "48",
+    "100"
+   ],
+   "correta": 1,
+   "explicacao": "São 88 constelações oficiais."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um gnômon é uma haste fixa no chão que projeta sombra.",
+   "comando": "O que ele permite observar?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados: sombra do gnômon",
+    "unidade": "cm",
+    "itens": [
+     {
+      "rotulo": "9 h",
+      "valor": 40
+     },
+     {
+      "rotulo": "12 h",
+      "valor": 15
+     },
+     {
+      "rotulo": "15 h",
+      "valor": 38
+     }
+    ]
+   },
+   "alts": [
+    "A temperatura do ar",
+    "A idade das estrelas",
+    "A distância da Lua",
+    "O movimento aparente do Sol pela sombra"
+   ],
+   "correta": 3,
+   "explicacao": "A sombra muda de tamanho e direção ao longo do dia."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Para povos indígenas, o Homem Velho aparece ao anoitecer em janeiro.",
+   "comando": "Que característica do clima de SP nessa época?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação do céu ao anoitecer",
+    "colunas": [
+     "Mês",
+     "Constelação mais alta"
+    ],
+    "linhas": [
+     [
+      "Janeiro",
+      "Homem Velho"
+     ],
+     [
+      "Julho",
+      "Ema"
+     ]
+    ]
+   },
+   "alts": [
+    "Chuvosa e quente",
+    "Seca e fria",
+    "Seca e quente",
+    "Chuvosa e fria"
+   ],
+   "correta": 0,
+   "explicacao": "Janeiro é verão, época de chuvas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Muitos povos usam o céu como calendário.",
+   "comando": "Qual a vantagem?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Uso do céu como calendário",
+    "etapas": [
+     "Observar o céu ao anoitecer",
+     "Anotar qual constelação aparece",
+     "Relacionar com chuva e seca",
+     "Combinar datas de atividades"
+    ]
+   },
+   "alts": [
+    "Prever eclipses de Marte",
+    "Medir a idade da Terra",
+    "Decidir a época de plantar, colher, caçar e pescar",
+    "Substituir qualquer relógio"
+   ],
+   "correta": 2,
+   "explicacao": "O céu ajuda a organizar o ano."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao anoitecer, a constelação visível muda ao longo do ano.",
+   "comando": "Por que isso acontece?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação do céu ao anoitecer",
+    "colunas": [
+     "Mês",
+     "Constelação mais alta"
+    ],
+    "linhas": [
+     [
+      "Janeiro",
+      "Homem Velho"
+     ],
+     [
+      "Abril",
+      "Cruzeiro do Sul"
+     ],
+     [
+      "Julho",
+      "Ema"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque as estrelas se movem ao acaso",
+    "Porque a Terra se move em volta do Sol e muda a parte do céu vista à noite",
+    "Porque a Lua apaga constelações",
+    "Porque o céu muda por vontade dos povos"
+   ],
+   "correta": 1,
+   "explicacao": "A translação muda o céu visível."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A astronomia dos povos originários é chamada etnoastronomia.",
+   "comando": "O que a etnoastronomia estuda?",
+   "figura": null,
+   "ref": "Como povos e culturas observam e interpretam o céu.",
+   "conceitos": [
+    "etnoastronomia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Alunos usam um gnômon no pátio.",
+   "comando": "Para que ele serve?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados: sombra do gnômon",
+    "unidade": "cm",
+    "itens": [
+     {
+      "rotulo": "9 h",
+      "valor": 40
+     },
+     {
+      "rotulo": "12 h",
+      "valor": 15
+     },
+     {
+      "rotulo": "15 h",
+      "valor": 38
+     }
+    ]
+   },
+   "ref": "Medir a sombra do Sol para marcar horas, dias e estações.",
+   "conceitos": [
+    "gnômon",
+    "sombra"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em julho, a Ema aparece ao anoitecer no céu.",
+   "comando": "Que estação e que clima?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação do céu ao anoitecer",
+    "colunas": [
+     "Mês",
+     "Constelação mais alta"
+    ],
+    "linhas": [
+     [
+      "Janeiro",
+      "Homem Velho"
+     ],
+     [
+      "Julho",
+      "Ema"
+     ]
+    ]
+   },
+   "ref": "Inverno, mais seco e frio.",
+   "conceitos": [
+    "inverno",
+    "seco"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os guaranis observam o céu há séculos.",
+   "comando": "Por que isso pode ser considerado conhecimento científico?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Método dos povos",
+    "etapas": [
+     "Observar o céu",
+     "Registrar o que se repete",
+     "Relacionar com chuva e seca",
+     "Prever datas"
+    ]
+   },
+   "ref": "Observação cuidadosa e registro de padrões para prever fenômenos.",
+   "conceitos": [
+    "observação",
+    "registro",
+    "previsão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O Tempo Novo e o Tempo Velho do céu guarani marcam partes do ano.",
+   "comando": "Por que valorizar esse conhecimento?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Tempos no calendário guarani",
+    "colunas": [
+     "Tempo",
+     "Meses aproximados"
+    ],
+    "linhas": [
+     [
+      "Tempo Novo",
+      "setembro a março"
+     ],
+     [
+      "Tempo Velho",
+      "março a setembro"
+     ]
+    ]
+   },
+   "ref": "Preserva a cultura e a ciência dos povos originários e ajuda a respeitar a natureza.",
+   "conceitos": [
+    "cultura",
+    "respeito",
+    "natureza"
+   ]
+  }
+ ]
+}

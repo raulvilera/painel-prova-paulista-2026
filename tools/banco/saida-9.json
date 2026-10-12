@@ -1,0 +1,2866 @@
+{
+ "7º ANO|1|Reconhecer fenômenos geológicos (vulcanismo, terremotos e tsunamis) e seus impactos na superfície da Terra.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Um vídeo mostra lava e cinzas saindo pela abertura de uma montanha.",
+   "comando": "Qual fenômeno natural está acontecendo?",
+   "figura": null,
+   "alts": [
+    "Terremoto",
+    "Tsunami",
+    "Erupção vulcânica",
+    "Deslizamento de terra"
+   ],
+   "correta": 2,
+   "explicacao": "Lava e cinzas saindo de uma abertura caracterizam uma erupção vulcânica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Após um abalo, uma aluna anotou o que sentiu na cidade.",
+   "comando": "Que fenômeno os registros indicam?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação",
+    "colunas": [
+     "Item",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Duração",
+      "cerca de 30 segundos"
+     ],
+     [
+      "Chão",
+      "balançou"
+     ],
+     [
+      "Lustre da sala",
+      "oscilou"
+     ],
+     [
+      "Som",
+      "ruído grave"
+     ]
+    ]
+   },
+   "alts": [
+    "Vulcanismo",
+    "Terremoto",
+    "Tsunami",
+    "Maré alta"
+   ],
+   "correta": 1,
+   "explicacao": "O balanço do chão causado por liberação de energia na crosta é um terremoto."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na bandeja de areia, a turma sacudiu a maquete com três intensidades.",
+   "comando": "O que o experimento mostra?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: prédios de palitos que caíram",
+    "colunas": [
+     "Intensidade",
+     "Prédios que caíram"
+    ],
+    "linhas": [
+     [
+      "Fraca",
+      "1"
+     ],
+     [
+      "Média",
+      "3"
+     ],
+     [
+      "Forte",
+      "6"
+     ]
+    ]
+   },
+   "alts": [
+    "Quanto mais forte o tremor, maior o dano às construções",
+    "Só caem prédios construídos perto de vulcões",
+    "Qualquer tremor derruba todos os prédios",
+    "A areia protege as construções de qualquer abalo"
+   ],
+   "correta": 0,
+   "explicacao": "Os dados mostram que o número de prédios caídos aumenta com a intensidade do tremor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma turma comparou o número de terremotos fortes em três países.",
+   "comando": "Por que o Chile tem muito mais terremotos que o Brasil?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: terremotos fortes em dez anos",
+    "unidade": "terremotos",
+    "itens": [
+     {
+      "rotulo": "Japão",
+      "valor": 90
+     },
+     {
+      "rotulo": "Chile",
+      "valor": 70
+     },
+     {
+      "rotulo": "Brasil",
+      "valor": 1
+     }
+    ]
+   },
+   "alts": [
+    "O Brasil não tem crosta terrestre sólida",
+    "O Chile é mais quente que o Brasil",
+    "O Brasil é grande demais para sofrer tremores",
+    "O Chile fica junto ao encontro de placas tectônicas e o Brasil está no meio de uma placa"
+   ],
+   "correta": 3,
+   "explicacao": "Terremotos são mais frequentes nas bordas das placas; o Brasil está no interior de uma placa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em aula, a turma recortou o mapa-múndi e aproximou os continentes.",
+   "comando": "Que explicação científica justifica o encaixe das costas do Brasil e da África?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas do procedimento da atividade",
+    "etapas": [
+     "Recortar os continentes do mapa",
+     "Aproximar a costa do Brasil da costa africana",
+     "Observar como as bordas se ajustam",
+     "Anotar o resultado"
+    ]
+   },
+   "alts": [
+    "Os rios cavaram as costas até ficarem iguais",
+    "Os vulcões empurraram os continentes de uma vez",
+    "Os continentes já estiveram unidos e se afastaram lentamente pelo movimento das placas",
+    "As marés moldaram as duas costas ao mesmo tempo"
+   ],
+   "correta": 2,
+   "explicacao": "A deriva continental explica o encaixe: os continentes eram unidos e se separaram com o movimento das placas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ondas gigantes podem atingir o litoral e destruir cidades.",
+   "comando": "Cite um fenômeno geológico que pode formar um tsunami.",
+   "figura": null,
+   "ref": "Um terremoto no fundo do mar (ou erupção vulcânica submarina) movimenta a água e forma ondas gigantes.",
+   "conceitos": [
+    "terremoto submarino",
+    "erupção submarina",
+    "ondas gigantes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma sacudiu a bandeja com areia e observou a maquete.",
+   "comando": "Cite um impacto que um terremoto forte pode causar nas construções.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: situação da maquete após sacudir",
+    "colunas": [
+     "Elemento",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Prédio de palitos",
+      "tombou"
+     ],
+     [
+      "Prédio de caixinha",
+      "ficou em pé com inclinação"
+     ],
+     [
+      "Areia",
+      "formou ondulações"
+     ]
+    ]
+   },
+   "ref": "Queda ou rachaduras de prédios; também pode haver deslizamentos de terra.",
+   "conceitos": [
+    "queda de construções",
+    "rachaduras",
+    "deslizamentos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma sobrepôs o mapa de vulcões ao mapa dos limites das placas.",
+   "comando": "Por que muitos vulcões ficam perto dos limites das placas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: contagem no mapa sobreposto",
+    "colunas": [
+     "Região do mapa",
+     "Vulcões ativos"
+    ],
+    "linhas": [
+     [
+      "Perto dos limites de placas",
+      "450"
+     ],
+     [
+      "Longe dos limites de placas",
+      "5"
+     ]
+    ]
+   },
+   "ref": "Nos limites as placas se chocam ou se afastam, o que abre caminhos para o magma subir à superfície.",
+   "conceitos": [
+    "limites de placas",
+    "movimento das placas",
+    "magma"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um colega disse que terremotos acontecem em qualquer lugar com a mesma frequência.",
+   "comando": "Use os dados para discordar dele.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: terremotos registrados por região",
+    "unidade": "terremotos",
+    "itens": [
+     {
+      "rotulo": "Borda de placas no Pacífico",
+      "valor": 80
+     },
+     {
+      "rotulo": "Borda de placas no Atlântico",
+      "valor": 10
+     },
+     {
+      "rotulo": "Interior da América do Sul",
+      "valor": 1
+     }
+    ]
+   },
+   "ref": "Os terremotos se concentram nas bordas das placas tectônicas; no interior das placas são raros.",
+   "conceitos": [
+    "bordas de placas",
+    "distribuição desigual",
+    "interior das placas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os cientistas encontram rochas e fósseis parecidos no Brasil e na África.",
+   "comando": "Por que isso reforça a ideia de que os continentes já estiveram unidos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: comparação entre as duas costas",
+    "colunas": [
+     "Observação",
+     "Brasil",
+     "África"
+    ],
+    "linhas": [
+     [
+      "Fóssil de réptil de água doce",
+      "encontrado",
+      "encontrado"
+     ],
+     [
+      "Idade das rochas da costa",
+      "130 milhões de anos",
+      "130 milhões de anos"
+     ],
+     [
+      "Formato da costa",
+      "saliência",
+      "reentrância"
+     ]
+    ]
+   },
+   "ref": "Seres e rochas iguais em lados opostos do oceano e costas que se encaixam indicam que os continentes eram unidos e depois se separaram.",
+   "conceitos": [
+    "deriva continental",
+    "evidências",
+    "fósseis e rochas iguais"
+   ]
+  }
+ ],
+ "8º ANO|3|Identificar variáveis meteorológicas relacionadas à previsão do tempo e os instrumentos utilizados para medi-las.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na previsão de sábado, a temperatura máxima prevista é 27 °C.",
+   "comando": "Qual instrumento mede a temperatura do ar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Previsão do tempo para sábado",
+    "colunas": [
+     "Variável",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Temperatura",
+      "16 a 27 °C"
+     ],
+     [
+      "Umidade",
+      "60%"
+     ],
+     [
+      "Chance de chuva",
+      "20%"
+     ],
+     [
+      "Vento",
+      "10 km/h"
+     ]
+    ]
+   },
+   "alts": [
+    "Termômetro",
+    "Pluviômetro",
+    "Biruta",
+    "Régua"
+   ],
+   "correta": 0,
+   "explicacao": "O termômetro mede temperatura."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na miniestação, uma garrafa PET cortada com régua colada recebeu água da chuva.",
+   "comando": "O que esse instrumento mede?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: nível da água na garrafa",
+    "unidade": "mm",
+    "itens": [
+     {
+      "rotulo": "Segunda",
+      "valor": 0
+     },
+     {
+      "rotulo": "Terça",
+      "valor": 12
+     },
+     {
+      "rotulo": "Quarta",
+      "valor": 3
+     },
+     {
+      "rotulo": "Quinta",
+      "valor": 0
+     }
+    ]
+   },
+   "alts": [
+    "A direção do vento",
+    "A temperatura do ar",
+    "A pressão atmosférica",
+    "A quantidade de chuva"
+   ],
+   "correta": 3,
+   "explicacao": "O pluviômetro mede a quantidade de chuva em milímetros."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma família decide levar guarda-chuva quando a chance de chuva passa de 50%.",
+   "comando": "Em que dia ela deve levar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Previsão para o fim de semana",
+    "colunas": [
+     "Dia",
+     "Chance de chuva",
+     "Vento"
+    ],
+    "linhas": [
+     [
+      "Sábado",
+      "20%",
+      "10 km/h"
+     ],
+     [
+      "Domingo",
+      "80%",
+      "35 km/h"
+     ]
+    ]
+   },
+   "alts": [
+    "Sábado, pois o vento é mais fraco",
+    "Domingo, pois a chance de chuva é 80%",
+    "Nos dois dias, por causa do vento",
+    "Em nenhum dos dois dias"
+   ],
+   "correta": 1,
+   "explicacao": "Só o domingo passa de 50% de chance de chuva."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A biruta do pátio aponta para onde o vento está indo.",
+   "comando": "De onde o vento soprava às 12h?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da biruta no pátio",
+    "colunas": [
+     "Horário",
+     "A biruta apontava para"
+    ],
+    "linhas": [
+     [
+      "8h",
+      "Norte"
+     ],
+     [
+      "12h",
+      "Leste"
+     ],
+     [
+      "16h",
+      "Sul"
+     ]
+    ]
+   },
+   "alts": [
+    "Do Leste",
+    "Do Norte",
+    "Do Oeste",
+    "Do Sul"
+   ],
+   "correta": 2,
+   "explicacao": "Se a biruta aponta para o Leste, o vento vem do Oeste."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma anotou a pressão e a umidade do ar em três dias seguidos.",
+   "comando": "Qual previsão combina melhor com esses dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: registros diários",
+    "colunas": [
+     "Dia",
+     "Pressão (hPa)",
+     "Umidade"
+    ],
+    "linhas": [
+     [
+      "Segunda",
+      "1018",
+      "45%"
+     ],
+     [
+      "Terça",
+      "1012",
+      "65%"
+     ],
+     [
+      "Quarta",
+      "1006",
+      "85%"
+     ]
+    ]
+   },
+   "alts": [
+    "Aumento da chance de chuva",
+    "Dias cada vez mais secos",
+    "Tempo estável e sem nuvens",
+    "Queda forte de temperatura sem chuva"
+   ],
+   "correta": 0,
+   "explicacao": "Pressão caindo e umidade subindo indicam chuva mais provável."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma previsão do tempo traz vários números sobre o dia.",
+   "comando": "Cite duas variáveis meteorológicas que aparecem numa previsão.",
+   "figura": null,
+   "ref": "Por exemplo: temperatura, umidade do ar, chance de chuva, vento e pressão atmosférica.",
+   "conceitos": [
+    "temperatura",
+    "umidade",
+    "chuva",
+    "vento",
+    "pressão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma mediu a temperatura do ar no pátio durante o dia.",
+   "comando": "Que instrumento foi usado e em que horário foi mais quente?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: temperatura do ar",
+    "unidade": "°C",
+    "itens": [
+     {
+      "rotulo": "6h",
+      "valor": 16
+     },
+     {
+      "rotulo": "12h",
+      "valor": 26
+     },
+     {
+      "rotulo": "15h",
+      "valor": 29
+     },
+     {
+      "rotulo": "18h",
+      "valor": 22
+     }
+    ]
+   },
+   "ref": "Foi usado o termômetro; o horário mais quente foi 15h (29 °C).",
+   "conceitos": [
+    "termômetro",
+    "15h",
+    "29 °C"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O pluviômetro de PET ficou no pátio durante a semana.",
+   "comando": "Em que dia choveu mais e quantos mm a mais que na quarta?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: chuva no pluviômetro",
+    "unidade": "mm",
+    "itens": [
+     {
+      "rotulo": "Segunda",
+      "valor": 0
+     },
+     {
+      "rotulo": "Terça",
+      "valor": 12
+     },
+     {
+      "rotulo": "Quarta",
+      "valor": 3
+     },
+     {
+      "rotulo": "Quinta",
+      "valor": 0
+     }
+    ]
+   },
+   "ref": "Choveu mais na terça: 12 mm, ou seja, 9 mm a mais que na quarta (3 mm).",
+   "conceitos": [
+    "pluviômetro",
+    "terça",
+    "9 mm"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um colega disse que a biruta serve para medir a chuva.",
+   "comando": "Corrija a ideia dele.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da biruta no pátio",
+    "colunas": [
+     "Horário",
+     "A biruta apontava para"
+    ],
+    "linhas": [
+     [
+      "8h",
+      "Norte"
+     ],
+     [
+      "12h",
+      "Leste"
+     ]
+    ]
+   },
+   "ref": "A biruta indica a direção do vento; a chuva é medida pelo pluviômetro.",
+   "conceitos": [
+    "biruta",
+    "direção do vento",
+    "pluviômetro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aluno disse que só a temperatura basta para saber se vai chover.",
+   "comando": "Use os dados para justificar por que é melhor observar várias variáveis.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: dois dias parecidos",
+    "colunas": [
+     "Variável",
+     "Dia A",
+     "Dia B"
+    ],
+    "linhas": [
+     [
+      "Temperatura",
+      "24 °C",
+      "24 °C"
+     ],
+     [
+      "Pressão",
+      "1018 hPa",
+      "1005 hPa"
+     ],
+     [
+      "Umidade",
+      "40%",
+      "90%"
+     ]
+    ]
+   },
+   "ref": "A temperatura é igual nos dois dias, mas pressão baixa e umidade alta indicam chuva no dia B; várias variáveis juntas melhoram a previsão.",
+   "conceitos": [
+    "várias variáveis",
+    "pressão",
+    "umidade"
+   ]
+  }
+ ],
+ "9º ANO|1|Aplicar as Leis Ponderais em reações químicas.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Há mais de 200 anos, um cientista francês pesou substâncias antes e depois de reações em recipientes fechados.",
+   "comando": "Quem enunciou a lei da conservação das massas?",
+   "figura": null,
+   "alts": [
+    "Dalton",
+    "Lavoisier",
+    "Newton",
+    "Einstein"
+   ],
+   "correta": 1,
+   "explicacao": "Lavoisier mostrou que, em sistema fechado, a massa total se conserva."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma misturou bicarbonato e vinagre com um balão preso à garrafa.",
+   "comando": "Que evidência mostra que houve reação química?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas do procedimento",
+    "etapas": [
+     "Pesar o balão com bicarbonato e a garrafa com vinagre",
+     "Virar o balão para o bicarbonato cair na garrafa",
+     "Observar o que acontece com o balão",
+     "Pesar o sistema de novo"
+    ]
+   },
+   "alts": [
+    "O vinagre ficou parado no fundo",
+    "A garrafa ficou mais leve",
+    "O balão encheu, indicando formação de gás",
+    "O balão murchou"
+   ],
+   "correta": 2,
+   "explicacao": "O balão encher mostra que um gás foi produzido."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma pesou o sistema antes e depois da reação, fechado e aberto.",
+   "comando": "Por que a massa diminuiu no sistema aberto?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: massa do sistema",
+    "colunas": [
+     "Sistema",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Com balão (fechado)",
+      "180 g",
+      "180 g"
+     ],
+     [
+      "Sem balão (aberto)",
+      "180 g",
+      "176 g"
+     ]
+    ]
+   },
+   "alts": [
+    "A matéria foi destruída pela reação",
+    "O vinagre evaporou e sumiu totalmente",
+    "A balança estava com defeito",
+    "O gás formado escapou para o ar"
+   ],
+   "correta": 3,
+   "explicacao": "No sistema aberto o gás escapa; a massa total se conserva se o gás for contado."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma reação, carbono e oxigênio formam gás carbônico em recipiente fechado.",
+   "comando": "Qual a massa de gás carbônico formado?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: reação em recipiente fechado",
+    "colunas": [
+     "Substância",
+     "Massa"
+    ],
+    "linhas": [
+     [
+      "Carbono (reagente)",
+      "12 g"
+     ],
+     [
+      "Oxigênio (reagente)",
+      "32 g"
+     ],
+     [
+      "Gás carbônico (produto)",
+      "?"
+     ]
+    ]
+   },
+   "alts": [
+    "44 g",
+    "20 g",
+    "32 g",
+    "12 g"
+   ],
+   "correta": 0,
+   "explicacao": "Massa dos reagentes = massa dos produtos: 12 + 32 = 44 g."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em dois testes, hidrogênio reage com oxigênio formando água.",
+   "comando": "Se 4 g de hidrogênio reagirem completamente, quantos gramas de oxigênio serão consumidos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: formação de água",
+    "colunas": [
+     "Teste",
+     "Hidrogênio",
+     "Oxigênio",
+     "Água"
+    ],
+    "linhas": [
+     [
+      "1",
+      "1 g",
+      "8 g",
+      "9 g"
+     ],
+     [
+      "2",
+      "2 g",
+      "16 g",
+      "18 g"
+     ]
+    ]
+   },
+   "alts": [
+    "8 g",
+    "16 g",
+    "36 g",
+    "32 g"
+   ],
+   "correta": 3,
+   "explicacao": "A proporção é constante: 1 g de H para 8 g de O; 4 g de H consomem 32 g de O."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cientistas usam recipientes diferentes ao estudar reações químicas.",
+   "comando": "O que é um sistema fechado?",
+   "figura": null,
+   "ref": "É um sistema em que nenhuma matéria entra nem sai, como o balão preso à garrafa.",
+   "conceitos": [
+    "sistema fechado",
+    "nada entra nem sai"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao misturar bicarbonato e vinagre, o balão preso à garrafa inflou.",
+   "comando": "Por que o balão encheu?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas do procedimento",
+    "etapas": [
+     "Colocar bicarbonato no balão",
+     "Colocar vinagre na garrafa",
+     "Encaixar o balão no gargalo",
+     "Virar o balão"
+    ]
+   },
+   "ref": "Os reagentes formaram um gás (gás carbônico), que ocupou o balão.",
+   "conceitos": [
+    "formação de gás",
+    "gás carbônico",
+    "reação química"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma repetiu o experimento sem o balão e a massa diminuiu.",
+   "comando": "Explique por que isso ocorreu.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: massa do sistema aberto",
+    "colunas": [
+     "Momento",
+     "Massa"
+    ],
+    "linhas": [
+     [
+      "Antes",
+      "180 g"
+     ],
+     [
+      "Depois",
+      "176 g"
+     ]
+    ]
+   },
+   "ref": "O gás produzido escapou para o ar, levando parte da massa; a matéria não foi destruída.",
+   "conceitos": [
+    "gás escapa",
+    "sistema aberto",
+    "conservação da massa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um frasco fechado, a substância A reage totalmente com a substância B formando C.",
+   "comando": "Qual é a massa de C? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: reação em frasco fechado",
+    "colunas": [
+     "Substância",
+     "Massa"
+    ],
+    "linhas": [
+     [
+      "A (reagente)",
+      "8 g"
+     ],
+     [
+      "B (reagente)",
+      "12 g"
+     ],
+     [
+      "C (produto)",
+      "?"
+     ]
+    ]
+   },
+   "ref": "20 g, porque em sistema fechado a massa dos reagentes é igual à dos produtos (8 + 12).",
+   "conceitos": [
+    "20 g",
+    "conservação das massas",
+    "soma dos reagentes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aluno disse que no sistema aberto a massa 'sumiu'.",
+   "comando": "Use os dados e argumente se ele está certo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: comparação entre sistemas",
+    "colunas": [
+     "Sistema",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Fechado",
+      "180 g",
+      "180 g"
+     ],
+     [
+      "Aberto",
+      "180 g",
+      "176 g"
+     ]
+    ]
+   },
+   "ref": "Ele não está certo: no fechado a massa se manteve; no aberto o gás escapou, então a massa não sumiu, apenas saiu do sistema.",
+   "conceitos": [
+    "Lavoisier",
+    "gás que escapa",
+    "massa conservada"
+   ]
+  }
+ ],
+ "9º ANO|3|Relacionar a gestão e reciclagem de resíduos sólidos às formas de destinação final e ao ciclo de vida dos materiais.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na auditoria do lixo da escola, a turma separou o que encontrou.",
+   "comando": "Qual item da tabela é resíduo orgânico?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Itens encontrados na auditoria",
+    "colunas": [
+     "Item",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Garrafa PET",
+      "14"
+     ],
+     [
+      "Casca de fruta",
+      "9"
+     ],
+     [
+      "Latinha",
+      "6"
+     ],
+     [
+      "Jornal",
+      "11"
+     ]
+    ]
+   },
+   "alts": [
+    "Garrafa PET",
+    "Latinha",
+    "Jornal",
+    "Casca de fruta"
+   ],
+   "correta": 3,
+   "explicacao": "Casca de fruta tem origem vegetal e é orgânica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma estudou como nasce uma garrafa PET.",
+   "comando": "De qual matéria-prima vem o plástico PET?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Ciclo de vida da garrafa PET",
+    "etapas": [
+     "Extração da matéria-prima",
+     "Fabricação da garrafa",
+     "Uso",
+     "Descarte"
+    ]
+   },
+   "alts": [
+    "Do petróleo",
+    "Da areia",
+    "Do algodão",
+    "Do minério de ferro"
+   ],
+   "correta": 0,
+   "explicacao": "O PET é derivado do petróleo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma pesou o lixo seco limpo da escola. A meta é reciclar papel e metal.",
+   "comando": "Quantos kg deixam de ir ao aterro?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: lixo seco limpo",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Papel",
+      "valor": 18
+     },
+     {
+      "rotulo": "Plástico",
+      "valor": 12
+     },
+     {
+      "rotulo": "Metal",
+      "valor": 3
+     },
+     {
+      "rotulo": "Vidro",
+      "valor": 7
+     }
+    ]
+   },
+   "alts": [
+    "3 kg",
+    "18 kg",
+    "21 kg",
+    "40 kg"
+   ],
+   "correta": 2,
+   "explicacao": "Papel (18) + metal (3) = 21 kg."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O refeitório gera restos de comida todos os dias.",
+   "comando": "Qual destino é mais adequado para esses restos?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: resíduos do refeitório",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Restos de comida",
+      "valor": 30
+     },
+     {
+      "rotulo": "Papel",
+      "valor": 8
+     }
+    ]
+   },
+   "alts": [
+    "Lixão",
+    "Compostagem",
+    "Queima a céu aberto",
+    "Descartar em terreno baldio"
+   ],
+   "correta": 1,
+   "explicacao": "A compostagem transforma restos orgânicos em adubo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma comparou o gasto para produzir garrafas novas e recicladas.",
+   "comando": "Qual conclusão os dados permitem?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: energia gasta por 100 garrafas",
+    "colunas": [
+     "Origem",
+     "Energia (unidades)"
+    ],
+    "linhas": [
+     [
+      "Material novo",
+      "100"
+     ],
+     [
+      "Material reciclado",
+      "40"
+     ]
+    ]
+   },
+   "alts": [
+    "Reciclar gasta mais energia que fabricar do zero",
+    "Reciclar usa menos energia e reduz a retirada de recursos da natureza",
+    "Reciclar elimina todo o lixo da cidade",
+    "Reciclar só vale para vidro"
+   ],
+   "correta": 1,
+   "explicacao": "A reciclagem economiza energia e recursos naturais."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na auditoria, a turma separou o lixo seco limpo.",
+   "comando": "Cite um material que pode ser reciclado.",
+   "figura": null,
+   "ref": "Por exemplo: papel, plástico, metal ou vidro.",
+   "conceitos": [
+    "papel",
+    "plástico",
+    "metal",
+    "vidro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola quer organizar a coleta seletiva.",
+   "comando": "O que é coleta seletiva?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: lixo da escola em um dia",
+    "colunas": [
+     "Tipo",
+     "Massa (kg)"
+    ],
+    "linhas": [
+     [
+      "Seco limpo",
+      "40"
+     ],
+     [
+      "Orgânico",
+      "30"
+     ],
+     [
+      "Rejeito",
+      "10"
+     ]
+    ]
+   },
+   "ref": "É separar os resíduos por tipo para que cada um tenha o destino adequado, como a reciclagem.",
+   "conceitos": [
+    "separar por tipo",
+    "reciclagem",
+    "destinação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Parte do lixo seco chegou sujo de comida.",
+   "comando": "Por que lavar a embalagem ajuda a reciclagem?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: lixo seco recolhido",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Limpo",
+      "valor": 40
+     },
+     {
+      "rotulo": "Sujo",
+      "valor": 15
+     }
+    ]
+   },
+   "ref": "Restos de comida contaminam os materiais e dificultam ou impedem a reciclagem.",
+   "conceitos": [
+    "contaminação",
+    "reciclagem",
+    "embalagem limpa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O pátio está sempre com embalagens no chão.",
+   "comando": "Proponha uma ação da escola para reduzir o lixo.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: resíduos do pátio em uma semana",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Embalagens plásticas",
+      "valor": 20
+     },
+     {
+      "rotulo": "Papel",
+      "valor": 10
+     },
+     {
+      "rotulo": "Restos de comida",
+      "valor": 15
+     }
+    ]
+   },
+   "ref": "Por exemplo: levar garrafa reutilizável, instalar lixeiras de coleta seletiva ou campanha para reduzir descartáveis.",
+   "conceitos": [
+    "reduzir consumo",
+    "reutilizar",
+    "coleta seletiva"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um colega disse que basta reciclar e não precisa diminuir o consumo.",
+   "comando": "Justifique por que reduzir o consumo é melhor que apenas reciclar.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Ciclo de vida de um produto",
+    "etapas": [
+     "Extração",
+     "Fabricação",
+     "Uso",
+     "Descarte"
+    ]
+   },
+   "ref": "Reduzir evita extrair recursos e gastar energia; reciclar também gasta energia e nem todo material volta ao ciclo.",
+   "conceitos": [
+    "reduzir consumo",
+    "uso de recursos",
+    "ciclo de vida"
+   ]
+  }
+ ],
+ "4B|6º ANO|6": [
+  {
+   "tipo": "obj",
+   "enunciado": "Ao sair do escuro para o sol, os olhos se ajustam à quantidade de luz.",
+   "comando": "Qual estrutura do olho controla a entrada de luz?",
+   "figura": null,
+   "alts": [
+    "Íris, que muda o tamanho da pupila",
+    "Retina",
+    "Nervo óptico",
+    "Esclera"
+   ],
+   "correta": 0,
+   "explicacao": "A íris regula o diâmetro da pupila."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao olhar uma flor, a luz percorre o olho até formar a imagem.",
+   "comando": "Em que parte do olho a imagem se forma?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Caminho da luz até o cérebro",
+    "etapas": [
+     "A luz do objeto chega ao olho",
+     "Atravessa as estruturas da frente do olho",
+     "Alcança o fundo do olho",
+     "O sinal segue até o cérebro"
+    ]
+   },
+   "alts": [
+    "Córnea",
+    "Íris",
+    "Retina",
+    "Nervo óptico"
+   ],
+   "correta": 2,
+   "explicacao": "A imagem se forma na retina, no fundo do olho."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em Holambra, uma pétala parece vermelha sob luz branca. A turma testou outras luzes.",
+   "comando": "Por que a pétala parece vermelha?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: aparência da pétala",
+    "colunas": [
+     "Luz usada",
+     "Aparência"
+    ],
+    "linhas": [
+     [
+      "Branca",
+      "vermelha"
+     ],
+     [
+      "Vermelha",
+      "vermelha"
+     ],
+     [
+      "Azul",
+      "escura"
+     ]
+    ]
+   },
+   "alts": [
+    "Ela produz luz vermelha sozinha",
+    "Ela reflete a luz vermelha e absorve as demais",
+    "Ela absorve a luz vermelha e reflete as outras",
+    "Ela deixa a luz atravessar sem alteração"
+   ],
+   "correta": 1,
+   "explicacao": "A cor vista é a da luz refletida."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma aluna mediu a pupila de um colega em dois ambientes.",
+   "comando": "O que acontece com a pupila no escuro e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: tamanho da pupila",
+    "colunas": [
+     "Ambiente",
+     "Pupila (mm)"
+    ],
+    "linhas": [
+     [
+      "Iluminado",
+      "2"
+     ],
+     [
+      "Escuro",
+      "7"
+     ]
+    ]
+   },
+   "alts": [
+    "Diminui, para entrar menos luz",
+    "Aumenta, para impedir a entrada de luz",
+    "Não muda, pois não depende da luz",
+    "Aumenta, para deixar entrar mais luz"
+   ],
+   "correta": 3,
+   "explicacao": "No escuro a pupila se dilata para captar mais luz."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um teste de visão avaliou três etapas em uma pessoa.",
+   "comando": "Qual estrutura provavelmente está lesionada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: resultado do teste",
+    "colunas": [
+     "Etapa",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Luz entra no olho",
+      "sim"
+     ],
+     [
+      "Imagem na retina",
+      "sim"
+     ],
+     [
+      "Percepção no cérebro",
+      "não"
+     ]
+    ]
+   },
+   "alts": [
+    "Pupila",
+    "Córnea",
+    "Nervo óptico",
+    "Cristalino"
+   ],
+   "correta": 2,
+   "explicacao": "Se a imagem se forma mas não chega ao cérebro, o problema é na condução do sinal."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O olho tem várias partes com funções diferentes.",
+   "comando": "Cite duas partes do olho.",
+   "figura": null,
+   "ref": "Por exemplo: córnea, íris, pupila, cristalino, retina e nervo óptico.",
+   "conceitos": [
+    "córnea",
+    "íris",
+    "pupila",
+    "cristalino",
+    "retina",
+    "nervo óptico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os cientistas estudam como a luz forma a imagem no olho.",
+   "comando": "Como é a imagem formada na retina em relação ao objeto?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Caminho da luz até o cérebro",
+    "etapas": [
+     "A luz do objeto chega ao olho",
+     "Atravessa as estruturas da frente do olho",
+     "Alcança o fundo do olho",
+     "O sinal segue até o cérebro"
+    ]
+   },
+   "ref": "Ela é invertida (de cabeça para baixo).",
+   "conceitos": [
+    "imagem invertida",
+    "retina"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um quarto fechado, a turma testou a visão das cores.",
+   "comando": "Por que não vemos as cores no escuro?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: quarto fechado",
+    "colunas": [
+     "Luz da sala",
+     "Cores vistas"
+    ],
+    "linhas": [
+     [
+      "Acesa",
+      "sim"
+     ],
+     [
+      "Apagada",
+      "não"
+     ]
+    ]
+   },
+   "ref": "Sem luz refletida pelos objetos, nada chega à retina, então não há imagem nem cor.",
+   "conceitos": [
+    "luz",
+    "reflexão",
+    "retina"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma caneta azul foi observada sob luzes diferentes.",
+   "comando": "Por que a caneta parece escura sob luz vermelha?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: aparência da caneta azul",
+    "colunas": [
+     "Luz usada",
+     "Aparência"
+    ],
+    "linhas": [
+     [
+      "Branca",
+      "azul"
+     ],
+     [
+      "Azul",
+      "azul"
+     ],
+     [
+      "Vermelha",
+      "escura"
+     ]
+    ]
+   },
+   "ref": "A caneta absorve a luz vermelha e quase não reflete luz para os olhos.",
+   "conceitos": [
+    "absorção",
+    "reflexão",
+    "cor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A imagem na retina é invertida, mas enxergamos tudo em pé.",
+   "comando": "Explique por quê.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Caminho da luz até o cérebro",
+    "etapas": [
+     "A luz do objeto chega ao olho",
+     "Atravessa as estruturas da frente do olho",
+     "Alcança o fundo do olho",
+     "O sinal segue até o cérebro"
+    ]
+   },
+   "ref": "O cérebro interpreta os sinais enviados pelo nervo óptico e reorganiza a imagem.",
+   "conceitos": [
+    "cérebro",
+    "nervo óptico",
+    "interpretação"
+   ]
+  }
+ ],
+ "4B|7º ANO|2": [
+  {
+   "tipo": "obj",
+   "enunciado": "Os vírus são muito menores que as células.",
+   "comando": "Qual é o menor dos três?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: tamanho aproximado",
+    "unidade": "nanômetros",
+    "itens": [
+     {
+      "rotulo": "Célula da pele",
+      "valor": 30000
+     },
+     {
+      "rotulo": "Bactéria",
+      "valor": 2000
+     },
+     {
+      "rotulo": "Vírus da gripe",
+      "valor": 100
+     }
+    ]
+   },
+   "alts": [
+    "Célula da pele",
+    "Bactéria",
+    "Todos têm o mesmo tamanho",
+    "Vírus da gripe"
+   ],
+   "correta": 3,
+   "explicacao": "O vírus da gripe tem cerca de 100 nm."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um vírus tem uma cápsula de proteína que envolve seu material genético.",
+   "comando": "Qual o nome dessa cápsula?",
+   "figura": null,
+   "alts": [
+    "Núcleo",
+    "Capsídeo",
+    "Mitocôndria",
+    "Citoplasma"
+   ],
+   "correta": 1,
+   "explicacao": "O capsídeo é a capa proteica do vírus."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma analisou etapas da multiplicação de um vírus em uma célula.",
+   "comando": "No ciclo lítico, o que ocorre no final?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da multiplicação viral",
+    "etapas": [
+     "O vírus encosta na célula",
+     "O material genético entra na célula",
+     "A célula produz cópias do vírus"
+    ]
+   },
+   "alts": [
+    "A célula se rompe e libera novos vírus",
+    "A célula vira um vírus gigante",
+    "O vírus morre dentro da célula",
+    "A célula passa a fazer fotossíntese"
+   ],
+   "correta": 0,
+   "explicacao": "No ciclo lítico a célula é destruída e libera novos vírus."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma pessoa com gripe quis tomar antibiótico, mas o médico disse que não adiantaria.",
+   "comando": "Por que o antibiótico não serve contra a gripe?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: bactéria e vírus",
+    "colunas": [
+     "Característica",
+     "Bactéria",
+     "Vírus"
+    ],
+    "linhas": [
+     [
+      "Tem célula",
+      "sim",
+      "não"
+     ],
+     [
+      "Multiplica sozinho",
+      "sim",
+      "não"
+     ]
+    ]
+   },
+   "alts": [
+    "A gripe é causada por bactérias resistentes",
+    "O antibiótico só age em fungos",
+    "A gripe é causada por vírus, que não são bactérias e se multiplicam dentro das células do hospedeiro",
+    "O vírus é grande demais para o remédio"
+   ],
+   "correta": 2,
+   "explicacao": "Antibióticos atuam em bactérias, não em vírus."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Cientistas discutem se os vírus são seres vivos.",
+   "comando": "Segundo a teoria celular, por que muitos não os consideram vivos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: características dos vírus",
+    "colunas": [
+     "Característica",
+     "Vírus"
+    ],
+    "linhas": [
+     [
+      "Tem células",
+      "não"
+     ],
+     [
+      "Metabolismo próprio",
+      "não"
+     ],
+     [
+      "Material genético",
+      "sim"
+     ],
+     [
+      "Reprodução",
+      "só dentro de células"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque não têm material genético",
+    "Porque não têm células e dependem de uma célula para se reproduzir",
+    "Porque são maiores que as bactérias",
+    "Porque se reproduzem sozinhos fora das células"
+   ],
+   "correta": 1,
+   "explicacao": "Seres vivos são formados por células; os vírus não as têm."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A gripe e a dengue são doenças conhecidas.",
+   "comando": "Cite uma doença causada por vírus.",
+   "figura": null,
+   "ref": "Por exemplo: gripe, dengue, covid-19, sarampo ou catapora.",
+   "conceitos": [
+    "gripe",
+    "dengue",
+    "covid-19",
+    "sarampo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um vírus da gripe mede cerca de 100 nm, muito menor que uma bactéria.",
+   "comando": "Cite duas estruturas básicas de um vírus.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: tamanho aproximado",
+    "unidade": "nanômetros",
+    "itens": [
+     {
+      "rotulo": "Bactéria",
+      "valor": 2000
+     },
+     {
+      "rotulo": "Vírus da gripe",
+      "valor": 100
+     }
+    ]
+   },
+   "ref": "Capsídeo (capa de proteína) e material genético; alguns têm também envelope.",
+   "conceitos": [
+    "capsídeo",
+    "material genético",
+    "envelope"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dizemos que os vírus são parasitas intracelulares obrigatórios.",
+   "comando": "O que isso quer dizer?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da multiplicação viral",
+    "etapas": [
+     "O vírus entra na célula",
+     "A célula copia o material genético",
+     "São montados novos vírus"
+    ]
+   },
+   "ref": "Só conseguem se multiplicar dentro de células vivas, usando a estrutura delas.",
+   "conceitos": [
+    "parasita",
+    "dentro de células",
+    "multiplicação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um texto diz que o vírus 'sequestra' a célula.",
+   "comando": "Explique o que significa essa expressão.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da multiplicação viral",
+    "etapas": [
+     "O vírus entra na célula",
+     "A célula passa a obedecer ao material genético viral",
+     "A célula produz novos vírus"
+    ]
+   },
+   "ref": "O vírus usa a célula para fazer cópias dele, desviando as funções celulares.",
+   "conceitos": [
+    "célula hospedeira",
+    "cópias do vírus",
+    "dependência"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aluno disse que vírus são seres vivos porque têm material genético.",
+   "comando": "Dê sua opinião, justificando com a teoria celular.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: características dos vírus",
+    "colunas": [
+     "Característica",
+     "Vírus"
+    ],
+    "linhas": [
+     [
+      "Tem células",
+      "não"
+     ],
+     [
+      "Material genético",
+      "sim"
+     ],
+     [
+      "Reprodução",
+      "só dentro de células"
+     ]
+    ]
+   },
+   "ref": "Têm material genético, mas não são formados por células nem se reproduzem sozinhos; pela teoria celular, são discutíveis como seres vivos.",
+   "conceitos": [
+    "teoria celular",
+    "ausência de células",
+    "dependência da célula"
+   ]
+  }
+ ],
+ "4B|7º ANO|12": [
+  {
+   "tipo": "obj",
+   "enunciado": "Nas campanhas de vacinação, um personagem em forma de gotinha é muito conhecido pelas crianças.",
+   "comando": "Qual é o nome dele?",
+   "figura": null,
+   "alts": [
+    "Zé Vacinão",
+    "Gota Azul",
+    "Zé Gotinha",
+    "Seu Remédio"
+   ],
+   "correta": 2,
+   "explicacao": "Zé Gotinha é o símbolo do PNI."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O Programa Nacional de Imunização (PNI) é uma política pública de saúde brasileira.",
+   "comando": "Em que ano ele foi criado?",
+   "figura": null,
+   "alts": [
+    "1950",
+    "1973",
+    "1990",
+    "2005"
+   ],
+   "correta": 1,
+   "explicacao": "O PNI foi criado em 1973."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma simulação, a turma comparou a cobertura vacinal com o número de casos de uma doença.",
+   "comando": "O que os dados sugerem?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento (simulação): cobertura e casos",
+    "colunas": [
+     "Cobertura vacinal",
+     "Casos no ano"
+    ],
+    "linhas": [
+     [
+      "95%",
+      "0"
+     ],
+     [
+      "80%",
+      "15"
+     ],
+     [
+      "60%",
+      "120"
+     ]
+    ]
+   },
+   "alts": [
+    "Quanto menor a cobertura vacinal, mais casos da doença",
+    "Quanto menor a cobertura, menos casos",
+    "A vacinação não tem relação com os casos",
+    "Os casos só aumentam quando a cobertura é de 95%"
+   ],
+   "correta": 0,
+   "explicacao": "A queda da vacinação permite que a doença circule mais."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em dois colégios fictícios, a proporção de alunos vacinados era diferente.",
+   "comando": "O que explica haver menos casos no colégio A?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento (simulação): dois colégios",
+    "colunas": [
+     "Colégio",
+     "Vacinados",
+     "Casos"
+    ],
+    "linhas": [
+     [
+      "A",
+      "95%",
+      "0"
+     ],
+     [
+      "B",
+      "50%",
+      "12"
+     ]
+    ]
+   },
+   "alts": [
+    "O vírus só ataca alunos do colégio B",
+    "As vacinas curam quem já está doente",
+    "Os alunos do colégio A nunca saem de casa",
+    "A maioria vacinada dificulta a circulação do vírus e protege também os não vacinados"
+   ],
+   "correta": 3,
+   "explicacao": "É a imunidade coletiva: muitos vacinados reduzem a transmissão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A pólio foi eliminada do Brasil, mas o sarampo voltou a ter casos.",
+   "comando": "Qual explicação é coerente com os dados?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento (simulação): cobertura vacinal contra o sarampo",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "2015",
+      "valor": 96
+     },
+     {
+      "rotulo": "2017",
+      "valor": 85
+     },
+     {
+      "rotulo": "2019",
+      "valor": 72
+     }
+    ]
+   },
+   "alts": [
+    "O vírus do sarampo ficou mais fraco com o tempo",
+    "Os vacinados passaram a transmitir mais a doença",
+    "A queda da vacinação permitiu que o vírus voltasse a circular",
+    "O calendário de vacinação foi extinto em 2015"
+   ],
+   "correta": 2,
+   "explicacao": "Com menos pessoas vacinadas, o vírus volta a circular."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Todo bebê recebe uma caderneta com as datas das vacinas.",
+   "comando": "Para que serve o calendário de vacinação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Trecho do calendário de vacinação",
+    "colunas": [
+     "Idade",
+     "Vacina"
+    ],
+    "linhas": [
+     [
+      "Ao nascer",
+      "BCG"
+     ],
+     [
+      "2 meses",
+      "Pentavalente"
+     ],
+     [
+      "12 meses",
+      "Tríplice viral"
+     ]
+    ]
+   },
+   "ref": "Mostra quais vacinas tomar e em que idade, para proteger a população no tempo certo.",
+   "conceitos": [
+    "calendário",
+    "idade",
+    "proteção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em 2019, a cobertura vacinal contra o sarampo ficou mais baixa que em anos anteriores.",
+   "comando": "Por que o sarampo voltou a circular no Brasil?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento (simulação): cobertura vacinal contra o sarampo",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "2015",
+      "valor": 96
+     },
+     {
+      "rotulo": "2017",
+      "valor": 85
+     },
+     {
+      "rotulo": "2019",
+      "valor": 72
+     }
+    ]
+   },
+   "ref": "Menos pessoas se vacinaram; com isso, o vírus encontrou muitos suscetíveis e voltou a circular.",
+   "conceitos": [
+    "queda da cobertura",
+    "vírus do sarampo",
+    "suscetíveis"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em dois colégios fictícios, a taxa de vacinados era diferente.",
+   "comando": "Explique o que é imunidade de grupo, usando os dados.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento (simulação): dois colégios",
+    "colunas": [
+     "Colégio",
+     "Vacinados",
+     "Casos"
+    ],
+    "linhas": [
+     [
+      "A",
+      "95%",
+      "0"
+     ],
+     [
+      "B",
+      "50%",
+      "12"
+     ]
+    ]
+   },
+   "ref": "Quando a maioria está vacinada, o vírus circula pouco, protegendo também quem não pode se vacinar.",
+   "conceitos": [
+    "imunidade de grupo",
+    "menor circulação",
+    "proteção coletiva"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O PNI organiza campanhas e Dias Nacionais de Vacinação.",
+   "comando": "Por que é importante vacinar muitas pessoas no mesmo período?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento (simulação): crianças vacinadas",
+    "unidade": "mil crianças",
+    "itens": [
+     {
+      "rotulo": "Antes da campanha",
+      "valor": 40
+     },
+     {
+      "rotulo": "Depois da campanha",
+      "valor": 90
+     }
+    ]
+   },
+   "ref": "Aumenta rapidamente a proteção da população e reduz a chance de surtos.",
+   "conceitos": [
+    "campanha",
+    "proteção coletiva",
+    "surtos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A pólio foi erradicada no Brasil, mas ainda existe em outros países.",
+   "comando": "Justifique por que o Brasil continua vacinando contra a pólio.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento (simulação): risco de pólio",
+    "colunas": [
+     "Situação",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "País com vacina em dia",
+      "sem casos"
+     ],
+     [
+      "País com queda da vacinação",
+      "casos voltam"
+     ]
+    ]
+   },
+   "ref": "Se a vacinação cair, a doença pode voltar por casos vindos de fora; vacinar mantém a proteção.",
+   "conceitos": [
+    "erradicação",
+    "manter cobertura",
+    "risco de volta"
+   ]
+  }
+ ],
+ "4B|8º ANO|9": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma lanterna usa pilhas e o rádio de pilha funciona sem ser ligado à tomada.",
+   "comando": "Qual fonte da tabela fornece corrente contínua?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Fontes de energia comuns",
+    "colunas": [
+     "Fonte",
+     "Tensão"
+    ],
+    "linhas": [
+     [
+      "Pilha",
+      "1,5 V"
+     ],
+     [
+      "Tomada da casa",
+      "127 V"
+     ]
+    ]
+   },
+   "alts": [
+    "A tomada da casa",
+    "A pilha",
+    "O alternador de uma usina",
+    "A rede de transmissão"
+   ],
+   "correta": 1,
+   "explicacao": "Pilhas e baterias fornecem corrente contínua."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No Brasil, a corrente alternada da tomada tem frequência de 60 Hz.",
+   "comando": "O que significa 60 Hz?",
+   "figura": null,
+   "alts": [
+    "A corrente repete 60 ciclos a cada segundo",
+    "A tensão é de 60 volts",
+    "A corrente dura 60 segundos",
+    "O aparelho gasta 60 watts"
+   ],
+   "correta": 0,
+   "explicacao": "Hertz é ciclos por segundo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma escola-abrigo sem rede elétrica terá painéis solares e bateria. Os painéis e a bateria fornecem corrente contínua.",
+   "comando": "O que é necessário para usar o ventilador de 127 V CA?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Aparelhos da escola-abrigo",
+    "colunas": [
+     "Aparelho",
+     "Tipo de corrente"
+    ],
+    "linhas": [
+     [
+      "Lâmpada LED de 12 V",
+      "contínua"
+     ],
+     [
+      "Ventilador de 127 V",
+      "alternada"
+     ],
+     [
+      "Carregador de celular",
+      "contínua"
+     ]
+    ]
+   },
+   "alts": [
+    "Mais pilhas ligadas em fila",
+    "Um ímã colado na bateria",
+    "Um inversor, que transforma CC em CA",
+    "Nada, pois o ventilador usa CC"
+   ],
+   "correta": 2,
+   "explicacao": "O inversor converte corrente contínua em alternada."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um gerador, uma turbina faz um ímã girar dentro de uma bobina.",
+   "comando": "Qual princípio explica a corrente produzida?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Funcionamento de um gerador",
+    "etapas": [
+     "A turbina gira",
+     "O ímã gira dentro da bobina",
+     "O campo magnético na bobina varia",
+     "Surge corrente elétrica nos fios"
+    ]
+   },
+   "alts": [
+    "Efeito estufa",
+    "Reflexão da luz",
+    "Dilatação térmica",
+    "Indução eletromagnética"
+   ],
+   "correta": 3,
+   "explicacao": "Variação do campo magnético induz corrente na bobina."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "As usinas ficam longe das cidades e a energia é enviada por fios de alta tensão.",
+   "comando": "Por que se usa alta tensão na transmissão?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento (simulação): perda na transmissão",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Tensão baixa",
+      "valor": 20
+     },
+     {
+      "rotulo": "Tensão alta",
+      "valor": 2
+     }
+    ]
+   },
+   "alts": [
+    "Porque reduz a perda de energia por aquecimento nos fios",
+    "Porque aumenta a perda nos fios",
+    "Porque transforma CA em CC",
+    "Porque o fio fica mais grosso sozinho"
+   ],
+   "correta": 0,
+   "explicacao": "Com alta tensão, a corrente é menor e há menos perda."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A energia de uma pilha vem de reações químicas.",
+   "comando": "Dê um exemplo de fonte de corrente contínua.",
+   "figura": null,
+   "ref": "Pilha, bateria ou painel fotovoltaico.",
+   "conceitos": [
+    "pilha",
+    "bateria",
+    "painel fotovoltaico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma escola-abrigo quer usar painéis solares.",
+   "comando": "O que é um painel fotovoltaico e que corrente ele fornece?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Aparelhos da escola-abrigo",
+    "colunas": [
+     "Aparelho",
+     "Tipo de corrente"
+    ],
+    "linhas": [
+     [
+      "Lâmpada LED de 12 V",
+      "contínua"
+     ],
+     [
+      "Ventilador de 127 V",
+      "alternada"
+     ],
+     [
+      "Carregador de celular",
+      "contínua"
+     ]
+    ]
+   },
+   "ref": "É um dispositivo que transforma luz do Sol em eletricidade, fornecendo corrente contínua.",
+   "conceitos": [
+    "luz solar",
+    "corrente contínua"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma bobina e um ímã giram juntos numa usina.",
+   "comando": "Explique como surge a corrente no gerador.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Funcionamento de um gerador",
+    "etapas": [
+     "Uma força faz o eixo girar",
+     "O ímã gira dentro da bobina",
+     "O campo magnético na bobina varia"
+    ]
+   },
+   "ref": "O movimento do ímã perto da bobina varia o campo magnético e induz corrente elétrica.",
+   "conceitos": [
+    "indução eletromagnética",
+    "ímã",
+    "bobina"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A corrente da tomada muda de sentido, a da pilha não.",
+   "comando": "Diferencie corrente alternada de corrente contínua.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação de fontes",
+    "colunas": [
+     "Fonte",
+     "Sentido da corrente"
+    ],
+    "linhas": [
+     [
+      "Pilha",
+      "sempre o mesmo"
+     ],
+     [
+      "Tomada",
+      "muda 60 vezes por segundo"
+     ]
+    ]
+   },
+   "ref": "Na contínua o sentido é sempre o mesmo; na alternada o sentido se inverte periodicamente.",
+   "conceitos": [
+    "sentido da corrente",
+    "frequência",
+    "CC e CA"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola-abrigo precisa de luz, ventilador e carregador de celular, sem rede elétrica.",
+   "comando": "Proponha uma solução e justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Aparelhos da escola-abrigo",
+    "colunas": [
+     "Aparelho",
+     "Tipo de corrente"
+    ],
+    "linhas": [
+     [
+      "Lâmpada LED de 12 V",
+      "contínua"
+     ],
+     [
+      "Ventilador de 127 V",
+      "alternada"
+     ],
+     [
+      "Carregador de celular",
+      "contínua"
+     ]
+    ]
+   },
+   "ref": "Painéis solares com bateria: alimentam diretamente os aparelhos CC e, com um inversor, o ventilador CA.",
+   "conceitos": [
+    "painel fotovoltaico",
+    "bateria",
+    "inversor"
+   ]
+  }
+ ],
+ "4B|8º ANO|19": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na conta de luz, o consumo de energia aparece com uma unidade de medida.",
+   "comando": "Qual unidade mede o consumo de energia elétrica?",
+   "figura": null,
+   "alts": [
+    "kg",
+    "km/h",
+    "kWh (quilowatt-hora)",
+    "litro"
+   ],
+   "correta": 2,
+   "explicacao": "O consumo é medido em kWh."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A conta de luz mostra uma bandeira tarifária que muda de acordo com as condições de geração de energia.",
+   "comando": "Qual bandeira é a mais cara?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: acréscimo por 100 kWh",
+    "colunas": [
+     "Bandeira",
+     "Acréscimo (R$)"
+    ],
+    "linhas": [
+     [
+      "Verde",
+      "0"
+     ],
+     [
+      "Amarela",
+      "2"
+     ],
+     [
+      "Vermelha 1",
+      "5"
+     ],
+     [
+      "Vermelha 2",
+      "8"
+     ]
+    ]
+   },
+   "alts": [
+    "Verde",
+    "Amarela",
+    "Vermelha 1",
+    "Vermelha 2"
+   ],
+   "correta": 3,
+   "explicacao": "A bandeira vermelha 2 tem o maior acréscimo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma casa consumiu 500 kWh no mês, com bandeira vermelha 1.",
+   "comando": "Qual o valor da conta, sem impostos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: dados da conta",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Consumo",
+      "500 kWh"
+     ],
+     [
+      "Tarifa",
+      "R$ 0,80 por kWh"
+     ],
+     [
+      "Acréscimo da bandeira",
+      "R$ 5,00 por 100 kWh"
+     ]
+    ]
+   },
+   "alts": [
+    "R$ 425,00",
+    "R$ 400,00",
+    "R$ 405,00",
+    "R$ 445,00"
+   ],
+   "correta": 0,
+   "explicacao": "500 × 0,80 = 400; acréscimo 5 × 5 = 25; total 425."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma família quer saber qual aparelho gasta mais energia por mês.",
+   "comando": "Qual aparelho tem o maior consumo mensal (30 dias)?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Uso dos aparelhos da casa",
+    "colunas": [
+     "Aparelho",
+     "Potência (W)",
+     "Horas por dia"
+    ],
+    "linhas": [
+     [
+      "Chuveiro",
+      "4000",
+      "0,5"
+     ],
+     [
+      "Ferro de passar",
+      "1000",
+      "1"
+     ],
+     [
+      "TV",
+      "100",
+      "5"
+     ],
+     [
+      "Lâmpada",
+      "10",
+      "5"
+     ]
+    ]
+   },
+   "alts": [
+    "Ferro de passar",
+    "Chuveiro",
+    "TV",
+    "Lâmpada"
+   ],
+   "correta": 1,
+   "explicacao": "Chuveiro: 4 kW × 0,5 h × 30 = 60 kWh, o maior valor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma casa trocou 5 lâmpadas de 60 W por LED de 9 W, ligadas 5 h por dia.",
+   "comando": "Qual a economia aproximada em 30 dias?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: troca de lâmpadas",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Quantidade",
+      "5"
+     ],
+     [
+      "Potência antiga",
+      "60 W"
+     ],
+     [
+      "Potência LED",
+      "9 W"
+     ],
+     [
+      "Uso",
+      "5 h por dia"
+     ]
+    ]
+   },
+   "alts": [
+    "4 kWh",
+    "8 kWh",
+    "38 kWh",
+    "90 kWh"
+   ],
+   "correta": 2,
+   "explicacao": "(60 − 9) W × 5 × 5 h × 30 = 38.250 Wh ≈ 38 kWh."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Muitas pessoas querem pagar menos na conta de luz.",
+   "comando": "Cite uma ação para economizar energia em casa.",
+   "figura": null,
+   "ref": "Por exemplo: apagar luzes, banhos mais curtos, usar lâmpada LED ou desligar aparelhos da tomada.",
+   "conceitos": [
+    "apagar luzes",
+    "banho curto",
+    "lâmpada LED"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "As bandeiras tarifárias aparecem todo mês na conta.",
+   "comando": "Para que servem as bandeiras verde, amarela e vermelha?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: acréscimo por 100 kWh",
+    "colunas": [
+     "Bandeira",
+     "Acréscimo (R$)"
+    ],
+    "linhas": [
+     [
+      "Verde",
+      "0"
+     ],
+     [
+      "Amarela",
+      "2"
+     ],
+     [
+      "Vermelha 1",
+      "5"
+     ],
+     [
+      "Vermelha 2",
+      "8"
+     ]
+    ]
+   },
+   "ref": "Indicam o custo de gerar energia no mês: verde sem acréscimo, amarela e vermelha com acréscimo crescente.",
+   "conceitos": [
+    "bandeiras tarifárias",
+    "custo da geração",
+    "acréscimo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma casa consumiu 300 kWh com bandeira amarela.",
+   "comando": "Calcule o valor da conta, sem impostos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: dados da conta",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Consumo",
+      "300 kWh"
+     ],
+     [
+      "Tarifa",
+      "R$ 0,80 por kWh"
+     ],
+     [
+      "Acréscimo da bandeira",
+      "R$ 2,00 por 100 kWh"
+     ]
+    ]
+   },
+   "ref": "R$ 246,00 (300 × 0,80 = 240; mais 3 × 2 = 6).",
+   "conceitos": [
+    "tarifa × consumo",
+    "acréscimo da bandeira",
+    "246"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas pessoas tomam banho com o mesmo chuveiro de 4000 W.",
+   "comando": "Explique por que reduzir o tempo de banho diminui a conta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: banho de 30 dias",
+    "colunas": [
+     "Tempo por dia",
+     "Energia (kWh)"
+    ],
+    "linhas": [
+     [
+      "30 minutos",
+      "60"
+     ],
+     [
+      "15 minutos",
+      "30"
+     ]
+    ]
+   },
+   "ref": "Energia = potência × tempo; com menos tempo ligado, o consumo em kWh cai e a conta também.",
+   "conceitos": [
+    "potência × tempo",
+    "consumo em kWh",
+    "economia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A família quer escolher a ação que mais reduz o consumo mensal.",
+   "comando": "Justifique qual aparelho deve ter o uso reduzido primeiro.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: consumo mensal",
+    "unidade": "kWh",
+    "itens": [
+     {
+      "rotulo": "Chuveiro",
+      "valor": 60
+     },
+     {
+      "rotulo": "Ferro",
+      "valor": 30
+     },
+     {
+      "rotulo": "TV",
+      "valor": 15
+     },
+     {
+      "rotulo": "Lâmpadas",
+      "valor": 2
+     }
+    ]
+   },
+   "ref": "O chuveiro, porque é o que mais consome (60 kWh); reduzir seu uso gera a maior economia.",
+   "conceitos": [
+    "maior consumo",
+    "kWh",
+    "prioridade"
+   ]
+  }
+ ],
+ "4B|9º ANO|19": [
+  {
+   "tipo": "obj",
+   "enunciado": "Astrobiólogos procuram planetas na zona habitável de uma estrela.",
+   "comando": "O que é a zona habitável?",
+   "figura": null,
+   "alts": [
+    "Região onde a temperatura permite água líquida na superfície",
+    "Região onde sempre há atmosfera de oxigênio",
+    "Região sem nenhuma radiação",
+    "Região mais próxima possível da estrela"
+   ],
+   "correta": 0,
+   "explicacao": "A zona habitável permite água líquida."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A tabela traz a temperatura média de alguns corpos do Sistema Solar.",
+   "comando": "Qual corpo tem temperatura mais próxima da Terra?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Condições em corpos do Sistema Solar",
+    "colunas": [
+     "Corpo",
+     "Temperatura média"
+    ],
+    "linhas": [
+     [
+      "Terra",
+      "15 °C"
+     ],
+     [
+      "Marte",
+      "-60 °C"
+     ],
+     [
+      "Vênus",
+      "460 °C"
+     ],
+     [
+      "Mercúrio",
+      "167 °C"
+     ]
+    ]
+   },
+   "alts": [
+    "Vênus",
+    "Marte",
+    "Mercúrio",
+    "Todos são iguais"
+   ],
+   "correta": 1,
+   "explicacao": "Marte (-60 °C) é o mais próximo de 15 °C entre os listados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um astronauta de 50 kg estudará em Marte.",
+   "comando": "Como seria seu peso lá em comparação com a Terra?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: Terra e Marte",
+    "colunas": [
+     "Característica",
+     "Terra",
+     "Marte"
+    ],
+    "linhas": [
+     [
+      "Gravidade",
+      "9,8 m/s²",
+      "3,7 m/s²"
+     ],
+     [
+      "Pressão do ar",
+      "1 atm",
+      "0,006 atm"
+     ],
+     [
+      "Camada de ozônio",
+      "presente",
+      "quase ausente"
+     ]
+    ]
+   },
+   "alts": [
+    "Maior, pois Marte tem menos ar",
+    "O mesmo, pois a massa é igual",
+    "Zero, pois não há gravidade em Marte",
+    "Menor, pois a gravidade de Marte é menor"
+   ],
+   "correta": 3,
+   "explicacao": "Peso depende da gravidade; em Marte é menor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em Marte quase não há camada de ozônio.",
+   "comando": "Qual risco isso traz aos astronautas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: Terra e Marte",
+    "colunas": [
+     "Característica",
+     "Terra",
+     "Marte"
+    ],
+    "linhas": [
+     [
+      "Gravidade",
+      "9,8 m/s²",
+      "3,7 m/s²"
+     ],
+     [
+      "Pressão do ar",
+      "1 atm",
+      "0,006 atm"
+     ],
+     [
+      "Camada de ozônio",
+      "presente",
+      "quase ausente"
+     ]
+    ]
+   },
+   "alts": [
+    "Falta de gravidade",
+    "Chuva ácida constante",
+    "Excesso de radiação ultravioleta",
+    "Ar muito pesado"
+   ],
+   "correta": 2,
+   "explicacao": "O ozônio protege da radiação ultravioleta."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Europa e Encélado são luas de gelo que podem esconder água líquida.",
+   "comando": "Por que são alvos de estudo sobre a vida?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: luas de gelo",
+    "colunas": [
+     "Lua",
+     "Superfície",
+     "Sob o gelo"
+    ],
+    "linhas": [
+     [
+      "Europa",
+      "-160 °C",
+      "oceano salgado"
+     ],
+     [
+      "Encélado",
+      "-200 °C",
+      "jatos de vapor de água"
+     ]
+    ]
+   },
+   "alts": [
+    "Têm atmosfera igual à da Terra",
+    "Pode haver água líquida sob o gelo, uma condição para a vida",
+    "São quentes e sem gelo",
+    "Já se encontraram cidades nelas"
+   ],
+   "correta": 1,
+   "explicacao": "Água líquida é condição para a vida."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A Terra tem condições que permitem a vida.",
+   "comando": "Cite duas condições para a vida na Terra.",
+   "figura": null,
+   "ref": "Por exemplo: água líquida, atmosfera, camada de ozônio, temperatura adequada e gravidade.",
+   "conceitos": [
+    "água líquida",
+    "atmosfera",
+    "ozônio",
+    "gravidade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Vênus é um planeta rochoso próximo da Terra.",
+   "comando": "Por que a vida humana não é possível em Vênus?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Condições em corpos do Sistema Solar",
+    "colunas": [
+     "Corpo",
+     "Temperatura média"
+    ],
+    "linhas": [
+     [
+      "Terra",
+      "15 °C"
+     ],
+     [
+      "Marte",
+      "-60 °C"
+     ],
+     [
+      "Vênus",
+      "460 °C"
+     ],
+     [
+      "Mercúrio",
+      "167 °C"
+     ]
+    ]
+   },
+   "ref": "A temperatura média é muito alta (460 °C), o que impede água líquida e a sobrevivência humana.",
+   "conceitos": [
+    "temperatura alta",
+    "água líquida",
+    "vida humana"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma missão pretende levar pessoas a Marte.",
+   "comando": "Cite dois desafios para viver em Marte.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: Terra e Marte",
+    "colunas": [
+     "Característica",
+     "Terra",
+     "Marte"
+    ],
+    "linhas": [
+     [
+      "Gravidade",
+      "9,8 m/s²",
+      "3,7 m/s²"
+     ],
+     [
+      "Pressão do ar",
+      "1 atm",
+      "0,006 atm"
+     ],
+     [
+      "Camada de ozônio",
+      "presente",
+      "quase ausente"
+     ]
+    ]
+   },
+   "ref": "Ar muito fino, pouca proteção contra radiação, gravidade menor e falta de ar respirável.",
+   "conceitos": [
+    "atmosfera fina",
+    "radiação",
+    "gravidade menor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A Terra está na zona habitável do Sol.",
+   "comando": "Explique por que Vênus e Júpiter ficam fora dela.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: distância ao Sol",
+    "unidade": "milhões de km",
+    "itens": [
+     {
+      "rotulo": "Vênus",
+      "valor": 108
+     },
+     {
+      "rotulo": "Terra",
+      "valor": 150
+     },
+     {
+      "rotulo": "Marte",
+      "valor": 228
+     },
+     {
+      "rotulo": "Júpiter",
+      "valor": 778
+     }
+    ]
+   },
+   "ref": "Vênus é quente demais e Júpiter frio demais para ter água líquida na superfície.",
+   "conceitos": [
+    "zona habitável",
+    "água líquida",
+    "distância ao Sol"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Carl Sagan dizia que somos feitos de 'poeira de estrelas' e incentivava a busca por vida no espaço.",
+   "comando": "Por que a astrobiologia procura água em outros mundos? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: ambientes na Terra",
+    "colunas": [
+     "Ambiente",
+     "Quantidade de seres vivos"
+    ],
+    "linhas": [
+     [
+      "Deserto muito seco",
+      "pequena"
+     ],
+     [
+      "Lagoa",
+      "grande"
+     ],
+     [
+      "Fundo do oceano",
+      "grande"
+     ]
+    ]
+   },
+   "ref": "Onde há água líquida há mais vida na Terra, então ela é uma condição essencial para procurar vida fora.",
+   "conceitos": [
+    "água líquida",
+    "condição para a vida",
+    "astrobiologia"
+   ]
+  }
+ ]
+}

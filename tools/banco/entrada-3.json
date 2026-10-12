@@ -1,0 +1,82 @@
+{
+ "7º ANO|1|Relacionar o movimento das placas tectônicas à teoria da deriva continental.": {
+  "serie": "7",
+  "desc": "Relacionar o movimento das placas tectônicas à teoria da deriva continental.",
+  "hab": "EF07CI16",
+  "habTxt": "Investigar a deriva continental relacionando o encaixe das costas do Brasil e da África à tectônica de placas (AE1).",
+  "nome": "Quebra-cabeça de Wegener",
+  "concreta": "Recortar América do Sul e África do mapa e encaixá-las; pintar onde aparecem fósseis de Mesosaurus e Glossopteris nos dois continentes e verificar que as áreas se completam."
+ },
+ "8º ANO|2|Identificar os órgãos do sistema digestório e sua função na digestão e absorção dos nutrientes.": {
+  "serie": "8",
+  "desc": "Identificar os órgãos do sistema digestório e sua função na digestão e absorção dos nutrientes.",
+  "hab": "EF05CI06A, EF08CI08B",
+  "habTxt": "Descrever estruturas e funções do sistema digestório e dos nutrientes, relacionando à classificação dos alimentos (in natura, processados, ultraprocessados) (AE5).",
+  "nome": "Viagem do lanche",
+  "concreta": "Simulação: amassar pão com água no saquinho (boca/estômago, digestão mecânica) e passar a pasta pela meia-calça (intestino), mostrando que só partes pequenas atravessam, como na absorção."
+ },
+ "8º ANO|1|Comparar os diferentes tipos de reprodução (assexuada e sexuada) e sua influência no sucesso reprodutivo das espécies.": {
+  "serie": "8",
+  "desc": "Comparar os diferentes tipos de reprodução (assexuada e sexuada) e sua influência no sucesso reprodutivo das espécies.",
+  "hab": "EF08CI07",
+  "habTxt": "Comparar reprodução assexuada e sexuada em vegetais e animais com base em mecanismos evolutivos e adaptativos (AE2).",
+  "nome": "Cópias ou misturas?",
+  "concreta": "Simulação: assexuada = copiar um copinho com 4 feijões iguais; sexuada = juntar 2 feijões de cada pai sorteados. Compara-se a variedade de filhos e o professor relaciona com mitose e meiose."
+ },
+ "9º ANO|2|Identificar as características e funções da mitose e da meiose nos ciclos celulares.": {
+  "serie": "9",
+  "desc": "Identificar as características e funções da mitose e da meiose nos ciclos celulares.",
+  "hab": "EF09CI08",
+  "habTxt": "Explicar hereditariedade e aplicações da biotecnologia articulando genética clássica e evolução (AE7).",
+  "nome": "Divide e conquista",
+  "concreta": "Com massinha, a turma modela uma célula com 4 cromossomos: na mitose formam-se 2 células com 4 cada; na meiose, 2 divisões geram 4 células com 2 cada."
+ },
+ "9º ANO|3|Identificar iniciativas para enfrentar problemas ambientais, com base no consumo consciente e no uso sustentável dos recursos naturais.": {
+  "serie": "9",
+  "desc": "Identificar iniciativas para enfrentar problemas ambientais, com base no consumo consciente e no uso sustentável dos recursos naturais.",
+  "hab": "EF09CI13, EF09CI12A, EF09CI12B",
+  "habTxt": "Propor iniciativas para problemas ambientais com consumo consciente e uso sustentável de recursos, considerando UCs e bacias hidrográficas (AE11).",
+  "nome": "Escola consciente",
+  "concreta": "Em grupos, fazem uma ronda rápida pela sala/corredor anotando desperdícios (luz acesa, torneira pingando, lixo misturado) e comparam com cartões de iniciativas reais."
+ },
+ "4B|6º ANO|10": {
+  "serie": "6",
+  "desc": "Explicar os mecanismos fisiológicos da audição e do equilíbrio.",
+  "hab": "EF06CI07",
+  "habTxt": "Orelhas externa, média e interna; captação do som e envio ao cérebro; relação do ouvido interno com o equilíbrio.",
+  "nome": "Sentido da audição e equilíbrio",
+  "concreta": "Discussão sobre ouvir música, Pause e responda, prática 'Testando o equilíbrio' (apoio em uma perna), questões escritas e encerramento."
+ },
+ "4B|7º ANO|6": {
+  "serie": "7",
+  "desc": "Comparar e diferenciar as características de pandemia, epidemia, endemia e surto.",
+  "hab": "EF07CI09, EF07CI11",
+  "habTxt": "Epidemiologia e vigilância epidemiológica; surto, endemia, epidemia e pandemia; fatores de risco; dengue em SP; linha do tempo da covid-19.",
+  "nome": "Pandemia, endemia, epidemia e surto",
+  "concreta": "Para começar (doenças sazonais); Pause e responda (exemplo de surto); Na prática: notícia do estado de emergência por dengue em SP."
+ },
+ "4B|7º ANO|16": {
+  "serie": "7",
+  "desc": "Investigar e comparar os índices que compõem diferentes indicadores de saúde pública.",
+  "hab": "EF07CI09, EF07CI11",
+  "habTxt": "Indicadores quantitativos e qualitativos; mortalidade infantil em SP; uso dos indicadores em políticas públicas; desigualdade e saúde; ODS 3.",
+  "nome": "Indicadores de saúde",
+  "concreta": "Relembre (como avaliar a saúde de uma cidade); Pause e responda; Na prática: gráfico de mortalidade por água insegura por região (2000 e 2022)."
+ },
+ "4B|8º ANO|13": {
+  "serie": "8",
+  "desc": "Aplicar as leis de Kirchhoff e o cálculo de resistores para comparar corrente e tensão em diferentes circuitos.",
+  "hab": "EF08CI04",
+  "habTxt": "Componentes e símbolos de circuitos; grandezas e unidades; circuitos em série e paralelo; resistência equivalente; leis dos nós e das malhas.",
+  "nome": "Circuito em série e circuito em paralelo",
+  "concreta": "Cálculo da resistência equivalente de três resistores em paralelo (2, 6 e 3 Ω) ligados a uma bateria de 12 V."
+ },
+ "4B|9º ANO|11": {
+  "serie": "9",
+  "desc": "Explicar hipóteses sobre a origem do Universo e do Sistema Solar e caracterizar os corpos celestes que o compõem.",
+  "hab": "EF09CI14",
+  "habTxt": "Mitos x ciência; Big Bang e expansão do Universo; nebulosa e disco de acreção; formação do Sol e planetas; asteroides, cometas, satélites.",
+  "nome": "Origem do sistema solar e seus astros",
+  "concreta": "Respondem teste sobre o Big Bang e classificam um corpo celeste recém-descoberto (planeta, asteroide ou satélite) justificando pelas características."
+ }
+}

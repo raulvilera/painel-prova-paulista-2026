@@ -1,0 +1,2784 @@
+{
+ "7º ANO|1|Relacionar o movimento das placas tectônicas à teoria da deriva continental.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, os alunos recortaram América do Sul e África e aproximaram as costas. As bordas combinaram como peças de quebra-cabeça.",
+   "comando": "O que esse encaixe sugere?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento da atividade",
+    "etapas": [
+     "Recortar os dois continentes do mapa",
+     "Aproximar as costas recortadas",
+     "Observar como as bordas se ajustam"
+    ]
+   },
+   "alts": [
+    "Os continentes já estiveram unidos no passado.",
+    "Os dois continentes sempre estiveram separados.",
+    "O encaixe é só coincidência, sem nenhum significado.",
+    "Os continentes surgiram ao mesmo tempo, mas distantes."
+   ],
+   "correta": 0,
+   "explicacao": "O encaixe das costas foi uma das pistas de Wegener de que os continentes estavam juntos e se separaram."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "As placas tectônicas explicam por que a superfície da Terra muda ao longo de milhões de anos.",
+   "comando": "O que são placas tectônicas?",
+   "figura": null,
+   "alts": [
+    "Camadas de ar que envolvem a Terra.",
+    "Grandes blocos de rocha da crosta que se movem lentamente.",
+    "Lâminas de metal no centro do planeta.",
+    "Ondas do mar que moldam o litoral."
+   ],
+   "correta": 1,
+   "explicacao": "A crosta é dividida em grandes blocos rochosos, as placas, que se deslocam bem devagar."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Fósseis do réptil de água doce Mesosaurus foram achados no Brasil e na África. Ele não atravessaria um oceano salgado.",
+   "comando": "O que explica esses fósseis nos dois lados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fósseis",
+    "colunas": [
+     "Fóssil",
+     "América do Sul",
+     "África"
+    ],
+    "linhas": [
+     [
+      "Mesosaurus",
+      "encontrado",
+      "encontrado"
+     ],
+     [
+      "Glossopteris (planta)",
+      "encontrado",
+      "encontrado"
+     ]
+    ]
+   },
+   "alts": [
+    "Ele nadava por todo o oceano Atlântico.",
+    "As ondas levavam os animais mortos até a outra costa.",
+    "Os fósseis se formam sozinhos nas rochas, sem animais.",
+    "Os continentes estavam unidos quando o animal vivia."
+   ],
+   "correta": 3,
+   "explicacao": "Se os continentes estavam juntos, o animal viveu numa só região contínua, hoje dividida."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma placa tectônica se move 3 cm por ano, sempre no mesmo ritmo.",
+   "comando": "Quanto ela se desloca em 100 anos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de medição",
+    "colunas": [
+     "Medida",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Deslocamento anual",
+      "3 cm"
+     ],
+     [
+      "Tempo considerado",
+      "100 anos"
+     ]
+    ]
+   },
+   "alts": [
+    "300 cm",
+    "30 cm",
+    "103 cm",
+    "3 cm"
+   ],
+   "correta": 0,
+   "explicacao": "3 cm x 100 anos = 300 cm, ou seja, 3 metros."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana diz que os continentes se moveram. Beto acha que o encaixe das costas pode ser coincidência.",
+   "comando": "Qual dado reforça a ideia de Ana?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos alunos",
+    "colunas": [
+     "Aluno",
+     "Opinião"
+    ],
+    "linhas": [
+     [
+      "Ana",
+      "os continentes se moveram"
+     ],
+     [
+      "Beto",
+      "o encaixe pode ser coincidência"
+     ]
+    ]
+   },
+   "alts": [
+    "As duas costas têm praias com areia.",
+    "As mesmas rochas e fósseis aparecem nas costas que se encaixam.",
+    "Os dois continentes têm clima quente.",
+    "Os dois continentes ficam no Hemisfério Sul."
+   ],
+   "correta": 1,
+   "explicacao": "Rochas e fósseis iguais em áreas que se completam são evidências independentes do encaixe."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em 1912, um cientista propôs que os continentes se movem lentamente pela superfície da Terra.",
+   "comando": "Quem propôs isso e qual o nome da teoria?",
+   "figura": null,
+   "ref": "Alfred Wegener propôs a teoria da deriva continental.",
+   "conceitos": [
+    "Alfred Wegener",
+    "deriva continental"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os alunos pintaram, no mapa, onde aparecem fósseis nos dois continentes.",
+   "comando": "Cite duas evidências usadas por Wegener para dizer que os continentes já estiveram unidos.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da atividade",
+    "etapas": [
+     "Recortar os continentes",
+     "Encaixar as costas",
+     "Pintar os locais de fósseis",
+     "Verificar se as áreas se completam"
+    ]
+   },
+   "ref": "Encaixe das costas; fósseis iguais nos dois continentes; rochas semelhantes.",
+   "conceitos": [
+    "encaixe das costas",
+    "fósseis iguais",
+    "rochas semelhantes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No mapa, os pontos de Mesosaurus ficaram de um lado do Atlântico e do outro.",
+   "comando": "Explique por que os pontos dos dois lados completam a mesma área.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Pontos pintados no mapa",
+    "colunas": [
+     "Local",
+     "Fóssil"
+    ],
+    "linhas": [
+     [
+      "Sul do Brasil",
+      "Mesosaurus"
+     ],
+     [
+      "Sul da África",
+      "Mesosaurus"
+     ],
+     [
+      "Sudeste do Brasil",
+      "Glossopteris"
+     ],
+     [
+      "Sul da África",
+      "Glossopteris"
+     ]
+    ]
+   },
+   "ref": "Os continentes estavam unidos e formavam uma área contínua onde os seres viviam; depois se separaram.",
+   "conceitos": [
+    "continentes unidos",
+    "área contínua",
+    "separação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "As placas se movem poucos centímetros por ano, e não sentimos isso no dia a dia.",
+   "comando": "Por que não percebemos o movimento das placas?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados de comparação",
+    "unidade": "cm por ano",
+    "itens": [
+     {
+      "rotulo": "Placa Sul-Americana",
+      "valor": 3
+     },
+     {
+      "rotulo": "Unha de uma pessoa",
+      "valor": 4
+     },
+     {
+      "rotulo": "Cabelo de uma pessoa",
+      "valor": 15
+     }
+    ]
+   },
+   "ref": "Porque o movimento é muito lento, de poucos centímetros por ano, só perceptível ao longo de milhões de anos.",
+   "conceitos": [
+    "movimento lento",
+    "centímetros por ano",
+    "milhões de anos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um colega diz que só o encaixe das costas já basta. Outro diz que é melhor usar também fósseis e rochas.",
+   "comando": "Por que usar várias evidências é mais convincente?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Evidências da atividade",
+    "colunas": [
+     "Observação",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Bordas das costas",
+      "combinam"
+     ],
+     [
+      "Fósseis nos dois continentes",
+      "iguais"
+     ],
+     [
+      "Tipos de rocha",
+      "semelhantes"
+     ]
+    ]
+   },
+   "ref": "Porque várias evidências independentes apontando para a mesma conclusão reduzem a chance de coincidência.",
+   "conceitos": [
+    "várias evidências",
+    "reduz coincidência",
+    "mesma conclusão"
+   ]
+  }
+ ],
+ "8º ANO|2|Identificar os órgãos do sistema digestório e sua função na digestão e absorção dos nutrientes.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Depois de comer um pão com suco, os nutrientes passam para o sangue.",
+   "comando": "Qual órgão absorve a maior parte dos nutrientes?",
+   "figura": null,
+   "alts": [
+    "Estômago",
+    "Esôfago",
+    "Intestino delgado",
+    "Intestino grosso"
+   ],
+   "correta": 2,
+   "explicacao": "No intestino delgado, as vilosidades absorvem a maior parte dos nutrientes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na simulação, o pão foi amassado com água dentro de um saquinho plástico.",
+   "comando": "O que o saquinho representa?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento da simulação",
+    "etapas": [
+     "Colocar pão e água no saquinho",
+     "Amassar o saquinho com as mãos",
+     "Observar a pasta formada"
+    ]
+   },
+   "alts": [
+    "O intestino grosso, que absorve água.",
+    "O estômago, que mistura e tritura o alimento.",
+    "O fígado, que produz bile.",
+    "O esôfago, que só leva o alimento."
+   ],
+   "correta": 1,
+   "explicacao": "A pasta formada lembra o alimento sendo misturado e triturado no estômago."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um lanche tinha os alimentos abaixo, com seus ingredientes.",
+   "comando": "Qual alimento é ultraprocessado?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Ingredientes dos alimentos",
+    "colunas": [
+     "Alimento",
+     "Ingredientes"
+    ],
+    "linhas": [
+     [
+      "Maçã",
+      "maçã"
+     ],
+     [
+      "Ovo cozido",
+      "ovo, água"
+     ],
+     [
+      "Pão francês",
+      "farinha, água, sal, fermento"
+     ],
+     [
+      "Biscoito recheado",
+      "farinha, açúcar, gordura, corante, aromatizante"
+     ]
+    ]
+   },
+   "alts": [
+    "Maçã",
+    "Ovo cozido",
+    "Pão francês",
+    "Biscoito recheado"
+   ],
+   "correta": 3,
+   "explicacao": "Ultraprocessados têm muitos aditivos e ingredientes industriais, como o biscoito recheado."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na simulação, a pasta foi espremida numa meia-calça e só o líquido fino passou.",
+   "comando": "O que essa parte representa?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Resultado da simulação",
+    "colunas": [
+     "Material",
+     "Atravessou a meia-calça?"
+    ],
+    "linhas": [
+     [
+      "Líquido",
+      "sim"
+     ],
+     [
+      "Pedaços grandes",
+      "não"
+     ],
+     [
+      "Pasta fina",
+      "em parte"
+     ]
+    ]
+   },
+   "alts": [
+    "O alimento sai inteiro do intestino.",
+    "O estômago absorve todos os nutrientes.",
+    "Só partes bem pequenas passam pela parede do intestino para o sangue.",
+    "A saliva atravessa o intestino."
+   ],
+   "correta": 2,
+   "explicacao": "Os nutrientes precisam estar pequenos para atravessar a parede intestinal."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um modelo de intestino foi feito com tubo liso e outro com dobras.",
+   "comando": "Se o intestino delgado tivesse parede lisa, o que ocorreria?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: superfície de contato do modelo",
+    "unidade": "cm²",
+    "itens": [
+     {
+      "rotulo": "Tubo liso",
+      "valor": 10
+     },
+     {
+      "rotulo": "Tubo com dobras",
+      "valor": 60
+     }
+    ]
+   },
+   "alts": [
+    "Absorveria mais nutrientes.",
+    "Digeriria o alimento na boca.",
+    "Absorveria menos nutrientes.",
+    "Nada mudaria."
+   ],
+   "correta": 2,
+   "explicacao": "Menos superfície de contato significa menor absorção."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Você come um lanche na escola e ele percorre o sistema digestório.",
+   "comando": "Cite dois órgãos por onde o alimento passa.",
+   "figura": null,
+   "ref": "Boca, esôfago, estômago, intestino delgado e intestino grosso (dois deles).",
+   "conceitos": [
+    "boca",
+    "esôfago",
+    "estômago",
+    "intestino"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No saquinho, o pão foi apenas amassado com água, sem nenhuma outra substância.",
+   "comando": "Isso é digestão mecânica ou química? Explique.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento",
+    "etapas": [
+     "Colocar pão e água no saquinho",
+     "Amassar com as mãos",
+     "Observar a pasta"
+    ]
+   },
+   "ref": "É mecânica, pois só muda o tamanho e mistura o alimento, sem enzimas; no corpo ocorre na mastigação e no estômago.",
+   "conceitos": [
+    "digestão mecânica",
+    "sem enzimas",
+    "mastigação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A pasta foi passada pela meia-calça e só parte dela atravessou.",
+   "comando": "Relacione isso com a absorção dos nutrientes.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: massa que atravessou",
+    "unidade": "g",
+    "itens": [
+     {
+      "rotulo": "Líquido",
+      "valor": 40
+     },
+     {
+      "rotulo": "Pasta fina",
+      "valor": 10
+     },
+     {
+      "rotulo": "Pedaços grandes",
+      "valor": 0
+     }
+    ]
+   },
+   "ref": "Só os nutrientes pequenos passam pela parede do intestino para o sangue; o que não é absorvido segue como resíduo.",
+   "conceitos": [
+    "partes pequenas",
+    "parede do intestino",
+    "sangue"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois comprimidos iguais foram colocados em água: um inteiro e outro triturado.",
+   "comando": "Por que mastigar bem ajuda a digestão?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Comprimido",
+     "Tempo para dissolver"
+    ],
+    "linhas": [
+     [
+      "Inteiro",
+      "20 min"
+     ],
+     [
+      "Triturado",
+      "5 min"
+     ]
+    ]
+   },
+   "ref": "Mastigar divide o alimento em pedaços menores, aumenta a superfície e os sucos digestivos agem mais rápido.",
+   "conceitos": [
+    "pedaços menores",
+    "maior superfície",
+    "ação das enzimas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Compare os rótulos de alimentos de um lanche escolar.",
+   "comando": "Por que comer muito ultraprocessado faz mal?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Quantidade em 100 g",
+    "colunas": [
+     "Alimento",
+     "Açúcar (g)",
+     "Sódio (mg)",
+     "Fibra (g)"
+    ],
+    "linhas": [
+     [
+      "Maçã",
+      "10",
+      "1",
+      "2"
+     ],
+     [
+      "Biscoito recheado",
+      "30",
+      "250",
+      "1"
+     ],
+     [
+      "Macarrão instantâneo",
+      "3",
+      "1500",
+      "2"
+     ]
+    ]
+   },
+   "ref": "Têm muito açúcar, sal e gordura e poucas fibras e nutrientes, o que aumenta o risco de obesidade, diabetes e pressão alta.",
+   "conceitos": [
+    "excesso de açúcar, sal e gordura",
+    "pouca fibra",
+    "doenças"
+   ]
+  }
+ ],
+ "8º ANO|1|Comparar os diferentes tipos de reprodução (assexuada e sexuada) e sua influência no sucesso reprodutivo das espécies.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Um morangueiro solta ramos que tocam o solo e formam plantas novas iguais à planta-mãe.",
+   "comando": "Que tipo de reprodução é essa?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Observações na horta",
+    "etapas": [
+     "Planta-mãe solta um ramo rasteiro",
+     "O ramo toca o solo e cria raízes",
+     "A nova planta se separa"
+    ]
+   },
+   "alts": [
+    "Sexuada, com fecundação cruzada.",
+    "Sexuada, por sementes.",
+    "Assexuada, sem gametas e com um só indivíduo.",
+    "Sexuada, com gametas de dois indivíduos."
+   ],
+   "correta": 2,
+   "explicacao": "Um só indivíduo origina cópias sem gametas: reprodução assexuada."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em animais como o gato, os filhos nascem da união de duas células especiais.",
+   "comando": "Na reprodução sexuada, os descendentes se formam pela união de:",
+   "figura": null,
+   "alts": [
+    "Um pedaço do corpo de um só indivíduo.",
+    "Gametas de dois indivíduos, como óvulo e espermatozoide.",
+    "Duas células da pele idênticas.",
+    "Esporos de uma mesma planta."
+   ],
+   "correta": 1,
+   "explicacao": "Na sexuada ocorre fecundação entre gametas de dois indivíduos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na simulação com feijões, dois jogos foram feitos e os resultados foram anotados.",
+   "comando": "Qual jogo representa a reprodução sexuada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Jogo",
+     "Copinhos usados",
+     "Filhos obtidos"
+    ],
+    "linhas": [
+     [
+      "A",
+      "1",
+      "3 iguais ao copinho"
+     ],
+     [
+      "B",
+      "2",
+      "3 diferentes entre si"
+     ]
+    ]
+   },
+   "alts": [
+    "A, pois usa um só copinho.",
+    "As duas, pois ambas têm filhos.",
+    "Nenhuma, pois feijões não se reproduzem.",
+    "B, pois mistura feijões de dois copinhos."
+   ],
+   "correta": 3,
+   "explicacao": "A mistura de material de dois genitores representa a reprodução sexuada."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma bactéria se divide em duas a cada 20 minutos, sem parar.",
+   "comando": "Quantas bactérias haverá em 1 hora, a partir de uma?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Medida",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Início",
+      "1 bactéria"
+     ],
+     [
+      "Intervalo entre divisões",
+      "20 min"
+     ],
+     [
+      "Tempo observado",
+      "60 min"
+     ]
+    ]
+   },
+   "alts": [
+    "8",
+    "6",
+    "3",
+    "16"
+   ],
+   "correta": 0,
+   "explicacao": "Em 60 min há 3 divisões: 1, 2, 4, 8."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma praga atacou duas plantações de banana, uma de mudas clonadas e outra de plantas variadas.",
+   "comando": "Por que a de clones corre mais risco de perder tudo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das plantações",
+    "colunas": [
+     "Plantação",
+     "Origem das mudas",
+     "Plantas atacadas"
+    ],
+    "linhas": [
+     [
+      "A",
+      "pedaços de uma mesma planta",
+      "todas"
+     ],
+     [
+      "B",
+      "sementes de plantas diferentes",
+      "algumas"
+     ]
+    ]
+   },
+   "alts": [
+    "Clones crescem mais devagar.",
+    "Reprodução assexuada exige muita água.",
+    "Todos os clones têm a mesma vulnerabilidade à praga.",
+    "Plantas variadas são imunes a qualquer praga."
+   ],
+   "correta": 2,
+   "explicacao": "Sem variabilidade, o que afeta um afeta todos."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Bactérias, estrelas-do-mar e batatas podem se reproduzir de várias formas.",
+   "comando": "Cite um exemplo de ser vivo que se reproduz de forma assexuada.",
+   "figura": null,
+   "ref": "Bactéria, morangueiro, batata, estrela-do-mar ou planária.",
+   "conceitos": [
+    "exemplo de assexuada"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Compare quantos indivíduos participam da reprodução em cada ser vivo.",
+   "comando": "O que a reprodução sexuada exige que a assexuada não exige?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Quadro de observação",
+    "colunas": [
+     "Ser vivo",
+     "Indivíduos envolvidos"
+    ],
+    "linhas": [
+     [
+      "Bactéria",
+      "1"
+     ],
+     [
+      "Gato",
+      "2"
+     ],
+     [
+      "Samambaia (rizoma)",
+      "1"
+     ],
+     [
+      "Sapo",
+      "2"
+     ]
+    ]
+   },
+   "ref": "Exige gametas de dois indivíduos e a fecundação.",
+   "conceitos": [
+    "gametas",
+    "dois indivíduos",
+    "fecundação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No jogo, os filhos sexuados saíram diferentes entre si.",
+   "comando": "Explique por que isso aconteceu.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Resultado do sorteio",
+    "colunas": [
+     "Filho",
+     "Feijões recebidos"
+    ],
+    "linhas": [
+     [
+      "1",
+      "3 pretos e 1 branco"
+     ],
+     [
+      "2",
+      "2 pretos e 2 brancos"
+     ],
+     [
+      "3",
+      "1 preto e 3 brancos"
+     ]
+    ]
+   },
+   "ref": "Cada filho recebe uma combinação diferente de características dos dois pais, por sorteio dos gametas.",
+   "conceitos": [
+    "combinação diferente",
+    "dois genitores",
+    "sorteio dos gametas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Mitose e meiose são divisões de células ligadas aos dois tipos de reprodução.",
+   "comando": "Relacione cada divisão a um tipo de reprodução.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da atividade",
+    "colunas": [
+     "Jogo",
+     "Feijões formados"
+    ],
+    "linhas": [
+     [
+      "Copiar o copinho de 4 feijões",
+      "4 feijões iguais"
+     ],
+     [
+      "Sortear 2 de cada pai",
+      "4 feijões misturados"
+     ]
+    ]
+   },
+   "ref": "Mitose se relaciona à assexuada (cópias iguais); meiose à sexuada (gametas variados).",
+   "conceitos": [
+    "mitose",
+    "assexuada",
+    "meiose",
+    "sexuada"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois grupos de plantas passaram por uma onda de frio forte.",
+   "comando": "Por que populações com reprodução sexuada têm mais chance de sobreviver a mudanças do ambiente?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Grupo",
+     "Plantas",
+     "Sobreviventes ao frio"
+    ],
+    "linhas": [
+     [
+      "Clones",
+      "10",
+      "0"
+     ],
+     [
+      "Variadas",
+      "10",
+      "4"
+     ]
+    ]
+   },
+   "ref": "A variabilidade faz alguns indivíduos terem características adequadas ao novo ambiente e sobreviverem.",
+   "conceitos": [
+    "variabilidade",
+    "adaptação",
+    "sobrevivência"
+   ]
+  }
+ ],
+ "9º ANO|2|Identificar as características e funções da mitose e da meiose nos ciclos celulares.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na modelagem com massinha, a célula-mãe tinha 4 cromossomos e passou por mitose.",
+   "comando": "Qual foi o resultado?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados da modelagem",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Célula-mãe",
+      "4 cromossomos"
+     ],
+     [
+      "Tipo de divisão",
+      "mitose"
+     ]
+    ]
+   },
+   "alts": [
+    "4 células com 2 cromossomos cada",
+    "2 células com 4 cromossomos cada",
+    "2 células com 2 cromossomos cada",
+    "4 células com 4 cromossomos cada"
+   ],
+   "correta": 1,
+   "explicacao": "Na mitose formam-se 2 células iguais à célula-mãe."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, os alunos modelaram uma divisão celular com duas etapas seguidas.",
+   "comando": "Qual é a função principal da meiose?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Modelagem com massinha",
+    "etapas": [
+     "Modelar célula com 4 cromossomos",
+     "Duplicar os cromossomos",
+     "Realizar as divisões na célula"
+    ]
+   },
+   "alts": [
+    "Formar gametas com metade dos cromossomos.",
+    "Cicatrizar feridas na pele.",
+    "Fazer o corpo crescer.",
+    "Copiar células idênticas."
+   ],
+   "correta": 0,
+   "explicacao": "A meiose produz gametas com metade do número de cromossomos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os gametas humanos têm 23 cromossomos cada. Eles se unem na fecundação.",
+   "comando": "Quantos cromossomos tem o zigoto?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Número de cromossomos",
+    "colunas": [
+     "Célula",
+     "Cromossomos"
+    ],
+    "linhas": [
+     [
+      "Célula da pele",
+      "46"
+     ],
+     [
+      "Óvulo",
+      "23"
+     ],
+     [
+      "Espermatozoide",
+      "23"
+     ]
+    ]
+   },
+   "alts": [
+    "23",
+    "92",
+    "46",
+    "69"
+   ],
+   "correta": 2,
+   "explicacao": "23 + 23 = 46 cromossomos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "João ralou o joelho e, em uma semana, a pele se refez.",
+   "comando": "Qual processo produz as células novas e iguais?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do machucado",
+    "etapas": [
+     "Dia 1: ferida aberta",
+     "Dia 3: crosta",
+     "Dia 7: pele nova"
+    ]
+   },
+   "alts": [
+    "Meiose",
+    "Fecundação",
+    "Fotossíntese",
+    "Mitose"
+   ],
+   "correta": 3,
+   "explicacao": "A mitose gera células iguais para renovar tecidos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Se os gametas tivessem o mesmo número de cromossomos das outras células, o zigoto teria o dobro.",
+   "comando": "Por que a meiose reduz o número de cromossomos à metade?",
+   "figura": null,
+   "alts": [
+    "Para o gameta ficar menor.",
+    "Para a espécie manter seu número de cromossomos após a fecundação.",
+    "Para impedir a fecundação.",
+    "Para fazer o corpo crescer."
+   ],
+   "correta": 1,
+   "explicacao": "A redução compensa a união dos gametas e mantém o número constante."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na modelagem, a mitose gerou 2 células e a meiose gerou 4.",
+   "comando": "Cite uma função da mitose no corpo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados da modelagem",
+    "colunas": [
+     "Divisão",
+     "Divisões seguidas",
+     "Células formadas"
+    ],
+    "linhas": [
+     [
+      "Mitose",
+      "1",
+      "2"
+     ],
+     [
+      "Meiose",
+      "2",
+      "4"
+     ]
+    ]
+   },
+   "ref": "Crescimento, renovação de tecidos ou cicatrização.",
+   "conceitos": [
+    "crescimento",
+    "renovação",
+    "cicatrização"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os gametas são células especiais do corpo humano.",
+   "comando": "Onde ocorre a meiose no corpo?",
+   "figura": null,
+   "ref": "Nos órgãos reprodutores (ovários e testículos), formando os gametas.",
+   "conceitos": [
+    "ovários",
+    "testículos",
+    "gametas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Compare os resultados da modelagem das duas divisões.",
+   "comando": "Diferencie mitose e meiose quanto ao número de células e de cromossomos formados.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados da modelagem: células formadas",
+    "unidade": "células",
+    "itens": [
+     {
+      "rotulo": "Mitose",
+      "valor": 2
+     },
+     {
+      "rotulo": "Meiose",
+      "valor": 4
+     }
+    ]
+   },
+   "ref": "Mitose forma 2 células com 4 cromossomos; meiose forma 4 células com 2 cromossomos.",
+   "conceitos": [
+    "2 células",
+    "4 células",
+    "cromossomos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Irmãos filhos dos mesmos pais não são iguais.",
+   "comando": "Por que os filhos de um casal são diferentes entre si?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Irmãos de uma família",
+    "colunas": [
+     "Irmão",
+     "Olhos",
+     "Cabelo"
+    ],
+    "linhas": [
+     [
+      "1",
+      "castanhos",
+      "liso"
+     ],
+     [
+      "2",
+      "verdes",
+      "ondulado"
+     ],
+     [
+      "3",
+      "castanhos",
+      "crespo"
+     ]
+    ]
+   },
+   "ref": "Porque a meiose embaralha os cromossomos e a fecundação combina gametas diferentes ao acaso.",
+   "conceitos": [
+    "meiose",
+    "embaralhamento",
+    "fecundação ao acaso"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma célula de peixe tem 6 cromossomos. Uma fez uma divisão e outra fez outra divisão.",
+   "comando": "Quantos cromossomos terá cada célula formada em cada caso? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Célula",
+     "Cromossomos iniciais",
+     "Divisão"
+    ],
+    "linhas": [
+     [
+      "A",
+      "6",
+      "mitose"
+     ],
+     [
+      "B",
+      "6",
+      "meiose"
+     ]
+    ]
+   },
+   "ref": "A terá 6 (mitose mantém o número); B terá 3 (meiose reduz à metade).",
+   "conceitos": [
+    "mitose mantém 6",
+    "meiose reduz a 3"
+   ]
+  }
+ ],
+ "9º ANO|3|Identificar iniciativas para enfrentar problemas ambientais, com base no consumo consciente e no uso sustentável dos recursos naturais.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na ronda, os alunos viram que a torneira do banheiro pinga o dia todo.",
+   "comando": "Qual iniciativa ajuda a resolver?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da ronda",
+    "colunas": [
+     "Local",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Banheiro",
+      "torneira pingando"
+     ],
+     [
+      "Sala",
+      "luz acesa sem alunos"
+     ],
+     [
+      "Corredor",
+      "lixo misturado"
+     ]
+    ]
+   },
+   "alts": [
+    "Pedir o conserto da torneira.",
+    "Comprar mais baldes.",
+    "Fechar o banheiro.",
+    "Usar mais água para lavar o chão."
+   ],
+   "correta": 0,
+   "explicacao": "Consertar vazamentos evita desperdício de água."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No corredor há uma só lixeira com papel, plástico e casca de fruta juntos.",
+   "comando": "Qual iniciativa melhora essa situação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Conteúdo da lixeira do corredor",
+    "colunas": [
+     "Item",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Papel",
+      "12"
+     ],
+     [
+      "Garrafa plástica",
+      "8"
+     ],
+     [
+      "Casca de fruta",
+      "5"
+     ]
+    ]
+   },
+   "alts": [
+    "Colocar tudo em um só saco maior.",
+    "Fazer a coleta seletiva, separando os recicláveis.",
+    "Queimar o lixo no pátio.",
+    "Jogar o lixo no terreno ao lado."
+   ],
+   "correta": 1,
+   "explicacao": "A coleta seletiva separa recicláveis e reduz o lixo enviado ao aterro."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os alunos anotaram quando as lâmpadas ficam acesas e quantos alunos há na sala.",
+   "comando": "Em qual horário há desperdício de energia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da sala",
+    "colunas": [
+     "Horário",
+     "Alunos na sala",
+     "Lâmpadas"
+    ],
+    "linhas": [
+     [
+      "7h às 12h",
+      "30",
+      "acesas"
+     ],
+     [
+      "12h às 13h",
+      "0",
+      "acesas"
+     ],
+     [
+      "13h às 17h",
+      "30",
+      "acesas"
+     ]
+    ]
+   },
+   "alts": [
+    "7h às 12h, com alunos e lâmpadas acesas.",
+    "13h às 17h, com alunos e lâmpadas acesas.",
+    "12h às 13h, com lâmpadas acesas e sem alunos.",
+    "Em nenhum horário."
+   ],
+   "correta": 2,
+   "explicacao": "Luz acesa sem ninguém usando é desperdício; basta apagar ao sair."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Perto da escola há um parque estadual, que é uma unidade de conservação.",
+   "comando": "Qual a função de uma unidade de conservação?",
+   "figura": null,
+   "alts": [
+    "Servir de depósito de lixo.",
+    "Abrir espaço para novas ruas.",
+    "Plantar apenas árvores de fora do país.",
+    "Proteger áreas naturais e a biodiversidade, com uso regulado."
+   ],
+   "correta": 3,
+   "explicacao": "Unidades de conservação protegem a natureza e regulam o uso dos recursos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A escola quer gastar menos água. Os cartões mostram a economia de cada iniciativa.",
+   "comando": "Qual iniciativa deve ser priorizada para economizar mais?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados dos cartões: redução no consumo de água",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Consertar vazamentos",
+      "valor": 20
+     },
+     {
+      "rotulo": "Fechar a torneira ao lavar as mãos",
+      "valor": 10
+     },
+     {
+      "rotulo": "Captar água da chuva",
+      "valor": 35
+     },
+     {
+      "rotulo": "Cartazes de aviso",
+      "valor": 5
+     }
+    ]
+   },
+   "alts": [
+    "Consertar vazamentos",
+    "Captar água da chuva",
+    "Fechar a torneira",
+    "Colocar cartazes"
+   ],
+   "correta": 1,
+   "explicacao": "Pelos dados, captar água da chuva gera a maior redução."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Durante a ronda pela escola, a turma anotou vários desperdícios.",
+   "comando": "Cite duas atitudes de consumo consciente para a escola.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da ronda",
+    "colunas": [
+     "Local",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Banheiro",
+      "torneira pingando"
+     ],
+     [
+      "Sala",
+      "luz acesa sem alunos"
+     ],
+     [
+      "Corredor",
+      "lixo misturado"
+     ]
+    ]
+   },
+   "ref": "Apagar luzes ao sair, consertar torneiras, separar o lixo, reutilizar materiais.",
+   "conceitos": [
+    "economizar luz",
+    "economizar água",
+    "separar lixo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O lixo do corredor vai todo para o mesmo saco.",
+   "comando": "O que é coleta seletiva?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Conteúdo da lixeira do corredor",
+    "colunas": [
+     "Item",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Papel",
+      "12"
+     ],
+     [
+      "Garrafa plástica",
+      "8"
+     ],
+     [
+      "Casca de fruta",
+      "5"
+     ]
+    ]
+   },
+   "ref": "É separar o lixo por tipo (recicláveis, orgânicos, rejeitos) para reciclar ou tratar cada um.",
+   "conceitos": [
+    "separar por tipo",
+    "reciclagem"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma torneira da escola pinga e perde 20 litros por dia.",
+   "comando": "Quantos litros são perdidos em 5 dias? O que fazer?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados da torneira",
+    "colunas": [
+     "Medida",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Perda por dia",
+      "20 litros"
+     ],
+     [
+      "Tempo",
+      "5 dias"
+     ]
+    ]
+   },
+   "ref": "100 litros; deve-se consertar a torneira.",
+   "conceitos": [
+    "100 litros",
+    "consertar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma contou os itens descartados no pátio em um dia.",
+   "comando": "Por que reduzir e reaproveitar o lixo ajuda a conservar os recursos naturais?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Itens no pátio",
+    "unidade": "itens",
+    "itens": [
+     {
+      "rotulo": "Papel",
+      "valor": 40
+     },
+     {
+      "rotulo": "Plástico",
+      "valor": 30
+     },
+     {
+      "rotulo": "Orgânico",
+      "valor": 15
+     }
+    ]
+   },
+   "ref": "Porque reduz a retirada de matéria-prima da natureza e a quantidade de lixo enviada a aterros.",
+   "conceitos": [
+    "menos extração",
+    "menos lixo",
+    "reaproveitamento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Sua turma quer propor uma ação para tornar a escola mais sustentável.",
+   "comando": "Proponha uma iniciativa e justifique como ela ajuda o ambiente.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da ronda",
+    "colunas": [
+     "Local",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Banheiro",
+      "torneira pingando"
+     ],
+     [
+      "Sala",
+      "luz acesa sem alunos"
+     ],
+     [
+      "Corredor",
+      "lixo misturado"
+     ]
+    ]
+   },
+   "ref": "Ex.: coleta seletiva, pois reduz lixo e permite reciclar; ou apagar luzes, que economiza energia.",
+   "conceitos": [
+    "iniciativa",
+    "justificativa",
+    "uso sustentável"
+   ]
+  }
+ ],
+ "4B|6º ANO|10": [
+  {
+   "tipo": "obj",
+   "enunciado": "Ao ouvir música, o som entra primeiro pelo pavilhão da orelha e segue por um canal.",
+   "comando": "Qual parte capta o som e o conduz até o tímpano?",
+   "figura": null,
+   "alts": [
+    "Orelha interna",
+    "Orelha média",
+    "Orelha externa",
+    "Nervo óptico"
+   ],
+   "correta": 2,
+   "explicacao": "A orelha externa capta e conduz o som até o tímpano."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na prática, a turma ficou apoiada em uma perna e alguns alunos tiveram dificuldade.",
+   "comando": "Qual estrutura do ouvido interno ajuda no equilíbrio?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Prática Testando o equilíbrio",
+    "etapas": [
+     "Ficar em pé",
+     "Levantar uma perna",
+     "Marcar quanto tempo se mantém"
+    ]
+   },
+   "alts": [
+    "Pavilhão auricular",
+    "Canais semicirculares",
+    "Tímpano",
+    "Martelo, bigorna e estribo"
+   ],
+   "correta": 1,
+   "explicacao": "Os canais semicirculares detectam movimentos da cabeça e ajudam no equilíbrio."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma mediu quanto tempo se mantinha apoiada em uma perna, de olhos abertos e fechados.",
+   "comando": "Por que fechar os olhos dificultou?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: tempo em equilíbrio",
+    "colunas": [
+     "Condição",
+     "Tempo médio"
+    ],
+    "linhas": [
+     [
+      "Olhos abertos",
+      "30 s"
+     ],
+     [
+      "Olhos fechados",
+      "8 s"
+     ]
+    ]
+   },
+   "alts": [
+    "O ouvido para de funcionar.",
+    "O tímpano se fecha.",
+    "Sem a visão, o cérebro conta mais com o ouvido interno e outros sentidos.",
+    "Os olhos controlam sozinhos o equilíbrio."
+   ],
+   "correta": 2,
+   "explicacao": "O equilíbrio usa informações de visão, ouvido interno e corpo juntas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Muita gente ouve música alta no fone por horas e pode ter perda auditiva.",
+   "comando": "Qual medida protege a audição?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Sons do cotidiano",
+    "unidade": "dB",
+    "itens": [
+     {
+      "rotulo": "Conversa",
+      "valor": 60
+     },
+     {
+      "rotulo": "Trânsito intenso",
+      "valor": 85
+     },
+     {
+      "rotulo": "Música no fone, volume máximo",
+      "valor": 100
+     }
+    ]
+   },
+   "alts": [
+    "Aumentar o volume para ouvir melhor.",
+    "Usar o fone o dia todo.",
+    "Colocar algodão sem avisar.",
+    "Baixar o volume e fazer pausas."
+   ],
+   "correta": 3,
+   "explicacao": "Volume alto e longo prejudica as células sensoriais; reduzir e pausar protege."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois de girar rápido, muitos alunos sentem tontura ao parar.",
+   "comando": "Por que isso acontece?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da atividade",
+    "colunas": [
+     "Ação",
+     "Sensação"
+    ],
+    "linhas": [
+     [
+      "Girar 10 voltas",
+      "tontura ao parar"
+     ],
+     [
+      "Ficar parado",
+      "sem tontura"
+     ]
+    ]
+   },
+   "alts": [
+    "O líquido do ouvido interno continua se movendo e envia sinal de giro ao cérebro.",
+    "O tímpano estoura.",
+    "Os ossículos se soltam.",
+    "O sangue sobe para os ouvidos."
+   ],
+   "correta": 0,
+   "explicacao": "O líquido dos canais continua se movendo, enganando o cérebro."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na prática da aula, o ouvido interno foi importante além de ouvir.",
+   "comando": "Que outra função do ouvido interno aparece na prática?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Prática Testando o equilíbrio",
+    "etapas": [
+     "Ficar em pé",
+     "Levantar uma perna",
+     "Marcar quanto tempo se mantém"
+    ]
+   },
+   "ref": "O equilíbrio do corpo.",
+   "conceitos": [
+    "equilíbrio"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O som precisa passar por várias partes até ser entendido.",
+   "comando": "Qual a função do tímpano?",
+   "figura": null,
+   "ref": "Vibra com o som e transmite a vibração aos ossículos da orelha média.",
+   "conceitos": [
+    "vibração",
+    "ossículos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma testou ficar em equilíbrio sobre o chão e sobre uma almofada.",
+   "comando": "Por que é mais difícil sobre a almofada?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: tempo em equilíbrio",
+    "unidade": "s",
+    "itens": [
+     {
+      "rotulo": "Chão firme",
+      "valor": 30
+     },
+     {
+      "rotulo": "Almofada",
+      "valor": 12
+     }
+    ]
+   },
+   "ref": "A superfície instável exige mais ajustes do corpo e do ouvido interno e do cérebro.",
+   "conceitos": [
+    "superfície instável",
+    "ajustes",
+    "ouvido interno"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na discussão, alunos contaram quantas horas por dia ouvem música no fone.",
+   "comando": "Por que o uso diário de fone alto pode prejudicar a audição? Dê uma medida.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Tempo diário no fone",
+    "unidade": "alunos",
+    "itens": [
+     {
+      "rotulo": "Menos de 1 h",
+      "valor": 8
+     },
+     {
+      "rotulo": "1 a 3 h",
+      "valor": 15
+     },
+     {
+      "rotulo": "Mais de 3 h",
+      "valor": 7
+     }
+    ]
+   },
+   "ref": "Sons altos por muito tempo lesam as células sensoriais da cóclea; reduzir volume e tempo.",
+   "conceitos": [
+    "lesão de células",
+    "volume baixo",
+    "pausas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Carlos teve uma infecção no ouvido e sentiu tontura.",
+   "comando": "Justifique por que uma infecção no ouvido pode causar tontura.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Relato de sintomas",
+    "colunas": [
+     "Sintoma",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Dor no ouvido",
+      "3 dias"
+     ],
+     [
+      "Tontura",
+      "ao levantar"
+     ],
+     [
+      "Audição",
+      "abafada"
+     ]
+    ]
+   },
+   "ref": "A inflamação atinge o ouvido interno, que envia sinais de equilíbrio ao cérebro, alterando-os.",
+   "conceitos": [
+    "ouvido interno",
+    "equilíbrio",
+    "sinais ao cérebro"
+   ]
+  }
+ ],
+ "4B|7º ANO|6": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma doença aparece todo ano em uma região, com número de casos parecido.",
+   "comando": "Como se chama esse padrão?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Casos por ano na cidade",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "2019",
+      "valor": 120
+     },
+     {
+      "rotulo": "2020",
+      "valor": 118
+     },
+     {
+      "rotulo": "2021",
+      "valor": 125
+     },
+     {
+      "rotulo": "2022",
+      "valor": 122
+     }
+    ]
+   },
+   "alts": [
+    "Surto",
+    "Pandemia",
+    "Epidemia",
+    "Endemia"
+   ],
+   "correta": 3,
+   "explicacao": "Endemia é a presença constante, com casos estáveis."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma escola, 12 alunos tiveram gripe na mesma semana, mas não houve casos no bairro.",
+   "comando": "Qual termo descreve essa situação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Casos de gripe na semana",
+    "colunas": [
+     "Local",
+     "Casos"
+    ],
+    "linhas": [
+     [
+      "7º A",
+      "8"
+     ],
+     [
+      "7º B",
+      "4"
+     ],
+     [
+      "Outras escolas do bairro",
+      "0"
+     ]
+    ]
+   },
+   "alts": [
+    "Pandemia",
+    "Surto",
+    "Endemia",
+    "Epidemia"
+   ],
+   "correta": 1,
+   "explicacao": "Surto é aumento de casos num local restrito, em pouco tempo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Numa cidade esperam-se 30 casos de dengue por semana. Os casos subiram muito em toda a cidade.",
+   "comando": "Como classificar a situação?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Casos semanais na cidade",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Semana 1",
+      "valor": 20
+     },
+     {
+      "rotulo": "Semana 2",
+      "valor": 90
+     },
+     {
+      "rotulo": "Semana 3",
+      "valor": 400
+     },
+     {
+      "rotulo": "Semana 4",
+      "valor": 900
+     }
+    ]
+   },
+   "alts": [
+    "Endemia",
+    "Surto",
+    "Epidemia",
+    "Pandemia"
+   ],
+   "correta": 2,
+   "explicacao": "Aumento muito acima do esperado em toda uma região é epidemia."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os casos de dengue sobem no verão e caem no inverno.",
+   "comando": "Qual fator explica essa variação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do município",
+    "colunas": [
+     "Mês",
+     "Chuva (mm)",
+     "Casos"
+    ],
+    "linhas": [
+     [
+      "Janeiro",
+      "250",
+      "900"
+     ],
+     [
+      "Julho",
+      "30",
+      "40"
+     ]
+    ]
+   },
+   "alts": [
+    "Calor e chuva favorecem a reprodução do mosquito.",
+    "O vírus só vive no verão.",
+    "As pessoas ficam mais fracas no verão.",
+    "O mosquito só nasce em julho."
+   ],
+   "correta": 0,
+   "explicacao": "Água parada e calor ajudam o Aedes a se reproduzir."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma notícia diz que a cidade decretou estado de emergência por dengue.",
+   "comando": "Por que decretar emergência?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados da notícia",
+    "colunas": [
+     "Medida",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Casos em 3 meses",
+      "5.000"
+     ],
+     [
+      "Média dos mesmos meses nos 5 anos anteriores",
+      "800"
+     ],
+     [
+      "Ocupação dos hospitais",
+      "90%"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque a doença deixou de existir.",
+    "Para proibir todos de sair de casa.",
+    "Para reforçar ações e recursos diante do grande número de casos.",
+    "Porque virou doença mundial."
+   ],
+   "correta": 2,
+   "explicacao": "A emergência facilita mutirões, verbas e atendimento."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Algumas doenças fazem parte da rotina de uma região.",
+   "comando": "O que é endemia? Dê um exemplo.",
+   "figura": null,
+   "ref": "É a presença constante de uma doença em uma região; ex.: dengue ou malária em certas áreas.",
+   "conceitos": [
+    "presença constante",
+    "exemplo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Compare duas doenças que apareceram em jornais.",
+   "comando": "Diferencie epidemia de pandemia.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Alcance das doenças",
+    "colunas": [
+     "Doença",
+     "Onde há casos"
+    ],
+    "linhas": [
+     [
+      "P",
+      "90 países em 5 continentes"
+     ],
+     [
+      "Q",
+      "vários bairros de uma cidade"
+     ]
+    ]
+   },
+   "ref": "Epidemia atinge uma região; pandemia atinge muitos países ou continentes.",
+   "conceitos": [
+    "epidemia",
+    "região",
+    "pandemia",
+    "mundial"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma festa, 15 pessoas tiveram diarreia após comer o mesmo bolo.",
+   "comando": "Classifique o caso e justifique.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Casos por dia",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Dia 1",
+      "valor": 3
+     },
+     {
+      "rotulo": "Dia 2",
+      "valor": 12
+     },
+     {
+      "rotulo": "Dia 3",
+      "valor": 0
+     }
+    ]
+   },
+   "ref": "Surto, pois houve aumento de casos em local restrito e curto período.",
+   "conceitos": [
+    "surto",
+    "local restrito"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A vigilância registra os casos de dengue a cada semana.",
+   "comando": "Por que a vigilância epidemiológica é importante?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Casos semanais",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Antes do mutirão",
+      "valor": 600
+     },
+     {
+      "rotulo": "Depois do mutirão",
+      "valor": 150
+     }
+    ]
+   },
+   "ref": "Ela monitora os casos, permite agir cedo e avaliar se as ações funcionam.",
+   "conceitos": [
+    "monitorar",
+    "agir cedo",
+    "avaliar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A covid-19 começou em poucos lugares e depois chegou a muitos.",
+   "comando": "Por que foi considerada pandemia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Linha do tempo",
+    "colunas": [
+     "Mês",
+     "Países com casos"
+    ],
+    "linhas": [
+     [
+      "Janeiro de 2020",
+      "5"
+     ],
+     [
+      "Março de 2020",
+      "110"
+     ]
+    ]
+   },
+   "ref": "Porque se espalhou por todo o mundo, em vários continentes.",
+   "conceitos": [
+    "vários continentes",
+    "alcance mundial"
+   ]
+  }
+ ],
+ "4B|7º ANO|16": [
+  {
+   "tipo": "obj",
+   "enunciado": "O posto registrou dados de um ano na cidade.",
+   "comando": "A taxa de mortalidade infantil mede:",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do ano",
+    "colunas": [
+     "Dado",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Nascimentos",
+      "1.000"
+     ],
+     [
+      "Óbitos de bebês no mesmo ano",
+      "12"
+     ]
+    ]
+   },
+   "alts": [
+    "Mortes de idosos por ano.",
+    "Mortes de crianças com menos de 1 ano a cada mil nascidos vivos.",
+    "Total de nascimentos.",
+    "Crianças vacinadas."
+   ],
+   "correta": 1,
+   "explicacao": "Mortalidade infantil considera óbitos antes de 1 ano por mil nascidos vivos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um indicador pode ser número ou opinião.",
+   "comando": "Qual é um indicador quantitativo?",
+   "figura": null,
+   "alts": [
+    "Opinião dos moradores sobre o posto.",
+    "Qualidade percebida do atendimento.",
+    "Relato de bem-estar da família.",
+    "Número de médicos por mil habitantes."
+   ],
+   "correta": 3,
+   "explicacao": "Indicadores quantitativos são números mensuráveis."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O gráfico mostra mortes por água insegura em 3 regiões, em 2000 e em 2022.",
+   "comando": "Qual região teve a maior queda?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Mortes por 100 mil habitantes",
+    "colunas": [
+     "Região",
+     "2000",
+     "2022"
+    ],
+    "linhas": [
+     [
+      "A",
+      "40",
+      "10"
+     ],
+     [
+      "B",
+      "80",
+      "45"
+     ],
+     [
+      "C",
+      "25",
+      "20"
+     ]
+    ]
+   },
+   "alts": [
+    "Região A",
+    "Região B",
+    "Região C",
+    "Todas caíram igual"
+   ],
+   "correta": 1,
+   "explicacao": "A: 30; B: 35; C: 5. A maior queda foi na B."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um bairro tem mortalidade infantil bem acima dos outros.",
+   "comando": "O que a prefeitura deve fazer?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Mortalidade infantil por bairro",
+    "colunas": [
+     "Bairro",
+     "Mortes por mil nascidos"
+    ],
+    "linhas": [
+     [
+      "Centro",
+      "8"
+     ],
+     [
+      "Vila Nova",
+      "22"
+     ],
+     [
+      "Jardim",
+      "10"
+     ]
+    ]
+   },
+   "alts": [
+    "Ignorar, pois é só um bairro.",
+    "Fechar o posto de saúde.",
+    "Reforçar pré-natal e saneamento onde a taxa está alta.",
+    "Esperar a taxa cair sozinha."
+   ],
+   "correta": 2,
+   "explicacao": "Indicadores orientam políticas para onde o problema é maior."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Duas cidades registraram o mesmo número de mortes por uma doença.",
+   "comando": "Por que usar taxas para comparar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados das cidades",
+    "colunas": [
+     "Cidade",
+     "Habitantes",
+     "Mortes"
+    ],
+    "linhas": [
+     [
+      "A",
+      "10 mil",
+      "50"
+     ],
+     [
+      "B",
+      "100 mil",
+      "50"
+     ]
+    ]
+   },
+   "alts": [
+    "A taxa considera o tamanho da população.",
+    "A taxa diminui as mortes.",
+    "A taxa esconde as diferenças.",
+    "As cidades são sempre iguais."
+   ],
+   "correta": 0,
+   "explicacao": "A taxa permite comparar populações de tamanhos diferentes."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os governos usam números para acompanhar a saúde da população.",
+   "comando": "Cite um indicador de saúde e diga o que ele mede.",
+   "figura": null,
+   "ref": "Ex.: mortalidade infantil, que mede mortes de menores de 1 ano por mil nascidos vivos.",
+   "conceitos": [
+    "indicador",
+    "o que mede"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Veja exemplos coletados por uma pesquisa em um bairro.",
+   "comando": "Diferencie indicador quantitativo de qualitativo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados coletados",
+    "colunas": [
+     "Dado",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Número de consultas por mês",
+      "450"
+     ],
+     [
+      "Opinião dos usuários sobre o atendimento",
+      "ótimo, bom, regular"
+     ]
+    ]
+   },
+   "ref": "Quantitativo é número medido; qualitativo descreve qualidade ou opinião.",
+   "conceitos": [
+    "número",
+    "opinião",
+    "qualidade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma cidade nasceram 2.000 bebês e 30 morreram antes de 1 ano.",
+   "comando": "Calcule a taxa de mortalidade infantil por mil nascidos vivos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da cidade",
+    "colunas": [
+     "Dado",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Nascidos vivos",
+      "2.000"
+     ],
+     [
+      "Mortes antes de 1 ano",
+      "30"
+     ]
+    ]
+   },
+   "ref": "30 ÷ 2.000 x 1.000 = 15 por mil.",
+   "conceitos": [
+    "15 por mil"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "As regiões têm acesso diferente a esgoto tratado.",
+   "comando": "Explique a relação entre saneamento e mortes por água insegura.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados por região",
+    "colunas": [
+     "Região",
+     "Esgoto tratado (%)",
+     "Mortes por 100 mil"
+    ],
+    "linhas": [
+     [
+      "A",
+      "90",
+      "5"
+     ],
+     [
+      "B",
+      "50",
+      "30"
+     ],
+     [
+      "C",
+      "20",
+      "70"
+     ]
+    ]
+   },
+   "ref": "Quanto menos esgoto tratado, mais água contaminada e mais doenças e mortes.",
+   "conceitos": [
+    "menos saneamento",
+    "água contaminada",
+    "mais mortes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A média de mortalidade infantil da cidade parece boa, mas um bairro tem taxa alta.",
+   "comando": "Por que olhar os dados por bairro?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Mortalidade infantil por mil nascidos",
+    "colunas": [
+     "Local",
+     "Taxa"
+    ],
+    "linhas": [
+     [
+      "Centro",
+      "6"
+     ],
+     [
+      "Periferia",
+      "25"
+     ],
+     [
+      "Média da cidade",
+      "12"
+     ]
+    ]
+   },
+   "ref": "A média esconde desigualdades; dados por bairro mostram onde agir, apoiando políticas e o ODS 3.",
+   "conceitos": [
+    "média esconde",
+    "desigualdade",
+    "políticas públicas"
+   ]
+  }
+ ],
+ "4B|8º ANO|13": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em eletricidade, cada grandeza tem uma unidade.",
+   "comando": "Qual é a unidade da resistência elétrica?",
+   "figura": null,
+   "alts": [
+    "Volt (V)",
+    "Ampère (A)",
+    "Ohm (Ω)",
+    "Watt (W)"
+   ],
+   "correta": 2,
+   "explicacao": "Resistência é medida em ohm."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Três resistores foram ligados um depois do outro com a bateria.",
+   "comando": "Em um circuito em série, a corrente:",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem do circuito",
+    "etapas": [
+     "Ligar a bateria ao 1º resistor",
+     "Ligar o 1º resistor ao 2º",
+     "Ligar o 2º ao 3º e voltar à bateria"
+    ]
+   },
+   "alts": [
+    "É a mesma em todos os componentes.",
+    "Se divide igualmente.",
+    "Diminui a cada resistor.",
+    "Aumenta a cada resistor."
+   ],
+   "correta": 0,
+   "explicacao": "Em série só existe um caminho, então a corrente é a mesma."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um resistor está ligado a uma bateria.",
+   "comando": "Qual é a corrente?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados",
+    "colunas": [
+     "Grandeza",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tensão",
+      "12 V"
+     ],
+     [
+      "Resistência",
+      "6 Ω"
+     ]
+    ]
+   },
+   "alts": [
+    "0,5 A",
+    "2 A",
+    "6 A",
+    "72 A"
+   ],
+   "correta": 1,
+   "explicacao": "i = V ÷ R = 12 ÷ 6 = 2 A."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Três resistores estão ligados em paralelo a uma bateria de 12 V.",
+   "comando": "Qual é a resistência equivalente?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do circuito",
+    "colunas": [
+     "Resistor",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "R1",
+      "2 Ω"
+     ],
+     [
+      "R2",
+      "6 Ω"
+     ],
+     [
+      "R3",
+      "3 Ω"
+     ]
+    ]
+   },
+   "alts": [
+    "11 Ω",
+    "6 Ω",
+    "1 Ω",
+    "0,5 Ω"
+   ],
+   "correta": 2,
+   "explicacao": "1/Req = 1/2 + 1/6 + 1/3 = 1, logo Req = 1 Ω."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os mesmos resistores foram medidos com um amperímetro em paralelo a 12 V.",
+   "comando": "Qual a corrente total da bateria?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Resistor",
+     "Corrente medida"
+    ],
+    "linhas": [
+     [
+      "2 Ω",
+      "6 A"
+     ],
+     [
+      "6 Ω",
+      "2 A"
+     ],
+     [
+      "3 Ω",
+      "4 A"
+     ]
+    ]
+   },
+   "alts": [
+    "6 A",
+    "11 A",
+    "1 A",
+    "12 A"
+   ],
+   "correta": 3,
+   "explicacao": "6 + 2 + 4 = 12 A (lei dos nós)."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Medimos a tensão da bateria com um instrumento.",
+   "comando": "Qual a unidade da tensão e qual instrumento a mede?",
+   "figura": null,
+   "ref": "Volt (V); voltímetro.",
+   "conceitos": [
+    "volt",
+    "voltímetro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas montagens foram feitas com duas lâmpadas iguais.",
+   "comando": "Diferencie ligação em série de em paralelo quanto ao caminho da corrente.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Descrição das montagens",
+    "etapas": [
+     "Montagem A: bateria e duas lâmpadas ligadas uma depois da outra",
+     "Montagem B: cada lâmpada ligada aos dois polos da bateria",
+     "Medir o brilho de cada lâmpada"
+    ]
+   },
+   "ref": "Em série há um único caminho; em paralelo há mais de um caminho.",
+   "conceitos": [
+    "um caminho",
+    "vários caminhos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aparelho tem 4 Ω e é ligado a uma bateria de 12 V.",
+   "comando": "Calcule a corrente no aparelho.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados",
+    "colunas": [
+     "Grandeza",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tensão",
+      "12 V"
+     ],
+     [
+      "Resistência",
+      "4 Ω"
+     ]
+    ]
+   },
+   "ref": "i = 12 ÷ 4 = 3 A.",
+   "conceitos": [
+    "lei de Ohm",
+    "3 A"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A resistência equivalente do circuito paralelo foi 1 Ω, menor que o menor resistor.",
+   "comando": "Explique por que isso ocorre.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do circuito",
+    "colunas": [
+     "Resistor",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "R1",
+      "2 Ω"
+     ],
+     [
+      "R2",
+      "6 Ω"
+     ],
+     [
+      "R3",
+      "3 Ω"
+     ]
+    ]
+   },
+   "ref": "Em paralelo há mais caminhos para a corrente, que flui com mais facilidade; a resistência total diminui.",
+   "conceitos": [
+    "mais caminhos",
+    "corrente maior"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um ponto do circuito, 12 A chegam e saem 6 A e 2 A por dois ramos.",
+   "comando": "Qual a corrente no terceiro ramo? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Ponto de ramificação",
+    "colunas": [
+     "Corrente",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Que chega",
+      "12 A"
+     ],
+     [
+      "Ramo 1",
+      "6 A"
+     ],
+     [
+      "Ramo 2",
+      "2 A"
+     ]
+    ]
+   },
+   "ref": "4 A, pois a soma das correntes que entram é igual à soma das que saem (lei dos nós).",
+   "conceitos": [
+    "4 A",
+    "lei dos nós"
+   ]
+  }
+ ],
+ "4B|9º ANO|11": [
+  {
+   "tipo": "obj",
+   "enunciado": "Cientistas explicam como o Universo começou.",
+   "comando": "Qual é a ideia central do Big Bang?",
+   "figura": null,
+   "alts": [
+    "O Universo surgiu de um estado muito quente e denso, há bilhões de anos.",
+    "O Universo sempre foi igual.",
+    "O Universo foi criado pelo Sol.",
+    "A Terra é o centro do Universo."
+   ],
+   "correta": 0,
+   "explicacao": "O Big Bang descreve o início a partir de um estado muito denso e quente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O Sol e os planetas se formaram de uma grande nuvem.",
+   "comando": "Como se chama a nuvem de gás e poeira?",
+   "figura": null,
+   "alts": [
+    "Cometa",
+    "Nebulosa",
+    "Satélite natural",
+    "Asteroide"
+   ],
+   "correta": 1,
+   "explicacao": "A nebulosa é a nuvem que originou o Sistema Solar."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um telescópio descobriu um corpo celeste novo.",
+   "comando": "Como classificá-lo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações do corpo",
+    "colunas": [
+     "Característica",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Órbita",
+      "ao redor do Sol"
+     ],
+     [
+      "Posição",
+      "entre Marte e Júpiter"
+     ],
+     [
+      "Formato",
+      "irregular e rochoso"
+     ],
+     [
+      "Diâmetro",
+      "400 km"
+     ]
+    ]
+   },
+   "alts": [
+    "Planeta",
+    "Satélite natural",
+    "Asteroide",
+    "Estrela"
+   ],
+   "correta": 2,
+   "explicacao": "Corpo rochoso pequeno em órbita do Sol é um asteroide."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Outro corpo foi descoberto.",
+   "comando": "Como classificá-lo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações do corpo",
+    "colunas": [
+     "Característica",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Órbita",
+      "ao redor de Júpiter"
+     ],
+     [
+      "Diâmetro",
+      "3.000 km"
+     ],
+     [
+      "Superfície",
+      "rochosa e gelada"
+     ]
+    ]
+   },
+   "alts": [
+    "Planeta",
+    "Asteroide",
+    "Cometa",
+    "Satélite natural"
+   ],
+   "correta": 3,
+   "explicacao": "Corpo que orbita um planeta é satélite natural."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Cientistas observaram a luz de galáxias distantes.",
+   "comando": "Qual conclusão esses dados apoiam?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações",
+    "colunas": [
+     "Observação",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Luz de galáxias distantes",
+      "desloca-se para o vermelho"
+     ],
+     [
+      "Quanto mais longe a galáxia",
+      "maior o deslocamento"
+     ]
+    ]
+   },
+   "alts": [
+    "As galáxias se aproximam.",
+    "As galáxias se afastam e o Universo cresce.",
+    "As galáxias estão paradas.",
+    "A Terra está no centro."
+   ],
+   "correta": 1,
+   "explicacao": "O desvio para o vermelho mostra que as galáxias se afastam."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um astro aparece no céu com cauda brilhante.",
+   "comando": "O que é um cometa?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações do astro",
+    "colunas": [
+     "Dado",
+     "Registro"
+    ],
+    "linhas": [
+     [
+      "Aparece a cada",
+      "76 anos"
+     ],
+     [
+      "Cauda",
+      "visível perto do Sol"
+     ]
+    ]
+   },
+   "ref": "Corpo de gelo, poeira e rocha que desenvolve cauda ao se aproximar do Sol.",
+   "conceitos": [
+    "gelo e poeira",
+    "cauda"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois corpos têm o mesmo tamanho.",
+   "comando": "Diferencie asteroide de satélite natural.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados dos corpos",
+    "colunas": [
+     "Corpo",
+     "Tamanho",
+     "Local"
+    ],
+    "linhas": [
+     [
+      "A",
+      "300 km",
+      "entre Marte e Júpiter"
+     ],
+     [
+      "B",
+      "300 km",
+      "perto de Saturno"
+     ]
+    ]
+   },
+   "ref": "Asteroide orbita o Sol; satélite natural orbita um planeta.",
+   "conceitos": [
+    "orbita o Sol",
+    "orbita um planeta"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um corpo de 5.000 km, redondo, gira em torno de Saturno.",
+   "comando": "Classifique e justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações do corpo",
+    "colunas": [
+     "Característica",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Diâmetro",
+      "5.000 km"
+     ],
+     [
+      "Formato",
+      "arredondado"
+     ],
+     [
+      "Gira em torno de",
+      "Saturno"
+     ]
+    ]
+   },
+   "ref": "Satélite natural, pois orbita um planeta.",
+   "conceitos": [
+    "satélite natural",
+    "orbita planeta"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os cientistas descrevem o Sistema Solar começando por uma nuvem.",
+   "comando": "Explique o papel da gravidade na formação do Sol e dos planetas.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Sequência proposta",
+    "etapas": [
+     "Nuvem de gás e poeira",
+     "Contração da nuvem",
+     "Disco girando em torno do centro"
+    ]
+   },
+   "ref": "A gravidade juntou a matéria no centro, formando o Sol, e agrupou o restante em planetas.",
+   "conceitos": [
+    "gravidade",
+    "Sol no centro",
+    "planetas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Mitos e ciência explicam a origem do Universo.",
+   "comando": "Por que um mito não é considerado ciência?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Comparação",
+    "colunas": [
+     "Explicação",
+     "Baseada em"
+    ],
+    "linhas": [
+     [
+      "Mito",
+      "tradição e narrativas"
+     ],
+     [
+      "Big Bang",
+      "observações e cálculos"
+     ]
+    ]
+   },
+   "ref": "A ciência usa evidências testáveis; o mito não precisa ser testado.",
+   "conceitos": [
+    "evidências",
+    "teste"
+   ]
+  }
+ ]
+}

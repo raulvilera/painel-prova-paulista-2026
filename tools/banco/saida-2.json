@@ -1,0 +1,2825 @@
+{
+ "7º ANO|2|Reconhecer o conceito de sustentabilidade e sua aplicação nas ações humanas e políticas ambientais.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, a turma estudou o que é sustentabilidade. Qual frase define bem essa ideia?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Usar os recursos naturais sem limite, pois a natureza sempre se recupera.",
+    "Usar os recursos de hoje de modo que as próximas gerações também possam usá-los.",
+    "Guardar todos os recursos sem usar nada, para não gastar.",
+    "Cuidar só do dinheiro da comunidade, deixando o ambiente de lado."
+   ],
+   "correta": 1,
+   "explicacao": "Sustentabilidade é atender às necessidades atuais sem comprometer as das gerações futuras."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No tripé feito com três lápis, cada lápis representa uma dimensão da sustentabilidade. Quais são elas?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da atividade do tripé",
+    "etapas": [
+     "Prender três lápis com elástico",
+     "Apoiar o conjunto sobre a mesa",
+     "Retirar um dos lápis",
+     "Observar o que acontece"
+    ]
+   },
+   "alts": [
+    "política, religiosa e esportiva",
+    "física, química e biológica",
+    "solar, eólica e hídrica",
+    "ambiental, social e econômica"
+   ],
+   "correta": 3,
+   "explicacao": "O tripé da sustentabilidade reúne as dimensões ambiental, social e econômica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma cooperativa de reciclagem do bairro recolhe papel e plástico, reduz o lixo enviado ao aterro e gera renda para 20 famílias. Ela contribui para qual(is) dimensão(ões) do tripé?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Material recolhido pela cooperativa em um mês",
+    "unidade": "toneladas",
+    "itens": [
+     {
+      "rotulo": "Papel",
+      "valor": 12
+     },
+     {
+      "rotulo": "Plástico",
+      "valor": 8
+     },
+     {
+      "rotulo": "Vidro",
+      "valor": 5
+     }
+    ]
+   },
+   "alts": [
+    "Ambiental, social e econômica ao mesmo tempo.",
+    "Só a ambiental, porque envolve lixo.",
+    "Só a econômica, porque gera renda.",
+    "Nenhuma, porque lixo não faz parte do tripé."
+   ],
+   "correta": 0,
+   "explicacao": "Reduz resíduos (ambiental), inclui famílias (social) e gera renda (econômica)."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma fábrica do bairro tem grande ganho, mas joga lixo no córrego e muitos moradores ficam doentes. Por que essa atividade não é sustentável?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro feito pelos alunos no bairro",
+    "colunas": [
+     "Item",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Ganho da fábrica",
+      "Alto"
+     ],
+     [
+      "Água do córrego",
+      "Com lixo"
+     ],
+     [
+      "Moradores com diarreia",
+      "Aumentou"
+     ]
+    ]
+   },
+   "alts": [
+    "É sustentável, pois a fábrica tem ganho alto.",
+    "É sustentável, pois o córrego é pequeno.",
+    "Há lucro, mas o ambiente e a saúde são prejudicados, sem equilíbrio entre as dimensões.",
+    "Não é sustentável apenas porque falta lucro."
+   ],
+   "correta": 2,
+   "explicacao": "Sem equilíbrio entre as dimensões, a atividade não se sustenta."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois planos de uso de uma mata foram apresentados à comunidade. Qual é o mais sustentável e por quê?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados dos planos para a mata",
+    "colunas": [
+     "Plano",
+     "Árvores cortadas por ano",
+     "Árvores plantadas por ano",
+     "Empregos locais"
+    ],
+    "linhas": [
+     [
+      "A",
+      "500",
+      "0",
+      "5"
+     ],
+     [
+      "B",
+      "200",
+      "220",
+      "15"
+     ]
+    ]
+   },
+   "alts": [
+    "Plano A, pois corta mais árvores e rende mais madeira hoje.",
+    "Plano A, pois gera menos custos para o dono.",
+    "Nenhum, pois toda atividade com árvores é insustentável.",
+    "Plano B, pois repõe as árvores e gera emprego local."
+   ],
+   "correta": 3,
+   "explicacao": "O plano B equilibra uso, reposição e benefício social."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite as três dimensões (pernas) do tripé da sustentabilidade.",
+   "comando": "Responda com suas palavras.",
+   "figura": null,
+   "ref": "Ambiental, social e econômica.",
+   "conceitos": [
+    "ambiental",
+    "social",
+    "econômica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A cooperativa de reciclagem paga salário aos cooperados. Qual dimensão do tripé é fortalecida por isso?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da cooperativa",
+    "colunas": [
+     "Item",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Cooperados",
+      "20"
+     ],
+     [
+      "Material reciclado por mês (toneladas)",
+      "25"
+     ],
+     [
+      "Pagamento médio por cooperado (R$)",
+      "1.500"
+     ]
+    ]
+   },
+   "ref": "A dimensão econômica, pois gera renda (também fortalece a social).",
+   "conceitos": [
+    "dimensão econômica",
+    "geração de renda"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na atividade, um tripé perde uma perna e cai. O que isso ensina sobre a sustentabilidade?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observação da atividade",
+    "colunas": [
+     "Lápis no tripé",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "3",
+      "Ficou em pé"
+     ],
+     [
+      "2",
+      "Caiu"
+     ],
+     [
+      "1",
+      "Caiu"
+     ]
+    ]
+   },
+   "ref": "As três dimensões precisam estar em equilíbrio; faltando uma, a ação não se sustenta.",
+   "conceitos": [
+    "equilíbrio",
+    "três dimensões"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma horta comunitária produz verduras para 30 famílias, mas usa veneno que contamina o poço do bairro. Ela é sustentável? Justifique.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da horta comunitária",
+    "colunas": [
+     "Item",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Verduras por mês (kg)",
+      "80"
+     ],
+     [
+      "Famílias atendidas",
+      "30"
+     ],
+     [
+      "Água do poço",
+      "Com resíduos de veneno"
+     ]
+    ]
+   },
+   "ref": "Não. Atende ao social e ao econômico, mas prejudica o ambiente e a saúde, faltando equilíbrio.",
+   "conceitos": [
+    "desequilíbrio entre as dimensões",
+    "dano ambiental",
+    "saúde"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Proponha uma ação para sua escola que una as três dimensões do tripé e explique como.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Resíduos da escola em uma semana",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Papel",
+      "valor": 15
+     },
+     {
+      "rotulo": "Plástico",
+      "valor": 10
+     },
+     {
+      "rotulo": "Restos de comida",
+      "valor": 20
+     },
+     {
+      "rotulo": "Vidro",
+      "valor": 2
+     }
+    ]
+   },
+   "ref": "Ex.: coleta seletiva com cooperativa: reduz lixo (ambiental), envolve a comunidade (social) e gera renda (econômica).",
+   "conceitos": [
+    "ação coerente",
+    "ambiental",
+    "social",
+    "econômica"
+   ]
+  }
+ ],
+ "8º ANO|2|Reconhecer os órgãos do sistema respiratório e suas funções no processo de inspiração e expiração.": [
+  {
+   "tipo": "obj",
+   "enunciado": "No modelo do pulmão de garrafa, a garrafa é a caixa torácica e a bexiga da base é o diafragma. O que representa o balão dentro da garrafa?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Peças do modelo",
+    "colunas": [
+     "Peça",
+     "Representa"
+    ],
+    "linhas": [
+     [
+      "Garrafa",
+      "Caixa torácica"
+     ],
+     [
+      "Bexiga da base",
+      "Diafragma"
+     ]
+    ]
+   },
+   "alts": [
+    "Coração",
+    "Estômago",
+    "Pulmão",
+    "Traqueia"
+   ],
+   "correta": 2,
+   "explicacao": "O balão interno representa o pulmão, que se enche de ar."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao puxar a bexiga da base para baixo, o balão interno enche. Esse movimento representa:",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: tamanho do balão interno",
+    "unidade": "cm",
+    "itens": [
+     {
+      "rotulo": "Base solta",
+      "valor": 6
+     },
+     {
+      "rotulo": "Base puxada",
+      "valor": 12
+     }
+    ]
+   },
+   "alts": [
+    "a inspiração, quando o ar entra nos pulmões.",
+    "a expiração, quando o ar sai dos pulmões.",
+    "a digestão do alimento.",
+    "a circulação do sangue."
+   ],
+   "correta": 0,
+   "explicacao": "Diafragma desce e o ar entra: inspiração."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de Educação Física, Lia correu e passou a respirar mais rápido. Por que isso acontece?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Respirações por minuto de Lia",
+    "unidade": "respirações",
+    "itens": [
+     {
+      "rotulo": "Em repouso",
+      "valor": 16
+     },
+     {
+      "rotulo": "Logo após a corrida",
+      "valor": 40
+     }
+    ]
+   },
+   "alts": [
+    "Para esfriar o sangue, que fica gelado.",
+    "Para eliminar o alimento do estômago.",
+    "Porque os pulmões ficam menores.",
+    "O corpo precisa de mais oxigênio, então aumenta a entrada de ar."
+   ],
+   "correta": 3,
+   "explicacao": "Com o esforço, as células pedem mais oxigênio."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em semanas com queimadas perto da escola, muitos alunos ficaram com tosse. Qual a melhor explicação?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do posto de saúde",
+    "colunas": [
+     "Período",
+     "Ar",
+     "Atendimentos por falta de ar"
+    ],
+    "linhas": [
+     [
+      "Sem queimadas",
+      "Limpo",
+      "5"
+     ],
+     [
+      "Com queimadas",
+      "Com fumaça",
+      "23"
+     ]
+    ]
+   },
+   "alts": [
+    "A fumaça melhora a troca de gases.",
+    "A fumaça traz partículas e gases que irritam e danificam as vias respiratórias.",
+    "A tosse é causada pelo calor no estômago.",
+    "O ar poluído só afeta o coração."
+   ],
+   "correta": 1,
+   "explicacao": "Poluentes irritam vias aéreas e alvéolos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No modelo, o balão enche quando a base é puxada. No corpo humano, o que faz o ar entrar nos pulmões?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas do modelo",
+    "etapas": [
+     "Puxar a base para baixo",
+     "Observar o balão interno",
+     "Soltar a base",
+     "Observar o balão de novo"
+    ]
+   },
+   "alts": [
+    "Os pulmões têm músculos que se enchem como balões.",
+    "O coração empurra o ar para dentro.",
+    "O diafragma desce, o tórax aumenta de volume e o ar entra.",
+    "O diafragma sobe e comprime os pulmões."
+   ],
+   "correta": 2,
+   "explicacao": "Os pulmões não têm músculos; o diafragma e os músculos do tórax aumentam o volume."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite dois órgãos por onde o ar passa até chegar aos pulmões.",
+   "comando": "Responda com suas palavras.",
+   "figura": null,
+   "ref": "Ex.: nariz, faringe, laringe, traqueia, brônquios.",
+   "conceitos": [
+    "nariz",
+    "traqueia",
+    "brônquios"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Qual peça do modelo representa o diafragma?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Peças do modelo",
+    "colunas": [
+     "Peça",
+     "Material"
+    ],
+    "linhas": [
+     [
+      "Garrafa",
+      "PET cortada"
+     ],
+     [
+      "Balão interno",
+      "Bexiga pequena"
+     ],
+     [
+      "Base",
+      "Bexiga grande"
+     ]
+    ]
+   },
+   "ref": "A bexiga grande da base.",
+   "conceitos": [
+    "diafragma",
+    "modelo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Use a observação do modelo para explicar o que acontece com o diafragma e o ar na expiração.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observação do modelo",
+    "colunas": [
+     "Ação",
+     "Balão interno"
+    ],
+    "linhas": [
+     [
+      "Puxar a base",
+      "Encheu"
+     ],
+     [
+      "Soltar a base",
+      "Murchou"
+     ]
+    ]
+   },
+   "ref": "O diafragma relaxa e sobe, o tórax diminui e o ar sai dos pulmões.",
+   "conceitos": [
+    "diafragma relaxa",
+    "ar sai"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que quem fuma há muitos anos costuma ter mais dificuldade para respirar? Justifique.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: ar soprado em um aparelho",
+    "colunas": [
+     "Pessoa",
+     "Litros de ar"
+    ],
+    "linhas": [
+     [
+      "Não fumante",
+      "4,0"
+     ],
+     [
+      "Fumante há 20 anos",
+      "2,8"
+     ]
+    ]
+   },
+   "ref": "A fumaça danifica vias aéreas e alvéolos, reduzindo a capacidade de troca de gases.",
+   "conceitos": [
+    "fumaça",
+    "alvéolos",
+    "capacidade pulmonar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Nas semanas 3 e 4 houve queimadas na região. Relacione isso aos atendimentos e cite uma medida de proteção.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Atendimentos por tosse no posto",
+    "unidade": "atendimentos",
+    "itens": [
+     {
+      "rotulo": "Semana 1",
+      "valor": 6
+     },
+     {
+      "rotulo": "Semana 2",
+      "valor": 8
+     },
+     {
+      "rotulo": "Semana 3",
+      "valor": 25
+     },
+     {
+      "rotulo": "Semana 4",
+      "valor": 28
+     }
+    ]
+   },
+   "ref": "A fumaça irrita as vias respiratórias e aumenta os casos. Proteção: máscara, beber água, evitar esforço, não queimar lixo.",
+   "conceitos": [
+    "poluição do ar",
+    "medida de proteção"
+   ]
+  }
+ ],
+ "8º ANO|2|Reconhecer a função dos nutrientes no organismo humano.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual nutriente tem como principal função construir e reparar tecidos, como os músculos?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Carboidrato",
+    "Proteína",
+    "Vitamina",
+    "Gordura"
+   ],
+   "correta": 1,
+   "explicacao": "As proteínas constroem e reparam o corpo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Para que servem principalmente os carboidratos do pão e do arroz?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Alimentos do almoço",
+    "colunas": [
+     "Alimento",
+     "Porção"
+    ],
+    "linhas": [
+     [
+      "Arroz",
+      "4 colheres"
+     ],
+     [
+      "Feijão",
+      "2 conchas"
+     ],
+     [
+      "Salada",
+      "1 prato raso"
+     ],
+     [
+      "Carne",
+      "1 bife"
+     ]
+    ]
+   },
+   "alts": [
+    "Construir ossos e músculos.",
+    "Regular funções como a visão.",
+    "Eliminar toxinas do corpo.",
+    "Fornecer energia para o corpo."
+   ],
+   "correta": 3,
+   "explicacao": "Carboidratos são a principal fonte de energia."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os alunos classificaram os alimentos pela função principal. Pelo rótulo, onde fica o ovo?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Rótulo do ovo cozido (100 g)",
+    "colunas": [
+     "Nutriente",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Proteínas",
+      "13 g"
+     ],
+     [
+      "Gorduras",
+      "10 g"
+     ],
+     [
+      "Carboidratos",
+      "1 g"
+     ]
+    ]
+   },
+   "alts": [
+    "Construtores, pois tem bastante proteína.",
+    "Energéticos, pois tem muito carboidrato.",
+    "Reguladores, pois não tem gordura.",
+    "Nenhum, pois ovo não é alimento."
+   ],
+   "correta": 0,
+   "explicacao": "O destaque é a proteína: alimento construtor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O rótulo do salgadinho do recreio traz os ingredientes abaixo. Como esse alimento é classificado?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Ingredientes do salgadinho",
+    "colunas": [
+     "Ordem",
+     "Ingrediente"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Farinha de milho"
+     ],
+     [
+      "2",
+      "Gordura vegetal"
+     ],
+     [
+      "3",
+      "Sal"
+     ],
+     [
+      "4",
+      "Realçador de sabor"
+     ],
+     [
+      "5",
+      "Corante artificial"
+     ]
+    ]
+   },
+   "alts": [
+    "In natura, pois vem do milho.",
+    "Processado só com sal.",
+    "Ultraprocessado, pois tem aditivos industriais.",
+    "Minimamente processado, pois foi só moído."
+   ],
+   "correta": 2,
+   "explicacao": "Aditivos como realçadores e corantes caracterizam ultraprocessados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois lanches do recreio estão no quadro. Qual ajuda mais o corpo a ter energia e funcionar bem, e por quê?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Lanches do recreio",
+    "colunas": [
+     "Lanche",
+     "Açúcar adicionado",
+     "Fibras",
+     "Vitaminas"
+    ],
+    "linhas": [
+     [
+      "A: bolacha recheada",
+      "12 g",
+      "0 g",
+      "Quase nenhuma"
+     ],
+     [
+      "B: fruta com aveia",
+      "0 g",
+      "3 g",
+      "Várias"
+     ]
+    ]
+   },
+   "alts": [
+    "A, pois mais açúcar sempre significa mais saúde.",
+    "B, pois traz fibras e vitaminas que regulam o corpo, sem açúcar adicionado.",
+    "A, pois bolacha tem mais vitaminas.",
+    "Os dois são iguais para o corpo."
+   ],
+   "correta": 1,
+   "explicacao": "Fibras e vitaminas ajudam a regular o corpo."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite dois nutrientes e a principal função de cada um.",
+   "comando": "Responda com suas palavras.",
+   "figura": null,
+   "ref": "Ex.: proteínas constroem tecidos; carboidratos dão energia; vitaminas regulam funções.",
+   "conceitos": [
+    "nutriente",
+    "função"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pelo rótulo, qual nutriente aparece em maior quantidade no pão? Para que ele serve?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Rótulo do pão francês (50 g)",
+    "colunas": [
+     "Nutriente",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Carboidratos",
+      "28 g"
+     ],
+     [
+      "Proteínas",
+      "4 g"
+     ],
+     [
+      "Gorduras",
+      "1 g"
+     ],
+     [
+      "Fibras",
+      "1 g"
+     ]
+    ]
+   },
+   "ref": "Carboidrato; fornece energia.",
+   "conceitos": [
+    "carboidrato",
+    "energia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lucas joga futebol e quer ganhar massa muscular. Cite dois alimentos da tabela que mais o ajudam e o nutriente envolvido.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Alimentos do almoço de Lucas",
+    "colunas": [
+     "Alimento",
+     "Proteínas em 100 g"
+    ],
+    "linhas": [
+     [
+      "Frango grelhado",
+      "27 g"
+     ],
+     [
+      "Arroz",
+      "2,5 g"
+     ],
+     [
+      "Ovo cozido",
+      "13 g"
+     ],
+     [
+      "Alface",
+      "1,4 g"
+     ]
+    ]
+   },
+   "ref": "Frango e ovo, ricos em proteínas, que constroem os músculos.",
+   "conceitos": [
+    "proteínas",
+    "construção muscular"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que comer ultraprocessados em excesso faz mal, mesmo que eles deem muita energia? Use os dados.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Rótulos por 100 g",
+    "colunas": [
+     "Produto",
+     "Sal",
+     "Açúcar",
+     "Fibra"
+    ],
+    "linhas": [
+     [
+      "Macarrão instantâneo",
+      "1800 mg",
+      "3 g",
+      "1 g"
+     ],
+     [
+      "Macarrão cozido simples",
+      "5 mg",
+      "0 g",
+      "2 g"
+     ]
+    ]
+   },
+   "ref": "Têm excesso de sal, açúcar e gorduras e poucas fibras e vitaminas, aumentando o risco de obesidade e pressão alta.",
+   "conceitos": [
+    "excesso de sal e açúcar",
+    "poucas fibras",
+    "riscos à saúde"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Monte um prato de almoço com alimentos de cada função (energia, construção e regulação) e justifique.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Alimentos disponíveis na merenda",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Arroz",
+      "valor": 10
+     },
+     {
+      "rotulo": "Feijão",
+      "valor": 8
+     },
+     {
+      "rotulo": "Frango",
+      "valor": 6
+     },
+     {
+      "rotulo": "Couve",
+      "valor": 4
+     },
+     {
+      "rotulo": "Banana",
+      "valor": 5
+     }
+    ]
+   },
+   "ref": "Ex.: arroz (energia), frango ou feijão (construção) e couve ou banana (regulação).",
+   "conceitos": [
+    "energético",
+    "construtor",
+    "regulador"
+   ]
+  }
+ ],
+ "9º ANO|3|Analisar a importância do tratamento de água e esgoto para a qualidade ambiental e a saúde humana.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em um copo, a água com terra ficou parada e, depois de um tempo, a terra foi para o fundo. Essa etapa se chama decantação. Ela ocorre quando:",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas do experimento",
+    "etapas": [
+     "Misturar terra na água do copo",
+     "Esperar sem mexer",
+     "Anotar a turbidez"
+    ]
+   },
+   "alts": [
+    "a água passa por areia e carvão.",
+    "a água é fervida e evapora.",
+    "o cloro elimina os microrganismos.",
+    "o material mais pesado vai se depositando no fundo com o tempo."
+   ],
+   "correta": 3,
+   "explicacao": "Decantação separa partículas por ação da gravidade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O filtro de garrafa PET tem camadas de algodão, carvão, areia e pedrinhas. Para que ele serve?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Camadas do filtro, de cima para baixo",
+    "colunas": [
+     "Camada",
+     "Material"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Algodão"
+     ],
+     [
+      "2",
+      "Carvão"
+     ],
+     [
+      "3",
+      "Areia fina"
+     ],
+     [
+      "4",
+      "Pedrinhas"
+     ]
+    ]
+   },
+   "alts": [
+    "Reter sujeiras e partículas da água.",
+    "Matar todos os microrganismos.",
+    "Adicionar sais minerais à água.",
+    "Transformar a água em potável."
+   ],
+   "correta": 0,
+   "explicacao": "A filtração retém partículas, mas não elimina microrganismos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois do filtro, a água ficou transparente. Por que ainda não deve ser bebida?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: turbidez da água",
+    "unidade": "unidades",
+    "itens": [
+     {
+      "rotulo": "Água com terra",
+      "valor": 80
+     },
+     {
+      "rotulo": "Após decantação",
+      "valor": 30
+     },
+     {
+      "rotulo": "Após o filtro",
+      "valor": 5
+     }
+    ]
+   },
+   "alts": [
+    "Porque a água transparente já é sempre limpa.",
+    "Porque o filtro acrescenta terra.",
+    "Pode ter microrganismos invisíveis; falta desinfecção, como a cloração.",
+    "Porque a água perde o oxigênio no filtro."
+   ],
+   "correta": 2,
+   "explicacao": "Transparência não garante ausência de microrganismos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O bairro A tem esgoto coletado e tratado; o bairro B, não. Qual conclusão os dados apoiam?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Casos de diarreia em crianças",
+    "colunas": [
+     "Bairro",
+     "Casos por 1.000 crianças ao ano"
+    ],
+    "linhas": [
+     [
+      "A",
+      "8"
+     ],
+     [
+      "B",
+      "42"
+     ]
+    ]
+   },
+   "alts": [
+    "O esgoto não tem relação com doenças.",
+    "A falta de tratamento de esgoto favorece doenças transmitidas pela água.",
+    "Diarreia só ocorre em bairros ricos.",
+    "O bairro A tem mais crianças doentes."
+   ],
+   "correta": 1,
+   "explicacao": "Sem tratamento, microrganismos contaminam a água e o solo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um rio recebe esgoto sem tratamento e os peixes morrem. Qual a melhor explicação?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Oxigênio dissolvido no rio",
+    "unidade": "mg/L",
+    "itens": [
+     {
+      "rotulo": "1 km antes do despejo",
+      "valor": 8
+     },
+     {
+      "rotulo": "No ponto de despejo",
+      "valor": 4
+     },
+     {
+      "rotulo": "5 km depois",
+      "valor": 2
+     }
+    ]
+   },
+   "alts": [
+    "O esgoto aumenta o oxigênio e os peixes não aguentam.",
+    "Os peixes morrem por falta de luz.",
+    "O esgoto esfria demais a água.",
+    "Microrganismos que decompõem a matéria orgânica consomem o oxigênio da água."
+   ],
+   "correta": 3,
+   "explicacao": "A decomposição consome oxigênio, causando morte de peixes."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite duas etapas do tratamento de água em uma estação (ETA).",
+   "comando": "Responda com suas palavras.",
+   "figura": null,
+   "ref": "Ex.: floculação, decantação, filtração, cloração (desinfecção).",
+   "conceitos": [
+    "decantação",
+    "filtração",
+    "cloração"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Qual copo ficou menos turvo, o da decantação ou o do filtro de PET? Justifique com os dados.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: turbidez após 30 minutos",
+    "colunas": [
+     "Copo",
+     "Turbidez"
+    ],
+    "linhas": [
+     [
+      "Copo parado",
+      "35"
+     ],
+     [
+      "Copo filtrado",
+      "6"
+     ]
+    ]
+   },
+   "ref": "O copo filtrado, pois o filtro retém mais partículas que a decantação sozinha.",
+   "conceitos": [
+    "filtração",
+    "menor turbidez"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O professor disse que a água filtrada ainda não é potável. Que etapa falta e por quê?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Teste da água filtrada",
+    "colunas": [
+     "Característica",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Aparência",
+      "Transparente"
+     ],
+     [
+      "Bactérias",
+      "Presentes"
+     ]
+    ]
+   },
+   "ref": "Falta a desinfecção (cloro), para eliminar os microrganismos.",
+   "conceitos": [
+    "desinfecção",
+    "microrganismos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Explique por que tratar o esgoto protege a saúde e o rio.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Bactérias nas amostras",
+    "unidade": "milhares por 100 mL",
+    "itens": [
+     {
+      "rotulo": "Amostra A (esgoto bruto)",
+      "valor": 5000
+     },
+     {
+      "rotulo": "Amostra B (esgoto tratado)",
+      "valor": 50
+     }
+    ]
+   },
+   "ref": "O tratamento reduz bactérias e matéria orgânica, evitando doenças e a perda de oxigênio do rio.",
+   "conceitos": [
+    "redução de bactérias",
+    "saúde",
+    "qualidade do rio"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Proponha uma ação da sua comunidade, que mora perto de um rio, para cuidar da água. Justifique.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Consumo de água em uma casa",
+    "unidade": "litros por dia",
+    "itens": [
+     {
+      "rotulo": "Banho",
+      "valor": 90
+     },
+     {
+      "rotulo": "Descarga",
+      "valor": 60
+     },
+     {
+      "rotulo": "Cozinha",
+      "valor": 40
+     },
+     {
+      "rotulo": "Lavar roupa",
+      "valor": 50
+     }
+    ]
+   },
+   "ref": "Ex.: reduzir banhos longos, consertar vazamentos, não jogar lixo no rio; economiza e protege a bacia.",
+   "conceitos": [
+    "consumo consciente",
+    "proteção da bacia"
+   ]
+  }
+ ],
+ "9º ANO|3|Reconhecer o conceito de pegada ecológica como indicador do impacto das atividades humanas sobre o meio ambiente.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na atividade, cada aluno recortou uma pegada do tamanho do seu resultado. A pegada ecológica indica:",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da atividade",
+    "etapas": [
+     "Responder ao questionário",
+     "Somar os pontos",
+     "Recortar a pegada",
+     "Comparar com a turma"
+    ]
+   },
+   "alts": [
+    "o peso do lixo que cada pessoa produz.",
+    "a quantidade de pegadas deixadas no solo.",
+    "a área de natureza necessária para sustentar um estilo de vida.",
+    "o número de árvores de uma cidade."
+   ],
+   "correta": 2,
+   "explicacao": "A pegada estima a área necessária para fornecer recursos e absorver resíduos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual hábito tende a aumentar a pegada ecológica de uma pessoa?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Usar o carro todos os dias para trajetos curtos.",
+    "Reutilizar garrafas e sacolas.",
+    "Separar o lixo para reciclagem.",
+    "Comer alimentos produzidos perto de casa."
+   ],
+   "correta": 0,
+   "explicacao": "Combustíveis fósseis elevam a pegada."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Leo tem pegada de 3,0 hectares globais. O planeta oferece 1,6 por pessoa. O que isso indica?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Hectares globais por pessoa",
+    "unidade": "hectares",
+    "itens": [
+     {
+      "rotulo": "Pegada de Leo",
+      "valor": 3
+     },
+     {
+      "rotulo": "Área disponível no planeta",
+      "valor": 1.6
+     }
+    ]
+   },
+   "alts": [
+    "Leo gasta menos recursos do que o planeta oferece.",
+    "Leo está exatamente no limite do planeta.",
+    "A área do planeta é maior que a de Leo.",
+    "O estilo de vida de Leo usa mais recursos do que o planeta consegue repor por pessoa."
+   ],
+   "correta": 3,
+   "explicacao": "Pegada acima da biocapacidade indica consumo insustentável."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma família troca carne bovina por feijão duas vezes por semana. O que acontece com a pegada?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Gases de efeito estufa na produção",
+    "unidade": "kg de CO₂ por kg de alimento",
+    "itens": [
+     {
+      "rotulo": "Carne bovina",
+      "valor": 30
+     },
+     {
+      "rotulo": "Frango",
+      "valor": 6
+     },
+     {
+      "rotulo": "Feijão",
+      "valor": 2
+     }
+    ]
+   },
+   "alts": [
+    "Aumenta, pois o feijão exige mais terra.",
+    "Diminui, pois a produção de feijão usa menos terra e emite menos gases.",
+    "Não muda, pois todo alimento pesa igual.",
+    "Diminui, pois feijão não precisa de água."
+   ],
+   "correta": 1,
+   "explicacao": "Alimentos vegetais têm menor impacto que carne bovina."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "As cidades A e B têm 100 mil moradores. A pegada média de A é maior. Qual dado explica melhor?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Hábitos médios por morador",
+    "colunas": [
+     "Cidade",
+     "Km de carro por dia",
+     "Lixo por semana"
+    ],
+    "linhas": [
+     [
+      "A",
+      "20",
+      "10 kg"
+     ],
+     [
+      "B",
+      "5",
+      "4 kg"
+     ]
+    ]
+   },
+   "alts": [
+    "A tem mais habitantes que B.",
+    "A pegada depende só da renda.",
+    "Maior consumo de combustível e de resíduos exige mais área da natureza.",
+    "A pegada mede somente o lixo."
+   ],
+   "correta": 2,
+   "explicacao": "Transporte e resíduos aumentam a pegada."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que a pegada ecológica mede?",
+   "comando": "Responda com suas palavras.",
+   "figura": null,
+   "ref": "A área de natureza necessária para fornecer recursos e absorver os resíduos de um estilo de vida.",
+   "conceitos": [
+    "área de natureza",
+    "consumo",
+    "resíduos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Quem usa mais área de natureza, Rui ou Caio? Explique.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Resultado do questionário",
+    "colunas": [
+     "Aluno",
+     "Pontos",
+     "Pegada recortada"
+    ],
+    "linhas": [
+     [
+      "Rui",
+      "10",
+      "Pequena"
+     ],
+     [
+      "Tânia",
+      "25",
+      "Média"
+     ],
+     [
+      "Caio",
+      "40",
+      "Grande"
+     ]
+    ]
+   },
+   "ref": "Caio: pegada maior indica estilo de vida que consome mais recursos.",
+   "conceitos": [
+    "pegada maior",
+    "maior consumo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite duas atitudes que um aluno pode ter para reduzir a pegada ecológica e explique uma delas.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Lixo de uma casa por semana",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Orgânico",
+      "valor": 5
+     },
+     {
+      "rotulo": "Plástico",
+      "valor": 2
+     },
+     {
+      "rotulo": "Papel",
+      "valor": 3
+     },
+     {
+      "rotulo": "Vidro",
+      "valor": 1
+     }
+    ]
+   },
+   "ref": "Ex.: separar lixo para reciclar e compostar, evitar desperdício; diminui extração de recursos.",
+   "conceitos": [
+    "reciclagem",
+    "consumo consciente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Quando a pegada de um país é maior que sua biocapacidade, o que isso significa para o futuro?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: hectares por pessoa",
+    "colunas": [
+     "País",
+     "Pegada",
+     "Biocapacidade"
+    ],
+    "linhas": [
+     [
+      "País X",
+      "4,5",
+      "2,0"
+     ],
+     [
+      "País Y",
+      "1,2",
+      "2,5"
+     ]
+    ]
+   },
+   "ref": "Usa recursos mais rápido do que a natureza repõe, esgotando-os e gerando déficit ecológico.",
+   "conceitos": [
+    "déficit ecológico",
+    "recursos esgotáveis"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas famílias têm mesma renda, mas pegadas diferentes. Cite dois fatores do estilo de vida que explicam e uma ação da escola para reduzir.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Hábitos semanais",
+    "colunas": [
+     "Hábito",
+     "Família 1",
+     "Família 2"
+    ],
+    "linhas": [
+     [
+      "Km de carro",
+      "200",
+      "20"
+     ],
+     [
+      "Carne (vezes)",
+      "10",
+      "3"
+     ],
+     [
+      "Lixo (kg)",
+      "15",
+      "5"
+     ]
+    ]
+   },
+   "ref": "Transporte, alimentação e lixo. Escola: coleta seletiva, carona solidária ou horta.",
+   "conceitos": [
+    "transporte",
+    "alimentação",
+    "ação coletiva"
+   ]
+  }
+ ],
+ "4B|6º ANO|9": [
+  {
+   "tipo": "obj",
+   "enunciado": "Ao tocar objetos de olhos fechados, a turma percebeu se eram quentes ou frios. Qual órgão é o principal responsável pelo tato?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Atividade em sala",
+    "etapas": [
+     "Tocar o objeto A com a ponta dos dedos",
+     "Dizer se parece quente ou frio",
+     "Tocar o objeto B",
+     "Comparar as respostas"
+    ]
+   },
+   "alts": [
+    "Pele",
+    "Retina",
+    "Orelha",
+    "Dente"
+   ],
+   "correta": 0,
+   "explicacao": "A pele reúne os receptores do tato."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os receptores da pele que percebem calor e frio são os de:",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Respostas de um aluno",
+    "colunas": [
+     "Objeto",
+     "Sensação"
+    ],
+    "linhas": [
+     [
+      "Copo de água da torneira",
+      "Frio"
+     ],
+     [
+      "Caneca de chá",
+      "Quente"
+     ],
+     [
+      "Caderno",
+      "Sem diferença"
+     ]
+    ]
+   },
+   "alts": [
+    "pressão",
+    "dor",
+    "textura",
+    "temperatura"
+   ],
+   "correta": 3,
+   "explicacao": "Termorreceptores detectam temperatura."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro encostou sem querer na panela quente e puxou a mão. Quais receptores foram ativados?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Sequência da situação",
+    "etapas": [
+     "Mão encosta na panela",
+     "Pedro sente ardor",
+     "Pedro afasta a mão",
+     "A pele fica vermelha"
+    ]
+   },
+   "alts": [
+    "Só os de textura.",
+    "Os de temperatura e de dor.",
+    "Só os de pressão.",
+    "Nenhum, pois o movimento é voluntário."
+   ],
+   "correta": 1,
+   "explicacao": "Temperatura e dor avisam do perigo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Por que a ponta dos dedos percebe melhor detalhes e texturas que as costas?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: menor distância para sentir dois toques",
+    "unidade": "mm",
+    "itens": [
+     {
+      "rotulo": "Ponta do dedo",
+      "valor": 3
+     },
+     {
+      "rotulo": "Palma da mão",
+      "valor": 10
+     },
+     {
+      "rotulo": "Costas",
+      "valor": 40
+     }
+    ]
+   },
+   "alts": [
+    "Porque os dedos têm pele mais grossa.",
+    "Porque as costas não têm receptores.",
+    "Porque a ponta dos dedos tem mais receptores por área.",
+    "Porque os dedos têm mais músculos."
+   ],
+   "correta": 2,
+   "explicacao": "Maior densidade de receptores, maior sensibilidade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma pessoa deixou a mão esquerda dormente com gelo e não percebeu que a panela estava quente. O que isso mostra?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Relato após tocar a panela",
+    "colunas": [
+     "Mão",
+     "Situação",
+     "Relato"
+    ],
+    "linhas": [
+     [
+      "Direita",
+      "Normal",
+      "Sentiu muito quente"
+     ],
+     [
+      "Esquerda",
+      "Dormente",
+      "Não sentiu nada"
+     ]
+    ]
+   },
+   "alts": [
+    "Sem receptores funcionando, a pele não avisa o perigo, e há risco de queimadura.",
+    "A mão esquerda é mais forte.",
+    "O frio aumenta a sensibilidade.",
+    "Só a mão direita tem receptores."
+   ],
+   "correta": 0,
+   "explicacao": "O tato protege o corpo."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite dois tipos de receptores presentes na pele.",
+   "comando": "Responda com suas palavras.",
+   "figura": null,
+   "ref": "Ex.: pressão, temperatura, textura, dor.",
+   "conceitos": [
+    "receptores",
+    "pele"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Qual sentido a turma usou para responder e onde ficam os receptores dele?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Respostas da turma",
+    "colunas": [
+     "Objeto",
+     "Disseram quente",
+     "Disseram frio"
+    ],
+    "linhas": [
+     [
+      "Caneca",
+      "28",
+      "2"
+     ],
+     [
+      "Copo",
+      "3",
+      "27"
+     ]
+    ]
+   },
+   "ref": "O tato; os receptores ficam na pele.",
+   "conceitos": [
+    "tato",
+    "pele"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que afastamos a mão da panela quente tão rápido? Relacione com os receptores.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Sequência da situação",
+    "etapas": [
+     "Mão encosta na panela",
+     "Sinal parte da pele",
+     "Resposta rápida",
+     "A mão sai da panela"
+    ]
+   },
+   "ref": "Receptores de temperatura e dor enviam sinais ao sistema nervoso, causando resposta que protege.",
+   "conceitos": [
+    "receptores de temperatura e dor",
+    "proteção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma pessoa idosa com diabetes perde sensibilidade nos pés. Por que deve olhar os pés todos os dias?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Teste de sensibilidade nos pés",
+    "colunas": [
+     "Região",
+     "Sentiu o toque?"
+    ],
+    "linhas": [
+     [
+      "Dedão",
+      "Não"
+     ],
+     [
+      "Planta",
+      "Não"
+     ],
+     [
+      "Calcanhar",
+      "Sim"
+     ]
+    ]
+   },
+   "ref": "Sem sentir dor ou pressão, ela não percebe feridas, que podem infeccionar.",
+   "conceitos": [
+    "perda de sensibilidade",
+    "feridas",
+    "prevenção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que a leitura em Braille é feita com a ponta dos dedos e não com o cotovelo? Justifique.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: menor distância para distinguir dois pontos",
+    "unidade": "mm",
+    "itens": [
+     {
+      "rotulo": "Ponta do dedo",
+      "valor": 2
+     },
+     {
+      "rotulo": "Antebraço",
+      "valor": 40
+     }
+    ]
+   },
+   "ref": "A ponta do dedo tem mais receptores e percebe pequenos relevos.",
+   "conceitos": [
+    "receptores",
+    "relevo"
+   ]
+  }
+ ],
+ "4B|7º ANO|5": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual destas doenças é causada por bactéria?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Gripe",
+    "Tuberculose",
+    "Dengue",
+    "Sarampo"
+   ],
+   "correta": 1,
+   "explicacao": "Tuberculose é bacteriana; as demais são virais."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os antibióticos são usados para tratar doenças causadas por:",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Caminho do paciente no posto",
+    "etapas": [
+     "Consulta",
+     "Exame",
+     "Receita médica",
+     "Retirada do remédio"
+    ]
+   },
+   "alts": [
+    "vírus como o da gripe.",
+    "fungos.",
+    "qualquer doença.",
+    "bactérias."
+   ],
+   "correta": 3,
+   "explicacao": "Antibióticos agem em bactérias."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Joana pisou em prego enferrujado. Pela carteira, o que ela deve fazer?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Carteira de vacinação de Joana",
+    "colunas": [
+     "Vacina",
+     "Última dose"
+    ],
+    "linhas": [
+     [
+      "Tétano (dT)",
+      "há 12 anos"
+     ],
+     [
+      "Febre amarela",
+      "há 3 anos"
+     ]
+    ]
+   },
+   "alts": [
+    "Lavar o ferimento e procurar o posto para checar o reforço da vacina.",
+    "Esperar e usar antibiótico sem receita.",
+    "Nada, pois tétano não tem prevenção.",
+    "Cobrir sem lavar."
+   ],
+   "correta": 0,
+   "explicacao": "A vacina contra tétano tem reforço a cada 10 anos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Por que não se deve parar o antibiótico antes do fim nem usá-lo sem receita?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: bactérias sobreviventes",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Parou no 2º dia",
+      "valor": 30
+     },
+     {
+      "rotulo": "Tratamento completo",
+      "valor": 1
+     }
+    ]
+   },
+   "alts": [
+    "O remédio perde o efeito.",
+    "As bactérias viram vírus.",
+    "As bactérias mais fortes sobrevivem e podem se tornar resistentes.",
+    "O corpo deixa de produzir defesas."
+   ],
+   "correta": 2,
+   "explicacao": "Interromper favorece bactérias resistentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Observe os dados de tuberculose. Qual conclusão eles apoiam?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Casos de tuberculose por faixa de idade",
+    "unidade": "por 100 mil",
+    "itens": [
+     {
+      "rotulo": "0 a 14 anos",
+      "valor": 3
+     },
+     {
+      "rotulo": "15 a 29 anos",
+      "valor": 40
+     },
+     {
+      "rotulo": "30 a 59 anos",
+      "valor": 55
+     },
+     {
+      "rotulo": "60 anos ou mais",
+      "valor": 45
+     }
+    ]
+   },
+   "alts": [
+    "Só atinge idosos.",
+    "Atinge mais adultos, mas ocorre em todas as idades.",
+    "Atinge mais crianças.",
+    "Não atinge jovens."
+   ],
+   "correta": 1,
+   "explicacao": "Maior número entre adultos, mas há casos em todas as faixas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite duas doenças causadas por bactérias.",
+   "comando": "Responda com suas palavras.",
+   "figura": null,
+   "ref": "Ex.: tuberculose, tétano, coqueluche, infecção urinária.",
+   "conceitos": [
+    "doenças bacterianas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A tuberculose se espalha por gotículas no ar. Cite uma medida de prevenção.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Sintomas de tuberculose",
+    "colunas": [
+     "Sintoma",
+     "Duração"
+    ],
+    "linhas": [
+     [
+      "Tosse",
+      "Mais de 3 semanas"
+     ],
+     [
+      "Febre à tarde",
+      "Vários dias"
+     ],
+     [
+      "Perda de peso",
+      "Sem causa aparente"
+     ]
+    ]
+   },
+   "ref": "Ventilar ambientes, cobrir a boca ao tossir, vacina BCG, tratar os doentes.",
+   "conceitos": [
+    "prevenção",
+    "vacina"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que antibióticos não curam a gripe?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Tratamento de duas pessoas",
+    "colunas": [
+     "Pessoa",
+     "Doença",
+     "Tratamento"
+    ],
+    "linhas": [
+     [
+      "Ana",
+      "Infecção urinária",
+      "Antibiótico"
+     ],
+     [
+      "Beto",
+      "Gripe",
+      "Repouso e líquidos"
+     ]
+    ]
+   },
+   "ref": "A gripe é causada por vírus e antibióticos agem só em bactérias.",
+   "conceitos": [
+    "vírus",
+    "bactérias"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Explique por que parar o remédio ao melhorar pode gerar bactérias resistentes.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: evolução do tratamento",
+    "colunas": [
+     "Dia",
+     "Sintomas",
+     "Bactérias"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Febre",
+      "Muitas"
+     ],
+     [
+      "2",
+      "Sem febre",
+      "Poucas"
+     ],
+     [
+      "4",
+      "Febre volta",
+      "Muitas"
+     ]
+    ]
+   },
+   "ref": "Sobrevivem as bactérias mais resistentes, que se multiplicam e passam a característica adiante.",
+   "conceitos": [
+    "seleção",
+    "resistência",
+    "tratamento completo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que a infecção urinária por E. coli é mais comum em quem bebe pouca água? Cite uma prevenção.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Hábitos de duas pessoas",
+    "colunas": [
+     "Pessoa",
+     "Água por dia",
+     "Idas ao banheiro"
+    ],
+    "linhas": [
+     [
+      "Lia",
+      "3 copos",
+      "2"
+     ],
+     [
+      "Raí",
+      "8 copos",
+      "6"
+     ]
+    ]
+   },
+   "ref": "Pouca água e urina retida favorecem a multiplicação das bactérias; beber água e ir ao banheiro com frequência previne.",
+   "conceitos": [
+    "E. coli",
+    "hidratação",
+    "higiene"
+   ]
+  }
+ ],
+ "4B|7º ANO|15": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual serviço faz parte do saneamento básico?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Transporte escolar",
+    "Iluminação da quadra",
+    "Coleta e tratamento de esgoto",
+    "Venda de alimentos"
+   ],
+   "correta": 2,
+   "explicacao": "Saneamento: água, esgoto, lixo e drenagem."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os Objetivos de Desenvolvimento Sustentável (ODS) orientam ações no mundo. O ODS 6 trata de:",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Alguns ODS",
+    "colunas": [
+     "ODS",
+     "Tema"
+    ],
+    "linhas": [
+     [
+      "4",
+      "Educação de qualidade"
+     ],
+     [
+      "11",
+      "Cidades sustentáveis"
+     ],
+     [
+      "13",
+      "Ação contra a mudança do clima"
+     ]
+    ]
+   },
+   "alts": [
+    "Fim da pobreza.",
+    "Água potável e saneamento para todos.",
+    "Energia limpa.",
+    "Vida na terra."
+   ],
+   "correta": 1,
+   "explicacao": "ODS 6: água potável e saneamento."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Observe a cobertura de esgoto por região. Que conclusão é correta?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Domicílios com rede de esgoto (valores aproximados)",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Sudeste",
+      "valor": 80
+     },
+     {
+      "rotulo": "Sul",
+      "valor": 50
+     },
+     {
+      "rotulo": "Nordeste",
+      "valor": 30
+     },
+     {
+      "rotulo": "Norte",
+      "valor": 15
+     }
+    ]
+   },
+   "alts": [
+    "Todas as regiões têm o mesmo acesso.",
+    "O Norte tem a maior cobertura.",
+    "O Sudeste tem a menor cobertura.",
+    "O acesso é desigual, sendo menor no Norte."
+   ],
+   "correta": 3,
+   "explicacao": "Há desigualdade regional."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um bairro como Paraisópolis, a falta de saneamento traz que consequência?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações em foto do bairro",
+    "colunas": [
+     "Item",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Esgoto",
+      "Corre pelo beco"
+     ],
+     [
+      "Lixo",
+      "Acumulado na rua"
+     ],
+     [
+      "Água",
+      "Abastecimento irregular"
+     ]
+    ]
+   },
+   "alts": [
+    "Mais doenças como diarreia e verminoses.",
+    "Menos casos de doenças.",
+    "Aumento da qualidade da água.",
+    "Nenhuma mudança."
+   ],
+   "correta": 0,
+   "explicacao": "Falta de saneamento favorece doenças."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O Marco Legal prevê ampliar a cobertura de esgoto. Se uma cidade tem 70% e a meta é 90%, o que é necessário?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Cobertura de esgoto na cidade",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Hoje",
+      "valor": 70
+     },
+     {
+      "rotulo": "Meta",
+      "valor": 90
+     }
+    ]
+   },
+   "alts": [
+    "Nada, pois já cumpriu.",
+    "Reduzir o número de moradores.",
+    "Investir em obras para ligar mais domicílios à rede.",
+    "Fechar as estações de tratamento."
+   ],
+   "correta": 2,
+   "explicacao": "É preciso investir para ampliar a rede."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite dois serviços de saneamento básico.",
+   "comando": "Responda com suas palavras.",
+   "figura": null,
+   "ref": "Ex.: abastecimento de água, coleta e tratamento de esgoto, coleta de lixo, drenagem.",
+   "conceitos": [
+    "saneamento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ana anotou três coisas no caminho até a escola. A que serviços de saneamento elas se ligam?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Observações de Ana",
+    "etapas": [
+     "Caminhão recolhe sacos de lixo",
+     "Tampa de bueiro na calçada",
+     "Cano de água dentro da escola"
+    ]
+   },
+   "ref": "Coleta de lixo, drenagem e abastecimento de água.",
+   "conceitos": [
+    "coleta de lixo",
+    "drenagem",
+    "água"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um bairro tem 95% das casas ligadas à rede de esgoto e outro 30%. Cite uma consequência para a saúde no segundo e explique.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Casas ligadas à rede de esgoto",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Bairro 1",
+      "valor": 95
+     },
+     {
+      "rotulo": "Bairro 2",
+      "valor": 30
+     }
+    ]
+   },
+   "ref": "Mais doenças, como diarreia, porque o esgoto contamina água e solo.",
+   "conceitos": [
+    "doenças",
+    "contaminação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Depois das obras de saneamento, as internações por diarreia diminuíram. Explique por quê.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Internações por diarreia",
+    "colunas": [
+     "Período",
+     "Por 10 mil moradores"
+    ],
+    "linhas": [
+     [
+      "Antes das obras",
+      "40"
+     ],
+     [
+      "Depois das obras",
+      "8"
+     ]
+    ]
+   },
+   "ref": "Água tratada e esgoto coletado reduzem a contaminação e as doenças.",
+   "conceitos": [
+    "água tratada",
+    "esgoto coletado",
+    "saúde"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite uma ação ligada ao ODS 6 que sua escola pode fazer e justifique.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Consumo de água da escola",
+    "unidade": "mil litros",
+    "itens": [
+     {
+      "rotulo": "Janeiro",
+      "valor": 30
+     },
+     {
+      "rotulo": "Fevereiro",
+      "valor": 28
+     },
+     {
+      "rotulo": "Março",
+      "valor": 45
+     },
+     {
+      "rotulo": "Abril",
+      "valor": 44
+     }
+    ]
+   },
+   "ref": "Ex.: consertar vazamentos e usar água com cuidado; reduz desperdício.",
+   "conceitos": [
+    "uso consciente da água",
+    "ODS 6"
+   ]
+  }
+ ],
+ "4B|8º ANO|12": [
+  {
+   "tipo": "obj",
+   "enunciado": "Qual componente abre ou fecha o caminho da corrente elétrica em um circuito?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": null,
+   "alts": [
+    "Interruptor",
+    "Resistor",
+    "Fonte",
+    "Lâmpada"
+   ],
+   "correta": 0,
+   "explicacao": "O interruptor liga ou desliga o circuito."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Qual é a função da pilha em um circuito?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem do circuito simples",
+    "etapas": [
+     "Ligar a pilha ao fio",
+     "Ligar o fio à lâmpada",
+     "Fechar o circuito",
+     "Observar a lâmpada"
+    ]
+   },
+   "alts": [
+    "Conduzir a corrente.",
+    "Transformar energia em luz.",
+    "Proteger contra excesso de corrente.",
+    "Fornecer a energia que movimenta as cargas elétricas."
+   ],
+   "correta": 3,
+   "explicacao": "A fonte fornece energia elétrica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um fio de cobre liga a pilha à lâmpada, que acende. O fio é trocado por barbante. O que acontece?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Materiais testados",
+    "colunas": [
+     "Material",
+     "Lâmpada"
+    ],
+    "linhas": [
+     [
+      "Cobre",
+      "Acendeu"
+     ],
+     [
+      "Alumínio",
+      "Acendeu"
+     ],
+     [
+      "Borracha",
+      "Não acendeu"
+     ]
+    ]
+   },
+   "alts": [
+    "Acende com mais brilho.",
+    "Não acende, pois o barbante não conduz corrente.",
+    "Acende mais fraco.",
+    "Pilha se recarrega."
+   ],
+   "correta": 1,
+   "explicacao": "O barbante é isolante."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O disjuntor da casa desarma ao ligar vários aparelhos juntos. Por quê?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: corrente dos aparelhos (limite da casa: 30 A)",
+    "unidade": "A",
+    "itens": [
+     {
+      "rotulo": "Geladeira",
+      "valor": 3
+     },
+     {
+      "rotulo": "Chuveiro",
+      "valor": 25
+     },
+     {
+      "rotulo": "Micro-ondas",
+      "valor": 10
+     }
+    ]
+   },
+   "alts": [
+    "Os aparelhos esgotam a energia do planeta.",
+    "Para economizar dinheiro.",
+    "A soma das correntes passa do limite e ele desliga para evitar superaquecimento.",
+    "Porque o disjuntor é um resistor."
+   ],
+   "correta": 2,
+   "explicacao": "Soma 38 A > 30 A."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O filamento da lâmpada brilha e o fio de cobre não. Qual a explicação?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Medidas durante o funcionamento",
+    "colunas": [
+     "Parte",
+     "Espessura",
+     "Temperatura"
+    ],
+    "linhas": [
+     [
+      "Fio de cobre",
+      "1 mm",
+      "28 °C"
+     ],
+     [
+      "Filamento",
+      "0,05 mm",
+      "2000 °C"
+     ]
+    ]
+   },
+   "alts": [
+    "O filamento oferece grande resistência, transformando energia elétrica em luz e calor.",
+    "O cobre não conduz.",
+    "O filamento é isolante.",
+    "O filamento não faz parte do circuito."
+   ],
+   "correta": 0,
+   "explicacao": "A resistência elétrica aquece o filamento."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cite três componentes de um circuito simples e a função de um deles.",
+   "comando": "Responda com suas palavras.",
+   "figura": null,
+   "ref": "Ex.: pilha (fonte), fios (condutores), lâmpada (carga), interruptor.",
+   "conceitos": [
+    "fonte",
+    "condutor",
+    "carga"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que os fios têm cobre por dentro e plástico por fora?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Construção do fio",
+    "etapas": [
+     "Cobre no centro",
+     "Capa de plástico ao redor",
+     "Pontas descascadas"
+    ]
+   },
+   "ref": "O cobre conduz a corrente e o plástico isola, evitando choques.",
+   "conceitos": [
+    "condutor",
+    "isolante"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Explique o que acontece com a lâmpada quando o interruptor é aberto.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do circuito",
+    "colunas": [
+     "Interruptor",
+     "Lâmpada"
+    ],
+    "linhas": [
+     [
+      "Fechado",
+      "Acesa"
+     ],
+     [
+      "Aberto",
+      "Apagada"
+     ]
+    ]
+   },
+   "ref": "O circuito fica aberto, a corrente é interrompida e a lâmpada apaga.",
+   "conceitos": [
+    "circuito aberto",
+    "corrente interrompida"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Se os fios das casas fossem de borracha, o que aconteceria? Justifique.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Teste de materiais",
+    "colunas": [
+     "Material",
+     "Lâmpada"
+    ],
+    "linhas": [
+     [
+      "Cobre",
+      "Acendeu"
+     ],
+     [
+      "Borracha",
+      "Não acendeu"
+     ]
+    ]
+   },
+   "ref": "Os aparelhos não funcionariam, pois a borracha não conduz corrente.",
+   "conceitos": [
+    "isolante",
+    "condutor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que disjuntores e fusíveis são importantes? Dê um exemplo.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Corrente por aparelho na mesma tomada (o fio suporta 20 A)",
+    "unidade": "A",
+    "itens": [
+     {
+      "rotulo": "Ferro de passar",
+      "valor": 8
+     },
+     {
+      "rotulo": "Chaleira",
+      "valor": 10
+     },
+     {
+      "rotulo": "Secador",
+      "valor": 12
+     }
+    ]
+   },
+   "ref": "Desligam o circuito em excesso de corrente, evitando superaquecimento e incêndio.",
+   "conceitos": [
+    "excesso de corrente",
+    "proteção"
+   ]
+  }
+ ],
+ "4B|9º ANO|10": [
+  {
+   "tipo": "obj",
+   "enunciado": "No modelo geocêntrico, o centro do universo é:",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Pensadores estudados",
+    "colunas": [
+     "Pensador",
+     "Época"
+    ],
+    "linhas": [
+     [
+      "Aristóteles",
+      "século IV a.C."
+     ],
+     [
+      "Copérnico",
+      "século XVI"
+     ]
+    ]
+   },
+   "alts": [
+    "O Sol.",
+    "A Lua.",
+    "Júpiter.",
+    "A Terra."
+   ],
+   "correta": 3,
+   "explicacao": "O geocentrismo coloca a Terra no centro."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Quem propôs, em 1543, que a Terra e os planetas giram em torno do Sol?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Linha do tempo",
+    "colunas": [
+     "Pensador",
+     "Época"
+    ],
+    "linhas": [
+     [
+      "Aristóteles",
+      "século IV a.C."
+     ],
+     [
+      "Ptolomeu",
+      "século II"
+     ],
+     [
+      "Kepler",
+      "1609"
+     ]
+    ]
+   },
+   "alts": [
+    "Copérnico",
+    "Ptolomeu",
+    "Aristóteles",
+    "Hiparco"
+   ],
+   "correta": 0,
+   "explicacao": "Copérnico propôs o heliocentrismo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marte parece avançar, parar e recuar no céu. Os epiciclos de Ptolomeu serviram para:",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Posição de Marte no céu",
+    "colunas": [
+     "Mês",
+     "Movimento"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Avança"
+     ],
+     [
+      "2",
+      "Para"
+     ],
+     [
+      "3",
+      "Recua"
+     ],
+     [
+      "4",
+      "Volta a avançar"
+     ]
+    ]
+   },
+   "alts": [
+    "provar que a Terra gira.",
+    "mostrar que o Sol está parado.",
+    "explicar esse vai e vem dos planetas mantendo a Terra no centro.",
+    "medir o tamanho da Lua."
+   ],
+   "correta": 2,
+   "explicacao": "Epiciclos explicavam o movimento retrógrado."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Galileu viu luas girando em torno de Júpiter. Por que isso enfraqueceu o geocentrismo?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações de Galileu",
+    "colunas": [
+     "Noite",
+     "Pontos de luz perto de Júpiter"
+    ],
+    "linhas": [
+     [
+      "1",
+      "3 à direita"
+     ],
+     [
+      "2",
+      "Posições diferentes"
+     ],
+     [
+      "3",
+      "2 visíveis"
+     ],
+     [
+      "4",
+      "3 à esquerda"
+     ]
+    ]
+   },
+   "alts": [
+    "Mostrou que Júpiter é maior que a Terra.",
+    "Mostrou que nem tudo gira em torno da Terra.",
+    "Provou que a Lua não existe.",
+    "Provou que o Sol tem luas."
+   ],
+   "correta": 1,
+   "explicacao": "Corpos giravam em torno de Júpiter."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Kepler abandonou as órbitas circulares. Por quê?",
+   "comando": "Assinale a alternativa correta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Distância de Marte ao Sol",
+    "colunas": [
+     "Posição",
+     "Milhões de km"
+    ],
+    "linhas": [
+     [
+      "A",
+      "207"
+     ],
+     [
+      "B",
+      "228"
+     ],
+     [
+      "C",
+      "249"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque não gostava de círculos.",
+    "Porque Galileu pediu.",
+    "Porque a Terra ficou parada.",
+    "Porque as medidas só se ajustavam a elipses."
+   ],
+   "correta": 3,
+   "explicacao": "As medidas mostravam distâncias variando; as órbitas são elípticas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O que defendia o heliocentrismo de Copérnico?",
+   "comando": "Responda com suas palavras.",
+   "figura": null,
+   "ref": "Que o Sol está no centro e os planetas, incluindo a Terra, giram ao redor dele.",
+   "conceitos": [
+    "Sol no centro",
+    "Terra em movimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Escreva o nome de um pensador do geocentrismo e outro do heliocentrismo.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Pensadores estudados",
+    "colunas": [
+     "Pensador",
+     "Século"
+    ],
+    "linhas": [
+     [
+      "Aristóteles",
+      "IV a.C."
+     ],
+     [
+      "Ptolomeu",
+      "II"
+     ],
+     [
+      "Copérnico",
+      "XVI"
+     ],
+     [
+      "Galileu",
+      "XVII"
+     ]
+    ]
+   },
+   "ref": "Geocentrismo: Aristóteles ou Ptolomeu. Heliocentrismo: Copérnico ou Galileu.",
+   "conceitos": [
+    "geocentrismo",
+    "heliocentrismo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Como cada modelo explica o Sol nascer no leste e se pôr no oeste?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Observação em um dia",
+    "etapas": [
+     "Manhã: Sol surge no leste",
+     "Meio-dia: Sol alto",
+     "Tarde: Sol se põe no oeste"
+    ]
+   },
+   "ref": "Geocentrismo: o Sol gira em torno da Terra. Heliocentrismo: a Terra gira em torno do próprio eixo.",
+   "conceitos": [
+    "geocentrismo",
+    "rotação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Por que a aceitação do heliocentrismo levou tempo e qual o papel das evidências?",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Marcos históricos",
+    "etapas": [
+     "1543: Copérnico publica sua obra",
+     "1609: Kepler descreve a órbita de Marte",
+     "1610: Galileu observa luas de Júpiter",
+     "1687: Newton explica o movimento dos corpos"
+    ]
+   },
+   "ref": "Foi um processo coletivo; resistência a ideias antigas e novas observações e cálculos mudaram o modelo.",
+   "conceitos": [
+    "construção coletiva",
+    "evidências"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Se a Terra se move, por que não sentimos? Explique com a ideia de inércia.",
+   "comando": "Responda com suas palavras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Argumento contra o movimento da Terra",
+    "colunas": [
+     "Observação",
+     "Registro"
+    ],
+    "linhas": [
+     [
+      "Pedra solta do alto de uma torre",
+      "Cai ao pé da torre"
+     ],
+     [
+      "Sensação das pessoas",
+      "Não sentem a Terra se mexer"
+     ]
+    ]
+   },
+   "ref": "Tudo na Terra se move junto com ela; por inércia, mantém o movimento e não percebemos.",
+   "conceitos": [
+    "inércia",
+    "referencial"
+   ]
+  }
+ ]
+}

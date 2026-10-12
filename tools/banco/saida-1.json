@@ -1,0 +1,2597 @@
+{
+ "6º ANO|2|Relacionar os impactos das ações humanas à qualidade e à saúde do solo.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Duas garrafas com terra foram regadas com a mesma quantidade de água. A água que saiu de uma delas estava barrenta.",
+   "comando": "O que deixou a água barrenta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: água recolhida",
+    "colunas": [
+     "Garrafa",
+     "Superfície",
+     "Água no copo"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Coberta de folhas",
+      "Clara"
+     ],
+     [
+      "2",
+      "Terra à mostra",
+      "Barrenta"
+     ]
+    ]
+   },
+   "alts": [
+    "Sal dissolvido da terra",
+    "Partículas de solo arrastadas pela água",
+    "Gás liberado pelas raízes",
+    "Calor do sol"
+   ],
+   "correta": 1,
+   "explicacao": "A água que escorre leva pedacinhos de solo, o que a deixa barrenta."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na escola, depois de uma chuva forte, a terra do barranco desceu e abriu sulcos no chão.",
+   "comando": "Como se chama esse desgaste do solo causado pela água?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Observação no barranco",
+    "etapas": [
+     "Chuva forte cai",
+     "A água escorre pelo chão",
+     "A terra solta desce",
+     "Surgem sulcos no terreno"
+    ]
+   },
+   "alts": [
+    "Fossilização",
+    "Condensação",
+    "Fotossíntese",
+    "Erosão"
+   ],
+   "correta": 3,
+   "explicacao": "Erosão é o desgaste e o transporte do solo pela água ou pelo vento."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma mediu quanto solo as garrafas perderam em 10 minutos de chuva simulada.",
+   "comando": "Qual prática ajuda a proteger o solo?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: solo perdido",
+    "unidade": "g",
+    "itens": [
+     {
+      "rotulo": "Com grama",
+      "valor": 5
+     },
+     {
+      "rotulo": "Com folhas secas",
+      "valor": 8
+     },
+     {
+      "rotulo": "Terra à mostra",
+      "valor": 60
+     }
+    ]
+   },
+   "alts": [
+    "Manter o solo coberto por vegetação ou folhas",
+    "Deixar o solo sem plantas",
+    "Retirar toda a grama",
+    "Cavar o terreno em dias de chuva"
+   ],
+   "correta": 0,
+   "explicacao": "A cobertura diminui o impacto da chuva e segura o solo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um bairro, tiraram as árvores da margem de um córrego. Depois das chuvas, a água ficou barrenta.",
+   "comando": "Por que o córrego ficou mais raso?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Medidas no córrego",
+    "colunas": [
+     "Momento",
+     "Profundidade",
+     "Água"
+    ],
+    "linhas": [
+     [
+      "Antes de tirar as árvores",
+      "80 cm",
+      "Clara"
+     ],
+     [
+      "Depois das chuvas",
+      "50 cm",
+      "Barrenta"
+     ]
+    ]
+   },
+   "alts": [
+    "As árvores absorveram a água do córrego",
+    "A chuva transformou a água em solo",
+    "A terra sem proteção foi levada e se acumulou no leito",
+    "O calor aumentou a evaporação do córrego"
+   ],
+   "correta": 2,
+   "explicacao": "Sem raízes, a terra da margem é arrastada e se deposita no fundo, deixando o córrego raso."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Três áreas de uma fazenda receberam a mesma chuva forte. A turma registrou a perda de solo.",
+   "comando": "Qual conclusão os dados permitem?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da visita: solo perdido",
+    "unidade": "kg por área",
+    "itens": [
+     {
+      "rotulo": "Mata",
+      "valor": 2
+     },
+     {
+      "rotulo": "Pasto",
+      "valor": 15
+     },
+     {
+      "rotulo": "Solo exposto",
+      "valor": 70
+     }
+    ]
+   },
+   "alts": [
+    "A perda de solo não depende da cobertura",
+    "Quanto menos cobertura vegetal, maior a perda de solo",
+    "O solo exposto perde menos que a mata",
+    "O pasto protege mais o solo que a mata"
+   ],
+   "correta": 1,
+   "explicacao": "A área com mais vegetação perdeu menos solo; a exposta perdeu mais."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um terreno ficou sem plantas e a chuva está levando a terra.",
+   "comando": "Cite uma ação humana que deixa o solo exposto à erosão.",
+   "figura": null,
+   "ref": "Desmatamento, queimadas, retirada da vegetação para construir ou arar sem proteção.",
+   "conceitos": [
+    "desmatamento",
+    "solo exposto",
+    "ação humana"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula, duas garrafas com terra foram regadas igualmente. Uma foi coberta com grama.",
+   "comando": "O que é diferente entre as duas garrafas?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento",
+    "etapas": [
+     "Deitar duas garrafas com terra",
+     "Preparar a superfície de cada uma",
+     "Regar igualmente",
+     "Recolher a água em copos"
+    ]
+   },
+   "ref": "A cobertura do solo: uma tem grama e a outra tem terra descoberta.",
+   "conceitos": [
+    "cobertura vegetal",
+    "variável do experimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um sítio tem terreno inclinado e o dono quer plantar sem perder terra na chuva.",
+   "comando": "Indique uma prática que ele pode adotar e explique por que ela ajuda.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Situação do sítio",
+    "etapas": [
+     "Terreno inclinado",
+     "Chuvas fortes no verão",
+     "Plantação de milho na encosta"
+    ]
+   },
+   "ref": "Manter vegetação ou palha sobre o solo, plantar em curvas de nível ou preservar a mata na margem; assim a água escorre devagar e a terra fica presa pelas raízes.",
+   "conceitos": [
+    "cobertura vegetal",
+    "raízes",
+    "reduzir escoamento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Três terrenos foram comparados após a mesma chuva.",
+   "comando": "O que os dados mostram sobre cobertura e perda de solo? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de campo",
+    "colunas": [
+     "Terreno",
+     "Cobertura do chão",
+     "Solo perdido"
+    ],
+    "linhas": [
+     [
+      "A",
+      "90%",
+      "3 kg"
+     ],
+     [
+      "B",
+      "40%",
+      "20 kg"
+     ],
+     [
+      "C",
+      "5%",
+      "55 kg"
+     ]
+    ]
+   },
+   "ref": "Quanto menor a cobertura do chão, maior a perda de solo, pois a vegetação protege da chuva e segura a terra.",
+   "conceitos": [
+    "cobertura",
+    "perda de solo",
+    "proteção da vegetação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Quando o solo é levado pela chuva, plantações e rios podem ser prejudicados.",
+   "comando": "Explique um problema que a erosão causa para quem planta e outro para um rio.",
+   "figura": null,
+   "ref": "Para quem planta, perde a camada fértil e a produção cai; no rio, a terra se acumula e deixa a água barrenta e mais rasa.",
+   "conceitos": [
+    "perda de fertilidade",
+    "assoreamento",
+    "água barrenta"
+   ]
+  }
+ ],
+ "8º ANO|3|Analisar os efeitos do aquecimento global no planeta.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Dois potes com termômetro ficaram ao sol. Só um foi coberto com filme plástico.",
+   "comando": "Qual pote estava mais quente após 15 minutos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: temperatura",
+    "colunas": [
+     "Tempo",
+     "Sem filme",
+     "Com filme"
+    ],
+    "linhas": [
+     [
+      "0 min",
+      "26 °C",
+      "26 °C"
+     ],
+     [
+      "5 min",
+      "28 °C",
+      "30 °C"
+     ],
+     [
+      "10 min",
+      "29 °C",
+      "33 °C"
+     ],
+     [
+      "15 min",
+      "30 °C",
+      "36 °C"
+     ]
+    ]
+   },
+   "alts": [
+    "O pote sem filme",
+    "Os dois ficaram iguais",
+    "O pote coberto com filme",
+    "Nenhum dos potes esquentou"
+   ],
+   "correta": 2,
+   "explicacao": "Com filme a temperatura subiu mais, chegando a 36 °C."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Carros e fábricas queimam combustíveis e lançam gases no ar.",
+   "comando": "Qual gás liberado por essa queima intensifica o efeito estufa?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Queima em um motor",
+    "etapas": [
+     "O combustível queima",
+     "Gases saem pelo escapamento",
+     "Os gases se espalham no ar"
+    ]
+   },
+   "alts": [
+    "Gás carbônico (CO₂)",
+    "Gás oxigênio (O₂)",
+    "Gás nitrogênio (N₂)",
+    "Gás hélio (He)"
+   ],
+   "correta": 0,
+   "explicacao": "A queima libera CO₂, que retém calor na atmosfera."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma montou dois potes ao sol para entender o efeito estufa.",
+   "comando": "O filme plástico do experimento representa o quê na Terra?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento",
+    "etapas": [
+     "Colocar termômetro em dois potes",
+     "Cobrir só um pote com filme",
+     "Expor os dois ao sol",
+     "Ler as temperaturas a cada 5 min"
+    ]
+   },
+   "alts": [
+    "O solo do planeta",
+    "Os oceanos",
+    "A luz do Sol",
+    "A camada de gases do efeito estufa na atmosfera"
+   ],
+   "correta": 3,
+   "explicacao": "Assim como o filme, os gases retêm parte do calor perto da superfície."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Cientistas medem o gás carbônico do ar há décadas.",
+   "comando": "O que esse aumento de CO₂ tende a provocar?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Medições de CO₂ no ar",
+    "unidade": "ppm",
+    "itens": [
+     {
+      "rotulo": "1990",
+      "valor": 354
+     },
+     {
+      "rotulo": "2000",
+      "valor": 369
+     },
+     {
+      "rotulo": "2010",
+      "valor": 389
+     },
+     {
+      "rotulo": "2020",
+      "valor": 413
+     }
+    ]
+   },
+   "alts": [
+    "Diminuição do efeito estufa",
+    "Aumento da temperatura média do planeta",
+    "Resfriamento da atmosfera",
+    "Aumento da camada de ozônio"
+   ],
+   "correta": 1,
+   "explicacao": "Mais CO₂ retém mais calor, elevando a temperatura média."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma escola quer diminuir o CO₂ emitido no trajeto de 10 km dos alunos.",
+   "comando": "Qual escolha reduz mais as emissões por pessoa?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Valores aproximados por pessoa em 10 km",
+    "unidade": "g de CO₂",
+    "itens": [
+     {
+      "rotulo": "Carro só com motorista",
+      "valor": 1700
+     },
+     {
+      "rotulo": "Carro com 4 pessoas",
+      "valor": 425
+     },
+     {
+      "rotulo": "Ônibus lotado",
+      "valor": 300
+     },
+     {
+      "rotulo": "Moto",
+      "valor": 800
+     }
+    ]
+   },
+   "alts": [
+    "Usar o carro só com o motorista",
+    "Trocar o ônibus pela moto",
+    "Usar o ônibus lotado em vez do carro só com o motorista",
+    "Ir de carro mesmo com lugares vazios"
+   ],
+   "correta": 2,
+   "explicacao": "O transporte coletivo divide as emissões entre muitos passageiros."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em casa e na rua, muitas atividades lançam gases que aumentam o efeito estufa.",
+   "comando": "Cite um gás de efeito estufa e uma atividade humana que o libera.",
+   "figura": null,
+   "ref": "CO₂ pela queima de combustíveis ou queimadas; metano pela pecuária e lixões.",
+   "conceitos": [
+    "gás de efeito estufa",
+    "atividade humana"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No experimento, a temperatura foi lida com termômetro em cada pote.",
+   "comando": "Qual pote ficou mais quente aos 10 minutos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: aos 10 min",
+    "colunas": [
+     "Pote",
+     "Leitura"
+    ],
+    "linhas": [
+     [
+      "A",
+      "29 °C"
+     ],
+     [
+      "B",
+      "33 °C"
+     ]
+    ]
+   },
+   "ref": "O pote B, que estava coberto com filme.",
+   "conceitos": [
+    "leitura de termômetro",
+    "retenção de calor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O experimento dos potes ajuda a entender o que acontece na Terra.",
+   "comando": "Explique como o pote coberto lembra o efeito estufa.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Experimento",
+    "etapas": [
+     "Termômetro no pote",
+     "Cobertura com filme",
+     "Exposição ao sol por 15 min",
+     "Comparação das leituras"
+    ]
+   },
+   "ref": "O filme retém o calor dentro do pote, como os gases de efeito estufa retêm calor na atmosfera.",
+   "conceitos": [
+    "retenção de calor",
+    "gases de efeito estufa",
+    "analogia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Com o planeta mais quente, as geleiras derretem e o nível do mar sobe.",
+   "comando": "Explique uma consequência para cidades litorâneas.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Aumento aproximado do nível do mar desde 1900",
+    "unidade": "cm",
+    "itens": [
+     {
+      "rotulo": "1900",
+      "valor": 0
+     },
+     {
+      "rotulo": "1950",
+      "valor": 8
+     },
+     {
+      "rotulo": "2000",
+      "valor": 15
+     },
+     {
+      "rotulo": "2020",
+      "valor": 22
+     }
+    ]
+   },
+   "ref": "Áreas à beira-mar podem alagar, causando perda de moradias e erosão da praia, ligada ao derretimento causado pelo aquecimento.",
+   "conceitos": [
+    "derretimento de geleiras",
+    "nível do mar",
+    "aquecimento global"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola quer ajudar a diminuir o aquecimento global.",
+   "comando": "Proponha duas ações e justifique uma delas.",
+   "figura": null,
+   "ref": "Plantar árvores, economizar energia, separar o lixo ou usar transporte coletivo; justificativa: reduz a emissão de CO₂ ou retira CO₂ do ar.",
+   "conceitos": [
+    "mitigação",
+    "redução de emissões",
+    "ação coletiva"
+   ]
+  }
+ ],
+ "8º ANO|3|Relacionar padrões de circulação atmosférica e oceânica aos climas regionais.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em um copo com água em temperatura ambiente, pingou-se água gelada com corante azul.",
+   "comando": "Para onde foi a água gelada?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento",
+    "etapas": [
+     "Encher o copo com água ambiente",
+     "Pingar água gelada azul",
+     "Observar o movimento",
+     "Pingar água morna vermelha"
+    ]
+   },
+   "alts": [
+    "Para o fundo do copo",
+    "Para a superfície",
+    "Ficou parada no topo",
+    "Evaporou na hora"
+   ],
+   "correta": 0,
+   "explicacao": "A água fria é mais densa e desce."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois, pingou-se água morna com corante vermelho no mesmo copo.",
+   "comando": "Como se chama o movimento causado pela diferença de temperatura?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações no copo",
+    "colunas": [
+     "Água",
+     "Temperatura",
+     "Movimento"
+    ],
+    "linhas": [
+     [
+      "Azul",
+      "5 °C",
+      "Desce"
+     ],
+     [
+      "Vermelha",
+      "40 °C",
+      "Sobe"
+     ]
+    ]
+   },
+   "alts": [
+    "Condução",
+    "Irradiação",
+    "Convecção",
+    "Evaporação"
+   ],
+   "correta": 2,
+   "explicacao": "A convecção é a circulação de fluidos por diferença de densidade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na praia, durante o dia, o ar sobre a areia fica mais quente que o ar sobre o mar.",
+   "comando": "O que acontece com o ar mais quente?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Temperatura às 14 h",
+    "colunas": [
+     "Local",
+     "Temperatura"
+    ],
+    "linhas": [
+     [
+      "Areia",
+      "38 °C"
+     ],
+     [
+      "Mar",
+      "27 °C"
+     ]
+    ]
+   },
+   "alts": [
+    "Desce e empurra o ar da areia para o mar",
+    "Fica parado sobre a areia",
+    "Vai para o mar por ser mais denso",
+    "Sobe, e o ar mais frio do mar vem ocupar o lugar"
+   ],
+   "correta": 3,
+   "explicacao": "O ar quente sobe e o ar do mar entra, formando a brisa marítima."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Duas cidades estão na mesma altura, mas uma fica no litoral e outra no interior.",
+   "comando": "Por que o litoral tem menos variação de temperatura?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Variação diária aproximada",
+    "unidade": "°C",
+    "itens": [
+     {
+      "rotulo": "Cidade do litoral",
+      "valor": 7
+     },
+     {
+      "rotulo": "Cidade do interior",
+      "valor": 15
+     }
+    ]
+   },
+   "alts": [
+    "O mar não troca calor com o ar",
+    "A água do mar esquenta e esfria devagar, suavizando o clima",
+    "O interior recebe menos luz solar",
+    "A areia guarda todo o calor da noite"
+   ],
+   "correta": 1,
+   "explicacao": "A água tem grande capacidade de guardar calor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um mapa mostra duas regiões com pressões diferentes.",
+   "comando": "Como deve soprar o vento?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do mapa do tempo",
+    "colunas": [
+     "Região",
+     "Ar",
+     "Pressão"
+    ],
+    "linhas": [
+     [
+      "A",
+      "32 °C",
+      "1008 hPa"
+     ],
+     [
+      "B",
+      "22 °C",
+      "1018 hPa"
+     ]
+    ]
+   },
+   "alts": [
+    "De A para B",
+    "Em círculos dentro de A",
+    "Não deve haver vento",
+    "De B para A, da alta para a baixa pressão"
+   ],
+   "correta": 3,
+   "explicacao": "O vento vai da alta pressão para a baixa pressão."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na experiência do copo, uma água subiu e outra desceu.",
+   "comando": "Qual água subiu: a gelada ou a morna?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Água",
+     "Temperatura"
+    ],
+    "linhas": [
+     [
+      "Azul",
+      "5 °C"
+     ],
+     [
+      "Vermelha",
+      "40 °C"
+     ]
+    ]
+   },
+   "ref": "A morna subiu.",
+   "conceitos": [
+    "água morna",
+    "movimento no copo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A previsão do tempo usa medidas da atmosfera.",
+   "comando": "Cite uma variável meteorológica usada para prever o tempo.",
+   "figura": null,
+   "ref": "Temperatura, umidade, pressão, vento ou chuva.",
+   "conceitos": [
+    "variável meteorológica",
+    "previsão do tempo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A água morna pingada no copo foi para cima.",
+   "comando": "Explique por que isso aconteceu.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Passos",
+    "etapas": [
+     "Água ambiente no copo",
+     "Gota morna colorida",
+     "A gota se move no copo"
+    ]
+   },
+   "ref": "A água morna é menos densa que a ambiente, por isso sobe.",
+   "conceitos": [
+    "densidade",
+    "temperatura",
+    "convecção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "À noite, a areia esfria mais rápido que o mar.",
+   "comando": "De onde para onde o vento sopra? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Temperatura à noite",
+    "colunas": [
+     "Local",
+     "Temperatura"
+    ],
+    "linhas": [
+     [
+      "Areia",
+      "20 °C"
+     ],
+     [
+      "Mar",
+      "24 °C"
+     ]
+    ]
+   },
+   "ref": "Da terra para o mar, pois o ar mais quente sobre o mar sobe e o ar frio da terra ocupa o lugar.",
+   "conceitos": [
+    "brisa terrestre",
+    "convecção",
+    "diferença de temperatura"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O mar não fica parado: existem grandes correntes de água.",
+   "comando": "Explique como elas podem influenciar o clima de uma cidade na costa.",
+   "figura": null,
+   "ref": "As correntes levam água quente ou fria para perto da costa e aquecem ou esfriam o ar, mudando temperatura e chuva.",
+   "conceitos": [
+    "correntes oceânicas",
+    "transporte de calor",
+    "clima regional"
+   ]
+  }
+ ],
+ "9º ANO|1|Analisar fenômenos relacionados às ondas mecânicas e eletromagnéticas em situações do cotidiano.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma viu situações com ondas.",
+   "comando": "Qual onda precisa de um meio material para se propagar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Situações observadas na escola",
+    "colunas": [
+     "Situação",
+     "Percebida por"
+    ],
+    "linhas": [
+     [
+      "Sino da escola tocando",
+      "Ouvido"
+     ],
+     [
+      "Lanterna acesa",
+      "Olhos"
+     ],
+     [
+      "Mensagem no celular",
+      "Tela"
+     ]
+    ]
+   },
+   "alts": [
+    "A luz da lanterna",
+    "O som do sino",
+    "O sinal do celular",
+    "A luz do Sol"
+   ],
+   "correta": 1,
+   "explicacao": "O som é onda mecânica e precisa de ar ou de outro meio."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um lápis dentro de um copo com água parece quebrado.",
+   "comando": "Qual fenômeno explica isso?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento",
+    "etapas": [
+     "Colocar o lápis no copo vazio",
+     "Encher o copo com água",
+     "Olhar de lado",
+     "Comparar com o lápis fora"
+    ]
+   },
+   "alts": [
+    "Reflexão",
+    "Difração",
+    "Absorção",
+    "Refração"
+   ],
+   "correta": 3,
+   "explicacao": "A luz muda de direção ao passar da água para o ar."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma lanterna foi apontada para um espelho e a luz formou uma mancha na parede.",
+   "comando": "Qual fenômeno levou a luz até a parede?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento",
+    "etapas": [
+     "Fixar o espelho",
+     "Apontar a lanterna",
+     "Marcar o ponto na parede",
+     "Mudar a posição e repetir"
+    ]
+   },
+   "alts": [
+    "Reflexão",
+    "Refração",
+    "Absorção total",
+    "Produção de som"
+   ],
+   "correta": 0,
+   "explicacao": "No espelho a luz volta ao mesmo meio: é a reflexão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A luz do Sol chega à Terra pelo espaço vazio, mas não ouvimos o som das explosões do Sol.",
+   "comando": "Por que ouvimos o trovão, mas não o Sol?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Velocidades aproximadas",
+    "colunas": [
+     "Onda",
+     "Velocidade"
+    ],
+    "linhas": [
+     [
+      "Som no ar",
+      "340 m/s"
+     ],
+     [
+      "Luz no ar",
+      "300 000 000 m/s"
+     ]
+    ]
+   },
+   "alts": [
+    "O som é mais rápido que a luz",
+    "A luz precisa de ar para viajar",
+    "A luz é onda eletromagnética e viaja no vácuo; o som precisa de meio material",
+    "O espaço tem muito ar"
+   ],
+   "correta": 2,
+   "explicacao": "Ondas eletromagnéticas se propagam no vácuo; as mecânicas não."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Antes, uma carta levava dias para chegar a outra cidade. Hoje, mensagens chegam em segundos.",
+   "comando": "Qual conclusão a tabela permite?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Tempo para a mensagem chegar",
+    "colunas": [
+     "Meio",
+     "Tempo"
+    ],
+    "linhas": [
+     [
+      "Carta",
+      "3 dias"
+     ],
+     [
+      "Mensagem de celular",
+      "1 segundo"
+     ]
+    ]
+   },
+   "alts": [
+    "A comunicação ficou mais lenta",
+    "O uso de ondas eletromagnéticas tornou a comunicação à distância muito mais rápida",
+    "Mensagens só chegam com fios",
+    "O som viaja mais rápido que a luz"
+   ],
+   "correta": 1,
+   "explicacao": "Sinais por ondas eletromagnéticas viajam em velocidade muito alta."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O professor mexeu uma mola e viu uma onda percorrê-la.",
+   "comando": "Cite um exemplo de onda mecânica do cotidiano.",
+   "figura": null,
+   "ref": "Som, onda na corda, onda do mar ou tremor de terra.",
+   "conceitos": [
+    "onda mecânica",
+    "exemplo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O lápis parece deslocado no copo com água.",
+   "comando": "Como se chama a mudança de direção da luz ao passar do ar para a água?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Procedimento",
+    "etapas": [
+     "Lápis no copo vazio",
+     "Adicionar água",
+     "Olhar pela lateral"
+    ]
+   },
+   "ref": "Refração.",
+   "conceitos": [
+    "refração",
+    "mudança de meio"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma lanterna acesa vira para o espelho e a luz atinge a parede.",
+   "comando": "Explique por que a mancha de luz aparece na parede.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem",
+    "etapas": [
+     "Espelho fixo na mesa",
+     "Lanterna apontada",
+     "Mancha na parede"
+    ]
+   },
+   "ref": "O espelho reflete a luz, que volta e chega à parede.",
+   "conceitos": [
+    "reflexão",
+    "espelho"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma tempestade, o relâmpago aparece antes do trovão.",
+   "comando": "Explique por que isso acontece.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Raio a 1 km",
+    "colunas": [
+     "Percebido",
+     "Tempo"
+    ],
+    "linhas": [
+     [
+      "Clarão",
+      "Quase imediato"
+     ],
+     [
+      "Barulho",
+      "Cerca de 3 s"
+     ]
+    ]
+   },
+   "ref": "A luz viaja muito mais rápido que o som, por isso o clarão chega primeiro.",
+   "conceitos": [
+    "velocidade da luz",
+    "velocidade do som"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rádio, TV e celular usam ondas eletromagnéticas.",
+   "comando": "Explique como essas ondas mudaram a comunicação entre as pessoas.",
+   "figura": null,
+   "ref": "Permitiram enviar voz, imagem e dados à distância em tempo muito curto, sem fios, e alcançar muita gente.",
+   "conceitos": [
+    "comunicação à distância",
+    "ondas eletromagnéticas",
+    "rapidez"
+   ]
+  }
+ ],
+ "9º ANO|3|Analisar os impactos das ações humanas sobre a biodiversidade.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma atividade, cada aluno recebe um cartão e todos se ligam por barbante.",
+   "comando": "O que o barbante representa na teia?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Dinâmica da teia",
+    "etapas": [
+     "Cada aluno recebe um cartão",
+     "Os alunos se ligam com barbante",
+     "Sorteia-se um impacto",
+     "Os atingidos soltam o fio"
+    ]
+   },
+   "alts": [
+    "O tamanho de cada espécie",
+    "O tempo de vida dos animais",
+    "As relações entre os seres vivos e o ambiente",
+    "A cor dos seres vivos"
+   ],
+   "correta": 2,
+   "explicacao": "Os fios mostram que os seres vivos dependem uns dos outros."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma região de mata perdeu muitas árvores nas últimas décadas.",
+   "comando": "Que atividade humana explica essa redução?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Área de mata de uma região",
+    "unidade": "km²",
+    "itens": [
+     {
+      "rotulo": "1980",
+      "valor": 100
+     },
+     {
+      "rotulo": "2000",
+      "valor": 70
+     },
+     {
+      "rotulo": "2020",
+      "valor": 40
+     }
+    ]
+   },
+   "alts": [
+    "Desmatamento",
+    "Reflorestamento",
+    "Coleta seletiva",
+    "Reciclagem"
+   ],
+   "correta": 0,
+   "explicacao": "Desmatar é retirar a vegetação nativa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na teia, os cartões eram onça, beija-flor, rio e solo. O desmatamento foi sorteado.",
+   "comando": "Por que outros alunos, além das árvores, soltaram o fio?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Cartões da teia",
+    "colunas": [
+     "Cartão",
+     "Ligação com a mata"
+    ],
+    "linhas": [
+     [
+      "Onça",
+      "Caça na mata"
+     ],
+     [
+      "Beija-flor",
+      "Visita flores das árvores"
+     ],
+     [
+      "Rio",
+      "Margens com árvores"
+     ],
+     [
+      "Solo",
+      "Raízes o seguram"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque só as árvores fazem parte da teia",
+    "Porque os outros não dependem da mata",
+    "Porque o barbante arrebenta sozinho",
+    "Porque muitos seres dependem da mata para abrigo, alimento e proteção"
+   ],
+   "correta": 3,
+   "explicacao": "A perda da mata afeta toda a cadeia de relações."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Parques e estações ecológicas são Unidades de Conservação (UCs).",
+   "comando": "Por que criar UCs ajuda a biodiversidade?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "UCs de São Paulo",
+    "colunas": [
+     "Nome",
+     "Tipo"
+    ],
+    "linhas": [
+     [
+      "Parque Estadual da Cantareira",
+      "Parque"
+     ],
+     [
+      "Parque Estadual da Serra do Mar",
+      "Parque"
+     ],
+     [
+      "Estação Ecológica Juréia-Itatins",
+      "Estação ecológica"
+     ]
+    ]
+   },
+   "alts": [
+    "Permitem retirar toda a mata",
+    "Protegem espécies e ambientes naturais de atividades que os destroem",
+    "Servem só para construir casas",
+    "Impedem o crescimento das plantas"
+   ],
+   "correta": 1,
+   "explicacao": "As UCs preservam ambientes e espécies."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um rio recebe esgoto ao passar pela cidade. A turma mediu o oxigênio da água.",
+   "comando": "O que os dados sugerem?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da visita ao rio: oxigênio dissolvido",
+    "unidade": "mg/L",
+    "itens": [
+     {
+      "rotulo": "Nascente",
+      "valor": 8
+     },
+     {
+      "rotulo": "Trecho com esgoto",
+      "valor": 2
+     },
+     {
+      "rotulo": "3 km depois",
+      "valor": 5
+     }
+    ]
+   },
+   "alts": [
+    "O esgoto aumenta o oxigênio",
+    "Os peixes preferem pouco oxigênio",
+    "O rio não é afetado pela cidade",
+    "O esgoto reduz o oxigênio e prejudica os seres aquáticos, que podem diminuir"
+   ],
+   "correta": 3,
+   "explicacao": "Sem oxigênio, peixes e outros seres morrem ou saem do local."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Queimadas, caça e poluição ameaçam muitos animais e plantas.",
+   "comando": "Cite um impacto humano que ameaça a biodiversidade.",
+   "figura": null,
+   "ref": "Desmatamento, queimadas, caça, poluição de rios ou introdução de espécies.",
+   "conceitos": [
+    "impacto humano",
+    "biodiversidade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na dinâmica, um aluno solta o fio da teia.",
+   "comando": "O que acontece com a teia?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Dinâmica",
+    "etapas": [
+     "Alunos formam a teia",
+     "Impacto é sorteado",
+     "Aluno atingido solta o fio"
+    ]
+   },
+   "ref": "A teia fica frouxa ou se desfaz, e os outros são afetados.",
+   "conceitos": [
+    "teia",
+    "dependência entre seres"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um rio tem trechos com mais e menos peixes.",
+   "comando": "Dê um exemplo de como a poluição afeta animais e plantas do rio.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Peixes contados em 3 trechos do rio",
+    "unidade": "peixes",
+    "itens": [
+     {
+      "rotulo": "Antes da cidade",
+      "valor": 24
+     },
+     {
+      "rotulo": "Dentro da cidade",
+      "valor": 9
+     },
+     {
+      "rotulo": "Depois da cidade",
+      "valor": 14
+     }
+    ]
+   },
+   "ref": "A poluição diminui o oxigênio e mata peixes e plantas, por isso há menos peixes na cidade.",
+   "conceitos": [
+    "poluição",
+    "redução de peixes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Algumas madeiras vêm de origem desconhecida.",
+   "comando": "Que impacto a compra delas pode causar? Cite uma atitude de consumo consciente.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Caminho de um móvel",
+    "etapas": [
+     "Árvore é derrubada",
+     "Madeira é transportada",
+     "Fábrica faz o móvel",
+     "Loja vende ao cliente"
+    ]
+   },
+   "ref": "Pode estimular o desmatamento; atitude: comprar produtos com selo de origem legal ou reaproveitar móveis.",
+   "conceitos": [
+    "desmatamento",
+    "consumo consciente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma teia, a perda de uma espécie parece pequena.",
+   "comando": "Por que ela pode afetar muitas outras? Use a ideia de teia.",
+   "figura": null,
+   "ref": "Os seres estão ligados por alimento e abrigo; se um some, quem dependia dele perde e a cadeia se desequilibra.",
+   "conceitos": [
+    "interdependência",
+    "equilíbrio",
+    "teia alimentar"
+   ]
+  }
+ ],
+ "4B|6º ANO|8": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma pessoa sente o cheiro de bolo saindo do forno.",
+   "comando": "Quais receptores do nariz detectam substâncias do ar?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Percurso do cheiro",
+    "etapas": [
+     "Cheiro do bolo chega ao nariz",
+     "Substâncias entram pelas narinas",
+     "Algo no nariz as detecta"
+    ]
+   },
+   "alts": [
+    "Fotorreceptores",
+    "Mecanorreceptores",
+    "Termorreceptores",
+    "Quimiorreceptores"
+   ],
+   "correta": 3,
+   "explicacao": "Quimiorreceptores detectam substâncias químicas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, um aluno provou café sem açúcar e fez uma careta.",
+   "comando": "Que sabor básico ele percebeu?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Atividade",
+    "etapas": [
+     "Provar o café",
+     "Sentir na língua",
+     "Anotar a sensação"
+    ]
+   },
+   "alts": [
+    "Doce",
+    "Amargo",
+    "Salgado",
+    "Azedo"
+   ],
+   "correta": 1,
+   "explicacao": "O café sem açúcar costuma ser percebido como amargo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois alunos provaram maçã e cebola com o nariz tapado e quase não distinguiram os alimentos.",
+   "comando": "Por que isso ocorreu?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Resultados da turma",
+    "colunas": [
+     "Alimento",
+     "Nariz livre",
+     "Nariz tapado"
+    ],
+    "linhas": [
+     [
+      "Maçã",
+      "Reconhecida",
+      "Difícil"
+     ],
+     [
+      "Cebola",
+      "Reconhecida",
+      "Difícil"
+     ]
+    ]
+   },
+   "alts": [
+    "O sabor depende também do olfato, que estava bloqueado",
+    "A língua parou de funcionar",
+    "A maçã e a cebola têm o mesmo gosto",
+    "Os olhos percebem o sabor"
+   ],
+   "correta": 0,
+   "explicacao": "Olfato e paladar trabalham juntos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O cheiro do pão chega ao nariz e é detectado.",
+   "comando": "Para onde segue o sinal para ser interpretado?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Percurso",
+    "etapas": [
+     "Cheiro entra no nariz",
+     "Receptores detectam as substâncias",
+     "O sinal segue por nervos"
+    ]
+   },
+   "alts": [
+    "Estômago",
+    "Pulmões",
+    "Encéfalo",
+    "Coração"
+   ],
+   "correta": 2,
+   "explicacao": "O encéfalo interpreta os sinais como cheiro."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Durante a covid, muitas pessoas relataram perder o olfato e o paladar.",
+   "comando": "Por que quem perdeu o olfato também perdeu o gosto?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Relato fictício de 100 pessoas",
+    "unidade": "pessoas",
+    "itens": [
+     {
+      "rotulo": "Perda do olfato",
+      "valor": 60
+     },
+     {
+      "rotulo": "Perda do paladar",
+      "valor": 45
+     },
+     {
+      "rotulo": "Perda da audição",
+      "valor": 2
+     }
+    ]
+   },
+   "alts": [
+    "A língua e o nariz são o mesmo órgão",
+    "O sabor percebido depende da integração entre olfato e paladar",
+    "Perder o olfato destrói o estômago",
+    "O sabor depende só da audição"
+   ],
+   "correta": 1,
+   "explicacao": "Sem cheiro, o sabor dos alimentos fica reduzido."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula, um aluno colocou limão na boca.",
+   "comando": "Onde ficam os receptores do paladar?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Atividade",
+    "etapas": [
+     "Colocar um pedaço de limão na boca",
+     "Sentir o sabor",
+     "Anotar onde sentiu"
+    ]
+   },
+   "ref": "Na língua, nas papilas gustativas.",
+   "conceitos": [
+    "língua",
+    "papilas gustativas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma provou alimentos comuns.",
+   "comando": "Cite dois sabores básicos que podem ser percebidos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Alimentos provados",
+    "colunas": [
+     "Alimento"
+    ],
+    "linhas": [
+     [
+      "Açúcar"
+     ],
+     [
+      "Sal"
+     ],
+     [
+      "Limão"
+     ],
+     [
+      "Café sem açúcar"
+     ]
+    ]
+   },
+   "ref": "Doce, salgado, azedo, amargo ou umami (dois deles).",
+   "conceitos": [
+    "sabores básicos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Com o nariz tapado, uma bala de morango parece só doce.",
+   "comando": "Explique por que o sabor de morango diminuiu.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Resultados da prova da bala",
+    "colunas": [
+     "Condição",
+     "O que sentiu"
+    ],
+    "linhas": [
+     [
+      "Nariz livre",
+      "Doce e morango"
+     ],
+     [
+      "Nariz tapado",
+      "Só doce"
+     ]
+    ]
+   },
+   "ref": "Sem o olfato, só o paladar age; o cheiro completa o sabor.",
+   "conceitos": [
+    "olfato",
+    "paladar",
+    "integração"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma pessoa não sente cheiros, mas sente doce e salgado.",
+   "comando": "Explique o que acontece.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Testes",
+    "colunas": [
+     "Teste",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Cheirar café",
+      "Não sente"
+     ],
+     [
+      "Provar açúcar",
+      "Sente doce"
+     ],
+     [
+      "Provar sal",
+      "Sente salgado"
+     ],
+     [
+      "Comer sopa",
+      "Sem graça"
+     ]
+    ]
+   },
+   "ref": "O paladar funciona, mas o olfato não; sem cheiro os alimentos ficam sem graça.",
+   "conceitos": [
+    "olfato",
+    "paladar",
+    "sabor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Perder o olfato pode trazer riscos.",
+   "comando": "Dê um exemplo de risco no dia a dia e justifique.",
+   "figura": null,
+   "ref": "Não sentir cheiro de gás ou comida estragada; o nariz alerta sobre perigos.",
+   "conceitos": [
+    "olfato",
+    "proteção"
+   ]
+  }
+ ],
+ "4B|7º ANO|4": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de microbiologia, a turma comparou seres vivos.",
+   "comando": "O que as bactérias têm em comum com a ameba?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Seres comparados",
+    "colunas": [
+     "Ser vivo",
+     "Número de células"
+    ],
+    "linhas": [
+     [
+      "Bactéria",
+      "1"
+     ],
+     [
+      "Ameba",
+      "1"
+     ],
+     [
+      "Ser humano",
+      "Trilhões"
+     ]
+    ]
+   },
+   "alts": [
+    "Têm uma única célula",
+    "Têm muitas células",
+    "Não têm células",
+    "Vivem só em animais"
+   ],
+   "correta": 0,
+   "explicacao": "Bactérias e amebas são unicelulares."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao microscópio, três amostras de bactérias foram desenhadas.",
+   "comando": "A amostra A tem bactérias do tipo:",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações ao microscópio",
+    "colunas": [
+     "Amostra",
+     "Formato"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Bolinhas"
+     ],
+     [
+      "B",
+      "Bastonetes"
+     ],
+     [
+      "C",
+      "Espiral"
+     ]
+    ]
+   },
+   "alts": [
+    "Bacilos",
+    "Espirilos",
+    "Cocos",
+    "Vírus"
+   ],
+   "correta": 2,
+   "explicacao": "Bactérias esféricas são chamadas de cocos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma pessoa tomou antibiótico por muitos dias e teve diarreia.",
+   "comando": "Por que isso pode ter ocorrido?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Linha do tempo",
+    "etapas": [
+     "Dia 1: início do antibiótico",
+     "Dia 5: diarreia",
+     "Dia 10: fim do tratamento"
+    ]
+   },
+   "alts": [
+    "O antibiótico criou novas bactérias",
+    "Foram eliminadas também bactérias úteis da microbiota intestinal",
+    "As bactérias do intestino aumentaram",
+    "O intestino perdeu as células"
+   ],
+   "correta": 1,
+   "explicacao": "O antibiótico atinge bactérias úteis também."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma bactéria se divide em duas a cada 20 minutos.",
+   "comando": "Quantas haverá em 80 minutos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: contagem",
+    "colunas": [
+     "Tempo",
+     "Bactérias"
+    ],
+    "linhas": [
+     [
+      "0 min",
+      "1"
+     ],
+     [
+      "20 min",
+      "2"
+     ],
+     [
+      "40 min",
+      "4"
+     ],
+     [
+      "60 min",
+      "8"
+     ]
+    ]
+   },
+   "alts": [
+    "10",
+    "12",
+    "9",
+    "16"
+   ],
+   "correta": 3,
+   "explicacao": "Cada divisão dobra o número: 8 em 60 min e 16 em 80 min."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Três recipientes com folhas ficaram 30 dias em condições diferentes.",
+   "comando": "Qual explicação combina com os dados?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: folhas decompostas",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Com solo comum",
+      "valor": 70
+     },
+     {
+      "rotulo": "Com solo fervido",
+      "valor": 8
+     },
+     {
+      "rotulo": "Sem solo",
+      "valor": 5
+     }
+    ]
+   },
+   "alts": [
+    "O solo fervido decompõe mais",
+    "As bactérias do solo decompõem a matéria orgânica",
+    "As folhas sumiram sozinhas",
+    "Só a luz decompõe folhas"
+   ],
+   "correta": 1,
+   "explicacao": "Fervendo o solo, as bactérias morrem e a decomposição diminui."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Bactérias são seres procariontes.",
+   "comando": "O que isso significa?",
+   "figura": null,
+   "ref": "Suas células não têm núcleo definido; o material genético fica solto no citoplasma.",
+   "conceitos": [
+    "procarionte",
+    "sem núcleo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na cantina há vários alimentos.",
+   "comando": "Qual deles depende de bactérias para ser produzido?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Alimentos da cantina",
+    "colunas": [
+     "Alimento"
+    ],
+    "linhas": [
+     [
+      "Iogurte"
+     ],
+     [
+      "Pão francês"
+     ],
+     [
+      "Queijo"
+     ],
+     [
+      "Suco de laranja"
+     ]
+    ]
+   },
+   "ref": "Iogurte e queijo, feitos com bactérias na fermentação do leite.",
+   "conceitos": [
+    "fermentação",
+    "uso das bactérias"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma bactéria se multiplica de forma regular.",
+   "comando": "Explique como o número aumenta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Tempo",
+     "Bactérias"
+    ],
+    "linhas": [
+     [
+      "0 min",
+      "1"
+     ],
+     [
+      "20 min",
+      "2"
+     ],
+     [
+      "40 min",
+      "4"
+     ]
+    ]
+   },
+   "ref": "Por fissão binária: cada bactéria se divide em duas, dobrando a cada período.",
+   "conceitos": [
+    "fissão binária",
+    "reprodução"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Três placas receberam as mãos de alunos em situações diferentes.",
+   "comando": "Que conclusão os dados permitem? Justifique.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: colônias na placa",
+    "unidade": "colônias",
+    "itens": [
+     {
+      "rotulo": "Mãos sem lavar",
+      "valor": 85
+     },
+     {
+      "rotulo": "Lavadas só com água",
+      "valor": 40
+     },
+     {
+      "rotulo": "Lavadas com água e sabão",
+      "valor": 6
+     }
+    ]
+   },
+   "ref": "Lavar com sabão reduz muito as bactérias, o que ajuda a evitar doenças.",
+   "conceitos": [
+    "higiene",
+    "redução de bactérias"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Folhas e animais mortos não se acumulam para sempre na natureza.",
+   "comando": "Explique a importância das bactérias decompositoras.",
+   "figura": null,
+   "ref": "Decompõem restos orgânicos e devolvem nutrientes ao solo, ajudando o ciclo da matéria e do nitrogênio.",
+   "conceitos": [
+    "decomposição",
+    "ciclo do nitrogênio"
+   ]
+  }
+ ],
+ "4B|7º ANO|14": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma turma estudou serviços de uma cidade.",
+   "comando": "Qual item faz parte do saneamento básico?",
+   "figura": null,
+   "alts": [
+    "Transporte escolar",
+    "Iluminação da quadra",
+    "Coleta de lixo e limpeza urbana",
+    "Internet na escola"
+   ],
+   "correta": 2,
+   "explicacao": "Saneamento inclui água, esgoto, resíduos e drenagem."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na visita ao rio, a turma anotou o que viu.",
+   "comando": "Qual é a causa mais provável do problema?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Observações no rio",
+    "colunas": [
+     "Item",
+     "Registro"
+    ],
+    "linhas": [
+     [
+      "Cheiro",
+      "Forte"
+     ],
+     [
+      "Água",
+      "Com espuma"
+     ],
+     [
+      "Peixes",
+      "Quase nenhum"
+     ]
+    ]
+   },
+   "alts": [
+    "Esgoto sem tratamento lançado no rio",
+    "Excesso de chuva limpa",
+    "Muita vegetação na margem",
+    "Pesca em excesso"
+   ],
+   "correta": 0,
+   "explicacao": "Esgoto sem tratamento polui e tira o oxigênio da água."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois bairros têm serviços diferentes.",
+   "comando": "O que a tabela sugere?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de dois bairros",
+    "colunas": [
+     "Bairro",
+     "Esgoto coletado",
+     "Diarreia por mil pessoas"
+    ],
+    "linhas": [
+     [
+      "A",
+      "95%",
+      "2"
+     ],
+     [
+      "B",
+      "30%",
+      "15"
+     ]
+    ]
+   },
+   "alts": [
+    "Esgoto não afeta a saúde",
+    "O bairro B tem mais esgoto coletado",
+    "Diarreia não depende do saneamento",
+    "Onde há menos esgoto coletado, há mais casos de doenças"
+   ],
+   "correta": 3,
+   "explicacao": "Sem saneamento, microrganismos se espalham mais."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os dados mostram o esgoto coletado nas cidades e no campo.",
+   "comando": "O que o gráfico indica?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Domicílios com esgoto coletado, valores aproximados",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Urbano",
+      "valor": 66
+     },
+     {
+      "rotulo": "Rural",
+      "valor": 10
+     }
+    ]
+   },
+   "alts": [
+    "O campo tem mais coleta que a cidade",
+    "A população rural tem menos acesso à coleta de esgoto",
+    "Os dois têm o mesmo acesso",
+    "Não existe esgoto no campo"
+   ],
+   "correta": 1,
+   "explicacao": "O acesso é bem menor na área rural."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Após chuva forte, duas ruas foram observadas.",
+   "comando": "O que os dados indicam?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da chuva forte",
+    "colunas": [
+     "Rua",
+     "Lixo",
+     "Bueiros",
+     "Alagou?"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Pouco",
+      "Limpos",
+      "Não"
+     ],
+     [
+      "B",
+      "Muito",
+      "Entupidos",
+      "Sim"
+     ]
+    ]
+   },
+   "alts": [
+    "Lixo evita alagamentos",
+    "Alagamento não depende do lixo",
+    "Lixo e bueiros entupidos favorecem alagamentos",
+    "A rua A tem pior drenagem"
+   ],
+   "correta": 2,
+   "explicacao": "Entupidos, os bueiros não escoam a água."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A cidade precisa de serviços para cuidar da água e do lixo.",
+   "comando": "Cite dois componentes do saneamento básico.",
+   "figura": null,
+   "ref": "Água potável, esgoto, limpeza urbana e resíduos, drenagem de águas da chuva (dois deles).",
+   "conceitos": [
+    "componentes do saneamento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Veja as etapas do tratamento da água.",
+   "comando": "Para que serve a etapa em que se adiciona cloro?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Tratamento da água",
+    "etapas": [
+     "Captação no rio",
+     "Mistura e decantação",
+     "Filtração",
+     "Adição de cloro",
+     "Distribuição às casas"
+    ]
+   },
+   "ref": "Para eliminar microrganismos e deixar a água segura para beber.",
+   "conceitos": [
+    "desinfecção",
+    "água potável"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois bairros foram comparados.",
+   "comando": "Por que o bairro B tem mais casos de diarreia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de dois bairros",
+    "colunas": [
+     "Bairro",
+     "Água tratada",
+     "Esgoto coletado",
+     "Casos por mil"
+    ],
+    "linhas": [
+     [
+      "A",
+      "100%",
+      "95%",
+      "2"
+     ],
+     [
+      "B",
+      "80%",
+      "30%",
+      "15"
+     ]
+    ]
+   },
+   "ref": "Porque tem menos coleta de esgoto, e microrganismos contaminam a água e o ambiente.",
+   "conceitos": [
+    "esgoto",
+    "contaminação",
+    "doenças"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A população rural e a urbana têm acessos diferentes à água tratada.",
+   "comando": "Dê uma razão para a diferença e uma ação para reduzi-la.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Domicílios com água tratada, valores aproximados",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Urbano",
+      "valor": 93
+     },
+     {
+      "rotulo": "Rural",
+      "valor": 35
+     }
+    ]
+   },
+   "ref": "Casas são distantes e há menos investimento; ação: ampliar redes ou instalar poços e tratamento.",
+   "conceitos": [
+    "desigualdade",
+    "investimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola fez uma campanha para não jogar lixo na rua.",
+   "comando": "Por que a educação ambiental ajuda o saneamento?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Lixo retirado de bueiros da escola",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Mês 1",
+      "valor": 40
+     },
+     {
+      "rotulo": "Mês 2, após campanha",
+      "valor": 15
+     }
+    ]
+   },
+   "ref": "Menos lixo na rua entope menos os bueiros e evita alagamentos e poluição.",
+   "conceitos": [
+    "educação ambiental",
+    "drenagem",
+    "resíduos"
+   ]
+  }
+ ],
+ "4B|8º ANO|11": [
+  {
+   "tipo": "obj",
+   "enunciado": "A tabela mostra algumas fontes que geram eletricidade no Brasil.",
+   "comando": "Qual fonte da tabela é renovável?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Fontes de eletricidade, valores aproximados",
+    "colunas": [
+     "Fonte",
+     "Participação"
+    ],
+    "linhas": [
+     [
+      "Gás natural",
+      "6%"
+     ],
+     [
+      "Carvão mineral",
+      "2%"
+     ],
+     [
+      "Derivados de petróleo",
+      "1%"
+     ],
+     [
+      "Nuclear",
+      "2%"
+     ],
+     [
+      "Solar",
+      "7%"
+     ]
+    ]
+   },
+   "alts": [
+    "Carvão mineral",
+    "Solar",
+    "Gás natural",
+    "Derivados de petróleo"
+   ],
+   "correta": 1,
+   "explicacao": "A energia solar vem do Sol, que não se esgota."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A energia sai da usina e chega à casa por etapas.",
+   "comando": "Qual equipamento reduz a tensão antes de chegar às casas?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Percurso da energia",
+    "etapas": [
+     "Usina gera energia",
+     "Linhas de transmissão levam a energia",
+     "Equipamento ajusta a tensão",
+     "Rede de distribuição",
+     "Casa do consumidor"
+    ]
+   },
+   "alts": [
+    "Ventilador",
+    "Bateria",
+    "Chuveiro",
+    "Transformador"
+   ],
+   "correta": 3,
+   "explicacao": "O transformador aumenta ou reduz a tensão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em casas de São Paulo há tomadas de 127 V e de 220 V.",
+   "comando": "O que pode ocorrer ao ligar o ventilador de 127 V na casa de Bia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados das casas",
+    "colunas": [
+     "Casa",
+     "Tomada"
+    ],
+    "linhas": [
+     [
+      "Ana",
+      "127 V"
+     ],
+     [
+      "Bia",
+      "220 V"
+     ]
+    ]
+   },
+   "alts": [
+    "Receber tensão acima da prevista e queimar",
+    "Funcionar mais devagar",
+    "Funcionar sem energia",
+    "Gerar eletricidade"
+   ],
+   "correta": 0,
+   "explicacao": "Tensão maior que a indicada pode danificar o aparelho."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O Brasil tem muitos rios com desníveis.",
+   "comando": "Por que a maior parte da eletricidade do país é renovável?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Eletricidade renovável, valores aproximados",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Brasil",
+      "valor": 88
+     },
+     {
+      "rotulo": "Mundo",
+      "valor": 30
+     }
+    ]
+   },
+   "alts": [
+    "Há poucos rios",
+    "O petróleo gera quase tudo",
+    "Há muitas usinas hidrelétricas, que usam a água dos rios",
+    "Não há sol no país"
+   ],
+   "correta": 2,
+   "explicacao": "Os rios permitem usinas hidrelétricas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A chuva diminuiu e o reservatório de uma usina baixou.",
+   "comando": "Qual a consequência mais provável?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Nível do reservatório",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Janeiro",
+      "valor": 80
+     },
+     {
+      "rotulo": "Abril",
+      "valor": 60
+     },
+     {
+      "rotulo": "Julho",
+      "valor": 40
+     },
+     {
+      "rotulo": "Outubro",
+      "valor": 25
+     }
+    ]
+   },
+   "alts": [
+    "A geração aumenta",
+    "A geração hidrelétrica diminui, pois há menos água para girar as turbinas",
+    "O consumo some",
+    "A tensão vai a 0 V"
+   ],
+   "correta": 1,
+   "explicacao": "Menos água significa menos energia gerada."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O Brasil gera energia de várias fontes.",
+   "comando": "Cite duas fontes renováveis.",
+   "figura": null,
+   "ref": "Hidráulica, solar, eólica ou biomassa (duas delas).",
+   "conceitos": [
+    "fontes renováveis"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Veja o percurso da energia até as casas.",
+   "comando": "O que ocorre com a tensão na subestação?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Percurso da energia",
+    "etapas": [
+     "Usina",
+     "Linhas de transmissão",
+     "Subestação",
+     "Rede de distribuição",
+     "Casa"
+    ]
+   },
+   "ref": "A tensão é reduzida para chegar às casas com segurança.",
+   "conceitos": [
+    "subestação",
+    "tensão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Compare dois aparelhos em um dia (energia em kWh = potência em kW x horas).",
+   "comando": "Qual consome mais energia por dia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Uso diário",
+    "colunas": [
+     "Aparelho",
+     "Potência",
+     "Tempo"
+    ],
+    "linhas": [
+     [
+      "Chuveiro",
+      "5 000 W",
+      "30 min"
+     ],
+     [
+      "Lâmpada LED",
+      "10 W",
+      "5 h"
+     ]
+    ]
+   },
+   "ref": "O chuveiro: 2,5 kWh contra 0,05 kWh da lâmpada.",
+   "conceitos": [
+    "potência",
+    "tempo",
+    "consumo de energia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O Brasil usa também energia solar e eólica, além da hidráulica.",
+   "comando": "Por que várias fontes dão mais segurança ao fornecimento?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Fontes de eletricidade, valores aproximados",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Hidráulica",
+      "valor": 58
+     },
+     {
+      "rotulo": "Eólica",
+      "valor": 13
+     },
+     {
+      "rotulo": "Biomassa",
+      "valor": 8
+     },
+     {
+      "rotulo": "Solar",
+      "valor": 7
+     }
+    ]
+   },
+   "ref": "Se uma falha, como a hidráulica na seca, outras suprem a energia.",
+   "conceitos": [
+    "diversificação",
+    "segurança energética"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A energia elétrica vem de recursos naturais.",
+   "comando": "Por que economizar energia em casa ajuda o meio ambiente?",
+   "figura": null,
+   "ref": "Menor demanda reduz a necessidade de usinas e de impactos ambientais.",
+   "conceitos": [
+    "economia de energia",
+    "impacto ambiental"
+   ]
+  }
+ ],
+ "4B|8º ANO|21": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma loja vende produtos duráveis e outra oferece promoções de itens descartáveis.",
+   "comando": "Quem escolhe o que compra e como descarta?",
+   "figura": null,
+   "alts": [
+    "Só o governo",
+    "Só a empresa",
+    "O consumidor",
+    "Ninguém"
+   ],
+   "correta": 2,
+   "explicacao": "O consumidor decide o que compra e como usa e descarta."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma empresa recolhe garrafas usadas e as transforma em novas embalagens.",
+   "comando": "Isso é exemplo de que?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Percurso da garrafa",
+    "etapas": [
+     "Garrafa usada é recolhida",
+     "É triturada",
+     "Vira material novo",
+     "Entra em nova embalagem"
+    ]
+   },
+   "alts": [
+    "Economia circular",
+    "Consumo exagerado",
+    "Descarte em lixão",
+    "Desperdício de materiais"
+   ],
+   "correta": 0,
+   "explicacao": "A economia circular reaproveita materiais."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Duas famílias compraram alimentos. A família A escolhe produtos com muitas embalagens; a família B compra a granel e leva sacola própria.",
+   "comando": "Qual atitude explica a diferença no lixo?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Lixo gerado em um mês",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Família A",
+      "valor": 40
+     },
+     {
+      "rotulo": "Família B",
+      "valor": 15
+     }
+    ]
+   },
+   "alts": [
+    "Comprar mais produtos",
+    "Não separar o lixo",
+    "Trocar de mercado sempre",
+    "Escolher produtos com menos embalagens descartáveis"
+   ],
+   "correta": 3,
+   "explicacao": "Menos embalagem gera menos lixo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma cidade criou uma lei proibindo canudos plásticos.",
+   "comando": "Essa ação é papel de quem?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Canudos coletados na praia",
+    "unidade": "unidades",
+    "itens": [
+     {
+      "rotulo": "Antes da lei",
+      "valor": 400
+     },
+     {
+      "rotulo": "Depois da lei",
+      "valor": 120
+     }
+    ]
+   },
+   "alts": [
+    "Só do consumidor",
+    "Do governo, por meio de políticas públicas",
+    "De nenhuma instituição",
+    "Só da empresa de canudos"
+   ],
+   "correta": 1,
+   "explicacao": "Leis e políticas são papel do governo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma cidade, a reciclagem de garrafas variou conforme quem agiu.",
+   "comando": "O que os dados sugerem?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do exemplo: garrafas recicladas",
+    "colunas": [
+     "Quem age",
+     "Reciclagem"
+    ],
+    "linhas": [
+     [
+      "Só campanha de consumidores",
+      "20%"
+     ],
+     [
+      "Consumidores e governo",
+      "45%"
+     ],
+     [
+      "Consumidores, governo e empresas",
+      "70%"
+     ]
+    ]
+   },
+   "alts": [
+    "Só empresas resolvem o problema",
+    "A ação do governo não faz diferença",
+    "Consumidores não têm papel",
+    "A reciclagem aumenta quando consumidores, governo e empresas agem juntos"
+   ],
+   "correta": 3,
+   "explicacao": "Cada parte contribui."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro e Bia compram roupas e tênis.",
+   "comando": "Quem consumiu de forma mais consciente e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Compras no ano",
+    "colunas": [
+     "Pessoa",
+     "Pares comprados",
+     "Pares sem uso"
+    ],
+    "linhas": [
+     [
+      "Ana",
+      "1",
+      "0"
+     ],
+     [
+      "Bia",
+      "4",
+      "3"
+     ]
+    ]
+   },
+   "ref": "Ana, que comprou só o necessário e evitou desperdício.",
+   "conceitos": [
+    "consumo consciente",
+    "desperdício"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A coleta seletiva passa por várias etapas.",
+   "comando": "Qual é a função da cooperativa nesse caminho?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Coleta seletiva",
+    "etapas": [
+     "Morador separa o lixo",
+     "Caminhão recolhe",
+     "Cooperativa recebe o material",
+     "Indústria reaproveita"
+    ]
+   },
+   "ref": "Fazer a triagem e preparar os materiais para reaproveitar.",
+   "conceitos": [
+    "coleta seletiva",
+    "triagem"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A cidade Z tem poucos serviços ambientais.",
+   "comando": "Escreva duas ações que o governo pode fazer para promover o consumo sustentável.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Situação da cidade Z",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Pontos de coleta seletiva",
+      "3 para 100 mil moradores"
+     ],
+     [
+      "Escolas com projeto ambiental",
+      "10%"
+     ],
+     [
+      "Lixo reciclado",
+      "4%"
+     ]
+    ]
+   },
+   "ref": "Ampliar pontos de coleta seletiva e criar campanhas e educação ambiental, ou incentivar a reciclagem.",
+   "conceitos": [
+    "políticas públicas",
+    "coleta seletiva",
+    "educação ambiental"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma fábrica mudou a forma de produzir.",
+   "comando": "O que ela pode ter feito para usar menos matéria-prima? Justifique.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Matéria-prima usada",
+    "unidade": "toneladas",
+    "itens": [
+     {
+      "rotulo": "Antes da mudança",
+      "valor": 100
+     },
+     {
+      "rotulo": "Depois da mudança",
+      "valor": 60
+     }
+    ]
+   },
+   "ref": "Reaproveitar e reciclar materiais (economia circular), reduzindo extração e resíduos.",
+   "conceitos": [
+    "economia circular",
+    "reaproveitamento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Muitas pessoas querem consumir menos, mas enfrentam barreiras.",
+   "comando": "Por que isso não depende só da vontade do consumidor?",
+   "figura": null,
+   "ref": "Há fatores culturais, econômicos e estruturais, como preço, publicidade e falta de coleta, que exigem ação do governo e das empresas.",
+   "conceitos": [
+    "fatores culturais",
+    "fatores econômicos",
+    "fatores estruturais"
+   ]
+  }
+ ]
+}
