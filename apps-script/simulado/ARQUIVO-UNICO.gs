@@ -1159,19 +1159,34 @@ function corrigirFormulasEM() {
 }
 
 
-/* Atividade individual (Fundamental): grava uma linha por envio na aba 'Individual · <turma>'. */
+/* Atividade individual (Fundamental): grava uma linha por envio na aba 'Individual · <turma>', com colunas por questão. */
 function individualPlanilha_(p) {
   const segredo = PropertiesService.getScriptProperties().getProperty('EM_SEGREDO');
   if (!segredo || String(p.segredo || '') !== segredo) throw new Error('não autorizado');
-  const lock = LockService.getScriptLock(); lock.waitLock(20000);
+  const NQ = 12, lock = LockService.getScriptLock(); lock.waitLock(20000);
   try {
     const ss = SpreadsheetApp.openById(PLANILHA_ID);
-    const aba = ('Individual · ' + String(p.turma || 'sem turma').replace(/[\[\]\*\?:\/\\]/g, ' ')).slice(0, 99);   // uma aba por turma
+    const aba = ('Individual · ' + String(p.turma || 'sem turma').replace(/[\[\]\*\?:\/\\]/g, ' ')).slice(0, 99);
     let sh = ss.getSheetByName(aba);
-    if (!sh) { sh = ss.insertSheet(aba); sh.appendRow(['Data/hora', 'Turma', 'Aluno', 'Acertos (obj.)', 'Total obj.', 'Nota final', 'Status', 'Detalhe (descritor | tipo | resposta | acerto/nota)']); sh.setFrozenRows(1); sh.getRange(1, 1, 1, 8).setFontWeight('bold'); }
+    const cab = ['Data/hora', 'Turma', 'Aluno', 'Acertos (obj.)', 'Total obj.', 'Nota final', 'Status'];
+    for (let i = 1; i <= NQ; i++) cab.push('Q' + i + ' · Descritor', 'Q' + i + ' · Tipo', 'Q' + i + ' · Resposta do aluno', 'Q' + i + ' · Resultado');
+    if (sh && String(sh.getRange(1, 8).getValue()).indexOf('Detalhe') === 0) { sh.clear(); }   // layout antigo (teste): refaz
+    if (!sh) sh = ss.insertSheet(aba);
+    if (sh.getLastRow() === 0) { sh.getRange(1, 1, 1, cab.length).setValues([cab]).setFontWeight('bold'); sh.setFrozenRows(1); sh.setFrozenColumns(3); }
     const sanea = v => { const s = String(v == null ? '' : v); return /^[=+\-@\t\r]/.test(s) ? "'" + s : s; };
-    const det = (Array.isArray(p.itens) ? p.itens : []).map(i => [String(i.desc || '').slice(0, 80), i.tipo, String(i.resp == null ? '' : i.resp).slice(0, 300), i.tipo === 'obj' ? (i.acerto ? 'certo' : (i.resp == null ? 'em branco' : 'errado')) : i.nota].join(' | ')).join('\n');
-    sh.appendRow([new Date(), sanea(p.turma), sanea(p.nome), p.acertos, p.total, p.nota == null ? '' : p.nota, sanea(p.status), sanea(det).slice(0, 45000)]);
+    const L = 'ABCDEFGH', linha = [new Date(), sanea(p.turma), sanea(p.nome), p.acertos, p.total, p.nota == null ? '' : p.nota, sanea(p.status)];
+    const itens = Array.isArray(p.itens) ? p.itens : [];
+    for (let i = 0; i < NQ; i++) {
+      const it = itens[i];
+      if (!it) { linha.push('', '', '', ''); continue; }
+      if (it.tipo === 'obj') {
+        const resp = it.resp == null ? '(em branco)' : L.charAt(it.resp) + ') ' + (it.textoResp || '');
+        linha.push(sanea(String(it.desc || '').slice(0, 120)), 'Objetiva', sanea(resp.slice(0, 300)), it.resp == null ? 'em branco' : (it.acerto ? 'Certo' : 'Errado'));
+      } else {
+        linha.push(sanea(String(it.desc || '').slice(0, 120)), 'Dissertativa', sanea(String(it.resp || '').slice(0, 1500)), 'Nota ' + (it.nota === '' || it.nota == null ? '—' : it.nota) + (it.comentario ? ' · ' + String(it.comentario).slice(0, 200) : ''));
+      }
+    }
+    sh.appendRow(linha.map(v => typeof v === 'string' ? sanea(v.replace(/^'/, '')) : v));
     return { ok: true };
   } finally { lock.releaseLock(); }
 }

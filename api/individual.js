@@ -123,6 +123,17 @@ async function adicionarFiguras(Q, c) {
   F.forEach((f, i) => { if (f && ok.has(i)) Q[i].figura = f; });
   return { desenhadas: com.length, aprovadas: Q.filter(q => q.figura).length, revisao: (Array.isArray(r.revisao) ? r.revisao : []).map(x => x && x.ok === true ? 1 : 0).join('') };
 }
+/* Reserva quando a IA está no limite: nota pela presença dos conceitos-chave na resposta (aproximada, marcada como automática). */
+function corrigirLocal(q, resposta) {
+  const txt = new Set(PALAVRAS(resposta)), raiz = w => w.slice(0, 5);
+  const rs = new Set(PALAVRAS(resposta).map(raiz));
+  const alvos = (q.conceitos && q.conceitos.length ? q.conceitos : [q.ref]).filter(Boolean);
+  const cob = alvos.map(c => { const w = PALAVRAS(c); return w.length ? w.filter(x => rs.has(raiz(x))).length / w.length : 0; });
+  let f = cob.length ? cob.reduce((a, b) => a + b, 0) / cob.length : 0;
+  if (txt.size < 3) f = Math.min(f, 0.3);
+  const nota = Math.round(Math.min(1, f * 1.15) * 10) / 10;
+  return { nota, comentario: nota >= 0.7 ? 'Boa resposta: você citou as ideias principais.' : nota >= 0.4 ? 'Resposta parcial: faltou explicar melhor as ideias principais.' : 'Revise o conteúdo e tente explicar com suas palavras as ideias principais.' };
+}
 async function corrigir(q, resposta, k) {
   const c = CAT[k] || {};
   const o = await gemini(
@@ -199,17 +210,17 @@ module.exports = async function individual(req, res) {
           const certo = Number(x) === q.correta; if (certo) { ac++; soma += 1; } return { k: it.k, tipo: 'obj', resp: Number(x), acerto: certo };
         }
         const t = String(x || '').trim().slice(0, 3000); let c;
-        if (!t) c = { nota: 0, comentario: 'Sem resposta.' }; else { try { c = await corrigir(q, t, it.k); } catch (e) { status = 'pendente: ' + String(e.message || e).slice(0, 100); c = { nota: '', comentario: '' }; } }
+        if (!t) c = { nota: 0, comentario: 'Sem resposta.' }; else { try { c = await corrigir(q, t, it.k); } catch (e) { c = corrigirLocal(q, t); status = 'corrigido automático (IA indisponível)'; } }
         return { k: it.k, tipo: 'dis', resp: t, nota: c.nota, comentario: c.comentario };
       }));
       det.forEach(d => { if (d.tipo === 'dis') { notas.push(d.nota); if (d.nota !== '') soma += d.nota; } });
-      const nota = status === 'corrigido pela IA' ? Math.round(soma / m.itens.length * 100) / 10 : null;
+      const nota = !status.startsWith('pendente') ? Math.round(soma / m.itens.length * 100) / 10 : null;
       await rest('indiv_respostas', { method: 'POST', body: JSON.stringify({ turma: b.turma, nome: m.aluno, itens: det, acertos: ac, total_obj: nObj, nota, status }) });
       let planilha = false;   // cópia na planilha (Apps Script); se falhar, a resposta continua salva no banco
       try {
         const url = process.env.EM_APPS_SCRIPT_URL || '', segredo = process.env.EM_SEGREDO || '';
         if (url && segredo) {
-          const itensP = det.map((d, i) => Object.assign({ desc: CAT[m.itens[i].k].desc }, d));
+          const itensP = det.map((d, i) => { const q = m.itens[i].q; return Object.assign({ desc: CAT[m.itens[i].k].desc, enun: String(q.enunciado || '').slice(0, 200), textoResp: d.tipo === 'obj' && d.resp != null && q.alts ? q.alts[d.resp] : undefined }, d); });
           const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 12000);
           const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, redirect: 'follow', signal: ctl.signal, body: JSON.stringify({ acao: 'individual', segredo, turma: b.turma, nome: m.aluno, acertos: ac, total: nObj, nota, status, itens: itensP }) });
           clearTimeout(t); const j = await r.json(); planilha = !!(j && j.ok);
