@@ -73,6 +73,7 @@ function doPost(e) {
   try {
     const p = JSON.parse((e && e.postData && e.postData.contents) || '{}');
     if (p.acao === 'resultadosEF') return json_(resultadosEF_(p));   // relatório do professor (somente leitura)
+    if (p.acao === 'individual') return json_(individualPlanilha_(p));   // atividade individual: uma linha por aluno
     if (p.acao === 'enviarEM') return json_(enviarEM_(p));   // Ensino Médio (ver seção no fim do arquivo)
     if (p.acao !== 'enviar') return json_({ ok: false, erro: 'ação desconhecida' });
     return json_(enviar(p));
@@ -1155,4 +1156,21 @@ function corrigirFormulasEM() {
     for (let linha = 3; linha <= sh.getLastRow(); linha++) { sh.getRange(linha, EM_COL_FINAL).setFormula(emFormulaFinal_(linha)); n++; }
   });
   Logger.log(n + ' fórmulas refeitas.');
+}
+
+
+/* Atividade individual (Fundamental): grava uma linha por envio na aba 'Atividade individual'. */
+function individualPlanilha_(p) {
+  const segredo = PropertiesService.getScriptProperties().getProperty('EM_SEGREDO');
+  if (!segredo || String(p.segredo || '') !== segredo) throw new Error('não autorizado');
+  const lock = LockService.getScriptLock(); lock.waitLock(20000);
+  try {
+    const ss = SpreadsheetApp.openById(PLANILHA_ID);
+    let sh = ss.getSheetByName('Atividade individual');
+    if (!sh) { sh = ss.insertSheet('Atividade individual'); sh.appendRow(['Data/hora', 'Turma', 'Aluno', 'Acertos (obj.)', 'Total obj.', 'Nota final', 'Status', 'Detalhe (descritor | tipo | resposta | acerto/nota)']); sh.setFrozenRows(1); sh.getRange(1, 1, 1, 8).setFontWeight('bold'); }
+    const sanea = v => { const s = String(v == null ? '' : v); return /^[=+\-@\t\r]/.test(s) ? "'" + s : s; };
+    const det = (Array.isArray(p.itens) ? p.itens : []).map(i => [String(i.desc || '').slice(0, 80), i.tipo, String(i.resp == null ? '' : i.resp).slice(0, 300), i.tipo === 'obj' ? (i.acerto ? 'certo' : (i.resp == null ? 'em branco' : 'errado')) : i.nota].join(' | ')).join('\n');
+    sh.appendRow([new Date(), sanea(p.turma), sanea(p.nome), p.acertos, p.total, p.nota == null ? '' : p.nota, sanea(p.status), sanea(det).slice(0, 45000)]);
+    return { ok: true };
+  } finally { lock.releaseLock(); }
 }

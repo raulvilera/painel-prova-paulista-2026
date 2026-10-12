@@ -205,6 +205,16 @@ module.exports = async function individual(req, res) {
       det.forEach(d => { if (d.tipo === 'dis') { notas.push(d.nota); if (d.nota !== '') soma += d.nota; } });
       const nota = status === 'corrigido pela IA' ? Math.round(soma / m.itens.length * 100) / 10 : null;
       await rest('indiv_respostas', { method: 'POST', body: JSON.stringify({ turma: b.turma, nome: m.aluno, itens: det, acertos: ac, total_obj: nObj, nota, status }) });
+      let planilha = false;   // cópia na planilha (Apps Script); se falhar, a resposta continua salva no banco
+      try {
+        const url = process.env.EM_APPS_SCRIPT_URL || '', segredo = process.env.EM_SEGREDO || '';
+        if (url && segredo) {
+          const itensP = det.map((d, i) => Object.assign({ desc: CAT[m.itens[i].k].desc }, d));
+          const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 12000);
+          const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, redirect: 'follow', signal: ctl.signal, body: JSON.stringify({ acao: 'individual', segredo, turma: b.turma, nome: m.aluno, acertos: ac, total: nObj, nota, status, itens: itensP }) });
+          clearTimeout(t); const j = await r.json(); planilha = !!(j && j.ok);
+        }
+      } catch (e) { planilha = false; }
       return ok({ acertos: ac, total: nObj, notasDis: notas, notaFinal: nota === null ? '' : nota, gabarito: gab });
     }
 
