@@ -21,6 +21,18 @@ const enc = encodeURIComponent;
 const inLista = ks => enc('(' + ks.map(k => '"' + String(k).replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"').join(',') + ')');
 
 /* ---------- IA ---------- */
+/* Lê o JSON da resposta da IA mesmo com texto extra antes/depois (pega o primeiro objeto { ... } balanceado). */
+function lerJSON(txt) {
+  try { return JSON.parse(txt); } catch (e) { /* tenta extrair */ }
+  const i = txt.indexOf('{'); if (i < 0) throw new Error('sem JSON');
+  let d = 0, str = false, esc = false;
+  for (let k = i; k < txt.length; k++) {
+    const ch = txt[k];
+    if (str) { if (esc) esc = false; else if (ch === '\\') esc = true; else if (ch === '"') str = false; continue; }
+    if (ch === '"') str = true; else if (ch === '{') d++; else if (ch === '}' && --d === 0) return JSON.parse(txt.slice(i, k + 1));
+  }
+  throw new Error('JSON incompleto');
+}
 async function gemini(prompt, temp) {
   if (!GKEY) throw new Error('GEMINI_API_KEY não configurada na Vercel');
   let ult = '';
@@ -29,7 +41,7 @@ async function gemini(prompt, temp) {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: temp, responseMimeType: 'application/json' } }) });
     if (!r.ok) { ult = 'IA respondeu ' + r.status; await new Promise(x => setTimeout(x, 1500 * (t + 1))); continue; }
-    try { const j = await r.json(); const txt = j.candidates[0].content.parts.map(x => x.text || '').join(''); return JSON.parse(txt.match(/\{[\s\S]*\}/)[0]); }
+    try { const j = await r.json(); const txt = j.candidates[0].content.parts.map(x => x.text || '').join(''); return lerJSON(txt); }
     catch (e) { ult = String(e.message || e); }
   }
   throw new Error(ult);
@@ -96,7 +108,7 @@ async function adicionarFiguras(Q, c) {
   const com = F.map((f, i) => f ? { i, enunciado: Q[i].enunciado, comando: Q[i].comando, resposta_correta: Q[i].tipo === 'obj' ? Q[i].alts[Q[i].correta] : Q[i].ref, figura: f } : null).filter(Boolean);
   if (!com.length) return { desenhadas: 0 };
   const r = await gemini(
-    'Você é revisor pedagógico de Ciências (Ensino Fundamental). Para cada item, diga se a figura é ADEQUADA. Reprove (ok=false) se a figura: (a) contém ou deixa óbvia a resposta correta, o conceito pedido ou uma conclusão; (b) repete texto de uma alternativa; (c) não tem relação direta com o enunciado; (d) tem erro científico ou é inadequada para a idade.\n\nITENS: ' + JSON.stringify(com) +
+    'Você é revisor pedagógico de Ciências (Ensino Fundamental). Para cada item, diga se a figura é ADEQUADA. Aprove (ok=true) a figura que é útil, relacionada ao enunciado e cientificamente correta, MESMO que o tema seja o mesmo da questão. Reprove (ok=false) somente se: (a) a figura declara explicitamente a resposta correta ou a conclusão que a questão pede (por exemplo, uma linha ou célula que já responde à pergunta); (b) copia literalmente uma das alternativas; (c) não tem relação com o enunciado; (d) tem erro científico ou é inadequada para a idade.\n\nITENS: ' + JSON.stringify(com) +
     '\n\nResponda APENAS em JSON: {"revisao":[{"i":0,"ok":true}, ...]}', 0.1);
   const ok = new Set((Array.isArray(r.revisao) ? r.revisao : []).filter(x => x && x.ok === true).map(x => Number(x.i)));
   F.forEach((f, i) => { if (f && ok.has(i)) Q[i].figura = f; });
