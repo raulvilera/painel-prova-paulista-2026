@@ -197,7 +197,8 @@ module.exports = async function individual(req, res) {
     }
     if (acao === 'status') {
       const r = await rest('indiv_banco?select=k,liberada'); const B = {}; (r || []).forEach(x => B[x.k] = x.liberada);
-      return ok({ chaves: Object.keys(CAT).map(k => ({ k, nome: CAT[k].nome, bim: CAT[k].bim, serie: CAT[k].serie, desc: CAT[k].desc, tem: k in B, liberada: !!B[k] })) });
+      const pl = await rest('indiv_plano?select=itens&limit=2000'); const U = {}; (pl || []).forEach(x => (x.itens || []).forEach(i => { if (i && i.k) U[i.k] = 1; }));
+      return ok({ chaves: Object.keys(CAT).map(k => ({ k, nome: CAT[k].nome, bim: CAT[k].bim, serie: CAT[k].serie, desc: CAT[k].desc, tem: k in B, liberada: !!B[k], usada: !!U[k] })) });
     }
     if (acao === 'gerar') {
       const k = String(b.k || ''); const Q = await gerarQuestoes(k);

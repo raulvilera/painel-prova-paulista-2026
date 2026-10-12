@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Preparar atividades</title>
+<style>
+  :root{--bg:#f2f5f2;--fg:#17261f;--card:#fff;--line:#d5ddd5;--acc:#2e7d6b;--mut:#5b6b63}
+  @media(prefers-color-scheme:dark){:root{--bg:#0d1719;--fg:#e3eeef;--card:#142226;--line:#2a3f44;--acc:#5cc2cf;--mut:#93a8ac}}
+  body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,sans-serif}
+  .w{max-width:760px;margin:0 auto;padding:16px}
+  .c{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:12px 0}
+  button{font:inherit;font-weight:700;background:var(--acc);color:#fff;border:0;border-radius:8px;padding:10px 16px;cursor:pointer}
+  button:disabled{opacity:.5;cursor:default}
+  .bar{height:14px;background:var(--line);border-radius:7px;overflow:hidden;margin:10px 0}.bar i{display:block;height:100%;background:var(--acc);width:0}
+  .m{color:var(--mut);font-size:.9rem}#log{font-size:.85rem;max-height:240px;overflow:auto;white-space:pre-wrap}
+  a{color:var(--acc)}
+</style>
+</head>
+<body>
+<div class="w">
+  <h1>Preparar as atividades individuais</h1>
+  <div class="c">
+    <p>Gera antes, uma de cada vez, as questões (com figuras) que os alunos vão usar. Assim, quando o aluno abrir a atividade, ela carrega na hora. Deixe esta página aberta até terminar; pode fechar e continuar depois, ela só gera o que ainda falta.</p>
+    <p id="res" class="m">Verificando…</p>
+    <div class="bar"><i id="pb"></i></div>
+    <button id="go" disabled>Gerar o que falta</button>
+    <p class="m"><a href="/">← Painel</a></p>
+  </div>
+  <div class="c"><b>Andamento</b><div id="log" class="m"></div></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const SB_URL = 'https://ykrjfjepnqeoqlgupsbe.supabase.co', SB_KEY = 'sb_publishable_FbMU5x7WBpxzHmmVzOfh2g_0M1xxAh5';
+  let token = '', falta = [], total = 0, parar = false;
+  const log = t => { const l = $('log'); l.textContent += t + '\n'; l.scrollTop = l.scrollHeight; };
+  const esperar = ms => new Promise(r => setTimeout(r, ms));
+  async function api(acao, corpo){
+    const opt = corpo ? { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token }, body: JSON.stringify(Object.assign({ acao }, corpo)) } : { headers: { Authorization: 'Bearer ' + token }, cache: 'no-store' };
+    const r = await fetch('/api/individual' + (corpo ? '' : '?acao=' + acao), opt);
+    const j = await r.json().catch(() => ({ ok: false, erro: 'resposta inválida (HTTP ' + r.status + ')' }));
+    if (!j.ok) throw new Error(j.erro || ('HTTP ' + r.status));
+    return j;
+  }
+  async function verificar(){
+    const j = await api('status');
+    const usadas = j.chaves.filter(c => c.usada);
+    total = usadas.length; falta = usadas.filter(c => !c.tem).map(c => c.k);
+    const pronto = total - falta.length;
+    $('pb').style.width = (total ? pronto / total * 100 : 0) + '%';
+    $('res').textContent = total ? pronto + ' de ' + total + ' conjuntos prontos' + (falta.length ? ' · faltam ' + falta.length : ' · tudo pronto!') : 'Nenhum conjunto em uso ainda.';
+    $('go').disabled = !falta.length;
+  }
+  async function gerar(){
+    $('go').disabled = true; parar = false;
+    for (const k of falta.slice()) {
+      if (parar) break;
+      let ok = false;
+      for (let t = 0; t < 4 && !ok; t++) {
+        try { await api('gerar', { k }); ok = true; log('✓ ' + k.slice(0, 70)); }
+        catch (e) { log('… tentando de novo (' + String(e.message).slice(0, 80) + ')'); await esperar(20000); }
+      }
+      if (!ok) log('✗ não gerou: ' + k.slice(0, 70));
+      await verificar();
+      await esperar(8000);   // pausa para não estourar o limite da IA
+    }
+    log('Fim desta rodada.'); await verificar();
+  }
+  (async function(){
+    if (!window.supabase) { $('res').textContent = 'Não foi possível carregar o login. Atualize a página.'; return; }
+    const sb = window.supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, detectSessionInUrl: false, flowType: 'implicit' } });
+    const { data } = await sb.auth.getSession();
+    if (!data || !data.session) { $('res').innerHTML = 'Entre primeiro no painel com o seu login de professor. <a href="/">Abrir o painel</a>'; return; }
+    token = data.session.access_token;
+    try { await verificar(); } catch (e) { $('res').textContent = 'Erro: ' + e.message; }
+    $('go').onclick = gerar;
+  })();
+})();
+</script>
+</body>
+</html>
