@@ -1,0 +1,82 @@
+{
+ "6º ANO|1|Classificar os corpos celestes do Sistema Solar.": {
+  "serie": "6",
+  "desc": "Classificar os corpos celestes do Sistema Solar.",
+  "hab": "EF06CI11",
+  "habTxt": "Descrever as esferas da Terra (litosfera, hidrosfera, atmosfera, biosfera), o surgimento da litosfera e suas transformações no tempo (AE1).",
+  "nome": "Detetives do céu",
+  "concreta": "Em roda, o professor mostra cartas-imagem e lê pistas ('tem luz própria', 'gira ao redor de um planeta', 'forma cauda perto do Sol'); a turma separa as cartas em pilhas: estrela, planeta, satélite, cometa, asteroide."
+ },
+ "7º ANO|1|Reconhecer o funcionamento de máquinas simples, com base no conceito de força e exemplos do cotidiano.": {
+  "serie": "7",
+  "desc": "Reconhecer o funcionamento de máquinas simples, com base no conceito de força e exemplos do cotidiano.",
+  "hab": "EF07CI01A",
+  "habTxt": "Distinguir uso e funcionamento de máquinas simples com base no conceito de força e exemplos cotidianos (AE3).",
+  "nome": "Alavanca de régua",
+  "concreta": "Equilibrar a régua sobre o lápis (ponto de apoio), colocar 2 moedas numa ponta e testar quantas moedas são necessárias do outro lado ao aproximar ou afastar o lápis da carga: apoio perto da carga = menos força."
+ },
+ "8º ANO|3|Analisar os efeitos do aquecimento global no planeta.": {
+  "serie": "8",
+  "desc": "Analisar os efeitos do aquecimento global no planeta.",
+  "hab": "EF08CI16",
+  "habTxt": "Discutir iniciativas para mitigar alterações climáticas causadas por ações humanas e restabelecer o equilíbrio ambiental (AE10).",
+  "nome": "Estufa no pote",
+  "concreta": "Os dois potes com termômetro ficam ao sol; só um é coberto com filme plástico. A turma lê as temperaturas a cada 5 min. O filme retém o calor, como os gases de efeito estufa (CO₂) retêm calor na atmosfera."
+ },
+ "8º ANO|1|Diferenciar métodos contraceptivos e estratégias de prevenção para a saúde.": {
+  "serie": "8",
+  "desc": "Diferenciar métodos contraceptivos e estratégias de prevenção para a saúde.",
+  "hab": "EF08CI10, EF08CI09",
+  "habTxt": "Analisar formas de prevenção de ISTs e da gravidez precoce, reconhecendo práticas de saúde sexual e reprodutiva (AE3).",
+  "nome": "Quadro dos métodos",
+  "concreta": "Montagem coletiva de um quadro: método × tipo (barreira, hormonal, dispositivo) × evita gravidez? × previne ISTs? O professor destaca que só a camisinha marca 'sim' nas duas colunas."
+ },
+ "9º ANO|3|Reconhecer a especiação como processo de formação de novas espécies a partir do isolamento reprodutivo associado, ou não, ao isolamento geográfico.": {
+  "serie": "9",
+  "desc": "Reconhecer a especiação como processo de formação de novas espécies a partir do isolamento reprodutivo associado, ou não, ao isolamento geográfico.",
+  "hab": "EF09CI11, EF09CI10",
+  "habTxt": "Analisar a evolução e a diversidade das espécies a partir de evidências científicas e processos evolutivos (AE10).",
+  "nome": "O rio que separou",
+  "concreta": "A turma é uma 'população'; uma fita (rio) a divide em dois grupos. Em cada lado, sorteiam-se feijões que mudam características ao longo de 'gerações'. Ao fim, os grupos estão diferentes demais para se cruzar."
+ },
+ "4B|6º ANO|5": {
+  "serie": "6",
+  "desc": "Reconhecer as principais funções das estruturas que formam o sistema nervoso periférico.",
+  "hab": "EF06CI07",
+  "habTxt": "Nervos e gânglios; nervos sensoriais e motores; sistema somático e autônomo; simpático e parassimpático.",
+  "nome": "Sistema nervoso periférico",
+  "concreta": "Relembre divisão do sistema nervoso; Pause e responda (V ou F); Na prática: indicar SNC/SNP na imagem e divisões do SNP e SNA."
+ },
+ "4B|7º ANO|2": {
+  "serie": "7",
+  "desc": "Identificar características e replicação dos vírus e discutir se são seres vivos à luz da teoria celular.",
+  "hab": "EF07CI10A",
+  "habTxt": "Tamanho e diversidade dos vírus; teoria celular; parasitas intracelulares obrigatórios; capsídeo, material genético e envelope; ciclos lítico e lisogênico.",
+  "nome": "Vírus",
+  "concreta": "Para começar (o que é vírus?); Pause e responda; Na prática: leitura de texto da Pesquisa Fapesp e questões sobre vivo/não vivo."
+ },
+ "4B|7º ANO|15": {
+  "serie": "7",
+  "desc": "Apresentar as características do saneamento básico e analisar desigualdades no acesso.",
+  "hab": "EF07CI09",
+  "habTxt": "Dados de saneamento por região e estado; municípios de SP; causas e consequências da falta de saneamento; ODS 6; Marco Legal.",
+  "nome": "Saneamento básico – Parte 2",
+  "concreta": "Identificar serviços no trajeto à escola; análise de infográficos; questões sobre foto de Paraisópolis e ações do ODS 6."
+ },
+ "4B|8º ANO|15": {
+  "serie": "8",
+  "desc": "Compreender a função dos componentes de um circuito elétrico por meio de simulação.",
+  "hab": "EF08CI02",
+  "habTxt": "Bateria, resistor, fio, interruptor, amperímetro e voltímetro; circuito simples e em série; Lei de Ohm aplicada; curto-circuito.",
+  "nome": "Simulador de um circuito elétrico – Parte 1",
+  "concreta": "Montagem de circuitos no simulador PhET, alterando e removendo componentes e medindo corrente e tensão."
+ },
+ "4B|9º ANO|16": {
+  "serie": "9",
+  "desc": "Comparar conhecimentos sobre a observação do céu usando um planetário virtual.",
+  "hab": "EF09CI15",
+  "habTxt": "Planetário virtual Stellarium; pontos cardeais; planetas e estrelas visíveis; constelações; variação sazonal do céu; zodíaco e eclíptica; astrologia x astronomia.",
+  "nome": "Planetário virtual",
+  "concreta": "Exploram o Stellarium Web: identificam astros e constelações, comparam Cruzeiro do Sul e Centauro em julho e fevereiro e localizam o Sol no zodíaco."
+ }
+}

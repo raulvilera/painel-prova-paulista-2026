@@ -1,0 +1,2660 @@
+{
+ "6º ANO|3|Reconhecer os principais componentes celulares (membrana, citoplasma e núcleo).": [
+  {
+   "tipo": "obj",
+   "enunciado": "Marina, aluna do 6º ano, raspou levemente a parte interna da bochecha, colocou o material em uma lâmina e observou ao microscópio na aula do laboratório da escola. Ela anotou o que viu no caderno.",
+   "comando": "Com base no registro de Marina, qual correspondência entre o que ela viu e as partes da célula está correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação ao microscópio",
+    "colunas": [
+     "Região observada",
+     "Aspecto"
+    ],
+    "linhas": [
+     [
+      "Borda externa",
+      "linha fina e contínua"
+     ],
+     [
+      "Interior",
+      "massa transparente e granulosa"
+     ],
+     [
+      "Ponto no interior",
+      "estrutura escura e arredondada"
+     ]
+    ]
+   },
+   "alts": [
+    "a borda é a membrana e o ponto escuro arredondado é o núcleo",
+    "a borda é o núcleo e o ponto escuro arredondado é a membrana",
+    "a borda é o citoplasma e o ponto escuro arredondado é o núcleo",
+    "a borda é a membrana e o ponto escuro arredondado é o citoplasma"
+   ],
+   "correta": 0,
+   "explicacao": "A linha fina que envolve a célula é a membrana e o ponto escuro e arredondado é o núcleo. Os outros itens trocam as estruturas entre si."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, o grupo de Pedro montou o modelo de célula: um saquinho plástico com água e cola dentro e uma bolinha no centro. Ao manusear, Pedro furou o saquinho com a unha e a água com cola começou a escorrer para fora.",
+   "comando": "Qual parte da célula foi danificada no modelo de Pedro e que função ela deixou de cumprir?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da montagem do modelo",
+    "etapas": [
+     "Encher o saquinho com água e cola",
+     "Colocar a bolinha no centro",
+     "Fechar o saquinho com um nó",
+     "Furar o saquinho sem querer",
+     "O líquido escorre para fora"
+    ]
+   },
+   "alts": [
+    "o núcleo, que envolve a célula e controla a entrada e a saída de substâncias",
+    "a membrana, que envolve a célula e controla a entrada e a saída de substâncias",
+    "o citoplasma, que envolve a célula e controla a entrada e a saída de substâncias",
+    "a membrana, que guarda o material genético e comanda as atividades da célula"
+   ],
+   "correta": 1,
+   "explicacao": "O saquinho representa a membrana, que delimita a célula e controla o que entra e sai. Os distratores atribuem essa função ao núcleo ou ao citoplasma, ou trocam as funções."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Após uma noite de geada forte, Dona Célia percebeu que as folhas de alface da horta da escola ficaram moles e encharcadas, como se o líquido de dentro das células tivesse escapado. O professor explicou que o frio intenso danifica uma estrutura específica da célula.",
+   "comando": "Qual explicação relaciona corretamente o dano da geada ao aspecto das folhas?",
+   "figura": null,
+   "alts": [
+    "O núcleo ficou danificado, perdeu o controle do que entra e sai e o conteúdo da célula vazou",
+    "O citoplasma ficou danificado, perdeu o controle do que entra e sai e o conteúdo da célula vazou",
+    "A membrana ficou danificada, perdeu a capacidade de guardar o material genético e a célula murchou",
+    "A membrana ficou danificada, perdeu o controle do que entra e sai e o conteúdo da célula vazou"
+   ],
+   "correta": 3,
+   "explicacao": "A membrana controla a passagem de substâncias; com o dano, o conteúdo vaza. Os distratores trocam a estrutura responsável ou a função da membrana."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Lia observou ao microscópio uma célula da bochecha e mediu a área ocupada por cada região na imagem projetada. Depois, comparou com o modelo da turma, feito de saquinho, água com cola e uma bolinha.",
+   "comando": "Qual região ocupa a maior parte da célula e que material do modelo a representa?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro das medidas feitas na imagem",
+    "unidade": "mm²",
+    "itens": [
+     {
+      "rotulo": "Ponto escuro",
+      "valor": 12
+     },
+     {
+      "rotulo": "Região entre a borda e o ponto",
+      "valor": 150
+     },
+     {
+      "rotulo": "Borda (espessura)",
+      "valor": 2
+     }
+    ]
+   },
+   "alts": [
+    "o núcleo, representado pela água com cola dentro do saquinho",
+    "o citoplasma, representado pelo saquinho que envolve a célula",
+    "o citoplasma, representado pela água com cola dentro do saquinho",
+    "a membrana, representada pela bolinha colocada no centro do modelo"
+   ],
+   "correta": 2,
+   "explicacao": "A região intermediária é o citoplasma, representado no modelo pela água com cola. Os distratores trocam o nome da estrutura ou o material do modelo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois grupos testaram saquinhos para o modelo de célula. O grupo 1 usou plástico sem furos e o grupo 2 usou plástico com furos minúsculos. Os saquinhos ficaram 10 minutos em água com corante azul, e os grupos anotaram a cor do líquido de dentro.",
+   "comando": "Com base nos resultados, o que se pode concluir sobre a membrana de uma célula real?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Grupo",
+     "Saquinho",
+     "Líquido de dentro após 10 min"
+    ],
+    "linhas": [
+     [
+      "1",
+      "sem furos",
+      "incolor"
+     ],
+     [
+      "2",
+      "com furos minúsculos",
+      "azul-claro"
+     ]
+    ]
+   },
+   "alts": [
+    "Ela é igual ao saquinho do grupo 1: impede a passagem de qualquer substância",
+    "Ela é igual ao saquinho do grupo 2: permite a passagem de qualquer substância",
+    "Ela fica entre os dois modelos: deixa passar certas substâncias e retém outras",
+    "Ela difere dos dois modelos: quem controla a entrada do corante é o citoplasma da célula"
+   ],
+   "correta": 2,
+   "explicacao": "A membrana celular deixa passar algumas substâncias e retém outras, por isso nem o saquinho totalmente fechado nem o muito furado a representam bem."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula prática, Rosa colocou uma película de cebola corada com iodo no microscópio e anotou o que viu: uma linha fina envolvendo cada célula, um interior claro e granuloso e um ponto escuro e arredondado.",
+   "comando": "Dê o nome de cada uma das três estruturas observadas por Rosa e indique uma função de cada uma.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da observação",
+    "colunas": [
+     "Estrutura",
+     "Aspecto"
+    ],
+    "linhas": [
+     [
+      "Linha fina ao redor",
+      "contínua e delicada"
+     ],
+     [
+      "Interior",
+      "claro e granuloso"
+     ],
+     [
+      "Ponto no interior",
+      "escuro e arredondado"
+     ]
+    ]
+   },
+   "ref": "A linha fina é a membrana, que delimita a célula e controla o que entra e sai. O interior é o citoplasma, onde ocorrem muitas atividades da célula. O ponto escuro é o núcleo, que guarda o material genético e comanda a célula.",
+   "conceitos": [
+    "membrana delimita e controla entrada e saída",
+    "citoplasma é onde ocorrem as atividades",
+    "núcleo guarda informações e comanda a célula"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Tiago desenhou no caderno uma célula da bochecha. Ele fez um círculo para o contorno e uma bolinha escura no centro, mas deixou o espaço entre as duas partes totalmente em branco. A professora disse que o desenho estava incompleto.",
+   "comando": "Que parte da célula Tiago esqueceu de representar? Explique o que existe nesse espaço e por que ele não pode ficar vazio.",
+   "figura": null,
+   "ref": "Ele esqueceu o citoplasma, material gelatinoso que preenche a célula entre a membrana e o núcleo. É nele que ficam as estruturas e ocorrem as atividades da célula, por isso não é um espaço vazio.",
+   "conceitos": [
+    "citoplasma preenche a célula",
+    "fica entre membrana e núcleo",
+    "nele ocorrem atividades da célula"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para montar o modelo de célula, o grupo de Bruna seguiu os passos do quadro. Na hora de apresentar, a professora pediu que o grupo retirasse a bolinha do saquinho e perguntou o que isso representaria numa célula real.",
+   "comando": "Que estrutura da célula a bolinha representa? O que aconteceria com uma célula real que perdesse essa estrutura?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da montagem do modelo",
+    "etapas": [
+     "Encher o saquinho com água e cola",
+     "Colocar a bolinha no centro",
+     "Fechar o saquinho",
+     "Retirar a bolinha na apresentação"
+    ]
+   },
+   "ref": "A bolinha representa o núcleo. Sem ele, a célula perderia o controle de suas atividades, pois o núcleo guarda as informações genéticas e comanda o funcionamento da célula, e ela não conseguiria funcionar normalmente.",
+   "conceitos": [
+    "bolinha representa o núcleo",
+    "núcleo comanda as atividades",
+    "núcleo guarda o material genético"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Mateus observou ao microscópio uma célula de cebola e uma da própria bochecha. Ele notou que as formas eram diferentes, mas anotou que as duas tinham partes parecidas.",
+   "comando": "Explique por que Mateus pode afirmar que as duas células têm a mesma organização básica, apesar de terem formas diferentes.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das observações de Mateus",
+    "colunas": [
+     "Característica",
+     "Cebola",
+     "Bochecha"
+    ],
+    "linhas": [
+     [
+      "Forma",
+      "retangular alongada",
+      "arredondada irregular"
+     ],
+     [
+      "Linha fina de contorno",
+      "presente",
+      "presente"
+     ],
+     [
+      "Ponto escuro interno",
+      "um",
+      "um"
+     ]
+    ]
+   },
+   "ref": "Porque as duas apresentam membrana, citoplasma e núcleo. A forma pode variar conforme o tipo de célula, mas essas três partes básicas aparecem nos dois casos.",
+   "conceitos": [
+    "membrana, citoplasma e núcleo nas duas",
+    "forma varia entre tipos de células",
+    "organização básica comum"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um colega de Sofia afirmou que a membrana celular funciona como uma parede, que bloqueia a entrada de tudo. Sofia fez um teste com membrana de ovo (casca removida) e anotou o que passou.",
+   "comando": "A afirmação do colega está correta? Justifique usando os dados do teste e a função da membrana.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do teste",
+    "colunas": [
+     "Substância",
+     "Atravessou a membrana?"
+    ],
+    "linhas": [
+     [
+      "Água",
+      "sim"
+     ],
+     [
+      "Sais dissolvidos",
+      "sim"
+     ],
+     [
+      "Partículas grandes de corante",
+      "não"
+     ]
+    ]
+   },
+   "ref": "Não está correta. Os dados mostram que a membrana deixa passar algumas substâncias e retém outras. Ela controla a entrada e a saída, permitindo o que a célula precisa, e não bloqueia tudo.",
+   "conceitos": [
+    "membrana controla entrada e saída",
+    "passam algumas substâncias e outras não",
+    "não é barreira total"
+   ]
+  }
+ ],
+ "7º ANO|1|Relacionar o movimento das placas tectônicas à teoria da deriva continental.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de Geografia e Ciências, Camila recortou a América do Sul e a África de um mapa-múndi e percebeu que o contorno da costa do Brasil se encaixa na costa de Camarões e Nigéria, como peças de um quebra-cabeça.",
+   "comando": "Que ideia sobre a história da Terra o encaixe observado por Camila apoia?",
+   "figura": null,
+   "alts": [
+    "Os continentes já estiveram unidos e depois se afastaram lentamente",
+    "Os continentes sempre ocuparam as posições atuais e só os oceanos mudaram",
+    "Os continentes foram moldados pela erosão das ondas até se encaixarem",
+    "Os continentes se afastaram de repente após o impacto de um meteoro"
+   ],
+   "correta": 0,
+   "explicacao": "O encaixe das costas sugere que os continentes formavam uma massa única e se separaram aos poucos, como propôs Wegener. Os distratores ignoram o movimento lento ou atribuem a outra causa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rafael pesquisou que fósseis do réptil Mesosaurus, que vivia em água doce e rasa, foram encontrados em rochas do Sul do Brasil e da África do Sul, separados hoje por cerca de 6 mil km de oceano. Ele marcou os locais no mapa.",
+   "comando": "Como a presença do mesmo fóssil nos dois continentes pode ser explicada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fósseis encontrados",
+    "colunas": [
+     "Local",
+     "Fóssil",
+     "Idade aproximada"
+    ],
+    "linhas": [
+     [
+      "Sul do Brasil",
+      "Mesosaurus",
+      "280 milhões de anos"
+     ],
+     [
+      "África do Sul",
+      "Mesosaurus",
+      "280 milhões de anos"
+     ],
+     [
+      "Europa",
+      "nenhum registro",
+      "-"
+     ]
+    ]
+   },
+   "alts": [
+    "O réptil atravessou o oceano nadando por milhares de quilômetros em busca de comida",
+    "Os dois continentes estavam juntos quando o réptil vivia, e depois se separaram",
+    "O réptil surgiu de forma independente nos dois continentes por evolução parecida",
+    "O réptil foi levado de um continente ao outro por aves migratórias de grande porte"
+   ],
+   "correta": 1,
+   "explicacao": "Como o Mesosaurus vivia em água doce e rasa, não cruzaria o oceano; a explicação é que os continentes estavam unidos. Os distratores propõem deslocamentos improváveis."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Larissa viu em uma reportagem que o fundo do Oceano Atlântico, na região central, tem uma cadeia de montanhas onde o magma sobe e forma crosta nova. Medições de satélite mostram que a distância entre América do Sul e África aumenta cerca de 2 cm por ano.",
+   "comando": "Qual relação entre esse dado e a teoria da deriva continental está correta?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados das medições por satélite",
+    "unidade": "cm por ano",
+    "itens": [
+     {
+      "rotulo": "Atlântico (Brasil-África)",
+      "valor": 2
+     },
+     {
+      "rotulo": "Pacífico (Chile-Austrália)",
+      "valor": 7
+     }
+    ]
+   },
+   "alts": [
+    "A crosta do oceano afunda no meio do Atlântico e puxa os continentes para longe",
+    "O afastamento ocorre pelo derretimento das geleiras, que eleva o nível do oceano",
+    "A crosta nova formada no meio do oceano empurra as placas e afasta os continentes",
+    "O afastamento ocorre porque os continentes flutuam livres, sem ligação com as placas"
+   ],
+   "correta": 2,
+   "explicacao": "O magma que sobe na cadeia meso-oceânica cria crosta nova e afasta as placas, o que explica a deriva. Os distratores invertem o processo ou o atribuem a outras causas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A professora Helena mostrou um mapa com as placas tectônicas e perguntou aos alunos onde o Brasil está localizado. Para os alunos, o Brasil fica no meio da Placa Sul-Americana, longe das bordas, e por isso quase não há terremotos fortes no país.",
+   "comando": "Qual explicação está de acordo com a tectônica de placas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de terremotos fortes por região",
+    "colunas": [
+     "Região",
+     "Terremotos fortes em 50 anos"
+    ],
+    "linhas": [
+     [
+      "Costa do Chile (borda da placa)",
+      "muitos"
+     ],
+     [
+      "Interior do Brasil",
+      "pouquíssimos"
+     ],
+     [
+      "Japão (borda de placas)",
+      "muitos"
+     ]
+    ]
+   },
+   "alts": [
+    "Os abalos fortes ocorrem sobretudo no interior das placas, onde a crosta é mais espessa e rígida",
+    "Os abalos fortes ocorrem sobretudo em países de clima frio, onde há mais geleiras",
+    "Os abalos fortes ocorrem sobretudo nas bordas dos continentes, por causa das ondas do mar",
+    "Os abalos fortes ocorrem sobretudo nas bordas das placas, onde elas se chocam ou deslizam"
+   ],
+   "correta": 3,
+   "explicacao": "Nas bordas das placas há maior interação (choques e deslizamentos), por isso concentram terremotos. O Brasil está no interior da placa, com poucos abalos fortes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um experimento, Davi colocou três placas de isopor sobre uma bandeja com água morna e uma resistência elétrica em um dos lados que gerava correntes na água. Ele observou que as placas se moviam devagar sobre a água.",
+   "comando": "No modelo de Davi, o que o movimento das placas de isopor representa na Terra?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do experimento",
+    "etapas": [
+     "Placas de isopor sobre a água morna",
+     "Resistência aquecendo um dos lados",
+     "Correntes se formam na água",
+     "As placas se movem lentamente"
+    ]
+   },
+   "alts": [
+    "O movimento dos continentes, que se afastam por causa da rotação diária do planeta Terra",
+    "O movimento dos oceanos, que empurram as placas com a força das marés e das ondas",
+    "O movimento das placas tectônicas, causado por correntes no interior quente da Terra",
+    "O movimento do núcleo da Terra, que gira e arrasta as placas de um lado para o outro"
+   ],
+   "correta": 2,
+   "explicacao": "As correntes de material quente no interior da Terra movimentam as placas tectônicas, como a água aquecida move o isopor. Os distratores atribuem o movimento a rotação, marés ou ao núcleo girando."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Bianca recortou os mapas da América do Sul e da África e colou lado a lado. Ela percebeu que as costas se encaixam bem na região do Nordeste do Brasil e do Golfo da Guiné.",
+   "comando": "Explique por que o encaixe das costas é uma evidência a favor da teoria da deriva continental.",
+   "figura": null,
+   "ref": "O encaixe sugere que os continentes formavam uma só massa de terra, que se partiu e se afastou lentamente. Se os continentes sempre estivessem onde estão, não haveria motivo para as costas se completarem como peças de quebra-cabeça.",
+   "conceitos": [
+    "continentes já estiveram unidos",
+    "afastamento lento",
+    "encaixe das costas como evidência"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula, Gustavo pintou no mapa os locais onde foram achados fósseis da planta Glossopteris e notou que as áreas pintadas na América do Sul, África, Índia, Austrália e Antártida formam uma região contínua quando os continentes são aproximados.",
+   "comando": "O que a distribuição desses fósseis indica sobre a posição dos continentes no passado?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fósseis de Glossopteris",
+    "colunas": [
+     "Continente",
+     "Fóssil encontrado?"
+    ],
+    "linhas": [
+     [
+      "América do Sul",
+      "sim"
+     ],
+     [
+      "África",
+      "sim"
+     ],
+     [
+      "Índia",
+      "sim"
+     ],
+     [
+      "Austrália",
+      "sim"
+     ],
+     [
+      "Antártida",
+      "sim"
+     ]
+    ]
+   },
+   "ref": "Indica que esses continentes estiveram unidos e que a planta vivia nessa área contínua. Depois, a separação levou os fósseis para locais distantes entre si.",
+   "conceitos": [
+    "continentes unidos no passado",
+    "fósseis em áreas hoje separadas",
+    "separação posterior"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Thaís leu que a Placa Sul-Americana se afasta da Placa Africana a cerca de 2 cm por ano e que, no Atlântico, há uma cadeia de montanhas submersas onde o magma sobe. Ela calculou que, em 100 milhões de anos, o afastamento seria de aproximadamente 2 mil km.",
+   "comando": "Explique como o movimento das placas tectônicas pode ter separado a América do Sul da África.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados das medições",
+    "unidade": "cm por ano",
+    "itens": [
+     {
+      "rotulo": "Afastamento do Atlântico",
+      "valor": 2
+     },
+     {
+      "rotulo": "Crescimento da unha humana",
+      "valor": 4
+     }
+    ]
+   },
+   "ref": "As placas se movem lentamente por correntes no interior da Terra. No Atlântico, o magma sobe, forma crosta nova e empurra as placas para lados opostos. Ao longo de milhões de anos, esse pequeno afastamento anual separou os continentes.",
+   "conceitos": [
+    "movimento lento das placas",
+    "magma forma crosta nova",
+    "tempo geológico acumula distância"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma discussão, Leandro disse que Wegener foi ignorado em 1912 porque não sabia explicar qual força movia os continentes. Só décadas depois, estudos do fundo dos oceanos mostraram a expansão do assoalho oceânico.",
+   "comando": "Por que a ideia dos continentes à deriva ganhou aceitação apenas depois da teoria da tectônica de placas? Justifique.",
+   "figura": null,
+   "ref": "Wegener tinha evidências (encaixe e fósseis), mas não explicava o mecanismo do movimento. A tectônica de placas mostrou que os continentes fazem parte de placas movidas por correntes internas e pela formação de crosta nova, fornecendo a explicação que faltava.",
+   "conceitos": [
+    "Wegener sem mecanismo",
+    "placas movidas por correntes internas",
+    "expansão do fundo oceânico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um jornal local trouxe a notícia de que o terremoto de magnitude 8 no Chile ocorreu na região onde a Placa de Nazca mergulha sob a Placa Sul-Americana. No mesmo dia, o Brasil não registrou abalos fortes.",
+   "comando": "Relacione o movimento das placas à ocorrência do terremoto no Chile e à ausência de abalos fortes no Brasil.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do dia do terremoto",
+    "colunas": [
+     "Local",
+     "Posição em relação às placas",
+     "Abalo forte?"
+    ],
+    "linhas": [
+     [
+      "Costa do Chile",
+      "encontro de duas placas",
+      "sim"
+     ],
+     [
+      "Interior do Brasil",
+      "meio da Placa Sul-Americana",
+      "não"
+     ]
+    ]
+   },
+   "ref": "No Chile, duas placas se encontram e uma mergulha sob a outra; o atrito e o acúmulo de tensão liberam energia em terremotos. O Brasil fica no interior de uma placa, distante das bordas, onde há pouca interação e poucos abalos fortes.",
+   "conceitos": [
+    "borda de placas concentra terremotos",
+    "uma placa mergulha sob a outra",
+    "Brasil no interior da placa"
+   ]
+  }
+ ],
+ "8º ANO|1|Comparar os processos reprodutivos das plantas.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula prática, Júlia abriu uma flor de hibisco do jardim da escola e observou com lupa. Ela viu hastes finas com pó amarelo nas pontas e, no centro, uma estrutura mais grossa com a base dilatada, que o professor chamou de ovário.",
+   "comando": "Qual correspondência entre as estruturas observadas e a reprodução da planta está correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da observação com lupa",
+    "colunas": [
+     "Estrutura",
+     "Aspecto",
+     "Posição na flor"
+    ],
+    "linhas": [
+     [
+      "Hastes finas",
+      "pó amarelo nas pontas",
+      "ao redor do centro"
+     ],
+     [
+      "Estrutura grossa",
+      "base dilatada",
+      "centro da flor"
+     ]
+    ]
+   },
+   "alts": [
+    "As hastes com pó produzem o pólen; a base dilatada guarda os óvulos que formam sementes",
+    "As hastes com pó guardam os óvulos que formam sementes; a base dilatada produz os grãos de pólen",
+    "As hastes com pó atraem os insetos para a flor; a base dilatada produz os grãos de pólen",
+    "As hastes com pó formam o fruto depois da polinização; a base dilatada atrai os insetos"
+   ],
+   "correta": 0,
+   "explicacao": "O estame produz o pólen (parte masculina) e o ovário, na base do pistilo, abriga os óvulos que originam sementes. Os distratores trocam as funções."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O professor mostrou a pinha de um pinheiro-do-paraná e um tomate cortado. Na pinha, as sementes ficam expostas entre as escamas; no tomate, elas estão dentro de uma polpa que envolve as sementes.",
+   "comando": "A diferença observada entre os dois está relacionada a qual característica da reprodução dessas plantas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das observações",
+    "colunas": [
+     "Planta",
+     "Onde ficam as sementes"
+    ],
+    "linhas": [
+     [
+      "Pinheiro (pinha)",
+      "entre as escamas"
+     ],
+     [
+      "Tomateiro",
+      "dentro da polpa"
+     ]
+    ]
+   },
+   "alts": [
+    "O pinheiro forma flores e frutos que envolvem as sementes; o tomateiro não forma frutos",
+    "O tomateiro forma flores e frutos que envolvem as sementes; o pinheiro não forma frutos",
+    "O pinheiro se reproduz sem sementes; o tomateiro se reproduz com sementes dentro de frutos",
+    "O tomateiro e o pinheiro formam frutos, mas só o tomate os mantém dentro do solo"
+   ],
+   "correta": 1,
+   "explicacao": "O pinheiro é gimnosperma (semente nua, sem fruto) e o tomateiro é angiosperma (flor e fruto com sementes protegidas)."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Seu Antônio cortou um galho de uma planta de hortelã do quintal e o colocou em um copo com água. Após duas semanas, apareceram raízes no galho, e ele plantou o galho num vaso. A nova planta cresceu sem que houvesse semente ou flor envolvida.",
+   "comando": "Qual a característica principal da nova planta em relação à planta de onde saiu o galho?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do procedimento",
+    "etapas": [
+     "Cortar um galho da planta",
+     "Colocar o galho em copo com água",
+     "Aparecem raízes após duas semanas",
+     "Plantar o galho no vaso"
+    ]
+   },
+   "alts": [
+    "Ela é geneticamente diferente da planta original, pois houve união de gametas",
+    "Ela é geneticamente idêntica à planta original, pois houve polinização cruzada entre flores",
+    "Ela é geneticamente idêntica à planta original, pois não houve união de gametas",
+    "Ela é geneticamente diferente da planta original, pois houve mistura de pólen"
+   ],
+   "correta": 2,
+   "explicacao": "Na reprodução assexuada por estaca não há gametas; a nova planta é clone da original. Os distratores falam em gametas, pólen ou polinização."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Neusa tem uma estufa de tomates em Holambra e não deixa abelhas entrarem. Neste ano, as plantas floresceram bastante, mas poucas flores viraram frutos. Num canteiro vizinho, com abelhas, quase todas as flores formaram frutos.",
+   "comando": "Qual a explicação mais adequada para a diferença entre os canteiros?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: flores que formaram frutos",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Estufa sem abelhas",
+      "valor": 15
+     },
+     {
+      "rotulo": "Canteiro com abelhas",
+      "valor": 85
+     }
+    ]
+   },
+   "alts": [
+    "Sem abelhas houve menos produção de pólen nas flores, reduzindo a formação dos óvulos",
+    "Sem abelhas houve menos água disponível para as raízes, reduzindo a formação dos frutos",
+    "Sem abelhas houve menos luz solar nas flores, reduzindo a produção de pólen",
+    "Sem abelhas houve menos transporte de pólen entre as flores, reduzindo a fecundação"
+   ],
+   "correta": 3,
+   "explicacao": "As abelhas transportam o pólen até o estigma (polinização), permitindo a fecundação e a formação do fruto. Os distratores atribuem a diferença a outros fatores."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um produtor de morangos em Atibaia multiplica as plantas pelos estolhos (caules que se alastram e enraízam), obtendo mudas iguais à planta-mãe. Num ano de calor intenso, um fungo atacou a plantação e quase todas as plantas adoeceram. Em um jardim vizinho, com morangos nascidos de sementes, só algumas plantas adoeceram.",
+   "comando": "O que explica a diferença entre as plantações?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das plantações atacadas pelo fungo",
+    "colunas": [
+     "Plantação",
+     "Origem das plantas",
+     "Plantas doentes"
+    ],
+    "linhas": [
+     [
+      "Produtor",
+      "estolhos",
+      "92%"
+     ],
+     [
+      "Jardim vizinho",
+      "sementes",
+      "18%"
+     ]
+    ]
+   },
+   "alts": [
+    "As plantas de estolhos são geneticamente iguais, então a mesma fragilidade atingiu todas",
+    "As plantas de estolhos são geneticamente diferentes, então a fragilidade atingiu quase todas",
+    "As plantas de sementes são geneticamente iguais, então a resistência foi igual em todas",
+    "As plantas de sementes receberam mais pólen, então produziram mais frutos e resistiram melhor"
+   ],
+   "correta": 0,
+   "explicacao": "A reprodução assexuada gera clones, sem variabilidade genética: se um é suscetível, todos são. Na sexuada há variabilidade, e algumas plantas resistem."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula de Ciências, Bia abriu uma flor de lírio e identificou, com a ajuda do professor, o estame e o pistilo (com o ovário na base). Ela precisa explicar para a turma qual é o papel de cada parte na reprodução sexuada.",
+   "comando": "Explique a função do estame e do pistilo na reprodução da planta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da flor de lírio",
+    "colunas": [
+     "Estrutura",
+     "Aspecto"
+    ],
+    "linhas": [
+     [
+      "Estame",
+      "haste com pó amarelo na ponta"
+     ],
+     [
+      "Pistilo",
+      "estrutura central com base dilatada"
+     ]
+    ]
+   },
+   "ref": "O estame produz o pólen, que contém os gametas masculinos. O pistilo recebe o pólen e, no ovário, guarda os óvulos; após a fecundação, o óvulo forma a semente e o ovário forma o fruto.",
+   "conceitos": [
+    "estame produz pólen",
+    "pistilo/ovário guarda óvulos",
+    "fecundação forma semente e fruto"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma coletou uma pinha de pinheiro e um fruto de goiaba. Ao abrir, notaram sementes soltas entre as escamas da pinha e sementes dentro da polpa da goiaba.",
+   "comando": "Compare como as sementes estão protegidas no pinheiro e na goiabeira e diga qual planta forma fruto.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das observações",
+    "colunas": [
+     "Planta",
+     "Estrutura analisada",
+     "Sementes"
+    ],
+    "linhas": [
+     [
+      "Pinheiro",
+      "pinha",
+      "entre as escamas"
+     ],
+     [
+      "Goiabeira",
+      "goiaba",
+      "dentro da polpa"
+     ]
+    ]
+   },
+   "ref": "No pinheiro, as sementes ficam expostas nas escamas, sem fruto. Na goiabeira, as sementes ficam dentro do fruto, que se origina do ovário da flor e as protege. Portanto, só a goiabeira forma fruto.",
+   "conceitos": [
+    "pinheiro tem semente nua",
+    "goiabeira tem semente protegida no fruto",
+    "fruto vem do ovário"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu João quer ter, no sítio, laranjeiras que produzam laranjas tão doces quanto as de uma árvore que já possui. Um vizinho sugeriu plantar sementes das laranjas; outro sugeriu enxertar ou plantar estacas da árvore.",
+   "comando": "Qual método Seu João deve escolher para garantir plantas iguais à original? Justifique usando os tipos de reprodução.",
+   "figura": null,
+   "ref": "Ele deve usar estaca ou enxerto, que são formas de reprodução assexuada. Elas geram plantas geneticamente idênticas à original. As sementes vêm da reprodução sexuada, que mistura material genético e pode gerar frutos diferentes.",
+   "conceitos": [
+    "estaca/enxerto é assexuada",
+    "gera clones",
+    "semente gera variabilidade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um pesquisador comparou duas formas de multiplicar uma planta de jardim: por mudas de caule (assexuada) e por sementes (sexuada). Os dados do quadro mostram o tempo para florescer e a variação de altura das plantas obtidas.",
+   "comando": "Compare os dois métodos e indique a vantagem de cada um em um ambiente que muda ao longo do tempo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Método",
+     "Tempo para florescer",
+     "Variação de altura"
+    ],
+    "linhas": [
+     [
+      "Muda de caule",
+      "3 meses",
+      "pequena"
+     ],
+     [
+      "Semente",
+      "8 meses",
+      "grande"
+     ]
+    ]
+   },
+   "ref": "A reprodução assexuada é mais rápida e gera plantas iguais, boa para manter características desejadas. A sexuada é mais lenta, mas gera variabilidade, o que aumenta a chance de alguns indivíduos sobreviverem a mudanças do ambiente, como doenças e secas.",
+   "conceitos": [
+    "assexuada é rápida e gera clones",
+    "sexuada gera variabilidade",
+    "variabilidade favorece adaptação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em 1950, os bananais de uma região do Brasil eram formados por uma única variedade, multiplicada por mudas. Uma doença causada por fungo se espalhou e destruiu quase todos os bananais.",
+   "comando": "Justifique por que o uso de uma única variedade multiplicada por mudas tornou os bananais vulneráveis à doença.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de bananais atingidos",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Variedade única",
+      "valor": 95
+     },
+     {
+      "rotulo": "Variedades mistas",
+      "valor": 30
+     }
+    ]
+   },
+   "ref": "As mudas são clones, sem variabilidade genética. Se a variedade é suscetível ao fungo, todas as plantas são. Em plantações com variedades mistas, algumas resistem, e por isso menos plantas são perdidas.",
+   "conceitos": [
+    "mudas geram clones",
+    "ausência de variabilidade",
+    "plantas iguais têm a mesma suscetibilidade"
+   ]
+  }
+ ],
+ "9º ANO|1|Aplicar as Leis Ponderais em reações químicas.": [
+  {
+   "tipo": "obj",
+   "enunciado": "No laboratório da escola, Bruno colocou vinagre em uma garrafa e bicarbonato de sódio em um balão preso ao gargalo. Pesou o conjunto, virou o balão para o bicarbonato cair no vinagre e o balão encheu de gás. Pesou novamente com o sistema fechado.",
+   "comando": "Por que a balança marcou o mesmo valor antes e depois da reação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Momento",
+     "Massa do conjunto"
+    ],
+    "linhas": [
+     [
+      "Antes de virar o balão",
+      "245,3 g"
+     ],
+     [
+      "Depois de o balão encher",
+      "245,3 g"
+     ]
+    ]
+   },
+   "alts": [
+    "Nenhuma reação ocorreu de fato, então a massa dos reagentes permaneceu igual à massa inicial do conjunto",
+    "O gás formado não tem massa, então a massa do conjunto não depende da quantidade dele",
+    "Nenhuma matéria saiu do sistema fechado, então a massa dos reagentes é igual à dos produtos",
+    "A massa do vinagre diminuiu na mesma proporção em que a massa do bicarbonato aumentou"
+   ],
+   "correta": 2,
+   "explicacao": "Em sistema fechado, a massa total se conserva (Lavoisier): o gás fica retido no balão. Os distratores negam a reação, o peso do gás ou inventam uma compensação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois, Bruno repetiu o experimento sem o balão, com bicarbonato e vinagre em um copo aberto sobre a balança. Ele viu bolhas se formarem e anotou a massa antes e depois.",
+   "comando": "Como explicar a diminuição da massa no copo aberto, sem contrariar a lei da conservação das massas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Momento",
+     "Massa do copo com a mistura"
+    ],
+    "linhas": [
+     [
+      "Antes de misturar",
+      "182,6 g"
+     ],
+     [
+      "Depois de acabar a efervescência",
+      "181,1 g"
+     ]
+    ]
+   },
+   "alts": [
+    "O gás formado escapou para o ar, levando uma parte da massa que estava no sistema",
+    "O vinagre evaporou por completo, levando uma parte da massa que estava no sistema",
+    "O bicarbonato foi destruído na reação, desaparecendo uma parte da massa do sistema",
+    "A reação transformou parte da matéria em energia, reduzindo a massa do sistema"
+   ],
+   "correta": 0,
+   "explicacao": "No sistema aberto, o gás carbônico escapa e leva sua massa; a massa total, contando o gás, se conserva."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre a formação da água, a professora informou que 2 g de hidrogênio reagem com exatamente 16 g de oxigênio, formando 18 g de água. Ela pediu aos alunos que previssem o resultado se fossem misturados 4 g de hidrogênio e 16 g de oxigênio.",
+   "comando": "Qual é o resultado correto da reação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Hidrogênio (g)",
+     "Oxigênio (g)",
+     "Água formada (g)"
+    ],
+    "linhas": [
+     [
+      "2",
+      "16",
+      "18"
+     ],
+     [
+      "4",
+      "16",
+      "?"
+     ]
+    ]
+   },
+   "alts": [
+    "Formam-se 20 g de água e todo o hidrogênio e o oxigênio são consumidos",
+    "Formam-se 18 g de água e sobram 2 g de oxigênio que não reagiram",
+    "Formam-se 16 g de água e sobram 4 g de hidrogênio sem reagir",
+    "Formam-se 18 g de água e sobram 2 g de hidrogênio sem reagir"
+   ],
+   "correta": 3,
+   "explicacao": "Pela lei de Proust, a proporção é fixa (1 de H para 8 de O): 16 g de O reagem com 2 g de H, formando 18 g de água e sobrando 2 g de H."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Gabriela pesou um chumaço de palha de aço antes e depois de queimá-lo ao ar livre. Ela ficou surpresa, pois o material queimado ficou mais pesado e pensou que a lei da conservação das massas tinha falhado.",
+   "comando": "Qual explicação mostra que a lei da conservação das massas continua válida?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Momento",
+     "Massa"
+    ],
+    "linhas": [
+     [
+      "Palha de aço antes de queimar",
+      "8,0 g"
+     ],
+     [
+      "Material queimado",
+      "10,3 g"
+     ]
+    ]
+   },
+   "alts": [
+    "O ferro reagiu com o calor da chama, e a massa do produto inclui a energia que se juntou",
+    "O ferro reagiu com o oxigênio do ar, e a massa do produto inclui o oxigênio que se juntou",
+    "O ferro foi transformado em carvão pela queima, e a massa do produto inclui o carbono",
+    "O ferro absorveu a fumaça do ambiente, e a massa do produto inclui as cinzas que se juntaram"
+   ],
+   "correta": 1,
+   "explicacao": "A queima do ferro envolve o oxigênio do ar; a massa do óxido é a soma das massas de ferro e de oxigênio consumido."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma turma testou a queima de carbono em recipientes fechados, variando a massa de oxigênio, e anotou a massa de gás carbônico (CO2) formada e o gás que sobrou em cada teste.",
+   "comando": "O que ocorreu no teste C, em comparação com os testes A e B?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Teste",
+     "Carbono (g)",
+     "Oxigênio (g)",
+     "CO2 formado (g)"
+    ],
+    "linhas": [
+     [
+      "A",
+      "3",
+      "8",
+      "11"
+     ],
+     [
+      "B",
+      "6",
+      "16",
+      "22"
+     ],
+     [
+      "C",
+      "6",
+      "20",
+      "22"
+     ]
+    ]
+   },
+   "alts": [
+    "Sobraram 4 g de oxigênio, pois o carbono só reage com oxigênio na proporção de 3 para 8",
+    "Sobraram 4 g de carbono, pois o oxigênio só reage com carbono na proporção fixa de 3 para 8",
+    "Formaram-se 26 g de CO2, mas 4 g escaparam, pois os reagentes reagem em qualquer proporção",
+    "Formaram-se 22 g de CO2 porque o oxigênio extra se converteu em carbono durante a reação"
+   ],
+   "correta": 0,
+   "explicacao": "Pela lei de Proust, 6 g de carbono reagem com 16 g de oxigênio; os 4 g a mais de oxigênio ficaram sem reagir."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No laboratório, Rafaela fechou uma garrafa com bicarbonato de sódio e vinagre dentro de um balão preso ao gargalo, pesou o conjunto e depois deixou reagirem. Ela pesou novamente e a massa foi a mesma.",
+   "comando": "Enuncie a lei que explica o resultado e diga o que acontece com a massa total em uma reação química em sistema fechado.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Momento",
+     "Massa do conjunto"
+    ],
+    "linhas": [
+     [
+      "Antes de reagir",
+      "245,3 g"
+     ],
+     [
+      "Depois de reagir",
+      "245,3 g"
+     ]
+    ]
+   },
+   "ref": "É a lei de conservação das massas (Lavoisier): em um sistema fechado, a massa total dos reagentes é igual à massa total dos produtos. A matéria não se perde nem se cria, só se rearranja.",
+   "conceitos": [
+    "lei de Lavoisier",
+    "massa total dos reagentes igual à dos produtos",
+    "sistema fechado"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro repetiu o mesmo experimento sem o balão, em um copo aberto, e observou que a balança mostrou um valor menor ao final. Ele concluiu que a matéria tinha 'sumido'.",
+   "comando": "Corrija a conclusão de Pedro: o que explica a diminuição da massa no copo aberto?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do copo aberto",
+    "colunas": [
+     "Momento",
+     "Massa do copo com a mistura"
+    ],
+    "linhas": [
+     [
+      "Antes de misturar",
+      "182,6 g"
+     ],
+     [
+      "Após a efervescência",
+      "181,1 g"
+     ]
+    ]
+   },
+   "ref": "A matéria não sumiu. Na reação se forma gás carbônico, que escapou para o ar no sistema aberto levando sua massa. Se o gás fosse recolhido, a massa total se manteria.",
+   "conceitos": [
+    "gás formado escapou",
+    "sistema aberto",
+    "massa total se conserva"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma aula, a professora disse que 24 g de magnésio reagem com 16 g de oxigênio, formando 40 g de óxido de magnésio. Em outro teste, o grupo de Carla usou 12 g de magnésio e oxigênio em quantidade suficiente.",
+   "comando": "Calcule a massa de oxigênio que reage e a massa de óxido formada no teste de Carla, justificando com a lei das proporções constantes.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Magnésio (g)",
+     "Oxigênio (g)",
+     "Óxido de magnésio (g)"
+    ],
+    "linhas": [
+     [
+      "24",
+      "16",
+      "40"
+     ],
+     [
+      "12",
+      "?",
+      "?"
+     ]
+    ]
+   },
+   "ref": "Como a proporção é fixa e 12 g é metade de 24 g, reagem 8 g de oxigênio e formam-se 20 g de óxido de magnésio. Pela lei de Proust, as massas reagem sempre na mesma proporção.",
+   "conceitos": [
+    "lei de Proust",
+    "proporção fixa entre massas",
+    "8 g de oxigênio e 20 g de óxido"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas velas iguais foram acesas, uma em um pote fechado sobre a balança e outra em um pote aberto. Em ambos, a vela queimou por alguns minutos. No pote fechado a massa se manteve; no aberto, a balança acusou diminuição.",
+   "comando": "Explique a diferença entre os dois sistemas aplicando a lei de Lavoisier.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das medidas",
+    "colunas": [
+     "Sistema",
+     "Massa antes (g)",
+     "Massa depois (g)"
+    ],
+    "linhas": [
+     [
+      "Pote fechado",
+      "310,0",
+      "310,0"
+     ],
+     [
+      "Pote aberto",
+      "310,0",
+      "309,4"
+     ]
+    ]
+   },
+   "ref": "Na queima, a cera e o oxigênio se transformam em gás carbônico e vapor de água. No pote fechado, esses gases ficam retidos e a massa total se conserva. No aberto, eles escapam para o ar e levam massa, por isso a balança marca menos.",
+   "conceitos": [
+    "cera e oxigênio formam gases",
+    "sistema fechado conserva massa",
+    "gases escapam no aberto"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao queimar palha de aço, Lucas notou que a massa final foi maior que a inicial (8,0 g para 10,3 g), enquanto, ao queimar um papel, a massa do que sobrou foi bem menor. Um colega disse que uma das duas queimas contraria a lei de Lavoisier.",
+   "comando": "Justifique por que nenhuma das duas queimas contraria a lei da conservação das massas.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro das massas medidas",
+    "unidade": "g",
+    "itens": [
+     {
+      "rotulo": "Palha de aço antes",
+      "valor": 8.0
+     },
+     {
+      "rotulo": "Palha de aço depois",
+      "valor": 10.3
+     },
+     {
+      "rotulo": "Papel antes",
+      "valor": 5.0
+     },
+     {
+      "rotulo": "Papel (restos) depois",
+      "valor": 0.4
+     }
+    ]
+   },
+   "ref": "Na palha de aço, o ferro se combina com o oxigênio do ar e o produto, mais pesado, inclui o oxigênio. No papel, formam-se gases (CO2 e vapor de água) que escapam para o ar. Em ambos, a massa total de reagentes e produtos, contando os gases, é a mesma.",
+   "conceitos": [
+    "ferro ganha massa ao combinar com oxigênio",
+    "papel libera gases",
+    "conservação considerando todos os participantes"
+   ]
+  }
+ ],
+ "9º ANO|3|Reconhecer o conceito de pegada ecológica como indicador do impacto das atividades humanas sobre o meio ambiente.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, Rita respondeu a um questionário sobre seus hábitos de transporte, alimentação, consumo de energia e produção de lixo. Ao somar os pontos, o resultado foi \"pegada ecológica de 3,2 planetas\".",
+   "comando": "O que esse resultado indica sobre o estilo de vida de Rita?",
+   "figura": null,
+   "alts": [
+    "Ela produz 3,2 vezes mais gás carbônico que a média, o que equivale a 3,2 planetas poluídos por ano",
+    "Ela utiliza 3,2 planetas inteiros por ano para obter os recursos, deixando-os totalmente sem vida",
+    "Se todos vivessem como ela, seriam necessários cerca de 3,2 planetas para sustentar esse consumo",
+    "Ela precisaria reduzir em 3,2 planetas a sua população de origem para equilibrar o consumo"
+   ],
+   "correta": 2,
+   "explicacao": "A pegada ecológica estima a área de natureza que um estilo de vida exige; 3,2 planetas significa que o ritmo de consumo de Rita não seria sustentável se generalizado."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Marta fez compras na feira do bairro e no supermercado. Na feira, comprou legumes da estação, produzidos a 40 km da cidade e vendidos sem embalagem. No supermercado, comprou legumes fora de época, trazidos de outro país e embalados em bandejas de isopor e plástico.",
+   "comando": "Qual das compras de Dona Marta tende a ter menor pegada ecológica e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das compras",
+    "colunas": [
+     "Local",
+     "Origem",
+     "Distância percorrida",
+     "Embalagem"
+    ],
+    "linhas": [
+     [
+      "Feira",
+      "legumes da estação",
+      "40 km",
+      "nenhuma"
+     ],
+     [
+      "Supermercado",
+      "legumes fora de época",
+      "9 000 km",
+      "isopor e plástico"
+     ]
+    ]
+   },
+   "alts": [
+    "A da feira, porque o transporte curto e a falta de embalagem exigem menos energia e resíduos",
+    "A do supermercado, porque a embalagem conserva melhor os alimentos e evita o desperdício em casa",
+    "A da feira, porque os legumes têm menos nutrientes e são necessários em menor quantidade total",
+    "A do supermercado, porque a produção em grande escala usa menos área por unidade vendida ao ano"
+   ],
+   "correta": 0,
+   "explicacao": "Menor transporte e menos embalagem reduzem o consumo de energia e a geração de lixo, diminuindo a pegada. Os distratores usam argumentos fracos ou sem base."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma reportagem informou que a pegada ecológica média do brasileiro é de cerca de 2,6 hectares globais por pessoa, enquanto a biocapacidade do planeta (área produtiva disponível) é de cerca de 1,6 hectare global por pessoa.",
+   "comando": "O que a comparação entre esses dois valores mostra?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados da reportagem",
+    "unidade": "hectares globais por pessoa",
+    "itens": [
+     {
+      "rotulo": "Pegada do brasileiro (média)",
+      "valor": 2.6
+     },
+     {
+      "rotulo": "Área produtiva disponível por pessoa",
+      "valor": 1.6
+     }
+    ]
+   },
+   "alts": [
+    "O consumo médio é inferior à capacidade de a natureza repor os recursos, gerando reservas ecológicas",
+    "O consumo médio é igual à capacidade de a natureza repor os recursos, mantendo o equilíbrio ecológico",
+    "O consumo médio depende apenas da população, sem relação com a capacidade de a natureza repor recursos",
+    "O consumo médio supera a capacidade de a natureza repor os recursos, gerando déficit ecológico"
+   ],
+   "correta": 3,
+   "explicacao": "Quando a pegada é maior que a biocapacidade, há déficit ecológico: consome-se mais do que a natureza consegue repor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma cidade do interior de São Paulo, um jornal publicou que \"o Dia da Sobrecarga da Terra\" ocorreu em agosto. A partir dessa data, a humanidade passa a consumir recursos naturais mais rápido do que a natureza consegue repor no mesmo ano.",
+   "comando": "Qual é a relação entre essa notícia e a pegada ecológica da humanidade?",
+   "figura": null,
+   "alts": [
+    "A pegada ecológica global é menor do que a capacidade de reposição do planeta em um ano inteiro",
+    "A pegada ecológica global é maior do que a capacidade de reposição do planeta em um ano",
+    "A pegada ecológica global só aumenta depois dessa data, quando começa o consumo",
+    "A pegada ecológica global é igual à população mundial multiplicada pela biocapacidade"
+   ],
+   "correta": 1,
+   "explicacao": "Se o consumo anual se esgota antes do fim do ano, a pegada global excede a capacidade de reposição: há sobrecarga."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Lucas calculou sua pegada ecológica em categorias e quer reduzi-la com ações simples. Ele anotou quanto cada categoria contribui para o total e considera três ações: reduzir carne vermelha, usar mais a bicicleta e trocar lâmpadas por LED.",
+   "comando": "Considerando os dados, qual ação provavelmente reduz mais a sua pegada total?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da pegada de Lucas por categoria",
+    "unidade": "hectares globais",
+    "itens": [
+     {
+      "rotulo": "Alimentação",
+      "valor": 1.4
+     },
+     {
+      "rotulo": "Transporte",
+      "valor": 0.9
+     },
+     {
+      "rotulo": "Moradia e energia",
+      "valor": 0.7
+     },
+     {
+      "rotulo": "Bens e lixo",
+      "valor": 0.6
+     }
+    ]
+   },
+   "alts": [
+    "Trocar as lâmpadas por LED, pois a energia elétrica é a categoria de maior peso",
+    "Reduzir o consumo de carne vermelha, pois a alimentação é a categoria de maior peso",
+    "Usar mais a bicicleta nos trajetos, pois o transporte é a categoria de maior peso",
+    "Reduzir a produção de lixo, pois os bens e o lixo são a categoria de maior peso"
+   ],
+   "correta": 1,
+   "explicacao": "A alimentação é a categoria que mais contribui; reduzir carne vermelha, que exige muita área e água, atua nela. Os outros itens atuam em categorias menores."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na escola, Tiago respondeu a um questionário e obteve o resultado \"pegada ecológica de 2,5 planetas\". Ele não entendeu o que esse número mede.",
+   "comando": "Explique o que é a pegada ecológica e o que o resultado de Tiago indica.",
+   "figura": null,
+   "ref": "A pegada ecológica é um indicador que estima a área de natureza necessária para fornecer os recursos que uma pessoa consome e absorver os resíduos que produz. O resultado de 2,5 planetas indica que, se todos vivessem como Tiago, seriam necessários 2,5 planetas para sustentar esse consumo.",
+   "conceitos": [
+    "estima área de natureza usada",
+    "recursos consumidos e resíduos",
+    "comparação com a capacidade do planeta"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A família de Dona Sônia anotou seus hábitos durante uma semana para calcular a pegada ecológica.",
+   "comando": "Indique dois hábitos do quadro que aumentam a pegada da família e explique por quê.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de hábitos da semana",
+    "colunas": [
+     "Hábito",
+     "Frequência"
+    ],
+    "linhas": [
+     [
+      "Viagens de carro para o trabalho",
+      "10 por semana"
+     ],
+     [
+      "Refeições com carne",
+      "18 por semana"
+     ],
+     [
+      "Banhos de 5 minutos",
+      "14 por semana"
+     ],
+     [
+      "Garrafas plásticas descartáveis",
+      "12 por semana"
+     ]
+    ]
+   },
+   "ref": "Os hábitos que mais aumentam a pegada são o uso do carro, que consome combustível e emite gases, e o consumo frequente de carne, que exige muita área, água e energia. As garrafas descartáveis também geram resíduos e usam matéria-prima.",
+   "conceitos": [
+    "carro consome combustível",
+    "carne exige muita área e água",
+    "descartáveis geram resíduos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os irmãos Pedro e Lia calcularam suas pegadas. Pedro vai à escola de carro, usa ar-condicionado o dia todo e compra roupa nova todo mês. Lia vai de ônibus, usa ventilador e compra roupas em brechós.",
+   "comando": "Compare as pegadas dos irmãos e sugira duas atitudes para Pedro reduzir a dele.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos hábitos",
+    "colunas": [
+     "Hábito",
+     "Pedro",
+     "Lia"
+    ],
+    "linhas": [
+     [
+      "Transporte",
+      "carro",
+      "ônibus"
+     ],
+     [
+      "Refrigeração",
+      "ar-condicionado",
+      "ventilador"
+     ],
+     [
+      "Roupas",
+      "novas todo mês",
+      "de brechó"
+     ]
+    ]
+   },
+   "ref": "A pegada de Pedro é maior, pois seus hábitos usam mais energia, combustível e matérias-primas. Ele poderia usar transporte coletivo ou bicicleta e comprar menos roupas novas, reaproveitando ou comprando usadas.",
+   "conceitos": [
+    "pegada de Pedro maior",
+    "menos uso de combustível e energia",
+    "consumo consciente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um debate, Camila disse que sua família faz coleta seletiva e, por isso, não tem pegada ecológica relevante. Roberto contestou, afirmando que a pegada envolve outros hábitos além do lixo.",
+   "comando": "Julgue o argumento de Camila, justificando com o conceito de pegada ecológica.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de Camila: peso de cada categoria na pegada",
+    "unidade": "hectares globais",
+    "itens": [
+     {
+      "rotulo": "Alimentação",
+      "valor": 1.5
+     },
+     {
+      "rotulo": "Transporte",
+      "valor": 1.1
+     },
+     {
+      "rotulo": "Moradia e energia",
+      "valor": 0.8
+     },
+     {
+      "rotulo": "Bens e lixo",
+      "valor": 0.4
+     }
+    ]
+   },
+   "ref": "O argumento está incompleto. A pegada ecológica soma o impacto de alimentação, transporte, energia e bens, e não só o lixo. Mesmo com coleta seletiva, a família pode ter pegada alta nas outras categorias; por isso, não se pode dizer que ela é irrelevante.",
+   "conceitos": [
+    "pegada soma várias categorias",
+    "lixo é apenas uma parte",
+    "consumo total determina o impacto"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A pegada ecológica global é de cerca de 2,7 hectares globais por pessoa, enquanto a biocapacidade do planeta é de 1,6 hectare global por pessoa. Esse déficit vem se mantendo há décadas.",
+   "comando": "O que pode acontecer se o déficit ecológico continuar? Justifique.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados globais",
+    "unidade": "hectares globais por pessoa",
+    "itens": [
+     {
+      "rotulo": "Pegada ecológica média",
+      "valor": 2.7
+     },
+     {
+      "rotulo": "Biocapacidade do planeta",
+      "valor": 1.6
+     }
+    ]
+   },
+   "ref": "Se o consumo continuar maior que a capacidade de reposição, os recursos naturais (florestas, solos, pesca, água) tendem a se esgotar e os resíduos se acumular, prejudicando a qualidade de vida e as gerações futuras. A natureza não consegue se recuperar no ritmo em que é usada.",
+   "conceitos": [
+    "consumo maior que a reposição",
+    "esgotamento de recursos",
+    "acúmulo de resíduos e impacto futuro"
+   ]
+  }
+ ],
+ "4B|6º ANO|10": [
+  {
+   "tipo": "obj",
+   "enunciado": "Lucas foi à UBS do bairro com dor de ouvido. A médica olhou o canal auditivo com um otoscópio e mostrou a ele uma membrana fina e esticada, no fundo do canal, que vibra quando recebe o som.",
+   "comando": "Que estrutura a médica mostrou a Lucas e qual a sua função na audição?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do exame com otoscópio",
+    "colunas": [
+     "Estrutura vista",
+     "Aspecto",
+     "Posição"
+    ],
+    "linhas": [
+     [
+      "Membrana",
+      "fina e esticada",
+      "fundo do canal auditivo"
+     ]
+    ]
+   },
+   "alts": [
+    "o tímpano, que vibra com as ondas sonoras e transmite as vibrações aos ossículos",
+    "a cóclea, que vibra com as ondas sonoras e transmite as vibrações aos ossículos",
+    "o tímpano, que converte o som em impulsos nervosos e os envia diretamente ao cérebro",
+    "o pavilhão, que vibra com as ondas sonoras e as transmite aos ossículos"
+   ],
+   "correta": 0,
+   "explicacao": "A membrana no fundo do canal é o tímpano; ele vibra e passa as vibrações aos ossículos. Os distratores trocam a estrutura ou atribuem a ele a função da cóclea."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Sofia ficou duas horas num show com fones de ouvido em volume máximo. No dia seguinte, sentiu um zumbido e dificuldade para ouvir sons agudos. A audiologista disse que as células sensoriais de uma estrutura espiralada, cheia de líquido, haviam sido danificadas.",
+   "comando": "Em que parte da orelha ocorreu o dano e qual função foi prejudicada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do exame auditivo",
+    "colunas": [
+     "Tipo de som",
+     "Menor volume que Sofia ouviu"
+    ],
+    "linhas": [
+     [
+      "Grave (250 Hz)",
+      "20 dB"
+     ],
+     [
+      "Médio (1 000 Hz)",
+      "25 dB"
+     ],
+     [
+      "Agudo (8 000 Hz)",
+      "60 dB"
+     ]
+    ]
+   },
+   "alts": [
+    "Na orelha média, onde a cóclea transforma as vibrações em impulsos nervosos",
+    "Na orelha interna, onde os ossículos transformam as vibrações em impulsos nervosos",
+    "Na orelha externa, onde o pavilhão transforma as vibrações em impulsos nervosos",
+    "Na orelha interna, onde a cóclea transforma as vibrações em impulsos nervosos"
+   ],
+   "correta": 3,
+   "explicacao": "A estrutura espiralada com líquido é a cóclea, na orelha interna, onde as vibrações viram impulsos nervosos que seguem ao cérebro."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula prática \"Testando o equilíbrio\", João ficou apoiado em uma perna só. Primeiro com os olhos abertos e depois de olhos fechados. A turma cronometrou quanto tempo ele conseguiu se manter equilibrado.",
+   "comando": "Por que João teve mais dificuldade de se equilibrar de olhos fechados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Condição",
+     "Tempo equilibrado"
+    ],
+    "linhas": [
+     [
+      "Olhos abertos",
+      "40 s"
+     ],
+     [
+      "Olhos fechados",
+      "8 s"
+     ]
+    ]
+   },
+   "alts": [
+    "Sem a visão, o ouvido interno deixa de enviar informações e o cérebro perde o controle do equilíbrio",
+    "Sem a visão, o cérebro conta com menos informações e fica mais difícil manter o equilíbrio",
+    "Sem a visão, o tímpano passa a vibrar mais forte e o cérebro recebe sinais confusos do corpo",
+    "Sem a visão, a cóclea passa a enviar o comando de equilíbrio e o cérebro demora a responder"
+   ],
+   "correta": 1,
+   "explicacao": "O equilíbrio depende da integração de informações da visão, do ouvido interno e do corpo; sem a visão, falta uma delas e é mais difícil manter a posição."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Davi girou dez vezes seguidas no pátio e, ao parar, sentiu que tudo ao redor continuava girando e precisou se sentar. Sua professora explicou que isso acontece por causa de uma estrutura do ouvido interno.",
+   "comando": "Qual explicação está correta para a tontura de Davi?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da brincadeira",
+    "etapas": [
+     "Davi gira dez vezes",
+     "Davi para de girar",
+     "O ambiente parece girar",
+     "Davi se senta para se recuperar"
+    ]
+   },
+   "alts": [
+    "O líquido dos canais semicirculares continua se movendo e envia sinais de giro ao cérebro",
+    "O líquido da cóclea continua em movimento e envia sinais de giro ao cérebro mesmo sem som",
+    "O tímpano continua vibrando e envia sinais de giro ao cérebro mesmo sem nenhum som",
+    "Os ossículos continuam se movendo e enviam sinais de giro ao cérebro mesmo sem nenhum som"
+   ],
+   "correta": 0,
+   "explicacao": "Os canais semicirculares têm líquido que se move com a rotação da cabeça; ao parar, ele ainda se movimenta e o cérebro recebe a sensação de girar."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Beatriz foi ao médico com dificuldade de ouvir e o exame mostrou que o canal auditivo estava totalmente tampado por cera. O irmão dela, Caio, teve o canal livre, mas uma doença danificou as células sensoriais da cóclea. Ambos ouvem pouco.",
+   "comando": "Em que etapa do caminho do som ocorre a falha em cada caso?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos exames",
+    "colunas": [
+     "Pessoa",
+     "Canal auditivo",
+     "Células da cóclea"
+    ],
+    "linhas": [
+     [
+      "Beatriz",
+      "obstruído",
+      "normais"
+     ],
+     [
+      "Caio",
+      "livre",
+      "danificadas"
+     ]
+    ]
+   },
+   "alts": [
+    "Em Beatriz, as vibrações não viram impulsos nervosos; em Caio, o som não chega ao tímpano",
+    "Em Beatriz, os ossículos não vibram; em Caio, o pavilhão não capta os sons do ambiente",
+    "Em Beatriz, o som não chega ao tímpano; em Caio, as vibrações não viram impulsos nervosos",
+    "Em Beatriz, o cérebro não interpreta o som; em Caio, o tímpano não vibra com as ondas sonoras"
+   ],
+   "correta": 2,
+   "explicacao": "A cera impede o som de chegar ao tímpano (condução), enquanto a lesão da cóclea impede a transformação das vibrações em impulsos nervosos."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Paula desenhou a orelha de um colega e identificou o pavilhão, o tímpano e a cóclea. Para completar o trabalho, ela precisa dizer onde cada estrutura fica e para que serve.",
+   "comando": "Indique a localização (orelha externa, média ou interna) e a função de cada uma das três estruturas.",
+   "figura": null,
+   "ref": "O pavilhão fica na orelha externa e capta e direciona o som ao canal auditivo. O tímpano fica entre a orelha externa e a média e vibra com o som. A cóclea fica na orelha interna e transforma as vibrações em impulsos nervosos enviados ao cérebro.",
+   "conceitos": [
+    "pavilhão na orelha externa capta o som",
+    "tímpano vibra",
+    "cóclea transforma vibração em impulso nervoso"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um treino de patinação, Rodrigo gira e depois desacelera sem cair, mas Marcos, que iniciou há pouco, sente tontura com facilidade. A professora disse que ambos têm o mesmo sistema de equilíbrio no ouvido interno.",
+   "comando": "Que parte do ouvido interno participa do equilíbrio e como ela informa a posição da cabeça ao cérebro?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do treino de patinação",
+    "colunas": [
+     "Aluno",
+     "Tempo de prática",
+     "Tontura ao parar de girar"
+    ],
+    "linhas": [
+     [
+      "Rodrigo",
+      "3 anos",
+      "leve"
+     ],
+     [
+      "Marcos",
+      "1 mês",
+      "forte"
+     ]
+    ]
+   },
+   "ref": "Os canais semicirculares (e o vestíbulo) contêm líquido que se move quando a cabeça muda de posição. Esse movimento é detectado por células sensoriais, que enviam impulsos ao cérebro, o qual interpreta a posição e o movimento da cabeça.",
+   "conceitos": [
+    "canais semicirculares no ouvido interno",
+    "líquido se move com a cabeça",
+    "impulsos enviados ao cérebro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em outra rodada do teste de equilíbrio, Ana ficou numa perna só em três condições. Ela anotou o tempo em cada uma.",
+   "comando": "Compare as condições e explique o que os resultados mostram sobre os sentidos que contribuem para o equilíbrio.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento",
+    "unidade": "segundos",
+    "itens": [
+     {
+      "rotulo": "Olhos abertos, piso firme",
+      "valor": 45
+     },
+     {
+      "rotulo": "Olhos fechados, piso firme",
+      "valor": 9
+     },
+     {
+      "rotulo": "Olhos fechados, sobre almofada",
+      "valor": 3
+     }
+    ]
+   },
+   "ref": "O melhor desempenho ocorreu com todos os sentidos disponíveis. Sem a visão, o tempo caiu, e sem boa informação do piso caiu ainda mais. O equilíbrio resulta da integração de informações da visão, do ouvido interno e dos receptores do corpo pelo cérebro.",
+   "conceitos": [
+    "equilíbrio integra visão, ouvido interno e corpo",
+    "menos informações reduzem o desempenho",
+    "cérebro integra os sinais"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Mônica ouve música todos os dias, com fones em volume alto, durante horas. Seu primo disse que isso não faz mal, pois o som só passa pelo ouvido. O médico mostrou um quadro com o tempo máximo seguro de exposição para cada intensidade do som.",
+   "comando": "Justifique, com base no caminho do som, por que o uso de fones em volume alto por muito tempo pode causar perda auditiva.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de tempo seguro de exposição",
+    "colunas": [
+     "Intensidade do som",
+     "Tempo seguro por dia"
+    ],
+    "linhas": [
+     [
+      "85 dB",
+      "8 horas"
+     ],
+     [
+      "100 dB",
+      "15 minutos"
+     ],
+     [
+      "110 dB",
+      "1 minuto"
+     ]
+    ]
+   },
+   "ref": "O som intenso faz as vibrações chegarem com muita força à cóclea e danificarem as células sensoriais que as transformam em impulsos nervosos. Essas células não se regeneram, por isso a perda é permanente. Por isso, o volume e o tempo de exposição precisam ser limitados.",
+   "conceitos": [
+    "som intenso danifica células da cóclea",
+    "células sensoriais não se regeneram",
+    "limitar volume e tempo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Fernanda subiu em um avião e, na decolagem, sentiu o ouvido \"tapado\" e uma leve dor. O pai mandou que ela mastigasse chiclete e a sensação melhorou.",
+   "comando": "Explique o que ocorre na orelha média durante a variação de pressão e como a mastigação ajuda.",
+   "figura": null,
+   "ref": "A mudança de pressão desloca o tímpano, causando desconforto. A orelha média se liga à garganta pela tuba auditiva, que se abre ao mastigar ou engolir, equalizando a pressão dos dois lados do tímpano e fazendo a sensação passar.",
+   "conceitos": [
+    "variação de pressão afeta o tímpano",
+    "tuba auditiva liga orelha média à garganta",
+    "equalização da pressão"
+   ]
+  }
+ ],
+ "4B|7º ANO|7": [
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador da aula, a turma de Helena acompanhou o vírus fictício NVX-25. Na primeira semana, houve 40 casos concentrados em um bairro. Meses depois, o simulador registrou casos em 5 países de 3 continentes ao mesmo tempo.",
+   "comando": "Como se classificam, respectivamente, a situação da primeira semana e a situação de meses depois?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do simulador do vírus NVX-25",
+    "colunas": [
+     "Momento",
+     "Abrangência dos casos",
+     "Casos"
+    ],
+    "linhas": [
+     [
+      "Primeira semana",
+      "um bairro",
+      "40"
+     ],
+     [
+      "Meses depois",
+      "5 países em 3 continentes",
+      "milhares"
+     ]
+    ]
+   },
+   "alts": [
+    "Epidemia na primeira semana e surto meses depois",
+    "Pandemia na primeira semana e epidemia meses depois",
+    "Surto na primeira semana e pandemia meses depois",
+    "Surto na primeira semana e epidemia meses depois"
+   ],
+   "correta": 2,
+   "explicacao": "Surto é aumento de casos localizado; pandemia é a disseminação por vários continentes ao mesmo tempo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Rosa pegou o NVX-25 no simulador e, por conta própria, tomou antibiótico que sobrou de um tratamento antigo. Dois dias depois, os sintomas continuavam iguais. A atendente da UBS explicou que o NVX-25 é um vírus.",
+   "comando": "Por que o antibiótico não resolveu o problema de Dona Rosa?",
+   "figura": null,
+   "alts": [
+    "Antibióticos agem contra bactérias, e o vírus precisa de células hospedeiras para se reproduzir",
+    "Antibióticos atuam contra vírus, mas o uso incompleto do remédio impediu o efeito esperado",
+    "Antibióticos atuam contra bactérias, e o vírus se reproduz sozinho fora das células hospedeiras",
+    "Antibióticos atuam contra fungos, e o vírus se instala nas células sem se reproduzir nelas"
+   ],
+   "correta": 0,
+   "explicacao": "Antibióticos combatem bactérias; vírus são parasitas que se reproduzem dentro das células do hospedeiro e não respondem a esses remédios."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O simulador permitiu comparar duas situações do NVX-25: sem nenhuma medida de prevenção e com uso de máscaras e distanciamento social. Os alunos anotaram o número máximo de infectados ao mesmo tempo (pico) e a semana em que ocorreu.",
+   "comando": "O que a comparação entre as duas situações mostra?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Situação",
+     "Pico de infectados",
+     "Semana do pico"
+    ],
+    "linhas": [
+     [
+      "Sem medidas",
+      "600",
+      "5ª"
+     ],
+     [
+      "Com máscaras e distanciamento",
+      "250",
+      "8ª"
+     ]
+    ]
+   },
+   "alts": [
+    "As medidas aumentaram o pico e atrasaram sua chegada, o que sobrecarregou os serviços de saúde",
+    "As medidas reduziram o pico e anteciparam sua chegada, sem efeito sobre os serviços de saúde",
+    "As medidas eliminaram o vírus e impediram que ocorresse qualquer pico de infectados na cidade",
+    "As medidas reduziram o pico e atrasaram sua chegada, evitando sobrecarga dos serviços de saúde"
+   ],
+   "correta": 3,
+   "explicacao": "As medidas diminuem o pico e o adiam, achatando a curva e dando tempo ao sistema de saúde."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em outra simulação, a turma testou quantas pessoas cada infectado contamina. No cenário 1, sem medidas, cada pessoa infectada contamina 3. No cenário 2, com isolamento de doentes e vacinação, cada infectado contamina, em média, menos de 1 pessoa.",
+   "comando": "O que deve acontecer com o número de casos no cenário 2 ao longo do tempo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Cenário",
+     "Pessoas contaminadas por infectado"
+    ],
+    "linhas": [
+     [
+      "1 (sem medidas)",
+      "3"
+     ],
+     [
+      "2 (isolamento e vacinação)",
+      "0,5"
+     ]
+    ]
+   },
+   "alts": [
+    "O número de casos diminui a cada geração, pois cada infectado passa a doença a menos de uma pessoa",
+    "O número de casos aumenta a cada geração, pois cada infectado passa a doença a pelo menos uma pessoa",
+    "O número de casos se mantém constante, pois cada infectado passa a doença a exatamente uma pessoa",
+    "O número de casos diminui no início e depois aumenta, pois os infectados passam a doença a mais pessoas"
+   ],
+   "correta": 0,
+   "explicacao": "Se cada infectado contamina menos de uma pessoa, a transmissão se extingue gradualmente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma de Marcos analisou as curvas do NVX-25 nos dias 10, 30 e 60 da pandemia simulada e anotou o número de infectados ativos, recuperados e mortes.",
+   "comando": "Qual conclusão os dados permitem sobre o dia 60?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador (acumulado nos dias indicados)",
+    "colunas": [
+     "Dia",
+     "Infectados ativos",
+     "Recuperados",
+     "Mortes"
+    ],
+    "linhas": [
+     [
+      "10",
+      "200",
+      "50",
+      "5"
+     ],
+     [
+      "30",
+      "800",
+      "400",
+      "40"
+     ],
+     [
+      "60",
+      "300",
+      "1500",
+      "90"
+     ]
+    ]
+   },
+   "alts": [
+    "Os casos ativos diminuíram porque a maioria dos infectados morreu, indicando fase de declínio",
+    "Os casos ativos diminuíram porque a maioria dos infectados se recuperou, indicando declínio",
+    "Os casos ativos aumentaram porque a maioria dos infectados se recuperou, indicando fase de expansão",
+    "Os casos ativos diminuíram porque o vírus desapareceu da população, indicando fim da pandemia"
+   ],
+   "correta": 1,
+   "explicacao": "Entre os dias 30 e 60, os recuperados cresceram muito mais que as mortes, e os infectados ativos caíram: o vírus ainda circula, mas a pandemia está em declínio."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Durante o estudo do NVX-25, a professora pediu que os alunos listassem diferenças entre vírus e bactérias, usando as observações do quadro.",
+   "comando": "Explique por que um antibiótico trata infecção por bactéria, mas não resolve uma doença causada por vírus.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações",
+    "colunas": [
+     "Característica",
+     "Vírus",
+     "Bactéria"
+    ],
+    "linhas": [
+     [
+      "Estrutura",
+      "sem célula",
+      "uma célula"
+     ],
+     [
+      "Reprodução",
+      "só dentro de células hospedeiras",
+      "por conta própria"
+     ]
+    ]
+   },
+   "ref": "Os antibióticos atacam estruturas e processos das bactérias, que são seres de uma célula e se reproduzem sozinhas. Os vírus não têm célula e se reproduzem usando as células do hospedeiro, por isso o antibiótico não os atinge.",
+   "conceitos": [
+    "bactéria é uma célula",
+    "vírus depende da célula hospedeira",
+    "antibiótico age sobre bactérias"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O jornal da escola publicou três notícias sobre casos de NVX-25 em momentos diferentes. A professora pediu que a turma as classificasse.",
+   "comando": "Classifique cada situação do quadro como surto, epidemia ou pandemia e justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das notícias",
+    "colunas": [
+     "Notícia",
+     "Abrangência"
+    ],
+    "linhas": [
+     [
+      "A",
+      "30 casos em uma escola"
+     ],
+     [
+      "B",
+      "milhares de casos em todo o estado"
+     ],
+     [
+      "C",
+      "casos em dezenas de países dos 5 continentes"
+     ]
+    ]
+   },
+   "ref": "A é um surto (aumento localizado de casos). B é uma epidemia (grande número de casos em uma região maior). C é uma pandemia (disseminação por vários continentes ao mesmo tempo).",
+   "conceitos": [
+    "surto é localizado",
+    "epidemia atinge região maior",
+    "pandemia atinge vários continentes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No simulador, os alunos testaram três conjuntos de medidas para o NVX-25 e anotaram o número máximo de infectados ao mesmo tempo em cada teste.",
+   "comando": "Ordene os conjuntos do mais para o menos eficaz e explique como cada medida ajuda a reduzir a transmissão.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: pico de infectados",
+    "unidade": "pessoas",
+    "itens": [
+     {
+      "rotulo": "Sem medidas",
+      "valor": 900
+     },
+     {
+      "rotulo": "Só máscaras",
+      "valor": 500
+     },
+     {
+      "rotulo": "Máscaras e distanciamento",
+      "valor": 220
+     }
+    ]
+   },
+   "ref": "O mais eficaz é máscaras e distanciamento (pico 220), depois só máscaras (500) e, por último, sem medidas (900). A máscara reduz a liberação e a inalação de gotículas com o vírus e o distanciamento diminui o contato entre as pessoas, e ambos reduzem a chance de transmissão.",
+   "conceitos": [
+    "combinar medidas reduz mais o pico",
+    "máscara reduz gotículas",
+    "distanciamento reduz contatos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na simulação, o número de infectados ativos subiu até o dia 40 e depois caiu, mesmo sem nenhuma medida de prevenção nova. Um aluno achou estranho e disse que o vírus tinha desaparecido.",
+   "comando": "Explique por que a curva de infectados caiu e se o vírus necessariamente desapareceu.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador",
+    "colunas": [
+     "Dia",
+     "Infectados ativos",
+     "Pessoas ainda não infectadas"
+    ],
+    "linhas": [
+     [
+      "20",
+      "300",
+      "8 000"
+     ],
+     [
+      "40",
+      "900",
+      "4 500"
+     ],
+     [
+      "60",
+      "250",
+      "2 000"
+     ]
+    ]
+   },
+   "ref": "A curva cai porque o número de pessoas suscetíveis diminui (muitas já se recuperaram) e cada infectado encontra menos pessoas para contaminar. O vírus não necessariamente desapareceu: ainda circula, e pode voltar a crescer se houver pessoas suscetíveis.",
+   "conceitos": [
+    "menos pessoas suscetíveis",
+    "recuperados reduzem a transmissão",
+    "vírus pode continuar circulando"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Quando o NVX-25 surgiu no país A, o primeiro caso registrado fora de lá ocorreu no país B, doze dias depois. Em um mês, havia casos em quase todos os continentes. A OMS recomendou que os países compartilhassem dados e medidas.",
+   "comando": "Justifique por que a cooperação internacional coordenada pela OMS é importante no controle de uma pandemia.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de chegada do vírus",
+    "colunas": [
+     "País",
+     "Dia do primeiro caso"
+    ],
+    "linhas": [
+     [
+      "A",
+      "0"
+     ],
+     [
+      "B",
+      "12"
+     ],
+     [
+      "C",
+      "20"
+     ],
+     [
+      "D",
+      "30"
+     ]
+    ]
+   },
+   "ref": "O vírus se espalha rapidamente com a circulação de pessoas, e uma doença que surge em um país pode chegar a muitos outros. A OMS reúne e divulga informações, recomenda medidas e coordena ações, permitindo respostas rápidas e semelhantes entre os países.",
+   "conceitos": [
+    "doenças atravessam fronteiras",
+    "OMS coordena e informa",
+    "ação conjunta controla melhor"
+   ]
+  }
+ ],
+ "4B|8º ANO|4": [
+  {
+   "tipo": "obj",
+   "enunciado": "O grupo de Isabela planeja um bairro sustentável no interior de São Paulo, onde há muita plantação de cana-de-açúcar. Na usina da região, o bagaço da cana que sobra da moagem é queimado para gerar eletricidade, e a cana é replantada a cada safra.",
+   "comando": "Por que a energia gerada a partir do bagaço de cana é considerada renovável?",
+   "figura": null,
+   "alts": [
+    "Porque a cana é replantada e cresce de novo em poucos meses, repondo a fonte no ritmo do uso",
+    "Porque a queima do bagaço não libera gás algum, já que a matéria vegetal é totalmente consumida",
+    "Porque o bagaço é um resíduo sem custo, e a fonte é renovável quando o combustível é barato",
+    "Porque a cana absorve o petróleo do solo e o transforma em combustível a cada nova safra"
+   ],
+   "correta": 0,
+   "explicacao": "Fontes renováveis se repõem em escala de tempo curta; a cana volta a crescer a cada safra. Os distratores confundem renovável com baixo custo ou sem emissões."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na simulação do bairro, o grupo de Pedro instalou painéis solares e anotou a eletricidade gerada ao longo do dia e o consumo médio dos moradores nos mesmos horários.",
+   "comando": "Qual limitação da energia solar aparece nos dados do grupo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de geração e consumo do bairro",
+    "colunas": [
+     "Horário",
+     "Geração dos painéis (kW)",
+     "Consumo do bairro (kW)"
+    ],
+    "linhas": [
+     [
+      "6h",
+      "10",
+      "40"
+     ],
+     [
+      "12h",
+      "100",
+      "60"
+     ],
+     [
+      "18h",
+      "15",
+      "90"
+     ],
+     [
+      "22h",
+      "0",
+      "70"
+     ]
+    ]
+   },
+   "alts": [
+    "A geração depende do consumo dos moradores e é baixa nos horários em que o Sol está mais forte",
+    "A geração depende da luz do Sol e não acompanha o consumo, que é alto à noite no bairro",
+    "A geração é constante ao longo do dia e supera o consumo do bairro em todos os horários",
+    "A geração diminui pela poluição que os painéis emitem, o que reduz o fornecimento ao bairro"
+   ],
+   "correta": 1,
+   "explicacao": "A energia solar é intermitente: só gera com luz e deixa o bairro sem geração suficiente à noite."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A equipe de Camila quer instalar uma turbina eólica. As medições de vento em dois terrenos da prefeitura, feitas durante um ano, mostram os valores da velocidade média. A turbina escolhida só gera energia de forma eficiente com ventos acima de 5 m/s.",
+   "comando": "Em qual terreno a turbina deve ser instalada e por quê?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados das medições de vento",
+    "unidade": "m/s",
+    "itens": [
+     {
+      "rotulo": "Terreno A (várzea)",
+      "valor": 3.2
+     },
+     {
+      "rotulo": "Terreno B (topo da colina)",
+      "valor": 7.4
+     }
+    ]
+   },
+   "alts": [
+    "No terreno A, pois a velocidade média do vento é menor e poupa o equipamento da turbina",
+    "No terreno B, pois ventos mais fortes exigem mais área ocupada pela turbina",
+    "No terreno B, pois a velocidade média do vento está acima do mínimo necessário",
+    "No terreno A, pois ventos fracos garantem geração constante ao longo do dia"
+   ],
+   "correta": 2,
+   "explicacao": "A geração eólica exige velocidade de vento acima de um mínimo; só o terreno B atende."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na discussão do grupo, Rafael propôs uma pequena usina hidrelétrica no rio da cidade. Ana respondeu que ela tem vantagens e desvantagens que precisam ser pesadas. Os dois pesquisaram e listaram pontos.",
+   "comando": "Qual alternativa apresenta corretamente uma vantagem e uma desvantagem da hidrelétrica?",
+   "figura": null,
+   "alts": [
+    "Vantagem: não emite gases poluentes ao gerar energia; desvantagem: alaga áreas e altera o rio",
+    "Vantagem: funciona sem depender da chuva no rio; desvantagem: libera gases poluentes ao gerar energia",
+    "Vantagem: pode ser instalada em qualquer local; desvantagem: não gera energia durante a noite",
+    "Vantagem: custa pouco e ocupa pouco espaço; desvantagem: gera energia apenas quando há vento"
+   ],
+   "correta": 0,
+   "explicacao": "A hidrelétrica não emite gases na operação, mas o alagamento e a barragem afetam fauna, flora e populações."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A prefeitura fez uma simulação para o bairro, que precisa de 5 MW de potência, mas só dispõe de um terreno de 6 hectares. O grupo pesquisou a área necessária por MW e uma ressalva de cada fonte.",
+   "comando": "Qual escolha considera adequadamente espaço e limitação da fonte?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de área e limitação por fonte",
+    "colunas": [
+     "Fonte",
+     "Área por MW (ha)",
+     "Limitação"
+    ],
+    "linhas": [
+     [
+      "Solar fotovoltaica",
+      "2,0",
+      "só gera com luz"
+     ],
+     [
+      "Eólica",
+      "1,0",
+      "depende do vento"
+     ],
+     [
+      "Biomassa de bagaço",
+      "0,5",
+      "depende da safra da cana"
+     ]
+    ]
+   },
+   "alts": [
+    "A solar ocupa 5 ha e cabe no terreno, mas só gera quando há vento suficiente na região",
+    "A eólica ocupa 10 ha e não cabe no terreno, mas gera mesmo sem vento nenhum",
+    "A solar ocupa 10 ha e cabe no terreno, mas só gera durante a safra da cana",
+    "A eólica ocupa 5 ha e cabe no terreno, mas só gera quando há vento suficiente"
+   ],
+   "correta": 3,
+   "explicacao": "A eólica (1,0 ha/MW × 5 MW = 5 ha) cabe nos 6 ha, com a limitação do vento. A solar exigiria 10 ha."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Mariana disse na aula que \"energia renovável é a que não polui\". O professor pediu que o grupo explicasse o conceito com exemplos do bairro sustentável.",
+   "comando": "Explique o que são fontes renováveis de energia e cite duas que poderiam ser usadas no bairro sustentável.",
+   "figura": null,
+   "ref": "Fontes renováveis são aquelas que se repõem naturalmente em um tempo curto, como o Sol, o vento, a água e a biomassa. No bairro poderiam ser usadas a solar e a eólica, por exemplo. Renovável não significa que não cause impacto.",
+   "conceitos": [
+    "renovável se repõe rápido",
+    "exemplos: solar, eólica, hidrelétrica, biomassa",
+    "renovável não é sinônimo de sem impacto"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O grupo de Lucas pesquisou a energia solar para o bairro e fez um quadro com características da fonte.",
+   "comando": "Com base no quadro, indique uma vantagem e uma desvantagem da energia solar para o bairro.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de pesquisa",
+    "colunas": [
+     "Característica",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Gases emitidos na operação",
+      "nenhum"
+     ],
+     [
+      "Geração à noite",
+      "nenhuma"
+     ],
+     [
+      "Custo inicial de instalação",
+      "alto"
+     ]
+    ]
+   },
+   "ref": "Vantagem: não emite gases poluentes durante a geração, aproveitando uma fonte inesgotável, o Sol. Desvantagem: não gera à noite e tem custo inicial alto, sendo necessário armazenar energia ou combinar com outra fonte.",
+   "conceitos": [
+    "não emite gases na operação",
+    "intermitência",
+    "custo inicial alto"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O grupo de Beatriz escolheu usar painéis solares e uma usina de biomassa de bagaço de cana para abastecer o bairro. Precisam justificar a escolha no parágrafo final do trabalho.",
+   "comando": "Escreva um parágrafo que justifique a escolha, indicando uma vantagem e uma limitação de cada fonte.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das fontes escolhidas",
+    "colunas": [
+     "Fonte",
+     "Disponibilidade no interior de SP"
+    ],
+    "linhas": [
+     [
+      "Solar",
+      "muitos dias de Sol por ano"
+     ],
+     [
+      "Biomassa de bagaço",
+      "grande produção de cana na região"
+     ]
+    ]
+   },
+   "ref": "A solar aproveita os muitos dias de Sol e não emite gases, mas não gera à noite. A biomassa usa o bagaço da cana da região e pode gerar à noite, mas depende da safra e libera gás carbônico na queima. Combinadas, uma complementa a limitação da outra.",
+   "conceitos": [
+    "aproveitar recursos locais",
+    "limitações de cada fonte",
+    "complementaridade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os painéis do bairro geram muito ao meio-dia, mas quase nada às 18h, quando os moradores chegam em casa e o consumo é maior. Os alunos precisam propor soluções.",
+   "comando": "Explique o problema da intermitência no gráfico e proponha duas soluções para o bairro.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados de geração solar ao longo do dia",
+    "unidade": "kW",
+    "itens": [
+     {
+      "rotulo": "6h",
+      "valor": 10
+     },
+     {
+      "rotulo": "12h",
+      "valor": 100
+     },
+     {
+      "rotulo": "18h",
+      "valor": 15
+     },
+     {
+      "rotulo": "22h",
+      "valor": 0
+     }
+    ]
+   },
+   "ref": "A geração solar varia com a luz e não coincide com o horário de maior consumo. Soluções: armazenar energia em baterias para usar à noite e combinar com outras fontes, como biomassa ou eólica, que gerem em outros horários.",
+   "conceitos": [
+    "geração não coincide com o consumo",
+    "armazenamento",
+    "combinação de fontes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma cidade pequena do interior precisa decidir entre uma hidrelétrica e um parque eólico. O quadro resume o que cada projeto exigiria.",
+   "comando": "Qual projeto você escolheria? Justifique usando prós e contras dos dados.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos projetos",
+    "colunas": [
+     "Característica",
+     "Hidrelétrica",
+     "Parque eólico"
+    ],
+    "linhas": [
+     [
+      "Área alagada ou ocupada",
+      "300 ha alagados",
+      "20 ha ocupados"
+     ],
+     [
+      "Depende de",
+      "chuva e vazão do rio",
+      "vento"
+     ],
+     [
+      "Gases na operação",
+      "nenhum",
+      "nenhum"
+     ]
+    ]
+   },
+   "ref": "Resposta possível: o parque eólico, pois ocupa muito menos área e evita o alagamento e o impacto sobre a fauna e as pessoas do local, apesar de depender do vento. A hidrelétrica seria mais previsível se o rio tiver boa vazão, mas causaria grande impacto ambiental. Vale qualquer escolha justificada com prós e contras.",
+   "conceitos": [
+    "comparar área e impacto",
+    "limitações de cada fonte",
+    "justificar a escolha"
+   ]
+  }
+ ],
+ "4B|8º ANO|20": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de informática, o grupo de Larissa usou o simulador do Museu Light com a casa-modelo no perfil de uso padrão. O simulador mostrou o consumo mensal de eletricidade de cada cômodo da casa.",
+   "comando": "Qual cômodo tem o maior consumo e qual aparelho provavelmente explica esse resultado?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do simulador: consumo por cômodo no perfil padrão",
+    "unidade": "kWh por mês",
+    "itens": [
+     {
+      "rotulo": "Banheiro",
+      "valor": 95
+     },
+     {
+      "rotulo": "Cozinha",
+      "valor": 70
+     },
+     {
+      "rotulo": "Sala",
+      "valor": 25
+     },
+     {
+      "rotulo": "Quartos",
+      "valor": 20
+     }
+    ]
+   },
+   "alts": [
+    "O banheiro, por causa do chuveiro elétrico, que tem potência muito elevada",
+    "A cozinha, por causa da lâmpada, que fica acesa por muitas horas por dia",
+    "O banheiro, por causa do secador de cabelo, que fica ligado muitas horas por dia",
+    "A sala, por causa da televisão, que tem a maior potência entre os aparelhos"
+   ],
+   "correta": 0,
+   "explicacao": "O banheiro consome mais (95 kWh), por causa do chuveiro elétrico, de potência muito alta. Os distratores atribuem o consumo a aparelhos de baixa potência ou a outro cômodo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Rita quer saber quanto sua lâmpada de 10 W gasta por mês. Ela fica acesa 5 horas por dia, durante 30 dias. No simulador, ela lembrou que a energia elétrica consumida é calculada multiplicando a potência pelo tempo de uso.",
+   "comando": "Qual é o consumo mensal dessa lâmpada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador",
+    "colunas": [
+     "Aparelho",
+     "Potência",
+     "Tempo de uso por dia",
+     "Dias"
+    ],
+    "linhas": [
+     [
+      "Lâmpada",
+      "10 W",
+      "5 h",
+      "30"
+     ]
+    ]
+   },
+   "alts": [
+    "15 kWh, pois 10 W × 5 h × 30 dias = 15 000 Wh e 1 kWh equivale a 1 000 Wh",
+    "1,5 kWh, pois 10 W × 5 h × 30 dias = 1 500 Wh e 1 kWh equivale a 1 000 Wh",
+    "0,15 kWh, pois 10 W × 5 h × 30 dias = 150 Wh e 1 kWh equivale a 1 000 Wh",
+    "50 kWh, pois 10 W × 5 h = 50 Wh e depois se multiplica por 1 000 para dar kWh"
+   ],
+   "correta": 1,
+   "explicacao": "E = P × t = 10 W × 150 h = 1 500 Wh = 1,5 kWh. Os distratores erram a conversão de Wh para kWh."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador, Rafael comparou o perfil padrão com o econômico. No padrão, o banho dura 15 minutos; no econômico, 8 minutos. O chuveiro elétrico da casa tem potência de 5 500 W (5,5 kW) e é usado uma vez por dia durante 30 dias.",
+   "comando": "Quanto de energia, aproximadamente, o perfil econômico economiza por mês só com o banho?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador",
+    "colunas": [
+     "Perfil",
+     "Duração do banho",
+     "Potência do chuveiro"
+    ],
+    "linhas": [
+     [
+      "Padrão",
+      "15 min",
+      "5 500 W"
+     ],
+     [
+      "Econômico",
+      "8 min",
+      "5 500 W"
+     ]
+    ]
+   },
+   "alts": [
+    "Cerca de 41 kWh, pois a redução de 7 min por dia equivale a 5,5 kW × 15/60 h × 30",
+    "Cerca de 1,2 kWh, pois a redução de 7 min por dia equivale a 5,5 kW × 7/60 h × 1",
+    "Cerca de 19 kWh, pois a redução de 7 min por dia equivale a 5,5 kW × 7/60 h × 30",
+    "Cerca de 3 kWh, pois a redução de 7 min por dia equivale a 0,55 kW × 7/60 h × 30"
+   ],
+   "correta": 2,
+   "explicacao": "A economia vem dos 7 minutos a menos: 5,5 kW × (7/60) h × 30 dias ≈ 19 kWh."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No quarto da casa-modelo, Camila comparou dois jeitos de se refrescar: o ar-condicionado, de 1 400 W, usado 4 horas por dia, e o ventilador, de 80 W, usado 8 horas por dia.",
+   "comando": "Qual conclusão sobre o consumo diário dos dois aparelhos é correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador",
+    "colunas": [
+     "Aparelho",
+     "Potência",
+     "Tempo de uso por dia"
+    ],
+    "linhas": [
+     [
+      "Ar-condicionado",
+      "1 400 W",
+      "4 h"
+     ],
+     [
+      "Ventilador",
+      "80 W",
+      "8 h"
+     ]
+    ]
+   },
+   "alts": [
+    "O ventilador consome cerca de 2 vezes mais, pois o tempo de uso maior compensa a potência menor",
+    "O ar-condicionado consome cerca de 2 vezes mais, pois o tempo de uso depende apenas da potência",
+    "O ventilador e o ar-condicionado consomem o mesmo, pois o tempo total de uso é de 12 horas",
+    "O ar-condicionado consome cerca de 9 vezes mais, pois a potência maior compensa o tempo menor"
+   ],
+   "correta": 3,
+   "explicacao": "Ar: 1,4 kW × 4 h = 5,6 kWh; ventilador: 0,08 kW × 8 h = 0,64 kWh; razão ≈ 8,75, ou cerca de 9 vezes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao final da simulação, o grupo de Marcos somou o consumo de cada cômodo nos dois perfis e discutiu onde a mudança de hábitos mais fez diferença.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador: consumo mensal (kWh)",
+    "colunas": [
+     "Cômodo",
+     "Padrão",
+     "Econômico"
+    ],
+    "linhas": [
+     [
+      "Banheiro",
+      "95",
+      "60"
+     ],
+     [
+      "Cozinha",
+      "70",
+      "58"
+     ],
+     [
+      "Sala",
+      "25",
+      "14"
+     ],
+     [
+      "Quartos",
+      "20",
+      "12"
+     ]
+    ]
+   },
+   "alts": [
+    "A sala concentra mais da metade da economia total, pois teve a maior redução percentual da casa",
+    "O banheiro concentra mais da metade da economia, embora a sala tenha a maior redução percentual",
+    "O banheiro tem a maior redução percentual e, por isso, concentra mais da metade da economia",
+    "A cozinha concentra mais da metade da economia, pois é o segundo maior consumo da casa"
+   ],
+   "correta": 1,
+   "explicacao": "A economia total é de 66 kWh; o banheiro economiza 35 (mais da metade), mas a maior redução percentual (44%) foi da sala."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ana tem dois aparelhos: um ferro de passar de 1 000 W, usado 1 hora por semana, e uma lâmpada LED de 9 W, acesa 5 horas por dia. Ela acha que a lâmpada gasta mais, pois fica ligada mais tempo.",
+   "comando": "Calcule, em um mês de 4 semanas, o consumo do ferro e o da lâmpada e diga quem consome mais.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador",
+    "colunas": [
+     "Aparelho",
+     "Potência",
+     "Tempo de uso"
+    ],
+    "linhas": [
+     [
+      "Ferro de passar",
+      "1 000 W",
+      "1 h por semana"
+     ],
+     [
+      "Lâmpada LED",
+      "9 W",
+      "5 h por dia (30 dias)"
+     ]
+    ]
+   },
+   "ref": "Ferro: 1 kW × 4 h = 4 kWh. Lâmpada: 0,009 kW × 150 h = 1,35 kWh. O ferro consome mais, pois sua potência é muito maior, mesmo com menos tempo de uso. O consumo depende da potência e do tempo.",
+   "conceitos": [
+    "E = P × t",
+    "ferro 4 kWh e lâmpada 1,35 kWh",
+    "potência e tempo juntos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O simulador exibiu um gráfico com o consumo mensal dos cômodos da casa-modelo no perfil padrão. A turma precisa propor ações para economizar.",
+   "comando": "Indique o cômodo de maior consumo e duas atitudes para reduzir o consumo nele.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do simulador: consumo por cômodo",
+    "unidade": "kWh por mês",
+    "itens": [
+     {
+      "rotulo": "Banheiro",
+      "valor": 95
+     },
+     {
+      "rotulo": "Cozinha",
+      "valor": 70
+     },
+     {
+      "rotulo": "Sala",
+      "valor": 25
+     },
+     {
+      "rotulo": "Quartos",
+      "valor": 20
+     }
+    ]
+   },
+   "ref": "O banheiro é o cômodo de maior consumo. Atitudes: diminuir o tempo do banho e usar o chuveiro na posição de menor potência (ou morna) em dias quentes, e evitar usar o secador por muito tempo.",
+   "conceitos": [
+    "identificar o maior consumo",
+    "reduzir o tempo de uso",
+    "reduzir a potência do aparelho"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A família de Carlos paga R$ 0,80 por kWh. Ele reduziu o banho de 15 para 10 minutos, com chuveiro de 5 500 W, durante 30 dias. Ele quer saber quanto economiza.",
+   "comando": "Calcule a energia e o valor em reais economizados em um mês, mostrando as contas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador",
+    "colunas": [
+     "Perfil",
+     "Duração do banho",
+     "Potência"
+    ],
+    "linhas": [
+     [
+      "Antes",
+      "15 min",
+      "5 500 W"
+     ],
+     [
+      "Depois",
+      "10 min",
+      "5 500 W"
+     ]
+    ]
+   },
+   "ref": "Redução de 5 min por dia = 5/60 h. Energia economizada = 5,5 kW × (5/60) h × 30 dias ≈ 13,75 kWh. Valor = 13,75 × R$ 0,80 = R$ 11,00 por mês.",
+   "conceitos": [
+    "E = P × t",
+    "13,75 kWh",
+    "R$ 11,00"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na casa-modelo, o grupo de Bruna trocou 6 lâmpadas incandescentes de 60 W por 6 lâmpadas LED de 9 W. Todas ficam acesas 5 horas por dia, durante 30 dias.",
+   "comando": "Calcule o consumo mensal antes e depois da troca e conclua se a mudança vale a pena.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador",
+    "colunas": [
+     "Tipo de lâmpada",
+     "Quantidade",
+     "Potência",
+     "Uso por dia"
+    ],
+    "linhas": [
+     [
+      "Incandescente",
+      "6",
+      "60 W",
+      "5 h"
+     ],
+     [
+      "LED",
+      "6",
+      "9 W",
+      "5 h"
+     ]
+    ]
+   },
+   "ref": "Incandescentes: 6 × 0,06 kW × 150 h = 54 kWh. LED: 6 × 0,009 kW × 150 h = 8,1 kWh. A economia é de cerca de 45,9 kWh por mês, sem perda de iluminação, portanto a troca vale a pena.",
+   "conceitos": [
+    "cálculo com E = P × t",
+    "54 kWh e 8,1 kWh",
+    "economia de cerca de 46 kWh"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro afirmou que apagar a luz de um quarto vazio não faz diferença, pois uma lâmpada gasta muito pouco. Para testar, o grupo calculou o consumo de uma lâmpada de 60 W esquecida acesa por 8 horas por dia durante um mês e comparou com um banho de chuveiro.",
+   "comando": "Avalie a afirmação de Pedro usando os dados e explique a importância dos pequenos hábitos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador (consumo em 30 dias)",
+    "colunas": [
+     "Situação",
+     "Energia"
+    ],
+    "linhas": [
+     [
+      "Lâmpada de 60 W acesa 8 h por dia",
+      "14,4 kWh"
+     ],
+     [
+      "Banho de 10 min por dia (5 500 W)",
+      "27,5 kWh"
+     ]
+    ]
+   },
+   "ref": "A afirmação é parcialmente falsa: uma lâmpada esquecida consome 14,4 kWh por mês, cerca de metade do que um banho diário. Vários pequenos desperdícios somados representam um gasto grande, por isso apagar luzes desnecessárias ajuda a economizar.",
+   "conceitos": [
+    "lâmpada esquecida consome 14,4 kWh",
+    "comparação com o banho",
+    "soma de pequenos hábitos"
+   ]
+  }
+ ]
+}

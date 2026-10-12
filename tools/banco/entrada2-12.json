@@ -1,0 +1,74 @@
+{
+ "6º ANO|2|Analisar o processo de fossilização ao longo da história geológica da Terra.": {
+  "serie": "6",
+  "desc": "Analisar o processo de fossilização ao longo da história geológica da Terra.",
+  "hab": "EF06CI12",
+  "habTxt": "Classificar rochas, seus processos de formação e a formação/transformação do solo, incluindo a fossilização em rochas sedimentares (AE3).",
+  "nome": "Fóssil de massinha",
+  "concreta": "Pressionar concha ou folha na massinha e retirar, formando um molde, como uma impressão fóssil. Depois montar no pote camadas de areia e terra com 'fósseis' de papel: as camadas de baixo se depositaram antes, logo são mais antigas."
+ },
+ "7º ANO|2|Reconhecer o efeito estufa como fenômeno natural e os impactos das ações humanas que o intensificam.": {
+  "serie": "7",
+  "desc": "Reconhecer o efeito estufa como fenômeno natural e os impactos das ações humanas que o intensificam.",
+  "hab": "EF07CI13A",
+  "habTxt": "Identificar o efeito estufa como fenômeno natural e as ações humanas que o intensificam (AE7).",
+  "nome": "Estufa no copo",
+  "concreta": "Colocar ao sol dois copos com a mesma água, um coberto com saco plástico; após 15 min comparar a temperatura: o coberto retém mais calor. É um modelo de como certos gases da atmosfera retêm calor."
+ },
+ "8º ANO|3|Diferenciar os eclipses solar e lunar com base nas posições relativas entre Sol, Terra e Lua.": {
+  "serie": "8",
+  "desc": "Diferenciar os eclipses solar e lunar com base nas posições relativas entre Sol, Terra e Lua.",
+  "hab": "EF08CI12",
+  "habTxt": "Explicar fenômenos astronômicos cíclicos pelos movimentos de Sol, Terra e Lua e pela inclinação do eixo terrestre (AE8).",
+  "nome": "Quem fica no meio?",
+  "concreta": "Com a sala escura, alinha-se lanterna, Lua e Terra (sombra da Lua na Terra = eclipse solar) e depois lanterna, Terra e Lua (Lua entra na sombra da Terra = eclipse lunar)."
+ },
+ "9º ANO|1|Analisar fenômenos relacionados às ondas mecânicas e eletromagnéticas em situações do cotidiano.": {
+  "serie": "9",
+  "desc": "Analisar fenômenos relacionados às ondas mecânicas e eletromagnéticas em situações do cotidiano.",
+  "hab": "EF09CI05, EF09CI04",
+  "habTxt": "Investigar ondas mecânicas e eletromagnéticas e como esse conhecimento transformou a comunicação humana (AE6).",
+  "nome": "Onda na corda e na luz",
+  "concreta": "Com a corda/mola, os alunos produzem ondas mecânicas; o lápis no copo d'água parece 'quebrado' (refração) e a lanterna no espelho mostra a reflexão."
+ },
+ "9º ANO|2|Analisar os efeitos e aplicações das radiações ionizantes no organismo humano e na área médica.": {
+  "serie": "9",
+  "desc": "Analisar os efeitos e aplicações das radiações ionizantes no organismo humano e na área médica.",
+  "hab": "EF09CI06, EF09CI07",
+  "habTxt": "Classificar radiações eletromagnéticas por frequência e aplicações tecnológicas, reconhecendo implicações para a saúde (AE5).",
+  "nome": "Radiação: amiga ou perigo?",
+  "concreta": "Observando uma radiografia contra a janela, a turma discute como o raio X atravessa tecidos moles e é barrado pelos ossos; no espectro, destacam-se as radiações ionizantes (UV de alta energia, raios X e gama)."
+ },
+ "4B|6º ANO|12": {
+  "serie": "6",
+  "desc": "Relacionar os diferentes tipos de músculos às suas principais características.",
+  "hab": "EF06CI09",
+  "habTxt": "Músculos e tendões; movimentos voluntários e involuntários; músculo esquelético, liso e cardíaco; contração e relaxamento (bíceps/tríceps); saúde muscular.",
+  "nome": "Sistema muscular",
+  "concreta": "Relembre (corrida e sistemas envolvidos); Pause e responda; Na prática: analisar movimento do bíceps (contração, voluntário)."
+ },
+ "4B|7º ANO|9": {
+  "serie": "7",
+  "desc": "Justificar a importância do sistema imune para a saúde física, discutindo os impactos de sua ausência.",
+  "hab": "EF07CI10B",
+  "habTxt": "Imunidade humoral (linfócitos B, anticorpos) e celular (linfócitos T); antígenos; imunização ativa e passiva (natural e artificial); hábitos que fortalecem a imunidade.",
+  "nome": "Sistema imune humano: resposta imune",
+  "concreta": "Relembre linhas de defesa; Pause e responda; Na prática: texto e gráfico sobre amamentação e imunização passiva."
+ },
+ "4B|8º ANO|9": {
+  "serie": "8",
+  "desc": "Analisar corrente alternada e contínua, os modelos de transmissão de energia e o papel dos geradores.",
+  "hab": "EF08CI18*",
+  "habTxt": "Bateria e corrente contínua; corrente alternada e frequência (Hz); indução eletromagnética; geradores, alternadores; painéis fotovoltaicos.",
+  "nome": "Corrente alternada e corrente contínua",
+  "concreta": "Situação-problema: propor soluções de energia (CC e CA) para uma escola-abrigo sem fornecimento elétrico."
+ },
+ "4B|9º ANO|10": {
+  "serie": "9",
+  "desc": "Comparar a transição do geocentrismo ao heliocentrismo, destacando a construção coletiva da ciência e o papel das evidências.",
+  "hab": "EF09CI14",
+  "habTxt": "Geocentrismo (Aristóteles, Hiparco, Ptolomeu e epiciclos); heliocentrismo (Copérnico); órbitas elípticas (Kepler); luneta de Galileu; inércia.",
+  "nome": "Modelos geocêntrico e heliocêntrico: a construção do conhecimento científico ao longo do tempo",
+  "concreta": "Respondem teste sobre o geocentrismo e preenchem tabela-síntese com as ideias de Aristóteles, Hiparco, Ptolomeu, Copérnico, Kepler e Galileu."
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "6º ANO|1|Reconhecer os efeitos da gravidade na organização do Sistema Solar e em fenômenos observáveis no cotidiano.": {
+  "serie": "6",
+  "desc": "Reconhecer os efeitos da gravidade na organização do Sistema Solar e em fenômenos observáveis no cotidiano.",
+  "hab": "EF06CI13, EF06CI14",
+  "habTxt": "Explicar fenômenos causados pelos movimentos do sistema Terra-Sol-Lua: dia/noite, estações, fases da Lua e eclipses (AE2).",
+  "nome": "Quem puxa tudo?",
+  "concreta": "Soltar ao mesmo tempo uma folha aberta e uma amassada; depois girar a meia presa ao barbante: o barbante faz o papel da gravidade do Sol segurando o planeta em órbita. Ao soltar o barbante, a meia sai pela tangente."
+ },
+ "6º ANO|2|Reconhecer as esferas que estruturam a Terra (litosfera, hidrosfera, atmosfera e biosfera), considerando suas funções e características essenciais na dinâmica do planeta.": {
+  "serie": "6",
+  "desc": "Reconhecer as esferas que estruturam a Terra (litosfera, hidrosfera, atmosfera e biosfera), considerando suas funções e características essenciais na dinâmica do planeta.",
+  "hab": "EF06CI11",
+  "habTxt": "Descrever as esferas da Terra (litosfera, hidrosfera, atmosfera, biosfera), o surgimento da litosfera e suas transformações no tempo (AE1).",
+  "nome": "Terra no pote",
+  "concreta": "Montar a 'Terra no pote': pedrinhas e terra (litosfera), água (hidrosfera), ar fechado em cima (atmosfera) e muda (biosfera); colar etiquetas e discutir como a água passa de uma esfera para outra."
+ },
+ "7º ANO|1|Avaliar a qualidade do ar e seus efeitos sobre o ambiente e a saúde.": {
+  "serie": "7",
+  "desc": "Avaliar a qualidade do ar e seus efeitos sobre o ambiente e a saúde.",
+  "hab": "EF07CI12",
+  "habTxt": "Identificar a composição da atmosfera e fatores naturais/humanos que a alteram, com impactos no ambiente e na saúde respiratória (AE2).",
+  "nome": "Cartão pega-poeira",
+  "concreta": "Comparar com lupa cartões com vaselina deixados uma semana antes em locais diferentes (portão perto da rua, pátio, sala), contando pontinhos de partículas em uma grade."
+ },
+ "8º ANO|2|Associar os efeitos da poluição atmosférica na saúde do sistema respiratório.": {
+  "serie": "8",
+  "desc": "Associar os efeitos da poluição atmosférica na saúde do sistema respiratório.",
+  "hab": "EF05CI06B, EF08CI08B",
+  "habTxt": "Explicar o funcionamento do sistema respiratório e fatores que o comprometem, como poluição e doenças (AE6).",
+  "nome": "Filtro do ar",
+  "concreta": "Coladas fitas adesivas em locais da escola (janela da rua, pátio, sala), coletadas na aula e observadas com lupa sobre papel branco: a sujeira mostra partículas no ar que respiramos."
+ },
+ "9º ANO|2|Identificar as características e funções da mitose e da meiose nos ciclos celulares.": {
+  "serie": "9",
+  "desc": "Identificar as características e funções da mitose e da meiose nos ciclos celulares.",
+  "hab": "EF09CI08",
+  "habTxt": "Explicar hereditariedade e aplicações da biotecnologia articulando genética clássica e evolução (AE7).",
+  "nome": "Divide e conquista",
+  "concreta": "Com massinha, a turma modela uma célula com 4 cromossomos: na mitose formam-se 2 células com 4 cada; na meiose, 2 divisões geram 4 células com 2 cada."
+ },
+ "4B|6º ANO|1": {
+  "serie": "6",
+  "desc": "Compreender que o corpo humano é formado por órgãos que atuam em conjunto, organizados em sistemas.",
+  "hab": "EF06CI06",
+  "habTxt": "Níveis de organização (célula, tecido, órgão, sistema, organismo); tecidos epitelial, conjuntivo, muscular e nervoso; principais sistemas.",
+  "nome": "Organização dos órgãos em sistemas do corpo humano",
+  "concreta": "Relembre sobre tecidos; Pause e responda (sequência de níveis); Na prática: mapa mental célula→organismo com exemplos."
+ },
+ "4B|6º ANO|14": {
+  "serie": "6",
+  "desc": "Finalizar a mão biônica seguindo roteiro ilustrado, relacionando o processo à importância da acessibilidade.",
+  "hab": "EF06CI09",
+  "habTxt": "Tendões representados por barbantes; movimentos voluntários da mão; próteses, acessibilidade, inclusão e limites do modelo.",
+  "nome": "Mão biônica: finalização",
+  "concreta": "Retomar checklist, passar barbantes (tendões), acoplar à mão e testar segurando objetos; reflexão escrita sobre acessibilidade."
+ },
+ "4B|7º ANO|11": {
+  "serie": "7",
+  "desc": "Investigar a fabricação e o desenvolvimento de vacinas como mecanismos de promoção da saúde individual, coletiva e ambiental.",
+  "hab": "EF07CI09, EF07CI10B",
+  "habTxt": "Instituto Butantan e Fiocruz; vacinas atenuadas, de subunidade e de mRNA; produção da vacina da influenza em ovos; segurança e controle; SUS.",
+  "nome": "Processo de fabricação de vacinas",
+  "concreta": "Pause e responda; Na prática: tour virtual pelo Museu da Vacina do Butantan em 3 etapas (história, produção, papel do instituto) com questões."
+ },
+ "4B|8º ANO|11": {
+  "serie": "8",
+  "desc": "Apresentar a matriz energética e elétrica brasileira e explicar o percurso da energia da usina até o consumidor.",
+  "hab": "EF08CI06A",
+  "habTxt": "Matriz energética e elétrica do Brasil (BEN); usinas no estado de SP; tensões 127 V/220 V e transformadores; geração, transmissão, distribuição e consumo.",
+  "nome": "Distribuição de energia",
+  "concreta": "Interpretam a tabela de oferta interna de energia do BEN e respondem sobre participação de fontes renováveis, petróleo, solar e nuclear."
+ },
+ "4B|9º ANO|12": {
+  "serie": "9",
+  "desc": "Compreender as características dos planetas rochosos: constituição, distância ao Sol e condições ambientais.",
+  "hab": "EF09CI14",
+  "habTxt": "Mercúrio, Vênus, Terra e Marte; estrutura interna (crosta, manto, núcleo); distâncias em escala; atmosfera; origem dos nomes.",
+  "nome": "Planetas rochosos e gasosos",
+  "concreta": "Retomada da formação dos planetas; questão de múltipla escolha; atividade escrita sobre por que Mercúrio, Vênus e Marte não são habitáveis."
+ }
+}

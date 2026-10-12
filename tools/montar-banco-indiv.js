@@ -2,7 +2,7 @@
 const fs=require('fs'),path=require('path');
 const CAT=require('../api/_catalogo-indiv.js'), I=require('../api/individual.js');
 const out={};let sem=0,cort=0,tot=0,erros=[];
-fs.readdirSync(__dirname+'/banco').filter(f=>/^saida-\d+\.json$/.test(f)).forEach(f=>{
+fs.readdirSync(__dirname+'/banco').filter(f=>/^saida2-\d+\.json$/.test(f)).forEach(f=>{
  const o=JSON.parse(fs.readFileSync(path.join(__dirname,'banco',f),'utf8'));
  Object.keys(o).forEach(k=>{ if(!CAT[k]){erros.push('chave '+k);return;}
   const Q=o[k], obj=Q.filter(q=>q.tipo==='obj'), dis=Q.filter(q=>q.tipo==='dis');

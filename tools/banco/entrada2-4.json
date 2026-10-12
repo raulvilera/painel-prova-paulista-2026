@@ -1,0 +1,82 @@
+{
+ "6º ANO|1|Reconhecer a formação e transformação da Terra ao longo do tempo.": {
+  "serie": "6",
+  "desc": "Reconhecer a formação e transformação da Terra ao longo do tempo.",
+  "hab": "EF06CI11, EF06CI13",
+  "habTxt": "Descrever as esferas da Terra (litosfera, hidrosfera, atmosfera, biosfera), o surgimento da litosfera e suas transformações no tempo (AE1).",
+  "nome": "Linha do tempo no barbante",
+  "concreta": "Esticar 4,6 m de barbante (1 m = 1 bilhão de anos) e prender cartões: formação da Terra, oceanos, primeiros seres vivos, oxigênio no ar, dinossauros (extintos a 6,6 cm do fim) e humanos (a menos de 1 mm do fim)."
+ },
+ "6º ANO|2|Relacionar os impactos das ações humanas à qualidade e à saúde do solo.": {
+  "serie": "6",
+  "desc": "Relacionar os impactos das ações humanas à qualidade e à saúde do solo.",
+  "hab": "EF06CI12",
+  "habTxt": "Classificar rochas, seus processos de formação e a formação/transformação do solo, incluindo a fossilização em rochas sedimentares (AE3).",
+  "nome": "Erosão na garrafa",
+  "concreta": "Regar igualmente duas garrafas PET deitadas com terra, uma coberta por grama/folhas e outra descoberta, e comparar a água recolhida nos copos: a do solo descoberto sai barrenta, carregando solo (erosão)."
+ },
+ "7º ANO|3|Diferenciar Unidades de Conservação de proteção integral e de uso sustentável com base em seus objetivos e formas de uso.": {
+  "serie": "7",
+  "desc": "Diferenciar Unidades de Conservação de proteção integral e de uso sustentável com base em seus objetivos e formas de uso.",
+  "hab": "EF07CI07",
+  "habTxt": "Caracterizar ecossistemas/biomas brasileiros e impactos de catástrofes naturais ou alterações em seus componentes (AE10).",
+  "nome": "Parque ou reserva?",
+  "concreta": "O professor mostra fotos do Parque Estadual da Serra do Mar (proteção integral) e da APA Cananéia-Iguape-Peruíbe (uso sustentável); para cada card de atividade, a turma decide em qual delas ela é permitida."
+ },
+ "8º ANO|1|Comparar os diferentes tipos de reprodução (assexuada e sexuada) e sua influência no sucesso reprodutivo das espécies.": {
+  "serie": "8",
+  "desc": "Comparar os diferentes tipos de reprodução (assexuada e sexuada) e sua influência no sucesso reprodutivo das espécies.",
+  "hab": "EF08CI07",
+  "habTxt": "Comparar reprodução assexuada e sexuada em vegetais e animais com base em mecanismos evolutivos e adaptativos (AE2).",
+  "nome": "Cópias ou misturas?",
+  "concreta": "Simulação: assexuada = copiar um copinho com 4 feijões iguais; sexuada = juntar 2 feijões de cada pai sorteados. Compara-se a variedade de filhos e o professor relaciona com mitose e meiose."
+ },
+ "9º ANO|3|Analisar evidências da ocorrência de evolução convergente e divergente em imagens, esquemas ou modelos comparativos de organismos.": {
+  "serie": "9",
+  "desc": "Analisar evidências da ocorrência de evolução convergente e divergente em imagens, esquemas ou modelos comparativos de organismos.",
+  "hab": "EF09CI11, EF09CI10",
+  "habTxt": "Analisar a evolução e a diversidade das espécies a partir de evidências científicas e processos evolutivos (AE10).",
+  "nome": "Parecidos, mas nem tanto",
+  "concreta": "Observação de pares de imagens: o professor pinta os mesmos ossos (úmero, rádio, ulna) em braço, nadadeira e asa (homólogos/divergência) e compara com asas de inseto e ave (análogos/convergência)."
+ },
+ "4B|6º ANO|4": {
+  "serie": "6",
+  "desc": "Reconhecer as principais estruturas do sistema nervoso central e suas funções.",
+  "hab": "EF06CI07",
+  "habTxt": "SNC e SNP; encéfalo (cérebro, cerebelo, tronco encefálico); medula espinal; ato reflexo e reflexo patelar.",
+  "nome": "Sistema nervoso central",
+  "concreta": "Relembre identificando partes na figura; Pause e responda (cerebelo); Na prática: texto sobre atos reflexos e questões."
+ },
+ "4B|7º ANO|1": {
+  "serie": "7",
+  "desc": "Usar o conceito de saúde da OMS e relacioná-lo ao direito à saúde, às políticas públicas, à qualidade de vida e ao papel do SUS.",
+  "hab": "EF07CI10B, EF07CI11",
+  "habTxt": "Conceito de saúde (OMS); saúde como direito (CF/1988); SUS e níveis de atenção; qualidade de vida; determinantes sociais; saúde individual, coletiva e ambiental; ANVISA.",
+  "nome": "Saúde",
+  "concreta": "Para começar (rotina e saúde); Pause e responda (conceito OMS); Na prática: análise de gráficos de Atenção Primária por região."
+ },
+ "4B|7º ANO|14": {
+  "serie": "7",
+  "desc": "Comparar e associar programas de saúde pública e indicadores de saúde, destacando a importância do saneamento básico.",
+  "hab": "EF07CI09",
+  "habTxt": "Componentes do saneamento: água potável, esgoto, limpeza urbana/resíduos e drenagem pluvial; poluição hídrica; educação ambiental.",
+  "nome": "Saneamento básico: impactos na vida cotidiana",
+  "concreta": "Para começar (rio Pinheiros); Pause e responda; Na prática: análise de dados de saneamento no Brasil e em SP e comparação urbano x rural."
+ },
+ "4B|8º ANO|14": {
+  "serie": "8",
+  "desc": "Conscientizar sobre os perigos da eletricidade e divulgar boas práticas no uso e manuseio de aparelhos elétricos.",
+  "hab": "EF08CI18*",
+  "habTxt": "Riscos: choque, curto-circuito, redes de transmissão; acidentes domésticos; proteção contra choques; fusíveis e disjuntores; aterramento; boas práticas.",
+  "nome": "Cuidados em relação à eletricidade",
+  "concreta": "Discutem práticas inseguras com eletricidade e explicam por escrito a função do aterramento e como identificá-lo nas tomadas."
+ },
+ "4B|9º ANO|15": {
+  "serie": "9",
+  "desc": "Valorizar a relevância das constelações e da observação do céu para os povos originários.",
+  "hab": "EF09CI15",
+  "habTxt": "Etnoastronomia; 88 constelações da UAI; gnômon e relógio de sol; calendário natural; céu guarani (tempo novo e velho); Ema, Homem Velho, Anta, Veado.",
+  "nome": "Constelações indígenas",
+  "concreta": "Relacionam as datas de aparição da Ema e do Homem Velho às estações, à chuva/seca e a atividades como plantio, colheita, caça e pesca."
+ }
+}

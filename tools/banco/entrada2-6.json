@@ -1,0 +1,82 @@
+{
+ "6º ANO|3|Reconhecer os princípios da teoria celular.": {
+  "serie": "6",
+  "desc": "Reconhecer os princípios da teoria celular.",
+  "hab": "EF06CI05",
+  "habTxt": "Analisar a organização básica da célula como unidade estrutural e funcional de seres uni e pluricelulares (AE5).",
+  "nome": "Célula no saquinho",
+  "concreta": "Montar a célula no saquinho (membrana, citoplasma, núcleo) e compará-la com imagens de células de cebola, da pele e de uma bactéria: todos os seres vivos são formados por células."
+ },
+ "7º ANO|1|Identificar a composição da atmosfera e os fatores naturais e humanos que a modificam, relacionando-os aos impactos ambientais e na saúde do sistema respiratório humano.": {
+  "serie": "7",
+  "desc": "Identificar a composição da atmosfera e os fatores naturais e humanos que a modificam, relacionando-os aos impactos ambientais e na saúde do sistema respiratório humano.",
+  "hab": "EF07CI12",
+  "habTxt": "Identificar a composição da atmosfera e fatores naturais/humanos que a alteram, com impactos no ambiente e na saúde respiratória (AE2).",
+  "nome": "Ar em 100 quadradinhos",
+  "concreta": "Pintar na grade 10×10 a composição do ar: 78 quadrados de nitrogênio, 21 de oxigênio e 1 de outros gases (argônio, gás carbônico, vapor); depois colar ao redor os cartões das fontes naturais e humanas que alteram o ar."
+ },
+ "8º ANO|2|Reconhecer os órgãos do sistema respiratório e suas funções no processo de inspiração e expiração.": {
+  "serie": "8",
+  "desc": "Reconhecer os órgãos do sistema respiratório e suas funções no processo de inspiração e expiração.",
+  "hab": "EF05CI06B, EF08CI08B",
+  "habTxt": "Explicar o funcionamento do sistema respiratório e fatores que o comprometem, como poluição e doenças (AE6).",
+  "nome": "Pulmão de garrafa",
+  "concreta": "O professor monta o modelo (garrafa = caixa torácica, bexiga de baixo = diafragma, bexiga de dentro = pulmão). Ao puxar o diafragma, o balão enche (inspiração); ao soltar, esvazia (expiração)."
+ },
+ "8º ANO|3|Diferenciar os movimentos da Terra (rotação, translação e/ou precessão) com base em suas características e efeitos.": {
+  "serie": "8",
+  "desc": "Diferenciar os movimentos da Terra (rotação, translação e/ou precessão) com base em suas características e efeitos.",
+  "hab": "EF08CI12, EF08CI13",
+  "habTxt": "Explicar fenômenos astronômicos cíclicos pelos movimentos de Sol, Terra e Lua e pela inclinação do eixo terrestre (AE8).",
+  "nome": "Gira, roda e bamboleia",
+  "concreta": "Com lanterna e bola, mostra-se a rotação (24 h, dia e noite) e a translação (≈365 dias, ano). O pião girando mostra o 'bamboleio' do eixo: a precessão (≈26 mil anos)."
+ },
+ "9º ANO|2|Reconhecer a função, composição e estrutura do DNA.": {
+  "serie": "9",
+  "desc": "Reconhecer a função, composição e estrutura do DNA.",
+  "hab": "EF09CI08",
+  "habTxt": "Explicar hereditariedade e aplicações da biotecnologia articulando genética clássica e evolução (AE7).",
+  "nome": "Escada do DNA",
+  "concreta": "Grupos montam uma 'escada' com tiras: laterais = açúcar e fosfato, degraus = pares de bases (A com T, C com G); ao torcer, obtém-se a dupla-hélice."
+ },
+ "4B|6º ANO|6": {
+  "serie": "6",
+  "desc": "Explicar a estrutura do olho e a formação da imagem, incluindo a percepção de luz e cores, com esquemas simples.",
+  "hab": "EF06CI08",
+  "habTxt": "Fonte de luz, objeto e observador; reflexão e absorção; luz branca e espectro; partes do olho; imagem invertida na retina; nervo óptico.",
+  "nome": "Sentido da visão",
+  "concreta": "Relembre (flores de Holambra); Pause e responda (V ou F); Na prática: nomear estruturas do olho e explicar a formação da imagem."
+ },
+ "4B|7º ANO|3": {
+  "serie": "7",
+  "desc": "Explicar e diferenciar as principais doenças virais, com destaque para doenças tropicais e ISTs, e suas formas de prevenção.",
+  "hab": "EF07CI10A, EF08CI10B",
+  "habTxt": "Infecção viral e Virologia; dengue e sorotipos; gripe; febre amarela (ciclos silvestre e urbano); sarampo; HIV/AIDS; prevenção e vacinação.",
+  "nome": "Doenças causadas por vírus",
+  "concreta": "Para começar (zoonoses e aquecimento global); Pause e responda; Na prática: análise de dados de dengue em SP 2024-2025 e ações de prevenção."
+ },
+ "4B|7º ANO|16": {
+  "serie": "7",
+  "desc": "Investigar e comparar os índices que compõem diferentes indicadores de saúde pública.",
+  "hab": "EF07CI09, EF07CI11",
+  "habTxt": "Indicadores quantitativos e qualitativos; mortalidade infantil em SP; uso dos indicadores em políticas públicas; desigualdade e saúde; ODS 3.",
+  "nome": "Indicadores de saúde",
+  "concreta": "Relembre (como avaliar a saúde de uma cidade); Pause e responda; Na prática: gráfico de mortalidade por água insegura por região (2000 e 2022)."
+ },
+ "4B|8º ANO|16": {
+  "serie": "8",
+  "desc": "Compreender a função dos componentes e comparar circuitos em série, em paralelo e mistos.",
+  "hab": "EF08CI02",
+  "habTxt": "Associação de resistores em série, paralelo e mista; medição de corrente e tensão; resistência equivalente; aplicação residencial.",
+  "nome": "Simulador de um circuito elétrico – Parte 2",
+  "concreta": "Montagem no PhET de circuitos em série, paralelo e mistos, medindo e comparando corrente e tensão em cada um."
+ },
+ "4B|9º ANO|19": {
+  "serie": "9",
+  "desc": "Discutir a viabilidade da vida e da sobrevivência humana fora do planeta Terra.",
+  "hab": "EF09CI16",
+  "habTxt": "Condições para a vida (gravidade, atmosfera, ozônio, efeito estufa, água líquida); zona habitável; viagens espaciais; astrobiologia; Marte, Europa, Encélado, exoplanetas.",
+  "nome": "Vida fora da Terra",
+  "concreta": "Respondem teste sobre condições para a vida e refletem por escrito sobre frases de Carl Sagan relacionando-as à astrobiologia."
+ }
+}

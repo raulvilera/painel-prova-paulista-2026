@@ -1,0 +1,3135 @@
+{
+ "6º ANO|1|Analisar as interações entre Sol, Terra e Lua na ocorrência das fases da Lua, dos eclipses e na medição do tempo.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Camila, aluna do 6º ano, olhou o céu de seu quintal em Campinas às 18h30 e viu a Lua nascendo no horizonte, com o disco todo iluminado e brilhante. Ela anotou o que viu e quis entender onde estavam Sol, Terra e Lua naquele momento.",
+   "comando": "Com base no registro de Camila, qual alternativa descreve a posição dos astros?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Camila",
+    "colunas": [
+     "Horário",
+     "Astro",
+     "Posição no céu"
+    ],
+    "linhas": [
+     [
+      "18h30",
+      "Lua",
+      "Nascendo, a leste"
+     ],
+     [
+      "18h30",
+      "Sol",
+      "Se pondo, a oeste"
+     ]
+    ]
+   },
+   "alts": [
+    "A Lua fica entre o Sol e a Terra, com a face iluminada voltada para o Sol.",
+    "A Terra fica entre o Sol e a Lua, com a face iluminada voltada para nós.",
+    "A Lua fica em ângulo reto com a Terra e o Sol, com metade da face visível.",
+    "A Terra fica entre o Sol e a Lua, com a sombra da Terra cobrindo a Lua."
+   ],
+   "correta": 1,
+   "explicacao": "Com o Sol de um lado e a Lua nascendo do outro, a Terra está no meio e vemos a face iluminada inteira (Lua cheia). A alternativa da sombra confunde a fase cheia com o eclipse lunar."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro anotou no caderno que, em 10 de outubro, a Lua estava na fase nova e não aparecia à noite. Ele quer marcar no calendário da escola a data aproximada da próxima Lua nova para uma atividade de observação.",
+   "comando": "Considerando o ciclo das fases, qual data Pedro deve marcar e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Anotações de Pedro",
+    "colunas": [
+     "Data",
+     "Fase observada"
+    ],
+    "linhas": [
+     [
+      "10 de outubro",
+      "Lua nova"
+     ],
+     [
+      "Próxima data a marcar",
+      "?"
+     ]
+    ]
+   },
+   "alts": [
+    "Por volta de 17 de outubro, pois cada fase da Lua dura cerca de uma semana inteira.",
+    "Por volta de 25 de outubro, pois a Lua leva cerca de 15 dias para dar uma volta completa.",
+    "Por volta de 10 de janeiro, pois o ciclo das fases acompanha o ano todo, de verão a verão.",
+    "Por volta de 8 de novembro, pois o ciclo das fases leva cerca de 29 dias."
+   ],
+   "correta": 3,
+   "explicacao": "O ciclo completo das fases se repete a cada cerca de 29 dias; 10 de outubro mais 29 dias dá por volta de 8 de novembro. Os distratores confundem a duração de uma fase, de meia volta ou do ano."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, Lia usou uma lanterna ligada, uma bolinha de isopor num palito (a 'Lua') e a própria cabeça (a 'Terra'). Quando posicionou a bolinha entre a lanterna e seu rosto, uma pequena sombra apareceu sobre a bochecha dela.",
+   "comando": "Que fenômeno a sombra representa e em qual fase da Lua ele ocorre?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem da atividade de Lia",
+    "etapas": [
+     "Lanterna ligada na frente de Lia",
+     "Bolinha no palito, entre a lanterna e o rosto",
+     "Pequena sombra da bolinha aparece na bochecha"
+    ]
+   },
+   "alts": [
+    "Eclipse solar, que ocorre na fase de Lua nova.",
+    "Eclipse lunar, que ocorre na fase de Lua nova.",
+    "Eclipse solar, que ocorre na fase de Lua cheia.",
+    "Eclipse lunar, que ocorre na fase de Lua cheia."
+   ],
+   "correta": 0,
+   "explicacao": "Quando a Lua está entre o Sol e a Terra e projeta sua sombra, há eclipse solar, o que só acontece na Lua nova. Os distratores trocam o tipo de eclipse ou a fase."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Rita saiu da escola às 18h e viu, bem alta no céu, uma Lua com exatamente metade do disco iluminada. Pelo calendário lunar do jornal, ela soube que essa Lua só se poria perto da meia-noite.",
+   "comando": "Qual fase Rita observou e qual a explicação correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de dona Rita",
+    "colunas": [
+     "Informação",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Horário",
+      "18h"
+     ],
+     [
+      "Posição da Lua",
+      "Alta no céu"
+     ],
+     [
+      "Parte iluminada",
+      "Metade do disco"
+     ],
+     [
+      "Pôr da Lua previsto",
+      "Perto de 0h"
+     ]
+    ]
+   },
+   "alts": [
+    "Quarto minguante, pois a Lua visível à tarde já passou da fase cheia.",
+    "Lua nova, pois a Lua visível ao entardecer fica entre o Sol e a Terra.",
+    "Quarto crescente, pois a Lua alta ao entardecer está a um quarto do ciclo.",
+    "Quarto crescente, pois a sombra da Terra cobre metade da Lua nesse horário."
+   ],
+   "correta": 2,
+   "explicacao": "A Lua alta ao entardecer, com metade iluminada, está a um quarto do ciclo desde a Lua nova: quarto crescente. Cobrir metade com a sombra da Terra é um erro comum, pois as fases não dependem dela."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Tiago leu que a Lua passa entre o Sol e a Terra a cada Lua nova, cerca de uma vez por mês. Mesmo assim, ele percebeu pelo jornal que eclipses solares são eventos raros. No experimento, ele subiu e desceu a bolinha em relação à linha lanterna-cabeça.",
+   "comando": "O que explica a raridade dos eclipses solares, de acordo com os dados de Tiago?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento de Tiago",
+    "colunas": [
+     "Tentativa",
+     "Posição da bolinha",
+     "Sombra no rosto"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Na linha lanterna-cabeça",
+      "Sim"
+     ],
+     [
+      "2",
+      "5 cm acima da linha",
+      "Não"
+     ],
+     [
+      "3",
+      "5 cm abaixo da linha",
+      "Não"
+     ]
+    ]
+   },
+   "alts": [
+    "A órbita da Lua é inclinada, por isso Sol, Lua e Terra raramente se alinham.",
+    "A sombra da Terra cobre a Lua nova e impede a luz do Sol de chegar aqui.",
+    "A Lua nova fica longe demais da Terra e sua sombra se dispersa pelo espaço.",
+    "O Sol se move no céu e sai da linha da Lua antes de a sombra chegar à Terra."
+   ],
+   "correta": 0,
+   "explicacao": "Como a órbita da Lua é inclinada, na maioria das luas novas ela passa acima ou abaixo da linha Sol-Terra e não projeta sombra na Terra. Só no alinhamento ocorre o eclipse."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Letícia segura uma bolinha no palito com o braço esticado diante de uma lanterna acesa e gira devagar. Em certo momento, a bolinha fica entre a lanterna e a cabeça dela, e o lado que Letícia enxerga fica escuro.",
+   "comando": "Que fase da Lua Letícia representou nesse momento? Explique por que o lado visto por ela está escuro.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da atividade de Letícia",
+    "etapas": [
+     "Lanterna acesa na frente",
+     "Braço esticado com a bolinha",
+     "Giro até a bolinha ficar diante da lanterna"
+    ]
+   },
+   "ref": "Lua nova. A luz da lanterna (Sol) ilumina o lado da bolinha voltado para ela, e o lado voltado para Letícia (Terra) fica na sombra, por isso parece escuro.",
+   "conceitos": [
+    "Lua nova",
+    "lado iluminado voltado ao Sol",
+    "lado visto da Terra no escuro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Gustavo observou a Lua durante um mês e anotou o aspecto dela em quatro dias: dia 1, disco totalmente escuro; dia 8, metade iluminada; dia 15, disco todo iluminado; dia 22, metade iluminada novamente.",
+   "comando": "Identifique a fase da Lua em cada um dos quatro dias e diga se a parte iluminada aumentou ou diminuiu entre os dias 15 e 22.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Gustavo",
+    "colunas": [
+     "Dia",
+     "Aspecto do disco"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Totalmente escuro"
+     ],
+     [
+      "8",
+      "Metade iluminada"
+     ],
+     [
+      "15",
+      "Todo iluminado"
+     ],
+     [
+      "22",
+      "Metade iluminada"
+     ]
+    ]
+   },
+   "ref": "Dia 1: Lua nova; dia 8: quarto crescente; dia 15: Lua cheia; dia 22: quarto minguante. Entre os dias 15 e 22 a parte iluminada diminuiu.",
+   "conceitos": [
+    "fases nova, crescente, cheia e minguante",
+    "ordem do ciclo",
+    "iluminada diminui na minguante"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rafael alinhou a lanterna, a própria cabeça e a bolinha, nessa ordem, com a cabeça no meio. A bolinha escureceu porque ficou na sombra da cabeça dele.",
+   "comando": "Qual fenômeno do céu o experimento de Rafael reproduz? Em que fase da Lua ele acontece e por quê?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem de Rafael",
+    "etapas": [
+     "Lanterna acesa de um lado",
+     "Cabeça de Rafael no meio",
+     "Bolinha do outro lado, escurecendo"
+    ]
+   },
+   "ref": "Eclipse lunar. Acontece na Lua cheia, quando a Terra fica entre o Sol e a Lua e a Lua entra na sombra da Terra, perdendo a luz do Sol.",
+   "conceitos": [
+    "eclipse lunar",
+    "Lua cheia",
+    "Terra entre Sol e Lua",
+    "Lua na sombra da Terra"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma notícia local dizia que um eclipse solar total seria visto só em uma faixa estreita do sul da Argentina, por poucos minutos, enquanto o eclipse lunar do mês anterior foi visto por quase todo o Brasil onde era noite.",
+   "comando": "Explique por que o eclipse lunar é visto de uma região muito maior do que o eclipse solar total.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de duas notícias",
+    "colunas": [
+     "Evento",
+     "Duração da fase total",
+     "Onde foi observado"
+    ],
+    "linhas": [
+     [
+      "Eclipse solar",
+      "3 minutos",
+      "Faixa de 150 km"
+     ],
+     [
+      "Eclipse lunar",
+      "1h20",
+      "Lugares com noite e Lua no céu"
+     ]
+    ]
+   },
+   "ref": "No eclipse solar, a sombra da Lua, que é pequena, atinge só uma faixa estreita da Terra. No eclipse lunar, a Lua inteira entra na sombra grande da Terra, e todos que a veem no céu notam o eclipse.",
+   "conceitos": [
+    "sombra da Lua pequena",
+    "sombra da Terra grande",
+    "visível de todo lugar onde a Lua está no céu"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu Antônio, pescador de Ubatuba, usa as fases da Lua para saber quando as marés são maiores e planejar a pesca. Ele diz que um ciclo de fases dura cerca de 29 dias, mas que o calendário de 12 ciclos lunares fica diferente do ano de 365 dias.",
+   "comando": "Justifique por que as fases da Lua servem para medir o tempo e por que 12 ciclos lunares não fecham exatamente um ano.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Duração em dias",
+    "unidade": "dias",
+    "itens": [
+     {
+      "rotulo": "Um ciclo de fases",
+      "valor": 29
+     },
+     {
+      "rotulo": "12 ciclos de fases",
+      "valor": 354
+     },
+     {
+      "rotulo": "Volta da Terra ao redor do Sol",
+      "valor": 365
+     }
+    ]
+   },
+   "ref": "As fases se repetem de forma regular e fácil de observar, a cada cerca de 29 dias, o que permite contar meses. Doze ciclos somam cerca de 354 dias, uns 11 dias a menos que o ano, e por isso o calendário lunar se descola das estações.",
+   "conceitos": [
+    "fases se repetem regularmente",
+    "ciclo de cerca de 29 dias",
+    "12 ciclos têm 354 dias, menos que o ano"
+   ]
+  }
+ ],
+ "6º ANO|2|Reconhecer os principais estados físicos da matéria (sólido, líquido, gasoso) e suas mudanças de estado.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Marcos tirou um cubo de gelo do congelador e o deixou sobre um prato na mesa da cozinha, numa tarde de 28 °C. Ele anotou o que viu a cada 20 minutos e percebeu que o prato foi ficando molhado.",
+   "comando": "Com base nas anotações de Marcos, qual mudança de estado físico aconteceu com o gelo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Marcos",
+    "colunas": [
+     "Horário",
+     "O que Marcos viu no prato"
+    ],
+    "linhas": [
+     [
+      "14h00",
+      "Cubo de gelo duro"
+     ],
+     [
+      "14h20",
+      "Cubo menor, com água ao redor"
+     ],
+     [
+      "14h40",
+      "Apenas uma poça de água"
+     ]
+    ]
+   },
+   "alts": [
+    "Solidificação, passagem do estado líquido para o sólido.",
+    "Evaporação, passagem do estado líquido para o gasoso.",
+    "Fusão, passagem do estado sólido para o líquido.",
+    "Condensação, passagem do estado gasoso para o líquido."
+   ],
+   "correta": 2,
+   "explicacao": "O gelo (sólido) recebeu calor do ambiente e virou água (líquido): isso é fusão. Os distratores trocam o nome da mudança ou o sentido dela."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana serviu suco bem gelado em um copo de vidro e o colocou sobre a mesa. Minutos depois, notou gotinhas de água na parte de fora do copo. Em outro copo com suco na temperatura ambiente, isso não aconteceu.",
+   "comando": "De onde vieram as gotinhas que apareceram por fora do copo gelado de Ana?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Ana",
+    "colunas": [
+     "Copo",
+     "Temperatura do suco",
+     "Gotas por fora"
+    ],
+    "linhas": [
+     [
+      "1",
+      "4 °C",
+      "Apareceram"
+     ],
+     [
+      "2",
+      "28 °C",
+      "Não apareceram"
+     ]
+    ]
+   },
+   "alts": [
+    "Do vapor de água do ar, que virou líquido ao tocar a superfície fria.",
+    "Do suco, que atravessou as paredes do vidro e formou gotas por fora.",
+    "Do gelo, que derreteu e atravessou as paredes do copo até o lado de fora.",
+    "Do ar frio, que se transformou em água ao se misturar ao suco do copo."
+   ],
+   "correta": 0,
+   "explicacao": "O vapor de água presente no ar perde calor ao tocar o vidro frio e se condensa (gasoso para líquido). O vidro não é poroso, então o suco não passa para fora."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Lúcia lavou duas toalhas iguais e as estendeu ao mesmo tempo: a toalha A no varal do quintal, ao sol e com vento, e a toalha B dentro de um quarto fechado e mais fresco, sem vento.",
+   "comando": "Qual toalha secou primeiro e qual é a explicação correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Condições de secagem",
+    "colunas": [
+     "Toalha",
+     "Local",
+     "Vento",
+     "Temperatura"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Quintal, ao sol",
+      "Com vento",
+      "32 °C"
+     ],
+     [
+      "B",
+      "Quarto fechado",
+      "Sem vento",
+      "22 °C"
+     ]
+    ]
+   },
+   "alts": [
+    "A toalha B, pois a água muda para o estado de vapor mais rápido em lugar frio.",
+    "A toalha B, pois a água escorre da roupa mais depressa quando não há vento.",
+    "As duas ao mesmo tempo, pois a água sai da roupa na mesma velocidade.",
+    "A toalha A, pois calor e vento aceleram a passagem da água para vapor."
+   ],
+   "correta": 3,
+   "explicacao": "A secagem é evaporação (líquido para gasoso), que fica mais rápida com calor e vento. Os distratores supõem que o frio ajuda a evaporar ou que a água apenas escorre."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Joana cozinhava arroz em uma panela com tampa de vidro. Ao levantar a tampa, viu que ela estava coberta por gotinhas de água que escorriam, e a água da panela borbulhava e liberava uma fumaça branca.",
+   "comando": "Quais mudanças de estado ocorreram, respectivamente, na água da panela e no vapor que tocou a tampa?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de Joana",
+    "etapas": [
+     "Água aquecida no fogo, panela tampada",
+     "Bolhas sobem e sai uma nuvem branca",
+     "Gotinhas escorrem pela tampa de vidro"
+    ]
+   },
+   "alts": [
+    "Evaporação da água na panela e depois fusão do vapor na tampa.",
+    "Vaporização da água e depois condensação do vapor na tampa.",
+    "Ebulição da água na panela e depois solidificação do vapor na tampa.",
+    "Condensação da água na panela e depois evaporação do vapor na tampa."
+   ],
+   "correta": 1,
+   "explicacao": "A água líquida aquecida passa a vapor (vaporização); ao tocar a tampa mais fria, o vapor volta a líquido (condensação). Os demais trocam o sentido ou o nome da segunda mudança."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Felipe aqueceu uma forma de gelo em fogo baixo e mediu a temperatura a cada 2 minutos. Ele ficou intrigado, pois mesmo com a chama acesa o termômetro ficou parado em 0 °C por vários minutos, enquanto o gelo diminuía.",
+   "comando": "O que explica a temperatura constante durante esses minutos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento de Felipe",
+    "colunas": [
+     "Tempo (min)",
+     "Temperatura (°C)"
+    ],
+    "linhas": [
+     [
+      "0",
+      "-5"
+     ],
+     [
+      "2",
+      "0"
+     ],
+     [
+      "4",
+      "0"
+     ],
+     [
+      "6",
+      "0"
+     ],
+     [
+      "8",
+      "4"
+     ]
+    ]
+   },
+   "alts": [
+    "O calor recebido é usado na mudança de estado, e não em subir a temperatura.",
+    "O gelo parou de receber calor da chama, e por isso a temperatura ficou constante.",
+    "A água já ferveu nesse momento, e por isso a temperatura não pode mais subir.",
+    "O calor recebido está sendo perdido para o ar, e por isso o gelo continua sólido."
+   ],
+   "correta": 0,
+   "explicacao": "Durante a fusão, a energia recebida é usada para mudar o estado do gelo para água, e a temperatura permanece em 0 °C até o gelo derreter. Só depois a água esquenta."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu João encheu uma forma com água da torneira, a 25 °C, e a colocou no congelador. Após algumas horas, a água na forma virou pedras de gelo duras.",
+   "comando": "Qual mudança de estado ocorreu com a água? Explique o que aconteceu com a temperatura e o estado da água.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Temperatura da água na forma",
+    "unidade": "°C",
+    "itens": [
+     {
+      "rotulo": "Ao colocar no congelador",
+      "valor": 25
+     },
+     {
+      "rotulo": "Depois de 1 hora",
+      "valor": 8
+     },
+     {
+      "rotulo": "Depois de 3 horas",
+      "valor": 0
+     }
+    ]
+   },
+   "ref": "Ocorreu solidificação: a água líquida passou ao estado sólido. Ao perder calor para o congelador, sua temperatura baixou até 0 °C ou menos e ela virou gelo.",
+   "conceitos": [
+    "solidificação",
+    "perda de calor",
+    "líquido para sólido"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula de Ciências, a professora Sônia mostrou três situações: um sorvete derretendo no pote, gotinhas aparecendo na parede de uma garrafa gelada e a mancha de um pano úmido sumindo da lousa.",
+   "comando": "Nomeie a mudança de estado de cada situação e indique o estado inicial e o final da água ou da substância.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da aula",
+    "colunas": [
+     "Situação",
+     "O que se observou"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Sorvete amolecendo e virando líquido"
+     ],
+     [
+      "2",
+      "Gotas na parede da garrafa gelada"
+     ],
+     [
+      "3",
+      "Mancha do pano sumindo da lousa"
+     ]
+    ]
+   },
+   "ref": "1) Fusão: do sólido para o líquido. 2) Condensação: do vapor de água do ar (gasoso) para gotas (líquido). 3) Evaporação: da água líquida da mancha para vapor (gasoso).",
+   "conceitos": [
+    "fusão",
+    "condensação",
+    "evaporação",
+    "estado inicial e final"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rafael deixou uma panela aberta com 300 g de água e outra tampada com a mesma quantidade sobre o fogão aceso por duas horas. Em seguida, mediu a massa de cada uma e notou gotas na tampa da panela fechada.",
+   "comando": "Explique para onde foi a água que 'sumiu' da panela aberta e por que a panela tampada perdeu menos água.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Rafael",
+    "colunas": [
+     "Panela",
+     "Massa inicial (g)",
+     "Massa final (g)"
+    ],
+    "linhas": [
+     [
+      "Aberta",
+      "300",
+      "270"
+     ],
+     [
+      "Tampada",
+      "300",
+      "298"
+     ]
+    ]
+   },
+   "ref": "A água da panela aberta evaporou: passou a vapor e se espalhou pelo ar, por isso a massa diminuiu. Na panela tampada, o vapor encontrou a tampa mais fria, condensou e voltou para a panela.",
+   "conceitos": [
+    "evaporação",
+    "vapor se espalha no ar",
+    "condensação na tampa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Carla notou que, em uma tarde ensolarada, a poça que havia no pátio da escola às 10h sumiu até às 15h. No dia seguinte, às 5h, a grama estava coberta de gotinhas de água.",
+   "comando": "Explique, usando mudanças de estado físico, o que aconteceu com a água da poça e como surgiram as gotinhas na grama.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de Carla",
+    "etapas": [
+     "10h: poça no pátio",
+     "15h: pátio seco, com sol forte",
+     "5h do dia seguinte: gotas sobre a grama"
+    ]
+   },
+   "ref": "A água da poça evaporou com o calor do Sol e virou vapor no ar. De madrugada, com o ar mais frio, parte do vapor condensou ao tocar a grama e voltou ao estado líquido, formando as gotas.",
+   "conceitos": [
+    "evaporação",
+    "vapor no ar",
+    "condensação com frio",
+    "água continua existindo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Paulo guardou um litro de suco no congelador e, no dia seguinte, ele estava duro. Depois, deixou o suco descongelar na bancada e viu que ele voltou a ser líquido, mas a embalagem ficou molhada por fora.",
+   "comando": "Identifique as duas mudanças de estado do suco e explique por que a embalagem ficou molhada.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de Paulo",
+    "etapas": [
+     "Suco guardado no congelador",
+     "Suco duro no dia seguinte",
+     "Suco retirado e deixado na bancada",
+     "Embalagem molhada por fora"
+    ]
+   },
+   "ref": "O suco passou por solidificação (líquido para sólido) no congelador e depois por fusão (sólido para líquido) na bancada. A embalagem molhou porque o vapor de água do ar condensou na superfície fria.",
+   "conceitos": [
+    "solidificação",
+    "fusão",
+    "condensação do vapor do ar"
+   ]
+  }
+ ],
+ "7º ANO|3|Analisar os impactos das ações humanas nos biomas brasileiros e suas implicações para a preservação ambiental.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma fazenda no sul de Goiás, o proprietário derrubou a vegetação nativa do Cerrado para plantar soja. Uma bióloga da região mediu, ao longo dos anos, quanto da área ainda tinha vegetação original e notou que lobos-guará e tamanduás passaram a ser vistos cada vez menos.",
+   "comando": "Com base nos dados da bióloga, qual é o impacto direto dessa mudança sobre o bioma?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da área de Cerrado nativo na fazenda",
+    "unidade": "hectares",
+    "itens": [
+     {
+      "rotulo": "2010",
+      "valor": 800
+     },
+     {
+      "rotulo": "2015",
+      "valor": 500
+     },
+     {
+      "rotulo": "2020",
+      "valor": 200
+     }
+    ]
+   },
+   "alts": [
+    "Aumento do número de nascentes, pois a lavoura retém a água da chuva.",
+    "Perda de habitat da fauna nativa, pois a vegetação original foi retirada.",
+    "Aumento da biodiversidade, pois a soja atrai novos animais para a região.",
+    "Fortalecimento do solo, pois a lavoura protege a terra contra a erosão."
+   ],
+   "correta": 1,
+   "explicacao": "Ao retirar a vegetação nativa, os animais perdem abrigo e alimento, e suas populações diminuem. Os distratores atribuem à lavoura efeitos que ela não tem sobre água, diversidade e solo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Letícia, aluna do 7º ano em Santos, leu que restam cerca de 12% da cobertura original da Mata Atlântica, e que os maiores centros urbanos e as plantações do país ficam justamente na região onde ela se estende.",
+   "comando": "Com base nos dados, por que a Mata Atlântica é um dos biomas mais ameaçados do Brasil?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Levantamento da cobertura da Mata Atlântica",
+    "unidade": "% da área original",
+    "itens": [
+     {
+      "rotulo": "Área original",
+      "valor": 100
+     },
+     {
+      "rotulo": "Área atual",
+      "valor": 12
+     }
+    ]
+   },
+   "alts": [
+    "Porque está longe das cidades e por isso não recebe fiscalização ambiental.",
+    "Porque é o menor bioma do país e desaparece rápido com qualquer queimada.",
+    "Porque suas árvores crescem devagar e não conseguem se recuperar do corte.",
+    "Porque fica na costa, onde se concentram cidades, indústrias e lavouras."
+   ],
+   "correta": 3,
+   "explicacao": "A Mata Atlântica ocupa a faixa mais povoada do país, e a expansão urbana, industrial e agrícola reduziu sua área. Os distratores trazem causas que não correspondem aos dados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em agosto, um incêndio atingiu uma área de pasto e vegetação nativa no Pantanal. Brigadistas controlaram o fogo após dias, e biólogos foram avaliar o que ocorreria com o ambiente nos meses seguintes.",
+   "comando": "Qual é a consequência mais provável a médio prazo para o Pantanal queimado?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da brigada de incêndio",
+    "colunas": [
+     "Informação",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Área queimada",
+      "12 mil hectares"
+     ],
+     [
+      "Duração do incêndio",
+      "9 dias"
+     ],
+     [
+      "Animais resgatados",
+      "340"
+     ]
+    ]
+   },
+   "alts": [
+    "Redução de espécies e empobrecimento do solo, que fica sem cobertura vegetal.",
+    "Recuperação imediata da vegetação, pois a cinza adubaria o solo e dispensaria cuidados.",
+    "Aumento do número de predadores, pois há mais presas fugindo pelo campo aberto.",
+    "Queda da temperatura local, pois a fumaça bloqueia a luz do Sol por meses."
+   ],
+   "correta": 0,
+   "explicacao": "As queimadas matam plantas e animais e deixam o solo descoberto, vulnerável à erosão e à perda de nutrientes. A ideia de recuperação imediata é um erro comum."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na Caatinga, perto de Petrolina, uma família corta a vegetação nativa para fazer lenha e mantém um rebanho grande de cabras. O solo da propriedade está seco, rachado e com pouca planta, e os vizinhos temem a desertificação.",
+   "comando": "Qual medida seria mais adequada para reduzir a degradação dessa área?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento de monitoramento",
+    "colunas": [
+     "Ano",
+     "Número de cabras",
+     "Cobertura de vegetação (%)"
+    ],
+    "linhas": [
+     [
+      "2000",
+      "40",
+      "70"
+     ],
+     [
+      "2010",
+      "120",
+      "45"
+     ],
+     [
+      "2020",
+      "260",
+      "20"
+     ]
+    ]
+   },
+   "alts": [
+    "Plantar espécies de outros biomas, pois crescem mais rápido que as nativas.",
+    "Irrigar a área com água do rio até a vegetação nativa voltar sozinha.",
+    "Reduzir o rebanho e manejar a vegetação nativa de forma sustentável.",
+    "Queimar o terreno com frequência, pois a cinza renova o solo e as plantas."
+   ],
+   "correta": 2,
+   "explicacao": "O excesso de animais e a retirada da vegetação degradam o solo; reduzir a pressão e manejar a vegetação nativa permite sua recuperação. Espécies de fora e fogo agravam o problema."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um pesquisador comparou a quantidade de espécies de aves em três áreas do Pampa gaúcho: campo nativo, pastagem com manejo cuidadoso e lavoura de soja. As áreas têm tamanho parecido e ficam a poucos quilômetros umas das outras.",
+   "comando": "Que conclusão os dados do pesquisador permitem sobre o uso da terra no Pampa?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de espécies de aves por área",
+    "unidade": "espécies",
+    "itens": [
+     {
+      "rotulo": "Campo nativo",
+      "valor": 120
+     },
+     {
+      "rotulo": "Pastagem com manejo",
+      "valor": 90
+     },
+     {
+      "rotulo": "Lavoura de soja",
+      "valor": 35
+     }
+    ]
+   },
+   "alts": [
+    "Quanto maior a produção agrícola, maior a diversidade de aves no local.",
+    "A soja reduz as aves por causa da maior presença de pessoas na lavoura.",
+    "A diversidade de aves independe do uso da terra, pois elas migram bastante.",
+    "Quanto mais a vegetação nativa é trocada, menos espécies de aves ficam."
+   ],
+   "correta": 3,
+   "explicacao": "Os dados mostram queda da diversidade conforme a vegetação nativa dá lugar à monocultura. Os distratores invertem a relação ou atribuem a causa a fatores que os dados não mostram."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma reportagem mostrou que, na Amazônia, grandes áreas de floresta são derrubadas para formar pasto para o gado. O gráfico da notícia indica o aumento da área derrubada em três anos seguidos.",
+   "comando": "Identifique a ação humana descrita e cite dois impactos dela sobre o bioma.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da área desmatada na Amazônia",
+    "unidade": "mil km²",
+    "itens": [
+     {
+      "rotulo": "2019",
+      "valor": 10
+     },
+     {
+      "rotulo": "2020",
+      "valor": 11
+     },
+     {
+      "rotulo": "2021",
+      "valor": 13
+     }
+    ]
+   },
+   "ref": "A ação é o desmatamento para formar pasto. Impactos: perda de habitat e de espécies, menos árvores para manter a umidade e as chuvas, aumento de gás carbônico na atmosfera e erosão do solo.",
+   "conceitos": [
+    "desmatamento",
+    "perda de biodiversidade",
+    "alteração do clima e da umidade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na atividade 'Mapa das ameaças', Marcelo colou três cards: queimadas no Cerrado, desertificação na Caatinga e monoculturas no Pampa. A professora pediu que ele explicasse o que cada ameaça causa ao ambiente.",
+   "comando": "Para cada card colado, explique uma consequência da ação humana no bioma correspondente.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do mapa de Marcelo",
+    "colunas": [
+     "Bioma",
+     "Card colado"
+    ],
+    "linhas": [
+     [
+      "Cerrado",
+      "Queimadas"
+     ],
+     [
+      "Caatinga",
+      "Desertificação"
+     ],
+     [
+      "Pampa",
+      "Monoculturas"
+     ]
+    ]
+   },
+   "ref": "Cerrado: o fogo destrói a vegetação e mata animais, empobrecendo o solo. Caatinga: a degradação deixa o solo seco e sem plantas, reduzindo a vida. Pampa: as monoculturas substituem o campo nativo e diminuem a diversidade de espécies.",
+   "conceitos": [
+    "queimadas destroem habitat",
+    "desertificação",
+    "monocultura reduz diversidade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em Cubatão, na encosta da Serra do Mar, parte da Mata Atlântica foi removida para construir moradias. Depois de uma semana de chuva forte, ocorreu um deslizamento de terra que atingiu casas e entupiu um córrego.",
+   "comando": "Explique por que a remoção da vegetação aumentou o risco do deslizamento e qual medida ajudaria a prevenir novos casos.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da ocorrência",
+    "etapas": [
+     "Mata retirada da encosta",
+     "Casas construídas no local",
+     "Chuva forte por uma semana",
+     "Terra desliza e entope o córrego"
+    ]
+   },
+   "ref": "As raízes e a copa das árvores seguram o solo e diminuem o impacto da chuva; sem elas, a terra encharca e desliza. É preciso preservar ou reflorestar as encostas e evitar construir nelas.",
+   "conceitos": [
+    "raízes fixam o solo",
+    "vegetação protege contra a chuva",
+    "reflorestar e evitar ocupar encostas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu Osvaldo, produtor rural no interior do Mato Grosso, diz que derrubar mais mata para plantar traz lucro rápido. Já sua vizinha, Dona Ivete, preservou as nascentes e a mata ciliar da propriedade, e a água nunca faltou nos períodos secos.",
+   "comando": "Compare as duas atitudes e justifique qual traz mais benefícios a longo prazo para o produtor e para o ambiente.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das propriedades",
+    "colunas": [
+     "Propriedade",
+     "Mata preservada",
+     "Água em ano seco"
+    ],
+    "linhas": [
+     [
+      "Seu Osvaldo",
+      "10%",
+      "Nascentes secaram"
+     ],
+     [
+      "Dona Ivete",
+      "35%",
+      "Nascentes mantidas"
+     ]
+    ]
+   },
+   "ref": "A atitude de Dona Ivete é mais vantajosa: a mata protege nascentes e solo, garante água para a lavoura e mantém a fauna. O lucro rápido de Seu Osvaldo cai quando falta água e o solo se degrada.",
+   "conceitos": [
+    "preservação protege água e solo",
+    "lucro de curto prazo versus sustentabilidade",
+    "benefício ambiental e econômico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma crise de água, uma reportagem mostrou que o desmatamento do Cerrado reduziu a vazão de rios que abastecem cidades distantes, como São Paulo. Ela mostrou a vazão de um rio e a vegetação nativa que restava na bacia dele.",
+   "comando": "Justifique por que preservar o Cerrado interessa também a quem vive longe dele.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de uma bacia no Cerrado",
+    "colunas": [
+     "Ano",
+     "Vegetação nativa (%)",
+     "Vazão do rio (m³/s)"
+    ],
+    "linhas": [
+     [
+      "1990",
+      "80",
+      "200"
+     ],
+     [
+      "2010",
+      "50",
+      "150"
+     ],
+     [
+      "2020",
+      "20",
+      "90"
+     ]
+    ]
+   },
+   "ref": "O Cerrado tem muitas nascentes e a vegetação ajuda a água da chuva a infiltrar e abastecer rios. Com menos vegetação, a vazão cai e falta água para cidades, indústrias e lavouras, mesmo distantes.",
+   "conceitos": [
+    "Cerrado abriga nascentes",
+    "vegetação favorece infiltração",
+    "impacto na água de outras regiões"
+   ]
+  }
+ ],
+ "8º ANO|3|Relacionar padrões de circulação atmosférica e oceânica aos climas regionais.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na praia de Pitangueiras, no Guarujá, Juliana percebeu que, durante a tarde de verão, o vento soprava do mar para a areia e refrescava quem estava deitado na orla. Ela mediu algumas temperaturas ao meio-dia.",
+   "comando": "Com base nas medidas de Juliana, como se explica o vento que sopra do mar para a areia durante o dia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Juliana, às 14h",
+    "colunas": [
+     "Local",
+     "Temperatura (°C)"
+    ],
+    "linhas": [
+     [
+      "Areia",
+      "40"
+     ],
+     [
+      "Água do mar",
+      "26"
+     ],
+     [
+      "Ar sobre a areia",
+      "33"
+     ],
+     [
+      "Ar sobre o mar",
+      "27"
+     ]
+    ]
+   },
+   "alts": [
+    "O ar sobre a areia esquenta e sobe, e o ar mais frio do mar ocupa o lugar.",
+    "O ar sobre o mar esquenta e sobe, e o ar mais frio da areia ocupa o lugar.",
+    "O mar empurra o ar para a terra por causa do movimento constante das ondas.",
+    "O ar frio sobe sobre a areia, e o ar quente do mar desce para a praia."
+   ],
+   "correta": 0,
+   "explicacao": "A areia aquece mais que a água; o ar sobre ela esquenta, sobe e é substituído pelo ar mais frio do mar (brisa marítima). Os distratores invertem o sentido da convecção ou atribuem o vento às ondas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Arica, cidade do litoral do Chile, tem um dos climas mais secos do mundo, embora fique à beira do oceano Pacífico. Ao longo dessa costa passa a corrente de Humboldt, que traz água fria do sul. Já Santos, no litoral paulista, recebe uma corrente mais quente e tem muita chuva.",
+   "comando": "Como a corrente fria de Humboldt contribui para o clima seco de Arica?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de duas cidades litorâneas",
+    "colunas": [
+     "Cidade",
+     "Água do mar (°C)",
+     "Chuva anual (mm)"
+    ],
+    "linhas": [
+     [
+      "Arica (Chile)",
+      "17",
+      "1"
+     ],
+     [
+      "Santos (Brasil)",
+      "25",
+      "2000"
+     ]
+    ]
+   },
+   "alts": [
+    "A corrente fria evapora muita água e forma nuvens que chovem no mar.",
+    "A corrente fria aquece o ar do litoral, que perde umidade para o mar.",
+    "A corrente fria esfria o ar, que recebe pouco vapor e forma poucas nuvens.",
+    "A corrente fria carrega o vapor para o interior, que recebe a chuva."
+   ],
+   "correta": 2,
+   "explicacao": "Água fria evapora pouco, o ar fica seco e quase não se formam nuvens de chuva. A corrente quente de Santos ocorre o oposto: mais evaporação e mais chuva."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Davi pingou uma gota de água gelada com corante azul e outra de água morna com corante vermelho em um copo com água em temperatura ambiente. Ele viu o azul descer até o fundo e o vermelho subir até a superfície, formando um movimento circular.",
+   "comando": "Qual fenômeno natural da atmosfera esse experimento representa?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do experimento de Davi",
+    "etapas": [
+     "Copo com água em temperatura ambiente",
+     "Gota de água gelada com corante azul",
+     "Gota de água morna com corante vermelho"
+    ]
+   },
+   "alts": [
+    "O ar frio sobe por ser mais leve, o que explica os ventos polares.",
+    "O ar quente desce por ser mais denso, o que gera os ventos de superfície.",
+    "O ar frio fica parado perto do solo, e o quente fica imóvel acima dele.",
+    "O ar quente sobe por ser menos denso, e o ar frio desce e ocupa o lugar."
+   ],
+   "correta": 3,
+   "explicacao": "No experimento, o fluido quente sobe e o frio desce (convecção), como o ar quente que sobe e é substituído pelo ar frio, formando ventos. Os distratores invertem densidade ou negam o movimento."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Londres está a 51° de latitude norte, e Labrador City, no Canadá, a 53° norte. Mesmo estando quase na mesma latitude, Londres tem invernos amenos, e Labrador City tem invernos muito rigorosos. Uma corrente quente do Atlântico passa perto da costa europeia.",
+   "comando": "Qual é a explicação mais adequada para a diferença entre os invernos dessas duas cidades?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de duas cidades",
+    "colunas": [
+     "Cidade",
+     "Latitude",
+     "Temperatura média em janeiro (°C)"
+    ],
+    "linhas": [
+     [
+      "Londres",
+      "51° N",
+      "5"
+     ],
+     [
+      "Labrador City",
+      "53° N",
+      "-22"
+     ]
+    ]
+   },
+   "alts": [
+    "Londres recebe mais raios solares que Labrador City por ficar mais perto do equador.",
+    "Uma corrente oceânica quente transporta calor e aquece o clima da costa europeia.",
+    "Labrador City fica em altitude bem maior que Londres, e isso a deixa mais fria.",
+    "Londres fica mais longe do mar que Labrador City, o que mantém o clima ameno."
+   ],
+   "correta": 1,
+   "explicacao": "As latitudes são parecidas; a diferença vem da corrente quente do Atlântico, que leva calor para a Europa. As outras explicações não correspondem aos dados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Entre Bertioga, no litoral, e a capital paulista, no planalto, a Serra do Mar forma uma barreira. Ventos úmidos vindos do oceano Atlântico sobem a serra. Um meteorologista comparou a chuva anual em três pontos do trajeto.",
+   "comando": "De acordo com os dados, por que chove muito mais no litoral e na serra do que no planalto?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de chuva anual",
+    "unidade": "mm",
+    "itens": [
+     {
+      "rotulo": "Litoral (Bertioga)",
+      "valor": 2500
+     },
+     {
+      "rotulo": "Topo da serra",
+      "valor": 3500
+     },
+     {
+      "rotulo": "Planalto (São Paulo)",
+      "valor": 1500
+     }
+    ]
+   },
+   "alts": [
+    "O ar úmido do mar sobe a serra, esfria e condensa, e chove no litoral.",
+    "O ar seco do interior sobe a serra e leva a chuva para o lado do litoral.",
+    "A serra produz a umidade do ar, que se acumula do lado do litoral e chove.",
+    "O ar do mar perde a umidade por causa do sal e chove mais no interior."
+   ],
+   "correta": 0,
+   "explicacao": "Ao subir a serra, o ar úmido do mar esfria, o vapor condensa e vira chuva (chuva de relevo); ao chegar ao planalto, o ar está mais seco. Os distratores invertem a origem do ar ou da umidade."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Clara colocou, em dois copos com água em temperatura ambiente, uma gota de água a 5 °C com corante azul e uma gota de água a 40 °C com corante vermelho. Ela observou o caminho de cada corante.",
+   "comando": "Explique por que o corante azul e o vermelho se moveram em sentidos diferentes.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento de Clara",
+    "colunas": [
+     "Gota",
+     "Temperatura",
+     "Movimento observado"
+    ],
+    "linhas": [
+     [
+      "Azul",
+      "5 °C",
+      "Foi para o fundo"
+     ],
+     [
+      "Vermelha",
+      "40 °C",
+      "Foi para a superfície"
+     ]
+    ]
+   },
+   "ref": "A água fria é mais densa e desce; a água morna é menos densa e sobe. Esse movimento de subida e descida pelas diferenças de temperatura é a convecção, o mesmo princípio dos ventos e das correntes.",
+   "conceitos": [
+    "diferença de temperatura",
+    "densidade",
+    "convecção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lucas viu num mapa que a Corrente do Brasil, de água quente, desce do equador pelo litoral, e a Corrente das Malvinas, de água fria, sobe do sul. A professora pediu que ele relacionasse as correntes ao clima das cidades da costa.",
+   "comando": "Explique como uma corrente quente e uma corrente fria influenciam o clima de cidades litorâneas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das correntes",
+    "colunas": [
+     "Corrente",
+     "Temperatura da água (°C)"
+    ],
+    "linhas": [
+     [
+      "Corrente do Brasil",
+      "24"
+     ],
+     [
+      "Corrente das Malvinas",
+      "12"
+     ]
+    ]
+   },
+   "ref": "A corrente quente aquece o ar e favorece a evaporação, deixando o clima mais quente, úmido e chuvoso. A corrente fria esfria o ar e reduz a evaporação, deixando o clima mais frio e seco.",
+   "conceitos": [
+    "corrente quente e úmida",
+    "corrente fria e seca",
+    "evaporação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um pescador de Caraguatatuba notou que, à noite, o vento sopra da terra para o mar, o contrário do que acontece à tarde. Ele mediu as temperaturas às 22h.",
+   "comando": "Explique por que o sentido do vento se inverte à noite.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro às 22h",
+    "colunas": [
+     "Local",
+     "Temperatura (°C)"
+    ],
+    "linhas": [
+     [
+      "Areia",
+      "22"
+     ],
+     [
+      "Água do mar",
+      "25"
+     ]
+    ]
+   },
+   "ref": "À noite a terra esfria mais rápido que o mar. O ar sobre o mar fica mais quente, sobe, e o ar mais frio da terra se desloca para ocupar o lugar, formando a brisa terrestre.",
+   "conceitos": [
+    "terra esfria mais rápido",
+    "ar quente do mar sobe",
+    "brisa terrestre"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A Amazônia, próxima do equador, tem chuvas abundantes, enquanto desertos como o Atacama e o Saara ficam perto de 23° de latitude. Um professor mostrou dados de chuva em locais com latitudes diferentes.",
+   "comando": "Explique, com base na circulação do ar, por que chove muito no equador e pouco nessas faixas desérticas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de chuva anual",
+    "colunas": [
+     "Local",
+     "Latitude",
+     "Chuva (mm)"
+    ],
+    "linhas": [
+     [
+      "Manaus",
+      "3° S",
+      "2300"
+     ],
+     [
+      "Deserto do Atacama",
+      "24° S",
+      "15"
+     ],
+     [
+      "Deserto do Saara",
+      "22° N",
+      "30"
+     ]
+    ]
+   },
+   "ref": "No equador o ar quente e úmido sobe, esfria e condensa, formando muita chuva. Esse ar perde a umidade e desce por volta de 30° de latitude, seco e sem formar nuvens, o que cria os desertos.",
+   "conceitos": [
+    "ar quente sobe no equador",
+    "ar seco desce em torno de 30°",
+    "circulação atmosférica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um ano de El Niño, quando o oceano Pacífico fica mais quente que o normal, notícias mostraram chuva muito acima da média no Sul do Brasil e seca no Norte e no Nordeste.",
+   "comando": "Justifique como uma mudança na temperatura do oceano pode alterar o clima de regiões brasileiras tão distantes dele.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de chuva em relação à média",
+    "colunas": [
+     "Região",
+     "Variação da chuva (%)"
+    ],
+    "linhas": [
+     [
+      "Sul",
+      "+40"
+     ],
+     [
+      "Sudeste",
+      "0"
+     ],
+     [
+      "Norte e Nordeste",
+      "-30"
+     ]
+    ]
+   },
+   "ref": "O oceano mais quente muda a evaporação e a circulação do ar. Isso desloca as massas de ar e as áreas de chuva: mais umidade chega ao Sul e menos ao Norte e Nordeste, mostrando a ligação entre oceano e atmosfera.",
+   "conceitos": [
+    "água quente altera a evaporação",
+    "mudança na circulação atmosférica",
+    "efeitos em regiões distantes"
+   ]
+  }
+ ],
+ "9º ANO|2|Analisar a aplicação da genética e da biotecnologia na sociedade, considerando aspectos éticos, científicos e tecnológicos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma manchete lida por Beatriz em seu grupo de trabalho dizia: 'Bactérias modificadas passam a fabricar insulina humana em grandes tanques, ajudando milhões de pessoas com diabetes'. O professor explicou que as bactérias não produzem insulina naturalmente.",
+   "comando": "Qual técnica permite que bactérias produzam insulina humana?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas descritas na reportagem",
+    "etapas": [
+     "Trecho do DNA humano responsável pela insulina é separado",
+     "Bactérias recebem esse trecho",
+     "Bactérias se multiplicam nos tanques e liberam a substância"
+    ]
+   },
+   "alts": [
+    "Clonagem, pois a bactéria é copiada a partir da célula de um paciente diabético.",
+    "Seleção artificial, pois se escolhem bactérias que já produzem insulina em excesso.",
+    "Fertilização in vitro, pois a insulina é obtida de óvulos cultivados em laboratório.",
+    "Engenharia genética, pois um gene humano é inserido e funciona na bactéria."
+   ],
+   "correta": 3,
+   "explicacao": "A engenharia genética transfere um gene humano para a bactéria, que passa a produzir a proteína; é o processo da insulina recombinante. Os distratores confundem com clonagem, seleção e reprodução assistida."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O agricultor Seu Nilton, de Sorocaba, trocou o milho comum pelo milho Bt, cujo DNA recebeu, em laboratório, um gene de uma bactéria que produz uma proteína tóxica para a lagarta-do-cartucho. Ele comparou as duas lavouras.",
+   "comando": "O que caracteriza o milho Bt como um organismo transgênico?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das lavouras de Seu Nilton",
+    "colunas": [
+     "Lavoura",
+     "Lagartas por planta",
+     "Perda da colheita (%)"
+    ],
+    "linhas": [
+     [
+      "Milho comum",
+      "12",
+      "30"
+     ],
+     [
+      "Milho Bt",
+      "1",
+      "3"
+     ]
+    ]
+   },
+   "alts": [
+    "Ser fruto do cruzamento natural entre duas variedades diferentes de milho.",
+    "Ter recebido um gene de outra espécie, inserido no DNA em laboratório.",
+    "Ter sido copiado de uma única planta, resultando em indivíduos idênticos entre si.",
+    "Ter sido tratado com defensivos que ficam gravados de forma permanente no DNA."
+   ],
+   "correta": 1,
+   "explicacao": "Transgênico é o organismo que recebeu gene de outra espécie por engenharia genética. Cruzamento e clonagem não envolvem essa transferência, e defensivos não alteram o DNA."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um haras em Campinas decidiu clonar a égua campeã Estrela, usando o núcleo de uma célula da pele dela. O embrião formado será implantado em outra égua, e o potro nascerá em um ano.",
+   "comando": "O que é correto esperar sobre o potro clonado?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da clonagem",
+    "etapas": [
+     "Célula da pele da égua é coletada",
+     "Núcleo da célula é colocado em um óvulo sem núcleo",
+     "Embrião é implantado em outra égua"
+    ]
+   },
+   "alts": [
+    "Terá o mesmo material genético de Estrela, mas pode ter outro comportamento.",
+    "Será idêntico a Estrela, inclusive no comportamento e nas experiências de vida.",
+    "Terá metade dos genes de Estrela e metade de um cavalo escolhido pelo haras.",
+    "Terá genes modificados e características novas que Estrela não possuía."
+   ],
+   "correta": 0,
+   "explicacao": "O clone tem o mesmo DNA do doador, mas ambiente e experiências influenciam o comportamento e o desempenho. Não há mistura de genes (como na reprodução) nem modificação (como na transgenia)."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao fazer compras com a mãe, Rafael viu no rótulo de um óleo de soja o aviso 'contém ingrediente transgênico', com um triângulo amarelo. Ele ficou curioso e perguntou por que a lei obriga a indústria a colocar essa informação.",
+   "comando": "Que argumento justifica a exigência de rotulagem de alimentos transgênicos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do rótulo",
+    "colunas": [
+     "Informação",
+     "Descrição"
+    ],
+    "linhas": [
+     [
+      "Produto",
+      "Óleo de soja"
+     ],
+     [
+      "Símbolo",
+      "T em triângulo amarelo"
+     ],
+     [
+      "Aviso",
+      "Contém ingrediente transgênico"
+     ]
+    ]
+   },
+   "alts": [
+    "Ela comprova que o alimento é perigoso e deve ser retirado do mercado.",
+    "Ela torna o alimento mais barato, porque a indústria deixa de pagar impostos.",
+    "Ela garante ao consumidor a informação para decidir o que deseja consumir.",
+    "Ela impede que os cientistas continuem pesquisando novas variedades."
+   ],
+   "correta": 2,
+   "explicacao": "A rotulagem respeita o direito do consumidor à informação e à escolha, sem afirmar que o alimento é perigoso. Os demais argumentos não têm relação com esse objetivo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um grupo escolar comparou duas lavouras de soja vizinhas, uma convencional e outra transgênica resistente a insetos, e coletou dados em uma safra. Os alunos precisam concluir qual é a leitura mais completa dos resultados.",
+   "comando": "Qual conclusão é coerente com os dados coletados pelo grupo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento do grupo",
+    "colunas": [
+     "Indicador",
+     "Convencional",
+     "Transgênica"
+    ],
+    "linhas": [
+     [
+      "Produção (sacas por hectare)",
+      "52",
+      "60"
+     ],
+     [
+      "Aplicações de inseticida",
+      "6",
+      "2"
+     ],
+     [
+      "Custo da semente (R$ por saco)",
+      "300",
+      "480"
+     ]
+    ]
+   },
+   "alts": [
+    "A lavoura transgênica não tem desvantagem e dispensa o monitoramento.",
+    "A transgênica produz mais e usa menos inseticida, mas a semente é mais cara.",
+    "A convencional produz mais, pois usa mais inseticida e sementes mais baratas.",
+    "As duas são equivalentes, pois a diferença de produção vem do clima."
+   ],
+   "correta": 1,
+   "explicacao": "Os dados mostram maior produção e menos inseticida na transgênica, mas custo maior da semente: há benefícios e custos a ponderar. Os distratores ignoram algum dado."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um debate, o grupo A afirmou que a ovelha Dolly era um animal transgênico, e o grupo B afirmou que o milho Bt é um clone. A professora pediu que a turma avaliasse as duas afirmações.",
+   "comando": "As afirmações estão corretas? Explique a diferença entre clonagem e transgenia.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos exemplos",
+    "colunas": [
+     "Exemplo",
+     "O que foi feito"
+    ],
+    "linhas": [
+     [
+      "Ovelha Dolly",
+      "Núcleo de célula adulta colocado em óvulo sem núcleo"
+     ],
+     [
+      "Milho Bt",
+      "Gene de bactéria colocado no DNA do milho"
+     ]
+    ]
+   },
+   "ref": "As duas estão erradas. Dolly é um clone: copiou-se o DNA completo de uma ovelha. O milho Bt é transgênico: recebeu um gene de outra espécie. Clonagem copia, e a transgenia acrescenta um gene.",
+   "conceitos": [
+    "clonagem copia o DNA",
+    "transgenia insere gene de outra espécie",
+    "diferença entre os processos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O jornal da escola publicou três manchetes: 'Bactérias fabricam hormônio para tratar diabetes', 'Soja resiste a praga e usa menos inseticida' e 'Exame de DNA descobre o pai de uma criança'.",
+   "comando": "Classifique cada manchete como aplicação na saúde ou na agricultura e cite um benefício dela para a sociedade.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das manchetes",
+    "colunas": [
+     "Nº",
+     "Manchete"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Bactérias fabricam hormônio para tratar diabetes"
+     ],
+     [
+      "2",
+      "Soja resiste a praga e usa menos inseticida"
+     ],
+     [
+      "3",
+      "Exame de DNA descobre o pai de uma criança"
+     ]
+    ]
+   },
+   "ref": "1) Saúde: tratamento de diabetes em maior escala e a menor custo. 2) Agricultura: menos perdas e menor uso de agrotóxicos. 3) Saúde e justiça: identificação de parentesco com segurança.",
+   "conceitos": [
+    "aplicação na saúde",
+    "aplicação na agricultura",
+    "benefício social"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma investigação, a polícia de Ribeirão Preto encontrou um fio de cabelo na cena de um crime. O laboratório comparou 10 trechos do DNA do cabelo com o de três suspeitos.",
+   "comando": "Qual suspeito é o mais provável de ter deixado o cabelo? Justifique usando o que se sabe sobre o DNA.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento do laboratório",
+    "colunas": [
+     "Suspeito",
+     "Trechos do DNA iguais aos do cabelo (de 10)"
+    ],
+    "linhas": [
+     [
+      "A",
+      "3"
+     ],
+     [
+      "B",
+      "10"
+     ],
+     [
+      "C",
+      "6"
+     ]
+    ]
+   },
+   "ref": "O suspeito B, pois todos os trechos do DNA coincidiram. O DNA é único em cada pessoa (exceto gêmeos idênticos), então a coincidência total indica a origem do cabelo, e as coincidências parciais são esperadas entre pessoas diferentes.",
+   "conceitos": [
+    "DNA é característico de cada pessoa",
+    "coincidência total indica a origem",
+    "aplicação da genética na justiça"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma clínica propõe corrigir, em embriões, um gene que causa uma doença hereditária grave. Alguns defendem a técnica para evitar o sofrimento, e outros temem que ela seja usada para escolher características como cor dos olhos ou altura.",
+   "comando": "Apresente um argumento a favor e um argumento contra essa técnica, considerando aspectos éticos e científicos.",
+   "figura": null,
+   "ref": "A favor: poderia prevenir doenças graves e o sofrimento das famílias. Contra: há riscos ainda desconhecidos para o embrião e as próximas gerações, e a técnica poderia ser usada para escolher características e ampliar desigualdades.",
+   "conceitos": [
+    "benefício à saúde",
+    "riscos científicos",
+    "limite ético e desigualdade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No 'Tribunal da biotecnologia', o grupo de Camila analisou um arroz modificado para produzir vitamina A, proposto a uma região em que muitas crianças têm falta dessa vitamina. Um outro grupo pergunta se vale a pena usar a técnica, já que há quem se preocupe com o domínio de empresas sobre as sementes.",
+   "comando": "Avalie benefícios e riscos do arroz modificado e proponha uma condição ética para o seu uso.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do estudo (fictício)",
+    "colunas": [
+     "Indicador",
+     "Antes",
+     "Depois de 3 anos"
+    ],
+    "linhas": [
+     [
+      "Crianças com falta de vitamina A (%)",
+      "28",
+      "9"
+     ],
+     [
+      "Famílias que compram semente de uma só empresa (%)",
+      "0",
+      "85"
+     ]
+    ]
+   },
+   "ref": "Benefício: queda de 28% para 9% de crianças com falta de vitamina A. Risco: dependência de uma só empresa e possíveis efeitos não estudados no ambiente. Condição ética: testes de segurança públicos, acesso justo às sementes e rotulagem clara.",
+   "conceitos": [
+    "benefício à saúde",
+    "risco de dependência e ambiental",
+    "condição ética: segurança e acesso"
+   ]
+  }
+ ],
+ "4B|6º ANO|2": [
+  {
+   "tipo": "obj",
+   "enunciado": "Bia, aluna do 6º ano, encostou sem querer a mão em uma xícara de café recém-coado, a cerca de 80 °C, e retirou o braço em menos de um segundo, antes mesmo de pensar no que tinha acontecido.",
+   "comando": "Quais estruturas formam o centro do sistema nervoso que recebe os sinais e elabora a resposta nessa situação?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da situação de Bia",
+    "etapas": [
+     "Mão toca a xícara quente",
+     "Um sinal percorre o braço",
+     "Mão se afasta em menos de 1 segundo"
+    ]
+   },
+   "alts": [
+    "Pele e músculos, que sentem o calor e movimentam a mão da pessoa.",
+    "Nervos e gânglios, que decidem sozinhos qual movimento a mão fará.",
+    "Encéfalo e medula espinal, que recebem os sinais e respondem.",
+    "Coração e pulmões, que levam sangue e ar para o braço reagir."
+   ],
+   "correta": 2,
+   "explicacao": "O encéfalo e a medula espinal formam o sistema nervoso central, que recebe a informação e envia a ordem de resposta. A pele e os músculos são receptor e órgão de resposta, e os nervos apenas transportam sinais."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a professora mostrou um esquema de um neurônio, a célula do sistema nervoso. A figura indicava um corpo celular com núcleo no centro, várias ramificações curtas de um lado e um único prolongamento longo do outro, terminando em pequenas ramificações.",
+   "comando": "Qual parte do neurônio leva o impulso nervoso do corpo celular até outras células?",
+   "figura": null,
+   "alts": [
+    "O axônio, prolongamento longo que leva o impulso até outras células.",
+    "Os dendritos, ramificações curtas que levam o impulso às outras células.",
+    "O corpo celular, que guarda o impulso e o libera como uma bateria.",
+    "O núcleo, que produz o impulso e o envia diretamente aos músculos."
+   ],
+   "correta": 0,
+   "explicacao": "O axônio é o prolongamento que conduz o impulso para longe do corpo celular. Os dendritos recebem os sinais, e o núcleo e o corpo celular mantêm a célula funcionando."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Carlos andava de bicicleta pela ciclovia quando viu o semáforo ficar vermelho. Em seguida, apertou o freio e parou a 2 metros da faixa. O professor pediu que a turma ordenasse o caminho do sinal nervoso nesse caso.",
+   "comando": "Qual alternativa apresenta a ordem correta das estruturas que o sinal percorreu?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da situação de Carlos",
+    "etapas": [
+     "Semáforo fica vermelho",
+     "Carlos aperta o freio",
+     "Bicicleta para a 2 metros da faixa"
+    ]
+   },
+   "alts": [
+    "Encéfalo, olhos, nervos motores e músculos das mãos, nessa ordem.",
+    "Músculos das mãos, medula espinal, encéfalo e olhos, nessa ordem.",
+    "Olhos, nervos motores, encéfalo e músculos das mãos, nessa ordem.",
+    "Olhos, nervos sensitivos, encéfalo e músculos das mãos, nessa ordem."
+   ],
+   "correta": 3,
+   "explicacao": "Os olhos captam o estímulo, os nervos sensitivos o levam ao encéfalo, e este envia a ordem pelos nervos motores até os músculos. As outras alternativas trocam a ordem ou o tipo de nervo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No consultório, o médico bateu levemente com um martelinho abaixo do joelho de Lucas, que estava com a perna solta, e a perna dele deu um chute sem que ele quisesse. Em seguida, o médico pediu que Lucas chutasse de propósito.",
+   "comando": "Por que o movimento involuntário ocorre mais rápido do que o movimento voluntário?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do exame de Lucas",
+    "colunas": [
+     "Tipo de movimento",
+     "Tempo de resposta (s)"
+    ],
+    "linhas": [
+     [
+      "Com a martelada",
+      "0,05"
+     ],
+     [
+      "Chute de propósito",
+      "0,30"
+     ]
+    ]
+   },
+   "alts": [
+    "O encéfalo decide o movimento, mas o paciente não percebe a decisão.",
+    "A medula espinal comanda o movimento antes de o sinal chegar ao encéfalo.",
+    "O nervo óptico leva o sinal direto ao músculo da coxa sem passar por nada.",
+    "O músculo da coxa tem neurônios próprios que decidem o movimento sozinho."
+   ],
+   "correta": 1,
+   "explicacao": "No ato reflexo, a medula espinal responde sem esperar a decisão do encéfalo, e por isso é mais rápido. As outras alternativas atribuem o comando a estruturas erradas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O Sr. João sofreu um acidente de moto que machucou a medula espinal na altura do pescoço. Ele consegue falar, enxergar e entender tudo, mas não sente nem movimenta as pernas.",
+   "comando": "O que os dados permitem concluir sobre a função da medula espinal?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do paciente",
+    "colunas": [
+     "Função avaliada",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Visão",
+      "Normal"
+     ],
+     [
+      "Fala",
+      "Normal"
+     ],
+     [
+      "Sensibilidade das pernas",
+      "Ausente"
+     ],
+     [
+      "Movimento das pernas",
+      "Ausente"
+     ]
+    ]
+   },
+   "alts": [
+    "Ela leva sinais entre o encéfalo e o corpo, e a lesão interrompeu esse caminho.",
+    "Ela comanda o pensamento, e a lesão impediu o paciente de decidir mover as pernas.",
+    "Ela forma os músculos das pernas, e a lesão os deixou sem capacidade de contrair.",
+    "Ela controla a visão e a fala, e por isso essas funções foram mantidas normais."
+   ],
+   "correta": 0,
+   "explicacao": "A medula faz a ligação entre o encéfalo e o resto do corpo; ao ser lesionada, os sinais não passam, e as pernas perdem sensibilidade e movimento. Visão e fala dependem do encéfalo, que está preservado."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Bia encostou a mão em uma xícara quente e a retirou rapidamente. Só depois sentiu dor e percebeu o que tinha acontecido.",
+   "comando": "Descreva o caminho do estímulo até a resposta, citando as estruturas do sistema nervoso envolvidas.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da situação",
+    "etapas": [
+     "A pele da mão toca a xícara quente",
+     "A mão se afasta",
+     "Bia sente dor depois"
+    ]
+   },
+   "ref": "Receptores da pele detectam o calor e enviam o sinal por nervos sensitivos até a medula espinal. A medula envia a ordem por nervos motores aos músculos, que afastam a mão. O sinal chega depois ao encéfalo, onde se sente dor.",
+   "conceitos": [
+    "receptores na pele",
+    "nervo sensitivo",
+    "medula espinal",
+    "nervo motor e músculo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na atividade 'Pause e responda', Paulo recebeu uma lista com estruturas do sistema nervoso: encéfalo, medula espinal, nervos e gânglios. A professora pediu que ele as organizasse em dois grupos.",
+   "comando": "Classifique as estruturas em sistema nervoso central e periférico e explique a diferença entre os dois.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da lista de Paulo",
+    "colunas": [
+     "Estrutura",
+     "Localização"
+    ],
+    "linhas": [
+     [
+      "Encéfalo",
+      "Dentro do crânio"
+     ],
+     [
+      "Medula espinal",
+      "Dentro da coluna vertebral"
+     ],
+     [
+      "Nervos",
+      "Distribuídos pelo corpo todo"
+     ],
+     [
+      "Gânglios",
+      "Perto da coluna e dos órgãos"
+     ]
+    ]
+   },
+   "ref": "Central: encéfalo e medula espinal, que processam as informações e comandam o corpo. Periférico: nervos e gânglios, que levam os sinais dos órgãos até o centro e as ordens do centro até os músculos.",
+   "conceitos": [
+    "central: encéfalo e medula",
+    "periférico: nervos e gânglios",
+    "funções distintas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marina bateu a nuca em uma queda no pátio. Depois disso, ela passou a ter tontura e dificuldade de se equilibrar ao andar em linha reta, mas fala, lembra de tudo e respira normalmente.",
+   "comando": "Qual parte do encéfalo provavelmente foi afetada? Justifique com as informações do caso.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Marina",
+    "colunas": [
+     "Função avaliada",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Equilíbrio e andar",
+      "Prejudicado"
+     ],
+     [
+      "Fala e memória",
+      "Normais"
+     ],
+     [
+      "Respiração e batimentos",
+      "Normais"
+     ]
+    ]
+   },
+   "ref": "Provavelmente o cerebelo, que coordena o equilíbrio e os movimentos. A fala e a memória (cérebro) e a respiração e os batimentos (tronco encefálico) estão normais, o que indica que essas partes não foram afetadas.",
+   "conceitos": [
+    "cerebelo coordena equilíbrio",
+    "cérebro: fala e memória",
+    "tronco encefálico: respiração"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma criança encostou o dedo em um ferro de passar quente e o retirou antes mesmo de sentir dor. Um médico explicou que a rapidez foi essencial para evitar uma queimadura mais grave.",
+   "comando": "Explique por que o ato reflexo protege o corpo nessa situação.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de tempos",
+    "unidade": "segundos",
+    "itens": [
+     {
+      "rotulo": "Resposta reflexa (medula)",
+      "valor": 0.05
+     },
+     {
+      "rotulo": "Resposta voluntária (encéfalo)",
+      "valor": 0.3
+     },
+     {
+      "rotulo": "Tempo para a pele queimar",
+      "valor": 0.2
+     }
+    ]
+   },
+   "ref": "No reflexo, a medula espinal envia a ordem direto aos músculos, sem esperar o encéfalo. Como a resposta leva 0,05 s, menor que o tempo para a pele queimar, o dedo sai antes do dano.",
+   "conceitos": [
+    "ato reflexo",
+    "comando pela medula",
+    "resposta mais rápida protege"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Durante a noite, Pedro dorme profundamente. Mesmo assim, o coração bate, ele respira e o intestino trabalha, embora ele não mova os braços nem decida nada conscientemente.",
+   "comando": "Explique por que essas funções continuam durante o sono e qual parte do sistema nervoso as controla.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do sono de Pedro",
+    "colunas": [
+     "Função",
+     "Situação durante o sono"
+    ],
+    "linhas": [
+     [
+      "Batimentos do coração",
+      "60 por minuto"
+     ],
+     [
+      "Respiração",
+      "14 por minuto"
+     ],
+     [
+      "Movimentos voluntários",
+      "Ausentes"
+     ]
+    ]
+   },
+   "ref": "Essas funções são involuntárias e vitais, controladas pelo tronco encefálico e pelo sistema nervoso autônomo, que agem sem a nossa vontade. Por isso continuam mesmo quando a parte consciente do cérebro está em repouso.",
+   "conceitos": [
+    "funções involuntárias",
+    "tronco encefálico",
+    "funcionamento contínuo"
+   ]
+  }
+ ],
+ "4B|6º ANO|15": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na véspera da prova, Rafael ficou ansioso e tomou duas latas de energético para estudar até tarde. No dia seguinte, contou que o coração disparou, que ficou agitado e que só conseguiu dormir de madrugada.",
+   "comando": "Que tipo de efeito a cafeína do energético teve sobre o sistema nervoso de Rafael?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Rafael",
+    "colunas": [
+     "Informação",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Energético consumido",
+      "2 latas (cerca de 160 mg de cafeína)"
+     ],
+     [
+      "Batimentos do coração",
+      "110 por minuto"
+     ],
+     [
+      "Horário em que dormiu",
+      "3h da manhã"
+     ]
+    ]
+   },
+   "alts": [
+    "Depressor, pois reduz a atividade do sistema nervoso e causa sono.",
+    "Estimulante, pois acelera a atividade nervosa e os batimentos.",
+    "Perturbador, pois altera a percepção e faz ver coisas que não existem.",
+    "Analgésico, pois bloqueia a dor e deixa o corpo mais relaxado."
+   ],
+   "correta": 1,
+   "explicacao": "A cafeína é estimulante: acelera o coração e dificulta o sono. Os distratores descrevem efeitos de depressores, de perturbadores e de analgésicos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Jorge tomou duas cervejas na festa e decidiu dirigir para casa 'porque se sentia bem'. Um instrutor de trânsito mostrou à turma de Jorge os resultados de um teste em simulador, feito com voluntários antes e depois de beber.",
+   "comando": "Com base nos dados do simulador, por que dirigir depois de beber é perigoso?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento no simulador",
+    "unidade": "segundos até frear",
+    "itens": [
+     {
+      "rotulo": "Sem bebida",
+      "valor": 0.7
+     },
+     {
+      "rotulo": "Após 2 cervejas",
+      "valor": 1.0
+     },
+     {
+      "rotulo": "Após 5 cervejas",
+      "valor": 1.6
+     }
+    ]
+   },
+   "alts": [
+    "O álcool melhora a atenção por alguns minutos e depois causa sono repentino.",
+    "O álcool afeta o fígado, e o risco no trânsito vem do cansaço do motorista.",
+    "O álcool acelera os reflexos, mas faz o motorista errar a velocidade.",
+    "O álcool deprime o sistema nervoso, o que retarda reflexos e atenção."
+   ],
+   "correta": 3,
+   "explicacao": "O álcool age como depressor do sistema nervoso e aumenta o tempo de reação, o que pode causar acidentes. Os dados mostram atraso crescente para frear, e não melhora dos reflexos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "João, de 35 anos, fuma 10 cigarros por dia desde os 18. Ele fica sem fôlego ao subir dois andares de escada e já tentou parar quatro vezes, mas sempre voltou a fumar nos primeiros dias.",
+   "comando": "Quais efeitos do cigarro explicam a falta de ar de João e a dificuldade de parar de fumar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de João",
+    "colunas": [
+     "Informação",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Tempo de fumo",
+      "17 anos"
+     ],
+     [
+      "Cigarros por dia",
+      "10"
+     ],
+     [
+      "Tentativas de parar",
+      "4"
+     ],
+     [
+      "Escada de 2 andares",
+      "Parou duas vezes"
+     ]
+    ]
+   },
+   "alts": [
+    "A fumaça lesiona os alvéolos e reduz o oxigênio; a nicotina vicia.",
+    "A fumaça aumenta a capacidade dos pulmões; a nicotina melhora a concentração.",
+    "A fumaça atinge o estômago e o fígado; a nicotina aumenta o apetite do fumante.",
+    "A fumaça é inofensiva em pouca quantidade; a nicotina é uma substância natural."
+   ],
+   "correta": 0,
+   "explicacao": "A fumaça danifica os pulmões e diminui a entrada de oxigênio, e a nicotina vicia, o que dificulta parar. Os distratores atribuem ao cigarro efeitos benéficos ou em outros órgãos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Marta, confeiteira, toma de cinco a seis xícaras de café por dia para dar conta das encomendas. Ela dorme apenas 4 horas por noite e vive irritada. Ao tentar reduzir para duas xícaras, sentiu forte dor de cabeça e mais irritação por três dias.",
+   "comando": "Como se explicam os sintomas que Marta sentiu ao reduzir o café?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Marta",
+    "colunas": [
+     "Situação",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "6 xícaras por dia",
+      "4 horas de sono, irritação"
+     ],
+     [
+      "Redução para 2 xícaras",
+      "Dor de cabeça e irritação por 3 dias"
+     ]
+    ]
+   },
+   "alts": [
+    "Ela tem doença do coração, e o café não causa dependência nem abstinência.",
+    "Ela comeu pouco no período, e a dor de cabeça vem da falta de comida.",
+    "A cafeína estimula, o corpo se acostuma, e reduzir causa abstinência.",
+    "A dor de cabeça vem do açúcar das encomendas, e não tem relação com o café."
+   ],
+   "correta": 2,
+   "explicacao": "O uso frequente de cafeína leva à tolerância e à dependência, e reduzi-la causa sintomas de abstinência como dor de cabeça e irritação. Os distratores ignoram a relação com o café."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Antes de uma prova importante, Lucas disse aos colegas que tomar um remédio estimulante sem receita 'ajuda a ficar acordado e a tirar nota boa'. Um grupo de alunos comparou, em um projeto, o desempenho de quem usou e de quem dormiu bem.",
+   "comando": "Que conclusão os dados do projeto permitem tirar sobre o uso do estimulante?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento do projeto",
+    "colunas": [
+     "Grupo",
+     "Horas de sono",
+     "Nota média na prova"
+    ],
+    "linhas": [
+     [
+      "Usou estimulante nas noites de estudo",
+      "3",
+      "5,0"
+     ],
+     [
+      "Dormiu bem",
+      "8",
+      "7,5"
+     ]
+    ]
+   },
+   "alts": [
+    "O estimulante melhorou o desempenho, pois deixou os alunos acordados por mais tempo.",
+    "O estimulante prejudicou o sono e não garantiu melhor desempenho na prova.",
+    "O desempenho dependeu do tempo de estudo, e o sono não teve relação com a prova.",
+    "O sono prejudicou o desempenho, pois quem dormiu perdeu tempo de estudo."
+   ],
+   "correta": 1,
+   "explicacao": "O estimulante reduziu o sono e a nota média foi menor, o que mostra que ele não garante bom desempenho e traz riscos. As outras conclusões contrariam os dados."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula, a professora mostrou uma lista de produtos comuns: café, cerveja e cigarro. Cada um contém uma substância que atua no organismo e é considerada droga lícita.",
+   "comando": "Associe cada produto à sua substância ativa e cite um dano à saúde provocado pelo uso excessivo de cada um.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos produtos",
+    "colunas": [
+     "Produto",
+     "Uso comum"
+    ],
+    "linhas": [
+     [
+      "Café",
+      "Bebida consumida em casa e no trabalho"
+     ],
+     [
+      "Cerveja",
+      "Bebida vendida a adultos"
+     ],
+     [
+      "Cigarro",
+      "Produto vendido a adultos"
+     ]
+    ]
+   },
+   "ref": "Café: cafeína, que causa insônia e taquicardia. Cerveja: álcool, que causa danos ao fígado e ao sistema nervoso. Cigarro: nicotina e outras substâncias, que causam dependência e doenças pulmonares.",
+   "conceitos": [
+    "cafeína",
+    "álcool",
+    "nicotina",
+    "dano à saúde"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um jogo de 'verdadeiro ou falso', um grupo leu a afirmação: 'Beber somente nos fins de semana não causa danos, pois o corpo se recupera durante a semana'. Para analisá-la, a turma considerou o caso de Ana, de 17 anos.",
+   "comando": "A afirmação é verdadeira ou falsa? Justifique com base no caso de Ana.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Ana",
+    "colunas": [
+     "Informação",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Idade",
+      "17 anos"
+     ],
+     [
+      "Quando bebe",
+      "Sexta e sábado"
+     ],
+     [
+      "Consumo",
+      "Cerca de 6 doses por noite"
+     ],
+     [
+      "Consequência",
+      "Não lembra o que fez à noite"
+     ]
+    ]
+   },
+   "ref": "É falsa. O consumo em grande quantidade, mesmo só nos fins de semana, prejudica o sistema nervoso, causa perda de memória e risco de acidentes, e na adolescência o cérebro ainda está em desenvolvimento e o risco de dependência é maior.",
+   "conceitos": [
+    "afirmação falsa",
+    "efeito no sistema nervoso",
+    "risco na adolescência"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro, de 14 anos, acha que o cigarro eletrônico (vape) é inofensivo, pois 'só solta vapor com cheirinho de fruta'. Um enfermeiro da UBS do bairro mostrou a ele a quantidade de nicotina de um dispositivo.",
+   "comando": "Explique por que o vape não é inofensivo para a saúde de Pedro.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de nicotina",
+    "unidade": "cigarros equivalentes",
+    "itens": [
+     {
+      "rotulo": "Um cigarro comum",
+      "valor": 1
+     },
+     {
+      "rotulo": "Um dispositivo de vape",
+      "valor": 20
+     }
+    ]
+   },
+   "ref": "O vape contém nicotina em quantidade alta, que causa dependência e prejudica o cérebro em desenvolvimento, e o vapor traz outras substâncias tóxicas para os pulmões. O sabor frutado apenas disfarça o risco.",
+   "conceitos": [
+    "nicotina causa dependência",
+    "pulmões e cérebro em desenvolvimento",
+    "falsa ideia de segurança"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu Antônio bebia nos fins de semana e foi aumentando a quantidade. Com o tempo, passou a beber todos os dias, faltava ao trabalho e brigava em casa. Hoje está desempregado e foi internado por problemas no fígado.",
+   "comando": "Analise de que modo o uso de álcool afetou a saúde e a qualidade de vida de Seu Antônio e de sua família.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da família",
+    "colunas": [
+     "Ano",
+     "Consumo de bebida",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "2019",
+      "Fins de semana",
+      "Emprego fixo"
+     ],
+     [
+      "2021",
+      "Todos os dias",
+      "Faltas ao trabalho"
+     ],
+     [
+      "2024",
+      "Todos os dias",
+      "Desempregado e internado"
+     ]
+    ]
+   },
+   "ref": "O álcool causou dependência e doença no fígado (saúde). Também levou à perda do emprego e de renda, a brigas e ao sofrimento da família, mostrando que o impacto vai além do corpo: social, econômico e familiar.",
+   "conceitos": [
+    "dependência e dano ao fígado",
+    "perda de emprego e renda",
+    "impacto familiar e social"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma pesquisa mostrou que quem começa a beber na adolescência tem mais chance de ficar dependente na vida adulta. A turma de Carla discutiu por que a idade de início faz diferença.",
+   "comando": "Justifique, com base nos dados, por que o consumo de álcool é mais perigoso na adolescência.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de pessoas dependentes na vida adulta",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Começou a beber aos 13 anos",
+      "valor": 40
+     },
+     {
+      "rotulo": "Começou a beber aos 21 anos",
+      "valor": 10
+     }
+    ]
+   },
+   "ref": "Na adolescência o cérebro ainda está em desenvolvimento e é mais sensível aos efeitos do álcool. Por isso o risco de dependência é maior, como mostram os 40% contra 10% dos que começaram depois.",
+   "conceitos": [
+    "cérebro em desenvolvimento",
+    "maior risco de dependência",
+    "dados da pesquisa"
+   ]
+  }
+ ],
+ "4B|7º ANO|12": [
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Cida levou o filho recém-nascido, Davi, à UBS do bairro para tomar as primeiras vacinas. A enfermeira mostrou o calendário de vacinação e explicou que todas essas vacinas fazem parte do Programa Nacional de Imunização (PNI).",
+   "comando": "O que é o PNI, segundo as informações da enfermeira?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Calendário apresentado na UBS",
+    "colunas": [
+     "Vacina",
+     "Idade"
+    ],
+    "linhas": [
+     [
+      "BCG",
+      "Ao nascer"
+     ],
+     [
+      "Pentavalente",
+      "2 meses"
+     ],
+     [
+      "Tríplice viral",
+      "12 meses"
+     ]
+    ]
+   },
+   "alts": [
+    "Um programa particular que vende vacinas a famílias com maior renda.",
+    "Um programa que trata as doenças depois que a pessoa já adoeceu.",
+    "Uma campanha anual que vacina as crianças contra a gripe nas escolas.",
+    "Um programa público que oferece vacinas gratuitas pelo SUS."
+   ],
+   "correta": 3,
+   "explicacao": "O PNI é uma política pública do SUS que oferece vacinas gratuitas a toda a população, seguindo um calendário. Os distratores o descrevem como privado, curativo ou restrito à gripe."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre saúde pública, o professor mostrou um gráfico da mortalidade de crianças menores de 5 anos no Brasil. No mesmo período, a vacinação e outras ações de saúde, como o pré-natal e o saneamento, foram ampliadas.",
+   "comando": "Qual relação é possível estabelecer entre o gráfico e o PNI?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de mortes de crianças menores de 5 anos",
+    "unidade": "por mil nascidos vivos",
+    "itens": [
+     {
+      "rotulo": "1990",
+      "valor": 62
+     },
+     {
+      "rotulo": "2000",
+      "valor": 36
+     },
+     {
+      "rotulo": "2010",
+      "valor": 19
+     },
+     {
+      "rotulo": "2020",
+      "valor": 14
+     }
+    ]
+   },
+   "alts": [
+    "A queda acompanhou a ampliação da vacinação e de outras ações de saúde.",
+    "A queda ocorreu porque as doenças infecciosas deixaram de existir sozinhas.",
+    "A queda foi causada pela diminuição do número de crianças nascidas.",
+    "A queda ocorreu porque as vacinas curam as crianças que já estão doentes."
+   ],
+   "correta": 0,
+   "explicacao": "A mortalidade infantil caiu junto com a ampliação de vacinação, pré-natal e saneamento. Vacinas previnem doenças, e não as curam, e a taxa é calculada por mil nascidos, então não depende do número de nascimentos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma cidade do interior paulista, a cobertura vacinal contra o sarampo caiu nos últimos anos, porque muitas famílias deixaram de levar as crianças às UBS. Ao mesmo tempo, os casos da doença voltaram a aparecer.",
+   "comando": "Por que o risco de surtos aumentou com a queda da cobertura vacinal?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da cidade",
+    "colunas": [
+     "Ano",
+     "Cobertura vacinal (%)",
+     "Casos de sarampo"
+    ],
+    "linhas": [
+     [
+      "2015",
+      "95",
+      "2"
+     ],
+     [
+      "2018",
+      "90",
+      "40"
+     ],
+     [
+      "2021",
+      "80",
+      "600"
+     ]
+    ]
+   },
+   "alts": [
+    "O vírus ficou mais forte, e por isso a vacina protege menos do que antes.",
+    "As crianças vacinadas passam a transmitir a doença às não vacinadas.",
+    "Com menos pessoas imunes, o vírus circula mais e atinge mais gente.",
+    "O sarampo é uma doença de inverno, e o frio reduz a proteção da vacina."
+   ],
+   "correta": 2,
+   "explicacao": "Com menos pessoas vacinadas, o vírus encontra mais pessoas suscetíveis e circula com facilidade; a vacinação coletiva protege também quem não pode se vacinar. As outras explicações não têm base nos dados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Carla levou a filha Bia à UBS aos 5 meses de idade, mas percebeu que a dose da vacina pentavalente prevista para 4 meses não tinha sido aplicada. A enfermeira consultou o cartão e a orientou.",
+   "comando": "Qual orientação é a mais adequada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Cartão de vacinação de Bia",
+    "colunas": [
+     "Dose",
+     "Idade prevista",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "1ª dose",
+      "2 meses",
+      "Aplicada"
+     ],
+     [
+      "2ª dose",
+      "4 meses",
+      "Atrasada"
+     ],
+     [
+      "3ª dose",
+      "6 meses",
+      "A aplicar"
+     ]
+    ]
+   },
+   "alts": [
+    "Reiniciar todo o esquema, pois as doses anteriores perderam o efeito.",
+    "Completar o esquema na UBS, pois as doses se somam na proteção.",
+    "Esperar os 12 meses, pois a dose deve ser aplicada nessa idade.",
+    "Não aplicar mais doses, pois uma dose garante proteção definitiva."
+   ],
+   "correta": 1,
+   "explicacao": "Doses atrasadas devem ser aplicadas assim que possível, sem reiniciar o esquema, pois cada dose reforça a resposta do organismo. As outras orientações são incorretas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Duas cidades paulistas com a mesma população, 100 mil habitantes, foram comparadas por uma equipe de saúde após um surto de coqueluche. A cidade A mantém alta cobertura vacinal, e a cidade B deixou de vacinar muitas crianças.",
+   "comando": "Que conclusão os dados permitem sobre o papel do PNI?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das cidades",
+    "colunas": [
+     "Cidade",
+     "Cobertura vacinal (%)",
+     "Casos por 100 mil habitantes"
+    ],
+    "linhas": [
+     [
+      "A",
+      "95",
+      "1"
+     ],
+     [
+      "B",
+      "70",
+      "35"
+     ]
+    ]
+   },
+   "alts": [
+    "A vacinação protege quem toma, mas não muda a situação da comunidade.",
+    "A cobertura baixa reduz os casos, pois o contato natural fortalece a imunidade.",
+    "O número de casos depende do tamanho da cidade, e não da vacinação.",
+    "A cobertura alta reduz os casos e protege também quem não pôde se vacinar."
+   ],
+   "correta": 3,
+   "explicacao": "As cidades têm a mesma população, e a de maior cobertura teve muito menos casos: a vacinação coletiva reduz a circulação da doença e protege toda a comunidade."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma reportagem local lembrou os 50 anos do PNI, criado em 1973. Ela listou vacinas oferecidas pelo programa e as doenças que elas previnem.",
+   "comando": "Explique o que é o PNI e cite dois benefícios dele para a população.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de vacinas do PNI",
+    "colunas": [
+     "Vacina",
+     "Doença prevenida"
+    ],
+    "linhas": [
+     [
+      "BCG",
+      "Formas graves de tuberculose"
+     ],
+     [
+      "Poliomielite",
+      "Paralisia infantil"
+     ],
+     [
+      "Tríplice viral",
+      "Sarampo, caxumba e rubéola"
+     ]
+    ]
+   },
+   "ref": "O PNI é o programa público do SUS que organiza e oferece vacinas gratuitas à população. Benefícios: prevenção de doenças e de mortes, principalmente em crianças, e controle ou eliminação de doenças, como a poliomielite.",
+   "conceitos": [
+    "política pública do SUS",
+    "vacinas gratuitas",
+    "prevenção de doenças e mortes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma leitura sobre mortalidade infantil, os alunos viram o gráfico de mortes de crianças menores de 5 anos entre 1990 e 2020.",
+   "comando": "Descreva a tendência mostrada no gráfico e indique duas ações de saúde que contribuíram para ela.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de mortes de crianças menores de 5 anos",
+    "unidade": "por mil nascidos vivos",
+    "itens": [
+     {
+      "rotulo": "1990",
+      "valor": 62
+     },
+     {
+      "rotulo": "2000",
+      "valor": 36
+     },
+     {
+      "rotulo": "2010",
+      "valor": 19
+     },
+     {
+      "rotulo": "2020",
+      "valor": 14
+     }
+    ]
+   },
+   "ref": "A mortalidade caiu de 62 para 14 por mil nascidos vivos. Para isso contribuíram a ampliação da vacinação pelo PNI e ações como pré-natal, saneamento básico e incentivo ao aleitamento materno.",
+   "conceitos": [
+    "queda de 62 para 14",
+    "vacinação",
+    "saneamento ou pré-natal"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A poliomielite foi eliminada no Brasil na década de 1990, mas, nos últimos anos, a cobertura vacinal caiu. Um agente de saúde de Campinas alertou que a doença poderia voltar, embora alguns moradores achem que 'a pólio já acabou'.",
+   "comando": "Explique por que é importante manter a vacinação mesmo contra uma doença que já foi eliminada no país.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da cobertura contra a poliomielite",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "2012",
+      "valor": 96
+     },
+     {
+      "rotulo": "2018",
+      "valor": 89
+     },
+     {
+      "rotulo": "2022",
+      "valor": 77
+     }
+    ]
+   },
+   "ref": "O vírus ainda existe em outros países e pode ser trazido por viajantes. Com cobertura baixa, há muitas pessoas sem imunidade, e a doença pode reaparecer. Manter a vacinação evita a volta da paralisia infantil.",
+   "conceitos": [
+    "vírus ainda circula no mundo",
+    "pessoas não imunes",
+    "manter a cobertura"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma mensagem de aplicativo circulou no bairro dizendo: 'Vacinas são desnecessárias, porque doenças como sarampo e pólio já sumiram'. Ana, agente de saúde, precisa responder à mensagem.",
+   "comando": "Elabore dois argumentos para mostrar que a mensagem está errada.",
+   "figura": null,
+   "ref": "As doenças diminuíram justamente por causa das vacinas, e voltam se a vacinação cair. Além disso, o vírus continua circulando em outras partes do mundo, e a vacinação coletiva protege quem não pode se vacinar.",
+   "conceitos": [
+    "doenças controladas pela vacina",
+    "risco de retorno",
+    "proteção coletiva"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um município estimou o custo de vacinar e o custo de tratar casos de sarampo. A secretária de saúde usou os dados para explicar por que a vacinação é uma política pública e não uma decisão só individual.",
+   "comando": "Justifique por que o PNI é vantajoso para a sociedade, com base nos dados e na ideia de proteção coletiva.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de custos",
+    "colunas": [
+     "Item",
+     "Valor (R$)"
+    ],
+    "linhas": [
+     [
+      "Uma dose de vacina",
+      "20"
+     ],
+     [
+      "Internação de um caso grave",
+      "3000"
+     ],
+     [
+      "Vacinar 10 mil crianças",
+      "200000"
+     ]
+    ]
+   },
+   "ref": "A vacinação custa bem menos do que tratar casos graves e evita mortes e sequelas. Por ser gratuita, protege também quem não teria como pagar, e a proteção coletiva reduz a circulação da doença em toda a comunidade.",
+   "conceitos": [
+    "custo menor que o tratamento",
+    "acesso igual para todos",
+    "proteção coletiva"
+   ]
+  }
+ ],
+ "4B|8º ANO|12": [
+  {
+   "tipo": "obj",
+   "enunciado": "Bia montou um circuito simples com uma pilha, uma lâmpada, fios e um interruptor. Com a chave do interruptor numa posição, a lâmpada ficava apagada; ao mudar a chave de posição, a lâmpada acendia.",
+   "comando": "Qual é a função do interruptor nesse circuito?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem de Bia",
+    "etapas": [
+     "Pilha ligada por fio à lâmpada",
+     "Lâmpada ligada por fio ao interruptor",
+     "Chave na posição A: lâmpada apagada; na posição B: lâmpada acesa"
+    ]
+   },
+   "alts": [
+    "Fornecer a energia elétrica que mantém a lâmpada funcionando no circuito.",
+    "Abrir ou fechar o caminho da corrente, ligando ou desligando o circuito.",
+    "Transformar a energia elétrica em luz e calor quando o circuito é ligado.",
+    "Conduzir a corrente da pilha até a lâmpada através dos fios do circuito."
+   ],
+   "correta": 1,
+   "explicacao": "O interruptor abre ou fecha o caminho da corrente: com o caminho fechado a corrente circula e a lâmpada acende. Fornecer energia é função da pilha, transformá-la em luz é da lâmpada e conduzi-la é dos fios."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Júlia abriu um cabo de extensão e viu que por dentro havia fios de cobre, e por fora uma capa de plástico. Para entender o motivo, testou alguns materiais em um circuito com lâmpada, colocando cada um no lugar de um pedaço do fio.",
+   "comando": "Com base nos testes, por que o cabo usa cobre por dentro e plástico por fora?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de teste de materiais",
+    "colunas": [
+     "Material",
+     "Lâmpada"
+    ],
+    "linhas": [
+     [
+      "Cobre",
+      "Acendeu"
+     ],
+     [
+      "Alumínio",
+      "Acendeu"
+     ],
+     [
+      "Plástico",
+      "Não acendeu"
+     ],
+     [
+      "Borracha",
+      "Não acendeu"
+     ]
+    ]
+   },
+   "alts": [
+    "O cobre isola a corrente e o plástico a conduz até o aparelho ligado.",
+    "O cobre armazena energia e o plástico a libera aos poucos para o aparelho.",
+    "O cobre e o plástico conduzem bem, e a capa serve para dar cor ao fio.",
+    "O cobre conduz bem a corrente e o plástico isola, o que evita choques."
+   ],
+   "correta": 3,
+   "explicacao": "Metais como o cobre são condutores e levam a corrente; o plástico é isolante e protege quem toca no fio. Os distratores invertem as funções ou ignoram os dados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A lanterna de Davi não acende. Ele fez alguns testes para descobrir o defeito: testou as pilhas e a lâmpada em outros aparelhos e examinou o interruptor por dentro, onde havia um fio solto, sem encostar na peça de metal.",
+   "comando": "Qual é a causa mais provável de a lanterna não acender?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de testes de Davi",
+    "colunas": [
+     "Peça testada",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Pilhas em outro aparelho",
+      "Funcionam"
+     ],
+     [
+      "Lâmpada em outro circuito",
+      "Acende"
+     ],
+     [
+      "Interruptor",
+      "Fio solto, sem contato"
+     ]
+    ]
+   },
+   "alts": [
+    "O circuito está aberto no interruptor, e a corrente não circula.",
+    "A pilha está descarregada, e por isso a lâmpada não recebe energia.",
+    "A lâmpada está queimada, e por isso o caminho da corrente se interrompe.",
+    "A corrente é consumida na lâmpada, e por isso não chega ao interruptor."
+   ],
+   "correta": 0,
+   "explicacao": "Com um fio sem contato, o circuito fica aberto e a corrente não circula, embora pilha e lâmpada estejam boas. A corrente não é consumida: ela circula e volta à pilha."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Seu Paulo ligou ao mesmo tempo o chuveiro, o micro-ondas e o ferro de passar na mesma instalação. Nesse momento, o disjuntor da casa, que fica no quadro de luz, desarmou e a energia caiu.",
+   "comando": "Por que o disjuntor desarmou, de acordo com os dados da instalação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da instalação de Seu Paulo",
+    "colunas": [
+     "Aparelho",
+     "Potência (W)"
+    ],
+    "linhas": [
+     [
+      "Chuveiro",
+      "5500"
+     ],
+     [
+      "Micro-ondas",
+      "1200"
+     ],
+     [
+      "Ferro de passar",
+      "1000"
+     ],
+     [
+      "Limite do disjuntor",
+      "6000"
+     ]
+    ]
+   },
+   "alts": [
+    "A corrente ficou fraca demais para os aparelhos, e o disjuntor desligou.",
+    "A tomada produziu energia a mais que o necessário, e o disjuntor desligou.",
+    "A corrente ficou alta demais, e o disjuntor abriu o circuito.",
+    "Os fios esfriaram e deixaram de conduzir, e o disjuntor desligou."
+   ],
+   "correta": 2,
+   "explicacao": "A soma das potências (7700 W) passa do limite de 6000 W; a corrente fica alta e o disjuntor abre o circuito para evitar superaquecimento. Ele é um componente de proteção."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Fernanda ligou os dois polos de uma pilha usando só um pedaço de fio, sem lâmpada. Em um minuto, sentiu o fio e a pilha ficarem quentes. Depois, repetiu o teste ligando uma lâmpada no circuito.",
+   "comando": "O que a comparação mostra sobre o papel da lâmpada no circuito?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento de Fernanda",
+    "colunas": [
+     "Circuito",
+     "Temperatura do fio (°C)",
+     "Duração da pilha"
+    ],
+    "linhas": [
+     [
+      "Só o fio",
+      "55",
+      "6 minutos"
+     ],
+     [
+      "Fio com lâmpada",
+      "26",
+      "9 horas"
+     ]
+    ]
+   },
+   "alts": [
+    "A lâmpada limita a corrente e converte energia em luz, poupando a pilha.",
+    "A lâmpada produz energia extra, e por isso a pilha dura mais tempo.",
+    "O fio sozinho guarda a corrente, e por isso a pilha se descarrega rápido.",
+    "A lâmpada impede a passagem da corrente, e por isso a pilha dura mais."
+   ],
+   "correta": 0,
+   "explicacao": "Sem a lâmpada, a corrente é muito alta, o fio esquenta e a pilha se descarrega rápido; a lâmpada limita a corrente e converte parte da energia em luz. Ela não impede a corrente nem cria energia."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ana abriu uma lanterna de bolso e separou as peças: duas pilhas, uma lâmpada, um botão e uma tira de metal que liga as peças.",
+   "comando": "Escolha três componentes da lanterna e explique a função de cada um no circuito.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das peças da lanterna",
+    "colunas": [
+     "Peça",
+     "Onde fica"
+    ],
+    "linhas": [
+     [
+      "Duas pilhas",
+      "Compartimento da base"
+     ],
+     [
+      "Lâmpada",
+      "Frente da lanterna"
+     ],
+     [
+      "Botão",
+      "Lateral"
+     ],
+     [
+      "Tira de metal",
+      "Liga as demais peças"
+     ]
+    ]
+   },
+   "ref": "Pilhas: fornecem a energia elétrica. Lâmpada: transforma a energia elétrica em luz. Botão (interruptor): abre ou fecha o circuito para ligar e desligar. Tira de metal (condutor): leva a corrente entre as peças.",
+   "conceitos": [
+    "fonte de energia",
+    "lâmpada transforma em luz",
+    "interruptor liga e desliga",
+    "condutor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula, o professor pediu que os alunos descrevessem o que são condutores elétricos. Júlia testou uma colher de metal, um pedaço de borracha e um fio de cobre em um circuito com lâmpada.",
+   "comando": "Defina condutor elétrico, explique por que os fios usam materiais específicos e diga o que aconteceria se não existissem condutores.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de teste de Júlia",
+    "colunas": [
+     "Material",
+     "Lâmpada"
+    ],
+    "linhas": [
+     [
+      "Colher de metal",
+      "Acendeu"
+     ],
+     [
+      "Borracha",
+      "Não acendeu"
+     ],
+     [
+      "Fio de cobre",
+      "Acendeu"
+     ]
+    ]
+   },
+   "ref": "Condutor é um material que permite a passagem da corrente elétrica, como os metais. Os fios usam metais condutores por dentro e plástico isolante por fora, para conduzir bem e proteger. Sem condutores, a energia não chegaria aos aparelhos.",
+   "conceitos": [
+    "condutor permite a passagem da corrente",
+    "condutores e isolantes nos fios",
+    "sem eles não haveria circuito"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro quer montar a luz de um abajur com uma pilha, uma lâmpada, dois fios e um interruptor, que ele pode ligar e desligar quando quiser.",
+   "comando": "Explique como Pedro deve ligar as peças para que a lâmpada acenda e apague, e o que acontece se um fio se soltar.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Materiais de Pedro",
+    "etapas": [
+     "Uma pilha",
+     "Dois fios",
+     "Uma lâmpada",
+     "Um interruptor"
+    ]
+   },
+   "ref": "Pedro deve ligar um polo da pilha ao interruptor, o interruptor à lâmpada e a lâmpada ao outro polo, formando um caminho fechado. Se um fio se soltar, o circuito fica aberto, a corrente para e a lâmpada apaga.",
+   "conceitos": [
+    "circuito fechado",
+    "interruptor no caminho",
+    "fio solto abre o circuito"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma extensão com fios muito finos foi ligada a um aquecedor e esquentou tanto que derreteu a capa de plástico. Um eletricista mostrou a Mariana dados de testes com fios de espessuras diferentes, conduzindo a mesma corrente.",
+   "comando": "Explique por que o fio fino esquentou mais e que cuidados evitam esse problema.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento do eletricista",
+    "colunas": [
+     "Fio",
+     "Corrente (A)",
+     "Temperatura (°C)"
+    ],
+    "linhas": [
+     [
+      "Fino (0,5 mm²)",
+      "15",
+      "90"
+     ],
+     [
+      "Grosso (2,5 mm²)",
+      "15",
+      "35"
+     ]
+    ]
+   },
+   "ref": "O fio fino oferece mais dificuldade à passagem da corrente, e parte da energia elétrica vira calor, esquentando o fio. É preciso escolher fios com a espessura adequada à potência do aparelho e usar disjuntores e fusíveis.",
+   "conceitos": [
+    "fio fino dificulta a corrente",
+    "energia vira calor",
+    "fio adequado e proteção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marcos testou uma lâmpada com variações no circuito. Em todos os testes em que mudou algo, a lâmpada apagou, e só quando ligou tudo corretamente ela acendeu.",
+   "comando": "Explique por que a lâmpada apagou em cada teste, relacionando com a função de cada componente.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de testes de Marcos",
+    "colunas": [
+     "Condição do circuito",
+     "Lâmpada"
+    ],
+    "linhas": [
+     [
+      "Sem a pilha",
+      "Apagada"
+     ],
+     [
+      "Fio cortado",
+      "Apagada"
+     ],
+     [
+      "Chave desligada",
+      "Apagada"
+     ],
+     [
+      "Tudo ligado",
+      "Acesa"
+     ]
+    ]
+   },
+   "ref": "Sem a pilha, não há fonte de energia. Com o fio cortado ou a chave desligada, o circuito fica aberto e a corrente não circula. A lâmpada só acende com fonte de energia e um caminho fechado de condutores.",
+   "conceitos": [
+    "pilha é a fonte",
+    "circuito aberto interrompe a corrente",
+    "caminho fechado necessário"
+   ]
+  }
+ ],
+ "4B|9º ANO|13": [
+  {
+   "tipo": "obj",
+   "enunciado": "Caio perguntou à professora de onde vem a energia do Sol, que brilha há 4,6 bilhões de anos sem 'apagar'. Ela mostrou a composição do Sol, que é formado principalmente por dois elementos químicos leves, e explicou que o núcleo está a 15 milhões de graus Celsius.",
+   "comando": "De acordo com a composição do Sol, qual processo gera a energia que ele emite?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da composição do Sol",
+    "unidade": "% da massa",
+    "itens": [
+     {
+      "rotulo": "Hidrogênio",
+      "valor": 73
+     },
+     {
+      "rotulo": "Hélio",
+      "valor": 25
+     },
+     {
+      "rotulo": "Outros elementos",
+      "valor": 2
+     }
+    ]
+   },
+   "alts": [
+    "A queima de gás e carvão em grande quantidade no interior do Sol.",
+    "A fissão de átomos pesados, como o urânio, no núcleo do Sol.",
+    "A fusão de átomos de hidrogênio em hélio, no núcleo do Sol.",
+    "A reflexão da luz de outras estrelas em sua superfície."
+   ],
+   "correta": 2,
+   "explicacao": "Nas altas temperatura e pressão do núcleo, núcleos de hidrogênio se fundem formando hélio e liberam energia. O Sol não queima carvão, não faz fissão e não apenas reflete luz."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um trecho de um texto da Fiocruz, Marina leu que as estrelas nascem em nebulosas, grandes nuvens de gás e poeira espalhadas pelo espaço. A professora pediu que ela explicasse como uma nuvem dessas dá origem a uma estrela.",
+   "comando": "Como uma estrela se forma a partir de uma nebulosa?",
+   "figura": null,
+   "alts": [
+    "A gravidade junta gás e poeira, que se comprimem e esquentam até a fusão.",
+    "Um planeta grande explode e seus restos se reúnem para formar a estrela.",
+    "O gás da nuvem esfria e se solidifica, formando uma bola de rocha brilhante.",
+    "A poeira da nebulosa pega fogo ao entrar em contato com o oxigênio do espaço."
+   ],
+   "correta": 0,
+   "explicacao": "Uma região da nebulosa se contrai pela gravidade, esquenta e, ao atingir temperatura muito alta no centro, começa a fusão do hidrogênio: nasce a estrela. As outras explicações não têm base científica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma notícia local contou que a estrela Betelgeuse tem cerca de 20 vezes a massa do Sol, mas deve viver só alguns milhões de anos, enquanto o Sol vive cerca de 10 bilhões de anos. Os alunos buscaram uma explicação para isso.",
+   "comando": "Por que estrelas de massa maior têm vida mais curta?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do tempo de vida estimado",
+    "unidade": "milhões de anos",
+    "itens": [
+     {
+      "rotulo": "Estrela de 0,5 massa do Sol",
+      "valor": 50000
+     },
+     {
+      "rotulo": "Sol (1 massa)",
+      "valor": 10000
+     },
+     {
+      "rotulo": "Estrela de 20 massas do Sol",
+      "valor": 10
+     }
+    ]
+   },
+   "alts": [
+    "Têm menos combustível e por isso esgotam o hidrogênio mais rápido.",
+    "Esfriam rapidamente por serem grandes e perdem o brilho em pouco tempo.",
+    "São atingidas por outras estrelas e se destroem mais cedo.",
+    "Fundem hidrogênio em ritmo muito maior e esgotam o combustível antes."
+   ],
+   "correta": 3,
+   "explicacao": "Estrelas massivas têm muito combustível, mas o núcleo é muito quente e a fusão ocorre em ritmo altíssimo, esgotando o hidrogênio em poucos milhões de anos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em aula, o professor disse que daqui a cerca de 5 bilhões de anos o Sol terá consumido o hidrogênio do núcleo. Os alunos tiveram que prever o destino final do Sol, uma estrela de massa média.",
+   "comando": "Qual é o destino mais provável do Sol?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro sobre o Sol",
+    "colunas": [
+     "Informação",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Idade atual",
+      "4,6 bilhões de anos"
+     ],
+     [
+      "Vida total estimada",
+      "cerca de 10 bilhões de anos"
+     ],
+     [
+      "Massa",
+      "1 massa solar"
+     ]
+    ]
+   },
+   "alts": [
+    "Explodirá como supernova e deixará uma estrela de nêutrons ou um buraco negro.",
+    "Virará uma gigante vermelha, perderá camadas e restará uma anã branca.",
+    "Seguirá brilhando com a mesma intensidade, pois a fusão se renova sozinha.",
+    "Esfriará aos poucos até virar um planeta rochoso sem brilho próprio."
+   ],
+   "correta": 1,
+   "explicacao": "Estrelas de massa média, como o Sol, incham como gigantes vermelhas, soltam as camadas externas e deixam um núcleo pequeno e quente, a anã branca. Supernovas são típicas de estrelas muito massivas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os alunos receberam o desafio de prever o destino de três estrelas descobertas por astrônomos, com massas diferentes. Sabe-se que estrelas com massa acima de cerca de 8 vezes a do Sol terminam em supernova, e as demais terminam como anãs brancas.",
+   "comando": "Qual previsão é coerente com as massas das estrelas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento dos astrônomos",
+    "colunas": [
+     "Estrela",
+     "Massa (Sol = 1)"
+    ],
+    "linhas": [
+     [
+      "X",
+      "25"
+     ],
+     [
+      "Y",
+      "1,2"
+     ],
+     [
+      "Z",
+      "0,4"
+     ]
+    ]
+   },
+   "alts": [
+    "X terminará como supernova, e Y e Z terminarão como anãs brancas.",
+    "Y terminará como supernova, pois tem mais massa que o nosso Sol.",
+    "Z terminará como supernova, pois é a menor e esfria mais depressa.",
+    "X terminará como anã branca, pois sua grande massa é gasta devagar."
+   ],
+   "correta": 0,
+   "explicacao": "Só X ultrapassa o limite de cerca de 8 massas solares e deve terminar em supernova; Y e Z terminam como anãs brancas. Os distratores aplicam o critério da massa de forma invertida."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um debate, a turma discutiu de onde vem a energia das estrelas. Os dados do núcleo do Sol, mostrados pela professora, indicam que parte da massa do hidrogênio se transforma em energia.",
+   "comando": "Explique como o Sol produz energia, indicando o que acontece com o hidrogênio.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do núcleo do Sol",
+    "colunas": [
+     "Informação",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Temperatura",
+      "15 milhões de °C"
+     ],
+     [
+      "Hidrogênio consumido por segundo",
+      "600 milhões de toneladas"
+     ],
+     [
+      "Hélio produzido por segundo",
+      "596 milhões de toneladas"
+     ]
+    ]
+   },
+   "ref": "O Sol produz energia por fusão nuclear: no núcleo muito quente, núcleos de hidrogênio se juntam e formam hélio. Parte da massa se transforma em energia, que é emitida como luz e calor.",
+   "conceitos": [
+    "fusão nuclear",
+    "hidrogênio vira hélio",
+    "massa vira energia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rafael recebeu quatro cartões com descrições de fases da vida do Sol e precisa colocá-las na ordem em que ocorrem, desde o nascimento até o fim.",
+   "comando": "Coloque as fases na ordem correta e explique o que ocorre em cada uma.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos cartões de Rafael",
+    "colunas": [
+     "Fase",
+     "Característica"
+    ],
+    "linhas": [
+     [
+      "Nebulosa",
+      "Nuvem fria de gás e poeira"
+     ],
+     [
+      "Gigante vermelha",
+      "Estrela inchada e avermelhada"
+     ],
+     [
+      "Anã branca",
+      "Estrela pequena e muito densa"
+     ],
+     [
+      "Estrela estável",
+      "Brilho constante por bilhões de anos"
+     ]
+    ]
+   },
+   "ref": "Ordem: nebulosa, estrela estável (fusão do hidrogênio), gigante vermelha e anã branca. Na nebulosa a gravidade junta o gás; na estrela estável há fusão; na gigante vermelha o hidrogênio acaba e a estrela incha; na anã branca resta o núcleo.",
+   "conceitos": [
+    "nebulosa",
+    "estrela estável",
+    "gigante vermelha",
+    "anã branca"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma reportagem de ciência comparou duas estrelas: o Sol e Betelgeuse. A professora quer que os alunos prevejam como cada uma terminará a vida.",
+   "comando": "Compare o destino final das duas estrelas e explique a diferença com base na massa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das estrelas",
+    "colunas": [
+     "Estrela",
+     "Massa (Sol = 1)",
+     "Tempo de vida (milhões de anos)"
+    ],
+    "linhas": [
+     [
+      "Sol",
+      "1",
+      "10000"
+     ],
+     [
+      "Betelgeuse",
+      "20",
+      "10"
+     ]
+    ]
+   },
+   "ref": "O Sol, de massa média, vira gigante vermelha e depois anã branca. Betelgeuse, muito mais massiva, termina em supernova e deixa uma estrela de nêutrons ou buraco negro. Maior massa significa fusão mais rápida e vida mais curta.",
+   "conceitos": [
+    "destino do Sol",
+    "destino de estrela massiva",
+    "massa define o destino"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marina leu a frase 'somos feitos de poeira de estrelas' e não entendeu. O professor mostrou que o corpo humano é formado principalmente por elementos como oxigênio, carbono e cálcio.",
+   "comando": "Explique, com base no ciclo de vida das estrelas, o sentido dessa frase.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de elementos do corpo humano",
+    "colunas": [
+     "Elemento",
+     "Percentual da massa do corpo"
+    ],
+    "linhas": [
+     [
+      "Oxigênio",
+      "65"
+     ],
+     [
+      "Carbono",
+      "18"
+     ],
+     [
+      "Hidrogênio",
+      "10"
+     ],
+     [
+      "Cálcio",
+      "1,5"
+     ]
+    ]
+   },
+   "ref": "Elementos mais pesados que o hidrogênio, como carbono, oxigênio e cálcio, foram formados por fusão no interior de estrelas. Quando elas morrem, esses elementos são espalhados no espaço e depois entram na formação de novos astros e dos seres vivos.",
+   "conceitos": [
+    "elementos formados por fusão",
+    "morte da estrela espalha o material",
+    "novos astros e seres vivos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O Sol mantém o mesmo tamanho há bilhões de anos, apesar da enorme massa de gás. O professor explicou que há um equilíbrio entre forças dentro da estrela, e que ele só se quebra no fim da vida dela.",
+   "comando": "Justifique por que o Sol mantém o tamanho constante e o que muda quando o hidrogênio do núcleo acaba.",
+   "figura": null,
+   "ref": "A gravidade puxa a matéria para o centro, e a pressão da fusão no núcleo empurra para fora; esse equilíbrio mantém o tamanho. Quando o hidrogênio acaba, a fusão no núcleo diminui, o equilíbrio se desfaz e a estrela passa a mudar, inchando como gigante vermelha.",
+   "conceitos": [
+    "gravidade para dentro",
+    "pressão da fusão para fora",
+    "fim do hidrogênio quebra o equilíbrio"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2883 @@
+{
+ "6º ANO|1|Relacionar o movimento de rotação terrestre com a ocorrência da sucessão dia e noite.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro mora em Campinas e anotou, durante um dia de céu limpo, onde o Sol aparecia no céu em cada horário. Ele quer saber que movimento da Terra explica a sucessão entre dia e noite.",
+   "comando": "Com base nos registros de Pedro, assinale a alternativa que explica a sucessão entre dia e noite.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação do Sol em Campinas",
+    "colunas": [
+     "Horário",
+     "Posição do Sol"
+    ],
+    "linhas": [
+     [
+      "6h",
+      "Perto do horizonte, a leste"
+     ],
+     [
+      "12h",
+      "Bem alto no céu"
+     ],
+     [
+      "18h",
+      "Perto do horizonte, a oeste"
+     ],
+     [
+      "22h",
+      "Não aparece no céu"
+     ]
+    ]
+   },
+   "alts": [
+    "A Terra gira em torno do Sol e leva cerca de 24 horas para completar cada volta.",
+    "A Terra gira em torno do próprio eixo e leva cerca de 24 horas em cada giro.",
+    "O Sol gira em torno da Terra e leva cerca de 24 horas para completar cada volta.",
+    "A Terra se inclina em seu eixo e cada inclinação dura cerca de 24 horas."
+   ],
+   "correta": 1,
+   "explicacao": "A rotação da Terra, em torno do próprio eixo, faz cada lugar ficar voltado para o Sol (dia) e depois para o lado oposto (noite). Os demais erros trocam rotação por translação ou pelo movimento aparente do Sol."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a sala foi escurecida. Uma lanterna ficou parada sobre a mesa (Sol) e Marina girou devagar uma laranja com um adesivo no lugar do Brasil (Terra). A turma anotou o que acontecia com o adesivo.",
+   "comando": "O que significa, no experimento, o momento em que o adesivo está na parte iluminada da laranja?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do experimento da laranja",
+    "etapas": [
+     "Adesivo voltado para a lanterna",
+     "Laranja gira um pouco para a esquerda",
+     "Adesivo passa para a parte escura",
+     "Laranja continua girando e o adesivo volta à luz"
+    ]
+   },
+   "alts": [
+    "É noite no Brasil, pois a luz da lanterna atinge o lado oposto da laranja.",
+    "É noite no Brasil, pois o adesivo está mais próximo da lanterna.",
+    "É dia no Brasil, pois o lado da laranja com o adesivo recebe a luz da lanterna.",
+    "É dia no Brasil, pois a laranja está parada e só a lanterna se move."
+   ],
+   "correta": 2,
+   "explicacao": "A parte iluminada da Terra tem dia e a parte na sombra tem noite. Os distratores confundem proximidade da fonte de luz e movimento do Sol com a causa da iluminação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana está em São Paulo e liga ao meio-dia para o primo Kenji, que mora em Tóquio. Ele atende e diz que já está no meio da noite, pronto para dormir.",
+   "comando": "Por que, ao mesmo tempo, é dia em São Paulo e noite em Tóquio?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de horário local no mesmo instante",
+    "colunas": [
+     "Cidade",
+     "Hora local"
+    ],
+    "linhas": [
+     [
+      "São Paulo",
+      "12h"
+     ],
+     [
+      "Tóquio",
+      "0h"
+     ],
+     [
+      "Cidade do México",
+      "9h"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque, pela rotação, enquanto metade da Terra está voltada para o Sol, a outra metade está na sombra.",
+    "Porque Tóquio fica bem mais longe do Sol do que São Paulo e por isso recebe pouca luz durante o dia.",
+    "Porque, pela translação, Tóquio passa pela sombra da Lua nas horas em que São Paulo está iluminada pelo Sol.",
+    "Porque o Sol ilumina mais os países do Ocidente, e os países do Oriente recebem luz só à noite."
+   ],
+   "correta": 0,
+   "explicacao": "Como a Terra é esférica, o Sol ilumina só uma metade por vez, e a rotação faz as horas locais serem diferentes. Os distratores atribuem a diferença à distância ao Sol ou à Lua."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No experimento da lanterna, um aluno decidiu parar a laranja com o adesivo do Brasil voltado para a lanterna e deixou assim durante toda a aula, sem girar. A turma discutiu o que aconteceria com a Terra se ela parasse de girar.",
+   "comando": "Se a Terra parasse de girar, o que aconteceria com a região do Brasil voltada para o Sol?",
+   "figura": null,
+   "alts": [
+    "Teria noite o tempo todo, pois a região deixaria de receber luz do Sol.",
+    "Teria dia e noite alternando, pois a Terra ainda giraria em torno do Sol.",
+    "Teria dia e noite alternando, pois o Sol passaria a girar em torno da Terra todos os dias.",
+    "Teria dia o tempo todo, pois a região continuaria sempre voltada para o Sol."
+   ],
+   "correta": 3,
+   "explicacao": "Sem rotação, o lado voltado para o Sol ficaria sempre iluminado e o outro, sempre escuro. O erro de translação não explica a alternância diária."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma roda de conversa, Lucas disse que a noite acontece porque, durante parte do dia, a Terra se afasta do Sol. A professora mostrou dados sobre a distância Terra-Sol e sobre a duração do ciclo dia-noite.",
+   "comando": "Qual argumento mostra que a ideia de Lucas está incorreta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados da distância Terra-Sol e do ciclo",
+    "colunas": [
+     "Informação",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Distância em janeiro",
+      "147 milhões de km"
+     ],
+     [
+      "Distância em julho",
+      "152 milhões de km"
+     ],
+     [
+      "Duração de um ciclo dia-noite",
+      "24 horas"
+     ]
+    ]
+   },
+   "alts": [
+    "A distância muda pouco durante um dia, então a Terra recebe quase a mesma quantidade de luz.",
+    "A distância varia ao longo do ano e a noite acontece só quando a Terra está mais distante.",
+    "A distância varia ao longo dos meses, mas o dia e a noite se repetem a cada 24 horas.",
+    "A distância é constante, por isso a noite deveria ocorrer na mesma hora em todo o planeta."
+   ],
+   "correta": 2,
+   "explicacao": "A distância muda em meses, mas dia e noite se alternam todo dia; logo a causa é a rotação. Os distratores misturam distância e iluminação ou trazem generalizações incorretas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na experiência da sala escura, a turma usou uma lanterna ligada, uma laranja espetada em um palito e um adesivo colado no lugar do Brasil.",
+   "comando": "Explique o que cada material (lanterna, laranja e adesivo) representa no experimento e o que o aluno precisa fazer com a laranja para produzir dia e noite no adesivo.",
+   "figura": null,
+   "ref": "A lanterna representa o Sol, a laranja representa a Terra e o adesivo representa o Brasil. Para produzir dia e noite, o aluno gira a laranja em torno do palito (eixo), fazendo o adesivo passar pela parte iluminada e pela parte escura.",
+   "conceitos": [
+    "Lanterna = Sol",
+    "Laranja = Terra",
+    "Rotação em torno do eixo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lia passou um sábado na chácara e viu o Sol nascer atrás do morro, subir no céu até o meio do dia e se pôr do lado oposto, perto de um eucalipto.",
+   "comando": "Descreva o caminho que o Sol parece fazer no céu e diga que movimento da Terra causa essa impressão.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação de Lia",
+    "colunas": [
+     "Horário",
+     "Onde Lia viu o Sol"
+    ],
+    "linhas": [
+     [
+      "7h",
+      "Baixo, atrás do morro (leste)"
+     ],
+     [
+      "12h",
+      "Bem alto, quase acima de Lia"
+     ],
+     [
+      "17h",
+      "Baixo, perto do eucalipto (oeste)"
+     ]
+    ]
+   },
+   "ref": "O Sol parece nascer no leste, subir até o meio do dia e se pôr no oeste. Essa impressão ocorre porque a Terra gira em torno do próprio eixo (rotação), de oeste para leste.",
+   "conceitos": [
+    "Movimento aparente do Sol",
+    "Rotação da Terra",
+    "Nascente a leste e poente a oeste"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na feira de ciências, o grupo de Bia usou a laranja para representar a Terra e combinou que cada giro completo representaria um dia. O grupo apresentou o quadro com os dados do giro.",
+   "comando": "Se o grupo quiser mostrar uma semana inteira, quantos giros completos e quantos segundos serão necessários? Explique o que um giro representa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento da laranja",
+    "colunas": [
+     "Tempo (s)",
+     "Giros completos"
+    ],
+    "linhas": [
+     [
+      "10",
+      "1"
+     ],
+     [
+      "20",
+      "2"
+     ],
+     [
+      "30",
+      "3"
+     ]
+    ]
+   },
+   "ref": "Serão 7 giros, que levam 70 segundos (7 x 10 s). Cada giro completo representa uma rotação da Terra, de cerca de 24 horas, com um período de dia e um de noite.",
+   "conceitos": [
+    "7 giros em 70 s",
+    "Um giro = uma rotação = 24 h",
+    "Cada giro tem dia e noite"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Júlia viaja de ônibus pela Rodovia dos Bandeirantes. Pela janela, ela vê os postes e as árvores passando para trás, embora eles estejam parados. Seu colega Davi disse que, então, o Sol pode estar parado e a Terra é que se move.",
+   "comando": "Compare o que Júlia vê pela janela do ônibus com o que vemos do Sol ao longo do dia e explique por que Davi pode ter razão.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações",
+    "colunas": [
+     "Quem observa",
+     "O que parece se mover"
+    ],
+    "linhas": [
+     [
+      "Júlia, dentro do ônibus em movimento",
+      "Postes e árvores"
+     ],
+     [
+      "Pessoa parada no quintal durante o dia",
+      "Sol cruzando o céu"
+     ]
+    ]
+   },
+   "ref": "Para quem está em movimento, objetos parados parecem se mover. Do mesmo modo, a Terra gira (rotação) e carrega quem está nela, então parece que o Sol cruza o céu. Davi tem razão: o movimento do Sol é aparente.",
+   "conceitos": [
+    "Movimento aparente",
+    "Rotação da Terra",
+    "Referencial do observador"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A professora comentou que Júpiter gira mais depressa que a Terra e Vênus gira muito devagar. Os alunos montaram um quadro com o tempo de um giro completo de cada planeta.",
+   "comando": "Com base nos dados, compare a duração do dia e da noite em Júpiter e em Vênus com a da Terra, justificando sua resposta pela rotação.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do tempo de um giro completo",
+    "unidade": "horas",
+    "itens": [
+     {
+      "rotulo": "Júpiter",
+      "valor": 10
+     },
+     {
+      "rotulo": "Terra",
+      "valor": 24
+     },
+     {
+      "rotulo": "Marte",
+      "valor": 25
+     },
+     {
+      "rotulo": "Vênus",
+      "valor": 5832
+     }
+    ]
+   },
+   "ref": "Em Júpiter, a rotação leva cerca de 10 horas, então dia e noite se alternam bem mais rápido que na Terra. Em Vênus, a rotação leva 5832 horas, então o dia e a noite duram muito mais. A duração do dia depende do tempo de rotação do planeta.",
+   "conceitos": [
+    "Rotação mais rápida = dia e noite curtos",
+    "Rotação lenta = dia e noite longos",
+    "Duração do dia depende da rotação"
+   ]
+  }
+ ],
+ "6º ANO|3|Classificar seres vivos (bactérias, fungos e/ou protozoários) a partir de suas características celulares e papéis ecossistêmicos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na mesa de observação, o professor colocou três lâminas ao microscópio e pediu que os alunos anotassem o que viam. A lâmina A veio de uma gota de iogurte natural.",
+   "comando": "Com base no registro, a amostra A é de qual tipo de ser vivo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação ao microscópio",
+    "colunas": [
+     "Amostra",
+     "Nº de células",
+     "Núcleo visível"
+    ],
+    "linhas": [
+     [
+      "A",
+      "1",
+      "Não"
+     ],
+     [
+      "B",
+      "1",
+      "Sim"
+     ],
+     [
+      "C",
+      "Muitas",
+      "Sim"
+     ]
+    ]
+   },
+   "alts": [
+    "Bactéria, pois tem uma só célula e o material genético solto no citoplasma.",
+    "Protozoário, pois tem uma só célula e o material genético solto no citoplasma.",
+    "Fungo pluricelular, pois tem muitas células e o material genético solto no citoplasma.",
+    "Bactéria, pois tem muitas células e o material genético protegido em um núcleo."
+   ],
+   "correta": 0,
+   "explicacao": "Bactérias são unicelulares e não têm núcleo definido. Protozoários têm núcleo; fungos pluricelulares têm muitas células."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ricardo esqueceu um pão de forma úmido dentro de um saquinho fechado, em cima da geladeira. Uma semana depois, apareceram manchas verde-escuras e aveludadas, que ele não lembra de ter visto antes.",
+   "comando": "Qual grupo de seres vivos formou as manchas do pão?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da evolução das manchas no pão",
+    "etapas": [
+     "Dia 1: pão úmido, sem manchas",
+     "Dia 3: pontos esbranquiçados",
+     "Dia 7: manchas verde-escuras aveludadas"
+    ]
+   },
+   "alts": [
+    "Protozoários, que têm uma só célula e se alimentam do pão.",
+    "Bactérias, que têm uma só célula e crescem sobre o pão.",
+    "Fungos, que têm muitas células com núcleo e crescem no pão.",
+    "Algas, que têm muitas células com núcleo e crescem sobre o pão."
+   ],
+   "correta": 2,
+   "explicacao": "O mofo é formado por fungos filamentosos, com células com núcleo. Os distratores trocam o grupo ou as características celulares."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Lúcia fez massa de pão: misturou fermento biológico, água morna e açúcar e deixou descansar. Seu neto Caio mediu a altura da massa durante uma hora e viu que ela cresceu e ficou cheia de bolhas.",
+   "comando": "Que papel o fermento desempenhou na massa?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento da massa de pão",
+    "colunas": [
+     "Tempo (min)",
+     "Altura da massa (cm)"
+    ],
+    "linhas": [
+     [
+      "0",
+      "3"
+     ],
+     [
+      "30",
+      "4"
+     ],
+     [
+      "60",
+      "6"
+     ]
+    ]
+   },
+   "alts": [
+    "Bactérias do fermento consomem o oxigênio da massa e é por isso que ela cresce.",
+    "Fungos do fermento absorvem a água da massa e a fazem crescer.",
+    "Protozoários do fermento fazem decomposição e esfarelam a massa.",
+    "Fungos do fermento consomem o açúcar e liberam gás que faz a massa crescer."
+   ],
+   "correta": 3,
+   "explicacao": "O fermento é formado por leveduras (fungos unicelulares) que fermentam o açúcar e liberam gás carbônico. Os distratores trocam o grupo ou o processo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Tales coletou uma gota de água de uma poça no quintal e viu, ao microscópio, um ser que se movimentava com pequenos cílios. Seu caderno de observação trouxe as características desse ser.",
+   "comando": "Em qual grupo esse ser vivo deve ser classificado?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação da gota de água",
+    "colunas": [
+     "Característica",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Nº de células",
+      "1"
+     ],
+     [
+      "Núcleo",
+      "Presente"
+     ],
+     [
+      "Parede celular",
+      "Ausente"
+     ],
+     [
+      "Locomoção",
+      "Cílios"
+     ]
+    ]
+   },
+   "alts": [
+    "Bactéria, pois vive na água parada e tem só uma célula sem núcleo.",
+    "Protozoário, pois tem uma célula com núcleo e se locomove.",
+    "Fungo, pois tem núcleo e vive em locais úmidos, como a poça do quintal.",
+    "Alga pluricelular, pois vive na água e tem núcleo, como as plantas."
+   ],
+   "correta": 1,
+   "explicacao": "Um ser unicelular com núcleo e sem parede celular, que se move, é um protozoário. Os distratores usam critérios que não distinguem os grupos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na horta da escola, os alunos puseram a mesma quantidade de folhas secas em dois canteiros. No canteiro 1, havia terra comum. No canteiro 2, a terra foi aquecida antes, para eliminar microrganismos. Após 30 dias, pesaram as folhas que restaram.",
+   "comando": "Qual conclusão os dados permitem?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Massa de folhas restante após 30 dias",
+    "unidade": "g",
+    "itens": [
+     {
+      "rotulo": "Canteiro 1 (terra comum)",
+      "valor": 20
+     },
+     {
+      "rotulo": "Canteiro 2 (terra aquecida)",
+      "valor": 85
+     }
+    ]
+   },
+   "alts": [
+    "Bactérias e fungos do solo decompõem folhas e devolvem nutrientes ao ambiente.",
+    "Bactérias e fungos do solo aumentam a massa de folhas e produzem nutrientes novos.",
+    "Bactérias e fungos do solo precisam de folhas frescas para viver e crescer.",
+    "Bactérias e fungos do solo causam doença nas folhas e atrasam o crescimento."
+   ],
+   "correta": 0,
+   "explicacao": "Onde há microrganismos, as folhas foram decompostas; decompositores reciclam a matéria. Os distratores invertem causa e efeito."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na mesa dos microrganismos havia um cogumelo e um copo de iogurte. Os alunos observaram que o cogumelo é formado por muitas células com núcleo, enquanto no iogurte havia células minúsculas isoladas e sem núcleo.",
+   "comando": "Classifique o cogumelo e o ser vivo do iogurte em grupos (bactéria, fungo ou protozoário) e explique a escolha.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação da mesa",
+    "colunas": [
+     "Item",
+     "Células",
+     "Núcleo"
+    ],
+    "linhas": [
+     [
+      "Cogumelo",
+      "Muitas",
+      "Presente"
+     ],
+     [
+      "Iogurte",
+      "Muito pequenas e isoladas",
+      "Ausente"
+     ]
+    ]
+   },
+   "ref": "O cogumelo é um fungo: tem muitas células com núcleo. O ser vivo do iogurte é uma bactéria: unicelular e sem núcleo definido.",
+   "conceitos": [
+    "Fungo: pluricelular com núcleo",
+    "Bactéria: unicelular sem núcleo",
+    "Classificar por características celulares"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O pão mofado foi guardado em um saquinho bem fechado e, mesmo assim, o mofo continuou crescendo. Marcos achou estranho, pois nada entrou no saquinho.",
+   "comando": "Explique por que o mofo pôde crescer no saquinho fechado e a que grupo de seres vivos ele pertence.",
+   "figura": null,
+   "ref": "Os esporos dos fungos já estavam no pão ou no ar do saquinho, e o pão úmido forneceu alimento e umidade. O mofo é formado por fungos, que se alimentam da matéria orgânica do pão.",
+   "conceitos": [
+    "Esporos já presentes",
+    "Alimento e umidade",
+    "Mofo = fungos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No bairro de Rosa, a água de poço sem tratamento causou diarreia em várias crianças, e o exame na UBS apontou um protozoário (giárdia) na água. A UBS contou os casos em dois bairros.",
+   "comando": "Explique como o protozoário pode chegar às crianças e o que as famílias podem fazer para evitar a doença.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de casos de diarreia por 100 moradores",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Bairro com água de poço sem tratamento",
+      "valor": 9
+     },
+     {
+      "rotulo": "Bairro com água tratada",
+      "valor": 2
+     }
+    ]
+   },
+   "ref": "O protozoário vive na água contaminada e chega às crianças quando bebem a água sem tratamento. Para evitar, as famílias devem usar água tratada, ferver ou filtrar e clorar a água, e lavar as mãos e os alimentos.",
+   "conceitos": [
+    "Protozoários causam doenças",
+    "Transmissão pela água contaminada",
+    "Prevenção: água tratada e higiene"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu Antônio quer montar uma composteira no quintal com folhas secas e restos de verdura. O vizinho disse que bactérias e fungos são um problema e que ele deveria tentar eliminá-los da composteira.",
+   "comando": "Explique se o vizinho está certo, justificando com o papel que bactérias e fungos têm no processo.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da composteira de Seu Antônio",
+    "etapas": [
+     "Camada de folhas secas",
+     "Restos de verdura",
+     "Cobertura de terra",
+     "Mistura uma vez por semana",
+     "Após 60 dias: material escuro e fofo"
+    ]
+   },
+   "ref": "O vizinho não está certo. Bactérias e fungos são decompositores: transformam folhas e restos de verdura em adubo, devolvendo nutrientes ao solo. Sem eles, a composteira não produziria o material escuro e fofo.",
+   "conceitos": [
+    "Decompositores",
+    "Reciclagem de nutrientes",
+    "Papel ecológico de bactérias e fungos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma conversa, Carla disse que todo microrganismo faz mal à saúde e deve ser eliminado. Na mesa, os alunos tinham iogurte, pão feito com fermento e uma foto de água de poço contaminada.",
+   "comando": "Avalie a frase de Carla usando dois exemplos dos itens da mesa.",
+   "figura": null,
+   "ref": "A frase está incorreta. Bactérias do iogurte e fungos do fermento são úteis para produzir alimentos, enquanto microrganismos da água contaminada podem causar doenças. Portanto, o efeito depende do tipo de microrganismo e do ambiente.",
+   "conceitos": [
+    "Microrganismos úteis",
+    "Microrganismos patogênicos",
+    "Papel depende do ser vivo"
+   ]
+  }
+ ],
+ "7º ANO|2|Relacionar os impactos das atividades humanas com as mudanças climáticas globais e seus efeitos socioambientais.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma reportagem local mostrou que, em Piracicaba, a temperatura média de outubro vem aumentando. O texto também diz que a queima de gasolina e diesel dos veículos da cidade é uma das causas.",
+   "comando": "Qual gás, liberado na queima de combustíveis, intensifica o efeito estufa e contribui para esse aumento?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da temperatura média de outubro em Piracicaba",
+    "colunas": [
+     "Ano",
+     "Temperatura média (°C)"
+    ],
+    "linhas": [
+     [
+      "2000",
+      "27,5"
+     ],
+     [
+      "2010",
+      "28,3"
+     ],
+     [
+      "2020",
+      "29,4"
+     ]
+    ]
+   },
+   "alts": [
+    "O gás oxigênio, que se acumula na atmosfera e retém o calor do Sol.",
+    "O gás nitrogênio, que se acumula na atmosfera e retém o calor do Sol.",
+    "O gás carbônico, que se acumula na atmosfera e retém o calor do Sol.",
+    "O gás ozônio, que se acumula na atmosfera e retém o calor do Sol."
+   ],
+   "correta": 2,
+   "explicacao": "A queima de combustíveis fósseis libera gás carbônico, um dos principais gases do efeito estufa. Os demais gases não são liberados em quantidade relevante nem retêm calor da mesma forma."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na região de Mato Grosso, o fazendeiro Jair derrubou 50 hectares de mata e queimou os troncos para abrir pasto. A fumaça cobriu cidades vizinhas por vários dias.",
+   "comando": "O que a queima da mata provoca na atmosfera?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da área de mata derrubada e queimada",
+    "unidade": "hectares",
+    "itens": [
+     {
+      "rotulo": "Ano 1",
+      "valor": 10
+     },
+     {
+      "rotulo": "Ano 2",
+      "valor": 25
+     },
+     {
+      "rotulo": "Ano 3",
+      "valor": 50
+     }
+    ]
+   },
+   "alts": [
+    "Libera gás carbônico, pois o carbono guardado nas árvores vai para o ar.",
+    "Libera gás oxigênio, pois a queima transforma o carbono das árvores em oxigênio.",
+    "Retira gás carbônico, pois a fumaça ajuda a limpar o ar das cidades vizinhas.",
+    "Retira calor, pois a queima das árvores esfria o ar acima da região."
+   ],
+   "correta": 0,
+   "explicacao": "A queima da vegetação libera gás carbônico, reforçando o efeito estufa. Os distratores trocam o gás liberado ou o efeito sobre a temperatura."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No verão de 2024, uma cidade do interior paulista teve chuvas muito fortes e enchentes. A defesa civil comparou a chuva máxima em 24 horas de três anos. Para o meteorologista, o aquecimento global ajuda a explicar a tendência.",
+   "comando": "Como o aquecimento do planeta se relaciona com os dados?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de chuva máxima em 24 horas",
+    "unidade": "mm",
+    "itens": [
+     {
+      "rotulo": "2005",
+      "valor": 60
+     },
+     {
+      "rotulo": "2015",
+      "valor": 95
+     },
+     {
+      "rotulo": "2024",
+      "valor": 140
+     }
+    ]
+   },
+   "alts": [
+    "O ar mais quente aumenta a camada de ozônio, o que favorece chuvas mais fortes em poucas horas.",
+    "O ar mais quente absorve a água das nuvens, o que favorece chuvas mais fracas e frequentes.",
+    "O ar mais quente se afasta da superfície, o que favorece chuvas em menos dias do ano.",
+    "O ar mais quente evapora mais água, o que favorece chuvas mais intensas em poucas horas."
+   ],
+   "correta": 3,
+   "explicacao": "Temperaturas mais altas aumentam a evaporação e a energia da atmosfera, intensificando eventos extremos. Os distratores citam efeitos que não ocorrem ou confundem com o ozônio."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, os alunos montaram uma corrente de papel para explicar como a queima de combustíveis chega a afetar a temperatura da Terra. Cada elo trazia uma etapa, mas os grupos montaram a sequência de formas diferentes.",
+   "comando": "Qual sequência representa corretamente a corrente de causas?",
+   "figura": null,
+   "alts": [
+    "Aquecimento global, mais gás carbônico no ar, efeito estufa intensificado, queima de combustíveis.",
+    "Queima de combustíveis, mais gás carbônico no ar, efeito estufa intensificado, aquecimento.",
+    "Queima de combustíveis, buraco na camada de ozônio, mais raios solares, aquecimento global.",
+    "Efeito estufa intensificado, queima de combustíveis, aquecimento global, mais gás carbônico no ar."
+   ],
+   "correta": 1,
+   "explicacao": "A queima libera gás carbônico, que intensifica o efeito estufa e causa aquecimento. Os distratores invertem causa e efeito ou confundem com o ozônio."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rafael disse na escola que o efeito estufa é sempre ruim e deveria acabar. A professora mostrou a temperatura média da Terra atual, estimada sem os gases estufa, e a de Vênus, que tem atmosfera com muito gás carbônico.",
+   "comando": "Qual conclusão é apoiada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de temperatura média de superfície",
+    "colunas": [
+     "Situação",
+     "Temperatura (°C)"
+    ],
+    "linhas": [
+     [
+      "Terra sem gases estufa (estimativa)",
+      "-18"
+     ],
+     [
+      "Terra atual",
+      "15"
+     ],
+     [
+      "Vênus",
+      "464"
+     ]
+    ]
+   },
+   "alts": [
+    "O efeito estufa só existe em planetas com muito gás carbônico, como Vênus.",
+    "O efeito estufa natural é prejudicial à vida, pois o excesso se origina de gases naturais.",
+    "O efeito estufa natural é importante para a vida, mas o excesso causa aquecimento.",
+    "O efeito estufa natural é desnecessário na Terra, pois ela é aquecida só pelo Sol."
+   ],
+   "correta": 2,
+   "explicacao": "O efeito estufa natural mantém a Terra habitável, e o excesso de gases (como em Vênus) causa aquecimento. Os distratores generalizam ou negam o efeito natural."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os alunos montaram uma corrente de papel com os elos: queima de combustíveis, aumento do gás carbônico, efeito estufa intensificado, aquecimento global e eventos extremos.",
+   "comando": "Explique, com suas palavras, como a queima de combustíveis pode levar a mais eventos extremos, como secas e enchentes.",
+   "figura": null,
+   "ref": "A queima de combustíveis libera gás carbônico, que se acumula na atmosfera e intensifica o efeito estufa. Com mais calor retido, o planeta esquenta, e o aquecimento favorece eventos extremos, como secas e chuvas muito fortes.",
+   "conceitos": [
+    "Queima libera gás carbônico",
+    "Efeito estufa intensificado",
+    "Aquecimento e eventos extremos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rafael contou, durante uma hora, o que viu no trajeto da escola até em casa e anotou o número de fontes de fumaça.",
+   "comando": "Cite duas atividades humanas do registro que lançam gás carbônico no ar e diga o que acontece com esse gás na atmosfera.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de fontes de fumaça observadas em 1 hora",
+    "unidade": "unidades",
+    "itens": [
+     {
+      "rotulo": "Carros e motos",
+      "valor": 40
+     },
+     {
+      "rotulo": "Caminhões a diesel",
+      "valor": 15
+     },
+     {
+      "rotulo": "Queima de lixo em terreno",
+      "valor": 3
+     }
+    ]
+   },
+   "ref": "Carros e motos e caminhões a diesel (queima de combustíveis) e a queima de lixo lançam gás carbônico. Esse gás se acumula na atmosfera e retém calor, intensificando o efeito estufa.",
+   "conceitos": [
+    "Combustíveis e queimadas liberam gás carbônico",
+    "Acúmulo na atmosfera",
+    "Intensifica o efeito estufa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na UBS de um bairro de Campinas, a enfermeira percebeu que cresceu o número de idosos atendidos por mal-estar em dias de calor extremo. Ela mostrou um quadro à secretaria de saúde.",
+   "comando": "Relacione esses dados às mudanças climáticas e explique um impacto social que elas podem causar.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de atendimentos por calor extremo na UBS",
+    "colunas": [
+     "Ano",
+     "Atendimentos"
+    ],
+    "linhas": [
+     [
+      "2018",
+      "12"
+     ],
+     [
+      "2020",
+      "25"
+     ],
+     [
+      "2023",
+      "48"
+     ]
+    ]
+   },
+   "ref": "Com o aumento de gás carbônico e do aquecimento global, as ondas de calor ficam mais frequentes. Isso aumenta os atendimentos por mal-estar, em especial de idosos, e sobrecarrega os serviços de saúde, um impacto social.",
+   "conceitos": [
+    "Aquecimento global",
+    "Ondas de calor mais frequentes",
+    "Impacto social na saúde"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu Jorge derrubou 100 hectares de mata em sua fazenda e queimou os troncos para fazer pasto para o gado.",
+   "comando": "Explique por que a derrubada e a queimada aumentam o efeito estufa, mesmo depois de a fumaça sumir.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro das etapas na fazenda de Seu Jorge",
+    "etapas": [
+     "Mata derrubada",
+     "Troncos secos queimados",
+     "Área vira pasto",
+     "Chuvas após dois meses"
+    ]
+   },
+   "ref": "A queima libera o carbono guardado nas árvores como gás carbônico. Além disso, sem a mata, menos gás carbônico é retirado do ar pela fotossíntese. O gás permanece na atmosfera e intensifica o efeito estufa.",
+   "conceitos": [
+    "Queimada libera carbono",
+    "Perda da fotossíntese",
+    "Gás carbônico acumulado"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A prefeitura de uma cidade paulista quer reduzir as emissões de gás carbônico. O levantamento mostrou de onde vêm as emissões.",
+   "comando": "Escolha a medida que você priorizaria e justifique, relacionando-a à corrente de causas das mudanças climáticas.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro das emissões de gás carbônico por origem",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Transporte",
+      "valor": 45
+     },
+     {
+      "rotulo": "Queimadas",
+      "valor": 30
+     },
+     {
+      "rotulo": "Indústria",
+      "valor": 15
+     },
+     {
+      "rotulo": "Outras origens",
+      "valor": 10
+     }
+    ]
+   },
+   "ref": "Priorizar o transporte, origem de 45% das emissões: transporte público e bicicleta reduzem a queima de combustíveis, diminuindo o gás carbônico emitido, o efeito estufa intensificado e o aquecimento. Outra resposta é aceita se bem justificada com os dados.",
+   "conceitos": [
+    "Reduzir a queima de combustíveis",
+    "Menos gás carbônico emitido",
+    "Justificar com os dados"
+   ]
+  }
+ ],
+ "8º ANO|3|Identificar variáveis meteorológicas relacionadas à previsão do tempo e os instrumentos utilizados para medi-las.": [
+  {
+   "tipo": "obj",
+   "enunciado": "A escola montou uma miniestação do tempo. Os alunos fizeram um pluviômetro com garrafa PET cortada, com uma régua em milímetros colada na lateral, e o deixaram em campo aberto no pátio.",
+   "comando": "O que o pluviômetro mede e em que unidade?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da montagem do pluviômetro",
+    "etapas": [
+     "Cortar a garrafa PET ao meio",
+     "Encaixar a parte de cima invertida, como funil",
+     "Colar a régua em milímetros na lateral",
+     "Deixar em campo aberto, sem cobertura"
+    ]
+   },
+   "alts": [
+    "A temperatura do ar, em graus Celsius (°C).",
+    "A quantidade de chuva acumulada, em milímetros.",
+    "A velocidade do vento, em quilômetros por hora.",
+    "A umidade relativa do ar, em porcentagem."
+   ],
+   "correta": 1,
+   "explicacao": "O pluviômetro recolhe a água da chuva e mede a altura acumulada em mm. Os distratores citam outras variáveis e outros instrumentos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na entrada da escola, os alunos instalaram uma biruta (manga de vento). Em uma tarde, a biruta ficou esticada e apontando para o leste, e a turma discutiu o que isso indicava.",
+   "comando": "O que a posição da biruta indica sobre o vento naquela tarde?",
+   "figura": null,
+   "alts": [
+    "O vento vinha do leste e soprava para o oeste.",
+    "O vento vinha do norte e soprava para o sul.",
+    "O vento estava parado, e a biruta só indicava o Sol.",
+    "O vento vinha do oeste e soprava para o leste."
+   ],
+   "correta": 3,
+   "explicacao": "A manga da biruta aponta para onde o vento sopra, logo ele vinha do oeste. O erro mais comum é inverter origem e destino."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marina vai fazer um piquenique no sábado e consultou a previsão do tempo de sua cidade. Ela quer saber qual dado indica quanto vai chover e qual instrumento permitiria conferir isso depois.",
+   "comando": "Qual dado da previsão e qual instrumento respondem à dúvida de Marina?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Previsão do tempo para sábado",
+    "colunas": [
+     "Variável",
+     "Valor previsto"
+    ],
+    "linhas": [
+     [
+      "Temperatura",
+      "17 a 29 °C"
+     ],
+     [
+      "Umidade do ar",
+      "85%"
+     ],
+     [
+      "Chuva",
+      "12 mm"
+     ],
+     [
+      "Vento",
+      "25 km/h"
+     ],
+     [
+      "Pressão",
+      "1008 hPa"
+     ]
+    ]
+   },
+   "alts": [
+    "Chuva de 12 mm, que pode ser conferida com um pluviômetro.",
+    "Umidade de 85%, que pode ser conferida com uma biruta.",
+    "Vento de 25 km/h, que pode ser conferido com um pluviômetro.",
+    "Temperatura de 29 °C, que pode ser conferida com um termômetro."
+   ],
+   "correta": 0,
+   "explicacao": "A quantidade de chuva é dada em mm e medida no pluviômetro. Os distratores associam variável e instrumento errados ou escolhem outra variável."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro mediu a temperatura do pátio com o mesmo termômetro às 14h: primeiro deixou-o ao sol e depois à sombra de uma árvore. O professor explicou que as estações oficiais medem a temperatura do ar sempre na sombra.",
+   "comando": "Por que a medida à sombra é a mais adequada para representar a temperatura do ar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento do termômetro",
+    "colunas": [
+     "Local do termômetro",
+     "Leitura (°C)"
+    ],
+    "linhas": [
+     [
+      "Ao sol",
+      "38"
+     ],
+     [
+      "À sombra",
+      "31"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque o ar é mais quente ao sol e mais frio à sombra em qualquer horário do dia.",
+    "Porque o termômetro à sombra está mais perto do chão e mostra a temperatura do solo.",
+    "Porque o termômetro ao sol é aquecido pela radiação e mostra mais que o ar.",
+    "Porque o termômetro ao sol está mais exposto ao vento e por isso mostra mais calor."
+   ],
+   "correta": 2,
+   "explicacao": "O sol aquece o próprio termômetro, e a leitura não reflete a temperatura do ar. Os distratores atribuem a diferença ao solo, ao ar ou ao vento."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Nos três dias antes de um jogo no campo da escola, os alunos registraram a pressão atmosférica e a umidade do ar. Eles queriam decidir se era seguro marcar o jogo para o quarto dia.",
+   "comando": "Qual previsão para o quarto dia melhor se justifica pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de pressão e umidade em três dias",
+    "colunas": [
+     "Dia",
+     "Pressão (hPa)",
+     "Umidade (%)"
+    ],
+    "linhas": [
+     [
+      "1",
+      "1018",
+      "60"
+     ],
+     [
+      "2",
+      "1012",
+      "75"
+     ],
+     [
+      "3",
+      "1006",
+      "90"
+     ]
+    ]
+   },
+   "alts": [
+    "Tempo seco e de céu limpo, pois a pressão em queda indica ar descendo e secando.",
+    "Tempo seco e com ventos fortes, pois a pressão em queda indica a chegada de ar frio.",
+    "Tempo estável e abafado, pois a umidade em aumento indica que o ar fica parado.",
+    "Tempo instável com chuva, pois a pressão em queda e a umidade alta indicam nuvens."
+   ],
+   "correta": 3,
+   "explicacao": "Pressão em queda com umidade em alta indica ar quente e úmido subindo e formando nuvens, com chance de chuva. Os distratores invertem o significado da pressão."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na miniestação da escola há um pluviômetro, uma biruta e um termômetro. Os alunos precisam anotar o que cada um mede.",
+   "comando": "Associe cada instrumento à variável que ele mede.",
+   "figura": null,
+   "ref": "O pluviômetro mede a quantidade de chuva, a biruta indica a direção do vento e o termômetro mede a temperatura do ar.",
+   "conceitos": [
+    "Pluviômetro = chuva",
+    "Biruta = direção do vento",
+    "Termômetro = temperatura"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marcos recebeu o boletim do tempo da cidade com cinco valores, mas as legendas ficaram borradas. Só restaram os números e as unidades.",
+   "comando": "Diga qual variável meteorológica cada valor representa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do boletim de Marcos",
+    "colunas": [
+     "Valor",
+     "Unidade"
+    ],
+    "linhas": [
+     [
+      "29",
+      "°C"
+     ],
+     [
+      "85",
+      "%"
+     ],
+     [
+      "12",
+      "mm"
+     ],
+     [
+      "25",
+      "km/h"
+     ],
+     [
+      "1008",
+      "hPa"
+     ]
+    ]
+   },
+   "ref": "29 °C é a temperatura; 85% é a umidade do ar; 12 mm é a chuva prevista; 25 km/h é a velocidade do vento; 1008 hPa é a pressão atmosférica.",
+   "conceitos": [
+    "Temperatura em °C",
+    "Umidade em %",
+    "Chuva em mm, vento em km/h e pressão em hPa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Durante uma semana, a turma do 8º ano leu o pluviômetro da escola todos os dias, às 7h. Sabendo que 1 mm de chuva corresponde a 1 litro de água por metro quadrado, eles querem calcular a chuva total.",
+   "comando": "Calcule a chuva total da semana e diga em que dia choveu mais.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de chuva diária no pluviômetro",
+    "unidade": "mm",
+    "itens": [
+     {
+      "rotulo": "Segunda",
+      "valor": 0
+     },
+     {
+      "rotulo": "Terça",
+      "valor": 5
+     },
+     {
+      "rotulo": "Quarta",
+      "valor": 22
+     },
+     {
+      "rotulo": "Quinta",
+      "valor": 3
+     },
+     {
+      "rotulo": "Sexta",
+      "valor": 0
+     }
+    ]
+   },
+   "ref": "A chuva total foi 5 + 22 + 3 = 30 mm, ou seja, 30 litros de água por metro quadrado. Choveu mais na quarta-feira, com 22 mm.",
+   "conceitos": [
+    "Soma dos valores: 30 mm",
+    "Dia de maior chuva: quarta",
+    "1 mm = 1 L/m²"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rafael colocou o pluviômetro de PET sobre o telhado inclinado, encostado na parede, e anotou a chuva às 15h. Ele achou os valores diferentes dos da estação da cidade.",
+   "comando": "Aponte dois erros na posição ou na leitura e explique por que atrapalham a medida.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do uso do pluviômetro por Rafael",
+    "etapas": [
+     "Pluviômetro no telhado inclinado",
+     "Encostado na parede",
+     "Leitura às 15h, horário aleatório",
+     "Régua desgastada, quase sem números"
+    ]
+   },
+   "ref": "O telhado inclinado deixa o pluviômetro torto e a parede desvia a chuva, então ele não recebe a água de forma correta. Além disso, a leitura em horário variável e a régua apagada geram erros. O pluviômetro deve ficar nivelado, em campo aberto e ser lido sempre no mesmo horário.",
+   "conceitos": [
+    "Nivelado e em campo aberto",
+    "Parede interfere na chuva",
+    "Leitura em horário padrão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na semana do campeonato da escola, a turma comparou a previsão de duas datas para decidir em qual marcar a final de futebol.",
+   "comando": "Escolha a melhor data para o jogo e justifique com ao menos duas variáveis.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da previsão para duas datas",
+    "colunas": [
+     "Variável",
+     "Segunda",
+     "Quinta"
+    ],
+    "linhas": [
+     [
+      "Pressão (hPa)",
+      "1022",
+      "1004"
+     ],
+     [
+      "Umidade (%)",
+      "40",
+      "92"
+     ],
+     [
+      "Vento (km/h)",
+      "8",
+      "35"
+     ],
+     [
+      "Chuva (mm)",
+      "0",
+      "18"
+     ]
+    ]
+   },
+   "ref": "A melhor data é segunda-feira: sem chuva, vento fraco e umidade baixa, o que torna o jogo seguro e confortável. Na quinta, pressão baixa, umidade de 92%, vento forte e 18 mm de chuva indicam tempo instável.",
+   "conceitos": [
+    "Pressão alta e tempo estável",
+    "Chuva e vento como critérios",
+    "Escolha justificada com dados"
+   ]
+  }
+ ],
+ "9º ANO|3|Analisar a importância do tratamento de água e esgoto para a qualidade ambiental e a saúde humana.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, Bruno colocou água com terra em dois copos. O copo A ficou parado sobre a mesa durante 30 minutos. A água do copo B foi despejada em um filtro de PET com areia e cascalho. A turma comparou a turbidez da água nos dois casos.",
+   "comando": "Qual processo de tratamento a água do copo A reproduz?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do experimento com água e terra",
+    "colunas": [
+     "Copo",
+     "Procedimento",
+     "Turbidez ao final"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Repouso por 30 min",
+      "Menor, com terra no fundo"
+     ],
+     [
+      "B",
+      "Passagem por areia e cascalho",
+      "Menor, sem terra visível"
+     ]
+    ]
+   },
+   "alts": [
+    "Filtração, em que a terra é retida pelas camadas de areia e cascalho do filtro.",
+    "Flotação, em que a terra sobe e se acumula na superfície da água.",
+    "Desinfecção, em que a terra é eliminada depois de ficar em repouso.",
+    "Decantação, em que a terra, por ser mais densa, se deposita no fundo."
+   ],
+   "correta": 3,
+   "explicacao": "A decantação separa sólidos mais densos, que se depositam no fundo com o repouso. Os distratores trocam o processo ou o resultado."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma visita à estação de tratamento de água (ETA) de sua cidade, os alunos viram que, depois de a água do rio entrar, o técnico adiciona sulfato de alumínio. Pouco depois, aparecem flocos que descem para o fundo do tanque.",
+   "comando": "Qual é a função dessa substância na estação de tratamento?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da visita à ETA",
+    "etapas": [
+     "A água do rio entra na estação",
+     "Adição de sulfato de alumínio",
+     "Formam-se flocos na água",
+     "Os flocos descem ao fundo do tanque"
+    ]
+   },
+   "alts": [
+    "Reunir as partículas em flocos mais pesados, que se depositam no fundo.",
+    "Eliminar os microrganismos da água, que se juntam nos flocos e morrem.",
+    "Adicionar sais minerais à água, que formam flocos e deixam a água mais saborosa.",
+    "Dissolver as partículas em suspensão, que passam a fazer parte da água."
+   ],
+   "correta": 0,
+   "explicacao": "O sulfato de alumínio faz as partículas pequenas se agruparem em flocos, que decantam. A desinfecção é outra etapa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma comunidade, a coleta de esgoto chegou a um dos bairros, mas o outro continua com fossas abertas. O posto de saúde registrou as internações por diarreia nos dois bairros no último ano.",
+   "comando": "O que os dados permitem concluir sobre a relação entre saneamento e saúde?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de internações por diarreia por 1000 moradores",
+    "unidade": "internações",
+    "itens": [
+     {
+      "rotulo": "Bairro com coleta e tratamento de esgoto",
+      "valor": 3
+     },
+     {
+      "rotulo": "Bairro com fossas abertas",
+      "valor": 14
+     }
+    ]
+   },
+   "alts": [
+    "A coleta de esgoto, por si só, elimina todas as doenças e garante água potável em todo o bairro.",
+    "A falta de coleta de esgoto reduz a quantidade de água do bairro e causa mais doenças.",
+    "A falta de coleta e tratamento do esgoto favorece a contaminação da água e as doenças.",
+    "A presença de fossas abertas faz bactérias nascerem sozinhas na água, sem origem fecal."
+   ],
+   "correta": 2,
+   "explicacao": "Sem tratamento, o esgoto contamina água e alimentos e favorece doenças como a diarreia. Os distratores generalizam ou apresentam causas inexistentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um córrego recebe o esgoto de um bairro sem tratamento. A equipe da escola mediu o oxigênio dissolvido em três pontos e notou peixes mortos no ponto 2.",
+   "comando": "Por que o oxigênio caiu depois do lançamento do esgoto?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do oxigênio dissolvido no córrego",
+    "colunas": [
+     "Ponto",
+     "Local",
+     "Oxigênio (mg/L)"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Antes do lançamento de esgoto",
+      "8"
+     ],
+     [
+      "2",
+      "500 m depois do lançamento",
+      "2"
+     ],
+     [
+      "3",
+      "5 km depois do lançamento",
+      "6"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque o esgoto aquece a água do córrego e o oxigênio sai da água por evaporação mais rápida.",
+    "Porque a matéria orgânica do esgoto é decomposta por microrganismos, que consomem o oxigênio.",
+    "Porque o esgoto forma uma camada sobre a superfície da água e impede o oxigênio do ar de se dissolver nela.",
+    "Porque as bactérias do esgoto produzem gás carbônico que expulsa o oxigênio da água."
+   ],
+   "correta": 1,
+   "explicacao": "A decomposição da matéria orgânica por microrganismos consome oxigênio. Depois, o rio se recupera aos poucos. Os distratores apresentam causas não sustentadas pelos dados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Duas cidades vizinhas, A e B, informaram à companhia de saneamento quanto do esgoto é coletado e quanto é tratado. A cidade B coloca na propaganda que tem rede de esgoto para quase todos.",
+   "comando": "Qual afirmação sobre a qualidade do rio é a mais adequada para os dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do esgoto coletado e tratado",
+    "colunas": [
+     "Cidade",
+     "Esgoto coletado (%)",
+     "Esgoto tratado (%)"
+    ],
+    "linhas": [
+     [
+      "A",
+      "90",
+      "85"
+     ],
+     [
+      "B",
+      "90",
+      "20"
+     ]
+    ]
+   },
+   "alts": [
+    "O rio da cidade B está melhor que o da cidade A, pois a coleta é igual nas duas cidades.",
+    "O rio da cidade A recebe mais esgoto, pois trata uma porcentagem maior do que coleta.",
+    "O rio da cidade B recebe muito esgoto sem tratamento, pois coletar não significa tratar.",
+    "O rio das duas cidades tem a mesma qualidade, pois a coleta de esgoto é a mesma nas duas."
+   ],
+   "correta": 2,
+   "explicacao": "Coletar sem tratar só leva o esgoto a outro lugar, em geral o rio. Os distratores desconsideram o tratamento."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na experiência da turma, o copo A ficou em repouso por 30 minutos e a água do copo B passou por um filtro de PET com areia e cascalho. Nos dois, a água ficou menos turva.",
+   "comando": "Identifique o nome do processo usado em cada copo e diga o que acontece com a terra em cada um.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do experimento",
+    "etapas": [
+     "Copo A: água com terra em repouso por 30 min",
+     "Copo B: água com terra passa por areia e cascalho",
+     "Compara-se a turbidez final dos dois copos"
+    ]
+   },
+   "ref": "No copo A ocorre a decantação: a terra, mais densa, se deposita no fundo. No copo B ocorre a filtração: a terra fica retida na areia e no cascalho.",
+   "conceitos": [
+    "Decantação",
+    "Filtração",
+    "Separação de sólidos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Depois da filtração, o professor alertou que a água do copo B ainda não pode ser bebida, mesmo estando transparente.",
+   "comando": "Explique por que a água filtrada ainda não é potável e que etapa do tratamento falta.",
+   "figura": null,
+   "ref": "O filtro retém sujeira visível, mas não elimina microrganismos nem outras substâncias que causam doenças. Falta a desinfecção, em geral com cloro, para eliminar os microrganismos.",
+   "conceitos": [
+    "Água limpa não é água potável",
+    "Microrganismos não são retidos pelo filtro",
+    "Desinfecção com cloro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um estudo da prefeitura, foram comparados dois bairros de uma cidade paulista, um com água tratada e esgoto coletado e outro sem.",
+   "comando": "Explique a relação entre os dados e o saneamento básico.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de saneamento e de casos de hepatite A",
+    "colunas": [
+     "Bairro",
+     "Água tratada e esgoto coletado",
+     "Casos por ano"
+    ],
+    "linhas": [
+     [
+      "Vila Nova",
+      "Sim",
+      "2"
+     ],
+     [
+      "Jardim Alto",
+      "Não",
+      "19"
+     ]
+    ]
+   },
+   "ref": "A hepatite A é transmitida por água e alimentos contaminados com fezes. Onde há água tratada e coleta de esgoto, a contaminação é menor e há menos casos. O saneamento protege a saúde.",
+   "conceitos": [
+    "Transmissão por água contaminada",
+    "Saneamento reduz doenças",
+    "Relacionar dados e saúde"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A prefeitura de uma cidade quer despoluir o córrego do bairro e levantou a quantidade de esgoto que chega a ele a cada dia. O secretário disse que se pode fazer mutirão de limpeza e plantar árvores.",
+   "comando": "Qual deve ser a prioridade da prefeitura? Justifique com os dados e proponha uma atitude de consumo consciente.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do que chega ao córrego por dia",
+    "unidade": "mil litros",
+    "itens": [
+     {
+      "rotulo": "Esgoto de casas sem rede",
+      "valor": 40
+     },
+     {
+      "rotulo": "Esgoto de indústria",
+      "valor": 8
+     },
+     {
+      "rotulo": "Água de chuva das ruas",
+      "valor": 12
+     }
+    ]
+   },
+   "ref": "A prioridade é a coleta e o tratamento do esgoto das casas, que é a maior fonte (40 mil litros). Sem isso, o mutirão não resolve. Uma atitude de consumo consciente é economizar água e não jogar óleo e lixo no ralo.",
+   "conceitos": [
+    "Priorizar a maior fonte",
+    "Coleta e tratamento do esgoto",
+    "Consumo consciente de água"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um rio passa pela cidade B, que lança esgoto sem tratamento, e depois chega à cidade C, onde a água é captada para abastecer a população. Os moradores de C reclamam do gosto da água.",
+   "comando": "Explique como o esgoto de B afeta C e por que o tratamento do esgoto beneficia quem está rio abaixo.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Percurso do rio",
+    "etapas": [
+     "Nascente",
+     "Cidade B lança esgoto no rio",
+     "Rio segue pelo campo",
+     "Cidade C capta a água"
+    ]
+   },
+   "ref": "O esgoto de B leva matéria orgânica e microrganismos ao rio, que chegam a C e podem contaminar a água captada. O tratamento do esgoto antes do descarte reduz essa contaminação, protege a saúde de quem está rio abaixo e facilita o tratamento da água em C.",
+   "conceitos": [
+    "Poluição se propaga rio abaixo",
+    "Tratar o esgoto antes de lançá-lo",
+    "Bacia hidrográfica compartilhada"
+   ]
+  }
+ ],
+ "9º ANO|3|Relacionar práticas humanas às fontes de poluição da água e às alterações na qualidade dos ambientes aquáticos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Para investigar fontes de poluição, a turma preparou três copos com água limpa. O copo A recebeu terra, o copo B recebeu óleo de cozinha e o copo C recebeu detergente. Perto de uma oficina mecânica, o córrego tinha uma mancha brilhante na superfície.",
+   "comando": "Qual copo reproduz essa mancha e que prática humana pode causá-la?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação dos copos",
+    "colunas": [
+     "Copo",
+     "Substância",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Terra",
+      "Água turva"
+     ],
+     [
+      "B",
+      "Óleo",
+      "Mancha flutuando"
+     ],
+     [
+      "C",
+      "Detergente",
+      "Espuma"
+     ]
+    ]
+   },
+   "alts": [
+    "O copo A, pela terra carregada pela chuva de terrenos sem vegetação.",
+    "O copo C, pela lavagem de carros com sabão despejada no córrego.",
+    "O copo B, pelo descarte de óleo usado em ralos ou no solo.",
+    "O copo B, pelo lançamento de fezes de animais diretamente no córrego."
+   ],
+   "correta": 2,
+   "explicacao": "O óleo é menos denso que a água e forma mancha na superfície; vem de descarte de óleo. Os distratores trocam copo ou prática."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois de uma chuva forte, o córrego do bairro de Marta ficou marrom. Perto dali, uma obra tinha deixado o terreno sem vegetação. A turma mediu a turbidez antes e depois da chuva.",
+   "comando": "Qual é a causa mais provável da mudança no córrego?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da turbidez do córrego",
+    "unidade": "NTU",
+    "itens": [
+     {
+      "rotulo": "Antes da chuva",
+      "valor": 10
+     },
+     {
+      "rotulo": "Depois da chuva",
+      "valor": 180
+     }
+    ]
+   },
+   "alts": [
+    "A chuva dissolve o oxigênio do córrego, o que deixa a água marrom.",
+    "A chuva carrega a terra do solo exposto até o córrego (erosão).",
+    "A chuva forte aquece o córrego e faz o fundo se revolver, mesmo sem a obra.",
+    "A chuva traz sais dissolvidos das nuvens, que escurecem a água do córrego."
+   ],
+   "correta": 1,
+   "explicacao": "Sem cobertura vegetal, a chuva arrasta terra para o córrego (erosão), aumentando a turbidez. Os demais são causas inexistentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na lagoa de um parque, a água perto da saída de uma tubulação de esgoto ficou verde-escura e com cheiro ruim. Em outro ponto, longe da tubulação, a água era mais clara. A turma mediu o fósforo, um nutriente presente no esgoto.",
+   "comando": "Como o esgoto doméstico pode ter causado essa diferença?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da água da lagoa",
+    "colunas": [
+     "Ponto",
+     "Fósforo (mg/L)",
+     "Cor da água"
+    ],
+    "linhas": [
+     [
+      "A (longe da tubulação)",
+      "0,05",
+      "Verde-clara"
+     ],
+     [
+      "B (junto da tubulação)",
+      "0,60",
+      "Verde-escura"
+     ]
+    ]
+   },
+   "alts": [
+    "Os nutrientes do esgoto fazem as algas se multiplicar e reduzem o oxigênio da água.",
+    "Os nutrientes do esgoto eliminam as algas e deixam a água verde-escura por decomposição.",
+    "Os nutrientes do esgoto aumentam o oxigênio, o que deixa a água verde-escura por mais luz.",
+    "Os nutrientes do esgoto formam espuma na superfície e é ela que deixa a água verde-escura."
+   ],
+   "correta": 0,
+   "explicacao": "Nutrientes (eutrofização) estimulam as algas; ao morrerem, são decompostas e consomem oxigênio. Os distratores trocam efeitos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Rita frita pastel toda semana e costuma jogar o óleo usado na pia. Sua neta Bia aprendeu na escola que 1 litro de óleo pode contaminar milhares de litros de água.",
+   "comando": "Qual atitude de Dona Rita evita esse tipo de poluição?",
+   "figura": null,
+   "alts": [
+    "Misturar o óleo com detergente antes de jogá-lo na pia, para que ele se dissolva.",
+    "Diluir o óleo em bastante água quente e descartar no ralo da pia da cozinha.",
+    "Despejar o óleo no quintal, para que o solo o absorva sem chegar ao córrego.",
+    "Guardar o óleo em garrafa PET e entregar em um ponto de coleta para reciclagem."
+   ],
+   "correta": 3,
+   "explicacao": "O óleo deve ser armazenado e levado à coleta. O detergente só emulsiona temporariamente e a diluição ou o despejo no solo não eliminam a poluição."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma mediu a qualidade da água de um rio em três pontos ao longo do seu curso: na nascente, depois de um bairro residencial e depois de uma indústria.",
+   "comando": "Qual conclusão é mais adequada aos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da qualidade da água do rio",
+    "colunas": [
+     "Ponto",
+     "Oxigênio (mg/L)",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "1 (nascente)",
+      "8",
+      "Água clara"
+     ],
+     [
+      "2 (após o bairro)",
+      "4",
+      "Espuma na margem"
+     ],
+     [
+      "3 (após a indústria)",
+      "2",
+      "Mancha de óleo"
+     ]
+    ]
+   },
+   "alts": [
+    "A qualidade piora rio abaixo, pois a água perde oxigênio naturalmente ao longo do curso.",
+    "A qualidade piora rio abaixo, pois a água recebe lançamentos das atividades humanas.",
+    "A qualidade é pior após o bairro, pois a espuma barra o oxigênio, e a indústria não influencia.",
+    "A qualidade piora só após a indústria, pois a espuma do bairro não interfere no oxigênio."
+   ],
+   "correta": 1,
+   "explicacao": "A queda do oxigênio e os sinais de poluição aparecem após cada lançamento humano. Os distratores atribuem a causa a processos naturais ou ignoram um dos pontos."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma preparou três copos com água limpa: o copo A recebeu terra, o copo B recebeu óleo e o copo C recebeu detergente.",
+   "comando": "Relacione cada copo a uma fonte de poluição humana e à alteração observada na água.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos copos",
+    "colunas": [
+     "Copo",
+     "Substância adicionada"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Terra"
+     ],
+     [
+      "B",
+      "Óleo de cozinha"
+     ],
+     [
+      "C",
+      "Detergente"
+     ]
+    ]
+   },
+   "ref": "O copo A simula a erosão, que deixa a água turva. O copo B simula o descarte de óleo, que forma uma mancha na superfície. O copo C simula o esgoto doméstico, que gera espuma.",
+   "conceitos": [
+    "Erosão = turbidez",
+    "Óleo = mancha",
+    "Esgoto = espuma"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma limpou um trecho do córrego perto da escola e contou o lixo encontrado.",
+   "comando": "Que prática humana leva esse lixo ao córrego e que prejuízo ele causa aos seres vivos?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do lixo encontrado em 100 m de margem",
+    "unidade": "unidades",
+    "itens": [
+     {
+      "rotulo": "Sacolas plásticas",
+      "valor": 14
+     },
+     {
+      "rotulo": "Garrafas",
+      "valor": 9
+     },
+     {
+      "rotulo": "Latas",
+      "valor": 4
+     }
+    ]
+   },
+   "ref": "O lixo jogado na rua ou na margem é levado ao córrego pela chuva e pelo vento. Ele deixa a água suja, pode prender ou ferir animais e demora muito para se decompor.",
+   "conceitos": [
+    "Descarte incorreto de lixo",
+    "Poluição por resíduos sólidos",
+    "Prejuízo aos seres vivos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu Mário lava o carro todo sábado no quintal com detergente. A água escorre pela calçada e entra em uma boca de lobo, que leva a um córrego do bairro.",
+   "comando": "Explique o caminho da água com detergente e o efeito que ela causa no córrego.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Caminho da água",
+    "etapas": [
+     "Quintal",
+     "Calçada",
+     "Boca de lobo",
+     "Galeria de águas pluviais",
+     "Córrego"
+    ]
+   },
+   "ref": "A água com detergente vai pela boca de lobo até a galeria de águas da chuva, que desemboca no córrego sem tratamento. O detergente forma espuma, pode reduzir o oxigênio e prejudica peixes e plantas aquáticas.",
+   "conceitos": [
+    "Galeria pluvial sem tratamento",
+    "Detergente forma espuma",
+    "Prejuízo à vida aquática"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No experimento, o copo com terra ficou turvo e o copo com detergente formou espuma. Daiane afirmou que os dois tipos de poluição causam os mesmos problemas ao rio.",
+   "comando": "Compare os efeitos dessas duas fontes e diga se Daiane tem razão.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento dos copos",
+    "colunas": [
+     "Copo",
+     "Observação 1",
+     "Observação 2"
+    ],
+    "linhas": [
+     [
+      "Terra",
+      "Luz atravessa pouco",
+      "Terra se deposita no fundo"
+     ],
+     [
+      "Detergente",
+      "Luz atravessa bem",
+      "Espuma na superfície"
+     ]
+    ]
+   },
+   "ref": "Daiane não tem razão. A terra deixa a água turva, reduz a luz para plantas aquáticas e se deposita no fundo. O detergente (esgoto) forma espuma e pode reduzir o oxigênio. Os problemas são diferentes.",
+   "conceitos": [
+    "Turbidez reduz a luz",
+    "Espuma e oxigênio",
+    "Efeitos diferentes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um bairro, a prefeitura quer replantar a vegetação nas margens do córrego (mata ciliar). Os alunos compararam dois trechos do mesmo córrego depois de uma chuva forte.",
+   "comando": "Explique por que a mata ciliar ajuda a proteger a qualidade da água e proponha uma outra iniciativa da comunidade.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da turbidez após a chuva forte",
+    "unidade": "NTU",
+    "itens": [
+     {
+      "rotulo": "Trecho com mata nas margens",
+      "valor": 20
+     },
+     {
+      "rotulo": "Trecho sem mata nas margens",
+      "valor": 120
+     }
+    ]
+   },
+   "ref": "A vegetação das margens segura o solo e reduz a erosão, de modo que menos terra chega à água e a turbidez fica menor. Outra iniciativa é descartar corretamente óleo e lixo ou pedir coleta e tratamento de esgoto.",
+   "conceitos": [
+    "Mata ciliar reduz erosão",
+    "Menos turbidez",
+    "Iniciativa da comunidade"
+   ]
+  }
+ ],
+ "4B|6º ANO|13": [
+  {
+   "tipo": "obj",
+   "enunciado": "Lucas começou a montar um dedo da mão biônica de papelão. Ele recortou três tiras, uniu-as com pequenas dobras e comparou o dedo de papelão com o seu próprio dedo indicador.",
+   "comando": "O que as tiras e as dobras do dedo de papelão representam no dedo humano?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da montagem do dedo de papelão",
+    "etapas": [
+     "Recortar três tiras de papelão",
+     "Fazer uma dobra entre cada par de tiras",
+     "Unir as tiras com fita adesiva",
+     "Comparar com o dedo indicador"
+    ]
+   },
+   "alts": [
+    "As tiras representam os músculos e as dobras representam os ossos do dedo.",
+    "As tiras representam as falanges e as dobras, as articulações do dedo.",
+    "As tiras representam as articulações e as dobras representam as falanges do dedo.",
+    "As tiras representam os tendões e as dobras representam os músculos do dedo."
+   ],
+   "correta": 1,
+   "explicacao": "As falanges são os ossos do dedo e as articulações permitem o movimento. Os distratores trocam estruturas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Seu Joaquim perdeu a mão direita em um acidente e hoje usa uma mão artificial. Dona Maria quebrou o punho e usa uma tala por algumas semanas. A professora pediu que a turma classificasse os dois dispositivos.",
+   "comando": "Qual alternativa classifica corretamente os dispositivos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos dispositivos usados",
+    "colunas": [
+     "Pessoa",
+     "Situação",
+     "Dispositivo"
+    ],
+    "linhas": [
+     [
+      "Seu Joaquim",
+      "Mão ausente",
+      "Mão artificial"
+     ],
+     [
+      "Dona Maria",
+      "Punho quebrado",
+      "Tala"
+     ]
+    ]
+   },
+   "alts": [
+    "A mão artificial é uma órtese, pois apoia o corpo, e a tala é uma prótese.",
+    "As duas são próteses, pois ambas substituem partes do corpo.",
+    "As duas são órteses, pois ambas apoiam e protegem partes do corpo.",
+    "A mão é uma prótese, pois substitui o que falta, e a tala é uma órtese."
+   ],
+   "correta": 3,
+   "explicacao": "Prótese substitui uma parte do corpo que falta; órtese apoia ou protege uma parte existente. Os distratores invertem ou generalizam."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na montagem da mão biônica, os alunos passaram um barbante pelo lado de dentro de cada dedo de papelão e prenderam sua ponta na pontinha do dedo. Ao puxar o barbante, o dedo dobrou.",
+   "comando": "Qual estrutura do corpo o barbante representa?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da montagem do dedo com barbante",
+    "etapas": [
+     "Passar o barbante pelo lado de dentro do dedo",
+     "Prender a ponta do barbante na ponta do dedo",
+     "Puxar a outra ponta",
+     "O dedo se dobra"
+    ]
+   },
+   "alts": [
+    "O osso, que sustenta o dedo e o mantém firme durante o movimento.",
+    "O músculo, que se contrai e se encurta ao puxar a articulação.",
+    "O tendão, que liga o músculo ao osso e transmite a força.",
+    "A pele, que cobre o dedo e se estica quando o dedo se dobra."
+   ],
+   "correta": 2,
+   "explicacao": "O tendão liga o músculo ao osso e transmite a força para mover o dedo. Os distratores citam outras estruturas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Davi usa cadeira de rodas e estuda em uma escola com biblioteca no andar de cima, acessível por escada. A equipe da escola fez um levantamento de barreiras em alguns espaços.",
+   "comando": "Qual mudança remove a barreira que impede Davi de entrar na biblioteca?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de barreiras na escola",
+    "colunas": [
+     "Espaço",
+     "Barreira observada"
+    ],
+    "linhas": [
+     [
+      "Biblioteca",
+      "Três degraus na entrada"
+     ],
+     [
+      "Pátio",
+      "Piso com buracos"
+     ],
+     [
+      "Banheiro",
+      "Porta com 60 cm de largura"
+     ]
+    ]
+   },
+   "alts": [
+    "Instalar uma rampa com inclinação suave, com corrimão e piso antiderrapante.",
+    "Afixar um aviso pedindo ajuda dos colegas para carregar a cadeira pela escada.",
+    "Colocar um tapete antiderrapante nos degraus para que a cadeira não escorregue.",
+    "Colocar um corrimão na escada, para que Davi se apoie nele ao subir os degraus."
+   ],
+   "correta": 0,
+   "explicacao": "Acessibilidade é eliminar barreiras de forma autônoma; a rampa permite a entrada sem ajuda. Os distratores não eliminam a barreira."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana comparou seu polegar com os outros dedos antes de montar o protótipo e notou diferenças. Seu protótipo de papelão tem três tiras iguais em todos os dedos e, mesmo assim, não consegue pegar um lápis.",
+   "comando": "Qual ajuste torna o protótipo mais parecido com a mão humana?",
+   "figura": null,
+   "alts": [
+    "Fazer o polegar mais curto e rígido, sem dobras, para ficar firme ao pegar objetos.",
+    "Fazer todos os dedos com duas tiras e posicioná-los em fila, para ganhar força.",
+    "Fazer o polegar com três tiras e posicioná-lo em fila com os outros dedos, para dobrar mais.",
+    "Fazer o polegar com duas tiras, de frente para os outros dedos, para fazer a pinça."
+   ],
+   "correta": 3,
+   "explicacao": "O polegar tem duas falanges e se opõe aos outros dedos, o que permite a pinça. Os distratores ignoram a anatomia."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola de Bia tem uma rampa na entrada principal, banheiros com barras de apoio e uma intérprete de Libras nas aulas. Uma colega perguntou o que isso tem a ver com acessibilidade.",
+   "comando": "Explique o que é acessibilidade e relacione-a a dois exemplos da escola.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de recursos da escola",
+    "colunas": [
+     "Recurso",
+     "Local"
+    ],
+    "linhas": [
+     [
+      "Rampa",
+      "Entrada principal"
+     ],
+     [
+      "Barras de apoio",
+      "Banheiros"
+     ],
+     [
+      "Intérprete de Libras",
+      "Salas de aula"
+     ]
+    ]
+   },
+   "ref": "Acessibilidade é garantir que todas as pessoas, com ou sem deficiência, possam usar espaços e serviços com autonomia e segurança. A rampa permite o acesso de cadeirantes e a intérprete de Libras permite que alunos surdos participem das aulas.",
+   "conceitos": [
+    "Acessibilidade = igualdade de acesso",
+    "Rampa",
+    "Intérprete de Libras"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma feira de ciências, a turma expôs quatro dispositivos: tala no punho, perna mecânica, óculos e muletas. O visitante perguntou qual deles é prótese e qual é órtese.",
+   "comando": "Diferencie prótese e órtese e classifique a tala e a perna mecânica.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos dispositivos da feira",
+    "colunas": [
+     "Dispositivo",
+     "Para que serve"
+    ],
+    "linhas": [
+     [
+      "Tala no punho",
+      "Mantém o osso firme durante a recuperação"
+     ],
+     [
+      "Perna mecânica",
+      "Permite andar a quem não tem a perna"
+     ]
+    ]
+   },
+   "ref": "Prótese substitui uma parte do corpo que falta; órtese apoia ou protege uma parte que existe. A perna mecânica é prótese e a tala é órtese.",
+   "conceitos": [
+    "Prótese substitui",
+    "Órtese apoia",
+    "Tecnologias assistivas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para montar a mão de papelão, os alunos usaram canudos nas dobras dos dedos e barbantes ligados da ponta do dedo até o pulso. Ao puxar os barbantes, os dedos se fecham.",
+   "comando": "Explique como o movimento da mão de papelão se compara ao movimento de um dedo humano, relacionando barbante, dobras e tiras às partes do corpo.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da montagem",
+    "etapas": [
+     "Tiras de papelão para cada dedo",
+     "Canudos nas dobras",
+     "Barbante da ponta do dedo ao pulso",
+     "Puxar o barbante fecha o dedo"
+    ]
+   },
+   "ref": "As tiras representam as falanges (ossos), as dobras com canudos representam as articulações e o barbante representa o tendão. Ao puxar o barbante, como o músculo puxa o tendão, os ossos se movem nas articulações e o dedo se dobra.",
+   "conceitos": [
+    "Tiras = falanges",
+    "Dobras = articulações",
+    "Barbante = tendão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rafael testou a mão de papelão e viu que ela só fecha se alguém puxar os barbantes com a outra mão. O professor perguntou se isso serviria como prótese de uso diário.",
+   "comando": "Compare a mão de papelão com a mão humana e diga duas melhorias necessárias para ser uma prótese útil.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de comparação",
+    "colunas": [
+     "Característica",
+     "Mão de papelão",
+     "Mão humana"
+    ],
+    "linhas": [
+     [
+      "Material",
+      "Papelão",
+      "Ossos e músculos"
+     ],
+     [
+      "Como se movimenta",
+      "Barbante puxado à mão",
+      "Músculos puxam os tendões"
+     ]
+    ]
+   },
+   "ref": "A mão de papelão é só um modelo: precisa que alguém puxe o barbante e o papelão não resiste ao uso. Para ser prótese, ela precisa de materiais resistentes e de um jeito de comandar o movimento sem ajuda, como por meio de sensores ou da força do próprio braço.",
+   "conceitos": [
+    "Modelo x prótese",
+    "Material resistente",
+    "Controle do movimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Bia nasceu sem a mão direita. Um projeto de universidade fez para ela uma prótese impressa em 3D, bem mais barata que as importadas, o que ampliou o acesso a próteses para crianças da rede pública.",
+   "comando": "Justifique como esse projeto melhora a qualidade de vida e promove a acessibilidade.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do custo das próteses",
+    "unidade": "reais",
+    "itens": [
+     {
+      "rotulo": "Prótese importada",
+      "valor": 30000
+     },
+     {
+      "rotulo": "Prótese impressa em 3D",
+      "valor": 300
+     }
+    ]
+   },
+   "ref": "A prótese 3D custa muito menos, então mais famílias podem ter acesso. Com ela, Bia consegue realizar tarefas do dia a dia com mais autonomia, o que melhora sua qualidade de vida e promove acessibilidade.",
+   "conceitos": [
+    "Custo menor amplia acesso",
+    "Autonomia",
+    "Qualidade de vida"
+   ]
+  }
+ ],
+ "4B|7º ANO|10": [
+  {
+   "tipo": "obj",
+   "enunciado": "No posto de saúde, o pequeno Davi, de 2 meses, tomou sua primeira vacina. A mãe perguntou à enfermeira como a vacina protege a criança de doenças. A enfermeira explicou que a vacina contém o agente da doença enfraquecido ou partes dele.",
+   "comando": "O que acontece no corpo de Davi após receber a vacina?",
+   "figura": null,
+   "alts": [
+    "O corpo recebe anticorpos prontos, que o protegem de forma imediata e por pouco tempo.",
+    "O corpo reconhece o agente enfraquecido e produz defesas, que o protegem depois.",
+    "O corpo recebe um medicamento que mata o agente da doença no momento da aplicação.",
+    "O corpo fica doente por alguns dias, e é isso que garante que ele fique protegido."
+   ],
+   "correta": 1,
+   "explicacao": "A vacina é imunização ativa: o corpo produz suas próprias defesas. Anticorpos prontos são soros (passiva)."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em 1796, o médico Edward Jenner notou que as ordenhadeiras que tinham pegado uma doença leve do gado quase nunca tinham a varíola humana. Ele registrou casos em uma epidemia.",
+   "comando": "Qual observação de Jenner o levou à ideia da vacina?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das ordenhadeiras e da epidemia de varíola",
+    "colunas": [
+     "Grupo",
+     "Número de pessoas",
+     "Pegaram varíola humana"
+    ],
+    "linhas": [
+     [
+      "Ordenhadeiras que tiveram a doença do gado",
+      "20",
+      "0"
+     ],
+     [
+      "Pessoas sem contato com o gado",
+      "20",
+      "14"
+     ]
+    ]
+   },
+   "alts": [
+    "Quem tinha tido a doença do gado ficava protegido contra a varíola humana.",
+    "Quem tinha contato com o gado ficava mais exposto à varíola humana.",
+    "Quem tinha a doença do gado precisava ser isolado para não contaminar os demais.",
+    "Quem tinha a doença do gado ficava imune à varíola, por causa do leite."
+   ],
+   "correta": 0,
+   "explicacao": "A infecção leve pelo vírus bovino protegia contra a varíola humana, a base da vacina. Os distratores invertem a relação ou criam causas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No grupo de WhatsApp da família Ribeiro, circula uma mensagem dizendo que as vacinas são perigosas e não funcionam. A mensagem não cita fonte e foi encaminhada várias vezes. A filha Camila quer saber a veracidade da informação antes de decidir se leva o irmão para vacinar.",
+   "comando": "Qual atitude de Camila é a mais adequada?",
+   "figura": null,
+   "alts": [
+    "Perguntar aos mais velhos da família se já ouviram falar do assunto antes de decidir.",
+    "Buscar informação no Ministério da Saúde ou na UBS e conferir a caderneta.",
+    "Pesquisar na internet o que as pessoas que compartilharam a mensagem acham da vacina.",
+    "Esperar que outros membros do grupo contestem a mensagem antes de decidir vacinar."
+   ],
+   "correta": 1,
+   "explicacao": "A decisão deve se basear em fontes oficiais e confiáveis, como o Ministério da Saúde, a UBS e a caderneta. Os distratores se apoiam em opinião sem checagem."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma cidade, a cobertura vacinal contra o sarampo vem caindo. A secretaria de saúde mostrou os dados de três anos aos moradores e alertou para o risco de surtos.",
+   "comando": "O que os dados sugerem sobre a relação entre vacinação e a doença?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de cobertura vacinal e casos de sarampo",
+    "colunas": [
+     "Ano",
+     "Cobertura (%)",
+     "Casos"
+    ],
+    "linhas": [
+     [
+      "2015",
+      "95",
+      "0"
+     ],
+     [
+      "2019",
+      "85",
+      "3"
+     ],
+     [
+      "2022",
+      "78",
+      "20"
+     ]
+    ]
+   },
+   "alts": [
+    "Quando a cobertura cai, a doença só afeta as pessoas que decidiram não se vacinar.",
+    "Quando a cobertura cai, a doença deixa de ser transmitida e some da população.",
+    "Quando a cobertura cai, a doença só atinge adultos e crianças já vacinados antes.",
+    "Quando a cobertura cai, mais pessoas ficam suscetíveis e a doença volta."
+   ],
+   "correta": 3,
+   "explicacao": "Menos vacinados significam mais pessoas suscetíveis e perda da proteção coletiva, o que causa surtos. Os distratores negam essa relação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em 1904, no Rio de Janeiro, o governo tornou obrigatória a vacina contra a varíola. Agentes de saúde entraram nas casas para vacinar, sem explicar às famílias do que se tratava. A população reagiu com protestos, conhecidos como Revolta da Vacina.",
+   "comando": "Que lição histórica a Revolta da Vacina traz para as campanhas de hoje?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro histórico de 1904",
+    "etapas": [
+     "Lei torna a vacina obrigatória",
+     "Agentes entram nas casas sem explicar",
+     "População protesta nas ruas",
+     "Governo revoga a obrigatoriedade"
+    ]
+   },
+   "alts": [
+    "A vacinação em massa só funciona se for imposta, pois as pessoas resistem à ciência.",
+    "A população tem razão ao recusar medidas de saúde pública e vacinas obrigatórias.",
+    "Campanhas devem informar e esclarecer a população, e não apenas impor a vacinação.",
+    "A vacinação obrigatória é ineficaz, e é melhor deixar as campanhas voluntárias."
+   ],
+   "correta": 2,
+   "explicacao": "A falta de informação e a imposição geraram revolta, e hoje as campanhas informam e esclarecem. Os distratores generalizam."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Camila foi mordida por uma cobra venenosa e recebeu soro no hospital. Seu irmão Davi recebeu a vacina contra a gripe na UBS no mesmo dia.",
+   "comando": "Diferencie o que o soro e a vacina fazem no corpo e diga qual deles é imunização ativa.",
+   "figura": null,
+   "ref": "O soro traz anticorpos prontos, que agem logo, mas por pouco tempo: é imunização passiva. A vacina estimula o corpo a produzir seus próprios anticorpos e a criar memória: é imunização ativa.",
+   "conceitos": [
+    "Soro = imunização passiva",
+    "Vacina = imunização ativa",
+    "Memória imunológica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula de história da ciência, a professora mostrou uma linha do tempo com datas importantes na história da vacinação.",
+   "comando": "Diga a contribuição de Jenner e a de Pasteur para o desenvolvimento das vacinas.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da linha do tempo",
+    "etapas": [
+     "1796: Jenner testa a proteção contra a varíola",
+     "1885: Pasteur aplica vacina contra a raiva",
+     "1904: Revolta da Vacina, no Rio de Janeiro",
+     "1973: criação do Programa Nacional de Imunizações"
+    ]
+   },
+   "ref": "Jenner usou o vírus da varíola bovina para proteger contra a varíola humana, na origem da vacina. Pasteur desenvolveu vacinas com agentes enfraquecidos, como a da raiva, e ampliou o método.",
+   "conceitos": [
+    "Jenner: varíola bovina",
+    "Pasteur: vacina da raiva",
+    "Origem da vacinação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lia levou a caderneta de vacinação à UBS. A enfermeira conferiu as doses e viu que faltava uma.",
+   "comando": "Com base no quadro, diga qual vacina está atrasada, o que Lia deve fazer e por que isso importa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da caderneta de vacinação de Lia",
+    "colunas": [
+     "Vacina",
+     "Doses previstas",
+     "Doses tomadas"
+    ],
+    "linhas": [
+     [
+      "Hepatite B",
+      "3",
+      "3"
+     ],
+     [
+      "Tríplice viral",
+      "2",
+      "1"
+     ],
+     [
+      "Febre amarela",
+      "1",
+      "1"
+     ]
+    ]
+   },
+   "ref": "A tríplice viral está atrasada, pois só tem 1 de 2 doses. Lia deve voltar à UBS para tomar a dose que falta. O esquema completo garante a proteção dela e ajuda a proteger a comunidade.",
+   "conceitos": [
+    "Esquema vacinal",
+    "Vacina em atraso",
+    "Proteção individual e coletiva"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu Ricardo disse que como não se vê mais gente doente de sarampo, a vacina não é mais necessária. A escola mostrou os dados de uma cidade que reduziu a vacinação.",
+   "comando": "Use os dados para mostrar que Seu Ricardo está equivocado.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro dos casos de sarampo em uma cidade",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Ano com 95% de cobertura",
+      "valor": 0
+     },
+     {
+      "rotulo": "Ano com 80% de cobertura",
+      "valor": 18
+     }
+    ]
+   },
+   "ref": "Os casos de sarampo sumiram porque a vacinação foi alta; quando a cobertura caiu, a doença voltou. A vacina continua necessária para manter a proteção individual e coletiva.",
+   "conceitos": [
+    "Vacina mantém a doença sob controle",
+    "Queda da cobertura",
+    "Proteção coletiva"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma nova vacina foi criada por um laboratório. Antes de chegar à UBS, ela passa por várias etapas de teste e aprovação.",
+   "comando": "Explique por que uma vacina não pode ser liberada logo após ser criada e cite um órgão responsável pela aprovação.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro das etapas de uma vacina",
+    "etapas": [
+     "Testes em laboratório e em animais",
+     "Testes em poucos voluntários",
+     "Testes em milhares de voluntários",
+     "Análise e aprovação pela Anvisa",
+     "Inclusão no calendário do PNI"
+    ]
+   },
+   "ref": "Os testes verificam se a vacina é segura e eficaz antes de ser aplicada em muitas pessoas, evitando riscos. A aprovação é feita pela Anvisa, e o PNI define a inclusão no calendário.",
+   "conceitos": [
+    "Segurança e eficácia",
+    "Fases de teste",
+    "Anvisa e PNI"
+   ]
+  }
+ ],
+ "4B|8º ANO|10": [
+  {
+   "tipo": "obj",
+   "enunciado": "Paulo trocou o fio de um ventilador de casa. O fio tinha um fio metálico de cobre por dentro e uma capa de PVC por fora. O pai disse que cada parte tem uma função diferente.",
+   "comando": "Qual é a função de cada parte do fio?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do fio do ventilador",
+    "colunas": [
+     "Parte do fio",
+     "Material"
+    ],
+    "linhas": [
+     [
+      "Interior",
+      "Cobre"
+     ],
+     [
+      "Revestimento",
+      "PVC"
+     ]
+    ]
+   },
+   "alts": [
+    "O cobre isola a corrente e o PVC tem elétrons livres, que a conduzem até o aparelho.",
+    "O cobre tem elétrons livres e conduz a corrente, e o PVC evita que ela passe.",
+    "O cobre produz a corrente elétrica e o PVC a armazena para o aparelho usar.",
+    "O cobre e o PVC conduzem a corrente, mas o PVC a conduz melhor por ser mais flexível."
+   ],
+   "correta": 1,
+   "explicacao": "Metais como o cobre têm elétrons livres que conduzem a corrente; o PVC, isolante, evita o choque. Os distratores trocam funções."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de laboratório, a turma montou um circuito simples com pilha e lâmpada e testou vários materiais, um de cada vez, entre os terminais do circuito. Em cada teste, anotaram se a lâmpada acendia.",
+   "comando": "Quais materiais do quadro são isolantes elétricos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do teste de materiais no circuito",
+    "colunas": [
+     "Material",
+     "Lâmpada acendeu?"
+    ],
+    "linhas": [
+     [
+      "Prego de ferro",
+      "Sim"
+     ],
+     [
+      "Borracha",
+      "Não"
+     ],
+     [
+      "Colher de metal",
+      "Sim"
+     ],
+     [
+      "Vidro",
+      "Não"
+     ],
+     [
+      "Madeira seca",
+      "Não"
+     ]
+    ]
+   },
+   "alts": [
+    "Prego de ferro e borracha, pois ambos permitem passagem de elétrons.",
+    "Prego de ferro e colher de metal, pois neles os elétrons não se movem com facilidade.",
+    "Borracha, vidro e madeira seca, pois neles os elétrons não se movem com facilidade.",
+    "Vidro e colher de metal, pois ambos impedem a passagem dos elétrons."
+   ],
+   "correta": 2,
+   "explicacao": "Quando a lâmpada não acende, o material é isolante: seus elétrons não se movem com facilidade. Os distratores misturam as categorias."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O eletricista Seu Paulo vai trocar uma tomada na casa de Marta. Ele usa luvas de borracha e uma chave de fenda com o cabo de plástico, mesmo depois de desligar a chave geral.",
+   "comando": "Por que a luva de borracha e o cabo de plástico aumentam a segurança?",
+   "figura": null,
+   "alts": [
+    "Porque a borracha e o plástico conduzem o calor, protegendo contra queimaduras.",
+    "Porque a borracha e o plástico atraem os elétrons, impedindo que eles circulem pelos fios.",
+    "Porque a borracha e o plástico armazenam a corrente elétrica, impedindo que ela chegue ao corpo.",
+    "Porque a borracha e o plástico são isolantes, e seus elétrons quase não circulam."
+   ],
+   "correta": 3,
+   "explicacao": "Isolantes dificultam a passagem de elétrons e protegem contra choques. Os distratores trocam a função."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro montou o circuito com uma lâmpada e testou três líquidos em um copo: água destilada, água da torneira e água com sal. Em cada caso, anotou o brilho da lâmpada. O tio avisou que não se deve usar aparelhos elétricos com os pés molhados no banheiro.",
+   "comando": "Por que a água do banheiro exige cuidado com a eletricidade?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento com líquidos",
+    "colunas": [
+     "Líquido",
+     "Brilho da lâmpada (0 a 10)"
+    ],
+    "linhas": [
+     [
+      "Água destilada",
+      "0"
+     ],
+     [
+      "Água da torneira",
+      "6"
+     ],
+     [
+      "Água com sal",
+      "9"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque a água comum tem sais dissolvidos, que conduzem a corrente e causam choques.",
+    "Porque a água pura conduz corrente muito bem, e a água da torneira não conduz.",
+    "Porque a água comum fica carregada de elétrons e os transmite ao corpo, mesmo sem sais.",
+    "Porque a água comum aquece ao receber corrente e queima a pele, mas não a conduz."
+   ],
+   "correta": 0,
+   "explicacao": "A água com sais dissolvidos conduz a corrente; a água pura conduz muito mal. Os distratores invertem ou inventam efeitos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um estudo de caso, a turma deve escolher um material isolante para revestir a tomada e os fios de um banheiro, onde há muita umidade. Eles compararam como cada material se comporta na presença de água.",
+   "comando": "Qual material é mais indicado para o banheiro?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos materiais",
+    "colunas": [
+     "Material",
+     "Isolante elétrico",
+     "Absorve água"
+    ],
+    "linhas": [
+     [
+      "Madeira",
+      "Sim, quando seca",
+      "Sim"
+     ],
+     [
+      "PVC",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Papelão",
+      "Sim, quando seco",
+      "Sim"
+     ],
+     [
+      "Alumínio",
+      "Não",
+      "Não"
+     ]
+    ]
+   },
+   "alts": [
+    "Madeira, pois isola a corrente em qualquer situação, inclusive quando está molhada.",
+    "Papelão, pois é isolante e barato, e seca rápido depois que molha.",
+    "Alumínio, pois resiste bem à água e conduz a eletricidade de forma segura.",
+    "PVC, pois isola a corrente e não absorve água, mantendo o isolamento."
+   ],
+   "correta": 3,
+   "explicacao": "O PVC é isolante e não absorve água, mantendo o isolamento. Madeira e papelão molhados perdem a função isolante; o alumínio é condutor."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro testou materiais no circuito com lâmpada e anotou os resultados.",
+   "comando": "Classifique os materiais em condutores e isolantes e explique o que acontece com os elétrons em cada grupo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do teste de materiais",
+    "colunas": [
+     "Material",
+     "Lâmpada acendeu?"
+    ],
+    "linhas": [
+     [
+      "Prego de ferro",
+      "Sim"
+     ],
+     [
+      "Colher de metal",
+      "Sim"
+     ],
+     [
+      "Borracha",
+      "Não"
+     ],
+     [
+      "Vidro",
+      "Não"
+     ]
+    ]
+   },
+   "ref": "Prego e colher de metal são condutores: têm elétrons livres que se movem com facilidade e deixam a lâmpada acender. Borracha e vidro são isolantes: seus elétrons ficam presos e não se movem com facilidade.",
+   "conceitos": [
+    "Condutores: elétrons livres",
+    "Isolantes: elétrons presos",
+    "Interpretar o teste"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em casa, Joana observou que o ferro de passar tem base de metal e cabo de plástico, e que a extensão tem pinos de metal e capa de plástico.",
+   "comando": "Aponte um condutor e um isolante em cada objeto e justifique o uso de cada material.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos objetos de casa",
+    "colunas": [
+     "Objeto",
+     "Partes"
+    ],
+    "linhas": [
+     [
+      "Ferro de passar",
+      "Base de metal e cabo de plástico"
+     ],
+     [
+      "Extensão",
+      "Pinos de metal e capa de plástico"
+     ]
+    ]
+   },
+   "ref": "No ferro, a base de metal conduz calor e eletricidade (condutor), e o cabo de plástico isola e protege a mão. Na extensão, os pinos de metal conduzem a corrente e a capa de plástico isola e evita choques.",
+   "conceitos": [
+    "Metal = condutor",
+    "Plástico = isolante",
+    "Função de cada parte"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma deve elaborar um relatório sobre os isolantes de uma casa, escolhendo materiais para a varanda, a área interna, a cozinha e o banheiro. Os alunos reuniram dados sobre o comportamento dos materiais.",
+   "comando": "Escolha o material mais indicado para o banheiro e justifique com os dados.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de materiais isolantes",
+    "colunas": [
+     "Material",
+     "Resiste à umidade",
+     "Isola corrente"
+    ],
+    "linhas": [
+     [
+      "Plástico PVC",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Borracha",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Cerâmica",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Madeira",
+      "Não",
+      "Só quando seca"
+     ]
+    ]
+   },
+   "ref": "PVC, cerâmica ou borracha são indicados, pois isolam e resistem à umidade. A madeira não serve, pois absorve água e deixa de isolar. Outra escolha é aceita se justificada com isolamento e umidade.",
+   "conceitos": [
+    "Isolante",
+    "Resistência à umidade",
+    "Justificar com dados"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rafael secou as mãos antes de ligar um secador de cabelo e comentou que a mãe sempre diz que não se deve mexer em tomada com a mão molhada. Os alunos pesquisaram a resistência da pele em duas situações.",
+   "comando": "Justifique, com os dados, por que mexer em tomadas com a mão molhada é perigoso.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da resistência da pele ao fluxo de corrente",
+    "unidade": "kΩ",
+    "itens": [
+     {
+      "rotulo": "Pele seca",
+      "valor": 100
+     },
+     {
+      "rotulo": "Pele molhada",
+      "valor": 1
+     }
+    ]
+   },
+   "ref": "A pele molhada tem resistência bem menor, porque a água com sais dissolvidos conduz corrente. Assim, passa mais corrente pelo corpo, o que aumenta o risco de choque grave.",
+   "conceitos": [
+    "Água com sais conduz",
+    "Menor resistência",
+    "Risco de choque"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma aula prática, a turma comparou a condução de eletricidade em água destilada, água da torneira e água com sal. Depois, a professora perguntou sobre o cuidado ao mexer em aparelhos elétricos perto de uma piscina.",
+   "comando": "Interprete o resultado do experimento e explique o cuidado em piscinas.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: brilho da lâmpada",
+    "unidade": "escala de 0 a 10",
+    "itens": [
+     {
+      "rotulo": "Água destilada",
+      "valor": 0
+     },
+     {
+      "rotulo": "Água da torneira",
+      "valor": 6
+     },
+     {
+      "rotulo": "Água com sal",
+      "valor": 9
+     }
+    ]
+   },
+   "ref": "Quanto mais sais dissolvidos, melhor a água conduz corrente, e a água destilada quase não conduz. A água da piscina tem sais e outras substâncias, então pode conduzir eletricidade, e por isso não se usam aparelhos elétricos ligados perto dela.",
+   "conceitos": [
+    "Água pura conduz mal",
+    "Sais aumentam a condução",
+    "Segurança em locais úmidos"
+   ]
+  }
+ ],
+ "4B|9º ANO|11": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em um planetário, o guia mostrou medidas de galáxias distantes: quanto mais longe a galáxia está da Terra, mais depressa ela parece se afastar de nós. Os astrônomos usam isso para explicar a origem do Universo.",
+   "comando": "O que esses dados sugerem sobre o Universo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de galáxias distantes",
+    "colunas": [
+     "Galáxia",
+     "Distância (milhões de anos-luz)",
+     "Velocidade de afastamento (km/s)"
+    ],
+    "linhas": [
+     [
+      "A",
+      "100",
+      "2000"
+     ],
+     [
+      "B",
+      "200",
+      "4000"
+     ],
+     [
+      "C",
+      "400",
+      "8000"
+     ]
+    ]
+   },
+   "alts": [
+    "O Universo está em expansão e, no passado, a matéria era muito quente e densa.",
+    "O Universo está em expansão porque as galáxias são empurradas pelas estrelas mais próximas da Terra.",
+    "O Universo tem tamanho fixo, e as galáxias se afastam como se fossem objetos em órbita da Terra.",
+    "O Universo está em contração, e as galáxias mais distantes são as primeiras a se aproximar de nós."
+   ],
+   "correta": 0,
+   "explicacao": "O afastamento das galáxias indica expansão, e a hipótese do Big Bang diz que o Universo começou muito quente e denso. Os demais trocam o sentido ou a causa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao estudar o Sistema Solar, a turma de Ana viu que o Sol concentra quase toda a massa do sistema. A professora explicou que tudo se formou a partir de uma nuvem de gás e poeira, uma nebulosa.",
+   "comando": "Como esse dado é explicado pela formação do Sistema Solar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da massa dos corpos do Sistema Solar",
+    "colunas": [
+     "Corpo",
+     "Porcentagem da massa total"
+    ],
+    "linhas": [
+     [
+      "Sol",
+      "99,86"
+     ],
+     [
+      "Júpiter",
+      "0,10"
+     ],
+     [
+      "Demais corpos",
+      "0,04"
+     ]
+    ]
+   },
+   "alts": [
+    "A maior parte da matéria foi lançada para fora da nebulosa, onde se formou o Sol.",
+    "A maior parte da matéria da nebulosa se concentrou no centro, onde se formou o Sol.",
+    "A maior parte da matéria da nebulosa formou Júpiter, o planeta maior, e o Sol é só uma estrela.",
+    "A maior parte da matéria da nebulosa já era uma estrela antes e originou os planetas."
+   ],
+   "correta": 1,
+   "explicacao": "A matéria da nebulosa se concentrou no centro, formando o Sol, e o restante formou os planetas e outros corpos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Astrônomos descobriram um novo corpo celeste, chamado X, e registraram suas características. A turma precisa classificá-lo entre planeta, asteroide e satélite.",
+   "comando": "Como o corpo X deve ser classificado?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das características do corpo X",
+    "colunas": [
+     "Característica",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Diâmetro",
+      "600 km"
+     ],
+     [
+      "Órbita",
+      "Em torno de Júpiter"
+     ],
+     [
+      "Forma",
+      "Quase esférica"
+     ]
+    ]
+   },
+   "alts": [
+    "Asteroide, pois é pequeno e rochoso, como os que orbitam o Sol.",
+    "Planeta, pois tem forma quase esférica e se move no Sistema Solar.",
+    "Cometa, pois é pequeno e tem uma órbita ao redor de um corpo maior.",
+    "Satélite natural, pois orbita em torno de um planeta, como a Lua."
+   ],
+   "correta": 3,
+   "explicacao": "Um corpo que orbita um planeta é um satélite natural. Os distratores usam critérios incompletos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um novo objeto, Y, foi observado ao se aproximar do Sol. Sua órbita é muito alongada e, ao chegar perto do Sol, surgiu uma longa cauda brilhante.",
+   "comando": "Que tipo de corpo celeste é Y e por que a cauda aparece?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação do objeto Y",
+    "colunas": [
+     "Característica",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Composição do núcleo",
+      "Gelo e poeira"
+     ],
+     [
+      "Órbita",
+      "Muito alongada, em torno do Sol"
+     ],
+     [
+      "Perto do Sol",
+      "Surge uma cauda"
+     ]
+    ]
+   },
+   "alts": [
+    "É um asteroide, e a cauda se forma porque o Sol aquece e derrete o núcleo rochoso.",
+    "É um satélite, e a cauda se forma porque o Sol aquece e derrete o núcleo gelado.",
+    "É um cometa, e a cauda se forma porque o gelo evapora ao ser aquecido pelo Sol.",
+    "É um cometa, e a cauda se forma porque o Sol atrai o núcleo rochoso e o fragmenta."
+   ],
+   "correta": 2,
+   "explicacao": "Cometas têm núcleo de gelo e poeira; perto do Sol o gelo se vaporiza e forma a cauda."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um teste sobre o Sistema Solar, a turma recebeu dados de três corpos. Cada um precisa ser classificado como planeta, asteroide ou satélite.",
+   "comando": "Qual alternativa classifica corretamente os três corpos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos corpos P, Q e R",
+    "colunas": [
+     "Corpo",
+     "Órbita",
+     "Diâmetro (km)",
+     "Forma"
+    ],
+    "linhas": [
+     [
+      "P",
+      "Em torno do Sol",
+      "12700",
+      "Esférica"
+     ],
+     [
+      "Q",
+      "Em torno do Sol",
+      "50",
+      "Irregular"
+     ],
+     [
+      "R",
+      "Em torno de um planeta",
+      "3470",
+      "Esférica"
+     ]
+    ]
+   },
+   "alts": [
+    "P é satélite, Q é asteroide e R é planeta.",
+    "P é planeta, Q é satélite e R é asteroide.",
+    "P é asteroide, Q é planeta e R é satélite.",
+    "P é planeta, Q é asteroide e R é satélite."
+   ],
+   "correta": 3,
+   "explicacao": "P orbita o Sol e é grande e esférico (planeta); Q é pequeno e irregular (asteroide); R orbita um planeta (satélite)."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao ler sobre o Universo, uma aluna comentou que o Big Bang foi uma explosão que aconteceu em um ponto do espaço vazio, como uma bomba.",
+   "comando": "Explique, com suas palavras, a ideia atual da ciência sobre o Big Bang e corrija o comentário da aluna.",
+   "figura": null,
+   "ref": "O Big Bang é a hipótese de que o Universo surgiu há cerca de 13,8 bilhões de anos, de um estado muito quente e denso, e vem se expandindo desde então. Não foi uma explosão em um espaço vazio: o próprio espaço e a matéria se expandiram.",
+   "conceitos": [
+    "Estado inicial quente e denso",
+    "Expansão do Universo",
+    "Não foi explosão no espaço vazio"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No museu de astronomia, o guia mostrou três cartões com características de corpos celestes, e os visitantes precisavam identificar cada um.",
+   "comando": "Classifique os corpos A, B e C em asteroide, cometa ou satélite.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos cartões do museu",
+    "colunas": [
+     "Corpo",
+     "Característica"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Rochoso e irregular, entre Marte e Júpiter"
+     ],
+     [
+      "B",
+      "Gelo e poeira, com cauda perto do Sol"
+     ],
+     [
+      "C",
+      "Orbita um planeta"
+     ]
+    ]
+   },
+   "ref": "A é um asteroide; B é um cometa; C é um satélite natural.",
+   "conceitos": [
+    "Asteroide",
+    "Cometa",
+    "Satélite"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para entender a formação do Sistema Solar, Davi girou uma massa de pizza no ar e viu que ela se achatou em forma de disco. A professora disse que algo parecido aconteceu com a nebulosa que originou o Sol.",
+   "comando": "Relacione o experimento de Davi à formação dos planetas e explique por que eles orbitam no mesmo plano.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da formação do Sistema Solar",
+    "etapas": [
+     "Nuvem de gás e poeira em rotação",
+     "Nuvem se achata em disco",
+     "Centro se aquece e forma o Sol",
+     "Grãos do disco se juntam e formam planetas"
+    ]
+   },
+   "ref": "A nebulosa girava e foi se achatando em um disco, como a massa de pizza. O Sol se formou no centro, e os planetas se formaram a partir da matéria do disco, por isso orbitam aproximadamente no mesmo plano.",
+   "conceitos": [
+    "Nebulosa em rotação",
+    "Disco de acreção",
+    "Planetas orbitam no mesmo plano"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Astrônomos descobriram o corpo K. Ele gira em torno do Sol, entre Marte e Júpiter, tem cerca de 2 km e formato de batata.",
+   "comando": "Classifique o corpo K e justifique, explicando por que ele não é planeta nem satélite.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do corpo K",
+    "colunas": [
+     "Característica",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Órbita",
+      "Em torno do Sol, entre Marte e Júpiter"
+     ],
+     [
+      "Tamanho",
+      "Cerca de 2 km"
+     ],
+     [
+      "Forma",
+      "Irregular, como uma batata"
+     ]
+    ]
+   },
+   "ref": "K é um asteroide: pequeno, rochoso, irregular e orbita o Sol. Não é satélite, pois não orbita um planeta, e não é planeta, pois é muito pequeno e não tem forma esférica.",
+   "conceitos": [
+    "Asteroide",
+    "Orbita o Sol",
+    "Não é planeta nem satélite"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A professora mostrou duas idades: a do Universo e a do Sistema Solar, e pediu que os alunos relacionassem à formação do Sol a partir de uma nebulosa.",
+   "comando": "Calcule a diferença entre as idades e explique o que ela indica sobre a formação do Sistema Solar.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro das idades",
+    "unidade": "bilhões de anos",
+    "itens": [
+     {
+      "rotulo": "Universo",
+      "valor": 13.8
+     },
+     {
+      "rotulo": "Sistema Solar",
+      "valor": 4.6
+     }
+    ]
+   },
+   "ref": "A diferença é 13,8 - 4,6 = 9,2 bilhões de anos. O Sistema Solar se formou muito depois do Big Bang, a partir de uma nebulosa, que já continha matéria de estrelas anteriores.",
+   "conceitos": [
+    "Diferença de 9,2 bilhões de anos",
+    "Formação tardia do Sistema Solar",
+    "Origem na nebulosa"
+   ]
+  }
+ ]
+}

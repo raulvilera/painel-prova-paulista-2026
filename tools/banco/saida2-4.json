@@ -1,0 +1,2848 @@
+{
+ "6º ANO|1|Reconhecer a formação e transformação da Terra ao longo do tempo.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, Marina e os colegas esticaram 4,6 m de barbante no pátio, onde cada metro representa 1 bilhão de anos. Prenderam cartões em pontos marcados e anotaram a distância de cada um até a ponta final do barbante, que representa os dias de hoje.",
+   "comando": "Com base nos registros, o que a posição do cartão dos humanos permite concluir?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da linha do tempo",
+    "colunas": [
+     "Cartão",
+     "Distância até a ponta final"
+    ],
+    "linhas": [
+     [
+      "Formação da Terra",
+      "4,6 m"
+     ],
+     [
+      "Primeiros seres vivos",
+      "3,8 m"
+     ],
+     [
+      "Dinossauros extintos",
+      "6,6 cm"
+     ],
+     [
+      "Humanos",
+      "menos de 1 mm"
+     ]
+    ]
+   },
+   "alts": [
+    "Os humanos surgiram logo depois da formação do planeta, junto com os primeiros seres vivos.",
+    "A espécie humana surgiu muito recentemente em comparação com a idade total do planeta.",
+    "Os humanos existem há quase tanto tempo quanto os dinossauros, pois os cartões ficam próximos.",
+    "A espécie humana está presente em boa parte da história do planeta, desde os oceanos primitivos."
+   ],
+   "correta": 1,
+   "explicacao": "Menos de 1 mm equivale a menos de 1 milhão de anos, um intervalo mínimo frente aos 4,6 bilhões de anos. Os distratores confundem proximidade na escala com simultaneidade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rafael prendeu no barbante dois cartões: um escrito \"oceanos\", sobre o período em que o vapor de água do planeta jovem esfriou e formou grandes massas líquidas, e outro escrito \"oxigênio no ar\", sobre o gás que passou a compor a camada gasosa ao redor da Terra.",
+   "comando": "Nessa ordem, a que esferas da Terra se referem os dois cartões?",
+   "figura": null,
+   "alts": [
+    "Atmosfera e hidrosfera, nessa mesma ordem.",
+    "Litosfera e biosfera, respectivamente.",
+    "Biosfera e litosfera, respectivamente.",
+    "Hidrosfera e atmosfera, respectivamente."
+   ],
+   "correta": 3,
+   "explicacao": "A água dos oceanos pertence à hidrosfera e o gás ao redor do planeta, à atmosfera. Os distratores trocam a ordem ou confundem com litosfera e biosfera."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma de Luana quer marcar no barbante o surgimento dos primeiros animais, ocorrido há cerca de 540 milhões de anos. A professora lembrou que a escala é de 1 m para cada 1 bilhão de anos e que a medida deve ser feita a partir da ponta final do barbante.",
+   "comando": "A que distância da ponta final o cartão deve ser preso?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da escala",
+    "colunas": [
+     "Tempo",
+     "Distância no barbante"
+    ],
+    "linhas": [
+     [
+      "1 bilhão de anos",
+      "1 m"
+     ],
+     [
+      "100 milhões de anos",
+      "10 cm"
+     ],
+     [
+      "10 milhões de anos",
+      "1 cm"
+     ]
+    ]
+   },
+   "alts": [
+    "54 cm da ponta final.",
+    "5,4 cm da ponta final.",
+    "5,4 m da ponta final.",
+    "54 m da ponta final."
+   ],
+   "correta": 0,
+   "explicacao": "540 milhões equivalem a 0,54 bilhão, ou seja, 0,54 m = 54 cm. Os distratores erram a posição da vírgula na conversão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro leu que, no início da história da Terra, o planeta era uma esfera de rocha derretida. Ao montar o cartão \"oxigênio no ar\", ele ficou em dúvida sobre como o gás chegou à atmosfera, já que o cartão dos primeiros seres vivos está bem antes dele no barbante.",
+   "comando": "Qual explicação relaciona corretamente os dois cartões?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Ordem dos cartões no barbante",
+    "etapas": [
+     "Formação da Terra",
+     "Oceanos",
+     "Primeiros seres vivos",
+     "Oxigênio no ar"
+    ]
+   },
+   "alts": [
+    "O oxigênio já existia na atmosfera primitiva e foi ele que permitiu o surgimento dos primeiros seres vivos.",
+    "O oxigênio veio da evaporação dos oceanos, pois a água é formada por esse gás e se desfez no ar.",
+    "Seres vivos que faziam fotossíntese liberaram oxigênio por bilhões de anos, mudando a atmosfera.",
+    "O oxigênio foi liberado pelos vulcões da Terra jovem, sem relação com a presença de seres vivos."
+   ],
+   "correta": 2,
+   "explicacao": "O oxigênio se acumulou como resultado da fotossíntese de seres vivos primitivos. Os distratores invertem causa e efeito ou atribuem a origem à água ou aos vulcões."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana afirma que \"dinossauros e humanos conviveram, porque os dois cartões estão no final do barbante\". Ela mediu: o cartão dos dinossauros extintos está a 6,6 cm da ponta final, e o dos humanos, a menos de 1 mm. Lembre que 1 m equivale a 1 bilhão de anos.",
+   "comando": "O que a escala permite afirmar sobre a conclusão de Ana?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de medidas",
+    "colunas": [
+     "Cartão",
+     "Distância até a ponta final",
+     "Equivalência"
+    ],
+    "linhas": [
+     [
+      "Dinossauros extintos",
+      "6,6 cm",
+      "?"
+     ],
+     [
+      "Humanos",
+      "menos de 1 mm",
+      "?"
+     ],
+     [
+      "1 cm",
+      "1 cm",
+      "10 milhões de anos"
+     ]
+    ]
+   },
+   "alts": [
+    "Está correta, pois ambos os cartões estão no último metro do barbante, ou seja, no mesmo período.",
+    "Está equivocada, pois 6,6 cm equivalem a cerca de 66 milhões de anos de intervalo.",
+    "Está correta, pois a distância de poucos centímetros indica uma convivência de milhares de anos.",
+    "Está equivocada, pois os dinossauros aparecem na escala depois do cartão dos humanos."
+   ],
+   "correta": 1,
+   "explicacao": "Na escala, 1 cm vale 10 milhões de anos; 6,6 cm correspondem a 66 milhões de anos, tempo grande demais para convivência. Os distratores confundem proximidade com simultaneidade."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Camila e a turma montaram a linha do tempo da Terra com 4,6 m de barbante e cartões: oceanos, primeiros seres vivos, oxigênio no ar e rochas da crosta recém-formada.",
+   "comando": "Associe cada um desses quatro cartões a uma das esferas da Terra (litosfera, hidrosfera, atmosfera, biosfera).",
+   "figura": null,
+   "ref": "Rochas da crosta: litosfera. Oceanos: hidrosfera. Oxigênio no ar: atmosfera. Primeiros seres vivos: biosfera.",
+   "conceitos": [
+    "litosfera",
+    "hidrosfera",
+    "atmosfera",
+    "biosfera"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao medir o cartão dos humanos, Diego viu que ele ficou a menos de 1 mm da ponta do barbante, onde 1 m equivale a 1 bilhão de anos.",
+   "comando": "Quantos anos, aproximadamente, correspondem a 1 mm nessa escala? O que isso mostra sobre a presença da espécie humana na história da Terra?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da escala",
+    "colunas": [
+     "Medida no barbante",
+     "Tempo"
+    ],
+    "linhas": [
+     [
+      "1 m",
+      "1 bilhão de anos"
+     ],
+     [
+      "1 cm",
+      "10 milhões de anos"
+     ],
+     [
+      "1 mm",
+      "?"
+     ]
+    ]
+   },
+   "ref": "1 mm equivale a 1 milhão de anos. Como os humanos ficam a menos de 1 mm, existem há menos de 1 milhão de anos, tempo mínimo diante dos 4,6 bilhões de anos da Terra.",
+   "conceitos": [
+    "1 mm = 1 milhão de anos",
+    "presença humana muito recente",
+    "comparação com 4,6 bilhões de anos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Júlia visitou uma pedreira no interior de São Paulo, a centenas de quilômetros do mar, e encontrou uma concha fossilizada dentro de uma rocha em camadas. Ela perguntou ao professor como isso era possível.",
+   "comando": "Explique como a transformação da litosfera ao longo do tempo pode justificar a presença dessa concha ali.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da visita à pedreira",
+    "colunas": [
+     "Item",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Local",
+      "Pedreira no interior de São Paulo"
+     ],
+     [
+      "Distância até o mar",
+      "Centenas de quilômetros"
+     ],
+     [
+      "Rocha",
+      "Em camadas"
+     ],
+     [
+      "Achado",
+      "Concha dentro da rocha"
+     ]
+    ]
+   },
+   "ref": "A região já foi coberta por mar. Sedimentos com conchas se acumularam em camadas e viraram rocha sedimentar. Com o tempo, a litosfera se transformou (movimentos, erosão) e a área ficou longe do mar.",
+   "conceitos": [
+    "região já coberta por água",
+    "sedimentos formando rocha sedimentar e fósseis",
+    "transformações lentas da litosfera"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na linha do tempo da turma, a Terra tem 4,6 bilhões de anos e a vida surgiu há cerca de 3,8 bilhões. O grupo de Bruno reuniu dados sobre quanto tempo cada grupo existe.",
+   "comando": "Com base nos dados, explique por que não faz sentido dizer que a história da Terra foi sempre parecida com o planeta de hoje.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de tempo de existência",
+    "unidade": "milhões de anos",
+    "itens": [
+     {
+      "rotulo": "Planeta Terra",
+      "valor": 4600
+     },
+     {
+      "rotulo": "Vida na Terra",
+      "valor": 3800
+     },
+     {
+      "rotulo": "Dinossauros (aprox.)",
+      "valor": 165
+     },
+     {
+      "rotulo": "Espécie humana",
+      "valor": 0.3
+     }
+    ]
+   },
+   "ref": "Os dados mostram que o planeta existiu por bilhões de anos antes dos humanos e dos dinossauros. Nesse tempo, houve grandes transformações: formação da crosta e dos oceanos, surgimento da vida e do oxigênio no ar. Por isso a Terra de hoje é resultado de mudanças longas e graduais.",
+   "conceitos": [
+    "tempo muito longo",
+    "transformações da litosfera, hidrosfera e atmosfera",
+    "humanos são recentes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lara ouviu um colega dizer: \"A Terra sempre teve oceanos, ar com oxigênio e florestas, igualzinha a hoje\". Ela discordou, mas precisa de argumentos para a roda de conversa.",
+   "comando": "Escreva dois argumentos que mostrem que essa afirmação está errada, citando mudanças ocorridas ao longo do tempo.",
+   "figura": null,
+   "ref": "A Terra jovem era rocha derretida e só depois formou crosta sólida e oceanos. O oxigênio só se acumulou no ar depois que seres vivos fotossintetizantes surgiram, e as florestas vieram muito depois.",
+   "conceitos": [
+    "Terra inicial muito quente",
+    "oceanos e crosta formados depois",
+    "oxigênio acumulado por seres vivos"
+   ]
+  }
+ ],
+ "6º ANO|2|Relacionar os impactos das ações humanas à qualidade e à saúde do solo.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula prática, Bianca regou com 200 mL de água duas garrafas PET deitadas, cheias de terra. A garrafa A tinha a terra coberta por grama e a garrafa B, descoberta. A água que escorreu foi recolhida em copos.",
+   "comando": "O que explica a água barrenta recolhida no copo da garrafa B?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do experimento",
+    "colunas": [
+     "Garrafa",
+     "Cobertura",
+     "Água recolhida",
+     "Aspecto"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Grama",
+      "170 mL",
+      "Quase limpa"
+     ],
+     [
+      "B",
+      "Nenhuma",
+      "150 mL",
+      "Barrenta"
+     ]
+    ]
+   },
+   "alts": [
+    "A terra descoberta tem mais nutrientes, que se dissolvem e deixam a água escura.",
+    "A grama absorveu toda a terra da garrafa A, deixando a garrafa B com mais lama.",
+    "A água arrastou partículas de solo sem proteção, processo chamado erosão.",
+    "A água se misturou com o ar da garrafa B, o que a deixou turva e com cor de terra."
+   ],
+   "correta": 2,
+   "explicacao": "Sem cobertura, a água da chuva desprende e carrega partículas do solo. Os distratores atribuem a cor a nutrientes, à grama ou ao ar, o que não explica a perda de solo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na horta da escola, em um terreno inclinado, os alunos arrancaram todo o mato para formar canteiros. Na primeira chuva forte, parte da terra dos canteiros desceu o declive e se acumulou na calçada.",
+   "comando": "Qual ação humana mais contribuiu para a perda de terra dos canteiros?",
+   "figura": null,
+   "alts": [
+    "Retirar o mato, deixando o solo sem proteção contra o impacto da chuva.",
+    "Usar adubo orgânico, que deixou a terra solta e fácil de ser levada.",
+    "Regar os canteiros todos os dias, o que dissolveu os nutrientes da terra.",
+    "Cultivar hortaliças, cujas raízes afastam as partículas do solo."
+   ],
+   "correta": 0,
+   "explicacao": "A vegetação protege o solo e segura as partículas com as raízes; ao retirá-la, a chuva leva a terra. Os distratores citam práticas que não explicam o arraste."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O Sr. Jorge cultiva milho em um morro em Piracicaba. Nos últimos anos, os sulcos de plantio, abertos de cima para baixo, viraram canais por onde a enxurrada leva terra para o córrego. Um técnico agrícola sugeriu mudar a forma de arar.",
+   "comando": "Qual prática o técnico provavelmente recomendou?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do manejo atual",
+    "etapas": [
+     "Retirada da vegetação do morro",
+     "Aração em sulcos de cima para baixo",
+     "Plantio do milho",
+     "Chuva forte e enxurrada"
+    ]
+   },
+   "alts": [
+    "Manter o solo exposto entre as safras, para a água infiltrar com mais facilidade.",
+    "Abrir sulcos mais profundos de cima para baixo, para a água escoar mais depressa.",
+    "Queimar a palha do milho após a colheita, para deixar o terreno limpo e leve.",
+    "Arar em curvas de nível, acompanhando o morro, para a água escorrer devagar."
+   ],
+   "correta": 3,
+   "explicacao": "Sulcos em nível reduzem a velocidade da água e a erosão. Os distratores mantêm o solo descoberto ou aceleram a enxurrada."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma região de Mato Grosso do Sul, pesquisadores mediram a matéria orgânica, que mantém o solo fértil, em três áreas vizinhas: mata preservada, pasto com manejo e área queimada todo ano para limpeza do terreno.",
+   "comando": "O que os dados indicam sobre a relação entre as ações humanas e a qualidade do solo?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de matéria orgânica do solo",
+    "unidade": "% do solo",
+    "itens": [
+     {
+      "rotulo": "Mata preservada",
+      "valor": 5.2
+     },
+     {
+      "rotulo": "Pasto com manejo",
+      "valor": 3.1
+     },
+     {
+      "rotulo": "Queimada todo ano",
+      "valor": 1.4
+     }
+    ]
+   },
+   "alts": [
+    "A queimada adiciona matéria orgânica ao solo, mas ela se perde logo com as chuvas.",
+    "Quanto mais a cobertura vegetal é retirada ou queimada, menor é a matéria orgânica do solo.",
+    "O teor de matéria orgânica independe do uso, pois depende do tipo de rocha de origem.",
+    "Quanto maior o teor de matéria orgânica, pior a qualidade do solo para o cultivo."
+   ],
+   "correta": 1,
+   "explicacao": "A vegetação repõe matéria orgânica; a queima e a retirada reduzem esse teor. Os distratores ignoram essa relação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rodrigo repetiu o experimento das garrafas com três coberturas e mediu a massa de terra levada pela água. Ele concluiu: \"só a grama protege o solo; folhas secas não servem para nada\".",
+   "comando": "Qual conclusão é sustentada pelos dados do experimento?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do experimento",
+    "colunas": [
+     "Garrafa",
+     "Cobertura",
+     "Terra na água recolhida"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Grama",
+      "2 g"
+     ],
+     [
+      "B",
+      "Nenhuma",
+      "31 g"
+     ],
+     [
+      "C",
+      "Folhas secas picadas",
+      "6 g"
+     ]
+    ]
+   },
+   "alts": [
+    "A cobertura com folhas secas aumentou a perda de solo, pois segurou menos terra que a grama.",
+    "A cobertura não influenciou a perda de solo, pois houve terra na água em todas as garrafas.",
+    "Toda cobertura reduziu a perda frente ao solo exposto, mas a grama protegeu mais.",
+    "A grama reduziu a perda de solo, mas as folhas não protegeram, pois a garrafa C teve mais terra que a A."
+   ],
+   "correta": 2,
+   "explicacao": "A garrafa C perdeu 6 g contra 31 g sem cobertura, logo as folhas também protegem. Os distratores comparam apenas grama e folhas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No experimento das garrafas, a água recolhida da garrafa sem cobertura saiu barrenta e a da garrafa com grama saiu quase limpa.",
+   "comando": "Explique por que isso aconteceu e dê o nome do processo observado.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do experimento",
+    "colunas": [
+     "Garrafa",
+     "Cobertura",
+     "Aspecto da água"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Grama",
+      "Quase limpa"
+     ],
+     [
+      "B",
+      "Nenhuma",
+      "Barrenta"
+     ]
+    ]
+   },
+   "ref": "Sem cobertura, a água atinge o solo diretamente, solta as partículas e as leva junto. Isso é erosão. A grama protege o solo e suas raízes seguram a terra.",
+   "conceitos": [
+    "erosão",
+    "solo exposto",
+    "proteção da vegetação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma listou o que viu no bairro: desmatamento da margem de um córrego, plantio em curvas de nível numa chácara, pátio de escola totalmente cimentado e canteiro coberto com palha.",
+   "comando": "Quais dessas situações prejudicam o solo e quais ajudam a conservá-lo? Justifique uma delas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações no bairro",
+    "colunas": [
+     "Local",
+     "Situação observada"
+    ],
+    "linhas": [
+     [
+      "Margem do córrego",
+      "Vegetação retirada"
+     ],
+     [
+      "Chácara",
+      "Plantio em curvas de nível"
+     ],
+     [
+      "Pátio da escola",
+      "Piso todo cimentado"
+     ],
+     [
+      "Horta",
+      "Canteiro coberto com palha"
+     ]
+    ]
+   },
+   "ref": "Prejudicam: vegetação retirada na margem (solo exposto, erosão) e piso cimentado (impede a infiltração e aumenta a enxurrada). Ajudam: curvas de nível e palha, que reduzem a velocidade da água e protegem o solo.",
+   "conceitos": [
+    "retirada da vegetação",
+    "impermeabilização",
+    "curvas de nível e cobertura do solo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Depois de uma chuva forte, o córrego que passa perto da escola de Tiago ficou marrom e mais raso. Dias antes, uma obra de loteamento havia retirado a vegetação de um morro ao lado.",
+   "comando": "Relacione a obra ao estado do córrego, usando o que você sabe sobre o solo.",
+   "figura": null,
+   "ref": "Sem vegetação, a chuva levou o solo do morro até o córrego. A terra acumulada no leito (assoreamento) deixa a água marrom e o córrego mais raso, prejudicando seres vivos e causando enchentes.",
+   "conceitos": [
+    "erosão do solo exposto",
+    "assoreamento",
+    "impacto no córrego"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma cooperativa de Ribeirão Preto mediu a perda de solo em quatro áreas. O gerente quer recomendar ao agricultor Davi o melhor manejo para a lavoura de milho em encosta.",
+   "comando": "Compare os dados e escreva uma recomendação para Davi, justificando.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de perda de solo",
+    "unidade": "toneladas por hectare por ano",
+    "itens": [
+     {
+      "rotulo": "Mata",
+      "valor": 0.2
+     },
+     {
+      "rotulo": "Pasto bem manejado",
+      "valor": 0.5
+     },
+     {
+      "rotulo": "Milho em sulcos morro abaixo",
+      "valor": 15
+     },
+     {
+      "rotulo": "Milho em curvas de nível",
+      "valor": 3
+     }
+    ]
+   },
+   "ref": "Davi deve plantar em curvas de nível, pois a perda caiu de 15 para 3 toneladas por hectare por ano. O manejo adequado e a cobertura vegetal reduzem a erosão e preservam a fertilidade.",
+   "conceitos": [
+    "curvas de nível",
+    "comparação de dados",
+    "conservação da fertilidade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma vizinha diz: \"a terra que a chuva leva é só sujeira, e o solo se refaz rápido\". Sabe-se que o solo leva centenas de anos para formar poucos centímetros, enquanto uma enxurrada forte pode levar vários centímetros em uma única estação.",
+   "comando": "Responda à vizinha, explicando por que a perda de solo é um problema para a produção de alimentos e para a saúde do ambiente.",
+   "figura": null,
+   "ref": "O solo se forma muito mais devagar do que é perdido, então a perda é praticamente irreversível. Sem a camada fértil, as plantas produzem menos, e a terra levada polui rios e assoreia córregos.",
+   "conceitos": [
+    "formação lenta do solo",
+    "perda de fertilidade",
+    "impactos nos rios"
+   ]
+  }
+ ],
+ "7º ANO|3|Diferenciar Unidades de Conservação de proteção integral e de uso sustentável com base em seus objetivos e formas de uso.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Letícia visitou o Parque Estadual da Serra do Mar, no litoral paulista. Na entrada, uma placa dizia que o parque é uma Unidade de Conservação de Proteção Integral e que algumas atividades não são permitidas.",
+   "comando": "Qual é o principal objetivo de uma Unidade de Conservação de Proteção Integral?",
+   "figura": null,
+   "alts": [
+    "Conciliar a conservação com a moradia e a produção dos moradores, mediante regras de uso.",
+    "Preservar a natureza, admitindo só o uso que não consome os recursos naturais.",
+    "Garantir a exploração controlada de madeira e de outros recursos em larga escala.",
+    "Manter áreas verdes próximas das cidades para lazer, esportes e eventos de todos os tipos."
+   ],
+   "correta": 1,
+   "explicacao": "A proteção integral busca manter os ecossistemas com mínima interferência, aceitando só o uso indireto. Os distratores descrevem uso sustentável ou simples lazer urbano."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em Cananéia, Seu Osvaldo é pescador e vive de capturar peixes e coletar ostras de forma artesanal. Ele mora dentro da APA Cananéia-Iguape-Peruíbe e recebeu da prefeitura a orientação de respeitar os períodos de defeso, quando a captura é proibida.",
+   "comando": "O que essa situação revela sobre as Unidades de Conservação de uso sustentável?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Seu Osvaldo",
+    "colunas": [
+     "Item",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Local onde mora",
+      "Cananéia, dentro da APA"
+     ],
+     [
+      "Atividade",
+      "Pesca artesanal e coleta de ostras"
+     ],
+     [
+      "Orientação recebida",
+      "Respeitar o período de defeso"
+     ]
+    ]
+   },
+   "alts": [
+    "Proíbem qualquer presença de moradores, que devem ser removidos para fora da área protegida.",
+    "Admitem visitas educativas e pesquisas científicas, mas sem retirada de recursos.",
+    "Liberam o uso dos recursos naturais sem limites, pois pertencem aos moradores da região.",
+    "Permitem moradia e uso dos recursos naturais, seguindo regras que garantem sua renovação."
+   ],
+   "correta": 3,
+   "explicacao": "O uso sustentável compatibiliza a conservação com atividades humanas reguladas, como o defeso. Os distratores misturam com a proteção integral ou ignoram as regras."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, o professor mostrou fotos do Parque Estadual da Serra do Mar e da APA Cananéia-Iguape-Peruíbe. Cada grupo recebeu um cartão de atividade para decidir em qual das duas unidades ela é permitida.",
+   "comando": "Qual cartão indica uma atividade permitida no Parque Estadual da Serra do Mar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos cartões da turma",
+    "colunas": [
+     "Cartão",
+     "Atividade"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Extração de palmito por moradores"
+     ],
+     [
+      "2",
+      "Visita guiada para observar aves"
+     ],
+     [
+      "3",
+      "Pousada com piscina e quadra"
+     ],
+     [
+      "4",
+      "Cultivo de banana em sítio"
+     ]
+    ]
+   },
+   "alts": [
+    "Cartão 2, pois a visita guiada é um uso indireto que não retira nem destrói os recursos.",
+    "Cartão 1, pois a extração de palmito por moradores tradicionais é permitida em qualquer unidade.",
+    "Cartão 3, pois a pousada gera renda e empregos para a comunidade do entorno do parque.",
+    "Cartão 4, pois o cultivo de banana é uma atividade de baixo impacto sobre a floresta."
+   ],
+   "correta": 0,
+   "explicacao": "Parques admitem visitação e pesquisa, mas não extração nem construções ou cultivos. Os distratores justificam atividades que retiram recursos ou alteram a área."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A prefeitura de Iguape propôs transformar a APA em Parque, para proteger mais a floresta. Dona Neusa, que vende artesanato de fibras e ostras coletadas na região, quer saber o que mudaria na vida dos moradores.",
+   "comando": "O que provavelmente aconteceria se a proposta fosse aprovada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da proposta",
+    "colunas": [
+     "Item",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Unidade atual",
+      "APA em Iguape"
+     ],
+     [
+      "Proposta",
+      "Transformar em Parque"
+     ],
+     [
+      "Atividade de Dona Neusa",
+      "Artesanato de fibras e coleta de ostras"
+     ],
+     [
+      "Moradia de Dona Neusa",
+      "Dentro da área"
+     ]
+    ]
+   },
+   "alts": [
+    "Nada mudaria, pois os parques e as APAs têm as mesmas regras de uso do território.",
+    "Os moradores poderiam explorar mais recursos, pois parques são maiores que as APAs.",
+    "Moradia e extração de recursos seriam restringidas, pois o parque admite só uso indireto.",
+    "O turismo seria proibido, mas as demais atividades dos moradores seguiriam livres."
+   ],
+   "correta": 2,
+   "explicacao": "Nas áreas de proteção integral, atividades de moradores que retiram recursos deixam de ser permitidas. Os distratores supõem regras iguais ou mais flexíveis."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois grupos de uma escola de Santos compararam as normas das duas unidades. A prefeitura afirma que a APA \"protege menos\" que o Parque, por permitir moradores, e por isso seria dispensável.",
+   "comando": "Com base nos dados, qual justificativa mostra por que existem os dois tipos de unidade?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das normas",
+    "colunas": [
+     "Característica",
+     "Parque Estadual",
+     "APA"
+    ],
+    "linhas": [
+     [
+      "Moradores",
+      "Não",
+      "Sim"
+     ],
+     [
+      "Pesquisa científica",
+      "Com autorização",
+      "Com autorização"
+     ],
+     [
+      "Pesca artesanal",
+      "Proibida",
+      "Permitida com regras"
+     ],
+     [
+      "Visitação",
+      "Com monitor",
+      "Livre, com regras"
+     ]
+    ]
+   },
+   "alts": [
+    "Elas têm o mesmo objetivo, mas a APA protege áreas menores e por isso admite moradores no local.",
+    "Têm objetivos distintos: uma resguarda áreas sem interferência e a outra concilia conservação e uso.",
+    "A APA é uma etapa anterior ao parque e deve ser convertida nele quando a área estiver bem restaurada.",
+    "O parque protege a natureza e a APA protege as pessoas que vivem na região e os seus costumes."
+   ],
+   "correta": 1,
+   "explicacao": "Cada categoria atende a um objetivo e se aplica a contextos diferentes. Os distratores supõem objetivos iguais, etapas ou proteção apenas humana."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula de Ciências, o professor apresentou fotos do Parque Estadual da Serra do Mar e da APA Cananéia-Iguape-Peruíbe, ambos em São Paulo, e pediu que os alunos escrevessem um parágrafo sobre elas.",
+   "comando": "Escreva o que diferencia uma Unidade de Conservação de proteção integral de uma de uso sustentável, citando um exemplo de cada.",
+   "figura": null,
+   "ref": "Proteção integral preserva a natureza com mínima interferência, só admite uso indireto (como o parque). Uso sustentável concilia conservação com moradia e uso dos recursos de forma regulada (como a APA).",
+   "conceitos": [
+    "proteção integral: uso indireto",
+    "uso sustentável: uso regulado",
+    "exemplos: Parque e APA"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma de Bruno recebeu quatro nomes de Unidades de Conservação: Estação Ecológica, Reserva Extrativista, Parque Nacional e Floresta Nacional.",
+   "comando": "Separe essas unidades em proteção integral e uso sustentável e justifique uma das classificações.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos cartões",
+    "colunas": [
+     "Cartão",
+     "Nome da unidade"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Estação Ecológica"
+     ],
+     [
+      "2",
+      "Reserva Extrativista"
+     ],
+     [
+      "3",
+      "Parque Nacional"
+     ],
+     [
+      "4",
+      "Floresta Nacional"
+     ]
+    ]
+   },
+   "ref": "Proteção integral: Estação Ecológica e Parque Nacional. Uso sustentável: Reserva Extrativista e Floresta Nacional. Exemplo: a Reserva Extrativista permite que populações tradicionais coletem recursos com regras para conservá-los.",
+   "conceitos": [
+    "proteção integral: estação e parque",
+    "uso sustentável: reserva extrativista e floresta nacional",
+    "justificativa pelo uso permitido"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em Cananéia, as famílias caiçaras vivem da pesca artesanal há gerações. A Câmara discute se esse modo de vida deve ser proibido para proteger a natureza.",
+   "comando": "Em qual tipo de Unidade de Conservação a pesca artesanal pode ser permitida? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da comunidade caiçara",
+    "colunas": [
+     "Item",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Local",
+      "Cananéia"
+     ],
+     [
+      "Atividade",
+      "Pesca artesanal"
+     ],
+     [
+      "Tempo de prática",
+      "Várias gerações"
+     ],
+     [
+      "Proposta em debate",
+      "Proibir a atividade"
+     ]
+    ]
+   },
+   "ref": "Em unidades de uso sustentável, como a APA. Elas permitem que as comunidades continuem vivendo e usando os recursos de forma regrada, o que mantém os ecossistemas e o modo de vida tradicional.",
+   "conceitos": [
+    "uso sustentável",
+    "regras de captura",
+    "população tradicional"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma comparou as regras do Parque Estadual da Serra do Mar e da APA Cananéia-Iguape-Peruíbe para algumas atividades.",
+   "comando": "Explique o padrão observado na tabela, relacionando-o ao objetivo de cada unidade.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das normas",
+    "colunas": [
+     "Atividade",
+     "Parque",
+     "APA"
+    ],
+    "linhas": [
+     [
+      "Pesquisa científica",
+      "Com autorização",
+      "Com autorização"
+     ],
+     [
+      "Trilha monitorada",
+      "Permitida",
+      "Permitida"
+     ],
+     [
+      "Pesca comercial",
+      "Proibida",
+      "Permitida com licença"
+     ],
+     [
+      "Loteamento",
+      "Proibido",
+      "Permitido com licenciamento"
+     ]
+    ]
+   },
+   "ref": "No parque, só são permitidas atividades de uso indireto (pesquisa, trilha), porque o objetivo é a preservação. Na APA, atividades de uso são possíveis com licença e regras, pois o objetivo é conciliar conservação e ocupação do território.",
+   "conceitos": [
+    "objetivo de preservar no parque",
+    "objetivo de conciliar na APA",
+    "licenciamento e regras"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma região vive uma espécie de ave ameaçada de extinção que só existe ali e é muito sensível a barulho e à presença humana. Dois vereadores brigam: um quer criar uma APA e outro, um Parque.",
+   "comando": "Qual categoria é mais adequada para proteger essa espécie? Justifique e diga uma consequência para os moradores.",
+   "figura": null,
+   "ref": "O Parque (proteção integral), porque limita a presença humana e as atividades de uso, preservando o habitat. Os moradores precisariam deixar a área ou ter suas atividades restringidas, e a comunidade deveria ser compensada.",
+   "conceitos": [
+    "proteção integral",
+    "habitat da espécie ameaçada",
+    "restrições aos moradores"
+   ]
+  }
+ ],
+ "8º ANO|1|Comparar os diferentes tipos de reprodução (assexuada e sexuada) e sua influência no sucesso reprodutivo das espécies.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, em uma escola de Campinas, o professor entregou a Amanda um copinho com 4 feijões e pediu que ela fizesse mais dois copinhos idênticos a ele, sem misturar com nenhum outro. Ela apenas copiou o conteúdo do copinho original.",
+   "comando": "Qual processo biológico a atividade de Amanda representa?",
+   "figura": null,
+   "alts": [
+    "Reprodução sexuada, em que um único organismo mistura suas características com as do ambiente.",
+    "Reprodução assexuada, em que dois organismos trocam material genético e formam descendentes iguais.",
+    "Reprodução sexuada, em que um único organismo gera descendentes com características diferentes.",
+    "Reprodução assexuada, em que um único organismo origina descendentes geneticamente iguais a ele."
+   ],
+   "correta": 3,
+   "explicacao": "Copiar o copinho equivale à origem de descendentes de um só genitor, idênticos entre si. Os distratores trocam o número de genitores ou o tipo de descendência."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Lúcia tem uma planta de morango que dá frutos muito doces. Ela prendeu na terra a ponta de um estolão (um caule que cresce rente ao chão) e, semanas depois, formou-se uma nova planta, igual à planta-mãe.",
+   "comando": "Por que a nova planta é igual à planta-mãe?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do cultivo",
+    "etapas": [
+     "Estolão cresce a partir da planta-mãe",
+     "A ponta do estolão é presa na terra",
+     "Raízes e folhas se formam",
+     "Nova planta se separa do estolão"
+    ]
+   },
+   "alts": [
+    "Ela se formou de uma só planta, sem fusão de gametas, e herdou o mesmo material genético.",
+    "Ela se formou da união de gametas da planta-mãe e herdou só as suas características.",
+    "Ela cresceu no mesmo solo e por isso adquiriu as mesmas características que a planta-mãe.",
+    "Ela se formou por reprodução sexuada entre partes da mesma planta e herdou combinações novas."
+   ],
+   "correta": 0,
+   "explicacao": "Estolão é um tipo de reprodução assexuada: gera clones. Os distratores confundem com sexuada ou atribuem a semelhança ao ambiente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um sítio de Limeira, todas as laranjeiras foram obtidas por enxertia de mudas de uma mesma árvore. Um fungo apareceu e, em poucas semanas, atingiu praticamente todo o pomar. No sítio vizinho, de laranjeiras nascidas de sementes, só algumas árvores adoeceram.",
+   "comando": "Qual explicação relaciona o tipo de reprodução ao que ocorreu nos pomares?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos pomares",
+    "colunas": [
+     "Pomar",
+     "Origem das árvores",
+     "Árvores doentes"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Mudas da mesma árvore",
+      "95%"
+     ],
+     [
+      "B",
+      "Sementes",
+      "12%"
+     ]
+    ]
+   },
+   "alts": [
+    "No pomar A, as árvores têm menos nutrientes, por isso o fungo as atinge com mais facilidade.",
+    "No pomar A, as árvores são geneticamente iguais e têm a mesma suscetibilidade ao fungo.",
+    "No pomar B, as árvores produzem sementes, que repelem o fungo e protegem as vizinhas.",
+    "No pomar B, o fungo é mais fraco, pois se espalha entre plantas nascidas de sementes."
+   ],
+   "correta": 1,
+   "explicacao": "Clones têm os mesmos genes e, portanto, a mesma resposta ao agente. Os distratores atribuem a diferença à nutrição ou ao fungo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma cadela e um cão da raça labrador, em Sorocaba, tiveram uma ninhada de quatro filhotes. Os filhotes, filhos dos mesmos pais, nasceram com pelagem e porte diferentes entre si, e o dono ficou surpreso.",
+   "comando": "O que explica a variação entre os filhotes?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da ninhada",
+    "colunas": [
+     "Filhote",
+     "Pelagem",
+     "Porte"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Amarela",
+      "Grande"
+     ],
+     [
+      "2",
+      "Preta",
+      "Médio"
+     ],
+     [
+      "3",
+      "Chocolate",
+      "Grande"
+     ],
+     [
+      "4",
+      "Amarela",
+      "Pequeno"
+     ]
+    ]
+   },
+   "alts": [
+    "Os filhotes foram copiados da mãe por mitose e, depois, o ambiente os modificou aos poucos.",
+    "Os filhotes herdaram as características do pai, que variam de acordo com a idade dele.",
+    "Cada filhote recebeu uma combinação própria de genes, formada na meiose e na fecundação.",
+    "Os filhotes receberam os mesmos genes, mas cada um deles os usou de modo bem diferente."
+   ],
+   "correta": 2,
+   "explicacao": "A meiose gera gametas diferentes e a fecundação os combina de formas variadas. Os distratores supõem cópia, herança de um só genitor ou genes idênticos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pesquisadores observaram duas populações de plantas, uma que se reproduz por clones (A) e outra por sementes (B), em dois ambientes: um estável e outro em que a temperatura subiu de forma brusca. Foram contadas as plantas que sobreviveram de um total de 100.",
+   "comando": "Que conclusão os dados sustentam?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de sobrevivência",
+    "colunas": [
+     "Ambiente",
+     "População A (clones)",
+     "População B (sementes)"
+    ],
+    "linhas": [
+     [
+      "Estável",
+      "95",
+      "90"
+     ],
+     [
+      "Temperatura em alta",
+      "5",
+      "40"
+     ]
+    ]
+   },
+   "alts": [
+    "A reprodução por clones é mais eficaz, pois gera descendentes iguais e bem adaptados, em ambiente estável ou não.",
+    "Clones vão bem em ambiente estável, mas a variabilidade da reprodução sexuada favorece a sobrevivência na mudança.",
+    "A reprodução por sementes é pior, pois 40 plantas sobreviveram com a temperatura em alta no local.",
+    "O tipo de reprodução não influencia a sobrevivência, pois o ambiente determina quem vive ou morre."
+   ],
+   "correta": 1,
+   "explicacao": "Em ambiente estável, o clone bem adaptado se mantém; em mudança, a variabilidade gera chance de indivíduos tolerantes. Os distratores generalizam ou negam a influência."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para simular a reprodução, a turma de Caio usou feijões. Na assexuada, copiaram um copinho; na sexuada, juntaram feijões de dois copinhos de pais diferentes, sorteados.",
+   "comando": "Explique a diferença entre os dois tipos de reprodução e o que os resultados da tabela mostram.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da simulação",
+    "colunas": [
+     "Filho",
+     "Assexuada",
+     "Sexuada"
+    ],
+    "linhas": [
+     [
+      "1",
+      "2 pretos, 1 vermelho, 1 branco",
+      "3 pretos, 1 vermelho"
+     ],
+     [
+      "2",
+      "2 pretos, 1 vermelho, 1 branco",
+      "1 preto, 2 vermelhos, 1 branco"
+     ],
+     [
+      "3",
+      "2 pretos, 1 vermelho, 1 branco",
+      "2 pretos, 2 brancos"
+     ]
+    ]
+   },
+   "ref": "Na assexuada há um só genitor e os filhos são idênticos a ele. Na sexuada, dois genitores contribuem e os filhos têm combinações diferentes, o que aumenta a variabilidade.",
+   "conceitos": [
+    "um genitor, filhos idênticos",
+    "dois genitores, filhos diferentes",
+    "variabilidade na sexuada"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na padaria de Seu Marcos, o fermento biológico (levedura) foi misturado à massa. Ao longo de uma hora, o número de células de levedura dobrou a cada 30 minutos por brotamento, e a massa cresceu.",
+   "comando": "Que tipo de reprodução ocorre nas leveduras? Quantos genitores participam e como são as células-filhas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de contagem",
+    "colunas": [
+     "Tempo",
+     "Células de levedura"
+    ],
+    "linhas": [
+     [
+      "0 min",
+      "1.000"
+     ],
+     [
+      "30 min",
+      "2.000"
+     ],
+     [
+      "60 min",
+      "4.000"
+     ]
+    ]
+   },
+   "ref": "Reprodução assexuada por brotamento. Participa um único organismo e as células-filhas são geneticamente iguais à célula-mãe.",
+   "conceitos": [
+    "assexuada por brotamento",
+    "um genitor",
+    "descendentes idênticos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No fim da aula, o professor disse que, na reprodução assexuada, as novas células se formam por mitose e, na sexuada, os gametas se formam por meiose.",
+   "comando": "Explique a diferença entre mitose e meiose e relacione cada uma com o que ocorreu na simulação dos feijões.",
+   "figura": null,
+   "ref": "Mitose produz células idênticas à original, como os copinhos copiados na assexuada. Meiose produz gametas com material genético diferente, e a combinação sorteada entre dois pais gera filhos variados na sexuada.",
+   "conceitos": [
+    "mitose gera cópias",
+    "meiose gera gametas variados",
+    "sorteio de dois pais"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um bananal do Vale do Ribeira, todas as bananeiras da plantação A foram obtidas de mudas do mesmo clone. Na plantação B, o produtor misturou três variedades. Uma doença atingiu as duas plantações.",
+   "comando": "Compare os resultados e explique, com base neles, uma vantagem e um risco do cultivo de clones.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de plantas atingidas pela doença",
+    "unidade": "% das plantas",
+    "itens": [
+     {
+      "rotulo": "Plantação A (clone)",
+      "valor": 92
+     },
+     {
+      "rotulo": "Plantação B (três variedades)",
+      "valor": 35
+     }
+    ]
+   },
+   "ref": "Vantagem: os clones são uniformes e produzem frutos iguais, o que facilita a colheita e a venda. Risco: por serem geneticamente iguais, são todos suscetíveis à mesma doença, e quase toda a plantação foi atingida.",
+   "conceitos": [
+    "clones uniformes",
+    "mesma suscetibilidade",
+    "variabilidade protege"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Gabriel viu na lagoa da cidade que a hidra se reproduz sozinha, por brotamento, enquanto o sapo-cururu precisa de parceiro: o macho canta e gasta muita energia para atrair uma fêmea.",
+   "comando": "Se a reprodução assexuada gasta menos energia, por que a reprodução sexuada é tão comum entre os animais? Justifique.",
+   "figura": null,
+   "ref": "A reprodução sexuada gera descendentes geneticamente variados. Se o ambiente mudar, alguns terão características que permitem sobreviver, o que aumenta a chance de a espécie persistir ao longo do tempo.",
+   "conceitos": [
+    "variabilidade",
+    "mudanças ambientais",
+    "sobrevivência da espécie"
+   ]
+  }
+ ],
+ "9º ANO|3|Analisar evidências da ocorrência de evolução convergente e divergente em imagens, esquemas ou modelos comparativos de organismos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, o professor mostrou imagens do braço humano, da nadadeira de uma baleia e da asa de um morcego, com os ossos úmero, rádio e ulna pintados nas mesmas cores. Ele pediu aos alunos que explicassem o padrão que viam.",
+   "comando": "O que o padrão dos ossos indica sobre esses animais?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das imagens",
+    "colunas": [
+     "Estrutura",
+     "Ossos pintados",
+     "Uso"
+    ],
+    "linhas": [
+     [
+      "Braço humano",
+      "Úmero, rádio e ulna",
+      "Segurar objetos"
+     ],
+     [
+      "Nadadeira de baleia",
+      "Úmero, rádio e ulna",
+      "Nadar"
+     ],
+     [
+      "Asa de morcego",
+      "Úmero, rádio e ulna",
+      "Voar"
+     ]
+    ]
+   },
+   "alts": [
+    "Eles têm uso parecido, por isso os ossos se organizaram da mesma forma nos três animais.",
+    "Eles têm um ancestral comum, e a estrutura original foi modificada para usos diferentes.",
+    "Eles viveram em ambientes iguais, que moldaram os ossos de maneira muito parecida nos três.",
+    "Eles trocaram genes entre si ao longo do tempo, por isso as estruturas ficaram semelhantes."
+   ],
+   "correta": 1,
+   "explicacao": "Ossos homólogos indicam ancestral comum e divergência. Os distratores atribuem a semelhança à função, ao ambiente ou à troca de genes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Camila comparou a asa de um pardal com a asa de uma abelha. A asa do pardal tem ossos, músculos e penas; a da abelha é uma membrana fina de quitina, sem ossos, que se prende ao tórax.",
+   "comando": "Que conclusão sobre as duas asas é coerente com essas observações?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das observações",
+    "colunas": [
+     "Característica",
+     "Asa de pardal",
+     "Asa de abelha"
+    ],
+    "linhas": [
+     [
+      "Ossos",
+      "Presentes",
+      "Ausentes"
+     ],
+     [
+      "Material",
+      "Penas",
+      "Quitina"
+     ],
+     [
+      "Função",
+      "Voar",
+      "Voar"
+     ]
+    ]
+   },
+   "alts": [
+    "A função é parecida, mas a estrutura e a origem são diferentes: são estruturas análogas.",
+    "A estrutura e a origem são iguais, o tamanho é o que muda: são estruturas homólogas.",
+    "A abelha desenvolveu ossos mais tarde, por isso as duas asas passaram a ser equivalentes.",
+    "O pardal herdou a asa da abelha, pois ambos são animais voadores e parentes próximos."
+   ],
+   "correta": 0,
+   "explicacao": "Asas de ave e de inseto têm origens distintas e a mesma função (análogas). Os distratores supõem origem igual ou parentesco."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rafael viu uma foto de um tubarão e outra de um golfinho. Os dois têm corpo alongado e nadadeiras, mas o tubarão é um peixe e o golfinho é um mamífero que respira ar. Ele disse: \"parecem parentes próximos\".",
+   "comando": "Como a ciência explica a semelhança entre eles?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de características",
+    "colunas": [
+     "Característica",
+     "Tubarão",
+     "Golfinho"
+    ],
+    "linhas": [
+     [
+      "Grupo",
+      "Peixe cartilaginoso",
+      "Mamífero"
+     ],
+     [
+      "Respiração",
+      "Brânquias",
+      "Pulmões"
+     ],
+     [
+      "Corpo",
+      "Alongado",
+      "Alongado"
+     ]
+    ]
+   },
+   "alts": [
+    "O tubarão deu origem ao golfinho, que manteve o formato do corpo do seu ancestral marinho.",
+    "O golfinho mudou o corpo porque precisava nadar e passou essa mudança aos seus descendentes.",
+    "A semelhança surgiu de forma independente, pois ambientes parecidos favoreceram corpos parecidos.",
+    "Os dois têm um ancestral comum recente, que já apresentava corpo alongado e nadadeiras."
+   ],
+   "correta": 2,
+   "explicacao": "A forma hidrodinâmica é convergência: pressões seletivas semelhantes em grupos distintos. Os distratores sugerem parentesco ou uso e desuso."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Nas Ilhas Galápagos vivem tentilhões com bicos bem diferentes. Os pesquisadores concluíram que todos descendem de uma única espécie que chegou do continente e se espalhou pelas ilhas, com alimentos diferentes em cada uma.",
+   "comando": "Que tipo de evolução esses dados exemplificam?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos tentilhões",
+    "colunas": [
+     "Espécie",
+     "Alimento principal",
+     "Bico"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Sementes duras",
+      "Grosso e curto"
+     ],
+     [
+      "B",
+      "Insetos",
+      "Fino e pontudo"
+     ],
+     [
+      "C",
+      "Frutos de cacto",
+      "Longo e curvo"
+     ]
+    ]
+   },
+   "alts": [
+    "Evolução divergente, pois de um ancestral comum surgiram adaptações a alimentos distintos.",
+    "Evolução convergente, pois bicos diferentes surgiram para resolver o mesmo problema de alimentação.",
+    "Evolução convergente, pois espécies sem parentesco ficaram parecidas ao viver nas mesmas ilhas.",
+    "Evolução divergente, pois cada tentilho mudou o bico durante a vida para alcançar o alimento."
+   ],
+   "correta": 0,
+   "explicacao": "Divergência é a diversificação de populações com ancestral comum em ambientes distintos. Os distratores trocam o tipo ou usam herança de caracteres adquiridos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana comparou três pares de estruturas: (I) mão humana e nadadeira de baleia; (II) asa de ave e asa de borboleta; (III) asa de ave e asa de morcego. A turma debateu se são homólogas, análogas ou ambas.",
+   "comando": "Qual afirmação sobre o par III está correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos pares",
+    "colunas": [
+     "Par",
+     "Estruturas comparadas",
+     "Função"
+    ],
+    "linhas": [
+     [
+      "I",
+      "Mão humana e nadadeira de baleia",
+      "Segurar e nadar"
+     ],
+     [
+      "II",
+      "Asa de ave e asa de borboleta",
+      "Voar"
+     ],
+     [
+      "III",
+      "Asa de ave e asa de morcego",
+      "Voar"
+     ]
+    ]
+   },
+   "alts": [
+    "Os ossos são análogos, pois ave e morcego voam, e a asa foi herdada de um ancestral comum que já voava.",
+    "As estruturas são homólogas porque os dois grupos têm asas, o que não tem relação com os ossos.",
+    "As estruturas são análogas, pois ave e morcego não partilham características herdadas de um mesmo ancestral.",
+    "Os ossos são homólogos, de ancestral comum, mas a asa para o voo surgiu de forma independente em cada grupo."
+   ],
+   "correta": 3,
+   "explicacao": "O membro anterior dos vertebrados é homólogo, mas o voo evoluiu de forma independente (convergência). Os distratores desconsideram uma das duas dimensões."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O professor mostrou imagens do braço humano, da nadadeira de baleia, da asa de abelha e da asa de pardal.",
+   "comando": "Explique o que são estruturas homólogas e análogas e cite um par de cada tipo entre as imagens.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das imagens",
+    "colunas": [
+     "Estrutura",
+     "Grupo",
+     "Função"
+    ],
+    "linhas": [
+     [
+      "Braço humano",
+      "Mamífero",
+      "Segurar objetos"
+     ],
+     [
+      "Nadadeira de baleia",
+      "Mamífero",
+      "Nadar"
+     ],
+     [
+      "Asa de abelha",
+      "Inseto",
+      "Voar"
+     ],
+     [
+      "Asa de pardal",
+      "Ave",
+      "Voar"
+     ]
+    ]
+   },
+   "ref": "Homólogas têm a mesma origem, de um ancestral comum, e podem ter funções diferentes (braço humano e nadadeira de baleia). Análogas têm função parecida, mas origens diferentes (asa de abelha e asa de pardal).",
+   "conceitos": [
+    "homologia: mesma origem",
+    "analogia: mesma função",
+    "pares citados corretamente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na feira de ciências, Marcos montou uma lista de pares: (1) pata do cavalo e pata do cachorro; (2) asa de morcego e asa de libélula; (3) braço do gorila e braço do humano.",
+   "comando": "Identifique entre os pares um que seja homólogo e outro que seja análogo e justifique cada resposta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos pares",
+    "colunas": [
+     "Par",
+     "Estruturas",
+     "Função"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Pata do cavalo e pata do cachorro",
+      "Locomoção"
+     ],
+     [
+      "2",
+      "Asa de morcego e asa de libélula",
+      "Voar"
+     ],
+     [
+      "3",
+      "Braço do gorila e braço do humano",
+      "Segurar e se apoiar"
+     ]
+    ]
+   },
+   "ref": "Homólogo: o par 3 (ou 1), pois os membros têm mesma origem em um ancestral comum. Análogo: o par 2, pois voam, mas a asa de morcego tem ossos e a de libélula é uma membrana de origem diferente.",
+   "conceitos": [
+    "homólogo por ancestral comum",
+    "análogo por função semelhante",
+    "origens diferentes no par 2"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os cactos vivem nos desertos das Américas e as eufórbias, em desertos da África. Ambos têm caule grosso que armazena água e espinhos, mas pertencem a famílias de plantas diferentes.",
+   "comando": "Por que essas plantas ficaram tão parecidas? Que tipo de evolução esse caso ilustra?",
+   "figura": null,
+   "ref": "O ambiente seco selecionou, nos dois grupos, plantas com caule que guarda água e espinhos. Como não herdaram essas características de um ancestral comum recente, é evolução convergente.",
+   "conceitos": [
+    "convergência",
+    "seleção do ambiente",
+    "sem ancestral comum recente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O lobo-da-tasmânia (um marsupial) e o lobo comum (um mamífero placentário) têm corpo, focinho e hábito caçador parecidos. Eles vivem em continentes diferentes, e seus grupos se separaram há muitos milhões de anos.",
+   "comando": "Explique como a seleção natural pode produzir animais tão parecidos em grupos distantes.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de comparação",
+    "colunas": [
+     "Característica",
+     "Lobo-da-tasmânia",
+     "Lobo comum"
+    ],
+    "linhas": [
+     [
+      "Grupo",
+      "Marsupial",
+      "Placentário"
+     ],
+     [
+      "Região",
+      "Oceania",
+      "Hemisfério Norte"
+     ],
+     [
+      "Alimentação",
+      "Caça animais",
+      "Caça animais"
+     ]
+    ]
+   },
+   "ref": "Nos dois ambientes, a vantagem era ser um caçador ágil. Indivíduos com corpo adequado sobreviviam e se reproduziam mais, e isso, ao longo de gerações, levou a formas semelhantes, uma convergência evolutiva.",
+   "conceitos": [
+    "seleção natural",
+    "pressões semelhantes",
+    "grupos sem parentesco próximo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro afirma: \"se dois animais são parecidos, são parentes próximos\". Ele cita o golfinho e o tubarão como exemplo.",
+   "comando": "Refute a ideia de Pedro, usando exemplos de evolução convergente e divergente.",
+   "figura": null,
+   "ref": "A semelhança pode surgir por convergência, como no tubarão e no golfinho. Animais parentes podem ser muito diferentes por divergência, como o braço humano, a nadadeira da baleia e a asa do morcego, que têm os mesmos ossos.",
+   "conceitos": [
+    "convergência",
+    "divergência",
+    "semelhança não implica parentesco"
+   ]
+  }
+ ],
+ "4B|6º ANO|4": [
+  {
+   "tipo": "obj",
+   "enunciado": "Caio, de 13 anos, caiu do skate numa pista de Santo André e bateu a nuca. Passou bem nos exames, mas nas semanas seguintes percebeu que tropeçava ao andar, errava ao tentar tocar o nariz com o dedo de olhos fechados e perdia o equilíbrio ao ficar num pé só.",
+   "comando": "Qual estrutura do encéfalo provavelmente foi afetada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos testes de Caio",
+    "colunas": [
+     "Teste",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Andar em linha reta",
+      "Tropeça"
+     ],
+     [
+      "Tocar o nariz de olhos fechados",
+      "Erra o alvo"
+     ],
+     [
+      "Ficar em um pé",
+      "Perde o equilíbrio"
+     ],
+     [
+      "Memória e fala",
+      "Normais"
+     ]
+    ]
+   },
+   "alts": [
+    "Cérebro, que comanda o pensamento e a memória, ligando os gestos às lembranças.",
+    "Tronco encefálico, que regula a respiração e os batimentos do coração.",
+    "Cerebelo, que coordena os movimentos e mantém o equilíbrio do corpo.",
+    "Medula espinal, que leva os impulsos entre o encéfalo e os músculos do corpo."
+   ],
+   "correta": 2,
+   "explicacao": "Equilíbrio e coordenação motora dependem do cerebelo. Os distratores citam funções de outras estruturas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Lara dorme profundamente após um dia de treino. Mesmo sem perceber, o coração dela continua batendo e ela respira em ritmo regular. A professora perguntou qual parte do sistema nervoso central cuida dessas funções automáticas.",
+   "comando": "Qual é a resposta correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da noite de Lara",
+    "colunas": [
+     "Medida",
+     "Valor durante o sono"
+    ],
+    "linhas": [
+     [
+      "Respirações por minuto",
+      "14"
+     ],
+     [
+      "Batimentos por minuto",
+      "62"
+     ],
+     [
+      "Controle consciente",
+      "Nenhum"
+     ]
+    ]
+   },
+   "alts": [
+    "Cerebelo, que controla os movimentos voluntários e a coordenação motora de todo o corpo.",
+    "Tronco encefálico, que controla funções vitais como respiração e batimentos cardíacos.",
+    "Cérebro, que decide de forma consciente cada respiração e cada batimento do coração.",
+    "Nervos dos braços, que levam ao coração as ordens enviadas pela medula espinal."
+   ],
+   "correta": 1,
+   "explicacao": "As funções vitais involuntárias são reguladas pelo tronco encefálico. Os distratores indicam estruturas de outras funções."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na consulta, o médico bate com um martelinho no joelho de Beatriz e a perna dela dá um pequeno chute, sem que ela decida mexer. Ele explica que é o reflexo patelar.",
+   "comando": "Qual sequência descreve corretamente o caminho do impulso nervoso?",
+   "figura": null,
+   "alts": [
+    "Receptor no tendão, neurônio sensitivo, medula, neurônio motor e músculo da coxa.",
+    "Receptor no tendão, neurônio sensitivo, cérebro, neurônio motor e músculo da coxa.",
+    "Cérebro, neurônio motor, medula espinal, neurônio sensitivo e receptor no tendão.",
+    "Músculo da coxa, neurônio motor, medula espinal, neurônio sensitivo e receptor no tendão."
+   ],
+   "correta": 0,
+   "explicacao": "No ato reflexo, o impulso é processado pela medula, sem esperar a decisão do cérebro. Os distratores passam pelo cérebro ou invertem a ordem."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Após um acidente de moto em Campinas, Roberto teve uma lesão na medula espinal, na região da cintura. O cérebro dele está intacto, mas ele não sente toques nem consegue mover as pernas.",
+   "comando": "Por que a lesão causou essas perdas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do paciente",
+    "colunas": [
+     "Região",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Cérebro",
+      "Sem alteração"
+     ],
+     [
+      "Medula, região lombar",
+      "Lesão"
+     ],
+     [
+      "Braços",
+      "Sentem e se movem normalmente"
+     ],
+     [
+      "Pernas",
+      "Sem sensibilidade e sem movimento"
+     ]
+    ]
+   },
+   "alts": [
+    "A medula guarda a memória dos movimentos, e a lesão apagou a lembrança de como andar e sentir.",
+    "A medula produz a sensação de dor, e a lesão eliminou a dor, mas não o movimento das pernas.",
+    "A medula comanda os pensamentos, e a lesão impediu que ele decidisse mover as pernas dele.",
+    "A medula liga o encéfalo ao corpo, e a lesão interrompeu esse caminho para as pernas."
+   ],
+   "correta": 3,
+   "explicacao": "A medula faz a ligação entre encéfalo e nervos do corpo. Os distratores atribuem a ela funções de memória ou pensamento."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro afirma: \"no reflexo patelar o cérebro não participa e a medula espinal pensa e decide, por isso a perna chuta tão rápido\". Sua professora pediu que a turma avaliasse essa explicação.",
+   "comando": "Qual afirmação é mais adequada sobre o que Pedro disse?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de tempo de resposta",
+    "colunas": [
+     "Situação",
+     "Tempo"
+    ],
+    "linhas": [
+     [
+      "Reflexo patelar",
+      "40 ms"
+     ],
+     [
+      "Apertar um botão ao ver uma luz",
+      "250 ms"
+     ]
+    ]
+   },
+   "alts": [
+    "O cérebro comanda a resposta, mas faz isso tão rápido que ela parece involuntária.",
+    "A medula pensa e decide como o cérebro, por isso o reflexo é uma escolha muito rápida.",
+    "A resposta é rápida e involuntária pois a medula a organiza, e o cérebro só percebe depois.",
+    "O cerebelo executa o reflexo, pois é ele que coordena movimentos como o chute da perna."
+   ],
+   "correta": 2,
+   "explicacao": "Reflexos são involuntários e feitos pela medula; o cérebro é informado depois. Os distratores atribuem decisão à medula ou o reflexo ao cerebelo."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Num pronto-socorro, a médica atendeu três pacientes: um com tremores e perda de equilíbrio ao andar, outro com falhas de memória recente e dificuldade para falar, e outro que não conseguia respirar sem ajuda de aparelho.",
+   "comando": "Indique a estrutura do sistema nervoso central provavelmente afetada em cada paciente.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos pacientes",
+    "colunas": [
+     "Paciente",
+     "Sintoma"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Tremores e perda de equilíbrio ao andar"
+     ],
+     [
+      "2",
+      "Falha de memória recente e dificuldade para falar"
+     ],
+     [
+      "3",
+      "Não respira sem ajuda de aparelho"
+     ]
+    ]
+   },
+   "ref": "Paciente 1: cerebelo. Paciente 2: cérebro. Paciente 3: tronco encefálico.",
+   "conceitos": [
+    "cerebelo: equilíbrio",
+    "cérebro: memória e fala",
+    "tronco encefálico: respiração"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma de Joana montou um modelo do sistema nervoso com papelão. Eles separaram as peças em dois grupos: o sistema nervoso central (SNC) e o periférico (SNP).",
+   "comando": "Classifique as peças em SNC ou SNP e explique a diferença entre os dois.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das peças do modelo",
+    "colunas": [
+     "Peça",
+     "Descrição"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Cérebro"
+     ],
+     [
+      "2",
+      "Nervo do braço"
+     ],
+     [
+      "3",
+      "Medula espinal"
+     ],
+     [
+      "4",
+      "Nervo do ciático"
+     ]
+    ]
+   },
+   "ref": "SNC: cérebro e medula espinal, que processam as informações. SNP: nervos do braço e ciático, que levam impulsos entre o SNC e o corpo.",
+   "conceitos": [
+    "SNC: cérebro e medula",
+    "SNP: nervos",
+    "SNP conecta o SNC ao corpo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Maria encostou a mão sem querer na panela quente e a retirou antes de perceber a dor. Só depois sentiu ardência e foi colocar a mão na água fria.",
+   "comando": "Descreva o caminho do impulso nervoso e explique por que esse ato reflexo protege a pessoa.",
+   "figura": null,
+   "ref": "Receptores da pele enviam impulso por neurônio sensitivo até a medula espinal, que envia a ordem por neurônio motor aos músculos, retirando a mão. Como não passa antes pelo cérebro, a resposta é mais rápida e evita a queimadura.",
+   "conceitos": [
+    "neurônio sensitivo",
+    "medula espinal",
+    "resposta rápida e involuntária"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Num laboratório de escola, mediu-se o tempo de resposta de alunos em duas situações: retirar a mão de uma superfície quente (reflexo) e apertar um botão ao ver uma luz acender (resposta voluntária).",
+   "comando": "Justifique a diferença de tempo observada, comparando o caminho do impulso nos dois casos.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de tempo de resposta",
+    "unidade": "milissegundos",
+    "itens": [
+     {
+      "rotulo": "Reflexo (retirar a mão)",
+      "valor": 40
+     },
+     {
+      "rotulo": "Resposta voluntária (apertar botão)",
+      "valor": 250
+     }
+    ]
+   },
+   "ref": "No reflexo, o impulso vai ao receptor e à medula e já volta ao músculo, caminho curto. Na resposta voluntária, o impulso chega ao cérebro, que interpreta, decide e envia a ordem, caminho mais longo.",
+   "conceitos": [
+    "reflexo pela medula",
+    "resposta voluntária pelo cérebro",
+    "caminho mais curto"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um motorista que bebeu vários copos de cerveja teve dificuldade para andar em linha reta, demorou para frear e dizia frases confusas, quando abordado pela polícia rodoviária em Ribeirão Preto.",
+   "comando": "Relacione cada sintoma a uma estrutura do sistema nervoso central afetada pelo álcool e explique o risco de dirigir assim.",
+   "figura": null,
+   "ref": "Andar torto indica o cerebelo afetado. A demora em frear e a fala confusa indicam o cérebro afetado (reações, raciocínio e fala). Com isso, ele reage mal e tem mais risco de causar acidentes.",
+   "conceitos": [
+    "cerebelo: equilíbrio",
+    "cérebro: raciocínio e fala",
+    "risco de acidente"
+   ]
+  }
+ ],
+ "4B|7º ANO|1": [
+  {
+   "tipo": "obj",
+   "enunciado": "Joana, de 40 anos, não tem nenhuma doença diagnosticada nos exames. Ela trabalha 12 horas por dia, dorme pouco, vive sozinha, não tem tempo para amigos e diz se sentir triste quase todos os dias.",
+   "comando": "Segundo o conceito de saúde da OMS, como se pode descrever a situação de Joana?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Joana",
+    "colunas": [
+     "Aspecto",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Exames",
+      "Sem doença"
+     ],
+     [
+      "Trabalho",
+      "12 horas por dia"
+     ],
+     [
+      "Sono",
+      "4 horas por noite"
+     ],
+     [
+      "Convívio",
+      "Vive sozinha, sem amigos"
+     ],
+     [
+      "Humor",
+      "Triste quase todos os dias"
+     ]
+    ]
+   },
+   "alts": [
+    "Joana não tem saúde plena, pois o conceito inclui bem-estar físico, mental e social.",
+    "Joana tem saúde plena, pois os exames não mostraram doença e isso basta para ter saúde.",
+    "Joana tem saúde plena, pois a tristeza é passageira e não afeta o bem-estar físico dela.",
+    "Joana não tem saúde, pois o bem-estar do corpo é o que conta e o cansaço mostra que ele falhou."
+   ],
+   "correta": 0,
+   "explicacao": "Para a OMS, saúde é um estado de completo bem-estar físico, mental e social. Os distratores reduzem o conceito à ausência de doença ou ao corpo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Seu Antônio mora na Zona Leste de São Paulo e vai à UBS (Unidade Básica de Saúde) do bairro para tomar vacina e medir a pressão. A agente comunitária de saúde visita as casas da rua para acompanhar as famílias.",
+   "comando": "A UBS pertence a qual nível de atenção do SUS?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da visita de Seu Antônio",
+    "etapas": [
+     "Chega à UBS do bairro",
+     "Mede a pressão",
+     "Toma a vacina",
+     "Recebe a visita da agente comunitária"
+    ]
+   },
+   "alts": [
+    "Atenção secundária, com consultas de especialistas e exames de maior complexidade técnica.",
+    "Atenção primária, porta de entrada do SUS, voltada à prevenção e ao acompanhamento.",
+    "Atenção terciária, com cirurgias e internações em hospitais de alta complexidade técnica.",
+    "Atenção especializada, com tratamento restrito a doenças raras e atendimento de urgência."
+   ],
+   "correta": 1,
+   "explicacao": "A UBS é o primeiro contato da população com o SUS. Os distratores descrevem níveis de maior complexidade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em dois bairros de uma mesma cidade, a prefeitura registrou os casos de diarreia em um ano. O bairro B não tem rede de esgoto nem coleta regular de lixo; o bairro A tem ambas.",
+   "comando": "O que os dados indicam sobre a saúde da população?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de casos de diarreia",
+    "unidade": "por 1.000 moradores",
+    "itens": [
+     {
+      "rotulo": "Bairro A (com esgoto)",
+      "valor": 12
+     },
+     {
+      "rotulo": "Bairro B (sem esgoto)",
+      "valor": 48
+     }
+    ]
+   },
+   "alts": [
+    "Os moradores do bairro B se cuidam menos, e a diarreia depende de hábitos individuais.",
+    "O saneamento e as condições de moradia influenciam a saúde, pois o bairro B não tem esgoto.",
+    "A diarreia é de origem genética e por isso aparece mais em certos bairros do que em outros.",
+    "O bairro B tem mais casos porque tem mais moradores, e o número de casos é proporcional."
+   ],
+   "correta": 1,
+   "explicacao": "Determinantes sociais, como saneamento, afetam a saúde coletiva. Os distratores culpam hábitos individuais, genética ou o tamanho do bairro (o dado já está por 1.000 moradores)."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Rita foi barrada na porta de uma UBS, sob o argumento de que não tinha plano de saúde nem emprego com carteira assinada. A neta dela, que estuda a Constituição de 1988, disse que isso estava errado.",
+   "comando": "O que diz a Constituição Federal de 1988 sobre o direito à saúde?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do atendimento",
+    "colunas": [
+     "Item",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Pessoa",
+      "Dona Rita"
+     ],
+     [
+      "Local",
+      "UBS"
+     ],
+     [
+      "Motivo da recusa",
+      "Sem plano e sem carteira assinada"
+     ]
+    ]
+   },
+   "alts": [
+    "A saúde é direito de quem contribui com a Previdência, e o atendimento depende de vínculo formal de trabalho.",
+    "A saúde é dever de cada pessoa, e o Estado só atende os casos mais graves e emergenciais.",
+    "A saúde é direito de todos, mas o atendimento tem prioridade para quem possui plano privado.",
+    "A saúde é direito de todos e dever do Estado, e o atendimento no SUS não depende de pagamento."
+   ],
+   "correta": 3,
+   "explicacao": "A CF/88 garante saúde universal e gratuita pelo SUS. Os distratores restringem o direito a contribuintes, a emergências ou a quem tem plano."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma reportagem mostrou a cobertura de Atenção Primária (população atendida por equipes de saúde da família) em quatro regiões de um estado. A secretaria de saúde precisa decidir onde ampliar o serviço.",
+   "comando": "Como interpretar os dados do gráfico?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de cobertura de Atenção Primária",
+    "unidade": "% da população",
+    "itens": [
+     {
+      "rotulo": "Região A",
+      "valor": 92
+     },
+     {
+      "rotulo": "Região B",
+      "valor": 71
+     },
+     {
+      "rotulo": "Região C",
+      "valor": 55
+     },
+     {
+      "rotulo": "Região D",
+      "valor": 38
+     }
+    ]
+   },
+   "alts": [
+    "Nas regiões com menor cobertura, a população é mais saudável, pois usa menos os serviços de saúde.",
+    "A cobertura não influencia a saúde da população, que depende dos hábitos das famílias.",
+    "Onde a cobertura é menor, menos pessoas têm acesso à prevenção, e isso pede ampliar as equipes.",
+    "As regiões com maior cobertura têm mais doentes, pois as equipes encontram mais problemas."
+   ],
+   "correta": 2,
+   "explicacao": "Menos cobertura significa menos acesso a prevenção e acompanhamento. Os distratores confundem uso do serviço com bom estado de saúde."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lucas faz um registro de sua rotina: joga bola duas vezes por semana, come frutas, dorme 5 horas por noite, evita encontrar os colegas e tem se sentido ansioso há semanas.",
+   "comando": "Com base no conceito de saúde da OMS, aponte dois aspectos que indicam bem-estar e dois que o comprometem.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da rotina de Lucas",
+    "colunas": [
+     "Aspecto",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Exercício",
+      "Joga bola 2 vezes por semana"
+     ],
+     [
+      "Alimentação",
+      "Come frutas"
+     ],
+     [
+      "Sono",
+      "5 horas por noite"
+     ],
+     [
+      "Convivência",
+      "Evita os colegas"
+     ]
+    ]
+   },
+   "ref": "Indicam bem-estar: exercício e alimentação com frutas. Comprometem: sono insuficiente (físico) e isolamento e ansiedade (mental e social). A saúde envolve corpo, mente e convívio social.",
+   "conceitos": [
+    "bem-estar físico, mental e social",
+    "exercício e alimentação",
+    "sono, isolamento e ansiedade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Durante uma campanha no bairro, houve vacinação infantil, um mutirão de limpeza de terrenos com água parada e consultas de pressão arterial na praça.",
+   "comando": "Explique a diferença entre saúde individual, coletiva e ambiental e relacione cada uma a uma das ações da campanha.",
+   "figura": null,
+   "ref": "Saúde individual: cuidado com cada pessoa (consulta de pressão). Saúde coletiva: ações que protegem o grupo (vacinação). Saúde ambiental: cuidado com o meio para evitar doenças (limpeza dos terrenos com água parada).",
+   "conceitos": [
+    "saúde individual",
+    "saúde coletiva",
+    "saúde ambiental"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro comprou em um mercado um suco com a data de validade apagada e a lata amassada e estufada. Preocupado, perguntou a quem deveria reclamar.",
+   "comando": "Que órgão cuida da segurança de alimentos e medicamentos e o que Pedro pode fazer? Por que isso é importante para a saúde da população?",
+   "figura": null,
+   "ref": "A ANVISA (com a vigilância sanitária local) regula e fiscaliza alimentos e medicamentos. Pedro pode não consumir o produto e fazer uma denúncia. Isso evita intoxicações e protege a saúde coletiva.",
+   "conceitos": [
+    "ANVISA",
+    "denúncia à vigilância sanitária",
+    "prevenção de riscos à população"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas áreas de um município foram comparadas. Na área 1, há UBS completa, coleta de esgoto e escolas; na área 2, nada disso. Os agentes de saúde registraram a mortalidade infantil.",
+   "comando": "Explique como as políticas públicas ajudam a explicar a diferença e o que o município deveria fazer.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das áreas",
+    "colunas": [
+     "Aspecto",
+     "Área 1",
+     "Área 2"
+    ],
+    "linhas": [
+     [
+      "UBS",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Coleta de esgoto",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Mortes antes de 1 ano por 1.000 nascidos",
+      "8",
+      "21"
+     ]
+    ]
+   },
+   "ref": "Onde há serviços (UBS, saneamento), há mais prevenção e menos mortes, o que mostra que a saúde depende de qualidade de vida e políticas públicas. O município deveria levar UBS e saneamento à área 2.",
+   "conceitos": [
+    "políticas públicas",
+    "saneamento e atenção primária",
+    "qualidade de vida"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Débora ouviu na fila de um mercado que \"o SUS é só para quem não pode pagar plano de saúde\". Ela discordou, pois sabe que o SUS faz muitas outras coisas.",
+   "comando": "Escreva uma resposta usando o que você sabe sobre o direito à saúde e sobre as atividades do SUS.",
+   "figura": null,
+   "ref": "A Constituição de 1988 diz que a saúde é direito de todos. O SUS atende a toda a população e também faz vacinação, vigilância sanitária e transplantes, que beneficiam inclusive quem tem plano de saúde.",
+   "conceitos": [
+    "saúde como direito de todos",
+    "atendimento universal",
+    "vacinas, vigilância e transplantes"
+   ]
+  }
+ ],
+ "4B|7º ANO|14": [
+  {
+   "tipo": "obj",
+   "enunciado": "Ao passar de ônibus pela marginal do rio Pinheiros, em São Paulo, Lucas viu espuma na água e sentiu mau cheiro. A professora explicou que o rio recebe, ao longo do trajeto, esgoto de casas e indústrias sem tratamento.",
+   "comando": "Qual é a principal causa da poluição observada por Lucas?",
+   "figura": null,
+   "alts": [
+    "O excesso de chuvas, que traz água limpa demais e desequilibra os seres vivos do rio.",
+    "A evaporação da água nos dias quentes, que concentra o sal e escurece o leito do rio.",
+    "A correnteza fraca, que impede a água de se misturar com o ar e de produzir espuma.",
+    "O esgoto lançado sem tratamento, que despeja matéria orgânica e produtos químicos."
+   ],
+   "correta": 3,
+   "explicacao": "O esgoto sem tratamento é a principal fonte de poluição hídrica urbana. Os distratores citam fatores naturais que não explicam o mau cheiro e a espuma."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Durante um passeio pelo bairro, a turma de Marina anotou o que viu: caminhão recolhendo lixo, bueiros nas ruas para escoar a chuva, canos levando água às casas e redes de esgoto sendo instaladas.",
+   "comando": "A que componente do saneamento básico pertencem os bueiros e as galerias que escoam a água da chuva?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do passeio",
+    "colunas": [
+     "Observação",
+     "Local"
+    ],
+    "linhas": [
+     [
+      "Caminhão recolhendo lixo",
+      "Avenida"
+     ],
+     [
+      "Bueiros nas ruas",
+      "Esquina"
+     ],
+     [
+      "Canos levando água às casas",
+      "Rua residencial"
+     ],
+     [
+      "Rede de esgoto sendo instalada",
+      "Obra"
+     ]
+    ]
+   },
+   "alts": [
+    "Drenagem pluvial, que conduz a água da chuva e evita alagamentos.",
+    "Abastecimento de água potável, que leva água tratada às casas e ao comércio.",
+    "Esgotamento sanitário, que coleta e trata os dejetos das casas e das fábricas.",
+    "Limpeza urbana, que recolhe e destina o lixo dos moradores e das ruas."
+   ],
+   "correta": 0,
+   "explicacao": "Bueiros e galerias fazem parte da drenagem pluvial. Os distratores são outros componentes do saneamento."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um levantamento do estado de São Paulo comparou a proporção de domicílios ligados à rede de coleta de esgoto nas áreas urbana e rural. Mariana, que mora em um sítio, usa uma fossa no quintal e um poço para abastecer a casa.",
+   "comando": "O que os dados permitem concluir sobre a situação na zona rural?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de domicílios com coleta de esgoto",
+    "unidade": "% dos domicílios",
+    "itens": [
+     {
+      "rotulo": "Zona urbana",
+      "valor": 85
+     },
+     {
+      "rotulo": "Zona rural",
+      "valor": 15
+     }
+    ]
+   },
+   "alts": [
+    "Na zona rural não é preciso cuidar do esgoto, pois há menos moradores e a poluição é menor.",
+    "Muitas casas dependem de fossas e poços, o que exige cuidado para o esgoto não contaminar a água.",
+    "A zona rural tem esgoto totalmente tratado, pois cada casa possui a própria fossa no terreno.",
+    "As áreas urbanas têm coleta de esgoto nas casas, e por isso não há risco de poluição."
+   ],
+   "correta": 1,
+   "explicacao": "Sem rede, o esgoto fica em fossas, e a água de poços pode ser contaminada. Os distratores ignoram essa diferença."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois de uma chuva forte em Guarulhos, o bairro de Sérgio alagou. Os moradores viram bueiros entupidos de sacolas e embalagens, e algumas pessoas adoeceram de leptospirose, doença ligada ao contato com água de enchente.",
+   "comando": "Quais componentes do saneamento falharam e provocaram o problema?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro dos fatos",
+    "etapas": [
+     "Lixo jogado nas ruas",
+     "Chuva forte",
+     "Bueiros entupidos e ruas alagadas",
+     "Contato das pessoas com a água do alagamento"
+    ]
+   },
+   "alts": [
+    "Água potável e esgoto, pois a água dos canos se misturou com os dejetos e contaminou o bairro.",
+    "Esgoto e energia, pois a falta de luz impediu o funcionamento da rede de coleta do bairro.",
+    "Drenagem pluvial e limpeza urbana, pois o lixo entupiu os bueiros e travou o escoamento.",
+    "Limpeza urbana e água potável, pois o lixo contaminou a água que chega às casas."
+   ],
+   "correta": 2,
+   "explicacao": "O lixo nas ruas obstruiu a drenagem e causou o alagamento. Os distratores indicam componentes sem relação direta com a situação descrita."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A secretaria de saúde reuniu dados de quatro municípios para entender as internações por diarreia. Um vereador disse que \"só a água tratada importa, o esgoto não faz diferença\".",
+   "comando": "O que os dados sugerem sobre a afirmação do vereador?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos municípios",
+    "colunas": [
+     "Município",
+     "Esgoto tratado (%)",
+     "Água tratada (%)",
+     "Internações por diarreia (por 10 mil)"
+    ],
+    "linhas": [
+     [
+      "A",
+      "95",
+      "99",
+      "3"
+     ],
+     [
+      "B",
+      "60",
+      "90",
+      "14"
+     ],
+     [
+      "C",
+      "20",
+      "70",
+      "27"
+     ],
+     [
+      "D",
+      "80",
+      "95",
+      "7"
+     ]
+    ]
+   },
+   "alts": [
+    "As internações caem quando mais esgoto é tratado, então o esgoto também influencia a saúde.",
+    "As internações dependem da água tratada, pois os municípios B e D têm água tratada acima de 90%.",
+    "O tratamento de esgoto não tem relação com a saúde, pois os municípios tiveram casos.",
+    "As internações aumentam quando o esgoto é tratado, pois ele atrai as bactérias para a cidade."
+   ],
+   "correta": 0,
+   "explicacao": "Há relação entre menos esgoto tratado e mais internações, sugerindo influência do saneamento. Os distratores ignoram o padrão ou o invertem."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na saída da escola, Camila observou: uma rua alagada depois da chuva, um cano sem água, esgoto correndo a céu aberto e lixo acumulado em um terreno.",
+   "comando": "Associe cada observação a um componente do saneamento básico.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das observações",
+    "colunas": [
+     "Observação",
+     "Local"
+    ],
+    "linhas": [
+     [
+      "Rua alagada após a chuva",
+      "Esquina da escola"
+     ],
+     [
+      "Torneira sem água",
+      "Casa vizinha"
+     ],
+     [
+      "Esgoto correndo na vala",
+      "Rua de trás"
+     ],
+     [
+      "Lixo acumulado",
+      "Terreno baldio"
+     ]
+    ]
+   },
+   "ref": "Rua alagada: drenagem pluvial. Torneira sem água: abastecimento de água potável. Esgoto na vala: esgotamento sanitário. Lixo acumulado: limpeza urbana e manejo de resíduos.",
+   "conceitos": [
+    "drenagem pluvial",
+    "água potável",
+    "esgotamento sanitário",
+    "limpeza urbana"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um córrego, a turma mediu o oxigênio dissolvido na água em três pontos: antes de um despejo de esgoto, 200 m depois dele e 5 km depois.",
+   "comando": "Descreva o que os dados mostram sobre a qualidade da água e uma consequência para os seres vivos do córrego.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de oxigênio dissolvido",
+    "unidade": "mg/L",
+    "itens": [
+     {
+      "rotulo": "Antes do despejo",
+      "valor": 8
+     },
+     {
+      "rotulo": "200 m depois do despejo",
+      "valor": 2
+     },
+     {
+      "rotulo": "5 km depois do despejo",
+      "valor": 6
+     }
+    ]
+   },
+   "ref": "Depois do despejo, o oxigênio cai muito, pois os microrganismos que decompõem a matéria orgânica do esgoto o consomem. Peixes e outros seres podem morrer ou fugir. Mais adiante a água se recupera.",
+   "conceitos": [
+    "queda do oxigênio",
+    "decomposição da matéria orgânica",
+    "morte de peixes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dona Neide costuma jogar o óleo de cozinha usado no ralo da pia. A neta, que aprendeu sobre saneamento na escola, disse que isso é um problema.",
+   "comando": "Explique por que isso é prejudicial e proponha uma alternativa de descarte.",
+   "figura": null,
+   "ref": "O óleo entope canos e polui rios, pois forma uma camada sobre a água que impede a entrada de oxigênio. Uma alternativa é guardar em garrafa PET e levar a pontos de coleta para reciclagem.",
+   "conceitos": [
+    "entupimento da rede",
+    "poluição da água",
+    "descarte em ponto de coleta"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um levantamento comparou a área urbana e a área rural de um município paulista quanto ao acesso a serviços de saneamento.",
+   "comando": "Compare os dados e proponha duas ações para melhorar a situação da zona rural.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de acesso aos serviços",
+    "colunas": [
+     "Serviço",
+     "Zona urbana (%)",
+     "Zona rural (%)"
+    ],
+    "linhas": [
+     [
+      "Água canalizada",
+      "98",
+      "70"
+     ],
+     [
+      "Coleta de esgoto",
+      "85",
+      "15"
+     ],
+     [
+      "Coleta de lixo",
+      "99",
+      "60"
+     ]
+    ]
+   },
+   "ref": "A zona rural tem menos acesso a todos os serviços, principalmente esgoto. Ações: instalar fossas adequadas ou sistemas de tratamento e ampliar a coleta de lixo e a rede de água tratada.",
+   "conceitos": [
+    "comparação dos dados",
+    "solução para esgoto",
+    "ampliação de serviços"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A prefeitura de uma cidade pensa em cortar verbas de drenagem e de esgoto para gastar mais em hospitais. Uma vereadora diz que isso seria um erro.",
+   "comando": "Explique por que investir em saneamento pode diminuir os gastos com saúde.",
+   "figura": null,
+   "ref": "O saneamento evita doenças ligadas à água contaminada, como diarreia e leptospirose. Com menos doentes, há menos internações e custos com tratamento, e a qualidade de vida melhora.",
+   "conceitos": [
+    "prevenção de doenças",
+    "menos internações",
+    "qualidade de vida"
+   ]
+  }
+ ],
+ "4B|8º ANO|14": [
+  {
+   "tipo": "obj",
+   "enunciado": "Bia acabou de tomar banho e, ainda com os pés molhados, ligou o secador de cabelos na tomada do banheiro. A mãe dela a alertou que isso é perigoso.",
+   "comando": "Por que essa prática oferece risco de choque elétrico?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da cena",
+    "etapas": [
+     "Bia sai do banho",
+     "Os pés ainda estão molhados",
+     "Liga o secador na tomada do banheiro"
+    ]
+   },
+   "alts": [
+    "A água armazena eletricidade e libera tudo de uma vez quando o secador é ligado.",
+    "A água com sais conduz corrente elétrica, e o corpo molhado pode fechar o circuito.",
+    "A água aumenta a tensão do secador, o que sobrecarrega a tomada e o corpo da pessoa.",
+    "A corrente passa por metais, então o risco é do secador e não do corpo molhado."
+   ],
+   "correta": 1,
+   "explicacao": "A água comum contém sais dissolvidos e conduz corrente, e a pele molhada reduz a resistência do corpo. Os distratores trocam condutividade por armazenamento ou tensão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Numa extensão ligada a uma só tomada da cozinha, Felipe conectou o ferro de passar, o micro-ondas e a chaleira elétrica. Pouco depois, o disjuntor do quadro desarmou, deixando a casa sem energia na cozinha.",
+   "comando": "Por que o disjuntor desarmou?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos aparelhos ligados",
+    "colunas": [
+     "Aparelho",
+     "Potência"
+    ],
+    "linhas": [
+     [
+      "Ferro de passar",
+      "1.200 W"
+     ],
+     [
+      "Micro-ondas",
+      "1.500 W"
+     ],
+     [
+      "Chaleira elétrica",
+      "1.800 W"
+     ]
+    ]
+   },
+   "alts": [
+    "O disjuntor armazena energia e desarmou ao se encher com a energia dos três aparelhos.",
+    "O disjuntor aumentou a tensão do circuito para dar conta dos aparelhos e acabou desarmando.",
+    "A soma das correntes passou do limite do circuito, e o disjuntor desligou para proteger os fios.",
+    "O disjuntor reduziu o consumo de energia, e por isso desligou os aparelhos mais potentes."
+   ],
+   "correta": 2,
+   "explicacao": "O disjuntor interrompe o circuito quando a corrente excede o valor seguro. Os distratores atribuem a ele funções que ele não tem."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Carlos comprou uma geladeira com plugue de três pinos, mas a tomada da cozinha tem só dois furos. Para encaixar, ele cortou o pino do meio, que é o fio-terra, e justificou: \"se funciona sem ele, não faz falta\".",
+   "comando": "Por que essa decisão é perigosa?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da instalação",
+    "colunas": [
+     "Item",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Plugue da geladeira",
+      "Três pinos"
+     ],
+     [
+      "Tomada da cozinha",
+      "Dois furos"
+     ],
+     [
+      "Ação de Carlos",
+      "Cortou o pino do meio"
+     ]
+    ]
+   },
+   "alts": [
+    "Uma fuga de corrente na carcaça não teria caminho seguro até a terra e atingiria alguém.",
+    "A geladeira passaria a consumir mais energia, e a conta de luz do mês aumentaria bastante.",
+    "A geladeira deixaria de ligar, pois o pino do meio fornece a tensão necessária ao motor.",
+    "A tensão da tomada aumentaria, o que danificaria os componentes eletrônicos do aparelho."
+   ],
+   "correta": 0,
+   "explicacao": "O fio-terra escoa para o solo correntes que escapem para a carcaça, evitando choques. Os distratores atribuem a ele funções de consumo ou de fornecimento de tensão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma casa antiga, uma extensão dobrada embaixo do tapete teve o isolamento rachado. Os fios de fase e neutro encostaram um no outro, houve faísca, cheiro de queimado e o disjuntor desarmou na hora.",
+   "comando": "O que ocorre em um curto-circuito como esse?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do incidente",
+    "etapas": [
+     "Extensão dobrada sob o tapete",
+     "Isolamento rachado",
+     "Fios encostam um no outro",
+     "Faísca e cheiro de queimado"
+    ]
+   },
+   "alts": [
+    "A corrente se torna muito baixa por um caminho de resistência grande, e o aparelho deixa de funcionar.",
+    "A tensão desaparece da extensão, e por isso a corrente para de circular nos fios do circuito.",
+    "A corrente passa a circular pelo fio neutro, o que ilumina a faísca sem aquecer os fios.",
+    "A corrente fica muito alta por um caminho de pouca resistência e aquece os fios do circuito."
+   ],
+   "correta": 3,
+   "explicacao": "No curto-circuito, a baixa resistência permite corrente muito alta e aquecimento intenso. Os distratores descrevem o oposto ou algo irreal."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rafael precisa trocar uma tomada em casa. O eletricista disse a ele que, mesmo com o interruptor da luz desligado, é preciso desligar o disjuntor do circuito antes de mexer nos fios.",
+   "comando": "Por que o eletricista fez essa recomendação?",
+   "figura": null,
+   "alts": [
+    "O interruptor desliga toda a casa, mas o disjuntor é necessário porque protege contra a chuva.",
+    "O disjuntor reduz a tensão da tomada para valores baixos, o que evita qualquer risco de choque.",
+    "O interruptor desliga só a luz, e os fios da tomada seguem energizados sem desligar o disjuntor.",
+    "O disjuntor e o interruptor fazem a mesma função, e desligar os dois só deixa o trabalho mais lento."
+   ],
+   "correta": 2,
+   "explicacao": "O interruptor atua sobre um ponto; o disjuntor interrompe o circuito. Os distratores confundem as funções."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na casa de Júlia, a irmã usa vários aparelhos ligados em um único benjamim (T), puxa o plugue pelo fio, mexe na tomada com a mão molhada e emenda fios com fita isolante velha.",
+   "comando": "Identifique duas dessas práticas inseguras e explique o risco de cada uma.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das práticas observadas",
+    "colunas": [
+     "Prática",
+     "Onde ocorre"
+    ],
+    "linhas": [
+     [
+      "Vários aparelhos em um benjamim",
+      "Sala"
+     ],
+     [
+      "Puxar o plugue pelo fio",
+      "Quarto"
+     ],
+     [
+      "Mexer na tomada de mão molhada",
+      "Cozinha"
+     ],
+     [
+      "Emenda de fios com fita velha",
+      "Corredor"
+     ]
+    ]
+   },
+   "ref": "Vários aparelhos no benjamim: sobrecarga e aquecimento dos fios, com risco de incêndio. Mexer na tomada com a mão molhada: a água conduz a corrente e causa choque. As outras também são riscos.",
+   "conceitos": [
+    "sobrecarga",
+    "choque pela água",
+    "curto-circuito por fio danificado"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma escola recebeu tomadas novas, e os alunos precisam explicar aos colegas para que serve o aterramento e como reconhecê-lo na tomada.",
+   "comando": "Escreva a função do aterramento e uma forma de identificá-lo.",
+   "figura": null,
+   "ref": "O aterramento é um fio ligado à terra que escoa correntes indesejadas da carcaça dos aparelhos, evitando choques. Na tomada, aparece como o terceiro pino ou furo, mais longo e central, do padrão atual.",
+   "conceitos": [
+    "fio-terra",
+    "proteção contra choques",
+    "terceiro pino ou furo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Depois de um temporal em Campinas, Lucas viu um fio de poste caído sobre uma poça d'água na calçada. Algumas pessoas se aproximaram para olhar.",
+   "comando": "Explique o risco dessa situação e o que as pessoas devem fazer.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da cena",
+    "etapas": [
+     "Temporal em Campinas",
+     "Fio de poste cai na calçada",
+     "Poça d'água ao redor do fio",
+     "Pessoas se aproximam para olhar"
+    ]
+   },
+   "ref": "A água da poça pode conduzir a corrente, e qualquer pessoa próxima pode levar um choque grave. As pessoas devem manter distância, avisar os vizinhos e ligar para a concessionária ou os bombeiros.",
+   "conceitos": [
+    "água conduz corrente",
+    "manter distância",
+    "chamar a concessionária"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma casa, o chuveiro elétrico de 5.500 W e 220 V faz o disjuntor de 20 A desarmar toda vez que é ligado. O morador pensa em trocar por um de 50 A, mas a fiação é de 4 mm², que suporta até 32 A.",
+   "comando": "Calcule a corrente do chuveiro (potência = tensão × corrente), explique por que o disjuntor desarma e por que trocar por outro de 50 A é arriscado.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da instalação",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Potência do chuveiro",
+      "5.500 W"
+     ],
+     [
+      "Tensão",
+      "220 V"
+     ],
+     [
+      "Disjuntor atual",
+      "20 A"
+     ],
+     [
+      "Fio instalado",
+      "4 mm² (até 32 A)"
+     ]
+    ]
+   },
+   "ref": "A corrente é 5.500 ÷ 220 = 25 A, maior que 20 A, por isso o disjuntor desarma. Com disjuntor de 50 A, ele não desarmaria antes de 32 A, o fio aqueceria e poderia provocar incêndio. O certo é trocar por um disjuntor adequado ao fio.",
+   "conceitos": [
+    "corrente = 25 A",
+    "disjuntor protege o fio",
+    "risco de incêndio"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um morador tem um fusível que queima toda vez que liga o forno elétrico. O vizinho sugeriu: \"troque o fusível por um pedaço de fio de cobre, que não queima\".",
+   "comando": "Explique por que essa solução é perigosa e o que o morador deveria fazer.",
+   "figura": null,
+   "ref": "O fusível queima para interromper o circuito quando a corrente é excessiva. Com um fio de cobre, o circuito não seria interrompido, e os fios da casa poderiam superaquecer e causar incêndio. O morador deve chamar um eletricista para verificar o circuito.",
+   "conceitos": [
+    "função do fusível",
+    "risco de incêndio",
+    "chamar profissional"
+   ]
+  }
+ ],
+ "4B|9º ANO|15": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma atividade sobre etnoastronomia, a professora apresentou o calendário de uma aldeia guarani. Segundo o registro, a Ema aparece ao anoitecer no começo do tempo novo (Ara Pyau), quando as chuvas voltam e a roça é preparada.",
+   "comando": "O que a aparição da Ema representa para a comunidade?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do calendário da aldeia",
+    "colunas": [
+     "Constelação",
+     "Quando aparece",
+     "Estação",
+     "Atividade"
+    ],
+    "linhas": [
+     [
+      "Homem Velho",
+      "Amanhecer",
+      "Frio e seca",
+      "Caça e pesca"
+     ],
+     [
+      "Ema",
+      "Anoitecer",
+      "Início das chuvas",
+      "Preparo da roça"
+     ]
+    ]
+   },
+   "alts": [
+    "Um sinal natural de que o tempo novo está chegando, usado para organizar o plantio.",
+    "Uma ave que traz as chuvas e faz as sementes germinarem quando aparece no céu à noite.",
+    "Uma festa religiosa, sem relação com as estações do ano nem com a vida na aldeia.",
+    "Uma data fixa, igual entre os povos, usada para marcar o início do ano no mundo."
+   ],
+   "correta": 0,
+   "explicacao": "Para os Guarani, o céu funciona como calendário natural. Os distratores atribuem poder causal à constelação ou negam a função prática."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro fincou uma vara reta no pátio da escola (um gnômon) e mediu a sombra em três horários. A professora explicou que esse instrumento é um relógio de sol, também usado por povos originários.",
+   "comando": "O que os dados do gnômon mostram?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das sombras do gnômon",
+    "colunas": [
+     "Horário",
+     "Comprimento da sombra"
+    ],
+    "linhas": [
+     [
+      "9h",
+      "80 cm"
+     ],
+     [
+      "12h",
+      "30 cm"
+     ],
+     [
+      "15h",
+      "85 cm"
+     ]
+    ]
+   },
+   "alts": [
+    "A sombra é maior ao meio-dia, pois o Sol está mais alto e projeta uma sombra mais longa.",
+    "A sombra é menor perto do meio-dia solar, com o Sol mais alto, e sua direção indica o horário.",
+    "A sombra tem o mesmo comprimento ao longo do dia, e muda de cor conforme o horário.",
+    "A sombra é menor às 9h e às 15h, que são os horários em que o Sol está mais alto no céu."
+   ],
+   "correta": 1,
+   "explicacao": "A sombra encurta quando o Sol sobe e se alonga quando ele desce. Os distratores invertem a relação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marina disse que viu no céu a constelação do Homem Velho, mas o colega Gabriel, que aprendeu no livro as constelações gregas, viu no mesmo trecho do céu o caçador Órion. Eles ficaram em dúvida sobre quem está certo.",
+   "comando": "Como a ciência explica essa diferença?",
+   "figura": null,
+   "alts": [
+    "Existe um desenho correto no céu, e os outros são erros de observação dos povos antigos.",
+    "As estrelas de cada constelação estão agrupadas no espaço, e cada povo as agrupa de um jeito.",
+    "Constelações são desenhos criados por cada cultura, sem ligação física entre as estrelas.",
+    "Cada povo olha para um céu diferente, e por isso as estrelas estão em lugares diferentes."
+   ],
+   "correta": 2,
+   "explicacao": "As constelações são interpretações culturais de padrões vistos da Terra. Os distratores supõem um desenho único, agrupamento real ou céus diferentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Vera, de uma aldeia guarani no litoral sul de São Paulo, diz que acompanha o céu todos os anos e que as constelações voltam a aparecer nos mesmos meses. Isso a ajuda a decidir quando plantar milho.",
+   "comando": "Por que o céu pode servir como calendário?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da aldeia",
+    "etapas": [
+     "Junho: Homem Velho ao amanhecer",
+     "Setembro: Ema ao anoitecer",
+     "Outubro: primeiras chuvas",
+     "Novembro: plantio do milho"
+    ]
+   },
+   "alts": [
+    "As estrelas se movem para mudar as estações e fazem chover quando chegam ao ponto certo.",
+    "O céu muda de forma diferente a cada ano, e por isso as constelações indicam o futuro.",
+    "As constelações aparecem nas noites de lua cheia, quando o plantio é favorável.",
+    "A posição das constelações na noite se repete a cada ano, acompanhando as mudanças do clima."
+   ],
+   "correta": 3,
+   "explicacao": "O ciclo anual do céu vem do movimento da Terra em torno do Sol, e se relaciona às estações. Os distratores atribuem poderes às estrelas ou negam a regularidade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um aluno disse que o conhecimento dos povos originários sobre o céu é só crença, sem relação com a natureza. A professora mostrou o registro de uma aldeia que associa constelações a eventos do ambiente.",
+   "comando": "Que conclusão os dados sustentam?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações da aldeia",
+    "colunas": [
+     "Constelação visível",
+     "Época",
+     "Fenômeno observado"
+    ],
+    "linhas": [
+     [
+      "Homem Velho ao amanhecer",
+      "Junho",
+      "Frio e seca"
+     ],
+     [
+      "Ema ao anoitecer",
+      "Setembro",
+      "Início das chuvas"
+     ],
+     [
+      "Ema ao anoitecer",
+      "Setembro",
+      "Preparo da roça"
+     ]
+    ]
+   },
+   "alts": [
+    "O conhecimento é uma crença sem relação com a natureza, pois não explica os fenômenos.",
+    "O conhecimento é sistemático e orientou decisões práticas, como plantar e pescar.",
+    "As constelações causam os fenômenos, e a aldeia usa o céu para controlar o clima.",
+    "O conhecimento serve para rituais, pois não traz informação sobre as estações."
+   ],
+   "correta": 1,
+   "explicacao": "As observações repetidas orientam decisões como o plantio. Os distratores desconsideram os dados ou atribuem causalidade às estrelas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma aldeia guarani registrou quando algumas constelações aparecem e o que acontece no ambiente e nas atividades.",
+   "comando": "Com base na tabela, diga quando a Ema aparece, em que período do ano isso ocorre e qual atividade ela indica.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do calendário da aldeia",
+    "colunas": [
+     "Constelação",
+     "Quando aparece",
+     "Período",
+     "Atividade"
+    ],
+    "linhas": [
+     [
+      "Homem Velho",
+      "Amanhecer",
+      "Frio e seca",
+      "Caça e pesca"
+     ],
+     [
+      "Ema",
+      "Anoitecer",
+      "Início das chuvas",
+      "Preparo da roça"
+     ]
+    ]
+   },
+   "ref": "A Ema aparece ao anoitecer, no início das chuvas, e indica o momento de preparar a roça e plantar.",
+   "conceitos": [
+    "aparece ao anoitecer",
+    "início das chuvas",
+    "preparo da roça"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para uma atividade, a turma de Renata quer construir um gnômon (relógio de sol) no pátio da escola e descobrir o meio-dia solar.",
+   "comando": "Explique como construir e usar o gnômon para descobrir o meio-dia solar.",
+   "figura": null,
+   "ref": "Fixar uma haste vertical em terreno plano e marcar a ponta da sombra ao longo do dia. A sombra mais curta ocorre no meio-dia solar, quando o Sol está mais alto; a direção dessa sombra aponta o sentido norte-sul.",
+   "conceitos": [
+    "haste vertical",
+    "sombra mais curta",
+    "meio-dia solar e direção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aldeia, a época das chuvas é o tempo novo (Ara Pyau), e a seca e o frio são o tempo velho (Ara Yma). Os moradores também observam as constelações para saber em que parte do ano estão. A turma de Lucas registrou a chuva no ano em que esteve lá.",
+   "comando": "Explique como os dados de chuva se relacionam ao calendário e por que as constelações visíveis à noite mudam ao longo do ano.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de chuva mensal na aldeia",
+    "unidade": "mm",
+    "itens": [
+     {
+      "rotulo": "Junho",
+      "valor": 40
+     },
+     {
+      "rotulo": "Julho",
+      "valor": 35
+     },
+     {
+      "rotulo": "Setembro",
+      "valor": 110
+     },
+     {
+      "rotulo": "Outubro",
+      "valor": 160
+     },
+     {
+      "rotulo": "Novembro",
+      "valor": 190
+     }
+    ]
+   },
+   "ref": "As chuvas aumentam a partir de setembro, quando começa o tempo novo, e são menores em junho e julho (tempo velho). Como a Terra se desloca ao redor do Sol, a cada época vê-se outra parte do céu à noite, e isso permite usar as constelações como calendário.",
+   "conceitos": [
+    "tempo novo e tempo velho",
+    "translação da Terra",
+    "céu muda ao longo do ano"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma comparou como a mesma região do céu é interpretada pelos Guarani e pela tradição grega.",
+   "comando": "Explique por que as duas culturas veem figuras diferentes e por que as duas leituras têm valor.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de comparação",
+    "colunas": [
+     "Região do céu",
+     "Leitura guarani",
+     "Leitura grega"
+    ],
+    "linhas": [
+     [
+      "Constelação de Órion e vizinhança",
+      "Homem Velho",
+      "Caçador Órion"
+     ],
+     [
+      "Região do Cruzeiro do Sul",
+      "Parte da Ema",
+      "Cruzeiro do Sul"
+     ]
+    ]
+   },
+   "ref": "Cada cultura cria figuras ligadas ao seu ambiente e modo de vida, e as estrelas não formam desenhos reais. As duas leituras têm valor: ambas organizam o céu e orientam atividades, como o calendário agrícola e a navegação.",
+   "conceitos": [
+    "constelações são construções culturais",
+    "figuras ligadas ao ambiente",
+    "valor dos dois saberes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma discussão, um colega disse: \"saberes indígenas sobre o céu não precisam entrar nas aulas de Ciências\".",
+   "comando": "Defenda, com dois argumentos, a importância de estudar a observação do céu pelos povos originários.",
+   "figura": null,
+   "ref": "Esses povos desenvolveram, por observação cuidada, calendários que relacionam o céu às estações, às chuvas e às atividades, o que é conhecimento científico tradicional. Estudá-los valoriza a diversidade cultural e mostra que há várias formas de ler o céu.",
+   "conceitos": [
+    "conhecimento baseado em observação",
+    "calendário natural",
+    "valorização cultural"
+   ]
+  }
+ ]
+}

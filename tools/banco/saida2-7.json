@@ -1,0 +1,3281 @@
+{
+ "6º ANO|2|Classificar os diferentes tipos de rochas e os processos de formação do solo.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Rafael encontrou no quintal uma pedra dura, com grãos grandes e cristais de cores diferentes encaixados entre si, sem camadas nem fósseis. Seu avô, que trabalhou numa pedreira, disse que ela se formou lentamente a grande profundidade, onde a temperatura era altíssima.",
+   "comando": "Com base nas observações, como essa pedra deve ser classificada e como se formou?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação da amostra",
+    "colunas": [
+     "Característica",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Grãos",
+      "cristais grandes encaixados"
+     ],
+     [
+      "Camadas",
+      "não aparecem"
+     ],
+     [
+      "Fósseis",
+      "não aparecem"
+     ],
+     [
+      "Dureza",
+      "risca o vidro"
+     ]
+    ]
+   },
+   "alts": [
+    "Rocha sedimentar, formada pela compactação de fragmentos depositados em camadas",
+    "Rocha metamórfica, formada pela transformação de outra rocha sob calor e pressão",
+    "Rocha ígnea, formada pelo resfriamento lento do magma em profundidade",
+    "Rocha sedimentar, formada pelo acúmulo de restos de seres vivos no fundo do mar"
+   ],
+   "correta": 2,
+   "explicacao": "A rocha com cristais grandes e sem camadas é ígnea e se formou pelo resfriamento lento de material derretido em profundidade. Os distratores confundem ígnea com sedimentar e metamórfica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marina, aluna do 6º ano, agitou um pote com terra, areia, pedrinhas e água e o deixou parado por um dia. No dia seguinte, as pedrinhas estavam no fundo, a areia no meio e a terra mais fina por cima, em camadas bem visíveis.",
+   "comando": "Na natureza, qual processo as camadas do pote representam e o que pode acontecer com elas ao longo de milhões de anos?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do pote de camadas",
+    "etapas": [
+     "Colocar terra, areia, pedrinhas e água",
+     "Agitar por um minuto",
+     "Deixar o pote parado por 24 horas",
+     "Observar o pote contra a luz"
+    ]
+   },
+   "alts": [
+    "Sedimentação: fragmentos levados pela água se depositam e, compactados, viram rocha",
+    "Metamorfismo: os fragmentos se fundem sob calor e pressão e formam uma rocha bem mais dura",
+    "Cristalização: a água evapora e os minerais dissolvidos formam cristais de rocha ígnea",
+    "Intemperismo: a água quebra os fragmentos em pedaços menores e forma o solo no fundo"
+   ],
+   "correta": 0,
+   "explicacao": "A deposição de fragmentos em camadas, seguida de compactação, forma rochas sedimentares. Os distratores trocam esse processo por metamorfismo, cristalização ou intemperismo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a professora passou de mão em mão três amostras sem identificação. Os alunos anotaram o que viram e tocaram em cada uma.",
+   "comando": "Qual alternativa classifica corretamente as amostras A, B e C?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das amostras da turma",
+    "colunas": [
+     "Amostra",
+     "Aspecto observado"
+    ],
+    "linhas": [
+     [
+      "A",
+      "cristais grandes, sem camadas"
+     ],
+     [
+      "B",
+      "grãos de areia colados, com marca de concha"
+     ],
+     [
+      "C",
+      "cristais finos e brilhantes em faixas"
+     ]
+    ]
+   },
+   "alts": [
+    "A é metamórfica, B é sedimentar e C é ígnea, pela ordem das características",
+    "A é ígnea, B é metamórfica e C é sedimentar, pela presença de fósseis",
+    "A é sedimentar, B é ígnea e C é metamórfica, pelo tamanho dos cristais",
+    "A é ígnea, B é sedimentar e C é metamórfica, pelas características observadas"
+   ],
+   "correta": 3,
+   "explicacao": "Cristais grandes sem camadas indicam rocha ígnea; grãos colados e conchas indicam sedimentar; cristais em faixas indicam metamórfica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Beto observou o corte de uma estrada em Piracicaba. No alto havia uma terra escura com raízes; logo abaixo, pedaços de rocha soltos e rachados; mais embaixo, a rocha dura e contínua.",
+   "comando": "Qual processo explica a origem da terra escura do alto do barranco?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do corte da estrada",
+    "colunas": [
+     "Posição",
+     "Aspecto"
+    ],
+    "linhas": [
+     [
+      "Alto",
+      "terra escura com raízes"
+     ],
+     [
+      "Meio",
+      "pedaços de rocha soltos e rachados"
+     ],
+     [
+      "Base",
+      "rocha dura contínua"
+     ]
+    ]
+   },
+   "alts": [
+    "Resfriamento de lava que escorreu sobre a rocha e depois foi coberta por plantas",
+    "Compactação de areia e argila trazidas pelo rio até formar uma camada macia",
+    "Desgaste da rocha pela chuva, pelo calor e pela ação de seres vivos",
+    "Fusão da rocha da base pelo calor do Sol, que sobe e forma a terra do alto"
+   ],
+   "correta": 2,
+   "explicacao": "O solo se forma pelo intemperismo da rocha-mãe, com ação de água, temperatura e seres vivos, que acrescentam matéria orgânica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A prefeitura mediu a profundidade do solo em três pontos de um mesmo morro com a mesma rocha de origem. No topo e na encosta a chuva forte escorre com rapidez; na baixada a água chega devagar.",
+   "comando": "Qual explicação é coerente com esses dados?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de profundidade do solo",
+    "unidade": "cm",
+    "itens": [
+     {
+      "rotulo": "Topo do morro",
+      "valor": 15
+     },
+     {
+      "rotulo": "Encosta",
+      "valor": 30
+     },
+     {
+      "rotulo": "Baixada",
+      "valor": 80
+     }
+    ]
+   },
+   "alts": [
+    "A rocha da baixada se desgasta mais depressa porque recebe mais calor do Sol que o topo",
+    "A chuva retira partículas do topo e da encosta e as deposita na baixada, onde o solo se acumula",
+    "O topo tem rocha mais dura e por isso quase não forma solo, enquanto a baixada tem rocha mole",
+    "Os seres vivos vivem na baixada e produzem ali um solo mais fundo que nas partes altas"
+   ],
+   "correta": 1,
+   "explicacao": "O transporte e a deposição de partículas pela água explicam o solo raso no alto e profundo na baixada, embora a rocha de origem seja a mesma."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Bia achou, perto de um rio seco, uma pedra com a marca de uma concha de caracol e grãos de areia colados uns aos outros.",
+   "comando": "Que tipo de rocha é essa e por que ela pode guardar fósseis?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da pedra encontrada",
+    "colunas": [
+     "Característica",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Grãos",
+      "areia colada"
+     ],
+     [
+      "Marca",
+      "formato de concha"
+     ],
+     [
+      "Local",
+      "margem de rio seco"
+     ]
+    ]
+   },
+   "ref": "É uma rocha sedimentar. Ela se forma pelo acúmulo e compactação de sedimentos em camadas, que podem soterrar restos de seres vivos e preservar suas marcas. O calor do material derretido das rochas ígneas destruiria os restos.",
+   "conceitos": [
+    "rocha sedimentar",
+    "deposição e compactação",
+    "fossilização"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No pote de camadas feito na escola, as pedrinhas ficaram no fundo, a areia no meio e a terra fina no topo.",
+   "comando": "Explique por que as camadas ficaram nessa ordem e relacione o resultado à formação das rochas sedimentares.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da espessura das camadas",
+    "unidade": "mm",
+    "itens": [
+     {
+      "rotulo": "Camada do fundo",
+      "valor": 12
+     },
+     {
+      "rotulo": "Camada do meio",
+      "valor": 20
+     },
+     {
+      "rotulo": "Camada do topo",
+      "valor": 8
+     }
+    ]
+   },
+   "ref": "Os fragmentos maiores e mais pesados se depositam primeiro e os menores e mais leves depois. Em rios e mares ocorre o mesmo: camadas se empilham e, com o tempo, são compactadas e cimentadas, formando rochas sedimentares.",
+   "conceitos": [
+    "transporte e deposição",
+    "tamanho dos fragmentos",
+    "compactação em camadas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Carla visitou uma pedreira em Cajamar e soube que o mármore usado em pisos já foi calcário, uma rocha sedimentar do fundo de um mar antigo.",
+   "comando": "Explique como o calcário se transformou em mármore e como o mármore deve ser classificado.",
+   "figura": null,
+   "ref": "O calcário foi soterrado e submetido a alta temperatura e pressão, sem derreter por completo, e seus minerais se reorganizaram. O mármore é uma rocha metamórfica.",
+   "conceitos": [
+    "metamorfismo",
+    "calor e pressão",
+    "rocha metamórfica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em Ribeirão Preto há solos avermelhados e argilosos, enquanto em outra região do interior paulista o solo é claro e arenoso. Um geólogo disse que a rocha de origem é diferente em cada local.",
+   "comando": "Explique como uma rocha se transforma em solo e por que os dois solos são diferentes.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de solos do interior paulista",
+    "colunas": [
+     "Região",
+     "Rocha de origem",
+     "Aspecto do solo"
+    ],
+    "linhas": [
+     [
+      "A",
+      "basalto",
+      "avermelhado e argiloso"
+     ],
+     [
+      "B",
+      "arenito",
+      "claro e arenoso"
+     ]
+    ]
+   },
+   "ref": "A chuva, as variações de temperatura e as raízes e outros seres vivos fragmentam e alteram a rocha por muito tempo (intemperismo), misturando-a a matéria orgânica. Como a composição do solo herda a da rocha de origem, rochas diferentes originam solos diferentes.",
+   "conceitos": [
+    "intemperismo",
+    "rocha de origem",
+    "matéria orgânica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma prefeitura quer desmatar uma encosta para plantar capim. Um técnico mediu a perda de solo em três situações de uma mesma encosta.",
+   "comando": "Justifique por que a retirada da vegetação preocupa os técnicos e por que o solo perdido não volta depressa.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: perda de solo por ano",
+    "unidade": "t/ha",
+    "itens": [
+     {
+      "rotulo": "Encosta com mata",
+      "valor": 1
+     },
+     {
+      "rotulo": "Encosta com pasto",
+      "valor": 8
+     },
+     {
+      "rotulo": "Encosta sem cobertura",
+      "valor": 40
+     }
+    ]
+   },
+   "ref": "As raízes e a cobertura vegetal seguram o solo e amortecem a chuva; sem elas a água arrasta as partículas. Como o solo se forma muito lentamente, em centímetros a cada milhares de anos, o que se perde não se recompõe em tempo útil.",
+   "conceitos": [
+    "proteção da vegetação",
+    "erosão pela chuva",
+    "formação lenta do solo"
+   ]
+  }
+ ],
+ "7º ANO|3|Identificar os componentes e características dos ecossistemas aquáticos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na visita à represa, os alunos do 7º ano anotaram o que viram: luz do sol, temperatura da água, oxigênio dissolvido, pedras do fundo, fitoplâncton, lambaris, uma garça e bactérias do sedimento.",
+   "comando": "Qual lista contém apenas fatores abióticos do ecossistema?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da visita à represa",
+    "colunas": [
+     "Item observado",
+     "Onde apareceu"
+    ],
+    "linhas": [
+     [
+      "Fitoplâncton",
+      "água verde da superfície"
+     ],
+     [
+      "Lambaris",
+      "perto das pedras"
+     ],
+     [
+      "Garça",
+      "na margem"
+     ],
+     [
+      "Pedras",
+      "fundo raso"
+     ]
+    ]
+   },
+   "alts": [
+    "Luz, temperatura, fitoplâncton e pedras do fundo",
+    "Oxigênio dissolvido, lambaris, pedras e luz do sol",
+    "Temperatura, bactérias, pedras e oxigênio dissolvido",
+    "Luz, temperatura, oxigênio dissolvido e pedras do fundo"
+   ],
+   "correta": 3,
+   "explicacao": "Luz, temperatura, oxigênio e pedras são componentes não vivos. Os distratores misturam um ser vivo em cada lista."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma lagoa do interior paulista, o lambari se alimenta do fitoplâncton e a garça se alimenta do lambari. Restos de todos eles se acumulam no fundo, onde são decompostos.",
+   "comando": "Qual organismo é o produtor dessa cadeia e por quê?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de alimentação na lagoa",
+    "etapas": [
+     "Lambari come fitoplâncton",
+     "Garça come lambari",
+     "Restos chegam ao fundo da lagoa"
+    ]
+   },
+   "alts": [
+    "O lambari, porque é o animal mais abundante e sustenta os demais",
+    "A garça, porque está no topo e recebe a energia acumulada da cadeia",
+    "O fitoplâncton, porque produz a matéria orgânica pela fotossíntese",
+    "As bactérias do fundo, porque transformam os restos em alimento para os demais"
+   ],
+   "correta": 2,
+   "explicacao": "Produtores fazem fotossíntese e iniciam a cadeia; o fitoplâncton cumpre esse papel. As demais opções confundem abundância, topo da cadeia e decomposição com produção."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um córrego da cidade, uma turma mediu o oxigênio dissolvido antes e depois do ponto onde chega esgoto. Depois do ponto, os lambaris quase desapareceram.",
+   "comando": "Qual explicação é coerente com os dados?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de oxigênio dissolvido",
+    "unidade": "mg/L",
+    "itens": [
+     {
+      "rotulo": "Antes do esgoto",
+      "valor": 8
+     },
+     {
+      "rotulo": "Depois do esgoto",
+      "valor": 2
+     }
+    ]
+   },
+   "alts": [
+    "A matéria orgânica do esgoto é decomposta por bactérias que consomem o oxigênio da água",
+    "O esgoto aumenta a luz que chega à água e isso faz o oxigênio dissolvido diminuir",
+    "Os lambaris migram porque a decomposição do esgoto libera muito oxigênio na água",
+    "O esgoto esfria a água e o frio reduz o número de bactérias que alimentam os peixes"
+   ],
+   "correta": 0,
+   "explicacao": "Bactérias decompositoras consomem oxigênio ao degradar a matéria orgânica, deixando menos oxigênio para os peixes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma turma mediu a quantidade de fitoplâncton em diferentes profundidades de uma represa, em um dia de sol, e viu que ela cai muito conforme se desce.",
+   "comando": "Qual fator explica a variação observada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fitoplâncton por profundidade",
+    "colunas": [
+     "Profundidade",
+     "Fitoplâncton (mil células/mL)"
+    ],
+    "linhas": [
+     [
+      "0 a 1 m",
+      "90"
+     ],
+     [
+      "5 m",
+      "40"
+     ],
+     [
+      "10 m",
+      "5"
+     ]
+    ]
+   },
+   "alts": [
+    "A pressão da água aumenta e rompe as células do fitoplâncton nas partes fundas",
+    "A luz diminui com a profundidade e limita a fotossíntese do fitoplâncton",
+    "O oxigênio dissolvido é maior no fundo e dificulta a vida do fitoplâncton ali",
+    "A quantidade de sal cresce com a profundidade e impede a divisão das células"
+   ],
+   "correta": 1,
+   "explicacao": "O fitoplâncton depende de luz para a fotossíntese; ela é absorvida pela água e escasseia nas camadas profundas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma lagoa de Itu, após semanas de chuva com adubo vindo das lavouras, a água ficou verde e, dias depois, muitos peixes apareceram mortos.",
+   "comando": "Qual sequência explica a mortandade?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro semanal da lagoa",
+    "colunas": [
+     "Semana",
+     "Fósforo (mg/L)",
+     "Algas (mil/mL)",
+     "Oxigênio (mg/L)"
+    ],
+    "linhas": [
+     [
+      "1",
+      "0,02",
+      "1",
+      "7"
+     ],
+     [
+      "2",
+      "0,15",
+      "50",
+      "6"
+     ],
+     [
+      "3",
+      "0,30",
+      "120",
+      "4"
+     ],
+     [
+      "4",
+      "0,30",
+      "20",
+      "1"
+     ]
+    ]
+   },
+   "alts": [
+    "Excesso de nutrientes multiplica as algas; ao morrerem, a decomposição consome o oxigênio",
+    "Excesso de nutrientes envenena os peixes diretamente e as algas crescem depois da morte deles",
+    "As algas cobrem a superfície, produzem oxigênio demais e os peixes morrem por excesso desse gás",
+    "O adubo aquece a água, as algas morrem de calor e a falta de comida acaba matando os peixes"
+   ],
+   "correta": 0,
+   "explicacao": "A eutrofização eleva as algas, e a decomposição delas reduz o oxigênio dissolvido. Distratores invertem causa e efeito."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro montou um aquário de papel colando cartões numa cartolina: sal, fitoplâncton, garça, pedras, oxigênio e decompositores.",
+   "comando": "Separe os cartões em fatores bióticos e abióticos e explique a diferença entre eles.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos cartões do aquário",
+    "colunas": [
+     "Cartão",
+     "Posição na cartolina"
+    ],
+    "linhas": [
+     [
+      "Sal",
+      "fundo"
+     ],
+     [
+      "Fitoplâncton",
+      "superfície"
+     ],
+     [
+      "Garça",
+      "margem"
+     ],
+     [
+      "Pedras",
+      "fundo"
+     ],
+     [
+      "Oxigênio",
+      "meio"
+     ],
+     [
+      "Decompositores",
+      "fundo"
+     ]
+    ]
+   },
+   "ref": "Bióticos são os seres vivos: fitoplâncton, garça e decompositores. Abióticos são os componentes não vivos: sal, pedras e oxigênio. Ambos interagem e formam o ecossistema.",
+   "conceitos": [
+    "fatores bióticos",
+    "fatores abióticos",
+    "interação no ecossistema"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lia comparou a salinidade de três ambientes aquáticos paulistas. Ela soube que um peixe de rio, colocado no mar, não sobrevive.",
+   "comando": "Classifique cada ambiente como água doce, salobra ou salgada e explique por que o peixe do rio não sobrevive no mar.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de salinidade",
+    "unidade": "‰",
+    "itens": [
+     {
+      "rotulo": "Rio",
+      "valor": 0.5
+     },
+     {
+      "rotulo": "Estuário",
+      "valor": 15
+     },
+     {
+      "rotulo": "Mar",
+      "valor": 35
+     }
+    ]
+   },
+   "ref": "O rio é de água doce, o estuário de água salobra e o mar de água salgada. Os organismos são adaptados a certa faixa de salinidade; no mar, o sal em excesso desequilibra a água do corpo do peixe de rio.",
+   "conceitos": [
+    "salinidade",
+    "água doce, salobra e salgada",
+    "adaptação dos organismos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma lagoa, o fitoplâncton é comido pelo zooplâncton, este pelo lambari e o lambari pela garça. Uma doença eliminou quase todos os lambaris.",
+   "comando": "Explique o que deve acontecer com a garça e com o zooplâncton.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de quem come quem",
+    "etapas": [
+     "Zooplâncton come fitoplâncton",
+     "Lambari come zooplâncton",
+     "Garça come lambari"
+    ]
+   },
+   "ref": "A garça perde sua fonte de alimento e tende a diminuir ou migrar. Sem o lambari, o zooplâncton aumenta e passa a consumir mais fitoplâncton, que tende a diminuir. A retirada de um elo altera toda a teia.",
+   "conceitos": [
+    "teia alimentar",
+    "desequilíbrio",
+    "efeito em cadeia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No litoral sul de São Paulo, pescadores de Cananeia notaram que a captura de camarão caiu depois que parte do manguezal foi aterrada.",
+   "comando": "Explique a relação entre a perda do manguezal e a queda na pesca.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de monitoramento do estuário",
+    "colunas": [
+     "Ano",
+     "Manguezal (ha)",
+     "Camarão capturado (t)"
+    ],
+    "linhas": [
+     [
+      "2015",
+      "100",
+      "50"
+     ],
+     [
+      "2020",
+      "70",
+      "35"
+     ],
+     [
+      "2025",
+      "40",
+      "18"
+     ]
+    ]
+   },
+   "ref": "O manguezal fornece abrigo e alimento para filhotes de camarão e peixes, funcionando como berçário. Com menos área, menos jovens sobrevivem e a pesca diminui.",
+   "conceitos": [
+    "manguezal como berçário",
+    "abrigo e alimento",
+    "impacto da perda de habitat"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Durante uma onda de calor, vários peixes morreram em um lago de condomínio, embora não houvesse esgoto nem lixo na água.",
+   "comando": "Justifique a mortandade usando os dados e proponha uma medida para reduzi-la.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: temperatura e oxigênio",
+    "colunas": [
+     "Temperatura (°C)",
+     "Oxigênio dissolvido (mg/L)"
+    ],
+    "linhas": [
+     [
+      "20",
+      "9,0"
+     ],
+     [
+      "25",
+      "8,2"
+     ],
+     [
+      "30",
+      "7,5"
+     ],
+     [
+      "35",
+      "6,9"
+     ]
+    ]
+   },
+   "ref": "A água mais quente dissolve menos oxigênio, e os peixes também aceleram o metabolismo e precisam de mais. Medidas: sombrear a margem com vegetação ou aerar a água, além de evitar excesso de peixes.",
+   "conceitos": [
+    "temperatura e gases dissolvidos",
+    "metabolismo dos peixes",
+    "medida de manejo"
+   ]
+  }
+ ],
+ "8º ANO|2|Identificar os órgãos do sistema digestório e sua função na digestão e absorção dos nutrientes.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Rafael lanchou pão com queijo e suco na escola. Depois da aula, a professora perguntou em qual órgão do trajeto do lanche a maior parte dos nutrientes passa para o sangue.",
+   "comando": "Qual órgão responde à pergunta e por quê?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Trajeto do lanche de Rafael",
+    "etapas": [
+     "Boca",
+     "Esôfago",
+     "Estômago",
+     "Intestino delgado",
+     "Intestino grosso"
+    ]
+   },
+   "alts": [
+    "Estômago, onde o suco gástrico transforma o lanche em nutrientes que seguem para o sangue",
+    "Intestino delgado, onde as dobras e vilosidades ampliam a superfície de absorção",
+    "Intestino grosso, onde o lanche é totalmente absorvido antes de formar as fezes",
+    "Boca, onde a mastigação e a saliva deixam os nutrientes prontos para entrar no sangue"
+   ],
+   "correta": 1,
+   "explicacao": "O intestino delgado tem grande superfície interna e é onde ocorre a maior parte da absorção. Os distratores atribuem a absorção a outros órgãos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana mastigou um pedaço de pão por um minuto, sem engolir, e percebeu que o sabor ficou adocicado.",
+   "comando": "O que explica esse resultado?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da mastigação do pão",
+    "colunas": [
+     "Tempo mastigando",
+     "Sabor percebido"
+    ],
+    "linhas": [
+     [
+      "0 s",
+      "neutro"
+     ],
+     [
+      "30 s",
+      "levemente adocicado"
+     ],
+     [
+      "60 s",
+      "adocicado"
+     ]
+    ]
+   },
+   "alts": [
+    "O estômago libera açúcar já pronto na boca, que se mistura ao pão mastigado",
+    "A mastigação amassa o pão e libera o açúcar que já vinha pronto na massa",
+    "A enzima da saliva começa a quebrar o amido do pão em açúcares menores",
+    "O fígado produz bile que sobe até a boca e transforma o amido em açúcar"
+   ],
+   "correta": 2,
+   "explicacao": "A amilase da saliva inicia a digestão química do amido, formando açúcares de gosto adocicado."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Duas amigas compararam seus lanches. O lanche de Bia tinha banana, pão francês com queijo e leite. O de Carla tinha salgadinho de pacote, biscoito recheado e refrigerante.",
+   "comando": "Qual lanche é predominantemente ultraprocessado e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos lanches",
+    "colunas": [
+     "Lanche",
+     "Itens"
+    ],
+    "linhas": [
+     [
+      "Bia",
+      "banana, pão francês, queijo, leite"
+     ],
+     [
+      "Carla",
+      "salgadinho, biscoito recheado, refrigerante"
+     ]
+    ]
+   },
+   "alts": [
+    "O de Bia, porque pão e queijo passaram por preparo e já não são alimentos naturais",
+    "O de Carla, porque tem mais calorias e esse é o critério que define o ultraprocessado",
+    "O de Bia, porque o leite foi pasteurizado e a banana foi levada ao mercado",
+    "O de Carla, porque seus itens são formulações industriais com aditivos"
+   ],
+   "correta": 3,
+   "explicacao": "Ultraprocessados são formulações industriais com aditivos e muitos ingredientes; pão, queijo e leite são minimamente processados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula prática, os alunos amassaram pão com água em um saquinho e depois despejaram a pasta numa meia-calça sobre um copo. Só um líquido turvo passou para o copo, e os pedaços maiores ficaram retidos.",
+   "comando": "O que a meia-calça representa e o que o resultado mostra?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da simulação",
+    "etapas": [
+     "Amassar pão com água no saquinho",
+     "Despejar a pasta na meia-calça",
+     "Espremer a meia-calça sobre o copo",
+     "Comparar o líquido com o que ficou retido"
+    ]
+   },
+   "alts": [
+    "O intestino delgado, mostrando que só partículas pequenas passam ao sangue",
+    "O estômago, mostrando que o alimento é totalmente transformado e depois absorvido",
+    "O intestino grosso, mostrando que o alimento inteiro passa para o sangue",
+    "O esôfago, mostrando que o alimento é filtrado antes de chegar ao estômago"
+   ],
+   "correta": 0,
+   "explicacao": "A parede do intestino delgado deixa passar apenas nutrientes já quebrados em partículas pequenas; o modelo representa isso."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Mateus fez uma cirurgia que retirou parte do intestino delgado. Mesmo comendo normalmente, ele passou a ter anemia e perda de peso.",
+   "comando": "Qual explicação é coerente com os exames?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de exames de Mateus",
+    "colunas": [
+     "Trecho do tubo",
+     "Antes (cm)",
+     "Depois (cm)"
+    ],
+    "linhas": [
+     [
+      "Intestino delgado",
+      "600",
+      "360"
+     ],
+     [
+      "Intestino grosso",
+      "150",
+      "150"
+     ]
+    ]
+   },
+   "alts": [
+    "A superfície de absorção diminuiu, e parte dos nutrientes passa sem ser absorvida",
+    "O estômago deixou de produzir suco gástrico, e o alimento não é digerido",
+    "O intestino grosso passou a absorver os nutrientes e sobrecarregou o sangue",
+    "A boca deixou de formar o bolo alimentar, e o alimento não chega ao intestino"
+   ],
+   "correta": 0,
+   "explicacao": "Menos intestino delgado significa menos superfície de absorção e risco de deficiências."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Júlia comeu um pedaço de pão com manteiga no café da manhã.",
+   "comando": "Descreva o caminho do pão pelo sistema digestório, citando o órgão em que a digestão do amido começa e o órgão em que os nutrientes são absorvidos.",
+   "figura": null,
+   "ref": "O pão é mastigado na boca, onde a saliva inicia a digestão do amido; segue pelo esôfago até o estômago, onde é misturado ao suco gástrico; no intestino delgado ocorre a digestão final e a absorção dos nutrientes; o intestino grosso absorve água e forma as fezes.",
+   "conceitos": [
+    "digestão na boca",
+    "absorção no intestino delgado",
+    "trajeto do alimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na simulação do saquinho, os alunos amassaram o pão com água. Depois discutiram o que ocorre de verdade no corpo.",
+   "comando": "Diferencie digestão mecânica de digestão química e dê um exemplo de cada no corpo humano.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da simulação do lanche",
+    "etapas": [
+     "Pão e água colocados no saquinho",
+     "Pão amassado com as mãos",
+     "Pasta passada pela meia-calça"
+    ]
+   },
+   "ref": "Na digestão mecânica o alimento é fragmentado sem mudar sua composição, como na mastigação e nos movimentos do estômago. Na química, enzimas quebram os nutrientes em partes menores, como a amilase da saliva e as enzimas do intestino.",
+   "conceitos": [
+    "digestão mecânica",
+    "digestão química",
+    "enzimas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao estudar o intestino delgado, Léo comparou três modelos de tubo e anotou a superfície interna de cada um.",
+   "comando": "Explique por que as dobras e vilosidades do intestino delgado favorecem a absorção de nutrientes.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da superfície interna dos modelos",
+    "unidade": "unidades",
+    "itens": [
+     {
+      "rotulo": "Tubo liso",
+      "valor": 1
+     },
+     {
+      "rotulo": "Tubo com dobras",
+      "valor": 3
+     },
+     {
+      "rotulo": "Tubo com dobras e vilosidades",
+      "valor": 10
+     }
+    ]
+   },
+   "ref": "As dobras e vilosidades aumentam muito a superfície de contato com os nutrientes, e as vilosidades são ricas em vasos sanguíneos. Assim mais nutrientes passam para o sangue no mesmo comprimento de tubo.",
+   "conceitos": [
+    "superfície de absorção",
+    "vilosidades",
+    "passagem para o sangue"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A família de Davi compara duas refeições: arroz, feijão, ovo e salada, ou macarrão instantâneo com refrigerante.",
+   "comando": "Com base na tabela, compare as refeições e explique qual favorece mais o funcionamento do sistema digestório.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de duas refeições (por porção)",
+    "colunas": [
+     "Refeição",
+     "Fibras (g)",
+     "Sódio (mg)",
+     "Açúcar adicionado (g)"
+    ],
+    "linhas": [
+     [
+      "Arroz, feijão, ovo e salada",
+      "8",
+      "600",
+      "0"
+     ],
+     [
+      "Macarrão instantâneo e refrigerante",
+      "1",
+      "1500",
+      "35"
+     ]
+    ]
+   },
+   "ref": "A primeira refeição, com alimentos in natura ou minimamente processados, tem mais fibras, que ajudam o trânsito intestinal, e menos sódio e açúcar. A segunda, ultraprocessada, tem pouca fibra e excesso de sal e açúcar.",
+   "conceitos": [
+    "alimentos in natura e ultraprocessados",
+    "fibras",
+    "sódio e açúcar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lara sente gases e dor de barriga sempre que toma leite comum. Os médicos explicaram que o corpo dela produz pouca lactase, enzima que digere a lactose.",
+   "comando": "Explique por que ocorrem os sintomas e por que o leite sem lactose não os causa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de teste de Lara",
+    "colunas": [
+     "Bebida",
+     "Sintomas após 2 horas"
+    ],
+    "linhas": [
+     [
+      "Leite comum",
+      "gases e dor"
+     ],
+     [
+      "Leite sem lactose",
+      "ausentes"
+     ],
+     [
+      "Suco de laranja",
+      "ausentes"
+     ]
+    ]
+   },
+   "ref": "Sem lactase, a lactose não é digerida nem absorvida no intestino delgado e chega ao intestino grosso, onde bactérias a fermentam, produzindo gases e dor. No leite sem lactose o açúcar já está quebrado e é absorvido normalmente.",
+   "conceitos": [
+    "enzima lactase",
+    "digestão química",
+    "fermentação no intestino grosso"
+   ]
+  }
+ ],
+ "9º ANO|1|Identificar substâncias, misturas e transformações da matéria.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma preparou quatro copos: água pura, água com sal, água com óleo e água com areia. Depois de cinco minutos, anotaram o que viam em cada um.",
+   "comando": "Quais copos contêm misturas heterogêneas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos copos após 5 minutos",
+    "colunas": [
+     "Copo",
+     "Aspecto"
+    ],
+    "linhas": [
+     [
+      "1",
+      "líquido transparente, uma fase"
+     ],
+     [
+      "2",
+      "líquido transparente, uma fase"
+     ],
+     [
+      "3",
+      "duas camadas visíveis"
+     ],
+     [
+      "4",
+      "sólido depositado no fundo"
+     ]
+    ]
+   },
+   "alts": [
+    "Água com sal e água com óleo, que apresentam mais de uma fase",
+    "Água com óleo e água com areia, que apresentam mais de uma fase",
+    "Água com sal e água com areia, que apresentam mais de uma fase",
+    "Água pura e água com sal, que apresentam mais de uma fase"
+   ],
+   "correta": 1,
+   "explicacao": "Óleo e areia não se dissolvem e formam mais de uma fase. Sal dissolvido forma uma fase só, e água pura é substância."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marcos aqueceu duas amostras de líquido incolor e anotou a temperatura a cada minuto. Uma é água destilada e a outra é água com sal de cozinha.",
+   "comando": "Qual conclusão os dados permitem?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: temperatura durante a ebulição",
+    "colunas": [
+     "Minuto",
+     "Amostra A (°C)",
+     "Amostra B (°C)"
+    ],
+    "linhas": [
+     [
+      "1",
+      "100",
+      "101"
+     ],
+     [
+      "2",
+      "100",
+      "102"
+     ],
+     [
+      "3",
+      "100",
+      "103"
+     ]
+    ]
+   },
+   "alts": [
+    "A é substância pura e B é mistura, pela temperatura de ebulição de cada uma",
+    "B é uma substância pura, porque sua temperatura aumenta de modo regular",
+    "A é uma mistura, porque sua temperatura permanece igual durante a ebulição",
+    "A e B são substâncias puras, porque ambas ferveram e ficaram acima de 100 °C"
+   ],
+   "correta": 0,
+   "explicacao": "Substâncias puras fervem em temperatura constante; misturas têm temperatura que varia durante a ebulição."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Quatro alunos fizeram observações em copos diferentes. Lia dissolveu sal em água, Teo misturou vinagre com bicarbonato, Gil deixou um gelo derreter e Ana quebrou um giz.",
+   "comando": "Em qual copo ocorreu transformação química e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações",
+    "colunas": [
+     "Aluno",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Lia",
+      "o sal sumiu, a água ficou salgada"
+     ],
+     [
+      "Teo",
+      "bolhas e cheiro de vinagre"
+     ],
+     [
+      "Gil",
+      "gelo virou água"
+     ],
+     [
+      "Ana",
+      "giz em pedaços menores"
+     ]
+    ]
+   },
+   "alts": [
+    "O de Lia, porque o sal desapareceu e isso mostra que a matéria deixou de existir",
+    "O de Gil, porque o gelo mudou de forma e passou a ter outras propriedades",
+    "O de Teo, porque as bolhas indicam gás, uma substância diferente das iniciais",
+    "O de Ana, porque o giz quebrado tem propriedades diferentes das do giz inteiro"
+   ],
+   "correta": 2,
+   "explicacao": "A liberação de gás indica formação de novas substâncias. Dissolver, mudar de estado e quebrar são transformações físicas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Bia aqueceu uma panela com água em fogão constante, medindo a temperatura do líquido. Ela estranhou que, mesmo com a chama acesa, a temperatura parou de subir entre 4 e 8 minutos.",
+   "comando": "O que explica a temperatura constante nesse intervalo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de aquecimento da água",
+    "colunas": [
+     "Tempo (min)",
+     "Temperatura (°C)"
+    ],
+    "linhas": [
+     [
+      "0",
+      "25"
+     ],
+     [
+      "2",
+      "60"
+     ],
+     [
+      "4",
+      "100"
+     ],
+     [
+      "6",
+      "100"
+     ],
+     [
+      "8",
+      "100"
+     ]
+    ]
+   },
+   "alts": [
+    "A chama diminuiu e a água deixou de receber energia durante esse intervalo",
+    "A energia recebida é usada para separar as partículas na mudança de estado",
+    "As partículas da água quase pararam de se mover e a temperatura ficou fixa",
+    "Todo o calor passou a ser perdido para o ar e nada chegou à água"
+   ],
+   "correta": 1,
+   "explicacao": "Durante a ebulição a energia recebida rompe as interações entre as partículas, e não aumenta a temperatura."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um professor entregou aos alunos a tabela de pontos de fusão e ebulição de três substâncias fictícias e pediu que previssem o estado físico de cada uma na cozinha da escola, a 25 °C.",
+   "comando": "Qual alternativa descreve corretamente o estado físico e a organização das partículas de A, B e C a 25 °C?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: temperaturas de mudança",
+    "colunas": [
+     "Substância",
+     "Fusão (°C)",
+     "Ebulição (°C)"
+    ],
+    "linhas": [
+     [
+      "A",
+      "-20",
+      "80"
+     ],
+     [
+      "B",
+      "30",
+      "200"
+     ],
+     [
+      "C",
+      "-100",
+      "-30"
+     ]
+    ]
+   },
+   "alts": [
+    "A é gasosa, B é líquida e C é sólida, com partículas organizadas em cada caso",
+    "A é líquida, B é gasosa e C é sólida, com partículas mais soltas na ordem citada",
+    "A é sólida, B é líquida e C é gasosa, com partículas mais soltas na ordem citada",
+    "A é líquida, B é sólida e C é gasosa, com partículas mais soltas conforme o estado"
+   ],
+   "correta": 3,
+   "explicacao": "Acima da fusão e abaixo da ebulição a substância é líquida (A); abaixo da fusão é sólida (B); acima da ebulição é gasosa (C)."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ana comparou água destilada, suco de laranja com polpa e café com leite.",
+   "comando": "Diferencie substância de mistura e classifique cada amostra como substância, mistura homogênea ou heterogênea.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das amostras",
+    "colunas": [
+     "Amostra",
+     "Aspecto"
+    ],
+    "linhas": [
+     [
+      "Água destilada",
+      "transparente, uma fase"
+     ],
+     [
+      "Suco com polpa",
+      "polpa em suspensão"
+     ],
+     [
+      "Café com leite",
+      "cor uniforme, uma fase"
+     ]
+    ]
+   },
+   "ref": "Substância é um material de composição única e propriedades constantes; mistura reúne duas ou mais substâncias. Água destilada é substância; suco com polpa é mistura heterogênea; café com leite é mistura homogênea.",
+   "conceitos": [
+    "substância pura",
+    "mistura homogênea",
+    "mistura heterogênea"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em casa, Pedro observou três mudanças: um prego exposto à chuva enferrujou, um cubo de gelo derreteu e a massa de bolo cresceu e endureceu no forno.",
+   "comando": "Classifique cada mudança como transformação física ou química e justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das observações de Pedro",
+    "colunas": [
+     "Situação",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Prego na chuva",
+      "brilhante",
+      "marrom e quebradiço"
+     ],
+     [
+      "Gelo",
+      "sólido",
+      "líquido"
+     ],
+     [
+      "Massa de bolo",
+      "líquida",
+      "sólida e esponjosa"
+     ]
+    ]
+   },
+   "ref": "O prego enferrujando e o bolo assando são transformações químicas, pois surgem novas substâncias com propriedades diferentes. O gelo derretendo é transformação física, pois é só mudança de estado da mesma substância.",
+   "conceitos": [
+    "novas substâncias",
+    "mudança de estado",
+    "transformação física e química"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um copo, Tati misturou areia, sal e água. Ela quer separar os três componentes e recuperar cada um.",
+   "comando": "Descreva uma sequência de métodos de separação que permita isso e justifique cada um.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da mistura no copo",
+    "colunas": [
+     "Componente",
+     "Comportamento na água"
+    ],
+    "linhas": [
+     [
+      "Areia",
+      "não dissolve, fica no fundo"
+     ],
+     [
+      "Sal",
+      "dissolve e não aparece"
+     ],
+     [
+      "Água",
+      "líquido transparente"
+     ]
+    ]
+   },
+   "ref": "Filtrar a mistura: a areia fica retida no filtro. Depois aquecer o líquido filtrado até a água evaporar: o sal permanece no recipiente. Se o vapor for condensado, a água também é recuperada.",
+   "conceitos": [
+    "filtração",
+    "evaporação",
+    "propriedades diferentes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma balança, Caio pesou um frasco com vinagre e um balão com bicarbonato. Misturou os dois no frasco aberto e depois repetiu com o frasco fechado.",
+   "comando": "Explique por que a massa diminuiu no frasco aberto e não no fechado.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: massa do sistema",
+    "colunas": [
+     "Situação",
+     "Massa inicial (g)",
+     "Massa final (g)"
+    ],
+    "linhas": [
+     [
+      "Frasco aberto",
+      "120,0",
+      "119,2"
+     ],
+     [
+      "Frasco fechado",
+      "120,0",
+      "120,0"
+     ]
+    ]
+   },
+   "ref": "Na reação forma-se gás. No frasco aberto o gás escapa e leva massa, por isso a balança marca menos. No fechado nada sai, e a massa total se conserva, como diz a lei de conservação das massas.",
+   "conceitos": [
+    "reação química",
+    "gás liberado",
+    "conservação da massa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Camila viu a água ferver e disse que ela virou outra substância porque o nível diminuiu. O pai colocou uma tampa fria sobre a panela, e gotas se formaram nela.",
+   "comando": "Justifique se Camila está certa, indicando o tipo de transformação.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da panela com tampa",
+    "etapas": [
+     "Água ferve na panela",
+     "Tampa fria colocada acima",
+     "Gotas se formam na tampa",
+     "Gotas pingam num copo"
+    ]
+   },
+   "ref": "Camila não está certa. A água passou ao estado de vapor, que ao tocar a tampa fria voltou a ser água. As partículas continuam sendo H2O, então é transformação física, mudança de estado.",
+   "conceitos": [
+    "mudança de estado",
+    "transformação física",
+    "mesma substância"
+   ]
+  }
+ ],
+ "9º ANO|3|Relacionar a gestão e reciclagem de resíduos sólidos às formas de destinação final e ao ciclo de vida dos materiais.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na auditoria do lixo da escola, a turma separou o que foi jogado fora em uma semana e pesou cada grupo.",
+   "comando": "Qual lista traz apenas materiais que podem ir para a coleta seletiva?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da auditoria do lixo",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Papel",
+      "valor": 4
+     },
+     {
+      "rotulo": "Plástico",
+      "valor": 6
+     },
+     {
+      "rotulo": "Metal",
+      "valor": 2
+     },
+     {
+      "rotulo": "Vidro",
+      "valor": 3
+     },
+     {
+      "rotulo": "Restos de comida",
+      "valor": 9
+     }
+    ]
+   },
+   "alts": [
+    "Garrafa PET lavada, lata de refrigerante e caixa de papelão limpa",
+    "Garrafa PET lavada, papel engordurado de pizza e pote de vidro",
+    "Lata de refrigerante, casca de banana e embalagem de papelão",
+    "Pote de vidro, guardanapo sujo e garrafa PET com restos de suco"
+   ],
+   "correta": 0,
+   "explicacao": "Materiais secos e limpos são recicláveis. Os distratores incluem itens sujos ou orgânicos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em duas cidades paulistas, o lixo coletado vai para locais diferentes. No local A, ele é despejado direto no solo, sem cobertura. No local B, há manta impermeável, drenos para coletar o chorume e cobertura diária do lixo.",
+   "comando": "Qual local é mais adequado como destinação final e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos locais de destinação",
+    "colunas": [
+     "Local",
+     "Características"
+    ],
+    "linhas": [
+     [
+      "A",
+      "solo sem manta, sem cobertura"
+     ],
+     [
+      "B",
+      "manta impermeável, drenos, cobertura diária"
+     ]
+    ]
+   },
+   "alts": [
+    "O local A, porque o lixo exposto ao ar se decompõe mais depressa e some",
+    "O local B, porque manta e drenos impedem que o chorume chegue ao solo e à água",
+    "O local A, porque o lixo em contato com o solo é absorvido sem deixar resíduos",
+    "O local B, porque a cobertura diária faz o lixo desaparecer e elimina o chorume"
+   ],
+   "correta": 1,
+   "explicacao": "O aterro sanitário controla chorume e gases; o lixão contamina solo e água."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma garrafa PET passa por etapas desde a extração do petróleo até o descarte. A escola quer saber em qual etapa a reciclagem reduz o uso de recursos naturais.",
+   "comando": "Em qual etapa do ciclo de vida a reciclagem reduz a extração de recursos e por quê?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do ciclo da garrafa PET",
+    "etapas": [
+     "Extração do petróleo",
+     "Fabricação da resina e da garrafa",
+     "Uso e consumo do refrigerante",
+     "Descarte pelo consumidor"
+    ]
+   },
+   "alts": [
+    "Na etapa de uso, porque a garrafa passa a ser maior e dura mais tempo",
+    "Na etapa de descarte, porque a reciclagem faz o plástico desaparecer do ambiente",
+    "Na etapa de extração, porque parte da matéria-prima vem do plástico reciclado",
+    "Na etapa de consumo, porque a reciclagem reduz a quantidade de refrigerante vendido"
+   ],
+   "correta": 2,
+   "explicacao": "Plástico reciclado volta à fabricação e substitui parte do petróleo extraído."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A cantina de uma escola usa 200 copos descartáveis por dia. A direção testou três medidas por uma semana.",
+   "comando": "Qual medida evita a produção de resíduo desde o início, segundo a ordem de prioridade dos 3Rs?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: copos descartados por dia",
+    "colunas": [
+     "Medida",
+     "Copos descartados"
+    ],
+    "linhas": [
+     [
+      "Separar copos para reciclagem",
+      "200"
+     ],
+     [
+      "Cada aluno traz uma caneca",
+      "20"
+     ],
+     [
+      "Trocar por copos biodegradáveis",
+      "200"
+     ]
+    ]
+   },
+   "alts": [
+    "Trazer caneca, pois reduz a geração de resíduo antes mesmo do descarte",
+    "Separar os copos, pois a reciclagem elimina o resíduo desde a origem",
+    "Trocar por biodegradáveis, pois se degradam e deixam de ser resíduo depois do uso",
+    "Separar os copos, pois a coleta seletiva impede que eles sejam produzidos"
+   ],
+   "correta": 0,
+   "explicacao": "Reduzir vem antes de reutilizar e reciclar. Reciclar e trocar o material não diminuem a quantidade de copos descartados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Moradores de um bairro notaram muito lixo no córrego que desemboca numa represa de abastecimento. Uma equipe contou os itens por trecho do córrego.",
+   "comando": "Considerando a bacia hidrográfica, qual iniciativa deve ter prioridade?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de itens de lixo por trecho",
+    "unidade": "itens por 100 m",
+    "itens": [
+     {
+      "rotulo": "Nascente",
+      "valor": 20
+     },
+     {
+      "rotulo": "Bairro sem coleta seletiva",
+      "valor": 180
+     },
+     {
+      "rotulo": "Centro",
+      "valor": 90
+     }
+    ]
+   },
+   "alts": [
+    "Instalar grades na foz para reter lixo e limpar o córrego uma vez por ano",
+    "Fazer campanhas de limpeza no centro, que é a área mais visível da cidade",
+    "Aumentar o tamanho das lixeiras na nascente, onde há menos itens de lixo",
+    "Ampliar a coleta seletiva e os pontos de entrega no bairro com mais lixo"
+   ],
+   "correta": 3,
+   "explicacao": "É preciso agir na origem, onde o resíduo é descartado e levado pela chuva, e não só no efeito."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na escola, a garrafa PET lavada vai para o saco do lixo seco e a casca de banana, para a composteira.",
+   "comando": "Explique por que cada resíduo tem um destino diferente e o que se ganha com isso.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da auditoria do lixo",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Plástico",
+      "valor": 6
+     },
+     {
+      "rotulo": "Restos de comida",
+      "valor": 9
+     }
+    ]
+   },
+   "ref": "O PET limpo é reciclável e volta à indústria como matéria-prima; a casca de banana é orgânica e pode virar adubo por compostagem. Separar corretamente reduz o que vai para o aterro e aproveita os recursos.",
+   "conceitos": [
+    "coleta seletiva",
+    "compostagem",
+    "redução de rejeitos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma fábrica produz mil garrafas PET e anota o que consome nesse processo.",
+   "comando": "Descreva as etapas do ciclo de vida de uma garrafa PET e aponte um impacto ambiental em uma delas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de 1.000 garrafas PET fabricadas",
+    "colunas": [
+     "Item",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Petróleo",
+      "110 kg"
+     ],
+     [
+      "Água",
+      "4.000 L"
+     ],
+     [
+      "Energia",
+      "120 kWh"
+     ]
+    ]
+   },
+   "ref": "O ciclo inclui extração da matéria-prima, fabricação, distribuição e uso, e descarte (aterro, reciclagem ou ambiente). Há impacto na extração (esgotamento do petróleo), na fabricação (energia e água) e no descarte (acúmulo de resíduos).",
+   "conceitos": [
+    "etapas do ciclo de vida",
+    "uso de recursos",
+    "descarte"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A horta da escola recebe adubo de uma composteira. Em uma semana, a cantina gerou restos de comida e a equipe anotou o destino deles.",
+   "comando": "Explique como a composteira funciona e dois benefícios para a escola e para o ambiente.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro semanal dos restos orgânicos",
+    "colunas": [
+     "Item",
+     "Quantidade (kg)"
+    ],
+    "linhas": [
+     [
+      "Gerado pela cantina",
+      "50"
+     ],
+     [
+      "Levado à composteira",
+      "40"
+     ],
+     [
+      "Enviado ao aterro",
+      "10"
+     ],
+     [
+      "Composto produzido em 60 dias",
+      "15"
+     ]
+    ]
+   },
+   "ref": "Microrganismos decompõem a matéria orgânica, transformando-a em composto rico em nutrientes. Isso diminui o lixo enviado ao aterro, reduz chorume e gases e fornece adubo para a horta, dispensando fertilizantes.",
+   "conceitos": [
+    "decomposição",
+    "adubo orgânico",
+    "redução do aterro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aterro sanitário fica a 2 km de um parque estadual (Unidade de Conservação) no mesmo córrego que abastece a cidade. Técnicos mediram a amônia, indicador de chorume, acima e abaixo do aterro.",
+   "comando": "Interprete os dados e proponha duas iniciativas para proteger o parque e a bacia.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de monitoramento do córrego",
+    "colunas": [
+     "Ponto",
+     "Amônia (mg/L)"
+    ],
+    "linhas": [
+     [
+      "Acima do aterro",
+      "0,2"
+     ],
+     [
+      "Abaixo do aterro",
+      "3,5"
+     ]
+    ]
+   },
+   "ref": "A amônia aumentou muito abaixo do aterro, indicando que o chorume chega ao córrego. Iniciativas: revisar a impermeabilização e a coleta de chorume, criar faixa de mata ao redor, ampliar coleta seletiva e compostagem para reduzir o volume aterrado.",
+   "conceitos": [
+    "contaminação por chorume",
+    "bacia hidrográfica",
+    "unidade de conservação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marcos disse: 'Se tudo pode ser reciclado, posso consumir à vontade'. A cooperativa do bairro anotou quanto de cada material realmente volta à indústria.",
+   "comando": "Justifique por que a afirmação de Marcos é problemática, usando os dados e o ciclo de vida dos materiais.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da cooperativa",
+    "colunas": [
+     "Material",
+     "Parte recuperada (%)"
+    ],
+    "linhas": [
+     [
+      "Alumínio",
+      "97"
+     ],
+     [
+      "Vidro",
+      "47"
+     ],
+     [
+      "PET",
+      "55"
+     ],
+     [
+      "Plástico filme",
+      "10"
+     ]
+    ]
+   },
+   "ref": "Nem todo material é recuperado, e a reciclagem também gasta energia e água. Por isso a prioridade é reduzir o consumo e reutilizar; reciclar vem depois. Consumo consciente diminui o impacto em todo o ciclo de vida.",
+   "conceitos": [
+    "limites da reciclagem",
+    "reduzir e reutilizar",
+    "consumo consciente"
+   ]
+  }
+ ],
+ "4B|6º ANO|7": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula com o simulador de visão de cores, Léo apontou uma lanterna de luz branca para uma tela e colocou na frente dela, um de cada vez, filtros transparentes de várias cores.",
+   "comando": "Por que a tela ficou vermelha quando o filtro era vermelho?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do simulador: lâmpada branca",
+    "colunas": [
+     "Filtro",
+     "Cor vista na tela"
+    ],
+    "linhas": [
+     [
+      "Vermelho",
+      "vermelha"
+     ],
+     [
+      "Verde",
+      "verde"
+     ],
+     [
+      "Azul",
+      "azul"
+     ]
+    ]
+   },
+   "alts": [
+    "O filtro vermelho deixa passar a luz vermelha e absorve as outras cores",
+    "O filtro vermelho pinta a luz branca e a transforma em luz vermelha ao atravessá-la",
+    "O filtro vermelho produz luz vermelha própria e a soma à luz branca da lanterna",
+    "O filtro vermelho reflete a luz vermelha para a tela e deixa passar as outras cores"
+   ],
+   "correta": 0,
+   "explicacao": "Um filtro transmite a cor que lhe corresponde e absorve as outras; ele não cria nem converte luz."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador, Sara ligou apenas as lâmpadas vermelha e verde, com mesma intensidade, e seu personagem relatou ver uma luz amarela.",
+   "comando": "Como o olho produz a percepção do amarelo nessa situação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do simulador RGB",
+    "colunas": [
+     "Lâmpadas ligadas",
+     "Cor percebida"
+    ],
+    "linhas": [
+     [
+      "Vermelha",
+      "vermelha"
+     ],
+     [
+      "Verde",
+      "verde"
+     ],
+     [
+      "Vermelha e verde",
+      "amarela"
+     ]
+    ]
+   },
+   "alts": [
+    "Existe na retina um cone sensível ao amarelo, que a luz das duas lâmpadas ativa",
+    "As luzes se misturam no ar e formam luz amarela antes mesmo de chegarem à retina",
+    "Os cones do vermelho e do verde são ativados juntos e o cérebro vê amarelo",
+    "A pupila filtra as luzes vermelha e verde e deixa passar a luz amarela até a retina"
+   ],
+   "correta": 2,
+   "explicacao": "A cor é construída pelo cérebro a partir da estimulação combinada dos cones da retina."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O grupo de Davi queria obter luz de cor ciano (azul-esverdeada) no simulador de lâmpadas RGB. Eles já tinham registrado algumas combinações.",
+   "comando": "Quais lâmpadas devem ser ligadas para ver ciano?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das combinações já testadas",
+    "colunas": [
+     "Lâmpadas ligadas",
+     "Cor percebida"
+    ],
+    "linhas": [
+     [
+      "Vermelha e verde",
+      "amarela"
+     ],
+     [
+      "Vermelha e azul",
+      "magenta"
+     ],
+     [
+      "Vermelha, verde e azul",
+      "branca"
+     ]
+    ]
+   },
+   "alts": [
+    "Vermelha e azul, mantendo a verde desligada",
+    "Vermelha e verde, mantendo a azul desligada",
+    "Vermelha, verde e azul, com a mesma intensidade",
+    "Verde e azul, mantendo a vermelha desligada"
+   ],
+   "correta": 3,
+   "explicacao": "Pela combinação aditiva, verde mais azul resulta em ciano."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em sala escura, Bia iluminou duas camisetas com luz vermelha monocromática. Sob luz branca, uma camiseta é vermelha e a outra é azul.",
+   "comando": "Por que a camiseta azul parece preta sob a luz vermelha?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do simulador: luz incidente",
+    "colunas": [
+     "Camiseta",
+     "Sob luz branca",
+     "Sob luz vermelha"
+    ],
+    "linhas": [
+     [
+      "1",
+      "vermelha",
+      "vermelha"
+     ],
+     [
+      "2",
+      "azul",
+      "preta"
+     ]
+    ]
+   },
+   "alts": [
+    "Ela reflete a luz vermelha e a transforma em preta ao atingir a retina",
+    "Ela absorve a luz vermelha e, sem luz azul na fonte, quase nada chega aos olhos",
+    "Ela absorve toda a luz azul e, por isso, deixa de refletir qualquer luz",
+    "Ela é azul quando a luz branca incide, pois a cor está na luz e não no tecido"
+   ],
+   "correta": 1,
+   "explicacao": "A cor vista depende da luz que incide e da luz que o objeto reflete."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um aluno quis saber a cor percebida de uma luz de 650 nm. O simulador mostrou a sensibilidade relativa de cada tipo de cone da retina para três comprimentos de onda.",
+   "comando": "Que cor deve ser percebida e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: sensibilidade dos cones",
+    "colunas": [
+     "Comprimento de onda",
+     "Cone S",
+     "Cone M",
+     "Cone L"
+    ],
+    "linhas": [
+     [
+      "450 nm",
+      "90",
+      "10",
+      "2"
+     ],
+     [
+      "550 nm",
+      "5",
+      "100",
+      "85"
+     ],
+     [
+      "650 nm",
+      "0",
+      "5",
+      "60"
+     ]
+    ]
+   },
+   "alts": [
+    "Verde, porque o cone M é o mais sensível a qualquer luz visível",
+    "Azul, porque o cone S responde mais a luzes de comprimento de onda maior",
+    "Amarela, porque os cones M e L respondem com intensidades iguais nessa luz",
+    "Vermelha, porque nessa luz o cone L é o mais ativado entre os três tipos"
+   ],
+   "correta": 3,
+   "explicacao": "Com 650 nm o cone L responde mais, e o cérebro interpreta o vermelho."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma aula, a professora pediu que os alunos explicassem como enxergamos uma maçã vermelha em uma sala iluminada.",
+   "comando": "Descreva o caminho da luz até a percepção da cor, citando a retina e o cérebro.",
+   "figura": null,
+   "ref": "A luz da lâmpada atinge a maçã, que reflete principalmente a luz vermelha. Essa luz entra pelo olho, atravessa a pupila e o cristalino e forma a imagem na retina, onde os cones são ativados. O nervo óptico leva os sinais ao cérebro, que interpreta a cor.",
+   "conceitos": [
+    "reflexão da luz",
+    "retina e cones",
+    "interpretação pelo cérebro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No simulador, Rafa colocou na frente da lanterna de luz branca um filtro vermelho e anotou o que chegava à parede.",
+   "comando": "Explique por que a parede ficou iluminada de vermelho.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do simulador",
+    "colunas": [
+     "Fonte",
+     "Filtro",
+     "Cor na parede"
+    ],
+    "linhas": [
+     [
+      "Luz branca",
+      "Vermelho",
+      "vermelha"
+     ]
+    ]
+   },
+   "ref": "A luz branca é policromática, formada por várias cores. O filtro vermelho deixa passar só a luz vermelha e absorve as outras, por isso a parede fica vermelha.",
+   "conceitos": [
+    "luz policromática",
+    "filtro de cor",
+    "absorção e transmissão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para um teatro da escola, os alunos têm três refletores: vermelho, verde e azul. Querem luz amarela para uma cena e luz branca para outra.",
+   "comando": "Indique quais refletores ligar em cada cena e explique o princípio usado.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos refletores",
+    "colunas": [
+     "Refletor",
+     "Cor da luz"
+    ],
+    "linhas": [
+     [
+      "1",
+      "vermelha"
+     ],
+     [
+      "2",
+      "verde"
+     ],
+     [
+      "3",
+      "azul"
+     ]
+    ]
+   },
+   "ref": "Para amarelo, ligar o vermelho e o verde; para branco, ligar os três ao mesmo tempo com intensidades parecidas. É a combinação aditiva de luzes: a soma de cores primárias de luz produz outras cores.",
+   "conceitos": [
+    "combinação aditiva",
+    "cores primárias de luz",
+    "RGB"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No simulador, Gui colocou em sequência um filtro vermelho e um filtro azul na frente da lâmpada branca. A tela ficou escura.",
+   "comando": "Explique por que quase nenhuma luz chegou à tela.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da montagem no simulador",
+    "etapas": [
+     "Lâmpada branca ligada",
+     "Filtro vermelho à frente",
+     "Segundo filtro azul em seguida",
+     "Tela observada ao final"
+    ]
+   },
+   "ref": "O filtro vermelho absorve as outras cores e deixa passar apenas a vermelha; o filtro azul só deixa passar a azul e absorve a vermelha. Como não sobra nenhuma cor, a tela fica escura.",
+   "conceitos": [
+    "absorção sucessiva",
+    "transmissão seletiva",
+    "filtros de cor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lia notou que, à noite, no quintal iluminado só pela luz da Lua, enxerga tudo em tons de cinza, e de dia vê as cores.",
+   "comando": "Justifique a diferença usando os dados e o que sabe sobre as células da retina.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de iluminação",
+    "unidade": "lux",
+    "itens": [
+     {
+      "rotulo": "Dia de sol",
+      "valor": 10000
+     },
+     {
+      "rotulo": "Sala iluminada",
+      "valor": 300
+     },
+     {
+      "rotulo": "Luar",
+      "valor": 0.1
+     }
+    ]
+   },
+   "ref": "Os cones, que percebem cores, precisam de muita luz; com pouca luz atuam os bastonetes, mais sensíveis, mas que não distinguem cores. À noite, com iluminação fraca, enxergamos em tons de cinza.",
+   "conceitos": [
+    "cones e bastonetes",
+    "intensidade da luz",
+    "percepção de cores"
+   ]
+  }
+ ],
+ "4B|7º ANO|4": [
+  {
+   "tipo": "obj",
+   "enunciado": "Ao observar uma gota de iogurte ao microscópio, Cris viu pequenas células alongadas, sem núcleo delimitado, mas com parede celular.",
+   "comando": "Como esses seres devem ser classificados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação do iogurte",
+    "colunas": [
+     "Característica",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Forma",
+      "alongada, em bastão"
+     ],
+     [
+      "Núcleo",
+      "não visível"
+     ],
+     [
+      "Tamanho",
+      "cerca de 2 µm"
+     ],
+     [
+      "Parede celular",
+      "presente"
+     ]
+    ]
+   },
+   "alts": [
+    "Fungos unicelulares, por terem parede celular e viverem no iogurte",
+    "Bactérias do tipo bacilo, que são unicelulares e procariontes",
+    "Protozoários, que são unicelulares e têm núcleo bem definido",
+    "Vírus, que são formas de vida acelulares e muito pequenas"
+   ],
+   "correta": 1,
+   "explicacao": "Células sem núcleo e em forma de bastão são bacilos, procariontes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Três amostras foram observadas ao microscópio em uma aula de microbiologia. O professor pediu que os alunos associassem cada amostra ao formato das bactérias.",
+   "comando": "Qual alternativa associa corretamente as amostras A, B e C aos formatos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das amostras",
+    "colunas": [
+     "Amostra",
+     "Formato observado"
+    ],
+    "linhas": [
+     [
+      "A",
+      "esferas em cadeia"
+     ],
+     [
+      "B",
+      "bastões isolados"
+     ],
+     [
+      "C",
+      "filamento em espiral"
+     ]
+    ]
+   },
+   "alts": [
+    "A é bacilo, B é espirilo e C é coco",
+    "A é espirilo, B é coco e C é bacilo",
+    "A é coco, B é bacilo e C é espirilo",
+    "A é coco, B é espirilo e C é bacilo"
+   ],
+   "correta": 2,
+   "explicacao": "Cocos são esféricos, bacilos têm forma de bastão e espirilos são espiralados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma bactéria foi colocada em caldo nutritivo a 37 °C e se dividiu a cada 20 minutos. O grupo contou as células nos primeiros 40 minutos.",
+   "comando": "Mantendo o ritmo, quantas bactérias existirão aos 100 minutos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da cultura",
+    "colunas": [
+     "Tempo (min)",
+     "Bactérias"
+    ],
+    "linhas": [
+     [
+      "0",
+      "1"
+     ],
+     [
+      "20",
+      "2"
+     ],
+     [
+      "40",
+      "4"
+     ]
+    ]
+   },
+   "alts": [
+    "32, pois cada célula se divide em duas a cada 20 minutos",
+    "10, pois surgem duas bactérias novas a cada 20 minutos",
+    "16, pois a cultura para de dobrar depois dos primeiros 80 minutos",
+    "50, pois a quantidade aumenta em 10 a cada 20 minutos"
+   ],
+   "correta": 0,
+   "explicacao": "A fissão binária faz a quantidade dobrar: 1, 2, 4, 8, 16, 32 em cinco divisões."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na horta da escola, o canteiro A tinha feijão com nódulos nas raízes e o canteiro B tinha feijão sem nódulos. O solo era o mesmo e não recebeu adubo.",
+   "comando": "Que papel das bactérias explica a diferença de crescimento?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de altura das plantas",
+    "unidade": "cm",
+    "itens": [
+     {
+      "rotulo": "Canteiro A",
+      "valor": 40
+     },
+     {
+      "rotulo": "Canteiro B",
+      "valor": 22
+     }
+    ]
+   },
+   "alts": [
+    "Bactérias dos nódulos produzem calor e aceleram o crescimento do feijão",
+    "Bactérias dos nódulos fazem fotossíntese e fornecem açúcar para o feijão",
+    "Bactérias dos nódulos matam os fungos do solo e protegem a raiz do feijão",
+    "Bactérias dos nódulos convertem nitrogênio do ar em formas que a planta absorve"
+   ],
+   "correta": 3,
+   "explicacao": "Bactérias fixadoras de nitrogênio fornecem nutrientes que a planta não obtém sozinha."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois frascos com o mesmo leite ficaram 24 horas, um na geladeira e outro na bancada da cozinha. O da bancada azedou.",
+   "comando": "Por que o leite na geladeira conserva por mais tempo?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: bactérias após 24 horas",
+    "unidade": "mil/mL",
+    "itens": [
+     {
+      "rotulo": "Geladeira (5 °C)",
+      "valor": 1.2
+     },
+     {
+      "rotulo": "Bancada (25 °C)",
+      "valor": 8000
+     }
+    ]
+   },
+   "alts": [
+    "O frio mata as bactérias do leite e, por isso, elas não se multiplicam",
+    "O frio retarda o metabolismo e a divisão das bactérias, que continuam vivas",
+    "O leite gelado perde nutrientes e as bactérias não conseguem se alimentar",
+    "A geladeira retira o oxigênio do leite e as bactérias deixam de respirar"
+   ],
+   "correta": 1,
+   "explicacao": "Baixa temperatura desacelera a multiplicação, mas não elimina as bactérias."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula, o professor mostrou ao microscópio uma célula de cebola e uma bactéria do iogurte, e os alunos anotaram o que viam.",
+   "comando": "Explique por que a bactéria é considerada procarionte e unicelular, comparando com a célula da cebola.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de microscopia",
+    "colunas": [
+     "Célula",
+     "Núcleo delimitado",
+     "Tamanho"
+    ],
+    "linhas": [
+     [
+      "Cebola",
+      "sim",
+      "200 µm"
+     ],
+     [
+      "Bactéria",
+      "não",
+      "2 µm"
+     ]
+    ]
+   },
+   "ref": "A bactéria é formada por uma única célula e seu material genético fica solto no citoplasma, sem núcleo delimitado por membrana, por isso é procarionte. A célula da cebola é eucarionte, com núcleo.",
+   "conceitos": [
+    "unicelular",
+    "procarionte",
+    "ausência de núcleo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Beatriz tomou antibiótico por dez dias e teve diarreia no período. O médico explicou que o remédio afetou a microbiota intestinal.",
+   "comando": "Explique o que é a microbiota e por que o antibiótico causou o problema.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de bactérias úteis nas fezes",
+    "colunas": [
+     "Dia",
+     "Milhões por grama"
+    ],
+    "linhas": [
+     [
+      "1",
+      "100"
+     ],
+     [
+      "5",
+      "10"
+     ],
+     [
+      "15",
+      "80"
+     ]
+    ]
+   },
+   "ref": "A microbiota é o conjunto de microrganismos que vive no intestino e ajuda na digestão e na proteção. O antibiótico mata também bactérias úteis, e o desequilíbrio provoca diarreia, que se normaliza quando elas se recuperam.",
+   "conceitos": [
+    "microbiota intestinal",
+    "bactérias benéficas",
+    "efeito do antibiótico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Mariana fez iogurte em casa misturando leite morno a 40 °C com uma colher de iogurte natural e deixando a mistura por 8 horas.",
+   "comando": "Explique o papel das bactérias na transformação do leite em iogurte.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do preparo",
+    "etapas": [
+     "Aquecer o leite a 40 °C",
+     "Misturar uma colher de iogurte natural",
+     "Cobrir e deixar 8 horas",
+     "Guardar na geladeira"
+    ]
+   },
+   "ref": "As bactérias do iogurte natural se multiplicam no leite morno e fermentam a lactose, produzindo ácido lático, que coagula as proteínas e dá o sabor ácido e a textura.",
+   "conceitos": [
+    "fermentação",
+    "multiplicação das bactérias",
+    "ácido lático"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma composteira, os restos de alimentos diminuíram de volume e a temperatura interna subiu. Depois de um mês, restou uma terra escura.",
+   "comando": "Explique por que a temperatura aumentou e qual é o papel das bactérias no ciclo dos nutrientes.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da composteira",
+    "colunas": [
+     "Dia",
+     "Temperatura (°C)"
+    ],
+    "linhas": [
+     [
+      "1",
+      "25"
+     ],
+     [
+      "7",
+      "55"
+     ],
+     [
+      "14",
+      "60"
+     ],
+     [
+      "30",
+      "35"
+     ]
+    ]
+   },
+   "ref": "Bactérias decompositoras se multiplicam e liberam calor ao degradar a matéria orgânica. Elas devolvem ao solo nutrientes, como o nitrogênio, que as plantas reutilizam, fechando o ciclo. Com menos alimento, a atividade cai e a temperatura abaixa.",
+   "conceitos": [
+    "decomposição",
+    "liberação de calor",
+    "ciclo do nitrogênio"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro disse que deveríamos eliminar todas as bactérias com álcool em gel, pois todas causam doenças.",
+   "comando": "Justifique se Pedro está certo, usando exemplos dos dados.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de bactérias encontradas",
+    "colunas": [
+     "Local",
+     "Situação observada"
+    ],
+    "linhas": [
+     [
+      "Iogurte",
+      "sabor ácido"
+     ],
+     [
+      "Raízes do feijão",
+      "nódulos"
+     ],
+     [
+      "Intestino",
+      "digestão saudável"
+     ],
+     [
+      "Ferida infectada",
+      "presença de pus"
+     ]
+    ]
+   },
+   "ref": "Pedro está equivocado. Muitas bactérias são benéficas: fermentam o leite, fixam nitrogênio para as plantas e vivem no intestino ajudando a digestão. Só algumas causam doenças, como em uma ferida infectada.",
+   "conceitos": [
+    "bactérias benéficas",
+    "bactérias patogênicas",
+    "usos e papéis ecológicos"
+   ]
+  }
+ ],
+ "4B|8º ANO|1": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na cozinha de Carla, o liquidificador foi ligado na tomada. As lâminas giraram, o motor esquentou um pouco e o aparelho fez barulho.",
+   "comando": "Quais formas de energia aparecem na saída do liquidificador, a partir da energia elétrica?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações do liquidificador",
+    "colunas": [
+     "Observação",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Lâminas",
+      "giram rapidamente"
+     ],
+     [
+      "Motor",
+      "esquenta"
+     ],
+     [
+      "Aparelho",
+      "faz barulho"
+     ]
+    ]
+   },
+   "alts": [
+    "Cinética, sonora e térmica",
+    "Química, nuclear e luminosa",
+    "Potencial, térmica e luminosa",
+    "Elétrica, química e sonora"
+   ],
+   "correta": 0,
+   "explicacao": "A energia elétrica é convertida em movimento das lâminas, som e calor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro levantou o mesmo tijolo para três posições diferentes numa obra: no chão, em um caixote e no alto de um muro. Em seguida o soltou, medindo a altura de cada posição.",
+   "comando": "Em qual posição o tijolo tem maior energia potencial gravitacional e por quê?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de altura do tijolo",
+    "unidade": "m",
+    "itens": [
+     {
+      "rotulo": "Chão",
+      "valor": 0
+     },
+     {
+      "rotulo": "Caixote",
+      "valor": 0.5
+     },
+     {
+      "rotulo": "Alto do muro",
+      "valor": 2
+     }
+    ]
+   },
+   "alts": [
+    "No chão, porque está em contato com a Terra e sofre a maior força de atração",
+    "No caixote, porque tem altura intermediária e energia média entre as posições",
+    "No alto do muro, porque a energia cresce com a altura e vira movimento",
+    "Nas três posições, porque a massa é a mesma e a energia independe da posição"
+   ],
+   "correta": 2,
+   "explicacao": "A energia potencial gravitacional aumenta com a altura; ao cair, converte-se em energia cinética."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um carrinho de montanha-russa de um parque em São Paulo foi medido em três pontos do trajeto.",
+   "comando": "Que transformação principal ocorre entre o topo e a base?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do carrinho",
+    "colunas": [
+     "Ponto",
+     "Altura (m)",
+     "Velocidade (m/s)"
+    ],
+    "linhas": [
+     [
+      "Topo",
+      "30",
+      "2"
+     ],
+     [
+      "Meio da descida",
+      "15",
+      "18"
+     ],
+     [
+      "Base",
+      "0",
+      "24"
+     ]
+    ]
+   },
+   "alts": [
+    "Energia cinética em potencial, com parte do calor do atrito",
+    "Energia térmica em cinética, pelo aquecimento do trilho",
+    "Energia elétrica em potencial, pelo motor que sobe o carrinho",
+    "Energia potencial em cinética, com parte dissipada em calor e som"
+   ],
+   "correta": 3,
+   "explicacao": "Ao descer, a energia potencial gravitacional diminui e a cinética aumenta; parte é dissipada."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Antes do jogo, Lia comeu uma banana e um pão. Durante a partida, correu, suou e ficou com o corpo quente.",
+   "comando": "Qual transformação de energia ocorre no corpo de Lia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do jogo de Lia",
+    "colunas": [
+     "Momento",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Antes",
+      "come banana e pão"
+     ],
+     [
+      "Durante",
+      "corre e sua"
+     ],
+     [
+      "Depois",
+      "corpo quente"
+     ]
+    ]
+   },
+   "alts": [
+    "A energia térmica do ambiente se transforma em energia química nos músculos",
+    "A energia química dos alimentos se transforma em energia cinética e térmica",
+    "A energia elétrica do corpo se transforma em energia luminosa e cinética",
+    "A energia cinética dos alimentos se transforma em energia potencial nos ossos"
+   ],
+   "correta": 1,
+   "explicacao": "Os alimentos armazenam energia química, usada no movimento e liberada como calor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma visita à usina hidrelétrica de Ilha Solteira, os alunos acompanharam o caminho da água e da eletricidade até as casas.",
+   "comando": "Qual sequência indica as formas de energia em ordem?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da visita à usina",
+    "colunas": [
+     "Etapa",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Represa",
+      "água acumulada em altura"
+     ],
+     [
+      "Queda d'água",
+      "água em movimento"
+     ],
+     [
+      "Gerador",
+      "eixo girando"
+     ],
+     [
+      "Chuveiro",
+      "água aquece"
+     ]
+    ]
+   },
+   "alts": [
+    "Potencial gravitacional, cinética, elétrica e térmica",
+    "Cinética, potencial gravitacional, térmica e elétrica",
+    "Elétrica, cinética, potencial gravitacional e térmica",
+    "Térmica, potencial gravitacional, cinética e elétrica"
+   ],
+   "correta": 0,
+   "explicacao": "A água represada tem energia potencial; a queda a converte em cinética, depois em elétrica e, no chuveiro, em térmica."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na festa junina da escola havia fogueira, caixa de som tocando, balões de gás e crianças correndo.",
+   "comando": "Cite três formas de energia presentes na festa e explique onde aparecem.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da festa junina",
+    "colunas": [
+     "Elemento",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Fogueira",
+      "queima lenha"
+     ],
+     [
+      "Caixa de som",
+      "toca música"
+     ],
+     [
+      "Crianças",
+      "correm"
+     ]
+    ]
+   },
+   "ref": "Energia térmica e luminosa na fogueira, vinda da energia química da lenha; energia sonora na caixa de som; energia cinética nas crianças correndo.",
+   "conceitos": [
+    "energia térmica",
+    "energia sonora",
+    "energia cinética"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um cata-vento no quintal de Rui só gira quando o vento sopra. Ele mediu as voltas por minuto em três velocidades do vento.",
+   "comando": "Explique, com base nos dados, o que significa dizer que energia é capacidade de realizar trabalho.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do cata-vento",
+    "unidade": "voltas por minuto",
+    "itens": [
+     {
+      "rotulo": "Vento a 0 km/h",
+      "valor": 0
+     },
+     {
+      "rotulo": "Vento a 10 km/h",
+      "valor": 20
+     },
+     {
+      "rotulo": "Vento a 20 km/h",
+      "valor": 55
+     }
+    ]
+   },
+   "ref": "O vento em movimento tem energia cinética que é transferida às pás, realizando trabalho (girar). Quanto maior a velocidade do vento, mais energia disponível e mais voltas; sem vento, nenhuma energia é transferida.",
+   "conceitos": [
+    "energia cinética",
+    "trabalho",
+    "transferência de energia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ju desceu uma ladeira de bicicleta, sem pedalar, saindo de 10 m de altura. Na subida seguinte ela só chegou a 8 m de altura.",
+   "comando": "Explique por que ela não alcançou a altura inicial, usando a ideia de conservação da energia.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do percurso de bicicleta",
+    "colunas": [
+     "Ponto",
+     "Altura (m)"
+    ],
+    "linhas": [
+     [
+      "Saída",
+      "10"
+     ],
+     [
+      "Base",
+      "0"
+     ],
+     [
+      "Ponto mais alto da subida",
+      "8"
+     ]
+    ]
+   },
+   "ref": "A energia não desaparece, mas se transforma: parte da energia inicial virou calor e som por causa do atrito com o ar, o solo e a corrente. Menos energia ficou disponível para subir, então a altura final é menor.",
+   "conceitos": [
+    "conservação da energia",
+    "dissipação por atrito",
+    "calor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A família de Davi discute como aquecer a água do chuveiro: carvão, gás ou energia solar.",
+   "comando": "Compare as opções quanto às emissões e justifique qual é mais sustentável.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de emissão de CO2 por kWh",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Carvão",
+      "valor": 0.9
+     },
+     {
+      "rotulo": "Gás",
+      "valor": 0.5
+     },
+     {
+      "rotulo": "Solar",
+      "valor": 0.05
+     }
+    ]
+   },
+   "ref": "A energia solar emite muito menos CO2 que gás e carvão e vem de fonte renovável, então é a mais sustentável. Carvão e gás são combustíveis fósseis, esgotáveis, que aumentam o efeito estufa.",
+   "conceitos": [
+    "fontes renováveis",
+    "emissões de CO2",
+    "combustíveis fósseis"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao carregar o celular, Ana percebeu que o aparelho e o carregador esquentam. O carregador fornece 10 Wh e a bateria armazena 8,5 Wh.",
+   "comando": "Explique o que ocorre com a diferença de energia.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de carregamento do celular",
+    "colunas": [
+     "Etapa",
+     "Energia (Wh)"
+    ],
+    "linhas": [
+     [
+      "Fornecida pelo carregador",
+      "10"
+     ],
+     [
+      "Armazenada na bateria",
+      "8,5"
+     ]
+    ]
+   },
+   "ref": "A energia elétrica fornecida é em parte armazenada como energia química na bateria; a parte restante (1,5 Wh) é dissipada como calor. A energia total se conserva, mas nem toda é aproveitada.",
+   "conceitos": [
+    "energia química",
+    "dissipação térmica",
+    "conservação"
+   ]
+  }
+ ],
+ "4B|8º ANO|17": [
+  {
+   "tipo": "obj",
+   "enunciado": "O rótulo do chuveiro elétrico da casa de Bia indica 4.400 W e 220 V.",
+   "comando": "Qual é a corrente elétrica, pela relação P = U × I?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do rótulo do chuveiro",
+    "colunas": [
+     "Informação",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Potência",
+      "4.400 W"
+     ],
+     [
+      "Tensão",
+      "220 V"
+     ],
+     [
+      "Uso diário",
+      "30 min"
+     ]
+    ]
+   },
+   "alts": [
+    "20 A, pois a potência dividida pela tensão resulta na corrente",
+    "200 A, pois a potência dividida por dez resulta na corrente",
+    "4.620 A, pois a tensão somada à potência resulta na corrente",
+    "0,05 A, pois a tensão dividida pela potência resulta na corrente"
+   ],
+   "correta": 0,
+   "explicacao": "Corrente = potência ÷ tensão = 4.400 ÷ 220 = 20 A."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A TV da sala de Léo traz no rótulo 110 W e 220 V.",
+   "comando": "O que a potência de 110 W indica?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do rótulo da TV",
+    "colunas": [
+     "Informação",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tensão",
+      "220 V"
+     ],
+     [
+      "Potência",
+      "110 W"
+     ],
+     [
+      "Frequência",
+      "60 Hz"
+     ]
+    ]
+   },
+   "alts": [
+    "A energia total que a TV consome em um mês de uso",
+    "A intensidade da corrente que passa pelos fios da TV",
+    "A energia elétrica que a TV transforma a cada segundo",
+    "A força que empurra os elétrons pelo circuito da TV"
+   ],
+   "correta": 2,
+   "explicacao": "Potência é energia transformada por unidade de tempo: 110 W equivale a 110 joules por segundo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A família de Rui anotou a potência e o tempo de uso diário de quatro aparelhos para descobrir qual consome mais energia por dia.",
+   "comando": "Qual aparelho consome mais energia por dia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de uso dos aparelhos",
+    "colunas": [
+     "Aparelho",
+     "Potência (W)",
+     "Horas por dia"
+    ],
+    "linhas": [
+     [
+      "Chuveiro",
+      "4400",
+      "0,5"
+     ],
+     [
+      "Ferro",
+      "1000",
+      "1"
+     ],
+     [
+      "TV",
+      "110",
+      "5"
+     ],
+     [
+      "Geladeira",
+      "150",
+      "24"
+     ]
+    ]
+   },
+   "alts": [
+    "O chuveiro, porque é o aparelho de maior potência da casa",
+    "A geladeira, pois 150 W por 24 horas somam mais energia que os demais",
+    "O ferro, porque 1.000 W por uma hora consome mais que os outros",
+    "A TV, porque é usada por mais horas seguidas que o ferro e o chuveiro"
+   ],
+   "correta": 1,
+   "explicacao": "Energia = potência × tempo: geladeira 3.600 Wh, chuveiro 2.200 Wh, ferro 1.000 Wh e TV 550 Wh."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A instalação da casa de Ana suporta 5.000 W simultâneos sem desarmar o disjuntor. Ela quer saber quais aparelhos podem ficar ligados ao mesmo tempo.",
+   "comando": "Qual combinação respeita o limite de 5.000 W?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de potências",
+    "colunas": [
+     "Aparelho",
+     "Potência (W)"
+    ],
+    "linhas": [
+     [
+      "Chuveiro",
+      "4400"
+     ],
+     [
+      "Ferro",
+      "1000"
+     ],
+     [
+      "Geladeira",
+      "150"
+     ],
+     [
+      "TV",
+      "110"
+     ]
+    ]
+   },
+   "alts": [
+    "Chuveiro, ferro e TV ligados, que somam 5.510 W",
+    "Chuveiro, ferro e geladeira, que somam 5.550 W",
+    "Chuveiro e ferro ligados juntos, que somam 5.400 W",
+    "Chuveiro, geladeira e TV, que somam 4.660 W"
+   ],
+   "correta": 3,
+   "explicacao": "Só a soma de 4.660 W fica abaixo de 5.000 W."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um morador mudou de uma cidade com rede de 127 V para outra com rede de 220 V e levou seu chuveiro de 4.400 W. O eletricista explicou que, em 127 V, o fio da instalação precisa ser mais grosso.",
+   "comando": "Qual explicação é correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da instalação do chuveiro",
+    "colunas": [
+     "Tensão (V)",
+     "Potência (W)",
+     "Corrente (A)"
+    ],
+    "linhas": [
+     [
+      "127",
+      "4.400",
+      "34,6"
+     ],
+     [
+      "220",
+      "4.400",
+      "20"
+     ]
+    ]
+   },
+   "alts": [
+    "Com tensão menor a corrente é maior, e fio fino aquece e pode causar incêndio",
+    "Com tensão menor a potência é maior, e fio fino não conduz energia suficiente",
+    "Com tensão menor a corrente é menor, e o fio grosso economiza energia elétrica",
+    "Com tensão menor a resistência do fio diminui, e o fio grosso é desnecessário"
+   ],
+   "correta": 0,
+   "explicacao": "Para mesma potência, menor tensão exige maior corrente, e o fio fino se aquece."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ana leu no ferro de passar a inscrição '127 V – 1000 W'.",
+   "comando": "Explique o que cada informação significa e como calcular a corrente.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do rótulo do ferro",
+    "colunas": [
+     "Informação",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tensão",
+      "127 V"
+     ],
+     [
+      "Potência",
+      "1000 W"
+     ]
+    ]
+   },
+   "ref": "A tensão de 127 V é a diferença de potencial da rede para a qual o ferro foi feito; a potência de 1000 W é a energia que ele transforma em calor a cada segundo. A corrente é I = P ÷ U = 1000 ÷ 127, cerca de 7,9 A.",
+   "conceitos": [
+    "tensão",
+    "potência",
+    "corrente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A TV da sala de Léo tem 110 W e é ligada em uma tomada de 220 V.",
+   "comando": "Calcule a corrente que passa pela TV e explique o cálculo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do rótulo da TV",
+    "colunas": [
+     "Informação",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tensão",
+      "220 V"
+     ],
+     [
+      "Potência",
+      "110 W"
+     ]
+    ]
+   },
+   "ref": "Usando P = U × I, a corrente é I = P ÷ U = 110 ÷ 220 = 0,5 A.",
+   "conceitos": [
+    "P = U × I",
+    "corrente elétrica",
+    "unidades"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma casa com instalação para 5.000 W, estão ligados ao mesmo tempo o chuveiro (4.400 W), o ferro (1.000 W), a geladeira (150 W) e a TV (110 W). A rede é de 220 V.",
+   "comando": "Verifique se o sistema suporta o uso simultâneo e proponha uma solução.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de potências",
+    "colunas": [
+     "Aparelho",
+     "Potência (W)"
+    ],
+    "linhas": [
+     [
+      "Chuveiro",
+      "4400"
+     ],
+     [
+      "Ferro",
+      "1000"
+     ],
+     [
+      "Geladeira",
+      "150"
+     ],
+     [
+      "TV",
+      "110"
+     ]
+    ]
+   },
+   "ref": "A soma é 5.660 W, maior que 5.000 W; a corrente total é cerca de 25,7 A, acima dos 22,7 A que a instalação suporta, e o disjuntor desarma. Solução: não usar o ferro junto com o chuveiro ou ampliar a instalação.",
+   "conceitos": [
+    "soma das potências",
+    "limite do disjuntor",
+    "uso simultâneo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma família trocou 5 lâmpadas incandescentes de 60 W por 5 lâmpadas LED de 9 W. Cada lâmpada fica acesa 5 horas por dia, e o kWh custa R$ 0,90.",
+   "comando": "Calcule a economia mensal (30 dias) e explique o cálculo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das lâmpadas",
+    "colunas": [
+     "Tipo",
+     "Potência (W)",
+     "Horas por dia"
+    ],
+    "linhas": [
+     [
+      "Incandescente",
+      "60",
+      "5"
+     ],
+     [
+      "LED",
+      "9",
+      "5"
+     ]
+    ]
+   },
+   "ref": "Energia = potência × tempo. Incandescentes: 5 × 60 W × 5 h × 30 = 45 kWh; LED: 5 × 9 × 5 × 30 = 6,75 kWh. Economia de 38,25 kWh, cerca de R$ 34,40 por mês.",
+   "conceitos": [
+    "energia = potência × tempo",
+    "kWh",
+    "economia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um quarto, Gil ligou numa mesma extensão um aquecedor de 1.500 W, um micro-ondas de 1.200 W e um ventilador de 100 W em 127 V. A extensão suporta no máximo 10 A.",
+   "comando": "Justifique por que essa ligação é perigosa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da extensão",
+    "colunas": [
+     "Aparelho",
+     "Potência (W)"
+    ],
+    "linhas": [
+     [
+      "Aquecedor",
+      "1500"
+     ],
+     [
+      "Micro-ondas",
+      "1200"
+     ],
+     [
+      "Ventilador",
+      "100"
+     ]
+    ]
+   },
+   "ref": "A potência total é 2.800 W, o que dá corrente I = 2.800 ÷ 127, cerca de 22 A, mais que o dobro do limite de 10 A. A corrente excessiva aquece os fios (efeito Joule) e pode causar incêndio.",
+   "conceitos": [
+    "soma das correntes",
+    "limite da extensão",
+    "efeito Joule"
+   ]
+  }
+ ],
+ "4B|9º ANO|20": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de história da ciência, os alunos receberam uma tabela de marcos da exploração espacial para ordenar os fatos.",
+   "comando": "Qual afirmação sobre a corrida espacial é correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de marcos da exploração espacial",
+    "colunas": [
+     "Marco",
+     "Ano"
+    ],
+    "linhas": [
+     [
+      "Sputnik 1",
+      "1957"
+     ],
+     [
+      "Gagarin em órbita",
+      "1961"
+     ],
+     [
+      "Apollo 11 na Lua",
+      "1969"
+     ]
+    ]
+   },
+   "alts": [
+    "Gagarin orbitou a Terra antes da chegada do ser humano à Lua com a Apollo 11",
+    "A Apollo 11 levou o ser humano à Lua antes de o Sputnik 1 ser lançado",
+    "O Sputnik 1 foi lançado depois da viagem de Gagarin e abriu a corrida",
+    "Gagarin orbitou a Terra depois da chegada do ser humano à Lua"
+   ],
+   "correta": 0,
+   "explicacao": "Sputnik 1 (1957), Gagarin (1961) e Apollo 11 (1969) estão em ordem cronológica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma escola rural de Mato Grosso não há internet por cabo. A prefeitura soube que um satélite brasileiro pode levar conexão a regiões isoladas.",
+   "comando": "Qual satélite é adequado para levar internet à escola e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de satélites brasileiros",
+    "colunas": [
+     "Satélite",
+     "Equipamento"
+    ],
+    "linhas": [
+     [
+      "SGDC",
+      "antenas de comunicação"
+     ],
+     [
+      "CBERS-4",
+      "câmeras multiespectrais"
+     ],
+     [
+      "Amazônia-1",
+      "câmera óptica"
+     ]
+    ]
+   },
+   "alts": [
+    "CBERS-4, pois fotografa a superfície e envia sinal de internet pela imagem",
+    "Amazônia-1, pois monitora o desmatamento e mantém a conexão entre cidades",
+    "Amazônia-1, pois acompanha as nuvens e envia a conexão às regiões isoladas",
+    "SGDC, pois retransmite sinais de comunicação e internet para regiões distantes"
+   ],
+   "correta": 3,
+   "explicacao": "O SGDC é um satélite de comunicações; CBERS-4 e Amazônia-1 são de observação da Terra."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Seu João instalou painéis solares no telhado da casa em Campinas. O instalador explicou que a tecnologia teve grande impulso da exploração espacial.",
+   "comando": "Qual é a ligação entre os painéis solares e a exploração espacial?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de tecnologias no dia a dia",
+    "colunas": [
+     "Tecnologia",
+     "Uso"
+    ],
+    "linhas": [
+     [
+      "Painel solar",
+      "energia da casa"
+     ],
+     [
+      "GPS",
+      "aplicativo de mapas"
+     ],
+     [
+      "Filtro UV",
+      "óculos de sol"
+     ]
+    ]
+   },
+   "alts": [
+    "Foram criados para aquecer astronautas e depois se tornaram painéis domésticos",
+    "Foram usados para alimentar satélites e naves e depois chegaram às residências",
+    "Foram desenvolvidos para queimar lixo espacial e viraram fonte de energia",
+    "Foram criados para ligar a Terra à Lua e passaram a abastecer cidades inteiras"
+   ],
+   "correta": 1,
+   "explicacao": "Células solares alimentaram satélites e espaçonaves, e a tecnologia foi aperfeiçoada para uso doméstico."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Astronautas na Estação Espacial Internacional fazem cerca de duas horas diárias de exercício. Um colega disse que isso ocorre porque 'lá não há gravidade, pois estão longe da Terra'.",
+   "comando": "Por que os exercícios são necessários?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de astronautas em missão",
+    "colunas": [
+     "Situação",
+     "Perda óssea mensal (%)"
+    ],
+    "linhas": [
+     [
+      "Sem exercício",
+      "1,5"
+     ],
+     [
+      "Com exercício",
+      "0,5"
+     ]
+    ]
+   },
+   "alts": [
+    "A gravidade é nula a 400 km de altura, e sem peso os músculos se fortalecem demais",
+    "A radiação do espaço enfraquece os ossos, e o exercício produz proteção contra ela",
+    "A queda livre em órbita reduz o esforço sobre ossos e músculos, que se enfraquecem",
+    "O ar da estação tem pouco oxigênio, e o exercício ajuda os astronautas a respirar"
+   ],
+   "correta": 2,
+   "explicacao": "Em órbita há queda livre contínua (microgravidade), e a falta de esforço provoca perda óssea e muscular."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma equipe planeja enviar um rover a Marte e discute como controlá-lo da Terra. Os engenheiros receberam dados de distância e de tempo de sinal.",
+   "comando": "Que consequência esses dados têm para a operação do rover?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da distância Terra-Marte",
+    "colunas": [
+     "Situação",
+     "Distância (milhões de km)",
+     "Atraso do sinal (min)"
+    ],
+    "linhas": [
+     [
+      "Mais próximos",
+      "55",
+      "3"
+     ],
+     [
+      "Mais distantes",
+      "400",
+      "22"
+     ]
+    ]
+   },
+   "alts": [
+    "O rover precisa de autonomia, pois o comando em tempo real é inviável",
+    "O rover precisa ser desligado, pois o sinal não chega a Marte quando distante",
+    "O rover pode ser dirigido por joystick, pois o sinal viaja mais rápido que a luz",
+    "O rover precisa de mais combustível, pois o atraso depende da energia consumida"
+   ],
+   "correta": 0,
+   "explicacao": "O atraso de minutos impede o controle em tempo real; o rover precisa tomar decisões sozinho."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Márcia afirmou: 'O Sputnik 1, em 1957, levou o primeiro ser humano ao espaço, e Valentina Tereshkova foi a primeira pessoa a pisar na Lua'.",
+   "comando": "Corrija as duas afirmações, explicando o que cada marco representa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de marcos",
+    "colunas": [
+     "Marco",
+     "Ano"
+    ],
+    "linhas": [
+     [
+      "Sputnik 1",
+      "1957"
+     ],
+     [
+      "Gagarin em órbita",
+      "1961"
+     ],
+     [
+      "Tereshkova no espaço",
+      "1963"
+     ],
+     [
+      "Apollo 11 na Lua",
+      "1969"
+     ]
+    ]
+   },
+   "ref": "O Sputnik 1 foi o primeiro satélite artificial, sem tripulação; o primeiro ser humano no espaço foi Yuri Gagarin, em 1961. Valentina Tereshkova foi a primeira mulher no espaço, em 1963; os primeiros a pisar na Lua foram os astronautas da Apollo 11, em 1969.",
+   "conceitos": [
+    "Sputnik 1",
+    "Gagarin",
+    "Tereshkova e Apollo 11"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma pesquisadora do Inpe usa imagens de satélites brasileiros para acompanhar desmatamento e queimadas.",
+   "comando": "Cite dois satélites brasileiros ou em parceria com o Brasil e explique como o espaço ajuda a sociedade.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de satélites",
+    "colunas": [
+     "Satélite",
+     "Tipo"
+    ],
+    "linhas": [
+     [
+      "CBERS-4",
+      "observação da Terra"
+     ],
+     [
+      "Amazônia-1",
+      "observação da Terra"
+     ],
+     [
+      "SGDC",
+      "comunicações"
+     ]
+    ]
+   },
+   "ref": "CBERS (parceria com a China) e Amazônia-1 fazem imagens da superfície para monitorar desmatamento, queimadas e plantações; o SGDC leva comunicação e internet a áreas remotas. Os satélites geram dados úteis para o meio ambiente, a agricultura e a conectividade.",
+   "conceitos": [
+    "satélites CBERS e Amazônia-1",
+    "monitoramento ambiental",
+    "comunicações"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para ir à escola, Ana usa o aplicativo de mapas do celular. Em casa, o pai usa óculos com filtro UV e a família tem painéis solares.",
+   "comando": "Explique como a exploração espacial contribuiu para essas tecnologias do cotidiano.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de tecnologias no dia a dia",
+    "colunas": [
+     "Tecnologia",
+     "Uso na família de Ana"
+    ],
+    "linhas": [
+     [
+      "Aplicativo de mapas",
+      "ir à escola"
+     ],
+     [
+      "Óculos com filtro UV",
+      "proteção dos olhos"
+     ],
+     [
+      "Painéis solares",
+      "energia da casa"
+     ]
+    ]
+   },
+   "ref": "O GPS depende de satélites e de tecnologia de posicionamento criada com a corrida espacial; os painéis solares alimentaram satélites e naves; o filtro UV foi desenvolvido para proteger instrumentos e astronautas. São exemplos de tecnologias derivadas do espaço.",
+   "conceitos": [
+    "GPS e satélites",
+    "painéis solares",
+    "spin-offs tecnológicos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Empresas falam em colonizar Marte. Cientistas listaram diferenças entre o planeta e a Terra.",
+   "comando": "Com base nos dados, explique dois riscos para seres humanos que viveriam em Marte.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro: Marte comparado à Terra",
+    "colunas": [
+     "Característica",
+     "Marte",
+     "Terra"
+    ],
+    "linhas": [
+     [
+      "Gravidade",
+      "38%",
+      "100%"
+     ],
+     [
+      "Atmosfera",
+      "95% de gás carbônico",
+      "21% de oxigênio"
+     ],
+     [
+      "Pressão",
+      "0,6%",
+      "100%"
+     ],
+     [
+      "Temperatura média",
+      "-60 °C",
+      "15 °C"
+     ]
+    ]
+   },
+   "ref": "Respirar seria impossível sem equipamentos, pois a atmosfera é de gás carbônico e a pressão é muito baixa. O frio intenso exige abrigos aquecidos, e a gravidade menor pode causar perda óssea e muscular. Também há atraso de comunicação e radiação.",
+   "conceitos": [
+    "atmosfera e pressão",
+    "temperatura",
+    "gravidade menor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um vereador questiona gastar dinheiro com a Agência Espacial Brasileira, dizendo que o dinheiro deveria ir só para saúde e educação.",
+   "comando": "Dê dois argumentos, com exemplos do cotidiano, sobre o retorno do investimento em pesquisa espacial.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro: usos de satélites no Brasil (exemplos)",
+    "unidade": "serviços",
+    "itens": [
+     {
+      "rotulo": "Previsão do tempo",
+      "valor": 1
+     },
+     {
+      "rotulo": "Navegação por GPS",
+      "valor": 1
+     },
+     {
+      "rotulo": "Monitoramento ambiental",
+      "valor": 1
+     },
+     {
+      "rotulo": "Internet em áreas remotas",
+      "valor": 1
+     }
+    ]
+   },
+   "ref": "Satélites ajudam na previsão do tempo e na prevenção de desastres, no monitoramento do desmatamento e na conexão de áreas remotas, o que beneficia saúde e educação. A pesquisa espacial também gera tecnologias reaproveitadas no dia a dia, como GPS e painéis solares.",
+   "conceitos": [
+    "serviços de satélites",
+    "spin-offs",
+    "benefício social"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "6º ANO|1|Relacionar o movimento de rotação terrestre com a ocorrência da sucessão dia e noite.": {
+  "serie": "6",
+  "desc": "Relacionar o movimento de rotação terrestre com a ocorrência da sucessão dia e noite.",
+  "hab": "EF06CI14",
+  "habTxt": "Explicar fenômenos causados pelos movimentos do sistema Terra-Sol-Lua: dia/noite, estações, fases da Lua e eclipses (AE2).",
+  "nome": "Lanterna e a laranja que gira",
+  "concreta": "Com a sala escura, a lanterna (Sol) fica parada e um aluno gira a laranja espetada no palito, com um adesivo no Brasil; a turma observa quando o adesivo passa pela parte iluminada (dia) e pela escura (noite)."
+ },
+ "6º ANO|3|Classificar seres vivos (bactérias, fungos e/ou protozoários) a partir de suas características celulares e papéis ecossistêmicos.": {
+  "serie": "6",
+  "desc": "Classificar seres vivos (bactérias, fungos e/ou protozoários) a partir de suas características celulares e papéis ecossistêmicos.",
+  "hab": "EF06CI05",
+  "habTxt": "Analisar a organização básica da célula como unidade estrutural e funcional de seres uni e pluricelulares (AE5).",
+  "nome": "Mesa dos microrganismos",
+  "concreta": "Mesa de observação com pão mofado no saquinho fechado, cogumelo, fermento, iogurte e imagens de bactérias e protozoários. Para cada um a turma pergunta: uma célula ou muitas? Tem núcleo? Que papel tem no ambiente?"
+ },
+ "7º ANO|2|Relacionar os impactos das atividades humanas com as mudanças climáticas globais e seus efeitos socioambientais.": {
+  "serie": "7",
+  "desc": "Relacionar os impactos das atividades humanas com as mudanças climáticas globais e seus efeitos socioambientais.",
+  "hab": "EF07CI05",
+  "habTxt": "Analisar impactos socioambientais de combustíveis fósseis, queimadas e desmatamento (AE6).",
+  "nome": "Corrente de causas",
+  "concreta": "Montar uma corrente de papel com elos: queima de combustíveis/desmatamento/queimadas → mais gás carbônico → efeito estufa intensificado → aquecimento → eventos extremos → impactos sociais."
+ },
+ "8º ANO|3|Identificar variáveis meteorológicas relacionadas à previsão do tempo e os instrumentos utilizados para medi-las.": {
+  "serie": "8",
+  "desc": "Identificar variáveis meteorológicas relacionadas à previsão do tempo e os instrumentos utilizados para medi-las.",
+  "hab": "EF08CI14, EF08CI15",
+  "habTxt": "Relacionar climas regionais à circulação atmosférica e oceânica e usar variáveis meteorológicas na previsão do tempo (AE9).",
+  "nome": "Miniestação do tempo",
+  "concreta": "O professor mostra pluviômetro de PET e biruta montados e um termômetro; em grupos, leem uma previsão real identificando temperatura, umidade, chuva, vento e pressão."
+ },
+ "9º ANO|3|Analisar a importância do tratamento de água e esgoto para a qualidade ambiental e a saúde humana.": {
+  "serie": "9",
+  "desc": "Analisar a importância do tratamento de água e esgoto para a qualidade ambiental e a saúde humana.",
+  "hab": "EF09CI13, EF09CI12A, EF09CI12B",
+  "habTxt": "Propor iniciativas para problemas ambientais com consumo consciente e uso sustentável de recursos, considerando UCs e bacias hidrográficas (AE11).",
+  "nome": "Da torneira ao rio",
+  "concreta": "Um copo de água com terra fica parado (decantação) enquanto outro passa pelo filtro de PET (filtração). A turma compara a turbidez; o professor alerta que a água filtrada ainda não é potável sem desinfecção."
+ },
+ "9º ANO|3|Relacionar práticas humanas às fontes de poluição da água e às alterações na qualidade dos ambientes aquáticos.": {
+  "serie": "9",
+  "desc": "Relacionar práticas humanas às fontes de poluição da água e às alterações na qualidade dos ambientes aquáticos.",
+  "hab": "EF09CI13, EF09CI12B",
+  "habTxt": "Propor iniciativas para problemas ambientais com consumo consciente e uso sustentável de recursos, considerando UCs e bacias hidrográficas (AE11).",
+  "nome": "Investigando o rio",
+  "concreta": "Em copos, simulam fontes de poluição (terra = erosão, óleo = descarte doméstico, detergente = esgoto) e observam turbidez, mancha de óleo e espuma contra papel branco."
+ },
+ "4B|6º ANO|13": {
+  "serie": "6",
+  "desc": "Construir a base de uma mão biônica seguindo roteiro ilustrado e relacioná-la à importância da acessibilidade.",
+  "hab": "EF06CI09",
+  "habTxt": "Conceito de acessibilidade; próteses, órteses e tecnologias assistivas; articulações e falanges dos dedos; ciência e qualidade de vida.",
+  "nome": "Mão biônica: acessibilidade",
+  "concreta": "Discussão sobre acessibilidade; Na prática: checklist, materiais e montagem em papelão da 1ª parte da mão biônica (passos 1 a 6)."
+ },
+ "4B|7º ANO|10": {
+  "serie": "7",
+  "desc": "Reconhecer a vacinação como ação de promoção da saúde individual e coletiva, contextualizando a história de seu desenvolvimento.",
+  "hab": "EF07CI09",
+  "habTxt": "Vacina como imunização ativa; variolação, Jenner e Pasteur; Revolta da Vacina (1904); tipos de vacinas; liberação (PNI, ANVISA); esquema vacinal.",
+  "nome": "Vacinas",
+  "concreta": "Relembre (tipo de imunização); Pause e responda; Na prática: estudo de caso da família Ribeiro e desinformação sobre vacinas."
+ },
+ "4B|8º ANO|10": {
+  "serie": "8",
+  "desc": "Explicar e exemplificar materiais condutores e isolantes elétricos e o comportamento dos elétrons em cada um.",
+  "hab": "EF08CI18*",
+  "habTxt": "Fios condutores e revestimento; elétrons livres; isolantes (borracha, plástico, vidro); usos e aplicações; água pura x água com sais; segurança em locais úmidos.",
+  "nome": "Condutores e isolantes",
+  "concreta": "Resolvem estudo de caso: elaboram relatório escolhendo isolantes (plástico, borracha, PVC, cerâmica) para varanda, área interna, cozinha e banheiro."
+ },
+ "4B|9º ANO|11": {
+  "serie": "9",
+  "desc": "Explicar hipóteses sobre a origem do Universo e do Sistema Solar e caracterizar os corpos celestes que o compõem.",
+  "hab": "EF09CI14",
+  "habTxt": "Mitos x ciência; Big Bang e expansão do Universo; nebulosa e disco de acreção; formação do Sol e planetas; asteroides, cometas, satélites.",
+  "nome": "Origem do sistema solar e seus astros",
+  "concreta": "Respondem teste sobre o Big Bang e classificam um corpo celeste recém-descoberto (planeta, asteroide ou satélite) justificando pelas características."
+ }
+}

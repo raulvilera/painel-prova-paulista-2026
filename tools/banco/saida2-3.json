@@ -1,0 +1,2893 @@
+{
+ "6º ANO|1|Relacionar as estações do ano como consequência da inclinação do eixo terrestre e do movimento de translação da Terra ao redor do Sol.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Mariana mora em Campinas e anotou a duração do dia em quatro meses do ano. Ela notou que em dezembro os dias são longos e quentes, e em junho são curtos e mais frios.",
+   "comando": "Qual explicação científica é a mais adequada para o que Mariana observou?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de horas de luz solar em Campinas",
+    "colunas": [
+     "Mês",
+     "Horas de luz"
+    ],
+    "linhas": [
+     [
+      "Dezembro",
+      "13h20"
+     ],
+     [
+      "Março",
+      "12h10"
+     ],
+     [
+      "Junho",
+      "10h50"
+     ],
+     [
+      "Setembro",
+      "12h05"
+     ]
+    ]
+   },
+   "alts": [
+    "A distância entre a Terra e o Sol muda muito, e em dezembro o planeta fica bem mais perto",
+    "A rotação da Terra fica mais lenta em junho, e isso deixa os dias mais curtos e frios",
+    "A inclinação do eixo terrestre muda a incidência da luz solar ao longo do ano",
+    "O Sol aumenta a própria temperatura em dezembro e a diminui em junho, mudando o clima"
+   ],
+   "correta": 2,
+   "explicacao": "As estações resultam da inclinação do eixo somada à translação; a distância ao Sol varia pouco e a rotação dura sempre cerca de 24 horas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a professora colocou uma lanterna no centro da mesa. Um aluno segurou uma bola com um palito inclinado e caminhou ao redor da lanterna, dando uma volta completa.",
+   "comando": "Que movimento da Terra o aluno está representando ao caminhar ao redor da lanterna?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas do experimento",
+    "etapas": [
+     "Lanterna fixa no centro da mesa",
+     "Bola com palito inclinado nas mãos do aluno",
+     "Aluno caminha em volta da lanterna",
+     "Volta completa até o ponto de partida"
+    ]
+   },
+   "alts": [
+    "Rotação, que leva cerca de 24 horas para completar a volta",
+    "Translação, que leva cerca de 30 dias para completar a sua volta",
+    "Rotação, que leva cerca de 365 dias para completar a volta",
+    "Translação, que leva cerca de 365 dias para completar a volta"
+   ],
+   "correta": 3,
+   "explicacao": "O movimento da Terra ao redor do Sol é a translação (cerca de 365 dias); a rotação é o giro em torno do próprio eixo (cerca de 24 horas)."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No dia 25 de dezembro, Rafael, que mora em Santos, ligou para a prima que vive em Lisboa. Ele estava na praia de bermuda, enquanto ela falou que usava casaco por causa do frio.",
+   "comando": "Segundo as informações, por que o clima é tão diferente entre as duas cidades nessa data?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de clima em 25 de dezembro",
+    "colunas": [
+     "Cidade",
+     "Hemisfério",
+     "Temperatura"
+    ],
+    "linhas": [
+     [
+      "Santos",
+      "Sul",
+      "31 °C"
+     ],
+     [
+      "Lisboa",
+      "Norte",
+      "8 °C"
+     ]
+    ]
+   },
+   "alts": [
+    "O hemisfério sul está inclinado em direção ao Sol e recebe raios mais diretos que o norte",
+    "O Brasil está mais perto do Sol que Portugal, e por isso o clima é mais quente em Santos",
+    "O hemisfério norte fica na sombra da Terra e não recebe luz do Sol nessa data",
+    "O Sol se desloca para o sul em dezembro e só o hemisfério sul recebe a luz solar"
+   ],
+   "correta": 0,
+   "explicacao": "Em dezembro o hemisfério sul está inclinado em direção ao Sol e recebe raios mais diretos; o norte recebe raios mais oblíquos e tem inverno."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma repetiu o experimento da lanterna, mas dessa vez usou uma bola com o palito totalmente na vertical, sem inclinação. Os alunos deram a volta na lanterna mantendo sempre a mesma distância.",
+   "comando": "O que os alunos devem observar a respeito das estações nessa nova montagem?",
+   "figura": null,
+   "alts": [
+    "As estações ficariam mais intensas, pois o hemisfério sul receberia luz direta por mais tempo",
+    "Quase não haveria estações, pois a luz incidiria igual nos dois hemisférios",
+    "As estações continuariam iguais, pois elas dependem da distância até a lanterna",
+    "Haveria só duas estações, pois um lado da bola ficaria iluminado e o outro escuro"
+   ],
+   "correta": 1,
+   "explicacao": "Sem inclinação do eixo, a incidência da luz seria igual nos dois hemisférios ao longo da órbita e as estações praticamente desapareceriam."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana afirma que o verão acontece porque a Terra fica mais perto do Sol. Seu colega Caio pesquisou a distância Terra-Sol e a temperatura média em Lisboa, no hemisfério norte, em dois meses.",
+   "comando": "Que conclusão os dados de Caio permitem tirar sobre a afirmação de Ana?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de dados de Caio",
+    "colunas": [
+     "Mês",
+     "Distância da Terra ao Sol (milhões de km)",
+     "Temperatura média em Lisboa"
+    ],
+    "linhas": [
+     [
+      "Janeiro",
+      "147",
+      "9 °C"
+     ],
+     [
+      "Julho",
+      "152",
+      "24 °C"
+     ]
+    ]
+   },
+   "alts": [
+    "A distância explica as estações no norte, pois os valores de distância variam pouco entre os meses",
+    "A distância explica as estações, pois em janeiro a Terra está mais perto e há mais calor no sul",
+    "A distância não explica as estações: em julho a Terra está mais longe e é verão no norte",
+    "Os dados são insuficientes, pois só dois meses foram medidos e nada se conclui sobre as estações"
+   ],
+   "correta": 2,
+   "explicacao": "Em julho a Terra está mais distante e mesmo assim é verão no hemisfério norte; logo, a distância não é a causa das estações."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em 21 de junho começa o inverno em Ribeirão Preto (hemisfério sul) e o verão em Londres (hemisfério norte). A turma montou o modelo com lanterna e bola de palito inclinado para entender o que acontece.",
+   "comando": "Cite os dois fatores que, juntos, causam as estações do ano e diga o que cada um faz no modelo.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Elementos do modelo da turma",
+    "etapas": [
+     "Lanterna no centro representa o Sol",
+     "Bola com palito inclinado representa a Terra",
+     "Bola é levada ao redor da lanterna",
+     "Palito mantém a mesma direção"
+    ]
+   },
+   "ref": "Os fatores são a inclinação do eixo da Terra e a translação ao redor do Sol. A inclinação faz um hemisfério receber luz mais direta que o outro; a translação muda, ao longo do ano, qual hemisfério está voltado para o Sol.",
+   "conceitos": [
+    "inclinação do eixo",
+    "translação",
+    "incidência da luz"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Veja a duração do dia em duas cidades em 21 de junho e em 21 de dezembro. Ribeirão Preto fica no hemisfério sul e Londres, no hemisfério norte.",
+   "comando": "Em qual hemisfério é verão em junho? Explique usando os dados da tabela.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da duração do dia",
+    "colunas": [
+     "Cidade",
+     "21 de junho",
+     "21 de dezembro"
+    ],
+    "linhas": [
+     [
+      "Ribeirão Preto",
+      "10h40",
+      "13h35"
+     ],
+     [
+      "Londres",
+      "16h30",
+      "7h50"
+     ]
+    ]
+   },
+   "ref": "É verão no hemisfério norte, onde fica Londres. Em junho o dia lá é longo (16h30), sinal de que os raios solares chegam de modo mais direto, o que aquece mais; em Ribeirão Preto o dia é curto e é inverno.",
+   "conceitos": [
+    "hemisfério norte",
+    "dia mais longo",
+    "raios mais diretos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Macapá fica quase na linha do Equador e Porto Alegre fica bem ao sul do Brasil. Uma aluna comparou as temperaturas médias dos dois lugares em janeiro e julho.",
+   "comando": "Relacione a inclinação do eixo da Terra com o fato de a temperatura variar pouco em Macapá e muito em Porto Alegre.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de temperatura média",
+    "colunas": [
+     "Cidade",
+     "Janeiro",
+     "Julho"
+    ],
+    "linhas": [
+     [
+      "Macapá",
+      "27 °C",
+      "27 °C"
+     ],
+     [
+      "Porto Alegre",
+      "25 °C",
+      "14 °C"
+     ]
+    ]
+   },
+   "ref": "Perto do Equador, a luz solar chega com inclinação parecida o ano todo, por isso quase não há variação. Em Porto Alegre, mais afastada do Equador, a inclinação do eixo faz a incidência da luz mudar bastante entre o verão e o inverno, variando a temperatura.",
+   "conceitos": [
+    "inclinação do eixo",
+    "incidência da luz",
+    "latitude"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lara montou o modelo com a lanterna e anotou três dados em quatro posições da bola. O palito aponta para a mesma parede em todas elas e a distância até a lanterna é igual. Ainda assim, a luz sobre cada hemisfério mudou de uma posição para outra.",
+   "comando": "Explique por que a luz muda de um hemisfério para outro mesmo com a distância constante.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Posição",
+     "Direção do palito",
+     "Distância da lanterna"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Parede da porta",
+      "40 cm"
+     ],
+     [
+      "B",
+      "Parede da porta",
+      "40 cm"
+     ],
+     [
+      "C",
+      "Parede da porta",
+      "40 cm"
+     ],
+     [
+      "D",
+      "Parede da porta",
+      "40 cm"
+     ]
+    ]
+   },
+   "ref": "Como o eixo é inclinado e mantém sempre a mesma direção, em cada posição da órbita um hemisfério fica mais voltado para a lanterna que o outro. Assim, a incidência da luz muda sem que a distância mude.",
+   "conceitos": [
+    "eixo inclinado",
+    "direção fixa do eixo",
+    "posição na órbita"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em São Paulo, o dia dura quase 12 horas em 21 de março e em 22 de setembro, mas é bem mais curto em junho e mais longo em dezembro. Um grupo registrou os dados e foi desafiado a explicá-los.",
+   "comando": "Justifique por que o dia e a noite têm duração parecida em março e setembro, e diferente em junho e dezembro.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da duração do dia em São Paulo",
+    "colunas": [
+     "Data",
+     "Duração do dia"
+    ],
+    "linhas": [
+     [
+      "21 de março",
+      "12h07"
+     ],
+     [
+      "21 de junho",
+      "10h35"
+     ],
+     [
+      "22 de setembro",
+      "12h08"
+     ],
+     [
+      "21 de dezembro",
+      "13h40"
+     ]
+    ]
+   },
+   "ref": "Em março e setembro o eixo não está inclinado para o Sol nem contra ele, e os dois hemisférios recebem luz de modo parecido, com dias e noites quase iguais. Em junho e dezembro o eixo inclinado deixa um hemisfério voltado para o Sol, e a duração do dia muda.",
+   "conceitos": [
+    "posição da Terra na órbita",
+    "inclinação do eixo",
+    "duração do dia"
+   ]
+  }
+ ],
+ "6º ANO|3|Associar células, tecidos, órgãos e sistemas aos níveis de organização dos seres vivos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Para a feira de ciências, Bia montou um varal com cartões que mostram o zoom do coração: célula muscular, tecido muscular, coração, sistema circulatório e organismo. Um visitante pediu a ela que explicasse o cartão do meio.",
+   "comando": "Qual é o nível de organização do coração, que aparece no cartão do meio do varal?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Cartões do varal de Bia",
+    "etapas": [
+     "Célula muscular",
+     "Tecido muscular",
+     "Coração",
+     "Sistema circulatório",
+     "Organismo"
+    ]
+   },
+   "alts": [
+    "Tecido, pois reúne células musculares iguais que trabalham juntas",
+    "Órgão, pois reúne tecidos diferentes que trabalham juntos",
+    "Sistema, pois reúne vários órgãos que trabalham juntos numa função",
+    "Célula, pois é a menor unidade que forma o corpo de uma pessoa"
+   ],
+   "correta": 1,
+   "explicacao": "O coração é um órgão: tem tecido muscular, nervoso e outros trabalhando juntos. Tecido é um grupo de células iguais; sistema reúne órgãos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Durante uma aula, os alunos listaram na lousa estruturas do corpo humano: neurônio, músculo do braço, pulmão e sistema digestório. A professora pediu que apontassem qual delas é um órgão.",
+   "comando": "Qual das estruturas listadas é um órgão?",
+   "figura": null,
+   "alts": [
+    "O pulmão, formado por tecidos diferentes que atuam na respiração",
+    "O neurônio, formado por tecidos que atuam juntos na condução de sinais",
+    "O sistema digestório, formado por tecidos que atuam juntos na digestão",
+    "O músculo do braço, formado por órgãos que atuam juntos no movimento"
+   ],
+   "correta": 0,
+   "explicacao": "O pulmão é órgão. O neurônio é uma célula, o sistema digestório é um conjunto de órgãos e o músculo é um tecido."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Joana estudou que o coração, as artérias e as veias levam sangue a todas as partes do corpo. Seu irmão perguntou por que esse conjunto é chamado de sistema, e não de órgão.",
+   "comando": "Qual é a melhor resposta de Joana ao irmão?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Estruturas estudadas por Joana",
+    "colunas": [
+     "Estrutura",
+     "Papel no transporte do sangue"
+    ],
+    "linhas": [
+     [
+      "Coração",
+      "Bombeia o sangue"
+     ],
+     [
+      "Artérias",
+      "Levam o sangue do coração ao corpo"
+     ],
+     [
+      "Veias",
+      "Trazem o sangue de volta ao coração"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque o conjunto é formado por células iguais que realizam uma só função",
+    "Porque o conjunto ocupa uma região grande do corpo e por isso recebe esse nome",
+    "Porque cada parte do conjunto é um tecido isolado que realiza sua própria função",
+    "Porque vários órgãos diferentes cooperam entre si na mesma função"
+   ],
+   "correta": 3,
+   "explicacao": "Sistema é um conjunto de órgãos que cooperam numa função. Células iguais formam tecido, e o tamanho não define o nível."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro observou, ao microscópio da escola, uma gota de água de lagoa e viu um paramécio, ser vivo de uma só célula que se alimenta, se move e se reproduz. Depois, comparou-o com o corpo humano.",
+   "comando": "Qual afirmação compara corretamente o paramécio com o corpo humano?",
+   "figura": null,
+   "alts": [
+    "No paramécio os tecidos fazem todas as funções; no humano, as células trabalham isoladas",
+    "O paramécio tem órgãos simples, enquanto o corpo humano tem tecidos e células, sem órgãos",
+    "No paramécio uma só célula faz todas as funções; no humano, células diferentes formam tecidos e órgãos",
+    "O paramécio é formado por vários tecidos iguais, e o humano por uma célula especial"
+   ],
+   "correta": 2,
+   "explicacao": "Seres unicelulares realizam todas as funções vitais numa única célula; os pluricelulares têm células especializadas organizadas em tecidos, órgãos e sistemas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Seu Antônio tem as artérias parcialmente entupidas, o que reduz o fluxo de sangue no sistema circulatório. Ele sente cansaço ao subir escadas e dor no peito, e o médico explicou que o problema afeta o corpo todo.",
+   "comando": "Por que um problema no sistema circulatório causa sintomas em várias partes do corpo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de sintomas de seu Antônio",
+    "colunas": [
+     "Sintoma",
+     "Quando aparece"
+    ],
+    "linhas": [
+     [
+      "Cansaço",
+      "Ao subir escadas"
+     ],
+     [
+      "Dor no peito",
+      "Em esforço físico"
+     ],
+     [
+      "Pés frios",
+      "No fim do dia"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque cada sistema funciona de forma independente, e o circulatório controla os demais sistemas",
+    "Porque o sangue forma o tecido que une os órgãos e os mantém no lugar dentro do corpo",
+    "Porque as artérias são órgãos que também produzem a energia usada pelos outros sistemas",
+    "Porque o sangue leva oxigênio e nutrientes a todas as células, e os sistemas dependem uns dos outros"
+   ],
+   "correta": 3,
+   "explicacao": "O sistema circulatório transporta oxigênio e nutrientes até todas as células; sem ele, órgãos e sistemas dependentes funcionam mal."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para montar o varal da feira de ciências, Bia recebeu cartões embaralhados com estruturas do corpo humano.",
+   "comando": "Coloque os cartões em ordem, do menor para o maior nível de organização, e indique o nível de cada um.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Cartões recebidos por Bia",
+    "colunas": [
+     "Cartão",
+     "Estrutura"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Coração"
+     ],
+     [
+      "2",
+      "Célula muscular"
+     ],
+     [
+      "3",
+      "Organismo"
+     ],
+     [
+      "4",
+      "Sistema circulatório"
+     ],
+     [
+      "5",
+      "Tecido muscular"
+     ]
+    ]
+   },
+   "ref": "Ordem: célula muscular (célula), tecido muscular (tecido), coração (órgão), sistema circulatório (sistema) e organismo (ser vivo completo).",
+   "conceitos": [
+    "célula",
+    "tecido",
+    "órgão",
+    "sistema",
+    "organismo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marcos raspou levemente a parte interna da bochecha, colocou o material numa lâmina e observou ao microscópio muitas células achatadas, juntinhas e parecidas entre si, que revestem a boca.",
+   "comando": "Que nível de organização se forma quando células parecidas se agrupam para a mesma função? Dê outro exemplo no corpo humano.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da observação de Marcos",
+    "etapas": [
+     "Raspar a parte interna da bochecha",
+     "Colocar o material na lâmina",
+     "Pingar corante e cobrir com lamínula",
+     "Observar ao microscópio"
+    ]
+   },
+   "ref": "Forma-se um tecido. Outro exemplo é o tecido muscular, com células alongadas que se contraem, ou o tecido ósseo, que sustenta o corpo.",
+   "conceitos": [
+    "tecido",
+    "células semelhantes",
+    "mesma função"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O estômago tem uma parede que se contrai para misturar o alimento, um revestimento interno que produz muco e nervos que controlam esses processos. A turma montou uma tabela para estudar o órgão.",
+   "comando": "Explique por que o estômago é classificado como um órgão, e não como um tecido.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos tecidos do estômago",
+    "colunas": [
+     "Parte do estômago",
+     "Função observada"
+    ],
+    "linhas": [
+     [
+      "Parede externa",
+      "Contrair e misturar o alimento"
+     ],
+     [
+      "Revestimento interno",
+      "Produzir muco"
+     ],
+     [
+      "Nervos",
+      "Controlar os movimentos"
+     ]
+    ]
+   },
+   "ref": "O estômago é um órgão porque é formado por vários tecidos diferentes (muscular, epitelial e nervoso) que trabalham juntos numa função, a digestão. Um tecido teria só um tipo de célula.",
+   "conceitos": [
+    "órgão",
+    "diferentes tecidos",
+    "função em conjunto"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lucas foi correr no parque e anotou a frequência cardíaca e o número de respirações por minuto, antes e durante a corrida. Os valores aumentaram durante o exercício.",
+   "comando": "Mostre, com base nos dados, como os sistemas circulatório, respiratório e muscular trabalham juntos durante a corrida.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Lucas",
+    "colunas": [
+     "Medida",
+     "Em repouso",
+     "Na corrida"
+    ],
+    "linhas": [
+     [
+      "Batimentos por minuto",
+      "70",
+      "150"
+     ],
+     [
+      "Respirações por minuto",
+      "16",
+      "40"
+     ]
+    ]
+   },
+   "ref": "Os músculos precisam de mais energia na corrida. O sistema respiratório capta mais oxigênio, e o circulatório, com batimentos mais rápidos, leva esse oxigênio aos músculos. Os sistemas cooperam para o corpo funcionar.",
+   "conceitos": [
+    "cooperação entre sistemas",
+    "oxigênio",
+    "aumento da demanda dos músculos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O paramécio tem uma única célula e vive em água de lagoa. Já uma pessoa tem trilhões de células. Uma turma comparou os dois seres vivos numa tabela.",
+   "comando": "Justifique por que o paramécio não precisa de tecidos e órgãos, mas o corpo humano precisa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de comparação",
+    "colunas": [
+     "Ser vivo",
+     "Número de células",
+     "Tamanho aproximado"
+    ],
+    "linhas": [
+     [
+      "Paramécio",
+      "1",
+      "0,2 mm"
+     ],
+     [
+      "Ser humano",
+      "Cerca de 30 trilhões",
+      "1,7 m"
+     ]
+    ]
+   },
+   "ref": "O paramécio realiza todas as funções numa só célula, por isso não precisa de tecidos e órgãos. O corpo humano tem trilhões de células especializadas em funções diferentes, que precisam se organizar em tecidos, órgãos e sistemas para funcionar de forma coordenada.",
+   "conceitos": [
+    "unicelular e pluricelular",
+    "especialização das células",
+    "organização em tecidos, órgãos e sistemas"
+   ]
+  }
+ ],
+ "7º ANO|1|Reconhecer fenômenos geológicos (vulcanismo, terremotos e tsunamis) e seus impactos na superfície da Terra.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em um telejornal, Lúcia viu a notícia de que um terremoto no fundo do oceano, a 80 km da costa, provocou ondas gigantes que invadiram a cidade litorânea poucos minutos depois.",
+   "comando": "Como se chama esse fenômeno, formado por ondas gigantes após um abalo no fundo do mar?",
+   "figura": null,
+   "alts": [
+    "Maré cheia, causada pela atração da Lua sobre a grande massa de água do mar",
+    "Tsunami, causado por abalo sísmico que desloca a água no fundo do mar",
+    "Ressaca, causada por ventos fortes que empurram a água sobre o mar aberto",
+    "Corrente marinha, causada pela diferença de temperatura da água do mar"
+   ],
+   "correta": 1,
+   "explicacao": "Tsunami é uma série de ondas gigantes gerada por terremoto, vulcão ou deslizamento no fundo do mar; marés e ressacas têm outras causas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula sobre vulcões, o professor mostrou uma sequência de imagens de uma erupção e perguntou aos alunos o nome do material quente e pastoso que escorria pelas encostas do vulcão.",
+   "comando": "Como é chamado o material que sai da cratera e escorre pela encosta do vulcão?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da erupção mostradas pelo professor",
+    "etapas": [
+     "Material se acumula na câmara no interior da Terra",
+     "Material sobe pela chaminé do vulcão",
+     "Material sai pela cratera",
+     "Material escorre pela encosta"
+    ]
+   },
+   "alts": [
+    "Cinza, fragmento fino que fica suspenso no ar depois da erupção",
+    "Gás, vapor liberado quando a água entra em contato com a cratera",
+    "Rocha, material sólido que se quebra dentro do vulcão antes da erupção",
+    "Lava, magma que chegou à superfície e escorre pela encosta"
+   ],
+   "correta": 3,
+   "explicacao": "O magma, rocha derretida dentro da Terra, passa a se chamar lava ao chegar à superfície."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Para a feira de ciências, Tiago sobrepôs o mapa de vulcões e terremotos ao mapa das placas tectônicas e montou uma tabela com três regiões para tirar conclusões.",
+   "comando": "O que os dados de Tiago indicam sobre onde ocorrem vulcões e terremotos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de ocorrências por região",
+    "colunas": [
+     "Região",
+     "Vulcões ativos",
+     "Terremotos fortes por década"
+    ],
+    "linhas": [
+     [
+      "Costa do Chile",
+      "40",
+      "12"
+     ],
+     [
+      "Japão",
+      "110",
+      "20"
+     ],
+     [
+      "Interior do Brasil",
+      "0",
+      "1"
+     ]
+    ]
+   },
+   "alts": [
+    "Concentram-se nos limites entre placas tectônicas, onde elas se movem",
+    "Concentram-se no interior das placas tectônicas, onde as rochas são antigas",
+    "Distribuem-se igualmente pelo planeta, pois dependem do clima de cada região",
+    "Concentram-se nas regiões mais frias, onde a crosta congela e se rompe"
+   ],
+   "correta": 0,
+   "explicacao": "Vulcões e terremotos se concentram nos limites das placas, onde o movimento delas libera energia; no interior da placa são raros."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na bandeja com areia, a turma construiu três prédios de caixinhas e palitos e sacudiu a bandeja por 10 segundos para simular um terremoto. Depois, anotou o que ocorreu com cada construção.",
+   "comando": "Que medida, aplicada em cidades de regiões sísmicas, é sugerida pelos resultados do experimento?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Prédio",
+     "Características",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Baixo, base larga",
+      "Ficou de pé"
+     ],
+     [
+      "B",
+      "Alto, base estreita",
+      "Caiu em 5 s"
+     ],
+     [
+      "C",
+      "Alto, base larga e reforçada",
+      "Ficou de pé"
+     ]
+    ]
+   },
+   "alts": [
+    "Construir edifícios mais altos e estreitos, para que balancem menos nos abalos",
+    "Construir edifícios sobre areia solta, para que ela absorva a vibração do chão",
+    "Construir edifícios de base larga, com estrutura reforçada e mais baixos",
+    "Construir edifícios sem reforço, para que a estrutura mais leve se desloque pouco"
+   ],
+   "correta": 2,
+   "explicacao": "No modelo, construções baixas ou de base larga e reforçada resistiram melhor às vibrações."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma região vulcânica da Itália, agricultores continuam plantando nas encostas de um vulcão ativo. Uma equipe mediu a produção de milho em dois tipos de solo e um aluno questionou por que eles correm esse risco.",
+   "comando": "Que explicação relaciona os dados à permanência dos agricultores?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Produção de milho por hectare",
+    "unidade": "t/ha",
+    "itens": [
+     {
+      "rotulo": "Solo vulcânico",
+      "valor": 8
+     },
+     {
+      "rotulo": "Solo comum",
+      "valor": 5
+     }
+    ]
+   },
+   "alts": [
+    "O solo vulcânico é rico em minerais porque o vulcão está extinto e sem risco de erupção",
+    "O solo vulcânico é rico em minerais, mas novas erupções continuam sendo um risco",
+    "O solo vulcânico é rico em água do magma, o que garante colheitas e reduz terremotos",
+    "O solo vulcânico é pobre em minerais, mas fica longe dos limites das placas tectônicas"
+   ],
+   "correta": 1,
+   "explicacao": "Cinzas e rochas vulcânicas liberam minerais que fertilizam o solo, mas o vulcão ativo mantém o perigo de erupções."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na atividade da bandeja com areia, a turma balançou a bandeja para representar um terremoto e viu os prédios de palitos tremerem.",
+   "comando": "Explique o que é um terremoto e por que o balançar da bandeja serve de modelo para ele.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da atividade",
+    "etapas": [
+     "Espalhar areia sobre a bandeja",
+     "Montar os prédios de palitos",
+     "Sacudir a bandeja",
+     "Observar o que ocorre com as construções"
+    ]
+   },
+   "ref": "Terremoto é a vibração do solo causada pela liberação brusca de energia quando rochas da crosta se movem, geralmente nos limites das placas. A bandeja sacudida representa as ondas sísmicas que se espalham e fazem as construções tremerem.",
+   "conceitos": [
+    "liberação de energia",
+    "movimento das rochas ou das placas",
+    "ondas sísmicas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma erupção cobriu de cinzas a cidade de Cerro Azul, e técnicos mediram a espessura da camada de cinzas em locais a diferentes distâncias do vulcão.",
+   "comando": "Cite dois impactos de uma erupção sobre a vida das pessoas e diga como a camada de cinzas varia com a distância.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da camada de cinzas",
+    "unidade": "cm",
+    "itens": [
+     {
+      "rotulo": "0 km",
+      "valor": 40
+     },
+     {
+      "rotulo": "10 km",
+      "valor": 15
+     },
+     {
+      "rotulo": "30 km",
+      "valor": 5
+     },
+     {
+      "rotulo": "60 km",
+      "valor": 1
+     }
+    ]
+   },
+   "ref": "A camada diminui com a distância do vulcão. Impactos possíveis: casas e plantações cobertas ou destruídas, voos cancelados, problemas respiratórios e morte de pessoas e animais.",
+   "conceitos": [
+    "cinzas diminuem com a distância",
+    "dois impactos na vida das pessoas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O Chile e o Japão têm muitos terremotos fortes, e o Brasil quase não tem. Um aluno pesquisou e anotou os números dos três países.",
+   "comando": "Com base nos dados, explique por que o Brasil tem poucos terremotos e vulcões em comparação com os outros dois países.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de terremotos fortes em 50 anos",
+    "colunas": [
+     "País",
+     "Terremotos fortes"
+    ],
+    "linhas": [
+     [
+      "Chile",
+      "60"
+     ],
+     [
+      "Japão",
+      "80"
+     ],
+     [
+      "Brasil",
+      "0"
+     ]
+    ]
+   },
+   "ref": "O Brasil fica no interior da Placa Sul-Americana, longe dos limites entre placas, onde ocorre a maior parte dos terremotos e vulcões. Chile e Japão estão em limites de placas, onde o movimento é intenso.",
+   "conceitos": [
+    "limites das placas",
+    "interior da placa",
+    "localização do Brasil"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um terremoto no fundo do oceano gerou um tsunami. Um sistema de alerta mediu o tempo que as ondas levaram para chegar a três locais, a distâncias diferentes do epicentro.",
+   "comando": "Explique a relação entre a distância e o tempo de chegada, e por que um sistema de alerta ajuda mais a um local do que a outro.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da chegada das ondas",
+    "colunas": [
+     "Local",
+     "Distância do epicentro",
+     "Tempo de chegada"
+    ],
+    "linhas": [
+     [
+      "Ilha A",
+      "100 km",
+      "15 min"
+     ],
+     [
+      "Costa B",
+      "1.500 km",
+      "2 h"
+     ],
+     [
+      "Costa C",
+      "7.000 km",
+      "9 h"
+     ]
+    ]
+   },
+   "ref": "Quanto maior a distância, maior o tempo de chegada. Na costa C há horas para avisar e retirar a população; na ilha A o tempo é curto e o alerta tem pouca margem, por isso são importantes planos de evacuação.",
+   "conceitos": [
+    "distância e tempo",
+    "alerta com antecedência",
+    "planos de evacuação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os mapas mostram que a costa leste da América do Sul e a costa oeste da África se encaixam como peças de quebra-cabeça. Medições mostram que a Placa Sul-Americana se afasta da Africana a 2,5 cm por ano.",
+   "comando": "Calcule quanto as placas se afastam em 100 milhões de anos e justifique o encaixe das costas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de medições",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Placas",
+      "Sul-Americana e Africana"
+     ],
+     [
+      "Afastamento medido",
+      "2,5 cm por ano"
+     ]
+    ]
+   },
+   "ref": "2,5 cm x 100 milhões de anos = 250 milhões de cm, ou cerca de 2.500 km. As costas se encaixam porque os continentes estavam unidos e as placas, ao se movimentarem lentamente, os afastaram ao longo do tempo.",
+   "conceitos": [
+    "movimento lento das placas",
+    "cálculo de cerca de 2.500 km",
+    "deriva continental"
+   ]
+  }
+ ],
+ "8º ANO|2|Reconhecer a função dos nutrientes no organismo humano.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na atividade em grupo, Carla e seus colegas separaram figuras de alimentos em três montes. No monte dos construtores colocaram ovo, feijão e carne, porque esses alimentos ajudam a formar músculos e a reparar machucados.",
+   "comando": "Que nutriente é o principal responsável por essa função de construção e reparo do corpo?",
+   "figura": null,
+   "alts": [
+    "Carboidratos, que são a principal fonte de energia rápida do corpo",
+    "Vitaminas, que regulam o funcionamento do corpo sem fornecer energia",
+    "Proteínas, que fornecem material para formar e reparar tecidos",
+    "Gorduras, que guardam energia e protegem alguns órgãos do corpo"
+   ],
+   "correta": 2,
+   "explicacao": "As proteínas são a matéria-prima para formar e reparar tecidos; os demais nutrientes citados têm funções energéticas ou reguladoras."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Bruno, de 9 anos, foi ao dentista com duas cáries. O profissional orientou que ele incluísse leite, queijo e iogurte na alimentação diária para fortalecer os dentes e os ossos em crescimento.",
+   "comando": "Qual nutriente desses alimentos está relacionado a essa orientação?",
+   "figura": null,
+   "alts": [
+    "Ferro, mineral que compõe o sangue e transporta oxigênio no corpo",
+    "Cálcio, mineral que forma e fortalece ossos e dentes",
+    "Sódio, mineral que ajuda a controlar a quantidade de água no corpo",
+    "Vitamina C, que auxilia na cicatrização e nas defesas do corpo"
+   ],
+   "correta": 1,
+   "explicacao": "O cálcio, abundante no leite e derivados, é o mineral que forma ossos e dentes; os demais nutrientes têm outras funções."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois do treino de futebol, Marcelo precisa de uma refeição que ajude a reparar os músculos. A cantina da escola apresentou três pratos, e ele quis escolher o mais adequado para esse objetivo.",
+   "comando": "Qual prato é o mais adequado para a necessidade de Marcelo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos pratos da cantina",
+    "colunas": [
+     "Prato",
+     "Alimentos"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Arroz, macarrão e batata"
+     ],
+     [
+      "2",
+      "Ovo, feijão e frango"
+     ],
+     [
+      "3",
+      "Laranja, couve e tomate"
+     ]
+    ]
+   },
+   "alts": [
+    "O prato 2, pois seus alimentos fornecem material para reparar músculos",
+    "O prato 1, pois seus alimentos fornecem a energia que repara os músculos",
+    "O prato 3, pois seus alimentos fornecem o material que repara os músculos",
+    "Os pratos 1 e 3 juntos, pois energia e vitaminas formam novos músculos"
+   ],
+   "correta": 0,
+   "explicacao": "Ovo, feijão e frango são ricos em proteínas, que reparam músculos. Os pratos 1 e 3 são ricos em energia e em vitaminas, que têm outras funções."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Camila, de 14 anos, sente muito cansaço e está pálida. O médico diagnosticou anemia e pediu que ela revisse a alimentação, pois ela não come carne, feijão nem folhas verdes.",
+   "comando": "Qual nutriente provavelmente está em falta e por que isso causa o cansaço de Camila?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do cardápio de Camila na semana",
+    "colunas": [
+     "Refeição",
+     "O que ela come"
+    ],
+    "linhas": [
+     [
+      "Café da manhã",
+      "Pão com margarina"
+     ],
+     [
+      "Almoço",
+      "Arroz e batata"
+     ],
+     [
+      "Jantar",
+      "Macarrão"
+     ]
+    ]
+   },
+   "alts": [
+    "Cálcio, pois ele é o mineral que forma a hemoglobina do sangue",
+    "Carboidratos, pois a falta deles reduz a produção de hemoglobina do sangue",
+    "Gorduras, pois a falta delas reduz a produção de hemoglobina do sangue",
+    "Ferro, pois ele compõe a hemoglobina que leva oxigênio às células"
+   ],
+   "correta": 3,
+   "explicacao": "O ferro compõe a hemoglobina, que transporta oxigênio. O cardápio de Camila é rico em carboidratos, mas pobre em ferro."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Leandro comparou o rótulo de um salgadinho de pacote, classificado como ultraprocessado, com o de uma batata cozida, que é um alimento in natura. Ele quer entender por que o salgadinho não é recomendado no dia a dia.",
+   "comando": "O que os dados do rótulo indicam sobre o consumo frequente do salgadinho?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de rótulos (100 g)",
+    "colunas": [
+     "Item",
+     "Sódio",
+     "Gordura",
+     "Fibras"
+    ],
+    "linhas": [
+     [
+      "Salgadinho",
+      "900 mg",
+      "25 g",
+      "1 g"
+     ],
+     [
+      "Batata cozida",
+      "6 mg",
+      "0 g",
+      "2 g"
+     ]
+    ]
+   },
+   "alts": [
+    "Ele concentra pouco sal e gordura e tem muitas fibras, o que sobrecarrega o organismo",
+    "Ele tem mais fibras que a batata, o que provoca desgaste dos órgãos e dos tecidos",
+    "Ele concentra muito sal e gordura e poucas fibras, o que sobrecarrega o organismo",
+    "Ele tem menos energia que a batata, o que provoca falta de nutrientes ao organismo"
+   ],
+   "correta": 2,
+   "explicacao": "Ultraprocessados costumam ter excesso de sal e gordura e poucas fibras e vitaminas, o que aumenta o risco de doenças com o consumo frequente."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula, os alunos organizaram figuras de alimentos em três montes: energéticos, construtores e reguladores.",
+   "comando": "Indique a função principal dos nutrientes de cada monte da tabela.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos montes da turma",
+    "colunas": [
+     "Monte",
+     "Alimentos"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Pão, arroz e azeite"
+     ],
+     [
+      "2",
+      "Ovo, feijão e leite"
+     ],
+     [
+      "3",
+      "Laranja, couve e tomate"
+     ]
+    ]
+   },
+   "ref": "Monte 1: fornece energia (carboidratos e gorduras). Monte 2: constrói e repara tecidos (proteínas). Monte 3: regula o funcionamento do corpo e ajuda nas defesas (vitaminas e sais minerais).",
+   "conceitos": [
+    "energia",
+    "construção e reparo",
+    "regulação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Tomás disse à irmã que laranja e couve não servem para nada, pois quase não dão energia. Ela mostrou a ele uma tabela com o valor energético de alguns alimentos.",
+   "comando": "Corrija a ideia de Tomás: explique por que alimentos com pouca energia ainda são importantes.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de valor energético (100 g)",
+    "colunas": [
+     "Alimento",
+     "Energia"
+    ],
+    "linhas": [
+     [
+      "Arroz cozido",
+      "130 kcal"
+     ],
+     [
+      "Laranja",
+      "47 kcal"
+     ],
+     [
+      "Couve",
+      "30 kcal"
+     ]
+    ]
+   },
+   "ref": "Vitaminas e minerais não fornecem energia, mas regulam o funcionamento do corpo. Por exemplo, a vitamina C ajuda nas defesas e na cicatrização. Sua falta causa doenças, por isso esses alimentos são importantes.",
+   "conceitos": [
+    "vitaminas e minerais não dão energia",
+    "função reguladora",
+    "falta causa doenças"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Gabriela comparou os rótulos de dois biscoitos de mesmo peso. O biscoito Y tem mais gordura e menos carboidratos que o biscoito X, e ela percebeu que o Y tem mais calorias.",
+   "comando": "Explique por que o biscoito Y tem mais calorias, mesmo com menos carboidratos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de rótulos (porção de 30 g)",
+    "colunas": [
+     "Biscoito",
+     "Gordura",
+     "Carboidratos",
+     "Energia"
+    ],
+    "linhas": [
+     [
+      "X",
+      "3 g",
+      "20 g",
+      "107 kcal"
+     ],
+     [
+      "Y",
+      "9 g",
+      "15 g",
+      "141 kcal"
+     ]
+    ]
+   },
+   "ref": "Porque a gordura fornece mais energia por grama (cerca de 9 kcal) do que o carboidrato (cerca de 4 kcal). Assim, a maior quantidade de gordura do biscoito Y compensa o menor teor de carboidratos.",
+   "conceitos": [
+    "gordura fornece mais energia por grama",
+    "carboidrato fornece menos energia",
+    "comparação dos valores do rótulo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os irmãos Pedro e Rui comem a mesma quantidade de comida por dia. Pedro treina natação duas horas por dia, enquanto Rui passa a maior parte do tempo jogando videogame.",
+   "comando": "Compare o saldo de energia de cada irmão e preveja o que acontece com o corpo de Rui ao longo do tempo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de energia por dia",
+    "colunas": [
+     "Pessoa",
+     "Consumo",
+     "Gasto"
+    ],
+    "linhas": [
+     [
+      "Pedro",
+      "3.000 kcal",
+      "3.200 kcal"
+     ],
+     [
+      "Rui",
+      "3.000 kcal",
+      "2.000 kcal"
+     ]
+    ]
+   },
+   "ref": "Pedro gasta mais do que consome (saldo de -200 kcal) e mantém o peso. Rui consome 1.000 kcal a mais do que gasta; o excesso de energia é armazenado em forma de gordura, o que pode levar ao ganho de peso.",
+   "conceitos": [
+    "saldo de energia",
+    "excesso armazenado como gordura",
+    "gasto energético"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola vai escolher o cardápio mais equilibrado da semana para o lanche. A diretora pediu que os alunos avaliassem as opções com base nas funções dos nutrientes.",
+   "comando": "Escolha o dia com o lanche mais equilibrado e justifique com as funções dos nutrientes.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do cardápio de lanche",
+    "colunas": [
+     "Dia",
+     "Lanche"
+    ],
+    "linhas": [
+     [
+      "Segunda",
+      "Bolacha recheada e refrigerante"
+     ],
+     [
+      "Terça",
+      "Pão com ovo e laranja"
+     ],
+     [
+      "Quarta",
+      "Salgadinho e suco de caixinha"
+     ]
+    ]
+   },
+   "ref": "Terça: o pão fornece energia (carboidratos), o ovo oferece proteínas para formar e reparar tecidos e a laranja traz vitaminas que regulam o corpo. Segunda e quarta têm muito açúcar, sal e gordura e poucos nutrientes construtores e reguladores.",
+   "conceitos": [
+    "lanche de terça",
+    "energia, construção e regulação",
+    "excesso de açúcar e sal nos demais"
+   ]
+  }
+ ],
+ "9º ANO|1|Relacionar a organização dos átomos aos estados físicos da matéria e suas propriedades.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Lia, de Sorocaba, deixou uma pedra de gelo num copo sobre a mesa da cozinha em uma tarde de 32 °C. Meia hora depois, só havia água líquida no copo, e ela quis explicar o que aconteceu com as partículas.",
+   "comando": "O que ocorreu com as partículas de água quando o gelo derreteu?",
+   "figura": null,
+   "alts": [
+    "Passaram a se mover mais e a se afastar um pouco, deslizando umas sobre as outras",
+    "Passaram a se mover menos e a se aproximar muito, ficando presas em posições fixas",
+    "Passaram a se mover mais e a se afastar muito, espalhando-se por todo o copo",
+    "Passaram a se mover menos e a se afastar um pouco, ficando presas em posições fixas"
+   ],
+   "correta": 0,
+   "explicacao": "Ao derreter, as partículas ganham energia, vibram mais e escorregam umas sobre as outras; no gás elas se espalhariam muito mais."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a professora usou três caixas com bolinhas para representar os estados físicos. Depois pediu que os alunos relacionassem o vapor que sai de uma panela com água fervendo a uma das caixas.",
+   "comando": "Qual caixa representa as partículas do vapor de água?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do modelo das caixas",
+    "colunas": [
+     "Caixa",
+     "Observação das bolinhas"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Encostadas, quase paradas"
+     ],
+     [
+      "2",
+      "Próximas, escorregando entre si"
+     ],
+     [
+      "3",
+      "Espaçadas, em movimento rápido"
+     ]
+    ]
+   },
+   "alts": [
+    "Caixa 1, pois as partículas ficam bem unidas e se movem livremente",
+    "Caixa 2, pois as partículas ficam muito afastadas e quase não se movem",
+    "Caixa 3, pois as partículas ficam muito afastadas e se movem livremente",
+    "As caixas 2 e 3, pois as partículas ficam próximas e se movem livremente"
+   ],
+   "correta": 2,
+   "explicacao": "No gás, as partículas ficam muito afastadas e se movem em todas as direções; por isso o vapor se espalha pelo ambiente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma aula prática, Rafael vedou a ponta de duas seringas iguais de 20 mL, uma com ar e outra com água, e empurrou o êmbolo de cada uma com a mesma força. Ele anotou o volume depois da compressão.",
+   "comando": "Por que a seringa com ar foi comprimida e a com água praticamente não?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Seringa",
+     "Conteúdo",
+     "Volume inicial",
+     "Volume final"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Ar",
+      "20 mL",
+      "8 mL"
+     ],
+     [
+      "2",
+      "Água",
+      "20 mL",
+      "20 mL"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque no ar as partículas ficam bem próximas, e na água, muito afastadas",
+    "Porque as partículas do ar são menores que as da água e ocupam menos espaço",
+    "Porque no ar as partículas estão paradas, e na água estão em movimento",
+    "Porque no ar as partículas ficam muito afastadas, e na água, bem próximas"
+   ],
+   "correta": 3,
+   "explicacao": "O ar é gás: há grandes espaços entre as partículas, que podem se aproximar. Na água as partículas já estão próximas e é difícil comprimi-las."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Camila consultou uma tabela com temperaturas de fusão e de ebulição de três substâncias. Em um dia de verão, a temperatura ambiente estava em 25 °C, e ela quis prever o estado de cada uma.",
+   "comando": "Qual é o estado físico de cada substância a 25 °C?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de temperaturas",
+    "colunas": [
+     "Substância",
+     "Fusão",
+     "Ebulição"
+    ],
+    "linhas": [
+     [
+      "Água",
+      "0 °C",
+      "100 °C"
+     ],
+     [
+      "Álcool",
+      "-114 °C",
+      "78 °C"
+     ],
+     [
+      "Ferro",
+      "1.538 °C",
+      "2.862 °C"
+     ]
+    ]
+   },
+   "alts": [
+    "Água e ferro estão líquidos, e o álcool está gasoso",
+    "Água e álcool estão líquidos, e o ferro está sólido",
+    "Água e álcool estão gasosos, e o ferro está líquido",
+    "Água está sólida, e o álcool e o ferro estão líquidos"
+   ],
+   "correta": 1,
+   "explicacao": "A 25 °C, água e álcool estão acima da fusão e abaixo da ebulição (líquidos); o ferro está abaixo da fusão (sólido)."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um laboratório, Bia aqueceu um béquer com gelo a -10 °C, com uma chama constante, e anotou a temperatura a cada 4 minutos. Ela estranhou que, entre 4 e 12 minutos, o termômetro marcou 0 °C mesmo com a chama acesa.",
+   "comando": "Como explicar a temperatura constante de 0 °C enquanto o béquer continua sendo aquecido?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Tempo",
+     "Temperatura",
+     "Conteúdo observado"
+    ],
+    "linhas": [
+     [
+      "0 min",
+      "-10 °C",
+      "Gelo"
+     ],
+     [
+      "4 min",
+      "0 °C",
+      "Gelo e água"
+     ],
+     [
+      "8 min",
+      "0 °C",
+      "Gelo e água"
+     ],
+     [
+      "12 min",
+      "0 °C",
+      "Só água"
+     ]
+    ]
+   },
+   "alts": [
+    "A energia é usada para aumentar a agitação das partículas, mas o termômetro não registra",
+    "A energia é usada para desfazer a organização das partículas, e não para agitá-las mais",
+    "O gelo para de receber energia ao começar a derreter, e as partículas ficam sem se mover",
+    "A energia é perdida para o ar da sala, e as partículas passam a se organizar mais"
+   ],
+   "correta": 1,
+   "explicacao": "Durante a fusão, a energia é usada para romper a organização do sólido; só depois que todo o gelo derrete é que a temperatura volta a subir."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A professora usou uma caixa com bolinhas para representar as partículas da matéria: ora bem juntas e só tremendo, ora deslizando, ora espalhadas e sacudindo forte.",
+   "comando": "Descreva a organização e o movimento das partículas nos estados sólido, líquido e gasoso.",
+   "figura": null,
+   "ref": "Sólido: partículas muito próximas e organizadas, apenas vibrando. Líquido: partículas próximas, mas deslizando umas sobre as outras. Gás: partículas muito afastadas, desorganizadas e movendo-se rapidamente em todas as direções.",
+   "conceitos": [
+    "sólido: partículas unidas e vibrando",
+    "líquido: partículas deslizando",
+    "gás: partículas afastadas e rápidas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um copo com gelo foi deixado sobre a mesa em um dia quente. Um aluno anotou a temperatura e o aspecto do conteúdo em quatro momentos.",
+   "comando": "Identifique a mudança de estado ocorrida e explique o que acontece com a agitação das partículas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do copo com gelo",
+    "colunas": [
+     "Tempo",
+     "Temperatura",
+     "Aspecto"
+    ],
+    "linhas": [
+     [
+      "0 min",
+      "-5 °C",
+      "Só gelo"
+     ],
+     [
+      "10 min",
+      "0 °C",
+      "Gelo e água"
+     ],
+     [
+      "25 min",
+      "0 °C",
+      "Pouco gelo e muita água"
+     ],
+     [
+      "40 min",
+      "8 °C",
+      "Só água"
+     ]
+    ]
+   },
+   "ref": "O gelo sofreu fusão, passando de sólido a líquido. As partículas receberam energia do ambiente, passaram a se agitar mais e se soltaram da organização fixa do sólido, deslizando umas sobre as outras.",
+   "conceitos": [
+    "fusão",
+    "aumento da agitação",
+    "partículas deslizando"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu Lúcio deixou 100 mL de água num prato ao sol, em um dia quente, e foi medindo quanto restava a cada hora. Depois de 3 horas, o prato estava seco.",
+   "comando": "Explique, usando o modelo de partículas, para onde foi a água do prato.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do volume de água no prato",
+    "unidade": "mL",
+    "itens": [
+     {
+      "rotulo": "0 h",
+      "valor": 100
+     },
+     {
+      "rotulo": "1 h",
+      "valor": 70
+     },
+     {
+      "rotulo": "2 h",
+      "valor": 35
+     },
+     {
+      "rotulo": "3 h",
+      "valor": 0
+     }
+    ]
+   },
+   "ref": "A água passou do estado líquido para o gasoso, por evaporação. As partículas da superfície, agitadas pelo calor do Sol, se soltaram das outras e se espalharam pelo ar como vapor de água.",
+   "conceitos": [
+    "evaporação",
+    "partículas se soltam",
+    "passagem de líquido para gás"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um grupo colocou uma pedra, água e ar em recipientes de formatos diferentes e anotou o que acontece com a forma e o volume de cada material.",
+   "comando": "Explique, com base na organização das partículas, por que os três materiais se comportam de modo diferente.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações",
+    "colunas": [
+     "Material",
+     "Forma",
+     "Volume"
+    ],
+    "linhas": [
+     [
+      "Pedra",
+      "Não muda",
+      "Não muda"
+     ],
+     [
+      "Água",
+      "Muda com o recipiente",
+      "Não muda"
+     ],
+     [
+      "Ar",
+      "Muda com o recipiente",
+      "Muda, enchendo o espaço"
+     ]
+    ]
+   },
+   "ref": "Na pedra (sólido), as partículas são muito unidas e fixas, por isso forma e volume ficam definidos. Na água (líquido), elas deslizam e a forma muda, mas permanecem próximas, e o volume se mantém. No ar (gás), estão afastadas e livres, ocupando todo o espaço.",
+   "conceitos": [
+    "sólido com forma e volume fixos",
+    "líquido com forma variável",
+    "gás ocupa todo o espaço"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O chocolate derrete na mão a cerca de 34 °C, o gelo derrete a 0 °C e o ferro só derrete em temperaturas muito altas. Um aluno anotou esses valores.",
+   "comando": "Justifique por que o ferro não derrete na mão, relacionando a temperatura de fusão com a organização das partículas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de temperaturas de fusão",
+    "colunas": [
+     "Material",
+     "Fusão"
+    ],
+    "linhas": [
+     [
+      "Gelo",
+      "0 °C"
+     ],
+     [
+      "Chocolate",
+      "34 °C"
+     ],
+     [
+      "Ferro",
+      "1.538 °C"
+     ]
+    ]
+   },
+   "ref": "No ferro, as partículas estão muito fortemente unidas e organizadas, e é preciso fornecer muita energia para soltá-las. A mão, a cerca de 34 °C, fornece pouca energia, por isso o ferro continua sólido, ao contrário do chocolate.",
+   "conceitos": [
+    "temperatura de fusão",
+    "união das partículas",
+    "energia necessária para a mudança de estado"
+   ]
+  }
+ ],
+ "4B|6º ANO|3": [
+  {
+   "tipo": "obj",
+   "enunciado": "Ana desenhou um neurônio no caderno, mas esqueceu os nomes das partes. Ela apontou para o prolongamento mais longo e fino da célula, que termina em pequenas ramificações perto de outra célula.",
+   "comando": "Qual é o nome dessa parte e qual é a sua função?",
+   "figura": null,
+   "alts": [
+    "Axônio, que conduz o impulso do corpo da célula até outras células",
+    "Dendrito, que recebe o impulso vindo de outras células e o leva ao corpo",
+    "Corpo celular, que tem o núcleo e conduz o impulso a outras células",
+    "Sinapse, que forma o impulso nervoso e o leva do corpo até outras células"
+   ],
+   "correta": 0,
+   "explicacao": "O axônio é o prolongamento longo que leva o impulso para fora do corpo celular; dendritos recebem, e a sinapse é o ponto de contato entre neurônios."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Bruno estudou que os neurônios de uma cadeia não se tocam: entre o fim do axônio de um neurônio e o dendrito do seguinte existe um pequeno espaço. Mesmo assim, a informação passa de uma célula para a outra.",
+   "comando": "Como o sinal atravessa esse espaço entre os dois neurônios?",
+   "figura": null,
+   "alts": [
+    "Por fios elétricos que se formam entre os dois neurônios durante o impulso",
+    "Por pedaços do axônio que se soltam do primeiro neurônio e entram no segundo",
+    "Por substâncias químicas que o primeiro neurônio libera e o segundo capta",
+    "Pelo sangue que passa pelo espaço e leva o sinal de um neurônio ao outro"
+   ],
+   "correta": 2,
+   "explicacao": "Na sinapse, o neurônio libera neurotransmissores, substâncias químicas que são captadas pelo neurônio seguinte."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Lara encostou o dedo num espinho de roseira e sentiu dor. Na aula, a professora mostrou as três regiões de um neurônio da mão de Lara e pediu que os alunos descobrissem o caminho do impulso nervoso.",
+   "comando": "Qual é a sequência correta do caminho do impulso nervoso dentro desse neurônio?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das regiões do neurônio",
+    "colunas": [
+     "Região",
+     "Característica"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Ramificações curtas na extremidade"
+     ],
+     [
+      "2",
+      "Parte arredondada, onde fica o núcleo"
+     ],
+     [
+      "3",
+      "Prolongamento longo que termina em ramificações"
+     ]
+    ]
+   },
+   "alts": [
+    "axônio, corpo celular, dendritos e sinapse com o neurônio seguinte",
+    "corpo celular, dendritos, axônio e sinapse com o neurônio seguinte",
+    "dendritos, axônio, corpo celular e depois sinapse com o neurônio seguinte",
+    "dendritos, corpo celular, axônio e sinapse com o neurônio seguinte"
+   ],
+   "correta": 3,
+   "explicacao": "O impulso entra pelos dendritos, passa pelo corpo celular e segue pelo axônio até a sinapse."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Caio pisou num prego sem querer e, em seguida, puxou o pé do chão. O médico do posto de saúde explicou que três tipos de neurônios participaram da resposta, em etapas.",
+   "comando": "Qual tipo de neurônio levou a ordem do sistema nervoso até o músculo da perna, na etapa 4?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas da reação de Caio",
+    "etapas": [
+     "O pé pisa no prego",
+     "O sinal vai até o sistema nervoso central",
+     "O comando volta pelo corpo",
+     "O músculo da perna se contrai"
+    ]
+   },
+   "alts": [
+    "O neurônio sensorial, que leva a informação da pele até o sistema nervoso",
+    "O neurônio motor, que leva o comando do sistema nervoso até os músculos",
+    "O interneurônio, que leva o comando do músculo até a pele do pé",
+    "O neurônio sensorial, que leva o comando do sistema nervoso até os músculos"
+   ],
+   "correta": 1,
+   "explicacao": "Neurônios sensoriais levam informação ao sistema nervoso, interneurônios a processam, e neurônios motores levam o comando aos músculos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um experimento de simulação, pesquisadores estimularam o neurônio A e mediram a resposta no neurônio B, que fica logo depois da sinapse. Depois, estimularam o neurônio B e mediram o neurônio A. Os resultados estão na tabela.",
+   "comando": "O que os dados permitem concluir sobre a transmissão do impulso na sinapse?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Neurônio estimulado",
+     "Neurônio que respondeu"
+    ],
+    "linhas": [
+     [
+      "A",
+      "B respondeu"
+     ],
+     [
+      "B",
+      "A não respondeu"
+     ]
+    ]
+   },
+   "alts": [
+    "A sinapse transmite em um sentido, pois o axônio libera as substâncias e o dendrito as capta",
+    "A sinapse transmite nos dois sentidos, pois qualquer parte do neurônio libera e capta substâncias",
+    "A sinapse transmite em um sentido, pois o dendrito libera as substâncias e o axônio as capta",
+    "A sinapse não transmite o impulso, pois o neurônio B respondeu por estar perto do neurônio A"
+   ],
+   "correta": 0,
+   "explicacao": "O axônio libera neurotransmissores e o dendrito do neurônio seguinte os capta; por isso o impulso segue em um só sentido."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula, a professora desenhou um neurônio e marcou três regiões com números, sem escrever os nomes.",
+   "comando": "Dê o nome de cada região da tabela e diga a função de cada uma.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das regiões do desenho",
+    "colunas": [
+     "Região",
+     "Característica"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Ramificações curtas na extremidade"
+     ],
+     [
+      "2",
+      "Parte arredondada, com núcleo"
+     ],
+     [
+      "3",
+      "Prolongamento longo que termina em ramificações"
+     ]
+    ]
+   },
+   "ref": "1 é o dendrito, que recebe o impulso vindo de outras células. 2 é o corpo celular, que contém o núcleo e comanda a célula. 3 é o axônio, que conduz o impulso até outras células.",
+   "conceitos": [
+    "dendrito recebe",
+    "corpo celular com núcleo",
+    "axônio conduz"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rafael leu que os neurônios formam longas cadeias, mas que um neurônio não encosta no seguinte. Ficou em dúvida sobre como o sinal chega à célula seguinte.",
+   "comando": "Explique o que é sinapse e como o sinal passa de um neurônio para outro.",
+   "figura": null,
+   "ref": "Sinapse é a região de comunicação entre dois neurônios. O fim do axônio libera substâncias químicas (neurotransmissores) no espaço entre as células, e o neurônio seguinte as capta pelos dendritos, recebendo o sinal.",
+   "conceitos": [
+    "sinapse",
+    "substâncias químicas",
+    "axônio libera e dendrito capta"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lúcia encostou o dedo numa panela quente e, em um instante, afastou a mão. A professora disse que esse movimento depende de neurônios conectados em cadeia.",
+   "comando": "Descreva o caminho do impulso dentro de um neurônio e entre neurônios, desde o dedo até o músculo.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Etapas do caso de Lúcia",
+    "etapas": [
+     "O dedo toca a panela quente",
+     "Neurônios conduzem o sinal",
+     "O músculo recebe o comando",
+     "A mão se afasta"
+    ]
+   },
+   "ref": "O impulso entra pelos dendritos, passa pelo corpo celular e segue pelo axônio. Na sinapse, substâncias químicas passam o sinal ao neurônio seguinte. Assim a informação vai do dedo ao sistema nervoso, e o comando volta ao músculo.",
+   "conceitos": [
+    "dendrito, corpo celular e axônio",
+    "sinapse",
+    "sentido do impulso"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um professor mediu o tempo de duas reações de Pedro: afastar a mão de uma superfície quente e apertar um botão depois de ver uma luz acender.",
+   "comando": "Explique por que a reação à superfície quente foi bem mais rápida que a reação à luz.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de tempos de reação",
+    "colunas": [
+     "Situação",
+     "Tempo de reação"
+    ],
+    "linhas": [
+     [
+      "Afastar a mão da superfície quente",
+      "0,05 s"
+     ],
+     [
+      "Apertar o botão ao ver a luz",
+      "0,25 s"
+     ]
+    ]
+   },
+   "ref": "O afastamento da mão é um reflexo: o sinal vai pelo neurônio sensorial até a medula, passa por um interneurônio e volta por um neurônio motor, sem esperar o cérebro. Apertar o botão envolve mais neurônios e decisão, por isso demora mais.",
+   "conceitos": [
+    "reflexo",
+    "caminho mais curto",
+    "menos neurônios envolvidos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Após um acidente, Marcos sente o toque na pele do braço direito, mas não consegue mexer o braço. O médico suspeita de lesão nos neurônios que ligam o sistema nervoso ao músculo.",
+   "comando": "Justifique qual tipo de neurônio foi atingido e por que a sensibilidade foi preservada.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do paciente",
+    "colunas": [
+     "Teste",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Sente o toque no braço",
+      "Sim"
+     ],
+     [
+      "Consegue mexer o braço",
+      "Não"
+     ]
+    ]
+   },
+   "ref": "Foram atingidos os neurônios motores, que levam o comando aos músculos, por isso o braço não se move. Os neurônios sensoriais, que levam a informação da pele ao sistema nervoso, continuam funcionando, então ele sente o toque.",
+   "conceitos": [
+    "neurônio motor lesionado",
+    "neurônio sensorial preservado",
+    "caminho da informação"
+   ]
+  }
+ ],
+ "4B|6º ANO|16": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências sobre substâncias psicoativas, a professora escreveu na lousa quatro listas de substâncias e pediu que a turma escolhesse a lista em que todas são drogas lícitas, isto é, de venda permitida por lei para adultos.",
+   "comando": "Qual lista reúne apenas drogas lícitas?",
+   "figura": null,
+   "alts": [
+    "Cafeína, maconha e álcool",
+    "Cigarro, cocaína e cafeína",
+    "Álcool, crack e cigarro",
+    "Álcool, cigarro e cafeína"
+   ],
+   "correta": 3,
+   "explicacao": "Álcool, cigarro e cafeína têm venda permitida para adultos, embora também afetem o sistema nervoso. Maconha, cocaína e crack são ilícitas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Miguel acompanha o tio Jair, que fumava dois maços de cigarro por dia. Ao tentar parar, o tio ficou irritado, ansioso e com muita vontade de fumar, e voltou ao hábito alguns dias depois.",
+   "comando": "O que explica o comportamento do tio Jair ao tentar parar de fumar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do tio Jair sem cigarro",
+    "colunas": [
+     "Dia",
+     "Como ele ficou"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Irritado"
+     ],
+     [
+      "2",
+      "Ansioso, com vontade de fumar"
+     ],
+     [
+      "3",
+      "Voltou a fumar"
+     ]
+    ]
+   },
+   "alts": [
+    "O corpo e o cérebro se habituaram à nicotina, e a falta dela causa mal-estar",
+    "O corpo e o cérebro rejeitaram a nicotina, e o mal-estar mostra que ela deixou de agir",
+    "O tio fica ansioso porque já curou os pulmões, e o mal-estar mostra que a doença sumiu",
+    "A nicotina age no pulmão, e o mal-estar do tio vem de falta de vontade"
+   ],
+   "correta": 0,
+   "explicacao": "Na dependência, o sistema nervoso se adapta à droga e sua falta provoca sintomas como irritação e ansiedade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Lia, de 13 anos, estava no pátio quando um colega ofereceu um cigarro eletrônico e disse: \"é só uma vez, para experimentar; não faz mal\". Ela lembrou do que viu na aula sobre efeitos das drogas no sistema nervoso.",
+   "comando": "Qual é a atitude mais adequada e a melhor justificativa para Lia?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Cena no pátio da escola",
+    "etapas": [
+     "Colega oferece um cigarro eletrônico",
+     "Colega diz que é só uma vez",
+     "Lia lembra da aula sobre o sistema nervoso",
+     "Lia precisa decidir o que fazer"
+    ]
+   },
+   "alts": [
+    "Aceitar uma vez, pois uma experiência isolada não causa dependência no cérebro",
+    "Aceitar, pois o vapor do cigarro eletrônico é de água e não atinge o sistema nervoso",
+    "Recusar, pois a nicotina atua no cérebro e pode causar dependência no uso ocasional",
+    "Recusar, pois a nicotina só causa problemas depois de vários anos de uso contínuo"
+   ],
+   "correta": 2,
+   "explicacao": "A nicotina age no cérebro e pode gerar dependência rapidamente, especialmente em adolescentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A escola de Camila fez uma pesquisa com uma turma sobre o que leva adolescentes a experimentar drogas. A direção quer escolher uma ação de prevenção que responda aos principais motivos encontrados.",
+   "comando": "Qual ação de prevenção responde melhor aos motivos mais citados?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro das respostas da turma",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Curiosidade",
+      "valor": 40
+     },
+     {
+      "rotulo": "Pressão de colegas",
+      "valor": 30
+     },
+     {
+      "rotulo": "Escapar de problemas",
+      "valor": 20
+     },
+     {
+      "rotulo": "Exemplo na família",
+      "valor": 10
+     }
+    ]
+   },
+   "alts": [
+    "Aulas de provas sobre os nomes das drogas, sem espaço para dúvidas dos alunos",
+    "Aviso no mural da escola proibindo o assunto, para que ninguém converse sobre ele",
+    "Punição para quem comentar o assunto no pátio, para que os colegas parem de falar",
+    "Rodas de conversa com informações sobre efeitos e treino de como dizer não"
+   ],
+   "correta": 3,
+   "explicacao": "A prevenção é mais eficaz quando oferece informação, diálogo e habilidades para resistir à pressão, e não silêncio ou punição."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um simulador de direção usado numa campanha de trânsito, voluntários adultos fizeram o mesmo percurso depois de beber diferentes quantidades de álcool. A equipe anotou o tempo de reação ao freio e o número de erros.",
+   "comando": "O que os dados indicam sobre o efeito do álcool no sistema nervoso e na direção?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Copos de bebida",
+     "Tempo de reação",
+     "Erros no percurso"
+    ],
+    "linhas": [
+     [
+      "0",
+      "0,7 s",
+      "0"
+     ],
+     [
+      "2",
+      "0,9 s",
+      "3"
+     ],
+     [
+      "4",
+      "1,3 s",
+      "9"
+     ]
+    ]
+   },
+   "alts": [
+    "O álcool deixa o sistema nervoso mais rápido, e o risco diminui com a quantidade",
+    "O álcool deixa o sistema nervoso mais lento, e o risco cresce com a quantidade",
+    "O álcool altera o sistema nervoso depois de quatro copos, e antes disso não há risco",
+    "O álcool não muda o sistema nervoso, e os erros se explicam pelo cansaço dos voluntários"
+   ],
+   "correta": 1,
+   "explicacao": "O álcool é depressor do sistema nervoso: aumenta o tempo de reação e os erros conforme a quantidade, o que torna perigoso dirigir."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Algumas substâncias, como álcool, cigarro, cafeína, maconha e cocaína, alteram o funcionamento do sistema nervoso e são chamadas de psicoativas. Algumas têm venda permitida para adultos e outras são proibidas.",
+   "comando": "Explique a diferença entre drogas lícitas e ilícitas, dê um exemplo de cada e diga o que elas têm em comum.",
+   "figura": null,
+   "ref": "Drogas lícitas têm venda permitida por lei, como o álcool para adultos; ilícitas são proibidas, como a cocaína. Em comum, todas alteram o funcionamento do sistema nervoso e podem causar dependência e prejuízos à saúde.",
+   "conceitos": [
+    "lícitas e ilícitas",
+    "exemplos",
+    "ação no sistema nervoso"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu Joaquim fumava 20 cigarros por dia. Ao decidir parar, anotou como se sentiu nos primeiros dias sem fumar e contou à neta, que estuda Ciências.",
+   "comando": "Explique o que é dependência e por que seu Joaquim teve esses sintomas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de seu Joaquim sem cigarro",
+    "colunas": [
+     "Dia sem fumar",
+     "Como se sentiu"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Muito irritado"
+     ],
+     [
+      "2",
+      "Ansioso e com vontade de fumar"
+     ],
+     [
+      "3",
+      "Dificuldade para dormir"
+     ]
+    ]
+   },
+   "ref": "Dependência é quando o organismo se acostuma à substância e passa a precisar dela. Sem a nicotina, o sistema nervoso reage com sintomas como irritação e ansiedade, e isso dificulta parar.",
+   "conceitos": [
+    "dependência",
+    "adaptação do sistema nervoso",
+    "mal-estar na falta da substância"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Gustavo, de 12 anos, vai a uma festa onde alguns colegas pretendem beber escondidos. Ele quer evitar o problema sem perder os amigos e pediu ajuda à turma para criar uma mensagem.",
+   "comando": "Escreva uma mensagem de prevenção para Gustavo com dois argumentos sobre os efeitos das drogas no sistema nervoso.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Situação de Gustavo",
+    "etapas": [
+     "Convite para a festa",
+     "Colegas combinam de beber escondidos",
+     "Gustavo quer recusar sem perder os amigos",
+     "A turma ajuda a criar a mensagem"
+    ]
+   },
+   "ref": "Mensagem esperada: recusar com respeito. Argumentos possíveis: o álcool deixa o sistema nervoso mais lento e prejudica atenção e reflexos; o cérebro dos adolescentes ainda está em desenvolvimento e pode ser mais afetado, com risco de dependência.",
+   "conceitos": [
+    "recusar com respeito",
+    "efeito no sistema nervoso",
+    "risco para quem está em desenvolvimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma pesquisa fictícia comparou o percentual de pessoas que desenvolveram dependência de nicotina segundo a idade em que começaram a fumar. O resultado foi apresentado na aula de Ciências.",
+   "comando": "Relacione os dados ao desenvolvimento do cérebro e justifique por que retardar o primeiro contato com drogas é importante.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de estudo fictício",
+    "colunas": [
+     "Idade de início",
+     "Pessoas com dependência"
+    ],
+    "linhas": [
+     [
+      "13 anos",
+      "40%"
+     ],
+     [
+      "18 anos",
+      "20%"
+     ],
+     [
+      "25 anos",
+      "10%"
+     ]
+    ]
+   },
+   "ref": "Quanto mais cedo se começa, maior o percentual de dependência. O cérebro de adolescentes ainda está em desenvolvimento e é mais sensível aos efeitos das drogas. Retardar o contato reduz o risco de dependência e de prejuízos.",
+   "conceitos": [
+    "quanto mais cedo, maior o risco",
+    "cérebro em desenvolvimento",
+    "prevenção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O primo de Júlia bebe todos os dias e diz que não consegue parar, embora queira. Ela pensa em dizer a ele que é só falta de força de vontade, mas a professora explicou que a situação precisa de outro olhar.",
+   "comando": "Justifique por que a dependência é uma questão de saúde e cite duas ações que Júlia pode tomar para ajudar o primo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do caso do primo",
+    "colunas": [
+     "Informação",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Frequência de consumo",
+      "Todos os dias"
+     ],
+     [
+      "Tentativas de parar",
+      "3"
+     ],
+     [
+      "Resultado",
+      "Não conseguiu parar"
+     ]
+    ]
+   },
+   "ref": "A dependência altera o funcionamento do sistema nervoso e exige tratamento; não é só falta de força de vontade. Júlia pode acolher o primo sem julgá-lo, conversar com um adulto de confiança e incentivá-lo a procurar a UBS ou um serviço de saúde.",
+   "conceitos": [
+    "dependência é questão de saúde",
+    "acolher sem julgar",
+    "procurar a UBS ou serviço de saúde"
+   ]
+  }
+ ],
+ "4B|7º ANO|13": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma creche de São Paulo, um menino com sarampo foi à aula antes de aparecerem as manchas na pele. Em poucos dias, vários colegas não vacinados adoeceram. A pediatra explicou o motivo ao ver os números sobre a transmissão de algumas doenças.",
+   "comando": "Por que o sarampo se espalha tão rápido entre pessoas não vacinadas?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de pessoas infectadas por cada doente (valores aproximados)",
+    "unidade": "pessoas",
+    "itens": [
+     {
+      "rotulo": "Sarampo",
+      "valor": 15
+     },
+     {
+      "rotulo": "Catapora",
+      "valor": 9
+     },
+     {
+      "rotulo": "Gripe comum",
+      "valor": 2
+     }
+    ]
+   },
+   "alts": [
+    "Porque o vírus passa pelo ar e cada doente infecta muitas pessoas sem imunidade",
+    "Porque o vírus passa pelo contato com alimentos, e cada doente infecta uma pessoa",
+    "Porque a bactéria passa pela água, e cada doente infecta um número fixo de pessoas",
+    "Porque o vírus passa pelo ar, e cada doente infecta pessoas que já têm imunidade"
+   ],
+   "correta": 0,
+   "explicacao": "O sarampo é muito contagioso: um doente pode infectar muitas pessoas sem imunidade, por isso a vacinação precisa atingir quase todos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Davi, de 7 anos, nunca teve sarampo, mas tomou a vacina tríplice viral aos 12 meses. Ele perguntou à mãe como a vacina pode proteger sem que ele tenha ficado doente.",
+   "comando": "Qual é a explicação científica para o que Davi perguntou?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Davi",
+    "colunas": [
+     "Informação",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Vacina tomada",
+      "Tríplice viral, aos 12 meses"
+     ],
+     [
+      "Já teve sarampo",
+      "Não"
+     ]
+    ]
+   },
+   "alts": [
+    "A vacina contém o remédio que cura o sarampo, e o corpo o usa quando a doença chegar",
+    "A vacina apresenta ao corpo uma forma enfraquecida do vírus, e o corpo cria defesas",
+    "A vacina forma uma camada na pele que bloqueia os vírus, e evita o contato com eles",
+    "A vacina deixa o corpo doente por alguns dias, e depois ele fica forte pelo resto da vida"
+   ],
+   "correta": 1,
+   "explicacao": "A vacina estimula o sistema imunológico a produzir anticorpos e células de memória, sem causar a doença."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na semana de vacinação, a escola onde estudam 400 alunos fez um levantamento. A meta da secretaria de saúde é que 95% dos alunos estejam com a vacina contra o sarampo em dia, e a coordenadora quer saber quantos precisam ainda ser vacinados.",
+   "comando": "Quantos alunos ainda precisam ser vacinados para a escola atingir a meta?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da vacinação na escola",
+    "unidade": "alunos",
+    "itens": [
+     {
+      "rotulo": "Em dia",
+      "valor": 340
+     },
+     {
+      "rotulo": "Atrasados",
+      "valor": 60
+     }
+    ]
+   },
+   "alts": [
+    "60 alunos, pois os alunos atrasados precisam tomar para atingir a meta",
+    "20 alunos, pois faltam 5% dos 400 alunos para chegar à meta de cobertura",
+    "40 alunos, pois a meta de 95% corresponde a 380 alunos com a vacina em dia",
+    "55 alunos, pois a diferença entre 95% e 85% corresponde a 55 alunos"
+   ],
+   "correta": 2,
+   "explicacao": "95% de 400 é 380. Como 340 já estão em dia, faltam 40 alunos; não é necessário vacinar os 60 atrasados para atingir a meta."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um grupo de mensagens da vizinhança espalhou o boato de que \"vacina causa a doença\" e de que é melhor esperar a criança adoecer para ela ficar imune. A agente de saúde foi convidada a esclarecer o assunto numa reunião.",
+   "comando": "Qual resposta da agente de saúde é cientificamente mais adequada?",
+   "figura": null,
+   "alts": [
+    "As vacinas são testadas e monitoradas, e seus riscos são bem menores que os da doença",
+    "As vacinas servem para tratar quem já adoeceu, por isso é melhor esperar os sintomas",
+    "As vacinas protegem a pessoa que toma, e a decisão de vacinar não afeta outras pessoas",
+    "As vacinas deixam imunidade para a vida toda, e doses de reforço não são necessárias"
+   ],
+   "correta": 0,
+   "explicacao": "As vacinas passam por testes e vigilância; esperar a doença expõe a complicações e ajuda a espalhá-la."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A poliomielite (paralisia infantil) deixou milhares de crianças com sequelas no Brasil até a década de 1980. Depois das campanhas de vacinação em massa, os casos caíram e o país foi certificado como livre da doença. Uma turma analisou os números.",
+   "comando": "Que conclusão os dados e o contexto permitem tirar?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de casos de poliomielite (valores ilustrativos)",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "1980",
+      "valor": 1300
+     },
+     {
+      "rotulo": "1985",
+      "valor": 60
+     },
+     {
+      "rotulo": "1990",
+      "valor": 0
+     },
+     {
+      "rotulo": "2020",
+      "valor": 0
+     }
+    ]
+   },
+   "alts": [
+    "A doença desapareceu sozinha com o tempo, e a vacinação já não é necessária",
+    "As campanhas reduziram os casos, e a cobertura alta evita o retorno da doença",
+    "A queda veio da melhora do clima ao longo dos anos, e a vacina passou a ser opcional",
+    "Os doentes foram isolados, e por isso a vacinação não teve papel na queda"
+   ],
+   "correta": 1,
+   "explicacao": "A vacinação em massa levou à eliminação da pólio, mas a doença pode voltar se a cobertura vacinal cair."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Mariana levou o cartão de vacinação ao posto de saúde para atualizar as doses. A enfermeira mostrou que cada vacina protege contra uma doença específica.",
+   "comando": "Explique o que acontece no corpo depois que Mariana toma uma vacina e por que isso a protege no futuro.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do cartão de Mariana",
+    "colunas": [
+     "Vacina",
+     "Dose",
+     "Idade"
+    ],
+    "linhas": [
+     [
+      "Tríplice viral",
+      "1ª",
+      "12 meses"
+     ],
+     [
+      "Poliomielite",
+      "3ª",
+      "6 meses"
+     ],
+     [
+      "Hepatite B",
+      "2ª",
+      "2 meses"
+     ]
+    ]
+   },
+   "ref": "A vacina apresenta ao corpo parte ou forma enfraquecida do microrganismo, sem causar a doença. O sistema imunológico produz anticorpos e células de memória; se Mariana for exposta ao microrganismo, o corpo reage rápido e evita a doença.",
+   "conceitos": [
+    "estímulo do sistema imunológico",
+    "anticorpos e memória",
+    "proteção futura"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Sofia tem 10 anos e faz um tratamento que a impede de tomar certas vacinas. Durante um surto de sarampo na cidade, ela não adoeceu. Em sua escola, 95% dos alunos estão vacinados.",
+   "comando": "Explique como Sofia ficou protegida mesmo sem vacina, usando a ideia de imunidade coletiva.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da escola de Sofia durante o surto",
+    "colunas": [
+     "Informação",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Alunos vacinados",
+      "95%"
+     ],
+     [
+      "Alunos não vacinados",
+      "5%"
+     ],
+     [
+      "Casos de sarampo na escola",
+      "1"
+     ]
+    ]
+   },
+   "ref": "Com quase todos os colegas vacinados, o vírus encontra poucas pessoas para infectar e quase não circula. Esse é o efeito da imunidade coletiva: quem está vacinado também protege quem não pode se vacinar.",
+   "conceitos": [
+    "imunidade coletiva",
+    "vírus circula menos",
+    "proteção de quem não pode se vacinar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma cidade registrou a queda da cobertura vacinal e, nos mesmos anos, o número de casos de sarampo. Um aluno colocou os dados numa tabela para uma reportagem da escola.",
+   "comando": "Relacione a cobertura vacinal com os casos de sarampo e explique o que isso mostra sobre a vacinação.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de cobertura e casos (valores ilustrativos)",
+    "colunas": [
+     "Ano",
+     "Cobertura vacinal",
+     "Casos de sarampo"
+    ],
+    "linhas": [
+     [
+      "2016",
+      "96%",
+      "0"
+     ],
+     [
+      "2019",
+      "82%",
+      "120"
+     ],
+     [
+      "2022",
+      "76%",
+      "350"
+     ]
+    ]
+   },
+   "ref": "Quando a cobertura vacinal cai, os casos de sarampo aumentam. Com menos pessoas vacinadas, o vírus circula mais, e a doença, antes controlada, volta. Isso mostra que a vacinação precisa continuar alta.",
+   "conceitos": [
+    "cobertura cai e casos sobem",
+    "vírus circula mais",
+    "vacinação protege a coletividade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um pai disse que não vai vacinar o filho porque a vacina pode causar dor e febre. A agente de saúde mostrou uma comparação entre reações comuns da vacina e complicações do sarampo.",
+   "comando": "Avalie o argumento do pai com base nos dados e diga o que a comparação mostra.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de comparação (valores ilustrativos)",
+    "colunas": [
+     "Evento",
+     "Frequência"
+    ],
+    "linhas": [
+     [
+      "Dor no braço após a vacina",
+      "1 a cada 10 vacinados"
+     ],
+     [
+      "Pneumonia causada pelo sarampo",
+      "1 a cada 20 doentes"
+     ]
+    ]
+   },
+   "ref": "As reações da vacina, como dor e febre, são leves e passageiras. O sarampo tem complicações graves, como pneumonia, que podem levar à morte. Logo, os benefícios da vacina superam os riscos, e o argumento do pai não se sustenta.",
+   "conceitos": [
+    "reações leves",
+    "complicações graves da doença",
+    "benefício maior que o risco"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O conselho de pais da escola vai decidir se faz uma campanha de vacinação no bairro. Alguns pais acham que vacinar é uma decisão só da família.",
+   "comando": "Escreva um argumento defendendo a vacinação como ação de saúde individual e coletiva, usando um exemplo de doença.",
+   "figura": null,
+   "ref": "A vacina protege quem a toma e também quem convive com essa pessoa. Quando muitos se vacinam, doenças como a poliomielite e o sarampo deixam de circular, e proteger-se ajuda recém-nascidos e pessoas que não podem tomar vacina.",
+   "conceitos": [
+    "proteção individual",
+    "proteção coletiva",
+    "exemplo de doença controlada"
+   ]
+  }
+ ],
+ "4B|8º ANO|13": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na casa de Dona Neusa, o pisca-pisca da árvore de Natal tem 20 lâmpadas. Quando uma das lâmpadas queimou, todas as outras apagaram juntas, e o filho dela precisou trocar a lâmpada defeituosa para o conjunto voltar a acender.",
+   "comando": "Como as lâmpadas do pisca-pisca estão ligadas e por que todas apagam juntas?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro dos fatos observados",
+    "etapas": [
+     "O pisca-pisca tem 20 lâmpadas na mesma fiada",
+     "Uma lâmpada queimou",
+     "As outras lâmpadas apagaram",
+     "Troca da lâmpada defeituosa"
+    ]
+   },
+   "alts": [
+    "Em paralelo, pois cada lâmpada tem seu caminho, e a corrente é interrompida em todo o conjunto",
+    "Em série, pois cada lâmpada tem seu caminho, e a corrente passa por uma delas",
+    "Em série, pois há um único caminho para a corrente, que é interrompido quando uma queima",
+    "Em paralelo, pois há um único caminho para a corrente, que é interrompido quando uma queima"
+   ],
+   "correta": 2,
+   "explicacao": "Na ligação em série há um único caminho para a corrente; se um componente se rompe, o circuito inteiro é interrompido."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Carol leu a etiqueta do carregador do celular do irmão: \"Saída: 5 V e 2 A\". Ela sabia que V e A são unidades de grandezas elétricas, mas não lembrava o que cada uma representa.",
+   "comando": "O que representam, respectivamente, os valores 5 V e 2 A?",
+   "figura": null,
+   "alts": [
+    "A tensão fornecida pelo carregador e a corrente que ele pode fornecer",
+    "A corrente fornecida pelo carregador e a tensão que ele pode fornecer",
+    "A resistência do carregador e a potência que ele pode fornecer",
+    "A tensão fornecida pelo carregador e a resistência que ele pode apresentar"
+   ],
+   "correta": 0,
+   "explicacao": "Volt (V) é a unidade de tensão e ampère (A) é a unidade de corrente elétrica; a resistência é medida em ohm."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No laboratório, Paulo ligou em série dois resistores a uma bateria e quis prever a corrente que passa no circuito. Ele anotou os valores do circuito antes de calcular.",
+   "comando": "Qual é a corrente no circuito e qual é o raciocínio correto para obtê-la?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Componente",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Resistor 1",
+      "4 Ω"
+     ],
+     [
+      "Resistor 2",
+      "6 Ω"
+     ],
+     [
+      "Bateria",
+      "20 V"
+     ]
+    ]
+   },
+   "alts": [
+    "5 A, pois o resistor de 4 Ω limita a corrente e o de 6 Ω não conta",
+    "0,5 A, pois a corrente é a resistência total dividida pela tensão",
+    "3,3 A, pois o resistor de 6 Ω limita a corrente e o de 4 Ω não conta no circuito",
+    "2 A, pois a resistência total é 4 + 6 = 10 Ω e a corrente é 20 ÷ 10"
+   ],
+   "correta": 3,
+   "explicacao": "Em série, as resistências se somam (10 Ω) e, pela lei de Ohm, I = U/R = 20/10 = 2 A."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um aluno montou, para a feira de ciências, um circuito com dois resistores ligados em paralelo, de 6 Ω e 3 Ω, e precisa saber a resistência equivalente para escolher a bateria adequada.",
+   "comando": "Qual é a resistência equivalente desses dois resistores em paralelo?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Montagem do circuito do aluno",
+    "etapas": [
+     "Ligar a bateria aos terminais",
+     "Conectar o resistor de 6 Ω entre os terminais",
+     "Conectar o resistor de 3 Ω entre os mesmos terminais",
+     "Fechar o circuito"
+    ]
+   },
+   "alts": [
+    "9 Ω, pois em paralelo a resistência equivalente é igual à soma 6 + 3",
+    "2 Ω, pois o produto 6 × 3 dividido pela soma 6 + 3 é igual a 2",
+    "4,5 Ω, pois em paralelo a equivalente é a média entre 6 e 3",
+    "3 Ω, pois em paralelo a equivalente é igual ao menor resistor"
+   ],
+   "correta": 1,
+   "explicacao": "Em paralelo, 1/Req = 1/6 + 1/3 = 1/2, logo Req = 2 Ω, menor que qualquer resistor do circuito."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Três resistores de 2 Ω, 6 Ω e 3 Ω estão ligados em paralelo a uma bateria de 12 V. Camila mediu a corrente em cada ramo e quer comparar os valores e relacioná-los à corrente que sai da bateria.",
+   "comando": "Qual afirmação descreve corretamente as correntes nesse circuito?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Componente",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Resistor 1",
+      "2 Ω"
+     ],
+     [
+      "Resistor 2",
+      "6 Ω"
+     ],
+     [
+      "Resistor 3",
+      "3 Ω"
+     ],
+     [
+      "Bateria",
+      "12 V"
+     ]
+    ]
+   },
+   "alts": [
+    "A corrente é maior no resistor de 6 Ω, pois ele recebe a maior parte da tensão da bateria",
+    "A corrente é igual nos três resistores, e a tensão da bateria se divide entre eles",
+    "A corrente é maior no resistor de 2 Ω, e a soma das correntes dos ramos é igual à da bateria",
+    "A corrente é maior no resistor de 2 Ω, e a soma das correntes dos ramos é menor que a da bateria"
+   ],
+   "correta": 2,
+   "explicacao": "Em paralelo a tensão é a mesma em todos os ramos (12 V) e a corrente é maior onde a resistência é menor; pela lei dos nós, a soma das correntes dos ramos é a corrente total."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas instalações foram montadas na bancada. No circuito X, quando se retira uma lâmpada, todas apagam. No circuito Y, ao retirar uma lâmpada, as outras continuam acesas.",
+   "comando": "Identifique qual circuito está em série e qual está em paralelo, justificando com as observações da tabela.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações",
+    "colunas": [
+     "Circuito",
+     "Lâmpada retirada",
+     "Outras lâmpadas"
+    ],
+    "linhas": [
+     [
+      "X",
+      "Lâmpada 1",
+      "Apagam"
+     ],
+     [
+      "Y",
+      "Lâmpada 1",
+      "Continuam acesas"
+     ]
+    ]
+   },
+   "ref": "X está em série: há um único caminho para a corrente, que é interrompido ao retirar uma lâmpada. Y está em paralelo: cada lâmpada tem seu próprio ramo, e as demais continuam funcionando.",
+   "conceitos": [
+    "série: único caminho",
+    "paralelo: ramos independentes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A placa de um chuveiro elétrico traz os valores 220 V, 25 A e 8,8 Ω. Joana não sabia o que cada valor representava nem em que unidade era medido.",
+   "comando": "Identifique a grandeza que cada valor da placa representa e explique o que cada uma mede.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da placa do chuveiro",
+    "colunas": [
+     "Valor",
+     "Unidade"
+    ],
+    "linhas": [
+     [
+      "220",
+      "V"
+     ],
+     [
+      "25",
+      "A"
+     ],
+     [
+      "8,8",
+      "Ω"
+     ]
+    ]
+   },
+   "ref": "220 V é a tensão, que mede a energia por carga fornecida ao circuito. 25 A é a corrente, que mede a quantidade de carga que passa por segundo. 8,8 Ω é a resistência, que mede a dificuldade que o material oferece à passagem da corrente.",
+   "conceitos": [
+    "tensão em volts",
+    "corrente em ampères",
+    "resistência em ohms"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um experimento, três resistores de 2 Ω, 6 Ω e 3 Ω foram ligados em paralelo a uma bateria de 12 V. A turma precisa calcular a resistência equivalente e a corrente total fornecida pela bateria.",
+   "comando": "Calcule a resistência equivalente e a corrente total, mostrando o raciocínio.",
+   "figura": null,
+   "ref": "1/Req = 1/2 + 1/6 + 1/3 = 6/6 = 1, então Req = 1 Ω. A corrente total é I = U/Req = 12/1 = 12 A. Os ramos têm 6 A, 2 A e 4 A, que somam 12 A.",
+   "conceitos": [
+    "resistência equivalente em paralelo",
+    "lei de Ohm",
+    "soma das correntes dos ramos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Três lâmpadas iguais de 12 V foram ligadas a uma bateria de 12 V, primeiro em série e depois em paralelo. Na ligação em série as lâmpadas brilharam pouco; na ligação em paralelo brilharam com intensidade total.",
+   "comando": "Explique por que o brilho foi diferente nas duas ligações, relacionando com a tensão sobre cada lâmpada.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das medições",
+    "colunas": [
+     "Ligação",
+     "Tensão em cada lâmpada",
+     "Brilho"
+    ],
+    "linhas": [
+     [
+      "Série",
+      "4 V",
+      "Fraco"
+     ],
+     [
+      "Paralelo",
+      "12 V",
+      "Intenso"
+     ]
+    ]
+   },
+   "ref": "Em série, a tensão da bateria se divide entre as três lâmpadas (12 V ÷ 3 = 4 V cada), e a corrente é menor, por isso o brilho é fraco. Em paralelo, cada lâmpada recebe os 12 V da bateria, por isso brilha com intensidade total.",
+   "conceitos": [
+    "tensão se divide em série",
+    "tensão igual em paralelo",
+    "brilho depende da tensão e da corrente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma extensão de 20 A, Rafael ligou ao mesmo tempo o secador, o ferro de passar e o micro-ondas. Depois de alguns instantes, o disjuntor desarmou e a casa ficou sem energia por alguns minutos.",
+   "comando": "Explique por que o disjuntor desarmou, usando a ideia de corrente nos ramos de um circuito em paralelo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos aparelhos ligados",
+    "colunas": [
+     "Aparelho",
+     "Corrente"
+    ],
+    "linhas": [
+     [
+      "Secador",
+      "9 A"
+     ],
+     [
+      "Ferro de passar",
+      "8 A"
+     ],
+     [
+      "Micro-ondas",
+      "10 A"
+     ]
+    ]
+   },
+   "ref": "Os aparelhos estão em paralelo, e a corrente total é a soma das correntes dos ramos: 9 + 8 + 10 = 27 A. Como o limite é 20 A, o fio aqueceria demais, e o disjuntor desarma para evitar acidentes.",
+   "conceitos": [
+    "aparelhos em paralelo",
+    "soma das correntes",
+    "sobrecarga e proteção"
+   ]
+  }
+ ],
+ "4B|9º ANO|14": [
+  {
+   "tipo": "obj",
+   "enunciado": "A bandeira do Brasil traz estrelas que representam o céu do Rio de Janeiro em 15 de novembro de 1889, incluindo as do Cruzeiro do Sul. Em uma aula de campo, Heitor mostrou ao grupo as cinco estrelas do desenho e pesquisou a distância de cada uma até a Terra.",
+   "comando": "O que os dados indicam sobre a constelação do Cruzeiro do Sul?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da distância até a Terra",
+    "unidade": "anos-luz",
+    "itens": [
+     {
+      "rotulo": "Estrela 1",
+      "valor": 320
+     },
+     {
+      "rotulo": "Estrela 2",
+      "valor": 280
+     },
+     {
+      "rotulo": "Estrela 3",
+      "valor": 88
+     },
+     {
+      "rotulo": "Estrela 4",
+      "valor": 360
+     },
+     {
+      "rotulo": "Estrela 5",
+      "valor": 228
+     }
+    ]
+   },
+   "alts": [
+    "As estrelas estão a distâncias bem diferentes; o desenho é uma convenção cultural",
+    "As estrelas estão a distâncias iguais; o desenho é um grupo físico ligado pela gravidade",
+    "As estrelas estão a distâncias bem diferentes; o desenho é um grupo que se move unido",
+    "As estrelas estão a distâncias iguais; o desenho é uma convenção que vale para o Brasil"
+   ],
+   "correta": 0,
+   "explicacao": "Estrelas de uma constelação podem estar a distâncias muito diferentes; o agrupamento é um desenho que vemos da Terra e que cada cultura interpreta a seu modo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No museu de ciências, Bia leu que em 1609 Galileu apontou uma luneta para o céu e viu pequenos pontos de luz que mudavam de posição a cada noite ao redor de Júpiter. O texto dizia que essa observação abalou a ideia da época.",
+   "comando": "Que ideia da época foi abalada pela observação de Galileu?",
+   "figura": null,
+   "alts": [
+    "A de que o Sol gira em torno da Terra, pois as luas giravam em torno do Sol",
+    "A de que os astros giram em torno da Terra, pois luas giravam em torno de Júpiter",
+    "A de que a Lua é um astro sem luz própria, pois as luas de Júpiter brilhavam sozinhas",
+    "A de que os planetas são iguais, pois as luas de Júpiter eram idênticas à Terra"
+   ],
+   "correta": 1,
+   "explicacao": "As luas de Júpiter mostraram que há corpos que orbitam outro astro que não a Terra, o que enfraqueceu o modelo em que tudo gira ao redor dela."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Júlia comparou os telescópios Hubble e James Webb com a luneta de Galileu. Ela notou que os dois telescópios modernos ficam no espaço e que suas imagens são muito mais nítidas que as de telescópios de mesmo tamanho na Terra.",
+   "comando": "Por que telescópios no espaço conseguem imagens mais nítidas que os instalados na superfície da Terra?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de instrumentos de observação",
+    "colunas": [
+     "Instrumento",
+     "Ano",
+     "Local"
+    ],
+    "linhas": [
+     [
+      "Luneta de Galileu",
+      "1609",
+      "Superfície da Terra"
+     ],
+     [
+      "Hubble",
+      "1990",
+      "Órbita da Terra"
+     ],
+     [
+      "James Webb",
+      "2021",
+      "Espaço, a 1,5 milhão de km"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque a luz dos astros fica mais forte no espaço do que ao passar por uma atmosfera",
+    "Porque a atmosfera da Terra produz luz própria que ofusca a luz que vem dos astros",
+    "Porque a distância até os astros é menor no espaço do que na superfície da Terra",
+    "Porque a atmosfera da Terra distorce e absorve parte da luz que vem dos astros"
+   ],
+   "correta": 3,
+   "explicacao": "A atmosfera distorce e absorve parte da luz; no espaço, os telescópios captam a luz sem essas interferências."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Num cartão de estudo sobre missões espaciais, Nina leu que uma sonda lançada em 2009 detectou milhares de planetas fora do Sistema Solar ao medir pequenas quedas no brilho das estrelas quando um planeta passava na frente delas.",
+   "comando": "A qual sonda o cartão de Nina se refere?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das sondas estudadas",
+    "colunas": [
+     "Sonda",
+     "Lançamento"
+    ],
+    "linhas": [
+     [
+      "Mariner 2",
+      "1962"
+     ],
+     [
+      "Voyager 1",
+      "1977"
+     ],
+     [
+      "Kepler",
+      "2009"
+     ]
+    ]
+   },
+   "alts": [
+    "Mariner 2, que sobrevoou Vênus e mediu a temperatura do planeta vizinho",
+    "Voyager 1, que visitou planetas gigantes e saiu do Sistema Solar",
+    "Kepler, que mediu quedas de brilho das estrelas para achar planetas",
+    "Hubble, que fotografou galáxias distantes e mediu sua velocidade"
+   ],
+   "correta": 2,
+   "explicacao": "A missão Kepler procurava exoplanetas pelo método do trânsito, observando quedas no brilho das estrelas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A rede brasileira de monitoramento de lixo espacial acompanha restos de foguetes e satélites que circulam ao redor da Terra a cerca de 28 mil km/h. Uma reportagem da Fapesp mostrou a evolução do número de objetos rastreados.",
+   "comando": "Que conclusão os dados permitem sobre o lixo espacial?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de objetos rastreados (valores ilustrativos)",
+    "unidade": "objetos",
+    "itens": [
+     {
+      "rotulo": "1980",
+      "valor": 5000
+     },
+     {
+      "rotulo": "2000",
+      "valor": 9000
+     },
+     {
+      "rotulo": "2020",
+      "valor": 20000
+     }
+    ]
+   },
+   "alts": [
+    "O aumento de objetos eleva o risco de colisões, então é importante monitorá-los",
+    "O aumento de objetos não preocupa, pois o espaço é grande e as colisões são impossíveis",
+    "O aumento de objetos afeta os astronautas, e satélites de comunicação não correm riscos",
+    "O aumento de objetos é de poeira cósmica natural, que não pode ser monitorada"
+   ],
+   "correta": 0,
+   "explicacao": "Mais objetos em órbita significam mais chance de colisão com satélites ativos; por isso o monitoramento é importante."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "As estrelas do Cruzeiro do Sul aparecem na bandeira do Brasil. Povos indígenas brasileiros também enxergam figuras no céu, como a Ema, que não aparecem nas cartas astronômicas tradicionais.",
+   "comando": "Explique por que as constelações são consideradas convenções culturais.",
+   "figura": null,
+   "ref": "Constelações são desenhos que as pessoas imaginam ao ligar estrelas vistas da Terra. As estrelas estão a distâncias muito diferentes e não formam um grupo físico. Cada cultura as agrupa e nomeia de forma diferente.",
+   "conceitos": [
+    "desenhos imaginados",
+    "estrelas a distâncias diferentes",
+    "diferentes culturas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em 1609, Galileu usou uma luneta para observar o céu e viu crateras na Lua, as fases de Vênus e quatro pequenas luzes que mudavam de posição ao redor de Júpiter. Esses relatos circularam pela Europa.",
+   "comando": "Explique por que as observações de Galileu mudaram a visão que se tinha do Universo.",
+   "figura": null,
+   "ref": "Galileu mostrou que a Lua tem relevo como a Terra e que Júpiter tem luas que o orbitam. Isso indicou que nem tudo gira em torno da Terra e apoiou a ideia de que os planetas giram em torno do Sol.",
+   "conceitos": [
+    "observações com a luneta",
+    "luas orbitando Júpiter",
+    "fim da ideia de Terra no centro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um museu de astronomia apresentou o tamanho da principal lente ou espelho de três instrumentos, para mostrar como os telescópios evoluíram desde a luneta de Galileu.",
+   "comando": "Relacione o tamanho do espelho ou da lente com o que o instrumento consegue observar.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do diâmetro da lente ou espelho",
+    "unidade": "cm",
+    "itens": [
+     {
+      "rotulo": "Luneta de Galileu",
+      "valor": 4
+     },
+     {
+      "rotulo": "Hubble",
+      "valor": 240
+     },
+     {
+      "rotulo": "James Webb",
+      "valor": 650
+     }
+    ]
+   },
+   "ref": "Quanto maior a lente ou o espelho, mais luz o instrumento capta. Por isso o Webb e o Hubble observam objetos muito mais fracos e distantes que a luneta de Galileu.",
+   "conceitos": [
+    "tamanho e captação de luz",
+    "objetos fracos e distantes",
+    "evolução dos instrumentos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A sonda Voyager 1, lançada em 1977, hoje está a cerca de 24 bilhões de km da Terra. A luz e os sinais de rádio viajam a cerca de 300 mil km/s. Um aluno quis calcular quanto tempo um sinal leva para ir da sonda à Terra.",
+   "comando": "Calcule o tempo de viagem do sinal, em horas, e explique o que isso mostra para a comunicação com a sonda.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da sonda Voyager 1",
+    "colunas": [
+     "Dado",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Distância até a Terra",
+      "24 bilhões de km"
+     ],
+     [
+      "Velocidade do sinal",
+      "300 mil km/s"
+     ]
+    ]
+   },
+   "ref": "Tempo = 24.000.000.000 km ÷ 300.000 km/s = 80.000 s, ou cerca de 22 horas. Há grande atraso na comunicação: uma mensagem leva quase um dia para chegar, e as respostas demoram mais ainda.",
+   "conceitos": [
+    "cálculo do tempo",
+    "cerca de 22 horas",
+    "atraso na comunicação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Entre os restos de foguetes e satélites que giram ao redor da Terra, há poucos fragmentos grandes e muitos fragmentos pequenos. Pesquisadores da rede brasileira de monitoramento organizaram os números em uma tabela.",
+   "comando": "Explique por que fragmentos pequenos de lixo espacial também são perigosos e difíceis de controlar.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fragmentos em órbita (valores ilustrativos)",
+    "colunas": [
+     "Tamanho",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Maiores que 10 cm",
+      "36 mil"
+     ],
+     [
+      "De 1 a 10 cm",
+      "1 milhão"
+     ]
+    ]
+   },
+   "ref": "Mesmo pequenos, os fragmentos viajam a cerca de 28 mil km/h e podem danificar satélites numa colisão. Como são muitos e difíceis de detectar por radar, é complicado rastreá-los e evitar acidentes.",
+   "conceitos": [
+    "alta velocidade",
+    "risco de colisão",
+    "dificuldade de rastreamento"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "6º ANO|1|Relacionar as estações do ano como consequência da inclinação do eixo terrestre e do movimento de translação da Terra ao redor do Sol.": {
+  "serie": "6",
+  "desc": "Relacionar as estações do ano como consequência da inclinação do eixo terrestre e do movimento de translação da Terra ao redor do Sol.",
+  "hab": "EF06CI14",
+  "habTxt": "Explicar fenômenos causados pelos movimentos do sistema Terra-Sol-Lua: dia/noite, estações, fases da Lua e eclipses (AE2).",
+  "nome": "Terra inclinada em volta da lanterna",
+  "concreta": "Lanterna fixa no centro; um aluno leva a 'Terra' inclinada ao redor dela, com o palito sempre apontando para a mesma parede. A turma observa que ora o hemisfério sul, ora o norte recebe luz mais direta."
+ },
+ "6º ANO|3|Associar células, tecidos, órgãos e sistemas aos níveis de organização dos seres vivos.": {
+  "serie": "6",
+  "desc": "Associar células, tecidos, órgãos e sistemas aos níveis de organização dos seres vivos.",
+  "hab": "EF06CI06",
+  "habTxt": "Analisar a organização de células em tecidos, órgãos e sistemas nos seres multicelulares (AE6).",
+  "nome": "Zoom no corpo",
+  "concreta": "Encaixar potes de tamanhos diferentes (célula dentro de tecido, dentro de órgão…) e pendurar no varal o 'zoom' do coração: célula muscular → tecido muscular → coração → sistema circulatório → organismo."
+ },
+ "7º ANO|1|Reconhecer fenômenos geológicos (vulcanismo, terremotos e tsunamis) e seus impactos na superfície da Terra.": {
+  "serie": "7",
+  "desc": "Reconhecer fenômenos geológicos (vulcanismo, terremotos e tsunamis) e seus impactos na superfície da Terra.",
+  "hab": "EF07CI15, EF07CI16",
+  "habTxt": "Investigar a deriva continental relacionando o encaixe das costas do Brasil e da África à tectônica de placas (AE1).",
+  "nome": "Terremoto na bandeja",
+  "concreta": "Construir 'prédios' de palitos e caixinhas sobre a bandeja com areia e sacudi-la simulando ondas sísmicas; depois sobrepor o mapa de vulcões e terremotos ao mapa dos limites das placas."
+ },
+ "8º ANO|2|Reconhecer a função dos nutrientes no organismo humano.": {
+  "serie": "8",
+  "desc": "Reconhecer a função dos nutrientes no organismo humano.",
+  "hab": "EF05CI06A, EF08CI08B",
+  "habTxt": "Descrever estruturas e funções do sistema digestório e dos nutrientes, relacionando à classificação dos alimentos (in natura, processados, ultraprocessados) (AE5).",
+  "nome": "Prato com função",
+  "concreta": "Em grupos, os alunos separam figuras de alimentos em 3 montes: energéticos (carboidratos/gorduras), construtores (proteínas) e reguladores (vitaminas, minerais) e leem um rótulo juntos."
+ },
+ "9º ANO|1|Relacionar a organização dos átomos aos estados físicos da matéria e suas propriedades.": {
+  "serie": "9",
+  "desc": "Relacionar a organização dos átomos aos estados físicos da matéria e suas propriedades.",
+  "hab": "EF09CI01",
+  "habTxt": "Explicar mudanças de estado físico pela estrutura molecular, organização da matéria e temperaturas de fusão e ebulição (AE3).",
+  "nome": "Dança das partículas",
+  "concreta": "Bolinhas na caixa: bem juntas e só tremendo (sólido), deslizando (líquido) e espalhadas sacudindo forte (gás). Alunos também 'encenam' as partículas. O gelo derretendo no copo serve de exemplo."
+ },
+ "4B|6º ANO|3": {
+  "serie": "6",
+  "desc": "Compreender a estrutura geral do neurônio e o sentido de propagação do impulso nervoso.",
+  "hab": "EF06CI07",
+  "habTxt": "Corpo celular, dendritos e axônio; sinapse e substâncias químicas; direção do impulso; neurônios sensoriais, motores e interneurônios.",
+  "nome": "Estrutura do neurônio",
+  "concreta": "Relembre com imagem de neurônio; Pause e responda; Na prática: nomear partes do neurônio e explicar a comunicação entre neurônios."
+ },
+ "4B|6º ANO|16": {
+  "serie": "6",
+  "desc": "Reconhecer efeitos das substâncias psicoativas no sistema nervoso e estratégias de prevenção e cuidado com a saúde.",
+  "hab": "EF06CI10",
+  "habTxt": "Drogas lícitas e ilícitas; dependência; efeitos no sistema nervoso; prevenção.",
+  "nome": "Efeitos das drogas no organismo – Parte 2",
+  "concreta": "Discussão orientada de casos e produção de mensagem de prevenção para a escola."
+ },
+ "4B|7º ANO|13": {
+  "serie": "7",
+  "desc": "Defender a vacinação como ação de saúde individual, coletiva e ambiental.",
+  "hab": "EF07CI09, EF07CI10B",
+  "habTxt": "Queda da vacinação infantil e hesitação vacinal; cobertura vacinal e imunidade coletiva; erradicação da poliomielite; retorno do sarampo; desafios da vacinação.",
+  "nome": "A importância da vacina: reflexão",
+  "concreta": "Relembre (vacinação na infância); Pause e responda; Na prática: notícia e gráfico de casos de sarampo em SP (2018-2026)."
+ },
+ "4B|8º ANO|13": {
+  "serie": "8",
+  "desc": "Aplicar as leis de Kirchhoff e o cálculo de resistores para comparar corrente e tensão em diferentes circuitos.",
+  "hab": "EF08CI04",
+  "habTxt": "Componentes e símbolos de circuitos; grandezas e unidades; circuitos em série e paralelo; resistência equivalente; leis dos nós e das malhas.",
+  "nome": "Circuito em série e circuito em paralelo",
+  "concreta": "Cálculo da resistência equivalente de três resistores em paralelo (2, 6 e 3 Ω) ligados a uma bateria de 12 V."
+ },
+ "4B|9º ANO|14": {
+  "serie": "9",
+  "desc": "Reconhecer constelações como convenções culturais e comparar a evolução histórica dos instrumentos de observação astronômica.",
+  "hab": "EF09CI15",
+  "habTxt": "Astronomia; luneta de Galileu; telescópios Hubble e James Webb; sondas Mariner 2, Voyager, Kepler; lixo espacial; constelações e asterismos; bandeira do Brasil.",
+  "nome": "Observação do céu",
+  "concreta": "Respondem teste sobre telescópios e sondas e analisam texto da Fapesp sobre a rede brasileira de monitoramento de lixo espacial."
+ }
+}

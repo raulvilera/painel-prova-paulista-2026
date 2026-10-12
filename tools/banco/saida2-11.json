@@ -1,0 +1,2790 @@
+{
+ "6º ANO|3|Relacionar as estruturas das organelas celulares às suas funções, considerando as especificidades das células animal e vegetal.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, Marina montou o modelo de uma célula vegetal: um saquinho plástico com água foi colocado dentro de uma caixinha de papelão rígida, e ervilhas verdes foram espalhadas no interior do saquinho.",
+   "comando": "Qual estrutura real da célula vegetal é representada pela caixinha de papelão que envolve o saquinho?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do modelo de Marina",
+    "colunas": [
+     "Material",
+     "Posição no modelo"
+    ],
+    "linhas": [
+     [
+      "Caixinha de papelão",
+      "Envolve o saquinho por fora"
+     ],
+     [
+      "Saquinho plástico",
+      "Delimita o interior"
+     ],
+     [
+      "Ervilhas verdes",
+      "Espalhadas no interior"
+     ]
+    ]
+   },
+   "alts": [
+    "Membrana plasmática, que controla o que entra e sai da célula",
+    "Núcleo, que guarda o material genético e comanda a célula",
+    "Parede celular, que reveste a célula vegetal e a sustenta",
+    "Vacúolo, que armazena água e substâncias dentro da célula"
+   ],
+   "correta": 2,
+   "explicacao": "A estrutura rígida por fora do saquinho é a parede celular, exclusiva da célula vegetal; a membrana é o próprio saquinho."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao montar dois modelos, a turma usou feijões para representar as mitocôndrias e ervilhas para representar os cloroplastos. Os feijões foram colocados nos dois modelos; as ervilhas, em apenas um deles.",
+   "comando": "Que conclusão sobre as células animal e vegetal é coerente com o registro da turma?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de peças usadas em cada modelo",
+    "unidade": "peças",
+    "itens": [
+     {
+      "rotulo": "Feijões, modelo animal",
+      "valor": 6
+     },
+     {
+      "rotulo": "Feijões, modelo vegetal",
+      "valor": 6
+     },
+     {
+      "rotulo": "Ervilhas, modelo animal",
+      "valor": 0
+     },
+     {
+      "rotulo": "Ervilhas, modelo vegetal",
+      "valor": 8
+     }
+    ]
+   },
+   "alts": [
+    "Ambas têm mitocôndrias, e cloroplastos aparecem na célula vegetal",
+    "A animal não tem mitocôndrias, pois não faz fotossíntese como a vegetal",
+    "Só a vegetal tem mitocôndrias, pois precisa de muita energia para crescer",
+    "As duas têm cloroplastos, pois ambas precisam produzir o próprio alimento"
+   ],
+   "correta": 0,
+   "explicacao": "Mitocôndrias liberam energia em todas as células eucariontes; cloroplastos ocorrem só em células vegetais. Os distratores confundem as duas organelas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Carlos observou ao microscópio uma folha de elodea (planta aquática) e células raspadas da parte interna da bochecha. Anotou o que viu em cada preparação.",
+   "comando": "Qual associação entre o que Carlos viu e a função da estrutura está correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das observações de Carlos",
+    "colunas": [
+     "Observação",
+     "Folha",
+     "Bochecha"
+    ],
+    "linhas": [
+     [
+      "Contorno rígido bem marcado",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Corpúsculos verdes no interior",
+      "Muitos",
+      "Nenhum"
+     ],
+     [
+      "Região central escura",
+      "Sim",
+      "Sim"
+     ]
+    ]
+   },
+   "alts": [
+    "O contorno rígido da folha é a membrana e produz energia para a célula",
+    "A região central escura é o vacúolo e guarda a água que a célula usa",
+    "A falta de contorno rígido na bochecha mostra que a célula não tem membrana",
+    "Os corpúsculos verdes da folha são cloroplastos e realizam a fotossíntese"
+   ],
+   "correta": 3,
+   "explicacao": "Os corpúsculos verdes são cloroplastos, onde ocorre a fotossíntese. O contorno rígido é a parede celular e a região escura é o núcleo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os atletas de corrida do clube da cidade têm células musculares muito ativas. Em um estudo, contou-se o número médio de mitocôndrias em três tipos de célula do corpo humano.",
+   "comando": "Qual explicação relaciona corretamente os dados à função da mitocôndria?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do estudo: mitocôndrias por célula",
+    "unidade": "unidades",
+    "itens": [
+     {
+      "rotulo": "Célula de gordura",
+      "valor": 200
+     },
+     {
+      "rotulo": "Célula da pele",
+      "valor": 400
+     },
+     {
+      "rotulo": "Célula do músculo da perna",
+      "valor": 2000
+     }
+    ]
+   },
+   "alts": [
+    "A célula muscular precisa de glicose, produzida nas mitocôndrias pela fotossíntese",
+    "A célula muscular gasta mais energia, liberada nas mitocôndrias pela respiração",
+    "A célula muscular tem mais mitocôndrias para guardar a água usada na contração",
+    "A célula muscular usa as mitocôndrias para comandar a divisão celular constante"
+   ],
+   "correta": 1,
+   "explicacao": "Mitocôndrias liberam energia dos nutrientes; músculos ativos gastam mais. Os distratores atribuem à mitocôndria funções de cloroplasto, vacúolo ou núcleo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Lúcia propôs retirar os feijões (mitocôndrias) do modelo da célula vegetal. Segundo ela, \"a planta faz fotossíntese nos cloroplastos, então não precisa de mitocôndrias\".",
+   "comando": "Qual é a melhor avaliação da proposta de Lúcia?",
+   "figura": null,
+   "alts": [
+    "Os feijões devem sair, pois os cloroplastos substituem as mitocôndrias na energia",
+    "Os feijões devem sair, pois mitocôndrias existem em células que se movimentam",
+    "Os feijões devem ficar, pois a mitocôndria libera a energia da glicose",
+    "Os feijões devem ficar, pois as mitocôndrias fazem fotossíntese quando falta luz"
+   ],
+   "correta": 2,
+   "explicacao": "A fotossíntese produz glicose; a respiração celular, nas mitocôndrias, libera a energia dela, de dia e de noite. Os distratores confundem as duas organelas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para comparar células, a turma montou um modelo animal e um vegetal e registrou as peças usadas. Os feijões representam mitocôndrias, e as ervilhas, cloroplastos.",
+   "comando": "Com base no registro, indique as peças que representam estruturas só da célula vegetal e dê o nome de cada estrutura.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de montagem dos modelos",
+    "colunas": [
+     "Peça",
+     "Modelo animal",
+     "Modelo vegetal"
+    ],
+    "linhas": [
+     [
+      "Caixinha rígida",
+      "Não",
+      "Sim"
+     ],
+     [
+      "Ervilhas",
+      "Não",
+      "Sim"
+     ],
+     [
+      "Saquinho grande com água",
+      "Não",
+      "Sim"
+     ],
+     [
+      "Feijões",
+      "Sim",
+      "Sim"
+     ]
+    ]
+   },
+   "ref": "Caixinha rígida: parede celular. Ervilhas: cloroplastos. Saquinho grande com água: vacúolo. Os feijões (mitocôndrias) estão nas duas.",
+   "conceitos": [
+    "parede celular",
+    "cloroplastos",
+    "vacúolo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ana examinou ao microscópio uma célula de folha e afirmou: \"É uma célula animal, porque tem núcleo bem visível\". Seu colega anotou o que apareceu na lâmina.",
+   "comando": "Ana está correta? Justifique usando as observações do registro.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do colega de Ana",
+    "etapas": [
+     "Contorno externo retangular e rígido",
+     "Pequenos corpos verdes espalhados",
+     "Região central escura e arredondada"
+    ]
+   },
+   "ref": "Ana não está correta. A célula é vegetal: o contorno rígido é a parede celular e os corpos verdes são cloroplastos, ausentes em células animais. O núcleo existe nos dois tipos.",
+   "conceitos": [
+    "parede celular",
+    "cloroplastos",
+    "núcleo existe nas duas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um dia quente, as folhas de alface da banca de feira ficaram murchas. O feirante as mergulhou em água fria e elas voltaram a ficar firmes.",
+   "comando": "Explique o que ocorreu com as células das folhas, citando o vacúolo e a parede celular.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da massa de um maço de alface",
+    "unidade": "g",
+    "itens": [
+     {
+      "rotulo": "Recém-colhido",
+      "valor": 50
+     },
+     {
+      "rotulo": "Após 3 h ao sol",
+      "valor": 41
+     },
+     {
+      "rotulo": "Após 1 h em água fria",
+      "valor": 49
+     }
+    ]
+   },
+   "ref": "Ao sol, o vacúolo perdeu água e as células murcharam. Na água fria, o vacúolo se encheu de novo e, apoiado pela parede celular, deixou a folha firme.",
+   "conceitos": [
+    "vacúolo armazena água",
+    "parede celular sustenta",
+    "perda e ganho de água"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas células foram comparadas em um laboratório. A célula X vive em uma folha exposta ao sol; a célula Y faz parte do tecido da pele de um cachorro, que não faz fotossíntese.",
+   "comando": "Identifique qual célula é vegetal e qual é animal e explique de onde a célula Y obtém a energia de que precisa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações das células X e Y",
+    "colunas": [
+     "Característica",
+     "Célula X",
+     "Célula Y"
+    ],
+    "linhas": [
+     [
+      "Contorno externo rígido",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Pequenos corpos verdes",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Corpos alongados com dobras internas",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Região central escura",
+      "Sim",
+      "Sim"
+     ]
+    ]
+   },
+   "ref": "X é vegetal e Y é animal. A célula Y recebe glicose do alimento, trazida pelo sangue, e libera a energia nas mitocôndrias pela respiração celular.",
+   "conceitos": [
+    "célula vegetal e animal",
+    "glicose do alimento",
+    "mitocôndrias liberam energia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marina colocou no modelo da célula animal um saquinho grande com água igual ao da célula vegetal. Seu professor disse que, assim, o modelo animal ficaria incorreto. As medições abaixo vêm de observações ao microscópio.",
+   "comando": "Justifique por que o saquinho grande não representa bem a célula animal e qual é a função dessa estrutura na célula vegetal.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do volume ocupado pelo saquinho grande nas células observadas",
+    "unidade": "% do volume",
+    "itens": [
+     {
+      "rotulo": "Célula de folha",
+      "valor": 80
+     },
+     {
+      "rotulo": "Célula da bochecha",
+      "valor": 5
+     }
+    ]
+   },
+   "ref": "A célula animal não tem vacúolo central grande, só pequenas vesículas. Na vegetal, o vacúolo grande armazena água e substâncias e, com a parede celular, mantém a célula firme.",
+   "conceitos": [
+    "vacúolo central é típico da vegetal",
+    "armazena água",
+    "sustentação com a parede"
+   ]
+  }
+ ],
+ "7º ANO|2|Reconhecer as principais características dos grupos de seres vivos invertebrados e vertebrados e seus papéis ecológicos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma montou uma chave de classificação na lousa. O card do morcego passou por três perguntas, e a professora registrou as respostas.",
+   "comando": "A qual grupo de vertebrados o morcego pertence, segundo o registro da chave?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da chave para o card do morcego",
+    "etapas": [
+     "Tem coluna vertebral? Sim",
+     "Tem penas? Não",
+     "Tem pelos? Sim"
+    ]
+   },
+   "alts": [
+    "Aves, vertebrados com asas, penas e bico sem dentes",
+    "Mamíferos, vertebrados que têm pelos e mamas",
+    "Répteis, vertebrados com escamas e pele seca",
+    "Anfíbios, vertebrados com pele fina e úmida"
+   ],
+   "correta": 1,
+   "explicacao": "Coluna vertebral e pelos indicam mamífero; o voo do morcego não o torna ave, pois ele não tem penas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na horta da escola, o canteiro A recebeu minhocas e o canteiro B não. Após uma chuva forte, os alunos mediram quanta água entrou no solo de cada canteiro em 10 minutos.",
+   "comando": "Qual papel ecológico das minhocas explica a diferença entre os canteiros?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da água que entrou no solo em 10 min",
+    "unidade": "mL",
+    "itens": [
+     {
+      "rotulo": "Canteiro A (com minhocas)",
+      "valor": 900
+     },
+     {
+      "rotulo": "Canteiro B (sem minhocas)",
+      "valor": 300
+     }
+    ]
+   },
+   "alts": [
+    "Elas comem as raízes das plantas doentes e protegem o canteiro das pragas",
+    "Elas transportam o pólen entre as flores e aumentam a produção da horta",
+    "Elas produzem calor ao se mover e aquecem o solo para a água infiltrar",
+    "Elas abrem galerias no solo, que fica arejado e deixa a água entrar"
+   ],
+   "correta": 3,
+   "explicacao": "Minhocas são invertebrados que revolvem e arejam o solo. Os distratores atribuem a elas papéis de pragas, de polinizadores ou de fontes de calor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Seu Jorge tem um pomar de laranjas em Limeira. Depois que a vizinhança passou a usar inseticida forte, ele notou menos abelhas nas laranjeiras e menos frutos por árvore.",
+   "comando": "Que papel ecológico das abelhas explica a queda na produção de frutos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do pomar de seu Jorge",
+    "colunas": [
+     "Ano",
+     "Colmeias por perto",
+     "Frutos por árvore"
+    ],
+    "linhas": [
+     [
+      "2022",
+      "12",
+      "310"
+     ],
+     [
+      "2023",
+      "5",
+      "180"
+     ],
+     [
+      "2024",
+      "2",
+      "90"
+     ]
+    ]
+   },
+   "alts": [
+    "Elas visitam flores e levam o pólen de uma para outra, formando frutos",
+    "Elas espalham as sementes das laranjas por outras áreas e geram novas árvores",
+    "Elas se alimentam de insetos que atacam as flores e reduzem a perda de frutos",
+    "Elas adubam o solo com restos da colmeia e deixam as árvores mais produtivas"
+   ],
+   "correta": 0,
+   "explicacao": "A polinização é feita por abelhas ao visitar flores. Dispersar sementes é outro papel, que pode ser confundido com ele."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um trecho de mata da Serra do Mar, pesquisadores instalaram um poleiro artificial para morcegos que se alimentam de frutos. Depois de seis meses, contaram plântulas (plantinhas recém-nascidas) em três áreas.",
+   "comando": "Qual explicação é compatível com a maior quantidade de plântulas sob o poleiro?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: áreas amostradas",
+    "colunas": [
+     "Área",
+     "Fezes de morcego por m²",
+     "Plântulas por m²"
+    ],
+    "linhas": [
+     [
+      "Sob árvore adulta",
+      "2",
+      "3"
+     ],
+     [
+      "Sob o poleiro",
+      "25",
+      "41"
+     ],
+     [
+      "Clareira distante",
+      "0",
+      "1"
+     ]
+    ]
+   },
+   "alts": [
+    "Os morcegos levam o pólen entre as árvores, por isso surgem plantas novas sob o poleiro",
+    "Os morcegos comem insetos que atacam as plântulas, por isso mais plantas sobrevivem",
+    "Os morcegos comem frutos e eliminam sementes nas fezes, que germinam sob o poleiro",
+    "Os morcegos abrem buracos no solo ao pousar, o que ajuda as sementes a germinar"
+   ],
+   "correta": 2,
+   "explicacao": "Morcegos frugívoros dispersam sementes. Os distratores trocam esse papel por polinização, controle de insetos ou arejamento do solo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os moradores de um bairro de Campinas observaram que a lagoa do parque, antes cheia de sapos, passou a ter muitos mosquitos. Um biólogo contou os animais a cada ano.",
+   "comando": "Qual interpretação dos dados é a mais adequada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da contagem na lagoa do parque",
+    "colunas": [
+     "Ano",
+     "Sapos adultos",
+     "Índice de mosquitos"
+    ],
+    "linhas": [
+     [
+      "2021",
+      "120",
+      "30"
+     ],
+     [
+      "2022",
+      "60",
+      "55"
+     ],
+     [
+      "2023",
+      "15",
+      "140"
+     ]
+    ]
+   },
+   "alts": [
+    "Os mosquitos afastaram os sapos, que se alimentam de plantas aquáticas da lagoa",
+    "Sapos são vertebrados e mosquitos invertebrados, então não se relacionam",
+    "Menos sapos reduziram a matéria orgânica da água, o que favoreceu os mosquitos",
+    "Os sapos comem insetos; com menos sapos, os mosquitos se reproduzem mais"
+   ],
+   "correta": 3,
+   "explicacao": "Anfíbios são predadores de insetos e controlam suas populações. Os distratores invertem causa e efeito ou ignoram a relação alimentar."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para testar a chave de classificação, um grupo passou o card de uma borboleta por três perguntas e anotou as respostas.",
+   "comando": "Classifique a borboleta como vertebrado ou invertebrado e indique a que grupo ela pertence, justificando com o registro.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da chave para o card da borboleta",
+    "etapas": [
+     "Tem coluna vertebral? Não",
+     "Corpo dividido em cabeça, tórax e abdômen? Sim",
+     "Tem três pares de patas? Sim"
+    ]
+   },
+   "ref": "A borboleta é invertebrada, pois não tem coluna vertebral. Pertence ao grupo dos insetos, com corpo em três partes e três pares de patas.",
+   "conceitos": [
+    "sem coluna vertebral",
+    "invertebrado",
+    "inseto"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma trilha, um guia fotografou três animais e anotou como eram suas coberturas do corpo e seus ovos, para a turma descobrir a que grupo de vertebrados cada um pertence.",
+   "comando": "Identifique o grupo de vertebrados dos animais A, B e C com base no registro.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do guia da trilha",
+    "colunas": [
+     "Animal",
+     "Cobertura do corpo",
+     "Ovos"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Pena e bico sem dentes",
+      "Com casca, no ninho"
+     ],
+     [
+      "B",
+      "Pele fina e úmida",
+      "Sem casca, na água"
+     ],
+     [
+      "C",
+      "Escamas secas",
+      "Com casca, no solo"
+     ]
+    ]
+   },
+   "ref": "A é ave, B é anfíbio e C é réptil, segundo a cobertura do corpo e o tipo de ovo.",
+   "conceitos": [
+    "ave",
+    "anfíbio",
+    "réptil"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A diretora quer usar inseticida forte na horta para eliminar todos os \"bichinhos\". Os alunos observaram durante uma manhã quem visitava as flores de abobrinha.",
+   "comando": "Explique por que eliminar todos os invertebrados da horta pode prejudicá-la, citando papéis ecológicos.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de visitantes nas flores de abobrinha em uma manhã",
+    "unidade": "visitas",
+    "itens": [
+     {
+      "rotulo": "Abelhas",
+      "valor": 24
+     },
+     {
+      "rotulo": "Joaninhas",
+      "valor": 6
+     },
+     {
+      "rotulo": "Borboletas",
+      "valor": 5
+     },
+     {
+      "rotulo": "Pulgões",
+      "valor": 40
+     }
+    ]
+   },
+   "ref": "Abelhas e borboletas polinizam as flores, e sem elas haveria menos frutos. Joaninhas comem pulgões e controlam essa praga. Eliminar tudo desequilibra a horta.",
+   "conceitos": [
+    "polinização",
+    "controle biológico",
+    "equilíbrio ecológico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marcelo afirmou: \"Invertebrados são menos importantes que vertebrados, pois são pequenos e simples\". Sua professora mostrou dados sobre os animais conhecidos.",
+   "comando": "Use os dados e os papéis ecológicos dos invertebrados para argumentar contra a afirmação de Marcelo.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de espécies de animais descritas",
+    "unidade": "milhares",
+    "itens": [
+     {
+      "rotulo": "Insetos",
+      "valor": 1000
+     },
+     {
+      "rotulo": "Aracnídeos",
+      "valor": 110
+     },
+     {
+      "rotulo": "Moluscos",
+      "valor": 85
+     },
+     {
+      "rotulo": "Vertebrados",
+      "valor": 70
+     }
+    ]
+   },
+   "ref": "Os invertebrados são a grande maioria das espécies e têm papéis essenciais: polinização, decomposição, arejamento do solo e alimento para outros animais. Tamanho não mede importância.",
+   "conceitos": [
+    "maioria das espécies",
+    "polinização e decomposição",
+    "base das cadeias alimentares"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um córrego de Atibaia, alunos montaram a cadeia alimentar abaixo. Depois, uma enxurrada com agrotóxico da lavoura vizinha eliminou quase todas as larvas de insetos do córrego.",
+   "comando": "Preveja o que ocorreria com os demais seres da cadeia e justifique com base nos papéis ecológicos.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da cadeia alimentar do córrego",
+    "etapas": [
+     "Folhas caídas na água",
+     "Larvas de insetos",
+     "Lambaris",
+     "Garça-branca"
+    ]
+   },
+   "ref": "Sem as larvas, as folhas se acumulariam, pois elas ajudam a decompô-las, e os lambaris teriam menos alimento e diminuiriam. A garça também sofreria com a falta de peixes.",
+   "conceitos": [
+    "larvas decompõem folhas",
+    "efeito em cadeia",
+    "peixes e aves dependem dos insetos"
+   ]
+  }
+ ],
+ "8º ANO|3|Analisar o papel da inclinação do eixo de rotação da Terra em relação à sua órbita na ocorrência das estações do ano.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, Pedro fez a bola inclinada dar a volta na lanterna, mantendo o palito (eixo) sempre apontado para a mesma direção da sala. Ele anotou qual hemisfério ficava mais iluminado em cada posição.",
+   "comando": "Qual característica do modelo explica a alternância observada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do modelo de Pedro",
+    "colunas": [
+     "Posição",
+     "Hemisfério com luz mais direta"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Sul"
+     ],
+     [
+      "B",
+      "Nenhum, luz igual"
+     ],
+     [
+      "C",
+      "Norte"
+     ],
+     [
+      "D",
+      "Nenhum, luz igual"
+     ]
+    ]
+   },
+   "alts": [
+    "A inclinação do eixo, que mantém a direção durante toda a volta ao redor da lanterna",
+    "A distância da bola à lanterna, que muda bastante ao longo da volta completa em torno dela",
+    "A rotação da bola em torno do palito, que alterna os períodos de claro e escuro na bola",
+    "O aquecimento da lanterna, que varia com o tempo de funcionamento durante todo o teste"
+   ],
+   "correta": 0,
+   "explicacao": "A inclinação do eixo, com direção fixa, faz cada hemisfério receber luz mais direta em épocas diferentes. Distância e rotação não explicam as estações."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Aline afirmou: \"O inverno acontece porque a Terra fica mais longe do Sol\". Para testar a ideia, a turma consultou a distância da Terra ao Sol e a estação em duas cidades no mesmo mês.",
+   "comando": "Que conclusão os dados sustentam?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de distância e estações",
+    "colunas": [
+     "Mês",
+     "Distância ao Sol (milhões de km)",
+     "Estação em São Paulo",
+     "Estação em Oslo"
+    ],
+    "linhas": [
+     [
+      "Janeiro",
+      "147",
+      "Verão",
+      "Inverno"
+     ],
+     [
+      "Julho",
+      "152",
+      "Inverno",
+      "Verão"
+     ]
+    ]
+   },
+   "alts": [
+    "A diferença de 5 milhões de km basta para causar as estações nos dois hemisférios ao mesmo tempo",
+    "O verão ocorre no hemisfério mais próximo do Sol, e a distância é a mesma para os dois lados",
+    "No mesmo mês os hemisférios têm estações opostas, logo a distância ao Sol não as explica",
+    "O inverno chega quando a Terra está mais longe, e Oslo e São Paulo se afastam do Sol juntas"
+   ],
+   "correta": 2,
+   "explicacao": "Em janeiro a Terra está mais perto do Sol, mas Oslo está no inverno. Logo, a causa é a inclinação do eixo, não a distância."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Daniela anotou a duração do dia em Porto Alegre em quatro datas do ano, usando um site de astronomia.",
+   "comando": "Qual explicação relaciona corretamente o resultado de 21 de dezembro à inclinação do eixo da Terra?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da duração do dia em Porto Alegre",
+    "colunas": [
+     "Data",
+     "Horas de luz"
+    ],
+    "linhas": [
+     [
+      "21 de março",
+      "12,0"
+     ],
+     [
+      "21 de junho",
+      "10,0"
+     ],
+     [
+      "21 de setembro",
+      "12,0"
+     ],
+     [
+      "21 de dezembro",
+      "14,2"
+     ]
+    ]
+   },
+   "alts": [
+    "A Terra passa mais perto do Sol, e por isso os lugares do planeta têm dias mais longos",
+    "O hemisfério sul fica inclinado para o Sol, com raios mais diretos e dias mais longos",
+    "O eixo da Terra fica na vertical, e o hemisfério sul recebe a mesma luz que o norte",
+    "A Terra gira mais devagar sobre o eixo, e por isso o dia dura mais horas no sul"
+   ],
+   "correta": 1,
+   "explicacao": "Em dezembro o hemisfério sul está inclinado em direção ao Sol: raios mais diretos e dia mais longo, característica do verão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em 22 de setembro, uma rede de escolas mediu as horas de luz do dia em cidades de diferentes latitudes e encontrou valores muito parecidos.",
+   "comando": "O que explica esse resultado?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro das horas de luz em 22 de setembro",
+    "unidade": "horas",
+    "itens": [
+     {
+      "rotulo": "Quito",
+      "valor": 12
+     },
+     {
+      "rotulo": "São Paulo",
+      "valor": 12
+     },
+     {
+      "rotulo": "Oslo",
+      "valor": 12
+     },
+     {
+      "rotulo": "Buenos Aires",
+      "valor": 12
+     }
+    ]
+   },
+   "alts": [
+    "Nessa data a Terra está à mesma distância do Sol de todas as cidades, igualando o dia",
+    "Nessa data a rotação da Terra desacelera, e cada ponto fica 12 horas no claro",
+    "Nessa data o eixo da Terra fica vertical na órbita, e por isso os polos ficam sem luz",
+    "Nessa data nenhum hemisfério se inclina para o Sol, e os dois recebem luz parecida"
+   ],
+   "correta": 3,
+   "explicacao": "No equinócio o eixo não aponta para o Sol nem para longe dele, então o dia e a noite têm duração parecida em todo o planeta."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma turma inventou dois planetas parecidos com a Terra, que giram em volta de uma estrela, diferindo só na inclinação do eixo. Eles queriam prever como seriam as estações em cada um.",
+   "comando": "Qual previsão está de acordo com o papel da inclinação do eixo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: planetas fictícios",
+    "colunas": [
+     "Planeta",
+     "Inclinação do eixo"
+    ],
+    "linhas": [
+     [
+      "Terra",
+      "23,5°"
+     ],
+     [
+      "X",
+      "0°"
+     ],
+     [
+      "Y",
+      "60°"
+     ]
+    ]
+   },
+   "alts": [
+    "Em X quase não haveria estações, e em Y elas seriam mais intensas do que na Terra",
+    "Em X as estações seriam mais intensas, pois a luz chegaria de forma direta o ano inteiro",
+    "Em X e em Y as estações seriam iguais às da Terra, pois dependem da distância",
+    "Em Y quase não haveria estações, pois um eixo muito inclinado reparte a luz igualmente"
+   ],
+   "correta": 0,
+   "explicacao": "Sem inclinação não há variação de incidência da luz; com inclinação maior, a diferença entre as épocas é maior."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na atividade com a bola inclinada, o palito aponta para cima na posição 1 e para baixo na posição 3. A ponta de baixo do palito representa o polo sul da Terra.",
+   "comando": "Em qual posição seria verão no hemisfério sul? Justifique com base na incidência da luz.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do modelo da turma",
+    "colunas": [
+     "Posição",
+     "Parte do palito voltada para a lanterna"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Ponta de cima"
+     ],
+     [
+      "2",
+      "Nenhuma, de lado"
+     ],
+     [
+      "3",
+      "Ponta de baixo"
+     ],
+     [
+      "4",
+      "Nenhuma, de lado"
+     ]
+    ]
+   },
+   "ref": "Na posição 3. Com a ponta de baixo voltada para a lanterna, o hemisfério sul recebe luz mais direta e por mais tempo, o que caracteriza o verão.",
+   "conceitos": [
+    "posição 3",
+    "luz mais direta",
+    "inclinação do eixo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro mediu ao meio-dia a sombra de uma estaca vertical em Campinas em duas datas.",
+   "comando": "Em qual data o Sol incidiu de forma mais direta? Qual era a estação do ano em Campinas? Explique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da sombra da estaca ao meio-dia",
+    "colunas": [
+     "Data",
+     "Comprimento da sombra"
+    ],
+    "linhas": [
+     [
+      "21 de junho",
+      "70 cm"
+     ],
+     [
+      "21 de dezembro",
+      "20 cm"
+     ]
+    ]
+   },
+   "ref": "Em 21 de dezembro: a sombra menor indica Sol mais alto e raios mais diretos. É verão no hemisfério sul, que está inclinado para o Sol.",
+   "conceitos": [
+    "sombra menor",
+    "raios mais diretos",
+    "verão no hemisfério sul"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No Natal, a família de Camila em Fortaleza vai à praia, enquanto o primo dela em Berlim brinca na neve.",
+   "comando": "Explique por que as estações são opostas nos dois lugares na mesma data.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de temperaturas em 25 de dezembro",
+    "colunas": [
+     "Cidade",
+     "Hemisfério",
+     "Temperatura média"
+    ],
+    "linhas": [
+     [
+      "Fortaleza",
+      "Sul",
+      "28 °C"
+     ],
+     [
+      "Berlim",
+      "Norte",
+      "1 °C"
+     ]
+    ]
+   },
+   "ref": "Por causa da inclinação do eixo, em dezembro o hemisfério sul fica voltado para o Sol e recebe luz mais direta, esquentando mais. O norte fica inclinado para longe e recebe luz mais inclinada.",
+   "conceitos": [
+    "inclinação do eixo",
+    "hemisférios opostos",
+    "incidência da luz"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A professora mostrou que, em Quito, perto do Equador, quase não se nota diferença entre as estações, enquanto em Oslo as diferenças são enormes.",
+   "comando": "Explique esse padrão relacionando latitude, incidência dos raios solares e duração do dia.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de cidades em diferentes latitudes",
+    "colunas": [
+     "Cidade",
+     "Latitude",
+     "Diferença entre mês mais quente e mais frio"
+    ],
+    "linhas": [
+     [
+      "Quito",
+      "0°",
+      "1 °C"
+     ],
+     [
+      "São Paulo",
+      "23° S",
+      "6 °C"
+     ],
+     [
+      "Oslo",
+      "60° N",
+      "22 °C"
+     ]
+    ]
+   },
+   "ref": "Perto do Equador a luz chega quase sempre de forma direta e a duração do dia varia pouco. Em latitudes maiores, a inclinação do eixo muda muito o ângulo dos raios e as horas de luz, gerando estações marcantes.",
+   "conceitos": [
+    "latitude",
+    "ângulo dos raios",
+    "duração do dia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois grupos testaram modos de dar a volta com a bola na lanterna. No grupo 1, o palito ficou sempre apontado para a mesma parede da sala. No grupo 2, o palito foi virado para apontar sempre para a lanterna.",
+   "comando": "Qual montagem representa melhor a Terra? Justifique por que a outra não produziria estações alternadas.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro dos testes dos grupos",
+    "etapas": [
+     "Fixar o palito inclinado na bola",
+     "Grupo 1: palito sempre voltado para a mesma parede",
+     "Grupo 2: palito sempre voltado para a lanterna"
+    ]
+   },
+   "ref": "A do grupo 1, pois o eixo da Terra mantém a direção durante o ano e cada hemisfério se inclina ao Sol em épocas diferentes. No grupo 2, o mesmo hemisfério ficaria sempre voltado à lanterna, sem alternância de estações.",
+   "conceitos": [
+    "direção fixa do eixo",
+    "alternância dos hemisférios",
+    "modelo do grupo 2 não alterna"
+   ]
+  }
+ ],
+ "9º ANO|1|Identificar os modelos atômicos considerando sua historicidade e pesquisa científica.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Para a linha do tempo do átomo, Marina moldou uma bola de massinha clara e foi enfiando passas escuras por toda a massa, sem deixar espaços vazios. A professora pediu que ela dissesse qual modelo atômico o trabalho representava.",
+   "comando": "Qual modelo atômico Marina representou?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da montagem de Marina",
+    "etapas": [
+     "Modelar uma bola inteira de massinha clara",
+     "Pressionar passas espalhadas pela massa",
+     "Manter a bola sem espaços vazios"
+    ]
+   },
+   "alts": [
+    "Modelo de Dalton, com átomo maciço, indivisível e sem partes internas",
+    "Modelo de Rutherford, com núcleo pequeno e elétrons girando ao redor",
+    "Modelo de Bohr, com elétrons distribuídos em camadas de energia definida",
+    "Modelo de Thomson, com elétrons espalhados em massa de carga positiva"
+   ],
+   "correta": 3,
+   "explicacao": "As passas (elétrons) em massa positiva representam o pudim de passas de Thomson; Dalton não previa partículas internas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em 1911, uma equipe lançou partículas alfa (positivas) contra uma folha finíssima de ouro e contou, a cada 10 mil partículas, como elas chegavam ao detector.",
+   "comando": "Qual ideia sobre o átomo os dados sustentam?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: destino de 10 mil partículas alfa",
+    "unidade": "partículas",
+    "itens": [
+     {
+      "rotulo": "Atravessaram sem desviar",
+      "valor": 9998
+     },
+     {
+      "rotulo": "Desviaram bastante",
+      "valor": 2
+     }
+    ]
+   },
+   "alts": [
+    "Átomo maciço e indivisível, com partículas distribuídas por todo o volume",
+    "Átomo com núcleo pequeno e denso, cercado por grande espaço vazio",
+    "Átomo com elétrons espalhados em uma massa positiva sem espaços vazios",
+    "Átomo com elétrons em órbitas de energia definida em torno do núcleo"
+   ],
+   "correta": 1,
+   "explicacao": "Quase todas as partículas atravessaram, e poucas desviaram bastante: a carga positiva está concentrada em um núcleo minúsculo (Rutherford)."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em 1897, Thomson estudou raios catódicos em um tubo com vácuo. Ele aproximou placas elétricas do feixe e observou o desvio.",
+   "comando": "O que o resultado permite concluir sobre o feixe?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: desvio do feixe",
+    "colunas": [
+     "Condição",
+     "Desvio do feixe"
+    ],
+    "linhas": [
+     [
+      "Sem placas",
+      "Segue reto"
+     ],
+     [
+      "Placa positiva em cima",
+      "Curva para cima"
+     ],
+     [
+      "Placa negativa em cima",
+      "Curva para baixo"
+     ]
+    ]
+   },
+   "alts": [
+    "É formado por partículas negativas, menores que o átomo, que é divisível",
+    "É formado por partículas de carga positiva, o que mostra que o átomo é maciço",
+    "É formado por luz sem carga elétrica, que é desviada pela atração das placas",
+    "É formado por átomos inteiros neutros, o que confirma que são indivisíveis"
+   ],
+   "correta": 0,
+   "explicacao": "O feixe é atraído pela placa positiva, logo tem carga negativa; essas partículas (elétrons) fazem parte do átomo, que não é indivisível."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Num espetáculo de fogos de artifício, Rafael notou que cada cor vem de um sal diferente colocado na mistura. O professor disse que a explicação está no modelo de Bohr.",
+   "comando": "Qual explicação usa corretamente o modelo de Bohr?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos fogos de artifício",
+    "colunas": [
+     "Sal usado",
+     "Cor da luz"
+    ],
+    "linhas": [
+     [
+      "Sódio",
+      "Amarelo"
+     ],
+     [
+      "Cobre",
+      "Azul-esverdeado"
+     ],
+     [
+      "Estrôncio",
+      "Vermelho"
+     ]
+    ]
+   },
+   "alts": [
+    "Os átomos de cada sal têm massas diferentes, e a massa define a cor da luz emitida",
+    "O núcleo perde prótons com o calor da explosão e libera energia na forma de luz colorida",
+    "Os elétrons ganham energia, vão para camadas externas e, ao voltar, emitem luz própria",
+    "Os elétrons saem do átomo e formam uma nuvem positiva que brilha com o calor da explosão"
+   ],
+   "correta": 2,
+   "explicacao": "Para Bohr, o elétron muda de camada ao ganhar ou perder energia, emitindo luz de energia definida, ou seja, de cor característica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Lia disse ao colega: \"Os cientistas erraram nos modelos de Dalton e Thomson, e por isso eles foram jogados fora\". A professora mostrou o que cada modelo não conseguia explicar.",
+   "comando": "Qual afirmação descreve melhor como a ciência produziu os modelos atômicos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos modelos e das evidências novas",
+    "colunas": [
+     "Modelo",
+     "Fato novo que ele não explicava"
+    ],
+    "linhas": [
+     [
+      "Dalton",
+      "Existência de partículas negativas"
+     ],
+     [
+      "Thomson",
+      "Desvios grandes na folha de ouro"
+     ],
+     [
+      "Rutherford",
+      "Luz de cores definidas emitida pelos gases"
+     ]
+    ]
+   },
+   "alts": [
+    "Cada cientista descartou por completo o modelo anterior por ter errado em tudo",
+    "Cada modelo explicava os dados da época e foi ampliado com novas evidências",
+    "Os modelos mudaram por decisão do cientista mais famoso da época, sem novos testes",
+    "O modelo de Bohr é o definitivo, pois nenhuma evidência posterior o modificou"
+   ],
+   "correta": 1,
+   "explicacao": "Modelos são construções provisórias; novas evidências levam a ajustes, e os anteriores continuam úteis para explicar parte dos fenômenos."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Quatro grupos moldaram modelos atômicos em massinha e os embaralharam antes de montar a linha do tempo. Os modelos são de Dalton, Thomson, Rutherford e Bohr.",
+   "comando": "Associe cada cartão ao cientista e coloque os cartões em ordem cronológica.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos cartões da turma",
+    "colunas": [
+     "Cartão",
+     "Como ficou a massinha"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Esfera inteira, sem divisões"
+     ],
+     [
+      "B",
+      "Bolinha central com bolinhas ao redor"
+     ],
+     [
+      "C",
+      "Massa com bolinhas dentro"
+     ],
+     [
+      "D",
+      "Bolinha central com anéis em volta"
+     ]
+    ]
+   },
+   "ref": "A é Dalton, C é Thomson, B é Rutherford e D é Bohr. A ordem cronológica é A, C, B, D.",
+   "conceitos": [
+    "Dalton: esfera maciça",
+    "Thomson: elétrons na massa positiva",
+    "Rutherford e Bohr"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A equipe de Rutherford lançou partículas alfa contra uma folha de ouro e registrou o que acontecia. Antes, acreditava-se no modelo de Thomson, o da massa com passas.",
+   "comando": "Que conclusão sobre a estrutura do átomo os resultados permitem?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do experimento de 1911",
+    "etapas": [
+     "Feixe de partículas alfa dirigido a uma folha fina de ouro",
+     "Detector em volta registra onde as partículas chegam",
+     "A maioria atravessa, e poucas desviam muito"
+    ]
+   },
+   "ref": "O átomo tem um núcleo muito pequeno, denso e positivo, com grande espaço vazio ao redor. Por isso a maioria atravessa e poucas desviam.",
+   "conceitos": [
+    "núcleo pequeno e denso",
+    "espaço vazio",
+    "carga positiva concentrada"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em ruas de cidades, letreiros luminosos usam tubos com gases diferentes e emitem cores diferentes quando recebem eletricidade.",
+   "comando": "Explique a emissão de luz colorida pelo modelo de Bohr.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos letreiros da avenida",
+    "colunas": [
+     "Gás no tubo",
+     "Cor da luz"
+    ],
+    "linhas": [
+     [
+      "Neônio",
+      "Vermelho-alaranjado"
+     ],
+     [
+      "Argônio",
+      "Azul-violeta"
+     ],
+     [
+      "Vapor de sódio",
+      "Amarelo"
+     ]
+    ]
+   },
+   "ref": "A corrente fornece energia aos elétrons, que saltam para camadas mais externas. Ao voltar às camadas de origem, liberam essa energia como luz de cor específica de cada elemento.",
+   "conceitos": [
+    "salto entre camadas",
+    "energia absorvida e emitida",
+    "cor característica do elemento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os resultados da folha de ouro mostraram desvios grandes em algumas partículas alfa, algo que o modelo de Thomson não previa.",
+   "comando": "Justifique por que esses resultados não combinam com o modelo da massa com passas.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: previsão e observação, em 10 mil partículas",
+    "unidade": "partículas",
+    "itens": [
+     {
+      "rotulo": "Desvio grande previsto por Thomson",
+      "valor": 0
+     },
+     {
+      "rotulo": "Desvio grande observado",
+      "valor": 2
+     }
+    ]
+   },
+   "ref": "No modelo de Thomson a carga positiva está espalhada, então as partículas só sofreriam pequenos desvios. Desvios grandes mostram que a carga positiva está concentrada em um núcleo, o que exigiu outro modelo.",
+   "conceitos": [
+    "carga positiva espalhada",
+    "desvios grandes observados",
+    "novo modelo com núcleo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lia construiu um modelo de Rutherford com um núcleo do tamanho de uma bolinha de gude e colocou os elétrons a 100 metros de distância. A professora elogiou a escala.",
+   "comando": "Justifique por que Lia usou uma distância tão grande e o que isso mostra sobre o átomo.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de medidas relativas do átomo",
+    "unidade": "vezes o tamanho do núcleo",
+    "itens": [
+     {
+      "rotulo": "Núcleo",
+      "valor": 1
+     },
+     {
+      "rotulo": "Átomo inteiro",
+      "valor": 100000
+     }
+    ]
+   },
+   "ref": "O átomo é cerca de 100 mil vezes maior que o núcleo, então os elétrons ficam muito distantes dele. Assim, o átomo é quase todo espaço vazio, com a massa concentrada no núcleo.",
+   "conceitos": [
+    "escala núcleo e átomo",
+    "espaço vazio",
+    "massa no núcleo"
+   ]
+  }
+ ],
+ "9º ANO|3|Identificar iniciativas para enfrentar problemas ambientais, com base no consumo consciente e no uso sustentável dos recursos naturais.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma ronda pela escola, um grupo anotou que, em três salas vazias durante o recreio, as lâmpadas ficaram acesas. Um aluno disse que ligar e desligar gasta mais energia do que deixar acesas.",
+   "comando": "Qual iniciativa de consumo consciente resolve melhor o problema observado?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da ronda no recreio",
+    "colunas": [
+     "Local",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Sala 5",
+      "Lâmpadas acesas, sem ninguém"
+     ],
+     [
+      "Sala 7",
+      "Lâmpadas acesas, sem ninguém"
+     ],
+     [
+      "Sala 9",
+      "Lâmpadas acesas, sem ninguém"
+     ]
+    ]
+   },
+   "alts": [
+    "Reciclar as lâmpadas queimadas para que o gasto de energia diminua depois",
+    "Manter as lâmpadas acesas, porque ligar e desligar gasta mais energia",
+    "Desligar as luzes ao sair e instalar sensores de presença nos ambientes",
+    "Plantar árvores no pátio para compensar a energia desperdiçada na escola"
+   ],
+   "correta": 2,
+   "explicacao": "Desligar as luzes evita o desperdício. Reciclar e plantar árvores não reduzem o consumo de energia, e a ideia de que ligar gasta mais é um mito."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A torneira do corredor da escola ficou pingando por 30 dias. O zelador estimou que ela perdia cerca de 40 litros por dia, enquanto a caixa-d'água da cantina tem 1000 litros.",
+   "comando": "Que conclusão é coerente com os dados?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de água perdida pela torneira",
+    "unidade": "litros",
+    "itens": [
+     {
+      "rotulo": "Em 1 dia",
+      "valor": 40
+     },
+     {
+      "rotulo": "Em 30 dias",
+      "valor": 1200
+     },
+     {
+      "rotulo": "Caixa-d'água da cantina",
+      "valor": 1000
+     }
+    ]
+   },
+   "alts": [
+    "A perda diária de 40 litros é pequena demais, então o conserto quase não muda nada",
+    "A água que pinga volta ao solo da escola, e por isso não representa perda de recursos",
+    "A perda é importante quando a torneira jorra água com muita força, e não quando pinga",
+    "Pequenos vazamentos somam grandes perdas, e consertar a torneira evita o desperdício"
+   ],
+   "correta": 3,
+   "explicacao": "Em 30 dias foram perdidos mais litros que uma caixa-d'água cheia. O desperdício pequeno e contínuo é grande no total."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na cantina da escola há uma lixeira única, que recebe cascas de banana, papéis de bala, garrafas PET e papelão. A turma quer reduzir o lixo que vai para o aterro.",
+   "comando": "Qual destino é adequado para os resíduos da lixeira?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do conteúdo da lixeira da cantina",
+    "colunas": [
+     "Resíduo",
+     "Quantidade na semana"
+    ],
+    "linhas": [
+     [
+      "Cascas de frutas",
+      "18 kg"
+     ],
+     [
+      "Papelão e papel",
+      "9 kg"
+     ],
+     [
+      "Garrafas PET",
+      "4 kg"
+     ]
+    ]
+   },
+   "alts": [
+    "Misturar tudo e enviar ao aterro, que decompõe todo tipo de resíduo",
+    "Separar os secos para a reciclagem e levar as cascas para a compostagem",
+    "Queimar o papelão e as garrafas PET e enterrar as cascas de frutas no quintal",
+    "Enviar as cascas à reciclagem e deixar o papelão e a PET apodrecerem no solo"
+   ],
+   "correta": 1,
+   "explicacao": "Resíduos secos podem ser reciclados e os orgânicos viram adubo por compostagem. As outras opções poluem ou não aproveitam os materiais."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Num parque estadual no alto de uma bacia hidrográfica, a mata é protegida por lei. Técnicos mediram a turbidez (sujeira) da água do rio dentro e fora do parque.",
+   "comando": "O que os dados mostram sobre uma Unidade de Conservação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do monitoramento do rio",
+    "colunas": [
+     "Trecho",
+     "Mata preservada",
+     "Turbidez da água"
+    ],
+    "linhas": [
+     [
+      "Dentro do parque",
+      "95%",
+      "5 NTU"
+     ],
+     [
+      "Fora do parque",
+      "20%",
+      "60 NTU"
+     ]
+    ]
+   },
+   "alts": [
+    "A vegetação preservada retém o solo e protege a água, deixando o rio menos turvo",
+    "A vegetação aumenta a turbidez com folhas e galhos, e por isso deve ser retirada",
+    "A turbidez do rio depende da chuva, e a vegetação não interfere na qualidade",
+    "A mata do parque beneficia os animais, mas não tem relação com a água da bacia"
+   ],
+   "correta": 0,
+   "explicacao": "Unidades de Conservação mantêm a vegetação, que evita a erosão e protege nascentes. Os distratores desconsideram a relação entre mata e água."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Duas iniciativas foram testadas na escola por um semestre para reduzir o consumo de água: cartazes nos banheiros e torneiras com temporizador. O consumo mensal foi medido antes e depois.",
+   "comando": "Qual conclusão é mais bem sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do consumo de água da escola",
+    "colunas": [
+     "Iniciativa",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Cartazes",
+      "62 m³",
+      "60 m³"
+     ],
+     [
+      "Torneiras com temporizador",
+      "62 m³",
+      "44 m³"
+     ]
+    ]
+   },
+   "alts": [
+    "Os cartazes são ineficazes e devem ser abandonados em qualquer escola do município",
+    "A economia dos cartazes foi igual à das torneiras, pois ambas reduziram o consumo da escola",
+    "A mudança estrutural reduziu mais o consumo que os cartazes, e vale combinar as duas",
+    "Reduzir o consumo da escola não afeta a bacia hidrográfica, que depende da chuva"
+   ],
+   "correta": 2,
+   "explicacao": "Os temporizadores economizaram 18 m³ contra 2 m³ dos cartazes. Iniciativas estruturais e educativas se complementam."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma ronda pela escola, um grupo registrou desperdícios que viu em três locais.",
+   "comando": "Para cada desperdício do registro, indique uma iniciativa de consumo consciente que possa resolvê-lo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da ronda pela escola",
+    "colunas": [
+     "Local",
+     "Desperdício observado"
+    ],
+    "linhas": [
+     [
+      "Corredor",
+      "Lâmpada acesa com sala vazia"
+     ],
+     [
+      "Banheiro",
+      "Torneira pingando"
+     ],
+     [
+      "Pátio",
+      "Papel e plástico na mesma lixeira"
+     ]
+    ]
+   },
+   "ref": "Lâmpada acesa: apagar ao sair ou usar sensor. Torneira pingando: consertar e avisar a manutenção. Lixo misturado: separar em lixeiras de coleta seletiva.",
+   "conceitos": [
+    "economia de energia",
+    "economia de água",
+    "coleta seletiva"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A cantina da escola quer diminuir o lixo que vai para o aterro. A turma pesou os resíduos de uma semana.",
+   "comando": "Qual iniciativa deveria ser priorizada? Justifique com os dados.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro dos resíduos da cantina em uma semana",
+    "unidade": "kg",
+    "itens": [
+     {
+      "rotulo": "Restos de comida",
+      "valor": 42
+     },
+     {
+      "rotulo": "Papel e papelão",
+      "valor": 15
+     },
+     {
+      "rotulo": "Plástico",
+      "valor": 10
+     },
+     {
+      "rotulo": "Vidro",
+      "valor": 2
+     }
+    ]
+   },
+   "ref": "Priorizar a compostagem dos restos de comida, que são a maior parte do lixo. Isso reduz o que vai ao aterro e gera adubo para a horta da escola.",
+   "conceitos": [
+    "restos de comida são maioria",
+    "compostagem",
+    "redução de resíduos no aterro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um córrego que cruza a cidade recebe esgoto e lixo. Alunos coletaram água em três pontos para medir o oxigênio dissolvido, necessário aos peixes.",
+   "comando": "Interprete os dados e proponha duas iniciativas da comunidade para melhorar o córrego.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do oxigênio dissolvido no córrego",
+    "unidade": "mg/L",
+    "itens": [
+     {
+      "rotulo": "Nascente",
+      "valor": 8
+     },
+     {
+      "rotulo": "Centro da cidade",
+      "valor": 4
+     },
+     {
+      "rotulo": "Foz",
+      "valor": 1.5
+     }
+    ]
+   },
+   "ref": "O oxigênio cai ao longo do córrego, o que indica poluição por esgoto e lixo. Iniciativas: não jogar lixo, pedir tratamento do esgoto, recuperar a mata ciliar ou fazer mutirões de limpeza.",
+   "conceitos": [
+    "queda de oxigênio indica poluição",
+    "tratamento de esgoto",
+    "ações da comunidade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro quer trocar de celular todo ano, mesmo com o aparelho funcionando bem. A professora mostrou as etapas da vida de um produto.",
+   "comando": "Explique como Pedro poderia ter um consumo mais consciente e que impacto ele evitaria em duas dessas etapas.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do ciclo de vida de um celular",
+    "etapas": [
+     "Extração dos minerais",
+     "Fabricação e transporte",
+     "Uso pelo consumidor",
+     "Descarte"
+    ]
+   },
+   "ref": "Pedro poderia usar o aparelho por mais tempo ou consertá-lo. Assim, reduz a extração de minerais e a energia da fabricação e diminui o lixo eletrônico descartado.",
+   "conceitos": [
+    "usar por mais tempo",
+    "menos extração e produção",
+    "menos lixo eletrônico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A prefeitura quer construir um estacionamento sobre uma área de mata ciliar, perto de um rio da cidade. Moradores e ambientalistas discutem a proposta.",
+   "comando": "Posicione-se contra ou a favor do estacionamento, justificando com os dados e com o uso sustentável dos recursos.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da água da chuva que escorre sobre a superfície",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Mata",
+      "valor": 10
+     },
+     {
+      "rotulo": "Solo exposto",
+      "valor": 50
+     },
+     {
+      "rotulo": "Asfalto",
+      "valor": 90
+     }
+    ]
+   },
+   "ref": "Contra: a mata ciliar absorve a chuva e protege o rio, enquanto o asfalto faz 90% da água escorrer, aumentando enchentes e erosão. É melhor instalar o estacionamento em outra área já ocupada.",
+   "conceitos": [
+    "mata ciliar protege o rio",
+    "impermeabilização aumenta enchentes",
+    "uso sustentável"
+   ]
+  }
+ ],
+ "4B|6º ANO|11": [
+  {
+   "tipo": "obj",
+   "enunciado": "Bia treina ginástica olímpica. Nas argolas ela gira os braços em círculos completos e, ao pousar, mantém a cabeça firme enquanto dobra os joelhos. O treinador explica que há articulações de tipos diferentes no corpo.",
+   "comando": "Qual alternativa relaciona corretamente os movimentos de Bia ao tipo de articulação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do treino de Bia",
+    "colunas": [
+     "Movimento",
+     "Parte do corpo"
+    ],
+    "linhas": [
+     [
+      "Girar em círculo",
+      "Braço"
+     ],
+     [
+      "Dobrar e esticar",
+      "Joelho"
+     ],
+     [
+      "Manter firme",
+      "Ossos da cabeça"
+     ]
+    ]
+   },
+   "alts": [
+    "O braço gira numa articulação fixa, e os ossos da cabeça se unem por articulações móveis",
+    "O braço gira numa articulação móvel, e os ossos da cabeça se unem por articulações fixas",
+    "O braço gira numa articulação móvel, e os ossos da cabeça se unem por articulações móveis",
+    "O braço gira numa articulação fixa, e os ossos da cabeça se unem por articulações fixas"
+   ],
+   "correta": 1,
+   "explicacao": "O ombro é articulação móvel; os ossos do crânio têm articulações fixas que protegem o encéfalo. Os distratores trocam os dois tipos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Lúcia, de 70 anos, fez um exame de densidade óssea. O médico comparou o resultado com valores médios de outras idades e disse que o corpo usa os ossos como reserva de cálcio.",
+   "comando": "Que explicação é coerente com a queda da densidade óssea ao longo da vida?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de densidade óssea média",
+    "unidade": "g/cm²",
+    "itens": [
+     {
+      "rotulo": "25 anos",
+      "valor": 1.2
+     },
+     {
+      "rotulo": "45 anos",
+      "valor": 1.1
+     },
+     {
+      "rotulo": "70 anos",
+      "valor": 0.8
+     }
+    ]
+   },
+   "alts": [
+    "Se falta cálcio na alimentação, o corpo retira o mineral dos ossos para outras funções",
+    "Com a idade, os ossos deixam de ser vivos e perdem o cálcio aos poucos por desgaste mecânico",
+    "Os ossos produzem cálcio a partir da glicose, e esse processo vai diminuindo com os anos",
+    "O cálcio dos ossos é eliminado na urina em quantidade fixa a cada dia da vida adulta"
+   ],
+   "correta": 0,
+   "explicacao": "Os ossos guardam cálcio e o liberam ao sangue quando necessário (músculos e nervos), reduzindo a massa óssea se a reposição for insuficiente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Caio, de 14 anos, caiu do skate e fraturou o antebraço. O médico fez uma radiografia, engessou o braço por 6 semanas e depois indicou fisioterapia.",
+   "comando": "Por que a imobilização com gesso foi importante para a recuperação?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do tratamento de Caio",
+    "etapas": [
+     "Radiografia mostra fratura no antebraço",
+     "Gesso mantido por 6 semanas",
+     "Retirada do gesso e fisioterapia"
+    ]
+   },
+   "alts": [
+    "Fornece cálcio que passa do gesso ao osso e reconstitui a parte quebrada do braço",
+    "Substitui o osso quebrado, funcionando como um osso novo durante a recuperação",
+    "Mantém as pontas do osso paradas para o osso novo se formar e unir os fragmentos",
+    "Impede o osso de crescer, para que ele não fique deformado depois da fratura do braço"
+   ],
+   "correta": 2,
+   "explicacao": "O osso se regenera com células vivas, desde que as partes fiquem imóveis. O gesso não fornece cálcio nem substitui o osso."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um médico comparou radiografias da mão de uma criança de 8 anos, de uma de 12 e de um adulto. Na criança, há espaços largos entre os ossos do punho, ocupados por cartilagem.",
+   "comando": "Qual explicação relaciona os dados ao crescimento dos ossos?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de ossos do punho visíveis na radiografia",
+    "unidade": "ossos",
+    "itens": [
+     {
+      "rotulo": "Criança de 8 anos",
+      "valor": 3
+     },
+     {
+      "rotulo": "Criança de 12 anos",
+      "valor": 6
+     },
+     {
+      "rotulo": "Adulto",
+      "valor": 8
+     }
+    ]
+   },
+   "alts": [
+    "Faltou cálcio na dieta da criança, e por isso os ossos do punho dela não se encostam",
+    "As articulações da criança são móveis e se tornam fixas quando ela cresce e fica adulta",
+    "Os ossos do adulto surgem de novo e os da criança desaparecem com o passar do tempo",
+    "A cartilagem vai sendo trocada por osso, e por isso aparecem mais ossos com a idade"
+   ],
+   "correta": 3,
+   "explicacao": "No crescimento, a cartilagem se transforma em osso (ossificação). Os distratores atribuem a diferença à falta de cálcio ou à troca de articulações."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Caio (12 anos) e seu avô (70 anos) fraturaram o fêmur em quedas parecidas. O ortopedista acompanhou os dois com radiografias até o osso consolidar.",
+   "comando": "Qual hipótese explica melhor a diferença no tempo de recuperação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do acompanhamento ortopédico",
+    "colunas": [
+     "Paciente",
+     "Idade",
+     "Tempo até consolidar"
+    ],
+    "linhas": [
+     [
+      "Caio",
+      "12 anos",
+      "6 semanas"
+     ],
+     [
+      "Avô",
+      "70 anos",
+      "16 semanas"
+     ]
+    ]
+   },
+   "alts": [
+    "O osso do idoso é mais duro, e por isso a união dos fragmentos leva mais tempo",
+    "No jovem o osso se renova mais e tem mais cálcio; no idoso a renovação é mais lenta",
+    "A recuperação depende do gesso e do repouso, e a idade não altera a renovação do osso",
+    "O jovem tem mais ossos que o idoso, e por isso um osso quebrado se une rapidamente"
+   ],
+   "correta": 1,
+   "explicacao": "Com a idade, a renovação óssea diminui e a perda de cálcio aumenta, tornando a consolidação mais lenta. Os distratores ignoram esses fatores."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Num treino, o professor mostrou três ossos do corpo humano e explicou que o esqueleto tem várias funções, como sustentação, proteção e movimento.",
+   "comando": "Indique uma função principal de cada osso do registro.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos ossos estudados",
+    "colunas": [
+     "Osso",
+     "Localização"
+    ],
+    "linhas": [
+     [
+      "Fêmur",
+      "Coxa"
+     ],
+     [
+      "Crânio",
+      "Cabeça"
+     ],
+     [
+      "Costelas",
+      "Tórax"
+     ]
+    ]
+   },
+   "ref": "O fêmur sustenta o peso do corpo e, com os músculos, permite mover a perna. O crânio protege o encéfalo. As costelas protegem o coração e os pulmões.",
+   "conceitos": [
+    "sustentação",
+    "movimento",
+    "proteção de órgãos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na ginástica, o professor mostrou duas articulações: a que liga a mandíbula ao crânio e as que unem os ossos da cabeça entre si.",
+   "comando": "Classifique cada articulação em móvel ou fixa e explique por que o movimento é importante em uma delas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das articulações observadas",
+    "colunas": [
+     "Articulação",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Mandíbula e crânio",
+      "Abre e fecha na mastigação"
+     ],
+     [
+      "Entre ossos da cabeça",
+      "Sem movimento perceptível"
+     ]
+    ]
+   },
+   "ref": "A articulação da mandíbula é móvel e permite abrir e fechar a boca para mastigar e falar. As dos ossos da cabeça são fixas e dão firmeza e proteção ao encéfalo.",
+   "conceitos": [
+    "articulação móvel",
+    "articulação fixa",
+    "movimento da mandíbula"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Luana, de 14 anos, não gosta de leite nem de derivados. O nutricionista da UBS comparou a ingestão diária de cálcio dela com a recomendada.",
+   "comando": "Explique como essa dieta pode afetar os ossos de Luana, relacionando com a reserva de cálcio.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da ingestão diária de cálcio",
+    "unidade": "mg",
+    "itens": [
+     {
+      "rotulo": "Recomendada na adolescência",
+      "valor": 1300
+     },
+     {
+      "rotulo": "Ingestão de Luana",
+      "valor": 400
+     }
+    ]
+   },
+   "ref": "Com pouco cálcio na dieta, o corpo retira o mineral dos ossos para outras funções. Na fase de crescimento, isso pode deixar os ossos frágeis e aumentar o risco de fraturas.",
+   "conceitos": [
+    "ossos como reserva de cálcio",
+    "dieta pobre em cálcio",
+    "ossos frágeis"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao tirar o gesso, Caio queria voltar logo ao skate. O médico disse que ainda não e pediu fisioterapia.",
+   "comando": "Justifique a recomendação do médico, considerando o osso e as articulações.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do tratamento de Caio",
+    "etapas": [
+     "Radiografia mostra fratura no antebraço",
+     "Gesso mantido por 6 semanas",
+     "Retirada do gesso e fisioterapia"
+    ]
+   },
+   "ref": "O osso novo ainda está se fortalecendo e pode quebrar de novo com impacto. Após semanas imobilizados, músculos e articulações ficam fracos e rígidos e precisam de fisioterapia.",
+   "conceitos": [
+    "osso em consolidação",
+    "músculos e articulações enfraquecidos",
+    "reabilitação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma ginasta de 16 anos e um colega sedentário da mesma idade fizeram exames de densidade óssea na UBS.",
+   "comando": "Explique o resultado do exame com base no papel dos ossos e na prática de exercícios.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da densidade óssea",
+    "unidade": "g/cm²",
+    "itens": [
+     {
+      "rotulo": "Ginasta",
+      "valor": 1.35
+     },
+     {
+      "rotulo": "Colega sedentário",
+      "valor": 1.1
+     }
+    ]
+   },
+   "ref": "O osso é tecido vivo. O exercício estimula a fixação de cálcio, e o impacto e a tração dos músculos deixam o osso mais denso e forte. Por isso a ginasta tem densidade maior.",
+   "conceitos": [
+    "osso é tecido vivo",
+    "estímulo do exercício",
+    "mais cálcio fixado"
+   ]
+  }
+ ],
+ "4B|7º ANO|8": [
+  {
+   "tipo": "obj",
+   "enunciado": "Tomás caiu de bicicleta na rua e ralou o joelho. Ele lavou o machucado com água e sabão e fez curativo. Mesmo assim, no dia seguinte a região estava vermelha e um pouco inchada.",
+   "comando": "Qual defesa do corpo foi rompida pelo ralado e qual é o seu papel?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do ferimento de Tomás",
+    "etapas": [
+     "Joelho ralado na queda",
+     "Lavagem com água e sabão e curativo",
+     "Vermelhidão e inchaço no dia seguinte"
+    ]
+   },
+   "alts": [
+    "A medula óssea, que produz os glóbulos que destroem os microrganismos",
+    "Os linfócitos B, que produzem anticorpos contra cada microrganismo",
+    "Os órgãos linfoides, que filtram o sangue e eliminam as bactérias",
+    "A pele, que forma uma barreira e impede a entrada de microrganismos"
+   ],
+   "correta": 3,
+   "explicacao": "A pele é barreira da imunidade inata. A vermelhidão indica que os leucócitos foram ao local combater microrganismos que entraram."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma enfermeira da UBS pediu um hemograma de Tomás ao longo de uma infecção no joelho e comparou a contagem de leucócitos em três dias.",
+   "comando": "O que o aumento de leucócitos no dia 2 indica?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do hemograma de Tomás",
+    "colunas": [
+     "Dia",
+     "Leucócitos por mm³"
+    ],
+    "linhas": [
+     [
+      "Dia 0",
+      "7000"
+     ],
+     [
+      "Dia 2",
+      "15000"
+     ],
+     [
+      "Dia 6",
+      "8000"
+     ]
+    ]
+   },
+   "alts": [
+    "O corpo perdeu as defesas, e os leucócitos aumentaram para compensar a falta",
+    "Os leucócitos carregam oxigênio para o ferimento, e por isso aumentaram",
+    "Os leucócitos, feitos na medula óssea, aumentaram para combater a infecção",
+    "Os leucócitos são produzidos no joelho machucado, onde se multiplicam"
+   ],
+   "correta": 2,
+   "explicacao": "Leucócitos são as células de defesa, produzidos na medula óssea; sobem durante a infecção e voltam ao normal depois."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na campanha de vacinação, uma menina recebeu uma vacina em duas doses. Um laboratório mediu os anticorpos contra o vírus no sangue dela em três momentos.",
+   "comando": "Por que a resposta após a segunda dose foi muito maior?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do laboratório: anticorpos no sangue",
+    "unidade": "unidades",
+    "itens": [
+     {
+      "rotulo": "Antes da vacina",
+      "valor": 2
+     },
+     {
+      "rotulo": "Após a 1ª dose",
+      "valor": 20
+     },
+     {
+      "rotulo": "Após a 2ª dose",
+      "valor": 90
+     }
+    ]
+   },
+   "alts": [
+    "Células de memória da primeira dose reconhecem o vírus e respondem mais rápido e forte",
+    "A vacina traz anticorpos prontos, que se somam aos que já existiam no sangue da menina",
+    "A segunda dose cria leucócitos novos na medula óssea, que substituem os leucócitos antigos",
+    "A imunidade inata ficou mais forte e passou a substituir a defesa adaptativa da menina"
+   ],
+   "correta": 0,
+   "explicacao": "A vacina apresenta o antígeno e forma células de memória, e a segunda exposição gera resposta adaptativa maior e mais rápida."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana já teve catapora aos 6 anos. Aos 12, esteve em contato com um colega com catapora e não adoeceu. Beto nunca teve e pegou a doença no mesmo contato.",
+   "comando": "Que explicação justifica a diferença entre Ana e Beto?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos dois alunos",
+    "colunas": [
+     "Aluno",
+     "Já teve catapora",
+     "Contato com doente",
+     "Adoeceu"
+    ],
+    "linhas": [
+     [
+      "Ana",
+      "Sim",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Beto",
+      "Não",
+      "Sim",
+      "Sim"
+     ]
+    ]
+   },
+   "alts": [
+    "A pele de Ana ficou mais grossa depois da doença e impediu a entrada do vírus no corpo",
+    "Os linfócitos de memória de Ana reconheceram o vírus e o eliminaram antes da doença",
+    "Ana produz antibióticos que eliminam o vírus antes de ele chegar ao sangue dela",
+    "Ana recebeu anticorpos da mãe ao nascer, que duram a vida inteira no corpo dela"
+   ],
+   "correta": 1,
+   "explicacao": "A primeira infecção gerou células de memória (imunidade adaptativa). Antibióticos não agem contra vírus, e anticorpos da mãe não duram a vida toda."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na UBS, uma médica comparou a contagem de linfócitos T de duas pessoas. A paciente B tem uma doença que destrói essas células e vem tendo pneumonias por microrganismos que raramente adoecem pessoas saudáveis.",
+   "comando": "Como a contagem explica as pneumonias da paciente B?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos exames",
+    "colunas": [
+     "Paciente",
+     "Linfócitos T por mm³"
+    ],
+    "linhas": [
+     [
+      "A, saudável",
+      "1000"
+     ],
+     [
+      "B",
+      "150"
+     ]
+    ]
+   },
+   "alts": [
+    "Com poucos linfócitos T, a defesa adaptativa falha e microrganismos comuns adoecem",
+    "O vírus destrói a pele e as mucosas, que deixam de ser barreira e permitem a infecção",
+    "Poucos linfócitos T aumentam os anticorpos, que passam a atacar as células do pulmão",
+    "A medula óssea deixa de produzir hemácias, e elas carregam os microrganismos ao pulmão"
+   ],
+   "correta": 0,
+   "explicacao": "Linfócitos T coordenam a resposta adaptativa; sem eles, o corpo fica vulnerável a infecções oportunistas. Os distratores trocam as células e as funções."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Joana notou que, quando a poeira entra no nariz, ela espirra e o nariz fica com muco; quando algo cai no olho, ele lacrimeja; e o ácido do estômago destrói bactérias da comida.",
+   "comando": "Que tipo de defesa os três casos mostram e como ela atua contra os microrganismos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das observações de Joana",
+    "colunas": [
+     "Situação",
+     "Local do corpo"
+    ],
+    "linhas": [
+     [
+      "Poeira presa no muco",
+      "Nariz"
+     ],
+     [
+      "Lágrima leva partículas embora",
+      "Olho"
+     ],
+     [
+      "Bactérias do alimento enfrentam acidez",
+      "Estômago"
+     ]
+    ]
+   },
+   "ref": "Mostram a imunidade inata, com barreiras físicas e químicas que agem logo e do mesmo modo contra qualquer microrganismo, sem reconhecer qual é.",
+   "conceitos": [
+    "imunidade inata",
+    "barreiras físicas e químicas",
+    "ação imediata e geral"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No hemograma de Rafael, a médica explicou que o sangue tem hemácias, leucócitos e plaquetas, e que uma dessas células participa da defesa do corpo.",
+   "comando": "Qual célula participa da defesa, onde ela é produzida e por que o hemograma ajuda a detectar infecções?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do hemograma de Rafael (por mm³)",
+    "unidade": "células",
+    "itens": [
+     {
+      "rotulo": "Hemácias",
+      "valor": 5000000
+     },
+     {
+      "rotulo": "Plaquetas",
+      "valor": 250000
+     },
+     {
+      "rotulo": "Leucócitos",
+      "valor": 16000
+     }
+    ]
+   },
+   "ref": "Os leucócitos fazem a defesa e são produzidos na medula óssea. Em infecções, o número deles sobe, o que aparece no hemograma.",
+   "conceitos": [
+    "leucócitos",
+    "medula óssea",
+    "aumento na infecção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Roberto raspou o joelho jogando bola e cobriu o machucado com terra \"para estancar o sangue\". Dois dias depois, o local estava inchado, dolorido e com pus.",
+   "comando": "Explique o que deu errado e qual deveria ter sido o cuidado correto com o ferimento.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do caso de Roberto",
+    "etapas": [
+     "Joelho raspado jogando bola",
+     "Machucado coberto com terra",
+     "Dois dias depois: dor, inchaço e pus"
+    ]
+   },
+   "ref": "A terra levou microrganismos para dentro do ferimento, onde a pele estava rompida, e os leucócitos reagiram, formando pus. O correto era lavar com água e sabão e proteger com curativo limpo.",
+   "conceitos": [
+    "pele rompida",
+    "entrada de microrganismos",
+    "higiene do ferimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lia teve um corte no dedo e a pele ficou vermelha em poucas horas. Semanas depois, pegou gripe pela primeira vez e só melhorou após uma semana. A professora pediu que ela comparasse as duas respostas do corpo.",
+   "comando": "Compare a imunidade inata e a adaptativa usando os dois episódios.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos episódios de Lia",
+    "colunas": [
+     "Episódio",
+     "Primeira reação",
+     "Tempo até melhorar"
+    ],
+    "linhas": [
+     [
+      "Corte no dedo",
+      "Vermelhidão em horas",
+      "3 dias"
+     ],
+     [
+      "Gripe, 1ª vez",
+      "Febre após 2 dias",
+      "8 dias"
+     ]
+    ]
+   },
+   "ref": "A inata age rápido e do mesmo modo contra vários agentes, como no corte. A adaptativa demora no primeiro contato, é específica contra o vírus e forma memória, o que acelera uma próxima resposta.",
+   "conceitos": [
+    "inata rápida e geral",
+    "adaptativa específica e mais lenta",
+    "memória imunológica"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rafael nasceu sem linfócitos funcionais e viveu seus primeiros anos em um quarto estéril. Os médicos compararam o número de infecções por ano dele com o de uma criança saudável.",
+   "comando": "Justifique os impactos da falta do sistema imune e o que o transplante de medula óssea pode mudar.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de infecções por ano",
+    "unidade": "infecções",
+    "itens": [
+     {
+      "rotulo": "Criança saudável",
+      "valor": 6
+     },
+     {
+      "rotulo": "Rafael, sem tratamento",
+      "valor": 40
+     }
+    ]
+   },
+   "ref": "Sem defesas, qualquer microrganismo pode causar doença grave e as vacinas não protegem. O transplante de medula óssea fornece células novas que produzem leucócitos e restauram a imunidade.",
+   "conceitos": [
+    "ausência de defesa",
+    "vacinas ineficazes",
+    "medula óssea produz leucócitos"
+   ]
+  }
+ ],
+ "4B|8º ANO|8": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na casa de Marina, um aquecedor elétrico será ligado em uma tomada de 220 V. O manual informa a resistência do aparelho.",
+   "comando": "Qual é a corrente elétrica que passa pelo aquecedor e como ela é obtida?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do aquecedor de Marina",
+    "colunas": [
+     "Grandeza",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tensão da tomada",
+      "220 V"
+     ],
+     [
+      "Resistência do aquecedor",
+      "8 Ω"
+     ]
+    ]
+   },
+   "alts": [
+    "Cerca de 27,5 A, obtida dividindo a tensão pela resistência",
+    "Cerca de 1760 A, obtida multiplicando a tensão pela resistência",
+    "Cerca de 212 A, obtida subtraindo a resistência da tensão",
+    "Cerca de 0,036 A, obtida dividindo a resistência pela tensão"
+   ],
+   "correta": 0,
+   "explicacao": "Pela 1ª Lei de Ohm, I = V/R = 220/8 = 27,5 A. Os distratores usam operações erradas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No laboratório da escola, Rafael ligou um resistor de 10 Ω a uma fonte de tensão variável e mediu a corrente para três tensões diferentes.",
+   "comando": "Que relação entre tensão e corrente os dados mostram?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: resistor de 10 Ω",
+    "colunas": [
+     "Tensão (V)",
+     "Corrente (A)"
+    ],
+    "linhas": [
+     [
+      "5",
+      "0,5"
+     ],
+     [
+      "10",
+      "1,0"
+     ],
+     [
+      "15",
+      "1,5"
+     ]
+    ]
+   },
+   "alts": [
+    "A corrente diminui à medida que a tensão aumenta, mantendo a resistência constante",
+    "A corrente aumenta na mesma proporção da tensão, mantendo a resistência constante",
+    "A tensão aumenta porque a resistência do resistor fica maior com a corrente",
+    "A corrente e a tensão são independentes, e a resistência depende de ambas"
+   ],
+   "correta": 1,
+   "explicacao": "I = V/R: com R fixa, dobrar a tensão dobra a corrente. Os distratores invertem a relação ou ignoram a resistência."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A avó de Marina mora em uma cidade onde a tomada é de 110 V. Marina levou o mesmo aquecedor de 8 Ω e o ligou lá.",
+   "comando": "O que acontece com a corrente no aquecedor em relação à casa de Marina (220 V)?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das tomadas",
+    "colunas": [
+     "Casa",
+     "Tensão"
+    ],
+    "linhas": [
+     [
+      "Marina",
+      "220 V"
+     ],
+     [
+      "Avó",
+      "110 V"
+     ]
+    ]
+   },
+   "alts": [
+    "A corrente dobra para 55 A, e o aparelho esquenta mais que na casa de Marina",
+    "A corrente continua em 27,5 A, pois a resistência do aquecedor é a mesma",
+    "A corrente cai para 8 A, que é a resistência e não muda com a tomada",
+    "A corrente cai à metade, cerca de 13,75 A, e o aquecedor esquenta menos"
+   ],
+   "correta": 3,
+   "explicacao": "Com R fixa, I = 110/8 = 13,75 A, a metade da corrente a 220 V. Menor corrente significa menos calor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O aquecedor de Marina puxa 27,5 A. O eletricista consultou uma tabela com a corrente máxima que cada fio suporta sem superaquecer.",
+   "comando": "Qual fio deve ser escolhido para ligar o aquecedor com segurança?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fios do eletricista",
+    "colunas": [
+     "Seção do fio",
+     "Corrente máxima"
+    ],
+    "linhas": [
+     [
+      "1,5 mm²",
+      "15 A"
+     ],
+     [
+      "2,5 mm²",
+      "21 A"
+     ],
+     [
+      "4,0 mm²",
+      "27 A"
+     ],
+     [
+      "6,0 mm²",
+      "36 A"
+     ]
+    ]
+   },
+   "alts": [
+    "O de 6,0 mm², que suporta 36 A, valor bem acima dos 27,5 A do aquecedor",
+    "O de 4,0 mm², que suporta 27 A, valor muito próximo dos 27,5 A do aquecedor",
+    "O de 2,5 mm², que suporta 21 A, valor comum nas instalações residenciais",
+    "O de 1,5 mm², que suporta 15 A, por ser o mais barato e o mais fácil de instalar"
+   ],
+   "correta": 0,
+   "explicacao": "O fio precisa suportar mais que 27,5 A. Fio fino ou no limite superaquece, com risco de incêndio."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Seu Antônio ligou o aquecedor em uma extensão muito comprida e fina. Depois de 10 minutos, a extensão estava quente e com cheiro de plástico queimado. Um técnico mediu a temperatura de dois fios.",
+   "comando": "Por que a extensão esquentou?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados da medição: temperatura do fio após 10 min",
+    "unidade": "°C",
+    "itens": [
+     {
+      "rotulo": "Fio grosso (4 mm²)",
+      "valor": 38
+     },
+     {
+      "rotulo": "Fio fino (1 mm²)",
+      "valor": 92
+     }
+    ]
+   },
+   "alts": [
+    "O fio fino tem menor resistência, e por isso a corrente aumenta até superaquecê-lo",
+    "O fio fino tem maior resistência, e a corrente alta nele libera muito calor",
+    "A extensão eleva a tensão da tomada, e por isso o fio esquenta mais que o normal",
+    "O aquecedor devolve corrente ao fio, que acumula calor até o isolamento derreter"
+   ],
+   "correta": 1,
+   "explicacao": "Fio fino e comprido tem mais resistência; com corrente alta, o aquecimento (efeito Joule) é intenso. Os distratores invertem resistência e corrente."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O ferro de passar roupa de Dona Rita funciona em uma tomada de 110 V e tem a resistência indicada no manual.",
+   "comando": "Calcule a corrente que passa pelo ferro e escreva a fórmula utilizada.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do ferro de passar",
+    "colunas": [
+     "Grandeza",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tensão",
+      "110 V"
+     ],
+     [
+      "Resistência",
+      "22 Ω"
+     ]
+    ]
+   },
+   "ref": "Pela 1ª Lei de Ohm, I = V/R = 110/22 = 5 A.",
+   "conceitos": [
+    "I = V/R",
+    "5 A",
+    "unidade ampère"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro montou um circuito simples com pilhas, fios e uma lâmpada pequena, e a lâmpada acendeu e esquentou um pouco.",
+   "comando": "Relacione cada elemento do registro a uma grandeza elétrica (tensão, corrente ou resistência) e diga a unidade dela.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do circuito de Pedro",
+    "etapas": [
+     "As pilhas fornecem energia ao circuito",
+     "Cargas elétricas passam pelos fios e pela lâmpada",
+     "A lâmpada limita a passagem das cargas e esquenta"
+    ]
+   },
+   "ref": "As pilhas fornecem tensão, medida em volts (V). O fluxo de cargas é a corrente, em ampères (A). A lâmpada oferece resistência, em ohms (Ω).",
+   "conceitos": [
+    "tensão (V)",
+    "corrente (A)",
+    "resistência (Ω)"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A família de Lucas tem dois chuveiros de 220 V: um para o verão e um para o inverno. Os dois têm resistências diferentes, e o de inverno esquenta mais a água.",
+   "comando": "Compare as correntes e explique por que o de inverno aquece mais.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos chuveiros",
+    "colunas": [
+     "Chuveiro",
+     "Tensão",
+     "Resistência"
+    ],
+    "linhas": [
+     [
+      "Verão",
+      "220 V",
+      "22 Ω"
+     ],
+     [
+      "Inverno",
+      "220 V",
+      "11 Ω"
+     ]
+    ]
+   },
+   "ref": "Verão: I = 220/22 = 10 A. Inverno: I = 220/11 = 20 A. Com menor resistência, a corrente é maior e libera mais calor, por isso a água esquenta mais.",
+   "conceitos": [
+    "I = V/R",
+    "menor resistência, maior corrente",
+    "mais calor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dona Rita tem uma tomada ligada a um fio que suporta 21 A. Ela quer ligar o aquecedor de 220 V e 8 Ω nessa mesma tomada.",
+   "comando": "Explique o que pode acontecer e qual é a medida de segurança correta.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro: corrente e limite do fio",
+    "unidade": "A",
+    "itens": [
+     {
+      "rotulo": "Limite do fio",
+      "valor": 21
+     },
+     {
+      "rotulo": "Aquecedor (220 V, 8 Ω)",
+      "valor": 27.5
+     }
+    ]
+   },
+   "ref": "O aquecedor puxa 27,5 A, acima dos 21 A do fio, que superaquece, pode derreter a isolação e causar incêndio. O correto é usar fio de seção maior e um disjuntor adequado.",
+   "conceitos": [
+    "I = V/R",
+    "corrente acima do limite",
+    "fio adequado e disjuntor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marcos montou dois circuitos com a mesma fonte de 12 V. No primeiro usou um resistor de 10 Ω; no segundo, trocou por um de 20 Ω.",
+   "comando": "Preveja a corrente em cada circuito e explique o que acontece com o aquecimento do resistor.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: dois circuitos",
+    "colunas": [
+     "Circuito",
+     "Tensão",
+     "Resistência"
+    ],
+    "linhas": [
+     [
+      "1",
+      "12 V",
+      "10 Ω"
+     ],
+     [
+      "2",
+      "12 V",
+      "20 Ω"
+     ]
+    ]
+   },
+   "ref": "No circuito 1, I = 12/10 = 1,2 A; no circuito 2, I = 12/20 = 0,6 A. Dobrar a resistência reduz a corrente à metade, e o aquecimento é menor.",
+   "conceitos": [
+    "I = V/R",
+    "resistência maior, corrente menor",
+    "menos calor"
+   ]
+  }
+ ],
+ "4B|8º ANO|21": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma cidade quer reduzir o lixo plástico. Dona Lúcia passou a levar sacola retornável à feira; um mercado começou a vender grãos a granel; e a Câmara Municipal aprovou uma lei que cobra pelas sacolas plásticas nos mercados.",
+   "comando": "Qual das ações é um exemplo de política pública?",
+   "figura": null,
+   "alts": [
+    "A escolha de Dona Lúcia de levar sacola retornável à feira",
+    "A lei municipal que cobra pelas sacolas plásticas dos mercados",
+    "A decisão do mercado de vender grãos a granel aos clientes",
+    "A campanha de uma vizinha pedindo embalagens menores nas lojas"
+   ],
+   "correta": 1,
+   "explicacao": "Política pública é ação do governo, como uma lei. As outras são iniciativas de consumidor, de empresa e de cidadão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma fábrica de bebidas passou a recolher as garrafas PET usadas nos mercados, triturá-las e usá-las para fabricar garrafas novas.",
+   "comando": "Que tipo de iniciativa a empresa adotou?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do processo da fábrica",
+    "etapas": [
+     "Venda da bebida em garrafa PET",
+     "Recolhimento das garrafas nos mercados",
+     "Trituração e fabricação de novas garrafas"
+    ]
+   },
+   "alts": [
+    "Consumo supérfluo, em que a empresa estimula o aumento de vendas das bebidas",
+    "Política pública, em que a empresa cria leis para obrigar o descarte correto",
+    "Economia circular, em que o material volta à produção e poupa recursos",
+    "Descarte em aterro, em que as garrafas são enterradas para decompor depois"
+   ],
+   "correta": 2,
+   "explicacao": "Reaproveitar materiais em novos produtos é economia circular. Não é política pública (feita pelo governo) nem descarte."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rita precisa comprar um tênis e comparou dois modelos na loja. O modelo A é mais barato, e o modelo B custa mais, mas dura mais tempo.",
+   "comando": "Qual escolha mostra consumo consciente?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da comparação de Rita",
+    "colunas": [
+     "Modelo",
+     "Preço",
+     "Vida útil"
+    ],
+    "linhas": [
+     [
+      "A",
+      "R$ 80",
+      "1 ano"
+     ],
+     [
+      "B",
+      "R$ 140",
+      "4 anos"
+     ]
+    ]
+   },
+   "alts": [
+    "O modelo A, que custa menos na hora da compra e traz economia imediata",
+    "O modelo B, pois preço maior indica menor impacto ambiental na fabricação",
+    "Qualquer um dos dois, pois o que importa é descartar o tênis em lugar correto",
+    "O modelo B, que custa menos por ano (R$ 35 contra R$ 80) e gera menos lixo"
+   ],
+   "correta": 3,
+   "explicacao": "Produtos duráveis reduzem gasto e resíduos ao longo do tempo. Preço alto sozinho não garante sustentabilidade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A prefeitura de uma cidade com aterro quase lotado implantou coleta seletiva, coleta de óleo de cozinha e fiscalização de descarte irregular. Depois, mediu o lixo enviado ao aterro.",
+   "comando": "Qual papel do governo essas ações ilustram?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do lixo enviado ao aterro",
+    "unidade": "toneladas por mês",
+    "itens": [
+     {
+      "rotulo": "2020",
+      "valor": 1200
+     },
+     {
+      "rotulo": "2022",
+      "valor": 900
+     },
+     {
+      "rotulo": "2024",
+      "valor": 700
+     }
+    ]
+   },
+   "alts": [
+    "Criar serviços, regras e fiscalização que facilitam hábitos sustentáveis",
+    "Transferir a responsabilidade pelo lixo aos consumidores, por meio de cartazes",
+    "Produzir os bens de consumo da cidade para que as empresas deixem de gerar resíduos",
+    "Decidir quais produtos cada família pode comprar para controlar o consumo"
+   ],
+   "correta": 0,
+   "explicacao": "O governo cria políticas públicas, estruturas e fiscalização. Não substitui as empresas nem decide as compras das famílias."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Num debate na escola, três alunos falaram sobre quem é responsável pela sustentabilidade. Joana, Pedro e Luiza deram argumentos diferentes.",
+   "comando": "Qual conclusão é a mais completa sobre o debate?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do debate",
+    "colunas": [
+     "Aluno",
+     "Argumento"
+    ],
+    "linhas": [
+     [
+      "Joana",
+      "O consumidor escolhe o que compra"
+     ],
+     [
+      "Pedro",
+      "A fábrica define o produto e a embalagem"
+     ],
+     [
+      "Luiza",
+      "A lei define o que pode ser vendido"
+     ]
+    ]
+   },
+   "alts": [
+    "O consumidor é o responsável, pois suas compras definem o que as empresas produzem",
+    "A responsabilidade é compartilhada entre consumidores, empresas e governo",
+    "A empresa é a responsável, pois ela decide como os produtos são feitos e vendidos",
+    "O governo é o responsável, pois as pessoas e as empresas agem conforme a lei vigente"
+   ],
+   "correta": 1,
+   "explicacao": "Cada argumento é parcial e verdadeiro; a sustentabilidade depende dos três atores. Os distratores atribuem tudo a um só."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um bairro adotou três ações para reduzir o lixo. Os alunos pesquisaram quem foi responsável por cada uma.",
+   "comando": "Classifique cada ação como do consumidor, da empresa ou do governo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das ações do bairro",
+    "colunas": [
+     "Ação",
+     "Onde ocorreu"
+    ],
+    "linhas": [
+     [
+      "Lei que proíbe canudo plástico",
+      "Todo o estado"
+     ],
+     [
+      "Uso de embalagem de papelão reciclado",
+      "Fábrica de biscoitos"
+     ],
+     [
+      "Compra de produtos a granel",
+      "Casa das famílias"
+     ]
+    ]
+   },
+   "ref": "A lei é do governo (política pública). A embalagem reciclada é da empresa. A compra a granel é do consumidor.",
+   "conceitos": [
+    "governo e política pública",
+    "empresa e embalagem",
+    "consumidor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma cidade viu o lixo por pessoa crescer nos últimos anos. A turma debateu o que o governo pode fazer para promover o consumo sustentável.",
+   "comando": "Cite pelo menos duas ações do governo que poderiam promover o consumo sustentável e explique como cada uma ajuda.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do lixo gerado por pessoa",
+    "unidade": "kg por dia",
+    "itens": [
+     {
+      "rotulo": "2000",
+      "valor": 0.8
+     },
+     {
+      "rotulo": "2010",
+      "valor": 1.1
+     },
+     {
+      "rotulo": "2024",
+      "valor": 1.3
+     }
+    ]
+   },
+   "ref": "Coleta seletiva, que facilita a reciclagem; leis que limitam descartáveis e fiscalização, que reduzem o lixo; incentivos a empresas que reaproveitam; e educação ambiental nas escolas.",
+   "conceitos": [
+    "coleta seletiva",
+    "leis e fiscalização",
+    "incentivos e educação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma loja de roupas vende duas coleções: uma barata, que dura poucos usos, e outra mais cara e durável. A loja também aceita roupas usadas para reaproveitar o tecido.",
+   "comando": "Explique como a empresa e o consumidor podem contribuir para a sustentabilidade nesse caso.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das coleções da loja",
+    "colunas": [
+     "Coleção",
+     "Preço da peça",
+     "Usos até estragar"
+    ],
+    "linhas": [
+     [
+      "Rápida",
+      "R$ 30",
+      "8"
+     ],
+     [
+      "Durável",
+      "R$ 90",
+      "60"
+     ]
+    ]
+   },
+   "ref": "A empresa pode fabricar peças duráveis e reaproveitar o tecido das roupas usadas (economia circular). O consumidor pode comprar menos e escolher peças que durem mais, reduzindo resíduos.",
+   "conceitos": [
+    "produto durável",
+    "economia circular",
+    "consumo consciente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu João quer separar o lixo, mas no bairro dele o caminhão da coleta seletiva não passa, produtos a granel custam mais caro e os vizinhos acham que separar lixo é perda de tempo.",
+   "comando": "Identifique os desafios estrutural, econômico e cultural do relato e proponha uma ação do governo para um deles.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do relato de seu João",
+    "colunas": [
+     "Dificuldade",
+     "Detalhe"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Caminhão da coleta seletiva não passa"
+     ],
+     [
+      "2",
+      "Produto a granel custa mais"
+     ],
+     [
+      "3",
+      "Vizinhos veem a separação como perda de tempo"
+     ]
+    ]
+   },
+   "ref": "Estrutural: falta de coleta seletiva. Econômico: preço maior do granel. Cultural: o hábito dos vizinhos. O governo pode estender a coleta ao bairro ou fazer campanhas de educação ambiental.",
+   "conceitos": [
+    "desafio estrutural",
+    "desafio econômico",
+    "desafio cultural"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um aluno disse: \"Se cada um fizer a sua parte, o problema do lixo se resolve\". A professora mostrou de onde vêm os resíduos de uma cidade.",
+   "comando": "Use os dados para justificar que a responsabilidade pela sustentabilidade é compartilhada, e não só do consumidor.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da origem dos resíduos da cidade",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Indústrias",
+      "valor": 55
+     },
+     {
+      "rotulo": "Comércio",
+      "valor": 20
+     },
+     {
+      "rotulo": "Residências",
+      "valor": 25
+     }
+    ]
+   },
+   "ref": "As residências geram só 25% dos resíduos; o restante vem de indústrias e comércio. Assim, consumidores, empresas (produção e embalagens) e governo (regras e fiscalização) precisam agir juntos.",
+   "conceitos": [
+    "resíduos vêm de várias fontes",
+    "responsabilidade compartilhada",
+    "papel de empresas e governo"
+   ]
+  }
+ ]
+}

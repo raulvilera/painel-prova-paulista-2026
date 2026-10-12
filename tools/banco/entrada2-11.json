@@ -1,0 +1,74 @@
+{
+ "6º ANO|3|Relacionar as estruturas das organelas celulares às suas funções, considerando as especificidades das células animal e vegetal.": {
+  "serie": "6",
+  "desc": "Relacionar as estruturas das organelas celulares às suas funções, considerando as especificidades das células animal e vegetal.",
+  "hab": "EF06CI05",
+  "habTxt": "Analisar a organização básica da célula como unidade estrutural e funcional de seres uni e pluricelulares (AE5).",
+  "nome": "Duas células, uma caixa",
+  "concreta": "Montar a célula animal no saquinho e a vegetal no saquinho dentro da caixinha (parede celular), com ervilhas (cloroplastos) e saquinho com água (vacúolo); feijões (mitocôndrias) entram nas duas."
+ },
+ "7º ANO|2|Reconhecer as principais características dos grupos de seres vivos invertebrados e vertebrados e seus papéis ecológicos.": {
+  "serie": "7",
+  "desc": "Reconhecer as principais características dos grupos de seres vivos invertebrados e vertebrados e seus papéis ecológicos.",
+  "hab": "EF07CI07",
+  "habTxt": "Caracterizar ecossistemas brasileiros relacionando fatores bióticos e abióticos à fauna e à flora, com foco na biodiversidade (AE9).",
+  "nome": "Chave dos bichos",
+  "concreta": "A turma monta na lousa uma chave simples de sim/não ('tem coluna vertebral?', 'tem penas?', 'tem pelos?') e passa cada card por ela; discute o papel ecológico (abelha poliniza, minhoca areja o solo, morcego dispersa sementes)."
+ },
+ "8º ANO|3|Analisar o papel da inclinação do eixo de rotação da Terra em relação à sua órbita na ocorrência das estações do ano.": {
+  "serie": "8",
+  "desc": "Analisar o papel da inclinação do eixo de rotação da Terra em relação à sua órbita na ocorrência das estações do ano.",
+  "hab": "EF08CI12, EF08CI13",
+  "habTxt": "Explicar fenômenos astronômicos cíclicos pelos movimentos de Sol, Terra e Lua e pela inclinação do eixo terrestre (AE8).",
+  "nome": "Globo inclinado",
+  "concreta": "A bola inclinada dá a volta na lanterna mantendo o palito sempre na mesma direção. A turma observa qual hemisfério recebe luz mais direta em cada posição."
+ },
+ "9º ANO|1|Identificar os modelos atômicos considerando sua historicidade e pesquisa científica.": {
+  "serie": "9",
+  "desc": "Identificar os modelos atômicos considerando sua historicidade e pesquisa científica.",
+  "hab": "EF09CI03",
+  "habTxt": "Identificar modelos da estrutura da matéria, a evolução histórica dos modelos atômicos e a classificação periódica (AE2).",
+  "nome": "Linha do tempo do átomo",
+  "concreta": "Grupos montam com massinha: esfera maciça (Dalton), massa com 'passas' (Thomson), núcleo pequeno com elétrons ao redor (Rutherford) e elétrons em camadas (Bohr), e os colocam numa linha do tempo."
+ },
+ "9º ANO|3|Identificar iniciativas para enfrentar problemas ambientais, com base no consumo consciente e no uso sustentável dos recursos naturais.": {
+  "serie": "9",
+  "desc": "Identificar iniciativas para enfrentar problemas ambientais, com base no consumo consciente e no uso sustentável dos recursos naturais.",
+  "hab": "EF09CI13, EF09CI12A, EF09CI12B",
+  "habTxt": "Propor iniciativas para problemas ambientais com consumo consciente e uso sustentável de recursos, considerando UCs e bacias hidrográficas (AE11).",
+  "nome": "Escola consciente",
+  "concreta": "Em grupos, fazem uma ronda rápida pela sala/corredor anotando desperdícios (luz acesa, torneira pingando, lixo misturado) e comparam com cartões de iniciativas reais."
+ },
+ "4B|6º ANO|11": {
+  "serie": "6",
+  "desc": "Descrever o papel dos ossos como reserva de cálcio e como parte do sistema locomotor.",
+  "hab": "EF06CI09",
+  "habTxt": "Endoesqueleto (206 ossos); ossos, cartilagens e articulações; esqueleto axial e apendicular; crânio e tronco; fratura e recuperação óssea.",
+  "nome": "Sistema esquelético",
+  "concreta": "Para começar (ginástica olímpica); Pause e responda (articulações); Na prática: estudo de caso de fratura no skate."
+ },
+ "4B|7º ANO|8": {
+  "serie": "7",
+  "desc": "Explicar a importância do sistema imune para a saúde, discutindo os impactos de sua ausência.",
+  "hab": "EF07CI10B",
+  "habTxt": "Sistema imunológico; órgãos linfoides; medula óssea e leucócitos; imunidade inata (barreiras) e adaptativa (linfócitos B e T, memória); higiene de ferimentos.",
+  "nome": "Sistema imune humano: principais características",
+  "concreta": "Para começar (como o corpo se protege?); Pause e responda; Na prática: tabela comparativa entre imunidade inata e adaptativa."
+ },
+ "4B|8º ANO|8": {
+  "serie": "8",
+  "desc": "Explicar a corrente elétrica e sua relação com a tensão e a resistência por meio da 1ª Lei de Ohm.",
+  "hab": "EF08CI18*",
+  "habTxt": "Resistência elétrica (Ω) e fatores que a alteram; corrente (A); tensão (V); 1ª Lei de Ohm I=V/R; aquecimento e segurança em circuitos.",
+  "nome": "Corrente elétrica",
+  "concreta": "Estudo de caso: calcular a corrente de um aquecedor (220 V, 8 Ω) e escolher a espessura de fio adequada em tabela."
+ },
+ "4B|8º ANO|21": {
+  "serie": "8",
+  "desc": "Discutir o papel de consumidores, governos e empresas na construção de uma sociedade sustentável.",
+  "hab": "EF08CI01, EF08CI17*, EF08CI18*, EF08CI05",
+  "habTxt": "Repensar o consumo; papel do consumidor, do governo (políticas públicas) e das empresas (economia circular); desafios culturais, econômicos e estruturais.",
+  "nome": "Consumo e desenvolvimento sustentável",
+  "concreta": "Debatem quem é responsável pela sustentabilidade e escrevem texto com ao menos duas ações do governo para promover o consumo sustentável."
+ }
+}

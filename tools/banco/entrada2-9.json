@@ -1,0 +1,74 @@
+{
+ "6º ANO|3|Reconhecer como o desenvolvimento do microscópio contribuiu para os avanços no conhecimento celular.": {
+  "serie": "6",
+  "desc": "Reconhecer como o desenvolvimento do microscópio contribuiu para os avanços no conhecimento celular.",
+  "hab": "EF06CI05",
+  "habTxt": "Analisar a organização básica da célula como unidade estrutural e funcional de seres uni e pluricelulares (AE5).",
+  "nome": "Lupa de gota d'água",
+  "concreta": "Pingar uma gota d'água sobre plástico transparente em cima do jornal e ver as letras aumentarem (a gota funciona como lente). Comparar com imagens da cortiça de Hooke (1665) e dos 'animálculos' de Leeuwenhoek."
+ },
+ "7º ANO|2|Reconhecer o conceito de sustentabilidade e sua aplicação nas ações humanas e políticas ambientais.": {
+  "serie": "7",
+  "desc": "Reconhecer o conceito de sustentabilidade e sua aplicação nas ações humanas e políticas ambientais.",
+  "hab": "EF07CI06",
+  "habTxt": "Analisar impactos sociais, econômicos e culturais das inovações tecnológicas e o uso consciente, incluindo sustentabilidade (AE5).",
+  "nome": "Tripé que não cai",
+  "concreta": "Montar um tripé com 3 lápis presos por elástico (ambiental, social, econômico) e mostrar que sem uma perna ele cai; depois ler cartões (horta escolar, lixo no córrego, cooperativa de reciclagem) e decidir se sustentam o tripé."
+ },
+ "8º ANO|1|Associar as principais ISTs (HPV, Sífilis, HIV/Aids) aos seus sintomas, formas de transmissão e métodos de prevenção.": {
+  "serie": "8",
+  "desc": "Associar as principais ISTs (HPV, Sífilis, HIV/Aids) aos seus sintomas, formas de transmissão e métodos de prevenção.",
+  "hab": "EF08CI10, EF08CI09",
+  "habTxt": "Analisar formas de prevenção de ISTs e da gravidez precoce, reconhecendo práticas de saúde sexual e reprodutiva (AE3).",
+  "nome": "Mito ou verdade? ISTs",
+  "concreta": "Leitura de cartões (ex.: 'HIV passa por abraço ou talher' – falso; 'vacina do HPV é gratuita no SUS' – verdadeiro) com votação e explicação do professor. Dúvidas vão para a caixa anônima."
+ },
+ "9º ANO|3|Relacionar evidências fósseis à ideia de ancestralidade comum proposta pela teoria da evolução.": {
+  "serie": "9",
+  "desc": "Relacionar evidências fósseis à ideia de ancestralidade comum proposta pela teoria da evolução.",
+  "hab": "EF09CI11, EF09CI10",
+  "habTxt": "Analisar a evolução e a diversidade das espécies a partir de evidências científicas e processos evolutivos (AE10).",
+  "nome": "Camadas do tempo",
+  "concreta": "No pote, montam-se camadas de terra/areia com uma concha em cada: as camadas de baixo são mais antigas. Depois, a turma observa a sequência de fósseis de ancestrais da baleia com patas."
+ },
+ "9º ANO|3|Analisar os impactos das ações humanas sobre a biodiversidade.": {
+  "serie": "9",
+  "desc": "Analisar os impactos das ações humanas sobre a biodiversidade.",
+  "hab": "EF09CI13, EF09CI12A, EF09CI12B",
+  "habTxt": "Propor iniciativas para problemas ambientais com consumo consciente e uso sustentável de recursos, considerando UCs e bacias hidrográficas (AE11).",
+  "nome": "Teia em perigo",
+  "concreta": "Alunos seguram cartões e ligam-se com barbante formando uma teia; ao sortear um impacto (ex.: desmatamento), quem é atingido solta o fio e todos veem a teia se desfazer."
+ },
+ "4B|6º ANO|9": {
+  "serie": "6",
+  "desc": "Descrever o papel da pele e de outros órgãos no tato, destacando os diferentes tipos de receptores.",
+  "hab": "EF06CI07",
+  "habTxt": "Pele como órgão do tato; receptores de pressão, temperatura, textura e dor; sensibilidade das regiões; Braille e recursos táteis de acessibilidade.",
+  "nome": "Sentido do tato",
+  "concreta": "Para começar (quente ou frio sem termômetro); Pause e responda; Na prática: situação da panela quente e receptores envolvidos."
+ },
+ "4B|7º ANO|6": {
+  "serie": "7",
+  "desc": "Comparar e diferenciar as características de pandemia, epidemia, endemia e surto.",
+  "hab": "EF07CI09, EF07CI11",
+  "habTxt": "Epidemiologia e vigilância epidemiológica; surto, endemia, epidemia e pandemia; fatores de risco; dengue em SP; linha do tempo da covid-19.",
+  "nome": "Pandemia, endemia, epidemia e surto",
+  "concreta": "Para começar (doenças sazonais); Pause e responda (exemplo de surto); Na prática: notícia do estado de emergência por dengue em SP."
+ },
+ "4B|8º ANO|3": {
+  "serie": "8",
+  "desc": "Discutir como a energia se transforma em diferentes contextos, com base no princípio da conservação da energia.",
+  "hab": "EF08CI03",
+  "habTxt": "Transformação e conservação da energia; exemplo da montanha-russa (potencial e cinética); transformações cotidianas; energia dissipada como calor.",
+  "nome": "Transformação de energia",
+  "concreta": "Usam o simulador PhET \"Formas de energia e transformações\" e preenchem tabela com energias presentes e transformações em cada sistema."
+ },
+ "4B|8º ANO|19": {
+  "serie": "8",
+  "desc": "Interpretar uma conta de luz, problematizando as bandeiras tarifárias e promovendo práticas sustentáveis de economia.",
+  "hab": "EF08CI17*",
+  "habTxt": "Leitura da conta de energia (kWh, tarifa, impostos); bandeiras verde, amarela e vermelha; benefícios e ações para reduzir o consumo.",
+  "nome": "Ações de economia de eletricidade",
+  "concreta": "Cálculo do valor de uma conta com bandeira vermelha 1 (500 kWh) a partir de notícia sobre a Aneel."
+ }
+}

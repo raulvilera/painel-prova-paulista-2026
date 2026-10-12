@@ -1,0 +1,82 @@
+{
+ "6º ANO|1|Analisar as interações entre Sol, Terra e Lua na ocorrência das fases da Lua, dos eclipses e na medição do tempo.": {
+  "serie": "6",
+  "desc": "Analisar as interações entre Sol, Terra e Lua na ocorrência das fases da Lua, dos eclipses e na medição do tempo.",
+  "hab": "EF06CI14",
+  "habTxt": "Explicar fenômenos causados pelos movimentos do sistema Terra-Sol-Lua: dia/noite, estações, fases da Lua e eclipses (AE2).",
+  "nome": "Lua no palito",
+  "concreta": "Cada aluno segura a 'Lua' com o braço esticado e gira devagar diante da lanterna, vendo a parte iluminada mudar (nova, crescente, cheia, minguante). Depois alinham lanterna-Lua-cabeça (eclipse solar) e lanterna-cabeça-Lua (eclipse lunar)."
+ },
+ "6º ANO|2|Reconhecer os principais estados físicos da matéria (sólido, líquido, gasoso) e suas mudanças de estado.": {
+  "serie": "6",
+  "desc": "Reconhecer os principais estados físicos da matéria (sólido, líquido, gasoso) e suas mudanças de estado.",
+  "hab": "EF06CI01",
+  "habTxt": "Classificar substâncias e misturas, analisar métodos de separação e mudanças de estado físico da matéria (AE4).",
+  "nome": "Gelo que viaja",
+  "concreta": "Observar gelo derretendo no saquinho (fusão), gotinhas surgindo por fora do copo gelado (condensação) e a mancha de pano úmido sumindo da lousa (evaporação); combinar levar o saquinho ao congelador (solidificação)."
+ },
+ "7º ANO|3|Analisar os impactos das ações humanas nos biomas brasileiros e suas implicações para a preservação ambiental.": {
+  "serie": "7",
+  "desc": "Analisar os impactos das ações humanas nos biomas brasileiros e suas implicações para a preservação ambiental.",
+  "hab": "EF07CI07",
+  "habTxt": "Caracterizar ecossistemas/biomas brasileiros e impactos de catástrofes naturais ou alterações em seus componentes (AE10).",
+  "nome": "Mapa das ameaças",
+  "concreta": "Colar no mapa dos biomas ícones de ameaças a partir de cards (desmatamento na Amazônia, queimadas no Cerrado e Pantanal, cidades na Mata Atlântica, desertificação na Caatinga, monoculturas no Pampa) e discutir consequências."
+ },
+ "8º ANO|3|Relacionar padrões de circulação atmosférica e oceânica aos climas regionais.": {
+  "serie": "8",
+  "desc": "Relacionar padrões de circulação atmosférica e oceânica aos climas regionais.",
+  "hab": "EF08CI14",
+  "habTxt": "Relacionar climas regionais à circulação atmosférica e oceânica e usar variáveis meteorológicas na previsão do tempo (AE9).",
+  "nome": "Correntes no copo",
+  "concreta": "No copo de água em temperatura ambiente, pinga-se água gelada com corante (desce) e depois água morna com outra cor (sobe): convecção, base da circulação do ar e dos oceanos."
+ },
+ "9º ANO|2|Analisar a aplicação da genética e da biotecnologia na sociedade, considerando aspectos éticos, científicos e tecnológicos.": {
+  "serie": "9",
+  "desc": "Analisar a aplicação da genética e da biotecnologia na sociedade, considerando aspectos éticos, científicos e tecnológicos.",
+  "hab": "EF09CI09, EF09CI08",
+  "habTxt": "Explicar a transmissão de características hereditárias pelas ideias de Mendel, usando heredogramas (AE8).",
+  "nome": "Tribunal da biotecnologia",
+  "concreta": "Grupos leem manchetes e o professor explica transgênico, clonagem e insulina humana produzida por bactérias modificadas; em seguida, cada grupo assume um papel para o debate."
+ },
+ "4B|6º ANO|2": {
+  "serie": "6",
+  "desc": "Identificar órgãos e estruturas do sistema nervoso usando esquemas e ilustrações.",
+  "hab": "EF06CI07",
+  "habTxt": "Encéfalo, medula espinal, nervos e gânglios; estímulo e resposta; neurônios, impulso nervoso e sinapse; rede de comunicação.",
+  "nome": "Sistema nervoso",
+  "concreta": "Situação da xícara quente; Pause e responda (V ou F); Na prática: leitura sobre neurônios e questões sobre estímulo e resposta."
+ },
+ "4B|6º ANO|15": {
+  "serie": "6",
+  "desc": "Associar o consumo de drogas a danos graves à saúde e à qualidade de vida.",
+  "hab": "EF06CI10",
+  "habTxt": "Substâncias que alteram a consciência; conceito de droga; drogas estimulantes, depressoras e perturbadoras; efeitos no sistema nervoso.",
+  "nome": "Efeitos das drogas no organismo",
+  "concreta": "Relembre (prova e ansiedade); Pause e responda (álcool, V ou F); Na prática: situação-problema da confeiteira e a cafeína."
+ },
+ "4B|7º ANO|12": {
+  "serie": "7",
+  "desc": "Apresentar a importância do PNI como política pública de saúde.",
+  "hab": "EF07CI09, EF07CI10B",
+  "habTxt": "Histórico do PNI (1973), Zé Gotinha, Dias Nacionais de Vacinação; calendário vacinal; objetivos; erradicação da pólio e caso do sarampo.",
+  "nome": "Programa Nacional de Imunização (PNI)",
+  "concreta": "Relembre em duplas; leitura de trecho sobre mortalidade infantil com questões escritas; questão sobre PNI."
+ },
+ "4B|8º ANO|12": {
+  "serie": "8",
+  "desc": "Apresentar os principais componentes de um circuito elétrico e explicar a função de cada um.",
+  "hab": "EF08CI18*",
+  "habTxt": "Conceito de circuito; fonte, condutores e cargas; resistores, capacitores, indutores; interruptores e disjuntores; miniaturização e microchips.",
+  "nome": "Circuitos elétricos",
+  "concreta": "Respondem por escrito o que são condutores, por que usam materiais específicos e como seria a vida sem eles; listam três componentes com função e exemplo."
+ },
+ "4B|9º ANO|13": {
+  "serie": "9",
+  "desc": "Explicar as principais etapas do ciclo de vida de uma estrela, do nascimento na nebulosa ao destino final.",
+  "hab": "EF09CI17",
+  "habTxt": "Nebulosas e protoestrelas; fusão nuclear H→He; massa x tempo de vida e cor; gigante vermelha, supernova, anã branca, estrela de nêutrons, buraco negro.",
+  "nome": "Ciclo de vida das estrelas",
+  "concreta": "Discutem a origem da energia do Sol, respondem teste sobre fusão nuclear e leem texto da Fiocruz respondendo questões sobre formação e destino das estrelas."
+ }
+}

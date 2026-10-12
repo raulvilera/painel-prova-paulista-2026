@@ -1,0 +1,3117 @@
+{
+ "6º ANO|1|Classificar os corpos celestes do Sistema Solar.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na atividade 'Detetives do céu', a professora Helena lê as pistas de três cartas e a turma separa as imagens em pilhas. Marina recebeu a carta 3 e precisa decidir em qual pilha ela entra.",
+   "comando": "Com base nas pistas registradas, em qual pilha Marina deve colocar a carta 3?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das pistas lidas pela professora",
+    "colunas": [
+     "Carta",
+     "Pista 1",
+     "Pista 2"
+    ],
+    "linhas": [
+     [
+      "1",
+      "gira ao redor do Sol",
+      "tem forma quase esférica"
+     ],
+     [
+      "2",
+      "brilho forte e calor intenso",
+      "fica no centro do sistema"
+     ],
+     [
+      "3",
+      "gira ao redor de um planeta",
+      "brilha à noite ao refletir a luz"
+     ]
+    ]
+   },
+   "alts": [
+    "Planeta, pois acompanha o Sol e reflete a luz que recebe das estrelas",
+    "Satélite natural, pois acompanha um planeta e reflete a luz que recebe do Sol",
+    "Estrela, pois brilha à noite e emite a luz que recebe do seu interior",
+    "Asteroide, pois gira ao redor de um corpo maior e reflete a luz do Sol"
+   ],
+   "correta": 1,
+   "explicacao": "A pista central é girar ao redor de um planeta, o que define um satélite; ele não produz luz, apenas a reflete. Os distratores trocam o astro ao redor do qual o corpo gira ou atribuem luz própria."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na mesma atividade, Joaquim sorteou uma carta com a imagem de um bloco de rocha de forma irregular, com cerca de 500 km de diâmetro, sem atmosfera, que se move entre as órbitas de Marte e de Júpiter.",
+   "comando": "Qual pilha representa melhor o corpo mostrado na carta de Joaquim?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados da carta de Joaquim",
+    "colunas": [
+     "Característica",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Forma",
+      "irregular"
+     ],
+     [
+      "Atmosfera",
+      "ausente"
+     ],
+     [
+      "Posição",
+      "entre Marte e Júpiter"
+     ],
+     [
+      "Diâmetro",
+      "500 km"
+     ]
+    ]
+   },
+   "alts": [
+    "Asteroide, pois é um corpo rochoso pequeno que gira ao redor do Sol",
+    "Cometa, pois é um corpo de rocha e gelo que gira ao redor do Sol",
+    "Satélite, pois é um corpo rochoso de pequeno porte que gira ao redor do Sol",
+    "Planeta, pois é um corpo rochoso que gira ao redor do Sol como a Terra"
+   ],
+   "correta": 3,
+   "explicacao": "Corpos rochosos pequenos e irregulares, sem atmosfera, que orbitam o Sol entre Marte e Júpiter são asteroides. Cometas têm gelo e cauda; satélites orbitam planetas; planetas são maiores e arredondados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma discute o caso de Plutão. Ele gira ao redor do Sol, tem forma arredondada, mas compartilha sua órbita com muitos outros objetos de gelo e rocha. Por isso, os alunos criaram uma nova pilha para ele.",
+   "comando": "Qual é o nome mais adequado para a nova pilha?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das observações sobre Plutão",
+    "colunas": [
+     "Pergunta da turma",
+     "Resposta"
+    ],
+    "linhas": [
+     [
+      "Gira ao redor do Sol?",
+      "sim"
+     ],
+     [
+      "Tem forma arredondada?",
+      "sim"
+     ],
+     [
+      "Tem a órbita só para ele?",
+      "não"
+     ]
+    ]
+   },
+   "alts": [
+    "Planeta anão, pois é arredondado, orbita o Sol e divide sua órbita com outros corpos",
+    "Planeta, pois é arredondado, orbita o Sol e domina sozinho a região da sua órbita",
+    "Satélite, pois é arredondado, orbita um planeta e divide sua órbita com outros corpos",
+    "Asteroide, pois é irregular, orbita o Sol e divide sua órbita com outros corpos"
+   ],
+   "correta": 0,
+   "explicacao": "Corpo arredondado que orbita o Sol, mas não domina a própria órbita, é planeta anão. Os distratores ignoram um dos três critérios ou trocam o astro ao redor do qual ele gira."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um astrônomo amador de Campinas fotografou um cometa em três datas e mediu o comprimento da cauda. Rafael observou que, quanto mais perto do Sol o cometa passa, maior fica a cauda.",
+   "comando": "Qual explicação relaciona corretamente a distância ao Sol com o tamanho da cauda?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do comprimento da cauda do cometa",
+    "unidade": "milhões de km",
+    "itens": [
+     {
+      "rotulo": "Longe do Sol",
+      "valor": 0
+     },
+     {
+      "rotulo": "Distância média",
+      "valor": 3
+     },
+     {
+      "rotulo": "Perto do Sol",
+      "valor": 25
+     }
+    ]
+   },
+   "alts": [
+    "A gravidade do Sol estica o núcleo do cometa e o transforma em um fio de rocha luminoso",
+    "O cometa produz luz própria ao se aproximar e a cauda é o rastro dessa luz emitida",
+    "O calor do Sol vaporiza o gelo do núcleo, e o gás e a poeira liberados formam a cauda",
+    "O cometa acelera ao se aproximar do Sol e o atrito com o espaço deixa um rastro de fogo"
+   ],
+   "correta": 2,
+   "explicacao": "A cauda surge quando o calor solar vaporiza o gelo e libera gás e poeira. Os distratores atribuem luz própria ao cometa, confundem com meteoros ou usam apenas a gravidade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Quatro alunos montaram, cada um, as pilhas de estrelas, planetas e satélites. Eles usaram as mesmas cartas e precisam descobrir qual montagem está correta.",
+   "comando": "Qual aluno montou as pilhas de forma correta, e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das pilhas montadas",
+    "colunas": [
+     "Aluno",
+     "Estrelas",
+     "Planetas",
+     "Satélites"
+    ],
+    "linhas": [
+     [
+      "Ana",
+      "Sol",
+      "Terra, Marte",
+      "Lua, Europa"
+     ],
+     [
+      "Bia",
+      "Sol",
+      "Terra, Lua",
+      "Fobos"
+     ],
+     [
+      "Davi",
+      "Sol, Terra",
+      "Marte",
+      "Lua"
+     ],
+     [
+      "Caio",
+      "Sol, Marte",
+      "Terra",
+      "Lua"
+     ]
+    ]
+   },
+   "alts": [
+    "Bia, pois a Lua tem massa grande e forma redonda, devendo ficar entre os planetas",
+    "Davi, pois a Terra recebe luz e calor em abundância, sendo uma estrela também",
+    "Caio, pois Marte é vermelho e brilha muito no céu, sendo classificado como estrela",
+    "Ana, pois só ela pôs nos satélites os corpos que giram ao redor de planetas"
+   ],
+   "correta": 3,
+   "explicacao": "Ana separou estrela (Sol), planetas (giram ao redor do Sol) e satélites (giram ao redor de planetas). Os demais confundem tamanho, brilho ou cor com o critério de classificação."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lucas puxou a carta da Lua com as pistas: 'não tem luz própria', 'gira ao redor da Terra' e 'vemos seu brilho à noite'.",
+   "comando": "Em qual pilha a carta da Lua deve ficar? Explique por que ela brilha no céu à noite.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro das pistas da carta, na ordem lida",
+    "etapas": [
+     "Pista 1: não tem luz própria",
+     "Pista 2: gira ao redor da Terra",
+     "Pista 3: vemos seu brilho à noite"
+    ]
+   },
+   "ref": "A Lua fica na pilha dos satélites, pois gira ao redor de um planeta (a Terra). Ela não produz luz; brilha porque reflete a luz do Sol.",
+   "conceitos": [
+    "satélite natural",
+    "gira ao redor de um planeta",
+    "reflete a luz do Sol"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na pilha das estrelas, Larissa colocou o Sol, e Pedro colocou Júpiter. Os dois discordam sobre quem acertou.",
+   "comando": "Qual dos dois está certo? Explique a diferença entre uma estrela e um planeta.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados das cartas em disputa",
+    "colunas": [
+     "Carta",
+     "Pista"
+    ],
+    "linhas": [
+     [
+      "Sol",
+      "fica no centro do Sistema Solar"
+     ],
+     [
+      "Júpiter",
+      "gira ao redor do Sol e tem dezenas de luas"
+     ]
+    ]
+   },
+   "ref": "Larissa está certa. A estrela produz a própria luz e calor; o Sol é uma estrela. Júpiter é planeta: gira ao redor do Sol e apenas reflete a luz que recebe dele.",
+   "conceitos": [
+    "estrela produz luz própria",
+    "planeta gira ao redor de estrela",
+    "planeta reflete luz"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Durante uma semana, o grupo de Bianca acompanhou pela internet um corpo celeste que não existia nas cartas. Ele apareceu sem cauda longe do Sol, desenvolveu uma cauda ao se aproximar e a perdeu ao se afastar. Sua composição é gelo e poeira, e sua órbita é bem alongada.",
+   "comando": "Por que esse corpo deve ser classificado como cometa e não como asteroide?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro das observações do grupo",
+    "etapas": [
+     "Semana 1: longe do Sol, sem cauda",
+     "Semana 2: perto do Sol, cauda longa",
+     "Semana 3: de volta longe do Sol, sem cauda"
+    ]
+   },
+   "ref": "É um cometa porque é feito de gelo e poeira e forma cauda perto do Sol, quando o calor vaporiza o gelo. Asteroides são rochosos e não formam cauda.",
+   "conceitos": [
+    "cometa tem gelo",
+    "cauda surge pelo calor do Sol",
+    "asteroide é rochoso e não tem cauda"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em 2006, Plutão deixou de ser chamado de planeta. Gustavo disse na aula: 'Ele foi rebaixado porque encolheu'. A professora mostrou os diâmetros de Plutão, Mercúrio e da Lua.",
+   "comando": "A explicação de Gustavo está correta? Justifique usando a classificação dos corpos celestes.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro dos diâmetros dos corpos",
+    "unidade": "km",
+    "itens": [
+     {
+      "rotulo": "Plutão",
+      "valor": 2377
+     },
+     {
+      "rotulo": "Lua",
+      "valor": 3474
+     },
+     {
+      "rotulo": "Mercúrio",
+      "valor": 4879
+     }
+    ]
+   },
+   "ref": "Não. Plutão não encolheu: foi reclassificado como planeta anão porque não domina a própria órbita, que divide com outros objetos. O tamanho sozinho não define: a Lua é maior e é satélite.",
+   "conceitos": [
+    "planeta anão",
+    "não domina a órbita",
+    "tamanho não define a classe"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Carolina observou do quintal um ponto muito brilhante no céu logo após o pôr do sol e disse: 'É a estrela Vênus'. Seu tio anotou que o ponto não pisca e que, ao longo de várias semanas, muda de posição em relação às estrelas vizinhas.",
+   "comando": "Classifique o astro observado e justifique, explicando por que ele brilha tanto.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da observação feita no quintal",
+    "etapas": [
+     "18h30: ponto brilhante perto do horizonte",
+     "Brilho firme, sem piscar",
+     "Após semanas: posição diferente entre as estrelas"
+    ]
+   },
+   "ref": "Vênus é um planeta, não uma estrela. Ele muda de posição entre as estrelas porque gira ao redor do Sol, e brilha forte por refletir a luz solar e estar próximo da Terra.",
+   "conceitos": [
+    "planeta",
+    "muda de posição entre as estrelas",
+    "reflete a luz do Sol"
+   ]
+  }
+ ],
+ "7º ANO|1|Reconhecer o funcionamento de máquinas simples, com base no conceito de força e exemplos do cotidiano.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na oficina do tio de Léo, em Sorocaba, ele usa um alicate de bico para dobrar um fio de cobre. O alicate tem dois cabos longos cruzados e presos por um parafuso, e as pontas ficam do outro lado desse parafuso.",
+   "comando": "Em qual parte do alicate fica o ponto de apoio da alavanca?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das partes do alicate",
+    "colunas": [
+     "Parte",
+     "Posição"
+    ],
+    "linhas": [
+     [
+      "Cabos",
+      "extremidade da mão"
+     ],
+     [
+      "Parafuso de junção",
+      "entre cabos e pontas"
+     ],
+     [
+      "Pontas",
+      "extremidade do fio"
+     ]
+    ]
+   },
+   "alts": [
+    "No parafuso de junção, ao redor do qual os dois braços giram",
+    "Nos cabos, onde a mão aplica a força que fecha as pontas",
+    "Nas pontas, onde o fio de cobre recebe a força aplicada",
+    "Na mola dos cabos, que mantém os braços separados"
+   ],
+   "correta": 0,
+   "explicacao": "O ponto de apoio é o ponto fixo em torno do qual a alavanca gira: o parafuso do alicate. Os cabos recebem a força e as pontas atuam sobre a resistência (o fio)."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Seu Ademar, pedreiro em Piracicaba, leva 60 kg de areia num carrinho de mão. A roda fica na frente, a caçamba com a areia no meio e as alças, onde ele segura, atrás.",
+   "comando": "Como o carrinho de mão pode ser descrito como máquina simples?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da posição das partes do carrinho, da frente para trás",
+    "etapas": [
+     "Roda no eixo da frente",
+     "Caçamba com a areia",
+     "Alças seguradas por Seu Ademar"
+    ]
+   },
+   "alts": [
+    "Alavanca em que a carga é o apoio e a roda fica entre as mãos e a caçamba",
+    "Alavanca em que a roda é o apoio e a carga fica entre o apoio e as mãos",
+    "Plano inclinado em que a roda reduz o caminho percorrido pela areia no chão",
+    "Roldana em que a roda gira para mudar a direção da força aplicada pelo pedreiro"
+   ],
+   "correta": 1,
+   "explicacao": "No carrinho, o apoio é o eixo da roda, a carga está no meio e a força aplicada nas alças; é uma alavanca. Os distratores trocam as posições ou citam outras máquinas simples."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dani está equilibrando uma régua de 30 cm sobre um lápis. Ela deixou 2 moedas em uma ponta, mudou o lápis de lugar e anotou quantas moedas precisou colocar na outra ponta para equilibrar.",
+   "comando": "Com base na tabela, o que acontece com a força necessária quando o lápis se afasta da carga?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do equilíbrio da régua com 2 moedas na carga",
+    "colunas": [
+     "Distância do lápis à carga (cm)",
+     "Moedas do outro lado"
+    ],
+    "linhas": [
+     [
+      "10",
+      "1"
+     ],
+     [
+      "15",
+      "2"
+     ],
+     [
+      "20",
+      "4"
+     ],
+     [
+      "25",
+      "10"
+     ]
+    ]
+   },
+   "alts": [
+    "Ela diminui, pois o braço onde se aplica a força fica menor que o da carga",
+    "Ela aumenta, pois o braço onde se aplica a força fica maior que o da carga",
+    "Ela se mantém, pois a carga de 2 moedas é a mesma nos testes feitos",
+    "Ela aumenta, pois o braço onde se aplica a força fica menor que o da carga"
+   ],
+   "correta": 3,
+   "explicacao": "Afastar o apoio da carga encurta o braço da força e alonga o da carga; assim é preciso mais moedas. Os distratores invertem os braços ou ignoram a posição do apoio."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marcos precisa arrancar um prego de uma tábua e tem dois pés de cabra de mesmo formato, com a mesma distância de 5 cm entre o prego e o ponto de apoio. Eles só diferem no comprimento total.",
+   "comando": "Qual pé de cabra exige menos força de Marcos, e por quê?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do comprimento dos pés de cabra",
+    "unidade": "cm",
+    "itens": [
+     {
+      "rotulo": "Pé de cabra A",
+      "valor": 40
+     },
+     {
+      "rotulo": "Pé de cabra B",
+      "valor": 80
+     }
+    ]
+   },
+   "alts": [
+    "O A, pois o braço entre o apoio e a mão é menor e a força necessária diminui",
+    "O B, pois o braço entre o apoio e o prego é maior e a força necessária diminui",
+    "O B, pois o braço entre o apoio e a mão é maior e a força necessária diminui",
+    "O A, pois o braço entre o apoio e a mão é maior e a força necessária aumenta"
+   ],
+   "correta": 2,
+   "explicacao": "Com a mesma distância apoio-prego, o pé de cabra mais comprido dá um braço de força maior, e a força necessária cai. Os distratores invertem o comprimento ou o braço considerado."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Bia levanta uma pedra de 100 kgf com uma barra de ferro apoiada num tijolo. Aplicando a força numa ponta quatro vezes mais longe do apoio que a pedra, ela consegue levantá-la. Seu irmão afirma que 'assim ela faz menos trabalho'.",
+   "comando": "O que os dados mostram sobre o uso dessa alavanca?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da pedra levantada por Bia",
+    "colunas": [
+     "Situação",
+     "Força aplicada (kgf)",
+     "Deslocamento da mão (cm)"
+    ],
+    "linhas": [
+     [
+      "Sem alavanca, levantando 10 cm",
+      "100",
+      "10"
+     ],
+     [
+      "Com a barra, levantando 10 cm",
+      "25",
+      "40"
+     ]
+    ]
+   },
+   "alts": [
+    "A força cai a um quarto, mas a mão percorre uma distância quatro vezes maior",
+    "A força cai a um quarto, e a mão percorre uma distância quatro vezes menor",
+    "A força cai a um quarto, e a mão percorre a mesma distância que a pedra",
+    "A força continua a mesma, mas a mão percorre uma distância quatro vezes maior"
+   ],
+   "correta": 0,
+   "explicacao": "A alavanca troca força por deslocamento: menos força, porém um caminho maior para a mão; o trabalho não diminui. Os distratores ignoram essa troca ou invertem a relação."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Fátima corta uma cartolina com uma tesoura escolar. Ela segura os cabos, que ficam de um lado do parafuso central, e as lâminas ficam do outro lado, cortando o papel.",
+   "comando": "Identifique a posição do apoio, da força e da resistência na tesoura e diga que máquina simples ela é.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do uso da tesoura",
+    "etapas": [
+     "Fátima segura os cabos com os dedos",
+     "Ela fecha os cabos",
+     "As lâminas cortam a cartolina"
+    ]
+   },
+   "ref": "A tesoura é uma alavanca (dupla). O apoio é o parafuso central, a força é aplicada pelos dedos nos cabos e a resistência é a cartolina nas lâminas.",
+   "conceitos": [
+    "alavanca",
+    "apoio no parafuso",
+    "força nos cabos e resistência na cartolina"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na cozinha, Dona Rosa abre uma garrafa de refrigerante com um abridor de metal. Ele se apoia na tampa, em um ponto, e ela levanta a outra extremidade.",
+   "comando": "Explique como o abridor usa os conceitos de força e de ponto de apoio para facilitar abrir a garrafa.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro dos passos de Dona Rosa",
+    "etapas": [
+     "Encaixa o abridor na borda da tampa",
+     "Apoia a ponta na tampa",
+     "Levanta o cabo com a mão"
+    ]
+   },
+   "ref": "O abridor é uma alavanca: a ponta apoiada na tampa é o apoio, a mão aplica a força no cabo longe do apoio e a tampa oferece a resistência. O cabo longo multiplica a força da mão.",
+   "conceitos": [
+    "alavanca",
+    "ponto de apoio",
+    "braço de força maior reduz a força"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Seu Ademar percebeu que o carrinho fica mais leve de empurrar quando ele coloca a areia mais perto da roda. Ele testou três posições para a mesma carga de 60 kg.",
+   "comando": "Explique por que a posição da carga muda a força que ele precisa fazer.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da força nas alças com a carga de 60 kg",
+    "unidade": "kgf",
+    "itens": [
+     {
+      "rotulo": "Carga a 80 cm da roda",
+      "valor": 45
+     },
+     {
+      "rotulo": "Carga a 50 cm da roda",
+      "valor": 30
+     },
+     {
+      "rotulo": "Carga a 20 cm da roda",
+      "valor": 12
+     }
+    ]
+   },
+   "ref": "Quanto mais perto da roda (apoio) fica a carga, menor o braço da resistência em relação ao braço da força nas alças, e menos força é necessária. A distância ao apoio define o efeito.",
+   "conceitos": [
+    "roda é o apoio",
+    "braço da carga menor",
+    "menor força"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma doceria, Heloísa tem dois quebra-nozes: o modelo A, de cabos curtos, e o modelo B, de cabos longos. A noz fica no mesmo ponto perto da articulação nos dois. A avó dela tem pouca força nas mãos.",
+   "comando": "Qual modelo deve ser indicado para a avó? Justifique com base no funcionamento da alavanca.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados dos modelos de quebra-nozes",
+    "colunas": [
+     "Modelo",
+     "Cabo (cm)",
+     "Noz até a articulação (cm)"
+    ],
+    "linhas": [
+     [
+      "A",
+      "8",
+      "3"
+     ],
+     [
+      "B",
+      "16",
+      "3"
+     ]
+    ]
+   },
+   "ref": "O modelo B. Como o cabo é mais longo e a noz está na mesma posição, o braço da força é maior e a força necessária é menor, o que ajuda quem tem pouca força.",
+   "conceitos": [
+    "braço de força maior",
+    "menor força",
+    "apoio na articulação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula, Caio usou uma pinça para pegar um parafuso pequeno. Ele notou que precisava apertar com bastante força, mais do que o peso do parafuso, mas conseguia segurar com precisão.",
+   "comando": "Por que a pinça exige força maior que a carga e, mesmo assim, é útil? Justifique com as medidas dadas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Medidas da pinça usada por Caio",
+    "colunas": [
+     "Distância",
+     "Valor (cm)"
+    ],
+    "linhas": [
+     [
+      "Apoio até os dedos",
+      "3"
+     ],
+     [
+      "Apoio até a ponta",
+      "9"
+     ]
+    ]
+   },
+   "ref": "Na pinça, a força é aplicada mais perto do apoio que a ponta, então o braço da força é menor e é preciso mais força. Em troca, a ponta se move mais e permite precisão e pegar objetos pequenos.",
+   "conceitos": [
+    "braço de força menor",
+    "força maior que a carga",
+    "vantagem na precisão"
+   ]
+  }
+ ],
+ "8º ANO|3|Analisar os efeitos do aquecimento global no planeta.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na feira de ciências, Júlia colocou dois potes de vidro com termômetro ao sol. Um deles foi coberto com filme plástico e o outro ficou aberto. A turma anotou as temperaturas a cada 5 minutos.",
+   "comando": "O que o pote coberto com filme representa no experimento?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento dos potes ao sol",
+    "colunas": [
+     "Tempo (min)",
+     "Pote aberto (°C)",
+     "Pote coberto (°C)"
+    ],
+    "linhas": [
+     [
+      "0",
+      "25",
+      "25"
+     ],
+     [
+      "5",
+      "27",
+      "30"
+     ],
+     [
+      "10",
+      "28",
+      "34"
+     ],
+     [
+      "15",
+      "28",
+      "37"
+     ]
+    ]
+   },
+   "alts": [
+    "A camada de ozônio, que bloqueia os raios solares antes de chegarem ao solo",
+    "A atmosfera sem gases poluentes, que deixa todo o calor escapar para o espaço",
+    "A atmosfera com gases de efeito estufa, que retém parte do calor recebido",
+    "Um espelho que aumenta a energia que o Sol envia à superfície da Terra"
+   ],
+   "correta": 2,
+   "explicacao": "O filme retém o calor dentro do pote, como os gases de efeito estufa retêm calor na atmosfera. Os distratores trocam esse efeito pelo da camada de ozônio ou por aumento de energia solar."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em Santos, a Defesa Civil registra ressacas cada vez mais fortes. Um técnico mostrou aos alunos o nível médio do mar medido por um marégrafo ao longo de quatro décadas e explicou que a água dos oceanos está se aquecendo.",
+   "comando": "Qual efeito do aquecimento global ajuda a explicar a tendência registrada no litoral?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do nível médio do mar em Santos",
+    "unidade": "mm acima da referência",
+    "itens": [
+     {
+      "rotulo": "1980",
+      "valor": 0
+     },
+     {
+      "rotulo": "1990",
+      "valor": 40
+     },
+     {
+      "rotulo": "2000",
+      "valor": 85
+     },
+     {
+      "rotulo": "2010",
+      "valor": 130
+     }
+    ]
+   },
+   "alts": [
+    "O derretimento de gelo continental e a expansão da água quando se aquece",
+    "O aumento da evaporação dos rios, que lançam mais água na costa",
+    "A maior formação de nuvens, que despejam mais chuva nos oceanos",
+    "O aumento das marés, causado pela maior atração gravitacional da Lua"
+   ],
+   "correta": 0,
+   "explicacao": "O aquecimento derrete geleiras e calotas em terra e dilata a água, elevando o nível do mar. Os distratores citam causas que não explicam uma tendência contínua."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Seu Antônio cultiva café arábica numa fazenda no interior de São Paulo. Ele ouviu um pesquisador dizer que a temperatura média da região subiu 1,5 °C em 30 anos e que o café arábica é pouco tolerante a temperaturas altas.",
+   "comando": "O que se espera para as áreas aptas ao cultivo desse café nas próximas décadas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de temperatura média anual na região de Seu Antônio",
+    "colunas": [
+     "Período",
+     "Temperatura média (°C)"
+    ],
+    "linhas": [
+     [
+      "Década de 1990",
+      "20,2"
+     ],
+     [
+      "Década de 2000",
+      "20,9"
+     ],
+     [
+      "Década de 2020",
+      "21,7"
+     ]
+    ]
+   },
+   "alts": [
+    "Elas devem migrar para regiões mais baixas e quentes, onde o café tolera o calor",
+    "Elas devem migrar para regiões mais altas e frescas, onde o café tolera o calor",
+    "Elas devem crescer em toda a região, pois o café se adapta ao calor imediatamente",
+    "Elas devem permanecer iguais, pois a temperatura da região pouco afeta as lavouras"
+   ],
+   "correta": 1,
+   "explicacao": "Com o clima mais quente, o café arábica tende a só se desenvolver bem em locais mais altos e frescos. Os distratores invertem o sentido da migração ou ignoram o efeito da temperatura."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em Campinas, Vitória notou que os verões estão mais quentes e pesquisou o número de dias com temperatura acima de 35 °C por década. Ela quer concluir algo com esses dados.",
+   "comando": "Qual conclusão é sustentada pelos dados e é coerente com o aquecimento global?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de dias com mais de 35 °C por ano em Campinas",
+    "colunas": [
+     "Década",
+     "Dias por ano (média)"
+    ],
+    "linhas": [
+     [
+      "1990",
+      "4"
+     ],
+     [
+      "2000",
+      "9"
+     ],
+     [
+      "2010",
+      "17"
+     ],
+     [
+      "2020",
+      "26"
+     ]
+    ]
+   },
+   "alts": [
+    "A temperatura da cidade subiu por causa da poluição local, sem relação com o clima global",
+    "A temperatura máxima do planeta aumentou 22 °C nesse período na maior parte dos lugares",
+    "O número de dias muito quentes vai continuar aumentando no mesmo ritmo nas próximas décadas",
+    "A frequência de dias muito quentes aumentou, o que é compatível com um clima em aquecimento"
+   ],
+   "correta": 3,
+   "explicacao": "Os dados mostram aumento dos dias muito quentes, compatível com aquecimento. Os distratores generalizam um único município, atribuem causa sem prova ou fazem previsão exata."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois do experimento dos potes, Rafael escreveu: 'O pote coberto esquentou mais, então está provado que o gás carbônico causa o aquecimento global'. A professora pediu que a turma avaliasse a frase.",
+   "comando": "Qual é a melhor avaliação dessa conclusão?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento dos potes",
+    "colunas": [
+     "Pote",
+     "Temperatura após 15 min (°C)"
+    ],
+    "linhas": [
+     [
+      "Aberto",
+      "28"
+     ],
+     [
+      "Coberto com filme",
+      "37"
+     ]
+    ]
+   },
+   "alts": [
+    "O experimento prova o papel do CO₂ porque o filme plástico é feito do mesmo gás da atmosfera",
+    "O experimento é um modelo simples: o filme retém calor e ilustra o efeito, sem provar o papel do CO₂",
+    "O experimento não tem valor, pois a atmosfera não funciona de nenhuma forma como um filme",
+    "O experimento mostra que o Sol aumentou sua energia, pois o pote coberto esquentou mais"
+   ],
+   "correta": 1,
+   "explicacao": "O filme impede a saída de calor, ilustrando a ideia do efeito estufa, mas o pote não contém CO₂ nem reproduz a atmosfera. Os distratores superestimam, descartam o modelo ou trocam a causa."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No experimento 'Estufa no pote', os alunos do 8º ano de Santos mediram a temperatura de dois potes ao sol: um coberto com filme plástico e outro aberto.",
+   "comando": "Explique por que o pote coberto atingiu temperatura maior e relacione isso à atmosfera da Terra.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento dos potes ao sol",
+    "colunas": [
+     "Tempo (min)",
+     "Pote aberto (°C)",
+     "Pote coberto (°C)"
+    ],
+    "linhas": [
+     [
+      "0",
+      "25",
+      "25"
+     ],
+     [
+      "10",
+      "28",
+      "34"
+     ],
+     [
+      "15",
+      "28",
+      "37"
+     ]
+    ]
+   },
+   "ref": "O filme deixa passar a luz do Sol, mas retém o calor dentro do pote. Na Terra, gases de efeito estufa, como o CO₂, retêm parte do calor e mantêm o planeta aquecido; com mais gases, ele esquenta mais.",
+   "conceitos": [
+    "filme retém calor",
+    "gases de efeito estufa",
+    "analogia com a atmosfera"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em Ubatuba, pescadores notaram corais esbranquiçados perto da costa depois de um verão muito quente. Uma bióloga explicou que isso está ligado ao aquecimento da água do mar.",
+   "comando": "Cite e explique uma consequência do aquecimento dos oceanos, usando o caso de Ubatuba.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da temperatura da água do mar em Ubatuba no verão",
+    "unidade": "°C",
+    "itens": [
+     {
+      "rotulo": "Há 20 anos",
+      "valor": 26
+     },
+     {
+      "rotulo": "Há 10 anos",
+      "valor": 27
+     },
+     {
+      "rotulo": "Neste ano",
+      "valor": 29
+     }
+    ]
+   },
+   "ref": "A água mais quente estressa os corais, que expulsam as algas que os alimentam e ficam brancos (branqueamento), podendo morrer. Outra consequência é a dilatação da água, que eleva o nível do mar.",
+   "conceitos": [
+    "branqueamento dos corais",
+    "água mais quente estressa organismos",
+    "dilatação e elevação do mar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A família de Pedro, em Ribeirão Preto, quer reduzir as emissões de CO₂ de casa. Ele levantou quanto cada atividade emite por mês.",
+   "comando": "Que ação traria a maior redução de emissões? Justifique com os dados e dê mais uma medida possível.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das emissões mensais de CO₂ da família",
+    "colunas": [
+     "Atividade",
+     "CO₂ (kg/mês)"
+    ],
+    "linhas": [
+     [
+      "Carro (gasolina)",
+      "120"
+     ],
+     [
+      "Consumo de carne",
+      "80"
+     ],
+     [
+      "Energia elétrica",
+      "40"
+     ],
+     [
+      "Gás de cozinha",
+      "15"
+     ]
+    ]
+   },
+   "ref": "A maior redução viria de diminuir o uso do carro (120 kg), por exemplo usando transporte coletivo ou bicicleta. Outras medidas: reduzir o consumo de carne, economizar energia ou plantar árvores.",
+   "conceitos": [
+    "reduzir a maior fonte",
+    "menor queima de combustíveis",
+    "outra medida de mitigação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para entender o nível do mar, Sofia montou dois copos. No copo A, um cubo de gelo flutua na água. No copo B, o cubo está apoiado numa pedra que fica acima da água. Ela marcou o nível da água nos dois e esperou o gelo derreter.",
+   "comando": "Por que o derretimento do gelo sobre os continentes eleva o nível do mar, e o do gelo flutuante quase não altera?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do experimento de Sofia",
+    "etapas": [
+     "Copo A: cubo flutuando na água, nível marcado",
+     "Copo B: cubo sobre a pedra, nível marcado",
+     "Espera o derretimento e compara as marcas"
+    ]
+   },
+   "ref": "O gelo flutuante já ocupa na água um volume equivalente ao que terá derretido, então o nível quase não muda. O gelo sobre a pedra (como as geleiras em terra) acrescenta água nova ao copo e eleva o nível.",
+   "conceitos": [
+    "gelo flutuante já desloca água",
+    "gelo em terra acrescenta água",
+    "elevação do nível do mar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Num dia frio de julho em São Paulo, Gustavo disse: 'Se hoje fez 6 °C, o aquecimento global não existe'. A professora mostrou a média anual de temperatura da cidade.",
+   "comando": "Avalie a afirmação de Gustavo, diferenciando tempo e clima.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da temperatura média anual em São Paulo",
+    "unidade": "°C",
+    "itens": [
+     {
+      "rotulo": "Ano 1",
+      "valor": 19.6
+     },
+     {
+      "rotulo": "Ano 2",
+      "valor": 19.8
+     },
+     {
+      "rotulo": "Ano 3",
+      "valor": 20.1
+     },
+     {
+      "rotulo": "Ano 4",
+      "valor": 20.4
+     },
+     {
+      "rotulo": "Ano 5",
+      "valor": 20.7
+     }
+    ]
+   },
+   "ref": "A afirmação está errada. Um dia frio descreve o tempo; o clima é o padrão de muitos anos. As médias anuais subindo mostram a tendência de aquecimento, mesmo com dias frios.",
+   "conceitos": [
+    "tempo é diferente de clima",
+    "tendência de longo prazo",
+    "dias frios não contradizem o aquecimento"
+   ]
+  }
+ ],
+ "8º ANO|1|Diferenciar métodos contraceptivos e estratégias de prevenção para a saúde.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma roda de conversa na UBS do bairro, a enfermeira Cláudia explica a um grupo de adolescentes como se proteger. Beatriz pergunta qual método ela poderia usar para evitar uma gravidez e, ao mesmo tempo, o contágio por HIV.",
+   "comando": "Qual método a enfermeira deve indicar a Beatriz?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos métodos apresentados na UBS",
+    "colunas": [
+     "Método",
+     "Tipo"
+    ],
+    "linhas": [
+     [
+      "Camisinha",
+      "barreira"
+     ],
+     [
+      "Pílula",
+      "hormonal"
+     ],
+     [
+      "DIU",
+      "dispositivo"
+     ],
+     [
+      "Injetável",
+      "hormonal"
+     ]
+    ]
+   },
+   "alts": [
+    "A pílula, pois impede a ovulação e também forma uma barreira contra vírus e bactérias",
+    "O DIU, pois impede a fecundação e também forma uma barreira contra vírus e bactérias",
+    "A camisinha, pois forma uma barreira que bloqueia secreções e espermatozoides",
+    "O injetável, pois altera os hormônios e também impede o contato com secreções do parceiro"
+   ],
+   "correta": 2,
+   "explicacao": "Só a camisinha é barreira física e protege de gravidez e de ISTs ao mesmo tempo. Os outros métodos evitam a gravidez, mas não impedem o contato com vírus e bactérias."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Carla, de 17 anos, foi à UBS e perguntou à médica como a pílula anticoncepcional impede a gravidez. A médica explicou que ela contém hormônios, mas Carla ainda ficou com dúvida sobre o que acontece no corpo.",
+   "comando": "Como a pílula anticoncepcional age para evitar a gravidez?",
+   "figura": null,
+   "alts": [
+    "Os hormônios impedem a ovulação, e por isso não há óvulo para ser fecundado",
+    "Os hormônios impedem a menstruação, e por isso o útero não recebe o embrião",
+    "Os hormônios matam os espermatozoides, e por isso o óvulo não é fecundado",
+    "Os hormônios fecham as tubas uterinas, e por isso o óvulo não é liberado"
+   ],
+   "correta": 0,
+   "explicacao": "A pílula tem hormônios que bloqueiam a ovulação; sem óvulo liberado, não há fecundação. Os distratores atribuem a ela efeitos que não são seu mecanismo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana, de 19 anos, esqueceu de tomar a pílula por dois dias seguidos e teve uma relação sem camisinha na noite seguinte. Preocupada, ela procurou uma amiga, que pediu calma e sugeriu o que fazer.",
+   "comando": "Qual é a atitude mais adequada para Ana?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro cronológico do caso de Ana",
+    "etapas": [
+     "Segunda: toma a pílula",
+     "Terça e quarta: esquece a pílula",
+     "Quarta à noite: relação sem camisinha"
+    ]
+   },
+   "alts": [
+    "Esperar a próxima menstruação e, se ela atrasar, só então procurar orientação de saúde",
+    "Ir à UBS logo, para receber orientação e a contracepção de emergência, se indicada",
+    "Tomar duas pílulas juntas no dia seguinte e continuar a cartela normalmente sem consulta",
+    "Fazer uma lavagem íntima logo após a relação para eliminar os espermatozoides do corpo"
+   ],
+   "correta": 1,
+   "explicacao": "A contracepção de emergência deve ser usada o quanto antes, preferencialmente em até 72 horas, com orientação dos profissionais da UBS, que também podem indicar testes para ISTs. Os distratores são mitos ou atrasam a ação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marina, de 20 anos, usa DIU há dois anos e se sente protegida. Recentemente começou a namorar uma pessoa nova. Na consulta, a enfermeira registrou os dados dela.",
+   "comando": "Qual cuidado adicional a enfermeira deve recomendar a Marina?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Ficha da consulta de Marina",
+    "colunas": [
+     "Informação",
+     "Registro"
+    ],
+    "linhas": [
+     [
+      "Método usado",
+      "DIU"
+     ],
+     [
+      "Tempo de uso",
+      "2 anos"
+     ],
+     [
+      "Parceiro novo",
+      "sim"
+     ]
+    ]
+   },
+   "alts": [
+    "Fazer o teste de gravidez a cada relação, pois o DIU falha com um novo parceiro",
+    "Trocar o DIU por pílula, pois a pílula evita a gravidez e também as ISTs",
+    "Manter só o DIU, pois ele evita a gravidez e também barra o contágio por ISTs",
+    "Usar camisinha nas relações, pois o DIU evita a gravidez, mas não as ISTs"
+   ],
+   "correta": 3,
+   "explicacao": "O DIU é eficaz contra a gravidez, mas não protege de ISTs; a camisinha deve ser somada a ele. Os distratores atribuem ao DIU ou à pílula uma proteção que eles não oferecem."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma agente de saúde acompanhou 100 casais por um ano em um bairro de Campinas e registrou quantos tiveram gravidez e quantos contraíram alguma IST, de acordo com o método usado. Ela quer orientar quem deseja menor risco de ambos.",
+   "comando": "Qual orientação é mais bem sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do acompanhamento de 100 casais por 1 ano",
+    "colunas": [
+     "Método",
+     "Gravidez",
+     "IST"
+    ],
+    "linhas": [
+     [
+      "Só pílula",
+      "4",
+      "12"
+     ],
+     [
+      "Só camisinha",
+      "10",
+      "3"
+     ],
+     [
+      "Pílula e camisinha",
+      "1",
+      "2"
+     ],
+     [
+      "Nenhum",
+      "85",
+      "15"
+     ]
+    ]
+   },
+   "alts": [
+    "Combinar pílula e camisinha, pois somam proteção hormonal e barreira contra ISTs",
+    "Usar só a camisinha, pois ela tem a menor taxa de gravidez e a menor de ISTs",
+    "Usar a pílula e depois a camisinha, pois o uso em sequência dá a proteção mais ampla",
+    "Usar só a pílula, pois ela tem menor taxa de gravidez e protege também contra ISTs"
+   ],
+   "correta": 0,
+   "explicacao": "O uso combinado teve menos gravidez e menos ISTs, pois a pílula atua sobre a ovulação e a camisinha é barreira. Os distratores ignoram que a pílula não protege de ISTs ou que a camisinha tem falhas na gravidez."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na feira de saúde da escola, a UBS montou um estande com vários métodos. Os alunos precisam separar os que são de barreira dos demais.",
+   "comando": "Quais métodos do estande são de barreira e como eles funcionam?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos métodos do estande da UBS",
+    "colunas": [
+     "Método",
+     "Forma de uso"
+    ],
+    "linhas": [
+     [
+      "Camisinha masculina",
+      "colocada no pênis"
+     ],
+     [
+      "Camisinha feminina",
+      "colocada na vagina"
+     ],
+     [
+      "Pílula",
+      "comprimido diário"
+     ],
+     [
+      "DIU",
+      "inserido no útero"
+     ],
+     [
+      "Implante",
+      "inserido sob a pele"
+     ]
+    ]
+   },
+   "ref": "São de barreira as camisinhas masculina e feminina. Elas impedem fisicamente que os espermatozoides cheguem ao óvulo e também o contato com secreções, o que previne gravidez e ISTs.",
+   "conceitos": [
+    "camisinha masculina e feminina",
+    "barreira física",
+    "previne gravidez e ISTs"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Júlia usa pílula todos os dias. Sua amiga disse: 'Com a pílula você está protegida de tudo'. Júlia ficou na dúvida se isso é verdade.",
+   "comando": "A frase da amiga está correta? Explique.",
+   "figura": null,
+   "ref": "Não. A pílula evita a gravidez porque seus hormônios impedem a ovulação, mas não forma barreira contra vírus e bactérias. Para prevenir ISTs é preciso usar camisinha.",
+   "conceitos": [
+    "pílula age na ovulação",
+    "não protege de ISTs",
+    "camisinha previne ISTs"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Carla e Rui, de 16 anos, namoram há seis meses e foram juntos à UBS conversar sobre prevenção. A enfermeira anotou o perfil e vai orientá-los.",
+   "comando": "Que estratégias de prevenção devem ser recomendadas ao casal? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do atendimento ao casal",
+    "colunas": [
+     "Informação",
+     "Registro"
+    ],
+    "linhas": [
+     [
+      "Idade",
+      "16 anos"
+     ],
+     [
+      "Método atual",
+      "nenhum"
+     ],
+     [
+      "Objetivo",
+      "evitar gravidez e ISTs"
+     ]
+    ]
+   },
+   "ref": "Devem usar camisinha em todas as relações, pois evita gravidez e ISTs, e conversar com a equipe da UBS sobre um método adicional, como o hormonal. Também é importante o diálogo e o acompanhamento de saúde.",
+   "conceitos": [
+    "camisinha previne os dois riscos",
+    "método adicional",
+    "diálogo e acompanhamento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marcos afirma que a camisinha é 'pior' que o DIU porque falha mais. A professora trouxe uma tabela de eficácia em condições habituais de uso, mas lembrou que a análise não termina aí.",
+   "comando": "Compare os métodos e explique por que a opinião de Marcos considera só uma parte do problema.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de gravidezes por 100 mulheres em 1 ano de uso habitual",
+    "unidade": "gravidezes por 100",
+    "itens": [
+     {
+      "rotulo": "DIU",
+      "valor": 1
+     },
+     {
+      "rotulo": "Pílula",
+      "valor": 7
+     },
+     {
+      "rotulo": "Camisinha",
+      "valor": 13
+     }
+    ]
+   },
+   "ref": "O DIU realmente tem menor taxa de gravidez que a camisinha, mas não protege contra ISTs. A camisinha é o único dos dois que previne também as ISTs, então a escolha depende do objetivo, e o ideal pode ser combinar os métodos.",
+   "conceitos": [
+    "DIU mais eficaz contra gravidez",
+    "DIU não previne ISTs",
+    "combinação de métodos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "João diz que não precisa usar camisinha com a nova parceira porque 'ela parece saudável'. Uma médica da UBS discordou e mostrou os registros de pessoas com ISTs atendidas no último ano.",
+   "comando": "Por que a aparência da pessoa não garante ausência de IST? Use os dados.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de pessoas com IST atendidas na UBS no último ano",
+    "unidade": "pessoas",
+    "itens": [
+     {
+      "rotulo": "Com sintomas visíveis",
+      "valor": 30
+     },
+     {
+      "rotulo": "Sem sintomas visíveis",
+      "valor": 70
+     }
+    ]
+   },
+   "ref": "Muitas ISTs não causam sintomas visíveis, e a maioria dos casos registrados era assim. A pessoa pode transmitir sem saber; por isso só o uso da camisinha e os exames dão proteção, e não a aparência.",
+   "conceitos": [
+    "ISTs assintomáticas",
+    "transmissão sem saber",
+    "camisinha e exames"
+   ]
+  }
+ ],
+ "9º ANO|3|Reconhecer a especiação como processo de formação de novas espécies a partir do isolamento reprodutivo associado, ou não, ao isolamento geográfico.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na atividade 'O rio que separou', a turma do 9º ano foi dividida por uma fita que representa um rio. Um grupo de feijões ficou de cada lado e, durante várias 'gerações', os grupos não puderam se encontrar.",
+   "comando": "Que tipo de isolamento a fita representa na atividade?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro das etapas da atividade",
+    "etapas": [
+     "A turma é uma única população",
+     "Uma fita divide a turma em dois grupos",
+     "Os grupos ficam sem contato por várias gerações"
+    ]
+   },
+   "alts": [
+    "Isolamento reprodutivo, pois a barreira muda o comportamento de acasalamento dos grupos",
+    "Isolamento geográfico, pois a barreira impede o encontro e o cruzamento entre os grupos",
+    "Seleção artificial, pois a barreira é colocada pelos alunos para escolher os grupos",
+    "Mutação, pois a barreira provoca mudanças nos genes dos feijões de cada grupo"
+   ],
+   "correta": 1,
+   "explicacao": "A fita é uma barreira física que separa as populações: isolamento geográfico. O isolamento reprodutivo é a incapacidade de cruzar, que pode surgir depois. Os distratores trocam esse conceito por outros."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma lagoa do interior paulista vivem duas populações de sapos da mesma região. Gabriel gravou o canto dos machos e viu que os sapos de cada população só respondem ao canto da própria população, embora vivam lado a lado.",
+   "comando": "Que processo esse comportamento indica entre as duas populações?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do canto dos machos de cada população",
+    "colunas": [
+     "População",
+     "Frequência do canto (Hz)"
+    ],
+    "linhas": [
+     [
+      "A",
+      "800"
+     ],
+     [
+      "B",
+      "1200"
+     ]
+    ]
+   },
+   "alts": [
+    "Isolamento geográfico, pois os sapos vivem separados e por isso não se cruzam",
+    "Adaptação individual, pois cada sapo muda o canto para atrair as fêmeas da população",
+    "Extinção da espécie, pois os sapos deixam de se cruzar e a população desaparece",
+    "Isolamento reprodutivo, pois os sapos não se cruzam, mesmo vivendo no mesmo lugar"
+   ],
+   "correta": 3,
+   "explicacao": "Quando indivíduos vivem juntos mas não se cruzam por causa de diferenças de comportamento, há isolamento reprodutivo. Os distratores confundem com barreira física ou com mudanças individuais."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois de 40 'gerações' na atividade, os alunos testaram cruzamentos entre feijões do lado A e do lado B. Os que ficaram do mesmo lado geraram descendentes sem problemas, mas os cruzamentos entre lados não deram resultado.",
+   "comando": "Que conclusão a turma pode tirar desses cruzamentos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos cruzamentos entre feijões",
+    "colunas": [
+     "Cruzamento",
+     "Descendentes férteis"
+    ],
+    "linhas": [
+     [
+      "A × A",
+      "sim"
+     ],
+     [
+      "B × B",
+      "sim"
+     ],
+     [
+      "A × B",
+      "não"
+     ]
+    ]
+   },
+   "alts": [
+    "Os dois grupos são variedades da mesma espécie, pois são diferentes na aparência",
+    "Os dois grupos continuam uma só espécie, pois cada um gera descendentes férteis",
+    "Os dois grupos formaram espécies distintas, pois não geram filhotes férteis juntos",
+    "Os dois grupos estão em processo de extinção, pois não geram descendentes férteis"
+   ],
+   "correta": 2,
+   "explicacao": "Quando grupos separados deixam de gerar descendentes férteis entre si, há isolamento reprodutivo e formaram-se espécies diferentes. Os distratores confundem esse critério com aparência ou com extinção."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em duas ilhas vizinhas do litoral paulista, uma população de lagartos de uma mesma espécie ficou separada há milhares de anos. Na ilha A o chão é de rocha lisa, e na ilha B há troncos e galhos finos. Os pesquisadores mediram as patas dos lagartos.",
+   "comando": "Que fator explica a diferença entre os lagartos das duas ilhas?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do comprimento médio das patas dos lagartos",
+    "unidade": "mm",
+    "itens": [
+     {
+      "rotulo": "Ilha A (rocha lisa)",
+      "valor": 12
+     },
+     {
+      "rotulo": "Ilha B (galhos finos)",
+      "valor": 18
+     }
+    ]
+   },
+   "alts": [
+    "Ambientes diferentes favorecem traços diferentes, acumulados em cada população",
+    "Cada lagarto escolhe o tamanho das patas de que precisa para sobreviver no ambiente",
+    "O uso das patas muda o corpo de cada lagarto, e a mudança é transmitida aos filhotes",
+    "As ilhas têm a mesma pressão ambiental, e as diferenças surgem por acaso"
+   ],
+   "correta": 0,
+   "explicacao": "Em ambientes distintos, a seleção natural favorece características diferentes, e a separação impede que as populações se misturem. Os distratores usam ideias do senso comum, como o uso e desuso."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois lagos de uma mesma região ficaram separados por uma seca. Anos depois, uma enchente os uniu novamente. Pesquisadores acompanharam os peixes e testaram cruzamentos entre as duas populações para saber se já são espécies distintas.",
+   "comando": "Que interpretação os resultados permitem?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos cruzamentos entre peixes dos dois lagos",
+    "colunas": [
+     "Cruzamento",
+     "Filhotes viáveis",
+     "Filhotes férteis"
+    ],
+    "linhas": [
+     [
+      "Lago 1 × Lago 1",
+      "90%",
+      "sim"
+     ],
+     [
+      "Lago 2 × Lago 2",
+      "88%",
+      "sim"
+     ],
+     [
+      "Lago 1 × Lago 2",
+      "85%",
+      "sim"
+     ]
+    ]
+   },
+   "alts": [
+    "Já são espécies distintas, pois os filhotes de cruzamentos mistos são menos numerosos",
+    "Já são espécies distintas, pois ficaram separados por muito tempo e se diferenciaram",
+    "Ainda são da mesma espécie, pois o cruzamento entre os lagos gera filhotes férteis",
+    "Ainda são da mesma espécie, pois não houve mudança nos genes dos peixes de cada lago"
+   ],
+   "correta": 2,
+   "explicacao": "Se os cruzamentos entre as populações ainda geram filhotes férteis, o isolamento reprodutivo não se completou. Os distratores usam o tempo de separação ou uma pequena queda na viabilidade como prova."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na atividade, a turma é dividida por uma fita que representa um rio, e cada grupo troca de feijões apenas entre os seus membros por várias gerações.",
+   "comando": "Que etapa representa o isolamento geográfico? Cite uma barreira natural equivalente.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro das etapas da atividade",
+    "etapas": [
+     "Etapa 1: a turma forma uma população única",
+     "Etapa 2: a fita divide a turma em dois grupos",
+     "Etapa 3: cada grupo troca feijões sem contato com o outro"
+    ]
+   },
+   "ref": "A etapa 2 representa o isolamento geográfico: uma barreira impede o encontro entre os grupos. Na natureza, equivalem a ela um rio, uma montanha, um deserto ou a formação de uma ilha.",
+   "conceitos": [
+    "etapa 2 (fita)",
+    "barreira que impede o contato",
+    "rio, montanha ou ilha"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma mata de Minas Gerais, dois grupos de uma mesma planta vivem lado a lado, mas um floresce em junho e julho, e o outro, em setembro e outubro. As flores de um grupo nunca encontram o pólen do outro.",
+   "comando": "Explique por que esses grupos podem se tornar espécies diferentes, mesmo vivendo no mesmo local.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da época de floração dos grupos de plantas",
+    "colunas": [
+     "Grupo",
+     "Floração"
+    ],
+    "linhas": [
+     [
+      "A",
+      "junho e julho"
+     ],
+     [
+      "B",
+      "setembro e outubro"
+     ]
+    ]
+   },
+   "ref": "Como florescem em épocas diferentes, não há troca de pólen e, assim, os grupos não se cruzam: há isolamento reprodutivo, mesmo sem barreira física. Com o tempo, as diferenças se acumulam e podem formar espécies distintas.",
+   "conceitos": [
+    "isolamento reprodutivo",
+    "sem troca de genes",
+    "diferenças acumuladas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma bióloga estuda uma planta nativa da Mata Atlântica. Com o curso de um rio mudando, a mata foi dividida em duas partes, e a planta ficou isolada em cada uma. Em testes no laboratório, plantas de cada parte já não geram sementes viáveis ao serem cruzadas.",
+   "comando": "Explique, em ordem, como as etapas registradas levam à formação de uma nova espécie.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do estudo da bióloga",
+    "etapas": [
+     "Ano 0: uma única população contínua",
+     "Ano 5.000: rio divide a mata em duas partes",
+     "Ano 50.000: cruzamentos entre as partes não geram sementes viáveis"
+    ]
+   },
+   "ref": "O rio isola as populações, que deixam de trocar genes. Cada parte sofre mutações e seleção natural em ambientes distintos e acumula diferenças. Com o tempo surge isolamento reprodutivo e, então, duas espécies.",
+   "conceitos": [
+    "isolamento geográfico",
+    "sem troca de genes",
+    "mutação e seleção natural",
+    "isolamento reprodutivo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na margem de um grande rio, pesquisadores contaram quantos indivíduos de duas espécies conseguem atravessar por ano. Aves conseguem voar de uma margem à outra, e pequenos roedores quase não atravessam.",
+   "comando": "Por que o rio pode levar à formação de novas espécies de roedores, mas dificilmente de aves?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de indivíduos que atravessaram o rio em um ano",
+    "unidade": "indivíduos",
+    "itens": [
+     {
+      "rotulo": "Aves",
+      "valor": 40
+     },
+     {
+      "rotulo": "Roedores",
+      "valor": 0
+     }
+    ]
+   },
+   "ref": "Os roedores não atravessam e ficam isolados: sem troca de genes, acumulam diferenças e podem formar novas espécies. As aves cruzam entre as margens, mantendo as populações misturadas, o que impede a diferenciação.",
+   "conceitos": [
+    "fluxo gênico",
+    "barreira só para alguns",
+    "população isolada diverge"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Beto afirmou: 'Basta separar um grupo por um rio e, no mesmo instante, nasce uma nova espécie'. A professora mostrou os resultados de cruzamentos entre grupos separados ao longo das gerações.",
+   "comando": "Avalie a afirmação de Beto usando os dados e explique quando se pode falar em nova espécie.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de cruzamentos entre os grupos ao longo das gerações",
+    "colunas": [
+     "Gerações de separação",
+     "Cruzamentos com descendentes férteis"
+    ],
+    "linhas": [
+     [
+      "0",
+      "100%"
+     ],
+     [
+      "10",
+      "80%"
+     ],
+     [
+      "30",
+      "40%"
+     ],
+     [
+      "60",
+      "0%"
+     ]
+    ]
+   },
+   "ref": "Beto está errado. A separação por si só não cria uma espécie: a fertilidade dos cruzamentos cai aos poucos, em muitas gerações. Só se fala em nova espécie quando o isolamento reprodutivo se completa e os grupos não geram descendentes férteis.",
+   "conceitos": [
+    "processo gradual",
+    "isolamento geográfico não basta",
+    "isolamento reprodutivo completo"
+   ]
+  }
+ ],
+ "4B|6º ANO|5": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na cozinha, Pedro encostou sem querer o dedo em uma panela quente e puxou a mão rapidamente. A professora explicou que uma informação percorreu o corpo em poucos instantes.",
+   "comando": "Que estruturas levaram a informação do dedo até a medula espinhal?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da sequência do episódio",
+    "etapas": [
+     "Dedo toca a panela quente",
+     "Informação chega ao sistema nervoso central",
+     "Pedro afasta a mão"
+    ]
+   },
+   "alts": [
+    "Os nervos sensoriais, que levam informações dos órgãos dos sentidos ao sistema nervoso central",
+    "Os nervos motores, que levam informações dos órgãos dos sentidos ao sistema nervoso central",
+    "Os gânglios, que levam ordens do sistema nervoso central aos músculos do braço do menino",
+    "Os nervos autônomos, que levam informações do sistema nervoso central às glândulas da pele"
+   ],
+   "correta": 0,
+   "explicacao": "Os nervos sensoriais conduzem os estímulos da pele ao SNC. Os distratores trocam o sentido da informação ou a função dos nervos motores, gânglios e autônomos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um jogo do campeonato da escola, Leila vê a bola, decide chutar e mexe a perna com rapidez. O treinador diz que o cérebro mandou a ordem e que algo precisa levá-la até os músculos.",
+   "comando": "Quais estruturas conduzem a ordem do sistema nervoso central até os músculos da perna?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro da sequência do chute",
+    "etapas": [
+     "Leila vê a bola chegando",
+     "O sistema nervoso central decide chutar",
+     "Os músculos da perna se contraem"
+    ]
+   },
+   "alts": [
+    "Os nervos sensoriais, que levam as ordens do sistema nervoso central aos músculos",
+    "Os nervos motores, que levam as informações dos músculos ao sistema nervoso central",
+    "Os nervos motores, que levam as ordens do sistema nervoso central aos músculos",
+    "Os nervos sensoriais, que levam as informações dos músculos ao sistema nervoso central"
+   ],
+   "correta": 2,
+   "explicacao": "Os nervos motores levam as ordens do SNC aos músculos. Os sensoriais fazem o caminho inverso, dos órgãos para o SNC. Os distratores trocam o tipo de nervo ou o sentido da informação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro levou um susto com um cachorro latindo no portão. Seu coração disparou, as pupilas dilataram e a respiração acelerou, sem que ele tivesse decidido nada disso.",
+   "comando": "Qual divisão do sistema nervoso periférico explica essas reações?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da frequência cardíaca de Pedro",
+    "unidade": "batimentos por minuto",
+    "itens": [
+     {
+      "rotulo": "Antes do susto",
+      "valor": 75
+     },
+     {
+      "rotulo": "Durante o susto",
+      "valor": 120
+     },
+     {
+      "rotulo": "5 minutos depois",
+      "valor": 80
+     }
+    ]
+   },
+   "alts": [
+    "O parassimpático, que prepara o corpo para reagir a situações de ameaça",
+    "O simpático, que prepara o corpo para reagir rápido a situações de ameaça",
+    "O somático, que comanda as reações voluntárias do corpo a situações de perigo",
+    "O parassimpático, que acelera o coração e dilata as pupilas diante de um perigo"
+   ],
+   "correta": 1,
+   "explicacao": "O simpático, parte do sistema autônomo, ativa as reações de luta ou fuga sem controle consciente. Os distratores trocam as funções do parassimpático ou atribuem a reação ao sistema voluntário."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois do almoço, Maria sentiu sono e notou que a barriga fazia barulhos. O médico da UBS explicou que o corpo estava em um estado de funcionamento diferente do de uma corrida.",
+   "comando": "Qual divisão do sistema autônomo predomina nessa situação?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro das contrações do intestino de Maria",
+    "unidade": "contrações por minuto",
+    "itens": [
+     {
+      "rotulo": "Antes do almoço",
+      "valor": 2
+     },
+     {
+      "rotulo": "Depois do almoço",
+      "valor": 8
+     }
+    ]
+   },
+   "alts": [
+    "O simpático, que estimula a digestão e o repouso do corpo",
+    "O parassimpático, que acelera os batimentos e reduz a digestão do corpo",
+    "O simpático, que acelera os batimentos e reduz a digestão do corpo",
+    "O parassimpático, que estimula a digestão e o repouso do corpo"
+   ],
+   "correta": 3,
+   "explicacao": "O parassimpático predomina em momentos de repouso e estimula a digestão. O simpático prepara para ação e reduz a digestão. Os distratores trocam as divisões ou as funções."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Seu Osvaldo sofreu um acidente de trabalho e machucou os nervos do braço direito. Na UBS, o exame mostrou que ele não sente toques nem consegue mexer o braço, mas seu coração e sua digestão funcionam normalmente.",
+   "comando": "Qual é a melhor interpretação desse exame?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do exame de Seu Osvaldo",
+    "colunas": [
+     "Função avaliada",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Sensibilidade do braço direito",
+      "ausente"
+     ],
+     [
+      "Movimento voluntário do braço direito",
+      "ausente"
+     ],
+     [
+      "Batimentos do coração",
+      "72 por minuto"
+     ],
+     [
+      "Digestão",
+      "normal"
+     ]
+    ]
+   },
+   "alts": [
+    "Os nervos autônomos do braço foram lesados, e as partes sensorial e motora estão preservadas",
+    "Os nervos sensoriais e motores do braço foram lesados, e a parte autônoma está preservada",
+    "O sistema nervoso central foi lesado, e a parte periférica do braço está preservada",
+    "Os gânglios do parassimpático foram lesados, e a parte sensorial e motora do braço está preservada"
+   ],
+   "correta": 1,
+   "explicacao": "Perder sensação e movimento do braço indica lesão de nervos sensoriais e motores (sistema somático); coração e digestão normais indicam sistema autônomo preservado. Os distratores trocam a divisão afetada."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula, Aline observou uma imagem do corpo humano em que o cérebro e a medula espinhal estão destacados, e há fios finos espalhados por todo o corpo. A professora pediu que ela classificasse algumas estruturas.",
+   "comando": "Classifique cada estrutura da lista em sistema nervoso central ou periférico e explique o que são os nervos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Estruturas apresentadas na imagem",
+    "colunas": [
+     "Estrutura",
+     "Local na imagem"
+    ],
+    "linhas": [
+     [
+      "Cérebro",
+      "cabeça"
+     ],
+     [
+      "Medula espinhal",
+      "coluna"
+     ],
+     [
+      "Nervo ciático",
+      "perna"
+     ],
+     [
+      "Gânglio",
+      "ao lado da coluna"
+     ]
+    ]
+   },
+   "ref": "Cérebro e medula espinhal formam o sistema nervoso central. Nervo ciático e gânglio fazem parte do periférico. Nervos são feixes de fibras que ligam o sistema nervoso central ao resto do corpo, levando informações nos dois sentidos.",
+   "conceitos": [
+    "SNC: cérebro e medula",
+    "SNP: nervos e gânglios",
+    "nervos como vias de comunicação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No exercício 'Pause e responda', Enzo respondeu 'verdadeiro' à frase: 'Os nervos do corpo só levam ordens do cérebro até os músculos'.",
+   "comando": "A resposta de Enzo está correta? Explique usando os tipos de nervos.",
+   "figura": null,
+   "ref": "Falso. Os nervos motores levam ordens do sistema nervoso central aos músculos, mas os nervos sensoriais levam informações do corpo, como o toque e o calor, ao sistema nervoso central.",
+   "conceitos": [
+    "nervos motores",
+    "nervos sensoriais",
+    "informação nos dois sentidos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Durante a aula de Educação Física, Luana correu 5 minutos no pátio. Seus batimentos cardíacos foram medidos antes, durante e depois do repouso.",
+   "comando": "Explique como o sistema autônomo explica as mudanças nos batimentos de Luana.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro dos batimentos cardíacos de Luana",
+    "unidade": "batimentos por minuto",
+    "itens": [
+     {
+      "rotulo": "Em repouso, antes",
+      "valor": 70
+     },
+     {
+      "rotulo": "Correndo",
+      "valor": 150
+     },
+     {
+      "rotulo": "5 minutos depois de parar",
+      "valor": 90
+     }
+    ]
+   },
+   "ref": "Na corrida, o simpático é ativado e acelera o coração para levar mais oxigênio aos músculos. Ao repousar, o parassimpático predomina e diminui os batimentos. Isso ocorre sem a decisão consciente de Luana.",
+   "conceitos": [
+    "simpático acelera",
+    "parassimpático desacelera",
+    "controle involuntário"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lia anotou algumas ações do seu dia para uma tarefa de ciências: escrever o nome na prova, o coração batendo sem parar, suar na aula de Educação Física e atender a chamada do tio.",
+   "comando": "Classifique essas ações entre sistema nervoso somático e autônomo. Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das ações do dia de Lia",
+    "colunas": [
+     "Horário",
+     "Ação"
+    ],
+    "linhas": [
+     [
+      "8h",
+      "escrever o nome na prova"
+     ],
+     [
+      "10h",
+      "batimento do coração"
+     ],
+     [
+      "11h",
+      "suar na aula de Educação Física"
+     ],
+     [
+      "19h",
+      "atender à chamada do tio"
+     ]
+    ]
+   },
+   "ref": "Escrever e atender a chamada são ações voluntárias, controladas pelo sistema somático. O batimento do coração e o suor acontecem sem decisão consciente e são controlados pelo sistema autônomo.",
+   "conceitos": [
+    "somático é voluntário",
+    "autônomo é involuntário",
+    "exemplos classificados"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No dentista, Rodrigo recebeu anestesia local no lábio. Ele não sentia dor nem o toque da agulha, mas conseguia mexer o lábio normalmente, e a dentista explicou que o anestésico age sobre os nervos.",
+   "comando": "Explique por que ele perdeu a sensibilidade, mas manteve o movimento do lábio.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da avaliação depois da anestesia",
+    "colunas": [
+     "Teste",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Sente dor?",
+      "não"
+     ],
+     [
+      "Sente toque?",
+      "não"
+     ],
+     [
+      "Mexe o lábio?",
+      "sim"
+     ]
+    ]
+   },
+   "ref": "O anestésico bloqueou os nervos sensoriais, que levam ao SNC as informações de dor e toque. Os nervos motores, que levam as ordens aos músculos do lábio, não foram afetados, e por isso o movimento continuou.",
+   "conceitos": [
+    "nervos sensoriais bloqueados",
+    "nervos motores preservados",
+    "funções diferentes dos nervos"
+   ]
+  }
+ ],
+ "4B|7º ANO|2": [
+  {
+   "tipo": "obj",
+   "enunciado": "Caio levou uma gota de água de um aquário até o microscópio óptico da escola, que aumenta até 400 vezes. Ele viu bactérias se movendo, mas não encontrou nenhum vírus, embora a professora tivesse dito que eles estavam ali.",
+   "comando": "Por que Caio não conseguiu enxergar os vírus no microscópio da escola?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados de tamanho dos organismos e partículas",
+    "unidade": "nm",
+    "itens": [
+     {
+      "rotulo": "Vírus da gripe",
+      "valor": 100
+     },
+     {
+      "rotulo": "Bactéria",
+      "valor": 2000
+     },
+     {
+      "rotulo": "Glóbulo vermelho",
+      "valor": 7000
+     }
+    ]
+   },
+   "alts": [
+    "Os vírus só existem no interior de células, e por isso não ficam soltos na água do aquário",
+    "Os vírus são do mesmo tamanho das bactérias, mas se movem rápido demais para serem vistos",
+    "Os vírus são maiores que as células, e por isso não cabem no campo de visão do microscópio",
+    "Os vírus são bem menores que as bactérias, e o aumento do microscópio não basta"
+   ],
+   "correta": 3,
+   "explicacao": "Os vírus medem cerca de 100 nm, muito menos que as bactérias; só microscópios eletrônicos os mostram. Os distratores trocam o tamanho relativo ou a presença dos vírus no ambiente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No laboratório da escola, a professora mostrou um cartaz com o esquema de um vírus. Ela explicou que, apesar da grande diversidade dos vírus, existem estruturas que todos eles apresentam.",
+   "comando": "Que estruturas estão presentes em todos os vírus?",
+   "figura": null,
+   "alts": [
+    "Capsídeo e material genético, que é formado por DNA ou por RNA",
+    "Capsídeo e núcleo, onde fica o material genético que guia o vírus",
+    "Capsídeo e ribossomos, que produzem as proteínas do próprio vírus",
+    "Membrana plasmática e material genético, que pode ser DNA ou RNA"
+   ],
+   "correta": 0,
+   "explicacao": "Todo vírus tem capsídeo (cápsula de proteína) e material genético (DNA ou RNA). O envelope só aparece em alguns. Os distratores citam estruturas de células, que os vírus não têm."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A dona Lúcia está com gripe e foi à UBS pedir um antibiótico, como tomou na última vez que ficou doente. A médica explicou o diagnóstico e não receitou o medicamento.",
+   "comando": "Por que a médica não deve receitar antibiótico para a gripe?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da consulta de Dona Lúcia",
+    "colunas": [
+     "Informação",
+     "Registro"
+    ],
+    "linhas": [
+     [
+      "Doença",
+      "gripe"
+     ],
+     [
+      "Agente",
+      "vírus influenza"
+     ],
+     [
+      "Medicamento pedido",
+      "amoxicilina (antibiótico)"
+     ]
+    ]
+   },
+   "alts": [
+    "Os antibióticos atuam em bactérias, e o vírus da gripe é um tipo de bactéria muito pequeno",
+    "Os antibióticos atuam em vírus, mas o da gripe é muito resistente e não é afetado por eles",
+    "Os antibióticos atuam em bactérias, e o vírus da gripe não tem o que eles atacam",
+    "Os antibióticos atuam em doenças de vários tipos, mas fazem efeito quando a febre passa"
+   ],
+   "correta": 2,
+   "explicacao": "Antibióticos agem sobre estruturas e processos de bactérias, que os vírus não têm. Os distratores confundem vírus com bactéria ou atribuem eficácia geral aos antibióticos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Cida tem herpes labial: uma pequena bolha aparece no lábio, desaparece e volta semanas depois, geralmente em épocas de provas dos filhos ou de estresse.",
+   "comando": "Que fato sobre o ciclo do vírus explica o reaparecimento das bolhas?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do caso de Dona Cida",
+    "etapas": [
+     "Ano 1: bolha no lábio",
+     "Anos 1 a 3: sem sintomas",
+     "Ano 3: nova bolha em semana de provas"
+    ]
+   },
+   "alts": [
+    "O vírus fica fora do corpo, sem produzir sintomas, e volta a infectar a pessoa depois",
+    "O vírus fica latente na célula, sem produzir sintomas, e volta a se multiplicar depois",
+    "O vírus destrói as células e se espalha, sem deixar sintomas, até uma nova infecção",
+    "O vírus se transforma em bactéria e permanece sem sintomas até se multiplicar depois"
+   ],
+   "correta": 1,
+   "explicacao": "No ciclo lisogênico (ou latência), o material genético viral permanece na célula sem causar sintomas e é reativado depois. Os distratores trocam o local do vírus, confundem com o ciclo lítico ou com bactéria."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro fez um experimento em três tubos e contou, após 24 horas, quantas partículas ou células havia em cada um. Ele queria entender onde os vírus conseguem se multiplicar.",
+   "comando": "O que os resultados indicam sobre a multiplicação dos vírus?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do experimento de Pedro",
+    "colunas": [
+     "Tubo",
+     "Conteúdo",
+     "Início",
+     "Após 24 h"
+    ],
+    "linhas": [
+     [
+      "A",
+      "vírus + caldo nutritivo",
+      "1.000",
+      "1.000"
+     ],
+     [
+      "B",
+      "vírus + células vivas",
+      "1.000",
+      "500.000"
+     ],
+     [
+      "C",
+      "bactérias + caldo nutritivo",
+      "1.000",
+      "800.000"
+     ]
+    ]
+   },
+   "alts": [
+    "Eles dependem de células hospedeiras, e as bactérias se multiplicam sozinhas",
+    "Eles dependem de caldo nutritivo, como as bactérias, que se multiplicam mesmo sem células",
+    "Eles se multiplicam em meios variados, como as bactérias, que se multiplicam em células",
+    "Eles são mais lentos que as bactérias, que precisam de células vivas para se multiplicar"
+   ],
+   "correta": 0,
+   "explicacao": "Só o tubo com células vivas teve aumento de vírus: eles são parasitas intracelulares obrigatórios. As bactérias se multiplicam no caldo sozinhas. Os distratores trocam essas condições."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula de ciências, a turma examinou um cartaz com um vírus desenhado. O cartaz traz letras indicando três partes, e a professora pediu que cada aluno identificasse cada uma.",
+   "comando": "Dê o nome das partes A, B e C e diga qual delas guarda a informação genética.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Descrição das partes indicadas no cartaz",
+    "colunas": [
+     "Parte",
+     "Descrição"
+    ],
+    "linhas": [
+     [
+      "A",
+      "casca de proteína que envolve o vírus"
+     ],
+     [
+      "B",
+      "fios de DNA ou RNA no interior"
+     ],
+     [
+      "C",
+      "capa de gordura presente em alguns vírus"
+     ]
+    ]
+   },
+   "ref": "A é o capsídeo, B é o material genético (DNA ou RNA) e C é o envelope. A informação genética fica na parte B, protegida pelo capsídeo.",
+   "conceitos": [
+    "capsídeo",
+    "material genético",
+    "envelope presente em alguns"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro afirmou no debate: 'Vírus são seres vivos, porque causam doenças e se reproduzem'. Uma colega discordou, lembrando o que foi visto sobre a teoria celular.",
+   "comando": "Pedro está certo? Explique à luz da teoria celular.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Características listadas por Pedro",
+    "colunas": [
+     "Característica",
+     "Registro"
+    ],
+    "linhas": [
+     [
+      "Causa doenças",
+      "sim"
+     ],
+     [
+      "Reproduz-se",
+      "somente dentro de uma célula hospedeira"
+     ],
+     [
+      "Tem material genético",
+      "sim"
+     ]
+    ]
+   },
+   "ref": "A teoria celular diz que os seres vivos são formados por células. Os vírus não têm células e só se multiplicam dentro de células hospedeiras. Por isso, muitos cientistas não os consideram seres vivos, embora causem doenças.",
+   "conceitos": [
+    "teoria celular",
+    "vírus sem células",
+    "parasita intracelular obrigatório"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Durante a pandemia, Beatriz lavou as mãos com água e sabão por 20 segundos, como o cartaz do posto de saúde recomendava. O coronavírus tem uma capa de gordura (envelope) em volta do capsídeo.",
+   "comando": "Explique por que esse hábito é eficaz contra o vírus.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do cartaz de higiene das mãos",
+    "etapas": [
+     "Molhar as mãos",
+     "Ensaboar por 20 segundos",
+     "Enxaguar e secar"
+    ]
+   },
+   "ref": "O sabão rompe a capa de gordura do envelope, e o vírus se desfaz e perde a capacidade de infectar. A água leva os restos embora; a fricção também ajuda a remover as partículas.",
+   "conceitos": [
+    "envelope de gordura",
+    "sabão rompe o envelope",
+    "vírus inativado"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois pacientes da UBS foram infectados por vírus diferentes. O paciente A teve febre alta dois dias depois e se recuperou em uma semana. O paciente B não teve sintomas por três meses e depois teve uma crise.",
+   "comando": "Relacione cada caso ao ciclo do vírus (lítico ou lisogênico) e justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de dois pacientes da UBS",
+    "colunas": [
+     "Paciente",
+     "Primeiros sintomas",
+     "Evolução"
+    ],
+    "linhas": [
+     [
+      "A",
+      "2 dias",
+      "recuperado em 7 dias"
+     ],
+     [
+      "B",
+      "3 meses",
+      "crise depois do período sem sintomas"
+     ]
+    ]
+   },
+   "ref": "O caso A é lítico: o vírus se multiplica logo, destrói as células e causa sintomas rápidos. O caso B é lisogênico: o material genético fica latente na célula e depois é ativado, causando sintomas tardios.",
+   "conceitos": [
+    "ciclo lítico",
+    "ciclo lisogênico",
+    "latência"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Todo ano a UBS de Sorocaba faz uma campanha de vacinação contra a gripe, e a vacina é atualizada. Rafael achou estranho: 'Se tomei no ano passado, por que preciso tomar de novo?'. O virologista mostrou quantas variantes do vírus circularam.",
+   "comando": "Explique por que a vacina da gripe precisa ser atualizada, usando os dados.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de variantes do vírus da gripe em circulação",
+    "unidade": "variantes",
+    "itens": [
+     {
+      "rotulo": "Ano 1",
+      "valor": 2
+     },
+     {
+      "rotulo": "Ano 2",
+      "valor": 4
+     },
+     {
+      "rotulo": "Ano 3",
+      "valor": 6
+     }
+    ]
+   },
+   "ref": "O vírus da gripe tem RNA e sofre mutações com frequência ao se replicar, surgindo novas variantes. A vacina de um ano pode não proteger contra as novas; por isso é atualizada a cada ano.",
+   "conceitos": [
+    "mutação do material genético",
+    "novas variantes",
+    "vacina atualizada"
+   ]
+  }
+ ],
+ "4B|7º ANO|15": [
+  {
+   "tipo": "obj",
+   "enunciado": "Dani, aluna do 7º ano, anotou os itens que viu no caminho de casa até a escola, em Osasco, e a professora pediu que ela separasse os serviços de saneamento básico dos demais.",
+   "comando": "Qual grupo contém só serviços de saneamento básico?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos itens observados no trajeto de Dani",
+    "colunas": [
+     "Item",
+     "Local"
+    ],
+    "linhas": [
+     [
+      "Caixa d'água",
+      "esquina da escola"
+     ],
+     [
+      "Bueiro",
+      "rua principal"
+     ],
+     [
+      "Caminhão de lixo",
+      "avenida"
+     ],
+     [
+      "Poste de luz",
+      "rua da escola"
+     ],
+     [
+      "Rede de esgoto",
+      "tampa no asfalto"
+     ]
+    ]
+   },
+   "alts": [
+    "Abastecimento de água, iluminação pública e coleta de esgoto",
+    "Coleta de lixo, transporte coletivo e drenagem das chuvas",
+    "Abastecimento de água, coleta de esgoto e coleta de lixo",
+    "Coleta de esgoto, energia elétrica e abastecimento de água"
+   ],
+   "correta": 2,
+   "explicacao": "Saneamento básico inclui água potável, esgoto, resíduos sólidos e drenagem. Iluminação, energia e transporte são serviços públicos, mas não de saneamento."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre desigualdade no acesso ao saneamento, a professora mostrou a porcentagem da população atendida com coleta de esgoto em quatro regiões do Brasil (valores aproximados).",
+   "comando": "Qual afirmação é sustentada pelos dados do gráfico?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de população com esgoto coletado, valores aproximados",
+    "unidade": "% da população",
+    "itens": [
+     {
+      "rotulo": "Sudeste",
+      "valor": 80
+     },
+     {
+      "rotulo": "Sul",
+      "valor": 48
+     },
+     {
+      "rotulo": "Nordeste",
+      "valor": 30
+     },
+     {
+      "rotulo": "Norte",
+      "valor": 14
+     }
+    ]
+   },
+   "alts": [
+    "O Sul tem cobertura próxima à do Sudeste, com diferença pequena",
+    "O Sudeste tem cobertura cerca de seis vezes maior que a do Norte",
+    "O Nordeste tem cobertura maior que a do Sul, apesar da diferença",
+    "O Norte tem cobertura próxima à do Nordeste, com diferença pequena"
+   ],
+   "correta": 1,
+   "explicacao": "80 / 14 é aproximadamente 6, então o Sudeste tem cobertura cerca de seis vezes maior que a do Norte. Os demais distratores contradizem os valores."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois bairros de uma cidade paulista foram comparados por uma UBS. No bairro A, as casas são ligadas à rede de esgoto tratado; no bairro B, o esgoto corre em valas a céu aberto, perto de onde as crianças brincam.",
+   "comando": "Qual explicação relaciona o saneamento com a diferença de casos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de diarreia atendida na UBS",
+    "colunas": [
+     "Bairro",
+     "Casos por mil habitantes"
+    ],
+    "linhas": [
+     [
+      "A (esgoto tratado)",
+      "5"
+     ],
+     [
+      "B (esgoto a céu aberto)",
+      "32"
+     ]
+    ]
+   },
+   "alts": [
+    "O esgoto sem coleta contamina a água e o solo, e favorece a transmissão de doenças",
+    "O esgoto sem coleta aquece a água e o solo, e favorece a transmissão de doenças",
+    "O esgoto sem coleta aumenta a temperatura dos bairros e favorece a falta de vacinas",
+    "O esgoto sem coleta atrai vírus do ar das ruas e favorece o cansaço dos moradores"
+   ],
+   "correta": 0,
+   "explicacao": "Esgoto sem tratamento contamina a água e o solo com microrganismos que causam diarreia, leptospirose e outras doenças. Os distratores inventam relações sem base."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A prefeitura de uma cidade da Grande São Paulo quer cumprir o ODS 6 (água potável e saneamento) em uma vila onde parte das casas lança esgoto direto no córrego. Os técnicos levantaram a situação.",
+   "comando": "Qual ação contribui diretamente para o ODS 6 nessa vila?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da situação das 300 casas da vila",
+    "colunas": [
+     "Destino do esgoto",
+     "Nº de casas"
+    ],
+    "linhas": [
+     [
+      "Rede de coleta",
+      "120"
+     ],
+     [
+      "Fossa",
+      "80"
+     ],
+     [
+      "Direto no córrego",
+      "100"
+     ]
+    ]
+   },
+   "alts": [
+    "Plantar árvores nas margens para disfarçar o esgoto no córrego",
+    "Canalizar o córrego para que o esgoto deixe de ficar visível",
+    "Levar o esgoto para mais longe, para ser despejado rio abaixo",
+    "Ligar as casas à rede de coleta e a uma estação de tratamento"
+   ],
+   "correta": 3,
+   "explicacao": "O ODS 6 pede acesso a saneamento e melhoria da qualidade da água; ligar as casas à rede com tratamento resolve a origem do problema. Os distratores apenas escondem ou deslocam a poluição."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma foto de Paraisópolis, na capital paulista, mostra casas muito próximas e ruas estreitas com valas. Os alunos compararam o acesso à água tratada em um bairro de renda alta e na comunidade, e discutiram por que a diferença existe.",
+   "comando": "Qual é a melhor explicação para a diferença entre os dois locais?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de moradias com água tratada na torneira",
+    "unidade": "% das moradias",
+    "itens": [
+     {
+      "rotulo": "Bairro central",
+      "valor": 99
+     },
+     {
+      "rotulo": "Comunidade",
+      "valor": 70
+     }
+    ]
+   },
+   "alts": [
+    "A população da comunidade não paga pelo serviço e por isso as redes não chegam ao local",
+    "A distância entre a comunidade e a represa impede uma rede de água tratada no local",
+    "A água da comunidade é naturalmente limpa e dispensa a distribuição de água tratada",
+    "A ocupação sem planejamento e a falta de investimento público dificultam a instalação das redes"
+   ],
+   "correta": 3,
+   "explicacao": "A desigualdade tem origem em ocupação sem planejamento e investimento insuficiente, e não em culpa dos moradores. Os distratores usam explicações simplistas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dani anotou os pontos de saneamento que viu no trajeto até a escola: uma caixa d'água, um bueiro, um caminhão de lixo e uma tampa de rede de esgoto.",
+   "comando": "Cite dois desses serviços e explique a função de cada um para a saúde da população.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do trajeto de Dani",
+    "colunas": [
+     "Ponto",
+     "Local"
+    ],
+    "linhas": [
+     [
+      "Caixa d'água",
+      "esquina da escola"
+     ],
+     [
+      "Bueiro",
+      "rua principal"
+     ],
+     [
+      "Caminhão de lixo",
+      "avenida"
+     ],
+     [
+      "Tampa de esgoto",
+      "rua da escola"
+     ]
+    ]
+   },
+   "ref": "A rede de água leva água tratada às casas, evitando doenças. A coleta de lixo e a rede de esgoto retiram resíduos e dejetos, impedindo contaminação da água, do solo e a proliferação de animais transmissores. O bueiro escoa a água da chuva.",
+   "conceitos": [
+    "abastecimento de água",
+    "coleta de esgoto ou lixo",
+    "prevenção de doenças"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O Marco Legal do Saneamento define metas de universalização: 99% da população com água potável e 90% com coleta e tratamento de esgoto até 2033. A professora mostrou a situação atual aproximada.",
+   "comando": "O que significa universalizar o saneamento e qual é o desafio indicado no gráfico?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de cobertura atual e metas, valores aproximados",
+    "unidade": "% da população",
+    "itens": [
+     {
+      "rotulo": "Água: situação atual",
+      "valor": 84
+     },
+     {
+      "rotulo": "Água: meta",
+      "valor": 99
+     },
+     {
+      "rotulo": "Esgoto: situação atual",
+      "valor": 56
+     },
+     {
+      "rotulo": "Esgoto: meta",
+      "valor": 90
+     }
+    ]
+   },
+   "ref": "Universalizar é levar o serviço a toda a população, sem exceção. O gráfico mostra que o esgoto está mais distante da meta: faltam cerca de 34 pontos percentuais, contra cerca de 15 na água.",
+   "conceitos": [
+    "universalização",
+    "esgoto mais distante da meta",
+    "leitura do gráfico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um bairro sem rede de esgoto, dona Marta vê o esgoto das casas escorrer por uma vala até um córrego onde crianças brincam. Há ratos e mau cheiro.",
+   "comando": "Explique duas consequências para a saúde dos moradores.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do caminho do esgoto no bairro",
+    "etapas": [
+     "Casas despejam esgoto na vala",
+     "A vala leva o esgoto ao córrego",
+     "Crianças brincam na água do córrego"
+    ]
+   },
+   "ref": "Há contaminação por microrganismos que causam doenças, como diarreia, hepatite e verminoses, por contato com a água. Os ratos e insetos atraídos pelo esgoto transmitem doenças, como a leptospirose.",
+   "conceitos": [
+    "contaminação por microrganismos",
+    "doenças de veiculação hídrica",
+    "animais transmissores"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma pesquisadora comparou duas cidades paulistas. A cidade X tem 98% do esgoto tratado e a cidade Y, 40%. Ela quer saber se há relação com internações por diarreia.",
+   "comando": "Explique a relação entre saneamento e saúde nos dados e dê um cuidado para interpretá-los.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos indicadores das duas cidades",
+    "colunas": [
+     "Cidade",
+     "Esgoto tratado",
+     "Internações por diarreia (por 10 mil)"
+    ],
+    "linhas": [
+     [
+      "X",
+      "98%",
+      "1"
+     ],
+     [
+      "Y",
+      "40%",
+      "12"
+     ]
+    ]
+   },
+   "ref": "A cidade com mais esgoto tratado teve menos internações por diarreia, pois o tratamento evita a contaminação da água. Porém só duas cidades não provam a causa; outros fatores, como renda e atendimento médico, também influenciam.",
+   "conceitos": [
+    "tratamento reduz doenças",
+    "relação nos dados",
+    "cuidado: outras causas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola de Marcos, em Santo André, quer cumprir o ODS 6 reduzindo o desperdício de água. A diretora pediu que os alunos analisassem o consumo diário da escola.",
+   "comando": "Que ação reduziria mais o desperdício? Justifique com os dados.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do consumo diário de água na escola",
+    "unidade": "litros",
+    "itens": [
+     {
+      "rotulo": "Banheiros",
+      "valor": 800
+     },
+     {
+      "rotulo": "Cozinha",
+      "valor": 600
+     },
+     {
+      "rotulo": "Limpeza e pátio",
+      "valor": 300
+     },
+     {
+      "rotulo": "Torneira vazando",
+      "valor": 150
+     }
+    ]
+   },
+   "ref": "A maior economia viria de reduzir o consumo nos banheiros (800 L), com descargas econômicas e torneiras com temporizador. O vazamento (150 L) é puro desperdício e deve ser consertado. Isso protege a água potável.",
+   "conceitos": [
+    "identificar o maior consumo",
+    "vazamento é desperdício",
+    "uso consciente da água"
+   ]
+  }
+ ],
+ "4B|8º ANO|15": [
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador de circuitos, Rafael ligou uma bateria de 9 V a uma lâmpada por fios e colocou um interruptor no caminho. Ele clicou no interruptor e anotou o que viu.",
+   "comando": "O que explica a lâmpada apagada quando o interruptor está aberto?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da simulação de Rafael",
+    "colunas": [
+     "Interruptor",
+     "Lâmpada"
+    ],
+    "linhas": [
+     [
+      "aberto",
+      "apagada"
+     ],
+     [
+      "fechado",
+      "acesa"
+     ]
+    ]
+   },
+   "alts": [
+    "A bateria se descarrega por completo, e a corrente elétrica não é produzida",
+    "O caminho do circuito fica interrompido, e a corrente elétrica não circula",
+    "O fio fica sem resistência, e a corrente elétrica passa direto sem acender a lâmpada",
+    "A lâmpada recebe tensão excessiva, e a corrente elétrica queima o filamento"
+   ],
+   "correta": 1,
+   "explicacao": "Com o interruptor aberto, o circuito não está fechado e não há corrente. Os distratores atribuem o apagamento a outros fenômenos que não ocorrem na simulação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Larissa montou no simulador um circuito simples com bateria, resistor e fios, e quer medir a corrente que passa pelo resistor. Ela tem à disposição um amperímetro e um voltímetro.",
+   "comando": "Como Larissa deve ligar o amperímetro para medir a corrente?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos instrumentos disponíveis",
+    "colunas": [
+     "Instrumento",
+     "Grandeza que mede"
+    ],
+    "linhas": [
+     [
+      "Amperímetro",
+      "corrente"
+     ],
+     [
+      "Voltímetro",
+      "tensão"
+     ]
+    ]
+   },
+   "alts": [
+    "Em paralelo com o resistor, para que a corrente do circuito passe por ele",
+    "Em série com a bateria, para medir a diferença de potencial entre os terminais",
+    "Em série com o resistor, para que a corrente do circuito passe por ele",
+    "Em paralelo com a bateria, para medir a diferença de potencial entre os terminais"
+   ],
+   "correta": 2,
+   "explicacao": "O amperímetro deve ficar no mesmo caminho da corrente, em série. O voltímetro é ligado em paralelo para medir a tensão. Os distratores trocam a ligação ou a grandeza."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador, Gabriel manteve um resistor fixo e aumentou a tensão da bateria. Ele anotou a corrente em cada caso e quer prever o valor para uma tensão de 15 V.",
+   "comando": "Qual será a corrente com 15 V?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da simulação com um resistor de 3 Ω",
+    "colunas": [
+     "Tensão (V)",
+     "Corrente (A)"
+    ],
+    "linhas": [
+     [
+      "3",
+      "1"
+     ],
+     [
+      "6",
+      "2"
+     ],
+     [
+      "9",
+      "3"
+     ],
+     [
+      "12",
+      "4"
+     ]
+    ]
+   },
+   "alts": [
+    "4 A, pois a corrente chega a um limite e deixa de crescer com a tensão",
+    "0,2 A, pois a corrente diminui quando a tensão ultrapassa o valor medido",
+    "45 A, pois a corrente é o produto da tensão pela resistência do resistor",
+    "5 A, pois a corrente cresce na mesma proporção da tensão aplicada"
+   ],
+   "correta": 3,
+   "explicacao": "Pela Lei de Ohm, I = V/R = 15/3 = 5 A: corrente e tensão são proporcionais. Os distratores usam ideias de limite, de produto ou de queda que não vale para resistor ôhmico."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na casa de Dona Sônia, um pisca-pisca de Natal antigo tem dez lâmpadas ligadas uma depois da outra. Quando uma queimou, todas as outras apagaram, e o filho dela precisou testar uma por uma.",
+   "comando": "Por que todas as lâmpadas apagaram quando uma queimou?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do caso do pisca-pisca",
+    "etapas": [
+     "Dez lâmpadas ligadas uma após a outra",
+     "Uma lâmpada queima",
+     "Todas as lâmpadas apagam"
+    ]
+   },
+   "alts": [
+    "Elas estão em série, e o circuito é interrompido quando uma queima",
+    "Elas estão em série, e a corrente passa toda pela lâmpada que queimou",
+    "Elas estão em paralelo, e a corrente passa toda pela lâmpada que queimou",
+    "Elas estão em paralelo, e o circuito é interrompido quando uma queima"
+   ],
+   "correta": 0,
+   "explicacao": "Na ligação em série há só um caminho; se o filamento rompe, o circuito se abre e todas apagam. Em paralelo, cada lâmpada tem seu caminho e as outras continuam acesas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador, Tiago ligou os terminais de uma bateria de 12 V por um fio sem lâmpada nem resistor, e a corrente subiu muito e o fio ficou com cor de brasa. Depois colocou uma lâmpada no circuito e a corrente caiu.",
+   "comando": "O que explica o aquecimento do fio sem a lâmpada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da simulação de Tiago",
+    "colunas": [
+     "Circuito",
+     "Resistência (Ω)",
+     "Corrente (A)"
+    ],
+    "linhas": [
+     [
+      "Com lâmpada",
+      "12",
+      "1"
+     ],
+     [
+      "Fio ligado direto",
+      "0,1",
+      "120"
+     ]
+    ]
+   },
+   "alts": [
+    "Com resistência quase nula, a tensão da bateria cai e aquece o fio (curto-circuito)",
+    "Com resistência muito alta, a corrente fica muito alta e aquece o fio (curto-circuito)",
+    "Com resistência quase nula, a corrente fica muito alta e aquece o fio (curto-circuito)",
+    "Com resistência quase nula, a corrente fica baixa e aquece o fio (curto-circuito)"
+   ],
+   "correta": 2,
+   "explicacao": "Sem resistência, I = V/R fica enorme e o fio dissipa muita energia, aquecendo: é o curto-circuito. Os distratores trocam resistência, corrente ou tensão."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma aula prática, Marina recebeu vários itens para montar um circuito: uma bateria de 9 V, uma lâmpada, um interruptor e fios.",
+   "comando": "Explique a função da bateria e a do interruptor no circuito.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos itens da bancada",
+    "colunas": [
+     "Item",
+     "Descrição"
+    ],
+    "linhas": [
+     [
+      "A",
+      "bateria de 9 V"
+     ],
+     [
+      "B",
+      "lâmpada de lanterna"
+     ],
+     [
+      "C",
+      "interruptor de alavanca"
+     ],
+     [
+      "D",
+      "fios de cobre"
+     ]
+    ]
+   },
+   "ref": "A bateria fornece a energia que empurra as cargas e mantém a corrente elétrica. O interruptor abre ou fecha o caminho do circuito: fechado, deixa a corrente passar; aberto, interrompe.",
+   "conceitos": [
+    "bateria fornece tensão",
+    "interruptor abre e fecha o circuito",
+    "circuito fechado permite corrente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No simulador, Gabriel montou um circuito com um resistor. O voltímetro marcou 9 V, e o amperímetro, 0,5 A. Ele confundiu o significado dos números.",
+   "comando": "Explique o que o voltímetro e o amperímetro medem e como cada um deve ser ligado.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos instrumentos no simulador",
+    "colunas": [
+     "Instrumento",
+     "Leitura"
+    ],
+    "linhas": [
+     [
+      "Voltímetro",
+      "9 V"
+     ],
+     [
+      "Amperímetro",
+      "0,5 A"
+     ]
+    ]
+   },
+   "ref": "O voltímetro mede a tensão (diferença de potencial) e é ligado em paralelo com o componente. O amperímetro mede a corrente elétrica e é ligado em série, no caminho da corrente.",
+   "conceitos": [
+    "voltímetro mede tensão em paralelo",
+    "amperímetro mede corrente em série",
+    "grandezas diferentes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma atividade, Carol mediu um resistor desconhecido de um aparelho: o voltímetro marcou 6 V, e o amperímetro, 0,2 A.",
+   "comando": "Calcule a resistência do resistor e explique como chegou ao valor usando a Lei de Ohm.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das medidas de Carol",
+    "colunas": [
+     "Grandeza",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tensão",
+      "6 V"
+     ],
+     [
+      "Corrente",
+      "0,2 A"
+     ]
+    ]
+   },
+   "ref": "Pela Lei de Ohm, R = V/I = 6/0,2 = 30 Ω. A resistência é a razão entre a tensão e a corrente que passa pelo resistor.",
+   "conceitos": [
+    "Lei de Ohm",
+    "R = V/I",
+    "30 ohms"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um circuito com bateria de 9 V, Bruno mediu a corrente fornecida pela bateria com uma lâmpada sozinha, com duas lâmpadas iguais em série e com duas iguais em paralelo. As lâmpadas em série ficaram mais fracas.",
+   "comando": "Explique por que as lâmpadas em série brilham menos e as em paralelo brilham como uma sozinha.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da corrente fornecida pela bateria",
+    "unidade": "A",
+    "itens": [
+     {
+      "rotulo": "Uma lâmpada",
+      "valor": 0.6
+     },
+     {
+      "rotulo": "Duas em série",
+      "valor": 0.3
+     },
+     {
+      "rotulo": "Duas em paralelo",
+      "valor": 1.2
+     }
+    ]
+   },
+   "ref": "Em série, a resistência total dobra e a corrente cai pela metade, então cada lâmpada brilha menos. Em paralelo, cada uma fica sob a tensão total da bateria e recebe a mesma corrente que sozinha; por isso a bateria fornece o dobro.",
+   "conceitos": [
+    "resistência total em série",
+    "corrente menor em série",
+    "paralelo mantém a tensão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na casa de Tiago, o disjuntor de 30 A desarma quando ele liga ao mesmo tempo o chuveiro e o ferro de passar na mesma tomada. Ligados separadamente, funcionam sem problemas.",
+   "comando": "Por que o disjuntor desarma? Explique com os dados e diga qual é o risco que ele evita.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da corrente de cada aparelho",
+    "unidade": "A",
+    "itens": [
+     {
+      "rotulo": "Chuveiro",
+      "valor": 25
+     },
+     {
+      "rotulo": "Ferro de passar",
+      "valor": 8
+     },
+     {
+      "rotulo": "Micro-ondas",
+      "valor": 10
+     },
+     {
+      "rotulo": "Televisão",
+      "valor": 1
+     }
+    ]
+   },
+   "ref": "Os aparelhos em paralelo somam as correntes: 25 + 8 = 33 A, maior que os 30 A do disjuntor. A corrente alta aquece os fios e pode causar incêndio; o disjuntor desarma para evitar o sobreaquecimento.",
+   "conceitos": [
+    "soma das correntes",
+    "sobrecarga",
+    "disjuntor protege dos incêndios"
+   ]
+  }
+ ],
+ "4B|9º ANO|16": [
+  {
+   "tipo": "obj",
+   "enunciado": "No Stellarium Web, Elisa escolheu a data de 21 de setembro, às 6 horas, em Campinas, e virou a visão para o Norte. Ela quer saber de que lado vê o Sol nascer.",
+   "comando": "Para quem olha para o Norte, em que lado fica o Leste, onde o Sol nasce?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da simulação no Stellarium",
+    "colunas": [
+     "Item",
+     "Configuração"
+    ],
+    "linhas": [
+     [
+      "Data",
+      "21 de setembro"
+     ],
+     [
+      "Horário",
+      "6h"
+     ],
+     [
+      "Local",
+      "Campinas"
+     ],
+     [
+      "Direção da visão",
+      "Norte"
+     ]
+    ]
+   },
+   "alts": [
+    "À direita, pois o Leste fica à direita de quem olha para o Norte",
+    "À esquerda, pois o Leste fica à esquerda de quem olha para o Norte",
+    "Atrás de quem observa, pois o Leste fica oposto à direção do Norte",
+    "À frente, pois o Leste fica na mesma direção que o Norte"
+   ],
+   "correta": 0,
+   "explicacao": "Olhando para o Norte, o Leste fica à direita e o Oeste à esquerda. O Sol nasce no Leste. Os distratores trocam os lados ou a direção do Leste."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Num trabalho de astronomia, Rodrigo acompanhou dois pontos brilhantes perto do Cruzeiro do Sul durante quatro noites seguidas e anotou a distância de cada um até a constelação.",
+   "comando": "Qual astro é provavelmente um planeta, e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da distância até o Cruzeiro do Sul, em graus",
+    "colunas": [
+     "Noite",
+     "Astro A",
+     "Astro B"
+    ],
+    "linhas": [
+     [
+      "1",
+      "10",
+      "25"
+     ],
+     [
+      "2",
+      "14",
+      "25"
+     ],
+     [
+      "3",
+      "18",
+      "25"
+     ],
+     [
+      "4",
+      "22",
+      "25"
+     ]
+    ]
+   },
+   "alts": [
+    "O astro B, pois mantém a posição em relação às estrelas ao longo das noites",
+    "O astro B, pois está mais longe do Cruzeiro do Sul e por isso brilha menos",
+    "O astro A, pois está mais perto do Cruzeiro do Sul e por isso brilha mais",
+    "O astro A, pois muda de posição em relação às estrelas ao longo das noites"
+   ],
+   "correta": 3,
+   "explicacao": "Planetas parecem se deslocar entre as estrelas, que mantêm posições relativas fixas. Os distratores usam brilho ou distância como critério, que não classifica o astro."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Usando o Stellarium para São Paulo, às 20 h, Lívia comparou a posição do Cruzeiro do Sul em três meses diferentes e notou que ele aparece cada vez mais baixo, perto do horizonte, à medida que se aproxima de fevereiro.",
+   "comando": "O que explica a mudança de posição da constelação no mesmo horário?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da altura do Cruzeiro do Sul às 20 h",
+    "colunas": [
+     "Mês",
+     "Altura (graus)"
+    ],
+    "linhas": [
+     [
+      "Fevereiro",
+      "10"
+     ],
+     [
+      "Abril",
+      "45"
+     ],
+     [
+      "Julho",
+      "60"
+     ]
+    ]
+   },
+   "alts": [
+    "O movimento de rotação da Terra, que muda a região do céu visível no mesmo horário",
+    "O movimento de translação da Terra, que muda a região do céu visível no mesmo horário",
+    "A inclinação do eixo da Terra, que muda a região do céu visível no mesmo horário",
+    "O deslocamento das estrelas, que mudam de lugar na esfera celeste de um mês a outro"
+   ],
+   "correta": 1,
+   "explicacao": "Ao longo do ano, a translação faz a Terra ver outra parte da esfera celeste à mesma hora. A rotação explica a mudança ao longo da noite. Os distratores confundem esses movimentos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A aluna Maria nasceu em 5 de setembro e leu que seu signo é Virgem. No Stellarium, ela localizou o Sol em 5 de setembro e ficou surpresa com o resultado.",
+   "comando": "Que explicação é adequada para o que Maria encontrou?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da constelação onde o Sol aparece no Stellarium",
+    "colunas": [
+     "Data",
+     "Constelação"
+    ],
+    "linhas": [
+     [
+      "5 de setembro",
+      "Leão"
+     ],
+     [
+      "25 de setembro",
+      "Virgem"
+     ],
+     [
+      "15 de novembro",
+      "Escorpião"
+     ]
+    ]
+   },
+   "alts": [
+    "As datas dos signos mudam todo ano porque a órbita da Terra muda de forma a cada ano",
+    "As datas dos signos foram definidas pelo Stellarium e o programa tem um erro de calendário",
+    "As datas dos signos foram definidas há cerca de 2 mil anos e o céu se deslocou desde então",
+    "As datas dos signos seguem as fases da Lua e por isso não coincidem com a posição do Sol"
+   ],
+   "correta": 2,
+   "explicacao": "O zodíaco tradicional foi definido há cerca de 2 mil anos; a precessão do eixo da Terra deslocou a posição do Sol em relação às constelações. Os distratores não têm base científica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Numa feira de ciências, um grupo pediu que 100 pessoas lessem uma descrição sobre o próprio signo. Sem que soubessem, outro grupo recebeu a descrição de um signo sorteado ao acaso. Depois, todos disseram se aquilo combinava com a personalidade.",
+   "comando": "O que o resultado indica sobre as descrições de signos?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de pessoas que concordaram com a descrição",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Descrição do próprio signo",
+      "valor": 78
+     },
+     {
+      "rotulo": "Descrição de signo sorteado",
+      "valor": 76
+     }
+    ]
+   },
+   "alts": [
+    "Os textos são precisos, e a concordância foi parecida porque os signos são parecidos entre si",
+    "Os textos são genéricos, e a concordância foi parecida mesmo com a descrição de outro signo",
+    "Os textos são genéricos, e a concordância foi maior com a descrição do próprio signo",
+    "Os textos são precisos, e a concordância foi menor com a descrição de outro signo sorteado"
+   ],
+   "correta": 1,
+   "explicacao": "A concordância quase igual indica que descrições vagas servem a muitas pessoas, sem prova de ligação com os astros. Os distratores ignoram os dados."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "De manhã, Tiago observou o Sol no Stellarium: nasceu em um ponto do horizonte, passou alto no céu ao meio-dia (voltado para o Norte, no hemisfério Sul) e se pôs do lado oposto.",
+   "comando": "Como Tiago pode usar o movimento do Sol para localizar o Leste e o Oeste?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do movimento do Sol",
+    "etapas": [
+     "6h: Sol aparece no horizonte",
+     "12h: Sol alto, na direção Norte",
+     "18h: Sol se põe no horizonte oposto"
+    ]
+   },
+   "ref": "O Sol nasce na direção Leste e se põe na Oeste. Assim, ao amanhecer, Tiago pode apontar o braço direito para onde o Sol nasce (Leste); o Oeste fica à esquerda e o Norte à frente.",
+   "conceitos": [
+    "Sol nasce no Leste",
+    "Sol se põe no Oeste",
+    "orientação pelo Sol"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Camila diz que 'as estrelas piscam, mas os planetas não'. No Stellarium, ela percebeu que algumas estrelas brilhavam com variações, e os planetas, com brilho firme.",
+   "comando": "Explique por que as estrelas parecem piscar e os planetas, não.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da aparência dos astros",
+    "colunas": [
+     "Astro",
+     "Aparência ao telescópio"
+    ],
+    "linhas": [
+     [
+      "Estrela",
+      "ponto de luz"
+     ],
+     [
+      "Planeta",
+      "disco pequeno"
+     ]
+    ]
+   },
+   "ref": "A luz das estrelas atravessa a atmosfera turbulenta e é desviada de formas diferentes, o que causa o 'piscar'. Os planetas aparecem como pequenos discos, formados por muitos pontos de luz, e a variação se compensa, mantendo o brilho firme.",
+   "conceitos": [
+    "turbulência da atmosfera",
+    "estrela é ponto de luz",
+    "planeta é disco"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No Stellarium, Pedro ativou o desenho da eclíptica e a linha das constelações do zodíaco. Ele anotou em qual constelação o Sol aparece em quatro datas do ano.",
+   "comando": "Explique por que o Sol parece passar de uma constelação a outra ao longo do ano.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da constelação onde o Sol aparece",
+    "colunas": [
+     "Data",
+     "Constelação"
+    ],
+    "linhas": [
+     [
+      "21 de março",
+      "Peixes"
+     ],
+     [
+      "21 de junho",
+      "Gêmeos"
+     ],
+     [
+      "23 de setembro",
+      "Virgem"
+     ],
+     [
+      "21 de dezembro",
+      "Sagitário"
+     ]
+    ]
+   },
+   "ref": "A Terra gira em torno do Sol (translação). Ao longo do ano, o Sol é visto contra o fundo de constelações diferentes, descrevendo no céu um caminho chamado eclíptica, onde estão as constelações do zodíaco.",
+   "conceitos": [
+    "translação da Terra",
+    "eclíptica",
+    "constelações do zodíaco"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao mudar o local no Stellarium de Porto Alegre para Lisboa, Bruno viu que o Cruzeiro do Sul desapareceu do céu. Ele comparou a altura máxima da constelação em quatro cidades.",
+   "comando": "Por que a constelação não é visível de Lisboa? Explique com os dados.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da altura máxima do Cruzeiro do Sul",
+    "unidade": "graus",
+    "itens": [
+     {
+      "rotulo": "Porto Alegre",
+      "valor": 60
+     },
+     {
+      "rotulo": "Brasília",
+      "valor": 46
+     },
+     {
+      "rotulo": "Natal",
+      "valor": 36
+     },
+     {
+      "rotulo": "Lisboa",
+      "valor": 0
+     }
+    ]
+   },
+   "ref": "A Terra é esférica e a latitude define quais regiões do céu aparecem acima do horizonte. O Cruzeiro do Sul fica no céu do sul e, de Lisboa, no hemisfério Norte, nunca se eleva acima do horizonte.",
+   "conceitos": [
+    "latitude",
+    "Terra esférica",
+    "céu visível depende do local"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas páginas de internet falam sobre Júpiter. Rafaela leu os textos e precisa dizer qual deles é astronomia e qual é astrologia.",
+   "comando": "Classifique cada texto e justifique pela forma como o conhecimento é produzido.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Textos lidos por Rafaela",
+    "colunas": [
+     "Texto",
+     "Trecho"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Júpiter está a 778 milhões de km do Sol e leva 12 anos para dar uma volta, medidos por telescópios"
+     ],
+     [
+      "B",
+      "Júpiter em Touro traz sorte no amor nesta semana"
+     ]
+    ]
+   },
+   "ref": "O texto A é astronomia: usa observações e medidas que podem ser repetidas e testadas. O texto B é astrologia: afirma efeitos sobre a vida das pessoas sem comprovação científica por testes.",
+   "conceitos": [
+    "astronomia usa observação e medidas",
+    "astrologia sem comprovação",
+    "método científico"
+   ]
+  }
+ ]
+}

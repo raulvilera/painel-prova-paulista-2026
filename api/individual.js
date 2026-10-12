@@ -157,7 +157,7 @@ async function montar(turma, nome, gerar) {
   const itens = lin.itens || [], ks = [...new Set(itens.map(i => i.k).filter(k => CAT[k]))];
   const bn = ks.length ? await rest('indiv_banco?select=k,questoes,liberada&k=in.' + inLista(ks)) : [];
   const B = {}, existe = {}; (bn || []).forEach(r => { existe[r.k] = 1; if (r.liberada) B[r.k] = r.questoes; });
-  ks.forEach(k => { if (!existe[k] && BANCO[k]) { existe[k] = 1; B[k] = BANCO[k]; } });   // banco embutido: sem espera, sem IA
+  ks.forEach(k => { if (BANCO[k]) { existe[k] = 1; B[k] = BANCO[k]; } });   // banco embutido (revisado) vale sobre o que a IA gravou antes: sem espera, sem IA
   let falhou = 0;
   if (gerar) {
     const falta = ks.filter(k => !existe[k]);

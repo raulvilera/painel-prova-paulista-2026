@@ -1,0 +1,74 @@
+{
+ "6º ANO|3|Reconhecer os principais componentes celulares (membrana, citoplasma e núcleo).": {
+  "serie": "6",
+  "desc": "Reconhecer os principais componentes celulares (membrana, citoplasma e núcleo).",
+  "hab": "EF06CI05",
+  "habTxt": "Analisar a organização básica da célula como unidade estrutural e funcional de seres uni e pluricelulares (AE5).",
+  "nome": "Célula no saquinho",
+  "concreta": "Cada grupo monta a célula: saquinho = membrana, água com cola = citoplasma, bolinha = núcleo. Depois compara o modelo com imagens de células de cebola e da bochecha ao microscópio, apontando cada parte."
+ },
+ "7º ANO|1|Relacionar o movimento das placas tectônicas à teoria da deriva continental.": {
+  "serie": "7",
+  "desc": "Relacionar o movimento das placas tectônicas à teoria da deriva continental.",
+  "hab": "EF07CI16",
+  "habTxt": "Investigar a deriva continental relacionando o encaixe das costas do Brasil e da África à tectônica de placas (AE1).",
+  "nome": "Quebra-cabeça de Wegener",
+  "concreta": "Recortar América do Sul e África do mapa e encaixá-las; pintar onde aparecem fósseis de Mesosaurus e Glossopteris nos dois continentes e verificar que as áreas se completam."
+ },
+ "8º ANO|1|Comparar os processos reprodutivos das plantas.": {
+  "serie": "8",
+  "desc": "Comparar os processos reprodutivos das plantas.",
+  "hab": "EF08CI07",
+  "habTxt": "Comparar reprodução assexuada e sexuada em vegetais e animais com base em mecanismos evolutivos e adaptativos (AE2).",
+  "nome": "Flor por dentro",
+  "concreta": "Observação de uma flor aberta com lupa (pétalas, estame, pistilo/ovário) e comparação com pinha de pinheiro (semente nua) e tomate (semente dentro do fruto). Um galho é posto na água: reprodução assexuada."
+ },
+ "9º ANO|1|Aplicar as Leis Ponderais em reações químicas.": {
+  "serie": "9",
+  "desc": "Aplicar as Leis Ponderais em reações químicas.",
+  "hab": "EF09CI02",
+  "habTxt": "Analisar transformações químicas e relações entre reagentes e produtos aplicando as leis ponderais (AE4).",
+  "nome": "A massa sumiu?",
+  "concreta": "Pouco bicarbonato vai no balão e o vinagre na garrafa; pesa-se tudo, vira-se o balão e pesa-se de novo: em sistema fechado a massa se conserva (Lavoisier). Repetir aberto mostra perda do gás."
+ },
+ "9º ANO|3|Reconhecer o conceito de pegada ecológica como indicador do impacto das atividades humanas sobre o meio ambiente.": {
+  "serie": "9",
+  "desc": "Reconhecer o conceito de pegada ecológica como indicador do impacto das atividades humanas sobre o meio ambiente.",
+  "hab": "EF09CI13, EF09CI12A, EF09CI12B",
+  "habTxt": "Propor iniciativas para problemas ambientais com consumo consciente e uso sustentável de recursos, considerando UCs e bacias hidrográficas (AE11).",
+  "nome": "Quanto planeta eu uso?",
+  "concreta": "Os alunos respondem questionário simples de hábitos, somam pontos e recortam uma 'pegada' do tamanho correspondente; o professor explica que a pegada estima a área de natureza que cada estilo de vida usa."
+ },
+ "4B|6º ANO|10": {
+  "serie": "6",
+  "desc": "Explicar os mecanismos fisiológicos da audição e do equilíbrio.",
+  "hab": "EF06CI07",
+  "habTxt": "Orelhas externa, média e interna; captação do som e envio ao cérebro; relação do ouvido interno com o equilíbrio.",
+  "nome": "Sentido da audição e equilíbrio",
+  "concreta": "Discussão sobre ouvir música, Pause e responda, prática 'Testando o equilíbrio' (apoio em uma perna), questões escritas e encerramento."
+ },
+ "4B|7º ANO|7": {
+  "serie": "7",
+  "desc": "Investigar e comparar, por meio de modelos, o processo de transmissão de doenças.",
+  "hab": "EF07CI09, EF07CI10B",
+  "habTxt": "Características de vírus e bactérias; surto, epidemia e pandemia; curvas de infectados, recuperados e mortes; medidas de prevenção e papel da OMS.",
+  "nome": "Como as pandemias se espalham?",
+  "concreta": "Estudo de caso com simulador (Simufísica) do vírus fictício NVX-25: análise de gráficos em 4 situações, do início ao fim da pandemia."
+ },
+ "4B|8º ANO|4": {
+  "serie": "8",
+  "desc": "Compreender a importância das energias renováveis, analisando prós e contras de cada fonte.",
+  "hab": "EF08CI01, EF08CI18*",
+  "habTxt": "Fontes renováveis: solar, eólica, hidrelétrica, biomassa, geotérmica e oceânica; vantagens e desvantagens (intermitência, custo, espaço, impacto local).",
+  "nome": "Energias renováveis",
+  "concreta": "Em grupos, planejam um bairro sustentável no interior de SP, escolhem fontes de energia e justificam a escolha em um parágrafo com prós e contras."
+ },
+ "4B|8º ANO|20": {
+  "serie": "8",
+  "desc": "Analisar o consumo de energia elétrica de uma residência por meio de um simulador.",
+  "hab": "EF08CI18*; EF08CI03",
+  "habTxt": "Consumo elétrico por aparelho e por cômodo; tempo de uso; comparação entre uso padrão e uso econômico.",
+  "nome": "Simulador: ações de economia de eletricidade",
+  "concreta": "Uso do simulador do Museu Light para comparar perfis de uso padrão e econômico de uma casa-modelo."
+ }
+}

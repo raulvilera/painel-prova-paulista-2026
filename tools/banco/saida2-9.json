@@ -1,0 +1,2759 @@
+{
+ "6º ANO|3|Reconhecer como o desenvolvimento do microscópio contribuiu para os avanços no conhecimento celular.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro, aluno do 6º ano, pingou uma gota d'água sobre um pedaço de plástico transparente apoiado em uma página de jornal. Ao olhar de cima, ele percebeu que as letras sob a gota pareciam maiores do que as vizinhas.",
+   "comando": "Qual característica da gota explica o que Pedro observou?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de procedimento de Pedro",
+    "etapas": [
+     "Pingar uma gota d'água no plástico",
+     "Apoiar o plástico sobre o jornal",
+     "Olhar as letras através da gota",
+     "Comparar com as letras ao redor"
+    ]
+   },
+   "alts": [
+    "A gota reflete a luz do jornal, como um pequeno espelho",
+    "A gota absorve a tinta e deixa as letras mais grossas",
+    "A curvatura da gota desvia a luz, como uma lente",
+    "A gota aquece o plástico e faz as letras se dilatarem"
+   ],
+   "correta": 2,
+   "explicacao": "A gota curva a luz que passa por ela e funciona como uma lente, o que amplia a imagem. Os outros itens atribuem o efeito a reflexão, absorção ou calor, que não ampliam."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em 1665, o inglês Robert Hooke cortou uma fatia muito fina de cortiça e a examinou com um microscópio de duas lentes. Alguns anos depois, Antonie van Leeuwenhoek pôs gotas de água de lagoa sob uma lente muito potente e descreveu 'animálculos' se movendo.",
+   "comando": "Com base nesses relatos, o que o uso do microscópio permitiu aos cientistas da época?",
+   "figura": null,
+   "alts": [
+    "Ver estruturas e seres pequenos demais para o olho nu",
+    "Fabricar seres vivos minúsculos a partir de água parada",
+    "Provar que só as plantas são formadas por pequenos espaços",
+    "Observar apenas objetos sem vida em tamanho ampliado"
+   ],
+   "correta": 0,
+   "explicacao": "O microscópio revelou um mundo invisível a olho nu, como os compartimentos da cortiça e os seres da água. Os distratores trazem ideias erradas de geração espontânea e de que só plantas teriam essas estruturas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana usou o microscópio da escola para observar uma folha de elódea, planta de aquário. Em um aumento de 40 vezes, ela anotou o que via; depois, trocou a lente para 400 vezes e anotou de novo.",
+   "comando": "Qual conclusão sobre a relação entre aumento do microscópio e conhecimento sobre a célula é coerente com os registros de Ana?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações de Ana",
+    "colunas": [
+     "Aumento",
+     "O que Ana anotou"
+    ],
+    "linhas": [
+     [
+      "40 vezes",
+      "Várias unidades pequenas, lado a lado"
+     ],
+     [
+      "400 vezes",
+      "Pontos verdes dentro de cada unidade"
+     ]
+    ]
+   },
+   "alts": [
+    "Aumentos maiores multiplicam o número de células da folha",
+    "Aumentos menores descrevem melhor as partes internas",
+    "Aumentos maiores modificam a estrutura da célula vista",
+    "Aumentos maiores mostram detalhes que os menores ocultam"
+   ],
+   "correta": 3,
+   "explicacao": "Com maior aumento surgem detalhes internos (pontos verdes) que não aparecem em 40 vezes, ampliando o conhecimento da célula. Os demais itens confundem aumento com número, precisão ou alteração da célula."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na feira de ciências, Júlia tinha de escolher um instrumento para observar uma bactéria de cerca de 0,002 mm. Ela consultou a tabela com o menor tamanho que cada instrumento permite enxergar.",
+   "comando": "Qual escolha e justificativa de Júlia estão corretas?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de menor tamanho visível em cada instrumento",
+    "unidade": "mm",
+    "itens": [
+     {
+      "rotulo": "Olho nu",
+      "valor": 0.1
+     },
+     {
+      "rotulo": "Gota d'água",
+      "valor": 0.03
+     },
+     {
+      "rotulo": "Lupa de mão",
+      "valor": 0.01
+     },
+     {
+      "rotulo": "Microscópio escolar",
+      "valor": 0.0002
+     }
+    ]
+   },
+   "alts": [
+    "A lupa de mão, pois o valor 0,01 mm indica maior poder de ampliação",
+    "O microscópio, pois seu limite de 0,0002 mm é menor que a bactéria",
+    "A gota d'água, pois o valor 0,03 mm é o mais próximo do da bactéria",
+    "O olho nu, pois o valor 0,1 mm é o maior entre os instrumentos"
+   ],
+   "correta": 1,
+   "explicacao": "Só o microscópio distingue estruturas menores que 0,002 mm. Os distratores leem a tabela ao contrário ou escolhem pelo valor numérico, sem comparar com o tamanho da bactéria."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em aula sobre a história da célula, a professora mostrou o que cada pesquisador viu e em que material. Marcos comentou: 'Hooke só viu caixinhas vazias, então isso não prova nada sobre os seres vivos'.",
+   "comando": "Qual análise mostra como a evolução do microscópio contribuiu para a ideia de célula como unidade dos seres vivos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações históricas",
+    "colunas": [
+     "Pesquisador",
+     "Material",
+     "O que descreveu"
+    ],
+    "linhas": [
+     [
+      "Hooke (1665)",
+      "Cortiça",
+      "Compartimentos vazios, em fileiras"
+     ],
+     [
+      "Leeuwenhoek (c. 1675)",
+      "Água de lagoa",
+      "Seres minúsculos em movimento"
+     ],
+     [
+      "Schleiden (1838)",
+      "Tecidos de plantas",
+      "Compartimentos com conteúdo interno"
+     ],
+     [
+      "Schwann (1839)",
+      "Tecidos de animais",
+      "Compartimentos com conteúdo interno"
+     ]
+    ]
+   },
+   "alts": [
+    "Hooke já provou que os seres vivos têm células, e os demais só repetiram",
+    "Cada pesquisador viu estruturas sem relação entre si em cada material",
+    "Lentes melhores mostraram o conteúdo interno em seres diversos",
+    "Os animálculos de Leeuwenhoek eram células mortas de plantas ampliadas"
+   ],
+   "correta": 2,
+   "explicacao": "Com lentes melhores, viu-se conteúdo interno em tecidos de plantas e animais, sustentando a célula como unidade comum. Os distratores ignoram a evolução do instrumento ou misturam as observações."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Maria pingou uma gota d'água sobre plástico transparente colocado em cima de um jornal e notou que as letras sob a gota ficaram maiores.",
+   "comando": "Explique por que as letras parecem maiores através da gota e qual instrumento científico funciona com princípio parecido.",
+   "figura": null,
+   "ref": "A gota tem superfície curva e desvia a luz como uma lente, formando uma imagem ampliada das letras. O microscópio (e a lupa) usa lentes de modo parecido para ampliar o que é pequeno.",
+   "conceitos": [
+    "gota funciona como lente",
+    "desvio da luz",
+    "ampliação da imagem",
+    "microscópio usa lentes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em 1665, Robert Hooke observou uma fatia fina de cortiça em microscópio e viu pequenos compartimentos enfileirados.",
+   "comando": "Explique o que Hooke observou, que nome deu a essas estruturas e por que não poderia tê-las visto sem o microscópio.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de trabalho de Hooke",
+    "etapas": [
+     "Cortar fatia muito fina de cortiça",
+     "Colocá-la sob o microscópio de duas lentes",
+     "Observar pequenos compartimentos em fileiras",
+     "Desenhar e nomear as estruturas"
+    ]
+   },
+   "ref": "Hooke viu pequenos compartimentos e os chamou de células. Eles são pequenos demais para o olho nu; só a ampliação das lentes do microscópio permitiu enxergá-los.",
+   "conceitos": [
+    "células da cortiça",
+    "estruturas muito pequenas",
+    "ampliação pelo microscópio"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lucas colheu água de uma poça do quintal e a observou ao microscópio, vendo seres minúsculos se movendo. O colega Davi disse: 'A água é só líquido, esses bichinhos não existem de verdade'.",
+   "comando": "Use o que você sabe sobre o microscópio para responder a Davi.",
+   "figura": null,
+   "ref": "O microscópio amplia o que o olho nu não vê e mostrou que a água contém seres vivos minúsculos, que já existiam e eram invisíveis sem o instrumento. Assim, a observação contradiz a ideia de Davi.",
+   "conceitos": [
+    "microscópio amplia",
+    "seres vivos invisíveis a olho nu",
+    "observação como evidência"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao observar a mesma lâmina de cebola, Rita anotou o que viu em dois aumentos.",
+   "comando": "Compare os registros e justifique qual aumento ela deve usar para estudar as partes internas das células.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações de Rita",
+    "colunas": [
+     "Aumento",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "40 vezes",
+      "Muitos retângulos juntos, sem detalhes"
+     ],
+     [
+      "400 vezes",
+      "Retângulos com ponto escuro no centro"
+     ]
+    ]
+   },
+   "ref": "Ela deve usar o aumento de 400 vezes, pois ele mostra detalhes internos, como o ponto escuro (núcleo), que não aparecem em 40 vezes. O menor aumento só mostra o conjunto de células.",
+   "conceitos": [
+    "maior aumento revela detalhes",
+    "estruturas internas da célula",
+    "menor aumento mostra conjunto"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A professora apresentou a sequência de marcos abaixo e perguntou como a ideia de que todos os seres vivos são feitos de células surgiu.",
+   "comando": "Justifique por que o desenvolvimento do microscópio foi essencial para essa ideia.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de marcos da história da célula",
+    "etapas": [
+     "1665: Hooke descreve compartimentos na cortiça",
+     "1675: Leeuwenhoek vê seres em água de lagoa",
+     "1838: Schleiden examina tecidos de plantas",
+     "1839: Schwann examina tecidos de animais"
+    ]
+   },
+   "ref": "Sem o microscópio ninguém veria as células. Com lentes melhores, foram observadas estruturas semelhantes em materiais diversos, em plantas, animais e seres da água, o que levou à ideia de que a célula é a unidade básica dos seres vivos.",
+   "conceitos": [
+    "microscópio torna células visíveis",
+    "observações em vários seres",
+    "célula como unidade dos seres vivos"
+   ]
+  }
+ ],
+ "7º ANO|2|Reconhecer o conceito de sustentabilidade e sua aplicação nas ações humanas e políticas ambientais.": [
+  {
+   "tipo": "obj",
+   "enunciado": "A prefeitura de uma cidade paulista criou um programa de coleta seletiva. Em seis meses, o lixo enviado ao aterro caiu, 24 catadores passaram a ter renda fixa e a venda dos recicláveis gerou receita para a cooperativa.",
+   "comando": "Por que o programa pode ser considerado sustentável?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de programa de coleta seletiva",
+    "colunas": [
+     "Indicador",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Lixo no aterro (t/mês)",
+      "100",
+      "70"
+     ],
+     [
+      "Catadores com renda fixa",
+      "0",
+      "24"
+     ],
+     [
+      "Receita da cooperativa (R$/mês)",
+      "0",
+      "18 mil"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque reduz o lixo, gera renda e poupa recursos futuros",
+    "Porque a venda dos recicláveis gerou receita para a cooperativa",
+    "Porque a queda do lixo no aterro garante o equilíbrio ambiental",
+    "Porque a renda dos catadores resolve a questão social da cidade"
+   ],
+   "correta": 0,
+   "explicacao": "Sustentabilidade integra o ambiental, o social e o econômico, atendendo ao presente sem comprometer o futuro. Os distratores consideram só uma dimensão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rita montou um tripé com três lápis presos por elástico, representando as dimensões ambiental, social e econômica. Depois, leu o cartão de uma fábrica de calçados: emprega 300 famílias e lucra todo ano, mas lança efluente sem tratamento no córrego do bairro.",
+   "comando": "Qual perna do tripé está faltando nessa fábrica, e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fábrica de calçados",
+    "colunas": [
+     "Indicador",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Famílias empregadas",
+      "300"
+     ],
+     [
+      "Resultado financeiro anual",
+      "Lucro"
+     ],
+     [
+      "Efluente lançado no córrego",
+      "40 mil L/dia sem tratamento"
+     ]
+    ]
+   },
+   "alts": [
+    "A econômica, pois o lucro anual ainda não é alto o bastante",
+    "A social, pois os 300 empregos não melhoram a vida das famílias",
+    "A fábrica atende ao tripé, pois emprego e lucro compensam o dano",
+    "A ambiental, pois o efluente degrada o córrego e o uso da água"
+   ],
+   "correta": 3,
+   "explicacao": "Falta a dimensão ambiental: o efluente degrada o córrego. Os distratores ignoram os dados ou acham que lucro e emprego compensam o dano."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na atividade dos cartões, a turma do 7º ano precisava escolher qual ação sustenta as três pernas do tripé: ambiental, social e econômica.",
+   "comando": "Qual ação atende às três dimensões da sustentabilidade?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de cartões da atividade",
+    "colunas": [
+     "Ação",
+     "Ambiente",
+     "Pessoas",
+     "Dinheiro"
+    ],
+    "linhas": [
+     [
+      "Horta com agrotóxico em excesso",
+      "Solo contaminado",
+      "Alimento barato",
+      "Boa venda"
+     ],
+     [
+      "Plantio sem manutenção",
+      "Mudas morrem",
+      "Sem emprego",
+      "Sem retorno"
+     ],
+     [
+      "Cooperativa de reciclagem",
+      "8 t de lixo reaproveitadas/mês",
+      "12 pessoas com renda",
+      "Contratos de venda"
+     ]
+    ]
+   },
+   "alts": [
+    "A horta com agrotóxico, pois vende bem e o alimento é barato",
+    "A cooperativa, que reaproveita lixo e gera renda",
+    "O plantio sem manutenção, pois árvores ajudam o ambiente local",
+    "A horta, pois o solo contaminado ainda produz alimento barato"
+   ],
+   "correta": 1,
+   "explicacao": "A cooperativa reduz resíduos, gera renda e tem retorno econômico. Os demais priorizam uma só dimensão ou não se sustentam."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma cidade paulista proibiu as sacolas plásticas descartáveis nos mercados e distribuiu sacolas reutilizáveis a famílias de baixa renda. A prefeitura acompanhou o número de sacolas descartáveis distribuídas.",
+   "comando": "Que interpretação dos dados relaciona a política às ações sustentáveis?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de sacolas descartáveis distribuídas por ano",
+    "unidade": "mil unidades",
+    "itens": [
+     {
+      "rotulo": "2020",
+      "valor": 1200
+     },
+     {
+      "rotulo": "2021",
+      "valor": 800
+     },
+     {
+      "rotulo": "2022",
+      "valor": 300
+     }
+    ]
+   },
+   "alts": [
+    "A queda mostra que as famílias consomem menos por falta de renda",
+    "A queda resolve o plástico, que deixa de existir no ambiente",
+    "A queda indica menos recursos usados hoje e mais no futuro",
+    "A queda é prejudicial, pois reduz a atividade econômica local"
+   ],
+   "correta": 2,
+   "explicacao": "A redução do consumo preserva recursos e inclui as famílias (dimensão social). Os distratores trocam causa por efeito ou generalizam o resultado."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma cidade construiu uma usina hidrelétrica que gera energia barata para a indústria local. Para isso, alagou áreas de mata e comunidades ribeirinhas, sem reassentamento adequado das famílias.",
+   "comando": "Por que a obra é questionada quanto à sustentabilidade, apesar do ganho econômico?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de obra da hidrelétrica",
+    "colunas": [
+     "Indicador",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Energia gerada (MW)",
+      "300"
+     ],
+     [
+      "Famílias deslocadas",
+      "450"
+     ],
+     [
+      "Mata alagada (ha)",
+      "1.800"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque o benefício econômico só vale se for de curto prazo",
+    "Porque energia barata prejudica a economia da região",
+    "Porque o ganho econômico veio com perdas sociais e ambientais",
+    "Porque só o impacto ambiental importa, e o social é secundário"
+   ],
+   "correta": 2,
+   "explicacao": "Sustentabilidade exige equilíbrio entre as dimensões; aqui o ganho econômico custou perdas sociais e ambientais. Os distratores trocam o critério ou desvalorizam uma dimensão."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na horta da escola, os alunos usam restos de comida do refeitório como adubo e servem a alface colhida na merenda.",
+   "comando": "Explique, com base nessa situação, o que é desenvolvimento sustentável.",
+   "figura": null,
+   "ref": "Desenvolvimento sustentável é atender às necessidades de hoje sem comprometer as das próximas gerações. Na horta, os restos viram adubo, reduzem o lixo e produzem alimento para a escola, sem esgotar os recursos.",
+   "conceitos": [
+    "atender o presente sem comprometer o futuro",
+    "reaproveitamento de resíduos",
+    "uso consciente de recursos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Moradores de um bairro jogam lixo no córrego. Em dias de chuva forte, ele entope e a água invade as casas da rua mais baixa.",
+   "comando": "Identifique as dimensões do tripé afetadas e explique como o lixo prejudica cada uma.",
+   "figura": null,
+   "ref": "Afeta a ambiental, pois o córrego fica poluído, e a social, pois as famílias sofrem alagamentos e riscos à saúde. Também afeta a econômica, pelas perdas materiais e pelo custo da limpeza.",
+   "conceitos": [
+    "dimensão ambiental",
+    "dimensão social",
+    "dimensão econômica",
+    "consequências do lixo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas cooperativas apresentaram seus dados à prefeitura, que quer apoiar a mais sustentável.",
+   "comando": "Indique qual cooperativa a prefeitura deve apoiar e justifique usando o tripé da sustentabilidade.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de cooperativas",
+    "colunas": [
+     "Indicador",
+     "Cooperativa A",
+     "Cooperativa B"
+    ],
+    "linhas": [
+     [
+      "Material reciclado (t/mês)",
+      "10",
+      "12"
+     ],
+     [
+      "Pessoas com renda fixa",
+      "15",
+      "3"
+     ],
+     [
+      "Lucro mensal",
+      "Positivo",
+      "Positivo"
+     ],
+     [
+      "Resíduos descartados no córrego",
+      "Nenhum",
+      "Parte do material"
+     ]
+    ]
+   },
+   "ref": "A prefeitura deve apoiar a Cooperativa A: ela recicla, dá renda a mais pessoas, tem lucro e não polui o córrego. A B recicla mais, mas gera poluição e menos renda, o que fere as dimensões ambiental e social.",
+   "conceitos": [
+    "tripé ambiental, social e econômico",
+    "comparação de dados",
+    "equilíbrio entre as dimensões"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A prefeitura propõe pavimentar a margem do córrego do bairro para criar um estacionamento. O comércio local apoia, mas ambientalistas se opõem.",
+   "comando": "Analise a proposta com base nas dimensões da sustentabilidade e diga se ela é sustentável.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de proposta do estacionamento",
+    "colunas": [
+     "Item",
+     "Situação prevista"
+    ],
+    "linhas": [
+     [
+      "Vagas criadas",
+      "80"
+     ],
+     [
+      "Vegetação da margem removida (m²)",
+      "2.500"
+     ],
+     [
+      "Solo da margem",
+      "Impermeabilizado"
+     ]
+    ]
+   },
+   "ref": "Não é sustentável. Há ganho econômico e de mobilidade, mas a remoção da vegetação e a impermeabilização aumentam enchentes e prejudicam o córrego e os moradores. Falta equilíbrio entre as dimensões.",
+   "conceitos": [
+    "análise por dimensões",
+    "impermeabilização e enchentes",
+    "equilíbrio entre benefícios e prejuízos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola tem um terreno livre e duas propostas: um estacionamento para pais e funcionários ou uma horta com composteira que abasteça a merenda e envolva a comunidade.",
+   "comando": "Justifique qual proposta é mais sustentável, relacionando-a às ações humanas e às políticas ambientais.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de propostas para o terreno",
+    "colunas": [
+     "Item",
+     "Estacionamento",
+     "Horta com composteira"
+    ],
+    "linhas": [
+     [
+      "Área impermeabilizada",
+      "Toda",
+      "Pequena"
+     ],
+     [
+      "Resíduos reaproveitados",
+      "Nenhum",
+      "Restos do refeitório"
+     ],
+     [
+      "Participação da comunidade",
+      "Baixa",
+      "Alta"
+     ],
+     [
+      "Custo de manutenção",
+      "Médio",
+      "Baixo"
+     ]
+    ]
+   },
+   "ref": "A horta com composteira é mais sustentável: reaproveita resíduos, mantém o solo permeável, envolve a comunidade e barateia a merenda. O estacionamento só atende a uma necessidade imediata e prejudica o ambiente.",
+   "conceitos": [
+    "horta e composteira",
+    "uso consciente de recursos",
+    "dimensões social, ambiental e econômica"
+   ]
+  }
+ ],
+ "8º ANO|1|Associar as principais ISTs (HPV, Sífilis, HIV/Aids) aos seus sintomas, formas de transmissão e métodos de prevenção.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na dinâmica 'Mito ou verdade?', a professora do 8º ano leu o cartão: 'O HIV passa por abraço ou por talher usado por alguém com o vírus'. A turma discutiu cada situação citada.",
+   "comando": "Como o cartão deve ser classificado?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de situações do cartão",
+    "colunas": [
+     "Situação",
+     "Tipo de contato"
+    ],
+    "linhas": [
+     [
+      "Abraço",
+      "Pele íntegra com pele íntegra"
+     ],
+     [
+      "Compartilhar talheres",
+      "Saliva em objeto de uso comum"
+     ],
+     [
+      "Sexo sem preservativo",
+      "Contato com fluidos sexuais"
+     ]
+    ]
+   },
+   "alts": [
+    "Falso: o vírus passa pelo ar quando duas pessoas conversam",
+    "Verdadeiro: o vírus passa por qualquer contato com a pele",
+    "Falso: o vírus não passa por abraço nem por talher",
+    "Verdadeiro: o vírus passa por objetos usados por infectados"
+   ],
+   "correta": 2,
+   "explicacao": "O HIV não é transmitido por abraço ou talher; passa por sangue, sexo sem preservativo e da mãe para o bebê. Os distratores mantêm mitos de contágio casual."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana, de 13 anos, foi à UBS com a mãe depois de ouvir na escola sobre verrugas genitais e câncer de colo do útero. A enfermeira explicou que existe uma vacina gratuita contra o HPV.",
+   "comando": "O que a vacina contra o HPV oferecida pelo SUS faz?",
+   "figura": null,
+   "alts": [
+    "Previne a infecção por tipos de HPV ligados a câncer",
+    "Cura quem já tem verrugas e outras lesões causadas pelo HPV",
+    "Protege contra a gravidez e contra várias outras ISTs",
+    "Substitui o uso do preservativo nas relações sexuais"
+   ],
+   "correta": 0,
+   "explicacao": "A vacina previne a infecção pelos tipos de HPV que causam verrugas e alguns cânceres, mas não trata nem protege contra outras ISTs ou gravidez. Os distratores exageram sua ação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Joana, de 22 anos, está grávida e fez o teste rápido de sífilis no pré-natal na UBS. O resultado foi positivo. Ela contou que, meses antes, teve uma ferida indolor que sumiu sozinha.",
+   "comando": "Qual orientação da UBS é correta para Joana?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fases da sífilis, segundo a UBS",
+    "colunas": [
+     "Fase",
+     "Sinais"
+    ],
+    "linhas": [
+     [
+      "Primária",
+      "Ferida indolor que some em semanas"
+     ],
+     [
+      "Secundária",
+      "Manchas na pele, incluindo palmas e plantas"
+     ],
+     [
+      "Latente",
+      "Sem sinais, mas a bactéria segue no corpo"
+     ]
+    ]
+   },
+   "alts": [
+    "Aguardar, pois os sinais da doença já sumiram sozinhos",
+    "Tomar antiviral, pois a sífilis é causada por vírus",
+    "Tomar vacina, pois ela protege o bebê na gravidez",
+    "Tratar com antibiótico para evitar passar ao bebê"
+   ],
+   "correta": 3,
+   "explicacao": "Sífilis é causada por bactéria e tratada com antibiótico (penicilina); tratar evita a transmissão ao bebê. Os distratores confundem sumiço dos sinais com cura, bactéria com vírus e tratamento com vacina."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marcos e Bia, ambos de 16 anos, estão namorando e conversaram na UBS sobre como evitar ao mesmo tempo uma gravidez e uma IST. O folheto da unidade trazia o quadro abaixo.",
+   "comando": "Qual escolha atende ao que eles querem?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de folheto da UBS",
+    "colunas": [
+     "Método",
+     "Evita gravidez",
+     "Evita IST"
+    ],
+    "linhas": [
+     [
+      "Pílula",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Preservativo",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "DIU",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Vacina HPV",
+      "Não",
+      "Só HPV"
+     ]
+    ]
+   },
+   "alts": [
+    "Usar a pílula, pois ela impede também a transmissão das ISTs",
+    "Usar o preservativo em toda relação sexual, do início ao fim",
+    "Usar o DIU, pois ele também protege contra várias ISTs",
+    "Tomar a vacina do HPV, pois ela também evita gravidez"
+   ],
+   "correta": 1,
+   "explicacao": "Só o preservativo reduz o risco de gravidez e de várias ISTs ao mesmo tempo. Os outros métodos protegem de apenas um dos riscos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma campanha da UBS do bairro, foram feitos testes rápidos em 200 pessoas. Um aluno afirmou: 'Se a pessoa não tem sintoma, ela não tem IST e não transmite'. A enfermeira pediu que a turma analisasse os dados.",
+   "comando": "O que os dados do quadro permitem concluir?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de campanha de testagem",
+    "colunas": [
+     "Grupo",
+     "Pessoas"
+    ],
+    "linhas": [
+     [
+      "Testadas",
+      "200"
+     ],
+     [
+      "Resultado positivo",
+      "30"
+     ],
+     [
+      "Positivas com sintomas",
+      "12"
+     ],
+     [
+      "Positivas sem sintomas",
+      "18"
+     ]
+    ]
+   },
+   "alts": [
+    "Há infecções sem sintomas, por isso o teste é útil",
+    "Os sintomas bastam para saber se alguém está infectado",
+    "A maioria dos testes positivos ocorreu em quem tinha sintomas",
+    "O teste detecta a IST depois que os sintomas surgem"
+   ],
+   "correta": 0,
+   "explicacao": "Dos 30 positivos, 18 não tinham sintomas; assim, quem não sente nada pode estar infectado e transmitir. Os distratores contradizem os dados."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na dinâmica 'Mito ou verdade?', o cartão dizia: 'A vacina do HPV é gratuita no SUS'. A turma votou 'verdade'.",
+   "comando": "Explique por que o cartão é verdadeiro e o que a vacina previne.",
+   "figura": null,
+   "ref": "É verdadeiro: o SUS oferece a vacina gratuitamente, em geral para meninas e meninos de 9 a 14 anos. Ela previne infecção por tipos de HPV que causam verrugas genitais e alguns cânceres, como o de colo do útero.",
+   "conceitos": [
+    "vacina gratuita no SUS",
+    "prevenção do HPV",
+    "verrugas e câncer de colo do útero"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na caixa anônima da sala, um aluno perguntou: 'Dá para pegar HIV na piscina, em abraço ou compartilhando copo?'",
+   "comando": "Responda à pergunta citando as formas pelas quais o HIV é, de fato, transmitido.",
+   "figura": null,
+   "ref": "Não, o HIV não passa por piscina, abraço ou copo. Ele é transmitido por relação sexual sem preservativo, por sangue contaminado (como o compartilhamento de seringas) e da mãe para o bebê na gestação, no parto ou na amamentação.",
+   "conceitos": [
+    "não há transmissão em contato social",
+    "relação sexual sem preservativo",
+    "sangue contaminado",
+    "transmissão mãe-bebê"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Carla, grávida, recebeu diagnóstico de sífilis na UBS no primeiro trimestre. Ela tinha ouvido falar que 'sífilis cura sozinha'.",
+   "comando": "Explique o que a UBS orienta sobre o tratamento e a importância do pré-natal nesse caso.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de acompanhamento de Carla",
+    "colunas": [
+     "Etapa",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Teste rápido no pré-natal",
+      "Positivo"
+     ],
+     [
+      "Tratamento com penicilina",
+      "A iniciar"
+     ],
+     [
+      "Parceiro",
+      "A testar e tratar"
+     ]
+    ]
+   },
+   "ref": "A sífilis é bactéria e precisa de antibiótico (penicilina), pois não cura sozinha. O tratamento de Carla e do parceiro, com o pré-natal, evita a transmissão ao bebê e complicações graves.",
+   "conceitos": [
+    "causada por bactéria",
+    "tratamento com antibiótico",
+    "transmissão para o bebê",
+    "pré-natal e teste"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas amigas conversam: Lia viu uma ferida indolor na região íntima que sumiu em três semanas e diz que está curada. Bia diz que ela deve procurar a UBS.",
+   "comando": "Analise a situação e justifique quem tem razão.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de caso de Lia",
+    "etapas": [
+     "Dia 0: ferida indolor na região íntima",
+     "Dia 21: a ferida some sozinha",
+     "Dia 70: manchas no corpo e nas palmas"
+    ]
+   },
+   "ref": "Bia tem razão. O sumiço da ferida não significa cura: na sífilis a bactéria continua no corpo e surgem outros sinais, como manchas. Só o teste e o tratamento com antibiótico curam.",
+   "conceitos": [
+    "sinais podem desaparecer sem cura",
+    "fases da sífilis",
+    "teste e tratamento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola fez uma campanha com palestra, distribuição de preservativos e testes rápidos. Um colega disse que só a palestra já bastaria.",
+   "comando": "Justifique por que as três ações juntas protegem melhor a saúde dos estudantes.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de participação na campanha",
+    "unidade": "pessoas",
+    "itens": [
+     {
+      "rotulo": "Palestra",
+      "valor": 120
+     },
+     {
+      "rotulo": "Preservativos retirados",
+      "valor": 80
+     },
+     {
+      "rotulo": "Testes rápidos",
+      "valor": 45
+     }
+    ]
+   },
+   "ref": "A palestra informa e desfaz mitos, o preservativo previne a transmissão e o teste identifica infecções sem sintomas para tratamento. Uma ação só não cobre informação, prevenção e diagnóstico.",
+   "conceitos": [
+    "informação e combate a mitos",
+    "prevenção com preservativo",
+    "testagem e tratamento"
+   ]
+  }
+ ],
+ "9º ANO|3|Relacionar evidências fósseis à ideia de ancestralidade comum proposta pela teoria da evolução.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Lia montou um pote com camadas de terra e areia, colocando uma concha diferente em cada camada, de baixo para cima, à medida que despejava o material. Em um barranco de estrada no interior de São Paulo, ela viu um perfil parecido, com três camadas e fósseis de conchas.",
+   "comando": "Que interpretação sobre a idade dos fósseis do barranco é coerente com o pote de Lia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de barranco",
+    "colunas": [
+     "Camada",
+     "Profundidade",
+     "Fóssil encontrado"
+    ],
+    "linhas": [
+     [
+      "A",
+      "0,5 m",
+      "Concha parecida com as atuais"
+     ],
+     [
+      "B",
+      "1,5 m",
+      "Concha menor, com poucas estrias"
+     ],
+     [
+      "C",
+      "3,0 m",
+      "Concha pequena e muito simples"
+     ]
+    ]
+   },
+   "alts": [
+    "Os fósseis das camadas mais fundas costumam ser mais antigos",
+    "Os fósseis das camadas mais fundas costumam ser mais novos",
+    "Os fósseis das três camadas têm idades quase iguais",
+    "Os fósseis maiores são mais antigos, qualquer que seja a camada"
+   ],
+   "correta": 0,
+   "explicacao": "Em geral, as camadas mais profundas foram depositadas antes e guardam fósseis mais antigos. Os distratores invertem a ordem, ignoram as camadas ou usam o tamanho como critério."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em museus, paleontólogos expõem fósseis de ancestrais das baleias que viveram há milhões de anos. Os mais antigos tinham quatro patas longas e viviam perto da água; nos mais recentes, as patas ficam cada vez menores.",
+   "comando": "O que a sequência de fósseis indica sobre a origem das baleias atuais?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fósseis de ancestrais das baleias",
+    "colunas": [
+     "Fóssil",
+     "Idade (milhões de anos)",
+     "Patas traseiras"
+    ],
+    "linhas": [
+     [
+      "Pakicetus",
+      "50",
+      "Longas, para andar"
+     ],
+     [
+      "Ambulocetus",
+      "49",
+      "Longas, para andar e nadar"
+     ],
+     [
+      "Rodhocetus",
+      "47",
+      "Curtas"
+     ],
+     [
+      "Basilosaurus",
+      "40",
+      "Muito reduzidas"
+     ],
+     [
+      "Baleia atual",
+      "0",
+      "Sem patas externas"
+     ]
+    ]
+   },
+   "alts": [
+    "As baleias perderam as patas porque deixaram de usá-las em vida",
+    "Cada fóssil mostra uma espécie sem ligação com as outras",
+    "As baleias descendem de ancestrais com patas que mudaram",
+    "As baleias são peixes que ganharam e perderam patas"
+   ],
+   "correta": 2,
+   "explicacao": "A sequência mostra mudanças graduais a partir de ancestrais com patas, evidenciando ancestralidade comum. Os distratores trazem a ideia errada de uso e desuso, de espécies independentes e de confundir baleias com peixes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, o professor mostrou o fóssil do Archaeopteryx, achado em rochas de 150 milhões de anos. O animal tinha penas e asas, mas também dentes e uma cauda longa com ossos, características de dinossauros.",
+   "comando": "Como esse fóssil se relaciona à ideia de ancestralidade comum?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fóssil de Archaeopteryx",
+    "colunas": [
+     "Característica",
+     "Presente?"
+    ],
+    "linhas": [
+     [
+      "Penas",
+      "Sim"
+     ],
+     [
+      "Asas",
+      "Sim"
+     ],
+     [
+      "Dentes",
+      "Sim"
+     ],
+     [
+      "Cauda longa com ossos",
+      "Sim"
+     ]
+    ]
+   },
+   "alts": [
+    "Mostra que as aves surgiram prontas e sem relação com outros grupos",
+    "Mostra que os dinossauros se transformaram em aves em uma geração",
+    "Mostra que as penas surgiram para que o animal pudesse voar",
+    "Mostra traços de aves e de dinossauros, indicando parentesco"
+   ],
+   "correta": 3,
+   "explicacao": "O fóssil combina características de aves e de dinossauros, sustentando um ancestral comum. Os distratores sugerem criação independente, mudança súbita ou finalidade nas penas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma equipe encontrou o fóssil de Tiktaalik, de 375 milhões de anos, em rochas do Canadá. O animal tinha escamas e nadadeiras, mas também pescoço móvel e ossos nas nadadeiras parecidos com os do braço de animais terrestres.",
+   "comando": "Por que o Tiktaalik é considerado uma evidência de parentesco entre peixes e animais de quatro patas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de características do Tiktaalik",
+    "colunas": [
+     "Característica",
+     "Peixes",
+     "Anfíbios",
+     "Tiktaalik"
+    ],
+    "linhas": [
+     [
+      "Escamas",
+      "Sim",
+      "Não",
+      "Sim"
+     ],
+     [
+      "Nadadeiras",
+      "Sim",
+      "Não",
+      "Sim"
+     ],
+     [
+      "Pescoço móvel",
+      "Não",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Ossos tipo braço",
+      "Não",
+      "Sim",
+      "Sim"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque ele vivia na água e depois se tornou um anfíbio",
+    "Porque tem traços intermediários entre os dois grupos",
+    "Porque ele mostra que os anfíbios surgiram antes dos peixes",
+    "Porque é o ancestral direto de muitos animais atuais"
+   ],
+   "correta": 1,
+   "explicacao": "O fóssil reúne características de peixes e de tetrápodes, o que indica ancestral em comum. Os distratores invertem a ordem, simplificam a transformação ou o tornam ancestral de todos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um debate, o aluno Caio disse: 'Faltam fósseis de algumas etapas da evolução das baleias, então a ideia de ancestral comum não vale'. A turma analisou o registro fóssil conhecido.",
+   "comando": "Qual resposta analisa corretamente o argumento de Caio?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fósseis conhecidos das baleias",
+    "colunas": [
+     "Idade (milhões de anos)",
+     "Fóssil encontrado"
+    ],
+    "linhas": [
+     [
+      "50",
+      "Pakicetus"
+     ],
+     [
+      "49",
+      "Ambulocetus"
+     ],
+     [
+      "47",
+      "Rodhocetus"
+     ],
+     [
+      "45",
+      "Sem registro"
+     ],
+     [
+      "40",
+      "Basilosaurus"
+     ]
+    ]
+   },
+   "alts": [
+    "Fósseis são raros, mas os achados seguem a ordem das camadas",
+    "Como há uma lacuna, os fósseis conhecidos não têm valor",
+    "As lacunas provam que as baleias surgiram sem ancestrais",
+    "A idade dos fósseis prova a evolução, mas não as formas"
+   ],
+   "correta": 0,
+   "explicacao": "Poucos organismos fossilizam, então lacunas são esperadas, e os fósseis achados seguem a ordem temporal. Os distratores generalizam a falta de uma etapa ou desprezam as formas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lia montou um pote com camadas de terra e areia, colocando uma concha em cada camada, de baixo para cima, e depois olhou o pote de lado.",
+   "comando": "Explique por que a concha da camada de baixo representa um fóssil mais antigo.",
+   "figura": null,
+   "ref": "As camadas se depositam umas sobre as outras: a de baixo é formada primeiro e a de cima depois. Assim, os fósseis das camadas mais fundas, em geral, são mais antigos.",
+   "conceitos": [
+    "deposição em camadas",
+    "camada inferior é mais antiga",
+    "datação relativa de fósseis"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Zeca encontrou, em um barranco no interior paulista, uma pedra com a marca de uma folha antiga e mostrou à professora.",
+   "comando": "Explique o que é um fóssil e como ele ajuda a conhecer a história dos seres vivos.",
+   "figura": null,
+   "ref": "Fóssil é um vestígio ou marca de um ser vivo do passado preservado em rocha. Ele mostra que seres diferentes viveram em outras épocas, permitindo comparar formas antigas e atuais.",
+   "conceitos": [
+    "fóssil como vestígio",
+    "seres do passado",
+    "comparação entre formas antigas e atuais"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A turma observou a tabela de fósseis de ancestrais das baleias, com patas cada vez menores nos mais recentes.",
+   "comando": "Explique como essa sequência de fósseis sustenta a ideia de ancestral comum entre baleias e mamíferos terrestres.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fósseis de ancestrais das baleias",
+    "colunas": [
+     "Fóssil",
+     "Idade (milhões de anos)",
+     "Habitat",
+     "Patas traseiras"
+    ],
+    "linhas": [
+     [
+      "Pakicetus",
+      "50",
+      "Perto da água",
+      "Longas"
+     ],
+     [
+      "Ambulocetus",
+      "49",
+      "Água e margem",
+      "Longas"
+     ],
+     [
+      "Rodhocetus",
+      "47",
+      "Quase só na água",
+      "Curtas"
+     ],
+     [
+      "Basilosaurus",
+      "40",
+      "Mar",
+      "Muito reduzidas"
+     ]
+    ]
+   },
+   "ref": "Os fósseis mostram mudanças graduais ao longo do tempo: ancestrais com patas, que viviam perto da água, deram origem a formas cada vez mais aquáticas e com patas reduzidas. Isso indica que as baleias descendem de mamíferos terrestres.",
+   "conceitos": [
+    "sequência no tempo",
+    "mudanças graduais",
+    "ancestral comum com mamíferos terrestres"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um grupo de alunos comparou um fóssil de ave primitiva, com dentes e cauda óssea, com uma ave atual, sem dentes e com cauda curta.",
+   "comando": "Relacione as semelhanças e diferenças ao parentesco entre aves e répteis.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de comparação entre ave primitiva e ave atual",
+    "colunas": [
+     "Característica",
+     "Ave primitiva",
+     "Ave atual"
+    ],
+    "linhas": [
+     [
+      "Penas",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Dentes",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Cauda longa com ossos",
+      "Sim",
+      "Não"
+     ],
+     [
+      "Asas",
+      "Sim",
+      "Sim"
+     ]
+    ]
+   },
+   "ref": "A ave primitiva tem dentes e cauda óssea, como os répteis, e penas e asas, como as aves. Isso indica que aves e répteis têm ancestral comum e que, com o tempo, características como dentes e cauda longa se perderam nas aves atuais.",
+   "conceitos": [
+    "características mistas",
+    "ancestral comum de aves e répteis",
+    "mudanças ao longo do tempo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um colega afirmou: 'A evolução é só uma teoria, não tem provas'. A professora pediu que você usasse os fósseis para responder.",
+   "comando": "Justifique, com base nos fósseis, por que a ideia de evolução é sustentada por evidências científicas.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de evidências fósseis apresentadas",
+    "etapas": [
+     "Camadas mais fundas têm fósseis mais antigos",
+     "Ancestrais das baleias têm patas que diminuem no tempo",
+     "Tiktaalik reúne traços de peixes e de anfíbios",
+     "Archaeopteryx reúne traços de dinossauros e de aves"
+    ]
+   },
+   "ref": "Em ciência, teoria é uma explicação sustentada por muitas evidências. Os fósseis, ordenados por idade, mostram formas intermediárias e mudanças graduais, como as das baleias, do Tiktaalik e do Archaeopteryx, o que sustenta o ancestral comum.",
+   "conceitos": [
+    "teoria científica",
+    "fósseis em ordem de idade",
+    "formas intermediárias",
+    "ancestral comum"
+   ]
+  }
+ ],
+ "9º ANO|3|Analisar os impactos das ações humanas sobre a biodiversidade.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em um município do interior paulista, a prefeitura comparou o uso do solo em duas épocas. A mata nativa, que abrigava onças-pardas, bugios e muitas aves, foi sendo trocada por pastagens e áreas urbanas.",
+   "comando": "Qual impacto sobre a biodiversidade pode ser inferido dos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de uso do solo no município (ha)",
+    "colunas": [
+     "Uso",
+     "1990",
+     "2020"
+    ],
+    "linhas": [
+     [
+      "Mata nativa",
+      "3.000",
+      "800"
+     ],
+     [
+      "Pastagem",
+      "2.000",
+      "3.800"
+     ],
+     [
+      "Área urbana",
+      "500",
+      "900"
+     ]
+    ]
+   },
+   "alts": [
+    "A perda de habitat reduz as populações que dependem da mata",
+    "O aumento do pasto amplia a diversidade, por haver mais espaço aberto",
+    "A área urbana criou novos habitats que compensam a perda da mata",
+    "A perda da mata afeta as plantas, e os animais se mudam sem prejuízo"
+   ],
+   "correta": 0,
+   "explicacao": "Menos mata significa menos habitat, alimento e abrigo, o que reduz populações e espécies. Os distratores supõem compensação pelo pasto ou pela cidade, ou que os animais se adaptam sem perdas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Moradores de um bairro notaram que, depois que um loteamento passou a despejar esgoto sem tratamento em um córrego, os peixes sumiram e a água ficou escura. Estudantes mediram o oxigênio dissolvido em três pontos do curso.",
+   "comando": "O que explica a redução dos peixes observada pelos moradores?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de oxigênio dissolvido no córrego",
+    "unidade": "mg/L",
+    "itens": [
+     {
+      "rotulo": "Nascente",
+      "valor": 8
+     },
+     {
+      "rotulo": "Meio do trecho",
+      "valor": 4
+     },
+     {
+      "rotulo": "Após o loteamento",
+      "valor": 1
+     }
+    ]
+   },
+   "alts": [
+    "O esgoto aumenta o oxigênio da água e sufoca os peixes por excesso",
+    "A água escura impede os peixes de se reproduzirem na superfície",
+    "A matéria orgânica consome o oxigênio, e os peixes não sobrevivem",
+    "Os peixes migraram para a nascente, onde há mais alimento"
+   ],
+   "correta": 2,
+   "explicacao": "A decomposição do esgoto consome oxigênio e reduz a vida aquática. Os distratores trocam causa e efeito (oxigênio aumenta) ou propõem explicações sem apoio nos dados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma represa no interior de São Paulo recebeu o tucunaré, peixe predador de outra região do Brasil, para incentivar a pesca esportiva. Pesquisadores contaram os peixes antes e depois da introdução.",
+   "comando": "Que relação os dados indicam entre a espécie introduzida e a biodiversidade local?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de peixes na represa (indivíduos por amostra)",
+    "colunas": [
+     "Espécie",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Lambari",
+      "120",
+      "40"
+     ],
+     [
+      "Traíra",
+      "30",
+      "8"
+     ],
+     [
+      "Tucunaré",
+      "0",
+      "60"
+     ]
+    ]
+   },
+   "alts": [
+    "O tucunaré é um novo recurso que aumenta a diversidade nativa",
+    "O tucunaré reduz as espécies nativas ao predá-las e competir",
+    "A queda de lambaris e traíras é coincidência sem relação",
+    "A pesca esportiva reduziu o tucunaré e liberou espaço aos nativos"
+   ],
+   "correta": 1,
+   "explicacao": "Espécies introduzidas podem predar e competir com as nativas, diminuindo suas populações, como os dados mostram. Os distratores ignoram os dados ou invertem a relação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma rodovia que corta fragmentos de mata no interior de São Paulo, o número de animais silvestres atropelados vem crescendo. Gambás, tamanduás e lobos-guarás tentam atravessar para chegar a outros fragmentos.",
+   "comando": "Qual medida ajuda a reduzir o impacto da rodovia sobre a fauna?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de animais silvestres atropelados na rodovia",
+    "unidade": "animais/ano",
+    "itens": [
+     {
+      "rotulo": "2019",
+      "valor": 40
+     },
+     {
+      "rotulo": "2020",
+      "valor": 55
+     },
+     {
+      "rotulo": "2021",
+      "valor": 70
+     },
+     {
+      "rotulo": "2022",
+      "valor": 90
+     }
+    ]
+   },
+   "alts": [
+    "Aumentar o limite de velocidade para encurtar o tempo na pista",
+    "Cercar a mata para impedir a circulação dos animais",
+    "Soltar mais animais da mesma espécie perto da pista",
+    "Criar passagens de fauna que liguem os fragmentos de mata"
+   ],
+   "correta": 3,
+   "explicacao": "Passagens de fauna reconectam os fragmentos e permitem a travessia segura. Os distratores aumentam o risco, isolam ainda mais as populações ou ignoram a causa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na dinâmica da teia da vida, os alunos ligaram onça-pintada, queixadas, frutos, aves e mata com barbante. Quando o cartão 'caça' atingiu a onça, a turma discutiu o que aconteceria. Pesquisadores registraram dados reais parecidos em uma mata.",
+   "comando": "O que os dados indicam sobre a perda de um predador de topo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de uma mata com e sem onça-pintada",
+    "colunas": [
+     "Indicador",
+     "Com onça",
+     "Sem onça"
+    ],
+    "linhas": [
+     [
+      "Queixadas por km²",
+      "4",
+      "14"
+     ],
+     [
+      "Mudas de árvores por m²",
+      "12",
+      "3"
+     ],
+     [
+      "Espécies de aves",
+      "60",
+      "41"
+     ]
+    ]
+   },
+   "alts": [
+    "A perda do predador aumenta as presas e reduz a vegetação",
+    "Sem predador, as espécies aumentam e a mata fica mais rica",
+    "Só a população da onça é afetada, e o restante da mata não muda",
+    "O aumento dos herbívoros beneficia a vegetação e a diversidade"
+   ],
+   "correta": 0,
+   "explicacao": "A ausência do predador desequilibra a teia: herbívoros crescem, consomem mudas e afetam outras espécies. Os distratores ignoram as relações entre os seres."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na dinâmica da teia, o cartão 'desmatamento' atingiu o aluno que representava a mata ciliar de um rio, e ele soltou o barbante.",
+   "comando": "Explique o que acontece com os demais elementos ligados à mata ciliar e o que isso mostra sobre a biodiversidade.",
+   "figura": null,
+   "ref": "Sem a mata ciliar, perdem-se abrigo e alimento de aves e mamíferos, o solo da margem erode e o rio assoreia, afetando peixes e pescadores. Os impactos se espalham pela teia, reduzindo a biodiversidade.",
+   "conceitos": [
+    "relações entre os seres da teia",
+    "perda de habitat",
+    "erosão e assoreamento",
+    "efeito em cadeia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro viu muitas garrafas plásticas e sacolas boiando no córrego perto de sua casa e percebeu aves e peixes se enroscando em lixo.",
+   "comando": "Explique como o lixo plástico afeta a fauna do córrego e cite uma ação humana que causa o problema.",
+   "figura": null,
+   "ref": "Animais podem se enroscar ou engolir plástico, sufocar ou se ferir, e o lixo também prejudica a qualidade da água. A causa está no descarte inadequado de lixo pelas pessoas e no consumo excessivo de descartáveis.",
+   "conceitos": [
+    "lixo plástico e fauna",
+    "ingestão e enroscamento",
+    "descarte inadequado"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na região de cana-de-açúcar, queimadas de beira de estrada se espalharam por um fragmento de cerrado. Pesquisadores contaram animais antes e depois do fogo.",
+   "comando": "Explique o que os dados mostram e como as queimadas afetam a biodiversidade.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de um fragmento de cerrado antes e depois da queimada",
+    "colunas": [
+     "Grupo",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Aves registradas",
+      "48 espécies",
+      "29 espécies"
+     ],
+     [
+      "Pequenos mamíferos",
+      "35 indivíduos",
+      "9 indivíduos"
+     ],
+     [
+      "Cobertura de plantas nativas",
+      "70%",
+      "25%"
+     ]
+    ]
+   },
+   "ref": "Houve queda do número de espécies e indivíduos e da vegetação nativa. A queimada destrói habitat, alimento e abrigo, mata animais e reduz a biodiversidade, que demora a se recuperar.",
+   "conceitos": [
+    "perda de habitat",
+    "redução de espécies e indivíduos",
+    "efeito do fogo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pesquisadores compararam uma área dentro de um parque estadual (unidade de conservação) com um trecho vizinho usado para pastagem.",
+   "comando": "Analise os dados e justifique como as unidades de conservação ajudam a proteger a biodiversidade.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de levantamento de espécies",
+    "colunas": [
+     "Indicador",
+     "Dentro do parque",
+     "Pastagem vizinha"
+    ],
+    "linhas": [
+     [
+      "Espécies de árvores",
+      "85",
+      "6"
+     ],
+     [
+      "Espécies de mamíferos",
+      "32",
+      "7"
+     ],
+     [
+      "Nascentes preservadas",
+      "5",
+      "1"
+     ]
+    ]
+   },
+   "ref": "Dentro do parque há muito mais espécies e nascentes preservadas, pois a mata é protegida de desmatamento, caça e uso intensivo. Unidades de conservação mantêm habitats e a água das bacias.",
+   "conceitos": [
+    "unidade de conservação",
+    "manutenção de habitat",
+    "proteção de nascentes",
+    "comparação de dados"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O município de Água Clara tem um córrego com margens desmatadas, esgoto e pesca predatória. A prefeitura quer propor uma iniciativa de consumo consciente e uso sustentável dos recursos da bacia do córrego.",
+   "comando": "Proponha uma iniciativa e justifique como ela reduz o impacto sobre a biodiversidade.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de problemas do córrego",
+    "etapas": [
+     "Margens sem mata ciliar",
+     "Esgoto despejado sem tratamento",
+     "Pesca em época de reprodução"
+    ]
+   },
+   "ref": "Uma iniciativa é replantar a mata ciliar com espécies nativas e tratar o esgoto, com educação ambiental e fiscalização da pesca. Isso devolve habitat, melhora a água e protege espécies, reduzindo os impactos sobre a biodiversidade da bacia.",
+   "conceitos": [
+    "recuperação de mata ciliar",
+    "tratamento de esgoto",
+    "uso sustentável de recursos",
+    "educação ambiental"
+   ]
+  }
+ ],
+ "4B|6º ANO|9": [
+  {
+   "tipo": "obj",
+   "enunciado": "Mariana, aluna do 6º ano, encostou sem querer o dedo no cabo de uma panela que estava no fogão e puxou a mão rapidamente, sentindo muito calor e um pouco de dor.",
+   "comando": "Quais estruturas da pele de Mariana captaram o estímulo de calor e de dor?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de cena na cozinha",
+    "colunas": [
+     "Momento",
+     "Relato de Mariana"
+    ],
+    "linhas": [
+     [
+      "Dedo encosta no cabo",
+      "Sensação de muito calor"
+     ],
+     [
+      "Segundos depois",
+      "Dor no dedo"
+     ],
+     [
+      "Reação",
+      "Mão puxada rapidamente"
+     ]
+    ]
+   },
+   "alts": [
+    "Receptores de pressão, que respondem a objetos pesados",
+    "Receptores de temperatura e de dor, presentes na pele",
+    "Receptores de textura, que identificam superfícies ásperas",
+    "Receptores da visão, que mostram a panela quente"
+   ],
+   "correta": 1,
+   "explicacao": "A pele tem receptores sensíveis a temperatura e dor, que captam o calor do cabo. Os distratores citam receptores de outras sensações ou de outro sentido."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois de se queimar levemente, Mariana contou que 'sentiu o calor no dedo'. O professor explicou que os receptores da pele só enviam sinais e que a sensação de quente é produzida em outra parte do corpo.",
+   "comando": "Qual parte do corpo interpreta os sinais e produz a sensação de calor?",
+   "figura": null,
+   "alts": [
+    "O cérebro, que recebe os sinais enviados pelos nervos",
+    "Os receptores da pele, que decidem a sensação sozinhos",
+    "Os nervos, que transformam o sinal em sensação de calor",
+    "Os músculos do braço, que percebem o calor do estímulo"
+   ],
+   "correta": 0,
+   "explicacao": "Os receptores captam o estímulo e os nervos conduzem o sinal, mas é o cérebro que o interpreta e produz a sensação. Os distratores atribuem essa função a outras estruturas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na atividade 'quente ou frio sem termômetro', Lucas colocou a mão esquerda em água gelada e a direita em água quente por um minuto. Depois, pôs as duas mãos na mesma água morna e relatou sensações diferentes em cada uma.",
+   "comando": "Como explicar o que Lucas sentiu?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de experimento de Lucas",
+    "colunas": [
+     "Mão",
+     "Água antes (1 min)",
+     "Água depois",
+     "Sensação relatada"
+    ],
+    "linhas": [
+     [
+      "Esquerda",
+      "Gelada",
+      "Morna",
+      "Quente"
+     ],
+     [
+      "Direita",
+      "Quente",
+      "Morna",
+      "Fria"
+     ]
+    ]
+   },
+   "alts": [
+    "A água morna muda de temperatura ao tocar cada uma das mãos",
+    "A mão esquerda tem mais receptores térmicos que a direita",
+    "O cérebro de cada lado percebe a temperatura de modo diferente",
+    "A sensação depende do estímulo anterior dos receptores"
+   ],
+   "correta": 3,
+   "explicacao": "Os receptores térmicos se ajustam ao estímulo anterior, e a sensação resulta da comparação. Os distratores atribuem a diferença à água, às mãos ou ao cérebro."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma calçada de São Paulo, o piso tátil de alerta tem relevo de bolinhas, e o direcional tem barras. Quem tem deficiência visual percebe a diferença com a bengala e com a sola dos sapatos.",
+   "comando": "Por que essas diferenças de relevo ajudam na orientação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de tipos de piso tátil",
+    "colunas": [
+     "Tipo de piso",
+     "Relevo"
+    ],
+    "linhas": [
+     [
+      "Alerta",
+      "Bolinhas"
+     ],
+     [
+      "Direcional",
+      "Barras"
+     ],
+     [
+      "Calçada comum",
+      "Liso"
+     ]
+    ]
+   },
+   "alts": [
+    "Os receptores de textura e pressão percebem o relevo",
+    "Os receptores de temperatura detectam a cor de cada piso",
+    "Os receptores de dor avisam que o piso é perigoso ao pisar",
+    "Os receptores de pressão se fecham quando o piso é liso"
+   ],
+   "correta": 0,
+   "explicacao": "Receptores de pressão e de textura percebem o relevo e enviam os sinais ao cérebro. Os distratores citam receptores de temperatura ou de dor, ou uma ação inexistente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Seu Joaquim tem diabetes há muitos anos e machucou o pé direito com um prego sem sentir dor. Só viu a ferida dias depois. No posto de saúde, a enfermeira fez um teste de sensibilidade nos pés e nas mãos.",
+   "comando": "Por que ele deve examinar os pés com atenção todos os dias?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de teste de sensibilidade",
+    "colunas": [
+     "Região",
+     "Toque leve",
+     "Picada",
+     "Calor"
+    ],
+    "linhas": [
+     [
+      "Mão direita",
+      "Sente",
+      "Sente",
+      "Sente"
+     ],
+     [
+      "Pé esquerdo",
+      "Sente pouco",
+      "Sente pouco",
+      "Sente pouco"
+     ],
+     [
+      "Pé direito",
+      "Não sente",
+      "Não sente",
+      "Não sente"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque a pele dos pés é grossa e quase não dói ao se ferir",
+    "Porque a perda de sensibilidade esconde lesões do pé",
+    "Porque o cérebro reconhece melhor a dor vinda das mãos",
+    "Porque a dor do pé aparece depois que o ferimento cicatriza"
+   ],
+   "correta": 1,
+   "explicacao": "Sem receptores de dor funcionando, as lesões passam despercebidas e podem infeccionar. Os distratores trazem explicações erradas sobre espessura da pele ou sobre o cérebro."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Mariana encostou o dedo no cabo quente de uma panela e puxou a mão rapidamente.",
+   "comando": "Cite os tipos de receptores da pele envolvidos nessa situação e explique o que cada um percebeu.",
+   "figura": null,
+   "ref": "Os receptores de temperatura perceberam o calor do cabo e os de dor perceberam a lesão provocada pelo calor. Os sinais seguem pelos nervos até o cérebro, que produz as sensações e a reação de puxar a mão.",
+   "conceitos": [
+    "receptores de temperatura",
+    "receptores de dor",
+    "sinais até o cérebro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Beatriz, que tem deficiência visual, lê um livro em Braille passando a ponta dos dedos sobre pontos em relevo.",
+   "comando": "Explique como a pele permite que ela identifique os pontos.",
+   "figura": null,
+   "ref": "Os receptores de pressão e de textura da ponta dos dedos percebem o relevo dos pontos e enviam sinais ao cérebro, que os interpreta como letras. As pontas dos dedos têm muitos receptores, o que facilita distinguir pontos próximos.",
+   "conceitos": [
+    "receptores de pressão e textura",
+    "pontas dos dedos sensíveis",
+    "interpretação pelo cérebro",
+    "Braille"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lucas colocou a mão esquerda em água gelada e a direita em água quente. Depois, passou as duas para a mesma água morna e sentiu a água quente na esquerda e fria na direita.",
+   "comando": "Explique por que Lucas teve sensações diferentes com a mesma água.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de experimento de Lucas",
+    "colunas": [
+     "Mão",
+     "Água antes",
+     "Água depois",
+     "Sensação"
+    ],
+    "linhas": [
+     [
+      "Esquerda",
+      "Gelada",
+      "Morna",
+      "Quente"
+     ],
+     [
+      "Direita",
+      "Quente",
+      "Morna",
+      "Fria"
+     ]
+    ]
+   },
+   "ref": "Os receptores de temperatura se ajustam à água de antes e a sensação resulta da comparação. A mão que estava na água gelada sente a morna como quente, e a que estava na quente a sente como fria. Por isso o tato não substitui o termômetro.",
+   "conceitos": [
+    "receptores de temperatura",
+    "sensação por comparação",
+    "tato não mede a temperatura"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma aula, mediu-se a menor distância em que duas pontas encostadas na pele ainda são sentidas como dois pontos separados.",
+   "comando": "Interprete os dados e justifique por que a ponta dos dedos é a região mais indicada para ler Braille.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de distância mínima entre dois pontos",
+    "unidade": "mm",
+    "itens": [
+     {
+      "rotulo": "Ponta do dedo",
+      "valor": 3
+     },
+     {
+      "rotulo": "Palma da mão",
+      "valor": 10
+     },
+     {
+      "rotulo": "Antebraço",
+      "valor": 35
+     },
+     {
+      "rotulo": "Costas",
+      "valor": 60
+     }
+    ]
+   },
+   "ref": "Quanto menor a distância, mais sensível é a região. Na ponta dos dedos, a distância é de 3 mm, pois há maior concentração de receptores táteis, o que permite distinguir pontos próximos do Braille.",
+   "conceitos": [
+    "menor distância indica mais receptores",
+    "ponta dos dedos muito sensível",
+    "leitura do Braille"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Raul foi ao dentista e tomou anestesia no lábio. Depois da consulta, almoçou sem perceber que mordeu o lábio e só notou a ferida horas depois.",
+   "comando": "Explique, com base nos receptores da pele, por que Raul não sentiu a mordida e que risco isso traz.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de dia de Raul",
+    "etapas": [
+     "Consulta e anestesia local no lábio",
+     "Almoço logo depois da consulta",
+     "Mordida no lábio sem perceber",
+     "Ferida notada horas depois"
+    ]
+   },
+   "ref": "A anestesia bloqueia os sinais dos receptores de dor e de pressão do lábio, então o cérebro não recebe a informação da mordida. Sem o alerta de dor, o lábio pode se ferir sem perceber, aumentando o risco de lesão e infecção.",
+   "conceitos": [
+    "anestesia bloqueia sinais",
+    "receptores de dor",
+    "risco de lesões"
+   ]
+  }
+ ],
+ "4B|7º ANO|6": [
+  {
+   "tipo": "obj",
+   "enunciado": "Após uma festa junina em uma escola de Campinas, 12 alunos da mesma sala passaram mal com vômito e diarreia em três dias. A vigilância da prefeitura investigou e suspeitou do bolo servido na festa. Nenhum caso foi registrado em outras escolas.",
+   "comando": "Como a vigilância epidemiológica classifica esse acontecimento?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de investigação na escola",
+    "colunas": [
+     "Dado",
+     "Informação"
+    ],
+    "linhas": [
+     [
+      "Local dos casos",
+      "Uma sala de aula"
+     ],
+     [
+      "Período",
+      "3 dias"
+     ],
+     [
+      "Casos fora da escola",
+      "0"
+     ]
+    ]
+   },
+   "alts": [
+    "Uma endemia, pois a doença é comum e esperada na região",
+    "Uma epidemia, pois a doença atingiu toda a cidade de Campinas",
+    "Uma pandemia, pois a doença atingiu várias salas de aula",
+    "Um surto, pois os casos surgiram num local restrito"
+   ],
+   "correta": 3,
+   "explicacao": "Surto é o aumento de casos em local e tempo restritos. Os distratores usam termos que exigem ocorrência esperada, ampla na cidade ou em vários países."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um município do litoral paulista, a leptospirose aparece todos os anos em número parecido. A secretaria de saúde registra casos todos os meses e já inclui a doença no planejamento anual.",
+   "comando": "Como classificar a presença da doença no município?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de casos de leptospirose por mês",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Janeiro",
+      "valor": 31
+     },
+     {
+      "rotulo": "Março",
+      "valor": 29
+     },
+     {
+      "rotulo": "Maio",
+      "valor": 30
+     },
+     {
+      "rotulo": "Julho",
+      "valor": 28
+     },
+     {
+      "rotulo": "Setembro",
+      "valor": 30
+     }
+    ]
+   },
+   "alts": [
+    "Pandemia, pois a doença ocorre em vários meses do ano",
+    "Epidemia, pois há casos todos os meses no município",
+    "Endemia, pois a ocorrência é constante e esperada",
+    "Surto, pois os casos se repetem num local restrito"
+   ],
+   "correta": 2,
+   "explicacao": "Endemia é a presença contínua e esperada de uma doença em uma região. Os distratores confundem a repetição dos casos com aumento súbito ou alcance mundial."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em março, o governo estadual decretou estado de emergência por dengue em várias cidades de São Paulo. Uma cidade tem em média 100 casos por semana nessa época, mas registrou um número muito maior em poucas semanas.",
+   "comando": "Como esse cenário é classificado?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de casos de dengue por semana",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Esperado para a época",
+      "valor": 100
+     },
+     {
+      "rotulo": "Semana 8",
+      "valor": 450
+     },
+     {
+      "rotulo": "Semana 10",
+      "valor": 1200
+     }
+    ]
+   },
+   "alts": [
+    "Epidemia, pois os casos superaram muito o esperado",
+    "Surto, pois os casos aumentaram em um único bairro",
+    "Endemia, pois a dengue existe na cidade todo ano",
+    "Pandemia, pois houve aumento rápido de casos em semanas"
+   ],
+   "correta": 0,
+   "explicacao": "Epidemia é o aumento acima do esperado em uma região. Os distratores usam critérios de local restrito, de ocorrência constante ou de alcance mundial."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em dezembro de 2019 surgiram os primeiros casos de covid-19 na China. Em poucas semanas, a doença chegou a outros países e, em 11 de março de 2020, a OMS declarou pandemia, quando havia casos em mais de cem países.",
+   "comando": "Por que a covid-19 passou a ser classificada como pandemia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de evolução da covid-19",
+    "colunas": [
+     "Data",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Dezembro de 2019",
+      "Casos em uma cidade da China"
+     ],
+     [
+      "Fevereiro de 2020",
+      "Casos em países de vários continentes"
+     ],
+     [
+      "11 de março de 2020",
+      "Casos em mais de cem países"
+     ]
+    ]
+   },
+   "alts": [
+    "Porque matou mais pessoas por dia que outras doenças",
+    "Porque foi detectada pela primeira vez num grande país",
+    "Porque se espalhou por muitos países e continentes",
+    "Porque aumentou muito os casos em apenas uma cidade"
+   ],
+   "correta": 2,
+   "explicacao": "Pandemia é a disseminação de uma doença por muitos países e continentes. Os distratores usam critérios que não definem pandemia."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A vigilância de uma região acompanhou três municípios. A cidade A costuma ter 20 casos mensais de determinada doença, a B passou de 20 para 180 em um mês e a C, onde a doença não existia, teve 5 casos na mesma creche.",
+   "comando": "Em qual município há epidemia, e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de vigilância no mês",
+    "colunas": [
+     "Município",
+     "Casos esperados",
+     "Casos no mês",
+     "Onde ocorreram"
+    ],
+    "linhas": [
+     [
+      "A",
+      "20",
+      "22",
+      "Vários bairros"
+     ],
+     [
+      "B",
+      "20",
+      "180",
+      "Vários bairros"
+     ],
+     [
+      "C",
+      "0",
+      "5",
+      "Uma creche"
+     ]
+    ]
+   },
+   "alts": [
+    "O município A, pois registra casos todos os meses na região",
+    "O município B, pois os casos superaram muito o esperado",
+    "O município C, pois a doença surgiu onde antes não existia",
+    "Os municípios A e B, pois ambos registraram casos no mês"
+   ],
+   "correta": 1,
+   "explicacao": "B teve casos muito acima do esperado, em vários bairros (epidemia); A está no nível esperado (endemia) e C tem casos restritos a uma creche (surto). Os distratores confundem presença da doença com aumento acima do esperado."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No outono, muitas cidades paulistas têm aumento de gripe, e médicos dizem que 'a gripe é sazonal'. Já a malária é comum em partes da Amazônia durante todo o ano.",
+   "comando": "Diferencie endemia e epidemia, usando essas doenças como exemplo.",
+   "figura": null,
+   "ref": "Endemia é a presença constante e esperada de uma doença em uma região, como a malária na Amazônia. Epidemia é o aumento acima do esperado em uma região em certo período, como um pico forte de gripe numa cidade.",
+   "conceitos": [
+    "endemia: ocorrência constante",
+    "epidemia: aumento acima do esperado",
+    "exemplos de cada situação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma escola, 15 de 400 alunos tiveram diarreia depois de comer o mesmo lanche. Em toda a cidade, não houve aumento de casos.",
+   "comando": "Classifique a situação e justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de caso na escola",
+    "colunas": [
+     "Dado",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Alunos da escola",
+      "400"
+     ],
+     [
+      "Alunos com diarreia",
+      "15"
+     ],
+     [
+      "Casos em outras escolas",
+      "0"
+     ]
+    ]
+   },
+   "ref": "É um surto: os casos aumentaram em um local e tempo restritos, ligados ao mesmo lanche. Não é epidemia, pois não atingiu a cidade, nem endemia, pois não é ocorrência habitual.",
+   "conceitos": [
+    "definição de surto",
+    "local e tempo restritos",
+    "diferença para epidemia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma notícia informa que o governo paulista decretou estado de emergência por dengue: os casos passaram de 100 por semana para mais de mil.",
+   "comando": "Explique por que a situação é uma epidemia e por que ações de emergência são necessárias.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de casos de dengue por semana",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Esperado",
+      "valor": 100
+     },
+     {
+      "rotulo": "Semana 6",
+      "valor": 300
+     },
+     {
+      "rotulo": "Semana 10",
+      "valor": 1200
+     }
+    ]
+   },
+   "ref": "É epidemia, pois os casos ficaram muito acima do esperado na região. A emergência é necessária porque o aumento rápido sobrecarrega os serviços de saúde, e é preciso reforçar o controle do mosquito e o atendimento.",
+   "conceitos": [
+    "epidemia: acima do esperado",
+    "sobrecarga dos serviços de saúde",
+    "controle do mosquito"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A covid-19 surgiu em uma cidade chinesa, atingiu outros países e depois todos os continentes.",
+   "comando": "Explique como a covid-19 passou de epidemia a pandemia e que fatores favoreceram essa expansão.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de linha do tempo da covid-19",
+    "etapas": [
+     "Dez. 2019: casos em uma cidade da China",
+     "Jan. 2020: casos em vários países da Ásia",
+     "Fev. 2020: casos em Europa e Américas",
+     "Mar. 2020: OMS declara pandemia"
+    ]
+   },
+   "ref": "Primeiro foi epidemia na China; depois se espalhou para muitos países e continentes, tornando-se pandemia. Viagens internacionais, aglomerações e transmissão respiratória favoreceram a expansão.",
+   "conceitos": [
+    "epidemia local",
+    "disseminação global",
+    "fatores de risco"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um bairro com muitos terrenos com água parada, os casos de dengue triplicaram em dois meses. A vigilância precisa decidir como agir.",
+   "comando": "Justifique duas ações de vigilância ou prevenção adequadas, relacionando-as aos fatores de risco.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de casos de dengue no bairro",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Mês 1",
+      "valor": 15
+     },
+     {
+      "rotulo": "Mês 2",
+      "valor": 30
+     },
+     {
+      "rotulo": "Mês 3",
+      "valor": 45
+     }
+    ]
+   },
+   "ref": "Eliminar a água parada, que é criadouro do mosquito, e orientar os moradores e fazer vistorias nos terrenos. Também notificar e acompanhar os casos para monitorar o avanço e reduzir os riscos.",
+   "conceitos": [
+    "água parada como fator de risco",
+    "eliminação de criadouros",
+    "notificação e monitoramento"
+   ]
+  }
+ ],
+ "4B|8º ANO|3": [
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador PhET 'Formas de energia e transformações', Bruna ligou uma torneira sobre uma roda d'água conectada a um gerador e a uma lâmpada. A água caiu, a roda girou e a lâmpada acendeu, ficando levemente quente.",
+   "comando": "Qual sequência de transformações de energia ocorre no sistema?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro de montagem no simulador",
+    "etapas": [
+     "Torneira aberta sobre a roda",
+     "Roda d'água gira",
+     "Gerador acionado",
+     "Lâmpada acende e esquenta"
+    ]
+   },
+   "alts": [
+    "Elétrica, depois cinética, depois luminosa e térmica",
+    "Cinética da água e da roda, elétrica, luminosa e térmica",
+    "Térmica da lâmpada, elétrica no gerador e cinética da roda",
+    "Química da água, depois luminosa, depois cinética da roda"
+   ],
+   "correta": 1,
+   "explicacao": "O movimento da água faz a roda girar, o gerador produz energia elétrica e a lâmpada a converte em luz e calor. Os distratores invertem a ordem ou citam formas de energia inexistentes no sistema."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um parque de diversões de São Paulo, um carrinho de montanha-russa sobe lentamente até o ponto mais alto, a 30 m do chão, e depois desce a trilha, ganhando velocidade.",
+   "comando": "O que acontece com as energias do carrinho durante a descida?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de pontos da montanha-russa",
+    "colunas": [
+     "Ponto",
+     "Altura (m)",
+     "Velocidade (m/s)"
+    ],
+    "linhas": [
+     [
+      "Topo",
+      "30",
+      "0"
+     ],
+     [
+      "Meio da descida",
+      "15",
+      "17"
+     ],
+     [
+      "Base",
+      "0",
+      "24"
+     ]
+    ]
+   },
+   "alts": [
+    "A energia cinética diminui enquanto a potencial aumenta",
+    "As energias potencial e cinética aumentam ao mesmo tempo",
+    "A potencial vira energia cinética durante a descida",
+    "A energia some, e o carrinho ganha velocidade sozinho"
+   ],
+   "correta": 2,
+   "explicacao": "Ao descer, a energia potencial gravitacional se transforma em energia cinética. Os distratores trocam o sentido da transformação, supõem que a energia seja criada ou que desapareça."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um grupo mediu as energias de um carrinho de montanha-russa em três pontos da trilha e anotou os valores na tabela. No topo, havia 9.000 J de energia, mas, ao somar os valores nos outros pontos, a soma ficou menor.",
+   "comando": "Onde foi parar a energia que 'faltou' na soma, de acordo com a conservação da energia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de energias do carrinho",
+    "colunas": [
+     "Ponto",
+     "Potencial (J)",
+     "Cinética (J)"
+    ],
+    "linhas": [
+     [
+      "Topo",
+      "9.000",
+      "0"
+     ],
+     [
+      "Ponto A",
+      "5.000",
+      "3.800"
+     ],
+     [
+      "Ponto B",
+      "0",
+      "8.500"
+     ]
+    ]
+   },
+   "alts": [
+    "Foi destruída pelo atrito, já que a energia é consumida",
+    "Foi guardada no carrinho como massa a mais, sem outra forma",
+    "Foi transformada em energia potencial dentro dos trilhos",
+    "Foi dissipada como calor e som, e o total se conservou"
+   ],
+   "correta": 3,
+   "explicacao": "Atrito e resistência do ar transformam parte da energia em calor e som, e a energia total se conserva. Os distratores supõem destruição ou transformações sem sentido."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em casa, Paulo notou que o motor do ventilador esquenta depois de horas de uso. A professora mostrou um gráfico do que acontece com 100 J de energia elétrica que entram em um ventilador.",
+   "comando": "Por que o motor esquenta, e o que os dados indicam?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de energia de 100 J que entra no ventilador",
+    "unidade": "J",
+    "itens": [
+     {
+      "rotulo": "Cinética das pás",
+      "valor": 70
+     },
+     {
+      "rotulo": "Térmica",
+      "valor": 25
+     },
+     {
+      "rotulo": "Sonora",
+      "valor": 5
+     }
+    ]
+   },
+   "alts": [
+    "Parte da energia vira calor e som, e não movimento",
+    "O ventilador cria energia térmica a mais, além dos 100 J",
+    "O motor esquenta por guardar a energia cinética das pás",
+    "O calor vem do ar em movimento, e não da energia elétrica"
+   ],
+   "correta": 0,
+   "explicacao": "Parte da energia elétrica se dissipa como calor e som, e o total continua 100 J. Os distratores supõem criação de energia, ou origem errada do calor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois alunos compararam lâmpadas de mesma potência: a incandescente e a de LED. Eles mediram, para cada 100 J de energia elétrica, quanto vira luz e quanto vira calor, e discutiram qual lâmpada é melhor.",
+   "comando": "Qual afirmação interpreta corretamente os dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de lâmpadas (para 100 J de energia elétrica)",
+    "colunas": [
+     "Lâmpada",
+     "Luz (J)",
+     "Calor (J)"
+    ],
+    "linhas": [
+     [
+      "Incandescente",
+      "5",
+      "95"
+     ],
+     [
+      "LED",
+      "40",
+      "60"
+     ]
+    ]
+   },
+   "alts": [
+    "A incandescente é mais eficiente, pois produz mais calor",
+    "A LED destrói parte da energia, e por isso esquenta menos",
+    "Ambas conservam a energia, mas a LED dissipa menos calor",
+    "A incandescente produz energia a mais, e por isso esquenta"
+   ],
+   "correta": 2,
+   "explicacao": "Nas duas, a energia total se conserva; a LED transforma mais energia em luz e dissipa menos calor. Os distratores confundem eficiência com calor, destruição ou criação de energia."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Alunos montaram no simulador um painel solar conectado a uma lâmpada e a um pequeno ventilador.",
+   "comando": "Indique as transformações de energia que ocorrem do painel à lâmpada e ao ventilador.",
+   "figura": null,
+   "ref": "O painel transforma energia luminosa (do Sol) em energia elétrica. Na lâmpada, a elétrica vira luminosa e térmica; no ventilador, vira cinética (movimento) e uma parte térmica.",
+   "conceitos": [
+    "luminosa em elétrica",
+    "elétrica em luz e calor",
+    "elétrica em movimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma montanha-russa, o carrinho é puxado até o ponto mais alto e depois solta.",
+   "comando": "Compare as energias cinética e potencial do carrinho no topo e na base da trilha.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de pontos da montanha-russa",
+    "colunas": [
+     "Ponto",
+     "Altura (m)",
+     "Velocidade (m/s)"
+    ],
+    "linhas": [
+     [
+      "Topo",
+      "30",
+      "0"
+     ],
+     [
+      "Base",
+      "0",
+      "24"
+     ]
+    ]
+   },
+   "ref": "No topo, a energia potencial é máxima e a cinética é nula, pois ele está parado. Na base, a potencial é mínima e a cinética é máxima, pois a velocidade é maior. A potencial se transformou em cinética.",
+   "conceitos": [
+    "energia potencial máxima no topo",
+    "energia cinética máxima na base",
+    "transformação entre elas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao medir um carrinho de brinquedo que desce uma rampa, os alunos viram que a soma das energias na base era menor que a energia total no início da descida.",
+   "comando": "Explique onde está a energia que falta e como isso se relaciona ao princípio da conservação.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de rampa",
+    "colunas": [
+     "Ponto",
+     "Energia potencial (J)",
+     "Energia cinética (J)"
+    ],
+    "linhas": [
+     [
+      "Topo",
+      "20",
+      "0"
+     ],
+     [
+      "Base",
+      "0",
+      "17"
+     ]
+    ]
+   },
+   "ref": "Os 3 J que faltam foram dissipados como calor e som pelo atrito. A energia não foi destruída: ela se transformou, e a soma de todas as formas continua 20 J.",
+   "conceitos": [
+    "energia dissipada como calor",
+    "atrito e som",
+    "conservação da energia total"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No simulador, os alunos testaram dois sistemas: uma bicicleta com gerador que acende uma lâmpada e um painel solar que acende a mesma lâmpada.",
+   "comando": "Compare as fontes de energia e justifique por que, nos dois, a lâmpada não transforma toda a energia em luz.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de sistemas do simulador",
+    "colunas": [
+     "Sistema",
+     "Energia que entra",
+     "Energia que sai"
+    ],
+    "linhas": [
+     [
+      "Bicicleta e gerador",
+      "Química do ciclista, depois cinética",
+      "Luz e calor"
+     ],
+     [
+      "Painel solar",
+      "Luminosa do Sol",
+      "Luz e calor"
+     ]
+    ]
+   },
+   "ref": "No primeiro, a energia química do ciclista vira cinética e depois elétrica; no segundo, a luminosa vira elétrica. Em ambos, a lâmpada transforma parte da energia em luz e parte em calor, pois sempre há dissipação.",
+   "conceitos": [
+    "fontes diferentes de energia",
+    "transformações até a energia elétrica",
+    "dissipação como calor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rafael deu um empurrão em um pêndulo (bolinha presa a um fio) e anotou a altura que ele alcançava a cada balanço. A bolinha foi diminuindo até parar.",
+   "comando": "Explique, com base na conservação da energia, por que o pêndulo para e não é possível um movimento perpétuo.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de altura alcançada pelo pêndulo",
+    "unidade": "cm",
+    "itens": [
+     {
+      "rotulo": "Balanço 1",
+      "valor": 20
+     },
+     {
+      "rotulo": "Balanço 2",
+      "valor": 17
+     },
+     {
+      "rotulo": "Balanço 3",
+      "valor": 14
+     },
+     {
+      "rotulo": "Balanço 4",
+      "valor": 11
+     },
+     {
+      "rotulo": "Balanço 5",
+      "valor": 8
+     }
+    ]
+   },
+   "ref": "A cada balanço, parte da energia mecânica é dissipada como calor e som pelo atrito com o ar e no ponto de fixação. A energia total se conserva, mas a parte útil diminui, e por isso o pêndulo para.",
+   "conceitos": [
+    "energia mecânica diminui",
+    "dissipação por atrito",
+    "conservação da energia total"
+   ]
+  }
+ ],
+ "4B|8º ANO|19": [
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Rita, moradora de Campinas, recebeu a conta de luz do mês e viu escrito 'Consumo: 500 kWh'. Seu neto Caio, do 8º ano, disse que o kWh mede quanto da energia elétrica foi usada em casa durante o mês.",
+   "comando": "O que a unidade kWh representa na conta de luz?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de conta de luz de Dona Rita (fictícia)",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Consumo no mês",
+      "500 kWh"
+     ],
+     [
+      "Tarifa base",
+      "R$ 0,75 por kWh"
+     ],
+     [
+      "Bandeira tarifária",
+      "Vermelha 1"
+     ]
+    ]
+   },
+   "alts": [
+    "A energia consumida, que depende de potência e tempo",
+    "A potência dos aparelhos, que não depende do tempo de uso",
+    "A tensão da rede elétrica que chega à casa de Dona Rita",
+    "A rapidez com que a energia passa pelos fios da casa"
+   ],
+   "correta": 0,
+   "explicacao": "O quilowatt-hora mede energia consumida: a potência do aparelho multiplicada pelo tempo de uso. Os distratores confundem energia com potência, tensão ou velocidade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma notícia da Aneel informou que, em outubro, a bandeira tarifária seria vermelha patamar 1, com acréscimo na conta de luz. Dona Rita não entendeu o motivo do acréscimo e perguntou ao neto.",
+   "comando": "O que a bandeira vermelha significa para o consumidor?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de bandeiras tarifárias",
+    "colunas": [
+     "Bandeira",
+     "Acréscimo por 100 kWh"
+    ],
+    "linhas": [
+     [
+      "Verde",
+      "Nenhum"
+     ],
+     [
+      "Amarela",
+      "R$ 1,88"
+     ],
+     [
+      "Vermelha 1",
+      "R$ 4,46"
+     ]
+    ]
+   },
+   "alts": [
+    "Haverá corte programado de energia em vários bairros",
+    "Gerar energia está mais caro, e há acréscimo na tarifa",
+    "A família passa a receber desconto por baixo consumo",
+    "O imposto estadual sobre a energia foi aumentado no mês"
+   ],
+   "correta": 1,
+   "explicacao": "As bandeiras indicam o custo de geração (por exemplo, quando é preciso usar termelétricas, mais caras) e o acréscimo na tarifa. Os distratores confundem a bandeira com corte, desconto ou imposto."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Com o consumo de 500 kWh, a tarifa de R$ 0,75 por kWh e a bandeira vermelha patamar 1, Dona Rita quis calcular a conta, sem impostos. A bandeira soma R$ 4,46 a cada 100 kWh consumidos.",
+   "comando": "Qual é o valor da conta de Dona Rita?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de dados da conta (sem impostos)",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Consumo",
+      "500 kWh"
+     ],
+     [
+      "Tarifa base",
+      "R$ 0,75 por kWh"
+     ],
+     [
+      "Bandeira vermelha 1",
+      "R$ 4,46 por 100 kWh"
+     ]
+    ]
+   },
+   "alts": [
+    "R$ 375,00",
+    "R$ 379,46",
+    "R$ 397,30",
+    "R$ 2.605,00"
+   ],
+   "correta": 2,
+   "explicacao": "Tarifa base: 500 x 0,75 = R$ 375,00. Bandeira: 5 x 4,46 = R$ 22,30. Total: R$ 397,30. Os distratores ignoram a bandeira, somam o acréscimo uma vez só ou o multiplicam pelos kWh."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A família de Caio quer reduzir o consumo de energia. Eles listaram o uso de quatro aparelhos por dia e querem escolher o hábito que mais economiza se o tempo de uso cair pela metade.",
+   "comando": "Qual hábito gera maior economia de energia por dia?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de uso diário dos aparelhos",
+    "colunas": [
+     "Aparelho",
+     "Potência (W)",
+     "Tempo de uso (h/dia)"
+    ],
+    "linhas": [
+     [
+      "Chuveiro elétrico",
+      "5.500",
+      "1"
+     ],
+     [
+      "Televisão",
+      "100",
+      "5"
+     ],
+     [
+      "Ferro de passar",
+      "1.200",
+      "1"
+     ],
+     [
+      "Lâmpadas (total)",
+      "100",
+      "5"
+     ]
+    ]
+   },
+   "alts": [
+    "Ligar a TV por metade do tempo, pois fica ligada mais horas",
+    "Reduzir à metade o tempo de banho no chuveiro elétrico",
+    "Passar roupa por metade do tempo, pois o ferro esquenta muito",
+    "Apagar as lâmpadas mais cedo, pois são muitas no total"
+   ],
+   "correta": 1,
+   "explicacao": "A energia depende de potência x tempo: o chuveiro (5,5 kWh/dia) é quem mais consome, então reduzir seu uso economiza mais. Os distratores consideram só o tempo ou o número de aparelhos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um mês de bandeira vermelha 1, a família de Caio reduziu o consumo de 500 kWh (mês anterior, com bandeira verde) para 400 kWh. A tarifa base é R$ 0,75 por kWh, e a vermelha 1 acrescenta R$ 4,46 a cada 100 kWh. Caio disse que a conta não diminuiu por causa da bandeira.",
+   "comando": "Qual afirmação analisa corretamente as contas, sem impostos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de contas da família (sem impostos)",
+    "colunas": [
+     "Mês",
+     "Consumo",
+     "Bandeira"
+    ],
+    "linhas": [
+     [
+      "Anterior",
+      "500 kWh",
+      "Verde"
+     ],
+     [
+      "Atual",
+      "400 kWh",
+      "Vermelha 1"
+     ]
+    ]
+   },
+   "alts": [
+    "A conta ficou igual, pois a bandeira cancelou a economia",
+    "A conta aumentou, pois a bandeira vermelha pesa mais",
+    "A conta caiu para R$ 317,84, contra R$ 375,00",
+    "A conta caiu para R$ 300,00, sem efeito da bandeira"
+   ],
+   "correta": 2,
+   "explicacao": "Mês atual: 400 x 0,75 = R$ 300,00 + 4 x 4,46 = R$ 17,84, ou seja, R$ 317,84, menor que R$ 375,00. A redução do consumo pesou mais que o acréscimo da bandeira."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na conta de luz de Dona Rita aparecem 'Consumo: 500 kWh', 'Tarifa: R$ 0,75 por kWh' e 'Bandeira vermelha 1'.",
+   "comando": "Explique o que significam o consumo em kWh, a tarifa e a bandeira tarifária.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de conta de luz (fictícia)",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Consumo",
+      "500 kWh"
+     ],
+     [
+      "Tarifa",
+      "R$ 0,75 por kWh"
+     ],
+     [
+      "Bandeira",
+      "Vermelha 1"
+     ]
+    ]
+   },
+   "ref": "O consumo em kWh é a energia elétrica usada no mês; a tarifa é o preço de cada kWh; a bandeira tarifária é o acréscimo cobrado quando gerar energia está mais caro. A bandeira vermelha 1 aumenta o valor final da conta.",
+   "conceitos": [
+    "kWh é energia consumida",
+    "tarifa é o preço do kWh",
+    "bandeira é acréscimo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na semana passada, a Aneel anunciou bandeira vermelha em um período seco, e Rafael perguntou por que a bandeira muda de verde para amarela e vermelha.",
+   "comando": "Explique o que a mudança das bandeiras indica sobre a geração de energia no Brasil.",
+   "figura": null,
+   "ref": "As bandeiras indicam o custo de gerar energia. Em períodos secos, os reservatórios das hidrelétricas ficam baixos e é preciso ligar termelétricas, mais caras, o que leva às bandeiras amarela ou vermelha e ao acréscimo na conta.",
+   "conceitos": [
+    "bandeiras indicam o custo de geração",
+    "seca e hidrelétricas",
+    "uso de termelétricas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dona Rita recebeu a conta com 500 kWh, tarifa de R$ 0,75 por kWh e bandeira vermelha 1, que acrescenta R$ 4,46 a cada 100 kWh. Ela quer saber o valor da conta, sem impostos.",
+   "comando": "Calcule o valor da conta e mostre as etapas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de dados da conta (sem impostos)",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Consumo",
+      "500 kWh"
+     ],
+     [
+      "Tarifa base",
+      "R$ 0,75 por kWh"
+     ],
+     [
+      "Bandeira vermelha 1",
+      "R$ 4,46 por 100 kWh"
+     ]
+    ]
+   },
+   "ref": "Tarifa base: 500 x 0,75 = R$ 375,00. Bandeira: 500 kWh equivalem a 5 blocos de 100 kWh, e 5 x 4,46 = R$ 22,30. Total: 375,00 + 22,30 = R$ 397,30.",
+   "conceitos": [
+    "cálculo da tarifa base",
+    "cálculo do acréscimo da bandeira",
+    "soma dos valores"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Caio propôs reduzir o banho de 30 para 15 minutos por dia. O chuveiro elétrico tem potência de 5.500 W, e a tarifa é de R$ 0,75 por kWh, sem bandeira.",
+   "comando": "Calcule a economia mensal de energia e de dinheiro com a mudança e comente se vale a pena.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de uso do chuveiro",
+    "colunas": [
+     "Item",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Potência",
+      "5.500 W",
+      "5.500 W"
+     ],
+     [
+      "Tempo de banho por dia",
+      "0,5 h",
+      "0,25 h"
+     ]
+    ]
+   },
+   "ref": "Antes: 5,5 kW x 0,5 h = 2,75 kWh/dia; depois: 5,5 x 0,25 = 1,375 kWh/dia. A economia é de 1,375 kWh por dia, ou cerca de 41,25 kWh em 30 dias, o que dá R$ 30,94 (41,25 x 0,75). Vale a pena: economiza dinheiro e energia.",
+   "conceitos": [
+    "energia = potência x tempo",
+    "cálculo da economia",
+    "consumo consciente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na semana de consumo consciente, a escola comparou a geração de energia de um mês chuvoso com a de um mês seco, quando vigorou a bandeira vermelha.",
+   "comando": "Interprete os dados e justifique por que economizar energia é importante, principalmente em bandeira vermelha.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de geração em um mês chuvoso e em um seco (% do total)",
+    "colunas": [
+     "Fonte",
+     "Mês chuvoso",
+     "Mês seco"
+    ],
+    "linhas": [
+     [
+      "Hidrelétricas",
+      "70%",
+      "50%"
+     ],
+     [
+      "Termelétricas",
+      "8%",
+      "25%"
+     ],
+     [
+      "Outras fontes",
+      "22%",
+      "25%"
+     ]
+    ]
+   },
+   "ref": "No mês seco, as hidrelétricas geram menos e as termelétricas, mais caras e que emitem mais gases poluentes, geram mais, o que justifica a bandeira vermelha. Economizar reduz a conta, o uso de termelétricas e a poluição.",
+   "conceitos": [
+    "menos água, mais termelétricas",
+    "custo e poluição maiores",
+    "economia reduz conta e impacto"
+   ]
+  }
+ ]
+}

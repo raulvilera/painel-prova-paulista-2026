@@ -1,0 +1,2910 @@
+{
+ "6º ANO|2|Analisar o processo de fossilização ao longo da história geológica da Terra.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Pedro, aluno do 6º ano, visitou uma pedreira perto de Votorantim e encontrou uma rocha com a marca de uma concha de molusco, em meio a camadas bem definidas de material compactado.",
+   "comando": "Com base nas observações de Pedro, em qual tipo de rocha essa marca provavelmente foi encontrada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações da pedreira",
+    "colunas": [
+     "Amostra",
+     "Aspecto",
+     "Marca de concha"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Camadas sobrepostas",
+      "Presente"
+     ],
+     [
+      "2",
+      "Cristais grandes sem camadas",
+      "Ausente"
+     ],
+     [
+      "3",
+      "Grãos compactados",
+      "Presente"
+     ]
+    ]
+   },
+   "alts": [
+    "Ígnea, formada pelo resfriamento do magma na superfície",
+    "Metamórfica, formada pela pressão profunda sobre sedimentos",
+    "Sedimentar, formada por sedimentos compactados em camadas",
+    "Ígnea, formada pela solidificação do magma dentro da crosta"
+   ],
+   "correta": 2,
+   "explicacao": "Fósseis aparecem principalmente em rochas sedimentares, formadas por sedimentos que se acumulam em camadas. O calor das rochas ígneas e metamórficas destruiria os restos do organismo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula prática, Júlia pressionou uma concha na massinha, retirou-a com cuidado e ficou com uma cavidade com o formato da concha.",
+   "comando": "A marca que ficou na massinha representa qual tipo de registro fóssil?",
+   "figura": null,
+   "alts": [
+    "Um molde, impressão deixada pelo organismo em material mole",
+    "Um fóssil de corpo, com a parte dura original preservada",
+    "Um icnofóssil, marca da atividade de um animal em movimento",
+    "Um sedimento, grão solto formado pela erosão de uma rocha"
+   ],
+   "correta": 0,
+   "explicacao": "A cavidade é um molde, impressão do organismo no material. Fósseis de corpo preservam a própria parte dura, e icnofósseis registram atividades, como pegadas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No pote da feira de ciências, Carlos montou camadas: areia clara na base, terra escura no meio e areia no topo. Colocou um 'fóssil' de papel em cada camada, sempre depositando de baixo para cima.",
+   "comando": "Se o pote representasse rochas reais não deformadas, qual fóssil seria o mais antigo e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da montagem do pote",
+    "colunas": [
+     "Fóssil de papel",
+     "Camada",
+     "Espessura (cm)"
+    ],
+    "linhas": [
+     [
+      "A",
+      "Areia clara",
+      "4"
+     ],
+     [
+      "B",
+      "Terra escura",
+      "5"
+     ],
+     [
+      "C",
+      "Areia do topo",
+      "3"
+     ]
+    ]
+   },
+   "alts": [
+    "O fóssil C, pois a camada de cima ficou mais tempo exposta",
+    "O fóssil B, pois a camada do meio sofreu mais pressão",
+    "O fóssil C, pois a camada de cima acumulou mais sedimentos",
+    "O fóssil A, pois a camada de baixo foi depositada primeiro"
+   ],
+   "correta": 3,
+   "explicacao": "Em camadas não deformadas, as de baixo se depositaram antes e são mais antigas. Os distratores confundem tempo de exposição ou pressão com idade."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Carolina estuda dois animais que morreram na mesma época. Um caiu no fundo lamacento de um lago e foi coberto por sedimentos em poucos meses. O outro morreu na mata e ficou sobre o solo.",
+   "comando": "Qual explicação justifica a formação de fóssil apenas no animal do lago?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos dois locais",
+    "colunas": [
+     "Local",
+     "Tempo até ser coberto",
+     "Contato com o ar"
+    ],
+    "linhas": [
+     [
+      "Lago",
+      "Poucos meses",
+      "Baixo"
+     ],
+     [
+      "Mata",
+      "Não foi coberto",
+      "Alto"
+     ]
+    ]
+   },
+   "alts": [
+    "A água do lago transformou o corpo em rocha em poucos dias",
+    "O soterramento rápido protegeu os restos da decomposição",
+    "Os animais de lago têm ossos mais duros que os da mata",
+    "A lama aqueceu o esqueleto até ele virar uma rocha dura"
+   ],
+   "correta": 1,
+   "explicacao": "Para fossilizar, o corpo precisa ser soterrado logo, antes de ser decomposto ou destruído. Os outros itens atribuem a fossilização à água, à dureza dos ossos ou ao calor."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um geólogo encontrou o fóssil de um peixe marinho em uma rocha em uma serra do interior paulista, a mais de 200 km do litoral. A rocha é formada por camadas de areia e argila compactadas.",
+   "comando": "O que se pode concluir a partir dessa descoberta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do afloramento",
+    "colunas": [
+     "Item",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Rocha",
+      "Camadas de areia e argila"
+     ],
+     [
+      "Fóssil",
+      "Peixe de ambiente marinho"
+     ],
+     [
+      "Distância do mar atual",
+      "Mais de 200 km"
+     ]
+    ]
+   },
+   "alts": [
+    "O peixe foi trazido da praia por pessoas e enterrado na serra",
+    "O mar já cobriu a região, e sedimentos soterraram o peixe",
+    "A serra se formou no fundo do mar e o peixe vive até hoje ali",
+    "O peixe nadou por rios até a serra e morreu por falta de água"
+   ],
+   "correta": 1,
+   "explicacao": "Fóssil de organismo marinho em rocha sedimentar indica que a área já foi coberta pelo mar. As demais opções ignoram o tempo geológico e a formação da rocha."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marcos, em um passeio, encontrou numa pedra a marca de uma folha que não existe mais na mata atual.",
+   "comando": "Com base na situação, explique o que é um fóssil e por que a marca encontrada por Marcos pode ser considerada um.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da amostra",
+    "colunas": [
+     "Item",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Rocha",
+      "Camadas compactadas"
+     ],
+     [
+      "Marca",
+      "Formato de folha"
+     ],
+     [
+      "Folha original",
+      "Não encontrada"
+     ]
+    ]
+   },
+   "ref": "Fóssil é qualquer resto ou vestígio de ser vivo de tempos geológicos preservado em rocha. A marca da folha é um fóssil porque registra um organismo que viveu no passado e ficou impresso nos sedimentos que viraram rocha.",
+   "conceitos": [
+    "Definição de fóssil",
+    "Vestígio de ser vivo antigo",
+    "Preservação em rocha"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma rocha arenosa, pesquisadores encontraram sequências de marcas com três dedos, em fila, com espaçamento regular. Não havia ossos nas proximidades.",
+   "comando": "Explique se essas marcas são fósseis e que tipo de informação elas podem trazer sobre o animal.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de campo",
+    "colunas": [
+     "Item",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Marcas",
+      "Três dedos, em fila"
+     ],
+     [
+      "Espaço entre marcas",
+      "Regular"
+     ],
+     [
+      "Ossos no local",
+      "Ausentes"
+     ]
+    ]
+   },
+   "ref": "São fósseis, mais especificamente icnofósseis, pois registram a atividade de um animal que viveu no passado. Podem indicar como ele andava, seu tamanho aproximado e se vivia em grupo.",
+   "conceitos": [
+    "Icnofóssil",
+    "Vestígio de atividade",
+    "Informações sobre o comportamento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marcos deixou três folhas por uma semana: uma sobre o solo da mata, uma na pilha de compostagem e uma no fundo de um aquário com lama, coberta por argila fina.",
+   "comando": "Qual das folhas teria maior chance de virar fóssil no futuro? Justifique com base nas condições de cada local.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de condições",
+    "colunas": [
+     "Situação",
+     "Cobertura",
+     "Contato com ar"
+    ],
+    "linhas": [
+     [
+      "Solo da mata",
+      "Nenhuma",
+      "Alto"
+     ],
+     [
+      "Compostagem",
+      "Restos vegetais",
+      "Médio"
+     ],
+     [
+      "Aquário com lama",
+      "Argila fina",
+      "Baixo"
+     ]
+    ]
+   },
+   "ref": "A folha coberta por argila no fundo do aquário. O soterramento rápido e o pouco contato com o ar reduzem a decomposição, permitindo que a marca fique preservada nos sedimentos que depois se compactam.",
+   "conceitos": [
+    "Soterramento rápido",
+    "Pouca decomposição",
+    "Sedimentos compactados em rocha"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um barranco de estrada, uma equipe observou quatro camadas de rocha, sem dobras ou falhas, cada uma com um fóssil diferente.",
+   "comando": "Ordene os fósseis do mais antigo para o mais recente e justifique a ordem escolhida.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do barranco",
+    "colunas": [
+     "Camada (de cima para baixo)",
+     "Fóssil"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Folha"
+     ],
+     [
+      "2",
+      "Concha"
+     ],
+     [
+      "3",
+      "Peixe"
+     ],
+     [
+      "4",
+      "Trilobita"
+     ]
+    ]
+   },
+   "ref": "Do mais antigo para o mais recente: trilobita, peixe, concha e folha. Em camadas sem deformação, as inferiores foram depositadas primeiro, logo contêm os fósseis mais antigos.",
+   "conceitos": [
+    "Camada inferior mais antiga",
+    "Camadas não deformadas",
+    "Idade relativa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma exposição, uma aluna perguntou por que se encontram fósseis em arenito, mas quase nunca em granito, uma rocha formada pelo resfriamento do magma.",
+   "comando": "Explique por que é muito raro encontrar fósseis em granito.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de amostras",
+    "colunas": [
+     "Rocha",
+     "Origem",
+     "Fósseis encontrados"
+    ],
+    "linhas": [
+     [
+      "Arenito",
+      "Sedimentos compactados",
+      "Vários"
+     ],
+     [
+      "Granito",
+      "Magma resfriado",
+      "Quase nenhum"
+     ]
+    ]
+   },
+   "ref": "O granito se forma de magma a temperaturas muito altas, que destruiriam qualquer organismo. O arenito se forma pelo acúmulo de sedimentos, que podem cobrir e preservar restos de seres vivos.",
+   "conceitos": [
+    "Magma em altas temperaturas",
+    "Rochas sedimentares preservam",
+    "Fossilização em sedimentos"
+   ]
+  }
+ ],
+ "7º ANO|2|Reconhecer o efeito estufa como fenômeno natural e os impactos das ações humanas que o intensificam.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na feira de ciências, Beatriz colocou dois copos com a mesma quantidade de água ao sol. Cobriu um deles com saco plástico transparente e deixou o outro aberto. Após 15 minutos, mediu a temperatura da água.",
+   "comando": "O que explica a diferença de temperatura observada por Beatriz?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Copo",
+     "Temperatura final (°C)"
+    ],
+    "linhas": [
+     [
+      "Coberto com plástico",
+      "38"
+     ],
+     [
+      "Sem cobertura",
+      "31"
+     ]
+    ]
+   },
+   "alts": [
+    "O saco plástico produziu calor próprio e aqueceu mais a água",
+    "O saco plástico atraiu mais raios solares que o copo aberto",
+    "O saco plástico dificultou a saída de calor do copo coberto",
+    "O saco plástico reduziu a evaporação e esquentou a água"
+   ],
+   "correta": 2,
+   "explicacao": "A cobertura retém parte do calor, de modo semelhante ao que os gases estufa fazem na atmosfera. Os distratores atribuem o aquecimento a produção de calor, atração de raios ou evaporação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma reportagem, o professor Luís leu que a temperatura média da Terra é cerca de 15 °C e que, sem os gases da atmosfera que retêm calor, ela seria próxima de -18 °C.",
+   "comando": "Segundo esses dados, qual afirmação sobre o efeito estufa está correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de temperatura média da Terra",
+    "colunas": [
+     "Situação",
+     "Temperatura (°C)"
+    ],
+    "linhas": [
+     [
+      "Com a atmosfera atual",
+      "15"
+     ],
+     [
+      "Sem os gases que retêm calor",
+      "-18"
+     ]
+    ]
+   },
+   "alts": [
+    "O efeito estufa surgiu com a industrialização e prejudica a vida",
+    "O efeito estufa resfria a Terra ao refletir a luz solar",
+    "O efeito estufa é causado pelo calor que a Terra produz sozinha",
+    "O efeito estufa natural mantém o planeta mais quente e habitável"
+   ],
+   "correta": 3,
+   "explicacao": "O efeito estufa natural é essencial para manter temperaturas adequadas à vida. O problema é a sua intensificação por ações humanas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A cidade de Sorocaba levantou as emissões de gás carbônico por fonte. A prefeitura quer escolher uma ação que reduza as emissões de modo significativo, usando os dados do levantamento.",
+   "comando": "Qual ação da prefeitura reduziria mais as emissões apontadas no levantamento?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de emissões de CO2 em Sorocaba",
+    "unidade": "mil toneladas por ano",
+    "itens": [
+     {
+      "rotulo": "Veículos",
+      "valor": 45
+     },
+     {
+      "rotulo": "Indústrias",
+      "valor": 25
+     },
+     {
+      "rotulo": "Queima de lixo",
+      "valor": 15
+     },
+     {
+      "rotulo": "Residências",
+      "valor": 15
+     }
+    ]
+   },
+   "alts": [
+    "Ampliar ciclovias e linhas de ônibus para reduzir o uso de carros",
+    "Plantar árvores nos canteiros para eliminar a queima de combustíveis",
+    "Recolher o lixo com mais frequência para reduzir as fumaças",
+    "Trocar lâmpadas das casas por modelos que consomem menos energia"
+   ],
+   "correta": 0,
+   "explicacao": "A maior fonte de emissão são os veículos, então reduzir seu uso tem maior efeito. As outras ações atuam em fontes menores ou não resolvem a emissão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rodrigo mora em uma região de pecuária. Seu avô queimou 20 hectares de mata para formar pasto para 300 cabeças de gado. Rodrigo leu que isso pode intensificar o efeito estufa.",
+   "comando": "De que modo as ações do avô contribuem para intensificar o efeito estufa?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da propriedade",
+    "colunas": [
+     "Item",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Árvores por hectare",
+      "400",
+      "0"
+     ],
+     [
+      "Cabeças de gado",
+      "0",
+      "300"
+     ]
+    ]
+   },
+   "alts": [
+    "Reduzem a luz solar que chega ao solo, esfriando a área",
+    "Liberam gás carbônico da queima e metano do gado",
+    "Aumentam a produção de oxigênio e o calor da região",
+    "Diminuem a umidade do ar e liberam o gás ozônio"
+   ],
+   "correta": 1,
+   "explicacao": "A queimada libera CO2 e o gado libera metano, gases estufa. Além disso, há menos árvores para absorver CO2."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um pesquisador reuniu medições de gás carbônico (CO2) na atmosfera feitas em um mesmo observatório e notou que, no mesmo período, o consumo mundial de combustíveis fósseis aumentou.",
+   "comando": "Qual interpretação dos dados é mais adequada?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de CO2 na atmosfera",
+    "unidade": "partes por milhão",
+    "itens": [
+     {
+      "rotulo": "1960",
+      "valor": 317
+     },
+     {
+      "rotulo": "1980",
+      "valor": 339
+     },
+     {
+      "rotulo": "2000",
+      "valor": 369
+     },
+     {
+      "rotulo": "2020",
+      "valor": 413
+     }
+    ]
+   },
+   "alts": [
+    "O aumento mostra que o efeito estufa passou a existir depois de 1960",
+    "O aumento é coerente com a queima de combustíveis, que intensifica o efeito",
+    "O aumento do CO2 é natural e não depende das atividades humanas",
+    "O aumento mostra que o planeta deixou de absorver todo o CO2"
+   ],
+   "correta": 1,
+   "explicacao": "Os dados indicam aumento contínuo de CO2, coerente com a queima de combustíveis fósseis, que intensifica um fenômeno já natural."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Beatriz repetiu o experimento dos dois copos ao sol e anotou a temperatura da água a cada 5 minutos.",
+   "comando": "Compare as temperaturas dos dois copos e explique o que o copo coberto representa em relação à atmosfera.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Tempo (min)",
+     "Copo coberto (°C)",
+     "Copo aberto (°C)"
+    ],
+    "linhas": [
+     [
+      "0",
+      "25",
+      "25"
+     ],
+     [
+      "5",
+      "29",
+      "28"
+     ],
+     [
+      "10",
+      "34",
+      "30"
+     ],
+     [
+      "15",
+      "38",
+      "31"
+     ]
+    ]
+   },
+   "ref": "O copo coberto esquentou mais, pois o plástico dificulta a saída de calor. Ele representa a atmosfera, cujos gases retêm parte do calor e mantêm a Terra aquecida.",
+   "conceitos": [
+    "Retenção de calor",
+    "Modelo da atmosfera",
+    "Gases estufa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Letícia ouviu o colega dizer que o efeito estufa é um problema criado pelos humanos e deveria acabar.",
+   "comando": "Explique por que essa ideia está parcialmente errada e como as ações humanas se relacionam com o efeito estufa.",
+   "figura": null,
+   "ref": "O efeito estufa é natural e necessário, pois mantém a Terra quente o bastante para a vida. As ações humanas, como queimar combustíveis e desmatar, aumentam os gases estufa e intensificam o fenômeno, elevando a temperatura.",
+   "conceitos": [
+    "Efeito estufa natural",
+    "Intensificação por ações humanas",
+    "Aumento de gases estufa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A família Souza quer reduzir suas emissões de gases estufa. Em uma semana, anotou as atividades abaixo.",
+   "comando": "Escolha duas atitudes da família que reduziriam as emissões e explique como cada uma ajuda.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de atividades da família Souza",
+    "colunas": [
+     "Atividade",
+     "Quantidade na semana"
+    ],
+    "linhas": [
+     [
+      "Km percorridos de carro",
+      "120"
+     ],
+     [
+      "Refeições com carne bovina",
+      "10"
+     ],
+     [
+      "Sacos de lixo queimados no quintal",
+      "3"
+     ],
+     [
+      "Árvores plantadas",
+      "0"
+     ]
+    ]
+   },
+   "ref": "Reduzir o uso do carro, trocando por ônibus ou bicicleta, diminui a queima de combustível e o CO2. Evitar queimar lixo no quintal impede a liberação de gases. Também são válidas: reduzir carne bovina (menos metano) e plantar árvores (absorvem CO2).",
+   "conceitos": [
+    "Menos queima de combustível",
+    "Evitar queimadas",
+    "Redução de gases estufa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O município de Alfa gera quase toda a eletricidade a partir de carvão. O município Beta usa principalmente hidrelétricas e energia solar. Os técnicos compararam as emissões por fonte.",
+   "comando": "Qual fonte deve ser priorizada para reduzir o efeito estufa? Justifique usando os dados.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de emissão de CO2 na geração de energia",
+    "unidade": "gramas por kWh",
+    "itens": [
+     {
+      "rotulo": "Carvão",
+      "valor": 820
+     },
+     {
+      "rotulo": "Gás natural",
+      "valor": 490
+     },
+     {
+      "rotulo": "Solar",
+      "valor": 45
+     },
+     {
+      "rotulo": "Hidrelétrica",
+      "valor": 24
+     }
+    ]
+   },
+   "ref": "Devem ser priorizadas a hidrelétrica e a solar, pois emitem muito menos CO2 por kWh que o carvão e o gás. Trocar fontes fósseis por elas reduz a liberação de gases estufa e a intensificação do efeito estufa.",
+   "conceitos": [
+    "Comparação de emissões",
+    "Combustíveis fósseis intensificam o efeito",
+    "Fontes renováveis"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um colega de Beatriz disse que o experimento do copo não prova nada sobre a atmosfera da Terra, pois é só um copo com água.",
+   "comando": "Justifique em que o experimento ajuda a entender o efeito estufa e aponte uma limitação desse modelo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do professor",
+    "colunas": [
+     "Item",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Fonte de calor",
+      "Sol"
+     ],
+     [
+      "Copo coberto",
+      "Mais quente após 15 min"
+     ],
+     [
+      "Copo aberto",
+      "Menos quente após 15 min"
+     ]
+    ]
+   },
+   "ref": "O experimento mostra que uma cobertura retém calor, como os gases da atmosfera. Limitação: o plástico é uma barreira física, enquanto na atmosfera os gases deixam passar a luz do Sol e retêm parte do calor emitido, e a escala é muito diferente.",
+   "conceitos": [
+    "Retenção de calor",
+    "Modelo simplificado",
+    "Limitação do modelo"
+   ]
+  }
+ ],
+ "8º ANO|3|Diferenciar os eclipses solar e lunar com base nas posições relativas entre Sol, Terra e Lua.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma reportagem de Campinas anunciou um eclipse lunar total visível a olho nu à noite, com a Lua cheia escurecendo e ficando avermelhada por cerca de uma hora.",
+   "comando": "Como estão posicionados Sol, Terra e Lua durante esse eclipse?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da observação",
+    "colunas": [
+     "Item",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Horário",
+      "21h às 23h"
+     ],
+     [
+      "Fase antes do eclipse",
+      "Lua cheia"
+     ],
+     [
+      "Visibilidade",
+      "Toda a cidade"
+     ]
+    ]
+   },
+   "alts": [
+    "A Lua entre o Sol e a Terra, projetando sombra sobre a Terra",
+    "A Terra entre o Sol e a Lua, com a Lua entrando na sombra da Terra",
+    "O Sol entre a Terra e a Lua, com a Lua ficando atrás do Sol",
+    "Sol, Terra e Lua em ângulo reto, com a Lua em quarto crescente"
+   ],
+   "correta": 1,
+   "explicacao": "No eclipse lunar a Terra fica no meio e a Lua entra na sombra da Terra. O distrator A descreve o eclipse solar."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na sala escura, Laura iluminou com uma lanterna uma bola de isopor (Lua) e uma bola maior (Terra). Em certa posição, a sombra da bola pequena caiu sobre a bola grande.",
+   "comando": "Em qual fase da Lua ocorre o fenômeno representado por Laura?",
+   "figura": null,
+   "alts": [
+    "Lua cheia, pois a Terra fica entre o Sol e a Lua",
+    "Lua nova, pois a Lua está do lado oposto ao Sol",
+    "Lua cheia, pois a Lua fica entre o Sol e a Terra",
+    "Lua nova, pois a Lua fica entre o Sol e a Terra"
+   ],
+   "correta": 3,
+   "explicacao": "Eclipse solar acontece em Lua nova, com a Lua entre o Sol e a Terra e sua sombra projetada na Terra."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma notícia, Rafael leu que um eclipse solar anular produziu um anel de luz ao redor da Lua. O texto informava que a Lua estava mais distante da Terra nesse dia do que em outros eclipses totais.",
+   "comando": "Por que o eclipse foi anular em vez de total?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de distâncias Terra-Lua",
+    "colunas": [
+     "Situação",
+     "Distância (mil km)"
+    ],
+    "linhas": [
+     [
+      "Eclipse total anterior",
+      "363"
+     ],
+     [
+      "Eclipse anular",
+      "405"
+     ]
+    ]
+   },
+   "alts": [
+    "A Lua parecia menor no céu e não cobriu todo o disco do Sol",
+    "A Lua estava mais perto e a sombra não alcançou a Terra",
+    "A Terra estava entre o Sol e a Lua e produziu uma sombra parcial",
+    "O Sol estava mais distante e parecia menor que a Lua"
+   ],
+   "correta": 0,
+   "explicacao": "Mais longe, a Lua parece menor e deixa um anel do Sol visível. Nos distratores, as posições ou distâncias estão trocadas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um eclipse solar total, a cidade A viu o Sol totalmente coberto, a cidade B, a 800 km do centro, viu apenas uma parte coberta, e a cidade C, bem distante, não notou alteração.",
+   "comando": "Por que as três cidades viram resultados diferentes?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação do eclipse",
+    "colunas": [
+     "Cidade",
+     "Distância do centro da faixa",
+     "Sol coberto"
+    ],
+    "linhas": [
+     [
+      "A",
+      "0 km",
+      "Totalmente"
+     ],
+     [
+      "B",
+      "800 km",
+      "Parcialmente"
+     ],
+     [
+      "C",
+      "3 000 km",
+      "Não observou"
+     ]
+    ]
+   },
+   "alts": [
+    "A Lua mudou de tamanho no céu de acordo com a cidade",
+    "A sombra da Lua é pequena e só cobre uma faixa da Terra",
+    "O Sol se apaga por tempos diferentes em cada cidade",
+    "A Terra gira mais rápido nas cidades mais distantes"
+   ],
+   "correta": 1,
+   "explicacao": "A sombra da Lua sobre a Terra é estreita. Quem está dentro dela vê o eclipse total, e quem está nos arredores vê parcial."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana, que mora em Santos, e Bruno, que mora em Campinas, viram o mesmo eclipse lunar. Já o eclipse solar do ano anterior foi total em poucas cidades e parcial em outras. Ana se perguntou por que o eclipse lunar é visto por mais gente.",
+   "comando": "Qual explicação está correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de visibilidade",
+    "colunas": [
+     "Eclipse",
+     "Região onde foi visto"
+    ],
+    "linhas": [
+     [
+      "Solar total",
+      "Faixa estreita da Terra"
+     ],
+     [
+      "Lunar total",
+      "Todo o lado em que era noite"
+     ]
+    ]
+   },
+   "alts": [
+    "A sombra da Lua é maior que a da Terra e atinge mais regiões",
+    "O eclipse lunar dura mais e por isso é visto por mais pessoas",
+    "A Lua entra na sombra da Terra e todos no lado noturno a veem",
+    "O eclipse solar só pode ser visto de dia, por poucas pessoas"
+   ],
+   "correta": 2,
+   "explicacao": "Quando a Lua entra na sombra da Terra, quem está no lado noturno vê o eclipse. No solar, a sombra da Lua cobre só uma faixa."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Carlos alinhou, na sala escura, a lanterna, uma bola pequena (Lua) e uma bola grande (Terra), nessa ordem, e viu a sombra da bola pequena sobre a grande.",
+   "comando": "Que eclipse Carlos representou e em que fase da Lua ele ocorre?",
+   "figura": null,
+   "ref": "Carlos representou o eclipse solar, pois a Lua ficou entre o Sol (lanterna) e a Terra e projetou sua sombra nela. Ocorre em Lua nova.",
+   "conceitos": [
+    "Eclipse solar",
+    "Lua entre Sol e Terra",
+    "Lua nova"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma noite de Lua cheia, uma família acompanhou a Lua escurecer por completo e ficar avermelhada, depois voltar ao brilho normal.",
+   "comando": "Explique que tipo de eclipse eles viram e por que ele acontece em Lua cheia.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da família",
+    "colunas": [
+     "Horário",
+     "Aspecto da Lua"
+    ],
+    "linhas": [
+     [
+      "21h",
+      "Cheia e brilhante"
+     ],
+     [
+      "22h",
+      "Parte escura"
+     ],
+     [
+      "23h",
+      "Totalmente avermelhada"
+     ],
+     [
+      "0h",
+      "Voltando ao brilho"
+     ]
+    ]
+   },
+   "ref": "Eles viram um eclipse lunar. Ocorre em Lua cheia porque a Terra está entre o Sol e a Lua, e a Lua entra na sombra da Terra.",
+   "conceitos": [
+    "Eclipse lunar",
+    "Terra entre Sol e Lua",
+    "Lua cheia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro afirmou que um eclipse solar pode acontecer em qualquer noite de Lua cheia. Marina discordou e mostrou seus registros de junho.",
+   "comando": "Quem tem razão? Justifique com base nas posições de Sol, Terra e Lua.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Marina",
+    "colunas": [
+     "Data",
+     "Fase da Lua",
+     "Evento"
+    ],
+    "linhas": [
+     [
+      "05/06",
+      "Nova",
+      "Eclipse solar"
+     ],
+     [
+      "20/06",
+      "Cheia",
+      "Sem eclipse solar"
+     ]
+    ]
+   },
+   "ref": "Marina tem razão. O eclipse solar exige a Lua entre o Sol e a Terra, o que ocorre em Lua nova. Na Lua cheia, a Terra fica entre o Sol e a Lua, e só poderia haver eclipse lunar.",
+   "conceitos": [
+    "Lua nova",
+    "Alinhamento Sol-Lua-Terra",
+    "Diferença entre eclipses"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um programa de TV, um astrônomo disse que a fase de totalidade de um eclipse solar dura poucos minutos, enquanto a de um eclipse lunar dura mais de uma hora.",
+   "comando": "Explique por que a duração é tão diferente, comparando as sombras envolvidas.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de duração da totalidade",
+    "unidade": "minutos",
+    "itens": [
+     {
+      "rotulo": "Eclipse solar",
+      "valor": 4
+     },
+     {
+      "rotulo": "Eclipse lunar",
+      "valor": 80
+     }
+    ]
+   },
+   "ref": "A sombra da Terra é bem maior que a Lua, que leva muito tempo para atravessá-la. Já a sombra da Lua sobre a Terra é pequena e passa rapidamente, por isso a totalidade solar dura poucos minutos.",
+   "conceitos": [
+    "Tamanho das sombras",
+    "Movimento da Lua",
+    "Duração da totalidade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em 2024, os registros mostraram 12 luas novas e 12 luas cheias, mas só dois eclipses solares e dois lunares.",
+   "comando": "Explique por que não há eclipses em todas as luas novas e cheias.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de 2024",
+    "colunas": [
+     "Fase",
+     "Ocorrências",
+     "Eclipses"
+    ],
+    "linhas": [
+     [
+      "Lua nova",
+      "12",
+      "2 solares"
+     ],
+     [
+      "Lua cheia",
+      "12",
+      "2 lunares"
+     ]
+    ]
+   },
+   "ref": "A órbita da Lua é inclinada em relação à órbita da Terra em torno do Sol. Por isso, quase sempre a Lua passa acima ou abaixo da linha Sol-Terra e só às vezes ocorre o alinhamento perfeito para o eclipse.",
+   "conceitos": [
+    "Inclinação da órbita da Lua",
+    "Alinhamento Sol-Terra-Lua",
+    "Eclipses menos frequentes"
+   ]
+  }
+ ],
+ "9º ANO|1|Analisar fenômenos relacionados às ondas mecânicas e eletromagnéticas em situações do cotidiano.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, Tiago amarrou uma fita vermelha no meio de uma mola esticada sobre a mesa e deu um empurrão em uma das pontas. Um pulso percorreu a mola até a outra extremidade. A fita subiu e desceu, mas voltou ao lugar de partida.",
+   "comando": "O que o pulso transportou ao longo da mola?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do experimento",
+    "colunas": [
+     "Item",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Posição da fita antes",
+      "50 cm"
+     ],
+     [
+      "Posição da fita depois",
+      "50 cm"
+     ],
+     [
+      "Tempo até a outra ponta",
+      "2 s"
+     ]
+    ]
+   },
+   "alts": [
+    "Energia, pois cada ponto da mola oscila e retorna à posição",
+    "Matéria, pois partes da mola foram levadas até a ponta",
+    "Matéria e energia, pois a fita acompanhou o pulso",
+    "Energia, pois a fita se deslocou até a outra extremidade"
+   ],
+   "correta": 0,
+   "explicacao": "Ondas transportam energia sem transportar matéria: a fita só oscilou. Os distratores supõem transporte de matéria ou deslocamento da fita."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Durante uma tempestade em Ribeirão Preto, Sofia viu um relâmpago e só ouviu o trovão alguns segundos depois, embora os dois fenômenos tenham ocorrido ao mesmo tempo.",
+   "comando": "Por que Sofia viu o relâmpago antes de ouvir o trovão?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do fenômeno",
+    "colunas": [
+     "Onda",
+     "Velocidade aproximada (m/s)"
+    ],
+    "linhas": [
+     [
+      "Luz do relâmpago",
+      "300 000 000"
+     ],
+     [
+      "Som do trovão",
+      "340"
+     ]
+    ]
+   },
+   "alts": [
+    "O som sai da nuvem antes e é interrompido pelo ar",
+    "A luz é eletromagnética e muito mais rápida que o som",
+    "O som precisa de menos energia e se propaga mais devagar",
+    "A luz é mecânica e percorre o ar mais rápido que o som"
+   ],
+   "correta": 1,
+   "explicacao": "A luz é onda eletromagnética, com velocidade muito maior que a do som, que é onda mecânica. Os distratores trocam a natureza das ondas ou a ordem de emissão."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao colocar um lápis em um copo transparente com água, Rafael viu o lápis parecer 'quebrado' na altura da superfície. Ao retirar o lápis, ele estava inteiro.",
+   "comando": "Qual fenômeno explica o lápis 'quebrado'?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Meio",
+     "Velocidade da luz (km/s)"
+    ],
+    "linhas": [
+     [
+      "Ar",
+      "300 000"
+     ],
+     [
+      "Água",
+      "225 000"
+     ]
+    ]
+   },
+   "alts": [
+    "A reflexão da luz no vidro, que divide a imagem do lápis",
+    "A dispersão da luz, que separa as cores do lápis na água",
+    "A absorção da luz pela água, que apaga parte do lápis",
+    "A refração da luz, que muda de direção ao passar da água ao ar"
+   ],
+   "correta": 3,
+   "explicacao": "A luz muda de velocidade e de direção ao passar de um meio para outro: refração. Reflexão, dispersão e absorção ocorrem em outros casos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um vale perto de Campos do Jordão, Paula gritou e ouviu o eco depois de 1,5 s. Ela sabe que o som se propaga no ar a cerca de 340 m/s e que o som vai até o paredão e volta.",
+   "comando": "A que distância, aproximadamente, está o paredão?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tempo entre grito e eco",
+      "1,5 s"
+     ],
+     [
+      "Velocidade do som no ar",
+      "340 m/s"
+     ]
+    ]
+   },
+   "alts": [
+    "510 m",
+    "340 m",
+    "255 m",
+    "127 m"
+   ],
+   "correta": 2,
+   "explicacao": "O som percorre 340 × 1,5 = 510 m, mas é ida e volta; a distância é 510 ÷ 2 = 255 m."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Lucas comparou as ondas de um rádio FM (100 MHz) e de um roteador Wi-Fi (2 400 MHz). Ambos são ondas eletromagnéticas que viajam à mesma velocidade, cerca de 300 000 km/s, no ar.",
+   "comando": "O que se pode concluir sobre os comprimentos de onda dessas duas ondas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Fonte",
+     "Frequência (MHz)"
+    ],
+    "linhas": [
+     [
+      "Rádio FM",
+      "100"
+     ],
+     [
+      "Wi-Fi",
+      "2 400"
+     ]
+    ]
+   },
+   "alts": [
+    "O Wi-Fi tem maior comprimento de onda, pois sua frequência é maior",
+    "Os dois têm o mesmo comprimento, pois a velocidade é a mesma",
+    "O rádio FM tem menor comprimento, pois sua frequência é menor",
+    "O Wi-Fi tem menor comprimento, pois sua frequência é maior"
+   ],
+   "correta": 3,
+   "explicacao": "Como v = λ × f e a velocidade é a mesma, maior frequência significa menor comprimento de onda."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um teste, Júlia agitou uma corda presa na parede e viu uma onda percorrer a corda. Depois, tentou repetir o teste com uma corda solta no ar, sem estar presa.",
+   "comando": "Explique por que a onda produzida na corda é classificada como mecânica.",
+   "figura": null,
+   "ref": "Porque precisa de um meio material (a corda) para se propagar. A perturbação passa de ponto a ponto da corda, transportando energia, e sem o meio não há propagação.",
+   "conceitos": [
+    "Onda mecânica",
+    "Necessita de meio material",
+    "Transporta energia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Laura anotou, na sala, o que acontecia em sua casa: som da TV, luz da lâmpada, sinal do Wi-Fi e ondas na água de uma bacia.",
+   "comando": "Classifique cada fenômeno em onda mecânica ou eletromagnética e justifique a classificação.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Laura",
+    "colunas": [
+     "Fenômeno",
+     "Onde ocorre"
+    ],
+    "linhas": [
+     [
+      "Som da TV",
+      "Ar da sala"
+     ],
+     [
+      "Luz da lâmpada",
+      "Sala"
+     ],
+     [
+      "Sinal de Wi-Fi",
+      "Sala"
+     ],
+     [
+      "Ondas na bacia",
+      "Água"
+     ]
+    ]
+   },
+   "ref": "Mecânicas: som da TV e ondas na bacia, que precisam de meio (ar e água). Eletromagnéticas: luz da lâmpada e Wi-Fi, que podem se propagar mesmo sem meio material.",
+   "conceitos": [
+    "Ondas mecânicas precisam de meio",
+    "Ondas eletromagnéticas",
+    "Classificação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma aula, Pedro apontou uma lanterna para um espelho plano e mediu os ângulos do raio incidente e do raio refletido, em relação à reta perpendicular ao espelho.",
+   "comando": "Preveja o ângulo do raio refletido quando o raio incidente formar 50° e justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento",
+    "colunas": [
+     "Ângulo incidente (°)",
+     "Ângulo refletido (°)"
+    ],
+    "linhas": [
+     [
+      "20",
+      "20"
+     ],
+     [
+      "40",
+      "40"
+     ],
+     [
+      "60",
+      "60"
+     ]
+    ]
+   },
+   "ref": "O ângulo refletido será 50°. Na reflexão, o ângulo do raio refletido é igual ao do raio incidente, como mostram as medidas.",
+   "conceitos": [
+    "Lei da reflexão",
+    "Ângulos iguais",
+    "Previsão a partir dos dados"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Antes, uma carta levava dias para chegar a outra cidade. Hoje, mensagens chegam em segundos pelo celular, que usa ondas eletromagnéticas.",
+   "comando": "Explique como o uso de ondas eletromagnéticas transformou a comunicação humana.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de tempo para uma mensagem chegar",
+    "colunas": [
+     "Meio",
+     "Tempo"
+    ],
+    "linhas": [
+     [
+      "Carta",
+      "3 dias"
+     ],
+     [
+      "Telegrama",
+      "1 hora"
+     ],
+     [
+      "Mensagem de celular",
+      "Menos de 1 segundo"
+     ]
+    ]
+   },
+   "ref": "As ondas eletromagnéticas viajam com velocidade altíssima e não precisam de meio material. Por isso as mensagens podem ser transmitidas quase instantaneamente a longas distâncias, por rádio, satélite e fibra óptica.",
+   "conceitos": [
+    "Alta velocidade",
+    "Sem meio material",
+    "Comunicação à distância"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um pescador usa um sonar, que emite som e mede o eco, para encontrar peixes em um lago. Em um teste, ele tentou usar um rádio FM debaixo d'água, mas não teve sinal.",
+   "comando": "Justifique por que o sonar funciona na água e o rádio FM não, comparando os tipos de onda.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do teste",
+    "colunas": [
+     "Equipamento",
+     "Alcance na água"
+    ],
+    "linhas": [
+     [
+      "Sonar",
+      "100 m"
+     ],
+     [
+      "Rádio FM",
+      "1 m"
+     ]
+    ]
+   },
+   "ref": "O sonar usa ondas sonoras, mecânicas, que se propagam bem na água. As ondas eletromagnéticas do rádio são muito absorvidas pela água, por isso o sinal some após pouca distância.",
+   "conceitos": [
+    "Ondas mecânicas na água",
+    "Absorção de ondas eletromagnéticas",
+    "Meio de propagação"
+   ]
+  }
+ ],
+ "9º ANO|2|Analisar os efeitos e aplicações das radiações ionizantes no organismo humano e na área médica.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Lucas caiu da bicicleta e foi à UBS. Na radiografia do braço, os ossos apareceram claros e a região dos músculos, mais escura. O médico explicou que parte dos raios X é barrada ao atravessar o corpo.",
+   "comando": "Por que os ossos aparecem mais claros na imagem?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da radiografia",
+    "colunas": [
+     "Região",
+     "Raios X que chegam ao filme (%)"
+    ],
+    "linhas": [
+     [
+      "Pulmão",
+      "90"
+     ],
+     [
+      "Músculo",
+      "60"
+     ],
+     [
+      "Osso",
+      "10"
+     ]
+    ]
+   },
+   "alts": [
+    "Os ossos absorvem mais raios X, que chegam menos ao filme",
+    "Os ossos emitem luz própria quando recebem os raios X",
+    "Os ossos refletem todos os raios X de volta ao aparelho",
+    "Os ossos deixam passar mais raios X que os músculos"
+   ],
+   "correta": 0,
+   "explicacao": "Ossos densos absorvem mais raios X; menos chegam ao filme e a imagem fica clara. Os distratores invertem o processo ou atribuem emissão de luz."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, Ana recebeu um quadro com frequências de radiações do espectro eletromagnético e precisou indicar qual delas tem energia suficiente para arrancar elétrons dos átomos, isto é, ionizar.",
+   "comando": "Qual radiação do quadro é ionizante?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do espectro eletromagnético",
+    "colunas": [
+     "Radiação",
+     "Frequência aproximada (Hz)"
+    ],
+    "linhas": [
+     [
+      "Ondas de rádio",
+      "1 × 10^8"
+     ],
+     [
+      "Micro-ondas",
+      "1 × 10^10"
+     ],
+     [
+      "Luz visível",
+      "5 × 10^14"
+     ],
+     [
+      "Raios X",
+      "1 × 10^18"
+     ]
+    ]
+   },
+   "alts": [
+    "Luz visível, pois é a mais intensa que chega ao corpo",
+    "Micro-ondas, pois aquecem os alimentos no forno",
+    "Ondas de rádio, pois atravessam as paredes das casas",
+    "Raios X, pois têm frequência alta e energia para ionizar"
+   ],
+   "correta": 3,
+   "explicacao": "Radiações ionizantes têm alta frequência e energia, como raios X e gama. Calor, atravessar paredes ou intensidade não definem se ionizam."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Roberto é técnico em radiologia numa clínica de Campinas. Ele usa avental de chumbo e sai da sala durante o disparo dos raios X. Um paciente fez apenas uma radiografia, mas Roberto pode participar de dezenas de exames por dia.",
+   "comando": "Por que Roberto precisa dessas proteções?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de doses",
+    "unidade": "microsievert por exame",
+    "itens": [
+     {
+      "rotulo": "Radiografia de tórax",
+      "valor": 100
+     },
+     {
+      "rotulo": "Radiografia de braço",
+      "valor": 10
+     },
+     {
+      "rotulo": "Tomografia de abdome",
+      "valor": 8000
+     }
+    ]
+   },
+   "alts": [
+    "Para evitar que o aparelho se torne radioativo ao longo do dia",
+    "Para reduzir a dose acumulada, que aumenta o risco de danos",
+    "Para impedir que ele tome choque elétrico do equipamento",
+    "Para evitar que o corpo fique radioativo após cada exame"
+   ],
+   "correta": 1,
+   "explicacao": "A exposição repetida aumenta a dose acumulada e o risco de danos às células. O corpo exposto não se torna radioativo, e o objetivo não é evitar choques."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em Santos, o índice de radiação ultravioleta (UV) varia durante o dia. Fernanda quer ir à praia e proteger a pele, pois a UV de alta energia pode danificar o DNA das células.",
+   "comando": "Qual orientação protege melhor a pele de Fernanda, considerando os dados?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro do índice UV em Santos",
+    "unidade": "índice",
+    "itens": [
+     {
+      "rotulo": "8h",
+      "valor": 3
+     },
+     {
+      "rotulo": "10h",
+      "valor": 8
+     },
+     {
+      "rotulo": "12h",
+      "valor": 11
+     },
+     {
+      "rotulo": "15h",
+      "valor": 7
+     },
+     {
+      "rotulo": "17h",
+      "valor": 2
+     }
+    ]
+   },
+   "alts": [
+    "Ficar no sol ao meio-dia por pouco tempo para a pele se acostumar",
+    "Usar protetor só após o bronzeado aparecer para evitar queimaduras",
+    "Ir à praia no início da manhã ou no fim da tarde, com protetor",
+    "Dispensar o protetor em dias nublados, pois a UV é bloqueada"
+   ],
+   "correta": 2,
+   "explicacao": "O índice UV é menor no início da manhã e no fim da tarde, e o protetor reduz o dano ao DNA. Nuvens não bloqueiam toda a UV."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um hospital, uma paciente faz radioterapia: a radiação ionizante é dirigida ao tumor em sessões separadas por dias. O médico explica que as células do tumor se dividem rápido e se recuperam pouco entre as sessões.",
+   "comando": "Por que o tratamento é dividido em sessões?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do tratamento",
+    "colunas": [
+     "Sessão",
+     "Células do tumor (%)",
+     "Tecido saudável (%)"
+    ],
+    "linhas": [
+     [
+      "0",
+      "100",
+      "100"
+     ],
+     [
+      "5",
+      "40",
+      "85"
+     ],
+     [
+      "10",
+      "10",
+      "75"
+     ]
+    ]
+   },
+   "alts": [
+    "A radiação só funciona se aplicada em pequenas doses para esquentar o tumor",
+    "As células saudáveis se recuperam entre as sessões, e as do tumor menos",
+    "As células do tumor ficam resistentes à radiação após cada sessão",
+    "A radiação deixa o tumor radioativo e ele se desfaz aos poucos"
+   ],
+   "correta": 1,
+   "explicacao": "A radiação ionizante danifica o DNA das células. Ao fracionar, o tecido saudável se recupera mais que o tumor, que se divide rápido e acumula danos."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No espectro eletromagnético, Pedro encontrou fontes de radiação: celular, lâmpada de LED, aparelho de raios X e forno de micro-ondas.",
+   "comando": "Indique qual dessas fontes emite radiação ionizante e explique o que isso significa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fontes",
+    "colunas": [
+     "Fonte",
+     "Uso"
+    ],
+    "linhas": [
+     [
+      "Celular",
+      "Comunicação"
+     ],
+     [
+      "Lâmpada de LED",
+      "Iluminação"
+     ],
+     [
+      "Aparelho de raios X",
+      "Diagnóstico"
+     ],
+     [
+      "Forno de micro-ondas",
+      "Aquecimento de alimentos"
+     ]
+    ]
+   },
+   "ref": "O aparelho de raios X. Radiação ionizante tem energia suficiente para arrancar elétrons de átomos e moléculas, podendo alterar o DNA das células.",
+   "conceitos": [
+    "Radiação ionizante",
+    "Raios X",
+    "Dano ao DNA"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um hospital esteriliza seringas e luvas expondo-as a raios gama antes de embalar. Marta, estudante, quer entender por que os objetos ficam livres de microrganismos e não ficam radioativos.",
+   "comando": "Explique como a radiação elimina os microrganismos e por que os profissionais usam proteção ao operar o equipamento.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da esterilização",
+    "colunas": [
+     "Momento",
+     "Bactérias por seringa"
+    ],
+    "linhas": [
+     [
+      "Antes da exposição",
+      "1 000 000"
+     ],
+     [
+      "Após 3 horas",
+      "0"
+     ]
+    ]
+   },
+   "ref": "A radiação ionizante danifica o DNA dos microrganismos e impede que se reproduzam. Os objetos tratados não retêm a radiação, mas os profissionais usam proteção porque a exposição direta ou repetida também pode danificar as células humanas.",
+   "conceitos": [
+    "Dano ao DNA",
+    "Esterilização",
+    "Proteção ocupacional"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um dentista posiciona o aparelho de raios X e orienta a recepcionista a ficar longe do consultório durante a radiografia. Um colega mediu a dose a diferentes distâncias.",
+   "comando": "Explique como a distância reduz a exposição e proponha mais uma medida de proteção.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de medições",
+    "colunas": [
+     "Distância do aparelho (m)",
+     "Dose relativa (%)"
+    ],
+    "linhas": [
+     [
+      "1",
+      "100"
+     ],
+     [
+      "2",
+      "25"
+     ],
+     [
+      "3",
+      "11"
+     ]
+    ]
+   },
+   "ref": "Quanto maior a distância, menor a dose recebida, pois a radiação se espalha e perde intensidade. Outras medidas: usar avental ou barreira de chumbo, ou reduzir o tempo de exposição.",
+   "conceitos": [
+    "Distância reduz a dose",
+    "Blindagem",
+    "Tempo de exposição"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro acha perigoso usar celular perto do corpo e compara com os raios X. Seu irmão afirma que as radiações são de tipos muito diferentes.",
+   "comando": "Explique por que o celular não oferece o mesmo risco que os raios X, usando a energia das radiações.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de energia por fóton",
+    "colunas": [
+     "Radiação",
+     "Frequência (Hz)",
+     "Energia do fóton (eV)"
+    ],
+    "linhas": [
+     [
+      "Celular",
+      "2 × 10^9",
+      "0,000008"
+     ],
+     [
+      "Raios X",
+      "2 × 10^18",
+      "8 000"
+     ]
+    ]
+   },
+   "ref": "O celular emite micro-ondas, de baixa energia por fóton, que não ionizam átomos nem alteram o DNA. Os raios X têm energia milhões de vezes maior, suficiente para ionizar e danificar as células.",
+   "conceitos": [
+    "Radiação não ionizante",
+    "Energia por fóton",
+    "Radiação ionizante"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um paciente de Piracicaba teve suspeita de fratura no fêmur. Seu amigo disse que nunca se deve fazer raios X por causa da radiação, mas o médico pediu o exame.",
+   "comando": "Avalie o argumento do amigo, considerando benefícios e riscos do exame.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de doses",
+    "unidade": "microsievert",
+    "itens": [
+     {
+      "rotulo": "Radiação natural em 1 mês",
+      "valor": 200
+     },
+     {
+      "rotulo": "Radiografia do fêmur",
+      "valor": 300
+     },
+     {
+      "rotulo": "Tomografia de abdome",
+      "valor": 8000
+     }
+    ]
+   },
+   "ref": "O argumento é exagerado. A dose de uma radiografia é baixa e comparável à radiação natural de poucas semanas, enquanto o benefício do diagnóstico correto é grande. Exames com doses altas devem ser feitos só quando necessários.",
+   "conceitos": [
+    "Relação risco e benefício",
+    "Doses baixas",
+    "Uso criterioso"
+   ]
+  }
+ ],
+ "4B|6º ANO|12": [
+  {
+   "tipo": "obj",
+   "enunciado": "Rafaela corre todo fim de tarde no parque. Depois de 20 minutos, ela percebe que as pernas estão cansadas, mas o coração continua batendo sem que ela precise pensar nisso.",
+   "comando": "Qual característica diferencia o músculo do coração dos músculos das pernas de Rafaela?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Rafaela",
+    "colunas": [
+     "Estrutura",
+     "Controle de Rafaela",
+     "Atividade durante o dia"
+    ],
+    "linhas": [
+     [
+      "Músculos das pernas",
+      "Decide quando mexer",
+      "Intermitente"
+     ],
+     [
+      "Músculo do coração",
+      "Não decide",
+      "Contínua"
+     ]
+    ]
+   },
+   "alts": [
+    "O músculo cardíaco é involuntário e age sem parar ao longo da vida",
+    "O músculo cardíaco é voluntário e se contrai quando Rafaela quer",
+    "O músculo das pernas é involuntário e age mesmo em repouso",
+    "O músculo das pernas é liso e se contrai de modo contínuo"
+   ],
+   "correta": 0,
+   "explicacao": "O músculo cardíaco é involuntário e contínuo. Os músculos das pernas são esqueléticos, voluntários e se cansam."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Depois do almoço, Pedro sentiu a barriga 'se mexer' e ouviu ruídos, sem poder controlar esses movimentos. O professor explicou que as paredes do estômago e do intestino têm músculos que empurram o alimento.",
+   "comando": "Que tipo de músculo é responsável por esses movimentos?",
+   "figura": null,
+   "alts": [
+    "Esquelético, voluntário e ligado aos ossos por tendões",
+    "Cardíaco, involuntário e exclusivo do coração do corpo",
+    "Liso, voluntário e de contração rápida nos órgãos internos",
+    "Liso, involuntário e de contração lenta nos órgãos internos"
+   ],
+   "correta": 3,
+   "explicacao": "Os órgãos do sistema digestório têm músculo liso, involuntário e de contração lenta. O esquelético é voluntário e o cardíaco fica só no coração."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marina segurava uma mochila pesada com a mão e dobrou o cotovelo, trazendo a mochila para perto do ombro. Em seguida, estendeu o braço novamente.",
+   "comando": "O que ocorre com o bíceps e o tríceps quando Marina dobra o cotovelo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do movimento",
+    "colunas": [
+     "Etapa",
+     "Posição do antebraço"
+    ],
+    "linhas": [
+     [
+      "Início",
+      "Esticado para baixo"
+     ],
+     [
+      "Meio",
+      "Subindo"
+     ],
+     [
+      "Fim",
+      "Dobrado perto do ombro"
+     ]
+    ]
+   },
+   "alts": [
+    "O tríceps contrai e o bíceps relaxa, levantando o antebraço",
+    "O bíceps contrai e o tríceps relaxa, levantando o antebraço",
+    "Os dois contraem juntos, o que dobra e firma o antebraço",
+    "Os dois relaxam, e o peso da mochila dobra o antebraço"
+   ],
+   "correta": 1,
+   "explicacao": "Músculos antagonistas: ao dobrar o cotovelo, o bíceps contrai e o tríceps relaxa. Ao esticar, o tríceps contrai e o bíceps relaxa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, os alunos listaram ações do dia a dia: escrever no caderno, piscar quando entra poeira no olho, chutar uma bola, digerir o lanche e levantar a mão para perguntar.",
+   "comando": "Em qual alternativa há apenas ações realizadas por movimentos voluntários?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da turma",
+    "colunas": [
+     "Ação",
+     "Local"
+    ],
+    "linhas": [
+     [
+      "Escrever no caderno",
+      "Mão"
+     ],
+     [
+      "Piscar com poeira",
+      "Olho"
+     ],
+     [
+      "Chutar a bola",
+      "Perna"
+     ],
+     [
+      "Digerir o lanche",
+      "Estômago"
+     ],
+     [
+      "Levantar a mão",
+      "Braço"
+     ]
+    ]
+   },
+   "alts": [
+    "Escrever no caderno, chutar a bola e levantar a mão",
+    "Piscar com poeira, chutar a bola e escrever no caderno",
+    "Digerir o lanche, levantar a mão e escrever no caderno",
+    "Chutar a bola, digerir o lanche e piscar com poeira"
+   ],
+   "correta": 0,
+   "explicacao": "Escrever, chutar e levantar a mão dependem da decisão da pessoa. Piscar por reflexo e digerir são movimentos involuntários."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Carlos, jogador de futebol, rompeu o tendão do calcanhar. Os exames mostram que o músculo da panturrilha está saudável e se contrai normalmente, mas ele não consegue levantar o calcanhar para ficar na ponta do pé.",
+   "comando": "Qual explicação justifica a limitação de movimento de Carlos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro médico",
+    "colunas": [
+     "Estrutura",
+     "Resultado do exame"
+    ],
+    "linhas": [
+     [
+      "Músculo da panturrilha",
+      "Contrai normalmente"
+     ],
+     [
+      "Tendão do calcanhar",
+      "Rompido"
+     ],
+     [
+      "Osso do calcanhar",
+      "Íntegro"
+     ]
+    ]
+   },
+   "alts": [
+    "O músculo parou de contrair e os ossos perderam a rigidez",
+    "O osso do calcanhar perdeu a ligação com os nervos da perna",
+    "A força do músculo não chega ao osso, pois falta o tendão",
+    "O tendão se contrai sozinho e agora não age sem o músculo"
+   ],
+   "correta": 2,
+   "explicacao": "O tendão liga o músculo ao osso e transmite a força da contração. Sem ele, o músculo contrai, mas o osso não se move."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Durante a corrida, Rafaela percebeu que as pernas se mexem quando ela quer, o coração acelera sozinho e o intestino continua funcionando.",
+   "comando": "Classifique os músculos das pernas, do coração e do intestino em esquelético, liso ou cardíaco.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Rafaela",
+    "colunas": [
+     "Estrutura",
+     "Observação"
+    ],
+    "linhas": [
+     [
+      "Pernas",
+      "Movem quando ela decide"
+     ],
+     [
+      "Coração",
+      "Acelera sozinho"
+     ],
+     [
+      "Intestino",
+      "Funciona sem controle"
+     ]
+    ]
+   },
+   "ref": "Pernas: músculo esquelético, voluntário. Coração: músculo cardíaco, involuntário e contínuo. Intestino: músculo liso, involuntário, de contração lenta.",
+   "conceitos": [
+    "Músculo esquelético",
+    "Músculo cardíaco",
+    "Músculo liso"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao levantar um copo para beber água, Bia dobra o cotovelo, e o antebraço sobe até a boca.",
+   "comando": "Descreva o que acontece com o bíceps durante esse movimento e classifique o movimento como voluntário ou involuntário.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do movimento",
+    "etapas": [
+     "Braço esticado ao lado do corpo",
+     "Cotovelo começa a dobrar",
+     "Antebraço sobe",
+     "Copo chega à boca"
+    ]
+   },
+   "ref": "O bíceps contrai e encurta, puxando o osso do antebraço pelo tendão, enquanto o tríceps relaxa. O movimento é voluntário, pois Bia decide fazê-lo.",
+   "conceitos": [
+    "Contração do bíceps",
+    "Relaxamento do tríceps",
+    "Movimento voluntário"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Joana quis levantar um haltere de 3 kg da altura da cintura até o ombro e depois baixá-lo, repetidas vezes.",
+   "comando": "Explique por que os músculos trabalham em pares nesse movimento e o que ocorre com bíceps e tríceps na subida e na descida.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do exercício",
+    "colunas": [
+     "Movimento",
+     "Posição do antebraço"
+    ],
+    "linhas": [
+     [
+      "Subida do haltere",
+      "Dobrando"
+     ],
+     [
+      "Descida do haltere",
+      "Esticando"
+     ]
+    ]
+   },
+   "ref": "Os músculos só puxam, não empurram, por isso precisam de pares com ações opostas. Na subida, o bíceps contrai e o tríceps relaxa; na descida, o tríceps contrai e o bíceps relaxa.",
+   "conceitos": [
+    "Músculos antagonistas",
+    "Contração e relaxamento",
+    "Movimento em pares"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lucas é sedentário, e sua colega Bia treina três vezes por semana. Em uma aula de educação física, os dois fizeram flexões até cansar.",
+   "comando": "Explique, com base nos dados, por que a atividade física regular é importante para a saúde dos músculos e cite outro hábito saudável.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da aula",
+    "colunas": [
+     "Aluno",
+     "Rotina semanal",
+     "Flexões feitas"
+    ],
+    "linhas": [
+     [
+      "Lucas",
+      "Sem exercício",
+      "4"
+     ],
+     [
+      "Bia",
+      "Treina 3 vezes",
+      "18"
+     ]
+    ]
+   },
+   "ref": "Exercício regular fortalece os músculos, aumentando a resistência e a força, como mostra o resultado de Bia. Outros hábitos: alimentação equilibrada com proteínas, alongar antes de se exercitar e dormir bem.",
+   "conceitos": [
+    "Fortalecimento muscular",
+    "Resistência",
+    "Hábitos saudáveis"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Roberto ficou intrigado: o músculo do braço cansa depois de uma hora de esforço, mas o coração trabalha 24 horas por dia, sem descanso.",
+   "comando": "Justifique por que o coração não se cansa como os músculos do braço, relacionando o tipo de músculo.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de atividade diária",
+    "unidade": "horas por dia",
+    "itens": [
+     {
+      "rotulo": "Bíceps",
+      "valor": 1
+     },
+     {
+      "rotulo": "Estômago",
+      "valor": 4
+     },
+     {
+      "rotulo": "Coração",
+      "valor": 24
+     }
+    ]
+   },
+   "ref": "O coração é formado por músculo cardíaco, involuntário, adaptado para se contrair ritmicamente durante toda a vida. O bíceps é esquelético, voluntário, e se cansa com esforço contínuo.",
+   "conceitos": [
+    "Músculo cardíaco",
+    "Contração contínua",
+    "Músculo esquelético se cansa"
+   ]
+  }
+ ],
+ "4B|7º ANO|9": [
+  {
+   "tipo": "obj",
+   "enunciado": "Bruna estava com gripe e fez um exame de sangue em dois momentos. No primeiro, havia poucos anticorpos específicos contra o vírus da gripe. Uma semana depois, havia muitos.",
+   "comando": "Qual explicação está de acordo com os resultados do exame?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de exame",
+    "colunas": [
+     "Dia",
+     "Anticorpos contra o vírus (unidades)"
+    ],
+    "linhas": [
+     [
+      "1",
+      "5"
+     ],
+     [
+      "7",
+      "80"
+     ],
+     [
+      "15",
+      "120"
+     ]
+    ]
+   },
+   "alts": [
+    "Os linfócitos T produziram vírus novos, que viram anticorpos",
+    "Os anticorpos foram trazidos pelo vírus, que os usa para atacar",
+    "Linfócitos B produziram anticorpos contra o antígeno viral",
+    "Os antígenos foram eliminados e passaram a produzir anticorpos"
+   ],
+   "correta": 2,
+   "explicacao": "Linfócitos B produzem anticorpos que reconhecem o antígeno do vírus. Os distratores confundem as funções das células e de antígeno e anticorpo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Lucas, de 1 ano, foi levado à UBS para a campanha de vacinação. A enfermeira aplicou a vacina tríplice viral, que contém vírus enfraquecidos de sarampo, caxumba e rubéola.",
+   "comando": "Que tipo de imunização Lucas recebeu?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da carteira de vacinação",
+    "colunas": [
+     "Vacina",
+     "Dose",
+     "Idade"
+    ],
+    "linhas": [
+     [
+      "Tríplice viral",
+      "1ª",
+      "12 meses"
+     ],
+     [
+      "Hepatite A",
+      "Única",
+      "15 meses"
+     ]
+    ]
+   },
+   "alts": [
+    "Ativa artificial, pois o corpo produz anticorpos próprios",
+    "Passiva artificial, pois Lucas recebeu anticorpos prontos",
+    "Ativa natural, pois Lucas teve contato com a doença",
+    "Passiva natural, pois Lucas recebeu anticorpos da mãe"
+   ],
+   "correta": 0,
+   "explicacao": "A vacina estimula o corpo a produzir anticorpos e células de memória: imunização ativa artificial. Soro é passiva artificial, doença é ativa natural e leite materno é passiva natural."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma pesquisa em uma maternidade acompanhou bebês de dois grupos nos primeiros seis meses de vida. O leite materno contém anticorpos da mãe.",
+   "comando": "Como o gráfico pode ser explicado?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de infecções intestinais",
+    "unidade": "casos por 100 bebês",
+    "itens": [
+     {
+      "rotulo": "Amamentados",
+      "valor": 4
+     },
+     {
+      "rotulo": "Não amamentados",
+      "valor": 11
+     }
+    ]
+   },
+   "alts": [
+    "O leite materno é uma vacina e dá proteção por toda a vida",
+    "O leite estimula o bebê a produzir anticorpos e memória permanente",
+    "O leite elimina os agentes infecciosos antes de chegarem ao intestino",
+    "Os anticorpos do leite protegem o bebê, mas sem criar memória"
+   ],
+   "correta": 3,
+   "explicacao": "O aleitamento fornece anticorpos prontos, uma imunização passiva natural, temporária. Não cria memória imunológica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marcos foi picado por uma jararaca em um sítio e levado ao hospital. A equipe aplicou soro antiofídico em vez de vacina, pois o veneno age em poucas horas.",
+   "comando": "Por que a equipe usou o soro em vez da vacina?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do atendimento",
+    "colunas": [
+     "Hora",
+     "Evento"
+    ],
+    "linhas": [
+     [
+      "14h",
+      "Picada"
+     ],
+     [
+      "15h",
+      "Chegada ao hospital"
+     ],
+     [
+      "15h30",
+      "Início do tratamento"
+     ]
+    ]
+   },
+   "alts": [
+    "O soro estimula o corpo a produzir células de memória contra a cobra",
+    "O soro contém anticorpos prontos, que agem imediatamente no veneno",
+    "A vacina contém veneno e poderia agravar o quadro do paciente",
+    "A vacina age depois que o corpo esquece o antígeno do veneno"
+   ],
+   "correta": 1,
+   "explicacao": "O soro tem anticorpos prontos (imunização passiva artificial) e age rápido. A vacina leva dias, pois depende do corpo produzir os anticorpos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um estudo de uma vacina, um mesmo grupo recebeu duas doses. O pesquisador mediu os anticorpos após cada dose e observou respostas diferentes.",
+   "comando": "Por que a resposta após a segunda dose foi mais rápida e mais intensa?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de anticorpos (unidades)",
+    "colunas": [
+     "Dia após a dose",
+     "Após a 1ª dose",
+     "Após a 2ª dose"
+    ],
+    "linhas": [
+     [
+      "7",
+      "5",
+      "120"
+     ],
+     [
+      "14",
+      "20",
+      "200"
+     ],
+     [
+      "28",
+      "10",
+      "150"
+     ]
+    ]
+   },
+   "alts": [
+    "Os antígenos da 2ª dose são mais fortes que os da 1ª dose",
+    "Os anticorpos da 1ª dose permaneceram e somaram-se aos novos",
+    "Linfócitos de memória reconheceram o antígeno e reagiram logo",
+    "O corpo esqueceu o antígeno e precisou aprender de novo"
+   ],
+   "correta": 2,
+   "explicacao": "Na primeira exposição formam-se linfócitos de memória, que reagem mais rápido e forte à segunda exposição."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um exame para dengue, Ana soube que o resultado indicava presença de anticorpos contra o vírus.",
+   "comando": "Explique o que são antígeno e anticorpo e o que o resultado de Ana indica.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de exame de Ana",
+    "colunas": [
+     "Teste",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Anticorpos contra dengue",
+      "Presentes"
+     ],
+     [
+      "Febre",
+      "Não"
+     ]
+    ]
+   },
+   "ref": "Antígeno é uma substância reconhecida como estranha pelo corpo, como parte de um vírus. Anticorpo é a proteína produzida pelos linfócitos B para combatê-lo. O resultado mostra que o corpo de Ana já entrou em contato com o vírus e respondeu.",
+   "conceitos": [
+    "Antígeno",
+    "Anticorpo",
+    "Resposta imune"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na UBS, três casos foram anotados: Paulo tomou a vacina contra o tétano, Joana recebeu soro contra picada de escorpião e um bebê mamou leite materno rico em anticorpos.",
+   "comando": "Classifique a imunização de cada caso em ativa ou passiva e em natural ou artificial.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da UBS",
+    "colunas": [
+     "Pessoa",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "Paulo",
+      "Vacina contra o tétano"
+     ],
+     [
+      "Joana",
+      "Soro contra escorpião"
+     ],
+     [
+      "Bebê",
+      "Leite materno"
+     ]
+    ]
+   },
+   "ref": "Paulo: ativa artificial. Joana: passiva artificial. Bebê: passiva natural.",
+   "conceitos": [
+    "Imunização ativa",
+    "Imunização passiva",
+    "Natural e artificial"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Clara dorme apenas 4 horas por noite, quase não come frutas e vive estressada. No último semestre, ficou doente quatro vezes.",
+   "comando": "Sugira dois hábitos que podem fortalecer o sistema imune de Clara e explique como cada um ajuda.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Clara",
+    "colunas": [
+     "Hábito",
+     "Frequência"
+    ],
+    "linhas": [
+     [
+      "Horas de sono por noite",
+      "4"
+     ],
+     [
+      "Porções de frutas por dia",
+      "0"
+     ],
+     [
+      "Atividade física na semana",
+      "Nenhuma"
+     ]
+    ]
+   },
+   "ref": "Dormir bem e alimentar-se com frutas, legumes e proteínas. O sono permite que o corpo se recupere e produza células de defesa. Uma alimentação equilibrada fornece nutrientes que mantêm o sistema imune funcionando. Atividade física regular também ajuda.",
+   "conceitos": [
+    "Sono adequado",
+    "Alimentação equilibrada",
+    "Hábitos saudáveis"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma criança nasceu sem a maioria dos linfócitos e precisa ficar isolada para evitar infecções. A família quer entender por que um simples resfriado pode ser grave.",
+   "comando": "Justifique a importância do sistema imune e descreva o impacto de sua ausência.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro médico",
+    "colunas": [
+     "Item",
+     "Criança sem linfócitos",
+     "Criança saudável"
+    ],
+    "linhas": [
+     [
+      "Infecções por ano",
+      "12",
+      "4"
+     ],
+     [
+      "Gravidade",
+      "Alta",
+      "Baixa"
+     ]
+    ]
+   },
+   "ref": "O sistema imune reconhece e combate agentes infecciosos. Sem linfócitos, o corpo não produz anticorpos nem células de defesa eficazes, e infecções comuns se tornam frequentes e graves.",
+   "conceitos": [
+    "Defesa contra patógenos",
+    "Linfócitos",
+    "Impacto da ausência"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma pessoa infectada pelo HIV, que ataca linfócitos T, a contagem dessas células cai com o passar dos anos. Quando está muito baixa, surgem doenças raras em pessoas saudáveis.",
+   "comando": "Explique por que a queda de linfócitos T favorece o surgimento dessas doenças.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de linfócitos T",
+    "unidade": "células por mm³",
+    "itens": [
+     {
+      "rotulo": "Ano 0",
+      "valor": 900
+     },
+     {
+      "rotulo": "Ano 2",
+      "valor": 600
+     },
+     {
+      "rotulo": "Ano 5",
+      "valor": 300
+     },
+     {
+      "rotulo": "Ano 8",
+      "valor": 150
+     }
+    ]
+   },
+   "ref": "Os linfócitos T coordenam a resposta imune. Quando poucos, o sistema imune não reconhece nem elimina micro-organismos que normalmente seriam controlados, e doenças oportunistas surgem.",
+   "conceitos": [
+    "Linfócitos T",
+    "Imunidade celular",
+    "Doenças oportunistas"
+   ]
+  }
+ ],
+ "4B|8º ANO|9": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na escola-abrigo montada após uma enchente, a diretora distribuiu lanternas movidas a pilhas. Pedro mediu a tensão da pilha com um multímetro e viu 1,5 V constante, com cargas se movendo sempre no mesmo sentido no circuito.",
+   "comando": "Que tipo de corrente a pilha fornece?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fontes disponíveis no abrigo",
+    "colunas": [
+     "Fonte",
+     "Tensão (V)"
+    ],
+    "linhas": [
+     [
+      "Pilha",
+      "1,5"
+     ],
+     [
+      "Bateria de carro",
+      "12"
+     ],
+     [
+      "Tomada do gerador",
+      "127"
+     ]
+    ]
+   },
+   "alts": [
+    "Alternada, pois a tensão diminui conforme a pilha descarrega",
+    "Alternada, pois as cargas mudam de sentido a cada segundo",
+    "Contínua, pois a frequência é de 60 Hz em todos os aparelhos",
+    "Contínua, pois as cargas circulam sempre no mesmo sentido"
+   ],
+   "correta": 3,
+   "explicacao": "Pilhas e baterias fornecem corrente contínua, com sentido fixo. Na alternada, o sentido muda periodicamente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No abrigo, o ventilador ligado à tomada do gerador tinha a etiqueta abaixo. Marina quis saber o que significa o valor da frequência.",
+   "comando": "O que significa a frequência de 60 Hz da tomada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da etiqueta do ventilador",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tensão",
+      "127 V"
+     ],
+     [
+      "Frequência",
+      "60 Hz"
+     ],
+     [
+      "Potência",
+      "80 W"
+     ]
+    ]
+   },
+   "alts": [
+    "A tensão da tomada é de 60 volts quando o ventilador é ligado",
+    "A corrente completa 60 ciclos de inversão a cada segundo",
+    "O ventilador consome 60 watts a cada hora de funcionamento",
+    "A corrente circula 60 vezes mais rápido que a de uma pilha"
+   ],
+   "correta": 1,
+   "explicacao": "Em corrente alternada, a frequência indica quantos ciclos de inversão ocorrem por segundo: 60 Hz = 60 ciclos/s."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Os alunos do abrigo montaram um gerador com um ímã preso a uma roda de bicicleta, girando próximo a uma bobina ligada a uma lâmpada. Giraram a roda e a lâmpada acendeu; com a roda parada, ela apagou.",
+   "comando": "Qual princípio explica o funcionamento do gerador?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do experimento",
+    "colunas": [
+     "Situação",
+     "Lâmpada"
+    ],
+    "linhas": [
+     [
+      "Ímã parado perto da bobina",
+      "Apagada"
+     ],
+     [
+      "Ímã girando perto da bobina",
+      "Acesa"
+     ]
+    ]
+   },
+   "alts": [
+    "A variação do campo magnético na bobina induz corrente elétrica",
+    "O ímã fornece elétrons que passam pelo fio até a lâmpada",
+    "A rotação do ímã aquece a bobina e gera luz na lâmpada",
+    "O ímã parado já cria corrente na bobina, e o giro a intensifica"
+   ],
+   "correta": 0,
+   "explicacao": "Indução eletromagnética: variação do fluxo magnético na bobina induz corrente. Com o ímã parado, não há variação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O abrigo recebeu painéis solares que produzem corrente contínua de 12 V. A geladeira de vacinas só funciona com corrente alternada de 127 V. A diretora precisa de um dispositivo para ligar o painel à geladeira.",
+   "comando": "Qual equipamento permite ligar a geladeira ao painel?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos equipamentos do abrigo",
+    "colunas": [
+     "Equipamento",
+     "Tensão e tipo"
+    ],
+    "linhas": [
+     [
+      "Painel solar",
+      "12 V, contínua"
+     ],
+     [
+      "Geladeira de vacinas",
+      "127 V, alternada"
+     ]
+    ]
+   },
+   "alts": [
+    "Retificador, que transforma a tensão contínua em alternada",
+    "Transformador, que transforma a corrente contínua em alternada",
+    "Fusível, que transforma a corrente contínua em alternada",
+    "Inversor, que transforma a corrente contínua em alternada"
+   ],
+   "correta": 3,
+   "explicacao": "O inversor converte corrente contínua em alternada. O retificador faz o oposto, o transformador só altera a tensão da corrente alternada e o fusível protege o circuito."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma usina distante transmite energia à cidade do abrigo. A companhia elétrica compara perdas de energia em fios para duas tensões, mantendo a mesma potência transmitida.",
+   "comando": "Por que se usa alta tensão (com corrente alternada) na transmissão?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de perdas na transmissão",
+    "colunas": [
+     "Tensão da linha (kV)",
+     "Perda de energia (%)"
+    ],
+    "linhas": [
+     [
+      "13,8",
+      "18"
+     ],
+     [
+      "138",
+      "2"
+     ]
+    ]
+   },
+   "alts": [
+    "Com tensão maior, a corrente aumenta e o aquecimento dos fios cai",
+    "Com tensão maior, a corrente é menor e o aquecimento dos fios é menor",
+    "Com tensão maior, a frequência da rede cai e as perdas diminuem",
+    "Com tensão menor, a corrente é menor e o aquecimento dos fios é menor"
+   ],
+   "correta": 1,
+   "explicacao": "Para a mesma potência, maior tensão significa menor corrente e menor aquecimento (perdas por efeito Joule)."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No abrigo, estão disponíveis: pilhas, painel solar, tomada do gerador e dínamo de bicicleta.",
+   "comando": "Classifique cada fonte em corrente contínua ou alternada.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fontes",
+    "colunas": [
+     "Fonte",
+     "Onde é usada"
+    ],
+    "linhas": [
+     [
+      "Pilha",
+      "Lanterna"
+     ],
+     [
+      "Painel solar",
+      "Carregar bateria"
+     ],
+     [
+      "Tomada do gerador",
+      "Ventilador"
+     ],
+     [
+      "Dínamo de bicicleta",
+      "Farol"
+     ]
+    ]
+   },
+   "ref": "Pilha e painel solar: corrente contínua. Tomada do gerador: corrente alternada. Dínamo de bicicleta: em geral produz corrente alternada.",
+   "conceitos": [
+    "Corrente contínua",
+    "Corrente alternada",
+    "Fontes de energia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O carregador de celular de Carlos tem a etiqueta com a entrada 100–240 V ~ 60 Hz e a saída 5 V ⎓ 2 A. Ele quer entender o que os símbolos representam.",
+   "comando": "Explique a diferença entre a entrada e a saída do carregador quanto ao tipo de corrente.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da etiqueta do carregador",
+    "colunas": [
+     "Parte",
+     "Especificação"
+    ],
+    "linhas": [
+     [
+      "Entrada",
+      "100–240 V ~ 60 Hz"
+     ],
+     [
+      "Saída",
+      "5 V ⎓ 2 A"
+     ]
+    ]
+   },
+   "ref": "A entrada é corrente alternada (símbolo ~), em que o sentido das cargas muda 60 vezes por segundo. A saída é corrente contínua (símbolo ⎓), com sentido fixo, que o celular usa. O carregador converte alternada em contínua.",
+   "conceitos": [
+    "Corrente alternada",
+    "Corrente contínua",
+    "Conversão no carregador"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O abrigo tem 20 lâmpadas de LED de 10 W acesas por 5 h, uma geladeira de vacinas de 150 W ligada 24 h e um rádio de 20 W ligado 4 h por dia.",
+   "comando": "Qual equipamento consome mais energia por dia? Proponha uma fonte para suprir a demanda e justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de consumo",
+    "colunas": [
+     "Equipamento",
+     "Potência total (W)",
+     "Horas por dia"
+    ],
+    "linhas": [
+     [
+      "Lâmpadas de LED",
+      "200",
+      "5"
+     ],
+     [
+      "Geladeira de vacinas",
+      "150",
+      "24"
+     ],
+     [
+      "Rádio",
+      "20",
+      "4"
+     ]
+    ]
+   },
+   "ref": "A geladeira (150 W × 24 h = 3 600 Wh) consome mais que as lâmpadas (1 000 Wh) e o rádio (80 Wh). Uma solução é usar painéis solares com baterias e inversor, pois a geladeira precisa funcionar 24 h.",
+   "conceitos": [
+    "Energia = potência × tempo",
+    "Painel solar com bateria",
+    "Inversor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A prefeitura pode enviar ao abrigo um gerador a diesel ou instalar painéis solares. A diretora pediu uma comparação.",
+   "comando": "Escolha uma das opções e justifique, usando os dados e o tipo de corrente que cada uma fornece.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da comparação",
+    "colunas": [
+     "Item",
+     "Gerador a diesel",
+     "Painel solar"
+    ],
+    "linhas": [
+     [
+      "Custo de operação",
+      "Alto (combustível)",
+      "Baixo"
+     ],
+     [
+      "Emissão de gases",
+      "Alta",
+      "Nenhuma"
+     ],
+     [
+      "Corrente fornecida",
+      "Alternada",
+      "Contínua"
+     ]
+    ]
+   },
+   "ref": "A escolha pelo painel solar é justificada pelo baixo custo de operação e ausência de emissões, mas exige inversor para aparelhos de corrente alternada e baterias para uso à noite. O gerador a diesel fornece alternada, mas gasta combustível e polui.",
+   "conceitos": [
+    "Comparação de fontes",
+    "Corrente contínua e alternada",
+    "Inversor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os alunos do abrigo testaram o dínamo da bicicleta variando a velocidade das pedaladas e anotaram a tensão produzida.",
+   "comando": "Relacione a velocidade das pedaladas com a tensão e explique o princípio físico do gerador.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do experimento",
+    "colunas": [
+     "Rotações por minuto",
+     "Tensão (V)"
+    ],
+    "linhas": [
+     [
+      "30",
+      "6"
+     ],
+     [
+      "60",
+      "12"
+     ],
+     [
+      "90",
+      "18"
+     ]
+    ]
+   },
+   "ref": "Quanto mais rápido gira, maior a tensão (proporcional). No dínamo, o ímã gira perto de uma bobina e a variação do campo magnético induz corrente; girar mais rápido aumenta a variação e a tensão.",
+   "conceitos": [
+    "Indução eletromagnética",
+    "Tensão proporcional à rotação",
+    "Gerador"
+   ]
+  }
+ ],
+ "4B|9º ANO|10": [
+  {
+   "tipo": "obj",
+   "enunciado": "Helena observou o Sol por um dia: nasceu a leste, subiu até o alto e se pôs a oeste. Para ela, a Terra parece parada e o céu gira ao redor.",
+   "comando": "Qual modelo da Antiguidade explicava essa observação?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Helena",
+    "colunas": [
+     "Horário",
+     "Posição do Sol"
+    ],
+    "linhas": [
+     [
+      "6h",
+      "Leste, baixo"
+     ],
+     [
+      "12h",
+      "Alto no céu"
+     ],
+     [
+      "18h",
+      "Oeste, baixo"
+     ]
+    ]
+   },
+   "alts": [
+    "Heliocêntrico, pois o Sol está parado e a Terra gira em torno dele",
+    "Geocêntrico, pois a Terra parece parada e o céu gira em torno dela",
+    "Geocêntrico, pois a Terra gira em torno do Sol em órbita circular",
+    "Heliocêntrico, pois o Sol se move em torno de uma Terra imóvel"
+   ],
+   "correta": 1,
+   "explicacao": "No modelo geocêntrico, a Terra é o centro e imóvel; o Sol e os astros giram em torno dela, o que combina com a observação cotidiana."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, o professor entregou um quadro-resumo com os nomes de pensadores e ideias, e pediu que os alunos indicassem a associação correta.",
+   "comando": "Qual associação entre pensador e ideia está correta?",
+   "figura": null,
+   "alts": [
+    "Ptolomeu defendeu que os planetas giram em órbitas elípticas",
+    "Aristóteles defendeu o Sol no centro do universo, com a Terra em órbita",
+    "Kepler defendeu que a Terra é o centro e que os astros giram ao seu redor",
+    "Copérnico defendeu o Sol no centro, com a Terra girando em torno dele"
+   ],
+   "correta": 3,
+   "explicacao": "Copérnico propôs o modelo heliocêntrico. Ptolomeu e Aristóteles defendiam o geocentrismo, e Kepler descreveu órbitas elípticas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marte, observado por vários meses, parece avançar entre as estrelas, parar, recuar e depois avançar de novo. Ptolomeu introduziu círculos menores (epiciclos) para explicar esse comportamento dentro do geocentrismo.",
+   "comando": "Qual era o objetivo dos epiciclos de Ptolomeu?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da posição de Marte",
+    "colunas": [
+     "Mês",
+     "Movimento entre as estrelas"
+    ],
+    "linhas": [
+     [
+      "Janeiro",
+      "Avança"
+     ],
+     [
+      "Março",
+      "Para"
+     ],
+     [
+      "Abril",
+      "Recua"
+     ],
+     [
+      "Junho",
+      "Avança"
+     ]
+    ]
+   },
+   "alts": [
+    "Mostrar que Marte gira em torno do Sol, e não da Terra",
+    "Explicar o recuo aparente de Marte com a Terra no centro",
+    "Provar que as órbitas dos planetas têm forma de elipse",
+    "Calcular a distância entre a Terra e Marte em cada mês"
+   ],
+   "correta": 1,
+   "explicacao": "Os epiciclos permitiam explicar o movimento retrógrado aparente sem abandonar o geocentrismo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em 1610, Galileu observou Júpiter com uma luneta e viu pequenos pontos de luz que mudavam de posição de noite para noite, sempre acompanhando o planeta.",
+   "comando": "De que forma essa observação contrariava o modelo geocêntrico?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das observações de Galileu",
+    "colunas": [
+     "Noite",
+     "Pontos de luz ao redor de Júpiter"
+    ],
+    "linhas": [
+     [
+      "7",
+      "3, à esquerda"
+     ],
+     [
+      "8",
+      "2 à esquerda, 1 à direita"
+     ],
+     [
+      "10",
+      "4, à esquerda e à direita"
+     ]
+    ]
+   },
+   "alts": [
+    "Mostrava corpos orbitando outro planeta, e não a Terra",
+    "Provava que a Terra gira em torno do Sol em órbita elíptica",
+    "Mostrava que as estrelas estão fixas e a Terra está parada",
+    "Provava que Júpiter estava no centro de todas as órbitas"
+   ],
+   "correta": 0,
+   "explicacao": "As luas de Júpiter mostram que nem tudo gira em torno da Terra, o que enfraquece o geocentrismo. Não provam sozinhas o heliocentrismo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Kepler analisou observações muito precisas de Marte feitas por Tycho Brahe. Com órbitas circulares, as previsões erravam; com elipses, as previsões batiam com as observações.",
+   "comando": "O que explica a aceitação das órbitas elípticas na ciência?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das previsões para Marte",
+    "colunas": [
+     "Modelo",
+     "Erro em relação às observações (minutos de arco)"
+    ],
+    "linhas": [
+     [
+      "Órbita circular",
+      "8"
+     ],
+     [
+      "Órbita elíptica",
+      "0"
+     ]
+    ]
+   },
+   "alts": [
+    "O prestígio de Kepler convenceu os cientistas, mesmo sem comprovação",
+    "A igreja decidiu que as elipses eram mais perfeitas que os círculos",
+    "As elipses se ajustaram melhor aos dados do que os círculos",
+    "O modelo geocêntrico foi comprovado, e as elipses o corrigiram"
+   ],
+   "correta": 2,
+   "explicacao": "A ciência avança quando um modelo explica melhor as evidências. As elipses ajustaram-se aos dados precisos."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Helena percebe, todos os dias, que o Sol nasce, cruza o céu e se põe, e que as estrelas giram à noite.",
+   "comando": "Explique por que muitas pessoas na Antiguidade aceitaram o geocentrismo.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações cotidianas",
+    "colunas": [
+     "Observação",
+     "Resultado"
+    ],
+    "linhas": [
+     [
+      "Sensação de movimento da Terra",
+      "Nenhuma"
+     ],
+     [
+      "Movimento do Sol no céu",
+      "Visível todos os dias"
+     ],
+     [
+      "Movimento das estrelas",
+      "Visível à noite"
+     ]
+    ]
+   },
+   "ref": "Porque o modelo concordava com as observações: a Terra parece parada e o Sol, a Lua e as estrelas parecem girar ao redor. Aristóteles e Ptolomeu organizaram essa ideia.",
+   "conceitos": [
+    "Geocentrismo",
+    "Observação cotidiana",
+    "Aristóteles e Ptolomeu"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Copérnico propôs, em 1543, que o Sol está no centro e que a Terra gira em torno de si e do Sol.",
+   "comando": "Explique como o modelo de Copérnico explica a alternância entre dia e noite.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações",
+    "colunas": [
+     "Fenômeno",
+     "Período"
+    ],
+    "linhas": [
+     [
+      "Dia e noite",
+      "24 horas"
+     ],
+     [
+      "Estações do ano",
+      "12 meses"
+     ]
+    ]
+   },
+   "ref": "Para Copérnico, a Terra gira em torno do próprio eixo a cada 24 horas; a parte voltada para o Sol está de dia e a oposta, de noite. A volta em torno do Sol em um ano explica a sucessão das estações.",
+   "conceitos": [
+    "Rotação da Terra",
+    "Heliocentrismo",
+    "Dia e noite"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Para estudar a evolução das ideias, uma turma montou uma tabela com os modelos de Ptolomeu, Copérnico e Kepler.",
+   "comando": "Compare os três modelos e indique o que mudou de um para o outro.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de modelos",
+    "colunas": [
+     "Modelo",
+     "Centro",
+     "Forma das órbitas"
+    ],
+    "linhas": [
+     [
+      "Ptolomeu",
+      "Terra",
+      "Círculos com epiciclos"
+     ],
+     [
+      "Copérnico",
+      "Sol",
+      "Círculos"
+     ],
+     [
+      "Kepler",
+      "Sol",
+      "Elipses"
+     ]
+    ]
+   },
+   "ref": "De Ptolomeu para Copérnico, o centro passou da Terra para o Sol. De Copérnico para Kepler, as órbitas passaram de círculos para elipses, o que ajustou melhor o modelo às observações.",
+   "conceitos": [
+    "Mudança de centro",
+    "Órbitas elípticas",
+    "Comparação de modelos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um crítico do heliocentrismo perguntava: se a Terra se move, por que uma pedra solta de uma torre cai na vertical? Para testar a ideia de inércia, Ana jogou uma bola para cima dentro de um ônibus em movimento constante.",
+   "comando": "Explique como a inércia responde a essa objeção.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do experimento",
+    "colunas": [
+     "Situação",
+     "Onde a bola cai"
+    ],
+    "linhas": [
+     [
+      "Ônibus parado",
+      "Na mão de Ana"
+     ],
+     [
+      "Ônibus a 60 km/h constantes",
+      "Na mão de Ana"
+     ]
+    ]
+   },
+   "ref": "Pela inércia, a bola mantém a velocidade horizontal do ônibus, e por isso cai na mão de Ana. Do mesmo modo, objetos na Terra em movimento acompanham o planeta, e cair na vertical não prova que a Terra esteja parada.",
+   "conceitos": [
+    "Inércia",
+    "Referencial em movimento",
+    "Resposta à objeção"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma colega afirma que Copérnico sozinho 'descobriu' como o Sistema Solar funciona. O professor mostrou uma linha do tempo com várias contribuições.",
+   "comando": "Argumente que a ciência é uma construção coletiva e cite o papel das evidências nessa transição.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da linha do tempo",
+    "colunas": [
+     "Ano",
+     "Contribuição"
+    ],
+    "linhas": [
+     [
+      "150",
+      "Ptolomeu: geocentrismo com epiciclos"
+     ],
+     [
+      "1543",
+      "Copérnico: heliocentrismo"
+     ],
+     [
+      "1609",
+      "Kepler: órbitas elípticas"
+     ],
+     [
+      "1610",
+      "Galileu: luas de Júpiter com luneta"
+     ]
+    ]
+   },
+   "ref": "Cada cientista usou e corrigiu ideias e dados anteriores. Copérnico propôs o Sol no centro, Kepler usou dados precisos para descrever elipses e Galileu trouxe novas observações. As evidências e o debate levaram à mudança de modelo.",
+   "conceitos": [
+    "Construção coletiva",
+    "Papel das evidências",
+    "Mudança de modelo"
+   ]
+  }
+ ]
+}

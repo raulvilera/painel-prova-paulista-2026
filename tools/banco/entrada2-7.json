@@ -1,0 +1,82 @@
+{
+ "6º ANO|2|Classificar os diferentes tipos de rochas e os processos de formação do solo.": {
+  "serie": "6",
+  "desc": "Classificar os diferentes tipos de rochas e os processos de formação do solo.",
+  "hab": "EF06CI12",
+  "habTxt": "Classificar rochas, seus processos de formação e a formação/transformação do solo, incluindo a fossilização em rochas sedimentares (AE3).",
+  "nome": "Rochas e o pote de camadas",
+  "concreta": "Agitar o pote com terra, areia, pedrinhas e água e deixar decantar: formam-se camadas, como nos sedimentos que originam rochas sedimentares. Passar de mão em mão amostras de granito/brita, arenito e mármore/ardósia."
+ },
+ "7º ANO|3|Identificar os componentes e características dos ecossistemas aquáticos.": {
+  "serie": "7",
+  "desc": "Identificar os componentes e características dos ecossistemas aquáticos.",
+  "hab": "EF07CI07",
+  "habTxt": "Caracterizar ecossistemas/biomas brasileiros e impactos de catástrofes naturais ou alterações em seus componentes (AE10).",
+  "nome": "Aquário de papel",
+  "concreta": "Montar na cartolina um 'aquário' colando cartões de fatores abióticos (luz, água, sal, temperatura, oxigênio, pedras) e bióticos (fitoplâncton, peixes, garça, decompositores) e ligar com barbante a teia alimentar."
+ },
+ "8º ANO|2|Identificar os órgãos do sistema digestório e sua função na digestão e absorção dos nutrientes.": {
+  "serie": "8",
+  "desc": "Identificar os órgãos do sistema digestório e sua função na digestão e absorção dos nutrientes.",
+  "hab": "EF05CI06A, EF08CI08B",
+  "habTxt": "Descrever estruturas e funções do sistema digestório e dos nutrientes, relacionando à classificação dos alimentos (in natura, processados, ultraprocessados) (AE5).",
+  "nome": "Viagem do lanche",
+  "concreta": "Simulação: amassar pão com água no saquinho (boca/estômago, digestão mecânica) e passar a pasta pela meia-calça (intestino), mostrando que só partes pequenas atravessam, como na absorção."
+ },
+ "9º ANO|1|Identificar substâncias, misturas e transformações da matéria.": {
+  "serie": "9",
+  "desc": "Identificar substâncias, misturas e transformações da matéria.",
+  "hab": "EF09CI01",
+  "habTxt": "Explicar mudanças de estado físico pela estrutura molecular, organização da matéria e temperaturas de fusão e ebulição (AE3).",
+  "nome": "Mistura ou substância?",
+  "concreta": "Copos com água, água+sal, água+óleo e água+areia: a turma observa as fases. Depois compara dissolver sal (transformação física) com vinagre+bicarbonato, que forma gás (transformação química)."
+ },
+ "9º ANO|3|Relacionar a gestão e reciclagem de resíduos sólidos às formas de destinação final e ao ciclo de vida dos materiais.": {
+  "serie": "9",
+  "desc": "Relacionar a gestão e reciclagem de resíduos sólidos às formas de destinação final e ao ciclo de vida dos materiais.",
+  "hab": "EF09CI13, EF09CI12A, EF09CI12B",
+  "habTxt": "Propor iniciativas para problemas ambientais com consumo consciente e uso sustentável de recursos, considerando UCs e bacias hidrográficas (AE11).",
+  "nome": "Auditoria do lixo",
+  "concreta": "De luvas, a turma separa lixo seco limpo em papel, plástico, metal e vidro e discute o ciclo de vida de uma garrafa PET (extração, fabricação, uso, descarte)."
+ },
+ "4B|6º ANO|7": {
+  "serie": "6",
+  "desc": "Justificar, com simuladores, a resposta do olho humano à luz de diferentes comprimentos de onda.",
+  "hab": "EF06CI08",
+  "habTxt": "Luz policromática e monocromática; filtros de cor; combinação aditiva RGB; percepção de cores pela retina e cérebro.",
+  "nome": "Simulador: funcionamento do olho humano",
+  "concreta": "Simulador PhET Color Vision: testes com uma lâmpada e filtros e com lâmpadas RGB; registro em tabelas e questões."
+ },
+ "4B|7º ANO|4": {
+  "serie": "7",
+  "desc": "Explicar a constituição geral e as principais características das bactérias como seres procariontes.",
+  "hab": "EF07CI10A",
+  "habTxt": "Unicelulares procariontes; estrutura e formas (cocos, bacilos, espiraladas); ambientes e microbiota; nutrição; fissão binária; decomposição e ciclo do nitrogênio; usos.",
+  "nome": "Bactérias",
+  "concreta": "Para começar (microbiologia); Pause e responda; Na prática: relacionar conceitos (procariontes, microbiota, fissão binária etc.) às definições."
+ },
+ "4B|8º ANO|1": {
+  "serie": "8",
+  "desc": "Compreender o conceito de energia e reconhecer suas diferentes formas de manifestação no dia a dia.",
+  "hab": "EF08CI03",
+  "habTxt": "Energia como capacidade de realizar trabalho; formas elétrica, sonora, nuclear, química, térmica, cinética, potencial e mecânica.",
+  "nome": "Energia no cotidiano",
+  "concreta": "Leitura do texto da EPE \"O que é energia?\" e respostas sobre o uso da energia ao longo da história humana."
+ },
+ "4B|8º ANO|17": {
+  "serie": "8",
+  "desc": "Explicar corrente, tensão e potência elétrica e relacioná-las ao consumo de diferentes eletrodomésticos.",
+  "hab": "EF08CI03",
+  "habTxt": "Circuito elétrico doméstico; corrente (A), tensão (V) e potência (W); P = U × I; eletrodomésticos de baixo, médio e alto consumo; conversões de energia.",
+  "nome": "Classificação dos aparelhos eletrônicos",
+  "concreta": "Calculam a potência de geladeira, TV e chuveiro em rede de 220 V e verificam se o sistema de 5.000 W suporta o uso simultâneo."
+ },
+ "4B|9º ANO|20": {
+  "serie": "9",
+  "desc": "Traçar o histórico e a situação atual da exploração espacial e seus impactos tecnológicos no cotidiano.",
+  "hab": "EF09CI20*",
+  "habTxt": "Sputnik 1, Gagarin, Tereshkova, Apollo 11, ISS, rovers em Marte; Brasil no espaço (SGDC, CBERS, Amazônia-1); mulheres na ciência; spin-offs (GPS, filtro UV, painéis solares).",
+  "nome": "Exploração espacial",
+  "concreta": "Respondem verdadeiro/falso sobre o Sputnik e analisam texto sobre os problemas de colonizar Marte, discutindo motivações e riscos."
+ }
+}

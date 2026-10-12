@@ -1,0 +1,3343 @@
+{
+ "6º ANO|3|Reconhecer os princípios da teoria celular.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Lucas, aluno do 6º ano, observou ao microscópio três amostras: uma película de cebola, um raspado da parte interna da bochecha e uma gota de iogurte natural. Ele anotou o que viu em cada uma.",
+   "comando": "Com base nos registros de Lucas, qual conclusão sobre os seres vivos é possível?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação ao microscópio",
+    "colunas": [
+     "Amostra",
+     "Aumento",
+     "O que aparece"
+    ],
+    "linhas": [
+     [
+      "Película de cebola",
+      "400x",
+      "Compartimentos lado a lado"
+     ],
+     [
+      "Raspado da bochecha",
+      "400x",
+      "Unidades arredondadas e isoladas"
+     ],
+     [
+      "Iogurte natural",
+      "1000x",
+      "Pontos minúsculos isolados"
+     ]
+    ]
+   },
+   "alts": [
+    "A organização em unidades microscópicas ocorre em plantas e animais, mas não em bactérias.",
+    "Seres vivos de tipos muito diferentes são formados por unidades microscópicas de estrutura básica semelhante.",
+    "Cada espécie de ser vivo é formada por um tipo de unidade microscópica próprio, sem semelhança com as outras.",
+    "Os seres vivos de corpo muito pequeno são formados por uma massa contínua, sem divisões internas."
+   ],
+   "correta": 1,
+   "explicacao": "Plantas, animais e bactérias são formados por células com estrutura básica semelhante, o que sustenta a teoria celular. Os demais itens negam essa característica comum."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Marina leu que uma ameba, formada por uma só célula, se alimenta, se move e se reproduz, e que o corpo de uma pessoa adulta tem cerca de 37 trilhões de células. Ela organizou os dados em um quadro.",
+   "comando": "Qual conclusão sobre a célula esses dados apoiam?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de dados de pesquisa",
+    "colunas": [
+     "Ser vivo",
+     "Nº aproximado de células",
+     "Se alimenta e se reproduz"
+    ],
+    "linhas": [
+     [
+      "Bactéria",
+      "1",
+      "Sim"
+     ],
+     [
+      "Ameba",
+      "1",
+      "Sim"
+     ],
+     [
+      "Pessoa adulta",
+      "37 trilhões",
+      "Sim"
+     ]
+    ]
+   },
+   "alts": [
+    "O número de células de um ser define quais funções vitais ele consegue realizar.",
+    "As funções vitais passam a existir quando as células se organizam em tecidos e órgãos.",
+    "Seres de uma célula realizam funções vitais por terem estruturas diferentes das demais células.",
+    "A célula realiza as funções vitais do ser, esteja ela sozinha ou reunida a outras células."
+   ],
+   "correta": 3,
+   "explicacao": "A célula é a unidade funcional: sozinha, nos unicelulares, ou em conjunto, nos pluricelulares, ela executa as funções vitais. Os distratores atribuem essas funções ao número de células ou aos órgãos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, a turma montou o modelo da célula no saquinho. O grupo de Paulo furou o saquinho com um palito e viu o conteúdo escorrer para o prato com água.",
+   "comando": "O que o furo no saquinho permite concluir sobre a célula real?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro das etapas do modelo",
+    "etapas": [
+     "Saquinho plástico fino preenchido com gelatina",
+     "Azeitona colocada no centro da gelatina",
+     "Saquinho furado com um palito",
+     "Gelatina escorre para a água do prato"
+    ]
+   },
+   "alts": [
+    "A membrana delimita a célula; sem ela, o conteúdo interno se espalha para o ambiente.",
+    "O núcleo mantém o formato da célula; sem ele, o conteúdo interno se espalha no ambiente.",
+    "O citoplasma envolve toda a célula; sem ele, o conteúdo interno se espalha para o ambiente.",
+    "A parede celular protege a célula; sem ela, o conteúdo interno se espalha para o ambiente."
+   ],
+   "correta": 0,
+   "explicacao": "O saquinho representa a membrana, que delimita a célula e controla o que entra e sai. Confundir com núcleo, citoplasma ou parede é um erro comum de correspondência."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Bianca comparou células de cebola, da bochecha e de uma bactéria em imagens de microscópio e preencheu um quadro. Em seguida, afirmou: “a bactéria não é formada por célula, porque não tem núcleo”.",
+   "comando": "Com base no quadro e na teoria celular, a afirmação de Bianca está:",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de comparação de imagens",
+    "colunas": [
+     "Célula",
+     "Membrana",
+     "Núcleo delimitado",
+     "Citoplasma"
+    ],
+    "linhas": [
+     [
+      "Cebola",
+      "Presente",
+      "Presente",
+      "Presente"
+     ],
+     [
+      "Bochecha",
+      "Presente",
+      "Presente",
+      "Presente"
+     ],
+     [
+      "Bactéria",
+      "Presente",
+      "Ausente",
+      "Presente"
+     ]
+    ]
+   },
+   "alts": [
+    "correta, pois ser considerado célula depende de ter núcleo delimitado, como nas outras amostras.",
+    "correta, pois a bactéria é um organismo inteiro e não uma unidade com membrana e citoplasma.",
+    "incorreta, pois a bactéria tem membrana e citoplasma e é uma célula sem núcleo delimitado.",
+    "incorreta, pois a bactéria tem núcleo como as demais, mas ele é pequeno demais para ser registrado."
+   ],
+   "correta": 2,
+   "explicacao": "A bactéria tem membrana e citoplasma, logo é uma célula; apenas seu material genético não fica dentro de um núcleo delimitado. A ideia de que núcleo define célula é um erro frequente."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um experimento na horta da escola, Rafaela contou, sob o microscópio, as células de um mesmo campo da ponta de uma raiz de cebola em crescimento, em três momentos.",
+   "comando": "Qual explicação para o aumento do número de células está de acordo com a teoria celular?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de células contadas no mesmo campo",
+    "unidade": "células",
+    "itens": [
+     {
+      "rotulo": "Início",
+      "valor": 12
+     },
+     {
+      "rotulo": "Após 24 h",
+      "valor": 25
+     },
+     {
+      "rotulo": "Após 48 h",
+      "valor": 49
+     }
+    ]
+   },
+   "alts": [
+    "As células novas surgem pela reunião de substâncias da água ao redor, que se organizam em compartimentos.",
+    "As células novas surgem da divisão de células já existentes, o que faz o tecido da raiz crescer.",
+    "As células existentes aumentam de tamanho, o que dá à raiz a aparência de ter mais células.",
+    "As células novas surgem pela transformação de células mortas que se acumulam na ponta da raiz."
+   ],
+   "correta": 1,
+   "explicacao": "Toda célula se origina de outra célula preexistente; o número dobra aproximadamente a cada 24 h por divisão. Surgimento espontâneo ou transformação de células mortas contraria esse princípio."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Tiago recebeu imagens de microscópio de três seres: uma folha de planta aquática, a pele de uma mão e uma bactéria do iogurte. Ele anotou o que viu em cada uma.",
+   "comando": "O que Tiago pode afirmar sobre a constituição desses três seres? Justifique com os registros.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação das imagens",
+    "colunas": [
+     "Imagem",
+     "Contorno",
+     "Interior"
+    ],
+    "linhas": [
+     [
+      "Folha de planta aquática",
+      "Delimitado",
+      "Granulado"
+     ],
+     [
+      "Pele da mão",
+      "Delimitado",
+      "Granulado"
+     ],
+     [
+      "Bactéria do iogurte",
+      "Delimitado",
+      "Granulado"
+     ]
+    ]
+   },
+   "ref": "Os três seres são formados por células, pois todos mostram unidades com limite (membrana) e interior com citoplasma. Isso mostra que seres diferentes compartilham a mesma unidade básica.",
+   "conceitos": [
+    "Todos os seres vivos são formados por células",
+    "Membrana delimita a célula",
+    "Citoplasma no interior",
+    "Unidade estrutural comum"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A professora listou quatro seres observados no laboratório e pediu à turma que os agrupasse pelo número de células do corpo: levedura do pão, cebola, paramécio de água de lagoa e gato.",
+   "comando": "Separe os seres em dois grupos, explique o critério usado e diga o que todos eles têm em comum.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação no laboratório",
+    "colunas": [
+     "Ser",
+     "Células contadas no organismo"
+    ],
+    "linhas": [
+     [
+      "Levedura do pão",
+      "1"
+     ],
+     [
+      "Cebola",
+      "Milhões"
+     ],
+     [
+      "Paramécio de lagoa",
+      "1"
+     ],
+     [
+      "Gato",
+      "Bilhões"
+     ]
+    ]
+   },
+   "ref": "Levedura e paramécio têm corpo de uma só célula; cebola e gato têm muitas células. O critério é o número de células. Todos são formados por células.",
+   "conceitos": [
+    "Unicelular x pluricelular",
+    "Critério: número de células",
+    "Célula como unidade comum"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Joana disse ao grupo: “só materiais moles têm células; osso e folha seca não têm”. O professor então mostrou ao microscópio três materiais e pediu que a turma comparasse com a afirmação.",
+   "comando": "A afirmação de Joana está correta? Explique com base nos registros e na teoria celular.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de lâminas ao microscópio",
+    "colunas": [
+     "Material",
+     "Aparência a olho nu",
+     "Ao microscópio"
+    ],
+    "linhas": [
+     [
+      "Osso de boi",
+      "Duro e liso",
+      "Espaços com núcleos"
+     ],
+     [
+      "Folha verde",
+      "Fina e flexível",
+      "Compartimentos com núcleo"
+     ],
+     [
+      "Gota de sangue",
+      "Líquido vermelho",
+      "Unidades arredondadas"
+     ]
+    ]
+   },
+   "ref": "Não está correta. Mesmo o osso, duro, mostra unidades com núcleo, assim como folha e sangue. A dureza ou o estado do material não indica ausência de células: todos os seres vivos e suas partes são formados por células.",
+   "conceitos": [
+    "Seres vivos são formados por células",
+    "Aparência não define presença de células",
+    "Células em tecidos duros e líquidos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No século XIX, um cientista ferveu um caldo nutritivo e o colocou em dois frascos: um aberto e outro com pescoço longo e curvo. Passada uma semana, ele comparou os frascos.",
+   "comando": "Explique por que o resultado do frasco A não indica que seres vivos surgem sozinhos no caldo, relacionando a um princípio da teoria celular.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do experimento",
+    "etapas": [
+     "Caldo fervido dividido em dois frascos",
+     "Frasco A: pescoço curto e aberto; frasco B: pescoço longo e curvo",
+     "Após 7 dias: frasco A turvo",
+     "Após 7 dias: frasco B límpido"
+    ]
+   },
+   "ref": "Os microrganismos do ar entraram no frasco A e se multiplicaram, deixando o caldo turvo. No frasco B, o pescoço curvo reteve esses seres. Isso mostra que toda célula se origina de outra célula preexistente.",
+   "conceitos": [
+    "Célula origina-se de célula preexistente",
+    "Microrganismos vêm do ar",
+    "Controle do experimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um debate, Caio disse: “se o corpo humano tem células tão diferentes, não dá para dizer que a célula é a unidade básica da vida”. Sua colega apresentou um quadro com três tipos de células do corpo humano.",
+   "comando": "Justifique por que, mesmo com formas e tarefas diferentes, a célula continua sendo chamada de unidade estrutural e funcional.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação de células humanas",
+    "colunas": [
+     "Tipo de célula",
+     "Forma",
+     "Tarefa observada"
+    ],
+    "linhas": [
+     [
+      "Neurônio",
+      "Longa e ramificada",
+      "Conduz sinais"
+     ],
+     [
+      "Hemácia",
+      "Disco achatado",
+      "Transporta gás pelo sangue"
+     ],
+     [
+      "Célula muscular",
+      "Alongada",
+      "Encurta e relaxa"
+     ]
+    ]
+   },
+   "ref": "Apesar das diferenças, todas têm membrana, citoplasma e material genético e realizam as próprias funções. Cada tipo é especializado, e o conjunto forma tecidos e o corpo. Assim, a célula é a unidade que constitui e realiza funções no ser vivo.",
+   "conceitos": [
+    "Estrutura básica comum",
+    "Especialização de funções",
+    "Unidade estrutural e funcional"
+   ]
+  }
+ ],
+ "7º ANO|1|Identificar a composição da atmosfera e os fatores naturais e humanos que a modificam, relacionando-os aos impactos ambientais e na saúde do sistema respiratório humano.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Rafael pintou uma grade de 100 quadradinhos para representar o ar seco que respiramos, usando três cores: azul, amarelo e verde. Ele anotou quantos quadradinhos pintou de cada cor.",
+   "comando": "Se a grade representa corretamente a composição do ar, a que gases correspondem as cores azul e amarela?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da pintura da grade",
+    "unidade": "quadradinhos",
+    "itens": [
+     {
+      "rotulo": "Azul",
+      "valor": 78
+     },
+     {
+      "rotulo": "Amarelo",
+      "valor": 21
+     },
+     {
+      "rotulo": "Verde",
+      "valor": 1
+     }
+    ]
+   },
+   "alts": [
+    "Azul representa o oxigênio e amarelo representa o nitrogênio, que é o gás usado na respiração.",
+    "Azul representa o oxigênio e amarelo representa o gás carbônico, que é o principal gás do ar.",
+    "Azul é o nitrogênio e amarelo é o oxigênio, que é o gás usado na respiração.",
+    "Azul representa o nitrogênio e amarelo representa o gás carbônico, liberado na respiração."
+   ],
+   "correta": 2,
+   "explicacao": "O ar tem cerca de 78% de nitrogênio e 21% de oxigênio. Inverter os gases ou apontar o gás carbônico como componente principal são erros comuns."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula sobre atmosfera, a turma recebeu cinco cartões com situações que mudam a composição do ar e precisou separar os que mostram causas naturais.",
+   "comando": "Quais cartões mostram fontes naturais de alteração do ar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos cartões",
+    "colunas": [
+     "Cartão",
+     "Situação"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Cinzas lançadas por um vulcão"
+     ],
+     [
+      "2",
+      "Fumaça do escapamento de um caminhão"
+     ],
+     [
+      "3",
+      "Poeira levantada pelo vento no sertão"
+     ],
+     [
+      "4",
+      "Fumaça da chaminé de uma fábrica"
+     ],
+     [
+      "5",
+      "Incêndio causado por um raio"
+     ]
+    ]
+   },
+   "alts": [
+    "Cartões 1, 3 e 5, pois ocorrem sem ação humana.",
+    "Cartões 1, 2 e 3, pois lançam material sólido no ar.",
+    "Cartões 2, 4 e 5, pois liberam fumaça visível no ar.",
+    "Cartões 1, 4 e 5, pois produzem gases muito quentes."
+   ],
+   "correta": 0,
+   "explicacao": "Vulcão, vento e raio são processos naturais; escapamento e chaminé resultam de atividades humanas. Os distratores agrupam por aparência do poluente, não pela origem."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em São Paulo, a prefeitura mede diariamente as partículas suspensas no ar durante uma semana de inverno seco. Na quarta-feira houve uma chuva forte, e a medida daquele dia ficou muito menor.",
+   "comando": "Qual explicação é adequada para a queda da quantidade de partículas na quarta-feira?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de medições da semana",
+    "colunas": [
+     "Dia",
+     "Chuva (mm)",
+     "Partículas (µg/m³)"
+    ],
+    "linhas": [
+     [
+      "Segunda",
+      "0",
+      "85"
+     ],
+     [
+      "Terça",
+      "0",
+      "92"
+     ],
+     [
+      "Quarta",
+      "18",
+      "35"
+     ],
+     [
+      "Quinta",
+      "2",
+      "60"
+     ]
+    ]
+   },
+   "alts": [
+    "A chuva transforma as partículas em gases, que não são contados pelo aparelho.",
+    "A chuva arrasta as partículas do ar até o solo, limpando a atmosfera.",
+    "A chuva esfria o ar, e as partículas deixam de existir em temperaturas baixas.",
+    "A chuva aumenta o oxigênio do ar, que destrói as partículas suspensas."
+   ],
+   "correta": 1,
+   "explicacao": "A água da chuva carrega as partículas para o solo. Os distratores inventam transformações químicas ou efeitos de temperatura inexistentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Léa, que tem bronquite, mora numa cidade do interior paulista. Em agosto e setembro houve queimadas intensas na região, e o posto de saúde registrou muitos atendimentos por problemas respiratórios.",
+   "comando": "Qual explicação relaciona corretamente a fumaça ao aumento dos atendimentos?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro da UBS: atendimentos respiratórios",
+    "unidade": "atendimentos",
+    "itens": [
+     {
+      "rotulo": "Junho",
+      "valor": 40
+     },
+     {
+      "rotulo": "Julho",
+      "valor": 55
+     },
+     {
+      "rotulo": "Agosto",
+      "valor": 120
+     },
+     {
+      "rotulo": "Setembro",
+      "valor": 135
+     }
+    ]
+   },
+   "alts": [
+    "A fumaça diminui o oxigênio do ar e faz o corpo produzir vírus respiratórios.",
+    "A fumaça deixa o ar seco e frio, e o frio causa as doenças respiratórias.",
+    "A fumaça é formada por vapor de água, que enche os alvéolos e impede a troca de gases.",
+    "A fumaça traz partículas e gases que irritam as vias aéreas e agravam as crises."
+   ],
+   "correta": 3,
+   "explicacao": "Partículas e gases irritantes da queima inflamam as vias aéreas e pioram doenças como a bronquite. Os distratores trazem causas sem relação direta com a fumaça."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Carlos leu que o gás carbônico forma só cerca de 0,04% do ar e achou que seu aumento não importa. Seu professor mostrou medições da concentração desse gás ao longo dos anos, em partes por milhão (ppm).",
+   "comando": "Qual interpretação está correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de concentração de gás carbônico",
+    "colunas": [
+     "Ano",
+     "Concentração (ppm)"
+    ],
+    "linhas": [
+     [
+      "1960",
+      "317"
+     ],
+     [
+      "1990",
+      "354"
+     ],
+     [
+      "2024",
+      "422"
+     ]
+    ]
+   },
+   "alts": [
+    "Como a proporção é pequena, o aumento não altera a atmosfera nem o clima do planeta Terra.",
+    "O aumento mostra que o gás carbônico virou o principal gás do ar, no lugar do nitrogênio.",
+    "Mesmo em pequena proporção, o aumento causado por combustíveis intensifica a retenção de calor.",
+    "O aumento é natural, causado pelos vulcões, e não depende das atividades humanas da região."
+   ],
+   "correta": 2,
+   "explicacao": "Pequenas quantidades de gases do efeito estufa já alteram o balanço de calor, e o crescimento coincide com a queima de combustíveis. Ignorar a proporção ou atribuir só a vulcões são erros comuns."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Numa feira de ciências, a turma colou ao redor da grade 10×10 do ar quatro cartões de eventos que alteram a atmosfera de cidades paulistas.",
+   "comando": "Classifique cada evento como fonte natural ou humana e cite um efeito possível sobre o ar.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos cartões de eventos",
+    "colunas": [
+     "Cartão",
+     "Evento"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Chaminé de siderúrgica em Cubatão"
+     ],
+     [
+      "2",
+      "Poeira levantada por ventania"
+     ],
+     [
+      "3",
+      "Queima de cana antes da colheita"
+     ],
+     [
+      "4",
+      "Cinzas de erupção de vulcão"
+     ]
+    ]
+   },
+   "ref": "Humanas: chaminé (1) e queima de cana (3), que liberam gases e fuligem. Naturais: ventania (2) e vulcão (4), que lançam poeira e cinzas. Em todos há aumento de partículas e gases no ar.",
+   "conceitos": [
+    "Fontes naturais e humanas",
+    "Partículas e gases",
+    "Alteração da qualidade do ar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Mariana pesquisou a composição do ar seco ao nível do mar e montou um quadro. Sua amiga perguntou por que se diz que o ar é uma mistura de gases e qual deles usamos para respirar.",
+   "comando": "Responda à pergunta usando os dados do quadro.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de composição do ar seco",
+    "colunas": [
+     "Gás",
+     "Proporção (%)"
+    ],
+    "linhas": [
+     [
+      "Nitrogênio",
+      "78"
+     ],
+     [
+      "Oxigênio",
+      "21"
+     ],
+     [
+      "Argônio",
+      "0,9"
+     ],
+     [
+      "Gás carbônico",
+      "0,04"
+     ]
+    ]
+   },
+   "ref": "O ar é uma mistura porque reúne vários gases em proporções diferentes, sem formar uma só substância. Para respirar usamos o oxigênio (21%), embora o nitrogênio (78%) seja o mais abundante.",
+   "conceitos": [
+    "Ar é mistura de gases",
+    "Oxigênio na respiração",
+    "Nitrogênio é o mais abundante"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Pedro pedala todas as manhãs pela Marginal Pinheiros, em horário de trânsito intenso. Ele aprendeu que o ar entra pelo nariz e percorre várias partes do sistema respiratório.",
+   "comando": "Explique dois efeitos que o ar poluído pode causar ao longo desse caminho.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Trajeto do ar inspirado por Pedro",
+    "etapas": [
+     "Narinas, com pelos e muco",
+     "Tubo único com anéis",
+     "Dois tubos que entram nos pulmões",
+     "Sacos minúsculos cercados de vasos sanguíneos"
+    ]
+   },
+   "ref": "Os pelos e o muco retêm parte das partículas, mas o excesso irrita o nariz e a garganta, causando coriza e tosse. Gases e partículas finas chegam aos brônquios e alvéolos, inflamam as vias e dificultam a troca de gases, agravando asma e bronquite.",
+   "conceitos": [
+    "Irritação das vias aéreas",
+    "Partículas finas chegam aos alvéolos",
+    "Doenças respiratórias"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Numa manhã fria de inverno em São Paulo, havia névoa cinzenta sobre a cidade, e muitos moradores sentiram a garganta irritada. Um meteorologista mediu a temperatura do ar em duas alturas.",
+   "comando": "Explique por que os poluentes ficaram concentrados perto do solo nessa manhã e qual a consequência para a saúde.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de temperatura do ar",
+    "colunas": [
+     "Horário",
+     "Perto do solo (°C)",
+     "A 300 m de altura (°C)"
+    ],
+    "linhas": [
+     [
+      "6h",
+      "8",
+      "14"
+     ],
+     [
+      "14h",
+      "22",
+      "15"
+     ]
+    ]
+   },
+   "ref": "De manhã, o ar frio e denso ficou sob uma camada de ar mais quente, que funcionou como uma tampa e impediu as correntes verticais. Os poluentes acumularam perto do solo, aumentando irritações e crises respiratórias.",
+   "conceitos": [
+    "Camada de ar quente sobre o ar frio",
+    "Sem dispersão dos poluentes",
+    "Aumento de problemas respiratórios"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A prefeitura de uma cidade fictícia quer reduzir a poluição do ar e a procura por atendimento respiratório. O inventário apontou as fontes das emissões.",
+   "comando": "Justifique qual ação teria maior efeito sobre a qualidade do ar e proponha uma segunda medida voltada à saúde da população.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de emissões da cidade (valores fictícios)",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Veículos",
+      "valor": 62
+     },
+     {
+      "rotulo": "Indústrias",
+      "valor": 20
+     },
+     {
+      "rotulo": "Queima de lixo",
+      "valor": 10
+     },
+     {
+      "rotulo": "Outras",
+      "valor": 8
+     }
+    ]
+   },
+   "ref": "A ação com maior efeito é reduzir emissões dos veículos, a maior fonte (62%), com transporte público, ciclovias e fiscalização. Para a saúde, pode-se alertar a população em dias de ar ruim e ampliar o atendimento a doenças respiratórias.",
+   "conceitos": [
+    "Maior fonte de emissão",
+    "Reduzir poluentes dos veículos",
+    "Prevenção e saúde respiratória"
+   ]
+  }
+ ],
+ "8º ANO|2|Reconhecer os órgãos do sistema respiratório e suas funções no processo de inspiração e expiração.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, o professor montou um modelo com uma garrafa PET cortada no fundo. Dentro dela havia uma bexiga pequena presa ao gargalo, e o fundo foi fechado com uma bexiga grande esticada. Ao puxar a bexiga grande para baixo, a bexiga pequena encheu.",
+   "comando": "No corpo humano, qual estrutura corresponde à bexiga puxada e como ela age na inspiração?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro das etapas do modelo",
+    "etapas": [
+     "Garrafa cortada no fundo",
+     "Bexiga pequena presa no gargalo, dentro da garrafa",
+     "Bexiga grande esticada no fundo",
+     "Bexiga grande é puxada para baixo"
+    ]
+   },
+   "alts": [
+    "O diafragma, que relaxa e sobe, empurrando o ar para dentro dos pulmões.",
+    "O pulmão, que se contrai e desce, aumentando o espaço dentro da caixa torácica.",
+    "O diafragma, que se contrai e desce, aumentando o volume da caixa torácica.",
+    "A traqueia, que se alarga e desce, puxando o ar para os alvéolos."
+   ],
+   "correta": 2,
+   "explicacao": "Ao se contrair e descer, o diafragma aumenta o volume da caixa torácica e o ar entra. Trocar o órgão ou inverter o movimento são erros comuns."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ana respirou fundo antes de mergulhar na piscina do clube. Ela quer lembrar por onde o ar passa desde o nariz até chegar ao sangue.",
+   "comando": "Qual é a sequência correta do caminho do ar na inspiração?",
+   "figura": null,
+   "alts": [
+    "Nariz, faringe, laringe, traqueia, brônquios e alvéolos.",
+    "Nariz, laringe, faringe, traqueia, brônquios e depois alvéolos.",
+    "Nariz, faringe, traqueia, laringe, depois alvéolos e brônquios.",
+    "Nariz, faringe, laringe, brônquios, depois traqueia e alvéolos."
+   ],
+   "correta": 0,
+   "explicacao": "O ar passa por nariz, faringe, laringe, traqueia, brônquios e chega aos alvéolos. As outras sequências trocam a ordem de órgãos próximos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Gabriela mediu com uma fita métrica o perímetro do tórax da irmã em dois momentos: com os pulmões esvaziados e depois de uma inspiração profunda.",
+   "comando": "Qual explicação relaciona a mudança observada à entrada de ar nos pulmões?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de medições do tórax",
+    "colunas": [
+     "Momento",
+     "Perímetro do tórax (cm)"
+    ],
+    "linhas": [
+     [
+      "Após expirar",
+      "86"
+     ],
+     [
+      "Após inspirar fundo",
+      "91"
+     ]
+    ]
+   },
+   "alts": [
+    "As costelas descem e o diafragma sobe, o que reduz o volume e empurra o ar para dentro.",
+    "Os pulmões se enchem sozinhos e empurram as costelas, aumentando o perímetro do tórax.",
+    "O ar entra pela pressão do nariz e dilata o tórax, sem participação dos músculos.",
+    "As costelas sobem e o diafragma desce, o que aumenta o volume e faz o ar entrar."
+   ],
+   "correta": 3,
+   "explicacao": "Na inspiração, costelas sobem e diafragma desce, aumentando o volume da caixa torácica e a pressão interna cai, entrando o ar. Os pulmões não têm músculos próprios para se encher sozinhos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um médico analisou a composição do sangue de Bruno antes e depois de passar pelos pulmões. Os valores mostram a pressão dos gases dissolvidos no sangue.",
+   "comando": "O que os dados indicam sobre o que ocorre nos alvéolos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de exame de sangue (mmHg)",
+    "colunas": [
+     "Gás",
+     "Ao chegar aos pulmões",
+     "Ao sair dos pulmões"
+    ],
+    "linhas": [
+     [
+      "Oxigênio",
+      "40",
+      "100"
+     ],
+     [
+      "Gás carbônico",
+      "46",
+      "40"
+     ]
+    ]
+   },
+   "alts": [
+    "O oxigênio passa do sangue para o ar dos alvéolos, e o gás carbônico passa do ar para o sangue.",
+    "O oxigênio passa do ar para o sangue, e o gás carbônico passa do sangue para o ar.",
+    "O oxigênio é produzido nos alvéolos e o gás carbônico é destruído pelas células do pulmão.",
+    "O oxigênio e o gás carbônico passam juntos do ar para o sangue e são levados às células."
+   ],
+   "correta": 1,
+   "explicacao": "Nas trocas gasosas, o oxigênio entra no sangue e o gás carbônico sai para ser expirado. Inverter o sentido ou achar que o pulmão produz oxigênio são erros frequentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Num exame de espirometria, três pessoas sopraram o mais forte possível e o aparelho mediu o volume de ar expirado no primeiro segundo. Maria nunca fumou, Pedro fuma há 20 anos e Léo tem asma controlada.",
+   "comando": "Qual é a melhor explicação para o resultado de Pedro?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de espirometria",
+    "unidade": "litros",
+    "itens": [
+     {
+      "rotulo": "Maria",
+      "valor": 4.1
+     },
+     {
+      "rotulo": "Pedro",
+      "valor": 3.0
+     },
+     {
+      "rotulo": "Léo",
+      "valor": 3.8
+     }
+    ]
+   },
+   "alts": [
+    "A fumaça irrita e lesa brônquios e alvéolos, diminuindo a elasticidade e o fluxo de ar.",
+    "A fumaça aumenta a quantidade de oxigênio nos alvéolos e reduz a necessidade de expirar.",
+    "A fumaça faz os pulmões produzirem mais ar, que fica preso e reduz o volume expirado.",
+    "A fumaça fortalece os músculos do tórax e faz o ar sair mais devagar do pulmão."
+   ],
+   "correta": 0,
+   "explicacao": "Substâncias da fumaça inflamam as vias e destroem alvéolos, reduzindo elasticidade e superfície de troca. Os distratores atribuem à fumaça efeitos benéficos ou inexistentes."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma visita à UBS do bairro, Rafael ouviu a enfermeira descrever o caminho do ar até o pulmão. Ele anotou cada parte pelas características, mas esqueceu os nomes.",
+   "comando": "Dê o nome de cada parte descrita e indique a função da última.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro das partes descritas",
+    "etapas": [
+     "Aberturas no rosto com pelos e muco",
+     "Tubo longo e único, com anéis",
+     "Dois tubos que entram nos pulmões",
+     "Sacos minúsculos cercados por vasos sanguíneos"
+    ]
+   },
+   "ref": "São, na ordem: nariz (narinas), traqueia, brônquios e alvéolos. Nos alvéolos ocorrem as trocas gasosas: o oxigênio passa para o sangue e o gás carbônico sai para ser expirado.",
+   "conceitos": [
+    "Nariz",
+    "Traqueia",
+    "Brônquios",
+    "Alvéolos e trocas gasosas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula, o grupo repetiu o modelo da garrafa com duas bexigas: ao puxar a bexiga de baixo a de dentro enchia, e ao soltar ela esvaziava. Os alunos anotaram o que ocorria.",
+   "comando": "Relacione cada ação do modelo ao movimento respiratório e ao papel do diafragma no corpo humano.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das observações do modelo",
+    "colunas": [
+     "Ação no modelo",
+     "Bexiga de dentro"
+    ],
+    "linhas": [
+     [
+      "Puxar a bexiga de baixo",
+      "Enche"
+     ],
+     [
+      "Soltar a bexiga de baixo",
+      "Esvazia"
+     ]
+    ]
+   },
+   "ref": "Puxar a bexiga corresponde à inspiração: o diafragma se contrai e desce, aumenta o espaço do tórax e o ar entra. Soltar corresponde à expiração: o diafragma relaxa e sobe, diminui o espaço e o ar sai.",
+   "conceitos": [
+    "Inspiração: diafragma contrai e desce",
+    "Expiração: diafragma relaxa e sobe",
+    "Variação do volume do tórax"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Beto mediu sua respiração e seus batimentos em repouso e depois de correr cinco minutos na quadra da escola, e se espantou com a diferença.",
+   "comando": "Explique por que a respiração e os batimentos aceleram durante o exercício.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de medidas de Beto",
+    "colunas": [
+     "Situação",
+     "Respirações por minuto",
+     "Batimentos por minuto"
+    ],
+    "linhas": [
+     [
+      "Repouso",
+      "16",
+      "70"
+     ],
+     [
+      "Após correr",
+      "32",
+      "140"
+     ]
+    ]
+   },
+   "ref": "Os músculos em atividade gastam mais oxigênio e produzem mais gás carbônico. Respirar mais rápido leva mais oxigênio ao sangue e elimina o gás carbônico, e o coração mais rápido distribui esse oxigênio às células.",
+   "conceitos": [
+    "Maior consumo de oxigênio",
+    "Eliminação de gás carbônico",
+    "Coração leva oxigênio às células"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas crianças foram à UBS com tosse. Uma tem bronquite e a outra, pneumonia. A médica explicou onde cada doença afeta o sistema respiratório e mostrou um quadro.",
+   "comando": "Explique por que a pneumonia tende a prejudicar mais a troca de gases do que a bronquite.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da UBS",
+    "colunas": [
+     "Doença",
+     "Onde afeta",
+     "Sinal observado"
+    ],
+    "linhas": [
+     [
+      "Bronquite",
+      "Tubos que levam o ar aos pulmões",
+      "Tosse com catarro"
+     ],
+     [
+      "Pneumonia",
+      "Sacos minúsculos do pulmão",
+      "Febre e falta de ar"
+     ]
+    ]
+   },
+   "ref": "Na pneumonia, os alvéolos ficam inflamados e com líquido, e é neles que o oxigênio passa para o sangue. Assim, a troca gasosa fica comprometida. Na bronquite, o problema é a passagem do ar nos brônquios.",
+   "conceitos": [
+    "Alvéolos como local das trocas",
+    "Líquido e inflamação nos alvéolos",
+    "Diferença entre brônquios e alvéolos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lia treinou prender a respiração debaixo d’água na piscina e sentiu uma vontade cada vez mais forte de respirar. O professor mediu os gases no sangue dela durante o teste.",
+   "comando": "Explique o que provoca essa vontade de respirar, usando os dados medidos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de medidas durante o teste",
+    "colunas": [
+     "Tempo sem respirar (s)",
+     "Oxigênio no sangue (%)",
+     "Gás carbônico (mmHg)"
+    ],
+    "linhas": [
+     [
+      "0",
+      "98",
+      "40"
+     ],
+     [
+      "20",
+      "96",
+      "44"
+     ],
+     [
+      "40",
+      "93",
+      "49"
+     ]
+    ]
+   },
+   "ref": "Sem respirar, o gás carbônico se acumula no sangue (de 40 para 49 mmHg). O cérebro detecta esse aumento e estimula os músculos respiratórios, gerando a vontade de respirar, mais do que a falta de oxigênio.",
+   "conceitos": [
+    "Acúmulo de gás carbônico",
+    "Controle pelo cérebro",
+    "Estímulo dos músculos respiratórios"
+   ]
+  }
+ ],
+ "8º ANO|3|Diferenciar os movimentos da Terra (rotação, translação e/ou precessão) com base em suas características e efeitos.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de Astronomia, o professor usou uma lanterna e uma bola e mostrou três movimentos da Terra, anotando o tempo de cada um. Marina comentou que a sucessão de dia e noite em Sorocaba depende de um deles.",
+   "comando": "Qual movimento do quadro explica o dia e a noite, e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos movimentos mostrados",
+    "colunas": [
+     "Movimento",
+     "Duração de um ciclo"
+    ],
+    "linhas": [
+     [
+      "A",
+      "24 horas"
+     ],
+     [
+      "B",
+      "365 dias"
+     ],
+     [
+      "C",
+      "26 mil anos"
+     ]
+    ]
+   },
+   "alts": [
+    "O movimento A, pois a Terra gira em torno do próprio eixo e expõe cada lado ao Sol.",
+    "O movimento B, pois a Terra se afasta do Sol à noite e se aproxima dele durante o dia.",
+    "O movimento A, pois o Sol gira ao redor da Terra e ilumina um lado de cada vez.",
+    "O movimento C, pois o eixo da Terra balança e muda o lado iluminado a cada dia."
+   ],
+   "correta": 0,
+   "explicacao": "A rotação, de cerca de 24 h, alterna o lado iluminado. Atribuir o dia e a noite à translação, ao Sol girando ou à precessão são equívocos comuns."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Rafael mora em Campinas e anotou as horas de luz solar em quatro datas do ano. Ele percebeu que os dias são mais longos em dezembro do que em junho e quer entender o motivo.",
+   "comando": "Qual explicação está correta para essa variação ao longo do ano?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de horas de luz em Campinas",
+    "colunas": [
+     "Data",
+     "Horas de luz solar"
+    ],
+    "linhas": [
+     [
+      "21 de março",
+      "12h"
+     ],
+     [
+      "21 de junho",
+      "10h35"
+     ],
+     [
+      "21 de setembro",
+      "12h"
+     ],
+     [
+      "21 de dezembro",
+      "13h40"
+     ]
+    ]
+   },
+   "alts": [
+    "A Terra fica mais próxima do Sol em dezembro, o que aquece mais e alonga os dias.",
+    "A rotação da Terra fica mais lenta em dezembro, o que alonga os dias no Brasil.",
+    "O eixo inclinado muda, ao longo da translação, a luz que cada hemisfério recebe.",
+    "A precessão do eixo muda a cada ano o tempo de luz solar em cada hemisfério."
+   ],
+   "correta": 2,
+   "explicacao": "A inclinação do eixo combinada com a translação altera a incidência de luz em cada hemisfério. A distância ao Sol é um mito comum sobre as estações."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula, os alunos compararam o horário em três cidades no mesmo instante, usando um relógio mundial. Pedro estranhou: se o Sol é um só, por que os horários são diferentes?",
+   "comando": "Qual explicação está de acordo com os movimentos da Terra?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de horários no mesmo instante",
+    "colunas": [
+     "Cidade",
+     "Horário local"
+    ],
+    "linhas": [
+     [
+      "São Paulo",
+      "9h"
+     ],
+     [
+      "Londres",
+      "13h"
+     ],
+     [
+      "Tóquio",
+      "21h"
+     ]
+    ]
+   },
+   "alts": [
+    "Os países ajustam o relógio de acordo com a distância que cada um está do Sol.",
+    "Como a Terra gira, o Sol ilumina cada local em um momento; a leste o dia começa antes.",
+    "Como a Terra se desloca ao redor do Sol, cada cidade recebe luz em uma época do ano.",
+    "Como o eixo da Terra é inclinado, as cidades do norte têm horário mais adiantado."
+   ],
+   "correta": 1,
+   "explicacao": "A rotação faz o Sol nascer primeiro nos lugares mais a leste, gerando fusos horários. Os distratores atribuem a diferença à distância ao Sol, à translação ou à inclinação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dona Neusa pergunta ao neto Davi por que fevereiro tem 29 dias a cada quatro anos. Davi pesquisou e anotou a duração da volta da Terra ao redor do Sol.",
+   "comando": "Como Davi pode explicar o ano bissexto à avó?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de pesquisa",
+    "colunas": [
+     "Informação",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Volta da Terra ao redor do Sol",
+      "365 dias e cerca de 6 horas"
+     ],
+     [
+      "Ano do calendário comum",
+      "365 dias"
+     ]
+    ]
+   },
+   "alts": [
+    "A rotação da Terra desacelera, e a cada quatro anos ganha-se um dia inteiro.",
+    "A precessão do eixo muda o calendário e exige o ajuste de um dia a cada quatro anos.",
+    "A Lua completa uma volta a mais a cada quatro anos, o que exige acrescentar um dia.",
+    "As 6 horas que sobram a cada translação se somam e formam um dia em quatro anos."
+   ],
+   "correta": 3,
+   "explicacao": "4 × 6 h = 24 h: um dia a mais a cada quatro anos compensa o que sobra da translação. As outras opções usam movimentos que não têm relação com essa conta."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um clube de astronomia de Ribeirão Preto discute por que a estrela que fica perto do polo norte celeste muda ao longo de milhares de anos. O professor mostrou um quadro com dados de astrônomos.",
+   "comando": "Qual movimento da Terra explica a mudança da estrela do polo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de estrela próxima ao polo norte celeste",
+    "colunas": [
+     "Época",
+     "Estrela"
+    ],
+    "linhas": [
+     [
+      "Hoje",
+      "Polaris"
+     ],
+     [
+      "Daqui a 12 mil anos",
+      "Vega"
+     ],
+     [
+      "Daqui a 26 mil anos",
+      "Polaris"
+     ]
+    ]
+   },
+   "alts": [
+    "A rotação, que muda a cada dia o ponto do céu para onde o eixo da Terra aponta.",
+    "A translação, que faz as estrelas do polo trocarem de posição no céu a cada ano.",
+    "O deslocamento rápido das estrelas, que mudam de lugar no espaço a cada século.",
+    "A precessão, em que o eixo descreve um cone lento e aponta para pontos diferentes."
+   ],
+   "correta": 3,
+   "explicacao": "Na precessão, o eixo descreve um cone em cerca de 26 mil anos, e o ponto do céu para o qual aponta muda. Rotação e translação têm ciclos curtos e não explicam esse padrão."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na demonstração, o professor girou a bola lentamente sobre um espeto, de frente para a lanterna, e depois levou a bola em volta da lanterna. Em seguida, girou um pião e mostrou que o eixo dele balança.",
+   "comando": "Nomeie os dois primeiros movimentos do modelo e diga qual representa o dia e a noite e qual representa o ano.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro das etapas da demonstração",
+    "etapas": [
+     "Bola gira sobre o próprio espeto",
+     "Lado voltado para a lanterna fica claro; o outro, escuro",
+     "Bola dá uma volta completa em torno da lanterna",
+     "Pião gira e seu eixo descreve círculos lentos"
+    ]
+   },
+   "ref": "Girar sobre o espeto é a rotação (cerca de 24 h), que produz dia e noite. A volta em torno da lanterna é a translação (cerca de 365 dias), que corresponde ao ano.",
+   "conceitos": [
+    "Rotação e dia/noite",
+    "Translação e ano",
+    "Diferença de duração"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Marina anotou duas observações de sua rotina em Santos e quer classificá-las pelos movimentos da Terra.",
+   "comando": "Associe cada observação a um movimento da Terra e justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observações de Marina",
+    "colunas": [
+     "Observação",
+     "Quando ocorre"
+    ],
+    "linhas": [
+     [
+      "Sol nasce às 6h e se põe às 18h",
+      "Todos os dias"
+     ],
+     [
+      "Sol nasce mais cedo em dezembro do que em junho",
+      "Repete-se a cada ano"
+     ]
+    ]
+   },
+   "ref": "A primeira é efeito da rotação, que completa um ciclo a cada dia. A segunda é efeito da translação junto com a inclinação do eixo, que muda a duração do dia ao longo do ano, repetindo-se a cada volta ao redor do Sol.",
+   "conceitos": [
+    "Rotação: ciclo diário",
+    "Translação e inclinação: ciclo anual",
+    "Associar efeito ao movimento"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No fim de dezembro, Bia, que mora em Porto Alegre, passa as férias na praia com muito calor. Sua prima Sara, que mora em Oslo, na Noruega, está com neve e dias curtos.",
+   "comando": "Explique por que as duas estão em estações opostas na mesma data.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de 21 de dezembro",
+    "colunas": [
+     "Cidade",
+     "Horas de luz",
+     "Temperatura média (°C)"
+    ],
+    "linhas": [
+     [
+      "Porto Alegre",
+      "14h",
+      "28"
+     ],
+     [
+      "Oslo",
+      "6h",
+      "-2"
+     ]
+    ]
+   },
+   "ref": "O eixo da Terra é inclinado e, na translação, em dezembro o hemisfério sul fica mais voltado para o Sol, recebendo luz mais direta e dias longos (verão). O hemisfério norte recebe menos luz, com dias curtos e frio (inverno).",
+   "conceitos": [
+    "Inclinação do eixo",
+    "Translação",
+    "Hemisférios com estações opostas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um estudante imaginou que o eixo da Terra fosse perpendicular ao plano da órbita, sem inclinação. Ele comparou dados reais de Quito, perto do equador, e de São Paulo.",
+   "comando": "Com base nos dados, o que mudaria em São Paulo sem a inclinação do eixo? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de horas de luz ao longo do ano",
+    "colunas": [
+     "Cidade",
+     "Menor duração do dia",
+     "Maior duração do dia"
+    ],
+    "linhas": [
+     [
+      "Quito",
+      "12h00",
+      "12h07"
+     ],
+     [
+      "São Paulo",
+      "10h30",
+      "13h40"
+     ]
+    ]
+   },
+   "ref": "Sem inclinação, São Paulo teria dias com duração quase constante, como Quito, e não haveria estações bem definidas. A inclinação, combinada com a translação, é a causa da variação de luz e das estações.",
+   "conceitos": [
+    "Inclinação causa estações",
+    "Duração do dia quase constante",
+    "Translação combinada à inclinação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Beto leu que o “bamboleio” do eixo da Terra, a precessão, mudou a estrela do polo ao longo da história e perguntou se ele também causa as estações do ano.",
+   "comando": "Justifique por que a precessão não explica as estações, comparando os ciclos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de ciclos",
+    "colunas": [
+     "Fenômeno",
+     "Tempo de um ciclo"
+    ],
+    "linhas": [
+     [
+      "Estações do ano",
+      "1 ano"
+     ],
+     [
+      "Precessão do eixo",
+      "cerca de 26 mil anos"
+     ]
+    ]
+   },
+   "ref": "As estações se repetem a cada ano, e a precessão leva cerca de 26 mil anos para completar um ciclo, lentíssimo demais. As estações resultam da translação junto com a inclinação do eixo.",
+   "conceitos": [
+    "Ciclo da precessão é muito longo",
+    "Estações: translação e inclinação",
+    "Comparar escalas de tempo"
+   ]
+  }
+ ],
+ "9º ANO|2|Reconhecer a função, composição e estrutura do DNA.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula de Genética, a turma de Larissa montou um modelo do DNA com tiras de papel. Antes de torcer o modelo, ela registrou o material usado.",
+   "comando": "No modelo, o que representam as tiras verticais cinza e as peças coloridas horizontais?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do material do modelo",
+    "colunas": [
+     "Peça",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Tira vertical cinza",
+      "2"
+     ],
+     [
+      "Peça colorida horizontal",
+      "8"
+     ]
+    ]
+   },
+   "alts": [
+    "As tiras representam as bases nitrogenadas, e as peças coloridas, o açúcar e o fosfato.",
+    "As tiras representam o açúcar e o fosfato, e as peças coloridas, os pares de bases.",
+    "As tiras representam os genes, e as peças coloridas, os cromossomos inteiros.",
+    "As tiras representam duas moléculas de RNA, e as peças coloridas, as proteínas."
+   ],
+   "correta": 1,
+   "explicacao": "As laterais da escada são formadas por açúcar e fosfato, e os degraus, pelos pares de bases. Inverter as partes ou trocar por RNA e proteínas são erros comuns."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Gabriel recebeu o trecho de uma fita de DNA e precisa escrever a fita complementar, lembrando que as bases se pareiam de modo específico.",
+   "comando": "Qual é a sequência da fita complementar?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da fita molde",
+    "colunas": [
+     "Posição",
+     "Base"
+    ],
+    "linhas": [
+     [
+      "1",
+      "A"
+     ],
+     [
+      "2",
+      "T"
+     ],
+     [
+      "3",
+      "C"
+     ],
+     [
+      "4",
+      "G"
+     ],
+     [
+      "5",
+      "G"
+     ],
+     [
+      "6",
+      "A"
+     ]
+    ]
+   },
+   "alts": [
+    "T A G C C T",
+    "U A G C C U",
+    "A T C G G A",
+    "T A C G G T"
+   ],
+   "correta": 0,
+   "explicacao": "A pareia com T e C com G, o que gera T A G C C T. U é do RNA; copiar a fita ou trocar os pares são erros frequentes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma investigação de paternidade num laboratório de Campinas, os técnicos compararam um marcador do DNA de uma criança, da mãe e de dois homens. Cada pessoa herda metade do DNA de cada genitor.",
+   "comando": "Qual homem pode ser o pai e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de marcador do DNA",
+    "colunas": [
+     "Pessoa",
+     "Variantes do marcador"
+    ],
+    "linhas": [
+     [
+      "Criança",
+      "12 e 14"
+     ],
+     [
+      "Mãe",
+      "12 e 13"
+     ],
+     [
+      "Homem A",
+      "14 e 15"
+     ],
+     [
+      "Homem B",
+      "11 e 13"
+     ]
+    ]
+   },
+   "alts": [
+    "O homem B, pois tem a variante 13, que a criança herdou da mãe.",
+    "O homem B, pois não possui a variante 12, que a criança tem em seu DNA.",
+    "O homem A, pois tem a variante 15, que é maior que as variantes da criança.",
+    "O homem A, pois tem a variante 14, que a criança não herdou da mãe."
+   ],
+   "correta": 3,
+   "explicacao": "A variante 12 veio da mãe; a 14, então, veio do pai, e só o homem A a possui. Os distratores confundem com a variante materna ou com a que a criança não tem."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao analisar uma amostra de DNA de uma planta, uma pesquisadora mediu a proporção de cada base. A porcentagem de A era igual à de T, e a de C era igual à de G.",
+   "comando": "O que explica essa igualdade entre as bases?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de proporção das bases",
+    "unidade": "%",
+    "itens": [
+     {
+      "rotulo": "Base A",
+      "valor": 30
+     },
+     {
+      "rotulo": "Base T",
+      "valor": 30
+     },
+     {
+      "rotulo": "Base C",
+      "valor": 20
+     },
+     {
+      "rotulo": "Base G",
+      "valor": 20
+     }
+    ]
+   },
+   "alts": [
+    "As quatro bases ficam em fitas separadas e cada fita tem quantidades iguais de A e T.",
+    "A adenina se liga à citosina e a timina à guanina, e as quantidades se compensam.",
+    "A adenina se liga à timina e a citosina à guanina, formando pares na dupla-hélice.",
+    "A planta produz as bases aos pares para poder fazer proteínas com menos erros."
+   ],
+   "correta": 2,
+   "explicacao": "O pareamento A–T e C–G na dupla-hélice faz as quantidades serem iguais. Pareamentos trocados ou ideias sobre fitas separadas não explicam os dados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um laboratório de São Paulo comparou o mesmo trecho do gene de uma pessoa saudável e de um paciente que produz uma proteína alterada.",
+   "comando": "O que os dados mostram e qual a consequência provável?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da sequência do trecho",
+    "colunas": [
+     "Pessoa",
+     "Sequência"
+    ],
+    "linhas": [
+     [
+      "Controle",
+      "A T G C C A G G T"
+     ],
+     [
+      "Paciente",
+      "A T G C T A G G T"
+     ]
+    ]
+   },
+   "alts": [
+    "Uma base foi trocada por outra, o que pode alterar a proteína produzida.",
+    "Um fosfato foi perdido, o que desfaz a dupla-hélice e impede a síntese de proteínas.",
+    "Uma base foi apagada do trecho, o que impede a produção da proteína.",
+    "A ordem das bases foi mantida, e a diferença está nos açúcares que ligam as bases."
+   ],
+   "correta": 0,
+   "explicacao": "A diferença é a troca de uma base (C por T), uma mutação que pode mudar a proteína. Os outros itens descrevem alterações que não aparecem nos dados."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma aula prática, Pedro precisa explicar a um colega o que é um nucleotídeo, a unidade que forma a molécula de DNA, e qual a função do DNA nas células.",
+   "comando": "Cite as três partes de um nucleotídeo do DNA e explique a função do DNA.",
+   "figura": null,
+   "ref": "O nucleotídeo é formado por um açúcar (desoxirribose), um grupo fosfato e uma base nitrogenada. O DNA guarda as instruções para a produção das proteínas e transmite as características hereditárias.",
+   "conceitos": [
+    "Açúcar, fosfato e base",
+    "Informação genética",
+    "Hereditariedade"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Carla recebeu uma fita de DNA incompleta e precisa completar a fita complementar para montar o modelo da dupla-hélice.",
+   "comando": "Complete a fita 2 e explique o que mantém as duas fitas unidas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das fitas",
+    "colunas": [
+     "Posição",
+     "Fita 1",
+     "Fita 2"
+    ],
+    "linhas": [
+     [
+      "1",
+      "A",
+      "?"
+     ],
+     [
+      "2",
+      "C",
+      "?"
+     ],
+     [
+      "3",
+      "G",
+      "?"
+     ],
+     [
+      "4",
+      "T",
+      "?"
+     ]
+    ]
+   },
+   "ref": "Fita 2: T, G, C, A. A se pareia com T e C com G, e esses pares são unidos por ligações fracas (pontes de hidrogênio) entre as bases, mantendo as fitas juntas.",
+   "conceitos": [
+    "Pareamento A–T e C–G",
+    "Pontes de hidrogênio",
+    "Fitas complementares"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ana extraiu o DNA de um morango na cozinha de casa. Ela amassou a fruta, misturou com água, sal e detergente, filtrou o líquido e colocou álcool gelado por cima, vendo surgirem fios brancos.",
+   "comando": "Explique o papel do detergente e do álcool gelado nesse procedimento.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro das etapas do procedimento",
+    "etapas": [
+     "Morango amassado com água, sal e detergente",
+     "Mistura filtrada em um coador",
+     "Álcool gelado despejado devagar sobre o líquido",
+     "Fios brancos surgem na superfície"
+    ]
+   },
+   "ref": "O detergente desmancha as membranas das células e do núcleo, liberando o DNA na solução. O álcool gelado faz o DNA, que não se dissolve nele, se aglomerar e aparecer como fios brancos.",
+   "conceitos": [
+    "Detergente rompe membranas",
+    "Álcool precipita o DNA",
+    "DNA presente em células vegetais"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois gêmeos idênticos e dois irmãos não gêmeos fizeram um teste de DNA. O laboratório informou a porcentagem de DNA que cada par tem em comum.",
+   "comando": "Explique por que gêmeos idênticos têm DNA praticamente igual, enquanto irmãos comuns se parecem menos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de comparação de DNA",
+    "colunas": [
+     "Par de pessoas",
+     "DNA em comum (%)"
+    ],
+    "linhas": [
+     [
+      "Gêmeos idênticos",
+      "≈ 100"
+     ],
+     [
+      "Irmãos não gêmeos",
+      "≈ 50"
+     ],
+     [
+      "Primos",
+      "≈ 12,5"
+     ]
+    ]
+   },
+   "ref": "Gêmeos idênticos vêm do mesmo óvulo fecundado, que se divide e herda o mesmo DNA. Irmãos comuns vêm de óvulos e espermatozoides diferentes, que recebem combinações distintas do DNA dos pais, compartilhando em média 50%.",
+   "conceitos": [
+    "Mesma origem do óvulo fecundado",
+    "Combinações diferentes de DNA dos pais",
+    "Herança de metade de cada genitor"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma empresa de biotecnologia paulista produz insulina humana usando bactérias. Para isso, o gene humano da insulina é colocado no DNA da bactéria, que passa a produzir o hormônio.",
+   "comando": "Justifique por que uma bactéria consegue usar um gene humano para produzir uma proteína humana.",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro das etapas da produção",
+    "etapas": [
+     "Gene da insulina é copiado de células humanas",
+     "Gene é inserido no DNA de bactérias",
+     "Bactérias se multiplicam em tanque",
+     "Insulina é separada e purificada"
+    ]
+   },
+   "ref": "Bactérias e humanos têm DNA com a mesma composição (as mesmas quatro bases) e leem as bases do mesmo modo. Por isso, a bactéria interpreta o gene humano e produz a proteína correspondente.",
+   "conceitos": [
+    "DNA com a mesma composição",
+    "Mesmo código genético",
+    "Biotecnologia"
+   ]
+  }
+ ],
+ "4B|6º ANO|6": [
+  {
+   "tipo": "obj",
+   "enunciado": "Mateus visitou os campos de flores de Holambra num dia de sol forte e notou que a abertura escura no centro do olho de sua irmã ficou bem pequena. Em casa, num quarto escuro, ela ficou grande.",
+   "comando": "Qual estrutura controla a quantidade de luz que entra no olho e como age?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação do olho de Clara",
+    "colunas": [
+     "Local",
+     "Abertura escura no centro do olho"
+    ],
+    "linhas": [
+     [
+      "Campo de flores ao sol",
+      "Pequena"
+     ],
+     [
+      "Quarto escuro",
+      "Grande"
+     ]
+    ]
+   },
+   "alts": [
+    "A córnea, que se contrai e reduz a entrada da luz quando o ambiente está claro.",
+    "A retina, que fecha a abertura quando recebe muita luz para proteger o nervo.",
+    "O cristalino, que cobre a abertura quando há muita luz e a descobre quando há pouca.",
+    "A íris, que muda o tamanho da pupila e regula a quantidade de luz que entra."
+   ],
+   "correta": 3,
+   "explicacao": "A íris, parte colorida do olho, aumenta ou diminui a pupila. Córnea, retina e cristalino não regulam a entrada de luz dessa forma."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No laboratório, Júlia iluminou uma pétala vermelha com luz branca e depois com luz verde, anotando o que via em cada caso.",
+   "comando": "Como o resultado pode ser explicado?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do ensaio com pétala",
+    "colunas": [
+     "Luz que ilumina",
+     "Cor percebida da pétala"
+    ],
+    "linhas": [
+     [
+      "Branca",
+      "Vermelha"
+     ],
+     [
+      "Verde",
+      "Quase preta"
+     ]
+    ]
+   },
+   "alts": [
+    "A pétala produz luz vermelha própria, e a luz verde interrompe essa produção.",
+    "A pétala absorve a luz vermelha e reflete as demais, que o olho percebe como vermelha.",
+    "A pétala reflete a luz vermelha e absorve as demais; sob luz verde, pouco é refletido.",
+    "A pétala deixa passar a luz verde, e por isso o olho vê o que está atrás dela."
+   ],
+   "correta": 2,
+   "explicacao": "Objetos coloridos refletem certas cores e absorvem as outras. Sob luz verde não há vermelho para refletir. Os distratores invertem reflexão e absorção ou atribuem luz própria à pétala."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao olhar um canteiro de rosas em Holambra, Rita aprendeu que a imagem formada no fundo do olho fica de cabeça para baixo, mas ela vê as rosas na posição normal.",
+   "comando": "Por que Rita vê as rosas na posição normal?",
+   "figura": {
+    "tipo": "etapas",
+    "titulo": "Registro do caminho da luz",
+    "etapas": [
+     "Luz sai da flor e chega ao olho",
+     "Atravessa as partes transparentes da frente do olho",
+     "Forma imagem no fundo do olho",
+     "Sinais seguem por um cabo de fibras até o cérebro"
+    ]
+   },
+   "alts": [
+    "A córnea inverte a imagem uma segunda vez antes de ela chegar ao fundo do olho.",
+    "O cérebro interpreta os sinais e reorganiza a imagem, por isso a vemos na posição certa.",
+    "A pupila gira a imagem quando se abre e se fecha, o que corrige a posição dela.",
+    "O nervo óptico inverte a imagem de novo ao levar os sinais até o cérebro."
+   ],
+   "correta": 1,
+   "explicacao": "A imagem é invertida na retina, e o cérebro interpreta os sinais enviados pelo nervo óptico. Os outros itens atribuem a correção a estruturas do olho que não fazem isso."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Ao entrar num cinema escuro em Campinas, Pedro não via nada. Depois de alguns minutos, passou a enxergar as poltronas. Sua irmã mediu a abertura escura do olho dele nesses minutos.",
+   "comando": "O que explica a melhora da visão de Pedro?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de medida da abertura escura do olho",
+    "colunas": [
+     "Tempo no cinema (min)",
+     "Diâmetro (mm)"
+    ],
+    "linhas": [
+     [
+      "0",
+      "2,5"
+     ],
+     [
+      "2",
+      "4,5"
+     ],
+     [
+      "5",
+      "6,5"
+     ],
+     [
+      "10",
+      "7,0"
+     ]
+    ]
+   },
+   "alts": [
+    "A pupila se alarga no escuro, e assim chega mais luz até a retina do olho.",
+    "A pupila se estreita com o escuro, e assim a luz fica concentrada na retina.",
+    "O cristalino produz luz no escuro, e a retina passa a perceber as poltronas.",
+    "A córnea fica mais transparente com o escuro, o que aumenta a luz que sai do olho."
+   ],
+   "correta": 0,
+   "explicacao": "No escuro a íris relaxa e a pupila se dilata, deixando entrar mais luz, como mostram os diâmetros. Os distratores inventam produção de luz ou invertem o movimento."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Tomás teve um exame completo. A luz atravessa normalmente as partes da frente dos dois olhos, as pupilas reagem à luz e a retina do olho esquerdo recebe a imagem, mas ele não percebe imagem nenhuma com esse olho.",
+   "comando": "Qual é o local mais provável do problema?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do exame",
+    "colunas": [
+     "Item avaliado",
+     "Olho esquerdo",
+     "Olho direito"
+    ],
+    "linhas": [
+     [
+      "Luz atravessa a frente do olho",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Pupila reage à luz",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Imagem chega ao fundo do olho",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Percebe a imagem",
+      "Não",
+      "Sim"
+     ]
+    ]
+   },
+   "alts": [
+    "O nervo óptico, que leva os sinais do olho ao cérebro.",
+    "A córnea, que deixa passar a luz até o interior do olho.",
+    "O cristalino, que faz a imagem chegar ao fundo do olho.",
+    "A íris, que regula a entrada da luz pela pupila."
+   ],
+   "correta": 0,
+   "explicacao": "Se a luz chega à retina e a pupila reage, o problema está na transmissão dos sinais pelo nervo óptico ou no cérebro. Córnea, cristalino e íris estão funcionando."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na aula de Ciências, a professora entregou um esquema do olho com números e descrições, sem os nomes das partes.",
+   "comando": "Dê o nome de cada parte numerada.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do esquema",
+    "colunas": [
+     "Nº",
+     "Descrição"
+    ],
+    "linhas": [
+     [
+      "1",
+      "Camada transparente externa"
+     ],
+     [
+      "2",
+      "Anel colorido com abertura no centro"
+     ],
+     [
+      "3",
+      "Lente flexível atrás da abertura"
+     ],
+     [
+      "4",
+      "Camada do fundo sensível à luz"
+     ],
+     [
+      "5",
+      "Cabo de fibras que sai do fundo"
+     ]
+    ]
+   },
+   "ref": "1 córnea; 2 íris (com a pupila no centro); 3 cristalino; 4 retina; 5 nervo óptico.",
+   "conceitos": [
+    "Córnea",
+    "Íris e pupila",
+    "Cristalino",
+    "Retina",
+    "Nervo óptico"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Num exercício de V ou F, Davi julgou três frases: (1) “o olho emite luz que ilumina os objetos”; (2) “vemos uma flor porque ela reflete luz que chega aos nossos olhos”; (3) “um objeto branco absorve todas as cores”.",
+   "comando": "Indique se cada frase é verdadeira ou falsa e corrija as falsas.",
+   "figura": null,
+   "ref": "(1) Falsa: o olho não emite luz, ele recebe a luz refletida pelos objetos. (2) Verdadeira. (3) Falsa: um objeto branco reflete todas as cores da luz branca; é o preto que absorve quase todas.",
+   "conceitos": [
+    "Olho recebe luz",
+    "Reflexão da luz",
+    "Absorção e reflexão das cores"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Rita olha de longe um canteiro de flores em Holambra. A luz da flor atravessa o olho e forma uma imagem. O caminho exige várias estruturas.",
+   "comando": "Descreva o caminho da luz da flor até a formação da imagem percebida, citando as estruturas do olho.",
+   "figura": null,
+   "ref": "A luz refletida pela flor entra pela córnea, passa pela pupila (regulada pela íris) e pelo cristalino, que a foca. A imagem se forma invertida na retina, onde células sensíveis geram sinais que o nervo óptico leva ao cérebro, que interpreta a imagem.",
+   "conceitos": [
+    "Córnea, pupila e cristalino",
+    "Imagem invertida na retina",
+    "Nervo óptico e cérebro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lúcio notou que, ao fim da tarde, quando quase não há luz, as flores do jardim parecem acinzentadas, enquanto ao meio-dia ele reconhece todas as cores. Ele registrou o que identificava.",
+   "comando": "Explique essa diferença com base nas células sensíveis à luz da retina.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de Lúcio",
+    "colunas": [
+     "Horário",
+     "Iluminação",
+     "Cores identificadas"
+    ],
+    "linhas": [
+     [
+      "12h",
+      "Forte",
+      "Vermelho, amarelo e azul"
+     ],
+     [
+      "19h",
+      "Fraca",
+      "Tons de cinza"
+     ]
+    ]
+   },
+   "ref": "Os cones, que percebem as cores, precisam de luz forte para funcionar. Com pouca luz atuam os bastonetes, mais sensíveis, que percebem claro e escuro, mas não distinguem as cores.",
+   "conceitos": [
+    "Cones e cores",
+    "Bastonetes e pouca luz",
+    "Intensidade da luz"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Numa feira de saúde, Laura e Caio olharam uma placa de teste. Laura leu o número 74, e Caio não conseguiu ler número algum. O exame mostrou que os olhos de Caio estavam saudáveis, sem problema de foco.",
+   "comando": "Que explicação pode ser dada para o resultado de Caio?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do teste da placa",
+    "colunas": [
+     "Pessoa",
+     "Número visto"
+    ],
+    "linhas": [
+     [
+      "Laura",
+      "74"
+     ],
+     [
+      "Caio",
+      "Nenhum"
+     ]
+    ]
+   },
+   "ref": "Caio pode ter daltonismo: falta ou alteração de um tipo de cone na retina, que impede distinguir certas cores (como verde e vermelho). A luz chega normalmente, mas a percepção das cores da placa fica comprometida.",
+   "conceitos": [
+    "Daltonismo",
+    "Alteração nos cones",
+    "Percepção das cores"
+   ]
+  }
+ ],
+ "4B|7º ANO|3": [
+  {
+   "tipo": "obj",
+   "enunciado": "A família de Kauã, em Campinas, fez uma vistoria no quintal por causa do aumento de casos de dengue no bairro. Eles anotaram onde havia água parada e larvas.",
+   "comando": "Por que eliminar a água parada ajuda a prevenir a dengue?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da vistoria no quintal",
+    "colunas": [
+     "Local",
+     "Água parada",
+     "Larvas"
+    ],
+    "linhas": [
+     [
+      "Pneu velho",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Prato de vaso",
+      "Sim",
+      "Sim"
+     ],
+     [
+      "Calha limpa",
+      "Não",
+      "Não"
+     ]
+    ]
+   },
+   "alts": [
+    "O vírus se multiplica na água parada e contamina quem tem contato com essa água.",
+    "O mosquito Anopheles põe ovos em água parada e transmite o vírus da dengue ao picar.",
+    "Água parada atrai o vírus da dengue, que sobrevive no ambiente por muito tempo.",
+    "O Aedes aegypti põe ovos em água parada; sem ela, a transmissão é interrompida."
+   ],
+   "correta": 3,
+   "explicacao": "O Aedes aegypti, que transmite a dengue, desenvolve as larvas na água parada. Os distratores confundem o vetor, ou atribuem a transmissão à água."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma sala de aula de 30 alunos em Sorocaba, durante o inverno, as janelas ficaram fechadas e vários alunos sentavam próximos. A professora anotou quantos alunos apareceram com febre, tosse e coriza.",
+   "comando": "Qual é a forma de transmissão mais provável e uma medida de prevenção adequada?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de alunos com sintomas por dia",
+    "unidade": "alunos",
+    "itens": [
+     {
+      "rotulo": "Segunda",
+      "valor": 1
+     },
+     {
+      "rotulo": "Terça",
+      "valor": 2
+     },
+     {
+      "rotulo": "Quarta",
+      "valor": 4
+     },
+     {
+      "rotulo": "Quinta",
+      "valor": 6
+     }
+    ]
+   },
+   "alts": [
+    "Transmissão por gotículas respiratórias; ventilar os ambientes e cobrir tosse e espirro.",
+    "Transmissão pela picada de mosquitos; eliminar água parada e usar repelente em casa.",
+    "Transmissão pelo contato com água contaminada; ferver e filtrar a água usada na escola.",
+    "Transmissão por relações sexuais sem proteção; usar preservativo em todas as relações."
+   ],
+   "correta": 0,
+   "explicacao": "A gripe se transmite por gotículas e aerossóis, e ventilar e cobrir a boca reduz o risco. As outras opções descrevem formas de transmissão de outras doenças."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma região de mata do interior paulista, agentes de saúde encontraram macacos mortos. O quadro mostra o que foi registrado nas semanas seguintes. A febre amarela silvestre é transmitida por mosquitos que picam macacos e pessoas.",
+   "comando": "O que os dados indicam e qual medida é mais importante?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de vigilância da região",
+    "colunas": [
+     "Semana",
+     "Macacos mortos",
+     "Casos humanos"
+    ],
+    "linhas": [
+     [
+      "1",
+      "0",
+      "0"
+     ],
+     [
+      "2",
+      "3",
+      "0"
+     ],
+     [
+      "3",
+      "7",
+      "0"
+     ]
+    ]
+   },
+   "alts": [
+    "Não há risco, pois não houve casos humanos; basta acompanhar a situação por mais um mês.",
+    "Os macacos transmitem a doença diretamente às pessoas; é preciso eliminá-los da região.",
+    "O vírus circula na mata; é preciso vacinar a população antes que surjam casos humanos.",
+    "A doença é urbana e se espalha pela água; é preciso tratar a água dos moradores."
+   ],
+   "correta": 2,
+   "explicacao": "Macacos mortos funcionam como alerta de circulação do vírus; a vacina protege antes de os casos aparecerem. Eliminar os macacos é um erro comum, pois eles também são vítimas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A secretaria de saúde de um município fictício acompanhou a vacinação contra o sarampo e o número de casos da doença nos últimos anos.",
+   "comando": "Qual interpretação dos dados está correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de vacinação e casos (município fictício)",
+    "colunas": [
+     "Ano",
+     "Cobertura vacinal (%)",
+     "Casos de sarampo"
+    ],
+    "linhas": [
+     [
+      "2018",
+      "95",
+      "0"
+     ],
+     [
+      "2020",
+      "88",
+      "2"
+     ],
+     [
+      "2022",
+      "79",
+      "14"
+     ],
+     [
+      "2024",
+      "84",
+      "8"
+     ]
+    ]
+   },
+   "alts": [
+    "A cobertura vacinal não tem relação com os casos, pois o sarampo se transmite pela água.",
+    "Com menos vacinados, aumenta a chance de surtos, pois há mais pessoas sem proteção.",
+    "A vacina causa a doença, e por isso os casos aumentaram quando mais pessoas se vacinaram.",
+    "Os casos aumentaram em 2022 porque o vírus ficou mais fraco e passou a causar mais casos."
+   ],
+   "correta": 1,
+   "explicacao": "Com menos pessoas vacinadas, o vírus circula mais e causa surtos. Os distratores negam a relação ou trocam causa e efeito."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma ONG preparou uma campanha sobre HIV numa escola de São Paulo. A equipe organizou, em um quadro, situações do cotidiano e o risco de transmissão do vírus em cada uma.",
+   "comando": "Qual mensagem da campanha é coerente com o quadro?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de situações e risco de transmissão do HIV",
+    "colunas": [
+     "Situação",
+     "Risco de transmissão"
+    ],
+    "linhas": [
+     [
+      "Relação sexual sem preservativo",
+      "Alto"
+     ],
+     [
+      "Compartilhar seringa",
+      "Alto"
+     ],
+     [
+      "Abraçar ou dividir um copo",
+      "Nenhum"
+     ]
+    ]
+   },
+   "alts": [
+    "Preservativo e seringas descartáveis previnem a infecção; abraço e copo dividido não a transmitem.",
+    "Evitar contato físico e não dividir objetos com pessoas com HIV, pois qualquer contato é arriscado.",
+    "Usar repelente e evitar água parada previne o HIV, que é transmitido por picadas de mosquito.",
+    "Tomar a vacina contra o HIV a cada ano garante proteção completa contra a infecção do vírus."
+   ],
+   "correta": 0,
+   "explicacao": "O HIV é transmitido por sangue, relações sexuais sem proteção e de mãe para filho, não por contato social. Os distratores trazem estigma, o vetor errado ou uma vacina que não existe."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Joana ficou gripada e tomou um antibiótico por 5 dias, por conta própria. Os sintomas só passaram depois de uma semana. A mãe dela, que é enfermeira, disse que o remédio não era o adequado para essa doença.",
+   "comando": "Explique por que o antibiótico não é adequado para tratar uma gripe.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de sintomas de Joana",
+    "colunas": [
+     "Dia",
+     "Febre (°C)",
+     "Medicamento"
+    ],
+    "linhas": [
+     [
+      "1",
+      "38,5",
+      "Antibiótico"
+     ],
+     [
+      "3",
+      "38,0",
+      "Antibiótico"
+     ],
+     [
+      "5",
+      "37,8",
+      "Antibiótico"
+     ],
+     [
+      "7",
+      "36,6",
+      "Nenhum"
+     ]
+    ]
+   },
+   "ref": "A gripe é causada por vírus, e os antibióticos agem em bactérias, não em vírus. Os sintomas passaram porque o corpo combateu a infecção; a prevenção é feita com vacina e hábitos de higiene.",
+   "conceitos": [
+    "Gripe é causada por vírus",
+    "Antibióticos atuam em bactérias",
+    "Recuperação e prevenção por vacina"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na semana da saúde, a turma de Marcos listou quatro doenças virais e a forma de transmissão de cada uma, para depois pensar em prevenção.",
+   "comando": "Para cada doença do quadro, indique uma medida de prevenção coerente com a forma de transmissão.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das doenças",
+    "colunas": [
+     "Doença",
+     "Como é transmitida"
+    ],
+    "linhas": [
+     [
+      "Dengue",
+      "Picada de mosquito"
+     ],
+     [
+      "Gripe",
+      "Gotículas respiratórias"
+     ],
+     [
+      "HIV",
+      "Sangue, sexo e mãe para filho"
+     ],
+     [
+      "Sarampo",
+      "Gotículas e aerossóis"
+     ]
+    ]
+   },
+   "ref": "Dengue: eliminar água parada e usar repelente. Gripe: vacina, cobrir tosse e ventilar ambientes. HIV: preservativo e seringas descartáveis. Sarampo: vacina tríplice viral.",
+   "conceitos": [
+    "Prevenir conforme a transmissão",
+    "Vacinação",
+    "Controle do vetor e proteção nas relações"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A prefeitura de um município paulista fictício registrou os casos confirmados de dengue em cada mês de um ano, de janeiro a junho.",
+   "comando": "Explique por que os casos aumentam de fevereiro a abril e diminuem em junho, e cite duas ações a serem feitas antes do período de maior risco.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de casos de dengue no município (valores fictícios)",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Janeiro",
+      "valor": 120
+     },
+     {
+      "rotulo": "Fevereiro",
+      "valor": 640
+     },
+     {
+      "rotulo": "Março",
+      "valor": 1900
+     },
+     {
+      "rotulo": "Abril",
+      "valor": 2600
+     },
+     {
+      "rotulo": "Maio",
+      "valor": 1100
+     },
+     {
+      "rotulo": "Junho",
+      "valor": 300
+     }
+    ]
+   },
+   "ref": "O calor e as chuvas do verão favorecem a reprodução do Aedes aegypti, e os casos sobem. Com a chegada do tempo frio e seco, o mosquito diminui e os casos caem. Antes do verão, deve-se eliminar criadouros e fazer campanhas de limpeza e informação.",
+   "conceitos": [
+    "Calor e chuva favorecem o mosquito",
+    "Frio reduz a transmissão",
+    "Eliminar criadouros antes do verão"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Paulo teve dengue em 2019 e, em 2024, teve dengue de novo, dessa vez com sintomas graves. O médico explicou que existem quatro sorotipos do vírus da dengue.",
+   "comando": "Explique por que Paulo pôde ter dengue de novo e por que a segunda infecção pode ser mais grave.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de infecções de Paulo",
+    "colunas": [
+     "Ano",
+     "Sorotipo",
+     "Gravidade"
+    ],
+    "linhas": [
+     [
+      "2019",
+      "DENV-1",
+      "Leve"
+     ],
+     [
+      "2024",
+      "DENV-2",
+      "Grave"
+     ]
+    ]
+   },
+   "ref": "A primeira infecção gera imunidade apenas contra o sorotipo que a causou (DENV-1). Paulo foi infectado por outro sorotipo (DENV-2), contra o qual não estava protegido. Os anticorpos da primeira infecção podem agravar a resposta na segunda.",
+   "conceitos": [
+    "Quatro sorotipos",
+    "Imunidade específica",
+    "Segunda infecção pode agravar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Num município serrano, pesquisadores acompanharam a temperatura e a altitude máxima onde o mosquito Aedes aegypti foi encontrado, em dois momentos.",
+   "comando": "Justifique como o aquecimento do clima pode aumentar o risco de doenças como a dengue.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de pesquisa",
+    "colunas": [
+     "Ano",
+     "Temperatura média (°C)",
+     "Altitude máxima do mosquito (m)"
+    ],
+    "linhas": [
+     [
+      "2000",
+      "21",
+      "800"
+     ],
+     [
+      "2024",
+      "23",
+      "1100"
+     ]
+    ]
+   },
+   "ref": "Com temperaturas maiores, o mosquito se reproduz mais rápido e passa a viver em altitudes antes frias demais. Isso aumenta as áreas de transmissão e o número de pessoas expostas à dengue.",
+   "conceitos": [
+    "Temperatura favorece o mosquito",
+    "Expansão para novas áreas",
+    "Mais pessoas expostas"
+   ]
+  }
+ ],
+ "4B|7º ANO|16": [
+  {
+   "tipo": "obj",
+   "enunciado": "A prefeitura de uma cidade paulista divulgou três informações sobre a saúde do município. A equipe de Ciências da escola quer classificar quais são indicadores quantitativos e quais são qualitativos.",
+   "comando": "Qual alternativa classifica corretamente os indicadores?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das informações divulgadas",
+    "colunas": [
+     "Informação",
+     "Dado"
+    ],
+    "linhas": [
+     [
+      "Mortalidade infantil",
+      "12 por mil nascidos vivos"
+     ],
+     [
+      "Leitos hospitalares",
+      "2,3 por mil habitantes"
+     ],
+     [
+      "Opinião dos usuários da UBS",
+      "Ótimo, bom ou ruim"
+     ]
+    ]
+   },
+   "alts": [
+    "Os três são quantitativos, pois qualquer dado pode ser apresentado em uma tabela.",
+    "A mortalidade infantil e os leitos são quantitativos; a opinião dos usuários é qualitativa.",
+    "A mortalidade infantil é qualitativa; os leitos e a opinião dos usuários são quantitativos.",
+    "Os leitos são qualitativos; a mortalidade infantil e a opinião dos usuários são quantitativas."
+   ],
+   "correta": 1,
+   "explicacao": "Indicadores quantitativos são expressos em números; os qualitativos descrevem qualidades ou percepções. Os distratores trocam as categorias."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um município paulista fictício, o setor de saúde registrou dados de um ano para calcular a mortalidade infantil, que é o número de óbitos de crianças com menos de 1 ano para cada mil nascidos vivos.",
+   "comando": "Qual é a taxa de mortalidade infantil do município?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do município no ano",
+    "colunas": [
+     "Informação",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Nascidos vivos",
+      "2.500"
+     ],
+     [
+      "Óbitos de menores de 1 ano",
+      "30"
+     ],
+     [
+      "Óbitos de todas as idades",
+      "900"
+     ]
+    ]
+   },
+   "alts": [
+    "12 óbitos por mil nascidos vivos, pois 30 divididos por 2.500, multiplicado por mil, dá 12.",
+    "83 óbitos por mil nascidos vivos, pois 2.500 divididos por 30 dá aproximadamente 83.",
+    "30 óbitos por mil nascidos vivos, pois o número bruto de óbitos já é a própria taxa.",
+    "360 óbitos por mil nascidos vivos, pois 900 divididos por 2.500, multiplicado por mil, dá 360."
+   ],
+   "correta": 0,
+   "explicacao": "Taxa = 30 ÷ 2.500 × 1.000 = 12 por mil. Os distratores invertem a divisão, usam o número bruto ou os óbitos de todas as idades."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma ONG comparou a mortalidade infantil em três cidades paulistas fictícias para sugerir onde investir primeiro em pré-natal e saneamento.",
+   "comando": "Qual conclusão está de acordo com os dados?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de mortalidade infantil (cidades fictícias)",
+    "unidade": "por mil nascidos vivos",
+    "itens": [
+     {
+      "rotulo": "Cidade A",
+      "valor": 8
+     },
+     {
+      "rotulo": "Cidade B",
+      "valor": 19
+     },
+     {
+      "rotulo": "Cidade C",
+      "valor": 12
+     }
+    ]
+   },
+   "alts": [
+    "A cidade A deve ser priorizada, pois tem o menor valor e precisa de mais ações para manter o resultado.",
+    "As ações podem ser adiadas nas três cidades, pois os valores estão na mesma ordem de grandeza.",
+    "A cidade C deve ser priorizada, pois está no meio da lista e é a que mais representa o estado.",
+    "A cidade B deve ser priorizada, pois tem a maior mortalidade infantil e mais necessidade de ações."
+   ],
+   "correta": 3,
+   "explicacao": "Um valor mais alto de mortalidade infantil indica pior situação de saúde, e quem tem o maior valor tende a ter prioridade. Os distratores invertem a leitura do indicador."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um estudo comparou dois bairros de um mesmo município paulista fictício, medindo renda, saneamento e mortalidade infantil.",
+   "comando": "Qual interpretação é a mais coerente com os dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos bairros (município fictício)",
+    "colunas": [
+     "Bairro",
+     "Renda média (salários mínimos)",
+     "Esgoto tratado (%)",
+     "Mortalidade infantil (por mil)"
+    ],
+    "linhas": [
+     [
+      "Centro",
+      "5,0",
+      "98",
+      "7"
+     ],
+     [
+      "Periferia",
+      "1,2",
+      "52",
+      "18"
+     ]
+    ]
+   },
+   "alts": [
+    "A diferença se deve à genética dos moradores, pois os dados não incluem outros fatores.",
+    "A saúde depende do número de médicos, e o saneamento não influencia nos resultados.",
+    "Menor renda e menor acesso a esgoto tratado se associam a maior mortalidade infantil.",
+    "A mortalidade infantil é maior onde há mais renda, pois as famílias têm mais filhos."
+   ],
+   "correta": 2,
+   "explicacao": "Condições sociais e de saneamento influenciam a saúde, e a desigualdade aparece nos indicadores. Os distratores usam causas sem apoio nos dados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Dois municípios fictícios foram avaliados por três indicadores. A secretaria queria escolher qual município estava melhor em saúde olhando apenas a esperança de vida.",
+   "comando": "O que a análise conjunta dos indicadores mostra?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de indicadores dos municípios",
+    "colunas": [
+     "Município",
+     "Esperança de vida (anos)",
+     "Mortalidade infantil (por mil)",
+     "Cobertura vacinal (%)"
+    ],
+    "linhas": [
+     [
+      "P",
+      "78",
+      "6",
+      "70"
+     ],
+     [
+      "Q",
+      "76",
+      "14",
+      "95"
+     ]
+    ]
+   },
+   "alts": [
+    "Cada indicador mostra um aspecto: P vai bem na mortalidade infantil, Q na vacinação.",
+    "Um único indicador basta, pois P tem maior esperança de vida e deve estar melhor em tudo.",
+    "O município Q está melhor, porque tem a maior cobertura vacinal, e isso define a saúde inteira.",
+    "Os dois municípios têm saúde equivalente, porque os indicadores se compensam em média."
+   ],
+   "correta": 0,
+   "explicacao": "Indicadores diferentes revelam aspectos diferentes da saúde, por isso são usados em conjunto. Os distratores generalizam a partir de um só indicador ou ignoram as diferenças."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Valéria leu no jornal que a mortalidade infantil de um município fictício caiu nos últimos anos e quer entender o que isso significa.",
+   "comando": "Explique o que a mortalidade infantil mede e o que a queda sugere sobre a saúde do município.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de mortalidade infantil do município (valores fictícios)",
+    "unidade": "por mil nascidos vivos",
+    "itens": [
+     {
+      "rotulo": "2000",
+      "valor": 16
+     },
+     {
+      "rotulo": "2010",
+      "valor": 12
+     },
+     {
+      "rotulo": "2022",
+      "valor": 8
+     }
+    ]
+   },
+   "ref": "A mortalidade infantil mede quantas crianças morrem antes de 1 ano para cada mil nascidos vivos. A queda sugere melhora no pré-natal, no atendimento, na vacinação e no saneamento.",
+   "conceitos": [
+    "Óbitos de menores de 1 ano por mil nascidos vivos",
+    "Indicador de saúde pública",
+    "Melhoria das condições de saúde"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Numa UBS, foram coletadas duas informações sobre o atendimento: uma em número e outra em opinião dos usuários.",
+   "comando": "Classifique cada informação como quantitativa ou qualitativa e justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de coleta da UBS",
+    "colunas": [
+     "Informação",
+     "Dado coletado"
+    ],
+    "linhas": [
+     [
+      "Tempo de espera",
+      "40 minutos em média"
+     ],
+     [
+      "Relato sobre acolhimento",
+      "Fui bem tratado e me explicaram tudo"
+     ]
+    ]
+   },
+   "ref": "O tempo de espera é quantitativo, pois é expresso em número (minutos). O relato sobre acolhimento é qualitativo, pois descreve a percepção e a qualidade do atendimento. Os dois se complementam na avaliação do serviço.",
+   "conceitos": [
+    "Quantitativo: número",
+    "Qualitativo: percepção",
+    "Complementaridade dos indicadores"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um gráfico do relatório de saúde mostra as mortes por água insegura a cada 100 mil habitantes em quatro regiões do mundo, em 2000 e em 2022 (valores ilustrativos).",
+   "comando": "Interprete a variação dos dados e relacione-a com saneamento e com o Objetivo de Desenvolvimento Sustentável 3 (saúde e bem-estar).",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de mortes por água insegura (por 100 mil)",
+    "colunas": [
+     "Região",
+     "2000",
+     "2022"
+    ],
+    "linhas": [
+     [
+      "Região A",
+      "90",
+      "40"
+     ],
+     [
+      "Região B",
+      "45",
+      "12"
+     ],
+     [
+      "Região C",
+      "8",
+      "2"
+     ],
+     [
+      "Região D",
+      "3",
+      "1"
+     ]
+    ]
+   },
+   "ref": "Todas as regiões reduziram as mortes, especialmente A e B, mas a Região A continua com valor alto. A melhoria vem de acesso a água tratada e esgoto. O ODS 3 busca reduzir mortes evitáveis, o que exige continuar investindo em saneamento.",
+   "conceitos": [
+    "Queda em todas as regiões",
+    "Água tratada e saneamento",
+    "ODS 3 e desigualdade entre regiões"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A prefeitura vai abrir uma nova UBS e precisa escolher um bairro. Os dados de três bairros fictícios foram reunidos.",
+   "comando": "Escolha o bairro que deve ser priorizado e justifique com pelo menos dois indicadores.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos bairros",
+    "colunas": [
+     "Bairro",
+     "Mortalidade infantil (por mil)",
+     "Gestantes com pré-natal (%)",
+     "Distância da UBS mais próxima (km)"
+    ],
+    "linhas": [
+     [
+      "X",
+      "7",
+      "96",
+      "0,8"
+     ],
+     [
+      "Y",
+      "10",
+      "90",
+      "1,5"
+     ],
+     [
+      "Z",
+      "19",
+      "61",
+      "5,2"
+     ]
+    ]
+   },
+   "ref": "O bairro Z deve ser priorizado. Tem a maior mortalidade infantil (19 por mil), a menor cobertura de pré-natal (61%) e fica mais distante da UBS (5,2 km), o que indica menor acesso aos serviços.",
+   "conceitos": [
+    "Bairro Z",
+    "Mortalidade infantil",
+    "Pré-natal e acesso"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um município fictício, a esperança de vida média da cidade foi divulgada como um único número, mas os dados de dois distritos mostram realidades diferentes.",
+   "comando": "Calcule a média da cidade e explique por que ela esconde a desigualdade entre os distritos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos distritos",
+    "colunas": [
+     "Distrito",
+     "População",
+     "Esperança de vida (anos)"
+    ],
+    "linhas": [
+     [
+      "Alto",
+      "100 mil",
+      "80"
+     ],
+     [
+      "Baixo",
+      "100 mil",
+      "66"
+     ]
+    ]
+   },
+   "ref": "A média é (80 + 66) ÷ 2 = 73 anos, um valor que não corresponde a nenhum dos distritos. A média esconde que os moradores do distrito Baixo vivem 14 anos a menos, o que revela desigualdade de condições de vida e de acesso à saúde.",
+   "conceitos": [
+    "Média = 73 anos",
+    "Média esconde desigualdade",
+    "Diferença de 14 anos entre distritos"
+   ]
+  }
+ ],
+ "4B|8º ANO|16": [
+  {
+   "tipo": "obj",
+   "enunciado": "No simulador PhET, Ana montou dois circuitos com três lâmpadas iguais e retirou a lâmpada L2 de cada um, anotando o que aconteceu com as outras.",
+   "comando": "Como os circuitos 1 e 2 estão ligados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da montagem no simulador",
+    "colunas": [
+     "Circuito",
+     "Lâmpada retirada",
+     "Demais lâmpadas"
+    ],
+    "linhas": [
+     [
+      "1",
+      "L2",
+      "Apagadas"
+     ],
+     [
+      "2",
+      "L2",
+      "Acesas"
+     ]
+    ]
+   },
+   "alts": [
+    "O circuito 1 está em paralelo e o 2 em série, pois a corrente tem caminhos separados no primeiro.",
+    "O circuito 1 está em série, com um só caminho para a corrente; o 2, em paralelo, com vários.",
+    "Os dois circuitos estão em série, pois as lâmpadas dependem da mesma bateria e dos mesmos fios.",
+    "Os dois circuitos estão em paralelo, pois a corrente passa por todas as lâmpadas ao mesmo tempo."
+   ],
+   "correta": 1,
+   "explicacao": "Em série, retirar uma lâmpada interrompe o único caminho da corrente; em paralelo, as outras continuam acesas. As alternativas trocam os tipos ou ignoram a diferença."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Roberto quer medir a corrente elétrica que passa por uma lâmpada de um circuito simples, usando o amperímetro do simulador, mas não sabe como ligá-lo.",
+   "comando": "Como o amperímetro deve ser ligado?",
+   "figura": null,
+   "alts": [
+    "Em qualquer ponto do circuito, pois a posição não altera o valor medido.",
+    "Em paralelo com a lâmpada, ligado aos dois terminais, para medir a diferença entre eles.",
+    "Em paralelo com a bateria, para medir toda a corrente armazenada na pilha.",
+    "Em série com a lâmpada, de modo que a corrente que passa por ela atravesse o medidor."
+   ],
+   "correta": 3,
+   "explicacao": "O amperímetro mede corrente e precisa ser atravessado por ela, por isso é ligado em série. Ligado em paralelo, mede a tensão ou causa curto, o que é uma confusão com o voltímetro."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma aula, Marta ligou dois resistores em série a uma fonte de 9 V. Ela deseja saber a corrente do circuito.",
+   "comando": "Qual é a corrente no circuito e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da montagem",
+    "colunas": [
+     "Componente",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Fonte",
+      "9 V"
+     ],
+     [
+      "Resistor R1",
+      "10 Ω"
+     ],
+     [
+      "Resistor R2",
+      "20 Ω"
+     ]
+    ]
+   },
+   "alts": [
+    "0,3 A, pois a resistência equivalente em série é 30 Ω e a corrente é 9 ÷ 30.",
+    "0,9 A, pois só a menor resistência limita a corrente e 9 ÷ 10 é igual a 0,9.",
+    "0,45 A, pois só a maior resistência limita a corrente e 9 ÷ 20 é igual a 0,45.",
+    "0,03 A, pois a resistência equivalente é o produto das duas, 200 Ω, e 9 ÷ 200 é 0,045."
+   ],
+   "correta": 0,
+   "explicacao": "Em série, a resistência equivalente é a soma: 30 Ω; I = 9 ÷ 30 = 0,3 A. Os distratores usam só um resistor ou o produto das resistências."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um circuito com bateria de 12 V, duas lâmpadas, uma de 6 Ω e outra de 12 Ω, foram ligadas em paralelo. O professor pediu previsões sobre a tensão e a corrente.",
+   "comando": "Qual previsão está correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da montagem em paralelo",
+    "colunas": [
+     "Componente",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Fonte",
+      "12 V"
+     ],
+     [
+      "Lâmpada 1",
+      "6 Ω"
+     ],
+     [
+      "Lâmpada 2",
+      "12 Ω"
+     ]
+    ]
+   },
+   "alts": [
+    "Cada lâmpada recebe 6 V; a corrente é igual nas duas lâmpadas, 1 A.",
+    "Cada lâmpada recebe 12 V; as correntes são 1 A e 2 A, e a total é 1 A.",
+    "Cada uma recebe 12 V; as correntes são 2 A e 1 A, e a total é 3 A.",
+    "A tensão se divide em 8 V e 4 V; a corrente é igual nas duas, 0,67 A."
+   ],
+   "correta": 2,
+   "explicacao": "Em paralelo, a tensão é a mesma (12 V) e a corrente se divide: 12 ÷ 6 = 2 A e 12 ÷ 12 = 1 A, total 3 A. Os distratores aplicam regras do circuito em série."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um circuito misto, o resistor R1 está em série com o conjunto de R2 e R3, que estão em paralelo entre si. A fonte é de 12 V. Os alunos previram o que ocorre se o R3 queimar e abrir o circuito.",
+   "comando": "Qual previsão está correta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do circuito",
+    "colunas": [
+     "Componente",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Fonte",
+      "12 V"
+     ],
+     [
+      "R1 (em série com o conjunto)",
+      "10 Ω"
+     ],
+     [
+      "R2",
+      "20 Ω"
+     ],
+     [
+      "R3 (em paralelo com R2)",
+      "20 Ω"
+     ]
+    ]
+   },
+   "alts": [
+    "A corrente total sobe de 0,6 A para 0,8 A, pois sobra mais corrente para o R2.",
+    "A corrente total cai de 0,6 A para 0,4 A, e o R2 continua funcionando.",
+    "A corrente total cai a zero, pois o circuito inteiro se interrompe.",
+    "A corrente total continua 0,6 A, pois o R1 mantém a corrente fixa."
+   ],
+   "correta": 1,
+   "explicacao": "Antes, a resistência é 10 + 10 = 20 Ω (0,6 A); depois de R3 abrir, é 10 + 20 = 30 Ω (0,4 A). O ramo de R2 continua com corrente. Os distratores tratam o circuito como série ou ignoram a resistência."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um circuito do simulador, o grupo ligou três lâmpadas iguais primeiro em série e depois em paralelo, com a mesma bateria, e anotou o brilho.",
+   "comando": "Explique por que o brilho é diferente nas duas montagens.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro do brilho das lâmpadas",
+    "colunas": [
+     "Ligação",
+     "Brilho de cada lâmpada"
+    ],
+    "linhas": [
+     [
+      "Série",
+      "Fraco"
+     ],
+     [
+      "Paralelo",
+      "Forte"
+     ]
+    ]
+   },
+   "ref": "Em série, a corrente é a mesma e a tensão da bateria é dividida entre as lâmpadas, que recebem menos. Em paralelo, cada lâmpada recebe a tensão total da bateria e tem seu próprio caminho, por isso brilha mais.",
+   "conceitos": [
+    "Série: tensão dividida",
+    "Paralelo: tensão igual em cada ramo",
+    "Brilho depende da energia recebida"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Carlos montou um circuito simples com bateria, interruptor e lâmpada. Com o interruptor aberto a lâmpada ficou apagada; ao fechá-lo, ela acendeu.",
+   "comando": "Explique o que ocorreu, usando a ideia de circuito fechado e o papel de cada componente.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro da montagem",
+    "colunas": [
+     "Interruptor",
+     "Lâmpada"
+    ],
+    "linhas": [
+     [
+      "Aberto",
+      "Apagada"
+     ],
+     [
+      "Fechado",
+      "Acesa"
+     ]
+    ]
+   },
+   "ref": "A corrente só circula se houver um caminho fechado. Com o interruptor aberto o caminho se interrompe; ao fechar, a bateria fornece energia, os fios conduzem a corrente e a lâmpada transforma a energia elétrica em luz e calor.",
+   "conceitos": [
+    "Circuito fechado",
+    "Bateria fornece energia",
+    "Lâmpada transforma energia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma casa, três aparelhos foram ligados ao mesmo filtro de linha, que suporta no máximo 10 A de corrente. As tomadas estão em paralelo.",
+   "comando": "Calcule a corrente total e explique por que ligar mais aparelhos em paralelo aumenta a corrente no filtro.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro dos aparelhos",
+    "colunas": [
+     "Aparelho",
+     "Corrente (A)"
+    ],
+    "linhas": [
+     [
+      "Ventilador",
+      "0,5"
+     ],
+     [
+      "Televisão",
+      "1,0"
+     ],
+     [
+      "Ferro de passar",
+      "8,0"
+     ],
+     [
+      "Limite do filtro",
+      "10,0"
+     ]
+    ]
+   },
+   "ref": "A corrente total é 0,5 + 1,0 + 8,0 = 9,5 A, quase no limite. Em paralelo cada aparelho recebe a mesma tensão e puxa sua própria corrente, que se soma; mais aparelhos aumentam a corrente total e o risco de aquecimento.",
+   "conceitos": [
+    "Corrente total soma as correntes",
+    "Mesma tensão em paralelo",
+    "Risco de sobrecarga"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Duas montagens foram feitas com dois resistores iguais de 6 Ω e uma fonte de 12 V: uma em série e outra em paralelo. O professor mediu a corrente fornecida pela fonte.",
+   "comando": "Calcule a resistência equivalente de cada montagem e explique por que a do paralelo é menor que cada resistor.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das medições",
+    "colunas": [
+     "Montagem",
+     "Corrente da fonte (A)"
+    ],
+    "linhas": [
+     [
+      "Série",
+      "1,0"
+     ],
+     [
+      "Paralelo",
+      "4,0"
+     ]
+    ]
+   },
+   "ref": "Série: 12 ÷ 1 = 12 Ω (soma dos resistores). Paralelo: 12 ÷ 4 = 3 Ω. No paralelo há mais de um caminho para a corrente, o que facilita sua passagem, e a resistência equivalente fica menor que a de qualquer resistor.",
+   "conceitos": [
+    "Série: soma das resistências (12 Ω)",
+    "Paralelo: 3 Ω",
+    "Mais caminhos reduzem a resistência"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "No simulador, Lia mediu tensão e corrente em cada resistor de um circuito misto ligado a uma fonte de 12 V e anotou as leituras.",
+   "comando": "Identifique quais resistores estão em paralelo e qual está em série com eles, justificando com as leituras.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro das leituras",
+    "colunas": [
+     "Resistor",
+     "Tensão (V)",
+     "Corrente (A)"
+    ],
+    "linhas": [
+     [
+      "R1",
+      "6",
+      "0,6"
+     ],
+     [
+      "R2",
+      "6",
+      "0,3"
+     ],
+     [
+      "R3",
+      "6",
+      "0,3"
+     ]
+    ]
+   },
+   "ref": "R2 e R3 estão em paralelo: têm a mesma tensão (6 V) e as correntes se somam (0,3 + 0,3 = 0,6 A). R1 está em série com o conjunto: a corrente total (0,6 A) passa por ele e as tensões se somam (6 + 6 = 12 V).",
+   "conceitos": [
+    "R2 e R3 em paralelo (mesma tensão)",
+    "R1 em série (mesma corrente total)",
+    "Soma das tensões e das correntes"
+   ]
+  }
+ ],
+ "4B|9º ANO|19": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma turma comparou três corpos do Sistema Solar para saber onde a vida como conhecemos teria mais chance. A professora lembrou que organismos conhecidos precisam de água líquida.",
+   "comando": "Qual alternativa relaciona corretamente as condições da Terra à possibilidade de vida?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de dados dos corpos",
+    "colunas": [
+     "Corpo",
+     "Temperatura média",
+     "Atmosfera",
+     "Água na superfície"
+    ],
+    "linhas": [
+     [
+      "Terra",
+      "15 °C",
+      "Densa",
+      "Líquida"
+     ],
+     [
+      "Marte",
+      "-60 °C",
+      "Muito rarefeita",
+      "Gelo"
+     ],
+     [
+      "Vênus",
+      "460 °C",
+      "Muito densa",
+      "Vapor"
+     ]
+    ]
+   },
+   "alts": [
+    "A temperatura moderada e a atmosfera que retém calor mantêm água líquida na superfície.",
+    "A atmosfera muito densa é a condição principal, pois explica a vida existente em Vênus.",
+    "A temperatura muito baixa é favorável, pois conserva a água em forma de gelo para a vida.",
+    "A ausência de atmosfera é favorável, pois evita a perda da água líquida pelo vento."
+   ],
+   "correta": 0,
+   "explicacao": "A Terra tem temperatura e atmosfera que mantêm água líquida. Atmosfera densa por si só (Vênus) ou frio extremo (Marte) não garantem as condições da vida."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A zona habitável é a região ao redor de uma estrela onde pode existir água líquida na superfície de um planeta. No Sistema Solar, ela vai de cerca de 0,95 a 1,4 UA (1 UA é a distância da Terra ao Sol).",
+   "comando": "Quais planetas do quadro estão dentro da zona habitável?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Registro de distância ao Sol",
+    "unidade": "UA",
+    "itens": [
+     {
+      "rotulo": "Mercúrio",
+      "valor": 0.4
+     },
+     {
+      "rotulo": "Vênus",
+      "valor": 0.7
+     },
+     {
+      "rotulo": "Terra",
+      "valor": 1.0
+     },
+     {
+      "rotulo": "Marte",
+      "valor": 1.5
+     }
+    ]
+   },
+   "alts": [
+    "A Terra e Marte, pois ambos têm solo rochoso e órbitas próximas entre si.",
+    "Apenas a Terra, pois Marte fica um pouco além do limite externo.",
+    "Vênus e a Terra, pois ambos têm tamanhos semelhantes e atmosfera densa.",
+    "Mercúrio e Vênus, pois perto do Sol o ambiente é mais favorável à vida."
+   ],
+   "correta": 1,
+   "explicacao": "Só a Terra (1,0 UA) está entre 0,95 e 1,4 UA; Marte (1,5 UA) está pouco além. Os distratores usam critérios que não definem a zona habitável."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Cientistas estudam Europa, lua de Júpiter, e Encélado, lua de Saturno. Suas superfícies são de gelo e muito frias, mas sondas encontraram indícios que chamaram atenção.",
+   "comando": "Por que esses corpos são alvos da astrobiologia, apesar da superfície gelada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de indícios",
+    "colunas": [
+     "Corpo",
+     "Superfície",
+     "Indício detectado"
+    ],
+    "linhas": [
+     [
+      "Europa",
+      "Gelo a -160 °C",
+      "Sinais de oceano sob a crosta"
+     ],
+     [
+      "Encélado",
+      "Gelo a -200 °C",
+      "Jatos de vapor com água e sais"
+     ]
+    ]
+   },
+   "alts": [
+    "A superfície é aquecida pela luz solar intensa, que mantém água líquida acima do gelo.",
+    "A atmosfera rica em oxigênio dessas luas indica que existem seres vivos respirando.",
+    "A água líquida sob o gelo, mantida morna por forças de maré, poderia abrigar micróbios.",
+    "O gelo da superfície prova que há vida, pois seres vivos produzem gelo ao se reproduzir."
+   ],
+   "correta": 2,
+   "explicacao": "Há indícios de água líquida abaixo da crosta, aquecida pela atração do planeta, ambiente que poderia abrigar vida microscópica. As demais opções não correspondem aos dados."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Astronautas na Estação Espacial Internacional sofrem perda de massa óssea. A NASA mediu a densidade óssea de um astronauta ao longo de uma missão.",
+   "comando": "Qual é a causa mais provável dessa perda?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de saúde do astronauta",
+    "colunas": [
+     "Tempo no espaço (meses)",
+     "Perda de densidade óssea (%)"
+    ],
+    "linhas": [
+     [
+      "0",
+      "0"
+     ],
+     [
+      "3",
+      "4"
+     ],
+     [
+      "6",
+      "8"
+     ]
+    ]
+   },
+   "alts": [
+    "O excesso de alimentos enlatados faz o corpo eliminar cálcio pelos ossos.",
+    "A radiação do Sol faz os ossos crescerem menos, o que reduz a densidade.",
+    "A falta de oxigênio na estação faz os ossos produzirem menos células.",
+    "A ausência de peso reduz a carga sobre os ossos, que perdem minerais."
+   ],
+   "correta": 3,
+   "explicacao": "Em microgravidade, os ossos recebem menos carga e perdem minerais, um problema para viagens longas, como a Marte. As outras causas não correspondem ao fenômeno."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Astrônomos descobriram um exoplaneta rochoso orbitando uma anã vermelha. A imprensa noticiou que “há grande chance de vida lá”, mas ainda existem dados desconhecidos.",
+   "comando": "Qual conclusão é a mais cuidadosa com base nos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação do exoplaneta X (dados fictícios)",
+    "colunas": [
+     "Característica",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Tipo de estrela",
+      "Anã vermelha"
+     ],
+     [
+      "Distância à estrela",
+      "0,25 UA"
+     ],
+     [
+      "Temperatura de equilíbrio",
+      "10 °C"
+     ],
+     [
+      "Atmosfera",
+      "Não medida"
+     ]
+    ]
+   },
+   "alts": [
+    "Há vida no planeta, pois a temperatura permite água líquida e ele está na zona habitável.",
+    "A temperatura é favorável, mas atmosfera, água e radiação precisam ser confirmadas.",
+    "A vida é impossível, pois a distância de 0,25 UA é menor que a da Terra ao Sol.",
+    "Não pode haver vida, pois o planeta orbita uma estrela diferente do nosso Sol, mais fria."
+   ],
+   "correta": 1,
+   "explicacao": "Temperatura favorável não prova vida; faltam dados sobre atmosfera e água. Os distratores afirmam ou negam a vida sem evidências."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um professor mostrou aos alunos a comparação entre a Terra e Marte, lembrando que astronautas não poderiam sair de uma nave em Marte sem proteção.",
+   "comando": "Cite três diferenças do quadro que dificultam a sobrevivência humana em Marte e explique cada uma.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de comparação entre Terra e Marte",
+    "colunas": [
+     "Característica",
+     "Terra",
+     "Marte"
+    ],
+    "linhas": [
+     [
+      "Pressão atmosférica",
+      "1 atm",
+      "0,006 atm"
+     ],
+     [
+      "Temperatura média",
+      "15 °C",
+      "-60 °C"
+     ],
+     [
+      "Gravidade (m/s²)",
+      "9,8",
+      "3,7"
+     ],
+     [
+      "Oxigênio no ar",
+      "21%",
+      "0,1%"
+     ]
+    ]
+   },
+   "ref": "A pressão muito baixa faz os líquidos do corpo ferverem sem traje pressurizado. A temperatura de -60 °C causa congelamento. O ar quase sem oxigênio impede a respiração. A gravidade baixa também enfraquece músculos e ossos.",
+   "conceitos": [
+    "Pressão atmosférica muito baixa",
+    "Frio extremo",
+    "Falta de oxigênio",
+    "Gravidade reduzida"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Vênus tem temperatura de cerca de 464 °C, enquanto a Terra tem 15 °C em média. Os estudantes compararam a composição das atmosferas dos dois planetas.",
+   "comando": "Explique a importância do efeito estufa para a vida na Terra e por que o excesso dele, como em Vênus, é um problema.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de comparação das atmosferas",
+    "colunas": [
+     "Planeta",
+     "Gás carbônico (%)",
+     "Temperatura média (°C)"
+    ],
+    "linhas": [
+     [
+      "Vênus",
+      "96",
+      "464"
+     ],
+     [
+      "Terra",
+      "0,04",
+      "15"
+     ]
+    ]
+   },
+   "ref": "Na Terra, o efeito estufa natural retém parte do calor e mantém a temperatura média em cerca de 15 °C, permitindo água líquida. Em excesso, como em Vênus, retém calor demais, eleva a temperatura a níveis que impedem a água líquida e a vida.",
+   "conceitos": [
+    "Efeito estufa natural mantém o calor",
+    "Excesso eleva a temperatura",
+    "Água líquida e vida"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma atividade, os alunos leram a frase de Carl Sagan: “em algum lugar, algo incrível está esperando para ser descoberto”. O professor listou formas atuais de procurar vida fora da Terra.",
+   "comando": "Explique como cada método do quadro ajuda a buscar indícios de vida e o que seriam esses indícios.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de métodos de busca",
+    "colunas": [
+     "Alvo",
+     "Método"
+    ],
+    "linhas": [
+     [
+      "Marte",
+      "Robô coleta e analisa rochas e solo"
+     ],
+     [
+      "Europa",
+      "Sonda mede jatos e superfície"
+     ],
+     [
+      "Exoplanetas",
+      "Telescópio analisa a luz que atravessa a atmosfera"
+     ]
+    ]
+   },
+   "ref": "O robô em Marte procura sinais de água antiga e de moléculas orgânicas nas rochas. A sonda em Europa analisa o material lançado pelo oceano sob o gelo. Os telescópios buscam gases na atmosfera de exoplanetas, como oxigênio, que possam indicar atividade biológica.",
+   "conceitos": [
+    "Água e moléculas orgânicas",
+    "Análise de oceanos sob o gelo",
+    "Gases na atmosfera de exoplanetas"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma empresa propõe uma colônia humana em Marte. Os engenheiros fizeram um levantamento do que os humanos precisam e do que existe lá.",
+   "comando": "Argumente se a colônia seria viável hoje e indique duas tecnologias necessárias.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de necessidades e disponibilidade em Marte",
+    "colunas": [
+     "Necessidade humana",
+     "Situação em Marte"
+    ],
+    "linhas": [
+     [
+      "Oxigênio para respirar",
+      "Cerca de 0,1% do ar"
+     ],
+     [
+      "Água",
+      "Gelo nos polos e no subsolo"
+     ],
+     [
+      "Pressão adequada",
+      "0,6% da pressão da Terra"
+     ],
+     [
+      "Proteção contra radiação",
+      "Sem campo magnético global"
+     ]
+    ]
+   },
+   "ref": "A colônia não seria viável sem muita tecnologia, pois falta ar respirável, pressão e proteção contra radiação. Seriam necessários habitats pressurizados e blindados, produção de oxigênio e extração de água do gelo.",
+   "conceitos": [
+    "Falta de oxigênio, pressão e proteção",
+    "Habitats pressurizados e blindados",
+    "Produção de oxigênio e água"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Cientistas encontraram seres vivos em lugares extremos da Terra e isso mudou a forma de pensar a vida em outros mundos.",
+   "comando": "Justifique por que os extremófilos ampliam a busca por vida e cite um limite dessa ideia.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de seres em ambientes extremos",
+    "colunas": [
+     "Ser vivo",
+     "Ambiente"
+    ],
+    "linhas": [
+     [
+      "Arqueias",
+      "Fontes hidrotermais a 100 °C"
+     ],
+     [
+      "Bactérias",
+      "Gelo da Antártida"
+     ],
+     [
+      "Tardígrado",
+      "Vácuo por curto período"
+     ]
+    ]
+   },
+   "ref": "Os extremófilos mostram que a vida pode existir em condições muito diferentes das que consideramos comuns, ampliando os lugares onde procurar, como oceanos sob o gelo. O limite é que todos ainda dependem de água líquida e de fontes de energia, e não sabemos se há vida fora da Terra.",
+   "conceitos": [
+    "Vida em condições extremas",
+    "Ampliação da busca",
+    "Dependência de água e energia"
+   ]
+  }
+ ]
+}

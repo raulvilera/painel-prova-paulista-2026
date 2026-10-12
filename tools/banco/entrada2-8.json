@@ -1,0 +1,74 @@
+{
+ "6º ANO|3|Classificar células procariontes e eucariontes de acordo com a presença ou ausência de núcleo organizado.": {
+  "serie": "6",
+  "desc": "Classificar células procariontes e eucariontes de acordo com a presença ou ausência de núcleo organizado.",
+  "hab": "EF06CI05",
+  "habTxt": "Analisar a organização básica da célula como unidade estrutural e funcional de seres uni e pluricelulares (AE5).",
+  "nome": "Com ou sem envoltório?",
+  "concreta": "Montar dois saquinhos-célula: em um, o barbante fica solto no citoplasma (procarionte); no outro, fica dentro de um saquinho menor (núcleo com envoltório, eucarionte). Comparar com esquemas de bactéria e de célula animal."
+ },
+ "7º ANO|2|Reconhecer as características dos microrganismos e sua importância para o ambiente e para a saúde.": {
+  "serie": "7",
+  "desc": "Reconhecer as características dos microrganismos e sua importância para o ambiente e para a saúde.",
+  "hab": "EF07CI10A",
+  "habTxt": "Explicar características de vírus, bactérias e fungos, as doenças que causam e formas de prevenção (AE8).",
+  "nome": "Balão do fermento",
+  "concreta": "Colocar na garrafa água morna, 1 colher de açúcar e 1 de fermento, prender a bexiga no gargalo e observar em 10–15 min ela encher com gás carbônico liberado pelas leveduras (fungos) na fermentação."
+ },
+ "8º ANO|3|Relacionar os movimentos da Lua com sua dinâmica em relação à Terra.": {
+  "serie": "8",
+  "desc": "Relacionar os movimentos da Lua com sua dinâmica em relação à Terra.",
+  "hab": "EF08CI12",
+  "habTxt": "Explicar fenômenos astronômicos cíclicos pelos movimentos de Sol, Terra e Lua e pela inclinação do eixo terrestre (AE8).",
+  "nome": "A Lua que não vira as costas",
+  "concreta": "Um aluno (Lua) com um X de papel colado na camiseta dá a volta em outro (Terra) sempre olhando para ele: ele gira 1 vez em torno de si ao completar 1 volta. A lanterna mostra as fases."
+ },
+ "9º ANO|3|Relacionar a evolução biológica à formação da biodiversidade ao longo do tempo.": {
+  "serie": "9",
+  "desc": "Relacionar a evolução biológica à formação da biodiversidade ao longo do tempo.",
+  "hab": "EF09CI11, EF09CI10",
+  "habTxt": "Analisar a evolução e a diversidade das espécies a partir de evidências científicas e processos evolutivos (AE10).",
+  "nome": "Jogo dos bicos",
+  "concreta": "Grupos usam 'bicos' (pregador, colher ou pinça) para pegar grãos por 30 s, em 3 rodadas, e anotam quantos pegaram. Os bicos que pegam pouco 'não sobrevivem'."
+ },
+ "9º ANO|2|Aplicar os mecanismos da hereditariedade na explicação da transmissão das características genéticas segundo as Leis de Mendel e outros padrões de dominância.": {
+  "serie": "9",
+  "desc": "Aplicar os mecanismos da hereditariedade na explicação da transmissão das características genéticas segundo as Leis de Mendel e outros padrões de dominância.",
+  "hab": "EF09CI09",
+  "habTxt": "Explicar a transmissão de características hereditárias pelas ideias de Mendel, usando heredogramas (AE8).",
+  "nome": "Moeda genética",
+  "concreta": "Cada dupla tem 2 'pais' Aa (moedas: cara = A, coroa = a). Lançam as duas moedas 20 vezes, anotam os filhos e comparam com o esperado 1 AA : 2 Aa : 1 aa."
+ },
+ "4B|6º ANO|8": {
+  "serie": "6",
+  "desc": "Descrever o papel dos quimiorreceptores na percepção de odores e sabores e o envio ao SNC.",
+  "hab": "EF06CI07",
+  "habTxt": "Quimiorreceptores do nariz e da língua, sabores básicos, integração olfato-paladar e interpretação pelo encéfalo.",
+  "nome": "Sentidos do paladar e do olfato",
+  "concreta": "Discussão inicial sobre cheiro e gosto, Pause e responda, leitura sobre perda de olfato/paladar na covid com questões e encerramento."
+ },
+ "4B|7º ANO|5": {
+  "serie": "7",
+  "desc": "Investigar e comparar características de algumas doenças bacterianas, indicando formas de prevenção.",
+  "hab": "EF07CI10A, EF07CI10B",
+  "habTxt": "Infecções bacterianas e saúde pública; tuberculose, tétano, coqueluche; E. coli e infecção urinária; antibióticos e resistência bacteriana; vacinas.",
+  "nome": "Doenças causadas por bactérias",
+  "concreta": "Para começar (doenças bacterianas conhecidas); Pause e responda (tuberculose); Na prática: leitura sobre resistência a antibióticos e gráfico por idade."
+ },
+ "4B|8º ANO|2": {
+  "serie": "8",
+  "desc": "Diferenciar fontes renováveis e não renováveis, discutindo impactos, importância estratégica e a necessidade da transição energética.",
+  "hab": "EF08CI01; EF08CI06B",
+  "habTxt": "Fontes renováveis e não renováveis; impactos dos combustíveis fósseis; matriz energética mundial e brasileira; matriz elétrica.",
+  "nome": "Fontes de energia",
+  "concreta": "Leitura de texto do Jornal da USP sobre transição energética e respostas sobre impactos, cenários futuros e desafios."
+ },
+ "4B|8º ANO|18": {
+  "serie": "8",
+  "desc": "Avaliar o gasto mensal de eletrodomésticos, relacionando-o ao selo de eficiência energética.",
+  "hab": "EF08CI04",
+  "habTxt": "Eficiência energética; etiqueta INMETRO/ENCE e selo Procel; potência P=U×I; consumo diário e mensal (kWh); custo pela tarifa.",
+  "nome": "Consumo dos aparelhos eletrônicos",
+  "concreta": "Cálculo do consumo mensal e do custo de um ar-condicionado e de uma TV usando a tarifa por kWh."
+ }
+}
