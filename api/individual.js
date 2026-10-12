@@ -61,19 +61,39 @@ async function gerarQuestoes(k) {
     'Você é especialista em avaliação de Ciências do Ensino Fundamental (SEDUC-SP, Guia Priorizado 2026, SARESP).\n' +
     'Crie 10 questões para alunos do ' + c.serie + 'º ano: as 5 primeiras OBJETIVAS (4 alternativas, só 1 correta, distratores com erros conceituais típicos) e as 5 últimas DISSERTATIVAS (resposta curta).\n' +
     'Progressão: objetivas 1–2 e dissertativas 1–2 de reconhecer/identificar (Abaixo do Básico); objetivas 3–4 e dissertativa 3 de aplicar/relacionar; objetiva 5 e dissertativas 4–5 de analisar/justificar.\n' +
-    'Contextos do cotidiano de alunos de escola pública paulista; de preferência ligados a fatos reais. Linguagem simples, enunciados com no máximo 3 linhas. Cada questão pode ter uma "figura" (infográfico simples) que ajude a compreender o enunciado; inclua figura em pelo menos 8 das 10 questões (todas as objetivas e a maioria das dissertativas); use null só quando realmente não houver o que mostrar.\n\n' +
+    'Contextos do cotidiano de alunos de escola pública paulista; de preferência ligados a fatos reais. Linguagem simples, enunciados com no máximo 3 linhas.\n\n' +
     'CONTEÚDO/DESCRITOR: ' + c.desc + '\nHABILIDADE: ' + c.hab + ' — ' + c.habTxt + '\nAULA/ATIVIDADE DE REFERÊNCIA: "' + c.nome + '". ' + (c.concreta || '') + '\n\n' +
     'Responda APENAS em JSON: {"questoes":[{"tipo":"obj","enunciado":"...","comando":"...","alts":["...","...","...","..."],"correta":0,"explicacao":"..."},{"tipo":"dis","enunciado":"...","comando":"...","ref":"resposta esperada","conceitos":["...","..."]}]}\n' +
-    'Regras: "correta" é o índice (0 a 3); varie a posição da correta; não escreva letras (A, B...) dentro das alternativas.\n' +
-    'FIGURA (opcional, campo "figura" em cada questão): um destes formatos, ou null: {"tipo":"tabela","titulo":"...","colunas":["...","..."],"linhas":[["...","..."],["...","..."]]} | {"tipo":"barras","titulo":"...","unidade":"...","itens":[{"rotulo":"...","valor":0}]} | {"tipo":"etapas","titulo":"...","etapas":["...","...","..."]}. ' +
-    'Regras da figura: toda figura precisa trazer informação nova e útil do contexto (dados, comparação ou sequência de uma situação real), não repetir o enunciado; só dados e situações que já estão no enunciado, dentro do contexto do conteúdo; NUNCA revele nem sugira a resposta, nem destaque uma alternativa; rótulos neutros e curtos, adequados à idade do ' + c.serie + 'º ano; cientificamente corretos; números plausíveis e simples (se forem de um experimento fictício, diga no título "Dados do experimento"); não use "etapas" quando a questão pedir para ordenar ou explicar o processo; no máximo 6 itens, linhas ou etapas.', 0.5);
+    'Regras: "correta" é o índice (0 a 3); varie a posição da correta; não escreva letras (A, B...) dentro das alternativas.', 0.5);
   const Q = o.questoes; if (!Array.isArray(Q)) throw new Error('formato inválido');
   const limpa = s => String(s || '').replace(/^\s*[A-Da-d][\)\.]\s+/, '').trim();
   const obj = Q.filter(q => q && q.tipo === 'obj').slice(0, 5), dis = Q.filter(q => q && q.tipo === 'dis').slice(0, 5);
   if (obj.length < 5 || dis.length < 5) throw new Error('faltam questões (' + obj.length + ' obj, ' + dis.length + ' dis)');
-  const O = obj.map(q => { const alts = (q.alts || []).slice(0, 4).map(limpa), cor = Number(q.correta); if (alts.length !== 4 || !(cor >= 0 && cor <= 3) || !q.enunciado) throw new Error('objetiva incompleta'); return { tipo: 'obj', enunciado: String(q.enunciado), comando: String(q.comando || ''), alts, correta: cor, explicacao: String(q.explicacao || ''), figura: limpaFigura(q.figura) }; });
-  const D = dis.map(q => { if (!q.enunciado) throw new Error('dissertativa incompleta'); return { tipo: 'dis', enunciado: String(q.enunciado), comando: String(q.comando || ''), ref: String(q.ref || ''), conceitos: (q.conceitos || []).map(String).slice(0, 4), figura: limpaFigura(q.figura) }; });
-  return O.concat(D);
+  const O = obj.map(q => { const alts = (q.alts || []).slice(0, 4).map(limpa), cor = Number(q.correta); if (alts.length !== 4 || !(cor >= 0 && cor <= 3) || !q.enunciado) throw new Error('objetiva incompleta'); return { tipo: 'obj', enunciado: String(q.enunciado), comando: String(q.comando || ''), alts, correta: cor, explicacao: String(q.explicacao || ''), figura: null }; });
+  const D = dis.map(q => { if (!q.enunciado) throw new Error('dissertativa incompleta'); return { tipo: 'dis', enunciado: String(q.enunciado), comando: String(q.comando || ''), ref: String(q.ref || ''), conceitos: (q.conceitos || []).map(String).slice(0, 4), figura: null }; });
+  const todas = O.concat(D);
+  try { await adicionarFiguras(todas, c); } catch (e) { /* sem figuras é melhor que questão com figura errada */ }
+  return todas;
+}
+/* Segunda etapa: uma chamada só para desenhar as figuras das 10 questões e outra para revisar se alguma entrega a resposta. */
+async function adicionarFiguras(Q, c) {
+  const lista = Q.map((q, i) => ({ i, tipo: q.tipo, enunciado: q.enunciado, comando: q.comando, alternativas: q.tipo === 'obj' ? q.alts : undefined }));
+  const o = await gemini(
+    'Você prepara figuras didáticas (infográficos simples) para questões de Ciências do ' + c.serie + 'º ano do Ensino Fundamental. Conteúdo: ' + c.desc + '\n\n' +
+    'Para CADA questão abaixo, crie uma figura que ajude o aluno a compreender a situação do enunciado, em um destes formatos: ' +
+    '{"tipo":"tabela","titulo":"...","colunas":["...","..."],"linhas":[["...","..."],["...","..."]]} | {"tipo":"barras","titulo":"...","unidade":"...","itens":[{"rotulo":"...","valor":0}]} | {"tipo":"etapas","titulo":"...","etapas":["...","...","..."]}.\n' +
+    'REGRAS: a figura mostra apenas os dados, as observações ou a sequência da situação descrita (por exemplo, medidas de um experimento, registros de uma observação, etapas de um procedimento); NUNCA contém a resposta, o conceito que a questão pede, uma conclusão, nem texto parecido com uma das alternativas; rótulos neutros e curtos; linguagem da idade; cientificamente correta; números simples e plausíveis (se fictícios, o título começa com "Dados do experimento"); de 2 a 6 linhas, itens ou etapas. ' +
+    'Faça figura para o maior número possível de questões (pelo menos 8 das 10); use null apenas se a figura só pudesse repetir ou entregar a resposta.\n\nQUESTÕES: ' + JSON.stringify(lista) +
+    '\n\nResponda APENAS em JSON: {"figuras":[{"i":0,"figura":{...} ou null}, ...]}', 0.3);
+  const F = Q.map(() => null);
+  (Array.isArray(o.figuras) ? o.figuras : []).forEach(x => { const i = Number(x && x.i); if (i >= 0 && i < Q.length) F[i] = limpaFigura(x.figura); });
+  const com = F.map((f, i) => f ? { i, enunciado: Q[i].enunciado, comando: Q[i].comando, resposta_correta: Q[i].tipo === 'obj' ? Q[i].alts[Q[i].correta] : Q[i].ref, figura: f } : null).filter(Boolean);
+  if (!com.length) return;
+  const r = await gemini(
+    'Você é revisor pedagógico de Ciências (Ensino Fundamental). Para cada item, diga se a figura é ADEQUADA. Reprove (ok=false) se a figura: (a) contém ou deixa óbvia a resposta correta, o conceito pedido ou uma conclusão; (b) repete texto de uma alternativa; (c) não tem relação direta com o enunciado; (d) tem erro científico ou é inadequada para a idade.\n\nITENS: ' + JSON.stringify(com) +
+    '\n\nResponda APENAS em JSON: {"revisao":[{"i":0,"ok":true}, ...]}', 0.1);
+  const ok = new Set((Array.isArray(r.revisao) ? r.revisao : []).filter(x => x && x.ok === true).map(x => Number(x.i)));
+  F.forEach((f, i) => { if (f && ok.has(i)) Q[i].figura = f; });
 }
 async function corrigir(q, resposta, k) {
   const c = CAT[k] || {};
