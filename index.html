@@ -89,7 +89,9 @@ select:focus-visible,button:focus-visible,.card:focus-visible,.clk:focus-visible
 /* aluno */
 .aluno-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline}
 .aluno-head h3{font-size:1.15rem}
-.pies{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pies{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.pie.geral .lbl{color:var(--accent)}
+.pies .chip{max-width:100%;box-sizing:border-box;white-space:normal;text-align:center;justify-content:center;line-height:1.2}
 .pie{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}
 .pie canvas{width:100%;max-width:220px;height:auto;aspect-ratio:1.35}
 .pie .lbl{font-size:.8rem;font-weight:700}
@@ -267,7 +269,7 @@ textarea.ai-in{min-height:58px;resize:vertical}
 .ai-chk label{display:flex;gap:6px;align-items:center}
 footer{margin-top:18px}
 @media (max-width:900px){.card{grid-column:span 12}.cols4{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.dboxes{grid-template-columns:1fr}.pies{gap:4px}.cols4{grid-template-columns:1fr}.legend{margin-left:0}}
+@media (max-width:560px){.dboxes{grid-template-columns:1fr}.pies{gap:4px 8px;grid-template-columns:repeat(2,1fr)}.cols4{grid-template-columns:1fr}.legend{margin-left:0}}
 
 /* ---- tela de login ---- */
 .auth{min-height:100vh;display:flex;align-items:center;justify-content:center;padding-block:32px}
@@ -414,7 +416,7 @@ function stats(t,c,b){
   return { n:rs.length, mean: rs.length? sum/rs.length : null, cnt, names };
 }
 function descs(t,c,b){ return DATA.D.filter(d=>d[0]===t && d[1]===c && d[2]===b+1).sort((a,b)=>a[4]-b[4]); }
-function rank(t,c,b,v){ const vs=rows(t,c).map(r=>r[3+b]).filter(x=>x!=null); return {pos: vs.filter(x=>x>v).length+1, of: vs.length}; }
+function rank(t,c,b,v){ const vs=rows(t,c).map(r=>valB(r,b)).filter(x=>x!=null); return {pos: vs.filter(x=>x>v).length+1, of: vs.length}; }
 
 /* ---------- filtros ---------- */
 const fT=document.getElementById("fTurma"), fC=document.getElementById("fComp"), fA=document.getElementById("fAluno");
@@ -472,20 +474,21 @@ function lineChart(t,c,r,big){
 function alunoView(big){
   const r=rec(S.t,S.comp,S.aluno); const T=DATA.T[S.t];
   if(!r) return `<p class="muted">${esc(title(S.aluno))} não tem resultado em ${S.comp}.</p>`;
-  const v=[r[3],r[4],r[5]], d=(v[0]!=null&&v[2]!=null)? Math.round((v[2]-v[0])*1000)/10 : null;
+  const v=[r[3],r[4],r[5],valB(r,3)], d=(v[0]!=null&&v[2]!=null)? Math.round((v[2]-v[0])*1000)/10 : null;
   let h=`<div class="aluno-head"><h3>${esc(title(S.aluno))}</h3><span class="muted">${esc(T.n)} · ${S.comp}</span></div>`;
-  h+=`<div class="pies">`+[0,1,2].map(b=>{ const l=lvOf(v[b]);
-    return `<div class="pie" data-pie-bim="${b}" role="button" tabindex="0" title="Ver a turma no ${BIM[b]}"><canvas data-v="${v[b]??""}" aria-label="${BIM[b]}: ${pct(v[b])}"></canvas>
-      <span class="lbl">${BIM[b]}</span><span class="chip ${l<0?"lx":"l"+l}"><i></i>${l<0?"Sem resultado":LV[l]+" · "+pct(v[b])}</span></div>`; }).join("")+`</div>`;
+  h+=`<div class="pies">`+[0,1,2,3].map(b=>{ const l=lvOf(v[b]);
+    return `<div class="pie${b===3?" geral":""}" data-pie-bim="${b}" role="button" tabindex="0" title="${b===3?"Ver a turma no resultado geral (todos os bimestres)":"Ver a turma no "+BIM[b]}"><canvas data-v="${v[b]??""}" aria-label="${BIMG[b]}: ${pct(v[b])}"></canvas>
+      <span class="lbl">${BIMG[b]}</span><span class="chip ${l<0?"lx":"l"+l}"><i></i>${l<0?"Sem resultado":LV[l]+" · "+pct(v[b])}</span></div>`; }).join("")+`</div>`;
   if(big){
-    const rk=v[2]!=null? rank(S.t,S.comp,2,v[2]) : null;
+    const rk=v[2]!=null? rank(S.t,S.comp,2,v[2]) : null, rkG=v[3]!=null? rank(S.t,S.comp,3,v[3]) : null;
     h+=`<div class="kpis">
       <div class="kpi"><b>${d==null?"—":(d>0?"▲ +":d<0?"▼ ":"")+d+" p.p."}</b><span>Evolução 1º → 3º</span></div>
       <div class="kpi"><b>${rk? rk.pos+"º de "+rk.of : "—"}</b><span>Posição na turma (3º bim)</span></div>
-      ${[0,1,2].map(b=>`<div class="kpi"><b>${pct(stats(S.t,S.comp,b).mean)}</b><span>Média da turma ${BIM[b]}</span></div>`).join("")}
+      <div class="kpi"><b>${rkG? rkG.pos+"º de "+rkG.of : "—"}</b><span>Posição na turma (geral)</span></div>
+      ${[0,1,2,3].map(b=>`<div class="kpi"><b>${pct(stats(S.t,S.comp,b).mean)}</b><span>Média da turma ${BIMG[b]}</span></div>`).join("")}
     </div>`;
   }
-  h+=`<div class="pz-hint">Toque numa pizza para ver a turma naquele bimestre, com a fatia do nível do aluno ampliada e os nomes dos colegas.</div>`;
+  h+=`<div class="pz-hint">Toque numa pizza para ver a turma naquele bimestre (ou no geral, com os três bimestres juntos), com a fatia do nível do aluno ampliada e os nomes dos colegas.</div>`;
   h+=lineChart(S.t,S.comp,r,big);
   if(big) h+=`<h3 style="font-size:1.05rem">Descritores por bimestre</h3>`+descBoxes(true);
   return h;
@@ -1162,7 +1165,7 @@ function handleInner(e){
   const row=e.target.closest("tr.row"); if(row){ e.stopPropagation(); select(+row.dataset.t,row.dataset.c,null); return true; }
   const al=e.target.closest("[data-aluno]"); if(al){ e.stopPropagation(); S.aluno=al.dataset.aluno; fillAluno(); renderAll(); if(S.modal==="turma") openModal("aluno"); return true; }
   const tb=e.target.closest("[data-bim]"); if(tb){ e.stopPropagation(); S.bimTab=+tb.dataset.bim; S.pieSel=null; renderAll(); return true; }
-  const pb=e.target.closest("[data-pie-bim]"); if(pb){ e.stopPropagation(); const b=+pb.dataset.pieBim, r=rec(S.t,S.comp,S.aluno), l=r? lvOf(r[3+b]) : -1;
+  const pb=e.target.closest("[data-pie-bim]"); if(pb){ e.stopPropagation(); const b=+pb.dataset.pieBim, r=rec(S.t,S.comp,S.aluno), l=r? lvOf(valB(r,b)) : -1;
     S.bimTab=b; S.pieSel = l>=0 ? l : null; openModal("turma"); pzAnimar(); return true; }
   const sl=e.target.closest("[data-slice]"); if(sl){ e.stopPropagation(); const v=+sl.dataset.slice;
     if(S.modal!=="turma"){ S.bimTab=2; S.pieSel=v; openModal("turma"); }
