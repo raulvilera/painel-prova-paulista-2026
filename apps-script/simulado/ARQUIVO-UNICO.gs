@@ -167,7 +167,7 @@ function enviar(p) {
   const corr = dis.map(d => {
     if (!d.texto) return { nota: 0, comentario: 'Sem resposta.' };
     try { return corrigirIA_(d.q, d.texto); }
-    catch (e) { statusIA = 'pendente: ' + String(e.message || e).slice(0, 120); return { nota: '', comentario: '' }; }
+    catch (e) { statusIA = 'corrigido automático (IA indisponível)'; return corrigirLocal_(d.q, d.texto); }   // nunca fica sem nota: a IA refaz depois (corrigirPendentes)
   });
   const notaDis = corr.every(c => c.nota !== '') ? corr.reduce((s, c) => s + Number(c.nota), 0) : '';
   const notaFinal = notaDis === '' ? '' : Math.round((ac + notaDis) * 10) / 10;   // 7 objetivas + 3 dissertativas = 10
@@ -204,7 +204,7 @@ function corrigirIA_(q, resposta) {
     r = UrlFetchApp.fetch(url, { method: 'post', contentType: 'application/json', payload: JSON.stringify(body), muteHttpExceptions: true });
     if (r.getResponseCode() === 200) break;
     if (r.getResponseCode() !== 429 && r.getResponseCode() < 500) break;
-    Utilities.sleep(1500 * (tent + 1));
+    Utilities.sleep(2500 * (tent + 1));
   }
   if (r.getResponseCode() !== 200) throw new Error('IA respondeu ' + r.getResponseCode() + ': ' + r.getContentText().slice(0, 200));
   const j = JSON.parse(r.getContentText());
@@ -217,6 +217,18 @@ function corrigirIA_(q, resposta) {
   return { nota: Math.round(nota * 10) / 10, comentario: String(o.comentario || '').slice(0, 400) };
 }
 
+/* Reserva quando a IA está no limite (erro 429): nota aproximada pela presença dos conceitos-chave na resposta. */
+function corrigirLocal_(q, texto) {
+  const pal = s => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').split(/[^a-z0-9]+/).filter(w => w.length >= 4);
+  const raiz = w => w.slice(0, 5), rs = {}; pal(texto).forEach(w => rs[raiz(w)] = 1);
+  const alvos = ((q.conceitos && q.conceitos.length) ? q.conceitos : [q.ref]).filter(Boolean);
+  const cob = alvos.map(c => { const w = pal(c); return w.length ? w.filter(x => rs[raiz(x)]).length / w.length : 0; });
+  let f = cob.length ? cob.reduce((a, b) => a + b, 0) / cob.length : 0;
+  if (pal(texto).length < 3) f = Math.min(f, 0.3);
+  const nota = Math.round(Math.min(1, f * 1.15) * 10) / 10;
+  return { nota: nota, comentario: nota >= 0.7 ? 'Boa resposta: você citou as ideias principais. (correção automática)' : nota >= 0.4 ? 'Resposta parcial: faltou explicar melhor as ideias principais. (correção automática)' : 'Revise o conteúdo e explique com suas palavras as ideias principais. (correção automática)' };
+}
+
 /* Rode no editor para corrigir linhas que ficaram "pendente" (ex.: chave ausente ou IA fora do ar).
    Também pode ser agendado em Acionadores (a cada 1 hora). */
 function corrigirPendentes() {
@@ -226,16 +238,16 @@ function corrigirPendentes() {
     const Q = QUESTOES[t.serie].filter(q => q.tipo === 'dis');
     const v = sh.getRange(3, 1, sh.getLastRow() - 2, COL_FIM + 3).getValues();
     v.forEach((r, i) => {
-      if (!String(r[COL_FIM + 2]).startsWith('pendente')) return;
+      const st = String(r[COL_FIM + 2]); if (!st.startsWith('pendente') && !st.startsWith('corrigido automático')) return;
       try {
         let soma = 0;
         Q.forEach((q, k) => {
           const c0 = COL_DIS - 1 + k * 3, texto = String(r[c0] || '').trim();
-          const c = texto ? corrigirIA_(q, texto) : { nota: 0, comentario: 'Sem resposta.' };
+          let c; if (!texto) c = { nota: 0, comentario: 'Sem resposta.' }; else { try { c = corrigirIA_(q, texto); } catch (e) { if (st.startsWith('pendente')) c = corrigirLocal_(q, texto); else throw e; } }   // IA refaz; se continuar no limite, linha pendente vira automática
           r[c0 + 1] = c.nota; r[c0 + 2] = c.comentario; soma += c.nota;
         });
         const ac = Number(String(r[COL_FIM - 1]).split('/')[0]) || 0;
-        r[COL_FIM] = Math.round(soma * 10) / 10; r[COL_FIM + 1] = Math.round((ac + soma) * 10) / 10; r[COL_FIM + 2] = 'corrigido pela IA';
+        r[COL_FIM] = Math.round(soma * 10) / 10; r[COL_FIM + 1] = Math.round((ac + soma) * 10) / 10; r[COL_FIM + 2] = Q.every((q, k) => !String(r[COL_DIS - 1 + k * 3] || '').trim() || String(r[COL_DIS + k * 3 + 1] || '').indexOf('(correção automática)') < 0) ? 'corrigido pela IA' : 'corrigido automático (IA indisponível)';
         sh.getRange(3 + i, 1, 1, r.length).setValues([r]);
       } catch (e) { Logger.log(t.id + ' linha ' + (3 + i) + ': ' + e.message); }
     });
