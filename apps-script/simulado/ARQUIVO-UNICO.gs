@@ -389,6 +389,11 @@ function recalcularNotas() {
 function ativarCorrecaoAutomatica() {
   ScriptApp.getProjectTriggers().filter(t => t.getHandlerFunction() === 'corrigirPendentes').forEach(t => ScriptApp.deleteTrigger(t));
   ScriptApp.newTrigger('corrigirPendentes').timeBased().everyMinutes(10).create();
+  ativarCorrecaoAutomaticaEM();   // também o Ensino Médio
+}
+function ativarCorrecaoAutomaticaEM() {
+  ScriptApp.getProjectTriggers().filter(t => t.getHandlerFunction() === 'corrigirPendentesEM').forEach(t => ScriptApp.deleteTrigger(t));
+  ScriptApp.newTrigger('corrigirPendentesEM').timeBased().everyMinutes(15).create();
 }
 function desativarCorrecaoAutomatica() {
   ScriptApp.getProjectTriggers().filter(t => t.getHandlerFunction() === 'corrigirPendentes').forEach(t => ScriptApp.deleteTrigger(t));
@@ -990,6 +995,18 @@ function emInterpretarIA_(resp) {
 }
 
 /* Corrige várias dissertativas em paralelo; quem falhar tenta mais uma vez, em seguida. Devolve [{nota,comentario}|null]. */
+/* Reserva do Ensino Médio quando a IA está no limite: nota aproximada (máx. 0,7) pela sobreposição de termos entre a resposta e os descritores/critérios. */
+function emCorrigirLocal_(contexto, resposta) {
+  const pal = s => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').split(/[^a-z0-9]+/).filter(w => w.length >= 5);
+  const raiz = w => w.slice(0, 5), ctx = {}; pal(contexto).forEach(w => ctx[raiz(w)] = 1);
+  const ans = {}; pal(resposta).forEach(w => ans[raiz(w)] = 1);
+  const N = Object.keys(ans).length, M = Object.keys(ans).filter(w => ctx[w]).length;
+  if (N < 4) return { nota: 0.1, comentario: 'Resposta muito curta. Explique com mais detalhes o que o comando pede. (correção automática provisória)' };
+  const f = Math.min(1, N / 22) * Math.min(1, (M / N) * 1.6);
+  const nota = Math.round(Math.min(0.7, f * 0.8) * 10) / 10;
+  return { nota: nota, comentario: (nota >= 0.5 ? 'Você abordou boa parte do que foi pedido.' : 'Faltou relacionar melhor sua resposta ao que o comando pede.') + ' (correção automática provisória; a IA revisa depois)' };
+}
+
 function emCorrigirLote_(itens) {
   const reqs = itens.map(it => emRequisicaoIA_(emPrompt_(it.contexto, it.resposta)));
   if (reqs.some(r => !r)) return itens.map(() => null);                       // sem GEMINI_API_KEY: tudo pendente
@@ -997,8 +1014,8 @@ function emCorrigirLote_(itens) {
   try { resps = UrlFetchApp.fetchAll(reqs); } catch (e) { resps = []; }
   return itens.map((it, i) => {
     let r = emInterpretarIA_(resps[i]);
-    if (!r) {
-      Utilities.sleep(1500);
+    for (let t = 0; !r && t < 3; t++) {   // 429/erro: espera e tenta de novo, uma de cada vez
+      Utilities.sleep(3000 * (t + 1));
       try { r = emInterpretarIA_(UrlFetchApp.fetch(reqs[i].url, reqs[i])); } catch (e) { r = null; }
     }
     return r;
@@ -1029,14 +1046,19 @@ function enviarEM_(p) {
   const anterior = cache.get(chave);
   if (anterior) return { ok: true, repetido: true, dissertativas: JSON.parse(anterior) };   // reenvio: não duplica a linha
   const corr = emCorrigirLote_(p.dissertativas);                                            // fora do lock: pode levar alguns segundos
-  const resultado = corr.map(c => c ? { nota: c.nota, comentario: c.comentario, status: 'corrigido' } : { nota: null, comentario: '', status: 'pendente' });
-  const todas = resultado.every(r => r.status === 'corrigido');
+  let usouReserva = false;
+  const resultado = corr.map((c, k) => {
+    if (c) return { nota: c.nota, comentario: c.comentario, status: 'corrigido' };
+    usouReserva = true; const l = emCorrigirLocal_(p.dissertativas[k].contexto, p.dissertativas[k].resposta);   // nunca fica sem nota
+    return { nota: l.nota, comentario: l.comentario, status: 'corrigido' };
+  });
+  const todas = !usouReserva;
   const linha = [new Date(), emSeguro_(p.turma), emSeguro_(p.componente), emSeguro_(p.prova), p.n, emSeguro_(String(p.nome).trim()), emSeguro_(String(p.ra))]
     .concat(p.respostas.map(String));
   linha.push(Number(p.acertos), Number(p.notaObjetiva));
   p.dissertativas.forEach((d, k) => linha.push(emSeguro_(String(d.resposta).slice(0, 3000)),
     resultado[k].nota === null ? '' : resultado[k].nota, emSeguro_(resultado[k].comentario)));
-  linha.push(todas ? 'corrigido pela IA' : 'pendente', '', '');                              // status + nota final (fórmula) + observações
+  linha.push(todas ? 'corrigido pela IA' : 'corrigido automático (IA indisponível)', '', '');                              // status + nota final (fórmula) + observações
   const lock = LockService.getScriptLock();
   lock.waitLock(20000);
   try {
@@ -1063,7 +1085,7 @@ function corrigirPendentesEM() {
     const avaliacao = nome.substring(EM_PREFIXO_ABA.length);
     const dados = sh.getRange(3, 1, sh.getLastRow() - 2, EM_COL_OBS).getValues();
     dados.forEach((r, i) => {
-      if (String(r[EM_COL_STATUS - 1]) !== 'pendente') return;
+      const stEM = String(r[EM_COL_STATUS - 1]); if (stEM !== 'pendente' && stEM.indexOf('corrigido automático') !== 0) return;
       try {
         const itens = [];
         for (let k = 0; k < EM_N_DIS; k++) {
@@ -1076,11 +1098,11 @@ function corrigirPendentesEM() {
         let ok = true;
         corr.forEach((c, k) => {
           const base = EM_COL_DIS + k * EM_POR_DIS;
-          if (!c) { ok = false; return; }
-          if (sh.getRange(linha, base + 1).getValue() === '') sh.getRange(linha, base + 1).setValue(c.nota);   // não sobrescreve nota que o professor já pôs
+          if (!c) { ok = false; if (stEM === 'pendente') { const l = emCorrigirLocal_(itens[k].contexto, itens[k].resposta); sh.getRange(linha, base + 1).setValue(l.nota); sh.getRange(linha, base + 2).setValue(emSeguro_(l.comentario)); } return; }
+          if (stEM !== 'pendente' || sh.getRange(linha, base + 1).getValue() === '') sh.getRange(linha, base + 1).setValue(c.nota);   // não sobrescreve nota que o professor já pôs
           sh.getRange(linha, base + 2).setValue(emSeguro_(c.comentario));
         });
-        if (ok) sh.getRange(linha, EM_COL_STATUS).setValue('corrigido pela IA');
+        sh.getRange(linha, EM_COL_STATUS).setValue(ok ? 'corrigido pela IA' : 'corrigido automático (IA indisponível)');
       } catch (e) { Logger.log(nome + ' linha ' + (3 + i) + ': ' + e.message); }
     });
   });
