@@ -117,6 +117,7 @@ svg text{fill:var(--muted);font-family:var(--f-body)}
 .tabs{display:flex;gap:6px;flex-wrap:wrap}
 .tab{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:5px 12px;border-radius:999px;cursor:pointer}
 .tab[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.lvcol .det{display:block;color:var(--muted);font-family:var(--f-data);font-size:.72rem;line-height:1.25}
 .cols4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .lvcol{border-radius:10px;padding:10px;min-width:0}
 .lvcol h4{margin:0 0 6px;font-size:.85rem;display:flex;justify-content:space-between}
@@ -388,6 +389,11 @@ const LV = ["Abaixo do Básico","Básico","Adequado","Avançado"];
 const BIM = ["1º Bim","2º Bim","3º Bim"];
 const COMP_ORDER = ["Ciências","Biologia","Química"];
 const lvOf = v => v==null ? -1 : v<.25?0 : v<.5?1 : v<.75?2 : 3;
+const BIMG = BIM.concat("Geral");
+/* Nota do aluno no bimestre b (0 a 2). Em b===3 ("Geral"): média simples dos bimestres em que ele fez a prova. */
+function valB(r,b){ if(b<3) return r[3+b]; const v=[r[3],r[4],r[5]].filter(x=>x!=null); return v.length? Math.round(v.reduce((a,x)=>a+x,0)/v.length*10000)/10000 : null; }
+/* "1º 40% · 2º 55% · 3º —" : o individual de cada bimestre, usado na visão Geral */
+const detBim = r => [0,1,2].map(b=>BIM[b].replace(" Bim","")+" "+pct(r[3+b])).join(" · ");
 const pct = v => v==null ? "—" : Math.round(v*100)+"%";
 const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -401,10 +407,10 @@ function rows(t,c){ return DATA.A.filter(r=>r[0]===t && r[1]===c); }
 function alunosOf(t){ return [...new Set(DATA.A.filter(r=>r[0]===t).map(r=>r[2]))].sort((a,b)=>a.localeCompare(b,"pt")); }
 function rec(t,c,n){ return DATA.A.find(r=>r[0]===t && r[1]===c && r[2]===n); }
 function stats(t,c,b){
-  const rs = rows(t,c).filter(r=>r[3+b]!=null);
+  const rs = rows(t,c).filter(r=>valB(r,b)!=null);
   const cnt=[0,0,0,0], names=[[],[],[],[]]; let sum=0;
-  rs.forEach(r=>{ const l=lvOf(r[3+b]); cnt[l]++; names[l].push(r); sum+=r[3+b]; });
-  names.forEach(a=>a.sort((x,y)=>y[3+b]-x[3+b]));
+  rs.forEach(r=>{ const l=lvOf(valB(r,b)); cnt[l]++; names[l].push(r); sum+=valB(r,b); });
+  names.forEach(a=>a.sort((x,y)=>valB(y,b)-valB(x,b)));
   return { n:rs.length, mean: rs.length? sum/rs.length : null, cnt, names };
 }
 function descs(t,c,b){ return DATA.D.filter(d=>d[0]===t && d[1]===c && d[2]===b+1).sort((a,b)=>a[4]-b[4]); }
@@ -546,7 +552,7 @@ function pieNiveis(t,c,b,big){
     </g>`; };
   // ordem de pintura: fatias de trás primeiro; a destacada por último
   const order=sl.filter(s=>s.i!==sel).sort((p,q)=>Math.sin(p.m)-Math.sin(q.m)).concat(sl.filter(s=>s.i===sel));
-  let svg=`<svg class="pz" viewBox="0 0 ${W} ${H}" role="img" aria-label="Distribuição da turma por nível no ${BIM[b]}">`;
+  let svg=`<svg class="pz" viewBox="0 0 ${W} ${H}" role="img" aria-label="Distribuição da turma por nível: ${BIMG[b]}">`;
   svg+=order.map(sliceG).join("");
   // linhas e nomes da fatia selecionada
   const S0=sl.find(s=>s.i===sel);
@@ -570,7 +576,7 @@ function pieNiveis(t,c,b,big){
     anchors.forEach((p,k)=>{ const ty=y0+k*gap; const [rx2,ry2]=P(p.an,1.1); const ex=rx2+S0.dx, ey=ry2+S0.dy;
       g+=`<path d="M${f(p.x)} ${f(p.y)}L${f(ex)} ${f(ey)}L${f(busX)} ${f(ty-4)}L${f(tx-dir*6)} ${f(ty-4)}"/>`;
       g+=`<circle cx="${f(p.x)}" cy="${f(p.y)}" r="3" style="fill:var(--lv${sel})"/>`;
-      g+=`<text x="${f(tx)}" y="${f(ty)}" text-anchor="${right?"start":"end"}" class="${p.r[2]===S.aluno?"me":""}" data-aluno="${esc(p.r[2])}">${esc(title(p.r[2]))} <tspan style="fill:var(--muted);font-family:var(--f-data);font-size:11px">${pct(p.r[3+b])}</tspan></text>`; });
+      g+=`<text x="${f(tx)}" y="${f(ty)}" text-anchor="${right?"start":"end"}" class="${p.r[2]===S.aluno?"me":""}" data-aluno="${esc(p.r[2])}">${esc(title(p.r[2]))} <tspan style="fill:var(--muted);font-family:var(--f-data);font-size:11px">${pct(valB(p.r,b))}</tspan></text>`; });
     g+=`</g>`; svg+=g;
   }
   svg+=`</svg>`;
@@ -579,16 +585,16 @@ function pieNiveis(t,c,b,big){
 
 function turmaView(big){
   const T=DATA.T[S.t]; let h=`<div class="muted">${esc(T.n)} · ${S.comp} · ${esc(T.e)}</div>`;
-  h+=[0,1,2].map(b=>{ const st=stats(S.t,S.comp,b);
-    if(!st.n) return `<div class="sbar"><span>${BIM[b]}</span><div class="track"></div><span class="muted">sem dados</span></div>`;
-    return `<div class="sbar"><span>${BIM[b]}</span><div class="track">${st.cnt.map((c,i)=>c?`<div class="seg s${i}" style="flex:${c}" title="${LV[i]}: ${c}">${c}</div>`:"").join("")}</div><span class="num">${pct(st.mean)}</span></div>`; }).join("");
+  h+=[0,1,2,3].map(b=>{ const st=stats(S.t,S.comp,b);
+    if(!st.n) return `<div class="sbar"><span>${BIMG[b]}</span><div class="track"></div><span class="muted">sem dados</span></div>`;
+    return `<div class="sbar"><span>${BIMG[b]}</span><div class="track">${st.cnt.map((c,i)=>c?`<div class="seg s${i}" style="flex:${c}" title="${LV[i]}: ${c}">${c}</div>`:"").join("")}</div><span class="num">${pct(st.mean)}</span></div>`; }).join("");
   if(!big){ const st=stats(S.t,S.comp,2); const l=lvOf((rec(S.t,S.comp,S.aluno)||[])[5]);
     return h+pieNiveis(S.t,S.comp,2,false)+`<div class="note">3º bim: ${st.cnt.map((c,i)=>`${c} ${LV[i].toLowerCase()}`).join(" · ")}${l>=0?` · ${esc(short(title(S.aluno)))} está em <b>${LV[l]}</b>`:""}. Amplie para ver os nomes.</div>`; }
   const st=stats(S.t,S.comp,S.bimTab);
-  h+=`<div class="tabs" role="group" aria-label="Bimestre">${BIM.map((b,i)=>`<button class="tab" type="button" data-bim="${i}" aria-pressed="${i===S.bimTab}">${b}</button>`).join("")}</div>`;
+  h+=`<div class="tabs" role="group" aria-label="Bimestre">${BIMG.map((b,i)=>`<button class="tab" type="button" data-bim="${i}" aria-pressed="${i===S.bimTab}">${b}</button>`).join("")}</div>`;
   h+=pieNiveis(S.t,S.comp,S.bimTab,true);
-  h+=`<div class="cols4">${LV.map((lv,i)=>`<div class="lvcol l${i}"><h4><span>${lv}</span><span class="num">${st.cnt[i]}</span></h4><ol>${st.names[i].map(r=>`<li><span class="clk ${r[2]===S.aluno?"me":""}" tabindex="0" data-aluno="${esc(r[2])}">${esc(title(r[2]))}</span> <span class="num muted">${pct(r[3+S.bimTab])}</span></li>`).join("")||"<li class='muted' style='list-style:none'>—</li>"}</ol></div>`).join("")}</div>`;
-  return h+`<p class="note">Clique num nome para abrir o aluno.</p>`;
+  h+=`<div class="cols4">${LV.map((lv,i)=>`<div class="lvcol l${i}"><h4><span>${lv}</span><span class="num">${st.cnt[i]}</span></h4><ol>${st.names[i].map(r=>`<li><span class="clk ${r[2]===S.aluno?"me":""}" tabindex="0" data-aluno="${esc(r[2])}">${esc(title(r[2]))}</span> <span class="num muted">${pct(valB(r,S.bimTab))}</span>${S.bimTab===3?`<small class="det">${detBim(r)}</small>`:""}</li>`).join("")||"<li class='muted' style='list-style:none'>—</li>"}</ol></div>`).join("")}</div>`;
+  return h+(S.bimTab===3?`<p class="note"><b>Geral:</b> média simples dos bimestres em que o aluno fez a prova (${st.n} aluno${st.n===1?"":"s"} com ao menos um resultado). Abaixo de cada nome, o resultado de cada bimestre.</p>`:"")+`<p class="note">Clique num nome para abrir o aluno.</p>`;
 }
 function panoView(big){
   const list=[]; DATA.T.forEach((t,i)=>compsOf(i).forEach(c=>list.push([i,c])));
