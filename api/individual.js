@@ -67,18 +67,18 @@ async function geminiImagem(cena) {
   const tentativas = [
     () => fetch('https://generativelanguage.googleapis.com/v1beta/interactions', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': GKEY },
       body: JSON.stringify({ model: MODELO_IMG, input: prompt, response_format: { type: 'image', mime_type: 'image/jpeg', aspect_ratio: '4:3' } }) }),
-    () => fetch('https://generativelanguage.googleapis.com/v1beta/models/' + MODELO_IMG_RESERVA + ':generateContent', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': GKEY },
-      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseModalities: ['IMAGE'] } }) }),
+    ...[MODELO_IMG_RESERVA, 'gemini-3.1-flash-image'].map(m => () => fetch('https://generativelanguage.googleapis.com/v1beta/models/' + m + ':generateContent', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': GKEY },
+      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseModalities: ['IMAGE'] } }) })),
   ];
-  let ult = '';
-  for (const t of tentativas) {
+  const falhas = [];
+  for (let i = 0; i < tentativas.length; i++) {
     try {
-      const r = await t(); const txt = await r.text();
-      if (!r.ok) { ult = 'IA de imagem respondeu ' + r.status + ': ' + txt.slice(0, 120); continue; }
-      const img = achaImagem(JSON.parse(txt)); if (img) return img; ult = 'resposta sem imagem';
-    } catch (e) { ult = String(e.message || e); }
+      const r = await tentativas[i](); const txt = await r.text();
+      if (!r.ok) { let m = txt; try { const j = JSON.parse(txt); m = (j.error && (j.error.message || j.error.status)) || txt; } catch (e) { /* texto puro */ } falhas.push('[' + (i + 1) + '] HTTP ' + r.status + ': ' + String(m).replace(/\s+/g, ' ').slice(0, 140)); continue; }
+      const img = achaImagem(JSON.parse(txt)); if (img) return img; falhas.push('[' + (i + 1) + '] resposta sem imagem: ' + txt.replace(/\s+/g, ' ').slice(0, 100));
+    } catch (e) { falhas.push('[' + (i + 1) + '] ' + String(e.message || e).slice(0, 100)); }
   }
-  throw new Error(ult);
+  throw new Error(falhas.join(' | '));
 }
 /* As imagens ficam na própria tabela indiv_banco (chave "img:<k>", questoes = {mime, dados}): não precisa criar tabela nova. */
 async function imagensProntas() { try { const r = await rest('indiv_banco?select=k&limit=1000&k=like.' + enc('img:*')); return new Set((r || []).map(x => String(x.k).slice(4))); } catch (e) { return new Set(); } }
@@ -247,7 +247,7 @@ module.exports = async function individual(req, res) {
     }
     if (req.method === 'GET' && acao === 'imagem') {   // imagem de uma questão adaptada (só chaves conhecidas)
       const k = String(q.k || ''); if (!/^[0-9a-f]{12}$/.test(k) || !PEI.promptImagem(k)) return erro(404, 'Imagem desconhecida.');
-      let img; try { img = await garantirImagem(k); } catch (e) { return erro(502, 'Não foi possível gerar a imagem agora.'); }
+      let img; try { img = await garantirImagem(k); } catch (e) { return erro(502, 'Não foi possível gerar a imagem: ' + String(e.message || e).slice(0, 420)); }
       res.setHeader('Cache-Control', 'public, max-age=86400'); res.setHeader('Content-Type', img.mime || 'image/png'); res.setHeader('X-Content-Type-Options', 'nosniff');
       return res.status(200).send(Buffer.from(img.dados, 'base64'));
     }
