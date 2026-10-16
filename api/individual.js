@@ -48,6 +48,40 @@ async function gemini(prompt, temp) {
   }
   throw new Error(ult);
 }
+/* ---------- imagens das atividades adaptadas (Nano Banana, API Gemini) ---------- */
+const MODELO_IMG = process.env.MODELO_IMAGEM || 'gemini-nano-banana-2.1';      // recomendado pelo Google; Nano Banana Pro: gemini-3-pro-image
+const MODELO_IMG_RESERVA = process.env.MODELO_IMAGEM_RESERVA || 'gemini-2.5-flash-image';
+const ESTILO = 'Educational illustration for a school science activity for students aged 11 to 15 in Brazil. Clean, friendly, realistic-looking style, bright colors, plain light background, centered subject, easy to understand at a glance. ' +
+  'IMPORTANT: no text, no letters, no numbers, no labels, no captions, no watermark anywhere in the image. Scene: ';
+/* procura, em qualquer ponto da resposta, um bloco de imagem em base64 (as duas versões da API usam nomes diferentes) */
+function achaImagem(o, mimePai) {
+  if (!o || typeof o !== 'object') return null;
+  const mime = o.mimeType || o.mime_type || mimePai || 'image/png';
+  for (const k of ['data', 'bytesBase64Encoded']) if (typeof o[k] === 'string' && o[k].length > 2000 && /^[A-Za-z0-9+/=\s]+$/.test(o[k].slice(0, 200))) return { mime: /^image\//.test(mime) ? mime : 'image/png', dados: o[k].replace(/\s/g, '') };
+  for (const v of Object.values(o)) { const r = achaImagem(v, mime); if (r) return r; }
+  return null;
+}
+async function geminiImagem(cena) {
+  if (!GKEY) throw new Error('GEMINI_API_KEY não configurada na Vercel');
+  const prompt = ESTILO + cena;
+  const tentativas = [
+    () => fetch('https://generativelanguage.googleapis.com/v1beta/interactions', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': GKEY },
+      body: JSON.stringify({ model: MODELO_IMG, input: prompt, response_format: { type: 'image', mime_type: 'image/jpeg', aspect_ratio: '4:3' } }) }),
+    () => fetch('https://generativelanguage.googleapis.com/v1beta/models/' + MODELO_IMG_RESERVA + ':generateContent', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': GKEY },
+      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseModalities: ['IMAGE'] } }) }),
+  ];
+  let ult = '';
+  for (const t of tentativas) {
+    try {
+      const r = await t(); const txt = await r.text();
+      if (!r.ok) { ult = 'IA de imagem respondeu ' + r.status + ': ' + txt.slice(0, 120); continue; }
+      const img = achaImagem(JSON.parse(txt)); if (img) return img; ult = 'resposta sem imagem';
+    } catch (e) { ult = String(e.message || e); }
+  }
+  throw new Error(ult);
+}
+async function imagensProntas() { try { const r = await rest('indiv_imagens?select=k&limit=1000'); return new Set((r || []).map(x => x.k)); } catch (e) { return new Set(); } }
+
 /* Figura opcional (infográfico) de uma questão: a IA só descreve dados simples; aqui o formato é validado e a página desenha. */
 function limpaFigura(f) {
   if (!f || typeof f !== 'object') return null;
@@ -198,11 +232,19 @@ module.exports = async function individual(req, res) {
       const r = await rest('indiv_plano?select=nome&turma=eq.' + enc(String(q.turma || ''))); const nm = (r || []).map(x => x.nome); PEI.nomesFaltando(String(q.turma || ''), nm).forEach(x => nm.push(x));
       return ok({ nomes: nm.sort((x, y) => x.localeCompare(y, 'pt')) });
     }
+    if (req.method === 'GET' && acao === 'imagem') {   // imagem de uma questão adaptada (só chaves conhecidas)
+      const k = String(q.k || ''); if (!/^[0-9a-f]{12}$/.test(k) || !PEI.promptImagem(k)) return erro(404, 'Imagem desconhecida.');
+      const r = await rest('indiv_imagens?select=mime,dados&k=eq.' + enc(k)); if (!r || !r[0]) return erro(404, 'Imagem ainda não gerada.');
+      res.setHeader('Cache-Control', 'public, max-age=86400'); res.setHeader('Content-Type', r[0].mime || 'image/png'); res.setHeader('X-Content-Type-Options', 'nosniff');
+      return res.status(200).send(Buffer.from(r[0].dados, 'base64'));
+    }
     if (req.method === 'GET' && acao === 'atividade') {
       const m = await montar(String(q.turma || ''), String(q.nome || ''), true); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
+      const prontas = m.pei ? await imagensProntas() : new Set();
       return ok({ nome: m.aluno, aviso: m.itens.length ? '' : (m.falhou ? 'Estamos preparando suas questões. Tente de novo em 1 minuto.' : 'Ainda não há atividade para você. Fale com o professor.'),
         itens: m.itens.map(i => ({ desc: i.desc, tipo: i.q.tipo, enunciado: i.q.enunciado, comando: i.q.comando, figura: i.q.figura || null, alts: i.q.tipo === 'obj' ? i.q.alts : [],
-          linhas: i.q.tipo === 'assoc' ? i.q.itens : undefined, banco: i.q.tipo === 'assoc' ? i.q.banco : undefined, passos: i.q.tipo === 'ordem' ? i.q.passos : undefined })),
+          linhas: i.q.tipo === 'assoc' ? i.q.itens : undefined, banco: i.q.tipo === 'assoc' ? i.q.banco : undefined, passos: i.q.tipo === 'ordem' ? i.q.passos : undefined,
+          imagem: i.q.img && prontas.has(i.q.img.k) ? '/api/individual?acao=imagem&k=' + i.q.img.k : undefined, imagemAlt: i.q.img ? i.q.img.alt : undefined })),
         adapt: m.pei ? Object.assign({}, m.pei.flags) : null });
     }
     if (req.method === 'POST' && acao === 'enviar') {
@@ -245,13 +287,23 @@ module.exports = async function individual(req, res) {
     }
 
     /* ----- professor (precisa estar logado na plataforma) ----- */
-    if (!['status', 'gerar', 'liberar', 'ver', 'plano'].includes(acao)) return erro(400, 'Ação desconhecida.');
+    if (!['status', 'gerar', 'liberar', 'ver', 'plano', 'imagens', 'imagem_gerar'].includes(acao)) return erro(400, 'Ação desconhecida.');
     if (!(await professor(req))) return erro(401, 'Entre na plataforma como professor.');
     if (acao === 'plano') {
       const L = (Array.isArray(b.linhas) ? b.linhas : []).slice(0, 200).filter(x => x && x.turma && x.nome).map(x => ({ turma: String(x.turma), nome: String(x.nome), itens: (Array.isArray(x.itens) ? x.itens : []).filter(i => CAT[i.k]).map(i => ({ k: i.k, niv: Number(i.niv) || 0, t: i.t === 'b4' ? 'b4' : 'gap' })), resumo: String(x.resumo || '').slice(0, 300), atualizado: new Date().toISOString() }));
       if (!L.length) return erro(400, 'Nenhuma linha.');
       await rest('indiv_plano?on_conflict=turma,nome', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify(L) });
       return ok({ n: L.length });
+    }
+    if (acao === 'imagens') {
+      const prontas = await imagensProntas(); const L = PEI.imagens();
+      return ok({ total: L.length, imagens: L.map(x => ({ k: x.k, alt: x.alt, tem: prontas.has(x.k) })) });
+    }
+    if (acao === 'imagem_gerar') {
+      const k = String(b.k || ''), cena = PEI.promptImagem(k); if (!cena) return erro(400, 'Imagem desconhecida.');
+      const img = await geminiImagem(cena);
+      await rest('indiv_imagens?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify({ k, mime: img.mime, dados: img.dados, criado: new Date().toISOString() }) });
+      return ok({ k });
     }
     if (acao === 'status') {
       const r = await rest('indiv_banco?select=k,liberada'); const B = {}; (r || []).forEach(x => B[x.k] = x.liberada);

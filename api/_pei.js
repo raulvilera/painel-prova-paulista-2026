@@ -188,6 +188,95 @@ add('9º Ano B', 'NICOLAS PENTEADO', P.desafio, 'Investigação: do céu cultura
   DI('Monte uma proposta de missão para Marte, Europa ou Encélado: objetivo científico, condições do local, riscos para a vida humana e uma pergunta que a missão responderia.', 'Resposta aberta: avaliar objetivo claro, uso de dados (gravidade, temperatura, água), riscos (radiação, suprimentos) e pergunta científica (por exemplo, existe água líquida ou vida?).', ['objetivo científico', 'condições do local', 'riscos', 'pergunta científica'], 'Resposta autoral: pode ser longa.'),
 ]);
 
+/* ---------- imagens (Nano Banana / Gemini) ----------
+   Cada entrada: início do enunciado -> [descrição da cena em inglês, texto alternativo em português].
+   As imagens são geradas uma única vez pelo professor (página /atividade-individual/preparar/) e guardadas no banco.
+   Pedimos sempre imagem SEM texto, porque o gerador erra palavras em português. */
+const IMGS = {
+  'Ligue cada sentido ao órgão': ['a child exploring the five senses in five small scenes: looking through a magnifying glass, listening with a hand behind the ear, smelling a flower, tasting a fruit, touching a soft kitten', 'Criança usando visão, audição, olfato, paladar e tato'],
+  'Complete o esquema do neurônio': ['a scientific illustration of one neuron with branching dendrites, a round cell body, a long axon, and a tiny gap (synapse) to a second neuron, clear colors', 'Neurônio com dendritos, corpo celular e axônio'],
+  'Quando você encosta a mão': ['a child quickly pulling their hand away from a hot cooking pot on a stove, in a home kitchen', 'Criança puxando a mão de uma panela quente'],
+  'Complete as frases com a palavra certa': ['microscope-style view of round viruses with spikes next to rod-shaped bacteria, with a vaccine syringe at the side', 'Vírus, bactérias e vacina'],
+  'Ligue a doença à sua causa': ['microscope-style view of round viruses with spikes next to rod-shaped bacteria', 'Vírus e bactérias vistos ao microscópio'],
+  'Qual destas ações faz parte do saneamento': ['a Brazilian neighborhood with a treated water pipe, a sewage collection pipe under the street and a garbage collection truck', 'Bairro com água tratada, esgoto e coleta de lixo'],
+  'Por que tomar vacina': ['a friendly nurse giving a vaccine to a smiling child at a Brazilian public health clinic', 'Enfermeira vacinando uma criança'],
+  'Cite uma ação de saneamento': ['a Brazilian neighborhood with a treated water pipe, a sewage collection pipe under the street and a garbage collection truck', 'Bairro com água tratada, esgoto e coleta de lixo'],
+  'Qual ajuda a ficar saudável': ['two hands: left hand clean with soap foam under running water, right hand dirty with mud and germs, side by side, split image', 'Mãos limpas com sabão e mãos sujas'],
+  'Qual é uma água boa para beber': ['two scenes side by side: a clear glass of filtered water from a water filter, and a muddy brown puddle', 'Água filtrada e poça de lama'],
+  'Qual protege contra doenças': ['a vaccine syringe and vial next to a lollipop candy, side by side on a table', 'Vacina e doce'],
+  'Onde o lixo deve ficar': ['a child putting a paper in a green trash bin in a clean street, next to a street littered with trash', 'Lixeira e rua suja'],
+  'Como lavar as mãos': ['three panels in order: hands with soap foam, hands rinsing under a tap, hands being dried with a towel', 'Passos para lavar as mãos'],
+  'Como a energia chega até a lâmpada': ['a hydroelectric dam with water falling through a turbine, power lines going to a small house where a lamp is lit', 'Usina hidrelétrica levando energia até uma lâmpada'],
+  'Classifique cada fonte de energia': ['six energy sources in a row: sun, wind turbine, river with a small dam, oil pumpjack, coal mine cart, sugarcane field', 'Sol, vento, rio, petróleo, carvão e cana-de-açúcar'],
+  'Qual fonte de energia nunca acaba': ['a sun shining over solar panels next to an oil rig and a coal pile, three separate scenes', 'Sol, petróleo e carvão'],
+  'Qual fonte de energia pode acabar': ['a wind turbine, the sun and an oil pumpjack in three separate scenes', 'Vento, Sol e petróleo'],
+  'Qual fonte de energia vem do céu': ['the bright sun shining in a blue sky over a house with solar panels, next to an oil barrel', 'Sol e petróleo'],
+  'Complete sobre cargas elétricas': ['a child rubbing a plastic comb on hair so that hair strands lift up, next to two bar magnets attracting', 'Eletrização por atrito e ímãs'],
+  'Todo ímã tem dois polos': ['a red and blue horseshoe magnet with iron filings forming field lines around it', 'Ímã e linhas de campo magnético'],
+  'Os polos de mesmo nome': ['two bar magnets facing each other with the same colored ends pushing apart, with arrows', 'Dois ímãs se repelindo'],
+  'Cargas elétricas de mesmo sinal': ['two balloons rubbed on hair repelling each other when hung from strings', 'Balões eletrizados se repelindo'],
+  'Qual objeto o ímã atrai': ['a magnet attracting iron nails and paper clips while a rubber eraser and wooden stick stay still', 'Ímã atraindo pregos e clipes'],
+  'Qual atrai o prego': ['a magnet next to an iron nail and a rubber eraser', 'Ímã, prego e borracha'],
+  'A corrente que sai de uma pilha': ['an AA battery next to a wall power outlet with a plug', 'Pilha e tomada'],
+  'Por que não devemos usar aparelhos elétricos': ['a warning scene: wet hands near an electrical wall outlet with a cartoon caution triangle, no person shown except hands', 'Mãos molhadas perto de uma tomada'],
+  'Podemos mexer em tomada': ['a warning scene: wet hands near an electrical wall outlet with a cartoon caution triangle', 'Mãos molhadas perto de uma tomada'],
+  'O que é perigoso com a mão molhada': ['a wall power outlet next to a school notebook, two separate items', 'Tomada e caderno'],
+  'Do início ao fim: como a energia chega ao ventilador': ['a power plant, high-voltage transmission towers, and a house with a fan spinning in the living room', 'Usina, torres de energia e ventilador em casa'],
+  'Coloque na ordem: como a energia chega à lâmpada de casa': ['a power plant, high-voltage transmission towers, and a house with a lit ceiling lamp', 'Usina, torres de energia e lâmpada em casa'],
+  'Para a lâmpada acender, o circuito deve estar': ['a simple electric circuit with a battery, two wires and a lit light bulb on a table', 'Circuito simples com pilha, fios e lâmpada'],
+  'Para acender a lâmpada, coloque na ordem': ['a simple electric circuit with a battery, two wires and a lit light bulb on a table', 'Circuito simples com pilha, fios e lâmpada'],
+  'Condutor ou isolante': ['a copper wire, a plastic cup, a rubber glove and an iron nail laid out on a table', 'Fio de cobre, copo de plástico, luva de borracha e prego'],
+  'Em um circuito em SÉRIE': ['two electric circuits side by side: three bulbs in a single loop, and three bulbs on separate parallel branches', 'Circuito em série e circuito em paralelo'],
+  'As tomadas de uma casa': ['a wall with three power outlets each with a different appliance plugged in: lamp, fan, phone charger', 'Tomadas com aparelhos ligados'],
+  'Explique com suas palavras a diferença entre circuito': ['two electric circuits side by side: three bulbs in a single loop, and three bulbs on separate parallel branches', 'Circuito em série e circuito em paralelo'],
+  'Ligue cada aparelho à energia': ['a table with a lit lamp, a steam iron, a spinning desk fan and a small radio', 'Lâmpada, ferro de passar, ventilador e rádio'],
+  'Ligue o aparelho à energia': ['a table with a lit lamp, a steam iron and a spinning desk fan', 'Lâmpada, ferro de passar e ventilador'],
+  'Quando uma lâmpada acende': ['a lit incandescent light bulb glowing and giving off a little warm heat', 'Lâmpada acesa'],
+  'Em uma usina hidrelétrica': ['a hydroelectric dam with water falling through a turbine, power lines going to a small house where a lamp is lit', 'Usina hidrelétrica'],
+  'Para que serve a energia elétrica em casa': ['a cozy Brazilian living room with a lit lamp, TV and refrigerator in the kitchen', 'Aparelhos elétricos em casa'],
+  'Coloque os planetas do mais perto': ['the Sun at the left and the four inner planets in a row: Mercury, Venus, Earth, Mars, increasing distance, dark space background', 'Sol e os quatro primeiros planetas'],
+  'Ligue cada astro': ['the Sun, the Earth and the Moon drawn together in space, friendly educational style', 'Sol, Terra e Lua'],
+  'Coloque as fases da Lua': ['four moon phases in a row: new moon, first quarter, full moon, last quarter, on a night-sky background', 'Fases da Lua'],
+  'Se você soltar uma bola': ['a child dropping a ball from the hand and the ball falling to the ground, with a motion arrow downward', 'Bola caindo'],
+  'Se soltarmos uma bola': ['a child dropping a ball from the hand and the ball falling to the ground, with a motion arrow downward', 'Bola caindo'],
+  'Quem puxa a bola': ['a ball falling toward the Earth with an arrow showing gravity pulling down', 'Gravidade puxando a bola'],
+  'Na Lua a gravidade': ['an astronaut jumping high on the Moon surface with the blue Earth in the sky', 'Astronauta saltando na Lua'],
+  'Ligue a constelação indígena': ['a night sky over the Brazilian countryside with the Emu (Ema) shaped dark constellation along the Milky Way, Guarani sky tradition', 'Constelação indígena da Ema no céu'],
+  'A constelação da Ema': ['a night sky over the Brazilian countryside with the Emu (Ema) shaped dark constellation along the Milky Way', 'Constelação indígena da Ema no céu'],
+  'Muitos povos indígenas': ['an indigenous family in a Brazilian field at dusk looking at the starry sky with the Milky Way', 'Povo indígena observando as estrelas'],
+  'Para que alguns povos indígenas': ['an indigenous family in a Brazilian field at dusk looking at the starry sky with the Milky Way', 'Povo indígena observando as estrelas'],
+  'Cite uma constelação indígena': ['a night sky over the Brazilian countryside with the Emu (Ema) shaped dark constellation along the Milky Way', 'Constelação indígena da Ema'],
+  'Ligue cada movimento': ['the Earth rotating on its axis with day and night sides, and the Earth orbiting around the Sun, two panels', 'Rotação e translação da Terra'],
+  'Os eclipses acontecem': ['a solar eclipse diagram with the Sun, Moon and Earth aligned in a row', 'Eclipse com Sol, Lua e Terra alinhados'],
+  'O eclipse solar ocorre': ['a solar eclipse diagram with the Sun, Moon and Earth aligned in a row', 'Eclipse solar'],
+  'A Lua atrai a água': ['the Earth with oceans bulging toward the Moon, tides illustration, simple and clear', 'Maré causada pela Lua'],
+  'As marés são causadas': ['the Earth with oceans bulging toward the Moon, tides illustration, simple and clear', 'Maré causada pela Lua'],
+  'Por que o astronauta flutua': ['an astronaut floating inside the International Space Station with Earth visible through a window', 'Astronauta flutuando na estação espacial'],
+  'Ligue cada figura ao que ela é': ['three separate pictures: a bright yellow sun, a crescent moon in the night sky, and the blue planet Earth', 'Sol, Lua e Terra'],
+  'De dia, vemos no céu': ['a day sky with the sun and a night sky with the moon and stars, two panels', 'Céu de dia e céu de noite'],
+  'À noite, vemos no céu': ['a day sky with the sun and a night sky with the moon and stars, two panels', 'Céu de dia e céu de noite'],
+  'A Lei da Gravitação': ['two planets of different sizes attracting each other with arrows, simple physics illustration', 'Atração gravitacional entre corpos'],
+  'A zona habitável': ['a star with a ring-shaped habitable zone around it, with a blue Earth-like planet inside the ring and others outside', 'Zona habitável de uma estrela'],
+  'Classifique os planetas': ['a row of rocky planets (Mercury, Earth, Mars) next to a row of giant gas planets (Jupiter, Saturn, Uranus)', 'Planetas rochosos e planetas gasosos'],
+  'Relacione a tecnologia': ['a satellite orbiting Earth and a rover exploring the surface of Mars', 'Satélite e sonda espacial'],
+  'Peso = massa': ['an astronaut standing on Earth and an astronaut standing on the Moon, with a bathroom scale for each', 'Pesar na Terra e na Lua'],
+  'Na Lua (g': ['an astronaut standing on the Moon next to a scale', 'Astronauta na Lua'],
+  'P = m': ['an astronaut on Mars next to a scale, red rocky landscape', 'Astronauta em Marte'],
+  'Essa mesma pessoa em Marte': ['an astronaut on Mars next to a scale, red rocky landscape', 'Astronauta em Marte'],
+  'Explique por que a MASSA': ['an astronaut jumping on the Moon surface beside a lunar base module', 'Astronauta e base lunar'],
+  'Monte uma proposta de missão': ['a spacecraft approaching the icy moon Europa with Jupiter huge in the background', 'Nave chegando a Europa, lua de Júpiter'],
+  'Cite duas condições': ['a blue-green Earth-like planet with clouds, oceans and a glowing star in the distance', 'Planeta com água e atmosfera'],
+};
+const crypto = require('crypto');
+const chaveImg = p => crypto.createHash('sha1').update(String(p)).digest('hex').slice(0, 12);
+const IMG_LISTA = {};   // chave -> {k, p, alt}
+ALUNOS.forEach(a => a.itens.forEach(q => {
+  const k = Object.keys(IMGS).find(t => q.enunciado.indexOf(t) === 0); if (!k) return;
+  const [p, alt] = IMGS[k], ck = chaveImg(p); q.img = { k: ck, alt }; IMG_LISTA[ck] = { k: ck, p, alt };
+}));
+const imagens = () => Object.values(IMG_LISTA);
+const promptImagem = k => IMG_LISTA[k] ? IMG_LISTA[k].p : null;
+
 /* ---------- consulta ---------- */
 function achar(turma, nome) {
   const t = chaveTurma(turma), n = chaveNome(nome);
@@ -200,4 +289,4 @@ function nomesFaltando(turma, nomesExistentes) {
 }
 function turmasExtras() { return [...new Set(ALUNOS.map(a => a.turma))]; }
 
-module.exports = { achar, nomesFaltando, turmasExtras, chaveTurma, chaveNome, ALUNOS };
+module.exports = { imagens, promptImagem, achar, nomesFaltando, turmasExtras, chaveTurma, chaveNome, ALUNOS };

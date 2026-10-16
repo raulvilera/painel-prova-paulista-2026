@@ -28,6 +28,13 @@
     <button id="go" disabled>Gerar o que falta</button>
     <p class="m"><a href="/">← Painel</a></p>
   </div>
+  <div class="c">
+    <h2 style="margin:0 0 8px;font-size:1.1rem">Imagens das atividades adaptadas (PEI)</h2>
+    <p>Gera com o Nano Banana (Gemini) as imagens que ilustram as questões dos alunos com PEI. São geradas uma vez e ficam guardadas. Sem imagem, a questão aparece normalmente.</p>
+    <p id="resImg" class="m">Verificando…</p>
+    <div class="bar"><i id="pbImg"></i></div>
+    <button id="goImg" disabled>Gerar as imagens que faltam</button>
+  </div>
   <div class="c"><b>Andamento</b><div id="log" class="m"></div></div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
@@ -77,6 +84,23 @@
     log(falta.length ? 'Parou com ' + falta.length + ' faltando. Clique de novo para continuar.' : 'Tudo pronto!');
     $('go').textContent = 'Gerar o que falta'; $('go').disabled = !falta.length;
   }
+  let faltaImg = [];
+  async function verImagens(){
+    const j = await api('imagens'), pronto = j.imagens.filter(x => x.tem).length;
+    faltaImg = j.imagens.filter(x => !x.tem);
+    $('pbImg').style.width = (j.total ? pronto / j.total * 100 : 0) + '%';
+    $('resImg').textContent = pronto + ' de ' + j.total + ' imagens prontas' + (faltaImg.length ? ' · faltam ' + faltaImg.length : ' · tudo pronto!');
+    $('goImg').disabled = !faltaImg.length;
+  }
+  async function gerarImagens(){
+    $('goImg').disabled = true; $('goImg').textContent = 'Gerando…'; let pausa = 2000, seguidas = 0;
+    for (const x of faltaImg.slice()) {
+      try { await api('imagem_gerar', { k: x.k }); log('🖼️ ' + x.alt); seguidas = 0; pausa = Math.max(2000, pausa - 1000); }
+      catch (e) { seguidas++; log('✗ ' + x.alt + ' (' + String(e.message).slice(0, 80) + ')'); pausa = Math.min(60000, pausa * 2); if (seguidas >= 4) { log('Parou: várias falhas seguidas. Confira a chave GEMINI_API_KEY e o limite da IA, e clique de novo.'); break; } }
+      await verImagens().catch(() => {}); await esperar(pausa);
+    }
+    await verImagens().catch(() => {}); $('goImg').textContent = 'Gerar as imagens que faltam';
+  }
   (async function(){
     if (!window.supabase) { $('res').textContent = 'Não foi possível carregar o login. Atualize a página.'; return; }
     const sb = window.supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, detectSessionInUrl: false, flowType: 'implicit' } });
@@ -85,6 +109,7 @@
     token = data.session.access_token;
     try { await verificar(); } catch (e) { $('res').textContent = 'Erro: ' + e.message; }
     $('go').onclick = gerar;
+    try { await verImagens(); $('goImg').onclick = gerarImagens; } catch (e) { $('resImg').textContent = 'Erro: ' + e.message; }
   })();
 })();
 </script>

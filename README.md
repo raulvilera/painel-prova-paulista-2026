@@ -38,3 +38,7 @@ O painel "Planejamento de aulas" distribui as aulas do material digital do 4º b
 ## Atividade individual adaptada (PEI)
 
 Na "Atividade individual" (6º ao 9º ano), o aluno com Plano Educacional Individualizado abre a versão adaptada pelo fluxo normal (turma + nome): nenhuma lista mostra quem tem PEI. As questões e os gabaritos ficam só no servidor (`api/_pei.js`), sem diagnóstico; a tela recebe apenas opções de acessibilidade: uma questão por vez, agenda visual, letra maior, leitura em voz alta, ditado de resposta, pausas curtas, glossário e retorno acolhedor. Há questões de ligar/completar e de colocar em ordem, com acerto parcial. Para incluir ou ajustar um aluno, edite `api/_pei.js` (perfil `P.*` + lista de questões). O Ensino Médio (2ª série) ainda não tem essa versão.
+
+### Imagens das atividades adaptadas (Nano Banana)
+
+As questões adaptadas podem ter uma ilustração (sem texto) gerada pelo Nano Banana (API Gemini). Rode `supabase/indiv_imagens.sql` uma vez no Supabase; depois, logado no painel, abra `/atividade-individual/preparar/` e use "Gerar as imagens que faltam". Usa a mesma `GEMINI_API_KEY` da Vercel; o modelo pode ser trocado com `MODELO_IMAGEM` (padrão `gemini-nano-banana-2.1`; reserva `gemini-2.5-flash-image`). Sem imagem, a questão aparece normalmente.
