@@ -48,3 +48,9 @@ Cada questão adaptada tem uma lista de artigos da Wikipédia (em `api/_pei.js`,
 
 ### Simulado SARESP adaptado (PEI, Fundamental)
 `api/_pei-sim.js` tem o Simulado adaptado de cada aluno com PEI (mesmas habilidades do Simulado da série, formatos e acessibilidade do PEI). Na página do Simulado, ao escolher o nome, o servidor responde só "adaptada: sim/não" (`/api/individual?acao=adaptada&modo=simulado`); quem tem versão é levado a `/atividade-individual/?modo=simulado`. As respostas ficam em `indiv_respostas` com status "… · simulado adaptado". O projeto do Simulado precisa do rewrite `/api/individual` (já em `simulado/vercel.json`).
+
+
+## 8º Ano A: lista oficial e aluna em russo
+- `api/_roster.js`: lista oficial (nº e nome) do 8º A, usada no menu de nomes da atividade individual; `simulado/index.html` tem a mesma lista (`R8A`).
+- Zlata: `api/_pei-ru.js` (atividade e Simulado em russo, cada questão com espelho em português `pt`), `atividade-individual/i18n-ru.js` (interface em russo). A IA corrige pelo espelho em português e o professor recebe a resposta traduzida + original em russo.
+- Simulado: o Apps Script (`apps-script/simulado/ARQUIVO-UNICO.gs`) também precisa da lista nova (reimplantar; se existir a aba `Alunos_Simulado`, atualizá-la).

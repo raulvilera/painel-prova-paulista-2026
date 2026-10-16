@@ -109,6 +109,9 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
 
   function limpar(){ fN.disabled = true; fN.innerHTML = '<option value="">Escolha a turma primeiro</option>'; fNum.value = ''; fRa.value = ''; fRa.readOnly = true; }
   const codGuardado = () => { try { return sessionStorage.getItem('cod_' + fT.value) || ''; } catch (e) { return ''; } };
+  const R8A = '1 ALICE CARDOSO DE ALCANTARA|3 ANA LUIZA VALENCA PAIVA|5 BRYAN DINIZ SILVA|6 CARLOS EDUARDO MENEZES MACHADO|7 EVANDRO CUTOLO TEIXEIRA|9 GABRIELA SANTOS COSTA|11 GUILHERME CARMO RODRIGUES|12 GUSTAVO HENRIQUE DA SILVA|13 ISAAC FERNANDES DE ANDRADE|15 KELVIN DUARTE GONCALVES|16 LAURA VITÓRIA ROCHA|18 LETICIA CUSTÓDIO LIMA|19 LUCAS EDUARDO DA SILVA SANTANA|20 MATHEUS KAUÃ DOS SANTOS NASCIMENTO|21 MAYARA CAETANO DE OLIVEIRA PINA|22 MIGUEL LIMA DE MESQUITA|24 NICOLAS ROCHA SILVA|25 PAOLLA MICHELLINE DOS SANTOS MARQUES|27 PEDRO HENRIQUE CORREA DE BRITO|28 PEDRO LEONARDO DE ANDRADE MARQUES|29 RAFAEL HENRIQUE SIQUEIRA BERNARDES ZIA|30 RAPHAEL MATHIAS NUNES MIRANDA|34 SAMUEL ALVES DA COSTA|35 SOFIA AZEREDO CUBAS|36 SOPHIA LACERDA ANDRADE|37 THAYLLA DUANNY VENANCIO SCAQUITO|38 THAYS RODRIGUES DA SILVA|40 MANOELLA DOS ANJOS SANTOS|41 MARIANA CHARRUA GAIA MION SILVA|42 DIOGO DA SILVA VELOSO|43 QUÉZIA DO ESPIRITO SANTO ROBERTI|44 KEMILLYN ANDRADE DE SOUZA SILVA|45 KAUAN HENRIQUE DE ARAUJO SILVA|46 ZLATA EVGENIEVNA SAFOROVA'.split('|').map(l => { const m = /^(\d+) (.+)$/.exec(l); return { n: +m[1], nome: m[2] }; });   // lista oficial do 8º Ano A (sem RA)
+  const semAc = x => String(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase().replace(/\s+/g, ' ').trim();
+  const mesclar = (id, al) => id !== '8º Ano A' ? al : R8A.map(r => { const o = (al || []).find(x => semAc(x.nome) === semAc(r.nome)); return { n: r.n, nome: r.nome, ra: o && o.ra ? o.ra : '' }; });
   function carregarNomes(t, cod) {
     const sel = fN.value;
     fN.disabled = true; fN.innerHTML = '<option value="">Carregando nomes… (pode levar até 30 segundos na primeira vez; leia as questões enquanto isso)</option>';
@@ -116,6 +119,7 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
       .catch(e => /api desconhecida/.test(e.message) ? api({ api: 'turma', id: t.id }) : Promise.reject(e))
       .then(d => {
         if (fT.value !== t.id) return;
+        d = Object.assign({}, d, { alunos: mesclar(t.id, d.alunos) });
         D = { alunos: d.alunos, codOk: !!d.codOk };
         fN.disabled = false;
         fN.innerHTML = '<option value="">Selecione o seu nome</option>' + d.alunos.slice().sort((a,b) => a.nome.localeCompare(b.nome,'pt'))

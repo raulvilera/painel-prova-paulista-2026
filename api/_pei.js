@@ -307,8 +307,14 @@ function nomesFaltando(turma, nomesExistentes) {
 }
 function turmasExtras() { return [...new Set(ALUNOS.map(a => a.turma))]; }
 
+/* ---------- Zlata (8º A): tudo em russo ---------- */
+const RU = require('./_pei-ru.js')({ O, VF, AS, OR, DI });
+const FLAGS_RU = { lang: 'ru', umPorVez: true, agenda: true, fonte: 1.1, voz: true, gentil: true, semPressa: true };
+ALUNOS.push({ turma: '8A', nome: 'ZLATA EVGENIEVNA SAFOROVA', flags: FLAGS_RU, desc: 'Энергия: превращения, источники и электрические цепи', itens: RU.atividade });
+
 /* ---------- Simulado SARESP adaptado ---------- */
 const SIMULADO = require('./_pei-sim.js')({ O, VF, AS, OR, DI }).map(s => ({ turma: chaveTurma(s.turma), nome: s.nome, desc: s.desc, itens: s.itens }));
+SIMULADO.push({ turma: '8A', nome: 'ZLATA EVGENIEVNA SAFOROVA', desc: 'SARESP: энергия и электричество', itens: RU.simulado });
 SIMULADO.forEach(a => a.itens.forEach(q => {
   const [spec, alt] = [q.imgc, q.imgalt]; if (!spec) return; const ck = chaveImg(spec); q.ilus = { spec, alt, k: ck }; IMG_LISTA[ck] = { k: ck, cand: spec.split('|'), alt };
 }));

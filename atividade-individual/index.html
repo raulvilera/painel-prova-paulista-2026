@@ -148,6 +148,10 @@
   let Q = [], resp = [];
   const URLP = new URLSearchParams(location.search), MODO = URLP.get('modo') === 'simulado' ? 'simulado' : '';
   if (MODO) { document.title = 'Simulado SARESP adaptado · Ciências'; const h = document.querySelector('header.cab h1'); if (h) h.textContent = 'Simulado SARESP · Ciências'; }
+  let LANG = URLP.get('lang') === 'ru' ? 'ru' : '';   // 'ru': a interface e as questões são em russo (a aluna é russa)
+  const tr = x => LANG === 'ru' && window.RU ? window.RU.t(x) : x;
+  function usarRusso(){ if (LANG === 'ru' && window.RU) return Promise.resolve(); LANG = 'ru'; return new Promise(ok => { const sc = document.createElement('script'); sc.src = 'i18n-ru.js'; sc.onload = () => { window.RU.ativar(); ok(); }; sc.onerror = ok; document.head.appendChild(sc); }); }
+  if (LANG === 'ru') { const sc = document.createElement('script'); sc.src = 'i18n-ru.js'; sc.onload = () => window.RU.ativar(); document.head.appendChild(sc); }
   const espera = ms => new Promise(r => setTimeout(r, ms));
   async function chama(opt, q){
     let ult;
@@ -185,10 +189,11 @@
     zerar(); if (!fN.value) return;
     const t = fT.value, n = fN.value;
     $('#qs').innerHTML = '<p class="vazio">Preparando as suas questões… na primeira vez pode levar até 1 minuto.</p>';
-    get(Object.assign({ acao: 'atividade', turma: t, nome: n }, MODO ? { modo: MODO } : {})).then(a => {
+    get(Object.assign({ acao: 'atividade', turma: t, nome: n }, MODO ? { modo: MODO } : {})).then(async a => {
       if (fT.value !== t || fN.value !== n) return;
       if (a.aviso || !a.itens.length) { $('#qs').innerHTML = `<p class="vazio">${esc(a.aviso || 'Sem atividade por enquanto.')}</p>`; return; }
       Q = a.itens; resp = Q.map(() => null); AD = a.adapt || null; cur = 0;
+      if (AD && AD.lang === 'ru') await usarRusso();
       $('#sub').textContent = `${a.nome.split(' ')[0]}, estas questões foram preparadas para você · ${Q.length} questões` + (AD && AD.semPressa ? ' · sem pressa, não há limite de tempo' : '');
       const ds = []; Q.forEach(q => { if (ds.indexOf(q.desc) < 0) ds.push(q.desc); });
       $('#desc').hidden = false; $('#desc').innerHTML = '<b>O que vamos estudar:</b><ul style="margin:6px 0 0 18px;padding:0">' + ds.map(d => `<li>${esc(d)}</li>`).join('') + '</ul>';
@@ -213,18 +218,18 @@
     if (q.tipo === 'obj') t += q.alts.map((a, k) => 'Opção ' + 'ABCD'[k] + ': ' + a + '.').join(' ');
     if (q.tipo === 'assoc') t += q.linhas.map(l => l + '.').join(' ') + ' Opções: ' + q.banco.join(', ') + '.';
     if (q.tipo === 'ordem') t += q.passos.join('. ') + '.';
-    return t.replace(/_{2,}/g, 'espaço em branco');
+    return tr(t.replace(/_{2,}/g, 'espaço em branco'));
   }
   function fala(i){
     if (!TTS) return; falaParar();
-    const u = new SpeechSynthesisUtterance(textoDaQuestao(i)); u.lang = 'pt-BR'; u.rate = 0.9; speechSynthesis.speak(u);
+    const u = new SpeechSynthesisUtterance(textoDaQuestao(i)); u.lang = LANG === 'ru' ? 'ru-RU' : 'pt-BR'; u.rate = 0.9; speechSynthesis.speak(u);
   }
   let rec = null, recQ = -1;
   function ditar(i, btn){
     if (!SR) return;
     if (rec) { try { rec.stop(); } catch (e) {} rec = null; document.querySelectorAll('[data-dit]').forEach(b => { b.classList.remove('on'); b.textContent = '🎤 Falar a resposta'; }); if (recQ === i) { recQ = -1; return; } }
     const ta = document.querySelector(`textarea[data-q="${i}"]`); recQ = i;
-    rec = new SR(); rec.lang = 'pt-BR'; rec.continuous = true; rec.interimResults = false;
+    rec = new SR(); rec.lang = LANG === 'ru' ? 'ru-RU' : 'pt-BR'; rec.continuous = true; rec.interimResults = false;
     rec.onresult = ev => { let t = ''; for (let k = ev.resultIndex; k < ev.results.length; k++) if (ev.results[k].isFinal) t += ev.results[k][0].transcript + ' ';
       if (t) { ta.value = (ta.value ? ta.value.replace(/\s*$/, ' ') : '') + t.trim(); resp[i] = ta.value; } };
     rec.onend = () => { btn.classList.remove('on'); btn.textContent = '🎤 Falar a resposta'; rec = null; recQ = -1; };
@@ -323,7 +328,7 @@
   $('#btn').onclick = () => {
     if (!fT.value || !fN.value || !Q.length) return msg('Escolha a sua turma e o seu nome.', false);
     const falta = resp.map((r, i) => respondida(i) ? 0 : i + 1).filter(Boolean);
-    if (falta.length && !confirm((AD && AD.gentil ? 'Ainda dá tempo! Você não respondeu a questão ' : 'Faltam as questões ') + falta.join(', ') + '. ' + (AD && AD.gentil ? 'Quer enviar assim mesmo?' : 'Enviar mesmo assim?'))) return;
+    if (falta.length && !confirm(tr((AD && AD.gentil ? 'Ainda dá tempo! Você não respondeu a questão ' : 'Faltam as questões ') + falta.join(', ') + '. ' + (AD && AD.gentil ? 'Quer enviar assim mesmo?' : 'Enviar mesmo assim?')))) return;
     falaParar(); const b = $('#btn'); b.disabled = true; b.textContent = 'Enviando e corrigindo…';
     post(Object.assign({ acao: 'enviar', turma: fT.value, nome: fN.value, respostas: resp }, MODO ? { modo: MODO } : {})).then(r => {
       enviado = true; b.textContent = 'Respostas enviadas ✓';
