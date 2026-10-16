@@ -53,6 +53,8 @@
   .foto{margin:10px 0 6px;border-radius:12px;overflow:hidden;border:1px solid var(--linha);background:#fff}
   .foto img{display:block;width:100%;max-height:340px;object-fit:cover;background:#E8ECE8}
   .q .foto img{object-fit:contain;background:#fff;max-height:340px}
+  .foto .ph{display:none;padding:26px 10px;text-align:center;color:var(--suave)}
+  .foto.carr .ph{display:block}.foto.carr img{height:0;opacity:0}
   .foto figcaption{font-size:.82rem;color:var(--suave);padding:6px 10px}
   .foto figcaption a{color:inherit}
   .codra{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.85rem;color:var(--suave)}
@@ -236,7 +238,7 @@
         <div class="top"><span class="num">Questão ${i+1}</span><span class="tag">${ROT[q.tipo] || 'Questão'}</span>${AD && AD.desafio && q.tipo === 'dis' ? '<span class="tag des">Desafio</span>' : ''}</div>
         <p class="enun">${esc(q.enunciado)}</p>
         ${figura(q.figura)}
-        ${q.imagem ? `<figure class="foto"><img src="${esc(q.imagem)}" alt="${esc(q.imagemAlt || 'Imagem da questão')}" loading="lazy"></figure>` : ''}
+        ${q.imagem ? `<figure class="foto carr"><span class="ph">🖼️ Preparando a imagem…</span><img src="${esc(q.imagem)}" alt="${esc(q.imagemAlt || 'Imagem da questão')}"></figure>` : ''}
         <p class="cmd">${esc(q.comando)}</p>
         ${AD && AD.voz && !AD.semVoz && TTS ? `<div class="ferr"><button type="button" data-ouvir="${i}">🔊 Ouvir a questão</button></div>` : ''}
         ${corpo(q, i)}
@@ -269,6 +271,10 @@
   $('#prox').onclick = () => irPara(cur + 1);
 
   /* ---------- respostas ---------- */
+  /* imagem gerada na primeira vez (pode levar alguns segundos): mostra "preparando", tenta de novo uma vez e some se não der */
+  document.addEventListener('load', e => { const f = e.target.closest && e.target.closest('.foto'); if (f && e.target.tagName === 'IMG') f.classList.remove('carr'); }, true);
+  document.addEventListener('error', e => { const im = e.target; if (!im || im.tagName !== 'IMG' || !im.closest('.foto')) return;
+    if (!im.dataset.r) { im.dataset.r = '1'; setTimeout(() => { im.src = im.src.split('&r=')[0] + '&r=' + Date.now(); }, 3000); } else { const f = im.closest('.foto'); if (f) f.remove(); } }, true);
   document.addEventListener('click', e => {
     const o = e.target.closest('[data-ouvir]'); if (o) { fala(+o.dataset.ouvir); return; }
     const d = e.target.closest('[data-dit]'); if (d) { ditar(+d.dataset.dit, d); return; }

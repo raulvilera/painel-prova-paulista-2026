@@ -41,4 +41,4 @@ Na "Atividade individual" (6º ao 9º ano), o aluno com Plano Educacional Indivi
 
 ### Imagens das atividades adaptadas (Nano Banana)
 
-As questões adaptadas podem ter uma ilustração (sem texto) gerada pelo Nano Banana (API Gemini). Rode `supabase/indiv_imagens.sql` uma vez no Supabase; depois, logado no painel, abra `/atividade-individual/preparar/` e use "Gerar as imagens que faltam". Usa a mesma `GEMINI_API_KEY` da Vercel; o modelo pode ser trocado com `MODELO_IMAGEM` (padrão `gemini-nano-banana-2.1`; reserva `gemini-2.5-flash-image`). Sem imagem, a questão aparece normalmente.
+As questões adaptadas têm uma ilustração (sem texto) gerada automaticamente pelo Nano Banana (API Gemini): na primeira vez que alguém abre a questão, a imagem é gerada, guardada na tabela `indiv_banco` (chave `img:<id>`) e daí em diante só é servida. Não precisa gerar nada à mão (a página `/atividade-individual/preparar/` tem um botão opcional para pré-gerar tudo). Usa a `GEMINI_API_KEY` da Vercel; o modelo pode ser trocado com `MODELO_IMAGEM` (padrão `gemini-nano-banana-2.1`; reserva `gemini-2.5-flash-image`). Se a geração falhar, a questão aparece sem imagem.

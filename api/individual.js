@@ -80,7 +80,20 @@ async function geminiImagem(cena) {
   }
   throw new Error(ult);
 }
-async function imagensProntas() { try { const r = await rest('indiv_imagens?select=k&limit=1000'); return new Set((r || []).map(x => x.k)); } catch (e) { return new Set(); } }
+/* As imagens ficam na própria tabela indiv_banco (chave "img:<k>", questoes = {mime, dados}): não precisa criar tabela nova. */
+async function imagensProntas() { try { const r = await rest('indiv_banco?select=k&limit=1000&k=like.' + enc('img:*')); return new Set((r || []).map(x => String(x.k).slice(4))); } catch (e) { return new Set(); } }
+const emVoo = {};   // evita gerar a mesma imagem duas vezes ao mesmo tempo
+/* Devolve a imagem; se ainda não existe, o Nano Banana gera agora, guarda e entrega (automático, na primeira vez que alguém abre). */
+async function garantirImagem(k) {
+  const r = await rest('indiv_banco?select=questoes&k=eq.' + enc('img:' + k));
+  if (r && r[0] && r[0].questoes && r[0].questoes.dados) return r[0].questoes;
+  if (!emVoo[k]) emVoo[k] = (async () => {
+    const img = await geminiImagem(PEI.promptImagem(k));
+    await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=ignore-duplicates,return=minimal' }, body: JSON.stringify({ k: 'img:' + k, questoes: { mime: img.mime, dados: img.dados }, liberada: true, gerado_em: new Date().toISOString() }) });
+    return img;
+  })().finally(() => { delete emVoo[k]; });
+  return emVoo[k];
+}
 
 /* Figura opcional (infográfico) de uma questão: a IA só descreve dados simples; aqui o formato é validado e a página desenha. */
 function limpaFigura(f) {
@@ -234,17 +247,16 @@ module.exports = async function individual(req, res) {
     }
     if (req.method === 'GET' && acao === 'imagem') {   // imagem de uma questão adaptada (só chaves conhecidas)
       const k = String(q.k || ''); if (!/^[0-9a-f]{12}$/.test(k) || !PEI.promptImagem(k)) return erro(404, 'Imagem desconhecida.');
-      const r = await rest('indiv_imagens?select=mime,dados&k=eq.' + enc(k)); if (!r || !r[0]) return erro(404, 'Imagem ainda não gerada.');
-      res.setHeader('Cache-Control', 'public, max-age=86400'); res.setHeader('Content-Type', r[0].mime || 'image/png'); res.setHeader('X-Content-Type-Options', 'nosniff');
-      return res.status(200).send(Buffer.from(r[0].dados, 'base64'));
+      let img; try { img = await garantirImagem(k); } catch (e) { return erro(502, 'Não foi possível gerar a imagem agora.'); }
+      res.setHeader('Cache-Control', 'public, max-age=86400'); res.setHeader('Content-Type', img.mime || 'image/png'); res.setHeader('X-Content-Type-Options', 'nosniff');
+      return res.status(200).send(Buffer.from(img.dados, 'base64'));
     }
     if (req.method === 'GET' && acao === 'atividade') {
       const m = await montar(String(q.turma || ''), String(q.nome || ''), true); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
-      const prontas = m.pei ? await imagensProntas() : new Set();
       return ok({ nome: m.aluno, aviso: m.itens.length ? '' : (m.falhou ? 'Estamos preparando suas questões. Tente de novo em 1 minuto.' : 'Ainda não há atividade para você. Fale com o professor.'),
         itens: m.itens.map(i => ({ desc: i.desc, tipo: i.q.tipo, enunciado: i.q.enunciado, comando: i.q.comando, figura: i.q.figura || null, alts: i.q.tipo === 'obj' ? i.q.alts : [],
           linhas: i.q.tipo === 'assoc' ? i.q.itens : undefined, banco: i.q.tipo === 'assoc' ? i.q.banco : undefined, passos: i.q.tipo === 'ordem' ? i.q.passos : undefined,
-          imagem: i.q.img && prontas.has(i.q.img.k) ? '/api/individual?acao=imagem&k=' + i.q.img.k : undefined, imagemAlt: i.q.img ? i.q.img.alt : undefined })),
+          imagem: m.pei && i.q.img ? '/api/individual?acao=imagem&k=' + i.q.img.k : undefined, imagemAlt: i.q.img ? i.q.img.alt : undefined })),
         adapt: m.pei ? Object.assign({}, m.pei.flags) : null });
     }
     if (req.method === 'POST' && acao === 'enviar') {
@@ -301,9 +313,7 @@ module.exports = async function individual(req, res) {
     }
     if (acao === 'imagem_gerar') {
       const k = String(b.k || ''), cena = PEI.promptImagem(k); if (!cena) return erro(400, 'Imagem desconhecida.');
-      const img = await geminiImagem(cena);
-      await rest('indiv_imagens?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify({ k, mime: img.mime, dados: img.dados, criado: new Date().toISOString() }) });
-      return ok({ k });
+      await garantirImagem(k); return ok({ k });
     }
     if (acao === 'status') {
       const r = await rest('indiv_banco?select=k,liberada'); const B = {}; (r || []).forEach(x => B[x.k] = x.liberada);
