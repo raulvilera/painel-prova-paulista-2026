@@ -43,5 +43,5 @@ Na "Atividade individual" (6º ao 9º ano), o aluno com Plano Educacional Indivi
 
 As questões adaptadas têm uma ilustração (sem texto) gerada automaticamente pelo Nano Banana (API Gemini): na primeira vez que alguém abre a questão, a imagem é gerada, guardada na tabela `indiv_banco` (chave `img:<id>`) e daí em diante só é servida. Não precisa gerar nada à mão (a página `/atividade-individual/preparar/` tem um botão opcional para pré-gerar tudo). Usa a `GEMINI_API_KEY` da Vercel; o modelo pode ser trocado com `MODELO_IMAGEM` (padrão `gemini-nano-banana-2.1`; reserva `gemini-2.5-flash-image`). Se a geração falhar, a questão aparece sem imagem.
 
-### Imagens das atividades PEI: banco livre (padrão)
-As fotos vêm do Wikimedia Commons (licenças livres, com crédito do autor na legenda), buscadas automaticamente na primeira abertura e guardadas em `indiv_banco` (`img:<k>`). Não exige chave nem faturamento. Para usar o Nano Banana quando não houver foto, defina `IMAGENS_IA=1` (exige chave Gemini com faturamento).
+### Imagens das atividades PEI
+Cada questão adaptada tem uma lista de artigos da Wikipédia (em `api/_pei.js`, mapa `IMGS`); o servidor usa a imagem de abertura do primeiro artigo com foto de licença livre (Commons), guarda em `indiv_banco` (`img:<k>`) e mostra o crédito do autor. Sem chave nem cota. Para trocar a foto de uma questão, altere os títulos da lista.

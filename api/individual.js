@@ -50,7 +50,43 @@ async function gemini(prompt, temp) {
   throw new Error(ult);
 }
 /* ---------- ilustrações das atividades adaptadas ---------- */
-const ILUS = require('./_ilus.js');   // ilustrações próprias (SVG) das atividades adaptadas
+/* Fotos reais da Wikipédia/Wikimedia Commons: a imagem de abertura do artigo (escolhida por editores), só com licença livre e com crédito. */
+const UA = { 'User-Agent': 'PainelProvaPaulista/1.0 (escola; contato: raulvilera@gmail.com)' };
+const semHtml = h => String(h || '').replace(/<[^>]*>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim().slice(0, 90);
+const JSONF = async u => { const r = await fetch(u, { headers: UA }); if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); };
+async function wikiImagem(cands) {
+  for (const c of cands) {
+    try {
+      const i = c.indexOf(':'), lang = c.slice(0, i), titulo = c.slice(i + 1);
+      const sm = await JSONF('https://' + lang + '.wikipedia.org/api/rest_v1/page/summary/' + enc(titulo.replace(/ /g, '_')) + '?redirect=true');
+      const src = (sm.thumbnail && sm.thumbnail.source) || (sm.originalimage && sm.originalimage.source) || ''; if (!src) continue;
+      if (!/upload\.wikimedia\.org\/wikipedia\/commons\//.test(src)) continue;   // ignora imagens locais (uso justo)
+      const m = /\/commons\/(?:thumb\/)?[0-9a-f]\/[0-9a-f]{2}\/([^/]+)/.exec(src); if (!m) continue;
+      const arq = decodeURIComponent(m[1]);
+      const md = ((((await JSONF('https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=extmetadata&titles=' + enc('File:' + arq))).query || {}).pages || {}));
+      const ii = (Object.values(md)[0] || {}).imageinfo, ex = (ii && ii[0] && ii[0].extmetadata) || {}, lic = semHtml(ex.LicenseShortName && ex.LicenseShortName.value);
+      if (!/^(CC0|CC[ -]BY|Public domain|PD)/i.test(lic) || /\b(NC|ND)\b/i.test(lic)) continue;
+      const url = src.replace(/\/(\d+)px-/, '/960px-');
+      let r = await fetch(url, { headers: UA }); if (!r.ok) r = await fetch(src, { headers: UA }); if (!r.ok) continue;
+      const mime = (r.headers.get('content-type') || '').split(';')[0]; if (!/^image\/(jpeg|png)$/.test(mime)) continue;
+      const buf = Buffer.from(await r.arrayBuffer()); if (buf.length < 4000 || buf.length > 1400000) continue;
+      return { mime, dados: buf.toString('base64'), credito: 'Foto: ' + (semHtml(ex.Artist && ex.Artist.value) || 'autor desconhecido') + ' · ' + lic + ' · Wikimedia Commons', fonte: 'https://commons.wikimedia.org/wiki/File:' + enc(arq) };
+    } catch (e) { /* tenta o próximo candidato */ }
+  }
+  return null;
+}
+const emVoo = {};
+async function garantirImagem(k) {
+  const cands = PEI.candidatos(k), ver = crypto.createHash('sha1').update(cands.join('|')).digest('hex').slice(0, 6);
+  const r = await rest('indiv_banco?select=questoes&k=eq.' + enc('img:' + k));
+  if (r && r[0] && r[0].questoes && r[0].questoes.dados && r[0].questoes.v === ver) return r[0].questoes;
+  if (!emVoo[k]) emVoo[k] = (async () => {
+    const img = await wikiImagem(cands); if (!img) throw new Error('nenhuma foto livre encontrada');
+    await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify({ k: 'img:' + k, questoes: { v: ver, mime: img.mime, dados: img.dados, credito: img.credito, fonte: img.fonte }, liberada: true, gerado_em: new Date().toISOString() }) });
+    return img;
+  })().finally(() => { delete emVoo[k]; });
+  return emVoo[k];
+}
 
 /* Figura opcional (infográfico) de uma questão: a IA só descreve dados simples; aqui o formato é validado e a página desenha. */
 function limpaFigura(f) {
@@ -202,12 +238,19 @@ module.exports = async function individual(req, res) {
       const r = await rest('indiv_plano?select=nome&turma=eq.' + enc(String(q.turma || ''))); const nm = (r || []).map(x => x.nome); PEI.nomesFaltando(String(q.turma || ''), nm).forEach(x => nm.push(x));
       return ok({ nomes: nm.sort((x, y) => x.localeCompare(y, 'pt')) });
     }
+    if (req.method === 'GET' && acao === 'imagem') {   // foto de uma questão adaptada (só chaves conhecidas)
+      const k = String(q.k || ''); if (!/^[0-9a-f]{12}$/.test(k) || !PEI.candidatos(k)) return erro(404, 'Imagem desconhecida.');
+      let img; try { img = await garantirImagem(k); } catch (e) { return erro(502, 'Sem foto para esta questão: ' + String(e.message || e).slice(0, 200)); }
+      if (q.meta) return ok({ credito: img.credito || '', fonte: img.fonte || '' });
+      res.setHeader('Cache-Control', 'public, max-age=86400'); res.setHeader('Content-Type', img.mime || 'image/jpeg'); res.setHeader('X-Content-Type-Options', 'nosniff');
+      return res.status(200).send(Buffer.from(img.dados, 'base64'));
+    }
     if (req.method === 'GET' && acao === 'atividade') {
       const m = await montar(String(q.turma || ''), String(q.nome || ''), true); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
       return ok({ nome: m.aluno, aviso: m.itens.length ? '' : (m.falhou ? 'Estamos preparando suas questões. Tente de novo em 1 minuto.' : 'Ainda não há atividade para você. Fale com o professor.'),
         itens: m.itens.map(i => ({ desc: i.desc, tipo: i.q.tipo, enunciado: i.q.enunciado, comando: i.q.comando, figura: i.q.figura || null, alts: i.q.tipo === 'obj' ? i.q.alts : [],
           linhas: i.q.tipo === 'assoc' ? i.q.itens : undefined, banco: i.q.tipo === 'assoc' ? i.q.banco : undefined, passos: i.q.tipo === 'ordem' ? i.q.passos : undefined,
-          svg: m.pei && i.q.ilus ? ILUS.ilus(i.q.ilus.spec, i.q.ilus.alt) : undefined, imagemAlt: i.q.ilus ? i.q.ilus.alt : undefined })),
+          imagem: m.pei && i.q.ilus ? '/api/individual?acao=imagem&k=' + i.q.ilus.k : undefined, imagemAlt: i.q.ilus ? i.q.ilus.alt : undefined })),
         adapt: m.pei ? Object.assign({}, m.pei.flags) : null });
     }
     if (req.method === 'POST' && acao === 'enviar') {
