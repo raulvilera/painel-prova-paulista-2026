@@ -2,6 +2,7 @@
    Variáveis na Vercel: SUPABASE_URL, SUPABASE_SERVICE_KEY, GEMINI_API_KEY (opcional MODELO_IA). O gabarito e o nível nunca saem para o aluno. */
 const CAT = require('./_catalogo-indiv.js');
 const PEI = require('./_pei.js');   // atividades adaptadas (PEI); só no servidor
+const AUTOIMG = require('./_img-auto.js');   // foto ligada ao enunciado (demais alunos)
 const ROSTER = require('./_roster.js');   // listas oficiais de turma
 const crypto = require('crypto');
 let BANCO = {}; try { BANCO = require('./_banco-indiv.js'); } catch (e) { BANCO = {}; }
@@ -233,7 +234,7 @@ async function montar(turma, nome, gerar, modo) {
     if (it.t === 'b4') { const base = niv <= 1 ? 0 : 2; add(objs[base], 'b4'); if (primB4) { add(dis[niv <= 1 ? 0 : 3], 'b4'); primB4 = false; } }
     else { const e = ESC[niv]; e.o.forEach(i => add(objs[i], 'gap')); e.d.forEach(i => add(dis[i], 'gap')); }
   });
-  return { aluno: lin.nome, itens: out, falhou };
+  return { aluno: lin.nome, itens: AUTOIMG.aplicar(out), falhou };
 }
 
 module.exports = async function individual(req, res) {
@@ -269,7 +270,7 @@ module.exports = async function individual(req, res) {
       return ok({ nome: m.aluno, aviso: m.itens.length ? '' : (m.falhou ? 'Estamos preparando suas questões. Tente de novo em 1 minuto.' : 'Ainda não há atividade para você. Fale com o professor.'),
         itens: m.itens.map(i => ({ desc: i.desc, tipo: i.q.tipo, enunciado: i.q.enunciado, comando: i.q.comando, figura: i.q.figura || null, alts: i.q.tipo === 'obj' ? i.q.alts : [],
           linhas: i.q.tipo === 'assoc' ? i.q.itens : undefined, banco: i.q.tipo === 'assoc' ? i.q.banco : undefined, passos: i.q.tipo === 'ordem' ? i.q.passos : undefined,
-          imagem: m.pei && i.q.ilus ? '/api/individual?acao=imagem&k=' + i.q.ilus.k : undefined, imagemAlt: i.q.ilus ? i.q.ilus.alt : undefined })),
+          imagem: i.q.ilus ? '/api/individual?acao=imagem&k=' + i.q.ilus.k : undefined, imagemAlt: i.q.ilus ? i.q.ilus.alt : undefined, imagemOpc: i.q.imgOpc ? true : undefined })),
         adapt: m.pei ? Object.assign({}, m.pei.flags) : null });
     }
     if (req.method === 'POST' && acao === 'enviar') {

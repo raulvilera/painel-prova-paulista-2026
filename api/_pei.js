@@ -319,5 +319,6 @@ SIMULADO.push({ turma: '8A', nome: 'ZLATA EVGENIEVNA SAFOROVA', desc: 'SARESP: Ñ
 SIMULADO.forEach(a => a.itens.forEach(q => {
   const [spec, alt] = [q.imgc, q.imgalt]; if (!spec) return; const ck = chaveImg(spec); q.ilus = { spec, alt, k: ck }; IMG_LISTA[ck] = { k: ck, cand: spec.split('|'), alt };
 }));
-const candidatos = k => IMG_LISTA[k] ? IMG_LISTA[k].cand : null;
+const AUTO = require('./_img-auto.js');
+const candidatos = k => IMG_LISTA[k] ? IMG_LISTA[k].cand : AUTO.candidatos(k);
 module.exports = { candidatos, achar, nomesFaltando, turmasExtras, chaveTurma, chaveNome, ALUNOS };
