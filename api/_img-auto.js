@@ -6,6 +6,7 @@ const MAX = 8;
 const chaveImg = p => crypto.createHash('sha1').update(String(p)).digest('hex').slice(0, 12);
 const R = (re, spec, alt) => ({ re: new RegExp('\\b(?:' + re + ')'), spec, alt, k: chaveImg(spec) });
 const REGRAS = [
+  R('mao bionica|protese|acessibilidade', 'en:Prosthesis|en:Bionics', 'Prótese'),
   // astronomia
   R('eclipse solar', 'en:Solar eclipse|en:Eclipse', 'Eclipse solar'), R('eclipse lunar', 'en:Lunar eclipse|en:Eclipse', 'Eclipse lunar'), R('eclips', 'en:Eclipse|en:Solar eclipse', 'Eclipse'),
   R('fases? da lua|lua (nova|cheia|crescente|minguante)', 'en:Lunar phase', 'Fases da Lua'),
@@ -65,7 +66,7 @@ const candidatos = k => POR_K[k] ? POR_K[k].spec.split('|') : null;
 function aplicar(itens) {
   const usadas = new Set(); let n = 0;
   return itens.map(it => {
-    const q = it.q; if (n >= MAX || q.ilus || q.figura) return it;
+    const q = it.q; if (n >= MAX || q.ilus) return it;
     const acha = txt => { let b = null, bn = 0;   // vence o assunto mais citado no enunciado (empate: a regra mais específica, que vem antes)
       REGRAS.forEach(r => { if (usadas.has(r.k)) return; const c = (txt.match(new RegExp(r.re.source, 'g')) || []).length; if (c > bn) { b = r; bn = c; } }); return b; };
     const r = acha(norm(q.enunciado + ' ' + (q.comando || ''))) || acha(norm(it.desc));   // 1º o enunciado; se ele não citar um assunto, o tema da habilidade que a questão avalia
