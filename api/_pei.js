@@ -309,7 +309,8 @@ function turmasExtras() { return [...new Set(ALUNOS.map(a => a.turma))]; }
 
 /* ---------- Zlata (8º A): tudo em russo ---------- */
 const RU = require('./_pei-ru.js')({ O, VF, AS, OR, DI });
-const FLAGS_RU = { lang: 'ru', umPorVez: true, agenda: true, fonte: 1.1, voz: true, gentil: true, semPressa: true };
+const FLAGS_RU = { lang: 'ru', voz: true, gentil: true, semPressa: true };   // todas as questões na mesma página, como nos demais alunos
+RU.atividade.forEach(q => { if (!q.imgc) return; const ck = chaveImg(q.imgc); q.ilus = { spec: q.imgc, alt: q.imgalt, k: ck }; IMG_LISTA[ck] = { k: ck, cand: q.imgc.split('|'), alt: q.imgalt }; });
 ALUNOS.push({ turma: '8A', nome: 'ZLATA EVGENIEVNA SAFOROVA', flags: FLAGS_RU, desc: 'Энергия: превращения, источники и электрические цепи', itens: RU.atividade });
 
 /* ---------- Simulado SARESP adaptado ---------- */

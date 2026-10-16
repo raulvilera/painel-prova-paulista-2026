@@ -41,5 +41,15 @@ module.exports = function ({ O, AS, OR, DI }) {
     par(DI, ['Назови одно правило безопасности при работе с электричеством и объясни, почему оно важно.', 'Exemplos: não usar aparelhos com as mãos molhadas, não colocar objetos metálicos na tomada, não mexer em fios desencapados; o motivo é evitar choque elétrico, que pode causar queimaduras e ser fatal.', ['uma regra de segurança', 'evitar choque elétrico'], CD],
            ['Cite uma regra de segurança ao lidar com eletricidade e explique por que ela é importante.', 'Exemplos: não usar aparelhos com as mãos molhadas, não colocar objetos metálicos na tomada, não mexer em fios desencapados; o motivo é evitar choque elétrico, que pode causar queimaduras e ser fatal.', ['uma regra de segurança', 'evitar choque elétrico'], CDp]),
   ];
+  const FOTO = (L, f) => f.forEach((x, i) => { if (x) { L[i].imgc = x[0]; L[i].imgalt = x[1]; } });   // foto real (Wikipédia/Commons) ligada ao enunciado
+  FOTO(atividade, [
+    ['en:Hydroelectricity|en:Hoover Dam', 'Гидроэлектростанция'], ['en:Renewable energy|en:Wind power', 'Источники энергии'], ['en:Static electricity|en:Triboelectric effect', 'Статическое электричество'],
+    ['en:Incandescent light bulb|en:Electric light', 'Электрическая лампочка'], ['en:Electrical conductor|en:Copper', 'Проводник — медь'], ['en:Electric power transmission|en:Transmission tower', 'Линия электропередачи'],
+    ['en:Series and parallel circuits', 'Электрическая цепь'], ['en:Electric shock|en:Electrical injury', 'Электричество и безопасность'], ['en:Christmas lights|en:String lights', 'Гирлянда'],
+  ]);
+  FOTO(simulado, [
+    ['en:Magnet|en:Magnetism', 'Магнит'], ['en:Coal|en:Coal mining', 'Уголь'], ['en:Electric fan|en:Loudspeaker', 'Электроприборы'],
+    ['en:Battery (electricity)|en:Electric battery', 'Батарейки'], ['en:Three Gorges Dam|en:Hydroelectricity', 'Плотина гидроэлектростанции'], ['en:Electrical wiring|en:Power outlet', 'Электрическая розетка'],
+  ]);
   return { atividade, simulado };
 };
