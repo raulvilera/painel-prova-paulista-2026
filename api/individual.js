@@ -60,15 +60,16 @@ async function wikiImagem(cands, why) {
       const i = c.indexOf(':'), lang = c.slice(0, i), titulo = c.slice(i + 1);
       const sm = await JSONF('https://' + lang + '.wikipedia.org/api/rest_v1/page/summary/' + enc(titulo.replace(/ /g, '_')) + '?redirect=true');
       const src = (sm.thumbnail && sm.thumbnail.source) || (sm.originalimage && sm.originalimage.source) || ''; if (!src) { why.push(c + ': sem imagem'); continue; }
-      if (!/upload\.wikimedia\.org\/wikipedia\/commons\//.test(src)) { why.push(c + ': imagem não livre'); continue; }   // ignora imagens locais (uso justo)
-      const m = /\/commons\/(?:thumb\/)?[0-9a-f]\/[0-9a-f]{2}\/([^/]+)/.exec(src); if (!m) { why.push(c + ': url?'); continue; }
-      const arq = decodeURIComponent(m[1]);
+      let pth; try { pth = new URL(src).pathname.split('/').filter(Boolean); } catch (e) { why.push(c + ': url inválida ' + src.slice(0, 80)); continue; }
+      const arq = decodeURIComponent(pth.includes('thumb') ? pth[pth.length - 2] : pth[pth.length - 1] || '');
+      if (!arq) { why.push(c + ': sem nome de arquivo em ' + src.slice(0, 90)); continue; }
       const md = ((((await JSONF('https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=extmetadata&titles=' + enc('File:' + arq))).query || {}).pages || {}));
       const ii = (Object.values(md)[0] || {}).imageinfo, ex = (ii && ii[0] && ii[0].extmetadata) || {}, lic = semHtml(ex.LicenseShortName && ex.LicenseShortName.value);
-      if (!/^(CC0|CC[ -]BY|Public domain|PD)/i.test(lic) || /\b(NC|ND)\b/i.test(lic)) { why.push(c + ': licença ' + (lic || '?')); continue; }
+      if (!lic) { why.push(c + ': arquivo ' + arq.slice(0, 40) + ' fora do Commons'); continue; }
+      if (!/^(CC0|CC[ -]BY|Public domain|PD)/i.test(lic) || /\b(NC|ND)\b/i.test(lic)) { why.push(c + ': licença ' + lic); continue; }
       const url = src.replace(/\/(\d+)px-/, '/960px-');
       let r = await fetch(url, { headers: UA }); if (!r.ok) r = await fetch(src, { headers: UA }); if (!r.ok) { why.push(c + ': download HTTP ' + r.status); continue; }
-      const mime = (r.headers.get('content-type') || '').split(';')[0]; if (!/^image\/(jpeg|png)$/.test(mime)) { why.push(c + ': tipo ' + mime); continue; }
+      const mime = (r.headers.get('content-type') || '').split(';')[0]; if (!/^image\/(jpeg|png|webp)$/.test(mime)) { why.push(c + ': tipo ' + mime); continue; }
       const buf = Buffer.from(await r.arrayBuffer()); if (buf.length < 4000 || buf.length > 1400000) { why.push(c + ': tamanho ' + buf.length); continue; }
       return { mime, dados: buf.toString('base64'), credito: 'Foto: ' + (semHtml(ex.Artist && ex.Artist.value) || 'autor desconhecido') + ' · ' + lic + ' · Wikimedia Commons', fonte: 'https://commons.wikimedia.org/wiki/File:' + enc(arq) };
     } catch (e) { why.push(c + ': ' + String(e.message || e).slice(0, 60)); }
