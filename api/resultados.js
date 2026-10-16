@@ -37,6 +37,7 @@ module.exports = async function resultados(req, res) {
     if (fonte === 'individual') {
       const rows = await rest('indiv_respostas?select=id,criado,turma,nome,itens,acertos,total_obj,nota,status&order=criado.asc&limit=5000');
       const meta = {}; rows.forEach(r => (r.itens || []).forEach(i => { const c = CAT[i.k]; if (c && !meta[i.k]) meta[i.k] = { serie: c.serie, bim: c.bim, desc: c.desc, hab: c.hab, ae: c.habTxt }; }));
+      if (rows.some(r => (r.itens || []).some(i => i.k === 'pei'))) meta.pei = { serie: '', bim: '4', desc: 'Atividade adaptada (PEI)', hab: '', ae: 'Atividade adaptada ao plano individual' };
       const plano = await rest('indiv_plano?select=turma,nome&limit=2000');
       const roster = {}; plano.forEach(p => { (roster[p.turma] = roster[p.turma] || []).push(p.nome); });
       return out(200, { ok: true, rows, meta, roster });

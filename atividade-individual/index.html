@@ -8,7 +8,7 @@
 <style>
   :root{--verde:#145A32;--fundo:#F3F6F2;--cartao:#FFFFFF;--tinta:#1B2420;--suave:#5A6660;--linha:#D5DCD7}
   *{box-sizing:border-box}
-  body{margin:0;min-height:100vh;background:#1E5FA8 linear-gradient(180deg,#0A2150 0%,#164A94 45%,#5BA3E0 100%) fixed;color:var(--tinta);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  body{margin:0;min-height:100vh;background:#1E5FA8 linear-gradient(180deg,#0A2150 0%,#164A94 45%,#5BA3E0 100%) fixed;color:var(--tinta);font:1rem/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
   .wrap{max-width:880px;margin:0 auto;padding:16px}
   header.cab{background:var(--verde);color:#fff;border-radius:16px;padding:18px 20px;margin-bottom:16px}
   .esc{font-weight:800;letter-spacing:.03em;font-size:1.1rem}
@@ -62,6 +62,42 @@
   .desc{background:#E8F3EC;border:1px solid #B9DCC5;border-radius:12px;padding:10px 14px;margin-bottom:16px;font-size:.92rem}
   .alternativa.certa{outline:3px solid #1E63B5}
   .feedback{margin-top:8px;font-size:.88rem;color:var(--suave)}
+  /* ---- atividade adaptada (só aparece quando o servidor envia opções de acessibilidade) ---- */
+  .agenda{position:sticky;top:0;z-index:5;background:#fff;border:1px solid var(--linha);border-radius:14px;padding:10px 14px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+  .agenda[hidden]{display:none}
+  .agenda .tx{font-weight:800;margin-bottom:6px}
+  .agenda .pts{display:flex;gap:6px;flex-wrap:wrap}
+  .agenda .pt{width:16px;height:16px;border-radius:50%;border:2px solid #9DB5A6;background:#fff}
+  .agenda .pt.feito{background:#2E7D6B;border-color:#2E7D6B}
+  .agenda .pt.atual{border-color:var(--verde);box-shadow:0 0 0 3px #B9DCC5}
+  .ajuda{background:#E8F3EC;border:1px solid #B9DCC5;border-radius:12px;padding:10px 14px;margin-bottom:14px}
+  .gloss{background:#fff;border:1px solid var(--linha);border-radius:12px;padding:8px 14px;margin-bottom:14px}
+  .gloss summary{font-weight:800;cursor:pointer}.gloss dt{font-weight:800;margin-top:6px}.gloss dd{margin:0 0 4px 0}
+  .ferr{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}
+  .ferr button,.nav button,.pausa button{font:inherit;font-weight:800;border:0;border-radius:12px;padding:12px 18px;cursor:pointer;background:#E8F3EC;color:var(--verde);border:2px solid #9DB5A6;min-height:48px}
+  .ferr button.on{background:#FDECEC;color:#8A1F1F;border-color:#E3A3A3}
+  .nav{display:flex;gap:10px;justify-content:space-between;margin:0 0 16px}
+  .nav button.prim{background:var(--verde);color:#fff;border-color:var(--verde)}
+  .nav button:disabled{opacity:.4;cursor:default}
+  .nav[hidden],.pausa[hidden]{display:none}
+  .pausa{background:#FFF8E1;border:2px solid #F3D27A;border-radius:16px;padding:22px;text-align:center;margin-bottom:16px}
+  .pausa h2{margin:0 0 8px}
+  .q[hidden]{display:none}
+  .assoc{display:grid;gap:10px;margin-top:6px}
+  .assoc .l{display:grid;grid-template-columns:1fr minmax(150px,42%);gap:10px;align-items:center;background:#F6F9F6;border:1px solid var(--linha);border-radius:12px;padding:10px 12px}
+  @media (max-width:560px){.assoc .l{grid-template-columns:1fr}}
+  .assoc select{font:inherit;padding:12px;border:2px solid #9DB5A6;border-radius:10px;background:#fff;color:var(--tinta);min-height:48px}
+  .ordem{display:grid;gap:10px;margin-top:6px}
+  .carta{position:relative;text-align:left;font:inherit;color:var(--tinta);background:#fff;border:2px solid #9DB5A6;border-radius:12px;padding:14px 14px 14px 52px;cursor:pointer;min-height:52px}
+  .carta .n{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:2px dashed #9DB5A6;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--verde)}
+  .carta.esc{background:#145A32;color:#fff;border-color:#145A32}
+  .carta.esc .n{background:#fff;border:2px solid #fff}
+  .ordem-ferr{display:flex;gap:8px;margin-top:8px}
+  .ordem-ferr button{font:inherit;font-weight:700;border:2px solid #9DB5A6;border-radius:10px;padding:8px 14px;background:#fff;cursor:pointer;min-height:44px}
+  .adapt .alternativa{padding:16px 18px;min-height:56px}
+  .adapt textarea{min-height:170px}
+  .desafio .tag.des{background:#EDE7F6;border-color:#B8A4DC;color:#4A2C85}
+  .gentil .sub-ok{color:#145A32;font-weight:800}
 </style>
 </head>
 <body>
@@ -76,7 +112,12 @@
     <div class="nome"><label for="nome">Nome</label><select id="nome" disabled><option value="">Escolha a turma primeiro</option></select></div>
   </section>
   <div class="desc" id="desc" hidden></div>
+  <div class="ajuda" id="ajuda" hidden></div>
+  <details class="gloss" id="gloss" hidden></details>
+  <div class="agenda" id="agenda" hidden aria-live="polite"></div>
+  <div class="pausa" id="pausa" hidden><h2>⏸ Hora de uma pausa</h2><p>Respire fundo e beba um pouco de água. Quando estiver pronto, continue.</p><button type="button" id="pausaOk">Continuar</button></div>
   <div id="qs"></div>
+  <div class="nav" id="nav" hidden><button type="button" id="ant">← Voltar</button><button type="button" class="prim" id="prox">Próxima →</button></div>
   <div class="msg" id="msg" role="status"></div>
   <button class="enviar" id="btn" type="button" hidden>Enviar respostas</button>
 </div>
@@ -105,7 +146,9 @@
   fT.innerHTML = '<option value="">Carregando…</option>'; fT.disabled = true;
   get({ acao: 'turmas' }).then(d => { fT.disabled = false; fT.innerHTML = '<option value="">Selecione</option>' + d.turmas.map(t => `<option>${esc(t)}</option>`).join(''); })
     .catch(e => { fT.innerHTML = '<option value="">Indisponível</option>'; msg('Não foi possível carregar as turmas: ' + falha(e) + '.', false); });
-  function zerar(){ Q = []; resp = []; $('#qs').innerHTML = ''; $('#desc').hidden = true; $('#btn').hidden = true; $('#msg').className = 'msg'; }
+  let AD = null, cur = 0, enviado = false;   // AD = opções de acessibilidade (só para quem tem atividade adaptada)
+  function zerar(){ Q = []; resp = []; AD = null; cur = 0; enviado = false; falaParar(); Object.keys(pausaFeita).forEach(k => delete pausaFeita[k]); $('#qs').innerHTML = ''; $('#desc').hidden = true; $('#btn').hidden = true; $('#msg').className = 'msg';
+    ['ajuda','gloss','agenda','pausa','nav'].forEach(i => $('#' + i).hidden = true); document.documentElement.style.fontSize = ''; document.body.classList.remove('adapt','gentil','desafio'); }
   fT.onchange = () => {
     zerar(); fN.disabled = true; fN.innerHTML = '<option value="">Carregando nomes…</option>';
     if (!fT.value) { fN.innerHTML = '<option value="">Escolha a turma primeiro</option>'; return; }
@@ -122,13 +165,50 @@
     get({ acao: 'atividade', turma: t, nome: n }).then(a => {
       if (fT.value !== t || fN.value !== n) return;
       if (a.aviso || !a.itens.length) { $('#qs').innerHTML = `<p class="vazio">${esc(a.aviso || 'Sem atividade por enquanto.')}</p>`; return; }
-      Q = a.itens; resp = Q.map(() => null);
-      $('#sub').textContent = `${a.nome.split(' ')[0]}, estas questões foram preparadas para você · ${Q.length} questões`;
+      Q = a.itens; resp = Q.map(() => null); AD = a.adapt || null; cur = 0;
+      $('#sub').textContent = `${a.nome.split(' ')[0]}, estas questões foram preparadas para você · ${Q.length} questões` + (AD && AD.semPressa ? ' · sem pressa, não há limite de tempo' : '');
       const ds = []; Q.forEach(q => { if (ds.indexOf(q.desc) < 0) ds.push(q.desc); });
       $('#desc').hidden = false; $('#desc').innerHTML = '<b>O que vamos estudar:</b><ul style="margin:6px 0 0 18px;padding:0">' + ds.map(d => `<li>${esc(d)}</li>`).join('') + '</ul>';
-      desenhar();
+      prepararAdapt(); desenhar();
     }).catch(e => { $('#qs').innerHTML = `<p class="vazio">Não foi possível abrir a atividade: ${esc(falha(e))}.</p>`; });
   };
+
+  /* ---------- adaptação: letra maior, uma questão por vez, agenda, pausas, voz, ditado ---------- */
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition, TTS = 'speechSynthesis' in window;
+  function prepararAdapt(){
+    if (!AD) return;
+    document.body.classList.add('adapt'); if (AD.gentil) document.body.classList.add('gentil'); if (AD.desafio) document.body.classList.add('desafio');
+    if (AD.fonte && AD.fonte > 1) document.documentElement.style.fontSize = (16 * AD.fonte) + 'px';
+    if (AD.ajuda) { const j = $('#ajuda'); j.hidden = false; j.innerHTML = '💬 Se precisar, peça ajuda ao professor ou a um colega.' + (AD.voz && TTS && !AD.semVoz ? ' Toque em <b>🔊 Ouvir</b> para escutar a questão.' : ''); }
+    if (AD.glossario && AD.glossario.length) { const g = $('#gloss'); g.hidden = false; g.innerHTML = '<summary>📖 Glossário (palavras importantes)</summary><dl>' + AD.glossario.map(x => `<dt>${esc(x.t)}</dt><dd>${esc(x.d)}</dd>`).join('') + '</dl>'; }
+    if (AD.agenda) $('#agenda').hidden = false;
+    if (AD.umPorVez) $('#nav').hidden = false;
+  }
+  function falaParar(){ try { if (TTS) speechSynthesis.cancel(); } catch (e) {} }
+  function textoDaQuestao(i){
+    const q = Q[i]; let t = q.enunciado + '. ' + (q.comando || '') + '. ';
+    if (q.tipo === 'obj') t += q.alts.map((a, k) => 'Opção ' + 'ABCD'[k] + ': ' + a + '.').join(' ');
+    if (q.tipo === 'assoc') t += q.linhas.map(l => l + '.').join(' ') + ' Opções: ' + q.banco.join(', ') + '.';
+    if (q.tipo === 'ordem') t += q.passos.join('. ') + '.';
+    return t.replace(/_{2,}/g, 'espaço em branco');
+  }
+  function fala(i){
+    if (!TTS) return; falaParar();
+    const u = new SpeechSynthesisUtterance(textoDaQuestao(i)); u.lang = 'pt-BR'; u.rate = 0.9; speechSynthesis.speak(u);
+  }
+  let rec = null, recQ = -1;
+  function ditar(i, btn){
+    if (!SR) return;
+    if (rec) { try { rec.stop(); } catch (e) {} rec = null; document.querySelectorAll('[data-dit]').forEach(b => { b.classList.remove('on'); b.textContent = '🎤 Falar a resposta'; }); if (recQ === i) { recQ = -1; return; } }
+    const ta = document.querySelector(`textarea[data-q="${i}"]`); recQ = i;
+    rec = new SR(); rec.lang = 'pt-BR'; rec.continuous = true; rec.interimResults = false;
+    rec.onresult = ev => { let t = ''; for (let k = ev.resultIndex; k < ev.results.length; k++) if (ev.results[k].isFinal) t += ev.results[k][0].transcript + ' ';
+      if (t) { ta.value = (ta.value ? ta.value.replace(/\s*$/, ' ') : '') + t.trim(); resp[i] = ta.value; } };
+    rec.onend = () => { btn.classList.remove('on'); btn.textContent = '🎤 Falar a resposta'; rec = null; recQ = -1; };
+    rec.onerror = () => { btn.classList.remove('on'); btn.textContent = '🎤 Falar a resposta'; rec = null; recQ = -1; };
+    btn.classList.add('on'); btn.textContent = '⏹ Parar de gravar'; try { rec.start(); } catch (e) {}
+  }
+
   /* infográfico opcional da questão (tabela, barras ou etapas), desenhado a partir de dados validados no servidor */
   function figura(f){
     if(!f) return '';
@@ -141,43 +221,106 @@
     if(f.tipo === 'etapas') return `<figure class="infog">${cap}<ol class="steps">${f.etapas.map(e => `<li>${esc(e)}</li>`).join('')}</ol></figure>`;
     return '';
   }
+  const ROT = { obj: 'Objetiva', dis: 'Dissertativa', assoc: 'Ligar / completar', ordem: 'Colocar em ordem' };
+  function corpo(q, i){
+    if (q.tipo === 'obj') return `<div class="alts" role="radiogroup" aria-label="Alternativas da questão ${i+1}">${q.alts.map((t, k) => `<button type="button" class="alternativa" role="radio" aria-checked="false" data-q="${i}" data-k="${k}"><span class="l">${'ABCD'[k]}</span><span>${esc(t)}</span></button>`).join('')}</div>`;
+    if (q.tipo === 'assoc') return `<div class="assoc">${q.linhas.map((l, j) => `<div class="l"><span>${esc(l)}</span><select data-q="${i}" data-l="${j}" aria-label="${esc(l)}"><option value="">Escolha…</option>${q.banco.map((b, k) => `<option value="${k}">${esc(b)}</option>`).join('')}</select></div>`).join('')}</div>`;
+    if (q.tipo === 'ordem') return `<div class="ordem" data-ordem="${i}">${q.passos.map((p, k) => `<button type="button" class="carta" data-q="${i}" data-p="${k}"><span class="n"></span>${esc(p)}</button>`).join('')}</div><div class="ordem-ferr"><button type="button" data-desfaz="${i}">↩ Desfazer</button><button type="button" data-zera="${i}">Recomeçar</button></div>`;
+    const dit = AD && AD.ditado && SR && !AD.semVoz ? `<div class="ferr"><button type="button" data-dit="${i}">🎤 Falar a resposta</button></div>` : '';
+    return `${dit}<textarea data-q="${i}" aria-label="Resposta da questão ${i+1}" placeholder="${AD && AD.ditado ? 'Fale no microfone ou escreva aqui.' : 'Escreva sua resposta com as suas palavras.'}"></textarea>`;
+  }
   function desenhar(){
     $('#qs').innerHTML = Q.map((q, i) => `
       <article class="q" id="q${i}">
-        <div class="top"><span class="num">Questão ${i+1}</span><span class="tag">${q.tipo === 'obj' ? 'Objetiva' : 'Dissertativa'}</span></div>
+        <div class="top"><span class="num">Questão ${i+1}</span><span class="tag">${ROT[q.tipo] || 'Questão'}</span>${AD && AD.desafio && q.tipo === 'dis' ? '<span class="tag des">Desafio</span>' : ''}</div>
         <p class="enun">${esc(q.enunciado)}</p>
         ${figura(q.figura)}
         <p class="cmd">${esc(q.comando)}</p>
-        ${q.tipo === 'obj'
-          ? `<div class="alts" role="radiogroup" aria-label="Alternativas da questão ${i+1}">${q.alts.map((t, k) => `<button type="button" class="alternativa" role="radio" aria-checked="false" data-q="${i}" data-k="${k}"><span class="l">${'ABCD'[k]}</span><span>${esc(t)}</span></button>`).join('')}</div>`
-          : `<textarea data-q="${i}" aria-label="Resposta da questão ${i+1}" placeholder="Escreva sua resposta com as suas palavras."></textarea>`}
+        ${AD && AD.voz && !AD.semVoz && TTS ? `<div class="ferr"><button type="button" data-ouvir="${i}">🔊 Ouvir a questão</button></div>` : ''}
+        ${corpo(q, i)}
         <div class="feedback" id="fb${i}"></div>
       </article>`).join('');
-    $('#btn').hidden = false; $('#btn').disabled = false; $('#btn').textContent = 'Enviar respostas';
+    mostrar(0);
   }
+  /* estado visual: questão atual, agenda, botões */
+  function respondida(i){ const r = resp[i]; if (Array.isArray(r)) return r.some(v => v !== null && v !== '' && v !== undefined); return !(r === null || r === undefined || r === ''); }
+  function mostrar(i, ouvir){
+    cur = Math.max(0, Math.min(Q.length - 1, i));
+    const um = AD && AD.umPorVez;
+    Q.forEach((_, k) => { const a = $('#q' + k); if (a) a.hidden = um ? k !== cur : false; });
+    if (AD && AD.agenda) $('#agenda').innerHTML = `<div class="tx">${um ? `Questão ${cur + 1} de ${Q.length}` : `Você tem ${Q.length} questões`}</div><div class="pts" aria-hidden="true">${Q.map((_, k) => `<span class="pt${respondida(k) ? ' feito' : ''}${um && k === cur ? ' atual' : ''}"></span>`).join('')}</div>`;
+    const ult = cur === Q.length - 1;
+    if (um) { $('#ant').disabled = cur === 0; $('#prox').hidden = ult; $('#btn').hidden = !(ult && !enviado); }
+    else $('#btn').hidden = enviado;
+    if (!enviado) { $('#btn').disabled = false; $('#btn').textContent = 'Enviar respostas'; }
+    if (um) { const a = $('#q' + cur); if (a && ouvir !== false) a.scrollIntoView({ behavior: 'smooth', block: 'start' }); if (AD.vozAuto && ouvir !== false && !enviado) fala(cur); }
+  }
+  function irPara(i){
+    falaParar();
+    if (AD && AD.pausaA && i > cur && i % AD.pausaA === 0 && !enviado && !pausaFeita[i]) {   // pausa curta a cada N questões
+      pausaFeita[i] = 1; $('#qs').hidden = true; $('#nav').hidden = true; $('#pausa').hidden = false; $('#pausaOk').onclick = () => { $('#pausa').hidden = true; $('#qs').hidden = false; $('#nav').hidden = false; mostrar(i); }; return;
+    }
+    mostrar(i);
+  }
+  const pausaFeita = {};
+  $('#ant').onclick = () => irPara(cur - 1);
+  $('#prox').onclick = () => irPara(cur + 1);
+
+  /* ---------- respostas ---------- */
   document.addEventListener('click', e => {
-    const b = e.target.closest('.alternativa'); if (!b) return;
+    const o = e.target.closest('[data-ouvir]'); if (o) { fala(+o.dataset.ouvir); return; }
+    const d = e.target.closest('[data-dit]'); if (d) { ditar(+d.dataset.dit, d); return; }
+    const dz = e.target.closest('[data-desfaz]'), zr = e.target.closest('[data-zera]');
+    if (dz || zr) { const i = +(dz ? dz.dataset.desfaz : zr.dataset.zera); if (enviado) return; const r = Array.isArray(resp[i]) ? resp[i] : [];
+      if (dz) r.pop(); else r.length = 0; resp[i] = r.length ? r : null; marcarOrdem(i); mostrar(cur, false); return; }
+    const c = e.target.closest('.carta'); if (c) { if (enviado) return; const i = +c.dataset.q, p = +c.dataset.p; const r = Array.isArray(resp[i]) ? resp[i] : [];
+      if (r.indexOf(p) < 0) { r.push(p); resp[i] = r; marcarOrdem(i); mostrar(cur, false); } return; }
+    const b = e.target.closest('.alternativa'); if (!b || enviado) return;
     const i = +b.dataset.q, k = +b.dataset.k; resp[i] = k;
     document.querySelectorAll(`.alternativa[data-q="${i}"]`).forEach(x => { const on = x === b; x.classList.toggle('selecionada', on); x.setAttribute('aria-checked', on); });
+    if (AD && AD.agenda) mostrar(cur, false);
   });
-  document.addEventListener('input', e => { if (e.target.matches('textarea[data-q]')) resp[+e.target.dataset.q] = e.target.value; });
+  function marcarOrdem(i){
+    const r = Array.isArray(resp[i]) ? resp[i] : [];
+    document.querySelectorAll(`.carta[data-q="${i}"]`).forEach(x => { const pos = r.indexOf(+x.dataset.p); x.classList.toggle('esc', pos >= 0); x.querySelector('.n').textContent = pos >= 0 ? pos + 1 : ''; });
+  }
+  document.addEventListener('input', e => { if (e.target.matches('textarea[data-q]')) { resp[+e.target.dataset.q] = e.target.value; if (AD && AD.agenda) mostrar(cur, false); } });
+  document.addEventListener('change', e => {
+    if (!e.target.matches('select[data-l]') || enviado) return;
+    const i = +e.target.dataset.q, l = +e.target.dataset.l, n = Q[i].linhas.length; const r = Array.isArray(resp[i]) ? resp[i] : new Array(n).fill(null);
+    r[l] = e.target.value === '' ? null : +e.target.value; resp[i] = r; if (AD && AD.agenda) mostrar(cur, false);
+  });
+
+  /* ---------- envio ---------- */
   $('#btn').onclick = () => {
     if (!fT.value || !fN.value || !Q.length) return msg('Escolha a sua turma e o seu nome.', false);
-    const falta = resp.map((r, i) => (r === null || r === '') ? i + 1 : 0).filter(Boolean);
-    if (falta.length && !confirm('Faltam as questões ' + falta.join(', ') + '. Enviar mesmo assim?')) return;
-    const b = $('#btn'); b.disabled = true; b.textContent = 'Enviando e corrigindo…';
+    const falta = resp.map((r, i) => respondida(i) ? 0 : i + 1).filter(Boolean);
+    if (falta.length && !confirm((AD && AD.gentil ? 'Ainda dá tempo! Você não respondeu a questão ' : 'Faltam as questões ') + falta.join(', ') + '. ' + (AD && AD.gentil ? 'Quer enviar assim mesmo?' : 'Enviar mesmo assim?'))) return;
+    falaParar(); const b = $('#btn'); b.disabled = true; b.textContent = 'Enviando e corrigindo…';
     post({ acao: 'enviar', turma: fT.value, nome: fN.value, respostas: resp }).then(r => {
-      b.textContent = 'Respostas enviadas ✓';
+      enviado = true; b.textContent = 'Respostas enviadas ✓';
+      const gent = !!(AD && AD.gentil);
       let oi = 0, di = 0;
       Q.forEach((q, i) => {
+        const fb = $('#fb' + i);
+        if (q.tipo === 'dis') { const nt = (r.notasDis || [])[di++]; if (nt !== '' && nt != null) fb.textContent = gent ? '⭐ Obrigado por responder! Sua resposta foi registrada.' : 'Nota da IA: ' + String(nt).replace('.', ',') + ' de 1'; return; }
+        const g = (r.gabarito || [])[oi++]; if (!g) return;
         if (q.tipo === 'obj') {
-          const g = (r.gabarito || [])[oi++]; if (!g) return;
           const bt = document.querySelector(`.alternativa[data-q="${i}"][data-k="${g.correta}"]`); if (bt) bt.classList.add('certa');
-          $('#fb' + i).textContent = (resp[i] === g.correta ? '✓ Certo! ' : '✗ A correta é a ' + 'ABCD'[g.correta] + '. ') + (g.explicacao || '');
-        } else { const nt = (r.notasDis || [])[di++]; if (nt !== '' && nt != null) $('#fb' + i).textContent = 'Nota da IA: ' + String(nt).replace('.', ',') + ' de 1'; }
+          fb.textContent = (resp[i] === g.correta ? (gent ? '✓ Muito bem! ' : '✓ Certo! ') : (gent ? 'Quase! A resposta certa é a ' : '✗ A correta é a ') + 'ABCD'[g.correta] + (resp[i] === g.correta ? '. ' : '. ')) + (g.explicacao || '');
+        } else if (q.tipo === 'assoc') {
+          const ok = g.correta.filter((v, j) => Array.isArray(resp[i]) && resp[i][j] === v).length;
+          fb.textContent = (ok === g.correta.length ? '✓ Muito bem! ' : (gent ? 'Você acertou ' + ok + ' de ' + g.correta.length + '. Veja o certo: ' : 'Acertos: ' + ok + ' de ' + g.correta.length + '. Certo: ')) + (ok === g.correta.length ? '' : q.linhas.map((l, j) => l.replace(/___/g, '…') + ' → ' + q.banco[g.correta[j]]).join(' · ') + '. ') + (g.explicacao || '');
+        } else if (q.tipo === 'ordem') {
+          const ok = Array.isArray(resp[i]) && g.correta.every((v, j) => resp[i][j] === v);
+          fb.textContent = (ok ? '✓ Muito bem! ' : (gent ? 'Quase! A ordem certa é: ' : 'A ordem certa é: ') + g.correta.map((v, j) => (j + 1) + 'º ' + q.passos[v]).join(' · ') + '. ') + (g.explicacao || '');
+        }
       });
-      document.querySelectorAll('.alternativa, textarea').forEach(x => x.disabled = true);
-      msg(`Pronto, ${fN.value.split(' ')[0]}! Suas respostas foram registradas. Objetivas: ${r.acertos} de ${r.total} corretas.` + (r.notaFinal !== '' && r.notaFinal != null ? ` Nota: ${String(r.notaFinal).replace('.', ',')}.` : ' A correção das dissertativas ficou pendente.'), true);
+      document.querySelectorAll('.alternativa, textarea, select, .carta, [data-dit], [data-desfaz], [data-zera]').forEach(x => x.disabled = true);
+      mostrar(cur, false);
+      const nome1 = fN.value.split(' ')[0];
+      msg(gent ? `Parabéns, ${nome1}! Você terminou a atividade e suas respostas foram registradas. Você acertou ${r.acertos} de ${r.total} questões de marcar, ligar ou ordenar. 🎉`
+        : `Pronto, ${nome1}! Suas respostas foram registradas. Objetivas: ${r.acertos} de ${r.total} corretas.` + (r.notaFinal !== '' && r.notaFinal != null ? ` Nota: ${String(r.notaFinal).replace('.', ',')}.` : ' A correção das dissertativas ficou pendente.'), true);
     }).catch(err => { b.disabled = false; b.textContent = 'Enviar respostas'; msg('Não foi possível enviar: ' + falha(err) + '. Tente de novo.', false); });
   };
 })();

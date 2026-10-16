@@ -28,6 +28,7 @@
         let v = null;
         if (i.tipo === 'obj') v = i.resp === null || i.resp === undefined || i.resp === '' ? 0 : (i.acerto ? 1 : 0);
         else if (typeof i.nota === 'number') v = Math.max(0, Math.min(1, i.nota));
+        else if (typeof i.parcial === 'number') v = Math.max(0, Math.min(1, i.parcial));   // ligar/ordenar (atividade adaptada): acerto parcial vale
         const m = j.meta[CFG.fonte === 'em' ? i.id : i.k] || {};
         const q = { n: m.n || ix + 1, tipo: i.tipo, enun: m.enun || '', cor: m.cor || '', coment: i.comentario || '', nota: typeof i.nota === 'number' ? i.nota : null,
           marcou: i.tipo === 'obj' ? (typeof i.resp === 'number' ? 'ABCDE'[i.resp] : (i.resp || '')) : '', texto: i.tipo === 'dis' ? String(i.resp || i.resposta || '') : '' };

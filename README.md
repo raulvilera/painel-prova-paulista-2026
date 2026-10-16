@@ -34,3 +34,7 @@ O painel pode ser instalado como aplicativo (Android, Chrome/Edge no computador 
 ## Planejamento de aulas
 
 O painel "Planejamento de aulas" distribui as aulas do material digital do 4º bimestre pelo horário do professor (Tarde, Noite e Manhã/2ª DS), de 05/10 a 18/12/2026, pulando feriados e dias sem aula do calendário e sinalizando SARESP, Provão Paulista e semanas de recuperação. Mostra a semana, a sequência de cada turma (com "Não houve aula" para empurrar a sequência e "a turma está na aula nº") e gera o plano quinzenal no modelo da escola, para imprimir ou salvar em PDF. Os ajustes ficam na tabela `planejamento_ajustes` do Supabase, com acesso só do e-mail do professor.
+
+## Atividade individual adaptada (PEI)
+
+Na "Atividade individual" (6º ao 9º ano), o aluno com Plano Educacional Individualizado abre a versão adaptada pelo fluxo normal (turma + nome): nenhuma lista mostra quem tem PEI. As questões e os gabaritos ficam só no servidor (`api/_pei.js`), sem diagnóstico; a tela recebe apenas opções de acessibilidade: uma questão por vez, agenda visual, letra maior, leitura em voz alta, ditado de resposta, pausas curtas, glossário e retorno acolhedor. Há questões de ligar/completar e de colocar em ordem, com acerto parcial. Para incluir ou ajustar um aluno, edite `api/_pei.js` (perfil `P.*` + lista de questões). O Ensino Médio (2ª série) ainda não tem essa versão.
