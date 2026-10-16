@@ -246,12 +246,12 @@ const IMGS = {
   'Coloque os planetas do mais perto': ['en:Solar System', 'Sol e os quatro primeiros planetas'],
   'Complete as frases.': ['en:Earth|en:Moon', 'Sol, Terra e Lua'],
   'Ligue cada astro': ['en:Earth|en:Moon', 'Sol, Terra e Lua'],
-  'Muitos povos indígenas observam': ['pt:Astronomia indígena brasileira|en:Cultural astronomy', 'Povo indígena observando as estrelas'],
+  'Muitos povos indígenas observam': ['en:Archaeoastronomy|en:Cultural astronomy|en:Stonehenge', 'Povo indígena observando as estrelas'],
   'Muitos povos indígenas olham': ['en:Milky Way|en:Night sky', 'Povo indígena observando as estrelas'],
-  'Para que alguns povos indígenas': ['en:Cultural astronomy|en:Archaeoastronomy', 'Povo indígena observando as estrelas'],
-  'A constelação da Ema': ['en:Emu in the sky|pt:Constelações indígenas brasileiras', 'Constelação indígena da Ema no céu'],
-  'Ligue a constelação indígena': ['pt:Constelações indígenas brasileiras|en:Dark cloud constellation', 'Constelação indígena da Ema no céu'],
-  'Cite uma constelação indígena': ['en:Dark cloud constellation|en:Emu in the sky', 'Constelação indígena da Ema'],
+  'Para que alguns povos indígenas': ['en:Stonehenge|en:Archaeoastronomy', 'Povo indígena observando as estrelas'],
+  'A constelação da Ema': ['en:Emu in the sky|en:Dark cloud constellation|en:Milky Way', 'Constelação indígena da Ema no céu'],
+  'Ligue a constelação indígena': ['en:Emu in the sky|en:Dark cloud constellation|en:Milky Way', 'Constelação indígena da Ema no céu'],
+  'Cite uma constelação indígena': ['en:Dark cloud constellation|en:Emu in the sky|en:Milky Way', 'Constelação indígena da Ema'],
   'O Sol é uma estrela': ['en:Sun', 'Sol entre outras estrelas'],
   'A Lua produz luz própria': ['en:Moon', 'Lua refletindo a luz do Sol'],
   'Coloque as fases da Lua': ['en:Lunar phase', 'Fases da Lua'],
@@ -282,7 +282,7 @@ const IMGS = {
   'Explique por que a MASSA': ['en:Apollo program|en:Astronaut', 'Astronauta e base lunar'],
   'Monte uma proposta de missão': ['en:Europa (moon)|en:Europa Clipper', 'Nave chegando a Europa, lua de Júpiter'],
   'Cite duas condições': ['en:Habitability|en:Exoplanet', 'Planeta com água e atmosfera'],
-  'Escolha um povo indígena': ['en:Zodiac|en:Cultural astronomy', 'Céu indígena e constelações do zodíaco'],
+  'Escolha um povo indígena': ['en:Zodiac|en:Constellation', 'Céu indígena e constelações do zodíaco'],
 };
 const crypto = require('crypto');
 const chaveImg = p => crypto.createHash('sha1').update(String(p)).digest('hex').slice(0, 12);
