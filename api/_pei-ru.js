@@ -26,6 +26,11 @@ module.exports = function ({ O, AS, OR, DI }) {
            ['Por que não se deve usar aparelhos elétricos com as mãos molhadas?', 'A água conduz eletricidade e diminui a resistência da pele, aumentando o risco de choque elétrico.', ['água conduz eletricidade', 'risco de choque'], CDp]),
     par(DI, ['Объясни своими словами разницу между последовательным и параллельным соединением. Приведи пример.', 'Em série há um único caminho para a corrente; se um componente falha, todos param. Em paralelo há vários caminhos e cada aparelho funciona de forma independente (ex.: as tomadas da casa).', ['série: um só caminho', 'paralelo: vários caminhos'], CD],
            ['Explique com suas palavras a diferença entre circuito em série e em paralelo. Dê um exemplo.', 'Em série há um único caminho para a corrente; se um componente falha, todos param. Em paralelo há vários caminhos e cada aparelho funciona de forma independente (ex.: as tomadas da casa).', ['série: um só caminho', 'paralelo: vários caminhos'], CDp]),
+    par(O, ['Какой вид энергии есть у движущегося тела?', ['кинетическая', 'потенциальная', 'химическая'], 0, 'Энергия движения называется кинетической.', CR],
+           ['Que tipo de energia tem um corpo em movimento?', ['cinética', 'potencial', 'química'], 0, 'A energia do movimento é a energia cinética.', CP]),
+    par(O, VFr('При параллельном соединении каждый прибор работает независимо от других.', true, 'В параллельной цепи несколько путей, поэтому приборы не зависят друг от друга (как розетки в доме).'), VFp('Em um circuito em paralelo, cada aparelho funciona de forma independente dos outros.', true, 'No circuito em paralelo há vários caminhos; por isso os aparelhos não dependem uns dos outros (como as tomadas da casa).')),
+    par(DI, ['Назови два способа экономить электроэнергию дома и объясни, почему это важно.', 'Exemplos: apagar a luz ao sair, usar lâmpadas LED, desligar aparelhos da tomada, tomar banhos mais curtos com chuveiro elétrico; economizar reduz a conta e o consumo de recursos naturais usados para gerar energia.', ['duas formas de economizar', 'reduz consumo e impacto ambiental'], CD],
+           ['Cite duas formas de economizar energia elétrica em casa e explique por que isso é importante.', 'Exemplos: apagar a luz ao sair, usar lâmpadas LED, desligar aparelhos da tomada, tomar banhos mais curtos com chuveiro elétrico; economizar reduz a conta e o consumo de recursos naturais usados para gerar energia.', ['duas formas de economizar', 'reduz consumo e impacto ambiental'], CDp]),
   ];
 
   const simulado = [
@@ -46,6 +51,7 @@ module.exports = function ({ O, AS, OR, DI }) {
     ['en:Hydroelectricity|en:Hoover Dam', 'Гидроэлектростанция'], ['en:Renewable energy|en:Wind power', 'Источники энергии'], ['en:Static electricity|en:Triboelectric effect', 'Статическое электричество'],
     ['en:Incandescent light bulb|en:Electric light', 'Электрическая лампочка'], ['en:Electrical conductor|en:Copper', 'Проводник — медь'], ['en:Electric power transmission|en:Transmission tower', 'Линия электропередачи'],
     ['en:Series and parallel circuits', 'Электрическая цепь'], ['en:Electric shock|en:Electrical injury', 'Электричество и безопасность'], ['en:Christmas lights|en:String lights', 'Гирлянда'],
+    ['en:Kinetic energy|en:Roller coaster', 'Движущееся тело'], ['en:Power strip|en:AC power plugs and sockets', 'Розетки и вилки'], ['en:LED lamp|en:Compact fluorescent lamp', 'Энергосберегающая лампа'],
   ]);
   FOTO(simulado, [
     ['en:Magnet|en:Magnetism', 'Магнит'], ['en:Coal|en:Coal mining', 'Уголь'], ['en:Electric fan|en:Loudspeaker', 'Электроприборы'],
