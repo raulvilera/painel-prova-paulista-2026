@@ -2,6 +2,7 @@
    Variáveis na Vercel: SUPABASE_URL, SUPABASE_SERVICE_KEY, GEMINI_API_KEY (opcional MODELO_IA). O gabarito e o nível nunca saem para o aluno. */
 const CAT = require('./_catalogo-indiv.js');
 const PEI = require('./_pei.js');   // atividades adaptadas (PEI); só no servidor
+const crypto = require('crypto');
 let BANCO = {}; try { BANCO = require('./_banco-indiv.js'); } catch (e) { BANCO = {}; }
 const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.env.SUPABASE_SERVICE_KEY || '', GKEY = process.env.GEMINI_API_KEY || '';
 const MODELO = process.env.MODELO_IA || 'gemini-3.5-flash-lite';
@@ -109,12 +110,13 @@ async function commonsImagem(termos) {
 }
 async function garantirImagem(k) {
   const r = await rest('indiv_banco?select=questoes&k=eq.' + enc('img:' + k));
-  if (r && r[0] && r[0].questoes && r[0].questoes.dados) return r[0].questoes;
+  const ver = crypto.createHash('sha1').update(PEI.buscaImagem(k).join('|')).digest('hex').slice(0, 6);   // muda se os termos de busca mudarem
+  if (r && r[0] && r[0].questoes && r[0].questoes.dados && r[0].questoes.v === ver) return r[0].questoes;
   if (!emVoo[k]) emVoo[k] = (async () => {
     let img = await commonsImagem(PEI.buscaImagem(k));
     if (!img && process.env.IMAGENS_IA === '1') img = await geminiImagem(PEI.promptImagem(k));   // IA só se a escola ativar (chave paga)
     if (!img) throw new Error('nenhuma foto livre encontrada para esta questão');
-    await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=ignore-duplicates,return=minimal' }, body: JSON.stringify({ k: 'img:' + k, questoes: { mime: img.mime, dados: img.dados, credito: img.credito || '', fonte: img.fonte || '' }, liberada: true, gerado_em: new Date().toISOString() }) });
+    await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify({ k: 'img:' + k, questoes: { v: ver, mime: img.mime, dados: img.dados, credito: img.credito || '', fonte: img.fonte || '' }, liberada: true, gerado_em: new Date().toISOString() }) });
     return img;
   })().finally(() => { delete emVoo[k]; });
   return emVoo[k];
