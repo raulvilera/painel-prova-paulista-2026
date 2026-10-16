@@ -2,7 +2,7 @@
    Sem IA e sem custo: só a tabela abaixo. A foto é baixada na 1ª vez que alguém abre a questão e fica guardada no banco.
    Limites para não pesar: no máximo MAX fotos por atividade, nenhuma foto repetida na mesma atividade, e só quando há correspondência. */
 const crypto = require('crypto');
-const MAX = 6;
+const MAX = 8;
 const chaveImg = p => crypto.createHash('sha1').update(String(p)).digest('hex').slice(0, 12);
 const R = (re, spec, alt) => ({ re: new RegExp('\\b(?:' + re + ')'), spec, alt, k: chaveImg(spec) });
 const REGRAS = [
@@ -68,7 +68,7 @@ function aplicar(itens) {
     const q = it.q; if (n >= MAX || q.ilus || q.figura) return it;
     const acha = txt => { let b = null, bn = 0;   // vence o assunto mais citado no enunciado (empate: a regra mais específica, que vem antes)
       REGRAS.forEach(r => { if (usadas.has(r.k)) return; const c = (txt.match(new RegExp(r.re.source, 'g')) || []).length; if (c > bn) { b = r; bn = c; } }); return b; };
-    const r = acha(norm(q.enunciado + ' ' + (q.comando || '')));   // só o enunciado decide (nada de adivinhar pelo tema)
+    const r = acha(norm(q.enunciado + ' ' + (q.comando || ''))) || acha(norm(it.desc));   // 1º o enunciado; se ele não citar um assunto, o tema da habilidade que a questão avalia
     if (!r) return it;
     usadas.add(r.k); n++;
     return Object.assign({}, it, { q: Object.assign({}, q, { ilus: { spec: r.spec, alt: r.alt, k: r.k }, imgOpc: true }) });
