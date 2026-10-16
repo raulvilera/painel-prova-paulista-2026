@@ -54,24 +54,24 @@ async function gemini(prompt, temp) {
 const UA = { 'User-Agent': 'PainelProvaPaulista/1.0 (escola; contato: raulvilera@gmail.com)' };
 const semHtml = h => String(h || '').replace(/<[^>]*>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim().slice(0, 90);
 const JSONF = async u => { const r = await fetch(u, { headers: UA }); if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); };
-async function wikiImagem(cands) {
+async function wikiImagem(cands, why) {
   for (const c of cands) {
     try {
       const i = c.indexOf(':'), lang = c.slice(0, i), titulo = c.slice(i + 1);
       const sm = await JSONF('https://' + lang + '.wikipedia.org/api/rest_v1/page/summary/' + enc(titulo.replace(/ /g, '_')) + '?redirect=true');
-      const src = (sm.thumbnail && sm.thumbnail.source) || (sm.originalimage && sm.originalimage.source) || ''; if (!src) continue;
-      if (!/upload\.wikimedia\.org\/wikipedia\/commons\//.test(src)) continue;   // ignora imagens locais (uso justo)
-      const m = /\/commons\/(?:thumb\/)?[0-9a-f]\/[0-9a-f]{2}\/([^/]+)/.exec(src); if (!m) continue;
+      const src = (sm.thumbnail && sm.thumbnail.source) || (sm.originalimage && sm.originalimage.source) || ''; if (!src) { why.push(c + ': sem imagem'); continue; }
+      if (!/upload\.wikimedia\.org\/wikipedia\/commons\//.test(src)) { why.push(c + ': imagem não livre'); continue; }   // ignora imagens locais (uso justo)
+      const m = /\/commons\/(?:thumb\/)?[0-9a-f]\/[0-9a-f]{2}\/([^/]+)/.exec(src); if (!m) { why.push(c + ': url?'); continue; }
       const arq = decodeURIComponent(m[1]);
       const md = ((((await JSONF('https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=extmetadata&titles=' + enc('File:' + arq))).query || {}).pages || {}));
       const ii = (Object.values(md)[0] || {}).imageinfo, ex = (ii && ii[0] && ii[0].extmetadata) || {}, lic = semHtml(ex.LicenseShortName && ex.LicenseShortName.value);
-      if (!/^(CC0|CC[ -]BY|Public domain|PD)/i.test(lic) || /\b(NC|ND)\b/i.test(lic)) continue;
+      if (!/^(CC0|CC[ -]BY|Public domain|PD)/i.test(lic) || /\b(NC|ND)\b/i.test(lic)) { why.push(c + ': licença ' + (lic || '?')); continue; }
       const url = src.replace(/\/(\d+)px-/, '/960px-');
-      let r = await fetch(url, { headers: UA }); if (!r.ok) r = await fetch(src, { headers: UA }); if (!r.ok) continue;
-      const mime = (r.headers.get('content-type') || '').split(';')[0]; if (!/^image\/(jpeg|png)$/.test(mime)) continue;
-      const buf = Buffer.from(await r.arrayBuffer()); if (buf.length < 4000 || buf.length > 1400000) continue;
+      let r = await fetch(url, { headers: UA }); if (!r.ok) r = await fetch(src, { headers: UA }); if (!r.ok) { why.push(c + ': download HTTP ' + r.status); continue; }
+      const mime = (r.headers.get('content-type') || '').split(';')[0]; if (!/^image\/(jpeg|png)$/.test(mime)) { why.push(c + ': tipo ' + mime); continue; }
+      const buf = Buffer.from(await r.arrayBuffer()); if (buf.length < 4000 || buf.length > 1400000) { why.push(c + ': tamanho ' + buf.length); continue; }
       return { mime, dados: buf.toString('base64'), credito: 'Foto: ' + (semHtml(ex.Artist && ex.Artist.value) || 'autor desconhecido') + ' · ' + lic + ' · Wikimedia Commons', fonte: 'https://commons.wikimedia.org/wiki/File:' + enc(arq) };
-    } catch (e) { /* tenta o próximo candidato */ }
+    } catch (e) { why.push(c + ': ' + String(e.message || e).slice(0, 60)); }
   }
   return null;
 }
@@ -81,7 +81,7 @@ async function garantirImagem(k) {
   const r = await rest('indiv_banco?select=questoes&k=eq.' + enc('img:' + k));
   if (r && r[0] && r[0].questoes && r[0].questoes.dados && r[0].questoes.v === ver) return r[0].questoes;
   if (!emVoo[k]) emVoo[k] = (async () => {
-    const img = await wikiImagem(cands); if (!img) throw new Error('nenhuma foto livre encontrada');
+    const why = []; const img = await wikiImagem(cands, why); if (!img) throw new Error('nenhuma foto livre encontrada [' + why.join(' | ') + ']');
     await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify({ k: 'img:' + k, questoes: { v: ver, mime: img.mime, dados: img.dados, credito: img.credito, fonte: img.fonte }, liberada: true, gerado_em: new Date().toISOString() }) });
     return img;
   })().finally(() => { delete emVoo[k]; });
@@ -240,7 +240,7 @@ module.exports = async function individual(req, res) {
     }
     if (req.method === 'GET' && acao === 'imagem') {   // foto de uma questão adaptada (só chaves conhecidas)
       const k = String(q.k || ''); if (!/^[0-9a-f]{12}$/.test(k) || !PEI.candidatos(k)) return erro(404, 'Imagem desconhecida.');
-      let img; try { img = await garantirImagem(k); } catch (e) { return erro(502, 'Sem foto para esta questão: ' + String(e.message || e).slice(0, 200)); }
+      let img; try { img = await garantirImagem(k); } catch (e) { return erro(502, 'Sem foto para esta questão: ' + String(e.message || e).slice(0, 500)); }
       if (q.meta) return ok({ credito: img.credito || '', fonte: img.fonte || '' });
       res.setHeader('Cache-Control', 'public, max-age=86400'); res.setHeader('Content-Type', img.mime || 'image/jpeg'); res.setHeader('X-Content-Type-Options', 'nosniff');
       return res.status(200).send(Buffer.from(img.dados, 'base64'));
