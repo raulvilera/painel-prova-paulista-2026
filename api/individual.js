@@ -84,12 +84,37 @@ async function geminiImagem(cena) {
 async function imagensProntas() { try { const r = await rest('indiv_banco?select=k&limit=1000&k=like.' + enc('img:*')); return new Set((r || []).map(x => String(x.k).slice(4))); } catch (e) { return new Set(); } }
 const emVoo = {};   // evita gerar a mesma imagem duas vezes ao mesmo tempo
 /* Devolve a imagem; se ainda não existe, o Nano Banana gera agora, guarda e entrega (automático, na primeira vez que alguém abre). */
+/* Banco livre: Wikimedia Commons (sem chave, sem cota). Só aceita licenças livres e guarda o crédito do autor. */
+const UA = { 'User-Agent': 'PainelProvaPaulista/1.0 (escola; contato: raulvilera@gmail.com)' };
+const semHtml = h => String(h || '').replace(/<[^>]*>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim().slice(0, 80);
+async function commonsImagem(termos) {
+  for (const termo of termos) {
+    const u = 'https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=12&gsrsearch=' + enc(termo + ' filetype:bitmap') +
+      '&prop=imageinfo&iiprop=url|mime|size|extmetadata&iiurlwidth=800';
+    let j; try { const r = await fetch(u, { headers: UA }); if (!r.ok) continue; j = await r.json(); } catch (e) { continue; }
+    const pgs = Object.values((j.query && j.query.pages) || {}).sort((x, y) => (x.index || 0) - (y.index || 0));
+    for (const pg of pgs) {
+      const ii = pg.imageinfo && pg.imageinfo[0]; if (!ii || !/^image\/(jpeg|png)$/.test(ii.mime) || !ii.thumburl || (ii.width || 0) < 400) continue;
+      const md = ii.extmetadata || {}, lic = semHtml(md.LicenseShortName && md.LicenseShortName.value);
+      if (!/^(CC0|CC[ -]BY|Public domain|PD)/i.test(lic) || /\b(NC|ND)\b/i.test(lic)) continue;
+      try {
+        const r = await fetch(ii.thumburl, { headers: UA }); if (!r.ok) continue;
+        const buf = Buffer.from(await r.arrayBuffer()); if (buf.length < 3000 || buf.length > 900000) continue;
+        const autor = semHtml(md.Artist && md.Artist.value) || 'autor desconhecido';
+        return { mime: ii.mime, dados: buf.toString('base64'), credito: 'Foto: ' + autor + ' · ' + lic + ' · Wikimedia Commons', fonte: ii.descriptionurl || '' };
+      } catch (e) { /* tenta a próxima */ }
+    }
+  }
+  return null;
+}
 async function garantirImagem(k) {
   const r = await rest('indiv_banco?select=questoes&k=eq.' + enc('img:' + k));
   if (r && r[0] && r[0].questoes && r[0].questoes.dados) return r[0].questoes;
   if (!emVoo[k]) emVoo[k] = (async () => {
-    const img = await geminiImagem(PEI.promptImagem(k));
-    await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=ignore-duplicates,return=minimal' }, body: JSON.stringify({ k: 'img:' + k, questoes: { mime: img.mime, dados: img.dados }, liberada: true, gerado_em: new Date().toISOString() }) });
+    let img = await commonsImagem(PEI.buscaImagem(k));
+    if (!img && process.env.IMAGENS_IA === '1') img = await geminiImagem(PEI.promptImagem(k));   // IA só se a escola ativar (chave paga)
+    if (!img) throw new Error('nenhuma foto livre encontrada para esta questão');
+    await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=ignore-duplicates,return=minimal' }, body: JSON.stringify({ k: 'img:' + k, questoes: { mime: img.mime, dados: img.dados, credito: img.credito || '', fonte: img.fonte || '' }, liberada: true, gerado_em: new Date().toISOString() }) });
     return img;
   })().finally(() => { delete emVoo[k]; });
   return emVoo[k];
@@ -248,6 +273,7 @@ module.exports = async function individual(req, res) {
     if (req.method === 'GET' && acao === 'imagem') {   // imagem de uma questão adaptada (só chaves conhecidas)
       const k = String(q.k || ''); if (!/^[0-9a-f]{12}$/.test(k) || !PEI.promptImagem(k)) return erro(404, 'Imagem desconhecida.');
       let img; try { img = await garantirImagem(k); } catch (e) { return erro(502, 'Não foi possível gerar a imagem: ' + String(e.message || e).slice(0, 420)); }
+      if (q.meta) return ok({ credito: img.credito || '', fonte: img.fonte || '' });
       res.setHeader('Cache-Control', 'public, max-age=86400'); res.setHeader('Content-Type', img.mime || 'image/png'); res.setHeader('X-Content-Type-Options', 'nosniff');
       return res.status(200).send(Buffer.from(img.dados, 'base64'));
     }
