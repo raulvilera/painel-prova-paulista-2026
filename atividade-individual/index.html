@@ -86,8 +86,9 @@
   .pausa{background:#FFF8E1;border:2px solid #F3D27A;border-radius:16px;padding:22px;text-align:center;margin-bottom:16px}
   .pausa h2{margin:0 0 8px}
   .q[hidden]{display:none}
+  html,body{overflow-x:hidden;max-width:100%}.q,.q *{min-width:0;max-width:100%;box-sizing:border-box}.q select,.q textarea{width:100%}.q{overflow-wrap:anywhere}
   .assoc{display:grid;gap:10px;margin-top:6px}
-  .assoc .l{display:grid;grid-template-columns:1fr minmax(150px,42%);gap:10px;align-items:center;background:#F6F9F6;border:1px solid var(--linha);border-radius:12px;padding:10px 12px}
+  .assoc .l{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,42%);gap:10px;align-items:center;background:#F6F9F6;border:1px solid var(--linha);border-radius:12px;padding:10px 12px}
   @media (max-width:560px){.assoc .l{grid-template-columns:1fr}}
   .assoc select{font:inherit;padding:12px;border:2px solid #9DB5A6;border-radius:10px;background:#fff;color:var(--tinta);min-height:48px}
   .ordem{display:grid;gap:10px;margin-top:6px}
@@ -274,7 +275,7 @@
   /* imagem gerada na primeira vez (pode levar alguns segundos): mostra "preparando", tenta de novo uma vez e some se não der */
   document.addEventListener('load', e => { const f = e.target.closest && e.target.closest('.foto'); if (f && e.target.tagName === 'IMG') f.classList.remove('carr'); }, true);
   document.addEventListener('error', e => { const im = e.target; if (!im || im.tagName !== 'IMG' || !im.closest('.foto')) return;
-    if (!im.dataset.r) { im.dataset.r = '1'; setTimeout(() => { im.src = im.src.split('&r=')[0] + '&r=' + Date.now(); }, 3000); } else { const f = im.closest('.foto'); if (f) f.remove(); } }, true);
+    const n = +im.dataset.r || 0; if (n < 4) { im.dataset.r = String(n + 1); setTimeout(() => { im.src = im.src.split('&r=')[0] + '&r=' + Date.now(); }, 6000); } else { const f = im.closest('.foto'); if (f) f.remove(); } }, true);
   document.addEventListener('click', e => {
     const o = e.target.closest('[data-ouvir]'); if (o) { fala(+o.dataset.ouvir); return; }
     const d = e.target.closest('[data-dit]'); if (d) { ditar(+d.dataset.dit, d); return; }
