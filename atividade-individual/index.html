@@ -152,6 +152,8 @@
   const tr = x => LANG === 'ru' && window.RU ? window.RU.t(x) : x;
   function usarRusso(){ if (LANG === 'ru' && window.RU) return Promise.resolve(); LANG = 'ru'; return new Promise(ok => { const sc = document.createElement('script'); sc.src = 'i18n-ru.js'; sc.onload = () => { window.RU.ativar(); ok(); }; sc.onerror = ok; document.head.appendChild(sc); }); }
   if (LANG === 'ru') { const sc = document.createElement('script'); sc.src = 'i18n-ru.js'; sc.onload = () => window.RU.ativar(); document.head.appendChild(sc); }
+  /* o russo vale só para a aluna que o recebe: ao trocar de aluno na mesma página, recarrega em português (evita misturar idiomas) */
+  const sairRusso = () => { if (LANG !== 'ru') return false; location.replace(location.pathname + (MODO ? '?modo=simulado' : '')); return true; };
   const espera = ms => new Promise(r => setTimeout(r, ms));
   async function chama(opt, q){
     let ult;
@@ -176,6 +178,7 @@
   function zerar(){ Q = []; resp = []; AD = null; cur = 0; enviado = false; falaParar(); Object.keys(pausaFeita).forEach(k => delete pausaFeita[k]); $('#qs').innerHTML = ''; $('#desc').hidden = true; $('#btn').hidden = true; $('#msg').className = 'msg';
     ['ajuda','gloss','agenda','pausa','nav'].forEach(i => $('#' + i).hidden = true); document.documentElement.style.fontSize = ''; document.body.classList.remove('adapt','gentil','desafio'); }
   fT.onchange = () => {
+    if (sairRusso()) return;
     zerar(); fN.disabled = true; fN.innerHTML = '<option value="">Carregando nomes…</option>';
     if (!fT.value) { fN.innerHTML = '<option value="">Escolha a turma primeiro</option>'; return; }
     const t = fT.value;
@@ -186,6 +189,7 @@
     }).catch(e => { fN.innerHTML = '<option value="">Nomes indisponíveis</option>'; msg('Não foi possível carregar os nomes: ' + falha(e) + '.', false); });
   };
   fN.onchange = () => {
+    if (sairRusso()) return;
     zerar(); if (!fN.value) return;
     const t = fT.value, n = fN.value;
     $('#qs').innerHTML = '<p class="vazio">Preparando as suas questões… na primeira vez pode levar até 1 minuto.</p>';
