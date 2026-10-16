@@ -45,3 +45,6 @@ As questões adaptadas têm uma ilustração (sem texto) gerada automaticamente 
 
 ### Imagens das atividades PEI
 Cada questão adaptada tem uma lista de artigos da Wikipédia (em `api/_pei.js`, mapa `IMGS`); o servidor usa a imagem de abertura do primeiro artigo com foto de licença livre (Commons), guarda em `indiv_banco` (`img:<k>`) e mostra o crédito do autor. Sem chave nem cota. Para trocar a foto de uma questão, altere os títulos da lista.
+
+### Simulado SARESP adaptado (PEI, Fundamental)
+`api/_pei-sim.js` tem o Simulado adaptado de cada aluno com PEI (mesmas habilidades do Simulado da série, formatos e acessibilidade do PEI). Na página do Simulado, ao escolher o nome, o servidor responde só "adaptada: sim/não" (`/api/individual?acao=adaptada&modo=simulado`); quem tem versão é levado a `/atividade-individual/?modo=simulado`. As respostas ficam em `indiv_respostas` com status "… · simulado adaptado". O projeto do Simulado precisa do rewrite `/api/individual` (já em `simulado/vercel.json`).

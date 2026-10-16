@@ -205,8 +205,8 @@ async function guardar(k, Q, liberada) {
   await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=ignore-duplicates,return=minimal' }, body: JSON.stringify({ k, questoes: Q, liberada: liberada !== false, gerado_em: new Date().toISOString() }) });
 }
 /* Monta as questões do aluno. Com gerar=true, as questões que ainda não existem são criadas pela IA na hora e já ficam liberadas. */
-async function montar(turma, nome, gerar) {
-  const pei = PEI.achar(turma, nome);
+async function montar(turma, nome, gerar, modo) {
+  const pei = PEI.achar(turma, nome, modo);
   if (pei) return { aluno: String(nome), itens: pei.itens.map(q => ({ k: 'pei', bloco: 'pei', desc: pei.desc, q })), falhou: 0, pei };
   const pl = await rest('indiv_plano?select=nome,itens&turma=eq.' + enc(turma));
   const lin = (pl || []).find(r => norm(r.nome) === norm(nome)); if (!lin) return { aluno: null, itens: [] };
@@ -257,8 +257,11 @@ module.exports = async function individual(req, res) {
       res.setHeader('Cache-Control', 'public, max-age=86400'); res.setHeader('Content-Type', img.mime || 'image/jpeg'); res.setHeader('X-Content-Type-Options', 'nosniff');
       return res.status(200).send(Buffer.from(img.dados, 'base64'));
     }
+    if (req.method === 'GET' && acao === 'adaptada') {   // o aluno tem versão adaptada? (só sim/não; nada sobre o motivo)
+      return ok({ adaptada: !!PEI.achar(String(q.turma || ''), String(q.nome || ''), q.modo === 'simulado' ? 'simulado' : '') });
+    }
     if (req.method === 'GET' && acao === 'atividade') {
-      const m = await montar(String(q.turma || ''), String(q.nome || ''), true); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
+      const m = await montar(String(q.turma || ''), String(q.nome || ''), true, q.modo === 'simulado' ? 'simulado' : ''); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
       return ok({ nome: m.aluno, aviso: m.itens.length ? '' : (m.falhou ? 'Estamos preparando suas questões. Tente de novo em 1 minuto.' : 'Ainda não há atividade para você. Fale com o professor.'),
         itens: m.itens.map(i => ({ desc: i.desc, tipo: i.q.tipo, enunciado: i.q.enunciado, comando: i.q.comando, figura: i.q.figura || null, alts: i.q.tipo === 'obj' ? i.q.alts : [],
           linhas: i.q.tipo === 'assoc' ? i.q.itens : undefined, banco: i.q.tipo === 'assoc' ? i.q.banco : undefined, passos: i.q.tipo === 'ordem' ? i.q.passos : undefined,
@@ -266,7 +269,7 @@ module.exports = async function individual(req, res) {
         adapt: m.pei ? Object.assign({}, m.pei.flags) : null });
     }
     if (req.method === 'POST' && acao === 'enviar') {
-      const m = await montar(String(b.turma || ''), String(b.nome || ''), false); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
+      const m = await montar(String(b.turma || ''), String(b.nome || ''), false, b.modo === 'simulado' ? 'simulado' : ''); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
       if (!m.itens.length) return erro(409, 'Atividade ainda não liberada.'); if (!Array.isArray(b.respostas)) return erro(400, 'Respostas inválidas.');
       let ac = 0, nObj = 0, soma = 0, status = 'corrigido pela IA'; const gab = [], notas = [];
       const igual = (a, c) => Array.isArray(a) && a.length === c.length && c.every((v, j) => Number(a[j]) === v);
@@ -290,14 +293,14 @@ module.exports = async function individual(req, res) {
       }));
       det.forEach(d => { if (d.tipo === 'dis') { notas.push(d.nota); if (d.nota !== '') soma += d.nota; } });
       const nota = !status.startsWith('pendente') ? Math.round(soma / m.itens.length * 100) / 10 : null;
-      await rest('indiv_respostas', { method: 'POST', body: JSON.stringify({ turma: b.turma, nome: m.aluno, itens: det, acertos: ac, total_obj: nObj, nota, status: m.pei ? status + ' · adaptada' : status }) });
+      await rest('indiv_respostas', { method: 'POST', body: JSON.stringify({ turma: b.turma, nome: m.aluno, itens: det, acertos: ac, total_obj: nObj, nota, status: m.pei ? status + (m.pei.simulado ? ' · simulado adaptado' : ' · adaptada') : status }) });
       let planilha = false;   // cópia na planilha (Apps Script); se falhar, a resposta continua salva no banco
       try {
         const url = process.env.EM_APPS_SCRIPT_URL || '', segredo = process.env.EM_SEGREDO || '';
         if (url && segredo) {
           const itensP = det.map((d, i) => { const q = m.itens[i].q; return Object.assign({ desc: (CAT[m.itens[i].k] || {}).desc || m.itens[i].desc, enun: String(q.enunciado || '').slice(0, 200), textoResp: d.tipo === 'obj' && d.resp != null && q.alts ? q.alts[d.resp] : undefined, textoCorreta: d.tipo === 'obj' && q.alts ? q.alts[q.correta] : undefined, letraCorreta: d.tipo === 'obj' ? q.correta : undefined, explicacao: d.tipo === 'obj' ? String(q.explicacao || '').slice(0, 400) : undefined }, d); });
           const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 12000);
-          const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, redirect: 'follow', signal: ctl.signal, body: JSON.stringify({ acao: 'individual', segredo, turma: b.turma, nome: m.aluno, acertos: ac, total: nObj, nota, status: m.pei ? status + ' · adaptada' : status, itens: itensP }) });
+          const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, redirect: 'follow', signal: ctl.signal, body: JSON.stringify({ acao: 'individual', segredo, turma: b.turma, nome: m.aluno, acertos: ac, total: nObj, nota, status: m.pei ? status + (m.pei.simulado ? ' · simulado adaptado' : ' · adaptada') : status, itens: itensP }) });
           clearTimeout(t); const j = await r.json(); planilha = !!(j && j.ok);
         }
       } catch (e) { planilha = false; }

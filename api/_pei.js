@@ -293,9 +293,12 @@ ALUNOS.forEach(a => a.itens.forEach(q => {
 }));
 
 /* ---------- consulta ---------- */
-function achar(turma, nome) {
+function achar(turma, nome, modo) {
   const t = chaveTurma(turma), n = chaveNome(nome);
-  return ALUNOS.find(a => a.turma === t && chaveNome(a.nome) === n) || null;
+  const a = ALUNOS.find(x => x.turma === t && chaveNome(x.nome) === n) || null;
+  if (!a || modo !== 'simulado') return a;
+  const sm = SIMULADO.find(x => x.turma === t && chaveNome(x.nome) === n);
+  return sm ? Object.assign({}, a, { desc: sm.desc, itens: sm.itens, simulado: true }) : null;
 }
 /* nomes de PEI que ainda não aparecem na lista da turma (comparação tolerante) */
 function nomesFaltando(turma, nomesExistentes) {
@@ -304,5 +307,10 @@ function nomesFaltando(turma, nomesExistentes) {
 }
 function turmasExtras() { return [...new Set(ALUNOS.map(a => a.turma))]; }
 
+/* ---------- Simulado SARESP adaptado ---------- */
+const SIMULADO = require('./_pei-sim.js')({ O, VF, AS, OR, DI }).map(s => ({ turma: chaveTurma(s.turma), nome: s.nome, desc: s.desc, itens: s.itens }));
+SIMULADO.forEach(a => a.itens.forEach(q => {
+  const [spec, alt] = [q.imgc, q.imgalt]; if (!spec) return; const ck = chaveImg(spec); q.ilus = { spec, alt, k: ck }; IMG_LISTA[ck] = { k: ck, cand: spec.split('|'), alt };
+}));
 const candidatos = k => IMG_LISTA[k] ? IMG_LISTA[k].cand : null;
 module.exports = { candidatos, achar, nomesFaltando, turmasExtras, chaveTurma, chaveNome, ALUNOS };

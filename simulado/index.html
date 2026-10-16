@@ -152,7 +152,17 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
     fRa.value = a && a.ra ? a.ra : '';
     fRa.readOnly = !!(a && a.ra);
     fRa.placeholder = a && !a.ra ? 'digite seu RA' : '—';
+    verAdaptada(fT.value, nm.join('|'));
   };
+  /* Quem tem versão adaptada do Simulado (PEI) é levado para ela; ninguém vê lista nem motivo: o servidor só responde sim/não. */
+  function verAdaptada(turma, nome){
+    if (!turma || !nome || /Lydia/i.test(turma)) return;
+    fetch('/api/individual?' + new URLSearchParams({ acao: 'adaptada', modo: 'simulado', turma, nome }), { cache: 'no-store' }).then(r => r.json()).then(j => {
+      if (!j || !j.adaptada || fN.value.split('|').slice(1).join('|') !== nome) return;
+      const base = /^painel-prova-paulista/.test(location.hostname) ? '' : 'https://painel-prova-paulista-2026.vercel.app';
+      location.href = base + '/atividade-individual/?' + new URLSearchParams({ modo: 'simulado', t: turma, n: nome });
+    }).catch(() => {});
+  }
 
   function desenhar(){
     $('#qs').innerHTML = Q.map((q, i) => `
