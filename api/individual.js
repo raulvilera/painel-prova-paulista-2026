@@ -70,8 +70,25 @@ async function baixarArquivo(src, rotulo, why) {
   const buf = Buffer.from(await r.arrayBuffer()); if (buf.length < 4000 || buf.length > 1400000) { why.push(rotulo + ': tamanho ' + buf.length); return null; }
   return { mime, dados: buf.toString('base64'), credito: 'Foto: ' + (semHtml(ex.Artist && ex.Artist.value) || 'autor desconhecido') + ' · ' + lic + ' · Wikimedia Commons', fonte: 'https://commons.wikimedia.org/wiki/File:' + enc(arq) };
 }
-async function wikiImagem(cands, why) {
-  for (const c of cands) {   // 1) imagem de abertura do artigo
+/* Para as legendas dentro das figuras ficarem em português: troca cada artigo em inglês pelo equivalente da Wikipédia em português (e mantém o original como reserva) */
+async function comPortugues(cands) {
+  const out = [];
+  for (const c of cands) {
+    const i = c.indexOf(':'), lang = c.slice(0, i), titulo = c.slice(i + 1);
+    if (lang === 'en') {
+      try {
+        const j = await JSONF('https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=langlinks&lllang=pt&titles=' + enc(titulo));
+        const pg = Object.values((j.query && j.query.pages) || {})[0], pt = pg && pg.langlinks && pg.langlinks[0] && (pg.langlinks[0]['*'] || pg.langlinks[0].title);
+        if (pt) out.push('pt:' + pt);
+      } catch (e) { /* segue com o original */ }
+    }
+    out.push(c);
+  }
+  return [...new Set(out)];
+}
+async function wikiImagem(cands0, why) {
+  const cands = await comPortugues(cands0);
+  for (const c of cands) {   // 1) imagem de abertura do artigo (primeiro a versão em português)
     try {
       const i = c.indexOf(':'), lang = c.slice(0, i), titulo = c.slice(i + 1);
       const sm = await JSONF('https://' + lang + '.wikipedia.org/api/rest_v1/page/summary/' + enc(titulo.replace(/ /g, '_')) + '?redirect=true');
@@ -91,7 +108,7 @@ async function wikiImagem(cands, why) {
 }
 const emVoo = {};
 async function garantirImagem(k) {
-  const cands = PEI.candidatos(k), ver = crypto.createHash('sha1').update(cands.join('|')).digest('hex').slice(0, 6);
+  const cands = PEI.candidatos(k), ver = crypto.createHash('sha1').update('pt2|' + cands.join('|')).digest('hex').slice(0, 6);
   const r = await rest('indiv_banco?select=questoes&k=eq.' + enc('img:' + k));
   if (r && r[0] && r[0].questoes && r[0].questoes.dados && r[0].questoes.v === ver) return r[0].questoes;
   if (!emVoo[k]) emVoo[k] = (async () => {
