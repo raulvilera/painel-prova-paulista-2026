@@ -63,20 +63,34 @@ const REGRAS = [
 const RECUSADAS = new Set(["8c3c695d","53b9533a","d350f0d9","24623ac5","8e6f486b","4eb2f137","48ad0f7a","eaa0e835","d229bfda","a0213046","8ff04414","3c90d781","8e1134d3","8df5ddc4","67d9cc21","2b4d2778","fd989f8c","abb02dfa","abd24d94","9bf183cf","cb0e7a80","0e34c960","21923ab6","649ef375","ee0754cd","ddbc849d","8a9e314d","8eeab044","92e5caae","68dcf768","0507da5e","a62056e0"]);
 const impressao = q => crypto.createHash('sha1').update(q.enunciado).digest('hex').slice(0, 8);
 const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-const POR_K = {}; REGRAS.forEach(r => { POR_K[r.k] = r; });
+const TEMAS = require('./_img-temas.js'), CATALOGO = require('./_catalogo-indiv.js');
+const POR_K = {}; TEMAS.forEach(t => t.specs.forEach(sp => { POR_K[chaveImg(sp)] = { spec: sp }; })); REGRAS.forEach(r => { POR_K[r.k] = r; });
 const candidatos = k => POR_K[k] ? POR_K[k].spec.split('|') : null;
 
 /* itens: [{ q, desc }] na ordem da atividade -> devolve cópias das questões com q.ilus onde houver foto adequada */
+function tema(k) {
+  const c = CATALOGO[k]; if (!c) return null;
+  const n = norm(c.nome), d = norm(c.desc);
+  return TEMAS.find(t => t.re.test(n)) || TEMAS.find(t => t.re.test(d)) || null;
+}
+/* itens: [{ k, q, desc }] na ordem da atividade -> cópias com q.ilus em TODAS as questões:
+   1º a foto específica do assunto citado no enunciado (regras revisadas à mão); senão, uma foto do tema da questão, sem repetir na atividade. */
 function aplicar(itens) {
-  const usadas = new Set(); let n = 0;
+  const usadas = new Set(), uso = {};
   return itens.map(it => {
-    const q = it.q; if (n >= MAX || q.ilus || RECUSADAS.has(impressao(q))) return it;
-    // curadoria: o assunto precisa ser o centro da questão (citado no comando, ou ao menos 2 vezes no enunciado); o mais citado vence
+    const q = it.q; if (q.ilus) return it;
     const en = norm(q.enunciado), cm = norm(q.comando || ''); let r = null, rn = 0;
-    REGRAS.forEach(x => { if (usadas.has(x.k)) return; const g = new RegExp(x.re.source, 'g'), c = (en.match(g) || []).length + 3 * (cm.match(g) || []).length; if (c >= 2 && c > rn) { r = x; rn = c; } });
-    if (!r) return it;
-    usadas.add(r.k); n++;
-    return Object.assign({}, it, { q: Object.assign({}, q, { ilus: { spec: r.spec, alt: r.alt, k: r.k }, imgOpc: true }) });
+    if (!RECUSADAS.has(impressao(q))) REGRAS.forEach(x => { if (usadas.has(x.k)) return; const g = new RegExp(x.re.source, 'g'), c = (en.match(g) || []).length + 3 * (cm.match(g) || []).length; if (c >= 2 && c > rn) { r = x; rn = c; } });
+    let spec, alt, k2;
+    if (r) { spec = r.spec; alt = r.alt; k2 = r.k; }
+    else {
+      const t = tema(it.k); if (!t) return it;
+      const livres = t.specs.filter(sp => !usadas.has(chaveImg(sp)));
+      spec = livres.length ? livres[0] : t.specs[(uso[it.k] = (uso[it.k] || 0) + 1) % t.specs.length];
+      k2 = chaveImg(spec); alt = 'Imagem do tema estudado na questão';
+    }
+    usadas.add(k2);
+    return Object.assign({}, it, { q: Object.assign({}, q, { ilus: { spec, alt, k: k2 }, imgOpc: true }) });
   });
 }
 module.exports = { aplicar, candidatos };

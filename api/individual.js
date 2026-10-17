@@ -64,7 +64,7 @@ async function baixarArquivo(src, rotulo, why) {
   const ii = (Object.values(md)[0] || {}).imageinfo, ex = (ii && ii[0] && ii[0].extmetadata) || {}, lic = semHtml(ex.LicenseShortName && ex.LicenseShortName.value);
   if (!lic) { why.push(rotulo + ': fora do Commons'); return null; }
   if (!/^(CC0|CC[ -]BY|Public domain|PD)/i.test(lic) || /\b(NC|ND)\b/i.test(lic)) { why.push(rotulo + ': licença ' + lic); return null; }
-  const url = src.replace(/\/(\d+)px-/, '/960px-');
+  const url = src.replace(/\/(\d+)px-/, '/640px-');
   let r = await fetch(url, { headers: UA }); if (!r.ok) r = await fetch(src, { headers: UA }); if (!r.ok) { why.push(rotulo + ': download HTTP ' + r.status); return null; }
   const mime = (r.headers.get('content-type') || '').split(';')[0]; if (!/^image\/(jpeg|png|webp)$/.test(mime)) { why.push(rotulo + ': tipo ' + mime); return null; }
   const buf = Buffer.from(await r.arrayBuffer()); if (buf.length < 4000 || buf.length > 1400000) { why.push(rotulo + ': tamanho ' + buf.length); return null; }
