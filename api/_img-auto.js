@@ -8,6 +8,7 @@ const R = (re, spec, alt) => ({ re: new RegExp('\\b(?:' + re + ')'), spec, alt, 
 const REGRAS = [
   R('mao bionica|protese|acessibilidade', 'en:Prosthesis|en:Bionics', 'Prótese'),
   // astronomia
+  R('lua\\b|luar|lunar', 'en:Moon|en:Lunar phase', 'A Lua'), R('sol\\b|solar\\b|pôr do sol|nascer do sol', 'en:Sun|en:Sunset', 'O Sol'), R('horizonte|ceu\\b|ceu noturno', 'en:Sky|en:Horizon', 'O céu'),
   R('eclipse solar', 'en:Solar eclipse|en:Eclipse', 'Eclipse solar'), R('eclipse lunar', 'en:Lunar eclipse|en:Eclipse', 'Eclipse lunar'), R('eclips', 'en:Eclipse|en:Solar eclipse', 'Eclipse'),
   R('fases? da lua|lua (nova|cheia|crescente|minguante)', 'en:Lunar phase', 'Fases da Lua'),
   R('estac(ao|oes) do ano|inclinac(ao)? do eixo|solsticio|equinocio', 'en:Season|en:Axial tilt', 'Estações do ano'),
@@ -69,7 +70,7 @@ function aplicar(itens) {
     const q = it.q; if (n >= MAX || q.ilus) return it;
     const acha = txt => { let b = null, bn = 0;   // vence o assunto mais citado no enunciado (empate: a regra mais específica, que vem antes)
       REGRAS.forEach(r => { if (usadas.has(r.k)) return; const c = (txt.match(new RegExp(r.re.source, 'g')) || []).length; if (c > bn) { b = r; bn = c; } }); return b; };
-    const r = acha(norm(q.enunciado + ' ' + (q.comando || ''))) || acha(norm(it.desc));   // 1º o enunciado; se ele não citar um assunto, o tema da habilidade que a questão avalia
+    const r = acha(norm(q.enunciado + ' ' + (q.comando || ''))); ///// só o enunciado decide: sem assunto citado, sem foto (foto fora do assunto é pior que nenhuma)
     if (!r) return it;
     usadas.add(r.k); n++;
     return Object.assign({}, it, { q: Object.assign({}, q, { ilus: { spec: r.spec, alt: r.alt, k: r.k }, imgOpc: true }) });
