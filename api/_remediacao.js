@@ -73,6 +73,7 @@ const DEF = [
     DI('Por que os modelos atômicos mudaram ao longo do tempo? Dê um exemplo.', 'Porque novos experimentos trouxeram evidências que os modelos antigos não explicavam. Exemplo: o experimento de Rutherford mostrou o núcleo e substituiu o modelo de Thomson.', ['novas evidências/experimentos', 'modelo antigo não explicava', 'exemplo correto'])]]
 ];
 
+DEF.push(...require('./_remediacao-b.js')(O, AS, OR, DI));
 const REM = {};
 Object.keys(CAT).forEach(k => {
   const c = CAT[k];
