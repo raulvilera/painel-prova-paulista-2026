@@ -221,6 +221,10 @@ async function corrigir(q0, resposta, k, acolher) {
 
 /* ---------- montagem das questões de um aluno ---------- */
 const REMED = require('./_remediacao.js');
+const PAINEL = require('./_plano-painel.js');   // plano de cada aluno derivado do painel (descritores fracos da turma × nível do aluno) — vale para quem não tem linha em indiv_plano
+const tk = t => { const s = norm(t), m = /(\d)\S*\s*ANO\s*([A-Z])\b/.exec(s); if (!m) return ''; return m[1] + m[2] + (/MANHA/.test(s) ? 'M' : /TARDE/.test(s) ? 'T' : /NOITE/.test(s) ? 'N' : ''); };
+const painelTurma = turma => { const k = tk(turma), ks = Object.keys(PAINEL); const r = ks.find(x => tk(x) === k); if (r) return r; const c = ks.filter(x => tk(x).slice(0, 2) === k.slice(0, 2)); return k && !/[MTN]$/.test(k) && c.length === 1 ? c[0] : null; };
+const painelAluno = (turma, nome) => { const pk = painelTurma(turma); if (!pk) return null; const T = PAINEL[pk], ns = Object.keys(T); const n = ns.find(x => norm(x) === norm(nome)) || ns.find(x => PEI.chaveNome(x) === PEI.chaveNome(nome)); return n ? { nome: n, itens: T[n].map(([k, niv]) => ({ k, niv, t: 'gap' })) } : null; };
 const ESC = { 0: { o: [0, 1], d: [0], ob: [0, 1, 2], db: [0, 1] }, 1: { o: [2, 3], d: [2], ob: [1, 2, 3], db: [1, 2] }, 2: { o: [3, 4], d: [3], ob: [2, 3, 4], db: [2, 3] }, 3: { o: [3, 4], d: [4], ob: [3, 4], db: [3, 4] } };
 async function guardar(k, Q, liberada) {
   await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=ignore-duplicates,return=minimal' }, body: JSON.stringify({ k, questoes: Q, liberada: liberada !== false, gerado_em: new Date().toISOString() }) });
@@ -230,7 +234,8 @@ async function montar(turma, nome, gerar, modo) {
   const pei = PEI.achar(turma, nome, modo);
   if (pei) return { aluno: String(nome), itens: pei.itens.map(q => ({ k: 'pei', bloco: 'pei', desc: pei.desc, q })), falhou: 0, pei };
   const pl = await rest('indiv_plano?select=nome,itens&turma=eq.' + enc(turma));
-  const lin = (pl || []).find(r => norm(r.nome) === norm(nome)) || (pl || []).find(r => PEI.chaveNome(r.nome) === PEI.chaveNome(nome));
+  let lin = (pl || []).find(r => norm(r.nome) === norm(nome)) || (pl || []).find(r => PEI.chaveNome(r.nome) === PEI.chaveNome(nome)) || painelAluno(turma, nome);
+  if (lin && !(lin.itens || []).length) { const pa = painelAluno(turma, lin.nome); if (pa) lin = Object.assign({}, lin, { itens: pa.itens }); }   // linha sem itens: usa o plano do painel
   if (!lin) { const ro = ROSTER.da(turma); const el = ro && ro.find(x => PEI.chaveNome(x.nome) === PEI.chaveNome(nome)); return el ? { aluno: String(nome), itens: [], falhou: 0 } : { aluno: null, itens: [] }; }
   const itens = lin.itens || [], ks = [...new Set(itens.map(i => i.k).filter(k => CAT[k]))];
   const bn = ks.length ? await rest('indiv_banco?select=k,questoes,liberada&k=in.' + inLista(ks)) : [];
@@ -278,12 +283,14 @@ module.exports = async function individual(req, res) {
 
     /* ----- aluno ----- */
     if (req.method === 'GET' && acao === 'turmas') {
-      const r = await rest('indiv_plano?select=turma'); const t = [...new Set((r || []).map(x => x.turma))].sort((x, y) => x.localeCompare(y, 'pt'));
-      return ok({ turmas: t });
+      const r = await rest('indiv_plano?select=turma'); const t = [...new Set((r || []).map(x => x.turma))]; const cobertas = new Set(t.map(painelTurma).filter(Boolean));
+      Object.keys(PAINEL).forEach(pk => { if (!cobertas.has(pk)) t.push(pk); });   // turmas do painel que ainda não estão no plano
+      t.sort((x, y) => x.localeCompare(y, 'pt')); return ok({ turmas: t });
     }
     if (req.method === 'GET' && acao === 'nomes') {
       const ro = ROSTER.da(String(q.turma || '')); if (ro) return ok({ nomes: ro.map(x => x.nome).sort((x, y) => x.localeCompare(y, 'pt')) });   // lista oficial da turma
       const r = await rest('indiv_plano?select=nome&turma=eq.' + enc(String(q.turma || ''))); const nm = (r || []).map(x => x.nome); PEI.nomesFaltando(String(q.turma || ''), nm).forEach(x => nm.push(x));
+      const pk = painelTurma(String(q.turma || '')); if (pk) Object.keys(PAINEL[pk]).forEach(x => { if (!nm.some(y => norm(y) === norm(x) || PEI.chaveNome(y) === PEI.chaveNome(x))) nm.push(x); });
       return ok({ nomes: nm.sort((x, y) => x.localeCompare(y, 'pt')) });
     }
     if (req.method === 'GET' && acao === 'imagem') {   // foto de uma questão adaptada (só chaves conhecidas)
