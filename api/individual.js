@@ -310,7 +310,7 @@ module.exports = async function individual(req, res) {
       return ok({ nome: m.aluno, aviso: m.itens.length ? '' : (m.falhou ? 'Estamos preparando suas questões. Tente de novo em 1 minuto.' : 'Ainda não há atividade para você. Fale com o professor.'),
         itens: m.itens.map(i => ({ desc: i.desc, tipo: i.q.tipo, enunciado: i.q.enunciado, comando: i.q.comando, figura: i.q.figura || null, alts: i.q.tipo === 'obj' ? i.q.alts : [],
           linhas: i.q.tipo === 'assoc' ? i.q.itens : undefined, banco: i.q.tipo === 'assoc' ? i.q.banco : undefined, passos: i.q.tipo === 'ordem' ? i.q.passos : undefined,
-          imagem: i.q.ilus ? '/api/individual?acao=imagem&k=' + i.q.ilus.k : undefined, imagemAlt: i.q.ilus ? i.q.ilus.alt : undefined, imagemOpc: i.q.imgOpc ? true : undefined })),
+          imagem: i.q.ilus ? '/api/individual?acao=imagem&v=4&k=' + i.q.ilus.k : undefined, imagemAlt: i.q.ilus ? i.q.ilus.alt : undefined, imagemOpc: i.q.imgOpc ? true : undefined })),
         adapt: m.pei ? Object.assign({}, m.pei.flags) : null });
     }
     if (req.method === 'POST' && acao === 'enviar') {
