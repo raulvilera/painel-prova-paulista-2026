@@ -4,7 +4,7 @@ const T = [];
 const t = (re, ...specs) => T.push({ re: new RegExp(re), specs });
 // --- Terra e Universo
 t('lanterna e a laranja|gira, roda|rotacao terrestre', 'en:Earth\'s rotation|en:Day', 'en:Sunrise|en:Sunset', 'en:Night|en:Terminator (solar)', 'en:Earth|en:Globe');
-t('quem puxa tudo|gravidade', 'en:Free fall|en:Gravity', 'en:Isaac Newton', 'en:Tide|en:Orbit', 'en:Galileo Galilei');
+t('quem puxa tudo|gravidade', 'en:Free fall|en:Gravity', 'en:Isaac Newton', 'en:Orbit|en:Gravity', 'en:Galileo Galilei');
 t('quem fica no meio|eclips', 'en:Solar eclipse', 'en:Lunar eclipse', 'en:Total solar eclipse|en:Eclipse', 'en:Annular solar eclipse|en:Eclipse');
 t('lua no palito|lua que nao vira|fases da lua|movimentos da lua', 'en:Lunar phase', 'en:Moon', 'en:Tide|en:Moon', 'en:Full moon|en:Moon');
 t('terra inclinada|globo inclinado|estacoes', 'en:Season|en:Axial tilt', 'en:Solstice', 'en:Equinox', 'en:Axial tilt');

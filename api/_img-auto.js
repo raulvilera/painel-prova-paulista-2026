@@ -7,6 +7,8 @@ const chaveImg = p => crypto.createHash('sha1').update(String(p)).digest('hex').
 const R = (re, spec, alt) => ({ re: new RegExp('\\b(?:' + re + ')'), spec, alt, k: chaveImg(spec) });
 const REGRAS = [
   
+  // gravidade: corpo lançado que sobe e cai
+  R('(bola|objeto|pedra|maca|corpo)[^.?]{0,70}(subiu|subindo|caiu|cair|cai |descer|voltou ao chao)|queda livre', 'en:Free fall|en:Gravity', 'Queda livre'),
   // astronomia
   
   R('eclipse solar', 'en:Solar eclipse|en:Eclipse', 'Eclipse solar'), R('eclipse lunar', 'en:Lunar eclipse|en:Eclipse', 'Eclipse lunar'), R('eclips', 'en:Eclipse|en:Solar eclipse', 'Eclipse'),
