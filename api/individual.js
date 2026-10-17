@@ -86,13 +86,15 @@ async function comPortugues(cands) {
   }
   return [...new Set(out)];
 }
+const IMG_RUIM = /flag|bandeira|brasao|coat[_ ]of|escudo|logo|icon|symbol|simbolo|locator|location|mapa|[_-]map[_.-]/i;   // bandeiras, brasões, logos e mapas nunca servem como foto da questão
+const palavras = t => String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().split(/[^a-z]+/).filter(w => w.length >= 4);
 async function wikiImagem(cands0, why) {
   const cands = await comPortugues(cands0);
   for (const c of cands) {   // 1) imagem de abertura do artigo (primeiro a versão em português)
     try {
       const i = c.indexOf(':'), lang = c.slice(0, i), titulo = c.slice(i + 1);
       const sm = await JSONF('https://' + lang + '.wikipedia.org/api/rest_v1/page/summary/' + enc(titulo.replace(/ /g, '_')) + '?redirect=true');
-      const src = (sm.thumbnail && sm.thumbnail.source) || (sm.originalimage && sm.originalimage.source) || ''; if (!src) { why.push(c + ': sem imagem'); continue; }
+      const src = (sm.thumbnail && sm.thumbnail.source) || (sm.originalimage && sm.originalimage.source) || ''; if (!src) { why.push(c + ': sem imagem'); continue; } if (IMG_RUIM.test(decodeURIComponent(src))) { why.push(c + ': imagem descartada (bandeira/logo/mapa)'); continue; }
       const img = await baixarArquivo(src, c, why); if (img) return img;
     } catch (e) { why.push(c + ': ' + String(e.message || e).slice(0, 50)); }
   }
@@ -101,14 +103,14 @@ async function wikiImagem(cands0, why) {
       const i = c.indexOf(':'), lang = c.slice(0, i), titulo = c.slice(i + 1);
       const j = await JSONF('https://' + lang + '.wikipedia.org/w/api.php?action=query&format=json&generator=search&gsrlimit=8&gsrsearch=' + enc(titulo) + '&prop=pageimages&piprop=thumbnail&pithumbsize=960');
       const pgs = Object.values((j.query && j.query.pages) || {}).sort((x, y) => (x.index || 0) - (y.index || 0));
-      for (const pg of pgs) { if (!pg.thumbnail || !pg.thumbnail.source) continue; const img = await baixarArquivo(pg.thumbnail.source, 'busca ' + c, why); if (img) return img; }
+      const alvo = palavras(titulo); for (const pg of pgs) { if (!pg.thumbnail || !pg.thumbnail.source || IMG_RUIM.test(decodeURIComponent(pg.thumbnail.source))) continue; if (!palavras(pg.title).some(w => alvo.some(a => a.slice(0, 5) === w.slice(0, 5)))) continue; const img = await baixarArquivo(pg.thumbnail.source, 'busca ' + c, why); if (img) return img; }
     } catch (e) { why.push('busca ' + c + ': ' + String(e.message || e).slice(0, 50)); }
   }
   return null;
 }
 const emVoo = {};
 async function garantirImagem(k) {
-  const cands = PEI.candidatos(k), ver = crypto.createHash('sha1').update('pt2|' + cands.join('|')).digest('hex').slice(0, 6);
+  const cands = PEI.candidatos(k), ver = crypto.createHash('sha1').update('pt3|' + cands.join('|')).digest('hex').slice(0, 6);
   const r = await rest('indiv_banco?select=questoes&k=eq.' + enc('img:' + k));
   if (r && r[0] && r[0].questoes && r[0].questoes.dados && r[0].questoes.v === ver) return r[0].questoes;
   if (!emVoo[k]) emVoo[k] = (async () => {
