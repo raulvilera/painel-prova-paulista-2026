@@ -243,16 +243,23 @@ async function montar(turma, nome, gerar, modo) {
     // relê o que ficou gravado: se duas pessoas geraram a mesma chave ao mesmo tempo, vale a primeira gravada (a mesma que o envio vai usar)
     if (falta.length) { const rel = await rest('indiv_banco?select=k,questoes,liberada&k=in.' + inLista(falta)); (rel || []).forEach(r => { if (r.liberada) B[r.k] = r.questoes; }); }
   }
+  /* o que o aluno já respondeu: cada nova atividade troca as questões e reforça, com mais apoio, os descritores em que ele errou */
+  let tent = 0; const errou = {};
+  try {
+    const ant = await rest('indiv_respostas?select=itens&turma=eq.' + enc(turma) + '&nome=eq.' + enc(lin.nome) + '&order=criado.desc&limit=6');
+    tent = (ant || []).length;
+    (ant || []).slice(0, 2).forEach(r => (r.itens || []).forEach(d => { if (d && d.k && ((d.tipo !== 'dis' && d.acerto === false) || (d.tipo === 'dis' && typeof d.nota === 'number' && d.nota < 0.6))) errou[d.k] = 1; }));
+  } catch (e) { /* sem histórico: segue só com o plano */ }
   const out = []; let primB4 = true;
   itens.forEach(it => {
     const Q = B[it.k]; if (!Q) return;
-    const objs = Q.filter(q => q.tipo === 'obj'), dis = Q.filter(q => q.tipo === 'dis'), niv = Math.max(0, Math.min(3, Number(it.niv) || 0));
+    const objs = Q.filter(q => q.tipo === 'obj'), dis = Q.filter(q => q.tipo === 'dis'), reforco = !!errou[it.k], niv = Math.max(0, Math.min(3, (Number(it.niv) || 0) - (reforco ? 1 : 0)));
     const add = (q, tp) => { if (q) out.push({ k: it.k, bloco: tp, desc: CAT[it.k].desc, q }); };
     if (it.t === 'b4') { const base = niv <= 1 ? 0 : 2; add(objs[base], 'b4'); if (primB4) { add(dis[niv <= 1 ? 0 : 3], 'b4'); primB4 = false; } }
     else {   // abordagem própria de cada aluno: dentro da faixa de dificuldade do nível, cada um recebe um par de questões diferente (cenário, dados, experimento…)
-      const e = ESC[niv], h = parseInt(crypto.createHash('sha1').update(norm(lin.nome) + '|' + it.k).digest('hex').slice(0, 6), 16);
+      const e = ESC[niv], h = parseInt(crypto.createHash('sha1').update(norm(lin.nome) + '|' + it.k).digest('hex').slice(0, 6), 16) + tent * 2;
       const pega = (arr, lista, n) => { const L = lista.filter(i => arr[i]); for (let j = 0; j < Math.min(n, L.length); j++) add(arr[L[(h + j) % L.length]], 'gap'); };
-      pega(objs, e.ob, 2); pega(dis, e.db, 1);
+      pega(objs, e.ob, reforco ? 3 : 2); pega(dis, e.db, 1);
     }
   });
   return { aluno: lin.nome, itens: AUTOIMG.aplicar(out), falhou };
