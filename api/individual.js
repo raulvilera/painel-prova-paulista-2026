@@ -220,7 +220,7 @@ async function corrigir(q0, resposta, k, acolher) {
 }
 
 /* ---------- montagem das questões de um aluno ---------- */
-const ESC = { 0: { o: [0, 1], d: [0] }, 1: { o: [2, 3], d: [2] }, 2: { o: [3, 4], d: [3] }, 3: { o: [3, 4], d: [4] } };
+const ESC = { 0: { o: [0, 1], d: [0], ob: [0, 1, 2], db: [0, 1] }, 1: { o: [2, 3], d: [2], ob: [1, 2, 3], db: [1, 2] }, 2: { o: [3, 4], d: [3], ob: [2, 3, 4], db: [2, 3] }, 3: { o: [3, 4], d: [4], ob: [3, 4], db: [3, 4] } };
 async function guardar(k, Q, liberada) {
   await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'resolution=ignore-duplicates,return=minimal' }, body: JSON.stringify({ k, questoes: Q, liberada: liberada !== false, gerado_em: new Date().toISOString() }) });
 }
@@ -249,7 +249,11 @@ async function montar(turma, nome, gerar, modo) {
     const objs = Q.filter(q => q.tipo === 'obj'), dis = Q.filter(q => q.tipo === 'dis'), niv = Math.max(0, Math.min(3, Number(it.niv) || 0));
     const add = (q, tp) => { if (q) out.push({ k: it.k, bloco: tp, desc: CAT[it.k].desc, q }); };
     if (it.t === 'b4') { const base = niv <= 1 ? 0 : 2; add(objs[base], 'b4'); if (primB4) { add(dis[niv <= 1 ? 0 : 3], 'b4'); primB4 = false; } }
-    else { const e = ESC[niv]; e.o.forEach(i => add(objs[i], 'gap')); e.d.forEach(i => add(dis[i], 'gap')); }
+    else {   // abordagem própria de cada aluno: dentro da faixa de dificuldade do nível, cada um recebe um par de questões diferente (cenário, dados, experimento…)
+      const e = ESC[niv], h = parseInt(crypto.createHash('sha1').update(norm(lin.nome) + '|' + it.k).digest('hex').slice(0, 6), 16);
+      const pega = (arr, lista, n) => { const L = lista.filter(i => arr[i]); for (let j = 0; j < Math.min(n, L.length); j++) add(arr[L[(h + j) % L.length]], 'gap'); };
+      pega(objs, e.ob, 2); pega(dis, e.db, 1);
+    }
   });
   return { aluno: lin.nome, itens: AUTOIMG.aplicar(out), falhou };
 }
