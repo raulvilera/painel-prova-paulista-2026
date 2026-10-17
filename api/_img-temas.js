@@ -79,7 +79,8 @@ t('audicao', 'en:Ear', 'en:Hearing', 'en:Cochlea', 'en:Vestibular system');
 t('esqueletico', 'en:Human skeleton', 'en:Bone', 'en:Joint', 'en:Calcium');
 t('muscular', 'en:Muscle', 'en:Skeletal muscle', 'en:Smooth muscle', 'en:Cardiac muscle');
 t('mao bionica', 'en:Prosthesis', 'en:Bionics', 'en:Prosthetic arm|en:Prosthesis', 'en:Accessibility');
-t('drogas', 'en:Psychoactive drug', 'en:Substance abuse', 'en:Addiction', 'en:Nervous system');
+// drogas: só imagens do cérebro e do sistema nervoso (nunca seringas, embalagens ou o uso da droga em si)
+t('drogas', 'en:Human brain', 'en:Neuron', 'en:Nervous system', 'en:Adolescence');
 // --- 4º bimestre: saúde
 t('^saude|saude$', 'en:Health', 'en:Public health', 'en:World Health Organization', 'en:Healthcare');
 t('doencas causadas por virus', 'en:Dengue fever', 'en:Influenza', 'en:Measles', 'en:Aedes aegypti');
