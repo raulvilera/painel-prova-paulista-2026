@@ -1197,7 +1197,7 @@ function corrigirFormulasEM() {
 function individualPlanilha_(p) {
   const segredo = PropertiesService.getScriptProperties().getProperty('EM_SEGREDO');
   if (!segredo || String(p.segredo || '') !== segredo) throw new Error('não autorizado');
-  const NQ = 12, NC = 5, AZUL = '#c9ddf7', VERMELHO = '#f6c6c6';
+  const NQ = 24, NC = 5, AZUL = '#c9ddf7', VERMELHO = '#f6c6c6';   // até 24 questões por aluno (o plano individual chega a ~20)
   const lock = LockService.getScriptLock(); lock.waitLock(20000);
   try {
     const ss = SpreadsheetApp.openById(PLANILHA_ID);
@@ -1207,6 +1207,8 @@ function individualPlanilha_(p) {
     for (let i = 1; i <= NQ; i++) cab.push('Q' + i + ' · Descritor', 'Q' + i + ' · Tipo', 'Q' + i + ' · Resposta do aluno', 'Q' + i + ' · Resultado', 'Q' + i + ' · Justificativa (correção)');
     if (sh && String(sh.getRange(1, 12).getValue()) !== 'Q1 · Justificativa (correção)') { sh.setName((aba + ' (antiga)').slice(0, 99)); sh = null; }   // layout antigo: guarda os dados e começa a aba nova
     if (!sh) sh = ss.insertSheet(aba);
+    if (sh.getMaxColumns() < cab.length) sh.insertColumnsAfter(sh.getMaxColumns(), cab.length - sh.getMaxColumns());
+    if (sh.getLastRow() > 0 && String(sh.getRange(1, cab.length).getValue()) === '') sh.getRange(1, 1, 1, cab.length).setValues([cab]).setFontWeight('bold');   // aba criada com menos questões: completa o cabeçalho
     if (sh.getLastRow() === 0) { sh.getRange(1, 1, 1, cab.length).setValues([cab]).setFontWeight('bold'); sh.setFrozenRows(1); sh.setFrozenColumns(3); }
     formatarIndividual_(sh);   // regras de formatação condicional (azul = certo, vermelho = errado)
     const sanea = v => { const s = String(v == null ? '' : v); return /^[=+\-@\t\r]/.test(s) ? "'" + s : s; };
@@ -1221,6 +1223,13 @@ function individualPlanilha_(p) {
         const just = (certo ? 'Correto. ' : 'Resposta correta: ' + L.charAt(it.letraCorreta) + ') ' + (it.textoCorreta || '') + '. ') + (it.explicacao || '');
         linha.push(it.desc || '', 'Objetiva', resp, branco ? 'Errado (em branco)' : (certo ? 'Certo' : 'Errado'), just);
         cor[c0 + 2] = cor[c0 + 3] = certo ? AZUL : VERMELHO;
+      } else if (it.tipo === 'assoc' || it.tipo === 'ordem') {   // ligar / ordenar: certo só se tudo certo; parcial vale pelo progresso
+        const branco = it.resp == null, certo = !branco && !!it.acerto, parcial = !branco && !certo && Number(it.parcial) > 0;
+        const pct = Math.round((Number(it.parcial) || 0) * 100);
+        const resp = branco ? '(em branco)' : String(it.textoResp || '');
+        const just = (certo ? 'Correto. ' : 'Resposta correta: ' + String(it.textoCorreta || '') + '. ') + (it.explicacao || '');
+        linha.push(it.desc || '', it.tipo === 'ordem' ? 'Ordenar' : 'Ligar', resp, branco ? 'Errado (em branco)' : (certo ? 'Certo' : (parcial ? 'Parcial · ' + pct + '% certo' : 'Errado')), just);
+        cor[c0 + 2] = cor[c0 + 3] = certo ? AZUL : (parcial ? '#fff2cc' : VERMELHO);
       } else {
         const n = it.nota === '' || it.nota == null ? null : Number(it.nota), ok = n !== null && n >= 0.5;
         linha.push(it.desc || '', 'Dissertativa', String(it.resp || '').slice(0, 1500), n === null ? 'Sem nota' : (ok ? 'Certo' : 'Errado') + ' · nota ' + n, it.comentario || '');
@@ -1235,17 +1244,18 @@ function individualPlanilha_(p) {
 /* Formatação condicional da aba da turma: Resposta + Resultado ficam azuis quando o resultado começa com "Certo" e vermelhos quando começa com "Errado".
    Cria as regras uma única vez por aba. */
 function formatarIndividual_(sh) {
-  const NQ = 12, NC = 5, AZUL = '#c9ddf7', VERMELHO = '#f6c6c6';
+  const NQ = 24, NC = 5, AZUL = '#c9ddf7', VERMELHO = '#f6c6c6', AMARELO = '#fff2cc';
   const col = n => { let s = ''; while (n > 0) { const m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = Math.floor((n - 1) / 26); } return s; };
   const regras = sh.getConditionalFormatRules();
-  if (regras.some(r => { const c = r.getBooleanCondition(); return c && String(c.getCriteriaValues()[0] || '').indexOf('"Certo"') > -1; })) return;
+  if (regras.length >= NQ * 3) return;   // já tem as regras (azul = certo, amarelo = parcial, vermelho = errado)
   const novas = [];
   for (let i = 0; i < NQ; i++) {
     const cResp = 8 + i * NC + 2, cRes = cResp + 1, Lt = col(cRes), rng = sh.getRange(2, cResp, 2000, 2);
     novas.push(SpreadsheetApp.newConditionalFormatRule().whenFormulaSatisfied('=LEFT($' + Lt + '2,5)="Certo"').setBackground(AZUL).setRanges([rng]).build());
+    novas.push(SpreadsheetApp.newConditionalFormatRule().whenFormulaSatisfied('=LEFT($' + Lt + '2,7)="Parcial"').setBackground(AMARELO).setRanges([rng]).build());
     novas.push(SpreadsheetApp.newConditionalFormatRule().whenFormulaSatisfied('=LEFT($' + Lt + '2,6)="Errado"').setBackground(VERMELHO).setRanges([rng]).build());
   }
-  sh.setConditionalFormatRules(regras.concat(novas));
+  sh.setConditionalFormatRules(novas);   // refaz o conjunto completo (abas antigas tinham só 12 questões)
 }
 
 /* Rode UMA vez no editor para testar: cria a aba "Individual · TESTE" com um aluno fictício (pode apagar a aba depois). */
@@ -1257,7 +1267,9 @@ function testarIndividual() {
       { desc: 'Descritor de teste 1', tipo: 'obj', resp: 1, acerto: true, textoResp: 'Alternativa certa', textoCorreta: 'Alternativa certa', letraCorreta: 1, explicacao: 'Explicação de por que está certa.' },
       { desc: 'Descritor de teste 2', tipo: 'obj', resp: 0, acerto: false, textoResp: 'Alternativa errada', textoCorreta: 'Alternativa certa', letraCorreta: 2, explicacao: 'Explicação de por que a outra está certa.' },
       { desc: 'Descritor de teste 3', tipo: 'dis', resp: 'Resposta escrita pelo aluno', nota: 0.8, comentario: 'Boa resposta.' },
-      { desc: 'Descritor de teste 4', tipo: 'dis', resp: 'não sei', nota: 0.1, comentario: 'Faltou explicar.' }
+      { desc: 'Descritor de teste 4', tipo: 'dis', resp: 'não sei', nota: 0.1, comentario: 'Faltou explicar.' },
+      { desc: 'Descritor de teste 5', tipo: 'assoc', resp: [0, 2, 1], acerto: false, parcial: 0.33, textoResp: 'A → X | B → Z | C → Y', textoCorreta: 'A → X | B → Y | C → Z', explicacao: 'Cada item combina com uma opção.' },
+      { desc: 'Descritor de teste 6', tipo: 'ordem', resp: [0, 1, 2], acerto: true, parcial: 1, textoResp: '1) Primeiro · 2) Segundo · 3) Terceiro', textoCorreta: '1) Primeiro · 2) Segundo · 3) Terceiro', explicacao: 'A ordem certa é cronológica.' }
     ]
   });
   Logger.log(JSON.stringify(r) + ' - veja a aba "Individual · TESTE"');

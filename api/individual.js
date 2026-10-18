@@ -221,6 +221,11 @@ async function corrigir(q0, resposta, k, acolher) {
   return { nota: Math.round(nota * 10) / 10, comentario: String(o.comentario || '').slice(0, 300), traducao: ru ? String(o.traducao || '').slice(0, 3000) || '(sem tradução)' : undefined };
 }
 
+/* texto legível da resposta de uma questão de ligar/ordenar (para a planilha): r[j] = opção escolhida na linha j (ligar) ou cartão tocado no passo j (ordenar) */
+const textoAA = (q, r) => !Array.isArray(r) ? '' : q.tipo === 'ordem'
+  ? r.map((v, j) => (j + 1) + ') ' + (v == null ? '—' : (q.passos || [])[v])).join(' · ')
+  : r.map((v, j) => (q.itens || [])[j] + ' → ' + (v == null ? '—' : (q.banco || [])[v])).join(' | ');
+
 /* ---------- montagem das questões de um aluno ---------- */
 const REMED = require('./_remediacao.js');
 const PAINEL = require('./_plano-painel.js');   // plano de cada aluno derivado do painel (descritores fracos da turma × nível do aluno) — vale para quem não tem linha em indiv_plano
@@ -345,7 +350,7 @@ module.exports = async function individual(req, res) {
       try {
         const url = process.env.EM_APPS_SCRIPT_URL || '', segredo = process.env.EM_SEGREDO || '';
         if (url && segredo) {
-          const itensP = det.map((d, i) => { const q0 = m.itens[i].q, q = q0.pt ? Object.assign({}, q0, q0.pt) : q0; return Object.assign({ desc: (CAT[m.itens[i].k] || {}).desc || m.itens[i].desc, enun: String(q.enunciado || '').slice(0, 200), textoResp: d.tipo === 'obj' && d.resp != null && q.alts ? q.alts[d.resp] : undefined, textoCorreta: d.tipo === 'obj' && q.alts ? q.alts[q.correta] : undefined, letraCorreta: d.tipo === 'obj' ? q.correta : undefined, explicacao: d.tipo === 'obj' ? String(q.explicacao || '').slice(0, 400) : undefined }, d); });
+          const itensP = det.map((d, i) => { const q0 = m.itens[i].q, q = q0.pt ? Object.assign({}, q0, q0.pt) : q0; return Object.assign({ desc: (CAT[m.itens[i].k] || {}).desc || m.itens[i].desc, enun: String(q.enunciado || '').slice(0, 200), textoResp: d.tipo === 'obj' && d.resp != null && q.alts ? q.alts[d.resp] : (d.tipo === 'assoc' || d.tipo === 'ordem' ? textoAA(q, d.resp) : undefined), textoCorreta: d.tipo === 'obj' && q.alts ? q.alts[q.correta] : (d.tipo === 'assoc' || d.tipo === 'ordem' ? textoAA(q, q.correta) : undefined), letraCorreta: d.tipo === 'obj' ? q.correta : undefined, explicacao: d.tipo !== 'dis' ? String(q.explicacao || '').slice(0, 400) : undefined }, d); });
           const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 12000);
           const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, redirect: 'follow', signal: ctl.signal, body: JSON.stringify({ acao: 'individual', segredo, turma: b.turma, nome: m.aluno, acertos: ac, total: nObj, nota, status: rotulo, itens: itensP }) });
           clearTimeout(t); const j = await r.json(); planilha = !!(j && j.ok);
