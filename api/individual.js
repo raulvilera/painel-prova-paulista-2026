@@ -235,8 +235,8 @@ const PAINEL = require('./_plano-painel.js');   // plano de cada aluno derivado 
   const f = {}; Object.keys(T).forEach(a => T[a].forEach(([k]) => { f[k] = (f[k] || 0) + 1; }));
   T[n] = Object.keys(f).sort((x, y) => f[y] - f[x]).slice(0, 6).map(k => [k, 1]);
 });
-const tk = t => { const s = norm(t), m = /(\d)\S*\s*ANO\s*([A-Z])\b/.exec(s); if (!m) return ''; return m[1] + m[2] + (/MANHA/.test(s) ? 'M' : /TARDE/.test(s) ? 'T' : /NOITE/.test(s) ? 'N' : ''); };
-const painelTurma = turma => { const k = tk(turma), ks = Object.keys(PAINEL); const r = ks.find(x => tk(x) === k); if (r) return r; const c = ks.filter(x => tk(x).slice(0, 2) === k.slice(0, 2)); return k && !/[MTN]$/.test(k) && c.length === 1 ? c[0] : null; };
+const tk = t => { const s = norm(t), m = /(\d)\S*\s*ANO\s*([A-Z])\b/.exec(s); if (!m) return ''; return m[1] + m[2] + (/MANHA|LYDIA/.test(s) ? 'M' : /TARDE/.test(s) ? 'T' : /NOITE/.test(s) ? 'N' : ''); };   // Lydia = manhã; sem indicação (Wanda) = tarde
+const painelTurma = turma => { const k = tk(turma), ks = Object.keys(PAINEL); const r = ks.find(x => tk(x) === k); if (r) return r; const c = ks.filter(x => tk(x).slice(0, 2) === k.slice(0, 2)); if (k && !/[MTN]$/.test(k)) { if (c.length === 1) return c[0]; const t = c.find(x => /TARDE/.test(norm(x))); if (t) return t; } return null; };   // 6º A/C: "6º Ano C" (Wanda) = TARDE
 const painelAluno = (turma, nome) => { const pk = painelTurma(turma); if (!pk) return null; const T = PAINEL[pk], ns = Object.keys(T); const n = ns.find(x => norm(x) === norm(nome)) || ns.find(x => PEI.chaveNome(x) === PEI.chaveNome(nome)); return n ? { nome: n, itens: T[n].map(([k, niv]) => ({ k, niv, t: 'gap' })) } : null; };
 const ESC = { 0: { o: [0, 1], d: [0], ob: [0, 1, 2], db: [0, 1] }, 1: { o: [2, 3], d: [2], ob: [1, 2, 3], db: [1, 2] }, 2: { o: [3, 4], d: [3], ob: [2, 3, 4], db: [2, 3] }, 3: { o: [3, 4], d: [4], ob: [3, 4], db: [3, 4] } };
 async function guardar(k, Q, liberada) {
