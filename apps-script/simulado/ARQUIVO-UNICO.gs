@@ -1237,6 +1237,8 @@ function individualPlanilha_(p) {
       }
     }
     sh.appendRow(linha.map(sanea).map((v, k) => (k === 0 || (k >= 3 && k <= 5 && typeof linha[k] === 'number')) ? linha[k] : v));
+    const r = sh.getLastRow();
+    Object.keys(cor).forEach(c => sh.getRange(r, Number(c), 1, 2).setBackground(cor[c]));   // cor direta na linha (não depende da formatação condicional)
     return { ok: true };
   } finally { lock.releaseLock(); }
 }
@@ -1246,16 +1248,43 @@ function individualPlanilha_(p) {
 function formatarIndividual_(sh) {
   const NQ = 24, NC = 5, AZUL = '#c9ddf7', VERMELHO = '#f6c6c6', AMARELO = '#fff2cc';
   const col = n => { let s = ''; while (n > 0) { const m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = Math.floor((n - 1) / 26); } return s; };
+  const linhasMax = Math.max(sh.getMaxRows() - 1, 1);
   const regras = sh.getConditionalFormatRules();
-  if (regras.length >= NQ * 3) return;   // já tem as regras (azul = certo, amarelo = parcial, vermelho = errado)
+  if (regras.length === NQ * 3) return;   // já tem as regras (azul = certo, amarelo = parcial, vermelho = errado)
   const novas = [];
   for (let i = 0; i < NQ; i++) {
-    const cResp = 8 + i * NC + 2, cRes = cResp + 1, Lt = col(cRes), rng = sh.getRange(2, cResp, 2000, 2);
+    const cResp = 8 + i * NC + 2, cRes = cResp + 1, Lt = col(cRes), rng = sh.getRange(2, cResp, linhasMax, 2);
     novas.push(SpreadsheetApp.newConditionalFormatRule().whenFormulaSatisfied('=LEFT($' + Lt + '2,5)="Certo"').setBackground(AZUL).setRanges([rng]).build());
     novas.push(SpreadsheetApp.newConditionalFormatRule().whenFormulaSatisfied('=LEFT($' + Lt + '2,7)="Parcial"').setBackground(AMARELO).setRanges([rng]).build());
     novas.push(SpreadsheetApp.newConditionalFormatRule().whenFormulaSatisfied('=LEFT($' + Lt + '2,6)="Errado"').setBackground(VERMELHO).setRanges([rng]).build());
   }
   sh.setConditionalFormatRules(novas);   // refaz o conjunto completo (abas antigas tinham só 12 questões)
+}
+
+/* Rode UMA vez no editor (menu Executar → corrigirCoresIndividual): repinta TODAS as linhas já gravadas nas abas "Individual · ..."
+   (azul = Certo, amarelo = Parcial, vermelho = Errado) e refaz as regras de formatação condicional. */
+function corrigirCoresIndividual() {
+  const NQ = 24, NC = 5, AZUL = '#c9ddf7', VERMELHO = '#f6c6c6', AMARELO = '#fff2cc';
+  let abas = 0, linhas = 0;
+  SpreadsheetApp.openById(PLANILHA_ID).getSheets().forEach(sh => {
+    if (sh.getName().indexOf('Individual · ') !== 0) return;
+    const n = sh.getLastRow() - 1;
+    if (n < 1 || sh.getLastColumn() < 11) return;
+    abas++; linhas += n;
+    for (let i = 0; i < NQ; i++) {
+      const cResp = 8 + i * NC + 2;
+      if (cResp + 1 > sh.getLastColumn()) break;
+      const res = sh.getRange(2, cResp + 1, n, 1).getValues();
+      const fundo = res.map(l => {
+        const t = String(l[0]);
+        const c = t.indexOf('Certo') === 0 ? AZUL : t.indexOf('Parcial') === 0 ? AMARELO : t.indexOf('Errado') === 0 ? VERMELHO : null;
+        return [c, c];
+      });
+      sh.getRange(2, cResp, n, 2).setBackgrounds(fundo);
+    }
+    try { sh.setConditionalFormatRules([]); formatarIndividual_(sh); } catch (e) { Logger.log(sh.getName() + ': ' + e); }
+  });
+  Logger.log('Repintadas ' + linhas + ' linha(s) em ' + abas + ' aba(s).');
 }
 
 /* Rode UMA vez no editor para testar: cria a aba "Individual · TESTE" com um aluno fictício (pode apagar a aba depois). */
