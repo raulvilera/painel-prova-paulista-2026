@@ -467,6 +467,7 @@ const ALUNOS = {
 { "n": 33, "nome": "LEONARDO FURINI FERNANDES JUNIOR", "ra": "" },
 { "n": 35, "nome": "ROBERT LUCAS MARTINS FERREIRA", "ra": "" },
 { "n": 37, "nome": "ALICE CANALLE MAGALHÃES", "ra": "" },
+{ "n": 38, "nome": "NAOMI PAGES ROJO", "ra": "" },
 { "n": "", "nome": "ISAAC LOURENCO DA SILVA NASCIMENTO", "ra": "" }
 ],
 "6º Ano B (Lydia)": [

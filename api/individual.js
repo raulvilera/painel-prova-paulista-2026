@@ -229,6 +229,12 @@ const textoAA = (q, r) => !Array.isArray(r) ? '' : q.tipo === 'ordem'
 /* ---------- montagem das questões de um aluno ---------- */
 const REMED = require('./_remediacao.js');
 const PAINEL = require('./_plano-painel.js');   // plano de cada aluno derivado do painel (descritores fracos da turma × nível do aluno) — vale para quem não tem linha em indiv_plano
+/* Alunos da lista de chamada que ainda não estão nos dados do painel: recebem o plano típico da turma (descritores mais frequentes, nível Básico) até haver nota deles */
+[['6º ANO A TARDE', 'NAOMI PAGES ROJO']].forEach(([t, n]) => {
+  const T = PAINEL[t]; if (!T || T[n]) return;
+  const f = {}; Object.keys(T).forEach(a => T[a].forEach(([k]) => { f[k] = (f[k] || 0) + 1; }));
+  T[n] = Object.keys(f).sort((x, y) => f[y] - f[x]).slice(0, 6).map(k => [k, 1]);
+});
 const tk = t => { const s = norm(t), m = /(\d)\S*\s*ANO\s*([A-Z])\b/.exec(s); if (!m) return ''; return m[1] + m[2] + (/MANHA/.test(s) ? 'M' : /TARDE/.test(s) ? 'T' : /NOITE/.test(s) ? 'N' : ''); };
 const painelTurma = turma => { const k = tk(turma), ks = Object.keys(PAINEL); const r = ks.find(x => tk(x) === k); if (r) return r; const c = ks.filter(x => tk(x).slice(0, 2) === k.slice(0, 2)); return k && !/[MTN]$/.test(k) && c.length === 1 ? c[0] : null; };
 const painelAluno = (turma, nome) => { const pk = painelTurma(turma); if (!pk) return null; const T = PAINEL[pk], ns = Object.keys(T); const n = ns.find(x => norm(x) === norm(nome)) || ns.find(x => PEI.chaveNome(x) === PEI.chaveNome(nome)); return n ? { nome: n, itens: T[n].map(([k, niv]) => ({ k, niv, t: 'gap' })) } : null; };
