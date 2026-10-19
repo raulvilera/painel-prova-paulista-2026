@@ -2337,7 +2337,8 @@
    ],
    "correta": 1,
    "explicacao": "Indicadores quantitativos são expressos em números; os qualitativos descrevem qualidades ou percepções. Os distratores trocam as categorias.",
-   "manter": true
+   "manter": true,
+   "semImg": true
   },
   {
    "tipo": "obj",

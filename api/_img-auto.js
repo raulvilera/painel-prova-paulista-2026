@@ -80,7 +80,7 @@ function tema(k) {
 function aplicar(itens) {
   const usadas = new Set(), uso = {};
   return itens.map(it => {
-    const q = it.q; if (q.ilus) return it;
+    const q = it.q; if (q.ilus || q.semImg) return it;
     const en = norm(q.enunciado), cm = norm(q.comando || ''); let r = null, rn = 0;
     if (!RECUSADAS.has(impressao(q))) REGRAS.forEach(x => { if (usadas.has(x.k)) return; const g = new RegExp(x.re.source, 'g'), c = (en.match(g) || []).length + 3 * (cm.match(g) || []).length; if (c >= 2 && c > rn) { r = x; rn = c; } });
     let spec, alt, k2;
