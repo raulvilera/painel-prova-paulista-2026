@@ -195,7 +195,11 @@ function enviar(p) {
     try { c = corrigirIA_(d.q, d.texto); }
     catch (e) { statusIA = 'corrigido automático (IA indisponível)'; c = corrigirLocal_(d.q, d.texto); }
     const ind = indicioIA_(d.texto, Array.isArray(p.sinais) ? p.sinais[d.idx] : null, c.ia, c.iaMotivo);
-    if (ind) { c.alerta = ind; c.comentario = comentarioIA_(ind) + c.comentario; }
+    if (ind) {
+      c.alerta = ind;
+      if (ind.nivel === 'alto' && c.nota !== '') { ind.motivo += ' — nota original da correção: ' + String(c.nota).replace('.', ',') + ', zerada pelo critério'; c.nota = 0; c.comentario = 'Resposta não avaliada: indícios fortes de que o texto não foi escrito pelo aluno.'; }   // critério do professor: uso de IA = nota 0
+      c.comentario = comentarioIA_(ind) + c.comentario;
+    }
     return c;   // nunca fica sem nota: a IA refaz depois (corrigirPendentes)
   });
   const notaDis = corr.every(c => c.nota !== '') ? corr.reduce((s, c) => s + Number(c.nota), 0) : '';
