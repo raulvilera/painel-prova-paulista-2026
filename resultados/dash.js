@@ -8,6 +8,8 @@
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const pct = v => Math.round(v * 100) + '%';
   const media = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : 0;
+  /* data e hora (horário de Brasília) em que o aluno enviou a atividade */
+  const fmtData = d => { if (!d) return ''; const t = new Date(d); if (isNaN(t)) return ''; try { return t.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }).replace(',', ' às'); } catch (e) { return ''; } };
   const nf = n => (Math.round(n * 10) / 10).toString().replace('.', ',');
   const S = { filtro: '', status: '', busca: '', open: new Set() };
   let TENT = [], ROSTER = {};
@@ -88,7 +90,7 @@
       const al = new Map();
       (ROSTER[t] || []).forEach(n => al.set(n, { n, notas: [], itens: [], feito: false }));
       dados.filter(x => x.turma === t).forEach(x => {
-        const o = al.get(x.aluno) || { n: x.aluno, notas: [], itens: [], feito: false }; o.feito = true;
+        const o = al.get(x.aluno) || { n: x.aluno, notas: [], itens: [], feito: false }; o.feito = true; if (x.criado && (!o.criado || new Date(x.criado) > new Date(o.criado))) o.criado = x.criado;
         if (x.nota !== null) o.notas.push(x.nota); o.itens.push(...x.itens); o.parcial = o.parcial || x.parcial; al.set(x.aluno, o);
       });
       const alunos = [...al.values()].sort((a, b) => a.n.localeCompare(b.n, 'pt-BR'));
@@ -195,7 +197,7 @@
     const ds = agrega(tm.itens, 'desc'), as = agrega(tm.itens, 'ae');
     const nivTema = (a, chave, k) => { const x = agrega(a.itens, chave).find(z => z.k === k); return x ? nivel(x.p) : -1; };
     /* alunos que responderam um tema, com as suas questões; L = só os que estão no nível L */
-    const alunosTema = (chave, k, L) => { const l = al.filter(a => a.itens.some(i => i[chave] === k) && (L == null || nivTema(a, chave, k) === L)); return l.length ? l.map(a => { const its = a.itens.filter(i => i[chave] === k), p = media(its.map(i => i.v)); return '<details class="qs"' + (l.length <= 3 ? ' open' : '') + '><summary><b>' + esc(a.n) + '</b> · ' + pct(p) + ' (' + NV[nivel(p)] + ')</summary>' + qHtml(its) + '</details>'; }).join('') : '<p class="muted">Nenhum aluno neste nível.</p>'; };
+    const alunosTema = (chave, k, L) => { const l = al.filter(a => a.itens.some(i => i[chave] === k) && (L == null || nivTema(a, chave, k) === L)); return l.length ? l.map(a => { const its = a.itens.filter(i => i[chave] === k), p = media(its.map(i => i.v)); return '<details class="qs"' + (l.length <= 3 ? ' open' : '') + '><summary><b>' + esc(a.n) + '</b> · ' + pct(p) + ' (' + NV[nivel(p)] + ')' + (a.criado ? ' · ' + esc(fmtData(a.criado)) : '') + '</summary>' + qHtml(its) + '</details>'; }).join('') : '<p class="muted">Nenhum aluno neste nível.</p>'; };
     const por = chave => {
       const m = new Map();
       al.forEach(a => agrega(a.itens, chave).forEach(x => { if (!m.has(x.k)) m.set(x.k, [0, 0, 0, 0]); m.get(x.k)[nivel(x.p)]++; }));
@@ -203,7 +205,7 @@
     };
     const gal = (l, chave, rot) => '<div class="pzg pzs">' + l.map(x => '<div class="pzc"><h4>' + esc(x.k) + '</h4><div class="muted sm">' + x.n + ' aluno(s) avaliado(s) neste ' + rot + '</div>' + pizza3d(fatNiv(x.c, L => alunosTema(chave, x.k, L)), 150, x.k) + '</div>').join('') + '</div>';
     /* turma: fatia de alunos por nível → cada aluno com todas as questões */
-    const detAlunos = L => al.filter(a => a.nota !== null && nivel(a.nota / 10) === L).map(a => '<details class="qs"><summary><b>' + esc(a.n) + '</b> · nota ' + nf(a.nota) + ' · aproveitamento ' + pct(a.apr) + '</summary>' + qHtml(a.itens) + '</details>').join('') || '<p class="muted">Nenhum aluno neste nível.</p>';
+    const detAlunos = L => al.filter(a => a.nota !== null && nivel(a.nota / 10) === L).map(a => '<details class="qs"><summary><b>' + esc(a.n) + '</b> · nota ' + nf(a.nota) + ' · aproveitamento ' + pct(a.apr) + (a.criado ? ' · ' + esc(fmtData(a.criado)) : '') + '</summary>' + qHtml(a.itens) + '</details>').join('') || '<p class="muted">Nenhum aluno neste nível.</p>';
     /* turma: fatia de aprendizagens/descritores por nível → cada tema com as respostas de todos os alunos */
     const detTemasTurma = (lista, chave) => L => { const l = lista.filter(x => nivel(x.p) === L); return l.length ? l.map(x => '<h4 class="gn" style="color:var(--fg)">' + esc(x.k) + ' · turma ' + pct(x.p) + '</h4>' + alunosTema(chave, x.k, null)).join('') : '<p class="muted">Nenhum item neste nível.</p>'; };
     return '<div class="plano"><h3>Gráficos de pizza 3D da turma <span class="muted sm">· clique numa fatia para ampliar e ver as questões e as respostas dos alunos</span></h3><div class="pzg">' +
@@ -269,7 +271,7 @@
       return (nao.length ? '<h4 class="gn">✗ Não atingidos (' + nao.length + ')</h4>' + barras(nao, ref) : '') + (ok.length ? '<h4 class="ga">✓ Atingidos (' + ok.length + ')</h4>' + barras(ok, ref) : '') || '<p class="muted sm">Sem dados.</p>';
     };
     const refAe = new Map(agrega(tm.itens, 'ae').map(x => [x.k, x.p])), refDs = new Map(agrega(tm.itens, 'desc').map(x => [x.k, x.p]));
-    return questoes(a) + planoAluno(a, tm) + pizzasAluno(a) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
+    return (a.criado ? '<p class="muted sm" style="margin:0 0 8px">📅 Atividade realizada em <b>' + esc(fmtData(a.criado)) + '</b></p>' : '') + questoes(a) + planoAluno(a, tm) + pizzasAluno(a) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
       '<p class="muted sm">Barra = aproveitamento do aluno; traço preto = média da turma. Atingido: aproveitamento a partir de 50% (Adequado ou Avançado).' + (a.parcial ? ' Nota parcial: dissertativa ainda em correção.' : '') + '</p>';
   }
   function corpoTurma(tm) {
@@ -282,7 +284,7 @@
     return vis + '<div class="alist">' + cab + (lin.length ? lin.map((a, i) => {
       const k = tm.t + '|' + a.n;
       return '<details class="al' + (a.feito ? '' : ' pendr') + '" data-k="' + esc(k) + '" data-t="' + esc(tm.t) + '" data-a="' + esc(a.n) + '"' + (S.open.has(k) ? ' open' : '') + '><summary class="arow"><span class="muted">' + (tm.alunos.indexOf(a) + 1) + '</span><span class="nmal">' + esc(a.n) + '</span>' +
-        '<span>' + (a.feito ? '<span class="st ok">✓ Realizou</span>' : '<span class="st pend">Pendente</span>') + '</span>' +
+        '<span>' + (a.feito ? '<span class="st ok">✓ Realizou</span>' + (a.criado ? '<br><span class="muted" style="font-size:.72rem">' + esc(fmtData(a.criado)) + '</span>' : '') : '<span class="st pend">Pendente</span>') + '</span>' +
         '<span class="num">' + (a.nota === null ? '—' : '<b>' + nf(a.nota) + '</b>') + '</span><span>' + (a.nota === null ? '—' : chip(a.nota)) + '</span><span class="num">' + (a.apr === null ? '—' : pct(a.apr)) + '</span></summary><div class="lz"></div></details>';
     }).join('') : '<p class="muted sm" style="padding:8px">Nenhum aluno para este filtro.</p>') + '</div>';
   }
