@@ -557,7 +557,8 @@ const ALUNOS = {
 { "n": 28, "nome": "CATARYNA DOS SANTOS", "ra": "21484716-x" },
 { "n": 29, "nome": "ANA CLARA CORREA PINTO", "ra": "" },
 { "n": 31, "nome": "GUSTAVO HENRIQUE SANTOS MALAQUIAS", "ra": "15073645-8" },
-{ "n": 32, "nome": "SOFFIA NICOLY ALVES FIDELES", "ra": "" }
+{ "n": 32, "nome": "SOFFIA NICOLY ALVES FIDELES", "ra": "" },
+{ "n": 33, "nome": "DAYLLA CRISTINE RODRIGUES DOS SANTOS VIEIRA", "ra": "" }
 ],
 "7º Ano A": [
 { "n": 1, "nome": "ÁGATHA CAMPOS DE SOUSA", "ra": "123687705-6" },

@@ -230,7 +230,7 @@ const textoAA = (q, r) => !Array.isArray(r) ? '' : q.tipo === 'ordem'
 const REMED = require('./_remediacao.js');
 const PAINEL = require('./_plano-painel.js');   // plano de cada aluno derivado do painel (descritores fracos da turma × nível do aluno) — vale para quem não tem linha em indiv_plano
 /* Alunos da lista de chamada que ainda não estão nos dados do painel: recebem o plano típico da turma (descritores mais frequentes, nível Básico) até haver nota deles */
-[['6º ANO A TARDE', 'NAOMI PAGES ROJO']].forEach(([t, n]) => {
+[['6º ANO A TARDE', 'NAOMI PAGES ROJO'], ['6º ANO C TARDE', 'DAYLLA CRISTINE RODRIGUES DOS SANTOS VIEIRA']].forEach(([t, n]) => {
   const T = PAINEL[t]; if (!T || T[n]) return;
   const f = {}; Object.keys(T).forEach(a => T[a].forEach(([k]) => { f[k] = (f[k] || 0) + 1; }));
   T[n] = Object.keys(f).sort((x, y) => f[y] - f[x]).slice(0, 6).map(k => [k, 1]);
