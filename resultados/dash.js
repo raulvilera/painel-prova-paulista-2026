@@ -138,6 +138,56 @@
     return o;
   };
   const rotNivel = lv => ['Abaixo do Básico', 'Básico', 'Adequado', 'Avançado'][lv];
+
+  /* ---------- gráficos de pizza 3D (SVG, sem biblioteca): fatias = níveis de proficiência ---------- */
+  function pizza3d(fat, W, titulo) {
+    const tot = fat.reduce((s, f) => s + f.v, 0); W = W || 200;
+    if (!tot) return '<p class="muted sm">Sem dados.</p>';
+    const cx = W / 2, rx = W * .44, ry = W * .25, h = W * .08, cy = ry + 4, H = cy + ry + h + 6, P = Math.PI;
+    const pt = (a, dy) => (cx + rx * Math.cos(a)).toFixed(1) + ',' + (cy + ry * Math.sin(a) + (dy || 0)).toFixed(1);
+    let ang = -P / 2, walls = '', tops = '', lbl = '';
+    const f2 = fat.filter(f => f.v > 0);
+    f2.forEach(f => {
+      let a0 = ang, a1 = ang + f.v / tot * 2 * P; ang = a1;
+      if (f2.length === 1) a1 = a0 + 2 * P - .0001;
+      const segs = [[a0, a1]];
+      const parte = (x0, x1) => { const s = Math.max(x0, 0), e = Math.min(x1, P); return e > s ? [s, e] : null; };
+      const vis = [parte(a0, a1), parte(a0 - 2 * P, a1 - 2 * P), parte(a0 + 2 * P, a1 + 2 * P)].filter(Boolean);
+      vis.forEach(([s, e]) => { walls += '<path d="M' + pt(s) + ' A' + rx + ' ' + ry + ' 0 ' + (e - s > P ? 1 : 0) + ' 1 ' + pt(e) + ' L' + pt(e, h) + ' A' + rx + ' ' + ry + ' 0 ' + (e - s > P ? 1 : 0) + ' 0 ' + pt(s, h) + ' Z" style="fill:' + f.c + '"/><path d="M' + pt(s) + ' A' + rx + ' ' + ry + ' 0 ' + (e - s > P ? 1 : 0) + ' 1 ' + pt(e) + ' L' + pt(e, h) + ' A' + rx + ' ' + ry + ' 0 ' + (e - s > P ? 1 : 0) + ' 0 ' + pt(s, h) + ' Z" fill="#000" opacity=".32"/>'; });
+      tops += f2.length === 1 ? '<ellipse cx="' + cx + '" cy="' + cy + '" rx="' + rx + '" ry="' + ry + '" style="fill:' + f.c + '" stroke="#fff" stroke-width="1"/>'
+        : '<path d="M' + cx + ',' + cy + ' L' + pt(a0) + ' A' + rx + ' ' + ry + ' 0 ' + (a1 - a0 > P ? 1 : 0) + ' 1 ' + pt(a1) + ' Z" style="fill:' + f.c + '" stroke="#fff" stroke-width="1"><title>' + esc(f.r) + ': ' + f.v + ' (' + Math.round(f.v / tot * 100) + '%)</title></path>';
+      if (f.v / tot >= .08) { const m = (a0 + a1) / 2; lbl += '<text x="' + (cx + rx * .6 * Math.cos(m)).toFixed(1) + '" y="' + (cy + ry * .6 * Math.sin(m) + 4).toFixed(1) + '" text-anchor="middle" font-size="' + Math.round(W * .06) + '" font-weight="800" fill="#fff" stroke="#000" stroke-width=".6" paint-order="stroke">' + f.v + '</text>'; }
+    });
+    const leg = fat.map(f => '<li><i style="background:' + f.c + '"></i>' + esc(f.r) + ': <b>' + f.v + '</b> (' + Math.round(f.v / tot * 100) + '%)</li>').join('');
+    return '<figure class="pz"><svg viewBox="0 0 ' + W + ' ' + H.toFixed(0) + '" width="' + W + '" role="img" aria-label="' + esc(titulo || 'Gráfico de pizza') + '">' + walls + tops + lbl + '</svg><ul class="pzl">' + leg + '</ul></figure>';
+  }
+  const fatNiv = niv => NIVEIS.map((n, i) => ({ r: n[0], v: niv[i] || 0, c: 'var(--' + n[1] + ')' }));
+  const contaNiv = lista => { const c = [0, 0, 0, 0]; lista.forEach(x => c[nivel(x.p)]++); return c; };
+  const pzCard = (t, sub, svg) => '<div class="pzc"><h4>' + esc(t) + '</h4>' + (sub ? '<div class="muted sm">' + esc(sub) + '</div>' : '') + svg + '</div>';
+  function pizzasAluno(a) {
+    if (!a.feito || !a.itens.length) return '';
+    const ds = agrega(a.itens, 'desc'), as = agrega(a.itens, 'ae');
+    return '<div class="plano"><h3>Gráficos de pizza 3D do aluno</h3><div class="pzg">' + pzCard('Descritores por nível', ds.length + ' descritor(es)', pizza3d(fatNiv(contaNiv(ds)), 190, 'Descritores por nível')) +
+      pzCard('Aprendizagens essenciais por nível', as.length + ' aprendizagem(ns)', pizza3d(fatNiv(contaNiv(as)), 190, 'Aprendizagens por nível')) +
+      pzCard('Questões', a.itens.length + ' questão(ões)', pizza3d([{ r: 'Acertou (≥70%)', v: a.itens.filter(i => i.v >= .7).length, c: 'var(--lv3)' }, { r: 'Parcial (30–69%)', v: a.itens.filter(i => i.v >= .3 && i.v < .7).length, c: 'var(--lv1)' }, { r: 'Errou (<30%)', v: a.itens.filter(i => i.v < .3).length, c: 'var(--lv0)' }], 190, 'Questões')) + '</div></div>';
+  }
+  function pizzasTurma(tm) {
+    const al = tm.alunos.filter(a => a.feito && a.itens.length);
+    if (!al.length) return '';
+    const ds = agrega(tm.itens, 'desc'), as = agrega(tm.itens, 'ae');
+    const por = chave => {
+      const m = new Map();
+      al.forEach(a => agrega(a.itens, chave).forEach(x => { if (!m.has(x.k)) m.set(x.k, [0, 0, 0, 0]); m.get(x.k)[nivel(x.p)]++; }));
+      return [...m.entries()].map(([k, c]) => ({ k, c, n: c.reduce((x, y) => x + y, 0), pior: (c[0] + c[1]) / c.reduce((x, y) => x + y, 0) })).sort((x, y) => y.pior - x.pior);
+    };
+    const gal = (l, rot) => '<div class="pzg pzs">' + l.map(x => '<div class="pzc"><h4>' + esc(x.k) + '</h4><div class="muted sm">' + x.n + ' aluno(s) avaliado(s) neste ' + rot + '</div>' + pizza3d(fatNiv(x.c), 150, x.k) + '</div>').join('') + '</div>';
+    return '<div class="plano"><h3>Gráficos de pizza 3D da turma</h3><div class="pzg">' +
+      pzCard('Alunos por nível', al.length + ' aluno(s) com atividade', pizza3d(fatNiv(tm.niv), 200, 'Alunos por nível')) +
+      pzCard('Aprendizagens essenciais por nível', as.length + ' aprendizagem(ns), média da turma', pizza3d(fatNiv(contaNiv(as)), 200, 'Aprendizagens por nível')) +
+      pzCard('Descritores por nível', ds.length + ' descritor(es), média da turma', pizza3d(fatNiv(contaNiv(ds)), 200, 'Descritores por nível')) + '</div>' +
+      '<details class="qs"><summary>Por aprendizagem essencial: como os alunos se distribuem em cada uma (' + por('ae').length + ')</summary>' + gal(por('ae'), 'tema') + '</details>' +
+      '<details class="qs"><summary>Por descritor: como os alunos se distribuem em cada um (' + por('desc').length + ')</summary>' + gal(por('desc'), 'descritor') + '</details></div>';
+  }
   function planoAluno(a, tm) {
     const l = agrega(a.itens, 'desc').filter(x => x.p < .5);
     if (!a.feito) return '';
@@ -176,7 +226,7 @@
       return (nao.length ? '<h4 class="gn">✗ Não atingidos (' + nao.length + ')</h4>' + barras(nao, ref) : '') + (ok.length ? '<h4 class="ga">✓ Atingidos (' + ok.length + ')</h4>' + barras(ok, ref) : '') || '<p class="muted sm">Sem dados.</p>';
     };
     const refAe = new Map(agrega(tm.itens, 'ae').map(x => [x.k, x.p])), refDs = new Map(agrega(tm.itens, 'desc').map(x => [x.k, x.p]));
-    return questoes(a) + planoAluno(a, tm) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
+    return questoes(a) + planoAluno(a, tm) + pizzasAluno(a) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
       '<p class="muted sm">Barra = aproveitamento do aluno; traço preto = média da turma. Atingido: aproveitamento a partir de 50% (Adequado ou Avançado).' + (a.parcial ? ' Nota parcial: dissertativa ainda em correção.' : '') + '</p>';
   }
   function corpoTurma(tm) {
@@ -224,7 +274,7 @@
     const lz = d.querySelector(':scope > .lz'), k = d.dataset.k;
     if (d.classList.contains('tg')) { if (!lz.innerHTML) lz.innerHTML = corpoTurma(TURMAS.find(t => t.t === k)); lz.querySelectorAll('details[open]').forEach(preenche); }
     else if (d.classList.contains('al')) { if (!lz.innerHTML) { const tm = TURMAS.find(t => t.t === d.dataset.t); lz.innerHTML = graficoAluno(tm.alunos.find(a => a.n === d.dataset.a), tm); } }
-    else if (d.classList.contains('sub')) { if (!lz.innerHTML) { const tm = TURMAS.find(t => t.t === k.split('|')[0]); lz.innerHTML = planoTurma(tm) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + barras(agrega(tm.itens, 'ae')) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + barras(agrega(tm.itens, 'desc')) + '</div></div>'; } }
+    else if (d.classList.contains('sub')) { if (!lz.innerHTML) { const tm = TURMAS.find(t => t.t === k.split('|')[0]); lz.innerHTML = planoTurma(tm) + pizzasTurma(tm) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + barras(agrega(tm.itens, 'ae')) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + barras(agrega(tm.itens, 'desc')) + '</div></div>'; } }
   }
 
   async function iniciar() {
@@ -250,6 +300,6 @@
       desenha();
     } catch (e) { msg('Não foi possível carregar: ' + esc(e.message)); }
   }
-  window.RES_DASH = { iniciar, _norm: norm, _plano: { planoAluno, planoTurma, montaTurmas, setRoster: r => { ROSTER = r; } } };
+  window.RES_DASH = { iniciar, _norm: norm, _plano: { pizza3d, pizzasTurma, pizzasAluno, planoAluno, planoTurma, montaTurmas, setRoster: r => { ROSTER = r; } } };
   document.addEventListener('DOMContentLoaded', iniciar);
 })();
