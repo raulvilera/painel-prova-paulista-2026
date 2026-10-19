@@ -26,9 +26,28 @@ module.exports = async function resultados(req, res) {
   res.setHeader('Cache-Control', 'no-store'); res.setHeader('Content-Type', 'application/json; charset=utf-8');
   const out = (c, v) => res.status(c).json(v);
   try {
-    if (req.method !== 'GET') return out(405, { ok: false, erro: 'Use GET.' });
+    if (req.method !== 'GET' && req.method !== 'POST') return out(405, { ok: false, erro: 'Use GET.' });
     if (!SB || !KEY) return out(500, { ok: false, erro: 'Banco não configurado na Vercel.' });
     if (!(await professor(req))) return out(401, { ok: false, erro: 'Entre primeiro no painel com o seu login de professor.' });
+    if (req.method === 'POST') {   // liberar novo envio de um aluno (apaga o envio dele)
+      const b = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
+      if (b.acao !== 'liberar') return out(400, { ok: false, erro: 'Ação inválida.' });
+      if (b.fonte === 'individual') {
+        const id = Number(b.id); if (!Number.isInteger(id) || id <= 0) return out(400, { ok: false, erro: 'Envio inválido.' });
+        const r = await fetch(SB + '/rest/v1/indiv_respostas?id=eq.' + id, { method: 'DELETE', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, Prefer: 'return=representation' } });
+        const t = await r.text(); if (!r.ok) return out(502, { ok: false, erro: 'Supabase ' + r.status + ': ' + t.slice(0, 160) });
+        return out(200, { ok: true, removidos: (t ? JSON.parse(t) : []).length });
+      }
+      if (b.fonte === 'simulado') {
+        const url = process.env.EM_APPS_SCRIPT_URL || '', segredo = process.env.EM_SEGREDO || '';
+        if (!url || !segredo) return out(500, { ok: false, erro: 'Planilha não configurada na Vercel.' });
+        const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ acao: 'liberarEF', segredo, turma: String(b.turma || ''), nome: String(b.nome || '') }), redirect: 'follow' });
+        const j = await r.json().catch(() => null);
+        if (!j || !j.ok) return out(502, { ok: false, erro: String((j && j.erro) || 'A planilha não respondeu.') + (/ação desconhecida/.test(String(j && j.erro)) ? ' — cole o Codigo-completo.gs atualizado no Apps Script e crie uma nova versão da implantação.' : '') });
+        return out(200, { ok: true, removidos: j.removidos });
+      }
+      return out(400, { ok: false, erro: 'Esta avaliação não tem limite de envio.' });
+    }
     const fonte = String((req.query && req.query.fonte) || '');
     if (fonte === 'em') {
       const rows = await rest('em_respostas?select=envio_id,criado,avaliacao,turma_id,turma,componente,prova,n,nome,itens,acertos,total_obj,nota_obj,nota_final,status&order=criado.asc&limit=5000');

@@ -72,6 +72,7 @@ function doGet(e) {
 function doPost(e) {
   try {
     const p = JSON.parse((e && e.postData && e.postData.contents) || '{}');
+    if (p.acao === 'liberarEF') return json_(liberarEF_(p));   // professor libera novo envio de um aluno
     if (p.acao === 'resultadosEF') return json_(resultadosEF_(p));   // relatório do professor (somente leitura)
     if (p.acao === 'individual') return json_(individualPlanilha_(p));   // atividade individual: uma linha por aluno
     if (p.acao === 'enviarEM') return json_(enviarEM_(p));   // Ensino Médio (ver seção no fim do arquivo)
@@ -106,6 +107,24 @@ function resultadosEF_(p) {
     });
   });
   return { ok: true, rows: rows, roster: roster };
+}
+
+/* Liberar novo envio: apaga a(s) linha(s) do aluno na aba da turma (chamado pelo relatório, com o segredo do professor). */
+function liberarEF_(p) {
+  const segredo = PropertiesService.getScriptProperties().getProperty('EM_SEGREDO');
+  if (!segredo || String(p.segredo || '') !== segredo) throw new Error('não autorizado');
+  const t = cfg_(p.turma), nome = String(p.nome || '').trim();
+  if (!nome) throw new Error('nome inválido');
+  const lock = LockService.getScriptLock(); lock.waitLock(20000);
+  try {
+    const sh = SpreadsheetApp.openById(PLANILHA_ID).getSheetByName(nomeAba_(t.id));
+    let n = 0;
+    if (sh && sh.getLastRow() >= 3) {
+      const v = sh.getRange(3, COL.nome, sh.getLastRow() - 2, 1).getValues();
+      for (let i = v.length - 1; i >= 0; i--) if (String(v[i][0]).trim() === nome) { sh.deleteRow(i + 3); n++; }
+    }
+    return { ok: true, removidos: n };
+  } finally { lock.releaseLock(); }
 }
 
 function json_(o) { return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON); }

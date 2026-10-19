@@ -94,3 +94,6 @@ details.qs>summary{cursor:pointer;padding:9px 12px;font-weight:700;font-size:.9r
 .pzx{position:sticky;top:0;float:right;border:0;background:var(--surface-2);color:var(--fg);font-size:1.1rem;width:36px;height:36px;border-radius:50%;cursor:pointer}
 .pzh{margin:0 0 10px;font-size:1.05rem;padding-right:44px}.pzb{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}.pzbig{flex:0 0 310px;max-width:100%;position:sticky;top:0}.pzd{flex:1 1 360px;min-width:0}
 @media(max-width:760px){.pzbig{position:static;flex-basis:100%}}
+
+.lib{margin:0 0 10px}.libb{font:inherit;font-weight:700;font-size:.84rem;background:var(--surface-2);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}.libb:hover{border-color:var(--accent);color:var(--accent)}.libb:disabled{opacity:.6;cursor:wait}
+@media print{.lib{display:none}}

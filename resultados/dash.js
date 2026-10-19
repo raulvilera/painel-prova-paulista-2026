@@ -40,7 +40,7 @@
       });
       const parcial = (r.itens || []).some(i => i.tipo === 'dis' && typeof i.nota !== 'number');
       const rotAval = CFG.fonte === 'em' ? [r.componente, r.prova, (r.avaliacao.split('-')[1] || '') + 'ª série'].filter(Boolean).join(' · ') : (CFG.fonte === 'simulado' ? 'Simulado SARESP' : 'Atividade individual');
-      return { turma, aluno: r.nome, aval, rotAval, itens, parcial, nota: itens.length ? media(itens.map(i => i.v)) * 10 : null, criado: r.criado };
+      return { turma, aluno: r.nome, id: r.id, aval, rotAval, itens, parcial, nota: itens.length ? media(itens.map(i => i.v)) * 10 : null, criado: r.criado };
     });
   }
 
@@ -90,7 +90,7 @@
       const al = new Map();
       (ROSTER[t] || []).forEach(n => al.set(n, { n, notas: [], itens: [], feito: false }));
       dados.filter(x => x.turma === t).forEach(x => {
-        const o = al.get(x.aluno) || { n: x.aluno, notas: [], itens: [], feito: false }; o.feito = true; if (x.criado && (!o.criado || new Date(x.criado) > new Date(o.criado))) o.criado = x.criado;
+        const o = al.get(x.aluno) || { n: x.aluno, notas: [], itens: [], feito: false }; o.feito = true; o.id = x.id; o.turma = t; if (x.criado && (!o.criado || new Date(x.criado) > new Date(o.criado))) o.criado = x.criado;
         if (x.nota !== null) o.notas.push(x.nota); o.itens.push(...x.itens); o.parcial = o.parcial || x.parcial; al.set(x.aluno, o);
       });
       const alunos = [...al.values()].sort((a, b) => a.n.localeCompare(b.n, 'pt-BR'));
@@ -264,6 +264,20 @@
     });
     return '<div class="plano"><h3>Plano de intervenção da turma — descritores prioritários (' + L.length + ')</h3><p class="muted sm">Ordenados pela parcela de alunos abaixo de 50%. Nomes por descritor para formar grupos e duplas de apoio.</p>' + cards.join('') + '</div>';
   }
+  const podeLiberar = () => CFG.fonte === 'individual' || CFG.fonte === 'simulado';
+  let TOKEN = '';
+  async function liberar(btn) {
+    const t = btn.dataset.t, n = btn.dataset.a, id = btn.dataset.id;
+    if (!confirm('Liberar novo envio para ' + n + ' (' + t + ')?\n\nO envio atual será APAGADO dos relatórios e o aluno poderá refazer a atividade. Isso não pode ser desfeito.')) return;
+    btn.disabled = true; btn.textContent = 'Liberando…';
+    try {
+      const r = await fetch('/api/resultados', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + TOKEN }, body: JSON.stringify({ acao: 'liberar', fonte: CFG.fonte, id: id ? Number(id) : undefined, turma: t, nome: n }) });
+      const j = await r.json().catch(() => ({ ok: false, erro: 'resposta inválida (HTTP ' + r.status + ')' }));
+      if (!j.ok) throw new Error(j.erro || 'Erro ao liberar.');
+      TENT = TENT.filter(x => !(x.turma === t && x.aluno === n));
+      alert(n + ' está liberado(a): já pode enviar de novo.'); desenha();
+    } catch (e) { btn.disabled = false; btn.textContent = '🔓 Liberar novo envio'; alert('Não foi possível liberar: ' + e.message); }
+  }
   function graficoAluno(a, tm) {
     if (!a.feito) return '<p class="muted">Este aluno ainda não realizou a atividade.</p>';
     const dim = (chave, ref) => {
@@ -271,7 +285,8 @@
       return (nao.length ? '<h4 class="gn">✗ Não atingidos (' + nao.length + ')</h4>' + barras(nao, ref) : '') + (ok.length ? '<h4 class="ga">✓ Atingidos (' + ok.length + ')</h4>' + barras(ok, ref) : '') || '<p class="muted sm">Sem dados.</p>';
     };
     const refAe = new Map(agrega(tm.itens, 'ae').map(x => [x.k, x.p])), refDs = new Map(agrega(tm.itens, 'desc').map(x => [x.k, x.p]));
-    return (a.criado ? '<p class="muted sm" style="margin:0 0 8px">📅 Atividade realizada em <b>' + esc(fmtData(a.criado)) + '</b></p>' : '') + questoes(a) + planoAluno(a, tm) + pizzasAluno(a) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
+    return (a.criado ? '<p class="muted sm" style="margin:0 0 8px">📅 Atividade realizada em <b>' + esc(fmtData(a.criado)) + '</b></p>' : '') +
+      (podeLiberar() ? '<p class="lib"><button class="libb" data-t="' + esc(tm.t) + '" data-a="' + esc(a.n) + '" data-id="' + esc(a.id == null ? '' : a.id) + '">🔓 Liberar novo envio</button><span class="muted sm"> Use se o aluno diz que não fez e aparece “já enviou”. O envio atual é apagado.</span></p>' : '') + questoes(a) + planoAluno(a, tm) + pizzasAluno(a) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
       '<p class="muted sm">Barra = aproveitamento do aluno; traço preto = média da turma. Atingido: aproveitamento a partir de 50% (Adequado ou Avançado).' + (a.parcial ? ' Nota parcial: dissertativa ainda em correção.' : '') + '</p>';
   }
   function corpoTurma(tm) {
@@ -326,11 +341,13 @@
     $('fFiltro').onchange = e => { S.filtro = e.target.value; desenha(); };
     $('fStatus').onchange = e => { S.status = e.target.value; desenha(); };
     $('fBusca').oninput = e => { S.busca = e.target.value; desenha(); };
+    $('app').addEventListener('click', e => { const b = e.target.closest && e.target.closest('.libb'); if (b) { e.preventDefault(); liberar(b); } });
     $('app').addEventListener('toggle', e => { const d = e.target; if (!d.dataset || !d.dataset.k) return; if (d.open) { S.open.add(d.dataset.k); preenche(d); } else S.open.delete(d.dataset.k); }, true);
     if (!window.supabase) return msg('Não foi possível carregar o login. Atualize a página.');
     const sb = window.supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, detectSessionInUrl: false, flowType: 'implicit' } });
     const { data } = await sb.auth.getSession();
     if (!data || !data.session) return msg('Para ver os resultados, entre primeiro no painel com o seu login de professor.<br><br><a href="/">Abrir o painel</a>');
+    TOKEN = data.session.access_token;
     msg('Carregando os resultados…');
     try {
       const r = await fetch('/api/resultados?fonte=' + CFG.fonte, { headers: { Authorization: 'Bearer ' + data.session.access_token } });
