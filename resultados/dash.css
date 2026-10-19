@@ -83,3 +83,4 @@ details.qs>summary{cursor:pointer;padding:9px 12px;font-weight:700;font-size:.9r
 .plano{margin:0 0 14px}.pc{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;background:var(--surface);padding:9px 12px;margin:8px 0}
 .pc .ph{margin-bottom:4px}.pc ul{margin:4px 0 2px;padding-left:20px;font-size:.88rem}.pc li{margin:2px 0}
 @media print{.filters,nav{display:none}details>summary{display:block}}
+.iaw{margin:6px 0;padding:8px 10px;border-radius:8px;font-size:.85rem;border:1px solid var(--lv1);background:var(--lv1-soft)}.iaw.alto{border-color:var(--lv0);background:var(--lv0-soft)}

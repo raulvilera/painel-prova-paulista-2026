@@ -138,6 +138,7 @@
   <div id="qs"></div>
   <div class="nav" id="nav" hidden><button type="button" id="ant">← Voltar</button><button type="button" class="prim" id="prox">Próxima →</button></div>
   <div class="msg" id="msg" role="status"></div>
+  <p class="sm" style="margin:10px 0;color:#5b6f74">Responda as questões escritas com as suas próprias palavras. O sistema registra se o texto foi colado e avisa o professor sobre possível uso de inteligência artificial.</p>
   <button class="enviar" id="btn" type="button" hidden>Enviar respostas</button>
 </div>
 <script>
@@ -334,7 +335,7 @@
     const falta = resp.map((r, i) => respondida(i) ? 0 : i + 1).filter(Boolean);
     if (falta.length && !confirm(tr((AD && AD.gentil ? 'Ainda dá tempo! Você não respondeu a questão ' : 'Faltam as questões ') + falta.join(', ') + '. ' + (AD && AD.gentil ? 'Quer enviar assim mesmo?' : 'Enviar mesmo assim?')))) return;
     falaParar(); const b = $('#btn'); b.disabled = true; b.textContent = 'Enviando e corrigindo…';
-    post(Object.assign({ acao: 'enviar', turma: fT.value, nome: fN.value, respostas: resp }, MODO ? { modo: MODO } : {})).then(r => {
+    post(Object.assign({ acao: 'enviar', turma: fT.value, nome: fN.value, respostas: resp, sinais: window.SINAIS ? window.SINAIS.coletar() : null }, MODO ? { modo: MODO } : {})).then(r => {
       enviado = true; b.textContent = 'Respostas enviadas ✓';
       const gent = !!(AD && AD.gentil);
       let oi = 0, di = 0;
@@ -362,5 +363,6 @@
   };
 })();
 </script>
+<script src="/sinais.js?v=1"></script>
 </body>
 </html>

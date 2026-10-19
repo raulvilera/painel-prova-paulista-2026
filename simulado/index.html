@@ -72,6 +72,7 @@
   <p class="aviso">Leia o enunciado e as imagens com atenção. Compare todas as alternativas antes de escolher: algumas apresentam explicações próximas, mas apenas uma responde corretamente ao que foi solicitado.</p>
   <div id="qs"><p class="vazio">As questões aparecem aqui depois que você escolher a turma.</p></div>
   <div class="msg" id="msg" role="status"></div>
+  <p class="sm" style="margin:10px 0;color:#5b6f74">Responda as questões escritas com as suas próprias palavras. O sistema registra se o texto foi colado e avisa o professor sobre possível uso de inteligência artificial.</p>
   <button class="enviar" id="btn" type="button" hidden>Enviar respostas</button>
 </div>
 
@@ -196,12 +197,13 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
     if (falta.length && !confirm('Faltam as questões ' + falta.join(', ') + '. Enviar mesmo assim?')) return;
     const [n, ...nm] = fN.value.split('|');
     const b = $('#btn'); b.disabled = true; b.textContent = 'Enviando e corrigindo…';
-    post({ acao: 'enviar', turma: fT.value, n: n, nome: nm.join('|'), ra: fRa.value, respostas: resp }).then(r => {
+    post({ acao: 'enviar', turma: fT.value, n: n, nome: nm.join('|'), ra: fRa.value, respostas: resp, sinais: window.SINAIS ? window.SINAIS.coletar() : null }).then(r => {
       b.textContent = 'Respostas enviadas ✓';
       const nd=(r.notasDis||[]).filter(x=>x!==''&&x!=null); msg(`Pronto, ${nm.join('|').split(' ')[0]}! Suas respostas foram registradas. Objetivas: ${r.acertos} de ${r.total} corretas.` + (nd.length===(r.notasDis||[]).length && nd.length ? ` Dissertativas (corrigidas pela IA): ${nd.map(x=>String(x).replace('.',',')).join(' · ')}. Nota final: ${String(r.notaFinal).replace('.',',')} de 10.` : ' As dissertativas serão corrigidas em seguida.'), true);
     }).catch(err => { b.disabled = false; b.textContent = 'Enviar respostas'; msg('Não foi possível enviar: ' + falhaRede(err) + '. Tente de novo.', false); });
   };
 })();
 </script>
+<script src="/sinais.js?v=1"></script>
 </body>
 </html>

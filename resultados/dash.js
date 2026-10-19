@@ -30,7 +30,7 @@
         else if (typeof i.nota === 'number') v = Math.max(0, Math.min(1, i.nota));
         else if (typeof i.parcial === 'number') v = Math.max(0, Math.min(1, i.parcial));   // ligar/ordenar (atividade adaptada): acerto parcial vale
         const m = j.meta[CFG.fonte === 'em' ? i.id : i.k] || {};
-        const q = { n: m.n || ix + 1, tipo: i.tipo, enun: m.enun || '', cor: m.cor || '', coment: i.comentario || '', nota: typeof i.nota === 'number' ? i.nota : null,
+        const q = { ia: i.ia && i.ia.nivel ? i.ia : null, n: m.n || ix + 1, tipo: i.tipo, enun: m.enun || '', cor: m.cor || '', coment: i.comentario || '', nota: typeof i.nota === 'number' ? i.nota : null,
           marcou: i.tipo === 'obj' ? (typeof i.resp === 'number' ? 'ABCDE'[i.resp] : (i.resp || '')) : '', texto: i.tipo === 'dis' ? String(i.resp || i.resposta || '') : '' };
         if (v === null) return;   // dissertativa ainda sem nota: entra assim que for corrigida
         if (CFG.fonte === 'em') itens.push({ v, q, ae: m.ae ? m.ae + (m.hab ? ' · ' + m.hab : '') : (m.hab || 'Mapa do Provão'), desc: m.objeto || '—', bim: '', rot: m.objeto });
@@ -117,7 +117,7 @@
         '<div><b>Questão ' + q.n + '</b> <span class="muted">· ' + tx + '</span></div>' +
         '<div class="qd"><b>Aprendizagem/habilidade:</b> ' + esc(i.ae) + '</div><div class="qd"><b>Descritor:</b> ' + esc(i.desc) + '</div>' +
         (q.enun ? '<div class="qe">' + esc(q.enun) + (q.enun.length >= 255 ? '…' : '') + '</div>' : '') +
-        (q.texto ? '<blockquote class="qt">' + esc(q.texto) + '</blockquote>' : '') + (q.coment ? '<div class="qd muted"><b>Comentário da correção:</b> ' + esc(q.coment) + '</div>' : '') + '</div></div>';
+        (q.ia ? '<div class="iaw ' + esc(q.ia.nivel) + '"><b>⚠ Possível uso de IA (' + (q.ia.nivel === 'alto' ? 'indício forte' : 'indício moderado') + ')</b> — ' + esc(q.ia.motivo || '') + '<br><span class="muted">É um indício, não uma prova: converse com o aluno e peça que explique a resposta com as próprias palavras.</span></div>' : '') + (q.texto ? '<blockquote class="qt">' + esc(q.texto) + '</blockquote>' : '') + (q.coment ? '<div class="qd muted"><b>Comentário da correção:</b> ' + esc(q.coment) + '</div>' : '') + '</div></div>';
     };
     const ac = L.filter(i => i.v >= .5).length;
     return '<details class="qs"><summary>Questões respondidas · ' + ac + ' acerto(s) e ' + (L.length - ac) + ' erro(s)</summary>' + L.map(linha).join('') + '</details>';
