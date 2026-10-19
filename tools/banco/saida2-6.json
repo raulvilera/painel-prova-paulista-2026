@@ -142,7 +142,8 @@
     "incorreta, pois a bactéria tem núcleo como as demais, mas ele é pequeno demais para ser registrado."
    ],
    "correta": 2,
-   "explicacao": "A bactéria tem membrana e citoplasma, logo é uma célula; apenas seu material genético não fica dentro de um núcleo delimitado. A ideia de que núcleo define célula é um erro frequente."
+   "explicacao": "A bactéria tem membrana e citoplasma, logo é uma célula; apenas seu material genético não fica dentro de um núcleo delimitado. A ideia de que núcleo define célula é um erro frequente.",
+   "manter": true
   },
   {
    "tipo": "obj",
@@ -2335,7 +2336,8 @@
     "Os leitos são qualitativos; a mortalidade infantil e a opinião dos usuários são quantitativas."
    ],
    "correta": 1,
-   "explicacao": "Indicadores quantitativos são expressos em números; os qualitativos descrevem qualidades ou percepções. Os distratores trocam as categorias."
+   "explicacao": "Indicadores quantitativos são expressos em números; os qualitativos descrevem qualidades ou percepções. Os distratores trocam as categorias.",
+   "manter": true
   },
   {
    "tipo": "obj",

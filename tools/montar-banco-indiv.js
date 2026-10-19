@@ -11,7 +11,7 @@ fs.readdirSync(__dirname+'/banco').filter(f=>/^saida2-\d+\.json$/.test(f)).forEa
   const R=Q.map(q=>{ const b={tipo:q.tipo,enunciado:String(q.enunciado),comando:String(q.comando||''),figura:I.limpaFigura(q.figura)};
    if(q.tipo==='obj'){b.alts=q.alts.slice(0,4).map(L);b.correta=Number(q.correta);b.explicacao=String(q.explicacao||'');if(b.alts.length!==4||!(b.correta>=0&&b.correta<=3))throw new Error('obj '+k);}
    else{b.ref=String(q.ref||'');b.conceitos=(q.conceitos||[]).map(String).slice(0,4);}
-   tot++; if(!b.figura)sem++; else if(I.entregaResposta(b)){b.figura=null;cort++;sem++;}
+   tot++; if(!b.figura)sem++; else if(!q.manter&&I.entregaResposta(b)){b.figura=null;cort++;sem++;}
    return b;});
   out[k]=R;});});
 fs.writeFileSync(__dirname+'/../api/_banco-indiv.js','/* GERADO por tools/montar-banco-indiv.js */\nmodule.exports='+JSON.stringify(out)+';\n');
