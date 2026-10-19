@@ -79,3 +79,7 @@ details.qs>summary{cursor:pointer;padding:9px 12px;font-weight:700;font-size:.9r
 .qb.ok{background:var(--lv2)}.qb.er{background:var(--lv0)}.qb.pa{background:var(--lv1)}
 .qc{font-size:.86rem;line-height:1.35;min-width:0}.qd{margin-top:2px}.qe{margin-top:4px;color:var(--muted);font-size:.82rem}
 .qt{margin:6px 0 0;padding:6px 10px;border-left:3px solid var(--line);background:var(--surface-2);font-size:.84rem;white-space:pre-wrap;word-break:break-word}
+
+.plano{margin:0 0 14px}.pc{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;background:var(--surface);padding:9px 12px;margin:8px 0}
+.pc .ph{margin-bottom:4px}.pc ul{margin:4px 0 2px;padding-left:20px;font-size:.88rem}.pc li{margin:2px 0}
+@media print{.filters,nav{display:none}details>summary{display:block}}

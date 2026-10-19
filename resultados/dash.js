@@ -122,6 +122,53 @@
     const ac = L.filter(i => i.v >= .5).length;
     return '<details class="qs"><summary>Questões respondidas · ' + ac + ' acerto(s) e ' + (L.length - ac) + ' erro(s)</summary>' + L.map(linha).join('') + '</details>';
   }
+
+  /* ---------- mapeamento das defasagens e como abordá-las (aluno e turma) ---------- */
+  const ESTR = [
+    { t: 'Retomada intensiva do conceito-base', l: ['Reapresentar o conceito do zero, com exemplo concreto, modelo, imagem ou experimento curto (ensino explícito, 1 ideia por vez).', 'Atender em pequeno grupo ou tutoria de 10–15 min, com exemplo resolvido em voz alta e depois o aluno refaz com apoio.', 'Usar questões de entrada mais simples (reconhecer, nomear, relacionar) antes de pedir explicações ou aplicações.'] },
+    { t: 'Prática guiada', l: ['Partir do erro: pedir que o aluno explique por que escolheu aquela resposta e corrigir a ideia, não só o resultado.', 'Atividade em dupla com um colega Avançado nesse descritor (tutoria entre pares), com roteiro de perguntas.', 'Contextualizar com situação do cotidiano ou da turma antes de voltar ao formato da prova.'] },
+    { t: 'Consolidação', l: ['Propor situações-problema no formato SARESP e pedir justificativa da alternativa escolhida e do porquê das outras estarem erradas.', 'Variar o contexto do mesmo descritor (outro exemplo, outro gráfico/tabela) para garantir transferência.'] },
+    { t: 'Aprofundamento', l: ['Convidar para monitoria: explicar o conceito ao colega do grupo de apoio.', 'Desafios de maior complexidade: interpretar gráfico/experimento novo e propor hipótese.'] }
+  ];
+  const porTipo = tipos => {
+    const o = [];
+    if (tipos.has('dis')) o.push('Nas dissertativas: estrutura de resposta em 3 passos (afirmação → evidência/dado → explicação) com modelo e frase de apoio.');
+    if (tipos.has('assoc') || tipos.has('ordem')) o.push('Nas de ligar/ordenar: usar cartões físicos para montar a relação ou a sequência antes de registrar.');
+    if (tipos.has('obj')) o.push('Nas objetivas: analisar os distratores (por que cada alternativa errada atrai) e treinar a leitura do comando.');
+    return o;
+  };
+  const rotNivel = lv => ['Abaixo do Básico', 'Básico', 'Adequado', 'Avançado'][lv];
+  function planoAluno(a, tm) {
+    const l = agrega(a.itens, 'desc').filter(x => x.p < .5);
+    if (!a.feito) return '';
+    if (!l.length) return '<div class="plano"><h3>Como trabalhar com este aluno</h3><p class="sm">Sem defasagens nos descritores avaliados. ' + ESTR[3].l.join(' ') + '</p></div>';
+    const cards = l.map(x => {
+      const lv = nivel(x.p), it = a.itens.filter(i => i.desc === x.k), tipos = new Set(it.map(i => i.q && i.q.tipo)), ae = it[0].ae;
+      const col = tm.alunos.filter(b => b !== a && b.itens.some(i => i.desc === x.k)).map(b => ({ n: b.n, p: media(b.itens.filter(i => i.desc === x.k).map(i => i.v)) })).filter(b => b.p >= .75).slice(0, 2).map(b => b.n.split(' ').slice(0, 2).join(' '));
+      const e = ESTR[lv];
+      return '<div class="pc"><div class="ph"><span class="chip ' + NIVEIS[lv][1] + '"><i style="background:var(--' + NIVEIS[lv][1] + ')"></i>' + rotNivel(lv) + ' · ' + pct(x.p) + '</span> <b>' + esc(x.k) + '</b></div>' +
+        '<div class="qd"><b>Aprendizagem/habilidade:</b> ' + esc(ae) + '</div><div class="qd"><b>Abordagem sugerida · ' + e.t + '</b></div><ul>' + e.l.map(z => '<li>' + esc(z) + '</li>').join('') + porTipo(tipos).map(z => '<li>' + esc(z) + '</li>').join('') +
+        (lv <= 1 && col.length ? '<li>Sugestão de dupla: ' + esc(col.join(' ou ')) + ' (bom desempenho neste descritor).</li>' : '') + '</ul></div>';
+    });
+    return '<div class="plano"><h3>Mapeamento das defasagens e como abordar (' + l.length + ')</h3><p class="muted sm">Em ordem da maior para a menor defasagem; a abordagem muda conforme o nível e o tipo de questão em que o aluno errou.</p>' + cards.join('') + '</div>';
+  }
+  function planoTurma(tm) {
+    const m = new Map();
+    tm.alunos.filter(a => a.feito).forEach(a => agrega(a.itens, 'desc').forEach(x => { if (!m.has(x.k)) m.set(x.k, { k: x.k, ae: a.itens.find(i => i.desc === x.k).ae, al: [] }); m.get(x.k).al.push({ n: a.n, p: x.p }); }));
+    const L = [...m.values()].map(d => { d.p = media(d.al.map(z => z.p)); d.baixo = d.al.filter(z => z.p < .5).length; d.sh = d.baixo / d.al.length; return d; }).filter(d => d.p < .5 || d.sh >= .4).sort((x, y) => y.sh - x.sh || x.p - y.p);
+    if (!L.length) return '<div class="plano"><h3>Plano de intervenção da turma</h3><p class="sm">Nenhum descritor com defasagem relevante na turma (nada abaixo de 50% na média e menos de 40% dos alunos abaixo de 50%).</p></div>';
+    const prim = n => n.split(' ').slice(0, 2).join(' ');
+    const cards = L.map((d, ix) => {
+      const lv = nivel(d.p), ab = d.al.filter(z => z.p < .25).map(z => prim(z.n)), ap = d.al.filter(z => z.p >= .25 && z.p < .5).map(z => prim(z.n)), mo = d.al.filter(z => z.p >= .75).map(z => prim(z.n));
+      const acao = d.sh >= .5 ? 'Metade ou mais da turma não atingiu: reensinar com a turma toda (aula dialogada com exemplo/experimento + prática guiada), depois fechar com as questões da prova.' :
+        d.sh >= .25 ? 'Parte da turma não atingiu: formar grupos de intervenção (rotação por estações) enquanto os demais consolidam.' : 'Poucos alunos abaixo: atender em tutoria individual ou em pequenos grupos, sem parar a turma.';
+      const lst = (r, a) => a.length ? '<div class="qd"><b>' + r + ':</b> ' + esc(a.join(', ')) + '</div>' : '';
+      return '<div class="pc"><div class="ph"><span class="chip ' + NIVEIS[lv][1] + '"><i style="background:var(--' + NIVEIS[lv][1] + ')"></i>Prioridade ' + (ix + 1) + ' · ' + pct(d.p) + '</span> <b>' + esc(d.k) + '</b></div>' +
+        '<div class="qd"><b>Aprendizagem/habilidade:</b> ' + esc(d.ae) + '</div><div class="qd"><b>' + d.baixo + ' de ' + d.al.length + ' alunos (' + pct(d.sh) + ') abaixo de 50%.</b> ' + esc(acao) + '</div>' +
+        lst('Retomada intensiva (abaixo de 25%)', ab) + lst('Prática guiada (25–49%)', ap) + lst('Possíveis monitores (75% ou mais)', mo) + '</div>';
+    });
+    return '<div class="plano"><h3>Plano de intervenção da turma — descritores prioritários (' + L.length + ')</h3><p class="muted sm">Ordenados pela parcela de alunos abaixo de 50%. Nomes por descritor para formar grupos e duplas de apoio.</p>' + cards.join('') + '</div>';
+  }
   function graficoAluno(a, tm) {
     if (!a.feito) return '<p class="muted">Este aluno ainda não realizou a atividade.</p>';
     const dim = (chave, ref) => {
@@ -129,7 +176,7 @@
       return (nao.length ? '<h4 class="gn">✗ Não atingidos (' + nao.length + ')</h4>' + barras(nao, ref) : '') + (ok.length ? '<h4 class="ga">✓ Atingidos (' + ok.length + ')</h4>' + barras(ok, ref) : '') || '<p class="muted sm">Sem dados.</p>';
     };
     const refAe = new Map(agrega(tm.itens, 'ae').map(x => [x.k, x.p])), refDs = new Map(agrega(tm.itens, 'desc').map(x => [x.k, x.p]));
-    return questoes(a) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
+    return questoes(a) + planoAluno(a, tm) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
       '<p class="muted sm">Barra = aproveitamento do aluno; traço preto = média da turma. Atingido: aproveitamento a partir de 50% (Adequado ou Avançado).' + (a.parcial ? ' Nota parcial: dissertativa ainda em correção.' : '') + '</p>';
   }
   function corpoTurma(tm) {
@@ -177,7 +224,7 @@
     const lz = d.querySelector(':scope > .lz'), k = d.dataset.k;
     if (d.classList.contains('tg')) { if (!lz.innerHTML) lz.innerHTML = corpoTurma(TURMAS.find(t => t.t === k)); lz.querySelectorAll('details[open]').forEach(preenche); }
     else if (d.classList.contains('al')) { if (!lz.innerHTML) { const tm = TURMAS.find(t => t.t === d.dataset.t); lz.innerHTML = graficoAluno(tm.alunos.find(a => a.n === d.dataset.a), tm); } }
-    else if (d.classList.contains('sub')) { if (!lz.innerHTML) { const tm = TURMAS.find(t => t.t === k.split('|')[0]); lz.innerHTML = '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + barras(agrega(tm.itens, 'ae')) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + barras(agrega(tm.itens, 'desc')) + '</div></div>'; } }
+    else if (d.classList.contains('sub')) { if (!lz.innerHTML) { const tm = TURMAS.find(t => t.t === k.split('|')[0]); lz.innerHTML = planoTurma(tm) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + barras(agrega(tm.itens, 'ae')) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + barras(agrega(tm.itens, 'desc')) + '</div></div>'; } }
   }
 
   async function iniciar() {
@@ -203,6 +250,6 @@
       desenha();
     } catch (e) { msg('Não foi possível carregar: ' + esc(e.message)); }
   }
-  window.RES_DASH = { iniciar, _norm: norm };
+  window.RES_DASH = { iniciar, _norm: norm, _plano: { planoAluno, planoTurma, montaTurmas, setRoster: r => { ROSTER = r; } } };
   document.addEventListener('DOMContentLoaded', iniciar);
 })();
