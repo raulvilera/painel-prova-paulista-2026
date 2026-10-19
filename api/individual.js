@@ -227,6 +227,15 @@ const textoAA = (q, r) => !Array.isArray(r) ? '' : q.tipo === 'ordem'
   ? r.map((v, j) => (j + 1) + ') ' + (v == null ? '—' : (q.passos || [])[v])).join(' · ')
   : r.map((v, j) => (q.itens || [])[j] + ' → ' + (v == null ? '—' : (q.banco || [])[v])).join(' | ');
 
+/* Um envio por aluno: confere se ele já enviou esta atividade (ou o simulado adaptado). Se precisar refazer, o professor apaga a linha em indiv_respostas. */
+async function jaEnviou(turma, nome, modoSim) {
+  const rows = await rest('indiv_respostas?select=id,criado,turma,status&nome=eq.' + enc(nome) + '&order=criado.desc&limit=30');
+  const ch = t => painelTurma(t) || tk(t) || norm(t);
+  return (rows || []).find(r => ch(r.turma) === ch(turma) && /simulado/i.test(String(r.status || '')) === !!modoSim) || null;
+}
+const quando = d => { try { return new Date(d).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }).replace(',', ' às'); } catch (e) { return ''; } };
+const MSG_JA = (r, simulado) => 'Você já enviou ' + (simulado ? 'este simulado' : 'esta atividade') + (r.criado ? ' em ' + quando(r.criado) : '') + '. Só é permitido um envio. Se precisar refazer, fale com o professor.';
+
 /* ---------- montagem das questões de um aluno ---------- */
 const REMED = require('./_remediacao.js');
 const IAS = require('./_ia-sinais.js');
@@ -320,6 +329,7 @@ module.exports = async function individual(req, res) {
     }
     if (req.method === 'GET' && acao === 'atividade') {
       const m = await montar(String(q.turma || ''), String(q.nome || ''), true, q.modo === 'simulado' ? 'simulado' : ''); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
+      { const ja = await jaEnviou(String(q.turma || ''), m.aluno, q.modo === 'simulado'); if (ja) return ok({ nome: m.aluno, aviso: MSG_JA(ja, q.modo === 'simulado'), itens: [], adapt: null }); }
       return ok({ nome: m.aluno, aviso: m.itens.length ? '' : (m.falhou ? 'Estamos preparando suas questões. Tente de novo em 1 minuto.' : 'Ainda não há atividade para você. Fale com o professor.'),
         itens: m.itens.map(i => ({ desc: i.desc, tipo: i.q.tipo, enunciado: i.q.enunciado, comando: i.q.comando, figura: i.q.figura || null, alts: i.q.tipo === 'obj' ? i.q.alts : [],
           linhas: i.q.tipo === 'assoc' ? i.q.itens : undefined, banco: i.q.tipo === 'assoc' ? i.q.banco : undefined, passos: i.q.tipo === 'ordem' ? i.q.passos : undefined,
@@ -329,6 +339,7 @@ module.exports = async function individual(req, res) {
     if (req.method === 'POST' && acao === 'enviar') {
       const m = await montar(String(b.turma || ''), String(b.nome || ''), false, b.modo === 'simulado' ? 'simulado' : ''); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
       if (!m.itens.length) return erro(409, 'Atividade ainda não liberada.'); if (!Array.isArray(b.respostas)) return erro(400, 'Respostas inválidas.');
+      { const ja = await jaEnviou(String(b.turma || ''), m.aluno, b.modo === 'simulado'); if (ja) return erro(409, MSG_JA(ja, b.modo === 'simulado')); }
       let ac = 0, nObj = 0, soma = 0, status = 'corrigido pela IA'; const gab = [], notas = [];
       const igual = (a, c) => Array.isArray(a) && a.length === c.length && c.every((v, j) => Number(a[j]) === v);
       const det = await Promise.all(m.itens.map(async (it, i) => {

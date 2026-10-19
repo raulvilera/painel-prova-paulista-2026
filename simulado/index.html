@@ -200,7 +200,7 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
     post({ acao: 'enviar', turma: fT.value, n: n, nome: nm.join('|'), ra: fRa.value, respostas: resp, sinais: window.SINAIS ? window.SINAIS.coletar() : null }).then(r => {
       b.textContent = 'Respostas enviadas ✓';
       const nd=(r.notasDis||[]).filter(x=>x!==''&&x!=null); msg(`Pronto, ${nm.join('|').split(' ')[0]}! Suas respostas foram registradas. Objetivas: ${r.acertos} de ${r.total} corretas.` + (nd.length===(r.notasDis||[]).length && nd.length ? ` Dissertativas (corrigidas pela IA): ${nd.map(x=>String(x).replace('.',',')).join(' · ')}. Nota final: ${String(r.notaFinal).replace('.',',')} de 10.` : ' As dissertativas serão corrigidas em seguida.'), true);
-    }).catch(err => { b.disabled = false; b.textContent = 'Enviar respostas'; msg('Não foi possível enviar: ' + falhaRede(err) + '. Tente de novo.', false); });
+    }).catch(err => { const t = String(err && err.message || err); if (/já enviou/.test(t)) { b.textContent = 'Já enviado'; msg(t, false); return; } b.disabled = false; b.textContent = 'Enviar respostas'; msg('Não foi possível enviar: ' + falhaRede(err) + '. Tente de novo.', false); });
   };
 })();
 </script>

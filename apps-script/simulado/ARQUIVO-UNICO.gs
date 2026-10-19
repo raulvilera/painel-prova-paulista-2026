@@ -169,12 +169,23 @@ function iaDoComentario_(c) {
   return m ? { nivel: m[1] === 'indício forte' ? 'alto' : 'medio', motivo: m[2].trim() } : null;
 }
 
+/* Um envio por aluno: procura o nome na aba da turma. Se precisar refazer, o professor apaga a linha do aluno na aba. */
+function jaEnviouSimulado_(turma, nome) {
+  const sh = SpreadsheetApp.openById(PLANILHA_ID).getSheetByName('Respostas · ' + turma);
+  if (!sh || sh.getLastRow() < 2) return null;
+  const v = sh.getRange(2, 1, sh.getLastRow() - 1, COL.nome).getValues();
+  for (let i = v.length - 1; i >= 0; i--) if (String(v[i][COL.nome - 1]).trim() === String(nome).trim()) return v[i][COL.data - 1];
+  return null;
+}
+function msgJa_(d) { const q = d instanceof Date ? Utilities.formatDate(d, 'America/Sao_Paulo', "dd/MM/yyyy 'às' HH:mm") : ''; return 'Você já enviou este simulado' + (q ? ' em ' + q : '') + '. Só é permitido um envio. Se precisar refazer, fale com o professor.'; }
+
 /* Chamado pela página ao enviar: confere o aluno, corrige e grava na aba da turma. */
 function enviar(p) {
   const t = cfg_(p.turma);
   const a = alunos_(p.turma).find(x => x.nome === p.nome);
   if (!a) throw new Error('Aluno não encontrado nesta turma');
   if (!Array.isArray(p.respostas)) throw new Error('Respostas inválidas');
+  { const ja = jaEnviouSimulado_(p.turma, a.nome); if (ja) throw new Error(msgJa_(ja)); }
   const Q = QUESTOES[t.serie];
   const ra = a.ra || String(p.ra || '').replace(/[^\dXx-]/g, '').slice(0, 14);
   let ac = 0;
@@ -210,6 +221,7 @@ function enviar(p) {
   const lock = LockService.getScriptLock();
   lock.waitLock(20000);
   try {
+    const ja2 = jaEnviouSimulado_(p.turma, a.nome); if (ja2) throw new Error(msgJa_(ja2));   // reconfere dentro do bloqueio (dois cliques ao mesmo tempo)
     const sh = abaTurma_(p.turma); sh.appendRow(linha);
     const lr = sh.getLastRow();
     corr.forEach((c, i) => { if (c.alerta) sh.getRange(lr, COL_DIS + i * 3 + 2).setBackground(c.alerta.nivel === 'alto' ? '#f6c6c6' : '#ffe0b2'); });   // comentário em laranja/vermelho = possível uso de IA
