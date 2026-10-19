@@ -30,7 +30,7 @@
         else if (typeof i.nota === 'number') v = Math.max(0, Math.min(1, i.nota));
         else if (typeof i.parcial === 'number') v = Math.max(0, Math.min(1, i.parcial));   // ligar/ordenar (atividade adaptada): acerto parcial vale
         const m = j.meta[CFG.fonte === 'em' ? i.id : i.k] || {};
-        const q = { ia: i.ia && i.ia.nivel ? i.ia : null, n: m.n || ix + 1, tipo: i.tipo, enun: m.enun || '', cor: m.cor || '', coment: i.comentario || '', nota: typeof i.nota === 'number' ? i.nota : null,
+        const q = { ia: i.ia && i.ia.nivel ? i.ia : null, n: m.n || ix + 1, tipo: i.tipo, enun: m.enun || i.enun || '', enunCompleto: !m.enun && !!i.enun, tResp: i.textoResp || '', tCor: i.textoCorreta || '', cor: m.cor || '', coment: i.comentario || '', nota: typeof i.nota === 'number' ? i.nota : null,
           marcou: i.tipo === 'obj' ? (typeof i.resp === 'number' ? 'ABCDE'[i.resp] : (i.resp || '')) : '', texto: i.tipo === 'dis' ? String(i.resp || i.resposta || '') : '' };
         if (v === null) return;   // dissertativa ainda sem nota: entra assim que for corrigida
         if (CFG.fonte === 'em') itens.push({ v, q, ae: m.ae ? m.ae + (m.hab ? ' · ' + m.hab : '') : (m.hab || 'Mapa do Provão'), desc: m.objeto || '—', bim: '', rot: m.objeto });
@@ -104,21 +104,7 @@
   function questoes(a) {
     const L = a.itens.filter(i => i.q).slice().sort((x, y) => x.q.n - y.q.n);
     if (!L.length) return '';
-    const linha = i => {
-      const q = i.q; let st, tx;
-      if (q.tipo === 'obj') {
-        const ok = i.v === 1; st = ok ? 'ok' : 'er';
-        tx = !q.marcou ? 'Não respondeu' : 'Marcou <b>' + esc(q.marcou) + '</b>' + (q.cor ? ' · Correta <b>' + esc(q.cor) + '</b>' : '');
-      } else {
-        st = i.v >= .7 ? 'ok' : i.v >= .4 ? 'pa' : 'er';
-        tx = 'Dissertativa · nota <b>' + nf(i.v) + '</b> de 1' + (q.texto ? '' : ' · sem resposta');
-      }
-      return '<div class="qr"><span class="qb ' + st + '" title="' + (st === 'ok' ? 'Acertou' : st === 'pa' ? 'Parcial' : 'Errou') + '">' + (st === 'ok' ? '✓' : st === 'pa' ? '~' : '✗') + '</span><div class="qc">' +
-        '<div><b>Questão ' + q.n + '</b> <span class="muted">· ' + tx + '</span></div>' +
-        '<div class="qd"><b>Aprendizagem/habilidade:</b> ' + esc(i.ae) + '</div><div class="qd"><b>Descritor:</b> ' + esc(i.desc) + '</div>' +
-        (q.enun ? '<div class="qe">' + esc(q.enun) + (q.enun.length >= 255 ? '…' : '') + '</div>' : '') +
-        (q.ia ? '<div class="iaw ' + esc(q.ia.nivel) + '"><b>⚠ Possível uso de IA (' + (q.ia.nivel === 'alto' ? 'indício forte' : 'indício moderado') + ')</b> — ' + esc(q.ia.motivo || '') + (q.ia.zerada ? '<br><b>Nota zerada pelo critério</b>' + (q.ia.notaOriginal != null ? ' (nota original da correção: ' + nf(q.ia.notaOriginal) + ')' : '') : '') + '<br><span class="muted">É um indício, não uma prova: converse com o aluno e peça que explique a resposta com as próprias palavras.</span></div>' : '') + (q.texto ? '<blockquote class="qt">' + esc(q.texto) + '</blockquote>' : '') + (q.coment ? '<div class="qd muted"><b>Comentário da correção:</b> ' + esc(q.coment) + '</div>' : '') + '</div></div>';
-    };
+    const linha = linhaQ;
     const ac = L.filter(i => i.v >= .5).length;
     return '<details class="qs"><summary>Questões respondidas · ' + ac + ' acerto(s) e ' + (L.length - ac) + ' erro(s)</summary>' + L.map(linha).join('') + '</details>';
   }
@@ -139,54 +125,111 @@
   };
   const rotNivel = lv => ['Abaixo do Básico', 'Básico', 'Adequado', 'Avançado'][lv];
 
-  /* ---------- gráficos de pizza 3D (SVG, sem biblioteca): fatias = níveis de proficiência ---------- */
-  function pizza3d(fat, W, titulo) {
-    const tot = fat.reduce((s, f) => s + f.v, 0); W = W || 200;
+  /* ---------- gráficos de pizza 3D (SVG, sem biblioteca): fatias = níveis de proficiência; clicar numa fatia amplia e mostra as questões e respostas ---------- */
+  const G = {}; let GID = 0;
+  function pizza3d(fat, W, titulo, o) {
+    o = o || {}; const tot = fat.reduce((s, f) => s + f.v, 0); W = W || 200;
     if (!tot) return '<p class="muted sm">Sem dados.</p>';
-    const cx = W / 2, rx = W * .44, ry = W * .25, h = W * .08, cy = ry + 4, H = cy + ry + h + 6, P = Math.PI;
+    const gid = o.g || ++GID; if (!o.g) G[gid] = { fat, titulo };
+    const cx = W / 2, rx = W * .4, ry = W * .23, h = W * .08, cy = ry + 4 + (o.sel != null ? W * .05 : 0), H = cy + ry + h + 8 + (o.sel != null ? W * .05 : 0), P = Math.PI;
     const pt = (a, dy) => (cx + rx * Math.cos(a)).toFixed(1) + ',' + (cy + ry * Math.sin(a) + (dy || 0)).toFixed(1);
-    let ang = -P / 2, walls = '', tops = '', lbl = '';
-    const f2 = fat.filter(f => f.v > 0);
-    f2.forEach(f => {
-      let a0 = ang, a1 = ang + f.v / tot * 2 * P; ang = a1;
-      if (f2.length === 1) a1 = a0 + 2 * P - .0001;
-      const segs = [[a0, a1]];
+    let ang = -P / 2; const f2 = [];
+    fat.forEach((f, ix) => { if (f.v > 0) { const a0 = ang; ang += f.v / tot * 2 * P; f2.push({ f, ix, a0, a1: f2.length === 0 && f.v === tot ? a0 + 2 * P - .0001 : ang }); } });
+    f2.sort((x, y) => (x.ix === o.sel) - (y.ix === o.sel) || Math.sin((x.a0 + x.a1) / 2) - Math.sin((y.a0 + y.a1) / 2));
+    let gs = '', lbl = '';
+    f2.forEach(({ f, ix, a0, a1 }) => {
+      const m = (a0 + a1) / 2, ex = ix === o.sel ? W * .06 : 0, tr = ex ? ' transform="translate(' + (ex * Math.cos(m)).toFixed(1) + ',' + (ex * .6 * Math.sin(m)).toFixed(1) + ')"' : '';
       const parte = (x0, x1) => { const s = Math.max(x0, 0), e = Math.min(x1, P); return e > s ? [s, e] : null; };
       const vis = [parte(a0, a1), parte(a0 - 2 * P, a1 - 2 * P), parte(a0 + 2 * P, a1 + 2 * P)].filter(Boolean);
-      vis.forEach(([s, e]) => { walls += '<path d="M' + pt(s) + ' A' + rx + ' ' + ry + ' 0 ' + (e - s > P ? 1 : 0) + ' 1 ' + pt(e) + ' L' + pt(e, h) + ' A' + rx + ' ' + ry + ' 0 ' + (e - s > P ? 1 : 0) + ' 0 ' + pt(s, h) + ' Z" style="fill:' + f.c + '"/><path d="M' + pt(s) + ' A' + rx + ' ' + ry + ' 0 ' + (e - s > P ? 1 : 0) + ' 1 ' + pt(e) + ' L' + pt(e, h) + ' A' + rx + ' ' + ry + ' 0 ' + (e - s > P ? 1 : 0) + ' 0 ' + pt(s, h) + ' Z" fill="#000" opacity=".32"/>'; });
-      tops += f2.length === 1 ? '<ellipse cx="' + cx + '" cy="' + cy + '" rx="' + rx + '" ry="' + ry + '" style="fill:' + f.c + '" stroke="#fff" stroke-width="1"/>'
-        : '<path d="M' + cx + ',' + cy + ' L' + pt(a0) + ' A' + rx + ' ' + ry + ' 0 ' + (a1 - a0 > P ? 1 : 0) + ' 1 ' + pt(a1) + ' Z" style="fill:' + f.c + '" stroke="#fff" stroke-width="1"><title>' + esc(f.r) + ': ' + f.v + ' (' + Math.round(f.v / tot * 100) + '%)</title></path>';
-      if (f.v / tot >= .08) { const m = (a0 + a1) / 2; lbl += '<text x="' + (cx + rx * .6 * Math.cos(m)).toFixed(1) + '" y="' + (cy + ry * .6 * Math.sin(m) + 4).toFixed(1) + '" text-anchor="middle" font-size="' + Math.round(W * .06) + '" font-weight="800" fill="#fff" stroke="#000" stroke-width=".6" paint-order="stroke">' + f.v + '</text>'; }
+      let w = '';
+      vis.forEach(([s, e]) => { const d = 'M' + pt(s) + ' A' + rx + ' ' + ry + ' 0 ' + (e - s > P ? 1 : 0) + ' 1 ' + pt(e) + ' L' + pt(e, h) + ' A' + rx + ' ' + ry + ' 0 ' + (e - s > P ? 1 : 0) + ' 0 ' + pt(s, h) + ' Z'; w += '<path d="' + d + '" style="fill:' + f.c + '"/><path d="' + d + '" fill="#000" opacity=".32"/>'; });
+      const at = ' class="fatia" data-g="' + gid + '" data-i="' + ix + '" tabindex="0" role="button" aria-label="' + esc(f.r + ': ' + f.v + ' — clique para ver as questões') + '"';
+      const top = f2.length === 1 ? '<ellipse' + at + ' cx="' + cx + '" cy="' + cy + '" rx="' + rx + '" ry="' + ry + '" style="fill:' + f.c + '" stroke="#fff" stroke-width="1"><title>' + esc(f.r) + ': ' + f.v + ' (' + Math.round(f.v / tot * 100) + '%) — clique para ver as questões</title></ellipse>'
+        : '<path' + at + ' d="M' + cx + ',' + cy + ' L' + pt(a0) + ' A' + rx + ' ' + ry + ' 0 ' + (a1 - a0 > P ? 1 : 0) + ' 1 ' + pt(a1) + ' Z" style="fill:' + f.c + '" stroke="#fff" stroke-width="1"><title>' + esc(f.r) + ': ' + f.v + ' (' + Math.round(f.v / tot * 100) + '%) — clique para ver as questões</title></path>';
+      gs += '<g' + tr + '>' + w + top;
+      if (f.v / tot >= .08) gs += '<text x="' + (cx + rx * .6 * Math.cos(m)).toFixed(1) + '" y="' + (cy + ry * .6 * Math.sin(m) + 4).toFixed(1) + '" text-anchor="middle" font-size="' + Math.round(W * .06) + '" font-weight="800" fill="#fff" stroke="#000" stroke-width=".6" paint-order="stroke" pointer-events="none">' + f.v + '</text>';
+      gs += '</g>';
     });
-    const leg = fat.map(f => '<li><i style="background:' + f.c + '"></i>' + esc(f.r) + ': <b>' + f.v + '</b> (' + Math.round(f.v / tot * 100) + '%)</li>').join('');
-    return '<figure class="pz"><svg viewBox="0 0 ' + W + ' ' + H.toFixed(0) + '" width="' + W + '" role="img" aria-label="' + esc(titulo || 'Gráfico de pizza') + '">' + walls + tops + lbl + '</svg><ul class="pzl">' + leg + '</ul></figure>';
+    const leg = fat.map((f, ix) => '<li class="' + (f.v ? 'pzli' : '') + (ix === o.sel ? ' sel' : '') + '" data-g="' + gid + '" data-i="' + ix + '"><i style="background:' + f.c + '"></i>' + esc(f.r) + ': <b>' + f.v + '</b> (' + Math.round(f.v / tot * 100) + '%)</li>').join('');
+    return '<figure class="pz"><svg viewBox="0 0 ' + W + ' ' + H.toFixed(0) + '" width="' + W + '" role="group" aria-label="' + esc(titulo || 'Gráfico de pizza') + '">' + gs + '</svg><ul class="pzl">' + leg + '</ul></figure>';
   }
-  const fatNiv = niv => NIVEIS.map((n, i) => ({ r: n[0], v: niv[i] || 0, c: 'var(--' + n[1] + ')' }));
+  /* janela ampliada: fatia destacada + detalhes (questões e respostas) */
+  function abrePizza(gid, ix) {
+    const g = G[gid]; if (!g || !g.fat[ix] || !g.fat[ix].v) return;
+    let m = $('pzModal');
+    if (!m) { m = document.createElement('div'); m.id = 'pzModal'; m.className = 'pzm'; m.innerHTML = '<div class="pzbox" role="dialog" aria-modal="true"><button type="button" class="pzx" aria-label="Fechar">✕</button><h3 class="pzh"></h3><div class="pzb"><div class="pzbig"></div><div class="pzd"></div></div></div>'; document.body.appendChild(m);
+      m.addEventListener('click', e => { if (e.target === m || e.target.closest('.pzx')) fechaPizza(); }); }
+    const f = g.fat[ix];
+    m.querySelector('.pzh').textContent = (g.titulo || '') + ' · ' + f.r + ' (' + f.v + ')';
+    m.querySelector('.pzbig').innerHTML = pizza3d(g.fat, 300, g.titulo, { g: gid, sel: ix });
+    m.querySelector('.pzd').innerHTML = f.det ? f.det() : '<p class="muted">Sem detalhes.</p>';
+    m.hidden = false; document.body.style.overflow = 'hidden'; m.querySelector('.pzx').focus();
+  }
+  function fechaPizza() { const m = $('pzModal'); if (m) m.hidden = true; document.body.style.overflow = ''; }
+  document.addEventListener('click', e => { const t = e.target.closest && e.target.closest('.fatia, .pzli'); if (t) abrePizza(+t.dataset.g, +t.dataset.i); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') fechaPizza(); else if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('fatia')) { e.preventDefault(); abrePizza(+e.target.dataset.g, +e.target.dataset.i); } });
+
+  const NV = NIVEIS.map(n => n[0]);
   const contaNiv = lista => { const c = [0, 0, 0, 0]; lista.forEach(x => c[nivel(x.p)]++); return c; };
+  /* fatias por nível; det(L) devolve o HTML do detalhe do nível L */
+  const fatNiv = (niv, det) => NIVEIS.map((n, i) => ({ r: n[0], v: niv[i] || 0, c: 'var(--' + n[1] + ')', det: det ? () => det(i) : null }));
   const pzCard = (t, sub, svg) => '<div class="pzc"><h4>' + esc(t) + '</h4>' + (sub ? '<div class="muted sm">' + esc(sub) + '</div>' : '') + svg + '</div>';
+  const nomeCurto = n => n;
+  /* blocos de detalhe */
+  const qHtml = its => its.length ? its.slice().sort((x, y) => x.q.n - y.q.n).map(linhaQ).join('') : '<p class="muted sm">Sem questões.</p>';
+  const blocoTema = (rot, p, its) => '<details class="qs" open><summary>' + esc(rot) + ' · ' + pct(p) + ' (' + NV[nivel(p)] + ')</summary>' + qHtml(its) + '</details>';
+  /* aluno: fatia de descritores/aprendizagens de um nível → cada tema com as suas questões e respostas */
+  const detTemasAluno = (a, chave, L) => () => { const l = agrega(a.itens, chave).filter(x => nivel(x.p) === L); return l.length ? l.map(x => blocoTema(x.k, x.p, a.itens.filter(i => i[chave] === x.k))).join('') : '<p class="muted">Nenhum item neste nível.</p>'; };
   function pizzasAluno(a) {
     if (!a.feito || !a.itens.length) return '';
-    const ds = agrega(a.itens, 'desc'), as = agrega(a.itens, 'ae');
-    return '<div class="plano"><h3>Gráficos de pizza 3D do aluno</h3><div class="pzg">' + pzCard('Descritores por nível', ds.length + ' descritor(es)', pizza3d(fatNiv(contaNiv(ds)), 190, 'Descritores por nível')) +
-      pzCard('Aprendizagens essenciais por nível', as.length + ' aprendizagem(ns)', pizza3d(fatNiv(contaNiv(as)), 190, 'Aprendizagens por nível')) +
-      pzCard('Questões', a.itens.length + ' questão(ões)', pizza3d([{ r: 'Acertou (≥70%)', v: a.itens.filter(i => i.v >= .7).length, c: 'var(--lv3)' }, { r: 'Parcial (30–69%)', v: a.itens.filter(i => i.v >= .3 && i.v < .7).length, c: 'var(--lv1)' }, { r: 'Errou (<30%)', v: a.itens.filter(i => i.v < .3).length, c: 'var(--lv0)' }], 190, 'Questões')) + '</div></div>';
+    const ds = agrega(a.itens, 'desc'), as = agrega(a.itens, 'ae'), it = a.itens;
+    const fq = [[i => i.v >= .7, 'Acertou (≥70%)', 'var(--lv3)'], [i => i.v >= .3 && i.v < .7, 'Parcial (30–69%)', 'var(--lv1)'], [i => i.v < .3, 'Errou (<30%)', 'var(--lv0)']].map(([fn, r, c]) => ({ r, v: it.filter(fn).length, c, det: () => qHtml(it.filter(fn)) }));
+    return '<div class="plano"><h3>Gráficos de pizza 3D do aluno <span class="muted sm">· clique numa fatia para ampliar e ver as questões e as respostas</span></h3><div class="pzg">' +
+      pzCard('Descritores por nível', ds.length + ' descritor(es)', pizza3d(NIVEIS.map((n, L) => ({ r: n[0], v: contaNiv(ds)[L], c: 'var(--' + n[1] + ')', det: detTemasAluno(a, 'desc', L) })), 190, 'Descritores · ' + a.n)) +
+      pzCard('Aprendizagens essenciais por nível', as.length + ' aprendizagem(ns)', pizza3d(NIVEIS.map((n, L) => ({ r: n[0], v: contaNiv(as)[L], c: 'var(--' + n[1] + ')', det: detTemasAluno(a, 'ae', L) })), 190, 'Aprendizagens · ' + a.n)) +
+      pzCard('Questões', it.length + ' questão(ões)', pizza3d(fq, 190, 'Questões · ' + a.n)) + '</div></div>';
   }
   function pizzasTurma(tm) {
     const al = tm.alunos.filter(a => a.feito && a.itens.length);
     if (!al.length) return '';
     const ds = agrega(tm.itens, 'desc'), as = agrega(tm.itens, 'ae');
+    const nivTema = (a, chave, k) => { const x = agrega(a.itens, chave).find(z => z.k === k); return x ? nivel(x.p) : -1; };
+    /* alunos que responderam um tema, com as suas questões; L = só os que estão no nível L */
+    const alunosTema = (chave, k, L) => { const l = al.filter(a => a.itens.some(i => i[chave] === k) && (L == null || nivTema(a, chave, k) === L)); return l.length ? l.map(a => { const its = a.itens.filter(i => i[chave] === k), p = media(its.map(i => i.v)); return '<details class="qs"' + (l.length <= 3 ? ' open' : '') + '><summary><b>' + esc(a.n) + '</b> · ' + pct(p) + ' (' + NV[nivel(p)] + ')</summary>' + qHtml(its) + '</details>'; }).join('') : '<p class="muted">Nenhum aluno neste nível.</p>'; };
     const por = chave => {
       const m = new Map();
       al.forEach(a => agrega(a.itens, chave).forEach(x => { if (!m.has(x.k)) m.set(x.k, [0, 0, 0, 0]); m.get(x.k)[nivel(x.p)]++; }));
       return [...m.entries()].map(([k, c]) => ({ k, c, n: c.reduce((x, y) => x + y, 0), pior: (c[0] + c[1]) / c.reduce((x, y) => x + y, 0) })).sort((x, y) => y.pior - x.pior);
     };
-    const gal = (l, rot) => '<div class="pzg pzs">' + l.map(x => '<div class="pzc"><h4>' + esc(x.k) + '</h4><div class="muted sm">' + x.n + ' aluno(s) avaliado(s) neste ' + rot + '</div>' + pizza3d(fatNiv(x.c), 150, x.k) + '</div>').join('') + '</div>';
-    return '<div class="plano"><h3>Gráficos de pizza 3D da turma</h3><div class="pzg">' +
-      pzCard('Alunos por nível', al.length + ' aluno(s) com atividade', pizza3d(fatNiv(tm.niv), 200, 'Alunos por nível')) +
-      pzCard('Aprendizagens essenciais por nível', as.length + ' aprendizagem(ns), média da turma', pizza3d(fatNiv(contaNiv(as)), 200, 'Aprendizagens por nível')) +
-      pzCard('Descritores por nível', ds.length + ' descritor(es), média da turma', pizza3d(fatNiv(contaNiv(ds)), 200, 'Descritores por nível')) + '</div>' +
-      '<details class="qs"><summary>Por aprendizagem essencial: como os alunos se distribuem em cada uma (' + por('ae').length + ')</summary>' + gal(por('ae'), 'tema') + '</details>' +
-      '<details class="qs"><summary>Por descritor: como os alunos se distribuem em cada um (' + por('desc').length + ')</summary>' + gal(por('desc'), 'descritor') + '</details></div>';
+    const gal = (l, chave, rot) => '<div class="pzg pzs">' + l.map(x => '<div class="pzc"><h4>' + esc(x.k) + '</h4><div class="muted sm">' + x.n + ' aluno(s) avaliado(s) neste ' + rot + '</div>' + pizza3d(fatNiv(x.c, L => alunosTema(chave, x.k, L)), 150, x.k) + '</div>').join('') + '</div>';
+    /* turma: fatia de alunos por nível → cada aluno com todas as questões */
+    const detAlunos = L => al.filter(a => a.nota !== null && nivel(a.nota / 10) === L).map(a => '<details class="qs"><summary><b>' + esc(a.n) + '</b> · nota ' + nf(a.nota) + ' · aproveitamento ' + pct(a.apr) + '</summary>' + qHtml(a.itens) + '</details>').join('') || '<p class="muted">Nenhum aluno neste nível.</p>';
+    /* turma: fatia de aprendizagens/descritores por nível → cada tema com as respostas de todos os alunos */
+    const detTemasTurma = (lista, chave) => L => { const l = lista.filter(x => nivel(x.p) === L); return l.length ? l.map(x => '<h4 class="gn" style="color:var(--fg)">' + esc(x.k) + ' · turma ' + pct(x.p) + '</h4>' + alunosTema(chave, x.k, null)).join('') : '<p class="muted">Nenhum item neste nível.</p>'; };
+    return '<div class="plano"><h3>Gráficos de pizza 3D da turma <span class="muted sm">· clique numa fatia para ampliar e ver as questões e as respostas dos alunos</span></h3><div class="pzg">' +
+      pzCard('Alunos por nível', al.length + ' aluno(s) com atividade', pizza3d(fatNiv(tm.niv, detAlunos), 200, 'Alunos por nível')) +
+      pzCard('Aprendizagens essenciais por nível', as.length + ' aprendizagem(ns), média da turma', pizza3d(fatNiv(contaNiv(as), detTemasTurma(as, 'ae')), 200, 'Aprendizagens por nível')) +
+      pzCard('Descritores por nível', ds.length + ' descritor(es), média da turma', pizza3d(fatNiv(contaNiv(ds), detTemasTurma(ds, 'desc')), 200, 'Descritores por nível')) + '</div>' +
+      '<details class="qs"><summary>Por aprendizagem essencial: como os alunos se distribuem em cada uma (' + por('ae').length + ')</summary>' + gal(por('ae'), 'ae', 'tema') + '</details>' +
+      '<details class="qs"><summary>Por descritor: como os alunos se distribuem em cada um (' + por('desc').length + ')</summary>' + gal(por('desc'), 'desc', 'descritor') + '</details></div>';
+  }
+    function linhaQ(i) {
+      const q = i.q; let st, tx;
+      if (q.tipo === 'obj') {
+        const ok = i.v === 1; st = ok ? 'ok' : 'er';
+        tx = !q.marcou ? 'Não respondeu' : 'Marcou <b>' + esc(q.marcou) + '</b>' + (q.tResp ? ' (' + esc(q.tResp) + ')' : '') + (q.cor ? ' · Correta <b>' + esc(q.cor) + '</b>' : '') + (q.tCor ? ' (' + esc(q.tCor) + ')' : '');
+      } else if (q.tipo === 'assoc' || q.tipo === 'ordem') {
+        st = i.v >= 1 ? 'ok' : i.v > 0 ? 'pa' : 'er';
+        tx = (q.tipo === 'ordem' ? 'Ordenar' : 'Ligar') + ' · <b>' + Math.round(i.v * 100) + '%</b> certo' + (q.tResp ? '<br>Aluno: ' + esc(q.tResp) : '') + (q.tCor && i.v < 1 ? '<br>Correto: ' + esc(q.tCor) : '');
+      } else {
+        st = i.v >= .7 ? 'ok' : i.v >= .4 ? 'pa' : 'er';
+        tx = 'Dissertativa · nota <b>' + nf(i.v) + '</b> de 1' + (q.texto ? '' : ' · sem resposta');
+      }
+      return '<div class="qr"><span class="qb ' + st + '" title="' + (st === 'ok' ? 'Acertou' : st === 'pa' ? 'Parcial' : 'Errou') + '">' + (st === 'ok' ? '✓' : st === 'pa' ? '~' : '✗') + '</span><div class="qc">' +
+        '<div><b>Questão ' + q.n + '</b> <span class="muted">· ' + tx + '</span></div>' +
+        '<div class="qd"><b>Aprendizagem/habilidade:</b> ' + esc(i.ae) + '</div><div class="qd"><b>Descritor:</b> ' + esc(i.desc) + '</div>' +
+        (q.enun ? '<div class="qe">' + esc(q.enun) + (q.enun.length >= 255 && !q.enunCompleto ? '…' : '') + '</div>' : '') +
+        (q.ia ? '<div class="iaw ' + esc(q.ia.nivel) + '"><b>⚠ Possível uso de IA (' + (q.ia.nivel === 'alto' ? 'indício forte' : 'indício moderado') + ')</b> — ' + esc(q.ia.motivo || '') + (q.ia.zerada ? '<br><b>Nota zerada pelo critério</b>' + (q.ia.notaOriginal != null ? ' (nota original da correção: ' + nf(q.ia.notaOriginal) + ')' : '') : '') + '<br><span class="muted">É um indício, não uma prova: converse com o aluno e peça que explique a resposta com as próprias palavras.</span></div>' : '') + (q.texto ? '<blockquote class="qt">' + esc(q.texto) + '</blockquote>' : '') + (q.coment ? '<div class="qd muted"><b>Comentário da correção:</b> ' + esc(q.coment) + '</div>' : '') + '</div></div>';
   }
   function planoAluno(a, tm) {
     const l = agrega(a.itens, 'desc').filter(x => x.p < .5);

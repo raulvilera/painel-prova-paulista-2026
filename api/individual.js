@@ -351,6 +351,12 @@ module.exports = async function individual(req, res) {
         if (ind && ind.nivel === 'alto' && c.nota !== '') { ind.notaOriginal = c.nota; ind.zerada = true; c = { nota: 0, comentario: 'Resposta não avaliada: o sistema encontrou indícios fortes de que o texto não foi escrito por você (colado ou gerado por IA). Fale com o professor.' }; }   // critério do professor: uso de IA = nota 0 (a nota original da correção fica registrada)
         return Object.assign({ k: it.k, tipo: 'dis', resp: t, nota: c.nota, comentario: c.comentario }, ind ? { ia: ind } : {});
       }));
+      det.forEach((d, i) => {   // guarda o enunciado e os textos das alternativas para o relatório do professor (nunca vai para o aluno)
+        const q0 = m.itens[i].q, q = q0.pt ? Object.assign({}, q0, q0.pt) : q0;
+        d.enun = (String(q.enunciado || '') + (q.comando ? ' — ' + q.comando : '')).slice(0, 420);
+        if (d.tipo === 'obj' && q.alts) { d.textoCorreta = String(q.alts[q.correta] || '').slice(0, 200); if (d.resp != null) d.textoResp = String(q.alts[d.resp] || '').slice(0, 200); }
+        if (d.tipo === 'assoc' || d.tipo === 'ordem') { d.textoCorreta = textoAA(q, q.correta).slice(0, 400); if (d.resp != null) d.textoResp = textoAA(q, d.resp).slice(0, 400); }
+      });
       const rotulo = m.pei ? status + (m.pei.flags && m.pei.flags.lang === 'ru' ? (m.pei.simulado ? ' · simulado em russo' : ' · em russo') : (m.pei.simulado ? ' · simulado adaptado' : ' · adaptada')) : status;
       det.forEach(d => { if (d.tipo === 'dis') { notas.push(d.nota); if (d.nota !== '') soma += d.nota; } });
       const nota = !status.startsWith('pendente') ? Math.round(soma / m.itens.length * 100) / 10 : null;
