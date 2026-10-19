@@ -40,7 +40,7 @@ const REGRAS = [
   R('especiacao|isolamento reprodutivo', 'en:Speciation|en:Darwin\'s finches', 'Especiação'), 
   R('bacteria', 'en:Bacteria|en:Escherichia coli', 'Bactérias'), R('virus|viral', 'en:Virus|en:Coronavirus', 'Vírus'), 
   R('vacin|imunizacao', 'en:Vaccine|en:Vaccination', 'Vacinação'), 
-  R('pandemia|epidemia|endemia|surto', 'en:Pandemic|en:Epidemic', 'Pandemia'), 
+  R('pandemia|epidemia|endemia|surto', 'en:Pandemic|en:Coronavirus', 'Pandemia'), 
   R('flor|polinizac|polen', 'en:Flower|en:Pollination', 'Flor'), 
   R('olhos?\\b|visao|retina|cristalino', 'en:Human eye', 'Olho humano'),
   R('olfato|paladar|quimiorreceptor', 'en:Olfaction|en:Taste', 'Olfato e paladar'), R('audicao|ouvido|equilibrio', 'en:Ear|en:Hearing', 'Ouvido'),

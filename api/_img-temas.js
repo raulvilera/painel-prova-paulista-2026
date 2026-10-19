@@ -83,11 +83,11 @@ t('mao bionica', 'en:Prosthesis', 'en:Bionics', 'en:Prosthetic arm|en:Prosthesis
 t('drogas', 'en:Human brain', 'en:Neuron', 'en:Nervous system', 'en:Adolescence');
 // --- 4º bimestre: saúde
 t('^saude|saude$', 'en:Health', 'en:Public health', 'en:World Health Organization', 'en:Healthcare');
-t('doencas causadas por virus', 'en:Dengue fever', 'en:Influenza', 'en:Measles', 'en:Aedes aegypti');
+t('doencas causadas por virus', 'en:Virus', 'en:Aedes aegypti', 'en:Influenza virus', 'en:Coronavirus');
 t('virus', 'en:Virus', 'en:Coronavirus', 'en:Bacteriophage', 'en:Viral replication');
-t('doencas causadas por bacterias', 'en:Tuberculosis', 'en:Cholera', 'en:Tetanus', 'en:Whooping cough');
+t('doencas causadas por bacterias', 'en:Bacteria', 'en:Escherichia coli', 'en:Gram stain', 'en:Antibiotic');
 t('bacterias', 'en:Bacteria', 'en:Escherichia coli', 'en:Antibiotic', 'en:Bacterial cell structure');
-t('como as pandemias|pandemia', 'en:Pandemic', 'en:Epidemic', 'en:COVID-19 pandemic', 'en:Epidemiology');
+t('como as pandemias|pandemia', 'en:Pandemic', 'en:Face masks during the COVID-19 pandemic', 'en:Coronavirus', 'en:Vaccine');
 t('sistema imune', 'en:Immune system', 'en:White blood cell', 'en:Antibody', 'en:Lymphocyte');
 t('vacinas|fabricacao de vacinas|importancia da vacina|pni', 'en:Vaccine', 'en:Vaccination', 'en:Edward Jenner', 'en:Immunization');
 t('indicadores de saude', 'en:Life expectancy', 'en:Infant mortality', 'en:Human Development Index', 'en:Public health');
