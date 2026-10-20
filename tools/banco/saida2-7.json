@@ -3012,10 +3012,10 @@
     ]
    },
    "alts": [
-    "As correntes são 30 A e 5 A; somam 35 A, acima de 30 A, e o disjuntor desarma",
+    "As correntes são 30 A e 5 A; somam 35 A, acima do limite de 30 A, e o disjuntor desarma",
     "As correntes são 30 A e 5 A; como a tensão é a mesma de 220 V, elas não se somam e o circuito suporta",
     "As correntes são 3 A e 0,5 A, pois a potência é dividida por mil; a soma é 3,5 A e o circuito suporta",
-    "As correntes são 30 A e 5 A, mas só o chuveiro importa, pois o disjuntor protege o aparelho de maior potência"
+    "As correntes são 30 A e 5 A, mas o disjuntor considera o chuveiro, por ser o maior consumidor"
    ],
    "correta": 0,
    "explicacao": "I = P/U: 6600/220 = 30 A e 1100/220 = 5 A; em um mesmo circuito, as correntes se somam (35 A > 30 A). Os distratores acreditam que a tensão igual impede a soma, erram a conversão e consideram um só aparelho."
@@ -3136,7 +3136,7 @@
     "Chaleira elétrica e liquidificador, que somam 2.500 W, abaixo do limite, pois a tensão de 220 V é alta",
     "Micro-ondas, ferro e ventilador, que somam 2.700 W, pois cada aparelho tem menos de 10 A isoladamente",
     "Ferro e chaleira, que somam 3.200 W, pois a potência da extensão aumenta com a quantidade de aparelhos",
-    "Micro-ondas, liquidificador e ventilador, que somam 2.000 W e cerca de 9,1 A"
+    "O conjunto que soma 2.000 W, o que dá cerca de 9,1 A na tensão de 220 V, abaixo do limite"
    ],
    "correta": 3,
    "explicacao": "O limite é 10 A × 220 V = 2.200 W; só a opção de 2.000 W cabe nele. Os distratores comparam a soma com a tensão, avaliam cada aparelho separadamente e supõem que a capacidade cresce."
@@ -3290,7 +3290,7 @@
    "comando": "Calcule a potência da lâmpada nas duas montagens e explique, com base em P = U × I, por que o brilho aumentou.",
    "figura": {
     "tipo": "tabela",
-    "titulo": "Dados do experimento: circuito com uma lâmpada",
+    "titulo": "Dados do experimento: montagens A e B",
     "colunas": [
      "Montagem",
      "Tensão (V)",
@@ -3299,13 +3299,13 @@
     ],
     "linhas": [
      [
-      "1 pilha",
+      "A",
       "1,5",
       "0,10",
       "fraco"
      ],
      [
-      "2 pilhas",
+      "B",
       "3,0",
       "0,20",
       "forte"
@@ -3315,7 +3315,7 @@
    "ref": "Com 1 pilha, P = 1,5 × 0,10 = 0,15 W; com 2 pilhas, P = 3,0 × 0,20 = 0,60 W. Dobrando a tensão, a corrente também dobrou (a resistência da lâmpada é a mesma), então a potência ficou 4 vezes maior e a lâmpada brilhou mais.",
    "conceitos": [
     "potências de 0,15 W e 0,60 W",
-    "tensão e corrente dobraram",
+    "a potência cresce com o produto de U e I",
     "potência quadruplicou",
     "mais potência, mais brilho"
    ]
