@@ -2433,5 +2433,317 @@
     "cuidado com vazamento de metano ou risco de incêndio"
    ]
   }
+ ],
+ "4B|8º ANO|20": [
+  {
+   "tipo": "obj",
+   "enunciado": "Ao usar o simulador de uma casa-modelo, Rafaela viu que o chuveiro elétrico tem a maior potência entre os aparelhos e concluiu que ele é o que mais consome energia por dia. Para testar a ideia, ela anotou potência e tempo de uso diário de quatro aparelhos.",
+   "comando": "Qual aparelho tem o maior consumo diário e como isso se relaciona à conclusão de Rafaela?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador: casa-modelo",
+    "colunas": [
+     "Aparelho",
+     "Potência",
+     "Tempo de uso por dia"
+    ],
+    "linhas": [
+     [
+      "Chuveiro",
+      "5 400 W",
+      "20 min"
+     ],
+     [
+      "Geladeira",
+      "150 W",
+      "24 h"
+     ],
+     [
+      "Lâmpadas",
+      "100 W",
+      "5 h"
+     ],
+     [
+      "Televisão",
+      "100 W",
+      "4 h"
+     ]
+    ]
+   },
+   "alts": [
+    "o chuveiro, com 5,4 kWh por dia, pois a maior potência garante o maior consumo entre os aparelhos",
+    "o chuveiro, com 1,8 kWh por dia, valor maior que o da geladeira, que consome 0,15 kWh por dia",
+    "a televisão, com 4 kWh por dia, pois o tempo de uso de quatro horas supera o dos demais aparelhos",
+    "a geladeira, com 3,6 kWh por dia contra 1,8 do chuveiro, pois o tempo de uso compensa a potência menor"
+   ],
+   "correta": 3,
+   "explicacao": "O consumo é potência vezes tempo: a geladeira consome 0,15 kW vezes 24 h, ou 3,6 kWh, e o chuveiro 5,4 kW vezes um terço de hora, ou 1,8 kWh. Os distratores ignoram o tempo, erram a conta ou ignoram os demais aparelhos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A casa-modelo do Museu mostra o consumo mensal em quatro cômodos nos perfis de uso padrão e econômico. A turma quer saber em quais cômodos a economia é mais relevante e vai comparar tanto a redução em kWh quanto a redução percentual.",
+   "comando": "Qual cômodo teve a maior economia absoluta e qual teve a maior economia percentual?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador: consumo mensal por cômodo",
+    "colunas": [
+     "Cômodo",
+     "Padrão",
+     "Econômico"
+    ],
+    "linhas": [
+     [
+      "Banheiro",
+      "120 kWh",
+      "84 kWh"
+     ],
+     [
+      "Cozinha",
+      "90 kWh",
+      "81 kWh"
+     ],
+     [
+      "Sala",
+      "40 kWh",
+      "24 kWh"
+     ],
+     [
+      "Quarto",
+      "30 kWh",
+      "15 kWh"
+     ]
+    ]
+   },
+   "alts": [
+    "a maior economia absoluta foi no quarto, com 15 kWh, e a maior percentual foi no banheiro, com 30%",
+    "a maior economia absoluta foi no banheiro, com 36 kWh, e a percentual no quarto, com 50%",
+    "a maior economia absoluta foi na cozinha, com 81 kWh, e a maior percentual foi na sala, com 40%",
+    "a maior economia absoluta foi no banheiro, com 36 kWh, e a maior percentual foi na sala, com 40%"
+   ],
+   "correta": 1,
+   "explicacao": "No banheiro caem 36 kWh (30%) e no quarto caem 15 kWh (50%), por isso os dois critérios apontam cômodos diferentes. Os distratores trocam os critérios, usam o valor final como economia ou erram o percentual."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma família de São Bernardo do Campo trocou 10 lâmpadas incandescentes por lâmpadas de LED. As lâmpadas ficam acesas 5 horas por dia, durante 30 dias do mês, e a companhia cobra o valor de R$ 0,80 por kWh. A família quer saber a economia mensal.",
+   "comando": "Qual é a economia mensal na conta de luz com a troca?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do exercício: troca de lâmpadas",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Potência da incandescente",
+      "60 W"
+     ],
+     [
+      "Potência da LED",
+      "9 W"
+     ],
+     [
+      "Número de lâmpadas",
+      "10"
+     ],
+     [
+      "Horas por dia",
+      "5"
+     ],
+     [
+      "Preço do kWh",
+      "R$ 0,80"
+     ]
+    ]
+   },
+   "alts": [
+    "R$ 61,20 por mês",
+    "R$ 6,12 por mês",
+    "R$ 10,80 por mês",
+    "R$ 612,00 por mês"
+   ],
+   "correta": 0,
+   "explicacao": "Cada lâmpada economiza 51 W vezes 5 h vezes 30 dias, ou 7,65 kWh; com 10 lâmpadas são 76,5 kWh, que a R$ 0,80 dão R$ 61,20. Os distratores erram a casa decimal, usam só a potência da LED ou erram a multiplicação final."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um medidor de tomada mostrou que, mesmo desligada pelo controle remoto, uma televisão continua consumindo energia em modo de espera. Davi mediu a potência nos dois estados e calculou o consumo diário, supondo 4 horas de uso e 20 horas de espera por dia.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: televisão",
+    "colunas": [
+     "Estado",
+     "Potência",
+     "Horas por dia"
+    ],
+    "linhas": [
+     [
+      "Ligada",
+      "90 W",
+      "4"
+     ],
+     [
+      "Em espera",
+      "6 W",
+      "20"
+     ]
+    ]
+   },
+   "alts": [
+    "o consumo em espera é desprezível, pois 6 W é uma potência muito menor que 90 W e não altera a conta de luz",
+    "o consumo em espera é maior que o da televisão ligada, pois ela fica 20 horas por dia em modo de espera",
+    "o consumo em espera é pequeno por hora, mas o longo tempo o faz chegar a um quarto do consumo diário",
+    "o consumo em espera é cerca de metade do consumo diário, pois a espera dura 20 horas das 24 do dia"
+   ],
+   "correta": 2,
+   "explicacao": "Ligada, a TV consome 0,36 kWh por dia e em espera 0,12 kWh, ou seja, 25% do total de 0,48 kWh. Os distratores ignoram o tempo, comparam horas em vez de energia ou superestimam a fração."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Para comparar hábitos, uma aluna usou o simulador para rodar o perfil padrão e o perfil econômico de uma casa. Os resultados mostraram uma queda grande no consumo, e ela concluiu que todas as ações econômicas foram responsáveis por essa queda.",
+   "comando": "Qual é a falha que impede essa conclusão?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador: dois perfis de uso",
+    "colunas": [
+     "Perfil",
+     "Estação",
+     "Banho",
+     "Consumo mensal"
+    ],
+    "linhas": [
+     [
+      "Padrão",
+      "inverno",
+      "15 min",
+      "300 kWh"
+     ],
+     [
+      "Econômico",
+      "verão",
+      "7 min",
+      "210 kWh"
+     ]
+    ]
+   },
+   "alts": [
+    "o perfil econômico usou menos aparelhos, e assim não se sabe quanto da queda vem do banho e quanto vem da geladeira",
+    "a estação e o banho mudaram juntos, e assim não se sabe quanto da queda vem das ações e quanto do clima",
+    "a duração do banho não mudou entre os perfis, e assim não se sabe quanto da queda vem das ações e quanto do clima",
+    "a estação do ano não influencia a conta, e assim a queda pode ser atribuída ao tempo do banho e ao clima"
+   ],
+   "correta": 1,
+   "explicacao": "Como estação e banho variaram ao mesmo tempo, o efeito de cada fator se mistura. Os distratores inventem falhas que não aparecem nos dados ou negam o efeito do clima."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma casa de Campinas, um ar-condicionado de 1,5 kW é usado 6 horas por dia durante 30 dias. A família pensa em trocá-lo por um ventilador de 80 W usado pelo mesmo tempo. O preço do kWh é de R$ 0,90.",
+   "comando": "Calcule o consumo mensal e o custo de cada aparelho e explique o que a comparação indica sobre a escolha dos aparelhos.",
+   "figura": null,
+   "ref": "O ar-condicionado consome 1,5 kW vezes 6 h vezes 30 dias, ou 270 kWh, o que custa R$ 243,00. O ventilador consome 0,08 kW vezes 6 h vezes 30, ou 14,4 kWh, que custam R$ 12,96. A potência do aparelho pesa muito no consumo, mas é preciso avaliar se o ventilador oferece o mesmo conforto.",
+   "conceitos": [
+    "270 kWh e R$ 243 para o ar-condicionado",
+    "14,4 kWh e cerca de R$ 13 para o ventilador",
+    "potência alta aumenta muito o consumo",
+    "considerar conforto na escolha"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O banho com chuveiro elétrico de 5 500 W é responsável por grande parte da conta de uma família. Em casa, cada um dos 4 moradores toma um banho por dia, hoje de 15 minutos, e a meta é reduzir o tempo para 8 minutos.",
+   "comando": "Calcule o consumo diário da casa nos dois casos e a economia em kWh por dia, explicando o raciocínio.",
+   "figura": null,
+   "ref": "Em 15 minutos, ou 0,25 h, o chuveiro consome 5,5 kW vezes 0,25 h, ou 1,375 kWh por banho, o que dá 5,5 kWh para quatro banhos. Em 8 minutos, cerca de 0,133 h, são 0,73 kWh por banho e cerca de 2,9 kWh para os quatro. A economia é de cerca de 2,6 kWh por dia.",
+   "conceitos": [
+    "consumo é potência vezes tempo",
+    "5,5 kWh por dia com banhos de 15 minutos",
+    "cerca de 2,9 kWh com banhos de 8 minutos",
+    "economia de cerca de 2,6 kWh por dia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "O simulador do museu mostrou como o consumo mensal de uma casa-modelo se divide entre os aparelhos. A família de Aline quer reduzir a conta de luz e decidiu escolher dois aparelhos como prioridade.",
+   "comando": "Escolha duas prioridades, justifique com os dados e proponha uma ação concreta para cada uma.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do simulador: divisão do consumo",
+    "unidade": "% do consumo",
+    "itens": [
+     {
+      "rotulo": "Chuveiro",
+      "valor": 35
+     },
+     {
+      "rotulo": "Geladeira",
+      "valor": 25
+     },
+     {
+      "rotulo": "Iluminação",
+      "valor": 15
+     },
+     {
+      "rotulo": "Televisão e eletrônicos",
+      "valor": 15
+     },
+     {
+      "rotulo": "Outros",
+      "valor": 10
+     }
+    ]
+   },
+   "ref": "As prioridades podem ser o chuveiro, com 35% do consumo, e a geladeira, com 25%, pois juntos somam 60%. No chuveiro, pode-se reduzir o tempo de banho ou usar a posição verão; na geladeira, evitar abrir a porta e regular a temperatura, ou trocar por modelo mais eficiente.",
+   "conceitos": [
+    "escolher chuveiro e geladeira por serem os maiores percentuais",
+    "juntos somam 60% do consumo",
+    "ação concreta para o chuveiro",
+    "ação concreta para a geladeira"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Os moradores de uma casa em Sorocaba compararam a leitura do medidor no início e no fim do mês com a conta do ano anterior. A tarifa é de R$ 0,85 por kWh, e o consumo do mesmo mês no ano anterior foi de 240 kWh.",
+   "comando": "Calcule o consumo e o valor deste mês, a redução percentual em relação ao ano anterior e cite duas ações que podem ter contribuído.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados da leitura do medidor",
+    "colunas": [
+     "Leitura",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Início do mês",
+      "12 340 kWh"
+     ],
+     [
+      "Fim do mês",
+      "12 520 kWh"
+     ]
+    ]
+   },
+   "ref": "O consumo foi 12 520 menos 12 340, ou seja, 180 kWh, o que custa 180 vezes R$ 0,85, ou R$ 153,00. Em relação a 240 kWh, a redução foi de 60 kWh, ou 25%. Podem ter contribuído banhos mais curtos e a troca de lâmpadas por LED.",
+   "conceitos": [
+    "consumo de 180 kWh",
+    "valor de R$ 153,00",
+    "redução de 25%",
+    "duas ações de economia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma família avalia trocar a geladeira antiga, que consome 60 kWh por mês, por uma nova com selo de alta eficiência, que consome 30 kWh por mês e custa R$ 1 500 a mais. O kWh custa R$ 0,90 e a geladeira dura cerca de 10 anos.",
+   "comando": "Calcule em quanto tempo a economia na conta paga a diferença de preço e diga se a troca vale a pena.",
+   "figura": null,
+   "ref": "A economia é de 30 kWh por mês, ou 360 kWh por ano, o que dá R$ 324,00 por ano. Dividindo R$ 1 500 por R$ 324, o retorno ocorre em cerca de 4,6 anos. Como a geladeira dura cerca de 10 anos, a troca vale a pena do ponto de vista financeiro e reduz o consumo de energia.",
+   "conceitos": [
+    "economia de 30 kWh por mês",
+    "R$ 324 por ano",
+    "retorno em cerca de 4,6 anos",
+    "conclusão com vida útil de 10 anos"
+   ]
+  }
  ]
 }
