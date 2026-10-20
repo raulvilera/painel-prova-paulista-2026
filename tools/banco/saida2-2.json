@@ -176,7 +176,7 @@
    },
    "alts": [
     "A sombra é mais curta ao meio-dia porque, nesse horário, o Sol está mais perto da Terra do que de manhã e à tarde.",
-    "A sombra muda de tamanho e de direção porque a rotação da Terra altera a posição aparente do Sol, e isso permite estimar a hora.",
+    "A sombra muda de tamanho e direção porque a rotação da Terra altera a posição aparente do Sol.",
     "A sombra aponta para o oeste de manhã porque o Sol se desloca de oeste para leste em torno da Terra ao longo do dia.",
     "A sombra muda ao longo do dia porque a Terra dá uma volta completa em torno do Sol em cerca de seis horas."
    ],
@@ -1141,7 +1141,7 @@
     ]
    },
    "alts": [
-    "À noite a areia esfria mais que o mar, o ar sobre o mar fica mais quente e sobe, e o ar da terra desloca-se para ocupar o lugar.",
+    "À noite a areia esfria mais que o mar, o ar sobre o mar fica mais quente e sobe, e o ar da terra ocupa o seu lugar.",
     "À noite o mar esfria mais que a areia, o ar sobre a terra fica mais quente e sobe, e o ar do mar desloca-se para ocupar o lugar.",
     "À noite o vento muda porque a Lua atrai o ar da terra em direção ao mar, já que a areia e a água ficam na mesma temperatura.",
     "À noite o ar sobre o mar fica mais frio e desce, e por isso o vento sopra do mar para a terra, como ocorria à tarde."
@@ -1177,7 +1177,7 @@
    "alts": [
     "O aquecimento do Pacífico não influencia o Brasil, pois a chuva do Sul e a do Nordeste variam por motivos locais.",
     "O aquecimento do Pacífico aumenta a evaporação e, por isso, a chuva sobe de modo parecido em qualquer região do Brasil.",
-    "O aquecimento do Pacífico altera a circulação do ar e redistribui a chuva, que aumenta em uma região e diminui em outra.",
+    "O aquecimento do Pacífico altera a circulação do ar e redistribui a chuva entre as regiões do país.",
     "O aquecimento do Pacífico reduz a chuva em todo o país, pois o ar quente impede a formação de nuvens sobre o continente."
    ],
    "correta": 2,
@@ -1251,7 +1251,7 @@
     "As correntes marinhas influenciam a temperatura da água, e a chuva das cidades depende dos ventos que sopram no continente.",
     "A corrente fria aumenta a evaporação e leva vapor ao ar, que traz chuva a B; a corrente quente deixa o ar mais seco em A.",
     "A diferença se deve à latitude, pois as cidades recebem quantidades diferentes de luz solar e, por isso, têm climas diferentes.",
-    "A corrente quente aumenta a evaporação e leva vapor ao ar, que traz chuva a A; a corrente fria deixa o ar mais seco e frio em B."
+    "A corrente quente aumenta a evaporação e umedece o ar de A; a corrente fria deixa o ar de B mais seco e frio."
    ],
    "correta": 3,
    "explicacao": "Na mesma latitude a diferença vem do oceano: a corrente quente evapora mais e umedece o ar (A: 1500 mm), enquanto a fria resfria o ar e reduz a chuva (B: 50 mm). Os distratores invertem as correntes, usam a latitude, que é igual, ou negam o efeito das correntes."
