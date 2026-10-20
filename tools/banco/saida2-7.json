@@ -3380,7 +3380,7 @@
     ]
    },
    "alts": [
-    "Em 12 anos, a exploração passou de um satélite sem tripulação a um pouso humano na Lua, com voos orbitais no meio",
+    "Em 12 anos, a exploração foi de um satélite sem tripulação ao pouso humano na Lua, com voos orbitais no meio",
     "Tereshkova voou antes de Gagarin, pois o voo dela teve mais órbitas e por isso foi o primeiro de um ser humano",
     "A Apollo 11 pousou na Lua antes de qualquer humano orbitar a Terra, pois a Lua foi o primeiro destino tripulado",
     "Os quatro marcos ocorreram em menos de cinco anos, o que mostra o ritmo acelerado da corrida espacial"
@@ -3421,8 +3421,8 @@
    "alts": [
     "O CBERS-4 fica fixo sobre o Brasil a 778 km e serve às comunicações; o SGDC-1 passa sobre toda a Terra e gera imagens",
     "O Amazônia-1 fica fixo a 752 km e atende às comunicações; o SGDC-1 e o CBERS-4 geram imagens da floresta",
-    "O SGDC-1 fica fixo sobre o Brasil a 36.000 km e serve às comunicações; os de cerca de 750 km varrem a superfície e geram imagens",
-    "Os três satélites têm a mesma função, pois todos orbitam acima da atmosfera e transmitem sinais ao território"
+    "O SGDC-1 fica fixo sobre o Brasil, a 36.000 km, e serve às comunicações; os de 750 km geram imagens",
+    "Os três satélites têm a mesma função, pois os três orbitam acima da atmosfera e transmitem sinais ao território"
    ],
    "correta": 2,
    "explicacao": "Órbita geoestacionária (período de 24 h) mantém o satélite sobre o mesmo ponto: ideal para comunicações; órbitas polares baixas cobrem todo o planeta e fotografam. Os distratores trocam as órbitas ou igualam funções."
@@ -3454,7 +3454,7 @@
     ]
    },
    "alts": [
-    "O sinal leva até 22 minutos para ir e outro tanto para voltar, o que impede o controle em tempo real; o robô executa comandos prontos",
+    "O sinal leva até 22 minutos para ir, e a resposta demora outro tanto, o que impede pilotar em tempo real",
     "O sinal viaja mais devagar no espaço do que na atmosfera, e por isso o robô precisa decidir sozinho certas tarefas",
     "O atraso diminui quando Marte está mais longe, e por isso o robô precisa ser controlado em tempo real nesses períodos",
     "O robô precisa de autonomia porque a energia solar em Marte é fraca e as ordens da Terra gastariam a bateria"
@@ -3493,7 +3493,7 @@
     "Não há gravidade na ISS por estar longe da Terra, e os ossos perdem massa; a medida é descer a estação ao solo",
     "A radiação espacial dissolve o cálcio dos ossos, e a medida é adicionar cálcio à dieta, pois o exercício é inútil",
     "O alimento embalado das missões é pobre em cálcio, e a medida é incluir queijo, pois a gravidade não influi",
-    "A queda livre contínua da estação reduz a carga sobre os ossos, que perdem massa; exercícios resistidos reduzem a perda"
+    "A queda livre contínua tira a carga sobre os ossos, que perdem massa; exercícios resistidos reduzem a perda"
    ],
    "correta": 3,
    "explicacao": "Na ISS há gravidade (cerca de 90%), mas tudo cai junto em órbita; sem carga, os ossos perdem massa. Os distratores usam a ideia de que não há gravidade, atribuem à radiação e à dieta."
@@ -3524,8 +3524,8 @@
     ]
    },
    "alts": [
-    "Como o empuxo não mudou, a aceleração é a mesma nas duas fases, pois depende apenas da força do motor do foguete",
-    "Com a mesma força e menos massa, a aceleração aumenta (cerca de 14 para 47 m/s²), e por isso o desempenho melhora",
+    "Como o empuxo não mudou, a aceleração é a mesma nas duas fases, pois depende da força do motor do foguete",
+    "Com a mesma força e menos massa, a aceleração sobe (cerca de 14 para 47 m/s²), e por isso o desempenho melhora",
     "Com menos massa, a aceleração diminui, pois o foguete passa a ter menos combustível para impulsionar a carga",
     "Com menos massa, o empuxo cai na mesma proporção, e a aceleração se mantém igual à da fase de decolagem"
    ],
