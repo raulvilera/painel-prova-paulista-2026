@@ -80,7 +80,7 @@ t('esqueletico', 'en:Human skeleton', 'en:Bone', 'en:Joint', 'en:Calcium');
 t('muscular', 'en:Muscle', 'en:Skeletal muscle', 'en:Smooth muscle', 'en:Cardiac muscle');
 t('mao bionica', 'en:Prosthesis', 'en:Bionics', 'en:Prosthetic arm|en:Prosthesis', 'en:Accessibility');
 // drogas: só imagens do cérebro e do sistema nervoso (nunca seringas, embalagens ou o uso da droga em si)
-t('drogas', 'en:Human brain', 'en:Neuron', 'en:Nervous system', 'en:Adolescence');
+t('drogas', 'en:Human brain', 'en:Neuron', 'en:Nervous system');
 // --- 4º bimestre: saúde
 t('^saude|saude$', 'en:Health', 'en:Public health', 'en:World Health Organization', 'en:Healthcare');
 t('doencas causadas por virus', 'en:Virus', 'en:Aedes aegypti', 'en:Influenza virus', 'en:Coronavirus');

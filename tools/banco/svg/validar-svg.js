@@ -5,6 +5,7 @@ const fs = require('fs'), path = require('path');
 const I = require('../../../api/individual.js');
 const dir = __dirname, arqs = process.argv[2] ? [process.argv[2]] : fs.readdirSync(dir).filter(f => /^resultado-\d+\.json$/.test(f)).map(f => path.join(dir, f));
 const BANCO = {}; fs.readdirSync(path.join(dir, '..')).filter(f => /^saida2-\d+\.json$/.test(f)).forEach(f => Object.assign(BANCO, JSON.parse(fs.readFileSync(path.join(dir, '..', f), 'utf8'))));
+const { bloqueado } = require('./bloqueios.js');
 const PROIBIDO = /<\s*(script|foreignObject|image|use|iframe|style)\b|\son[a-z]+\s*=|href\s*=|xlink:|javascript:|https?:\/\//i;
 let ruins = 0, ok = 0, vazias = 0;
 arqs.forEach(a => {
@@ -19,6 +20,7 @@ arqs.forEach(a => {
       if (!/viewBox="0 0 \d+ \d+"/.test(s)) erros.push('falta viewBox');
       if (PROIBIDO.test(s)) erros.push('conteúdo não permitido (script/on*/foreignObject/link externo)');
       if (s.length > 9000) erros.push('muito grande (' + s.length + ' caracteres; máx. 9000)');
+      const bl = bloqueado(s); if (bl) erros.push(bl);
       const textos = [...s.matchAll(/>([^<>]+)</g)].map(m => m[1].trim()).filter(Boolean);
       if (!textos.length) erros.push('sem nenhum rótulo em texto');
       const q = qs[i]; if (q) {
