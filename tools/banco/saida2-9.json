@@ -3023,7 +3023,7 @@
     "R$ 186,25, pois a tarifa dá R$ 175,00 e o adicional de R$ 4,50 vale por bloco de 100 kWh, somando 2,5 blocos e R$ 11,25.",
     "R$ 179,50, pois o adicional de R$ 4,50 é cobrado uma vez na conta, qualquer que seja o consumo, e soma-se a R$ 175,00."
    ],
-   "correta": 3,
+   "correta": 2,
    "explicacao": "O consumo de 250 kWh a R$ 0,70 dá R$ 175,00 e o adicional é 2,5 x R$ 4,50 = R$ 11,25, totalizando R$ 186,25. Os distratores tratam o adicional como valor fixo, aplicam um limite que não existe ou cobram o adicional por kWh em vez de por bloco."
   },
   {
