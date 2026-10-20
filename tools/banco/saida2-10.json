@@ -287,5 +287,623 @@
     "modelo A isola e não permite trocas"
    ]
   }
+ ],
+ "7º ANO|1|Relacionar o movimento das placas tectônicas à teoria da deriva continental.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Wegener propôs que os continentes já estiveram unidos. Hoje, geólogos do Brasil e da África comparam fósseis de rochas com cerca de 280 milhões de anos. O Mesosaurus era um réptil pequeno, de patas curtas, que vivia em lagos e rios rasos, e não em mar aberto. A Glossopteris era uma planta de clima frio.",
+   "comando": "Qual explicação é sustentada pelos dados sobre os fósseis do Mesosaurus?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de fósseis encontrados",
+    "colunas": [
+     "Fóssil",
+     "Onde aparece",
+     "Ambiente"
+    ],
+    "linhas": [
+     [
+      "Mesosaurus",
+      "Sul do Brasil e sul da África",
+      "água doce rasa"
+     ],
+     [
+      "Glossopteris",
+      "Brasil, África, Índia, Austrália",
+      "terra firme"
+     ]
+    ]
+   },
+   "alts": [
+    "o réptil cruzou o oceano a nado, o que explica fósseis iguais dos dois lados, mesmo em água doce rasa de lagos",
+    "o clima atual é igual nos dois continentes, e por isso os mesmos fósseis surgiram em rochas de regiões distantes",
+    "o réptil de água doce vivia numa região contínua, depois separada pelo afastamento dos continentes",
+    "as correntes do mar transportaram os animais mortos até a outra costa, onde foram soterrados e viraram fósseis"
+   ],
+   "correta": 2,
+   "explicacao": "Um animal de água doce não atravessaria o oceano, então sua presença nos dois continentes indica áreas antes ligadas. Os distratores ignoram o ambiente do réptil, usam o clima de hoje para explicar fósseis antigos ou propõem transporte marinho."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Medidas de satélite mostram que a América do Sul e a África se afastam. Um grupo de estudantes quer estimar há quanto tempo os continentes começaram a se separar, supondo que a velocidade tenha sido constante. Lembre que 1 km equivale a 100 000 cm.",
+   "comando": "Qual é a melhor estimativa e a interpretação adequada dela?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de medição por satélite",
+    "colunas": [
+     "Grandeza",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Afastamento anual",
+      "2,5 cm"
+     ],
+     [
+      "Distância atual entre as costas",
+      "5 000 km"
+     ]
+    ]
+   },
+   "alts": [
+    "cerca de 20 milhões de anos, valor que indica uma separação muito recente em relação aos fósseis iguais nos dois continentes",
+    "cerca de 200 milhões de anos, compatível com a época em que os fósseis indicam continentes unidos",
+    "cerca de 2 bilhões de anos, valor que indica que os continentes se separaram antes de surgirem os primeiros fósseis",
+    "cerca de 200 mil anos, valor que indica que a separação começou na época em que surgiram os primeiros humanos"
+   ],
+   "correta": 1,
+   "explicacao": "Convertendo 5 000 km em 500 000 000 cm e dividindo por 2,5 cm por ano, obtêm-se 200 milhões de anos, coerente com os fósseis. Os distratores erram a conversão por fatores de 10 ou 1 000 e produzem datas incompatíveis."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O Brasil fica no interior da placa Sul-Americana e quase não tem terremotos fortes, ao contrário do Chile. Um sismólogo reuniu o número de abalos fortes em três regiões durante um século, junto com a distância de cada local até o limite mais próximo da placa.",
+   "comando": "Que hipótese melhor explica por que Mato Grosso tem poucos terremotos fortes?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de abalos fortes em 100 anos",
+    "colunas": [
+     "Local",
+     "Distância do limite da placa",
+     "Abalos fortes"
+    ],
+    "linhas": [
+     [
+      "Costa do Chile",
+      "0 km",
+      "40"
+     ],
+     [
+      "Cadeia no meio do Atlântico",
+      "0 km",
+      "25"
+     ],
+     [
+      "Mato Grosso",
+      "2 000 km",
+      "0"
+     ]
+    ]
+   },
+   "alts": [
+    "o Brasil está assentado sobre rochas sem movimento algum, e por isso as placas tectônicas não o afetam",
+    "o clima tropical amortece os abalos, de modo que a ausência de terremotos independe da posição na placa",
+    "o interior das placas concentra as maiores tensões, mas elas são aliviadas por fraturas pequenas e frequentes",
+    "as tensões se concentram nas bordas, onde as placas interagem, e o interior da placa sofre pouco esforço"
+   ],
+   "correta": 3,
+   "explicacao": "Os locais com abalos ficam em limites de placas, e o local sem abalos fica a 2 000 km da borda. Os distratores negam o movimento das placas, atribuem o fenômeno ao clima ou invertem a relação entre tensão e posição."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "No topo de uma cordilheira a mais de 8 000 m de altitude, alpinistas encontraram rochas cheias de conchas de animais que só vivem no mar. Uma equipe de geologia coletou amostras em três altitudes para entender como esse material foi parar ali.",
+   "comando": "Que hipótese explica melhor a presença das conchas nesse local?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de amostras da cordilheira",
+    "colunas": [
+     "Altitude",
+     "Tipo de rocha"
+    ],
+    "linhas": [
+     [
+      "200 m (planície)",
+      "areia e argila de rio"
+     ],
+     [
+      "3 000 m",
+      "arenito dobrado"
+     ],
+     [
+      "8 000 m",
+      "calcário com conchas"
+     ]
+    ]
+   },
+   "alts": [
+    "o fundo de um mar antigo foi dobrado e erguido quando duas placas se aproximaram e comprimiram a crosta",
+    "o nível do mar subiu há milhões de anos até cobrir a cordilheira inteira, e depois a água recuou por completo",
+    "animais marinhos escalaram a montanha em migrações antigas e morreram nas áreas mais altas, onde foram soterrados",
+    "o gelo do topo carregou as conchas de praias vizinhas e as depositou nas rochas durante o avanço das geleiras"
+   ],
+   "correta": 0,
+   "explicacao": "As conchas só se formam no mar, e o calcário e o arenito dobrados indicam compressão, compatível com placas que se aproximam. Os distratores atribuem o fato a variação do nível do mar, à migração dos animais ou ao transporte pelo gelo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um mapa mostra que a maioria dos vulcões e terremotos do planeta se concentra em faixas estreitas, como a ao redor do oceano Pacífico. Quatro estudantes tentaram interpretar a tabela abaixo e cada um escreveu uma conclusão.",
+   "comando": "Qual conclusão dos estudantes NÃO é sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de vulcões e abalos por região",
+    "colunas": [
+     "Região",
+     "Vulcões ativos",
+     "Abalos por ano",
+     "Placas vizinhas"
+    ],
+    "linhas": [
+     [
+      "Costa do Pacífico",
+      "450",
+      "900",
+      "várias"
+     ],
+     [
+      "Islândia",
+      "30",
+      "200",
+      "2"
+     ],
+     [
+      "Interior da América do Sul",
+      "3",
+      "10",
+      "1"
+     ]
+    ]
+   },
+   "alts": [
+    "vulcões e abalos ocorrem em maior número nas regiões com várias placas vizinhas, o que sugere relação com o movimento delas",
+    "a região do interior da placa tem poucos vulcões e abalos, o que é compatível com menor interação entre placas",
+    "os vulcões do Pacífico empurram as placas vizinhas, e é isso que provoca os abalos observados naquela região",
+    "a Islândia, com duas placas vizinhas, tem muitos abalos para o seu tamanho, e isso é compatível com o movimento delas"
+   ],
+   "correta": 2,
+   "explicacao": "Os dados mostram coincidência entre atividade e limites de placas, mas não que os vulcões movam as placas, o que inverte causa e efeito. As demais frases descrevem a associação sem afirmar o sentido da causa."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em 1912, Alfred Wegener apresentou argumentos para a deriva continental: encaixe das costas, fósseis iguais e rochas semelhantes em continentes distantes. Muitos cientistas da época não aceitaram a ideia, mesmo diante dessas evidências.",
+   "comando": "Cite duas evidências favoráveis à ideia de Wegener e explique por que ela só foi aceita depois, com o estudo do fundo dos oceanos.",
+   "figura": null,
+   "ref": "Duas evidências são o encaixe das costas e os fósseis iguais em continentes hoje distantes. A ideia só foi aceita depois porque Wegener não explicava qual força movia os continentes; a descoberta do fundo oceânico em expansão e das placas tectônicas forneceu esse mecanismo.",
+   "conceitos": [
+    "encaixe das costas ou fósseis iguais como evidência",
+    "Wegener não explicou a força que move os continentes",
+    "fundo oceânico em expansão e placas tectônicas deram o mecanismo"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Navios mediram a idade das rochas do fundo do Atlântico em pontos cada vez mais distantes de uma cadeia submarina no meio do oceano. As amostras foram coletadas ao longo de uma linha que parte da cadeia em direção ao Brasil.",
+   "comando": "Interprete a relação entre distância e idade e calcule a velocidade média de afastamento em km por milhão de anos.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de amostras do fundo do mar",
+    "colunas": [
+     "Distância da cadeia",
+     "Idade da rocha"
+    ],
+    "linhas": [
+     [
+      "0 km",
+      "0 milhão de anos"
+     ],
+     [
+      "500 km",
+      "10 milhões de anos"
+     ],
+     [
+      "1 000 km",
+      "20 milhões de anos"
+     ],
+     [
+      "2 000 km",
+      "40 milhões de anos"
+     ]
+    ]
+   },
+   "ref": "As rochas ficam mais antigas quanto mais longe da cadeia, o que indica que o fundo se forma ali e vai se afastando para os lados. A velocidade é de 50 km por milhão de anos, ou seja, cerca de 5 cm por ano.",
+   "conceitos": [
+    "rochas mais antigas quanto mais longe da cadeia",
+    "fundo oceânico se forma na cadeia e se afasta",
+    "afastamento de cerca de 5 cm por ano"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um colega duvida da deriva continental: diz que, se a América do Sul se move cerca de 2,5 cm por ano, isso deveria ser percebido no dia a dia. Você sabe que as unhas das mãos crescem aproximadamente 3 cm por ano e que ninguém percebe esse crescimento hora a hora.",
+   "comando": "Responda ao colega mostrando, com a comparação, por que o movimento das placas passa despercebido e como ele mesmo assim pode mudar o mapa.",
+   "figura": null,
+   "ref": "O movimento das placas é de 2,5 cm por ano, semelhante ao crescimento de uma unha, lento demais para ser percebido no dia a dia. Como esse deslocamento se acumula por milhões de anos, ele soma milhares de quilômetros e muda a posição dos continentes.",
+   "conceitos": [
+    "velocidade semelhante ao crescimento da unha",
+    "movimento lento demais para perceber no dia a dia",
+    "deslocamento se acumula por milhões de anos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Se a América do Sul e a África continuarem a se afastar a 2,5 cm por ano, o oceano Atlântico continuará a crescer. Uma turma quer prever como será o oceano daqui a 50 milhões de anos, usando uma calculadora e o fato de que 1 km tem 100 000 cm.",
+   "comando": "Calcule quanto o Atlântico terá aumentado em quilômetros, mostrando as contas, e explique por que o cálculo é apenas uma estimativa.",
+   "figura": null,
+   "ref": "Em 50 milhões de anos, o afastamento é 2,5 cm vezes 50 000 000, que dá 125 000 000 cm, ou seja, 1 250 km. É uma estimativa porque supõe velocidade constante, e as placas podem acelerar, frear ou mudar de direção ao longo do tempo.",
+   "conceitos": [
+    "cálculo 2,5 cm vezes 50 milhões de anos",
+    "resultado de cerca de 1 250 km",
+    "supõe velocidade constante que pode variar"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na falha de San Andreas, na Califórnia, duas placas deslizam lado a lado. Cientistas mediram que, em 40 anos sem terremotos, as rochas de lados opostos se moveram 140 cm lentamente, mas a falha permaneceu travada. Em um único terremoto, ela se deslocou 140 cm em poucos segundos.",
+   "comando": "Explique por que o movimento lento das placas pode terminar em um terremoto súbito.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de medição na falha",
+    "colunas": [
+     "Período",
+     "Deslocamento"
+    ],
+    "linhas": [
+     [
+      "40 anos sem terremoto",
+      "140 cm nas rochas ao redor"
+     ],
+     [
+      "Terremoto (segundos)",
+      "140 cm na falha"
+     ]
+    ]
+   },
+   "ref": "As placas se movem devagar, mas o atrito mantém a falha travada, e as rochas vão acumulando tensão. Quando a tensão supera o atrito, a falha rompe de uma vez e libera a energia em ondas sísmicas, causando o terremoto.",
+   "conceitos": [
+    "placas se movem lentamente",
+    "atrito trava a falha e acumula tensão",
+    "rompimento súbito libera energia em ondas sísmicas"
+   ]
+  }
+ ],
+ "8º ANO|1|Comparar os processos reprodutivos das plantas.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma horta escolar de Campinas, a turma estudou por que alguns tomateiros dão frutos e outros não. Separaram plantas em três grupos: flores cobertas com saquinho de tecido fino, flores abertas e flores cobertas, nas quais um aluno encostou um pincel nos estames e depois no pistilo.",
+   "comando": "Que conclusão é sustentada pelos dados do experimento?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: tomateiros",
+    "colunas": [
+     "Grupo",
+     "Flores",
+     "Frutos formados"
+    ],
+    "linhas": [
+     [
+      "Saquinho fechado",
+      "20",
+      "0"
+     ],
+     [
+      "Flor aberta",
+      "20",
+      "18"
+     ],
+     [
+      "Saquinho com pincel",
+      "20",
+      "16"
+     ]
+    ]
+   },
+   "alts": [
+    "o saquinho impede a planta de formar flores completas, por isso as flores cobertas não deram fruto, nem com o pincel",
+    "o fruto depende da chegada do pólen ao pistilo, feita por insetos ou, nesse teste, por um pincel",
+    "o pincel produz pólen novo e por isso os frutos surgiram no terceiro grupo, igual ao grupo de flores abertas",
+    "os insetos são indispensáveis para qualquer formação de fruto, já que o pincel gerou menos frutos do que a flor aberta"
+   ],
+   "correta": 1,
+   "explicacao": "O grupo com saquinho e pincel formou frutos, o que mostra que o transporte do pólen, e não o inseto em si, foi o fator decisivo. Os distratores atribuem ao saquinho um efeito sobre as flores, ao pincel a produção de pólen ou generalizam o papel dos insetos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um produtor de morangos de Atibaia obteve novas plantas de duas formas: replantando os brotos (estolhos) que saem da planta-mãe e semeando sementes dos próprios morangos. Ele mediu a altura das plantas após 30 dias nos dois canteiros e anotou a variação entre elas.",
+   "comando": "Qual explicação relaciona melhor a reprodução à variação entre as plantas?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de canteiros de morango",
+    "colunas": [
+     "Origem da planta",
+     "Altura média",
+     "Variação entre plantas"
+    ],
+    "linhas": [
+     [
+      "Estolho",
+      "20 cm",
+      "1 cm"
+     ],
+     [
+      "Semente",
+      "18 cm",
+      "8 cm"
+     ]
+    ]
+   },
+   "alts": [
+    "o estolho resulta da combinação de material genético de duas plantas e gera descendentes iguais, enquanto a semente copia a mãe",
+    "a semente produz plantas mais variadas por receber mais luz no canteiro, enquanto o estolho é protegido pela planta-mãe",
+    "o estolho produz plantas iguais por receber nutrientes da mãe, e a semente produz plantas variadas por falta de água",
+    "a semente combina material genético de duas plantas e gera descendentes diferentes, e o estolho copia a mãe"
+   ],
+   "correta": 3,
+   "explicacao": "A variação de 8 cm nas plantas de semente é típica da reprodução sexuada, e a variação de 1 cm no estolho é típica da clonagem. Os distratores inverteram os processos ou usaram luz, nutrientes e água, que não foram medidos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma visita ao Parque Estadual da Serra do Mar, estudantes compararam duas plantas: a araucária, cujo pinhão fica nas escamas de uma pinha, e o tomateiro da horta, cuja semente fica dentro do fruto. Anotaram o que observaram em cada uma.",
+   "comando": "Qual afirmação sobre a reprodução dessas plantas é sustentada pelas observações?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de observação das plantas",
+    "colunas": [
+     "Planta",
+     "Posição da semente",
+     "Flor vistosa"
+    ],
+    "linhas": [
+     [
+      "Araucária",
+      "exposta nas escamas",
+      "não"
+     ],
+     [
+      "Tomateiro",
+      "dentro de fruto",
+      "sim"
+     ]
+    ]
+   },
+   "alts": [
+    "ambas produzem sementes por reprodução sexuada, mas só no tomateiro a semente fica dentro de um fruto",
+    "a araucária se reproduz sem sementes por não ter flores vistosas, enquanto o tomateiro produz sementes por reprodução sexuada",
+    "ambas formam frutos a partir do ovário, mas na araucária a semente fica exposta porque o fruto se abre ao amadurecer",
+    "o tomateiro depende de pólen para formar sementes, enquanto a araucária forma sementes por reprodução assexuada"
+   ],
+   "correta": 0,
+   "explicacao": "A semente exposta da araucária e a semente dentro do fruto do tomateiro mostram que ambas se reproduzem por sementes, com proteção diferente. Os distratores confundem flor vistosa com reprodução, atribuem fruto à araucária ou tratam a semente da araucária como assexuada."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Para multiplicar roseiras, uma floricultora de Holambra cortou galhos e os colocou em água para enraizar. Preparou galhos diferentes, variando a presença de nós (regiões de onde saem brotos) e de folhas, e contou as raízes após 15 dias.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: galhos em água",
+    "colunas": [
+     "Galho",
+     "Nós",
+     "Folhas",
+     "Raízes"
+    ],
+    "linhas": [
+     [
+      "1",
+      "2",
+      "3",
+      "12"
+     ],
+     [
+      "2",
+      "0",
+      "3",
+      "0"
+     ],
+     [
+      "3",
+      "2",
+      "0",
+      "3"
+     ]
+    ]
+   },
+   "alts": [
+    "o enraizamento exige nós, pois sem eles não houve raízes, e as folhas ajudam, pois sem elas houve poucas raízes",
+    "o enraizamento exige folhas, pois sem nós ainda houve raízes, e os nós ajudam, pois houve mais raízes com mais nós",
+    "o enraizamento depende do número de nós, pois os galhos com dois nós formaram o mesmo número de raízes",
+    "o enraizamento ocorre com qualquer pedaço de galho, pois as folhas e os nós não alteraram o número de raízes obtido"
+   ],
+   "correta": 0,
+   "explicacao": "O galho sem nós não formou raízes e o galho sem folhas formou menos que o galho completo, o que mostra o papel dos nós e das folhas. Os distratores invertem o papel das estruturas, ignoram a diferença entre os galhos 1 e 3 ou negam a diferença observada."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma aluna quis testar se a luz influencia a germinação de sementes, etapa da reprodução sexuada das plantas. Colocou sementes de alface em um vaso na janela, a 25 °C, e sementes de feijão em outro vaso dentro do armário, a 15 °C. Contou as plântulas após uma semana.",
+   "comando": "Qual é a falha do procedimento que impede concluir algo sobre a luz?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: germinação",
+    "colunas": [
+     "Espécie",
+     "Local",
+     "Temperatura",
+     "Germinadas"
+    ],
+    "linhas": [
+     [
+      "Alface",
+      "Janela",
+      "25 °C",
+      "18"
+     ],
+     [
+      "Feijão",
+      "Armário",
+      "15 °C",
+      "7"
+     ]
+    ]
+   },
+   "alts": [
+    "o teste usou sementes demais em cada vaso, e por isso a contagem de plântulas ficou imprecisa depois de uma semana",
+    "o teste durou pouco tempo, o que impede notar que a luz afeta a germinação do feijão e não a da alface",
+    "o teste mudou a espécie e a temperatura junto com a luz, e assim não é possível saber qual delas causou a diferença",
+    "o teste não incluiu um vaso com plantas adultas, que são o grupo de comparação para medir a germinação"
+   ],
+   "correta": 2,
+   "explicacao": "Como espécie, temperatura e luz variaram juntas, a diferença pode ser causada por qualquer uma delas. Os distratores propõem falhas que não impedem a conclusão, como a quantidade de sementes, o tempo e o uso de plantas adultas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A abóbora tem flores masculinas, com estames, e flores femininas, com pistilo e ovário. Em uma horta, uma agricultora cobriu uma flor feminina por um dia, depois a abriu e viu que ela murchou sem formar fruto. Outra flor feminina, que abelhas visitaram, formou uma abóbora.",
+   "comando": "Explique o que ocorreu em cada flor, relacionando polinização, fecundação e formação do fruto.",
+   "figura": null,
+   "ref": "A abelha transporta o pólen da flor masculina até o pistilo da feminina, e isso é a polinização. O pólen fecunda a oosfera dentro do ovário, que se desenvolve em fruto com sementes; a flor coberta não recebeu pólen e por isso murchou.",
+   "conceitos": [
+    "abelha transporta pólen da flor masculina ao pistilo",
+    "pólen fecunda a oosfera no ovário",
+    "ovário se desenvolve em fruto com sementes",
+    "flor coberta sem pólen não forma fruto"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma fazenda do Vale do Ribeira, todos os pés de banana foram obtidos de mudas retiradas de uma única planta, o que garante frutos iguais. Um fungo que ataca a raiz apareceu na plantação, e agrônomos compararam a doença com uma plantação vizinha de variedades diferentes.",
+   "comando": "Explique a vantagem e o risco de multiplicar plantas por mudas, com base nos dados.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados de duas plantações: plantas doentes",
+    "unidade": "% de plantas",
+    "itens": [
+     {
+      "rotulo": "Plantas de uma só origem",
+      "valor": 90
+     },
+     {
+      "rotulo": "Variedades mistas",
+      "valor": 20
+     }
+    ]
+   },
+   "ref": "A multiplicação por mudas dá plantas idênticas à planta-mãe, o que garante frutos uniformes. Como todas têm o mesmo material genético, se uma é suscetível ao fungo, todas são, e a doença atinge a plantação inteira, ao contrário da plantação variada.",
+   "conceitos": [
+    "mudas dão plantas idênticas à planta-mãe",
+    "vantagem de frutos uniformes",
+    "sem variabilidade todas são suscetíveis ao fungo",
+    "variedade genética reduz o dano da doença"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma turma observou frutos de três plantas e onde nasceram as plantinhas novas. O fruto do dente-de-leão tem pelos leves, o da goiaba é doce e tem sementes pequenas, e o do coqueiro é grande, fibroso e flutua.",
+   "comando": "Relacione cada tipo de fruto a uma forma de dispersão das sementes e explique por que isso ajuda a planta a se reproduzir.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de frutos observados",
+    "colunas": [
+     "Planta",
+     "Característica do fruto",
+     "Onde nasceram plantinhas"
+    ],
+    "linhas": [
+     [
+      "Dente-de-leão",
+      "pelos leves",
+      "campo aberto distante"
+     ],
+     [
+      "Goiabeira",
+      "polpa doce",
+      "perto de ninhos de aves"
+     ],
+     [
+      "Coqueiro",
+      "casca fibrosa que flutua",
+      "praia distante"
+     ]
+    ]
+   },
+   "ref": "Os pelos leves permitem dispersão pelo vento, a polpa doce atrai animais que levam as sementes e a casca que flutua permite dispersão pela água. Ao espalhar as sementes, a planta ocupa novos locais e reduz a competição com a planta-mãe.",
+   "conceitos": [
+    "pelos leves e dispersão pelo vento",
+    "polpa doce atrai animais que dispersam sementes",
+    "fruto que flutua é dispersado pela água",
+    "dispersão reduz competição e ocupa novos locais"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um agricultor de Mogi das Cruzes pode plantar batata de duas formas: usando pedaços de batata com brotos ou semeando sementes de batata. Ele conversou com um técnico que apresentou dados de campos de teste com as duas formas.",
+   "comando": "Qual forma é melhor para quem quer colher batatas iguais e rápido, e qual é melhor para quem quer criar uma variedade nova? Justifique.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de campos de teste",
+    "colunas": [
+     "Forma de plantio",
+     "Tempo até colheita",
+     "Semelhança entre plantas"
+    ],
+    "linhas": [
+     [
+      "Pedaço com broto",
+      "90 dias",
+      "alta"
+     ],
+     [
+      "Semente",
+      "150 dias",
+      "baixa"
+     ]
+    ]
+   },
+   "ref": "Para colher rápido e batatas iguais, o melhor é o pedaço com broto, que é reprodução assexuada e gera clones em menos tempo. Para criar variedade nova, o melhor é a semente, que vem de reprodução sexuada e gera plantas diferentes entre si, das quais se escolhem as melhores.",
+   "conceitos": [
+    "pedaço com broto é reprodução assexuada e gera clones",
+    "pedaço com broto colhe mais rápido",
+    "semente é reprodução sexuada e gera variação",
+    "variação permite selecionar variedade nova"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Produtores de maracujá de uma região de São Paulo notaram que a produção caiu depois que a mata ao redor foi derrubada para um loteamento. Pesquisadores contaram abelhas e frutos nas mesmas plantas em dois anos.",
+   "comando": "Explique a relação entre o número de abelhas e a produção de frutos e proponha uma medida para recuperar a produção.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de duas safras de maracujá",
+    "colunas": [
+     "Ano",
+     "Abelhas por hora",
+     "Frutos por planta"
+    ],
+    "linhas": [
+     [
+      "2020",
+      "12",
+      "40"
+     ],
+     [
+      "2023",
+      "3",
+      "14"
+     ]
+    ]
+   },
+   "ref": "As abelhas fazem a polinização do maracujá, transportando o pólen entre as flores, e com menos abelhas menos flores são fecundadas e menos frutos se formam. Pode-se recuperar a produção preservando ou replantando a mata do entorno e fazendo polinização manual com pincel enquanto isso.",
+   "conceitos": [
+    "abelhas polinizam transportando pólen",
+    "menos abelhas resulta em menos flores fecundadas e menos frutos",
+    "propor preservar mata ou polinização manual"
+   ]
+  }
  ]
 }
