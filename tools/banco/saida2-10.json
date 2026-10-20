@@ -2111,5 +2111,327 @@
     "quem não se vacinou fica protegido"
    ]
   }
+ ],
+ "4B|8º ANO|4": [
+  {
+   "tipo": "obj",
+   "enunciado": "Uma usina solar do interior paulista monitorou a potência gerada ao longo de um dia de céu limpo. Ao mesmo tempo, a companhia elétrica informou que o consumo da cidade atinge o valor mais alto entre 19h e 21h, quando as pessoas voltam para casa.",
+   "comando": "Que limitação da fonte solar os dados mostram e que solução é coerente?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: potência da usina solar",
+    "unidade": "MW",
+    "itens": [
+     {
+      "rotulo": "6h",
+      "valor": 0
+     },
+     {
+      "rotulo": "9h",
+      "valor": 40
+     },
+     {
+      "rotulo": "12h",
+      "valor": 100
+     },
+     {
+      "rotulo": "15h",
+      "valor": 70
+     },
+     {
+      "rotulo": "18h",
+      "valor": 5
+     },
+     {
+      "rotulo": "21h",
+      "valor": 0
+     }
+    ]
+   },
+   "alts": [
+    "a geração é maior em horários de menor luz, o que pede mais painéis para captar a luz fraca do fim do dia",
+    "a geração é intermitente e quase nula no pico de consumo, o que pede armazenamento ou outra fonte",
+    "a geração cai ao meio-dia pelo calor excessivo, o que pede o resfriamento dos painéis com água do rio",
+    "a geração é contínua durante o dia, mas a energia se perde no transporte, o que pede o uso de cabos mais grossos"
+   ],
+   "correta": 1,
+   "explicacao": "A potência é máxima ao meio-dia e quase zero às 18h e 21h, quando o consumo é maior, e por isso é preciso armazenar energia ou usar outra fonte. Os distratores invertem o horário de maior geração, atribuem a queda ao calor ou à perda no transporte."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Duas cidades paulistas fictícias estudam instalar parques eólicos. Os engenheiros compararam um local de ventos fracos e um de ventos fortes, com quantidade de turbinas e energia anual gerada diferentes, e querem decidir qual local aproveita melhor cada turbina.",
+   "comando": "Qual local é mais vantajoso por turbina e por quê?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados dos locais: parque eólico",
+    "colunas": [
+     "Local",
+     "Turbinas",
+     "Vento médio",
+     "Energia por ano"
+    ],
+    "linhas": [
+     [
+      "A",
+      "12",
+      "4 m/s",
+      "30 GWh"
+     ],
+     [
+      "B",
+      "5",
+      "8 m/s",
+      "55 GWh"
+     ]
+    ]
+   },
+   "alts": [
+    "o local A, pois tem mais turbinas e por isso gera 2,5 GWh por turbina, valor maior que o do B, que gera 11 GWh",
+    "o local B, pois tem mais turbinas e por isso gera mais energia total do que o local A, que tem ventos fracos",
+    "o local A, pois o vento mais fraco desgasta menos as turbinas e por isso a energia gerada por turbina é maior",
+    "o local B, pois cada turbina gera 11 GWh por ano contra 2,5 no A, e o vento forte compensa o número menor"
+   ],
+   "correta": 3,
+   "explicacao": "Dividindo a energia pelas turbinas, B gera 11 GWh por turbina e A, 2,5 GWh, e o vento forte explica a diferença. Os distratores invertem o cálculo, atribuem a vantagem ao número de turbinas ou ao desgaste."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma usina de açúcar e etanol de Ribeirão Preto queima o bagaço da cana para gerar eletricidade. Um estudante argumentou que, por vir de planta, essa energia não tem nenhum impacto no ambiente, e a professora pediu que ele avaliasse a afirmação.",
+   "comando": "Qual avaliação é mais coerente com os dados e com a análise da fonte?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do exercício: usina de cana",
+    "colunas": [
+     "Item",
+     "Quantidade"
+    ],
+    "linhas": [
+     [
+      "Cana colhida",
+      "1 000 t"
+     ],
+     [
+      "Bagaço queimado",
+      "280 t"
+     ],
+     [
+      "Área plantada",
+      "200 ha"
+     ]
+    ]
+   },
+   "alts": [
+    "o bagaço é resíduo renovável, mas sua queima libera gás carbônico e a cana ocupa terra",
+    "o bagaço é renovável, e por isso sua queima não libera gás carbônico nem outros poluentes na atmosfera",
+    "o bagaço é um resíduo, e por isso a cana não ocupa terra que poderia ser usada para plantar alimentos",
+    "o bagaço é renovável, e por isso a queima libera um gás carbônico que a cana não consegue absorver"
+   ],
+   "correta": 0,
+   "explicacao": "A biomassa é renovável e aproveita resíduos, mas tem impactos como emissões e uso do solo. Os distratores negam as emissões, negam o uso de terra ou afirmam que o gás não é reabsorvido."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O governo avalia duas usinas hidrelétricas para um rio do interior. Os técnicos compararam a potência de cada usina com a área que seria alagada pelo reservatório, já que o alagamento afeta a vegetação, a fauna e as famílias que moram na região.",
+   "comando": "Que conclusão é sustentada por esses dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do exercício: usinas hidrelétricas",
+    "colunas": [
+     "Usina",
+     "Potência",
+     "Área alagada"
+    ],
+    "linhas": [
+     [
+      "A",
+      "1 400 MW",
+      "300 km²"
+     ],
+     [
+      "B",
+      "800 MW",
+      "2 000 km²"
+     ]
+    ]
+   },
+   "alts": [
+    "a usina B gera cerca de 2,5 MW por km² alagado, contra 4,7 da A, e por isso tem o menor impacto local entre as duas",
+    "a usina A gera mais potência, e por isso é a de menor impacto, pois o impacto depende da potência",
+    "a usina A gera 4,7 MW por km² alagado, contra 0,4 da B, mas o impacto também depende de fauna e famílias",
+    "a usina B alaga mais área, e por isso é a que gera mais energia, pois o tamanho do reservatório define a potência"
+   ],
+   "correta": 2,
+   "explicacao": "Dividindo a potência pela área, A rende 4,7 MW por km² e B 0,4, o que mostra aproveitamento melhor, mas outros impactos continuam a pesar. Os distratores erram a divisão, ligam impacto à potência ou ligam potência à área."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "O gráfico a seguir resume a participação de cada fonte na geração de eletricidade de um estado fictício. Quatro estudantes escreveram conclusões, e a professora pediu que identificassem a que os dados não sustentam.",
+   "comando": "Qual conclusão NÃO é sustentada pelos dados?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do exercício: fontes de eletricidade",
+    "unidade": "% da geração",
+    "itens": [
+     {
+      "rotulo": "Hidrelétrica",
+      "valor": 55
+     },
+     {
+      "rotulo": "Eólica",
+      "valor": 12
+     },
+     {
+      "rotulo": "Solar",
+      "valor": 8
+     },
+     {
+      "rotulo": "Biomassa",
+      "valor": 9
+     },
+     {
+      "rotulo": "Térmica a combustível fóssil",
+      "valor": 16
+     }
+    ]
+   },
+   "alts": [
+    "a hidrelétrica é a maior fonte, pois responde por mais da metade da eletricidade gerada no estado",
+    "mais de um terço da eletricidade vem de fontes não renováveis, e o estado depende de fósseis",
+    "a eólica e a solar somam 20% da geração, o que é menos que a quarta parte da eletricidade total",
+    "as fontes renováveis somam 84% da geração, o que corresponde à maior parte da eletricidade do estado"
+   ],
+   "correta": 1,
+   "explicacao": "As térmicas fósseis geram 16%, bem menos que um terço, e a frase afirma o contrário. As outras três conclusões usam corretamente os percentuais."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um grupo de alunos planeja um bairro sustentável no interior de São Paulo e levantou os recursos da região. A região recebe muito sol, tem vento fraco, um rio pequeno de pouca vazão e um grande canavial a 5 km do local.",
+   "comando": "Escolha duas fontes de energia para o bairro, justifique com os dados e aponte uma desvantagem de uma delas.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do exercício: recursos da região",
+    "colunas": [
+     "Recurso",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Horas de sol por dia",
+      "6,5"
+     ],
+     [
+      "Vento médio",
+      "3 m/s"
+     ],
+     [
+      "Vazão do rio",
+      "baixa"
+     ],
+     [
+      "Distância do canavial",
+      "5 km"
+     ]
+    ]
+   },
+   "ref": "Podem ser escolhidas a solar, por causa das 6,5 horas de sol por dia, e a biomassa, pois o canavial próximo fornece resíduo. A eólica e a hidrelétrica seriam fracas por causa do vento fraco e do rio pequeno. Uma desvantagem da solar é a geração nula à noite, que pede armazenamento.",
+   "conceitos": [
+    "solar justificada pelo sol",
+    "biomassa justificada pelo canavial próximo",
+    "descartar eólica e hidrelétrica pelos dados",
+    "desvantagem como intermitência da solar ou emissões da biomassa"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma cooperativa quer combinar energia solar e eólica numa fazenda do interior. Os técnicos mediram as horas de sol e a velocidade do vento nas duas estações, e perceberam que as duas fontes se comportam de formas diferentes: no verão, 8 horas de sol por dia e vento médio de 3 m/s; no inverno, 6 horas de sol e vento médio de 7 m/s.",
+   "comando": "Explique como combinar as duas fontes pode reduzir o problema da intermitência, usando os dados.",
+   "figura": null,
+   "ref": "No verão há mais sol e menos vento, e no inverno há menos sol e mais vento, de modo que cada fonte compensa a queda da outra em parte do ano. Assim a soma das duas gera energia de forma mais estável que uma fonte sozinha, embora ainda seja preciso armazenar para a noite.",
+   "conceitos": [
+    "sol maior no verão e vento maior no inverno",
+    "fontes se complementam",
+    "geração mais estável do que uma fonte isolada"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola quer instalar painéis solares no telhado para reduzir a conta de luz. O consumo é de 3 000 kWh por mês, e cada metro quadrado de painel gera cerca de 20 kWh por mês na região. O telhado disponível tem 100 m².",
+   "comando": "Calcule a área de painéis necessária para atender todo o consumo, diga se o telhado basta e cite dois fatores que a escola deve considerar.",
+   "figura": null,
+   "ref": "A área necessária é 3 000 dividido por 20, ou seja, 150 m². O telhado tem 100 m² e não basta, pois só atende dois terços do consumo. A escola deve considerar o custo da instalação e o fato de os painéis não gerarem à noite nem em dias nublados.",
+   "conceitos": [
+    "cálculo de 150 m²",
+    "telhado de 100 m² não é suficiente",
+    "considerar custo da instalação",
+    "considerar intermitência à noite e em dias nublados"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma empresa propõe uma hidrelétrica de 50 MW em um rio perto de uma cidade paulista. O reservatório alagaria 30 km², e 400 famílias teriam de ser deslocadas. Os moradores se dividiram entre apoiar e se opor.",
+   "comando": "Apresente dois argumentos a favor e dois contra o projeto, com base nos dados e nas características dessa fonte.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do exercício: projeto hidrelétrico",
+    "colunas": [
+     "Item",
+     "Valor"
+    ],
+    "linhas": [
+     [
+      "Potência",
+      "50 MW"
+     ],
+     [
+      "Área alagada",
+      "30 km²"
+     ],
+     [
+      "Famílias deslocadas",
+      "400"
+     ]
+    ]
+   },
+   "ref": "A favor: a fonte é renovável e gera energia sem queimar combustíveis, e fornece 50 MW de forma contínua. Contra: o reservatório alaga 30 km² de vegetação e habitats, e obriga 400 famílias a deixarem suas casas, com impactos sociais e ambientais.",
+   "conceitos": [
+    "a favor: fonte renovável sem queima",
+    "a favor: geração contínua de 50 MW",
+    "contra: alagamento de vegetação e habitats",
+    "contra: deslocamento de 400 famílias"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma granja de Tietê instalou um biodigestor, equipamento onde o esterco dos animais se decompõe sem oxigênio e libera biogás, rico em metano. O gás é usado para aquecer os galpões, e o material que sobra serve de adubo.",
+   "comando": "Explique por que essa solução é considerada energia renovável e cite uma vantagem e um cuidado necessário.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do exercício: biodigestor da granja",
+    "colunas": [
+     "Item",
+     "Valor por dia"
+    ],
+    "linhas": [
+     [
+      "Esterco colocado",
+      "500 kg"
+     ],
+     [
+      "Biogás produzido",
+      "25 m³"
+     ],
+     [
+      "Biogás equivalente a botijões",
+      "3"
+     ]
+    ]
+   },
+   "ref": "É renovável porque o esterco é renovado continuamente pelos animais e o gás vem da decomposição desse resíduo. Uma vantagem é aproveitar um resíduo, gerando calor e adubo e evitando liberar metano no ar; um cuidado é evitar vazamentos, pois o gás é inflamável e o metano contribui para o aquecimento global.",
+   "conceitos": [
+    "esterco é renovado continuamente",
+    "vantagem de aproveitar o resíduo e gerar adubo",
+    "cuidado com vazamento de metano ou risco de incêndio"
+   ]
+  }
  ]
 }
