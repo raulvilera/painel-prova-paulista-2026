@@ -3317,10 +3317,10 @@
     "Marte recebe pouca luz solar, por isso a água congela, e a pressão atmosférica não tem influência sobre a presença de água líquida.",
     "Marte está mais longe do Sol que a Terra, por isso a água evapora na superfície, e o tamanho do planeta não altera esse resultado.",
     "Marte tem atmosfera muito mais fina, então a pressão é baixa e a água tende a evaporar ou congelar em vez de permanecer líquida.",
-    "Marte tem menos água porque seu núcleo é frio, e a atmosfera fina só reduz a intensidade da luz que chega ao solo marciano."
+    "Marte tem menos água porque seu núcleo é frio, e a atmosfera fina meramente reduz a intensidade da luz que chega ao solo marciano."
    ],
    "correta": 2,
-   "explicacao": "A pressão em Marte é cerca de 1% da terrestre, e a água nessa condição não se mantém líquida, o que explica a escassez. Os distratores atribuem o resultado só à luz, só à distância, ao núcleo ou afirmam que a pressão não importa."
+   "explicacao": "A pressão em Marte é cerca de 1% da terrestre, e a água nessa condição não se mantém líquida, o que explica a escassez. Os distratores atribuem o resultado meramente à luz, meramente à distância, ao núcleo ou afirmam que a pressão não importa."
   },
   {
    "tipo": "obj",
@@ -3377,7 +3377,7 @@
    "alts": [
     "Ele certamente tem vida, pois fica a uma distância próxima da Terra e a estrela semelhante ao Sol garante água líquida.",
     "Ele não pode ter água, porque toda órbita além de 1 UA torna o planeta frio demais para qualquer forma de líquido.",
-    "Ele se parece com Marte, com temperatura negativa e água só congelada, pois a órbita de 1,1 UA fica além da Terra e recebe pouca luz.",
+    "Ele se parece com Marte, com temperatura negativa e água meramente congelada, pois a órbita de 1,1 UA fica além da Terra e recebe pouca luz.",
     "Ele está próximo da zona habitável, onde a água pode ser líquida, mas a presença de vida depende também de atmosfera e de outros fatores."
    ],
    "correta": 3,
@@ -3454,7 +3454,7 @@
     "temperatura dentro da faixa adequada",
     "presença de água líquida",
     "atmosfera que mantém a água",
-    "exemplo dos dados (Terra, Vênus ou Marte)"
+    "exemplo concreto de um corpo analisado"
    ]
   },
   {
@@ -3495,7 +3495,7 @@
    "conceitos": [
     "água é necessária, mas não suficiente",
     "atmosfera e energia também importam",
-    "vida não confirmada em Europa",
+    "incerteza sobre a vida nas luas geladas",
     "ausência de evidência não prova ausência"
    ]
   },
@@ -3538,20 +3538,20 @@
       "20 km"
      ],
      [
-      "Calor interno",
-      "Atividade geológica"
+      "Atividade geológica",
+      "Intensa"
      ],
      [
-      "Compostos orgânicos",
-      "Detectados"
+      "Moléculas complexas",
+      "Detectadas"
      ]
     ]
    },
    "ref": "O oceano é líquido e pode existir sem luz do Sol, pois o calor interno gera energia química que sustenta micro-organismos. A presença de compostos orgânicos indica a matéria-prima para a vida, por isso ele é um alvo de busca.",
    "conceitos": [
     "água líquida sem luz solar",
-    "energia do calor interno",
-    "compostos orgânicos como matéria-prima",
+    "energia gerada internamente",
+    "matéria-prima química para a vida",
     "busca de micro-organismos"
    ]
   },
