@@ -25,6 +25,7 @@
   .q .num{font-weight:800;color:var(--verde);margin-right:4px}
   .tag{font-size:.74rem;color:var(--suave);border:1px solid var(--linha);border-radius:999px;padding:1px 9px}
   .enun{margin:10px 0 6px}
+  .infog.ilus{padding:6px;text-align:center}.infog.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 auto}
   .infog{margin:8px 0 12px;padding:10px 12px;border:1px solid #D5DDD5;border-radius:10px;background:#F6F9F6}
   .infog figcaption{font-weight:700;font-size:.9rem;margin-bottom:8px}
   .infog table{width:100%;border-collapse:collapse;font-size:.9rem}.infog th,.infog td{border:1px solid #CBD5CB;padding:6px 8px;text-align:left}.infog th{background:#E3ECE3}
@@ -268,6 +269,7 @@
         <div class="top"><span class="num">Questão ${i+1}</span><span class="tag">${ROT[q.tipo] || 'Questão'}</span>${AD && AD.desafio && q.tipo === 'dis' ? '<span class="tag des">Desafio</span>' : ''}</div>
         <p class="enun">${esc(q.enunciado)}</p>
         ${figura(q.figura)}
+        ${q.svg ? `<figure class="infog ilus" role="img" aria-label="Ilustração da questão ${i+1}">${q.svg}</figure>` : ''}
         ${q.imagem ? `<figure class="foto carr"${q.imagemOpc ? ' data-opc="1"' : ''}><span class="ph">🖼️ Carregando a imagem…</span><img src="${esc(q.imagem)}" alt="${esc(q.imagemAlt || 'Imagem da questão')}" loading="lazy"></figure>` : ''}
         <p class="cmd">${esc(q.comando)}</p>
         ${AD && AD.voz && !AD.semVoz && TTS ? `<div class="ferr"><button type="button" data-ouvir="${i}">🔊 Ouvir a questão</button></div>` : ''}

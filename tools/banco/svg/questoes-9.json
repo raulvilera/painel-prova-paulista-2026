@@ -1,0 +1,818 @@
+{
+ "9º ANO|3|Analisar os impactos das ações humanas sobre a biodiversidade.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Pesquisadores contaram as espécies de aves que só vivem no interior da mata em três fragmentos de Mata Atlântica do interior paulista, cercados por pasto e cana-de-açúcar. Todos têm o mesmo tipo de vegetação e foram observados com o mesmo esforço, durante o mesmo tempo.",
+   "comando": "Que conclusão é sustentada pelos dados e orienta a conservação?",
+   "alts": [
+    "O número de espécies depende do esforço de observação, e por isso as diferenças entre os fragmentos refletem o acaso.",
+    "O fragmento C tem cem vezes a área de A e abriga cerca de cem vezes mais espécies, e isso mostra que a relação é proporcional.",
+    "Fragmentos maiores mantêm mais espécies, mas não na mesma proporção da área, por isso conservar áreas grandes e ligá-las importa.",
+    "Fragmentos pequenos são suficientes para conservar a biodiversidade, pois cem fragmentos como o A equivalem a um fragmento como o C."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em um reservatório do interior de São Paulo, pescadores relataram que a tilápia, espécie trazida de outro continente para criação, se espalhou e que os peixes nativos estão mais raros. Pesquisadores compararam três represas parecidas quanto à água, ao clima e ao tamanho.",
+   "comando": "Que hipótese é consistente com os dados e pode ser testada?",
+   "alts": [
+    "A espécie introduzida compete com os nativos ou os preda, e a perda cresce com o tempo de presença da tilápia.",
+    "A tilápia é favorecida pela poluição das represas, e a poluição é a verdadeira causa da perda dos peixes nativos.",
+    "As represas perderam espécies nativas por acaso, pois a diferença entre elas não se relaciona com a presença da tilápia.",
+    "A tilápia não afeta os peixes nativos, pois os peixes ocupam o mesmo ambiente e dividem o alimento sem prejuízo."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "A bacia hidrográfica de um rio que abastece uma cidade paulista tem setores com diferentes níveis de preservação da mata ao redor das nascentes. A empresa de saneamento registrou a qualidade da água captada e o custo para tratá-la em cada setor.",
+   "comando": "Qual relação entre preservação e serviço prestado pela natureza é sustentada pelos dados?",
+   "alts": [
+    "Quanto mais mata ao redor das nascentes, mais limpa a água e menor o custo de tratamento, o que mostra o benefício de preservar.",
+    "Quanto maior o custo de tratamento, menor a cobertura de mata, pois o gasto elevado da empresa estimula o desmatamento nas nascentes.",
+    "Os setores não podem ser comparados, pois a turbidez e o custo de tratamento mudam por motivos independentes da cobertura de mata.",
+    "A turbidez da água determina quanta mata existe, pois a água mais suja impede que a vegetação cresça ao redor do rio."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma comunidade de pescadores artesanais vive há gerações em uma área de manguezal do litoral paulista onde há espécies ameaçadas de extinção. Ela quer continuar pescando e coletando caranguejo, mas também proteger o mangue. Os moradores estudam o tipo de unidade de conservação (UC) mais adequado.",
+   "comando": "Qual proposta concilia o uso pela comunidade e a proteção da biodiversidade?",
+   "alts": [
+    "Criar um parque de proteção integral, pois ele garante a proteção do mangue e a comunidade teria ainda acesso à pesca tradicional.",
+    "Criar uma reserva de uso sustentável, com plano de manejo que fixe limites de captura e proteja as espécies ameaçadas do mangue.",
+    "Não criar unidade alguma, pois a comunidade já cuida do mangue e as regras de uso se formam por conta própria.",
+    "Criar uma unidade voltada ao turismo e às visitas, pois os moradores deixariam a pesca de lado em troca de novas rendas."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em uma reserva florestal do interior do estado, a caça ilegal de grandes felinos reduziu a população de onças. Pesquisadores acompanham, em três anos, o número de onças, de queixadas (porcos-do-mato que comem sementes e plântulas) e de plântulas de árvores por metro quadrado.",
+   "comando": "Que explicação relaciona corretamente os dados e a teia alimentar?",
+   "alts": [
+    "As queixadas aumentaram, e por isso as onças diminuíram, pois as queixadas competem com as onças pelo mesmo alimento.",
+    "As plântulas diminuíram por falta de queixadas, pois essas dispersam as sementes e protegem a vegetação contra os predadores.",
+    "Com menos onças, as queixadas aumentaram e consumiram mais plântulas, o que reduz a regeneração da floresta e afeta outras espécies.",
+    "As onças diminuíram porque as plântulas acabaram, já que os felinos dependem dessa vegetação para se alimentar na floresta."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Um rio recebe esgoto de uma cidade. Biólogos mediram o oxigênio dissolvido na água e contaram as espécies de peixes em três pontos: na nascente, logo depois da cidade e 10 km depois.",
+   "comando": "Interprete os dados e explique como o esgoto afeta a biodiversidade e que medida ajudaria a recuperar o rio.",
+   "ref": "Logo após a cidade, o oxigênio cai de 8 para 3 mg/L e as espécies de peixes caem de 14 para 5, pois o esgoto aumenta a matéria orgânica e os decompositores consomem o oxigênio. Mais adiante o rio se recupera em parte. O tratamento do esgoto antes do lançamento ajudaria a recuperar o rio."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma rodovia corta uma reserva florestal e atropelamentos de animais silvestres eram frequentes. O governo construiu uma passagem de fauna sobre a pista e cercou o trecho. O quadro mostra os registros antes e depois.",
+   "comando": "Avalie o resultado da medida com os dados e explique por que ela protege a biodiversidade em longo prazo.",
+   "ref": "Os atropelamentos caíram de 120 para 30 por ano, ou seja, 75% a menos, e os animais passaram a atravessar com segurança. A passagem liga as duas partes da floresta, o que permite o encontro entre populações, evita o isolamento e mantém a variabilidade genética das espécies."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma região do Cerrado, a expansão de pastagens e lavouras reduziu a vegetação nativa. Uma organização ambiental registrou a área nativa e o número de espécies de animais ameaçados de extinção em três anos. Uma consumidora quer saber como suas escolhas podem ajudar.",
+   "comando": "Explique a relação entre os dados e proponha duas atitudes de consumo consciente ou ações coletivas.",
+   "ref": "Conforme a vegetação nativa diminuiu de 800 para 200 mil hectares, as espécies ameaçadas aumentaram de 12 para 47, pois a perda de habitat reduz alimento e abrigo. A consumidora pode preferir produtos com origem e certificação ambiental e evitar o desperdício de alimentos, além de apoiar a criação de unidades de conservação."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Duas unidades de conservação ficam separadas por uma faixa de lavouras. A tabela mostra o tamanho de cada uma e quantas espécies de mamíferos de grande porte elas têm. Pesquisadores propõem criar um corredor ecológico plantando mata na faixa entre as duas.",
+   "comando": "Explique como o corredor poderia ajudar a biodiversidade e cite uma ação para que a proposta dê certo.",
+   "ref": "O corredor permite que os animais se desloquem entre as duas áreas, o que amplia a área disponível, favorece o encontro entre populações e evita o isolamento e a perda de variabilidade genética. Para dar certo, é preciso recuperar a vegetação com espécies nativas e combinar com os proprietários das lavouras."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma colônia de pescadores notou que os peixes capturados estão menores. Um técnico registrou o comprimento médio dos peixes de uma espécie ao longo dos anos. A pesca é feita com redes de malha fina durante todo o ano, inclusive na época de reprodução.",
+   "comando": "Explique o que os dados indicam sobre a população da espécie e proponha duas medidas de uso sustentável.",
+   "ref": "O tamanho médio caiu de 40 para 25 cm, o que indica que os peixes maiores e mais velhos estão sendo retirados antes de se reproduzirem, e a população fica mais fraca. Medidas possíveis são respeitar o período de defeso, em que se proíbe a pesca na reprodução, e usar redes de malha maior para poupar os peixes pequenos."
+  }
+ ],
+ "9º ANO|3|Identificar iniciativas para enfrentar problemas ambientais, com base no consumo consciente e no uso sustentável dos recursos naturais.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma escola estadual de Campinas fez uma ronda de três dias para anotar desperdícios e estimar o custo mensal de cada problema. A diretora quer escolher uma primeira ação que seja de baixo custo, dependa da própria comunidade escolar e tenha o maior efeito.",
+   "comando": "Qual iniciativa é a mais indicada, considerando os dados da ronda?",
+   "alts": [
+    "Trocar as torneiras por novas nos banheiros, pois a água desperdiçada é a maior perda registrada",
+    "Contratar empresa para separar o lixo, já que os recicláveis perdidos têm custo mensal de R$ 0 e são difíceis",
+    "Indicar monitores por sala para apagar as luzes ao sair, pois a energia desperdiçada gera o maior custo",
+    "Instalar painéis solares no telhado, pois resolvem a energia gasta e dispensam mudança de hábito dos alunos"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "O Rio Piracicaba atravessa trechos de mata preservada, de agricultura e de bairros sem coleta de esgoto. Um grupo de estudantes coletou amostras em três pontos e anotou cobertura vegetal nas margens e a turbidez da água, para propor ações na bacia hidrográfica.",
+   "comando": "Qual iniciativa é sustentada pelos dados para melhorar a água do ponto B?",
+   "alts": [
+    "Recompor a mata das margens, que segura o solo e reduz o carregamento de sedimentos para o rio",
+    "Instalar rede de esgoto no ponto B, pois a turbidez alta resulta do esgoto doméstico lançado no rio",
+    "Ampliar a lavoura até a beira do rio, porque as plantas cultivadas filtram a água e reduzem a turbidez",
+    "Transformar o ponto C em parque, já que a mata do ponto A é a causa de a água ser clara no ponto B"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um aluno comparou o consumo de água em garrafinhas descartáveis de 500 mL, uma por dia, com o de uma garrafa reutilizável durante um ano. Ele registrou custo e resíduos gerados, sem incluir o impacto de fabricação da garrafa reutilizável.",
+   "comando": "Qual interpretação do quadro é adequada para orientar o consumo consciente?",
+   "alts": [
+    "A reutilizável é melhor desde o primeiro uso, pois seu impacto de fabricação é menor que o de uma garrafinha",
+    "A descartável é melhor, pois cada garrafinha pesa pouco e o aluno evita a lavagem da reutilizável",
+    "As duas têm impacto igual, porque a reutilizável também será descartada um dia, como a garrafinha",
+    "A reutilizável reduz resíduos e custo, e seu impacto de fabricação é compensado com o uso repetido"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Três bairros de uma cidade paulista receberam pontos de entrega voluntária de recicláveis em quantidades diferentes. A prefeitura mediu o material coletado por mês. Um vereador comentou o resultado, e a equipe técnica precisa avaliar o comentário.",
+   "comando": "Qual comentário confunde correlação com causa e não é sustentado apenas pelos dados?",
+   "alts": [
+    "Os bairros com mais pontos de entrega apresentaram maior quantidade de material reciclado",
+    "O bairro C recicla mais porque seus moradores são mais conscientes, o que os dados comprovam",
+    "O bairro B tem menos pontos e menos material, o que sugere que a oferta influencia a coleta",
+    "A relação entre pontos e toneladas deveria ser testada em outros bairros antes de generalizar"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma comunidade ribeirinha coleta frutos do cerrado para vender e quer continuar a atividade sem esgotar a espécie. Os técnicos explicaram que duas categorias de Unidade de Conservação poderiam ser criadas na região e mostraram o quadro abaixo.",
+   "comando": "Qual iniciativa é adequada para conciliar a atividade da comunidade com a conservação?",
+   "alts": [
+    "Criar um parque de proteção integral, que mantém a coleta dos frutos sob controle da própria comunidade",
+    "Criar uma unidade de uso sustentável e elaborar um plano de manejo com limites de coleta por época",
+    "Liberar a coleta de frutos sem limites, pois a comunidade conhece a espécie e saberá evitar o esgotamento",
+    "Criar o parque e permitir a coleta de frutos caídos no chão, sem plano nem fiscalização local"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma escola de Ribeirão Preto gera cerca de 40 kg de restos de comida e folhas por semana, que vão para o lixo comum e ocupam o espaço do aterro. A horta da escola está com o solo fraco, e a direção busca uma solução que resolva os dois problemas.",
+   "comando": "Proponha uma iniciativa, explicando como ela reduz o impacto ambiental e traz benefício para a escola.",
+   "ref": "Fazer compostagem dos restos de comida e folhas, o que reduz o lixo enviado ao aterro e produz adubo orgânico. O adubo melhora o solo da horta, diminui a compra de fertilizantes e envolve os alunos em um hábito de consumo consciente."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma família de São Paulo, o chuveiro elétrico fica ligado 40 minutos por dia, e o ferro elétrico e a lâmpada acesa em cômodos vazios aumentam a conta de energia. A mãe quer reduzir o consumo sem prejudicar o conforto, e os filhos precisam propor mudanças.",
+   "comando": "Proponha duas ações de consumo consciente e explique por que cada uma reduz o consumo de recursos.",
+   "ref": "Reduzir o tempo de banho e passar a roupa de uma vez, juntando as peças, diminuem o tempo de uso dos aparelhos que mais gastam energia. Apagar as luzes ao sair dos cômodos e trocar por lâmpadas de LED reduz o consumo sem perder conforto."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Durante a seca, uma cidade que se abastece pela represa tem consumo médio de 180 litros por pessoa por dia, enquanto a recomendação para uso essencial é de cerca de 110 litros. A prefeitura quer metas e ações, e a Companhia de saneamento mostra o nível da represa.",
+   "comando": "Proponha três iniciativas, uma da prefeitura, uma da população e uma de empresas, para reduzir o consumo de água.",
+   "ref": "Prefeitura: reduzir vazamentos da rede e criar tarifa maior para quem gasta muito. População: usar menos água no banho e reaproveitar a água da máquina na limpeza. Empresas: reutilizar água de processos e captar chuva, diminuindo o uso da represa."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um celular é trocado a cada 18 meses em média, embora a maior parte do impacto ambiental ocorra na fabricação, com extração de metais, e o descarte inadequado de componentes pode contaminar o solo. Uma ONG propõe campanhas para estender o uso dos aparelhos.",
+   "comando": "Explique como estender a vida do aparelho e destinar corretamente o lixo eletrônico reduzem impactos ambientais.",
+   "ref": "Estender o uso diminui a demanda por novos aparelhos e, com ela, a extração de metais e a energia gasta na fabricação, que concentra o maior impacto. Entregar o lixo eletrônico em pontos de coleta evita contaminação do solo e permite recuperar metais por reciclagem."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma comunidade que vive no entorno de uma Reserva Extrativista coleta castanhas e outra, em área vizinha, mora no entorno de um Parque Estadual, onde a coleta é proibida. Moradores dos dois lados discutem se as regras são justas.",
+   "comando": "Compare os dois tipos de Unidade de Conservação, explicando a lógica de cada um com relação ao uso dos recursos naturais.",
+   "ref": "Na UC de proteção integral o objetivo é preservar a natureza com o mínimo de interferência, permitindo só pesquisa e visitação. Na de uso sustentável, a conservação é combinada com o uso dos recursos pelas populações locais com plano de manejo, garantindo que a coleta não esgote a espécie."
+  }
+ ],
+ "9º ANO|3|Reconhecer a especiação como processo de formação de novas espécies a partir do isolamento reprodutivo associado, ou não, ao isolamento geográfico.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Um rio mudou de curso há 10 mil anos e separou uma população de roedores em dois grupos, um em cada margem. Pesquisadores da universidade compararam os grupos hoje e depois tentaram cruzá-los em laboratório, para decidir se já formam espécies diferentes.",
+   "comando": "Qual resultado do laboratório é a evidência mais forte de que as duas populações já são espécies distintas?",
+   "alts": [
+    "Os filhotes do cruzamento entre margens crescem, mas são menores que os pais",
+    "Os animais de margens distintas cruzam, mas preferem acasalar com a própria margem",
+    "Os filhotes do cruzamento entre margens crescem, mas não têm descendentes",
+    "Os filhotes do cruzamento entre margens crescem, mas têm cor intermediária"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma lagoa do interior paulista, vivem duas populações de peixes do mesmo gênero, sem nenhuma barreira física entre elas. Uma população se reproduz perto de plantas nativas e a outra perto de plantas trazidas por humanos. Pesquisadores acompanharam os grupos por dois anos.",
+   "comando": "Que mecanismo contribui para manter as duas populações separadas, mesmo sem barreira geográfica?",
+   "alts": [
+    "O isolamento geográfico, pois a lagoa separa fisicamente os peixes de cada grupo e impede o encontro",
+    "O isolamento mecânico, pois o formato do corpo impede que peixes de grupos diferentes se acasalem",
+    "A seleção artificial, pois os humanos escolhem os peixes que podem se reproduzir em cada local",
+    "O isolamento temporal, pois a reprodução em meses diferentes dificulta o encontro de parceiros"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "A mula nasce do cruzamento entre uma égua e um jumento, e é muito usada no trabalho rural. Apesar de ser saudável, ela quase nunca tem filhotes. Um professor mostrou a tabela com o número de cromossomos e pediu que a turma explicasse por que cavalo e jumento são espécies diferentes.",
+   "comando": "Qual argumento justifica que cavalo e jumento são espécies distintas, apesar de cruzarem?",
+   "alts": [
+    "O descendente é infértil, então os genes das duas populações não se misturam entre as gerações",
+    "O descendente do cruzamento é saudável, então os genes das duas populações se misturam entre as gerações",
+    "O descendente do cruzamento é infértil, então cavalos e jumentos deixam de ter filhotes entre si",
+    "O descendente do cruzamento é infértil, mas cavalos e jumentos continuam sendo da mesma espécie"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "A turma simulou a evolução com feijões em duas margens de um rio de fita colorida. Em cada geração, sorteavam-se feijões grandes e pequenos, e cada margem tinha uma 'regra do ambiente': em A, predadores comiam os pequenos; em B, comiam os grandes. Ninguém atravessava a fita.",
+   "comando": "Que explicação sustenta a divergência entre os grupos observada na simulação?",
+   "alts": [
+    "Cada grupo muda de modo planejado conforme sua necessidade, e a separação impede a mistura entre os grupos",
+    "Ambientes com pressões diferentes selecionam características opostas, e a separação impede a mistura",
+    "Ambientes com pressões diferentes selecionam características opostas, mas a separação favorece a mistura",
+    "Os feijões grandes de A tornaram-se maiores durante a vida e passaram o ganho aos descendentes"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Na simulação dos feijões, a professora repetiu o experimento em duas condições. No cenário 1, a fita (rio) bloqueou qualquer passagem. No cenário 2, a cada geração, 10% dos feijões de cada margem foram trocados de lado, como se fossem migrantes. Mediu-se a diferença entre as margens.",
+   "comando": "Que conclusão os dados sustentam sobre o papel da migração entre populações?",
+   "alts": [
+    "A troca de indivíduos entre as margens aumenta a diferença e acelera a formação de espécies",
+    "A troca de indivíduos entre as margens mantém os grupos semelhantes e impede qualquer mudança",
+    "A troca de indivíduos entre as margens mantém os grupos semelhantes e retarda a formação de espécies",
+    "A troca de indivíduos entre as margens não afeta os grupos, que mudam do mesmo jeito nos dois cenários"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Há 60 anos, uma represa separou em dois lagos uma população de peixes de rio. Hoje, os peixes do Lago 1 são maiores e se alimentam na superfície, e os do Lago 2, menores e de fundo. Uma bióloga propõe testar se já são espécies diferentes.",
+   "comando": "Os dados bastam para dizer que são espécies distintas? Explique e proponha um teste que traga evidência de isolamento reprodutivo.",
+   "ref": "Não bastam: diferenças de tamanho e hábito mostram divergência, mas não provam isolamento reprodutivo. A bióloga deve colocar peixes dos dois lagos juntos e observar se cruzam e se os filhotes são férteis."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma região de mata, duas populações de uma ave se encontram em uma zona de contato. Os machos da população A cantam em tom grave, os da população B em tom agudo. As fêmeas respondem melhor ao canto de sua própria população, e os filhotes híbridos são raros.",
+   "comando": "Explique como o canto pode contribuir para a formação de duas espécies, mesmo sem barreira física.",
+   "ref": "As fêmeas preferem o canto da própria população, o que reduz os cruzamentos entre A e B (apenas 8 de 95). Esse isolamento comportamental diminui o fluxo de genes e permite que as populações divirjam até se tornarem espécies distintas."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um geólogo registrou a história de uma população de lagartos em um vale. Os pesquisadores querem explicar por que, mil anos depois do terremoto, os lagartos ainda se cruzavam, mas cem mil anos depois não mais.",
+   "comando": "Explique cada etapa e por que a especiação só se completou no final.",
+   "ref": "A fenda isolou os grupos geograficamente, interrompendo a troca de genes. Com mutações e seleção em ambientes diferentes, os grupos acumularam diferenças aos poucos; só depois de muito tempo surgiu isolamento reprodutivo."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em um laboratório, pesquisadores criaram moscas-das-frutas em dois grupos por muitas gerações: um alimentado com amido, outro com maltose. Depois, juntaram moscas dos dois grupos para ver quem escolhia quem como parceiro.",
+   "comando": "O que os resultados indicam sobre a possível formação de novas espécies? Explique.",
+   "ref": "Os grupos passaram a preferir parceiros da mesma dieta (70%), reduzindo o fluxo de genes entre eles. Essa barreira de acasalamento é o início do isolamento reprodutivo, que pode levar à formação de novas espécies com o tempo."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em uma ilha, aves de bico longo e de bico curto convivem. Alguém disse que 'as aves ficaram de bico longo porque precisavam alcançar o néctar'. Um estudante propôs outra explicação, com base nos dados de comprimento médio do bico em três épocas de seca, de gerações diferentes.",
+   "comando": "Explique a mudança no bico usando variação, seleção natural e herança, e não necessidade.",
+   "ref": "Havia aves com bicos de comprimentos diferentes; nas secas, as de bico longo alcançaram o néctar, sobreviveram e se reproduziram mais, passando a característica aos filhotes. Assim, o comprimento médio cresceu ao longo das gerações."
+  }
+ ],
+ "9º ANO|3|Reconhecer o conceito de pegada ecológica como indicador do impacto das atividades humanas sobre o meio ambiente.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula sobre pegada ecológica, três alunos da escola calcularam a área de natureza usada diariamente no trajeto de casa até a escola, incluindo a energia do veículo e a área necessária para absorver o gás carbônico emitido. Cada um usa um meio de transporte diferente.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "alts": [
+    "a distância percorrida determina a pegada, pois Caio, que percorre o menor trajeto, usa a menor área entre os três",
+    "o ônibus tem pegada maior que a bicicleta, pois Bruno e Caio percorrem trajetos de comprimentos diferentes",
+    "o meio de transporte pesa mais que a distância, pois Ana e Bruno percorrem 12 km e a área de Ana é maior",
+    "o carro tem pegada pequena por passageiro, pois Ana percorreu a mesma distância que Bruno e usou mais área"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "A pegada ecológica média de um habitante de um país é medida em hectares globais, e a Terra dispõe de cerca de 1,6 hectare global de natureza por pessoa para se regenerar. Uma turma comparou três países usando valores de exercício e perguntou quantos planetas seriam necessários se todos vivessem como um habitante de cada país.",
+   "comando": "Se todas as pessoas do mundo vivessem como a média do país A, qual seria a conclusão?",
+   "alts": [
+    "seriam necessários cerca de 5 planetas, pois a pegada de 8,0 é cinco vezes a natureza disponível por pessoa",
+    "seriam necessários cerca de 0,2 planeta, pois a pegada de 8,0 é bem menor que a natureza disponível por pessoa",
+    "seria necessário cerca de 1 planeta, pois a Terra consegue sustentar qualquer hábito de consumo de um país",
+    "seriam necessários cerca de 9,6 planetas, pois a pegada de 8,0 deve ser somada à natureza disponível por pessoa"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma nutricionista da UBS comparou a área de natureza usada na produção de dois pratos de almoço de porções parecidas, como parte de um projeto sobre consumo consciente. Os dados foram calculados por refeição, na mesma região do estado de São Paulo.",
+   "comando": "Que explicação justifica a diferença de pegada entre os pratos?",
+   "alts": [
+    "o feijão exige mais área de plantio por porção, mas a água e a energia do bife aumentam sua pegada total",
+    "o bife tem pegada maior por ser mais nutritivo, e a pegada de um alimento cresce com a sua qualidade nutricional",
+    "os dois pratos têm pegada parecida, pois a quantidade de arroz é igual e esse ingrediente define o resultado",
+    "o bife exige mais pasto, água e energia por refeição, e por isso tem pegada maior com porções parecidas"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "A diretoria de uma escola de Guarulhos quer reduzir em pelo menos 1,5 hectare global por ano a pegada da escola, escolhendo duas ações entre quatro. A comissão estimou o quanto cada ação reduz a pegada anual da escola e lembrou que ações combinadas somam seus efeitos.",
+   "comando": "Qual combinação de duas ações atinge a meta?",
+   "alts": [
+    "reduzir o desperdício da merenda e trocar as lâmpadas, que somadas reduzem 1,4 ha por ano e ficam perto da meta",
+    "reduzir o desperdício da merenda e fazer compostagem, que somadas reduzem 1,6 ha por ano e superam a meta",
+    "fazer compostagem e reciclar o papel, que somadas reduzem 0,7 ha por ano e ficam abaixo da meta definida",
+    "reduzir o desperdício da merenda e reciclar o papel, que somadas reduzem 1,3 ha por ano e ficam abaixo da meta"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma entidade ambiental divulgou o dia do ano em que a humanidade já usou todos os recursos que a Terra consegue repor naquele ano. Estudantes receberam três valores de exercício de anos diferentes e precisam interpretá-los.",
+   "comando": "Qual interpretação é sustentada pelos dados?",
+   "alts": [
+    "a data ocorre mais cedo, o que indica que a Terra produz menos recursos a cada ano que passa",
+    "a data ocorre mais cedo, o que indica que a população diminuiu e que consome menos recursos",
+    "a data ocorre mais cedo, o que indica que a demanda por recursos supera a capacidade de renovação por mais tempo",
+    "a data ocorre mais tarde a cada período, o que indica que a humanidade passou a usar os recursos com mais cuidado"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Mariana respondeu a um questionário de pegada ecológica na escola e anotou os hábitos semanais da família: 20 viagens de carro, 10 refeições com carne bovina, 7 banhos de 5 minutos e 2 garrafas plásticas descartadas. A professora explicou que a pegada ecológica estima a área de natureza necessária para sustentar o estilo de vida de uma pessoa ou grupo.",
+   "comando": "Escolha dois hábitos que mais aumentam a pegada da família e explique por que, propondo uma mudança para cada um.",
+   "ref": "Os hábitos que mais aumentam a pegada são as 20 viagens de carro e as 10 refeições com carne bovina, pois consomem combustível e muita área e água. Pode-se trocar parte das viagens por ônibus, bicicleta ou carona e reduzir a carne bovina, substituindo-a por feijão e outros alimentos."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em um bairro perto da represa do Cantareira, o consumo de água por pessoa cresceu e a empresa de saneamento pediu ajuda à escola para uma campanha. Os alunos mediram o consumo em duas casas, uma que usa mangueira para lavar o quintal e outra que reaproveita a água da máquina de lavar.",
+   "comando": "Explique como o consumo de água se relaciona com a pegada ecológica e proponha duas iniciativas para o bairro.",
+   "ref": "Quanto maior o consumo de água, maior a área de natureza necessária para captar, tratar e repor a água, o que aumenta a pegada. O bairro pode adotar o reaproveitamento da água da lavagem e trocar a mangueira por balde, além de proteger a mata ao redor da represa."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Quatro estudantes moram a 10 km da escola, na zona leste da capital, e vão para a aula cada um em seu carro, no trânsito da Marginal. Um deles propôs uma carona solidária. Cada carro emite cerca de 0,2 kg de gás carbônico por quilômetro, e a emissão faz parte da pegada de carbono.",
+   "comando": "Calcule a emissão diária de ida do grupo nas duas situações e explique o que a carona mostra sobre pegada ecológica.",
+   "ref": "Em quatro carros, a emissão de ida é 4 vezes 10 km vezes 0,2 kg, ou seja, 8 kg; com um carro, é 2 kg, uma redução de 6 kg por viagem. A carona mostra que dividir o veículo diminui a pegada ecológica sem reduzir o deslocamento."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma escola de Sorocaba descarta cerca de 90 kg de restos de comida por semana e envia tudo ao aterro. Uma proposta da turma é reduzir o desperdício e fazer compostagem com a sobra para adubar a horta.",
+   "comando": "Explique como essa proposta reduz a pegada ecológica da escola e cite uma dificuldade que a turma terá de enfrentar.",
+   "ref": "Reduzir o desperdício diminui a quantidade de alimento produzido e transportado, e a compostagem evita o envio de resíduos ao aterro e produz adubo, o que reduz a área de natureza usada. Uma dificuldade é manter a rotina de separar os restos e cuidar da composteira, para evitar mau cheiro e pragas."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um país A tem pegada média de 4,0 hectares globais por pessoa, mas sua natureza disponível é de 1,0 por pessoa. Um país B tem pegada de 1,2 e natureza disponível de 3,5. Estudantes comparam os dois países para entender quem depende dos recursos de outros lugares.",
+   "comando": "Interprete os valores de cada país e indique uma iniciativa para o país que usa mais do que dispõe.",
+   "ref": "O país A usa quatro vezes mais natureza do que possui, e por isso depende de recursos de outros locais ou esgota os próprios. O país B usa menos do que tem e mantém uma reserva. O país A pode reduzir o consumo, reciclar, usar energia renovável e proteger suas áreas de vegetação."
+  }
+ ],
+ "9º ANO|3|Relacionar a evolução biológica à formação da biodiversidade ao longo do tempo.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Pesquisadores acompanharam uma população de aves de uma ilha durante uma longa seca, que reduziu as sementes macias e deixou as sementes duras como principal alimento. Eles mediram o bico de aves marcadas e confirmaram que o bico de cada ave não mudou ao longo da vida. Também mediram a média da população antes e depois da seca.",
+   "comando": "Qual explicação evolutiva é sustentada pelos dados?",
+   "alts": [
+    "As aves forçaram o bico para quebrar as sementes duras e o esforço aumentou o bico, característica que passou aos filhotes.",
+    "Aves que já tinham bico mais fundo quebraram melhor as sementes duras e deixaram mais filhotes, elevando a média.",
+    "A seca provocou mutações dirigidas no bico das aves, que mudaram na direção necessária para aproveitar as sementes duras.",
+    "As aves de bico maior migraram para a ilha durante a seca, o que aumentou a média mesmo sem diferença de sobrevivência."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Na atividade do jogo dos bicos, grupos usaram pinça, colher e pregador como bicos para pegar grãos em 30 segundos, e os bicos que pegam menos são eliminados. Com grãos pequenos, a pinça se saiu melhor. A turma repetiu o jogo com grãos grandes e duros e anotou os resultados, antes de propor um novo desafio.",
+   "comando": "Se a oferta passar a ser de grãos grandes por várias rodadas, o que se espera para a composição dos bicos?",
+   "alts": [
+    "A pinça deve continuar aumentando, pois foi o melhor bico nas rodadas anteriores e o sucesso passado garante o sucesso futuro.",
+    "Os bicos devem se transformar em pregadores, pois a necessidade de pegar grãos grandes modifica cada bico durante o jogo.",
+    "A colher deve ser a mais favorecida, pois foi o bico que mais melhorou o desempenho ao passar para grãos grandes.",
+    "A proporção de pregadores deve aumentar, pois com grãos grandes eles pegam mais, sobrevivem mais e deixam mais bicos semelhantes."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um laboratório, uma população de bactérias com 1% de indivíduos resistentes a um antibiótico foi dividida em dois frascos: um com o antibiótico e outro sem ele. A cada dia, os pesquisadores contaram a proporção de bactérias resistentes. Sabe-se que a resistência já existia por mutações anteriores ao teste.",
+   "comando": "Que explicação os resultados sustentam para o aumento de resistentes no frasco com antibiótico?",
+   "alts": [
+    "O antibiótico eliminou as sensíveis e favoreceu a reprodução das resistentes já existentes, elevando a proporção delas.",
+    "As bactérias se acostumaram ao antibiótico e ficaram resistentes durante o tratamento, passando essa adaptação às descendentes.",
+    "A resistência é vantajosa em qualquer frasco e tende a dominar a população, pois as resistentes são mais fortes que as sensíveis.",
+    "O antibiótico provocou nas bactérias as mutações de resistência, o que explica o aumento da proporção no frasco tratado."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um museu paulista expôs os ossos do membro anterior de diferentes animais. O úmero, o rádio e a ulna aparecem em todos os vertebrados da lista, ainda que usados de modo muito diferente. O besouro tem asas para voar, mas elas não têm ossos. Uma visitante comentou que o morcego e o besouro deveriam ser parentes próximos 'porque os dois voam'.",
+   "comando": "Qual interpretação dos dados é sustentada?",
+   "alts": [
+    "Morcego e besouro são parentes próximos porque ambos voam, e a função em comum mostra que descendem do mesmo ancestral recente.",
+    "Os ossos do membro de baleia, morcego e cavalo são parecidos porque esses animais vivem no mesmo ambiente e usam o membro igual.",
+    "A semelhança óssea de baleia, morcego e cavalo indica ancestral comum com usos diferentes; a asa do besouro surgiu à parte.",
+    "A baleia tem ossos de membro porque precisa deles para nadar, e a estrutura surgiu em resposta direta a essa necessidade."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Biólogos estudam três populações de lagartos de ilhas vizinhas, descendentes de uma mesma população do continente, que ficou separada pelo mar há muito tempo. Para saber se já formam espécies diferentes, cruzaram indivíduos das populações em laboratório e mediram o comprimento médio dos adultos.",
+   "comando": "Qual interpretação dos dados é sustentada?",
+   "alts": [
+    "A e C formam uma espécie porque têm tamanho parecido, e B é outra espécie por ser 4 cm maior que as demais populações.",
+    "A e B ainda formam uma espécie, apesar da diferença de tamanho, e C já é outra espécie, apesar de ser parecida com A.",
+    "As três populações já são espécies diferentes porque ficaram separadas por mais tempo do que as populações necessitam para se diferenciar.",
+    "A e B são espécies diferentes porque a diferença de tamanho é grande, e C ainda é da mesma espécie por ser semelhante a A."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na atividade do jogo dos bicos, uma turma registrou o número de grãos pegos por três tipos de bico em três rodadas. Depois de cada rodada, o bico que pegou menos foi eliminado e substituído por uma cópia do bico que pegou mais.",
+   "comando": "Descreva o que aconteceu com a composição dos bicos ao longo das rodadas e relacione o jogo com o processo de seleção natural.",
+   "ref": "A pinça foi se tornando mais frequente e a colher foi eliminada, pois os bicos que pegam mais grãos sobrevivem e se reproduzem mais. Isso representa a seleção natural: características que dão vantagem em um ambiente se tornam mais comuns na população."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma cidade industrial, pesquisadores contaram mariposas escuras e claras em troncos de árvores em três momentos: antes de uma grande fábrica, com a fábrica soltando fuligem que escureceu os troncos, e depois da instalação de filtros que limparam o ar. Aves predadoras caçam as mariposas que são mais fáceis de ver.",
+   "comando": "Explique por que a proporção de mariposas escuras mudou ao longo do tempo, usando a ideia de seleção natural.",
+   "ref": "Com os troncos escuros, as mariposas escuras ficavam menos visíveis às aves, sobreviviam mais e se reproduziam, e sua proporção subiu. Com a limpeza do ar, os troncos clareiam e as claras voltam a ter vantagem, mostrando que a vantagem depende do ambiente."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em um debate, uma aluna afirmou que as aves de uma ilha têm bico longo 'porque se esforçaram para alcançar o alimento dentro das flores, e o esforço passou aos filhotes'. O professor apresentou as medidas de aves marcadas e de seus descendentes.",
+   "comando": "Avalie a afirmação da aluna com base nos dados e proponha uma explicação evolutiva mais adequada.",
+   "ref": "A afirmação não é sustentada: o bico de cada ave não mudou com o esforço. A explicação adequada é que a população tem variação de tamanho de bico, as aves de bico mais longo alcançam mais alimento, sobrevivem e deixam mais filhotes, e a característica se torna mais comum."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Fósseis de ancestrais do cavalo foram encontrados em camadas de rocha de idades diferentes. Os pesquisadores estimaram a altura do animal na altura dos ombros e perceberam que há tendência de aumento ao longo do tempo, mas houve também ambientes diferentes em cada época.",
+   "comando": "Interprete o que os dados sugerem sobre a evolução do cavalo e explique por que os fósseis são considerados evidências da evolução.",
+   "ref": "A altura aumentou ao longo do tempo, o que mostra uma linhagem que se modificou gradualmente. Os fósseis são evidências porque registram formas intermediárias e permitem comparar organismos de épocas diferentes, indicando que as espécies atuais descendem de formas antigas."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em uma lavoura de milho no interior paulista, o produtor aplicou o mesmo inseticida várias vezes contra uma praga. A cada aplicação, ele estimou a porcentagem de lagartas que morreram, e desconfiou que o produto estava perdendo o efeito.",
+   "comando": "Explique por que o inseticida perdeu eficiência com o tempo e proponha uma medida de manejo que retarde esse processo.",
+   "ref": "Entre as lagartas havia algumas resistentes ao inseticida. A cada aplicação, as sensíveis morriam e as resistentes sobreviviam e se reproduziam, de modo que a proporção delas aumentou, por seleção natural. Uma medida é alternar produtos de ação diferente ou manter áreas sem aplicação, para que as sensíveis continuem se cruzando com as resistentes."
+  }
+ ],
+ "9º ANO|3|Relacionar a gestão e reciclagem de resíduos sólidos às formas de destinação final e ao ciclo de vida dos materiais.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "A diretoria de uma escola estadual da capital pesou, durante uma semana, tudo o que era jogado fora, separado por tipo. Hoje todo esse material segue misturado no caminhão para o aterro sanitário, e a escola quer reduzir ao máximo o que é enviado para lá.",
+   "comando": "Qual proposta reduz mais o volume enviado ao aterro, de acordo com os dados?",
+   "alts": [
+    "Concentrar a campanha no vidro e no metal, que são recicláveis muitas vezes e portanto poupam mais recursos naturais",
+    "Trocar embalagens plásticas por embalagens de papel, que é biodegradável e por isso não precisa de aterro",
+    "Compostar os restos de comida e separar papel e plástico para a coleta seletiva, pois somam 160 dos 200 kg",
+    "Priorizar o rejeito e a reciclagem, pois o rejeito é o resíduo que mais pesa e menos pode ser reaproveitado"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma loja de bairro oferece sacolas descartáveis e vende sacolas retornáveis de tecido. Uma pesquisa de ciclo de vida estimou a energia gasta para fabricar cada uma e o número de usos esperado. Dona Neide comprou uma retornável, mas a esqueceu em casa várias vezes e a usou só 15 vezes.",
+   "comando": "Qual conclusão sobre o impacto energético por uso é correta?",
+   "alts": [
+    "Com 15 usos, a retornável gasta 2 MJ por uso, mais que a descartável; a vantagem depende de reutilizar",
+    "Com 15 usos, a retornável gasta 0,3 MJ por uso e já compensa, pois o valor esperado é o que vale",
+    "Com 15 usos, a retornável gasta 15 MJ por uso, valor menor que os 30 MJ da fabricação, e compensa",
+    "Com 15 usos, a retornável gasta o mesmo que a descartável, porque ambas dependem da mesma matéria-prima natural"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Moradores de um bairro vizinho a um lixão reclamam de um líquido escuro que escorre do monte de lixo em direção a um córrego a 200 m dali, e de muitas moscas. Uma prefeitura vizinha mantém um aterro sanitário e comparou os dois locais.",
+   "comando": "Qual explicação e qual medida são coerentes com os dados?",
+   "alts": [
+    "O líquido escuro é água da chuva suja de terra, e a medida é cobrir o lixão com uma lona para o deixar secar",
+    "O chorume é produzido porque o lixo recebe cobertura diária, e a medida é remover a cobertura para o líquido sair",
+    "As moscas são a causa do líquido escuro, e a medida é queimar o lixo a céu aberto para eliminar os insetos do local",
+    "O chorume infiltra e atinge o córrego sem base impermeável; a medida é encerrar o lixão e usar um aterro sanitário"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma cooperativa de reciclagem de Campinas comparou o gasto de energia para produzir latas de alumínio e garrafas PET a partir de matéria-prima nova ou reciclada. Os valores são relativos: 100 representa o gasto com a matéria-prima nova de cada material.",
+   "comando": "Qual interpretação dos dados é correta?",
+   "alts": [
+    "A reciclagem reduz o gasto de energia nos dois materiais, com economia maior no PET (30%) que no alumínio (5%)",
+    "A reciclagem reduz o gasto de energia nos dois materiais, com economia maior no alumínio (95%) que no PET (70%)",
+    "A reciclagem reduz igualmente a energia nos dois materiais, pois ambos passam a gastar menos que a metade",
+    "A reciclagem de alumínio gasta 5 vezes mais energia que a produção feita a partir do minério da natureza"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um bairro de Santo André iniciou a coleta seletiva de materiais recicláveis. A cooperativa que faz a triagem acompanhou, mês a mês, o total recolhido e a parte que chegava suja ou misturada com lixo orgânico, que não pode ser reciclada e precisa ir ao aterro.",
+   "comando": "Qual hipótese explica o aumento do rejeito e qual ação é mais coerente?",
+   "alts": [
+    "A participação cresceu, mas a separação em casa piorou; é preciso orientar a limpeza e a separação",
+    "O aumento de material recolhido mostra que a reciclagem melhorou, pois o rejeito é parte natural da coleta",
+    "O rejeito cresce porque a cooperativa separa mal, e a medida é trocar a triagem por queima do material",
+    "O rejeito aumenta porque há muito material, e a medida é reduzir a coleta seletiva até a cooperativa se ajustar bem"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "A ficha de ciclo de vida da garrafa PET mostra que ela passa por várias etapas, da extração do material até o descarte. A prefeitura de uma cidade paulista quer reduzir o impacto ambiental das garrafas usadas na merenda escolar.",
+   "comando": "Escolha duas ações (reduzir, reutilizar ou reciclar), indique em que etapa do ciclo atuam e justifique o benefício de cada uma.",
+   "ref": "Reduzir o uso de garrafas diminui a extração de petróleo e a fabricação. Reutilizar a garrafa estende o uso e evita nova produção. Reciclar no descarte substitui matéria-prima nova, poupa energia e reduz o lixo no aterro e nos rios."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma escola montou uma composteira com restos de frutas e folhas. A cada duas semanas, os alunos mediram a massa do material e a temperatura no centro da pilha. No fim, o material estava escuro, com cheiro de terra.",
+   "comando": "Explique por que a massa diminui e a temperatura sobe, e qual é o destino do composto final.",
+   "ref": "Bactérias e fungos decompõem a matéria orgânica, liberando calor, água e gás carbônico, e por isso a pilha esquenta e perde massa. Quando a matéria acaba, a pilha esfria. O composto é usado como adubo, devolvendo nutrientes ao solo e reduzindo o lixo enviado ao aterro."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Na escola, uma caixa recebeu pilhas e baterias usadas durante seis meses. O professor explicou que elas não devem ir ao lixo comum, pois contêm metais como chumbo e cádmio, e que existe um sistema de devolução previsto em lei.",
+   "comando": "Explique por que pilhas não devem ser descartadas no lixo comum e o que é logística reversa.",
+   "ref": "Os metais pesados das pilhas contaminam solo e água, se acumulam nos seres vivos e podem causar danos à saúde. Na logística reversa, o consumidor devolve o produto ao comércio ou ao fabricante, que o encaminha para reciclagem ou destinação adequada."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "A escola gera cerca de 120 kg de lixo por semana, e todo ele hoje segue para o aterro. A diretora pediu ao grêmio um plano com metas, usando a tabela da auditoria. Considere que o rejeito não pode ser reaproveitado.",
+   "comando": "Proponha iniciativas para reduzir o lixo enviado ao aterro e estime quantos quilos ainda iriam para lá.",
+   "ref": "Compostar os 50 kg de orgânicos e enviar papel, plástico, vidro e metal (55 kg) à coleta seletiva. Assim, 105 kg seriam desviados e só os 15 kg de rejeito iriam ao aterro, uma redução de cerca de 87%."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Após uma chuva forte, uma equipe que opera barreiras de contenção em um rio da Grande São Paulo registrou mais lixo flutuante retido. Os técnicos dizem que a barreira retira o lixo, mas não resolve a origem do problema.",
+   "comando": "Relacione a chuva à quantidade de lixo no rio e proponha duas ações na origem do problema.",
+   "ref": "Chuvas fortes arrastam o lixo descartado nas ruas e nos bueiros para os córregos e o rio, e por isso mais chuva significa mais lixo retido. A barreira trata a consequência. Na origem, é possível reduzir embalagens descartáveis, ampliar a coleta seletiva e evitar o descarte irregular."
+  }
+ ],
+ "9º ANO|3|Relacionar evidências fósseis à ideia de ancestralidade comum proposta pela teoria da evolução.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Paleontólogos descreveram fósseis de animais extintos encontrados em camadas de rocha de diferentes idades, em regiões que hoje ficam no sul da Ásia e no Egito. Todos os animais são mamíferos e têm características dos ossos do ouvido e do crânio semelhantes às das baleias atuais, que não têm patas visíveis.",
+   "comando": "Que interpretação é sustentada pelos dados do quadro?",
+   "alts": [
+    "Os animais perderam as patas porque deixaram de usá-las, e essa perda foi herdada pelos filhos de cada indivíduo que passou a nadar.",
+    "Os animais mais novos têm patas menores, o que é compatível com um ancestral terrestre comum das baleias e mudanças nas gerações.",
+    "Os três animais viveram na mesma época e região, e as diferenças nas patas mostram que cada um nasceu com um tipo de membro.",
+    "Cada indivíduo do Pakicetus se transformou em uma baleia durante a vida, e o Basilosaurus é o resultado final dessa mudança."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma equipe estuda um fóssil X em dois sítios diferentes. Em cada sítio, as camadas de rocha não foram viradas nem misturadas, e rochas vulcânicas datadas por elementos radioativos permitem estimar a idade das camadas vizinhas, com as mais antigas embaixo.",
+   "comando": "Entre que idades o fóssil X provavelmente viveu?",
+   "alts": [
+    "Há menos de 40 milhões de anos, pois o fóssil está ao lado de cinzas vulcânicas que são as mais novas nos dois sítios.",
+    "Há mais de 50 milhões de anos, pois os fósseis são muito mais antigos do que as cinzas vulcânicas vizinhas.",
+    "Há exatamente 45 milhões de anos, pois é a média dos dois valores de idade das cinzas que aparecem no quadro.",
+    "Entre 40 e 50 milhões de anos, pois é mais velho que a cinza do sítio 1 e mais novo que a cinza do sítio 2."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um museu, estudantes compararam o esqueleto do membro anterior de quatro animais. A guia perguntou por que animais tão diferentes na aparência e na função (voar, nadar, manipular objetos) têm um conjunto de ossos tão parecido na ordem e na posição.",
+   "comando": "Qual explicação é mais coerente com a ideia de ancestralidade comum?",
+   "alts": [
+    "Os três mamíferos herdaram o plano de ossos de um ancestral comum, modificado em cada linhagem conforme o modo de vida.",
+    "Os animais que têm a mesma função têm parentesco mais próximo, e por isso a baleia e o peixe ósseo são os mais aparentados do quadro.",
+    "O ambiente de cada animal moldou os ossos de cada indivíduo durante a vida, e as semelhanças são acaso da forma de cada membro.",
+    "Os ossos iguais mostram que os três mamíferos têm a mesma função no corpo, e a diferença de função é aparente."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Na sala de aula, uma professora apresentou a sequência de três fósseis de vertebrados encontrados em rochas de idades diferentes. Os alunos receberam o quadro para formular afirmações e o grupo precisa apontar a afirmação que NÃO pode ser feita com base nele.",
+   "comando": "Qual afirmação NÃO é sustentada pelos dados do quadro?",
+   "alts": [
+    "O fóssil de 375 milhões de anos combina traços de peixes, como as brânquias, com traços de animais terrestres, como o pescoço.",
+    "A sequência de idades acompanha o surgimento gradual de características ligadas a membros com ossos e dedos nos fósseis.",
+    "Um peixe individual ganhou membros durante a vida ao sair da água, e o Ichthyostega é o resultado dessa mudança em um único animal.",
+    "Os dados sugerem relação de parentesco entre peixes e animais de quatro membros, mas não provam que um fóssil seja ancestral direto de outro."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Na Prova Paulista de Ciências, a turma recebeu dados de fósseis de cavalos de diferentes épocas na América do Norte. Cada gênero viveu em ambientes um pouco diferentes: o mais antigo habitava florestas fechadas, e o mais recente vive em campos abertos, onde correr rápido ajuda a fugir de predadores.",
+   "comando": "Que hipótese é mais consistente com o conjunto dos dados?",
+   "alts": [
+    "Cada gênero surgiu de forma separada dos demais, e a semelhança entre eles é um acaso, pois as alturas e os dedos não seguem uma ordem.",
+    "Ao longo de gerações, descendentes com patas mais longas e menos dedos tiveram mais chance de sobreviver em campos abertos e deixaram mais filhotes.",
+    "Os cavalos antigos esticaram as patas e perderam dedos ao tentar correr, e os filhotes já nasciam com as mudanças que os pais tinham adquirido.",
+    "Os quatro gêneros viveram na mesma época, e as diferenças de altura e de dedos refletem a variação entre indivíduos de uma população."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Um geólogo escavou um barranco em que as camadas de rocha são horizontais e sem sinais de mistura. Ele anotou os fósseis encontrados em cada camada, numeradas de baixo para cima.",
+   "comando": "Explique o que a sequência indica sobre a ordem em que os grupos surgiram e por que ela apoia a ideia de ancestralidade comum, em vez de indicar que um grupo \"virou\" outro de uma vez.",
+   "ref": "As camadas mais baixas são mais antigas, então os trilobitas e as esponjas surgiram antes e os répteis depois. Cada grupo novo aparece junto com grupos mais antigos, sem salto brusco, o que é compatível com formas novas que descendem de formas anteriores por mudanças ao longo de muitas gerações, e não com a transformação de um animal em outro."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Estudos de fósseis mostram que os ancestrais das baleias andavam em terra. O gráfico mostra o comprimento das patas traseiras de quatro espécies, em ordem de idade, com valores aproximados e ilustrativos.",
+   "comando": "Descreva a tendência mostrada e explique como a seleção natural em ambiente aquático pode ter contribuído para ela.",
+   "ref": "O comprimento das patas traseiras diminuiu ao longo do tempo, de 40 para 5 cm. Na água, patas longas eram menos importantes que a natação, e os indivíduos com patas menores e corpo mais adaptado ao nado podiam sobreviver e deixar mais descendentes, o que reduziu as patas ao longo das gerações."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em um debate, uma aluna afirmou que \"se todos os animais tivessem sido criados juntos, os fósseis de todos os grupos estariam misturados em todas as camadas\". O professor apresentou a idade dos fósseis mais antigos de cada grupo de vertebrados.",
+   "comando": "Use os dados para avaliar a afirmação da aluna e explique o que a ordem de aparecimento dos grupos sugere.",
+   "ref": "Os dados mostram que os grupos surgem em ordem, com os peixes mais antigos e as aves mais recentes, e não misturados em todas as camadas. Isso apoia a ideia de que os grupos novos surgiram em épocas diferentes a partir de grupos anteriores, com ancestrais comuns."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "O fóssil de Archaeopteryx, de 150 milhões de anos, tem penas e asas, mas também outras características. Os pesquisadores compararam o fóssil com um dinossauro terópode e com uma ave atual.",
+   "comando": "Explique por que esse fóssil é considerado uma evidência de ancestralidade comum entre dinossauros e aves.",
+   "ref": "O Archaeopteryx combina características de dinossauros terópodes, como dentes e cauda longa com ossos, e de aves atuais, como penas e asas para voar. Essa mistura mostra uma forma intermediária entre os dois grupos, compatível com um ancestral comum que foi se modificando."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um aluno disse que, como não existem fósseis de todas as etapas intermediárias, a evolução não pode ser verdadeira. A professora mostrou a chance de fossilização de diferentes tipos de organismos, com valores ilustrativos.",
+   "comando": "Explique por que a falta de alguns fósseis não derruba a ideia de evolução e como os cientistas lidam com essa limitação.",
+   "ref": "A fossilização é rara e depende de partes duras e de condições especiais, então muitos organismos nunca viram fósseis e há lacunas no registro. Mesmo assim, a evidência existente (ordem das camadas, fósseis de transição e semelhanças) concorda com a evolução, e novos fósseis são descobertos e preenchem lacunas."
+  }
+ ],
+ "9º ANO|3|Relacionar práticas humanas às fontes de poluição da água e às alterações na qualidade dos ambientes aquáticos.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma turma do 9º ano visitou um córrego de Osasco e anotou o que observou em três pontos, cada um perto de uma atividade humana diferente: uma oficina mecânica, uma saída de canal de um bairro sem rede de esgoto e uma encosta com solo exposto por obras. Depois de voltar à sala, os grupos tentaram associar cada ponto à prática humana que mais provavelmente o causou.",
+   "comando": "Qual associação entre ponto e prática humana é coerente com as observações?",
+   "alts": [
+    "P1 reflete descarte de óleo e graxa, P2 reflete esgoto doméstico sem tratamento e P3 reflete erosão de solo exposto por obras.",
+    "P1 reflete esgoto doméstico sem tratamento, P2 reflete descarte de óleo e graxa e P3 reflete erosão de solo exposto por obras.",
+    "P1 reflete descarte de óleo e graxa, P2 reflete erosão de solo exposto por obras e P3 reflete esgoto doméstico sem tratamento.",
+    "P1 reflete erosão de solo exposto por obras, P2 reflete esgoto doméstico sem tratamento e P3 reflete descarte de óleo e graxa."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma represa do interior paulista, moradores notaram que, no verão, a superfície ficou verde e peixes apareceram mortos. Perto do local existem uma lavoura que usa adubo e um loteamento sem coleta de esgoto. Pesquisadores compararam a represa em dois momentos e queriam explicar a sequência de eventos que terminou na morte dos peixes.",
+   "comando": "Qual sequência explica a mortandade de peixes com base nos registros?",
+   "alts": [
+    "O adubo e o esgoto aumentaram os nutrientes, as algas proliferaram e, ao fazer fotossíntese, liberaram oxigênio em excesso, o que levou os peixes à morte por intoxicação.",
+    "O adubo e o esgoto aumentaram os nutrientes, as algas proliferaram e, ao morrer, foram decompostas por bactérias que consumiram o oxigênio, o que levou os peixes à morte.",
+    "O adubo e o esgoto envenenaram diretamente os peixes, as algas proliferaram porque os peixes que as comiam desapareceram e o oxigênio deixou de ser produzido.",
+    "O adubo e o esgoto reduziram os nutrientes da água, as algas morreram por falta de alimento e, ao se decompor, consumiram o oxigênio e causaram a mortandade."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um aterro sanitário antigo, perto de uma cidade do interior paulista, não tinha manta impermeável no solo. A prefeitura mediu a condutividade elétrica da água em poços a diferentes distâncias do aterro, na direção em que a água subterrânea escoa. Valores mais altos indicam mais substâncias dissolvidas, vindas do líquido (chorume) que escorre do lixo.",
+   "comando": "Que interpretação dos dados é coerente com a origem da contaminação?",
+   "alts": [
+    "O aterro contamina a água da superfície, mas os poços profundos não são afetados, então os poços mais próximos podem ser usados para consumo sem riscos.",
+    "O aterro contamina a água subterrânea, e o efeito aumenta com a distância, então os poços mais distantes têm maior risco e não devem ser usados para consumo.",
+    "O aterro não afeta a água subterrânea, e a variação vem de causas naturais do solo, então os poços mais próximos e os distantes podem ser usados para consumo.",
+    "O aterro contamina a água subterrânea, e o efeito diminui com a distância, então os poços mais próximos têm maior risco e não devem ser usados para consumo."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em um projeto sobre poluentes, alunos de uma escola de Mauá regaram sementes de feijão com líquidos diferentes e contaram quantas germinaram em 7 dias. Cada copo recebeu 20 sementes. Ao analisar a ficha, a professora percebeu que um dos copos tinha recebido uma quantidade de líquido bem maior que os outros, o que atrapalhava a comparação.",
+   "comando": "Qual conclusão é sustentada pelos dados, considerando o cuidado necessário em um experimento?",
+   "alts": [
+    "A comparação entre B e C mostra que o óleo é mais prejudicial que o detergente, pois germinaram menos sementes; o volume do líquido não interfere na comparação.",
+    "A comparação entre A e C é válida, pois ambos têm água, e indica que o óleo prejudica a germinação mais que o detergente; o copo B não pode ser comparado por ter detergente.",
+    "A comparação entre A e B é válida, pois o volume foi igual, e indica que o detergente prejudica a germinação; o copo C não pode ser comparado por ter volume diferente.",
+    "A comparação entre A, B e C mostra que a germinação diminui em cada poluente testado, e o volume diferente do copo C reforça que o óleo é o mais prejudicial."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Para avaliar a qualidade da água de um rio da bacia do Tietê, biólogos usaram bioindicadores: algumas espécies de invertebrados só vivem em água limpa e bem oxigenada, enquanto outras toleram água com muita matéria orgânica e pouco oxigênio. Eles coletaram amostras em dois pontos e identificaram os organismos presentes, sabendo que um dos pontos fica a jusante de uma saída de esgoto.",
+   "comando": "Qual ponto tem melhor qualidade da água e como os dados permitem concluir isso?",
+   "alts": [
+    "O ponto 2, pois tem mais indivíduos, o que indica ambiente produtivo; o grande número de organismos mostra que a água tem condições de sustentar a vida.",
+    "O ponto 1, pois reúne organismos que dependem de água limpa e oxigenada; o ponto 2 tem organismos tolerantes à poluição, o que sugere a influência do esgoto.",
+    "O ponto 1, pois tem menos indivíduos, o que indica ausência de matéria orgânica; a quantidade menor de organismos mostra que a água está livre de qualquer poluente.",
+    "O ponto 2, pois reúne organismos que dependem de água limpa e oxigenada; o ponto 1 tem organismos tolerantes à poluição, o que sugere a influência do esgoto."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na atividade com três copos de água limpa, a professora adicionou terra no copo A, óleo de cozinha no copo B e detergente no copo C, e a turma anotou o aspecto de cada um. Em seguida, discutiram o que cada substância faria se chegasse a um rio, considerando peixes e plantas aquáticas que vivem ali.",
+   "comando": "Relacione cada observação a uma prática humana que gera esse tipo de poluição e explique um efeito de cada uma sobre os seres vivos do rio.",
+   "ref": "A terra corresponde à erosão de solo exposto por desmatamento ou obras e a água turva reduz a luz para plantas aquáticas. O óleo vem do descarte doméstico ou de oficinas e forma uma película que dificulta a troca de oxigênio, e o detergente vem do esgoto doméstico e causa espuma que prejudica os organismos aquáticos."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma lagoa de um parque em São José do Rio Preto passou a ficar coberta por uma camada verde no verão. O parque recebe água de uma galeria pluvial que traz restos de adubo de jardins e esgoto de ligações clandestinas. Estudantes compararam a lagoa em dois meses.",
+   "comando": "Explique o que os dados mostram e como a prática humana descrita provoca a queda do oxigênio na lagoa.",
+   "ref": "No verão, as algas aumentaram muito e o oxigênio caiu de 7 para 2 mg/L. O adubo e o esgoto levam nutrientes à lagoa e fazem as algas se multiplicarem; quando morrem, são decompostas por bactérias que consomem o oxigênio, prejudicando peixes e outros seres."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em um rio onde uma indústria de papel descartou, por anos, uma substância tóxica em pequena quantidade, pesquisadores mediram a concentração dessa substância em seres de uma mesma cadeia alimentar. Os pescadores locais perguntaram se podem continuar vendendo os peixes maiores.",
+   "comando": "Descreva o padrão dos dados, explique por que a concentração é maior nos seres do topo da cadeia e dê um conselho para a comunidade.",
+   "ref": "A concentração aumenta a cada nível: é mínima na água e muito maior no peixe grande. Isso ocorre porque a substância não é eliminada e se acumula; cada animal come muitos indivíduos do nível anterior e vai concentrando o poluente. A comunidade deve evitar consumir e vender peixes de topo enquanto o rio não for monitorado e a fonte, controlada."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um córrego que nasce em uma Unidade de Conservação, atravessa uma região de pastagem e depois entra em um bairro de uma cidade paulista. Os alunos mediram a turbidez da água em três trechos, sabendo que a mata que acompanha as margens (mata ciliar) só existe perto da nascente.",
+   "comando": "Interprete a variação da turbidez ao longo do córrego e proponha duas iniciativas para recuperar a qualidade da água.",
+   "ref": "A turbidez aumenta da nascente à foz, pois, sem mata ciliar, o solo do pasto sofre erosão e carrega partículas, e no bairro o esgoto e o lixo se somam. Duas iniciativas são recompor a mata ciliar para segurar o solo e filtrar a água e ligar as casas à rede de esgoto, com educação ambiental para evitar o descarte de lixo."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em um condomínio de São Paulo com 50 famílias, o síndico descobriu que cada família descarta, em média, meio litro de óleo de cozinha usado por mês na pia. Esse óleo vai para a rede de esgoto e pode chegar aos rios, onde forma uma película sobre a água. A empresa de coleta propôs recolher o óleo para reciclagem em sabão.",
+   "comando": "Calcule quantos litros de óleo o condomínio descarta em um ano e explique por que a coleta seletiva é melhor que descartar na pia.",
+   "ref": "Por mês são 50 x 0,5 = 25 L e, em um ano, 25 x 12 = 300 L de óleo. O óleo na pia entope tubulações e forma película na água, que dificulta a entrada de oxigênio e prejudica a vida aquática; na coleta seletiva ele é reaproveitado, evitando a poluição."
+  }
+ ]
+}

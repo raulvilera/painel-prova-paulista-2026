@@ -1,0 +1,1328 @@
+{
+ "8º ANO|1|Comparar os diferentes tipos de reprodução (assexuada e sexuada) e sua influência no sucesso reprodutivo das espécies.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na simulação \"Cópias ou misturas?\", a turma de Rafaela representou a reprodução assexuada copiando um copinho com 4 feijões, e a sexuada juntando 2 feijões sorteados de cada genitor. Cada processo gerou 6 \"filhos\". Depois, o professor perguntou o que aconteceria se uma doença atingisse apenas feijões pretos.",
+   "comando": "Qual conclusão é coerente com os resultados e com a pergunta do professor?",
+   "alts": [
+    "A mistura gerou filhos variados, então é mais provável que ao menos um filho resista a uma doença que ataque feijões pretos.",
+    "A cópia gerou filhos iguais, o que garante que os filhos resistam à doença, já que repetem os genes do genitor.",
+    "A mistura gerou 5 tipos de filhos, logo cada um tem mais sucesso que os filhos da cópia diante de qualquer ambiente.",
+    "A cópia é a que mais protege a população, pois a doença atinge os feijões pretos e os filhos iguais dividem a perda diante da doença."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma fazenda paulista, um agricultor cultiva bananeiras que são multiplicadas por mudas retiradas da base da planta-mãe. Vizinhos plantam outro cultivo, de uma espécie que se reproduz por sementes e cruzamentos. Um fungo novo chegou à região, e as duas áreas foram monitoradas por um técnico.",
+   "comando": "Que explicação é sustentada pelos dados do técnico?",
+   "alts": [
+    "As bananeiras adoeceram mais porque a reprodução assexuada gera plantas fracas, incapazes de resistir a qualquer fungo do ambiente.",
+    "O cultivo por sementes teve menos doentes porque a reprodução sexuada produz descendentes idênticos e adaptados ao fungo.",
+    "As mudas são cópias da planta-mãe, com a mesma suscetibilidade, enquanto as sementes geram plantas variadas e algumas resistem.",
+    "As mudas adoeceram mais porque estavam mais perto uma da outra, e a forma de reprodução não influenciou o resultado."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em hortas e jardins paulistas, os pulgões aparecem em grande número na primavera e no verão, quando as fêmeas geram filhotes sem fecundação, todos fêmeas e semelhantes à mãe. No outono, nascem machos, ocorre a reprodução sexuada e as fêmeas põem ovos que resistem ao frio do inverno.",
+   "comando": "Qual interpretação explica a vantagem de cada tipo de reprodução em cada estação?",
+   "alts": [
+    "Sem fecundação surgem descendentes variados e mais resistentes, o que explica o crescimento rápido da colônia na primavera.",
+    "Sem fecundação a população cresce rápido com bom alimento; com fecundação surgem descendentes variados, com chance de passar pelo frio.",
+    "Com fecundação a população cresce mais rápido, e por isso o outono tem mais pulgões que a primavera nos canteiros.",
+    "Os dois tipos de reprodução produzem descendentes iguais, e a mudança depende da temperatura ambiente em cada época."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um produtor de morangos de Atibaia pode formar a lavoura por estolões (ramos da planta-mãe que enraízam) ou por sementes. Ele quer frutos padronizados e colheita rápida, mas teme uma doença nova que já atingiu a região. Fez um teste em pequena escala, com os valores abaixo, e pediu orientação ao técnico.",
+   "comando": "Qual orientação considera os dados e o risco que o produtor teme?",
+   "alts": [
+    "Usar sementes, pois a variação entre as plantas torna a colheita mais rápida e uniforme que a obtida pelos estolões.",
+    "Usar estolões de uma mesma planta, pois a reprodução assexuada garante resistência a qualquer doença futura que apareça na região.",
+    "Usar sementes, pois elas garantem a padronização dos frutos e livram a lavoura de qualquer risco de doença nova.",
+    "Usar estolões atende a padronização e rapidez, mas as plantas iguais correm risco com a doença, e convém misturar variedades."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um laboratório de escola técnica, alunos colocaram 1 milhão de bactérias iguais, que se reproduzem por divisão simples, em placas com antibiótico. Sobreviveram apenas 3 colônias. Os descendentes dessas 3 colônias foram colocados em novas placas com o mesmo antibiótico, e a maioria sobreviveu. Uma aluna concluiu que a reprodução por divisão simples impede qualquer variação entre as bactérias.",
+   "comando": "Qual interpretação do experimento é INCORRETA?",
+   "alts": [
+    "A variação existente na 1ª placa, vinda de mutações, deixou algumas bactérias resistentes que passaram essa característica à prole.",
+    "Na 2ª placa a maioria sobreviveu porque os descendentes das colônias resistentes herdaram a característica dos genitores.",
+    "Como as bactérias se dividem em cópias, não há variação entre elas, então a sobrevivência na 1ª placa foi causada pelo antibiótico.",
+    "A resistência passou a predominar porque o antibiótico eliminou as bactérias sem a característica, e restaram as resistentes."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na simulação com feijões, o grupo de Caio fez 4 filhos por cópia e 4 filhos por mistura de dois genitores, um com feijões pretos e outro com feijões brancos, e anotou a composição de cada copinho.",
+   "comando": "Explique por que os filhos da mistura são diferentes entre si e dos genitores, enquanto os da cópia não, relacionando com mitose e meiose.",
+   "ref": "Na cópia, a divisão (mitose) mantém o material genético do genitor, então os filhos são iguais. Na mistura, cada genitor passa metade do material genético, em combinações sorteadas por meiose e fecundação, gerando filhos variados."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma estrela-do-mar de laboratório teve um braço cortado, e dele surgiu outro animal completo. Já uma tartaruga-marinha põe cerca de 100 ovos de uma só vez, resultado de cruzamento entre macho e fêmea, e poucos filhotes chegam à idade adulta. Os dados foram resumidos em um quadro.",
+   "comando": "Compare os dois casos e explique uma vantagem e uma desvantagem de cada tipo de reprodução para a sobrevivência da espécie.",
+   "ref": "A reprodução assexuada é rápida e dispensa parceiro, mas gera descendentes iguais, todos com a mesma suscetibilidade. A sexuada gera descendentes variados, com mais chance de adaptação a mudanças, mas depende de parceiro e gasta mais energia."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma produtora de laranjas em Limeira usa o enxerto (um ramo de uma planta boa colado em outra) para preservar uma variedade doce. Um instituto de pesquisa, por outro lado, cruza plantas diferentes e semeia as sementes para tentar obter uma variedade resistente a uma doença que ameaça os pomares.",
+   "comando": "Explique por que o enxerto mantém a variedade doce e por que o cruzamento é útil para buscar resistência.",
+   "ref": "O enxerto é uma multiplicação assexuada, que gera plantas geneticamente iguais à planta original, mantendo o sabor doce. O cruzamento é reprodução sexuada e mistura características de duas plantas, gerando variação, na qual podem surgir plantas resistentes à doença."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Pesquisadores cortaram planárias (vermes de água doce) em três pedaços e deixaram cada pedaço em uma vasilha com a mesma água. Em 10 dias, cada um se tornou um verme completo. A temperatura da água subiu 6 °C num dos dias e metade dos vermes de uma criação morreu.",
+   "comando": "Explique por que os novos vermes têm a mesma característica do original e o que o resultado da temperatura sugere sobre a população formada assim.",
+   "ref": "Cada pedaço regenera por divisão celular que copia o material genético, então os vermes são clones do original. Se todos têm a mesma sensibilidade, uma mudança de temperatura pode atingir muitos ao mesmo tempo, pois há pouca variação para a sobrevivência."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma rã põe cerca de 3.000 ovos por ano, e dela, em média, 5 filhotes chegam à vida adulta. Uma onça-pintada tem de 1 a 3 filhotes a cada gestação, e cuida deles por quase dois anos, com cerca de 1,5 chegando à vida adulta. Ambas fazem reprodução sexuada.",
+   "comando": "Mostre por que o número de descendentes, sozinho, não mede o sucesso reprodutivo e compare as duas estratégias.",
+   "ref": "O sucesso reprodutivo depende de quantos descendentes chegam à vida adulta, e não de quantos nascem. A rã gera muitos ovos e quase todos morrem. A onça gera poucos filhotes e investe em cuidado, aumentando a sobrevivência de cada um."
+  }
+ ],
+ "8º ANO|1|Comparar os processos reprodutivos das plantas.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma horta escolar de Campinas, a turma estudou por que alguns tomateiros dão frutos e outros não. Separaram plantas em três grupos: flores cobertas com saquinho de tecido fino, flores abertas e flores cobertas, nas quais um aluno encostou um pincel nos estames e depois no pistilo.",
+   "comando": "Que conclusão é sustentada pelos dados do experimento?",
+   "alts": [
+    "o saquinho impede a planta de formar flores completas, por isso as flores cobertas não deram fruto, nem com o pincel",
+    "o fruto depende da chegada do pólen ao pistilo, feita por insetos ou, nesse teste, por um pincel",
+    "o pincel produz pólen novo e por isso os frutos surgiram no terceiro grupo, igual ao grupo de flores abertas",
+    "os insetos são indispensáveis para qualquer formação de fruto, já que o pincel gerou menos frutos do que a flor aberta"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um produtor de morangos de Atibaia obteve novas plantas de duas formas: replantando os brotos (estolhos) que saem da planta-mãe e semeando sementes dos próprios morangos. Ele mediu a altura das plantas após 30 dias nos dois canteiros e anotou a variação entre elas.",
+   "comando": "Qual explicação relaciona melhor a reprodução à variação entre as plantas?",
+   "alts": [
+    "o estolho resulta da combinação de material genético de duas plantas e gera descendentes iguais, enquanto a semente copia a mãe",
+    "a semente produz plantas mais variadas por receber mais luz no canteiro, enquanto o estolho é protegido pela planta-mãe",
+    "o estolho produz plantas iguais por receber nutrientes da mãe, e a semente produz plantas variadas por falta de água",
+    "a semente combina material genético de duas plantas e gera descendentes diferentes, e o estolho copia a mãe"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma visita ao Parque Estadual da Serra do Mar, estudantes compararam duas plantas: a araucária, cujo pinhão fica nas escamas de uma pinha, e o tomateiro da horta, cuja semente fica dentro do fruto. Anotaram o que observaram em cada uma.",
+   "comando": "Qual afirmação sobre a reprodução dessas plantas é sustentada pelas observações?",
+   "alts": [
+    "ambas produzem sementes por reprodução sexuada, mas só no tomateiro a semente fica dentro de um fruto",
+    "a araucária se reproduz sem sementes por não ter flores vistosas, enquanto o tomateiro produz sementes por reprodução sexuada",
+    "ambas formam frutos a partir do ovário, mas na araucária a semente fica exposta porque o fruto se abre ao amadurecer",
+    "o tomateiro depende de pólen para formar sementes, enquanto a araucária forma sementes por reprodução assexuada"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Para multiplicar roseiras, uma floricultora de Holambra cortou galhos e os colocou em água para enraizar. Preparou galhos diferentes, variando a presença de nós (regiões de onde saem brotos) e de folhas, e contou as raízes após 15 dias.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "alts": [
+    "o enraizamento exige nós, pois sem eles não houve raízes, e as folhas ajudam, pois sem elas houve poucas raízes",
+    "o enraizamento exige folhas, pois sem nós ainda houve raízes, e os nós ajudam, pois houve mais raízes com mais nós",
+    "o enraizamento depende do número de nós, pois os galhos com dois nós formaram o mesmo número de raízes",
+    "o enraizamento ocorre com qualquer pedaço de galho, pois as folhas e os nós não alteraram o número de raízes obtido"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma aluna quis testar se a luz influencia a germinação de sementes, etapa da reprodução sexuada das plantas. Colocou sementes de alface em um vaso na janela, a 25 °C, e sementes de feijão em outro vaso dentro do armário, a 15 °C. Contou as plântulas após uma semana.",
+   "comando": "Qual é a falha do procedimento que impede concluir algo sobre a luz?",
+   "alts": [
+    "o teste usou sementes demais em cada vaso, e por isso a contagem de plântulas ficou imprecisa depois de uma semana",
+    "o teste durou pouco tempo, o que impede notar que a luz afeta a germinação do feijão e não a da alface",
+    "o teste mudou a espécie e a temperatura junto com a luz, e assim não é possível saber qual delas causou a diferença",
+    "o teste não incluiu um vaso com plantas adultas, que são o grupo de comparação para medir a germinação"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "A abóbora tem flores masculinas, com estames, e flores femininas, com pistilo e ovário. Em uma horta, uma agricultora cobriu uma flor feminina por um dia, depois a abriu e viu que ela murchou sem formar fruto. Outra flor feminina, que abelhas visitaram, formou uma abóbora.",
+   "comando": "Explique o que ocorreu em cada flor, relacionando polinização, fecundação e formação do fruto.",
+   "ref": "A abelha transporta o pólen da flor masculina até o pistilo da feminina, e isso é a polinização. O pólen fecunda a oosfera dentro do ovário, que se desenvolve em fruto com sementes; a flor coberta não recebeu pólen e por isso murchou."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma fazenda do Vale do Ribeira, todos os pés de banana foram obtidos de mudas retiradas de uma única planta, o que garante frutos iguais. Um fungo que ataca a raiz apareceu na plantação, e agrônomos compararam a doença com uma plantação vizinha de variedades diferentes.",
+   "comando": "Explique a vantagem e o risco de multiplicar plantas por mudas, com base nos dados.",
+   "ref": "A multiplicação por mudas dá plantas idênticas à planta-mãe, o que garante frutos uniformes. Como todas têm o mesmo material genético, se uma é suscetível ao fungo, todas são, e a doença atinge a plantação inteira, ao contrário da plantação variada."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma turma observou frutos de três plantas e onde nasceram as plantinhas novas. O fruto do dente-de-leão tem pelos leves, o da goiaba é doce e tem sementes pequenas, e o do coqueiro é grande, fibroso e flutua.",
+   "comando": "Relacione cada tipo de fruto a uma forma de dispersão das sementes e explique por que isso ajuda a planta a se reproduzir.",
+   "ref": "Os pelos leves permitem dispersão pelo vento, a polpa doce atrai animais que levam as sementes e a casca que flutua permite dispersão pela água. Ao espalhar as sementes, a planta ocupa novos locais e reduz a competição com a planta-mãe."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um agricultor de Mogi das Cruzes pode plantar batata de duas formas: usando pedaços de batata com brotos ou semeando sementes de batata. Ele conversou com um técnico que apresentou dados de campos de teste com as duas formas.",
+   "comando": "Qual forma é melhor para quem quer colher batatas iguais e rápido, e qual é melhor para quem quer criar uma variedade nova? Justifique.",
+   "ref": "Para colher rápido e batatas iguais, o melhor é o pedaço com broto, que é reprodução assexuada e gera clones em menos tempo. Para criar variedade nova, o melhor é a semente, que vem de reprodução sexuada e gera plantas diferentes entre si, das quais se escolhem as melhores."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Produtores de maracujá de uma região de São Paulo notaram que a produção caiu depois que a mata ao redor foi derrubada para um loteamento. Pesquisadores contaram abelhas e frutos nas mesmas plantas em dois anos.",
+   "comando": "Explique a relação entre o número de abelhas e a produção de frutos e proponha uma medida para recuperar a produção.",
+   "ref": "As abelhas fazem a polinização do maracujá, transportando o pólen entre as flores, e com menos abelhas menos flores são fecundadas e menos frutos se formam. Pode-se recuperar a produção preservando ou replantando a mata do entorno e fazendo polinização manual com pincel enquanto isso."
+  }
+ ],
+ "8º ANO|1|Diferenciar métodos contraceptivos e estratégias de prevenção para a saúde.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma roda de conversa na UBS do bairro, uma enfermeira apresentou aos jovens uma tabela com valores aproximados de métodos contraceptivos. Um aluno comentou que 'o método mais eficaz contra a gravidez também protege de todas as infecções'. A turma analisou os dados para avaliar o comentário.",
+   "comando": "Qual afirmação é sustentada pela tabela?",
+   "alts": [
+    "O DIU é o mais eficaz contra a gravidez e, por isso, também reduz o risco de ISTs",
+    "O preservativo é o menos eficaz contra a gravidez e, por isso, não protege contra ISTs",
+    "O DIU é o mais eficaz contra a gravidez, mas não evita ISTs, que exigem preservativo",
+    "A pílula é mais eficaz que o injetável e, por isso, protege contra ISTs de modo parcial"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um levantamento fictício acompanhou 100 casais sexualmente ativos durante um ano para estudar o uso de métodos para evitar gravidez. O gráfico mostra quantas gravidezes ocorreram em cada grupo. A professora pediu que os alunos avaliassem afirmações sobre o resultado.",
+   "comando": "Qual interpretação NÃO é sustentada pelos dados?",
+   "alts": [
+    "A pílula reduz as gravidezes e, por isso, também protege contra o HIV",
+    "Os métodos reduzem as gravidezes quando comparados com o grupo sem método",
+    "O DIU apresentou o menor número de gravidezes entre os métodos avaliados",
+    "O uso do preservativo teve menos gravidezes que o grupo sem uso de método"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Na UBS, duas agentes comunitárias compararam dois bairros de São Paulo depois de uma campanha sobre infecções sexualmente transmissíveis (ISTs). No bairro A, houve palestras e distribuição de preservativos. No bairro B, só palestras. Os casos de sífilis foram contados antes e depois.",
+   "comando": "Que conclusão os dados sustentam com cuidado?",
+   "alts": [
+    "A queda foi maior no bairro com preservativos (13% contra 45%), mas dois bairros não permitem generalizar",
+    "A queda foi maior com preservativos (45% contra 13%), mas dois bairros não permitem generalizar",
+    "A queda foi maior no bairro com preservativos (45% contra 13%), o que prova que palestras não têm efeito",
+    "A queda foi menor no bairro com preservativos (45% contra 13%), mas os dois bairros permitem generalizar"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Marina tem 16 anos e usa a 'tabelinha' (contar dias do ciclo). Ela registrou durante quatro meses a duração do ciclo, contada do primeiro dia de uma menstruação até o primeiro dia da seguinte. A ovulação ocorre cerca de 14 dias antes da próxima menstruação.",
+   "comando": "O que os registros de Marina indicam sobre a tabelinha como método?",
+   "alts": [
+    "A ovulação varia de dia a cada ciclo, o que dificulta prever o período fértil",
+    "A ovulação ocorre no dia 14 do ciclo, o que facilita prever o período fértil",
+    "A duração varia, mas a ovulação se mantém, o que torna seguro prever o período fértil",
+    "A menstruação ocorre em dias diferentes, mas o período fértil independe dela e se mantém"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Durante uma oficina de saúde, a educadora descreveu uma sequência de uso do preservativo masculino feita por um casal fictício e pediu que o grupo identificasse qual passo compromete a proteção contra a gravidez e as ISTs. O preservativo era de um lote antigo.",
+   "comando": "Qual passo compromete a proteção do casal?",
+   "alts": [
+    "O passo 2, pois abrir a embalagem com os dedos pode furar o preservativo",
+    "O passo 4, pois retirar o ar da ponta aumenta a chance de rompimento",
+    "O passo 5, pois segurar pela base na retirada faz o preservativo escapar",
+    "O passo 1, pois o material vencido ressecado fica mais propenso a romper"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma jovem de 17 anos vai à UBS com o namorado e quer evitar uma gravidez e se proteger de infecções. Ela já ouviu que 'a pílula basta'. A enfermeira apresenta a tabela dos métodos para que o casal escolha com informação.",
+   "comando": "Que combinação de métodos você indicaria ao casal? Justifique com base na tabela.",
+   "ref": "A dupla proteção: preservativo mais um método de alta eficácia (pílula ou DIU). O preservativo previne ISTs, que os outros não evitam, e o segundo método reduz bastante o risco de gravidez."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um colega afirma no grupo da turma: 'Quem toma pílula não precisa usar preservativo, porque já está protegida'. A professora pede que você use o gráfico, que mostra a frequência de gravidez e de infecções por método, para analisar a frase em uma discussão em sala.",
+   "comando": "Explique se a afirmação está correta e justifique com os dados.",
+   "ref": "A afirmação está incorreta. A pílula reduz muito a gravidez (de 85 para 7), mas só o preservativo reduz o risco de ISTs, então a proteção contra infecções exige o preservativo."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma pesquisa fictícia da UBS ouviu 100 adolescentes que engravidaram antes dos 18 anos para entender o impacto da gravidez precoce na vida escolar e na saúde. A equipe de saúde quer usar os dados para planejar ações educativas na escola do bairro.",
+   "comando": "Interprete a tabela e proponha duas ações de prevenção que a escola e a UBS podem fazer juntas.",
+   "ref": "Muitas adolescentes interromperam os estudos, tinham pouca informação e começaram o pré-natal tarde. A escola e a UBS podem fazer rodas de conversa sobre métodos e distribuir preservativos, além de orientar o início do pré-natal."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "A vacina contra o HPV é oferecida pelo SUS a jovens de 9 a 14 anos, antes do início da vida sexual. Em um município, a equipe de saúde registrou que muitos pais não levam os filhos para vacinar. Uma agente quer explicar o assunto na reunião da escola.",
+   "comando": "Explique por que vale vacinar nessa idade e por que o preservativo continua importante depois de vacinado.",
+   "ref": "A vacina protege contra tipos do vírus que causam câncer e verrugas, e funciona melhor antes da exposição ao vírus. Mesmo vacinado, é preciso usar preservativo, pois ele previne outras ISTs que a vacina não cobre."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em uma UBS, um jovem de 19 anos teve uma ferida indolor nos genitais que sumiu em três semanas sem tratamento. Ele pensou que havia se curado e não procurou ajuda. Meses depois, apareceram manchas pelo corpo, e o teste rápido da UBS indicou sífilis.",
+   "comando": "Explique por que o desaparecimento da ferida não significa cura e o que o jovem deve fazer.",
+   "ref": "Sem tratamento, a bactéria continua no corpo e a doença avança, mesmo quando o sintoma some. O jovem deve fazer o tratamento com antibiótico prescrito pela UBS, avisar os parceiros sexuais e usar preservativo."
+  }
+ ],
+ "8º ANO|2|Associar os efeitos da poluição atmosférica na saúde do sistema respiratório.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma médica da UBS explicou aos alunos do 8º ano que o ar poluído de uma avenida carrega partículas de tamanhos diferentes. Para entender até onde cada uma consegue chegar no sistema respiratório, a turma pesquisou o tamanho de quatro tipos de partículas e o comparou com as estruturas por onde o ar passa.",
+   "comando": "Qual partícula tem maior chance de alcançar os alvéolos, e por quê?",
+   "alts": [
+    "O pólen, porque, sendo o maior, ele é carregado com mais força pelo ar até o fundo dos pulmões.",
+    "A poeira de rua, porque o seu tamanho médio a deixa passar pelo nariz sem ser retida pelo muco.",
+    "A ultrafina, porque, sendo a menor, atravessa os pelos e o muco das vias superiores e chega onde ocorre a troca de gases.",
+    "A fuligem de diesel, porque as partículas escuras escapam do muco e das vias aéreas com mais facilidade."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma Unidade Básica de Saúde (UBS) registrou, durante quatro semanas, a concentração média de partículas finas (MP2,5) no bairro e o número de consultas por falta de ar e chiado. Na semana 5, a previsão é que o MP2,5 médio chegue a 40 µg/m³.",
+   "comando": "Com base na tendência dos dados, qual previsão de consultas para a semana 5 é mais coerente?",
+   "alts": [
+    "Cerca de 26 a 28 consultas, pois valores de 22 e 48 µg/m³ corresponderam a 15 e 31 consultas.",
+    "Cerca de 40 consultas, pois o número de consultas aumenta a cada semana que passa, independentemente do ar.",
+    "Cerca de 14 consultas, pois a semana 5 vem depois de uma semana com ar melhor, e as consultas seguem a queda.",
+    "Cerca de 31 consultas, pois toda semana de ar ruim repete o maior valor já registrado, igual à semana 3."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em campanhas contra queimadas, a fumaça e a fumaça de cigarro aparecem como fatores que prejudicam a limpeza dos pulmões. Um grupo de pesquisadores mediu, em voluntários adultos, a velocidade com que o muco é empurrado pelos cílios das vias aéreas.",
+   "comando": "Qual interpretação dos dados é a mais adequada?",
+   "alts": [
+    "Os cílios produzem o muco, então fumantes têm menos muco e as vias aéreas ficam menos protegidas contra partículas.",
+    "A fumaça reduz o movimento dos cílios, deixando a limpeza mais lenta; parar de fumar recupera parte dessa função.",
+    "A fumaça acelera a limpeza das vias aéreas, e por isso fumantes eliminam o muco mais depressa que os não fumantes.",
+    "Depois de seis meses sem fumar, a função se recupera por completo, pois o valor dos ex-fumantes igualou o dos demais."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Duas pessoas respiram o mesmo ar de uma avenida movimentada em São Paulo, onde a concentração de poluentes é constante: uma está sentada em um ponto de ônibus e a outra faz uma corrida. Um estudante mediu a respiração das duas e calculou o volume de ar que passa pelos pulmões em um minuto.",
+   "comando": "Qual conclusão explica por que o corredor está mais exposto aos poluentes da avenida?",
+   "alts": [
+    "Ao correr, a frequência dobra de 14 para 30, e por isso a quantidade de poluentes inalada também fica duas vezes maior.",
+    "Os pulmões do corredor concentram os poluentes do ar, de modo que o mesmo volume de ar contém mais partículas.",
+    "A corrida aumenta a concentração de poluentes no ar ao redor do corpo, e por isso há mais partículas disponíveis.",
+    "No repouso passam cerca de 7 L de ar por minuto e na corrida cerca de 45 L, então ele inala em torno de 6 vezes mais poluentes."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma comunidade rural cozinha em fogões com combustíveis diferentes. Técnicos mediram o monóxido de carbono (CO), gás que reduz o transporte de oxigênio pelo sangue, dentro de três cozinhas, e queriam concluir se ventilar a cozinha é suficiente para tornar o ambiente seguro.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "Ventilar elimina o risco do fogão a lenha, pois o CO caiu de forma intensa quando a janela foi aberta.",
+    "Abrir a janela reduziu o CO do fogão a lenha de 35 para 12 ppm, mas o valor ainda supera o do gás.",
+    "O fogão a lenha produz mais CO que o a gás porque a cozinha 2 é fechada, e isso confirma o efeito do combustível.",
+    "Comparando as cozinhas 1 e 2, o tipo de fogão explica a diferença, e a ventilação não teve influência."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Para saber que partículas há no ar da escola, alunos prenderam fitas adesivas por uma semana em três locais e as observaram com lupa sobre papel branco, contando os pontos escuros por centímetro quadrado.",
+   "comando": "Explique por que esses resultados são importantes para a saúde respiratória e proponha uma medida para os locais mais afetados.",
+   "ref": "Partículas inaladas podem irritar o nariz, a traqueia e os brônquios e chegar aos pulmões, causando tosse e crises de asma. A janela da rua tem mais pontos, então poderia ficar fechada em horários de trânsito intenso, com ventilação por outro lado da sala e limpeza úmida."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um levantamento comparou crianças de 6 a 10 anos de dois bairros de uma cidade paulista: um próximo a uma rodovia de caminhões e outro afastado, com muitas árvores. Um pesquisador afirmou que 'a diferença prova que a poluição causa asma'.",
+   "comando": "Explique como a poluição pode ter relação com os resultados e o que ainda seria preciso verificar para sustentar a afirmação.",
+   "ref": "Os poluentes da rodovia irritam as vias aéreas e podem desencadear crises, o que é compatível com a diferença. Para afirmar a causa, seria preciso comparar também outros fatores, como fumo em casa, mofo, alergias e renda, e acompanhar as crianças ao longo do tempo."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma estudante explicou: 'Se eu respiro pelo nariz, a poluição não entra no corpo, porque o nariz filtra tudo'. O professor entregou um esquema com o caminho do ar até os pulmões e perguntou onde as partículas podem ser retidas e onde podem passar.",
+   "comando": "Explique onde as partículas podem ser retidas nas vias respiratórias e por que as menores ainda assim representam um risco maior.",
+   "ref": "Pelos e muco no nariz e na traqueia retêm muitas partículas maiores, que depois são eliminadas pelos cílios, espirro ou tosse. As partículas muito pequenas passam por essas barreiras, chegam aos alvéolos e podem até passar para o sangue."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Na estação seca, com fumaça de queimadas no ar e umidade muito baixa, a UBS de Ribeirão Preto notou aumento de pessoas com tosse seca, garganta irritada e dificuldade para respirar. A equipe registrou a umidade relativa do ar e os atendimentos em três dias.",
+   "comando": "Explique por que ar seco com fumaça agrava os sintomas respiratórios e proponha duas orientações à população.",
+   "ref": "A fumaça tem partículas e gases que irritam as vias aéreas, e o ar muito seco ressecam o muco que as protege, deixando a mucosa vulnerável. Convém beber água, evitar exercício nas horas mais secas e, quando possível, umidificar o ambiente."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um trabalhador que lida com poeira em uma pedreira precisa escolher entre três protetores respiratórios. Em um teste de laboratório, mediu-se a porcentagem de partículas de 2,5 µm retidas por cada um, quando bem ajustados ao rosto.",
+   "comando": "Escolha o protetor mais adequado, justifique com os dados e explique o cuidado de uso necessário para que o resultado seja válido.",
+   "ref": "O respirador PFF2 é o mais adequado por reter 95% das partículas, contra 30% e 60%. Ele só tem esse desempenho se estiver bem ajustado ao rosto, sem frestas laterais, e for trocado quando úmido ou sujo."
+  }
+ ],
+ "8º ANO|2|Identificar os órgãos do sistema digestório e sua função na digestão e absorção dos nutrientes.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula prática, um grupo misturou amido de milho com saliva em tubos mantidos em condições diferentes. Após 10 minutos, pingaram iodo, que fica azul-escuro quando há amido. Em um dos tubos, a turma usou vinagre para imitar a acidez do estômago.",
+   "comando": "Por que a digestão do amido iniciada na boca é interrompida no estômago, de acordo com os resultados?",
+   "alts": [
+    "A acidez altera a enzima da saliva, que deixa de agir, como no tubo com vinagre, que manteve o amido",
+    "O estômago absorve o amido ainda inteiro, e por isso o tubo com vinagre ficou azul pela falta de saliva",
+    "A baixa temperatura do estômago desativa a enzima, como se vê no tubo mantido a 5 °C, que ficou azul fraco",
+    "O vinagre se mistura ao amido e forma um composto que não reage ao iodo, por isso o tubo ficou azul-escuro"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma turma montou um modelo de intestino com três tubos de papel-toalha de mesmo comprimento e mediu a superfície de contato de cada um. O primeiro era liso, o segundo foi dobrado em pregas e o terceiro foi dobrado e recebeu franjas, imitando vilosidades.",
+   "comando": "Que relação entre estrutura e função o modelo sustenta, e por que ela é importante para o intestino delgado?",
+   "alts": [
+    "As vilosidades aceleram a passagem do alimento, e essa velocidade maior eleva a quantidade absorvida no intestino",
+    "As pregas e franjas produzem enzimas digestivas, e essa produção maior deixa o alimento pronto para o sangue",
+    "Pregas e vilosidades ampliam a área de contato, permitindo absorver mais nutrientes sem alongar tanto o órgão",
+    "O aumento de superfície torna o intestino mais comprido, o que deixa o alimento mais tempo e reduz a absorção"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Na cantina, Pedro comparou três lanches usando as listas de ingredientes dos rótulos e das receitas. Ele sabe que alimentos in natura são os pouco alterados, os processados são feitos com sal, açúcar ou óleo adicionados, e os ultraprocessados levam ingredientes e aditivos que não existem na cozinha de casa.",
+   "comando": "Qual classificação é sustentada pelas listas de ingredientes?",
+   "alts": [
+    "O pão artesanal é ultraprocessado, pois passou por forno e fermentação e perdeu parte dos nutrientes originais",
+    "O biscoito é ultraprocessado, e o pão artesanal é processado por receber sal, mas ter ingredientes caseiros",
+    "A maçã é processada por ter sido colhida, lavada e transportada até a cantina antes de chegar ao consumo",
+    "O biscoito é processado, pois leva açúcar e gordura, como uma receita de bolo que se faz na cozinha de casa"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Para entender a função da bile, uma turma agitou tubos com água e óleo e observou o tamanho das gotas de óleo depois de dois minutos. No segundo tubo foi adicionado um pouco de detergente, usado como modelo da bile, que é produzida no fígado e guardada na vesícula.",
+   "comando": "Que função da bile o experimento representa e qual é uma limitação do modelo?",
+   "alts": [
+    "Representa a emulsificação, que quebra a gordura em gotículas para a ação das enzimas; o detergente não é produzido pelo corpo",
+    "Representa a digestão química da gordura em ácidos graxos pela bile, mas o detergente não passa pelo intestino",
+    "Representa a absorção da gordura pela parede do intestino, mas o modelo não tem sangue para levar as gotas",
+    "Representa a produção de enzimas pelo pâncreas, mas o detergente não tem origem em um órgão do corpo humano"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "A escola ofereceu três opções de lanche com energia parecida. Uma nutricionista pediu aos alunos que escolhessem o lanche que mais ajuda na saciedade e no funcionamento do intestino, usando a tabela nutricional de cada porção.",
+   "comando": "Qual escolha é sustentada pelos dados e por quê?",
+   "alts": [
+    "O lanche 3, pois a energia maior fornece mais combustível para o intestino realizar os movimentos de digestão",
+    "O lanche 1, pois a energia intermediária evita excesso, e a manteiga facilita a passagem das fibras no intestino",
+    "O lanche 2, pois a energia menor garante que o alimento seja digerido mais rápido e deixe o estômago vazio",
+    "O lanche 2, pois a fibra estimula os movimentos do intestino e a proteína prolonga a saciedade, com energia semelhante"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Mariana comeu um sanduíche de queijo no lanche. O queijo é fonte de proteínas e gorduras. Para estudar o trajeto, ela consultou uma tabela com enzimas do sistema digestório, o local onde cada uma age e o que ela digere.",
+   "comando": "Explique onde ocorre a digestão das proteínas e das gorduras do queijo e como os nutrientes chegam ao sangue.",
+   "ref": "As proteínas começam a ser digeridas no estômago pela pepsina e terminam no intestino delgado, onde as gorduras são digeridas pela lipase com ajuda da bile. Os nutrientes pequenos (aminoácidos, ácidos graxos) atravessam as vilosidades do intestino e vão para o sangue."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma UBS, a enfermeira explicou que, na diarreia, o conteúdo passa rápido pelo intestino e a pessoa perde muita água. Ela mostrou aos alunos quanto de água chega a cada trecho do tubo digestório e quanto é absorvida em condições normais.",
+   "comando": "Explique por que a diarreia pode causar desidratação e qual função do intestino grosso fica prejudicada.",
+   "ref": "O intestino grosso absorve quase toda a água que sobra (1,4 de 1,5 L). Na diarreia o conteúdo passa rápido e a água não é absorvida, sendo eliminada com sais minerais, o que causa desidratação. Por isso é preciso repor líquidos e procurar a UBS."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um estudo na escola comparou três grupos de voluntários adultos que seguiram cardápios diferentes por duas semanas, com mais ou menos alimentos ricos em fibras, como frutas, verduras, feijão e cereais integrais. Mediu-se o tempo que o alimento leva para percorrer o tubo digestório.",
+   "comando": "Explique como as fibras alteram o trânsito intestinal e sugira um cardápio coerente com os dados.",
+   "ref": "As fibras não são digeridas, aumentam o volume do bolo fecal e retêm água, o que estimula os movimentos do intestino e reduz o tempo de trânsito de 70 para 30 horas. O cardápio deve incluir frutas, verduras, feijão e grãos integrais."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Para visualizar o caminho do lanche, uma turma montou um modelo: amassaram pão com água dentro de um saco plástico e espremeram a pasta dentro de uma meia-calça sobre um copo. Anotaram o que atravessou o tecido e o que ficou retido.",
+   "comando": "Diga que partes do corpo cada etapa do modelo representa e aponte uma limitação do modelo.",
+   "ref": "O saco amassado representa a digestão mecânica, feita pela mastigação e pelos movimentos do estômago. A meia-calça representa a parede do intestino, que deixa passar apenas partículas pequenas (absorção). O modelo não tem enzimas nem sangue, então não mostra a digestão química nem o transporte dos nutrientes."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "A cantina vende laranja inteira e néctar de laranja de caixa. Os alunos compararam os rótulos de uma porção de cada um e discutiram qual opção escolher para a merenda, sabendo que o intestino e a saúde dependem de fibras, e que o excesso de açúcar e de sódio deve ser evitado.",
+   "comando": "Qual opção você escolheria e por quê? Use os dados e a classificação dos alimentos.",
+   "ref": "Escolheria a laranja inteira, alimento in natura, que tem 2,4 g de fibras e nenhum açúcar adicionado. O néctar é processado ou ultraprocessado, com 14 g de açúcar adicionado e quase nenhuma fibra, o que prejudica o intestino e a saciedade."
+  }
+ ],
+ "8º ANO|2|Reconhecer a função dos nutrientes no organismo humano.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Luana joga vôlei no time da escola e machucou o músculo da coxa em um treino. A nutricionista da UBS do bairro sugeriu que ela escolhesse, entre três refeições típicas do almoço, a que mais ajudasse a reconstruir os tecidos do corpo. Ela comparou a composição de cada prato.",
+   "comando": "Qual escolha é a mais adequada para esse objetivo, de acordo com os dados?",
+   "alts": [
+    "O prato 2, pois tem mais proteínas, que fornecem os aminoácidos usados na construção e no reparo dos tecidos, como o muscular.",
+    "O prato 1, pois tem mais carboidratos, que fornecem a energia necessária para que as células musculares se reconstruam depois da lesão.",
+    "O prato 3, pois tem mais gorduras, que formam reserva de energia e se transformam em músculo durante a recuperação do corpo.",
+    "O prato 1, pois tem menos gorduras e proteínas, o que evita sobrecarga do organismo e deixa o músculo livre para se recuperar."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma campanha de saúde na escola, uma enfermeira reuniu o consumo diário de ferro e a taxa de hemoglobina de quatro estudantes que toparam participar. Ela sabe que o ferro é parte da hemoglobina, a proteína do sangue que transporta o gás oxigênio, e pediu que a turma interpretasse a tabela com cuidado.",
+   "comando": "Qual das afirmações a seguir NÃO é sustentada por esses dados?",
+   "alts": [
+    "Na amostra de quatro estudantes, quem consome menos ferro na dieta tem menor taxa de hemoglobina no sangue.",
+    "O fato de o ferro fazer parte da hemoglobina torna plausível a relação que aparece na tabela entre dieta e sangue.",
+    "Os dados provam que a falta de ferro é a causa da hemoglobina baixa e descartam outras causas, como infecções ou perda de sangue.",
+    "Para testar se a dieta causa a diferença, seria preciso comparar grupos parecidos que diferissem no consumo de ferro."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Na cantina de uma escola de Santos, três opções de bebida à base de laranja foram comparadas por um grupo de estudantes que consultou os rótulos e uma tabela de composição de alimentos. Eles querem entender o que cada opção oferece além da energia dos açúcares.",
+   "comando": "Que conclusão é sustentada pelos dados reunidos pelo grupo?",
+   "alts": [
+    "O suco natural coado é o mais completo porque tem mais vitamina C e mais fibras do que a laranja, que perde nutrientes ao ser comida inteira.",
+    "O refresco em pó tem mais açúcares e por isso é o que fornece mais nutrientes reguladores para o funcionamento do corpo.",
+    "As três opções são equivalentes para o corpo, pois a quantidade de açúcares é parecida e a energia fornecida por elas é a mesma.",
+    "A laranja inteira fornece açúcares com fibras e vitamina C, e o refresco em pó fornece energia sem esses nutrientes."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma pesquisadora acompanhou quatro grupos de adolescentes de uma cidade paulista durante um ano. Ela variou o consumo de cálcio na alimentação (leite, couve, sardinha) e o tempo de exposição ao Sol, cuja luz ajuda o corpo a produzir vitamina D. Ao final, mediu um índice de densidade dos ossos.",
+   "comando": "Que conclusão é compatível com os resultados do estudo?",
+   "alts": [
+    "O cálcio garante ossos fortes por si mesmo, pois os grupos 1 e 2 têm índices altos, e a exposição ao Sol não altera o resultado.",
+    "Cálcio na dieta e exposição ao Sol contribuem para ossos mais densos, e o índice menor é o do grupo com pouco dos dois fatores.",
+    "A luz do Sol substitui o cálcio da dieta, porque o grupo 3 mantém índice alto mesmo com pouco cálcio no cardápio.",
+    "A vitamina D é a fonte do cálcio dos ossos, e por isso o grupo 2 tem índice maior que o grupo 3 mesmo comendo mais cálcio."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "No rótulo de uma barra de cereais, a porção de 30 g traz as massas de cada nutriente indicadas na tabela. Para estimar a energia, uma aluna usou os valores médios: 4 kcal por grama de carboidrato, 4 kcal por grama de proteína e 9 kcal por grama de gordura.",
+   "comando": "Qual interpretação do rótulo é a mais adequada?",
+   "alts": [
+    "Os carboidratos fornecem cerca de dois terços da energia da barra, pois representam 20 g de uma porção de 30 g de alimento.",
+    "As gorduras fornecem a maior parte da energia, pois têm mais calorias por grama, mesmo estando em menor massa na porção.",
+    "Os carboidratos dão a maior parte da energia, mas as gorduras, com menos da metade da massa, dão quase tanta energia.",
+    "As proteínas fornecem quase a mesma energia que as gorduras, pois ambas são nutrientes que o corpo usa na construção de tecidos."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Joana comparou três itens que costumam aparecer na lancheira dos colegas: uma banana, um pão francês e um pacote de biscoito recheado. Ela leu os ingredientes de cada um e anotou o que encontrou, para classificá-los segundo o grau de processamento.",
+   "comando": "Classifique os três itens (in natura, processado ou ultraprocessado) e justifique com os ingredientes, explicando uma diferença no que cada um oferece ao organismo.",
+   "ref": "A banana é in natura, o pão é processado (poucos ingredientes culinários) e o biscoito é ultraprocessado (aditivos como aromatizantes e corantes). A banana oferece vitaminas, minerais e fibras, enquanto o biscoito fornece sobretudo açúcar e gordura, com poucos nutrientes reguladores."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "No século XVIII, muitos marinheiros em viagens longas ficavam doentes, com gengivas sangrando e feridas que demoravam a sarar. Um médico dividiu seis marinheiros doentes em grupos, deu a cada grupo um complemento diferente à comida e, após seis dias, registrou quem melhorou.",
+   "comando": "Interprete os resultados do experimento, indicando que tipo de nutriente fazia falta e por que o cuidado de manter a mesma comida base nos grupos foi importante.",
+   "ref": "Só o grupo que recebeu frutas cítricas se recuperou, indicando falta de vitamina C, nutriente regulador ligado à formação do colágeno e à cicatrização. Manter a mesma comida base garante que a diferença se deva ao complemento e não a outra variável."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "O sal de cozinha vendido no Brasil recebe iodo por lei. O iodo é usado pelo corpo para produzir hormônios da tireoide, uma glândula do pescoço. Em um estudo hipotético, duas comunidades foram comparadas, uma com sal iodado e outra com sal sem iodo.",
+   "comando": "Explique a diferença entre as comunidades e a função do iodo, citando uma limitação do estudo.",
+   "ref": "A comunidade B tem muito mais aumento da tireoide porque o iodo é matéria-prima dos hormônios dessa glândula, e sua falta a faz crescer. O estudo compara só duas comunidades, e outros fatores, como a água e a alimentação, podem ter influência."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "A combinação de arroz com feijão é comum na mesa dos brasileiros. As proteínas são formadas por aminoácidos, e alguns deles o corpo não consegue produzir. A tabela mostra o teor de dois desses aminoácidos em cada alimento.",
+   "comando": "Explique por que comer arroz e feijão juntos é nutricionalmente vantajoso em comparação com comer só um deles.",
+   "ref": "O arroz é pobre em um aminoácido essencial que o feijão tem em abundância, e o feijão é pobre no outro, que o arroz fornece. Juntos, os alimentos se complementam e oferecem os aminoácidos que o corpo precisa para formar suas proteínas."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Rafael vai treinar corrida às 17h e quer um lanche às 15h30 que dê energia e ajude a manter os músculos. A tabela mostra a composição de quatro alimentos disponíveis em casa, em porções de 100 g.",
+   "comando": "Monte um lanche com dois ou três desses alimentos e justifique sua escolha, explicando a função dos nutrientes principais de cada alimento escolhido.",
+   "ref": "Uma boa escolha é pão integral com ovo e uma banana: o pão e a banana fornecem carboidratos para a energia do treino, e o ovo traz proteínas para a manutenção e o reparo dos músculos. A gordura do queijo fornece muita energia, mas em excesso antes do treino pode pesar."
+  }
+ ],
+ "8º ANO|2|Reconhecer os órgãos do sistema respiratório e suas funções no processo de inspiração e expiração.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na feira de ciências da escola, Bruno apresentou o pulmão de garrafa: uma garrafa PET sem fundo, com um balão preso ao gargalo e outro balão de borracha larga fechando a base. Ele puxou e soltou o balão da base várias vezes e anotou o que ocorreu.",
+   "comando": "Qual interpretação relaciona corretamente o modelo ao que ocorre no corpo humano?",
+   "alts": [
+    "Quando o diafragma desce, o volume da caixa torácica aumenta, a pressão interna cai e o ar entra nos pulmões.",
+    "Quando o diafragma desce, os pulmões puxam o ar por contração própria, o que aumenta o volume da caixa torácica.",
+    "Quando o diafragma sobe, o volume da caixa torácica aumenta, a pressão interna cai e o ar entra nos pulmões.",
+    "Quando o diafragma desce, o ar é empurrado para fora porque a pressão interna fica maior que a pressão externa."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma educadora física comparou a respiração de um aluno em repouso e durante uma corrida na pista da escola. Ela contou os movimentos respiratórios em um minuto e estimou, com um aparelho, o volume de ar de cada movimento.",
+   "comando": "Qual conclusão sobre a ventilação por minuto é sustentada pelos dados?",
+   "alts": [
+    "A ventilação aumentou cerca de 2,5 vezes, porque a frequência subiu e o volume de cada movimento ficou praticamente estável.",
+    "A ventilação aumentou cerca de 5 vezes, pois a profundidade passou de 0,5 L para 2,5 L, sem influência da frequência.",
+    "A ventilação aumentou porque os músculos passaram a produzir menos gás carbônico, o que exige inspirações mais profundas.",
+    "A ventilação foi de 8 L para 100 L por minuto, pois frequência e volume subiram, suprindo os músculos."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Pesquisadores fictícios mediram a velocidade com que o muco, que prende partículas do ar, é empurrado pelos cílios da traqueia para fora das vias respiratórias. Eles compararam grupos com diferentes hábitos em relação ao cigarro.",
+   "comando": "Qual interpretação é sustentada pelos dados?",
+   "alts": [
+    "A fumaça elimina o muco da traqueia, o que explica a menor velocidade e deixa o ar que chega aos pulmões mais limpo.",
+    "A fumaça reduz a eficiência da limpeza do muco, e a velocidade volta a subir quando a exposição cessa.",
+    "A menor velocidade no fumante pesado mostra que o cigarro destrói os alvéolos, impedindo a troca de gases no pulmão.",
+    "O ex-fumante tem velocidade igual à do não fumante, o que mostra que os efeitos da fumaça são totalmente reversíveis."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um grupo de alpinistas partiu do litoral paulista e subiu até uma cidade andina para treinar. Durante a viagem, um médico mediu a pressão do ar, a porcentagem de oxigênio e a frequência respiratória de repouso de um deles em três locais.",
+   "comando": "Que explicação é compatível com a mudança de frequência respiratória do alpinista?",
+   "alts": [
+    "Em altitude a porcentagem de oxigênio no ar é menor, e por isso o corpo precisa respirar mais vezes por minuto.",
+    "O ar mais frio da montanha enrijece as vias respiratórias, o que obriga o alpinista a respirar mais vezes por minuto.",
+    "Com pressão menor, cada inspiração traz menos moléculas de oxigênio, mesmo com a mesma porcentagem, e a respiração acelera.",
+    "Em altitude o pulmão aumenta de tamanho, e isso faz o ar entrar mais depressa e a frequência respiratória subir."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Na oficina de ciências, Júlia usou balões novos e balões muito esticados para representar pulmões saudáveis e pulmões que perderam elasticidade. Ela puxou a base do modelo com a mesma força em cada caso e mediu quanto ar entrou e quanto ficou retido.",
+   "comando": "Qual interpretação dos resultados é sustentada pelos dados do modelo?",
+   "alts": [
+    "Sem elasticidade, o pulmão não se esvazia bem e retém ar, o que reduz a renovação do ar a cada respiração.",
+    "O balão esticado enche menos na inspiração, porque a perda de elasticidade diminui a força do diafragma.",
+    "O balão esticado retém mais ar porque os alvéolos aumentaram de tamanho, o que melhora a troca de gases.",
+    "A entrada de ar no balão esticado é igual à do novo, então a falha na renovação do ar deve estar na inspiração."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Marina mediu a respiração e os batimentos do coração do irmão em repouso e logo depois de ele subir três lances de escada correndo. Ela queria entender por que o corpo muda o ritmo durante o esforço.",
+   "comando": "Explique por que o ritmo respiratório mudou e que relação ele tem com o sangue e com os músculos.",
+   "ref": "Os músculos em esforço consomem mais oxigênio e produzem mais gás carbônico, e isso faz a respiração e o coração acelerarem. Assim, mais ar passa pelos pulmões e o sangue leva mais oxigênio aos músculos e retira o gás carbônico."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma turma montou o pulmão de garrafa seguindo uma sequência de passos e depois discutiu o que cada parte representa. A professora pediu que cada grupo avaliasse o modelo cientificamente.",
+   "comando": "Relacione cada parte do modelo a um órgão do corpo e aponte uma limitação do modelo.",
+   "ref": "A garrafa representa a caixa torácica, a borracha do fundo o diafragma e o balão interno o pulmão; puxar a borracha enche o balão e soltar o esvazia. O modelo não tem traqueia nem alvéolos e não representa as trocas gasosas, e o pulmão real não é um saco único."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma pesquisa fictícia com crianças de um bairro, os pesquisadores compararam quantas apresentaram tosse frequente em casas onde algum adulto fuma dentro de casa e em casas onde ninguém fuma.",
+   "comando": "Interprete os dados e explique, com base no funcionamento do sistema respiratório, por que fumar em ambiente fechado afeta quem não fuma. Proponha uma ação.",
+   "ref": "A tosse foi mais frequente em casas com fumantes, o que sugere que a fumaça inalada pelos não fumantes irrita as vias respiratórias e prejudica os cílios que limpam o ar. Uma ação é não fumar em ambientes fechados e ventilar a casa."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma clínica esportiva fictícia, mediu-se a capacidade pulmonar, o maior volume de ar que cabe nos pulmões, de três adultos da mesma idade e altura. A equipe quer explicar a diferença entre eles.",
+   "comando": "Compare os resultados e explique dois fatores que podem ter produzido essas diferenças.",
+   "ref": "O nadador tem a maior capacidade, o que pode vir do treino que fortalece os músculos respiratórios e amplia a ventilação. O fumante tem a menor, pois a fumaça lesa as vias aéreas e os alvéolos e reduz o volume de ar que o pulmão comporta."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um residente de medicina fictício coletou amostras do sangue que chega aos pulmões e do sangue que sai deles. Os valores abaixo indicam a pressão de cada gás no sangue, em milímetros de mercúrio.",
+   "comando": "Explique o que ocorreu com cada gás ao passar pelos pulmões e por que os alvéolos são adequados para esse processo.",
+   "ref": "No pulmão, o oxigênio passa do ar dos alvéolos para o sangue e o gás carbônico passa do sangue para o ar, por difusão. Os alvéolos têm paredes finas e muitos capilares, o que dá grande área de contato e facilita essas trocas."
+  }
+ ],
+ "8º ANO|3|Analisar o papel da inclinação do eixo de rotação da Terra em relação à sua órbita na ocorrência das estações do ano.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Um estudante comparou a duração do dia em três cidades nos solstícios de dezembro e junho, usando um almanaque. Ele quer relacionar as diferenças com a latitude e com a inclinação do eixo da Terra em relação à órbita.",
+   "comando": "Qual conclusão os dados sustentam?",
+   "alts": [
+    "Quanto maior a latitude, mais a Terra se afasta do Sol em dezembro, e isso explica o dia mais longo",
+    "Quanto maior a latitude, maior a diferença na duração do dia, efeito da inclinação do eixo",
+    "A diferença aparece no Hemisfério Sul, pois no Equador a inclinação do eixo deixa de existir",
+    "O dia mais longo em dezembro prova que as cidades de maior latitude recebem mais calor o ano inteiro"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Muitas pessoas acham que o verão ocorre quando a Terra está mais perto do Sol. Para testar essa ideia, um grupo reuniu a distância média Terra-Sol em dois meses e a temperatura média de São Paulo e de Paris nesses meses.",
+   "comando": "Qual dado do quadro contradiz a ideia de que a distância ao Sol causa as estações?",
+   "alts": [
+    "Em julho, com a Terra mais distante, a temperatura de São Paulo cai, o que confirma que a distância define as estações",
+    "Em janeiro Paris está mais fria que São Paulo porque fica mais longe do Sol que o Brasil nesse mês",
+    "Em julho Paris é mais quente que São Paulo, pois o Hemisfério Norte se aproxima do Sol por causa da órbita",
+    "Em janeiro, com a Terra mais próxima do Sol, é verão em São Paulo e inverno em Paris no mesmo momento"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um modelo com lanterna, uma prancheta recebeu o feixe de luz em três inclinações diferentes, e os alunos mediram a área iluminada e a temperatura de um termômetro preso na prancheta após 5 minutos.",
+   "comando": "Qual afirmação relaciona corretamente o resultado do modelo ao que ocorre com a Terra?",
+   "alts": [
+    "Raios mais inclinados espalham a energia em área maior e aquecem menos, como no inverno",
+    "Raios mais inclinados concentram a energia em área menor, e por isso aquecem menos o hemisfério inclinado",
+    "A luz mais inclinada vem de uma lanterna mais distante, e isso explica a temperatura menor no inverno",
+    "Raios mais diretos iluminam área maior, o que explica o aquecimento maior no hemisfério voltado para o Sol"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Num modelo da órbita da Terra, uma bola com palito inclinado dá a volta em uma lanterna, mantendo o palito sempre apontando para a mesma direção. Os estudantes marcaram, para quatro posições, a latitude onde os raios chegam na vertical (Sol a pino).",
+   "comando": "Em qual posição é verão na maior parte do Brasil, e que característica acompanha essa posição?",
+   "alts": [
+    "P1, pois com o Sol a pino ao norte o Brasil se aproxima do Sol e recebe raios mais intensos",
+    "P2, pois com o Sol a pino no Equador as regiões têm dia e noite iguais e a temperatura máxima",
+    "P3, pois o Hemisfério Sul recebe raios mais diretos e os dias ficam mais longos que as noites",
+    "P4, pois com o Sol a pino no Equador o Brasil inteiro recebe os raios na vertical e fica mais quente"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma cientista fez uma simulação para prever o que ocorreria em São Paulo se a inclinação do eixo da Terra fosse diferente da atual, mantendo a órbita e a distância ao Sol iguais. Ela registrou a diferença entre a temperatura média do mês mais quente e a do mais frio.",
+   "comando": "Qual previsão é coerente com os dados da simulação para um eixo sem inclinação?",
+   "alts": [
+    "As estações seriam mais intensas, porque a Terra passaria a ficar mais perto do Sol em parte da órbita",
+    "As estações praticamente desapareceriam, com insolação parecida o ano todo, mesmo com órbita elíptica",
+    "As estações seriam definidas pela distância ao Sol, que passaria a ser o fator da variação térmica",
+    "As estações continuariam como hoje, pois a órbita elíptica mantém a diferença entre os meses sozinha"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Natal (RN), perto do Equador, tem temperatura média de 27 °C em janeiro e 25 °C em julho, enquanto Porto Alegre tem cerca de 25 °C em janeiro e 14 °C em julho. Uma estudante achou estranho que cidades do mesmo país tenham variações tão diferentes ao longo do ano.",
+   "comando": "Explique a diferença de variação entre as duas cidades com base na inclinação do eixo da Terra.",
+   "ref": "Por causa da inclinação do eixo, a incidência dos raios muda ao longo do ano conforme a latitude. Perto do Equador, os raios chegam quase na vertical o ano todo e a temperatura varia pouco; em Porto Alegre, mais ao sul, a inclinação dos raios muda bastante e a variação é maior."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em Sydney, na Austrália, muitas pessoas vão à praia no Natal e comem ceia ao ar livre, enquanto na Alemanha é comum nevar nessa data. Um aluno disse que isso ocorre porque a Austrália fica mais perto do Sol que a Alemanha em dezembro.",
+   "comando": "Avalie a afirmação do aluno e explique corretamente por que as estações são opostas nos dois locais.",
+   "ref": "A afirmação está errada, pois a distância ao Sol é praticamente a mesma para os dois locais. As estações são opostas porque o eixo inclinado faz um hemisfério receber raios mais diretos enquanto o outro recebe raios mais inclinados; em dezembro o Sul está voltado ao Sol e o Norte está afastado."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Os moradores de Ushuaia, na Argentina, que fica a 55° S, relatam dias muito longos em dezembro e muito curtos em junho. Uma aluna colheu os dados de duração do dia e quer compreender por que a diferença é maior que a de São Paulo.",
+   "comando": "Explique por que a diferença de duração do dia é maior em Ushuaia que em São Paulo.",
+   "ref": "Com a inclinação do eixo, quanto mais longe do Equador, mais a duração do dia varia ao longo do ano. Ushuaia, a 55° S, tem diferença maior (10h30 contra 2h30), pois em dezembro fica muito tempo sob a luz e em junho o Sol permanece pouco acima do horizonte."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um aluno disse: \"nos dias de verão no Brasil a Terra está mais perto do Sol, por isso faz mais calor\". A professora pediu que ele conferisse com dados: no mês de janeiro, quando a Terra está mais próxima, a distância é de 147 milhões de km, e em julho é de 152 milhões de km.",
+   "comando": "Mostre por que a afirmação não é adequada e indique qual fator explica o verão.",
+   "ref": "A diferença de distância é de apenas 5 milhões de km, pequena em comparação com os 150 milhões. Além disso, no mesmo mês é inverno no Hemisfério Norte, o que mostra que a distância não decide as estações. O verão ocorre porque o eixo inclinado deixa o Hemisfério Sul recebendo raios mais diretos."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em uma aula, a professora girou uma bola com o eixo inclinado em torno de uma lanterna, mas um aluno segurou o palito sempre apontando para a lanterna. A turma notou que, nessa versão, o mesmo hemisfério ficava iluminado de modo diferente do que ocorre na Terra.",
+   "comando": "Explique o erro do modelo do aluno e o que acontece na Terra real com a direção do eixo ao longo da órbita.",
+   "ref": "Na Terra real o eixo mantém a mesma direção no espaço durante toda a órbita. Por isso, em uma parte do ano o Hemisfério Sul fica voltado para o Sol e, seis meses depois, é o Norte; no modelo do aluno o palito acompanhava a lanterna e sempre o mesmo hemisfério recebia luz."
+  }
+ ],
+ "8º ANO|3|Analisar os efeitos do aquecimento global no planeta.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na feira de ciências, Rafael montou dois potes de vidro idênticos, cada um com um termômetro, e os deixou ao sol da manhã sobre a mesma bancada. Um pote foi coberto com filme plástico transparente e o outro ficou aberto. Os alunos leram as temperaturas a cada 10 minutos.",
+   "comando": "Qual conclusão é sustentada pelos dados do experimento?",
+   "alts": [
+    "O filme plástico produziu calor próprio, e por isso o pote coberto esquentou mais rápido",
+    "A cobertura dificultou a saída do calor, e a diferença aumentou com o tempo",
+    "O pote aberto absorveu menos radiação solar, e a diferença entre os potes se manteve fixa",
+    "O pote coberto recebeu mais luz do sol, e a diferença entre os potes aumentou com o tempo"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma estação de monitoramento (valores aproximados, para estudo) registrou a concentração de gás carbônico (CO₂) no ar em três anos. Um grupo de alunos calculou o aumento por ano entre os registros e discutiu a relação com a temperatura média global, que também foi anotada.",
+   "comando": "Qual interpretação dos dados é coerente?",
+   "alts": [
+    "O CO₂ subiu mais rápido de 1990 a 2020 e a temperatura subiu junto, coerente com a retenção de calor",
+    "O CO₂ aumentou em ritmo constante, e a temperatura acompanhou, o que prova que o gás causa o aquecimento",
+    "O CO₂ aumentou mais rápido até 1990, e a temperatura subiu depois, o que mostra um efeito retardado",
+    "O CO₂ aumentou mais rápido de 1990 a 2020, e a temperatura subiu junto, o que indica que o gás é liberado pelos oceanos"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Dois alunos queriam saber qual tipo de derretimento eleva o nível dos oceanos. No copo A, colocaram um cubo de gelo flutuando na água, representando o gelo do mar. No copo B, apoiaram o gelo sobre pedras acima da água, representando geleiras sobre a terra. Deixaram derreter.",
+   "comando": "O que o experimento permite concluir sobre o nível do mar?",
+   "alts": [
+    "O derretimento do gelo flutuante adiciona água ao mar e eleva seu nível; o gelo sobre a terra quase não altera",
+    "O derretimento de qualquer gelo eleva o nível do mar, pois a água líquida ocupa mais volume que o gelo",
+    "O derretimento do gelo sobre o continente é irrelevante, pois a água escoa para outros rios e lagos",
+    "O derretimento do gelo sobre o continente soma água ao mar e eleva seu nível; o flutuante quase não altera"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Para a feira de sustentabilidade, uma turma comparou as emissões de CO₂ por passageiro em um trajeto diário. Os números abaixo são estimativas para estudo. Uma aluna afirma que 'transporte coletivo sempre emite menos', e o grupo quer testar a ideia com os dados.",
+   "comando": "Qual afirmação é sustentada pela tabela?",
+   "alts": [
+    "Ônibus emite menos por passageiro em qualquer lotação, pois o veículo é maior e dilui as emissões",
+    "Carro com quatro pessoas emite menos que ônibus lotado, pois o motor menor consome menos combustível",
+    "Ônibus lotado emite menos que carro com quatro pessoas, mas ônibus quase vazio emite mais que carro com um",
+    "Ônibus lotado e carona de quatro pessoas emitem a mesma quantidade, pois ambos reduzem a emissão à metade"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Mariana comparou o efeito do gás carbônico produzido por vinagre e bicarbonato em duas garrafas expostas ao sol. A garrafa A ficou com ar comum, a garrafa B recebeu o CO₂. Ela concluiu que 'o CO₂ aumentou a temperatura em 7 °C'. O professor questionou o procedimento.",
+   "comando": "Que falha do procedimento enfraquece a conclusão de Mariana?",
+   "alts": [
+    "A cor das garrafas também difere, e a escura absorve mais radiação e esquenta mais",
+    "A garrafa A recebeu menos luz do que a garrafa B, o que pode explicar a diferença de temperatura",
+    "O CO₂ é produzido por reação química, e isso aquece a garrafa independentemente do efeito estufa",
+    "A temperatura foi medida em um instante, e o CO₂ não esquenta a garrafa no intervalo curto do teste"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em um dia de verão, a prefeitura mediu a temperatura do ar às 14h em quatro pontos de São Paulo. Moradores do centro reclamam do calor e pedem soluções. Os técnicos observaram que o chão do parque é coberto por vegetação e que o das avenidas é de asfalto e concreto.",
+   "comando": "Explique a diferença de temperatura entre os pontos e proponha uma medida para reduzir o calor no centro.",
+   "ref": "Áreas com asfalto e concreto absorvem e armazenam mais calor e têm menos sombra e evaporação, formando ilhas de calor. Plantar árvores e ampliar áreas verdes sombreia o solo e resfria o ar pela evapotranspiração."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Santos monitora o nível do mar desde 1990. Em 30 anos, o nível médio subiu cerca de 9 cm, enquanto a prefeitura estuda obras para áreas de baixada. Os cientistas indicam duas causas físicas principais ligadas ao aquecimento do planeta.",
+   "comando": "Estime a taxa média anual de aumento e explique duas causas do aumento do nível do mar associadas ao aquecimento global.",
+   "ref": "A taxa média é cerca de 0,3 cm por ano (9 cm em 30 anos). Duas causas são a dilatação térmica da água aquecida e o derretimento de geleiras e calotas continentais, que adiciona água ao oceano."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Produtores de café do sul de Minas e do interior paulista observaram que, nas safras mais quentes, o rendimento por hectare caiu. A cooperativa reuniu os dados abaixo e quer orientar os agricultores sobre como lidar com o problema.",
+   "comando": "Descreva a tendência dos dados e diferencie uma ação de mitigação de uma ação de adaptação para o produtor.",
+   "ref": "Quanto maior a temperatura média, menor a produção, que caiu de 32 para 22 sacas. Mitigação reduz as causas, como diminuir emissões e plantar árvores; adaptação ajusta a lavoura aos efeitos, como sombrear o cafezal ou usar variedades resistentes."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "A represa do Sistema Cantareira abastece milhões de pessoas. Um pesquisador descreve uma cadeia de eventos associada a períodos de seca prolongados, relacionando o aumento da temperatura com a água disponível para a população da Grande São Paulo.",
+   "comando": "Explique como o aquecimento global pode reduzir a água disponível, seguindo a cadeia de eventos descrita.",
+   "ref": "O aquecimento aumenta a evaporação da represa e do solo e pode alterar o regime de chuvas, reduzindo a água que chega ao reservatório. Com menos água armazenada, o nível cai e é preciso racionar o abastecimento."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "A diretoria de uma escola tem verba para duas ações que reduzem emissões de CO₂: plantar 20 árvores ou trocar 100 lâmpadas antigas por LED. Os alunos calcularam o efeito anual de cada uma e precisam recomendar a decisão.",
+   "comando": "Compare as duas ações com base nos números e recomende uma, justificando a decisão.",
+   "ref": "A troca de lâmpadas reduz um pouco mais (490 contra 400 kg) e começa a valer já no primeiro ano, enquanto as árvores demoram a crescer. Também é possível recomendar as duas ações, pois as árvores trazem sombra e biodiversidade."
+  }
+ ],
+ "8º ANO|3|Diferenciar os eclipses solar e lunar com base nas posições relativas entre Sol, Terra e Lua.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Dois eclipses foram observados por moradores do estado de São Paulo em dias diferentes e descritos em boletins de um observatório. O boletim do eclipse A informa que ele foi visto à noite, por todo o lado noturno da Terra com céu limpo. O boletim do eclipse B informa que ele ocorreu de dia e só foi visto em uma faixa estreita do planeta.",
+   "comando": "Que alternativa relaciona corretamente cada eclipse às posições de Sol, Terra e Lua?",
+   "alts": [
+    "Em A, a Lua está entre o Sol e a Terra; em B, a Terra está entre o Sol e a Lua",
+    "Em A e em B, a Terra está entre o Sol e a Lua, mudando o horário em que a Lua é vista",
+    "Em A, o Sol está entre a Terra e a Lua; em B, a Lua está entre o Sol e a Terra",
+    "Em A, a Terra está entre o Sol e a Lua; em B, a Lua está entre o Sol e a Terra"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma turma de Bauru percebeu que a Lua nova e a Lua cheia acontecem todo mês e perguntou por que não há um eclipse solar e um lunar a cada mês. A professora entregou os dados de quatro meses seguidos de um calendário astronômico fictício e pediu uma hipótese que os explique.",
+   "comando": "Que hipótese explica melhor os dados do calendário?",
+   "alts": [
+    "A Lua só fica entre o Sol e a Terra em alguns meses, porque sua distância à Terra muda e ela escapa do Sol",
+    "A órbita da Lua é inclinada em relação ao plano da órbita da Terra, e o alinhamento exato só ocorre em algumas luas novas e cheias",
+    "A sombra da Terra é pequena demais para chegar à Lua na maioria dos meses, e por isso os eclipses lunares são raros",
+    "A Terra gira e esconde a Lua na maioria dos meses, e eclipses só ocorrem quando o giro da Terra é lento"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Durante um eclipse solar fictício, observadores de três cidades de uma mesma região mediram, com instrumentos, que parte do disco do Sol foi coberta pela Lua. Eles registraram também a distância de cada cidade ao centro da faixa por onde passou a sombra mais escura da Lua.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "alts": [
+    "Quanto mais longe do centro da faixa de sombra, menor a parte do Sol coberta pela Lua",
+    "Quanto mais longe do centro da faixa de sombra, maior a parte do Sol coberta, pois a Lua parece maior",
+    "A parte do Sol coberta é a mesma nas três cidades, pois a Lua tem o mesmo tamanho para os observadores",
+    "A cidade Z viu o eclipse total, pois é a que está mais longe da Lua e a vê menor no céu"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma escola de Sorocaba organizou uma noite de observação para um eclipse lunar total e, meses depois, outra atividade para um eclipse solar parcial. A coordenadora precisava decidir os cuidados para cada evento e pediu à professora de Ciências que relacionasse os cuidados à origem da luz observada.",
+   "comando": "Qual decisão é adequada para cada evento?",
+   "alts": [
+    "Observar o solar a olho nu por pouco tempo, pois a Lua cobre o Sol, e o lunar com filtro, pois a Lua brilha muito",
+    "Observar os dois com filtro, pois em qualquer eclipse a luz que chega aos olhos vem direto do Sol",
+    "Observar o lunar a olho nu e o solar com filtro apropriado, pois só no solar a luz direta do Sol chega aos olhos",
+    "Observar o lunar com filtro e o solar a olho nu quando a cobertura for acima de 50%, pois o Sol já é menos intenso"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Alunos de uma escola em Jundiaí montaram um modelo com uma lanterna (Sol), uma bola grande (Terra) e uma bola pequena (Lua), numa sala escura. Eles testaram três alinhamentos e anotaram o que aconteceu com a sombra, para depois comparar o modelo ao que ocorre no céu.",
+   "comando": "Qual interpretação dos resultados do modelo é INCORRETA?",
+   "alts": [
+    "O teste 3 indica que o eclipse solar ocorre em toda a Terra ao mesmo tempo, pois a Lua cobre o Sol",
+    "O teste 1 representa o eclipse lunar, pois a Lua entra na sombra produzida pela Terra no alinhamento",
+    "O teste 2 representa o eclipse solar, e a sombra pequena mostra que ele é visto em região limitada",
+    "O teste 3 mostra que, sem alinhamento, não há eclipse, em coerência com a órbita inclinada da Lua"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Moradores de duas cidades paulistas conversaram sobre dois eclipses vistos em anos diferentes. Quem viu o eclipse da Lua afirmou que toda a vizinhança o viu ao mesmo tempo. Quem viu o eclipse do Sol disse que foi preciso viajar centenas de quilômetros para ver a cobertura total.",
+   "comando": "Explique por que o eclipse lunar é visto em uma grande parte da Terra e o eclipse solar total é visto apenas em uma faixa estreita.",
+   "ref": "No eclipse lunar, a Lua entra na sombra da Terra, e quem está no lado noturno pode vê-la escurecer. No eclipse solar, a Lua projeta sobre a Terra uma sombra pequena, então só quem está nessa faixa vê o Sol totalmente coberto."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um estudante de Ribeirão Preto disse a um colega que o eclipse lunar acontece na Lua nova, pois é quando a Lua fica escura no céu. O colega duvidou e consultou o calendário do observatório, que informa a fase da Lua em cada tipo de eclipse.",
+   "comando": "Corrija a afirmação do estudante, relacionando a fase da Lua à posição dos astros em cada tipo de eclipse.",
+   "ref": "O eclipse lunar ocorre na Lua cheia, quando a Terra está entre o Sol e a Lua e a Lua entra na sombra da Terra. Na Lua nova, a Lua fica entre o Sol e a Terra, o que pode causar eclipse solar, não lunar."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma jovem de Santos se perguntou por que, mesmo com Lua nova e Lua cheia a cada mês, os eclipses são mais raros. A professora lembrou que a órbita da Lua em torno da Terra tem uma pequena inclinação em relação ao plano da órbita da Terra em torno do Sol.",
+   "comando": "Explique como essa inclinação ajuda a entender a raridade dos eclipses e quando um eclipse pode ocorrer.",
+   "ref": "Por causa da inclinação, na maioria das luas novas e cheias a Lua passa acima ou abaixo da linha entre Sol e Terra, e a sombra não atinge o alvo. O eclipse só ocorre quando a Lua nova ou cheia coincide com a passagem pelo plano da Terra, quando os três astros ficam alinhados."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em alguns eclipses solares, a Lua não cobre todo o disco do Sol, e um anel brilhante fica visível. Um grupo de estudantes de Campinas leu que a distância da Lua à Terra varia ao longo da órbita e comparou o tamanho que a Lua e o Sol parecem ter no céu.",
+   "comando": "Explique, com os dados, por que há eclipses solares totais e eclipses anulares (em anel).",
+   "ref": "Quando a Lua está perto da Terra, seu tamanho aparente (0,56°) é maior que o do Sol (0,53°), e ela cobre todo o disco, causando eclipse total. Quando está longe (0,49°), é menor que o Sol e deixa um anel visível, caracterizando o eclipse anular."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Para uma feira de ciências em Piracicaba, um grupo quer montar um modelo que mostre aos visitantes tanto o eclipse solar quanto o lunar, usando uma lanterna e duas bolas de tamanhos diferentes. Eles dispõem de uma sala escura e de suportes para posicionar os objetos.",
+   "comando": "Descreva como montar o modelo para cada eclipse e o que os visitantes devem observar em cada caso.",
+   "ref": "Para o eclipse solar, alinhar lanterna, bola pequena e bola grande, nessa ordem, e observar a pequena sombra da Lua sobre a Terra. Para o lunar, alinhar lanterna, bola grande e bola pequena, e observar a Lua entrando na sombra da Terra."
+  }
+ ],
+ "8º ANO|3|Diferenciar os movimentos da Terra (rotação, translação e/ou precessão) com base em suas características e efeitos.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma turma de 8º ano comparou, usando um almanaque astronômico, a duração do dia em três cidades no mesmo dia do solstício de verão do hemisfério sul e no solstício de inverno. Os valores abaixo foram organizados para a discussão.",
+   "comando": "Qual explicação é compatível com a variação da duração do dia entre as cidades?",
+   "alts": [
+    "A distância entre a Terra e o Sol muda ao longo do ano e, por isso, o dia fica mais longo nas cidades mais ao sul.",
+    "A inclinação do eixo, com a translação, deixa o Sol mais tempo no horizonte no verão, e o efeito cresce com a latitude.",
+    "A rotação da Terra fica mais lenta no verão e mais rápida no inverno, e o efeito é maior nas cidades mais ao sul.",
+    "A translação aquece mais as regiões ao sul, e o calor adicional alonga o tempo em que o Sol fica visível ali."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um aluno afirmou que o verão acontece porque a Terra fica mais perto do Sol. Para testar essa ideia, a professora apresentou a distância Terra-Sol em dois meses e a estação em duas cidades, uma no hemisfério sul e outra no hemisfério norte.",
+   "comando": "Qual conclusão os dados sustentam sobre a causa das estações?",
+   "alts": [
+    "A distância ao Sol não explica as estações, pois no mesmo mês há verão em um hemisfério e inverno no outro.",
+    "A distância menor em janeiro explica o verão em Curitiba, e a inclinação do eixo explica o inverno em Oslo na mesma data.",
+    "As estações decorrem da variação da distância, e a diferença entre os hemisférios é causada pela rotação da Terra.",
+    "A diferença de 5 milhões de km é grande o bastante para produzir as estações, mas a inclinação do eixo ajusta o efeito."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma escola paulista, a turma fincou um bastão de 100 cm na vertical no pátio e mediu a sombra ao meio-dia solar, no início de cada estação do ano. A cidade fica próxima ao Trópico de Capricórnio e o bastão permaneceu no mesmo lugar.",
+   "comando": "Que explicação é sustentada pelos dados do pátio?",
+   "alts": [
+    "A sombra muda ao longo do ano porque a rotação da Terra fica mais lenta em junho e mais rápida em dezembro.",
+    "A menor sombra em dezembro indica que o Sol está mais perto da Terra, e a inclinação do eixo não interfere.",
+    "A sombra é menor com raios mais verticais, e a inclinação do eixo muda esse ângulo ao longo da translação.",
+    "A sombra varia entre as datas porque a rotação muda a posição do Sol no céu, o mesmo efeito do dia inteiro."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma emissora paulista vai transmitir ao vivo uma final de campeonato que começa às 20 h no horário local de Tóquio, no Japão. Os fusos horários de cada cidade, em relação ao meridiano de Greenwich, estão no quadro que a produção usou para planejar a programação.",
+   "comando": "Em que horário a partida começa em São Paulo e qual movimento explica a diferença?",
+   "alts": [
+    "8 h do dia seguinte, pois Tóquio está a leste e a rotação faz o Sol surgir ali 12 horas depois do que em São Paulo.",
+    "17 h do mesmo dia, pois a diferença entre os fusos é de 3 horas, que é o valor do fuso de São Paulo.",
+    "20 h do mesmo dia, pois a rotação faz o dia começar ao mesmo tempo nos dois lugares e o relógio é igual.",
+    "8 h do mesmo dia, pois Tóquio está a leste e a rotação faz o Sol surgir ali 12 horas antes do que em São Paulo."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um planetário, o guia mostrou que a direção para a qual o eixo da Terra aponta muda muito lentamente, e que isso altera qual estrela está próxima ao polo celeste norte ao longo dos milênios. A turma recebeu um quadro de estimativas.",
+   "comando": "Qual conclusão é sustentada pelo quadro?",
+   "alts": [
+    "O eixo mantém sua inclinação, mas a direção para onde aponta gira num ciclo de cerca de 26 mil anos, trocando a estrela indicada.",
+    "A inclinação do eixo varia ao longo de cerca de 26 mil anos, e essa variação troca a estrela indicada pelo polo celeste.",
+    "A estrela mais próxima do polo celeste se desloca pelo espaço, enquanto o eixo da Terra permanece apontando para o mesmo lugar.",
+    "O ciclo de troca de estrelas se repete a cada ano, pois o eixo gira uma volta completa durante a translação ao redor do Sol."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na mesma data de dezembro, uma turma comparou a duração do dia em duas cidades: Curitiba, no sul do Brasil, e Reykjavik, na Islândia. Os dados vieram de um almanaque e foram usados para uma atividade de investigação.",
+   "comando": "Explique por que a duração do dia é tão diferente nas duas cidades, relacionando com o eixo da Terra e a translação.",
+   "ref": "O eixo da Terra é inclinado e mantém a mesma direção durante a translação. Em dezembro, o hemisfério sul fica voltado para o Sol e recebe dias longos, e o norte fica menos voltado, com dias curtos, e o efeito aumenta com a latitude."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Camila notou que o Sol nasce mais cedo em Recife do que em Rio Branco, no Acre, no mesmo dia. Ela anotou o horário do nascer do Sol em cada cidade, usando os relógios locais de cada uma, e quis entender o motivo.",
+   "comando": "Explique a diferença de horários com base no movimento de rotação da Terra e no sentido em que ele ocorre.",
+   "ref": "A Terra gira de oeste para leste, então o Sol alcança primeiro os lugares mais a leste, como Recife. Rio Branco, mais a oeste, é iluminada depois e usa um fuso horário diferente, por isso os horários locais ficam desencontrados."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma oficina, os alunos apontaram uma lanterna para uma folha com o mesmo feixe de luz em três ângulos diferentes e mediram a área iluminada. A professora pediu que usassem o resultado para explicar clima e estações.",
+   "comando": "Interprete os dados e relacione-os à diferença de temperatura entre as regiões polares e a região equatorial.",
+   "ref": "Quanto menor o ângulo, maior a área iluminada e mais espalhada fica a energia do feixe. Nos polos, os raios chegam mais inclinados e a energia se distribui por área maior, esquentando menos que o equador, onde os raios chegam mais verticais."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "O calendário comum tem 365 dias, mas a Terra leva cerca de 365,25 dias para dar uma volta em torno do Sol. Um grupo de alunos organizou um quadro para entender por que, de tempos em tempos, um ano tem 366 dias.",
+   "comando": "Explique, a partir do quadro, por que existe o ano bissexto e qual movimento da Terra está envolvido.",
+   "ref": "O movimento de translação dura cerca de 365,25 dias, e o calendário de 365 dias perde um quarto de dia a cada ano. Depois de quatro anos, esse atraso soma um dia inteiro, que é acrescentado em fevereiro no ano bissexto, mantendo as estações no lugar."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma estudante recebeu um quadro com três movimentos da Terra identificados apenas por letras e pela duração de cada ciclo. Ela precisa associá-los a observações do dia a dia e à posição das estrelas ao longo dos séculos.",
+   "comando": "Identifique qual letra corresponde à rotação, à translação e à precessão e justifique pelo tempo de cada ciclo.",
+   "ref": "A é a rotação, pois leva 24 horas e explica dia e noite. B é a translação, de 365 dias, que define o ano. C é a precessão, ciclo de 26 mil anos da direção do eixo, perceptível apenas em escalas de séculos e milênios."
+  }
+ ],
+ "8º ANO|3|Identificar variáveis meteorológicas relacionadas à previsão do tempo e os instrumentos utilizados para medi-las.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na miniestação do tempo da escola, em Bauru, dois grupos construíram pluviômetros iguais com garrafa PET e régua em milímetros. O grupo 1 deixou o seu no pátio aberto e o grupo 2 colocou o seu embaixo da marquise da cantina, para 'proteger de vento'. Após uma mesma tempestade, os grupos leram a régua e discutiram por que os resultados eram tão diferentes.",
+   "comando": "Qual explicação para a diferença é a mais adequada e o que ela revela sobre o procedimento?",
+   "alts": [
+    "O pluviômetro 2 mediu certo, pois o vento levou a água para o pátio, de modo que o pluviômetro 1 acumulou o excesso e superestimou a chuva do bairro.",
+    "O pluviômetro 2 estava coberto e recebeu pouca água, então ele não mede a chuva do local; o procedimento correto exige campo aberto, longe de telhados e árvores.",
+    "O pluviômetro 1 mediu errado, pois recebeu água demais por estar no pátio, e o ideal é medir sob cobertura para proteger a régua e evitar erros.",
+    "Os dois pluviômetros mediram corretamente a chuva, pois cada local pode receber quantidade diferente, e a média das duas leituras é o valor oficial."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "A estação de uma cidade paulista tem uma biruta (cata-vento em forma de manga) e um anemômetro. Em dois horários de um mesmo dia, o técnico anotou para onde a biruta apontava e a velocidade medida. Ele lembra que a biruta aponta para o lado para onde o vento sopra, e que a escala da estação chama de moderado o vento entre 20 e 40 km/h.",
+   "comando": "Qual descrição do vento às 15h é correta?",
+   "alts": [
+    "Vento vindo do Sul e moderado, que ficou mais forte que de manhã e soprou na mesma direção.",
+    "Vento vindo do Sul e fraco, que ficou mais intenso que de manhã e soprou na mesma direção.",
+    "Vento vindo do Norte e fraco, que ficou mais intenso que de manhã e soprou na mesma direção.",
+    "Vento vindo do Norte e moderado, que ficou mais forte que de manhã e soprou na mesma direção."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Três dias antes de uma tempestade em Santos, a escola registrou a pressão do ar com um barômetro e a umidade com um higrômetro. O professor lembra que massas de ar de baixa pressão favorecem a subida do ar e a formação de nuvens de chuva, enquanto alta pressão costuma trazer tempo estável. A turma tentou prever o tempo do dia seguinte.",
+   "comando": "Que previsão é coerente com a tendência dos registros?",
+   "alts": [
+    "Céu limpo, pois a pressão em queda indica a chegada de uma massa de ar mais estável, e a umidade elevada produz orvalho na madrugada.",
+    "Aumento da chance de chuva, pois a pressão está baixa e a umidade elevada indica que o ar está seco, o que favorece nuvens de chuva.",
+    "Aumento da chance de chuva, pois a pressão está caindo e a umidade do ar está subindo, o que favorece a formação de nuvens.",
+    "Céu limpo, pois a pressão do ar em queda indica que há menos ar sobre a região, e a umidade elevada indica que as nuvens já se dissiparam."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Duas turmas mediram a temperatura do ar no pátio da escola, às 13h do mesmo dia, para comparar com a previsão do tempo. A turma A deixou o termômetro à sombra, a 1,5 m do chão e com boa ventilação. A turma B apoiou o termômetro diretamente no chão de concreto, sob sol forte, e as turmas discutiram qual valor representava a temperatura do ar.",
+   "comando": "Qual alternativa explica a diferença e indica a leitura que deve ser usada?",
+   "alts": [
+    "A turma B mediu o ar mais corretamente porque o sol fornece o calor real do dia, e por isso deve ser usada a leitura da turma B nos boletins do tempo.",
+    "A turma A mediu a temperatura da sombra, que é menor que a do ar, e por isso deve ser usada a leitura da turma B, que recebe o calor direto.",
+    "As duas turmas mediram o ar, e a diferença é causada por um defeito em um dos termômetros, de modo que a leitura mais alta deve ser usada na previsão.",
+    "A turma B mediu a temperatura da superfície aquecida pelo Sol, e não a do ar, e por isso deve ser usada a leitura da turma A, feita em local sombreado e ventilado."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma previsão do tempo para a cidade de Curitiba, usada pelos alunos em uma atividade de campo, indicava a chegada de uma frente fria entre hoje e amanhã. A professora pediu que cada grupo escolhesse quais instrumentos da miniestação confirmariam, no dia seguinte, que a previsão estava acontecendo.",
+   "comando": "Quais medidas e instrumentos confirmariam a previsão da tabela?",
+   "alts": [
+    "Termômetro para a queda da temperatura, higrômetro para o aumento da umidade, biruta e anemômetro para o vento, e pluviômetro para a chuva.",
+    "Barômetro para a queda da temperatura, higrômetro para o aumento da umidade, biruta e anemômetro para o vento, e pluviômetro para a chuva.",
+    "Termômetro para a queda da temperatura, pluviômetro para o aumento da umidade, biruta e anemômetro para o vento, e higrômetro para a chuva.",
+    "Termômetro para a queda da temperatura, higrômetro para o aumento da umidade, barômetro para a direção do vento, e pluviômetro para a chuva."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em uma escola de Presidente Prudente, o pluviômetro de PET registrou a chuva em milímetros nos três dias de uma semana chuvosa. A professora explicou que 1 mm de chuva corresponde a 1 litro de água por metro quadrado, e a diretora quer saber quanta água caiu no telhado de 50 m² da quadra.",
+   "comando": "Calcule o total de chuva da semana, explique o significado dessa medida em milímetros e estime quantos litros caíram no telhado.",
+   "ref": "O total foi 12 + 0 + 8 = 20 mm, ou seja, 20 litros de água por metro quadrado ao longo dos três dias. Em um telhado de 50 m² isso dá 20 x 50 = 1.000 litros de água."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma estação meteorológica em Presidente Prudente usa uma biruta para registrar a direção do vento. Em três horários, a biruta apontou para diferentes lados e o anemômetro mediu a velocidade. A turma tentou descrever como o vento mudou ao longo do dia e quais instrumentos permitiram a descrição.",
+   "comando": "Descreva a mudança do vento ao longo do dia, informando de onde ele vinha em cada horário, e indique qual instrumento mediu cada característica.",
+   "ref": "Às 8h o vento vinha do Leste e era fraco (8 km/h), às 14h vinha do Sul e ficou mais forte (25 km/h) e às 20h continuava vindo do Sul e enfraqueceu (10 km/h). A direção é indicada pela biruta, que aponta para onde o vento vai, e a velocidade é medida pelo anemômetro."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Após um fim de semana de chuva fraca em Londrina, Henrique reclamou que 'a previsão errou', pois ela indicava 80% de chance de chuva e o pluviômetro da escola acumulou apenas 2 mm. A professora disse que o problema estava na interpretação da previsão, e não no pluviômetro.",
+   "comando": "Explique o que significa '80% de chance de chuva', diga o que o pluviômetro mede e por que a previsão não pode ser considerada errada.",
+   "ref": "A porcentagem indica a probabilidade de ocorrer chuva na região, e não a quantidade nem a duração: em situações parecidas, chove em cerca de 8 de cada 10 vezes. O pluviômetro mede a quantidade de chuva em mm; como choveu (2 mm), a previsão de ocorrência se confirmou, embora a quantidade tenha sido pequena."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Alunos de uma escola de Campinas anotaram a pressão do ar e a umidade em quatro dias seguidos. No quarto dia, a professora pediu uma previsão do tempo para o dia 5, justificada com os dados, e lembrou que a queda de pressão costuma indicar aproximação de ar mais úmido e instável.",
+   "comando": "Faça uma previsão para o dia 5 e justifique com a tendência dos dados, citando os instrumentos usados.",
+   "ref": "É provável que o dia 5 tenha chuva, pois a pressão caiu todos os dias (de 1016 para 1003 hPa) e a umidade subiu de 50% para 88%, tendência de formação de nuvens e instabilidade. A pressão foi medida com barômetro e a umidade com higrômetro."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Para uma feira de ciências em Jundiaí, três alunos leram a temperatura em três lugares do pátio ao mesmo tempo. Cada um escolheu um ponto: P1 à sombra e com ventilação, P2 sob sol direto e P3 dentro de uma sala fechada. Os valores variaram bastante. O professor explicou que, para a previsão e para comparar dias, a medição precisa seguir um padrão.",
+   "comando": "Explique qual leitura é a mais adequada para representar a temperatura do ar e por que as outras não servem, propondo o padrão da medida.",
+   "ref": "A mais adequada é a leitura à sombra e ventilada (29 °C), pois representa o ar. Sob o sol, o termômetro absorve a radiação e superestima, e dentro da sala fechada o ar é influenciado por paredes e ausência de ventilação; o padrão é medir à sombra, ventilado e a cerca de 1,5 m do solo."
+  }
+ ],
+ "8º ANO|3|Relacionar os movimentos da Lua com sua dinâmica em relação à Terra.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Camila, que mora na capital paulista, observou a Lua da janela, sempre no mesmo horário, e anotou quanto da face visível estava iluminada. No dia 1 ela mal conseguiu enxergar a Lua no céu. Ela quer prever quando verá a Lua da mesma forma que no dia 1.",
+   "comando": "Com base no registro, em que dia a Lua deve voltar a ter o aspecto do dia 1, e por quê?",
+   "alts": [
+    "Por volta do dia 15, pois a Lua passa de 0% a 100% em duas semanas e depois reinicia o ciclo de fases.",
+    "Por volta do dia 8, pois a cada semana a Lua repete o mesmo aspecto ao completar um quarto de volta.",
+    "Por volta do dia 30, pois o ciclo todo leva cerca de quatro semanas, e em 22 dias a Lua só percorreu três quartos do caminho.",
+    "Por volta do dia 22, pois a Lua já voltou a 50% e o ciclo se completa quando a porção volta ao valor de partida."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Rafael, em Campinas, fotografou a Lua cheia em três meses seguidos e notou que as mesmas manchas escuras aparecem na mesma posição nas três fotos. Ele pesquisou o tempo que a Lua leva para dar uma volta em torno da Terra e o tempo que leva para girar uma vez em torno do próprio eixo.",
+   "comando": "Que explicação os dados sustentam para a Lua mostrar a mesma face para a Terra?",
+   "alts": [
+    "Os dois períodos são iguais, então a Lua gira uma vez a cada volta em torno da Terra e mostra a mesma metade.",
+    "A Lua não gira em torno de si mesma, e por isso a mesma metade fica voltada para a Terra durante toda a sua órbita.",
+    "A Lua gira em torno do eixo bem mais depressa do que dá a volta na Terra, o que faz as mesmas manchas reaparecerem nas fotos.",
+    "A metade oculta da Lua é escura porque não recebe luz do Sol, e por isso as manchas visíveis aparecem na mesma posição."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um calendário astronômico de um ano fictício lista as datas de Lua nova e Lua cheia de seis meses e indica se houve eclipse. Os alunos notaram que, em apenas dois momentos, a Lua passou exatamente na linha entre Sol e Terra ou na sombra da Terra, apesar de as fases ocorrerem todo mês.",
+   "comando": "Qual explicação dos dados é cientificamente adequada para os eclipses não ocorrerem todo mês?",
+   "alts": [
+    "A Lua nova e a Lua cheia ocorrem em meses alternados, e por isso o alinhamento entre Sol, Terra e Lua ocorre uma vez a cada dois meses.",
+    "A órbita da Lua é inclinada em relação à da Terra, e na maioria das fases nova e cheia ela passa fora da linha Sol-Terra.",
+    "Nuvens e poluição do ar encobrem a Lua e o Sol na maioria dos meses, impedindo que os eclipses sejam registrados no calendário.",
+    "A sombra da Terra alcança a Lua em alguns meses do ano, pois a distância entre a Terra e a Lua muda bastante de um mês para o outro."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Pedro estava na praia em Ubatuba e viu a Lua nascer à meia-noite, com metade do disco iluminada. Ele ficou em dúvida se era quarto crescente ou quarto minguante, pois nas duas fases a metade da face visível está iluminada. Sua tia, que pesca na região, lhe mostrou um registro do horário aproximado em que a Lua nasce em cada fase.",
+   "comando": "Qual fase Pedro observou e que dado do registro permite decidir?",
+   "alts": [
+    "Quarto crescente, pois a metade iluminada indica fase crescente e a Lua nasce mais tarde a cada dia, chegando à meia-noite.",
+    "Lua cheia, pois a Lua cheia nasce e fica visível durante toda a madrugada, quando o céu está mais escuro na praia.",
+    "Lua nova, pois a Lua nasce de madrugada e a porção iluminada é a que aparece no registro de horário da tia.",
+    "Quarto minguante, pois é nessa fase que a Lua nasce por volta da meia-noite, e não no quarto crescente."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Na atividade do pátio, um aluno faz o papel da Lua, com um X colado na camiseta, e caminha em volta de outro aluno, que faz o papel da Terra, sempre mantendo o X voltado para a Terra. Os colegas anotaram para onde o aluno-Lua olhava em relação aos pontos cardeais marcados no chão. Uma colega concluiu que 'se o X sempre aponta para a Terra, a Lua não gira'.",
+   "comando": "Qual afirmação sobre o modelo está correta?",
+   "alts": [
+    "O aluno-Lua não gira em torno de si, porque o X permanece voltado para a Terra e isso mostra que o corpo não muda de direção.",
+    "O aluno-Lua gira quatro vezes em torno de si, porque a direção do olhar muda em cada um dos quatro quartos da volta registrados.",
+    "O aluno-Lua gira uma vez em torno de si a cada volta, pois sua direção em relação aos pontos cardeais muda por completo.",
+    "O aluno-Lua gira uma vez em torno de si por causa do giro da própria Terra, e não pelo movimento da Lua."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Um aluno de uma escola de Santos afirma que as fases da Lua acontecem porque a sombra da Terra cobre parte dela, e por isso a Lua cheia seria o momento em que a Terra está longe da Lua. A professora mostrou um registro de 22 dias.",
+   "comando": "Avalie a afirmação do aluno com base nos dados e explique por que a Lua tem fases.",
+   "ref": "A afirmação está errada: no dia 15, com 100% iluminada, não houve eclipse, então não há sombra da Terra sobre a Lua. As fases surgem porque o Sol sempre ilumina metade da Lua, e a cada posição na órbita vemos uma porção diferente dessa metade iluminada."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma sonda orbitou a Lua e fotografou o lado que nunca é visto da Terra. Os cientistas calcularam quanto desse lado fica iluminado pelo Sol ao longo de um ciclo de fases. Uma estudante comentou que esse lado seria 'o lado escuro da Lua'.",
+   "comando": "Explique por que não vemos esse lado da Terra e avalie se a expressão 'lado escuro' é adequada, usando os dados.",
+   "ref": "Não vemos esse lado porque a rotação e a translação da Lua têm o mesmo período, mantendo sempre a mesma metade voltada para a Terra. A expressão 'lado escuro' é inadequada, pois esse lado recebe luz do Sol e fica 100% iluminado na Lua nova."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um pescador de Ubatuba anota as datas em que a Lua nova aparece para planejar as saídas de barco. Em um ano fictício, ele registrou quatro Luas novas seguidas e quer saber quando será a próxima Lua cheia depois da última anotação.",
+   "comando": "Use os dados para estimar o tempo entre duas Luas novas e indique a data aproximada da próxima Lua cheia, explicando seu raciocínio.",
+   "ref": "Entre duas Luas novas passam cerca de 29 ou 30 dias, e de uma Lua nova à Lua cheia passa cerca de metade desse ciclo, uns 15 dias. A próxima Lua cheia deve ocorrer por volta de 14 ou 15 de junho."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Durante um eclipse, a turma de Ciências da escola em Sorocaba discutiu o assunto. Um registro simples foi montado com eclipses de dois tipos, mostrando em que fase a Lua estava e em que parte da Terra o fenômeno foi visto. Eles notaram que o eclipse do Sol dura poucos minutos e é visto em uma faixa estreita.",
+   "comando": "Explique como Sol, Terra e Lua ficam posicionados em cada tipo de eclipse e por que o eclipse solar é visto só em uma faixa estreita da Terra.",
+   "ref": "No eclipse solar, a Lua fica entre o Sol e a Terra, e sua sombra pequena atinge só uma faixa estreita da Terra, por isso ele dura pouco. No eclipse lunar, a Terra fica entre o Sol e a Lua, que entra na sombra da Terra e é vista por todo o lado noturno."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "A professora de uma escola em Ribeirão Preto pediu que os grupos planejassem um modelo com uma lanterna, uma bola de isopor e um aluno para mostrar como as fases da Lua aparecem. O grupo de Ana tem pouco espaço na sala e precisa decidir o que cada material representa e como se movimentar.",
+   "comando": "Descreva como Ana deve montar e usar o modelo para mostrar pelo menos duas fases diferentes e explique o que o modelo ensina.",
+   "ref": "A lanterna representa o Sol, a bola de isopor a Lua e a cabeça do aluno a Terra. O aluno gira em volta de si, segurando a bola em diferentes posições em relação à lanterna: com a bola entre ele e a luz, a face voltada para ele fica escura (Lua nova), e com ele entre a luz e a bola, a face fica toda iluminada (Lua cheia). O modelo mostra que a posição relativa de Sol, Terra e Lua define a porção iluminada vista da Terra."
+  }
+ ]
+}

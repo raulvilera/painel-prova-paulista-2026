@@ -1,0 +1,1328 @@
+{
+ "6º ANO|2|Analisar o processo de fossilização ao longo da história geológica da Terra.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Durante a abertura de uma vala para obras de drenagem às margens do rio Tietê, uma equipe técnica registrou as camadas do barranco, que não apresentava dobras nem falhas. Em duas delas apareceram restos de organismos preservados na rocha.",
+   "comando": "Com base nos dados, qual conclusão sobre a idade relativa dos fósseis é sustentada?",
+   "alts": [
+    "O fóssil de folha é mais antigo, pois a camada B está perto da superfície e recebeu mais matéria orgânica",
+    "Os dois fósseis têm a mesma idade, pois estão na mesma vala e em rochas formadas por sedimentos",
+    "O fóssil de escama é mais antigo, pois a camada D se depositou antes das camadas acima dela",
+    "O fóssil de escama é mais recente, pois a camada D foi a última a se formar na sequência"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma aula de laboratório, uma turma de Sorocaba enterrou conchas iguais em recipientes com sedimentos. No recipiente 1 a concha foi coberta com lama fina logo no início; no recipiente 2 ela ficou apenas apoiada sobre a areia, exposta ao ar e à água da chuva simulada. Após seis meses, os alunos avaliaram o estado das conchas.",
+   "comando": "Que explicação é coerente com os dados para a diferença entre as conchas?",
+   "alts": [
+    "O soterramento rápido reduz o contato com ar, água e decompositores e favorece a preservação",
+    "A lama é mais dura que a areia e transforma a concha em fóssil em poucos meses de contato direto",
+    "A exposição ao ar acelera a fossilização, pois o oxigênio ajuda a mineralizar as partes duras da concha",
+    "A concha do recipiente 2 se desgastou porque era mais antiga que a do recipiente 1"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma museóloga em Ribeirão Preto compara dois ossos de mesmo tamanho e formato: um de capivara atual e outro de um mamífero que viveu há milhares de anos, encontrado em depósito de sedimentos. Ela pesou as duas peças e notou também que o osso antigo é muito mais duro.",
+   "comando": "Qual hipótese explica a diferença de massa e de dureza entre os ossos?",
+   "alts": [
+    "O osso antigo reteve mais água e gordura do animal, o que aumentou sua massa e dureza",
+    "O osso atual perdeu minerais para o solo, e por isso pesa menos que o osso do depósito",
+    "O osso do depósito é de um animal maior, o que explica a massa maior e a dureza observadas",
+    "Minerais dissolvidos na água preencheram os poros do osso, tornando-o mais pesado e duro"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma equipe de geologia do estado de São Paulo precisa escolher onde procurar fósseis de animais antigos. Ela tem quatro afloramentos disponíveis e só tempo para visitar um. Os técnicos sabem que o calor intenso e o fundir de rochas destroem restos de seres vivos.",
+   "comando": "Qual afloramento tem maior chance de conter fósseis e por quê?",
+   "alts": [
+    "Local S, pois a pressão e o calor aprisionam os restos e os preservam nos cristais",
+    "Local Q, pois a rocha se formou por deposição de sedimentos em camadas, sem fundir restos",
+    "Local P, pois o resfriamento lento do magma protege os restos de animais em seu interior",
+    "Local R, pois a lava recobre rapidamente os animais e preserva seus detalhes na rocha"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um estudante encontrou, em uma rocha do interior paulista a cerca de 400 km do litoral e a 600 m de altitude, a marca de um peixe de ambiente marinho. Ele pesquisou e viu que o animal pertence a um grupo que só vive em água salgada. A rocha apresenta camadas finas e regulares.",
+   "comando": "Que interpretação dos dados é mais bem sustentada?",
+   "alts": [
+    "O peixe migrou do litoral para o interior e morreu depois que a rocha ígnea se formou ao seu redor",
+    "O fóssil prova que o mar atual continua sob o local, e o peixe viveu ali há pouco tempo",
+    "O ambiente mudou: houve ali água salgada no passado, onde os sedimentos com o peixe se depositaram",
+    "O peixe foi levado por rios até o interior e se fossilizou numa rocha de formação recente"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na abertura de uma estrada, geólogos mediram duas camadas de uma mesma parede de rocha sedimentar. A camada inferior contém fósseis de trilobitas e a superior contém fósseis de peixes ósseos. Em um trecho vizinho, uma falha geológica deslocou parte das camadas.",
+   "comando": "Explique como os geólogos usam a posição das camadas para estimar a idade dos fósseis e por que a falha exige cuidado.",
+   "ref": "Em camadas sedimentares não perturbadas, as de baixo se depositaram primeiro, então os trilobitas são mais antigos que os peixes. Se há falha, as camadas podem ter sido deslocadas ou invertidas, e a ordem de idade pode não corresponder à posição."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em um levantamento fictício, estudantes contaram o destino de cem conchas de moluscos que morreram em uma lagoa durante um ano. A maioria foi decomposta ou quebrada pelas ondas, e poucas foram soterradas por lama.",
+   "comando": "Justifique por que somente uma pequena parte dos seres vivos que morrem se torna fóssil, usando os números do registro.",
+   "ref": "Para virar fóssil, o resto do organismo precisa ser soterrado rapidamente por sedimentos, o que o protege de decompositores e de quebra. Como só 9 das 100 conchas foram soterradas, a fossilização é um evento raro."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Duas alunas fizeram impressões na massinha. Ana pressionou uma folha de samambaia e a retirou, obtendo a marca. Bia misturou gesso líquido na marca e, depois de seco, obteve um objeto com o relevo da folha. A professora disse que cada resultado corresponde a um tipo de fóssil.",
+   "comando": "Compare o que Ana e Bia obtiveram e relacione cada resultado a tipos de fósseis encontrados nas rochas.",
+   "ref": "Ana obteve um molde, a impressão em negativo da folha, semelhante ao fóssil de impressão em rocha. Bia obteve um contramolde, uma cópia em relevo formada pelo preenchimento do molde, semelhante a quando sedimentos ou minerais enchem a cavidade deixada pelo organismo."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma exposição, um estudante de 6º ano viu fósseis de conchas em arenito e perguntou por que a monitora disse que não esperaria encontrar fósseis de animais em rochas que se formaram do magma esfriado. A monitora mostrou uma amostra de basalto e uma de arenito, ambas de São Paulo.",
+   "comando": "Explique por que é mais provável encontrar fósseis na amostra de arenito do que na de basalto.",
+   "ref": "O basalto se forma de lava muito quente, e esse calor destrói os restos de seres vivos. O arenito se forma de sedimentos depositados e compactados, que podem soterrar e preservar organismos, por isso é mais provável conter fósseis."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em um museu de Santa Rita do Passa Quatro, dois fósseis de plantas foram encontrados em camadas diferentes de um mesmo corte de rocha. A de cima tem folhas de formato largo e a de baixo, folhas finas e estreitas. Os pesquisadores querem saber se o ambiente mudou.",
+   "comando": "Proponha como os pesquisadores podem usar os fósseis e as camadas para discutir a mudança do ambiente ao longo do tempo, indicando o que seria preciso verificar.",
+   "ref": "Eles podem comparar os fósseis das camadas, em ordem de idade, e relacionar o formato das folhas com condições do ambiente, como umidade. Seria preciso verificar se as camadas não foram deslocadas e se outras evidências da rocha indicam a mesma mudança."
+  }
+ ],
+ "6º ANO|2|Classificar os diferentes tipos de rochas e os processos de formação do solo.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma antiga pedreira perto de Itu (SP), a turma de Ciências coletou três amostras de rocha e anotou suas características. A professora pediu que a classificação fosse feita apenas com base no que foi observado, sem consultar etiquetas.",
+   "comando": "Qual conclusão sobre a origem das amostras é sustentada pelos dados?",
+   "alts": [
+    "A amostra B é metamórfica, pois os cristais grandes mostram que a rocha foi comprimida e aquecida sem chegar a derreter",
+    "A amostra C é ígnea, pois as faixas onduladas surgem quando o magma escorre e esfria em movimento",
+    "A amostra A é sedimentar, pois o fóssil e as camadas indicam acúmulo de material em ambiente aquático",
+    "A amostra A é ígnea, pois a concha ficaria preservada se o magma a cobrisse e endurecesse ao redor dela"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Após uma chuva forte, a equipe de uma horta escolar em Piracicaba mediu quanto solo foi levado pela enxurrada em três parcelas de mesmo tamanho, mesma inclinação e que receberam a mesma quantidade de chuva. Cada parcela tinha uma cobertura diferente.",
+   "comando": "Qual hipótese explica melhor a diferença entre as parcelas?",
+   "alts": [
+    "A vegetação protege o solo: folhas e raízes reduzem o impacto da chuva e a velocidade da enxurrada",
+    "O solo da mata é mais antigo e por isso mais duro, o que impediu que a água arrastasse partículas",
+    "O solo exposto recebeu mais chuva e por isso a enxurrada carregou uma quantidade bem maior de partículas",
+    "O pasto perdeu menos que o solo exposto porque as rochas abaixo dele são mais resistentes à água"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Ao cavar um buraco para plantar uma árvore no pátio, a turma observou as camadas do solo e registrou profundidade, cor e conteúdo de cada uma. O professor explicou que o solo se forma pelo desgaste lento da rocha original, chamada rocha-mãe.",
+   "comando": "Qual interpretação do perfil é sustentada pelos dados?",
+   "alts": [
+    "A camada 1 é a mais jovem do perfil porque o solo se forma de cima para baixo, a partir de folhas e restos de plantas",
+    "A camada 2 é alaranjada porque guarda restos de animais, que se decompõem e tingem o material de argila",
+    "A camada 3 é a mais rica em nutrientes, pois os pedaços de rocha liberam minerais direto para as raízes",
+    "A passagem de rocha inteira para pedaços e depois para argila mostra a rocha desgastada em etapas até virar solo"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em uma visita a um museu, alunos compararam três locais onde foram achadas rochas, dois deles sem qualquer fóssil. O guia explicou a origem de cada rocha e a turma anotou as informações, querendo entender por que fósseis aparecem em alguns tipos de rocha e não em outros.",
+   "comando": "Qual explicação relaciona o tipo de rocha à presença de fósseis?",
+   "alts": [
+    "Rochas ígneas preservam melhor os fósseis, pois a lava cobre o organismo e o protege da ação da água",
+    "Rochas sedimentares preservam restos soterrados aos poucos; o calor da lava destrói e o metamorfismo apaga marcas",
+    "Rochas metamórficas guardam fósseis maiores, pois a pressão compacta os restos sem alterar o formato",
+    "Rochas sedimentares guardam fósseis de peixes, pois os lagos reúnem animais com esqueleto duro e os mantêm intactos"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma estátua de mármore e um banco de granito foram instalados juntos numa praça de São Paulo há 80 anos, e a estátua está muito mais desgastada. Para testar a ideia de que a chuva ácida age mais sobre certas rochas, um grupo mergulhou amostras em vinagre, um ácido fraco, e mediu a perda de massa.",
+   "comando": "Qual ajuste tornaria o teste justo para comparar as três rochas?",
+   "alts": [
+    "Usar o mesmo volume de vinagre e manter massas diferentes, pois cada rocha tem a própria densidade e dureza",
+    "Usar a mesma massa inicial, o mesmo volume de vinagre e o mesmo tempo de contato em todas as amostras",
+    "Deixar cada amostra no vinagre até perder 1 g, para que o tempo gasto por cada uma revele a mais resistente",
+    "Medir a perda em gramas e comparar a rocha mais pesada com a mais leve, para compensar a massa maior de cada uma"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na aula, Júlia agitou um pote com terra, areia, pedrinhas e água e deixou o pote parado em cima da mesa. Ela anotou o que via em intervalos de tempo e notou que o material não ficou misturado, mas formou camadas.",
+   "comando": "Explique por que as camadas se formam nessa ordem e relacione o fenômeno à formação das rochas sedimentares.",
+   "ref": "As partículas maiores e mais pesadas afundam primeiro e as menores depositam depois, formando camadas ordenadas. Em rios e represas os sedimentos se acumulam do mesmo modo e, soterrados, são compactados e cimentados até virar rocha sedimentar."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um grupo de alunos recebeu duas rochas: a amostra X, recolhida perto de um vulcão extinto, é cheia de furinhos e tem cristais minúsculos; a amostra Y, uma ardósia usada em telhados, se separa em lâminas finas e veio de argila em uma região de montanhas dobradas.",
+   "comando": "Classifique as duas rochas e explique como cada característica observada se relaciona ao processo de formação.",
+   "ref": "X é ígnea: a lava resfriou rápido na superfície, por isso os cristais são minúsculos e os furinhos são bolhas de gás. Y é metamórfica: uma rocha de argila foi submetida a muita pressão e calor, sem derreter, e seus minerais se alinharam em lâminas."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "No topo de um morro em Jundiaí, uma rocha exposta há 50 anos sob clima seco tem apenas 2 cm de solo sobre ela. Numa encosta úmida e sombreada, uma rocha do mesmo tipo e da mesma idade já tem 15 cm de solo, com musgos e líquens sobre ela.",
+   "comando": "Explique duas razões para essa diferença na espessura do solo e o papel dos organismos nesse processo.",
+   "ref": "A umidade acelera o intemperismo, pois a água penetra nas rachaduras e reage com os minerais. Líquens, musgos e raízes liberam ácidos e abrem fendas, e seus restos formam matéria orgânica que se mistura aos fragmentos e forma solo mais espesso."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma praia de Ubatuba, Marina observou que a areia é formada por grãos pequenos de quartzo. Na serra próxima há afloramentos de granito, uma rocha ígnea. Em um corte de estrada a poucos quilômetros dali, ela viu um arenito, uma rocha sedimentar de grãos unidos.",
+   "comando": "Descreva como o granito da serra pode originar o arenito e por que as duas rochas pertencem a grupos diferentes.",
+   "ref": "A chuva e o vento desgastam o granito (intemperismo) e o rio transporta os grãos até a praia, onde se depositam. Novas camadas os soterram e a compactação e cimentação unem os grãos em arenito. O granito é ígnea (esfriou do magma), o arenito é sedimentar (grãos depositados e cimentados)."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um agricultor de Piracicaba tem dois terrenos: o X, com solo muito arenoso, e o Y, com solo argiloso. Ele quer plantar uma horta que será pouco irrigada. Para escolher, mediu quanta água cada solo retém após ser regado com 200 mL e esperar uma hora.",
+   "comando": "Qual terreno é mais adequado à horta pouco irrigada e que prática poderia melhorar o outro? Justifique com os dados.",
+   "ref": "O terreno Y é mais adequado, pois reteve 140 mL contra 50 mL de X: as partículas finas da argila seguram mais água. O solo arenoso pode ser melhorado com matéria orgânica (composto, cobertura morta), que retém água e nutrientes."
+  }
+ ],
+ "6º ANO|2|Reconhecer as esferas que estruturam a Terra (litosfera, hidrosfera, atmosfera e biosfera), considerando suas funções e características essenciais na dinâmica do planeta.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na feira de ciências, um grupo montou o 'pote-Terra': em um pote de vidro colocaram pedrinhas e terra, um pouco de água e uma muda de feijão, e fecharam bem a tampa. Deixaram o pote perto da janela e observaram por três dias, sem abrir.",
+   "comando": "Que interpretação das observações é coerente com a troca de matéria entre as esferas da Terra?",
+   "alts": [
+    "As gotas surgiram porque o ar de fora entrou pelo vidro e a água do solo desapareceu por completo do pote.",
+    "A água do fundo foi absorvida pelas pedrinhas e transformada em terra, e as gotas da tampa são suor das raízes.",
+    "A água evaporou do solo e passou pela planta, foi para o ar do pote e condensou na tampa, voltando depois ao solo.",
+    "A água passou da terra para a planta, e as gotas na tampa mostram que a muda produziu água nova ao crescer."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Na horta da escola, três canteiros receberam a mesma quantidade de sementes de alface e ficaram expostos ao mesmo sol. Os alunos mediram a umidade do solo e a altura das mudas após 20 dias. Cada canteiro teve um tratamento diferente de rega e de cobertura do solo.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "A palha acrescenta água ao solo, e a rega perde importância, já que o canteiro 3 teve o melhor resultado.",
+    "A palha mantém a água no solo, reduzindo a perda para o ar, e o solo úmido favorece o crescimento das mudas.",
+    "A rega explica sozinha a diferença de crescimento, e a palha não alterou a umidade nem a altura das mudas.",
+    "O solo seco do canteiro 1 mostra que a água da chuva não chega à litosfera e por isso a muda cresceu pouco."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "A Lua e a Terra recebem a mesma luz do Sol, mas suas temperaturas variam de modo muito diferente entre o dia e a noite. Um astrônomo amador compara medições na superfície da Lua com medições feitas em um ponto sobre o oceano Atlântico, ao longo de um dia.",
+   "comando": "Qual hipótese explica melhor a diferença entre as variações de temperatura?",
+   "alts": [
+    "A atmosfera e a água da Terra retêm e distribuem o calor, reduzindo a diferença entre o dia e a noite.",
+    "A Lua está mais perto do Sol do que a Terra, e isso aquece a sua superfície a ponto de congelá-la à noite.",
+    "A água dos oceanos recebe menos luz do Sol que a rocha da Lua, e por isso a sua temperatura varia pouco.",
+    "A atmosfera terrestre impede que a luz do Sol aqueça a superfície, mas é a Lua que perde calor mais rápido."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "O leito de um rio paulista foi medido em três anos diferentes. Nesse período, a mata das margens foi derrubada para dar lugar a loteamentos, e a chuva média anual permaneceu parecida. Um técnico quer relacionar as mudanças no rio com a retirada da vegetação.",
+   "comando": "Qual cadeia de relações entre as esferas explica os dados da tabela?",
+   "alts": [
+    "Com menos mata, a atmosfera recebe mais água do rio, e o excesso de vapor forma sedimentos que se depositam no fundo.",
+    "O rio ficou mais raso porque choveu menos, e a água restante carregou mais pedaços de rocha das margens.",
+    "Os sedimentos vêm do ar, trazidos pela poluição, e se acumulam no leito sem relação com o solo das margens.",
+    "Sem vegetação, o solo exposto é levado pela chuva ao rio, e o material acumulado reduz a profundidade do canal."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma tabela de apoio mostra a distribuição aproximada da água do planeta. Um aluno observou que a água na atmosfera é uma fração mínima do total e sugeriu que ela 'não tem importância para o planeta'. A professora pediu que ele considerasse também o tempo que a água permanece em cada reservatório.",
+   "comando": "Qual interpretação dos dados contraria a afirmação do aluno?",
+   "alts": [
+    "A água do ar é o maior reservatório de água potável, por isso é essencial para o abastecimento das cidades.",
+    "Por ser a fração menor, a água do ar não participa do ciclo, que acontece entre os oceanos e as geleiras.",
+    "A água do ar se renova em poucos dias e transporta grandes volumes entre oceanos, terra e seres vivos.",
+    "A água do ar permanece por mais tempo que a dos oceanos, o que a torna a esfera mais estável do planeta."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Dois potes iguais foram montados com terra, água e uma muda. O pote A foi fechado com tampa e o pote B ficou aberto. Após três dias, os alunos compararam o que viram nos dois.",
+   "comando": "Explique a diferença entre os potes, indicando quais esferas da Terra interagem no pote A e por que o pote B terminou diferente.",
+   "ref": "No pote A a água evapora do solo e da planta, condensa na tampa e volta ao solo, então a água fica no sistema. No pote B o vapor escapa para o ar da sala, a terra seca e a muda murcha por falta de água."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Na serra de Paranapiacaba, um corte de estrada expõe uma rocha dura e, acima dela, um solo escuro com raízes e minhocas. Geólogos estimam que a camada de solo se formou lentamente a partir da rocha ao longo de milhares de anos.",
+   "comando": "Explique como a atmosfera, a hidrosfera e a biosfera contribuem para transformar a rocha em solo.",
+   "ref": "O vento, a chuva e as variações de temperatura quebram e desgastam a rocha, e a água se infiltra nas fendas. Raízes e organismos ajudam a quebrar e a misturar matéria orgânica, formando o solo."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um aluno disse: 'A biosfera é uma camada separada, como uma casca em volta da Terra'. A professora entregou a tabela com ambientes onde foram encontrados seres vivos em uma visita ao Parque da Cantareira.",
+   "comando": "Use a tabela para mostrar se a afirmação do aluno está correta e explique a relação da biosfera com as outras esferas.",
+   "ref": "A afirmação está errada. Há seres vivos no solo e na rocha, na água e no ar, então a biosfera ocupa partes da litosfera, da hidrosfera e da atmosfera. Ela depende delas e também as modifica."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em um ano de pouca chuva, o nível do reservatório que abastece parte da Grande São Paulo caiu bastante. A prefeitura pediu à população que reduzisse o consumo. Os dados do período estão na tabela.",
+   "comando": "Explique como a mudança na atmosfera afetou a hidrosfera e como isso pode atingir a biosfera, incluindo as pessoas.",
+   "ref": "Com pouca chuva, entra menos água na represa e o nível baixa, porque o consumo e a evaporação continuam. Com menos água, faltam abastecimento para as pessoas, água para as plantações e para os animais, e rios e ecossistemas sofrem."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Santos fica no litoral e Presidente Prudente no interior do estado de São Paulo. Meteorologistas mediram a diferença entre a temperatura máxima e a mínima de um dia típico de primavera nas duas cidades.",
+   "comando": "Levante uma hipótese que explique a diferença entre as cidades, relacionando as esferas da Terra.",
+   "ref": "A grande massa de água do oceano (hidrosfera) esquenta e esfria devagar e, junto com o ar úmido (atmosfera), suaviza as variações em Santos. No interior, sem essa influência, a variação diária é maior."
+  }
+ ],
+ "6º ANO|2|Reconhecer os principais estados físicos da matéria (sólido, líquido, gasoso) e suas mudanças de estado.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na cozinha da escola, a merendeira aqueceu uma panela com gelo picado em fogo constante, e a professora anotou a temperatura a cada poucos minutos. A turma estranhou que a temperatura tenha ficado parada por um tempo, apesar de a chama continuar acesa o tempo todo, e precisou explicar o que acontecia.",
+   "comando": "O que ocorre no intervalo entre 2 e 6 minutos, quando a temperatura fica estável?",
+   "alts": [
+    "A água está evaporando, e a energia recebida rompe as ligações entre as moléculas enquanto a temperatura permanece em 0 graus.",
+    "O gelo está derretendo, e a temperatura não sobe porque a chama fica mais fraca nesse intervalo do aquecimento.",
+    "O gelo está derretendo, e a energia recebida muda o estado da água sem elevar a temperatura nesse intervalo.",
+    "A água líquida está aquecendo devagar, pois o gelo já derreteu e a energia aumenta aos poucos a agitação das moléculas."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em um dia quente e úmido de Santos, a turma colocou três copos de vidro com água em temperaturas diferentes sobre a bancada. Depois de 20 minutos, notaram gotas de água na parte externa de alguns copos. João afirmou que a água do copo atravessou o vidro, e a professora pediu que a turma comparasse os resultados.",
+   "comando": "Qual hipótese é mais bem sustentada pelos dados?",
+   "alts": [
+    "As gotas se formam quando o vapor de água do ar condensa ao encostar na superfície mais fria do copo.",
+    "As gotas vêm da água do copo, que atravessa o vidro com mais facilidade quando a água está mais fria.",
+    "As gotas vêm do vapor de água do copo, que sai pela borda e condensa por fora quando a água está fria.",
+    "As gotas surgem quando o vidro esfria, porque o frio transforma o ar em água mesmo sem vapor presente."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Dona Neide lava roupa em Sorocaba e quer saber o que mais acelera a secagem. Ela pendurou quatro camisetas iguais, molhadas com a mesma quantidade de água, em lugares diferentes, e anotou o tempo até cada uma secar completamente, para comparar os resultados com a família.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "O vento atrasa a secagem na sombra, pois a camiseta D demorou mais que a camiseta B, que estava exposta ao sol.",
+    "O vento acelera mais que o sol, porque a camiseta D secou mais depressa que a camiseta A mesmo estando na sombra.",
+    "O sol é o fator decisivo, pois as camisetas A e B secaram mais depressa e o vento não altera o tempo de secagem.",
+    "Sol e vento aceleram a evaporação, pois em cada comparação em que um fator muda o tempo de secagem diminui."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Marcos esqueceu uma garrafa PET cheia de água no congelador e, no dia seguinte, a garrafa estava deformada e estufada. Para investigar, ele mediu a massa e o volume da água antes e depois de congelar, e anotou os valores em uma tabela para discutir com os colegas.",
+   "comando": "Qual explicação é coerente com as medidas?",
+   "alts": [
+    "A água ganhou massa do ar do congelador ao solidificar, e por isso passou a ocupar mais espaço dentro da garrafa.",
+    "A massa da água não mudou, mas o volume aumentou ao solidificar, pois o gelo ocupa mais espaço do que a água líquida.",
+    "As moléculas de água ficaram maiores ao congelar, e por isso a massa permaneceu igual enquanto o volume aumentou.",
+    "O volume aumentou cerca de 9% e a massa também aumentou na mesma proporção, o que explica a garrafa estufada."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma poça de 100 mL de água no quintal de Dona Cida levou dois dias para desaparecer, com temperatura de 25 °C. Na panela, a mesma quantidade de água sumiu em 8 minutos, em fogo alto, a 100 °C. Pedro disse que apenas na panela houve mudança de estado físico, e a turma precisa avaliar essa afirmação.",
+   "comando": "Qual alternativa explica corretamente a diferença entre os dois casos?",
+   "alts": [
+    "Nos dois casos ocorre ebulição, que é a passagem de líquido para gás; no quintal ela é mais lenta porque a água está mais fria.",
+    "Nos dois casos a água passa de líquido para gás; a poça demora porque a evaporação depende do vento, e não da temperatura da água.",
+    "No quintal a água infiltra no solo e não muda de estado, enquanto na panela o líquido vira gás e a mudança de estado ocorre na panela.",
+    "Nos dois casos a água passa de líquido para gás; no quintal as moléculas escapam pela superfície aos poucos, e na panela a ebulição ocorre em todo o líquido."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Júlia colocou dois copos na mesa em um dia de verão: um com suco gelado e outro com suco em temperatura ambiente. Depois de alguns minutos, o copo gelado ficou com gotas por fora e o outro permaneceu seco. Seu irmão disse que o copo gelado estava vazando.",
+   "comando": "Explique de onde vêm as gotas do copo gelado, nomeando a mudança de estado, e por que o outro copo ficou seco.",
+   "ref": "As gotas vêm do vapor de água do ar, que esfria ao tocar o copo gelado e condensa. No copo em temperatura ambiente a superfície não está mais fria que o ar, então o vapor não condensa."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Dona Lúcia cozinha feijão em uma panela com tampa de vidro, em São Bernardo do Campo. Ela percebeu que a água ferve, a tampa embaça e, depois, gotas escorrem pela parte de dentro da tampa e caem de volta no feijão, enquanto ela mexe a comida.",
+   "comando": "Descreva as mudanças de estado físico que acontecem nesse processo, na ordem em que ocorrem, e explique por que a tampa embaça.",
+   "ref": "A água líquida vira vapor (vaporização/ebulição) ao receber calor do fogo. O vapor encontra a tampa mais fria, perde energia e volta ao estado líquido (condensação), formando as gotas que embaçam o vidro e caem na panela."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma sorveteria de feira em Piracicaba testou quanto tempo duas bolas de sorvete levam para derreter por completo em lugares diferentes. O dono quer escolher onde montar a barraca e como atrasar o derretimento durante o verão.",
+   "comando": "Relacione os dados à mudança de estado que ocorre e proponha uma medida para atrasar o derretimento, justificando.",
+   "ref": "O sorvete derrete (fusão) mais rápido quanto maior a temperatura do ambiente, pois recebe mais calor. Para atrasar, a barraca deve ficar na sombra e o sorvete deve ficar em recipiente isolado e gelado, reduzindo a entrada de calor."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Na represa de uma cidade do interior paulista, o nível baixou cerca de 0,5 cm por dia durante um mês de estiagem. Um morador disse que a água 'sumiu', mas a professora explicou que ela mudou de estado físico e pode voltar à superfície da Terra como chuva.",
+   "comando": "Explique por que o nível baixou mais em janeiro do que em julho e diga para onde foi a água e o que acontece com ela depois.",
+   "ref": "A água líquida da superfície passa a vapor (evaporação), e isso é maior em janeiro porque o Sol aquece mais a água. O vapor sobe, esfria, condensa em gotículas e forma nuvens, e a água volta à Terra como chuva."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em uma festa de aniversário, a vela do bolo derreteu na região perto da chama e a cera líquida escorreu pela lateral, endurecendo de novo antes de chegar à base. Rafaela mediu as temperaturas em pontos da vela com um termômetro de laboratório, e registrou os valores.",
+   "comando": "Identifique as duas mudanças de estado da cera e explique cada uma usando as temperaturas medidas.",
+   "ref": "Perto da chama a cera sólida recebe calor e passa a líquida (fusão), por volta de 55 a 70 °C. Ao escorrer para pontos mais frios, perde calor e volta a sólida (solidificação), como a gota a 30 °C."
+  }
+ ],
+ "6º ANO|2|Relacionar os impactos das ações humanas à qualidade e à saúde do solo.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula prática \"Erosão na garrafa\", Bia regou duas garrafas PET deitadas e cheias de terra com 200 mL de água cada, usando o mesmo regador e a mesma altura. A garrafa A tinha a superfície coberta com grama e folhas secas, e a garrafa B estava com a terra descoberta. Ela recolheu em copos a água que escorreu de cada uma e pesou o solo que veio junto.",
+   "comando": "Qual afirmação é sustentada pelas medidas?",
+   "alts": [
+    "A garrafa coberta recebeu menos água, por isso escoou menos líquido e menos solo que a garrafa descoberta.",
+    "Na garrafa coberta mais da metade da água ficou retida na terra, e o escoamento carregou bem menos solo.",
+    "A garrafa descoberta absorveu mais água, e o solo no copo mostra que a água arrastou o excesso de terra.",
+    "A cobertura de grama impede a erosão porque absorve a água da chuva e deixa a terra completamente seca."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma propriedade rural do interior paulista, um técnico agrícola comparou três formas de uso do terreno em declive sob a mesma chuva média anual. Os valores abaixo são de estimativa por parcela de teste. O dono da fazenda quer manter a lavoura de milho no morro, mas perder menos solo.",
+   "comando": "Qual conclusão e explicação são coerentes com os dados?",
+   "alts": [
+    "Plantar morro abaixo reduz a perda, pois a água escoa mais rápido e tem menos tempo para arrastar o solo, segundo os dados.",
+    "As curvas de nível diminuem a perda porque aumentam a quantidade de chuva que atinge o terreno plantado.",
+    "A perda baixa na mata nativa mostra que qualquer lavoura é incompatível com a conservação do solo.",
+    "Plantar em curvas de nível reduz a velocidade da água, que infiltra mais, e a perda cai para cerca de um terço."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Na horta da escola, a professora Lúcia dividiu o terreno em três canteiros iguais e plantou alface em todos. Depois de 30 dias, a turma mediu a altura das plantas e contou as minhocas em uma amostra de solo de mesmo tamanho. O canteiro B recebeu adubo químico em quantidade bem acima da recomendada.",
+   "comando": "Que conclusão sobre a saúde do solo é sustentada pelos registros?",
+   "alts": [
+    "Plantas altas não bastam para indicar solo saudável: em B a alface cresceu como em A, mas a queda das minhocas sugere dano.",
+    "O canteiro B tem o solo mais saudável, pois a alface mais alta indica que as condições de cultivo foram as melhores do experimento.",
+    "O composto de A prejudicou a alface, pois, mesmo com mais minhocas, as plantas ficaram menores que as de B.",
+    "As minhocas de C explicam a baixa altura da alface, já que esses animais retiram nutrientes que as plantas usariam."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "A escola de Carlos tem um pátio inteiro cimentado, onde a água da chuva forma poças e corre para a rua, alagando a calçada. A direção quer reformar uma parte do pátio. A turma testou como cada tipo de piso recebe água: despejou 1.000 mL em 1 m² de cada superfície e mediu quanto entrou no chão em 10 minutos.",
+   "comando": "Qual proposta de reforma é mais coerente com os dados para diminuir o escoamento da água para a rua?",
+   "alts": [
+    "Cobrir o pátio com terra nua compactada, que deixa entrar alguma água e dispensa o plantio e a manutenção.",
+    "Manter o cimento liso e ampliar as calhas, já que a água que não entra no chão deixa de arrastar o solo.",
+    "Trocar parte do cimento por gramado e piso com frestas, que deixam entrar bem mais água e reduzem o que corre para a rua.",
+    "Substituir o cimento por terra nua compactada e depois cobri-la com cimento, para segurar o solo no lugar."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma área de encosta em Paraibuna foi queimada para limpar o terreno. Um ano depois, uma equipe comparou o solo dessa área com o de um trecho vizinho de mata preservada, onde as condições de declive, tipo de solo e chuva são iguais. Em seguida, simulou uma chuva forte nos dois trechos e mediu a água que escorreu pela superfície.",
+   "comando": "Que hipótese explica o resultado observado na área queimada?",
+   "alts": [
+    "A cinza da queima adicionou matéria orgânica ao solo, e por isso a água escorreu em maior volume pela superfície.",
+    "A queima removeu a cobertura e a matéria orgânica, deixando o solo exposto, com menos infiltração e mais arraste de nutrientes.",
+    "A mata preservada escoou menos água porque suas árvores aumentam a chuva que cai sobre o terreno de declive.",
+    "O solo queimado ficou mais poroso, e o maior escoamento mostra que a água passou rápido pelo interior do solo."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na horta de uma escola de Campinas, dois canteiros idênticos foram regados com a mesma quantidade de água. O canteiro 1 foi coberto com palha seca; o canteiro 2 ficou com a terra descoberta. Após uma chuva forte, a turma observou que o canteiro 2 ficou com sulcos e a água que escorreu dele estava barrenta.",
+   "comando": "Com base nos dados, explique a diferença entre os canteiros e proponha uma ação para proteger o solo da horta.",
+   "ref": "O canteiro 1 manteve mais umidade e a água escorrida ficou clara, pois a palha reduziu o impacto da chuva e favoreceu a infiltração. No canteiro 2 o solo exposto foi arrastado, formando sulcos. Cobrir o solo com palha ou plantar cobertura protege contra a erosão."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Para estudar o destino do lixo no solo, alunos de Sorocaba enterraram a 10 cm de profundidade pedaços de materiais diferentes em caixas com a mesma terra, umidade e temperatura, e desenterraram tudo depois de 60 dias.",
+   "comando": "Compare os resultados e explique por que o descarte de resíduos no solo exige escolhas diferentes conforme o material.",
+   "ref": "Materiais orgânicos, como a casca, se decompõem rápido, e o papel parcialmente, enquanto plástico e vidro permanecem no solo por muito tempo. Resíduos que não se decompõem devem ser reciclados ou levados a destino correto, e os orgânicos podem virar composto."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma cooperativa cafeeira comparou durante cinco anos dois sítios vizinhos com o mesmo tipo de solo. No sítio X, o plantio ocorreu sempre no mesmo lugar, com solo exposto entre as fileiras e sem adubação verde. No sítio Y, entre as fileiras, plantaram-se leguminosas que depois eram cortadas e deixadas sobre a terra.",
+   "comando": "Descreva a tendência de cada sítio e explique uma hipótese, ligada à saúde do solo, para a diferença observada.",
+   "ref": "A produtividade do sítio X caiu de 30 para 21, e a do Y subiu de 30 para 33. Hipótese: a cobertura de leguminosas protege contra erosão e devolve matéria orgânica e nutrientes ao solo, enquanto o solo exposto se empobrece."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em um bairro de encosta de Francisco Morato, moradores retiraram a vegetação para construir casas e abriram caminhos de terra no morro. Depois de uma semana de chuvas fortes, apareceram buracos fundos no terreno e lama escorrendo para as ruas de baixo.",
+   "comando": "Explique duas relações entre as ações dos moradores e o que ocorreu no solo, e proponha uma medida de prevenção.",
+   "ref": "Sem vegetação, as raízes não seguram o solo e a chuva o arrasta, formando buracos e lama. Os caminhos de terra concentram a água e aceleram o escoamento. Medidas: replantar vegetação, abrir drenagem e evitar ocupar áreas de encosta."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Alunos mediram a turbidez da água (quantidade de partículas em suspensão) em dois trechos do mesmo rio, depois de uma chuva forte. O trecho 1 tem as margens com mata, e o trecho 2 passa por pasto com as margens sem árvores.",
+   "comando": "Explique a diferença entre os trechos relacionando a ação humana à qualidade do solo e da água.",
+   "ref": "A água do trecho 2 está mais turva porque, sem mata nas margens, a chuva arrasta solo para o rio. As raízes e a cobertura do trecho 1 seguram a terra. A perda de solo empobrece o terreno e pode assorear o rio."
+  }
+ ],
+ "6º ANO|3|Associar células, tecidos, órgãos e sistemas aos níveis de organização dos seres vivos.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na horta da escola, os alunos do 6º ano coletaram uma folha de alface e observaram três preparações ao microscópio, anotando o que viam. Depois, discutiram em qual nível de organização cada observação se encaixa.",
+   "comando": "Qual classificação é sustentada pelas anotações dos alunos?",
+   "alts": [
+    "A película superficial é um órgão, pois protege a planta, e a folha inteira é um tecido, pois contém muitas células verdes.",
+    "A folha inteira é um sistema, pois tem muitas partes, e a película superficial é uma célula grande que cobre a planta.",
+    "A folha inteira é um órgão, pois reúne tecidos diferentes, e a película é um tecido, pois agrupa células parecidas.",
+    "O estômato é um tecido, pois tem duas células, e a película superficial é um órgão, pois cobre a folha inteira da planta."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Dois colegas discutem se o sangue humano é um tecido ou um órgão. Para decidir, pesquisaram a composição de uma amostra de sangue e a função de cada componente, conforme a tabela, e lembraram que um órgão reúne tecidos diferentes trabalhando juntos.",
+   "comando": "Que argumento é mais bem sustentado pelos dados da pesquisa?",
+   "alts": [
+    "É um órgão, pois possui células de tipos diferentes, e cada tipo de célula equivale a um tecido que cumpre uma função própria.",
+    "É um tecido, pois reúne células de tipos diferentes e uma parte líquida que atuam juntas no transporte e na defesa.",
+    "É um tecido, pois tem um mesmo tipo de célula repetido milhões de vezes, que cumpre a mesma função em todo o corpo.",
+    "É um órgão, pois circula pelo corpo inteiro e entra em contato com os demais órgãos para realizar o transporte de gases."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "O intestino delgado é um órgão formado por diferentes tecidos. Uma turma pesquisou o papel de cada um deles e, em seguida, imaginou um caso hipotético em que o tecido muscular liso da parede do intestino perdesse a capacidade de se contrair, mas os demais tecidos continuassem normais.",
+   "comando": "Com base na pesquisa, qual consequência é esperada nesse caso hipotético?",
+   "alts": [
+    "O alimento deixaria de ser empurrado ao longo do tubo, prejudicando o órgão e o sistema digestório, embora as células da superfície ainda absorvessem nutrientes.",
+    "A absorção de nutrientes deixaria de ocorrer, pois o tecido muscular é o responsável por levar os nutrientes das células do intestino até o sangue.",
+    "A falha ficaria restrita ao tecido muscular, e o intestino e o sistema digestório continuariam funcionando de modo normal, pois os demais tecidos cumprem outras funções.",
+    "O sistema nervoso deixaria de coordenar o intestino, e por isso o tecido muscular e o epitelial perderiam suas funções ao mesmo tempo."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "A ameba é um ser vivo de uma única célula e a minhoca é um animal multicelular. Uma estudante comparou os dois organismos para entender como cada um realiza funções como digerir alimentos, e anotou as informações que encontrou em um livro.",
+   "comando": "Qual conclusão é sustentada pelos dados que a estudante anotou?",
+   "alts": [
+    "A ameba possui um sistema digestório simples, pois a bolsa onde digere o alimento corresponde a um órgão da célula.",
+    "A minhoca digere melhor que a ameba, pois quanto mais células um organismo tem, mais eficiente é sua digestão.",
+    "Na ameba uma só célula cumpre todas as funções, e na minhoca partes diferentes do corpo dividem as tarefas.",
+    "As células da minhoca são todas iguais entre si, e por isso o tubo digestório trabalha como uma grande célula."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em uma feira de ciências, três grupos de alunos receberam cartões com estruturas do corpo humano e deviam rotular o nível de organização de cada conjunto. As anotações de cada grupo sobre o que os cartões continham aparecem a seguir.",
+   "comando": "Qual alternativa associa corretamente cada grupo ao seu nível de organização?",
+   "alts": [
+    "O grupo 1 reuniu um órgão, o grupo 2 reuniu um sistema e o grupo 3 reuniu um tecido.",
+    "O grupo 1 reuniu um tecido, o grupo 2 reuniu um órgão e o grupo 3 reuniu um sistema.",
+    "O grupo 1 reuniu um sistema, o grupo 2 reuniu um órgão e o grupo 3 reuniu um tecido.",
+    "O grupo 1 reuniu um sistema, o grupo 2 reuniu um tecido e o grupo 3 reuniu um órgão."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em um laboratório, pesquisadores colocaram uma única célula muscular do coração em uma placa e viram que ela se contrai cerca de 60 vezes por minuto. Já o coração inteiro, formado por milhões dessas células e outros tecidos, bombeia sangue para o corpo todo.",
+   "comando": "Explique por que a célula isolada não consegue bombear o sangue como o coração faz, relacionando os níveis de organização envolvidos.",
+   "ref": "Uma célula é só a unidade que se contrai; o bombeamento exige muitas células agrupadas em tecido muscular, junto com outros tecidos, formando o órgão coração com câmaras e válvulas. Esse órgão ainda atua com vasos e sangue no sistema circulatório."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Na horta escolar, Bia examinou ao microscópio a folha de uma couve. Ela viu uma camada fina de células transparentes por fora, células verdes cheias de cloroplastos no meio e pequenos tubos por onde circulam água e seiva.",
+   "comando": "Explique por que a folha é considerada um órgão e indique dois dos tecidos que Bia observou, dizendo a função de cada um.",
+   "ref": "A folha é um órgão porque reúne tecidos diferentes que trabalham juntos para uma função. A epiderme protege a folha, o tecido verde realiza a fotossíntese e os vasos conduzem água e seiva."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "O pâncreas é um órgão do sistema digestório que contém grupos de células especializadas em produzir hormônios e outras células que produzem enzimas digestivas. Uma pessoa pode ter problemas de saúde quando um tipo de célula do pâncreas deixa de funcionar bem.",
+   "comando": "Explique como a falha em um único tipo de célula do pâncreas pode afetar o órgão e o funcionamento do organismo.",
+   "ref": "Cada tipo de célula forma um tecido com função própria, e o pâncreas só funciona bem quando todos cumprem seu papel. Se um tipo falha, o órgão perde parte da sua função, o sistema ligado a ela é prejudicado e o organismo sofre as consequências."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma bactéria é formada por uma única célula, que realiza sozinha todas as suas funções. Já um cachorro tem trilhões de células organizadas em tecidos, órgãos e sistemas, com o sistema digestório, o respiratório e o circulatório trabalhando juntos.",
+   "comando": "Compare como cada um desses seres vivos realiza suas funções e explique a vantagem de organizar as células em tecidos e órgãos em um organismo grande.",
+   "ref": "A bactéria realiza todas as funções em uma só célula, e o cachorro divide as tarefas entre células especializadas organizadas em tecidos, órgãos e sistemas. Essa divisão de trabalho permite funções mais eficientes e um corpo maior e mais complexo."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um jogador de futebol amador sofreu uma lesão no tecido muscular da coxa durante uma partida. O médico explicou que ele ficaria alguns dias sem correr, embora os ossos e os nervos da perna estivessem intactos.",
+   "comando": "Preveja o que acontece com o órgão e com o sistema de movimento do jogador, explicando por que a lesão em um tecido afeta o conjunto.",
+   "ref": "O músculo, que é um órgão formado por tecido muscular, perde parte da capacidade de contrair, e assim o movimento da perna fica prejudicado. Como o sistema locomotor depende da ação conjunta de músculos, ossos e nervos, a falha de um tecido reduz o desempenho do conjunto."
+  }
+ ],
+ "6º ANO|3|Classificar células procariontes e eucariontes de acordo com a presença ou ausência de núcleo organizado.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula de microscopia, Lucas examinou três amostras coradas para destacar o DNA: uma gota de água de poço com bactérias, uma pitada de fermento de padaria e um fragmento de folha de alface. Ele anotou o que viu e a presença de membrana ao redor do DNA.",
+   "comando": "Qual conclusão é sustentada pelos dados de Lucas?",
+   "alts": [
+    "A amostra da água de poço é procarionte por ser a menor, pois o tamanho da célula é o critério para separar os dois tipos.",
+    "A amostra da água de poço é procarionte, pois seu DNA não está envolto por membrana, enquanto fermento e alface são eucariontes.",
+    "O fermento é procarionte por ser unicelular, e a alface é eucarionte por ter muitas células organizadas em tecido.",
+    "As três amostras são eucariontes, pois as três têm DNA, e a presença de material genético define o núcleo organizado."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma professora apresentou três células desconhecidas e pediu que a turma discutisse se a presença de parede celular indica que a célula é procarionte. Os alunos reuniram as características de cada célula em uma tabela.",
+   "comando": "Qual dado da tabela mostra que a ideia de que 'parede celular indica célula procarionte' é INCORRETA?",
+   "alts": [
+    "A célula Y não tem parede e tem núcleo delimitado, o que prova que toda célula com núcleo organizado é desprovida de parede.",
+    "A célula X tem parede e não tem núcleo, o que mostra que a parede é a estrutura que impede a formação do núcleo.",
+    "A célula Z é eucarionte, pois possui parede celular e também um núcleo envolto por membrana, além de cloroplastos.",
+    "A célula Z tem cloroplastos, estrutura típica de procariontes e que explica a presença da parede celular."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um grupo de pesquisadores mediu o comprimento de três células: uma bactéria comum do intestino, uma levedura e uma bactéria gigante encontrada em sedimento marinho. Eles sabem que o DNA da bactéria comum e o da bactéria gigante está solto no citoplasma, e que o da levedura fica dentro do núcleo.",
+   "comando": "O que os dados permitem concluir sobre a classificação das células por tamanho?",
+   "alts": [
+    "Células com mais de 5 µm são eucariontes, pois o núcleo organizado aparece quando a célula atinge um tamanho mínimo.",
+    "A bactéria gigante deve ser eucarionte, pois uma célula tão grande precisa de núcleo delimitado para controlar suas funções.",
+    "A levedura e a bactéria comum têm o mesmo tipo celular, pois ambas são microscópicas e medem poucos micrômetros.",
+    "O tamanho não separa os tipos celulares, porque a bactéria gigante é procarionte e maior que a levedura, que é eucarionte."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Na feira de ciências, uma equipe corou três amostras para verificar se havia núcleo. O corante de DNA mostrou um ponto central nas amostras 2 e 3 e uma mancha difusa na amostra 1. Em seguida, usaram um segundo corante, específico para membranas.",
+   "comando": "Qual afirmação NÃO é sustentada pelos dados da equipe?",
+   "alts": [
+    "As amostras 2 e 3 são do mesmo organismo, pois têm o mesmo padrão de coloração do DNA e da membrana.",
+    "A amostra 1 é procarionte, porque seu DNA aparece espalhado na célula e sem membrana ao redor dele.",
+    "As amostras 2 e 3 são eucariontes, porque o DNA está reunido em uma região delimitada por membrana.",
+    "O ponto central de DNA, sozinho, não bastaria para afirmar que há núcleo, e por isso foi preciso detectar a membrana."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um laboratório escolar, quatro seres microscópicos foram agrupados em uma tabela. A turma quer formar dois grupos que correspondam ao tipo de célula, isto é, à presença ou ausência de núcleo organizado.",
+   "comando": "Qual agrupamento é coerente com o tipo de célula?",
+   "alts": [
+    "Cianobactéria e alga verde formam um grupo, pois realizam fotossíntese e isso indica o mesmo tipo de célula.",
+    "Fungo de pão e bactéria do iogurte formam um grupo, pois ambos absorvem alimento e têm o mesmo tipo de célula.",
+    "Alga verde e fungo de pão formam um grupo, e cianobactéria e bactéria do iogurte formam o outro, apesar de nutrição distinta.",
+    "Cianobactéria e fungo de pão formam um grupo, pois são seres de ambientes úmidos com o mesmo tipo de célula."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma padaria faz pão com fermento e um laticínio faz iogurte com bactérias lácticas. Ao microscópio, a levedura do pão mede cerca de 7 µm e tem o DNA dentro de um núcleo com membrana; a bactéria do iogurte mede cerca de 2 µm e tem o DNA solto no citoplasma. Ambas são unicelulares.",
+   "comando": "Explique por que esses dois seres, embora unicelulares e microscópicos, têm tipos de célula diferentes, usando os dados.",
+   "ref": "Ser unicelular e microscópico não define o tipo celular. A levedura é eucarionte porque seu DNA está em um núcleo envolto por membrana; a bactéria é procarionte porque seu DNA fica solto no citoplasma, sem envoltório."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Marina montou dois modelos de célula com saquinhos: no modelo A, o barbante (DNA) ficou solto dentro do saquinho grande; no modelo B, o barbante ficou dentro de um saquinho pequeno colocado dentro do grande. Sua colega Júlia afirmou que o modelo B representa a bactéria, pois 'tem mais estruturas e é mais complexo'.",
+   "comando": "Avalie a afirmação de Júlia e indique qual modelo representa a bactéria, justificando com o critério usado para classificar células.",
+   "ref": "Júlia está errada: o critério não é ter mais estruturas, e sim a presença de núcleo com envoltório. O modelo A, com o DNA solto, representa a bactéria (procarionte); o modelo B, com DNA dentro de um saquinho próprio, representa uma célula eucarionte."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Pesquisadores que coletaram água da represa Billings, em São Paulo, isolaram um organismo unicelular novo. O corante de DNA mostrou uma mancha concentrada em uma região da célula, mas o microscópio comum não permitiu ver se havia membrana ao redor dela.",
+   "comando": "Explique se é possível afirmar que o organismo é eucarionte com essa observação e proponha uma observação adicional que ajudaria na classificação.",
+   "ref": "Não é possível afirmar ainda: uma região concentrada de DNA pode existir também em procariontes, sem membrana. Seria preciso verificar se há membrana envolvendo a região, por exemplo com um corante específico de membrana ou com microscopia de maior resolução."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma UBS, o exame de urina de uma paciente mostrou dois tipos de célula ao microscópio: células grandes (50 µm) com um ponto central de DNA envolto por membrana e células muito pequenas (2 µm) com DNA espalhado, sem membrana ao redor.",
+   "comando": "Compare os dois tipos de célula quanto à classificação e explique qual característica você usou para diferenciá-las.",
+   "ref": "A célula 1 é eucarionte, pois seu DNA está dentro de um núcleo delimitado por membrana, e a célula 2 é procarionte, com DNA solto. A característica usada foi a presença ou ausência de núcleo organizado, e não o tamanho."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma aluna deseja mostrar à turma a diferença entre uma célula de bactéria e uma célula de cebola usando materiais simples: saquinhos, barbante, massinha e canudos coloridos. Ela tem pouco material e precisa escolher o que representar em cada modelo.",
+   "comando": "Proponha como deve ser a construção dos dois modelos para que a diferença entre procarionte e eucarionte fique evidente, justificando sua escolha.",
+   "ref": "No modelo da bactéria, o barbante (DNA) fica solto dentro do saquinho, sem envoltório. No modelo da célula de cebola, o barbante fica dentro de um saquinho menor, que representa o núcleo com membrana. A diferença que deve ficar clara é a presença do núcleo organizado."
+  }
+ ],
+ "6º ANO|3|Classificar seres vivos (bactérias, fungos e/ou protozoários) a partir de suas características celulares e papéis ecossistêmicos.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na mesa dos microrganismos da escola, Bia observou ao microscópio três amostras e anotou o que enxergou. A amostra A veio de uma colher de iogurte natural, a amostra B de uma pitada de fermento biológico dissolvido em água morna e a amostra C de um pedaço de pão mofado. Depois, ela tentou classificar cada amostra usando só o que anotou.",
+   "comando": "Qual classificação é coerente com as anotações e com a origem de cada amostra?",
+   "alts": [
+    "A é bactéria, pois a célula única não tem núcleo; B é fungo, pois a célula única com núcleo vem de fermento; C é fungo, pois tem muitas células com núcleo.",
+    "A é bactéria, pois a célula única não tem núcleo; B é protozoário, pois a célula única com núcleo vem de água; C é fungo, pois tem muitas células com núcleo.",
+    "A é protozoário, pois a célula única vive em meio líquido; B é bactéria, pois é uma célula única e pequena; C é fungo, pois tem muitas células com núcleo.",
+    "A é bactéria, pois a célula única não tem núcleo; B é fungo, pois a célula única com núcleo vem de fermento; C é bactéria, pois cresce sobre o alimento."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma horta escolar de Mogi das Cruzes, Tiago colocou folhas secas e a mesma quantidade de água em três potes, que ficaram à sombra por 30 dias. O pote 1 recebeu solo comum de canteiro, o pote 2 recebeu solo aquecido em forno para eliminar microrganismos e o pote 3 recebeu solo aquecido e uma colher de solo comum. Ele mediu a perda de massa das folhas em cada pote.",
+   "comando": "Que conclusão é sustentada pelos resultados do experimento?",
+   "alts": [
+    "A perda de massa das folhas depende do calor aplicado ao solo, pois o solo que passou pelo forno decompôs menos e o solo sem aquecimento decompôs mais.",
+    "A perda de massa das folhas depende de organismos presentes no solo comum, pois sem eles a decomposição foi pequena e um pouco de solo comum a restabeleceu.",
+    "A perda de massa das folhas depende da quantidade de nutrientes do solo, pois o solo aquecido perdeu nutrientes e o solo comum manteve os nutrientes originais.",
+    "A perda de massa das folhas depende da água acrescentada nos potes, pois a umidade dissolve as folhas mais rápido quando o solo contém mais água disponível."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma turma de Sorocaba fez iogurte caseiro: misturou leite pasteurizado com uma colher de iogurte natural e dividiu a mistura em três copos, cada um mantido em uma temperatura por 8 horas. O iogurte natural contém bactérias vivas que transformam o açúcar do leite em ácido, o que deixa o leite mais espesso. Depois, os alunos verificaram a consistência de cada copo.",
+   "comando": "Qual interpretação dos resultados é correta?",
+   "alts": [
+    "No copo 1 as bactérias estão ausentes e no copo 3 estão presentes em maior número, pois a consistência líquida indica que elas não se multiplicaram.",
+    "No copo 3 as bactérias se multiplicaram mais depressa por causa do calor, mas o ácido produzido evaporou, o que manteve o leite com aspecto líquido.",
+    "No copo 1 as bactérias estão vivas, mas pouco ativas, e no copo 3 a temperatura elevada as eliminou, de modo que só o copo 2 transformou o leite.",
+    "No copo 2 as bactérias foram criadas pelo calor a partir do leite, pois o leite pasteurizado não continha microrganismos antes de ser aquecido a 40 °C."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em uma poça de água parada com folhas apodrecendo, Rafael coletou três organismos e anotou como cada um se alimenta. O organismo X forma filamentos com muitas células e absorve o alimento do material morto. O organismo Y é uma célula única sem núcleo e absorve substâncias da água. O organismo Z é uma célula única com núcleo e engole bactérias da água.",
+   "comando": "Qual alternativa classifica corretamente o organismo Z e descreve seu papel no ambiente?",
+   "alts": [
+    "É um protozoário decompositor, pois tem uma célula com núcleo e vive entre folhas em decomposição, o que acelera a reciclagem da matéria morta.",
+    "É um fungo decompositor, pois tem uma célula com núcleo e obtém alimento da matéria orgânica da poça, o que devolve nutrientes para o ambiente.",
+    "É uma bactéria produtora, pois tem uma célula pequena e vive na água da poça, o que fornece alimento para os outros organismos da cadeia.",
+    "É um protozoário consumidor, pois tem uma célula com núcleo e se alimenta de bactérias, o que ajuda a regular a população delas."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Para entender como funciona o pão de forma, a professora de Campinas montou três frascos com água morna e prendeu um balão na boca de cada um. No frasco 1 colocou fermento biológico e açúcar, no frasco 2 só fermento e no frasco 3 só açúcar. Depois de 30 minutos, a turma registrou o volume dos balões e discutiu o que originou o gás.",
+   "comando": "Que conclusão os resultados sustentam sobre a origem do gás que encheu o balão?",
+   "alts": [
+    "O gás vem do açúcar, que libera bolhas ao se dissolver, e o fermento só ajuda a deixar o açúcar mais solúvel na água morna.",
+    "O gás vem de organismos do fermento, que usam o açúcar como alimento, pois só a combinação dos dois encheu bem o balão.",
+    "O gás vem da água morna, que se expande e escapa por qualquer mistura, e o fermento e o açúcar apenas ajustam a quantidade liberada.",
+    "O gás vem do fermento, que o libera sozinho ao ser hidratado, e o açúcar só deixa a mistura mais doce sem interferir no volume."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Lúcia guardou um pão de forma em um saquinho plástico fechado e o deixou em um armário úmido da cozinha. Ela anotou o aspecto do pão em três dias e viu que o saquinho não impediu o aparecimento de manchas. Sua mãe pediu que ela não abrisse o saquinho para cheirar o pão.",
+   "comando": "Explique que tipo de ser vivo apareceu no pão, como ele obtém alimento e por que é recomendado não abrir o saquinho.",
+   "ref": "Apareceu um fungo (bolor), que tem células com núcleo, forma filamentos e se alimenta absorvendo nutrientes do próprio pão, atuando como decompositor. Não se deve abrir o saquinho porque o fungo libera esporos no ar, que podem ser inalados e se espalhar para outros alimentos."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um trecho de córrego de São Bernardo do Campo recebe esgoto doméstico sem tratamento. O esgoto é rico em matéria orgânica, que bactérias decompõem consumindo oxigênio da água. Estudantes consultaram medições de um projeto de monitoramento em três pontos do córrego e tentaram relacionar os valores com a presença de bactérias.",
+   "comando": "Explique por que o oxigênio dissolvido diminui logo após a entrada do esgoto e por que volta a subir mais adiante.",
+   "ref": "Logo após o lançamento há muita matéria orgânica, então as bactérias decompositoras se multiplicam e consomem o oxigênio da água, que cai. Mais adiante a matéria orgânica já foi em parte decomposta e a água recebe oxigênio do ar, por isso o valor sobe de novo."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Pesquisadores de uma universidade paulista encontraram em um tronco caído na Mata Atlântica um organismo desconhecido. Ao microscópio, viram filamentos formados por muitas células, todas com núcleo. Eles notaram que o organismo cresce sobre a madeira morta, onde libera substâncias que a desmancham, e que ele absorve os produtos dessa quebra.",
+   "comando": "Classifique o organismo em um grupo, justificando com duas características, e explique seu papel no ecossistema.",
+   "ref": "É um fungo, pois tem muitas células com núcleo organizadas em filamentos e absorve o alimento do material onde cresce. Seu papel é de decompositor: ele desmancha a madeira morta e devolve nutrientes ao solo, que as plantas podem reaproveitar."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma lagoa de um parque de Ribeirão Preto, alunos separaram a água em dois frascos com a mesma quantidade de bactérias. No frasco A adicionaram protozoários que se alimentam de bactérias e no frasco B não adicionaram nenhum. Eles contaram as bactérias por mililitro no início e depois de dois dias, em condições iguais de luz e temperatura.",
+   "comando": "Compare os frascos e explique que relação ecológica os dados indicam entre protozoários e bactérias.",
+   "ref": "No frasco B as bactérias aumentaram e no frasco A diminuíram, e a única diferença era a presença dos protozoários. Isso indica que eles se alimentam das bactérias (relação de predação) e ajudam a controlar o tamanho da população delas na lagoa."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Para fazer iogurte caseiro, Dona Marta esquenta o leite até ficar morno, mistura uma colher de iogurte natural comprado no mercado e deixa o pote embrulhado em um pano por uma noite. Seu neto perguntou por que ela não usa só o leite, nem coloca a mistura na geladeira logo no começo, e quis saber que seres vivos estão envolvidos.",
+   "comando": "Explique por que cada etapa é necessária, relacionando-a ao ser vivo responsável pela transformação do leite.",
+   "ref": "O iogurte natural traz bactérias vivas que transformam o açúcar do leite em ácido e o deixam espesso; só o leite não teria essas bactérias. O leite fica morno porque elas funcionam melhor nessa temperatura (o calor excessivo as mataria), e a geladeira só entra depois, pois o frio reduz a atividade delas."
+  }
+ ],
+ "6º ANO|3|Reconhecer como o desenvolvimento do microscópio contribuiu para os avanços no conhecimento celular.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula sobre lentes, Ana pingou gotas de água sobre um plástico transparente colocado em cima do jornal e mediu quanto uma mesma letra parecia maior através de cada gota. Ela usou a mesma água, o mesmo plástico e a mesma letra em todos os testes, mudando só a gota.",
+   "comando": "Que conclusão é sustentada pelos dados do registro de Ana?",
+   "alts": [
+    "A gota maior amplia mais, porque reúne uma quantidade maior de água para desviar a luz da letra.",
+    "A gota mais achatada amplia mais, porque espalha a luz sobre uma superfície maior do jornal.",
+    "A gota mais arredondada amplia mais, porque sua superfície curva desvia a luz como uma lente.",
+    "A gota de 5 mm é a pior lente, porque o diâmetro intermediário atrapalha a passagem da luz."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em 1665, Robert Hooke observou uma fatia fina de cortiça num microscópio de lentes e desenhou pequenas cavidades que chamou de células. Em 1674, Leeuwenhoek, com uma lente única muito pequena e bem polida, viu seres vivos em uma gota de água de lagoa.",
+   "comando": "Qual hipótese explica melhor por que Leeuwenhoek viu seres vivos que Hooke não registrou?",
+   "alts": [
+    "A cortiça observada por Hooke é material morto, por isso o seu microscópio não poderia mostrar seres vivos em movimento na lâmina.",
+    "A lente de Leeuwenhoek aumentava a imagem cerca de nove vezes mais, revelando seres menores que o limite do instrumento de Hooke.",
+    "A água de lagoa contém mais seres vivos do que a cortiça, então a diferença vem da amostra e o instrumento tem pouca influência.",
+    "Os dois instrumentos aumentavam de modo parecido, mas Leeuwenhoek era mais cuidadoso ao desenhar o que enxergava na lente."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "A escola comprou um microscópio com ocular de 10 vezes e objetivas de 4, 10 e 40 vezes. O professor explica que o olho nu só distingue detalhes a partir de 100 micrômetros (µm) e pede que os alunos escolham o MENOR aumento total capaz de mostrar uma bactéria de 2 µm.",
+   "comando": "Que escolha atende ao pedido do professor?",
+   "alts": [
+    "A objetiva de 10 vezes, pois o aumento total é de 100 vezes e a bactéria aparece com 200 µm, acima do mínimo visível.",
+    "A objetiva de 4 vezes, pois o aumento total é de 40 vezes e a bactéria aparece com 80 µm, abaixo do mínimo visível.",
+    "A objetiva de 40 vezes, pois o aumento total é de 400 vezes e a bactéria aparece com 800 µm, muito acima do mínimo.",
+    "A ocular de 10 vezes sozinha, pois a bactéria aumentada dez vezes já ocupa 20 µm, e isso basta para vê-la."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma turma montou a sequência abaixo a partir do livro didático para discutir como o conhecimento sobre as células foi construído. A professora pediu que cada aluno avaliasse a relação entre o instrumento usado e as ideias propostas em cada época.",
+   "comando": "Qual afirmação é sustentada pela sequência de eventos?",
+   "alts": [
+    "A ideia de que os seres vivos têm células surgiu antes das observações, e o microscópio serviu para confirmá-la nos anos seguintes.",
+    "Hooke já havia provado em 1665 que as células são a unidade de funcionamento dos seres vivos, e os demais cientistas repetiram o resultado.",
+    "Cada cientista descobriu as células de forma independente do instrumento, e o microscópio ilustrou o que já se sabia.",
+    "O avanço das lentes ampliou o que se observava, e as ideias gerais sobre células vieram após muitas observações."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Mariana comparou duas imagens: a foto A, feita em microscópio óptico escolar, mostra células de cebola com parede e núcleo; a foto B, feita em microscópio eletrônico, mostra pequenos pontos dentro da célula, os ribossomos. Ela quer saber se um aluno poderia ver ribossomos com o microscópio da escola.",
+   "comando": "O que os dados permitem concluir?",
+   "alts": [
+    "Os ribossomos aparecem no microscópio escolar se o aluno aumentar o foco, pois o núcleo de 10 µm já é visível com nitidez.",
+    "Os ribossomos não aparecem no microscópio escolar porque as células da cebola são vegetais e esse tipo celular não tem essas estruturas.",
+    "Os ribossomos ficam abaixo do menor detalhe do microscópio escolar e só poderiam ser vistos num instrumento de limite menor.",
+    "Os ribossomos são vistos no microscópio escolar apenas depois que a célula morre e deixa de se movimentar sob a lente."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Duas colegas discutem o experimento da gota d'água. Lia mediu uma gota de 2 mm, bem arredondada, que ampliou a letra 3 vezes, e uma gota de 4 mm, achatada, que ampliou apenas 1,5 vez. Sofia diz que gotas maiores sempre ampliam mais.",
+   "comando": "Você concorda com Sofia? Justifique com os dados e diga como Lia poderia testar de forma justa o efeito do tamanho.",
+   "ref": "Não concordo: a gota maior ampliou menos, porque estava achatada e desvia menos a luz. A ampliação depende da curvatura da superfície, que faz a gota agir como lente. Para testar o tamanho, Lia deve manter o mesmo formato e variar só o diâmetro."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em suas cartas, Leeuwenhoek contou que uma água de chuva guardada em um vaso mostrava cada vez mais seres minúsculos ao microscópio, mas a água recém-coletada parecia limpa a olho nu. Um grupo de alunos repetiu o procedimento e anotou a contagem em um campo de visão.",
+   "comando": "Interprete os dados e explique por que essa observação dependeu do microscópio.",
+   "ref": "O número de seres por campo aumentou com os dias, indicando que eles se reproduzem na água guardada. Como são pequenos demais para o olho nu, só foram vistos com lentes de grande aumento. O instrumento ampliou o que se pode observar e gerou evidências novas."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Na feira de ciências, um grupo vai trocar a objetiva de 10 vezes por uma de 40 vezes ao observar a película de cebola. A ocular do microscópio é de 10 vezes. Eles contaram as células visíveis em cada situação.",
+   "comando": "Calcule os aumentos totais e explique o que muda na imagem quando a objetiva é trocada.",
+   "ref": "Os aumentos totais são 100 vezes (10 x 10) e 400 vezes (10 x 40). Com mais aumento, a imagem de cada célula fica maior e mostra mais detalhes, mas o campo de visão diminui e cabem menos células nele."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um aluno afirmou que os vírus podem ser vistos no microscópio óptico da escola. A professora entregou uma tabela com tamanhos aproximados e o menor detalhe que esse microscópio consegue distinguir.",
+   "comando": "Avalie a afirmação do aluno com base nos dados e explique como o desenvolvimento de novos microscópios amplia o conhecimento científico.",
+   "ref": "A afirmação está errada: o vírus (0,1 µm) é menor que o menor detalhe do microscópio escolar (0,2 µm), e por isso não é distinguido. Para vê-lo foi preciso criar microscópios eletrônicos, o que mostra que novos instrumentos revelam estruturas antes invisíveis e permitem novos conhecimentos."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Pedro observou três amostras no microscópio da escola e anotou o que conseguia ver em cada uma. Ele precisa escrever uma conclusão para o caderno sobre o que as células têm em comum e no que diferem.",
+   "comando": "Nas colunas, \"sim\" e \"não\" indicam a presença de parede, cloroplastos e núcleo, nessa ordem. Com base no registro, explique o que há em comum entre as células observadas e uma diferença entre elas, relacionando ao papel do microscópio.",
+   "ref": "Todas as amostras têm células com núcleo, o que mostra uma organização básica comum. As células vegetais têm parede e a mucosa da bochecha não, e só a folha tem cloroplastos. O microscópio permitiu comparar essas estruturas e reconhecer a célula como unidade dos seres vivos."
+  }
+ ],
+ "6º ANO|3|Reconhecer os principais componentes celulares (membrana, citoplasma e núcleo).": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na feira de ciências, o grupo de Lia montou um modelo de célula com saquinhos de materiais diferentes, todos com água e cola no interior. Depois mergulharam cada saquinho em água com corante azul por 10 minutos e anotaram o que ocorreu com o corante e com a cola.",
+   "comando": "Qual saquinho representa melhor a membrana de uma célula e por quê?",
+   "alts": [
+    "o de plástico comum, pois isolou o interior do corante, como a membrana que separa a célula do meio externo",
+    "o de plástico com microfuros, pois deixou passar o corante e reteve a cola, como a membrana que controla trocas",
+    "o de tecido de filtro, pois deixou o corante circular, como a membrana que não oferece barreira à entrada",
+    "o de plástico com microfuros, pois deixou o corante entrar, como a membrana que elimina o citoplasma"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Carlos observou ao microscópio uma lâmina de células da bochecha sem corante e não viu pontos escuros no interior. Concluiu que essas células não têm núcleo. A professora pediu que ele repetisse a observação com outros preparos e registrasse o resultado.",
+   "comando": "Que conclusão é sustentada pelos dados apresentados?",
+   "alts": [
+    "o corante forma um núcleo novo em cada célula da bochecha, pois o ponto escuro surge depois que ela é tingida",
+    "as células da bochecha e da cebola diferem na organização, pois o ponto escuro surgiu na cebola e não na bochecha",
+    "a lâmina sem corante prova que células animais perdem o núcleo, pois o ponto escuro surgiu quando o corante foi usado",
+    "a lâmina sem corante tem pouco contraste e o núcleo ficou invisível, pois com corante cada célula mostrou um ponto"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um laboratório, um pesquisador dividiu uma ameba, organismo de uma única célula, em dois fragmentos: um com núcleo e outro sem núcleo. Os dois ficaram em água limpa com alimento e foram acompanhados por uma semana, com contagem diária dos que continuavam ativos e dos que se dividiram.",
+   "comando": "Que conclusão sobre as partes da célula é sustentada pelos dados?",
+   "alts": [
+    "o núcleo coordena as atividades da célula, pois só o fragmento que o tinha manteve o funcionamento e se dividiu",
+    "o núcleo é dispensável para a célula, pois o fragmento sem ele continuou ativo no primeiro dia do experimento",
+    "o citoplasma é a estrutura que comanda a divisão, pois os dois fragmentos tinham citoplasma e ambos ficaram ativos",
+    "a membrana mantém a célula viva por si mesma, pois o fragmento sem núcleo ainda tinha membrana e estava ativo"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Para estudar o citoplasma, a turma usou um modelo com água e cola dentro de um saquinho fechado, e uma bolinha de isopor representando o núcleo. Ao furar o saquinho com um alfinete, o líquido escorreu devagar e a bolinha continuou dentro, envolvida pelo líquido espesso.",
+   "comando": "Qual interpretação do modelo NÃO é sustentada pelo que a turma observou?",
+   "alts": [
+    "o escorrimento do líquido lembra que a membrana mantém o citoplasma contido no interior da célula viva",
+    "a bolinha envolvida pelo líquido lembra que o núcleo fica mergulhado no citoplasma da célula",
+    "o líquido espesso indica que o citoplasma é uma massa compacta, sem espaço para outras estruturas",
+    "o líquido que escorreu lentamente mostra que o citoplasma tem consistência gelatinosa e preenche o espaço"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma indústria despejou uma substância irritante em um riacho. Em laboratório, uma equipe expôs células a ela e usou um corante azul que só penetra quando a membrana está danificada. A cada 10 minutos contou a porcentagem de células coradas de azul.",
+   "comando": "O que os dados indicam sobre o efeito da substância?",
+   "alts": [
+    "a substância fortalece a membrana, que passa a reter o corante no citoplasma e por isso mais células ficaram azuis",
+    "a substância danifica a membrana, que perde a capacidade de barrar o corante, por isso mais células ficaram azuis com o tempo",
+    "a substância aumenta o núcleo, que absorve o corante com o tempo, por isso mais células ficaram azuis",
+    "a substância é produzida pelo citoplasma, que libera o corante no meio, por isso mais células ficaram azuis"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Rosa observou ao microscópio uma película de cebola corada com iodo e células da bochecha coradas com azul de metileno. Em ambas viu um contorno fino, um interior granuloso e um ponto escuro e arredondado por célula.",
+   "comando": "Identifique as três estruturas vistas por Rosa e explique por que o aparecimento delas nos dois materiais reforça a ideia de célula como unidade básica dos seres vivos.",
+   "ref": "O contorno é a membrana, o interior é o citoplasma e o ponto escuro é o núcleo. Como organismos diferentes, uma planta e um animal, apresentam o mesmo padrão de organização, a célula é a unidade estrutural dos seres vivos."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um aluno disse que a célula é como uma cidade murada: o muro tem portões, o centro administrativo toma as decisões e o resto do espaço abriga as casas e as fábricas, onde tudo acontece no dia a dia.",
+   "comando": "Relacione cada parte da cidade a uma estrutura da célula e justifique cada associação com uma função.",
+   "ref": "O muro com portões é a membrana, que delimita a célula e controla a entrada e a saída de substâncias. O centro administrativo é o núcleo, que guarda as informações e comanda a célula. O espaço de casas e fábricas é o citoplasma, onde ocorrem as atividades celulares."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma horta escolar, a turma percebeu que a raiz do tomateiro absorveu fósforo e potássio dissolvidos na água, mas pouco de um sal tóxico que estava misturado ao solo. Os alunos mediram a concentração de cada substância na água do solo e dentro das células da raiz.",
+   "comando": "Qual estrutura da célula explica essa diferença entre as substâncias e como ela atua?",
+   "ref": "A membrana celular explica a diferença, pois controla quais substâncias entram e saem da célula. Ela deixa passar nutrientes de que a planta precisa e dificulta a entrada do sal tóxico."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Fernanda disse ao irmão que o núcleo é apenas um buraco no meio da célula, já que ao microscópio ele parece um ponto escuro e vazio. O irmão lembrou que células sem núcleo, como fragmentos de ameba separados, deixam de se dividir.",
+   "comando": "Use a observação do irmão para corrigir a afirmação de Fernanda e explique a função do núcleo.",
+   "ref": "O núcleo não é um buraco, e sim uma estrutura que guarda o material genético, onde estão as instruções da célula. Como o fragmento sem núcleo deixa de se dividir e de funcionar, vê-se que o núcleo comanda as atividades e a reprodução da célula."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um professor pediu que dois grupos montassem modelos de célula. O grupo A usou um saco de plástico fechado e sem furos; o grupo B usou um saco de plástico com microfuros. Ambos puseram água com cola e uma bolinha dentro e mergulharam em água com corante.",
+   "comando": "Qual dos modelos representa melhor a membrana da célula? Justifique comparando o que acontece com o corante em cada um.",
+   "ref": "O modelo B representa melhor, porque a membrana real deixa passar algumas substâncias, como o corante no modelo. O saco sem furos isola totalmente a célula e não representa a troca com o meio."
+  }
+ ],
+ "6º ANO|3|Reconhecer os princípios da teoria celular.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Lucas, do 6º ano, observou ao microscópio uma película de cebola, um raspado da parte interna da bochecha e uma gota de iogurte natural, e anotou se via parede ao redor das unidades e se havia núcleo visível. O professor pediu que ele concluísse apenas com o que anotou.",
+   "comando": "Qual conclusão é sustentada pelas anotações de Lucas?",
+   "alts": [
+    "A parede ao redor da unidade define o que é um ser vivo, pois aparece nas amostras de origem vegetal e bacteriana.",
+    "Os três materiais têm unidades individualizadas, mas a organização interna dessas unidades varia entre as amostras.",
+    "O núcleo visível é comum às três amostras, o que indica que a divisão em unidades depende da presença de núcleo.",
+    "As unidades da bochecha diferem das demais por não terem delimitação, o que indica que o tecido animal não é celular."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Na aula de laboratório, Bia examinou uma gota de água de lagoa e viu um paramécio nadando, capturando partículas e se dividindo em dois. Depois, observou uma folha de elódea, uma planta aquática, e contou as unidades microscópicas visíveis no campo.",
+   "comando": "Qual conclusão sobre organização dos seres vivos é sustentada pelos dados?",
+   "alts": [
+    "O paramécio não é formado por célula, pois funções vitais como alimentar-se e dividir-se exigem conjuntos de células.",
+    "A elódea realiza mais funções vitais que o paramécio, pois o corpo dela possui um número bem maior de células.",
+    "O paramécio é uma célula incompleta, que precisa de outras células para conseguir se alimentar e se dividir.",
+    "Uma só célula do paramécio realiza sozinha as funções vitais, que na elódea ficam divididas entre muitas células."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Dona Rita ferveu caldo de carne e o distribuiu em três frascos, para testar se microrganismos surgem sozinhos no caldo. Um frasco foi lacrado, outro ficou aberto e o terceiro recebeu um tubo longo e curvo que permite entrada de ar, mas retém poeira. Após sete dias, ela anotou a turvação.",
+   "comando": "Qual interpretação dos resultados é sustentada pelos dados e pela teoria celular?",
+   "alts": [
+    "O caldo só turvou com acesso direto ao ambiente, indicando que os microrganismos vieram de células prévias.",
+    "A fervura não eliminou os microrganismos do frasco B, que se multiplicaram porque a tampa foi retirada do frasco.",
+    "O ar contém uma força vital que transforma o caldo em organismos, o que explica a turvação do frasco aberto.",
+    "Os frascos A e C ficaram sem turvação porque o caldo deles tinha menos nutrientes que o caldo do frasco B."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um grupo de alunos pesquisou quatro tipos de célula e organizou o que cada uma possui. Em seguida, cada integrante do grupo escreveu uma afirmação, e a professora pediu que o grupo identificasse a única que os dados do quadro NÃO sustentam.",
+   "comando": "Qual afirmação NÃO é sustentada pelos dados do quadro?",
+   "alts": [
+    "As quatro células têm membrana envolvendo o conteúdo e material genético, o que reforça a unidade entre os seres vivos.",
+    "A bactéria difere das demais pelo local do DNA, que fica disperso no citoplasma e sem núcleo delimitado por membrana.",
+    "O núcleo delimitado por membrana é uma característica de qualquer célula, pois aparece em cada amostra analisada pelo grupo.",
+    "Seres unicelulares e pluricelulares podem ter o mesmo plano básico de organização, como mostram a levedura e a cebola."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Ana colocou uma folha de cebola, um raspado de bochecha e uma bactéria em lâminas e usou aumentos diferentes em cada uma (lâmina 1: cebola, lâmina 2: bochecha, lâmina 3: bactéria). Ela mediu o tamanho da imagem no papel e dividiu pelo aumento para estimar o tamanho real de cada célula.",
+   "comando": "Qual alternativa apresenta as amostras da maior para a menor célula real?",
+   "alts": [
+    "Bochecha, cebola e bactéria, pois a ordem dos tamanhos reais coincide com a ordem das medidas das imagens no papel.",
+    "Cebola, bochecha e bactéria, pois a imagem dividida pelo aumento dá 0,5 mm, 0,06 mm e 0,012 mm.",
+    "Bactéria, bochecha e cebola, pois um aumento maior revela uma célula maior e, portanto, mais fácil de medir.",
+    "Cebola, bactéria e bochecha, pois a bactéria foi ampliada mais vezes e deve ter tamanho real próximo ao da cebola."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Joana ralou o joelho e a pele se recuperou em dez dias. Para entender o processo, um laboratório fictício contou as células em divisão por campo de microscópio na borda da ferida, comparando com a pele sem ferida.",
+   "comando": "Explique o que os dados indicam sobre a origem das novas células da pele e por que a cicatrização depende da divisão celular.",
+   "ref": "As novas células vêm da divisão de células já existentes na borda da ferida, o que explica o aumento até o dia 5. Como o tecido é feito de células, repor células fecha a ferida, e a divisão volta ao nível normal no dia 10."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Durante uma discussão em sala, um aluno disse que uma bactéria e uma célula de cebola não podem ser comparadas, pois uma é um organismo inteiro e a outra faz parte de uma planta. A professora entregou um quadro com características das duas.",
+   "comando": "Compare os dados das duas e explique por que ambas são consideradas células, mesmo com diferenças.",
+   "ref": "As duas têm membrana, ribossomos e capacidade de se dividir, o que as caracteriza como células, a unidade básica da vida. A diferença é a organização interna: a bactéria não tem núcleo delimitado, e a cebola tem; isso mostra variações sobre um mesmo plano."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Mariana estudou células do corpo humano e viu que elas têm formatos muito diferentes. Ela anotou, em um quadro, o formato, o tamanho aproximado e a função de três tipos de célula, para discutir com a turma.",
+   "comando": "Explique como o formato de cada célula se relaciona com sua função e por que ainda assim todas são consideradas a unidade básica do corpo.",
+   "ref": "O formato favorece a tarefa: o disco achatado da hemácia facilita as trocas gasosas, os prolongamentos do neurônio conduzem sinais a distância e a forma alongada do músculo permite encurtar. Todas são células, com membrana e material genético, que realizam as funções do corpo."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Pedro afirmou que um elefante tem células bem maiores que as de um camundongo, pois o corpo dele é muito maior. A professora trouxe medidas aproximadas de células do fígado de três animais.",
+   "comando": "Avalie a afirmação de Pedro com base nos dados e explique o que diferencia o tamanho do corpo desses animais.",
+   "ref": "A afirmação não é sustentada, pois as células têm tamanho semelhante nos três animais. O corpo maior resulta de um número muito maior de células, produzido por mais divisões celulares durante o crescimento."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Na aula de Ciências, Caio misturou fermento biológico, água e açúcar em três copos para testar se as leveduras são seres vivos. Depois de 30 minutos, ele mediu a altura da espuma em cada copo.",
+   "comando": "Interprete o resultado, indique a variável que diferencia os copos e explique por que ele sustenta que as leveduras são seres vivos formados por células.",
+   "ref": "A espuma só se formou com açúcar e água morna, e a água fervente impediu o efeito. Isso indica que as leveduras usam o açúcar e produzem gás, atividade de seres vivos, e que o calor excessivo as inativa; elas são organismos unicelulares."
+  }
+ ],
+ "6º ANO|3|Relacionar as estruturas das organelas celulares às suas funções, considerando as especificidades das células animal e vegetal.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na feira de ciências, Marina montou dois modelos de célula com materiais do dia a dia e anotou o que usou em cada um. A professora pediu que, no modelo vegetal, cada material representasse uma estrutura que não existe na célula animal.",
+   "comando": "Quais materiais do modelo vegetal representam estruturas ausentes na célula animal?",
+   "alts": [
+    "Caixinha e feijões: parede celular e mitocôndrias, já que a respiração celular ocorre nas células vegetais",
+    "Caixinha, ervilhas e saquinho com água: parede celular, cloroplastos e um grande vacúolo central",
+    "Ervilhas e feijões: cloroplastos e mitocôndrias, pois ambas as organelas transformam energia",
+    "Caixinha e saquinho plástico: parede celular e membrana, que protegem a célula vegetal por fora"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma estudante observou ao microscópio três amostras: folha de alface, raiz de beterraba e raspado da parte interna da bochecha. Em cada uma, contou as estruturas visíveis em um mesmo campo de visão.",
+   "comando": "Qual conclusão é sustentada pelos dados observados?",
+   "alts": [
+    "A raiz não tem cloroplastos, logo suas células não podem ser classificadas como vegetais",
+    "A folha tem cloroplastos e mitocôndrias, então a respiração celular ocorre em seus cloroplastos",
+    "A bochecha tem mais mitocôndrias que a folha, o que prova que ela realiza mais fotossíntese",
+    "A raiz tem parede, típica de célula vegetal, mas sem cloroplastos não faz fotossíntese"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Pesquisadores compararam células do músculo da coxa de um ciclista treinado, de uma pessoa sedentária e células de gordura (adiposas) da mesma região. Contaram as mitocôndrias em cada tipo, usando o mesmo tamanho de amostra.",
+   "comando": "Qual hipótese explica melhor a diferença entre os três tipos de célula?",
+   "alts": [
+    "Células com maior gasto de energia precisam de mais mitocôndrias, onde a respiração celular libera energia do alimento",
+    "Células que acumulam reservas precisam de mais mitocôndrias, pois elas guardam energia na forma de gordura",
+    "O treino físico aumenta o número de cloroplastos no músculo, o que eleva a produção de energia",
+    "As mitocôndrias fabricam o alimento da célula, e células mais ativas precisam fabricar mais alimento"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em uma aula prática, três folhas de alface de 10 g cada foram colocadas por 30 minutos em vasilhas diferentes: água pura, água com sal a 1% e água com sal a 5%. Depois, cada folha foi seca e pesada novamente.",
+   "comando": "Que explicação relaciona o resultado ao funcionamento das estruturas da célula vegetal?",
+   "alts": [
+    "O sal danifica os cloroplastos, que armazenam a água, e por isso a folha perde massa em meio salgado",
+    "A parede celular absorve o sal e libera a água armazenada, reduzindo a massa conforme a concentração",
+    "Quanto mais salgado o meio, mais água sai do vacúolo e a célula perde volume e firmeza",
+    "O núcleo regula a entrada de água e, no meio salgado, ele diminui e a célula fica murcha"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um grupo registrou a presença de estruturas em três células desconhecidas, X, Y e Z, observadas ao microscópio. Depois, quatro estudantes propuseram interpretações; apenas uma delas contraria os dados do quadro.",
+   "comando": "Qual interpretação NÃO é sustentada pelos dados?",
+   "alts": [
+    "X pode ser célula animal, já que o registro mostra ausência de parede e cloroplastos",
+    "Y e Z fazem fotossíntese, pois ambas têm parede celular, onde esse processo ocorre",
+    "Z pode ser vegetal que não faz fotossíntese, como uma raiz, pois tem parede mas não cloroplastos",
+    "Y tem cloroplastos e, por isso, é capaz de produzir o próprio alimento a partir da luz"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma célula da epiderme de cebola e uma célula da mucosa da bochecha foram observadas ao microscópio. A primeira tem contorno retangular bem definido e regular; a segunda tem contorno arredondado e irregular, e se deforma ao ser tocada pela lâmina.",
+   "comando": "Explique qual estrutura justifica a diferença de forma e firmeza entre as duas células e qual é a função dela.",
+   "ref": "A célula da cebola é vegetal e tem parede celular, uma camada rígida de celulose por fora da membrana que dá sustentação e forma fixa. A célula da bochecha é animal e só tem membrana, flexível, por isso se deforma."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma muda de planta ficou 12 dias dentro de um armário escuro, mas foi regada normalmente. As folhas ficaram amareladas, a planta não cresceu e permaneceu viva. Os cuidadores acharam estranho ela estar viva sem produzir alimento.",
+   "comando": "Explique o que aconteceu com a produção de alimento e por que as células ainda conseguiram se manter vivas por alguns dias.",
+   "ref": "Sem luz, os cloroplastos não fazem fotossíntese e a planta não produz glicose nova. As células usaram a glicose já armazenada, e as mitocôndrias fizeram a respiração celular para liberar energia desse estoque, mantendo a planta viva até acabar a reserva."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Para estudar o papel do núcleo, uma pesquisadora retirou o núcleo de algumas amebas e acompanhou as células por seis dias, comparando-as com amebas intactas da mesma cultura. Os resultados estão no registro.",
+   "comando": "Com base nos dados, explique que função do núcleo é sustentada pelo experimento e por que a ameba sem núcleo sobrevive alguns dias.",
+   "ref": "O núcleo controla as atividades da célula e a sua divisão, pois sem ele a ameba deixou de se dividir e de se alimentar. Ela sobreviveu alguns dias porque ainda tinha proteínas e substâncias já produzidas, que foram se esgotando."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Caio montou o modelo de uma célula animal com uma caixinha de papelão rígida envolvendo um saquinho com feijões e um saquinho menor com água. Ele explicou que a caixinha representa a membrana, porque protege a célula, e que o saquinho de água é o vacúolo.",
+   "comando": "Avalie as duas escolhas de Caio, apontando o que está inadequado para uma célula animal e como corrigir o modelo.",
+   "ref": "A caixinha rígida representa a parede celular, que células animais não têm; na célula animal só há a membrana, flexível, então a caixinha deve ser retirada. O vacúolo grande também é típico da célula vegetal, e na animal os vacúolos são pequenos."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Duas organelas foram analisadas quanto às substâncias que entram e saem delas. Na organela M entram luz, gás carbônico e água e saem glicose e gás oxigênio. Na organela N entram glicose e gás oxigênio e saem gás carbônico, água e energia utilizável.",
+   "comando": "Identifique M e N e explique por que uma célula vegetal de folha precisa das duas organelas.",
+   "ref": "M é o cloroplasto, que faz fotossíntese e produz glicose, e N é a mitocôndria, que faz respiração celular. A folha precisa das duas porque o cloroplasto produz o alimento e a mitocôndria libera a energia dele para as atividades da célula, inclusive à noite."
+  }
+ ],
+ "7º ANO|1|Avaliar a qualidade do ar e seus efeitos sobre o ambiente e a saúde.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma escola de Guarulhos, os alunos fixaram cartões com uma camada fina de vaselina em três lugares e os recolheram depois de uma semana. Com uma lupa e uma grade de quadradinhos, contaram os pontos de partículas grudadas em cada cartão. A escola fica ao lado de uma avenida movimentada.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "O ar da sala tem baixa quantidade de partículas, por isso não há risco à saúde de quem permanece lá durante as aulas.",
+    "Os veículos da avenida produziram as 46 partículas do portão, já que o cartão registra a fonte de cada partícula.",
+    "A quantidade de partículas diminui com o afastamento da rua, o que sugere uma fonte externa, mas não prova qual é ela.",
+    "A diferença entre os locais é pequena, pois o ar circula livremente e leva as partículas igualmente para dentro da escola."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Outra turma repetiu o experimento, mas os cartões ficaram expostos por tempos diferentes, porque o do pátio foi colocado depois dos outros. Eles querem comparar os três locais de modo justo, considerando a quantidade de partículas acumulada por dia de exposição.",
+   "comando": "Depois de ajustar os dados pelo tempo de exposição, qual conclusão é correta?",
+   "alts": [
+    "O pátio tem menos partículas que o portão, pois 21 é menor que 46, e por isso o ar do pátio é mais limpo.",
+    "Pátio e portão acumulam partículas em ritmo parecido, cerca de 7 pontos por dia, bem acima da sala.",
+    "O portão acumula cerca de 7 vezes mais partículas por dia que a sala, e o pátio fica entre os dois locais.",
+    "O pátio e a sala têm ritmo parecido, pois a diferença entre 21 e 9 pontos é pequena diante do portão."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma estação de monitoramento na zona oeste de São Paulo registra a concentração de partículas finas (MP2,5) em cinco horários de um dia útil. Uma estudante afirmou: 'Os picos coincidem com os horários de maior trânsito, então a poluição é toda causada pelos carros'.",
+   "comando": "Qual interpretação NÃO é sustentada pelos dados?",
+   "alts": [
+    "Os picos às 8 h e às 18 h confirmam que o trânsito é a causa dos picos, dispensando outras fontes.",
+    "A concentração varia ao longo do dia, com valores mais altos às 8 h e às 18 h do que de madrugada ou à noite.",
+    "Os picos coincidem com horários de maior movimento, o que torna o tráfego uma hipótese de fonte a ser testada.",
+    "O valor menor às 13 h pode refletir menos veículos ou melhor dispersão do ar, o que exigiria outras medições."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "No interior paulista, uma secretaria de saúde acompanhou por quatro meses os focos de queimada na região e as internações por problemas respiratórios. Um vereador afirmou que 'as queimadas causam as internações'. Um técnico quer saber que informação adicional testaria melhor essa hipótese.",
+   "comando": "Qual dado adicional fortaleceria, com mais rigor, a hipótese de que as queimadas elevam as internações?",
+   "alts": [
+    "O total de moradores da região, já que cidades com muitos habitantes têm mais internações em qualquer época do ano.",
+    "A quantidade de hospitais disponíveis, pois mais leitos significam mais internações independentemente de fumaça ou queimadas.",
+    "O número de focos em anos anteriores, porque um aumento de queimadas ao longo do tempo comprova a relação com as internações.",
+    "Internações em períodos de mesma umidade e temperatura, porém com poucas queimadas, para servir de comparação."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "A prefeitura de uma cidade paulista quer reduzir a emissão de poluentes do ar com uma única ação neste ano e tem dados sobre as três maiores fontes. Para cada fonte, uma consultoria estimou quanto das emissões poderia ser cortado com a medida disponível.",
+   "comando": "Qual ação eliminaria a maior quantidade de poluentes, segundo os dados?",
+   "alts": [
+    "Renovar a frota de veículos, pois é a fonte com maior emissão e portanto a que mais reduz poluentes ao ser tratada.",
+    "Fiscalizar as indústrias, que cortaria 200 t por ano, mais que veículos (90 t) ou lixo (180 t).",
+    "Combater a queima de lixo, pois tem o maior percentual de redução e por isso é a medida com maior resultado final.",
+    "Plantar árvores nas praças, já que a vegetação filtra o ar e compensa as emissões das três fontes ao mesmo tempo."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Para comparar o ar de três lugares da escola, uma turma usou cartões com vaselina. O cartão do portão foi preso no chão, enquanto os outros dois ficaram presos a 1,5 m de altura. Todos ficaram uma semana no local.",
+   "comando": "Aponte uma falha no procedimento que pode ter alterado a comparação e proponha como corrigi-la.",
+   "ref": "A altura do cartão do portão foi diferente: no chão ele pode ter recebido também poeira levantada do solo, o que supera a poluição do ar. Deve-se prender os três cartões à mesma altura, mantendo o mesmo tempo de exposição."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "No inverno, em muitas manhãs a cidade de São Paulo fica coberta por uma camada de ar cinzento, com cheiro de fumaça. Meteorologistas mediram a temperatura do ar em três alturas, em uma manhã com o céu limpo e sem vento.",
+   "comando": "Explique por que, nesse caso, os poluentes ficam presos perto do solo e o que poderia ajudar a dispersá-los.",
+   "ref": "O ar frio perto do solo é mais denso que o ar quente acima e não sobe, então forma uma camada que retém os poluentes. Vento ou aquecimento do solo pelo sol misturam o ar e ajudam a dispersá-los."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Duas escolas municipais têm o mesmo número de alunos e idades parecidas. A escola A fica ao lado de uma avenida de ônibus; a escola B, em um bairro de ruas calmas e arborizadas. Durante um mês, as enfermeiras contaram as crises de falta de ar e chiado.",
+   "comando": "Relacione os resultados com a qualidade do ar e proponha duas medidas que a escola A poderia adotar.",
+   "ref": "Os poluentes do trânsito irritam as vias respiratórias e podem provocar crises, o que é compatível com o número maior na escola A. A escola A pode manter as janelas voltadas à avenida fechadas nos horários de pico e plantar árvores no muro, além de levar as atividades físicas para locais mais afastados."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma semana de tempo seco em Campinas, a qualidade do ar piorou, e depois de uma chuva forte a concentração de partículas grossas (MP10) caiu. A Defesa Civil quer explicar o fenômeno em um aviso à população.",
+   "comando": "Explique por que a chuva reduziu a quantidade de partículas no ar e por que isso não resolve o problema da poluição.",
+   "ref": "A água da chuva arrasta as partículas do ar e as leva ao solo e aos rios. A queda é temporária: as fontes continuam emitindo, e o valor volta a subir quando a chuva para, como mostra o aumento de quarta para quinta."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma cidade avalia trocar parte dos ônibus a diesel por ônibus a gás ou elétricos. A tabela mostra as emissões de óxidos de nitrogênio (gases que irritam os pulmões) na rua, para cada tipo de ônibus, em condições de teste.",
+   "comando": "Explique a vantagem dos ônibus elétricos para o ar da cidade e uma limitação que deve ser considerada ao compará-los com os demais.",
+   "ref": "O ônibus elétrico não emite gases na rua, reduzindo os poluentes respirados pela população. A limitação é que a eletricidade e as baterias têm origem e impacto próprios, que dependem da fonte de energia usada e do descarte."
+  }
+ ]
+}

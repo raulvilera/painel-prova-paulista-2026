@@ -1,0 +1,1328 @@
+{
+ "7º ANO|1|Identificar a composição da atmosfera e os fatores naturais e humanos que a modificam, relacionando-os aos impactos ambientais e na saúde do sistema respiratório humano.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre respiração, a professora Clara analisou com a turma a composição do ar que uma pessoa inspira e do ar que ela expira. Os valores abaixo são aproximados e foram organizados pela turma como dados de um experimento fictício.",
+   "comando": "Qual conclusão é sustentada pelos dados da turma?",
+   "alts": [
+    "O corpo transforma nitrogênio em gás carbônico, pois a fração de nitrogênio fica estável e a do gás carbônico sobe.",
+    "O oxigênio é consumido por completo na respiração, por isso sua fração no ar expirado cai para um valor próximo de zero.",
+    "O nitrogênio ficou estável, e o corpo retira parte do oxigênio do ar e devolve bem mais gás carbônico a ele.",
+    "O gás carbônico expirado supera o oxigênio do ar inspirado, o que indica que a pessoa produz mais gás do que consome."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma estação de monitoramento instalada em uma avenida movimentada de São Paulo mediu a concentração de monóxido de carbono, gás liberado pela queima incompleta de combustíveis, em dois dias e dois horários. As condições do tempo foram semelhantes nos dois dias.",
+   "comando": "Que hipótese explica melhor a diferença entre os valores medidos nos dois dias?",
+   "alts": [
+    "O maior fluxo de veículos nos horários de pico de um dia útil eleva a queima de combustíveis e o gás na avenida.",
+    "O ar frio da manhã produz monóxido de carbono, e por isso o valor das 8 h deveria ser alto também no domingo.",
+    "O monóxido de carbono vem de fontes naturais e varia com a hora do dia, de modo que o dia da semana não interfere.",
+    "A diferença entre os dias é pequena, o que indica que a variação depende do horário e não da atividade humana."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Durante o inverno, uma cidade do interior paulista acompanhou, mês a mês, a concentração média de partículas no ar e o número de crianças internadas por crise de asma. Em agosto, o tempo ficou seco e sem chuvas por semanas.",
+   "comando": "Qual afirmação NÃO é sustentada pelos dados, por confundir associação com causa única?",
+   "alts": [
+    "Nos meses com mais partículas no ar houve mais internações, o que indica uma associação entre as duas variáveis observadas.",
+    "Os dados provam que as partículas são a única causa das crises de asma, já que as duas variáveis aumentam juntas ao longo dos meses.",
+    "O padrão é compatível com a ação irritante das partículas nas vias respiratórias, embora outros fatores possam contribuir.",
+    "Agosto reúne o maior valor de partículas e o maior número de internações, em um período de tempo seco e sem chuva."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Rafael montou duas garrafas PET transparentes idênticas com um termômetro em cada uma. Na garrafa B, ele liberou gás carbônico de um comprimido efervescente. Depois, colocou as duas a 30 cm de uma mesma lâmpada e anotou as temperaturas.",
+   "comando": "Qual conclusão e qual limitação são compatíveis com o experimento de Rafael?",
+   "alts": [
+    "A diferença de 4 °C prova que o aquecimento global é causado pelo gás carbônico lançado por atividades humanas.",
+    "O gás carbônico libera calor ao se dissolver no ar, por isso B aqueceu mais, mesmo se a lâmpada fosse desligada.",
+    "As duas garrafas esquentaram por causa da lâmpada, de modo que a diferença entre elas não tem relação com o gás liberado.",
+    "A garrafa B aqueceu mais, o que sugere retenção de calor pelo gás carbônico, mas o modelo simplifica a atmosfera."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "A prefeitura de uma cidade fictícia quer reduzir as emissões de gás carbônico e analisou de onde elas vêm. Uma vereadora propôs concentrar os esforços onde a redução total seria maior. Os dados abaixo são aproximados e foram usados só para o debate.",
+   "comando": "Qual medida tende a diminuir mais as emissões totais, segundo os dados?",
+   "alts": [
+    "Controlar as fontes naturais, pois elas liberam gases desde antes da industrialização e podem ser reduzidas por decreto.",
+    "Reduzir emissões do transporte, a maior fração do total, por exemplo ampliando o uso de transporte coletivo no lugar de carros.",
+    "Combater as queimadas, porque o fogo é a fonte mais visível, o que garante o maior efeito sobre o total emitido.",
+    "Fiscalizar a indústria, por ser fonte concentrada e de controle mais fácil, mesmo representando menos que o transporte."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma sala de aula de 30 alunos ficou com portas e janelas fechadas durante a manhã. Um sensor mediu o oxigênio e o gás carbônico do ar em três momentos. A diretora quer saber se o ar da sala está adequado.",
+   "comando": "Interprete os dados do sensor e explique o que deve ser feito e por quê.",
+   "ref": "O oxigênio diminuiu pouco, mas o gás carbônico quadruplicou, pois os alunos consomem oxigênio e expiram gás carbônico num espaço fechado. Deve-se ventilar a sala para renovar o ar e evitar cansaço e desconforto respiratório."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "No inverno, em dias secos e sem vento, a cidade de São Paulo costuma ter o ar mais poluído pela manhã. Um pesquisador mediu a temperatura do ar em diferentes alturas acima do solo em uma dessas manhãs.",
+   "comando": "Explique o que os dados mostram sobre o ar acima do solo e por que isso faz os poluentes se acumularem perto do chão.",
+   "ref": "A temperatura sobe até 300 m, formando uma camada de ar mais quente sobre o ar frio do solo, fenômeno chamado inversão térmica. O ar frio, mais denso, não sobe, e os poluentes dos veículos ficam presos perto do chão, piorando a respiração."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma região industrial fictícia, estudantes mediram o pH da água da chuva em três locais. A chuva natural, sem poluição, tem pH em torno de 5,6, e valores mais baixos indicam maior acidez.",
+   "comando": "Interprete os valores e explique a origem humana mais provável da diferença e um efeito sobre o ambiente.",
+   "ref": "A chuva ficou mais ácida perto da usina e da cidade, o que indica chuva ácida causada por óxidos de enxofre e de nitrogênio da queima de combustíveis. Ela pode danificar construções, empobrecer o solo e prejudicar plantas e lagos."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Na época das queimadas de cana na região de Ribeirão Preto, uma UBS fictícia anotou quantos pacientes procuraram atendimento por tosse e falta de ar. Depois das primeiras chuvas, o número caiu.",
+   "comando": "Relacione os dados com a qualidade do ar e explique por que a chuva ajudou.",
+   "ref": "Os atendimentos aumentaram com as queimadas, que liberam fumaça, partículas e gases que irritam as vias respiratórias. A chuva lava o ar, arrasta as partículas para o chão e reduz a irritação, por isso os casos voltaram perto do valor inicial."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Nos anos 1980, cientistas notaram que o ozônio sobre uma região fictícia diminuía enquanto o uso de gases CFC, usados em geladeiras e aerossóis, crescia. Depois, um acordo internacional limitou esses gases.",
+   "comando": "Explique o que os dados indicam sobre a relação entre os gases e o ozônio e qual consequência para a saúde teria a perda dessa camada.",
+   "ref": "Quando as emissões de CFC subiram, o ozônio caiu de 300 para 215 UD, e depois de reduzidas ele se recuperou em parte, o que indica que os CFC destroem o ozônio. Menos ozônio deixa passar mais radiação ultravioleta, aumentando riscos como câncer de pele e catarata."
+  }
+ ],
+ "7º ANO|1|Reconhecer fenômenos geológicos (vulcanismo, terremotos e tsunamis) e seus impactos na superfície da Terra.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em um projeto de geografia e ciências, uma turma de Campinas comparou a frequência de tremores de terra sentidos pela população em quatro regiões do mundo. Os dados vieram de boletins sismológicos e foram organizados junto com a posição de cada região em relação aos limites entre placas tectônicas.",
+   "comando": "Qual conclusão é sustentada pelos dados organizados pela turma?",
+   "alts": [
+    "Os tremores sentidos são mais frequentes onde o limite entre placas está próximo, e ficam raros nas regiões no interior de uma placa.",
+    "Os tremores são mais frequentes nas regiões com maior população, pois a ocupação humana pressiona o solo e libera a energia acumulada.",
+    "O Brasil não sofre abalos de terra, pois todo o território está longe do limite entre placas e as rochas não se movem.",
+    "A distância do limite de placa não influencia a frequência, pois o Japão e o Chile apresentam números parecidos de tremores."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Após um terremoto no fundo do mar, equipes de defesa civil de um país litorâneo registraram o tempo que a primeira onda gigante levou para atingir três cidades da costa. Agora precisam estimar o tempo de alerta de uma quarta cidade, mais distante do epicentro.",
+   "comando": "Com base nos registros, qual é a estimativa mais adequada para a cidade D, a 1500 km do epicentro?",
+   "alts": [
+    "Cerca de 60 minutos, pois a onda perde energia ao longo do trajeto e atinge as cidades distantes com menos força e mais tarde.",
+    "Cerca de 120 minutos, pois a onda manteve ritmo constante nas três cidades e o tempo cresce de forma proporcional à distância.",
+    "Cerca de 240 minutos, pois ondas do mar viajam mais devagar quanto mais fundo é o oceano e quanto mais longe está a costa.",
+    "Cerca de 12 minutos, pois o tsunami nasce no fundo do mar e chega à costa de qualquer cidade no mesmo intervalo de tempo."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Geólogos estudam a cadeia de ilhas vulcânicas do Havaí, no meio do oceano Pacífico, e descobriram que as ilhas têm idades diferentes. A ilha de Havaí ainda tem vulcões em erupção, enquanto as ilhas do noroeste da cadeia têm vulcões extintos e muito desgastados pelo mar.",
+   "comando": "Que hipótese explica melhor o padrão de idades observado na cadeia de ilhas?",
+   "alts": [
+    "Os vulcões mais antigos se apagaram porque o magma esfriou, e as ilhas mais distantes ficaram mais velhas por receber menos lava.",
+    "A fonte de magma se desloca para o sudeste e vai criando ilhas cada vez mais novas, enquanto a placa permanece parada.",
+    "A placa do Pacífico se desloca sobre uma fonte fixa de magma, e cada ilha vai sendo levada para longe do local onde se formou.",
+    "As ilhas mais antigas são maiores, pois acumularam mais lava ao longo do tempo, e por isso ficam mais distantes uma da outra."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Fósseis do réptil Mesosaurus, que viveu em lagos e lagoas de água doce há cerca de 280 milhões de anos, foram encontrados em rochas do Rio Grande do Sul e de São Paulo e também em rochas da África do Sul. Um aluno propôs explicações para essa ocorrência dos dois lados do oceano Atlântico.",
+   "comando": "Qual explicação é mais bem sustentada pelas evidências reunidas?",
+   "alts": [
+    "Os dois continentes estavam unidos na época, formando um mesmo ambiente de água doce, e depois se separaram com o movimento das placas.",
+    "O réptil atravessou o oceano a nado, pois era bom nadador, e se espalhou pelos dois lados do mar à procura de lagos de água doce.",
+    "Os fósseis surgiram em lugares diferentes por acaso, pois répteis de espécies parecidas evoluíram de modo independente em cada continente.",
+    "O oceano Atlântico era mais raso e estreito, e por isso o réptil de água doce migrava com facilidade entre as duas costas."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma turma simulou terremotos sacudindo uma bandeja com areia onde ficavam prédios feitos de palitos. Os grupos mediram quantos segundos cada prédio resistiu antes de ruir. Agora querem descobrir se a cola nas junções dos palitos melhora a resistência.",
+   "comando": "Qual comparação permite concluir o efeito da cola, com um teste justo?",
+   "alts": [
+    "A com D, pois os dois têm base larga e cola, e a diferença de altura mostra como a cola atua nos prédios mais altos.",
+    "B com C, pois os dois caíram antes do prédio A, e esse resultado mostra o efeito da cola nas estruturas.",
+    "A com C, pois os dois têm a mesma altura e a mesma largura de base, e diferem em um fator: o uso da cola.",
+    "C com D, pois os dois têm base larga, e a diferença de resultado entre eles mede o efeito da cola nas junções."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "O terremoto mais forte já registrado no Chile teve magnitude 9,5, e o Japão teve um de 9,1. No Brasil, o maior tremor registrado no século passado teve magnitude por volta de 6,2, e a maioria dos abalos sentidos aqui é fraca.",
+   "comando": "Explique, com base na posição do Brasil e na tectônica de placas, por que os tremores brasileiros são menos intensos e mais raros que os do Chile.",
+   "ref": "O Chile e o Japão ficam em limites entre placas, onde elas se chocam ou deslizam e acumulam muita energia, liberada em grandes terremotos. O Brasil está no interior da placa Sul-Americana, longe dos limites, onde há menos esforço, e só há tremores fracos em falhas antigas."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Os solos de terra roxa do interior de São Paulo e do Paraná são muito férteis e produzem altos rendimentos de soja. Geólogos explicam que esses solos vêm de rochas formadas por antigas erupções que cobriram a região, há cerca de 130 milhões de anos. Já os solos arenosos, formados de arenito, rendem menos.",
+   "comando": "Explique como erupções antigas ajudam a entender a produtividade de cada solo e por que hoje não há vulcões ativos nessa região.",
+   "ref": "A lava das erupções antigas esfriou e formou o basalto, que com o tempo se desfaz em solo rico em minerais, o que favorece a soja. Hoje a região não tem vulcões ativos porque está no interior da placa Sul-Americana, e aquele vulcanismo ocorreu quando os continentes se separavam."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Duas escolas ficam em uma cidade costeira sujeita a terremotos. A escola 1 tem prédios com estrutura reforçada e flexível, e a escola 2 tem prédios antigos sem reforço. Após um tremor de magnitude 7 na região, a defesa civil vistoriou as duas.",
+   "comando": "Explique a diferença de danos observada e proponha duas medidas que a cidade poderia adotar para reduzir os impactos de futuros terremotos.",
+   "ref": "O tremor foi o mesmo, mas a estrutura reforçada e flexível absorve melhor a energia das ondas sísmicas, enquanto as construções sem reforço racham e caem. A cidade pode exigir normas de construção antissísmica e realizar treinos de evacuação e reforço das construções antigas."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um terremoto ocorreu no fundo do mar a 80 km de uma cidade litorânea. Os moradores sentiram o tremor, ouviram o alerta e, minutos depois, notaram que o mar recuou além do normal. A prefeitura orienta a população a seguir imediatamente para áreas altas, mesmo que o tremor já tenha parado.",
+   "comando": "Explique como um terremoto no fundo do mar pode gerar um tsunami e por que a orientação de ir às áreas altas deve ser seguida mesmo depois que o tremor acaba.",
+   "ref": "O terremoto desloca o fundo do mar e empurra uma grande massa de água, que se propaga como ondas gigantes até a costa. A onda chega minutos depois do tremor e pode ser seguida de outras, por isso é preciso subir para áreas altas."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "A dorsal Meso-Atlântica é uma cadeia de montanhas submersas onde lava nova sobe e forma rocha no fundo do oceano. As medidas indicam que o oceano Atlântico se alarga cerca de 2,5 cm por ano. Hoje, Natal e Dacar, na África, estão a cerca de 2900 km uma da outra.",
+   "comando": "Calcule quantos quilômetros a distância entre as duas costas aumentaria em 10 milhões de anos e explique o que causa esse afastamento.",
+   "ref": "Em 10 milhões de anos o afastamento seria de 2,5 cm × 10 milhões = 25 milhões de cm, ou cerca de 250 km, e as costas ficariam a cerca de 3150 km. O afastamento ocorre porque as placas Sul-Americana e Africana se movem em sentidos opostos enquanto a dorsal forma rocha nova."
+  }
+ ],
+ "7º ANO|1|Reconhecer o funcionamento de máquinas simples, com base no conceito de força e exemplos do cotidiano.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma aula de laboratório, Bruno equilibrou uma régua sobre um lápis. Em uma das pontas, a 10 cm do apoio, colocou 2 moedas iguais. Depois, mediu quantas moedas iguais eram necessárias do outro lado para manter a régua na horizontal, variando a distância ao apoio.",
+   "comando": "Mantendo o mesmo padrão, a que distância do apoio equilibrariam a carga se Bruno usasse 5 moedas do outro lado?",
+   "alts": [
+    "Cerca de 4 cm, pois moedas vezes distância continua igual a 20",
+    "Cerca de 8 cm, pois cada moeda a mais desloca 2 cm a posição",
+    "Cerca de 2 cm, pois mais moedas exigem metade da distância",
+    "Cerca de 10 cm, pois a distância da carga não se altera"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Na feira livre de um bairro de Sorocaba, seu Aldo transporta 60 kgf de caixas em um carrinho de mão. A carga fica a 40 cm do eixo da roda e as mãos dele seguram os cabos a 120 cm do mesmo eixo. Ele quer saber como o carrinho o ajuda.",
+   "comando": "Que tipo de alavanca é o carrinho e qual a força aproximada que Aldo faz?",
+   "alts": [
+    "Interpotente: as mãos ficam entre o apoio e a carga, e a força exigida é cerca de 20 kgf",
+    "Inter-resistente: a carga fica entre o apoio e as mãos, e a força exigida é cerca de 180 kgf",
+    "Inter-resistente: a carga fica entre o apoio e as mãos, e a força exigida é cerca de 20 kgf",
+    "Interfixa: o apoio fica entre a carga e as mãos, e a força exigida é cerca de 20 kgf"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma obra, os pedreiros precisam levar sacos de cimento de 500 N a uma laje que fica a 1 m de altura. A engenheira testou rampas de diferentes comprimentos e mediu, com um dinamômetro, a força para empurrar o saco com velocidade constante, desprezando o atrito.",
+   "comando": "Qual conclusão é sustentada pelos dados da tabela?",
+   "alts": [
+    "Rampas mais longas pedem menos força e também diminuem o trabalho total realizado",
+    "Rampas mais longas pedem menos força porque reduzem o peso do saco de cimento",
+    "Rampas mais longas pedem menos força porque o atrito aumenta e sustenta o saco",
+    "Rampas mais longas pedem menos força, mas força vezes distância não muda"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Na horta da escola, Lia e Caio testaram duas formas de erguer um balde de 80 N de água do poço. Na montagem 1, usaram uma polia fixa presa no alto. Na montagem 2, uma polia móvel presa ao balde. Mediram a força e o comprimento de corda puxada para subir o balde 1 m.",
+   "comando": "Que conclusão sobre as duas montagens os dados sustentam?",
+   "alts": [
+    "A polia móvel divide a força pela metade e também reduz a corda puxada, poupando esforço",
+    "A polia móvel divide a força pela metade, mas exige o dobro de corda; a fixa apenas muda a direção",
+    "A polia fixa divide a força pela metade, mas exige o dobro de corda para subir o balde",
+    "A polia móvel e a fixa exigem a mesma força, mas a móvel muda a direção da força"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma enfermeira da UBS usa uma pinça para pegar gaze, e o cozinheiro da cantina usa um quebra-nozes. Uma turma mediu, para três ferramentas, a distância entre o apoio e o ponto onde se aplica a força e entre o apoio e o objeto, calculando a força necessária comparada à resistência.",
+   "comando": "Por que a pinça é usada apesar de exigir mais força que o objeto pede?",
+   "alts": [
+    "Ela perde força, mas ganha precisão e amplitude de movimento na ponta",
+    "Ela multiplica a força aplicada, o que facilita pegar objetos pequenos sem escorregar",
+    "Ela mantém o trabalho igual e reduz a distância percorrida pela ponta do instrumento",
+    "Ela posiciona o apoio entre a mão e o objeto, o que equilibra a força nos dois lados"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Duas crianças, Ana (30 kg) e Beto, de 40 kg, querem brincar numa gangorra de 4 m de comprimento de um parque de Santos. Ana senta numa ponta, a 2 m do apoio central. Beto quer ficar na outra ponta, mas a gangorra tomba para o lado dele.",
+   "comando": "Calcule a que distância do apoio Beto deve sentar para equilibrar e explique por que a gangorra tombou.",
+   "ref": "Beto deve sentar a 1,5 m, pois 30x2 = 40x1,5 = 60. A gangorra tombou porque, a 2 m, o efeito do peso de Beto (40x2 = 80) é maior que o de Ana (60)."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Para abrir uma lata de tinta, Marcos tentou usar o cabo curto de uma chave de fenda, a 3 cm do ponto de apoio na borda da lata, e não conseguiu. Depois, usou uma colher de pau longa, segurando a 15 cm do apoio, e conseguiu abrir com facilidade.",
+   "comando": "Explique por que a colher longa exigiu menos força, relacionando a distância ao apoio com a força aplicada.",
+   "ref": "Na alavanca, quanto maior a distância entre a mão e o apoio, menor a força necessária para vencer a mesma resistência. Com 15 cm, a força é cerca de cinco vezes menor que com 3 cm."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em um poço de uma chácara em Piracicaba, uma manivela com roda de 20 cm de raio gira um tambor de 10 cm de raio, onde se enrola a corda que sobe um balde de 100 N. O avô de Paula diz que a manivela facilita o trabalho, mas a neta quer saber o quanto.",
+   "comando": "Calcule a força aproximada na manivela e explique o que se perde em troca dessa vantagem.",
+   "ref": "A força na manivela é cerca de 50 N (100 x 10/20). Em troca, a manivela precisa dar mais voltas e percorrer o dobro da distância que a corda sobe, pois o trabalho se mantém."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um marceneiro rachou lenha com dois machados de mesma massa: um de lâmina afiada, de ponta fina, e outro desgastado, de ponta larga. Com o mesmo golpe, o afiado penetrou 4 cm e o desgastado, só 1 cm na madeira.",
+   "comando": "Explique, relacionando força, área e a função da cunha, por que o machado afiado penetrou mais.",
+   "ref": "A cunha concentra a força aplicada em uma área pequena e a converte em forças laterais que separam a madeira. Com a ponta mais fina, a mesma força atua em menor área, o que gera maior pressão e penetração."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Para estudar alavancas, um aluno montou uma régua de 30 cm sobre um lápis. No teste 1, apoiou a régua a 10 cm e usou moedas de R$ 1. No teste 2, apoiou a 15 cm e usou moedas de 5 centavos. Concluiu que 'mover o apoio não altera o equilíbrio'.",
+   "comando": "Aponte a falha do planejamento e proponha como tornar o teste justo.",
+   "ref": "Duas variáveis mudaram ao mesmo tempo (posição do apoio e massa das moedas), então não se sabe qual causou a diferença. O teste justo muda só a posição do apoio, mantendo o mesmo tipo e número de moedas, e repete as medidas."
+  }
+ ],
+ "7º ANO|1|Relacionar o movimento das placas tectônicas à teoria da deriva continental.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Wegener propôs que os continentes já estiveram unidos. Hoje, geólogos do Brasil e da África comparam fósseis de rochas com cerca de 280 milhões de anos. O Mesosaurus era um réptil pequeno, de patas curtas, que vivia em lagos e rios rasos, e não em mar aberto. A Glossopteris era uma planta de clima frio.",
+   "comando": "Qual explicação é sustentada pelos dados sobre os fósseis do Mesosaurus?",
+   "alts": [
+    "o réptil cruzou o oceano a nado, o que explica fósseis iguais dos dois lados, mesmo em água doce rasa de lagos",
+    "o clima atual é igual nos dois continentes, e por isso os mesmos fósseis surgiram em rochas de regiões distantes",
+    "o réptil de água doce vivia numa região contínua, depois separada pelo afastamento dos continentes",
+    "as correntes do mar transportaram os animais mortos até a outra costa, onde foram soterrados e viraram fósseis"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Medidas de satélite mostram que a América do Sul e a África se afastam. Um grupo de estudantes quer estimar há quanto tempo os continentes começaram a se separar, supondo que a velocidade tenha sido constante. Lembre que 1 km equivale a 100 000 cm.",
+   "comando": "Qual é a melhor estimativa e a interpretação adequada dela?",
+   "alts": [
+    "cerca de 20 milhões de anos, valor que indica uma separação muito recente em relação aos fósseis iguais nos dois continentes",
+    "cerca de 200 milhões de anos, compatível com a época em que os fósseis indicam continentes unidos",
+    "cerca de 2 bilhões de anos, valor que indica que os continentes se separaram antes de surgirem os primeiros fósseis",
+    "cerca de 200 mil anos, valor que indica que a separação começou na época em que surgiram os primeiros humanos"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "O Brasil fica no interior da placa Sul-Americana e quase não tem terremotos fortes, ao contrário do Chile. Um sismólogo reuniu o número de abalos fortes em três regiões durante um século, junto com a distância de cada local até o limite mais próximo da placa.",
+   "comando": "Que hipótese melhor explica por que Mato Grosso tem poucos terremotos fortes?",
+   "alts": [
+    "o Brasil está assentado sobre rochas sem movimento algum, e por isso as placas tectônicas não o afetam",
+    "o clima tropical amortece os abalos, de modo que a ausência de terremotos independe da posição na placa",
+    "o interior das placas concentra as maiores tensões, mas elas são aliviadas por fraturas pequenas e frequentes",
+    "as tensões se concentram nas bordas, onde as placas interagem, e o interior da placa sofre pouco esforço"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "No topo de uma cordilheira a mais de 8 000 m de altitude, alpinistas encontraram rochas cheias de conchas de animais que só vivem no mar. Uma equipe de geologia coletou amostras em três altitudes para entender como esse material foi parar ali.",
+   "comando": "Que hipótese explica melhor a presença das conchas nesse local?",
+   "alts": [
+    "o fundo de um mar antigo foi dobrado e erguido quando duas placas se aproximaram e comprimiram a crosta",
+    "o nível do mar subiu há milhões de anos até cobrir a cordilheira inteira, e depois a água recuou por completo",
+    "animais marinhos escalaram a montanha em migrações antigas e morreram nas áreas mais altas, onde foram soterrados",
+    "o gelo do topo carregou as conchas de praias vizinhas e as depositou nas rochas durante o avanço das geleiras"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um mapa mostra que a maioria dos vulcões e terremotos do planeta se concentra em faixas estreitas, como a ao redor do oceano Pacífico. Quatro estudantes tentaram interpretar a tabela abaixo e cada um escreveu uma conclusão.",
+   "comando": "Qual conclusão dos estudantes NÃO é sustentada pelos dados?",
+   "alts": [
+    "vulcões e abalos ocorrem em maior número nas regiões com várias placas vizinhas, o que sugere relação com o movimento delas",
+    "a região do interior da placa tem poucos vulcões e abalos, o que é compatível com menor interação entre placas",
+    "os vulcões do Pacífico empurram as placas vizinhas, e é isso que provoca os abalos observados naquela região",
+    "a Islândia, com duas placas vizinhas, tem muitos abalos para o seu tamanho, e isso é compatível com o movimento delas"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em 1912, Alfred Wegener apresentou argumentos para a deriva continental: encaixe das costas, fósseis iguais e rochas semelhantes em continentes distantes. Muitos cientistas da época não aceitaram a ideia, mesmo diante dessas evidências.",
+   "comando": "Cite duas evidências favoráveis à ideia de Wegener e explique por que ela só foi aceita depois, com o estudo do fundo dos oceanos.",
+   "ref": "Duas evidências são o encaixe das costas e os fósseis iguais em continentes hoje distantes. A ideia só foi aceita depois porque Wegener não explicava qual força movia os continentes; a descoberta do fundo oceânico em expansão e das placas tectônicas forneceu esse mecanismo."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Navios mediram a idade das rochas do fundo do Atlântico em pontos cada vez mais distantes de uma cadeia submarina no meio do oceano. As amostras foram coletadas ao longo de uma linha que parte da cadeia em direção ao Brasil.",
+   "comando": "Interprete a relação entre distância e idade e calcule a velocidade média de afastamento em km por milhão de anos.",
+   "ref": "As rochas ficam mais antigas quanto mais longe da cadeia, o que indica que o fundo se forma ali e vai se afastando para os lados. A velocidade é de 50 km por milhão de anos, ou seja, cerca de 5 cm por ano."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um colega duvida da deriva continental: diz que, se a América do Sul se move cerca de 2,5 cm por ano, isso deveria ser percebido no dia a dia. Você sabe que as unhas das mãos crescem aproximadamente 3 cm por ano e que ninguém percebe esse crescimento hora a hora.",
+   "comando": "Responda ao colega mostrando, com a comparação, por que o movimento das placas passa despercebido e como ele mesmo assim pode mudar o mapa.",
+   "ref": "O movimento das placas é de 2,5 cm por ano, semelhante ao crescimento de uma unha, lento demais para ser percebido no dia a dia. Como esse deslocamento se acumula por milhões de anos, ele soma milhares de quilômetros e muda a posição dos continentes."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Se a América do Sul e a África continuarem a se afastar a 2,5 cm por ano, o oceano Atlântico continuará a crescer. Uma turma quer prever como será o oceano daqui a 50 milhões de anos, usando uma calculadora e o fato de que 1 km tem 100 000 cm.",
+   "comando": "Calcule quanto o Atlântico terá aumentado em quilômetros, mostrando as contas, e explique por que o cálculo é apenas uma estimativa.",
+   "ref": "Em 50 milhões de anos, o afastamento é 2,5 cm vezes 50 000 000, que dá 125 000 000 cm, ou seja, 1 250 km. É uma estimativa porque supõe velocidade constante, e as placas podem acelerar, frear ou mudar de direção ao longo do tempo."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Na falha de San Andreas, na Califórnia, duas placas deslizam lado a lado. Cientistas mediram que, em 40 anos sem terremotos, as rochas de lados opostos se moveram 140 cm lentamente, mas a falha permaneceu travada. Em um único terremoto, ela se deslocou 140 cm em poucos segundos.",
+   "comando": "Explique por que o movimento lento das placas pode terminar em um terremoto súbito.",
+   "ref": "As placas se movem devagar, mas o atrito mantém a falha travada, e as rochas vão acumulando tensão. Quando a tensão supera o atrito, a falha rompe de uma vez e libera a energia em ondas sísmicas, causando o terremoto."
+  }
+ ],
+ "7º ANO|2|Reconhecer as características dos microrganismos e sua importância para o ambiente e para a saúde.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, Bia montou quatro garrafas iguais, cada uma com uma bexiga presa no gargalo. Ela variou os ingredientes e a temperatura da água e mediu o diâmetro da bexiga após 15 minutos, para entender o que as leveduras (fungos) precisam para liberar gás.",
+   "comando": "Qual comparação permite concluir que as leveduras precisam de açúcar para produzir gás?",
+   "alts": [
+    "A e D, pois a diferença entre elas é o fermento, e a bexiga só enche na garrafa que contém fermento.",
+    "A e B, pois a única diferença entre elas é o açúcar, e a bexiga só enche na que o contém.",
+    "A e C, pois a diferença entre elas é a temperatura, e a bexiga enche mais na garrafa com mais açúcar.",
+    "B e C, pois as duas bexiguinhas ficaram pequenas, o que mostra que sem açúcar o fermento não age."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma estação de tratamento de esgoto no interior paulista usa tanques com bactérias decompositoras. Os técnicos mediram a matéria orgânica na água em um tanque com bactérias. Em um tanque de controle, sem bactérias e nas mesmas condições, a matéria orgânica após 12 horas era de 395 mg/L.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "A queda é atribuída às bactérias, pois o controle sem elas quase não mudou, e a remoção ocorreu em ritmo constante nas duas etapas.",
+    "A queda ocorre pela simples passagem do tempo, pois a matéria orgânica se desfaz sozinha na água parada, com ou sem bactérias.",
+    "A remoção ficou mais rápida na segunda etapa, pois as bactérias se multiplicaram e eliminaram mais matéria orgânica depois.",
+    "As bactérias fazem a matéria orgânica deixar de existir, de modo que nada é devolvido ao ambiente após a decomposição."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um posto de saúde acompanhou três grupos de pacientes com sintomas respiratórios parecidos. Em cada grupo, exames identificaram o agente da doença, e os médicos registraram a proporção de pacientes que melhorou em 5 dias, com ou sem antibiótico.",
+   "comando": "Qual interpretação dos resultados é sustentada pelos dados?",
+   "alts": [
+    "O antibiótico ajudou um pouco nas doenças causadas por vírus, pois o grupo 2 melhorou mais que o grupo 3 ao receber o medicamento.",
+    "O grupo 1 melhorou mais porque as doenças bacterianas são menos graves que as virais, e o antibiótico teve pouca influência.",
+    "Os vírus do grupo 2 resistiram ao antibiótico, pois já tinham sido expostos ao medicamento e se tornaram resistentes a ele.",
+    "O antibiótico atua sobre bactérias, e a melhora igual nos grupos 2 e 3 mostra que ele não alterou a evolução da doença causada por vírus."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em um laticínio, a equipe testou o preparo de iogurte. Quatro frascos receberam 500 mL de leite e foram deixados por 8 horas. Em dois deles, foi colocada uma colher de iogurte natural com bactérias vivas, e em um terceiro foi colocado iogurte que havia sido fervido antes. O pH mede a acidez: quanto menor, mais ácido.",
+   "comando": "O que os resultados indicam sobre a acidificação do leite?",
+   "alts": [
+    "A acidificação é causada pela temperatura, pois o frasco 2, a 40 °C, mostra que o leite azeda sozinho quando fica aquecido por 8 horas.",
+    "A acidificação exige bactérias vivas e temperatura adequada, pois só o frasco 1 reuniu as duas condições e ficou ácido.",
+    "As bactérias agem em qualquer temperatura, pois o frasco 3 recebeu iogurte vivo e a acidez ficou igual à do frasco sem iogurte.",
+    "O iogurte fervido também acidifica o leite, pois o frasco 4 recebeu os mesmos ingredientes que o frasco 1 e foi mantido a 40 °C."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "A vigilância de um município paulista comparou quatro bairros quanto ao esgoto tratado e aos casos de diarreia infecciosa em um ano. A tendência geral mostrou menos casos onde há mais esgoto tratado, mas o bairro D fugiu do padrão. A equipe soube que, naquele ano, o bairro D teve duas enchentes que alagaram as ruas.",
+   "comando": "Que hipótese explica os resultados do bairro D sem contradizer a tendência geral?",
+   "alts": [
+    "O esgoto tratado aumenta o risco de diarreia quando passa de 90%, pois os microrganismos se multiplicam nas redes de tratamento.",
+    "Os moradores de D adoeceram por causa do frio das enchentes, pois a temperatura baixa causa a diarreia infecciosa em crianças.",
+    "As enchentes espalharam água contaminada com microrganismos pelas ruas, o que elevou os casos apesar do esgoto tratado.",
+    "O bairro D tem mais habitantes que os demais, e por isso a proporção de casos subiu mesmo com o saneamento já completo."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em uma padaria de bairro, o padeiro preparou a mesma massa de pão em dois ambientes e mediu a altura da massa depois de 1 hora. A massa tem farinha, água, açúcar e fermento biológico (leveduras).",
+   "comando": "Explique o que ocorreu em cada ambiente e qual é o papel das leveduras no crescimento da massa.",
+   "ref": "As leveduras são fungos que se alimentam do açúcar e liberam gás carbônico, o que faz a massa crescer. Na cozinha, a temperatura morna favorece essa atividade e a massa chega a 10 cm; na geladeira, o frio reduz a atividade e a massa quase não cresce."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Duas cidades paulistas de tamanho parecido registraram casos de sarampo, doença causada por vírus, durante um surto. A secretaria de saúde comparou a cobertura vacinal de cada uma.",
+   "comando": "Explique como os dados sustentam que a vacinação é uma forma de prevenir a doença e por que vacinar muita gente também protege quem não pôde se vacinar.",
+   "ref": "A cidade com mais pessoas vacinadas teve bem menos casos, o que indica que a vacina previne a doença. Quando muita gente está imune, o vírus encontra poucos hospedeiros e circula menos, protegendo também quem não pode se vacinar."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "A horta de uma escola em Sorocaba tem uma composteira, onde restos de frutas e folhas são deixados para se transformar em adubo. Os alunos registraram a temperatura no centro do material e o volume restante da pilha ao longo de semanas.",
+   "comando": "Explique por que o volume da pilha diminui e a temperatura sobe, e qual é a importância desse processo para o ambiente e para a horta.",
+   "ref": "Bactérias e fungos decompositores se alimentam dos restos e liberam calor, o que eleva a temperatura, enquanto parte da matéria orgânica é transformada em gases e em nutrientes, reduzindo o volume. Esse processo recicla os nutrientes e produz adubo para a horta, diminuindo o lixo."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma feira de ciências, alunos pressionaram as mãos em placas com meio de cultura depois de três procedimentos: 1 (mãos sem lavar), 2 (lavadas só com água corrente) e 3 (lavadas com água e sabão). As placas foram deixadas em estufa, e cada colônia visível representa um grupo de microrganismos que se multiplicou a partir de um deles.",
+   "comando": "Compare os procedimentos e explique qual deles mais ajuda a prevenir doenças, indicando um cuidado ao interpretar essas contagens.",
+   "ref": "Lavar as mãos com água e sabão reduziu muito as colônias (45 para 6), pois o sabão ajuda a remover os microrganismos da pele e, assim, diminui a transmissão de doenças. Como é uma só medição e nem todo microrganismo cresce na placa, o ideal é repetir o teste."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma família de Campinas guardou três pães iguais, comprados no mesmo dia, em três condições diferentes e anotou em quantos dias apareceram manchas de mofo, que são colônias de fungos.",
+   "comando": "Explique por que o mofo apareceu em tempos diferentes e proponha a melhor forma de conservar o pão, justificando com os dados.",
+   "ref": "Os fungos crescem mais rápido onde há umidade e temperatura mais alta, por isso o pão na bancada úmida mofou em 3 dias. A melhor conservação é a geladeira (14 dias), pois o frio retarda o crescimento dos fungos."
+  }
+ ],
+ "7º ANO|2|Reconhecer as principais características dos grupos de seres vivos invertebrados e vertebrados e seus papéis ecológicos.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Numa aula de Ciências, uma turma montou uma chave de classificação com quatro animais do Pantanal. Um colega agrupou o morcego-frugívoro com o besouro porque \"os dois voam\", e o professor pediu que a turma revisasse o agrupamento com base nas características registradas.",
+   "comando": "Qual característica da chave mostra que esse agrupamento é inadequado, e por quê?",
+   "alts": [
+    "O número de patas: o morcego tem duas e o besouro seis, e é isso que separa vertebrados de invertebrados",
+    "A cobertura do corpo: pelos e exoesqueleto são tipos de pele, e animais com pele semelhante formam um grupo",
+    "A coluna vertebral: o morcego a possui e o besouro não, então são de grupos distintos apesar de ambos voarem",
+    "O tamanho do corpo: o morcego é maior que o besouro, e o tamanho define a divisão entre os dois grupos"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um produtor de maçã de Minas Gerais comparou quatro talhões de pomar com a mesma variedade e o mesmo solo. Em três deles instalou colmeias de abelhas a distâncias diferentes; no quarto, aplicou inseticida durante a floração.",
+   "comando": "Qual conclusão é sustentada pelos dados do quadro?",
+   "alts": [
+    "Mais colmeias acompanham mais frutos, e o inseticida em D reduziu o resultado, indicando perda de polinizadores",
+    "As colmeias produzem os frutos diretamente, por isso o talhão D, com quatro colmeias, deveria ter igual resultado a C",
+    "O inseticida aumentou a produção em D em relação a A, pois eliminou pragas que atacam as flores",
+    "A quantidade de frutos depende do solo, que era igual nos quatro talhões, e as diferenças são acaso"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma horta escolar, três canteiros foram preparados com o mesmo solo e a mesma adubação. Os alunos contaram as minhocas e mediram em quantos minutos 1 litro de água era absorvido pelo solo de cada canteiro.",
+   "comando": "Qual hipótese explica a relação entre o número de minhocas e o tempo de absorção?",
+   "alts": [
+    "As minhocas absorvem a água do solo, então o solo com mais minhocas fica seco e parece absorver mais rápido",
+    "A absorção rápida atrai as minhocas, pois elas buscam solo úmido, o que inverte causa e efeito",
+    "As galerias abertas pelas minhocas aumentam os espaços no solo e facilitam a entrada de água e de ar",
+    "Os canteiros com mais minhocas tinham mais plantas, e as raízes, não as minhocas, é que abrem os espaços"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um grupo de biólogos estudou a regeneração de uma área aberta, antes pastagem, perto de um fragmento de mata. Contaram plântulas de espécies pioneiras em três locais e observaram que morcegos frugívoros usavam alguns poleiros instalados na área.",
+   "comando": "Qual interpretação dos dados é adequada para o papel desses animais na regeneração?",
+   "alts": [
+    "Morcegos polinizam as flores da área aberta, e é por isso que há mais plântulas sob o poleiro",
+    "As sementes germinam mais sob o poleiro porque as fezes do morcego funcionam como adubo, sem relação com dispersão",
+    "A árvore-mãe impede a germinação por competição, então o morcego é irrelevante para o resultado observado",
+    "Morcegos que comem frutos levam sementes para longe da árvore-mãe e favorecem a regeneração de áreas abertas"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma estudante quer testar se aves insetívoras reduzem o número de lagartas em árvores de uma praça de São Paulo. Ela cobriu com tela uma ipê e deixou um chorão sem tela, contou lagartas por folha nas duas após uma semana e concluiu que as aves reduzem a praga.",
+   "comando": "Qual mudança no procedimento tornaria o teste mais justo?",
+   "alts": [
+    "Contar as aves visitantes de cada árvore e relacionar esse número com o das lagartas",
+    "Usar árvores da mesma espécie e porte, com e sem tela, e repetir em várias árvores",
+    "Cobrir as duas árvores com tela, para que fiquem em condições iguais e o resultado seja confiável",
+    "Trocar a contagem de lagartas pela de folhas comidas, mantendo as espécies de árvores diferentes"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "O sapo-cururu e o lagarto-teiú vivem na mesma região de cerrado, mas o sapo permanece perto de poças e só sai à noite, enquanto o teiú caminha ao sol e se afasta da água. O sapo tem pele fina e úmida, e o teiú tem pele coberta de escamas.",
+   "comando": "Explique, relacionando pele e ambiente, por que o sapo depende mais da água que o lagarto.",
+   "ref": "O sapo é anfíbio e respira também pela pele fina e úmida, que perde água com facilidade, por isso precisa de poças e de ficar na umidade. O teiú é réptil, tem escamas que reduzem a perda de água e consegue viver longe de poças."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Numa lavoura de cana, um agricultor usou um veneno forte que matou muitos sapos que viviam nas bordas do campo. Dois meses depois, ele notou aumento de insetos na plantação, como mostram as contagens feitas por técnicos.",
+   "comando": "Explique por que o aumento dos insetos pode estar ligado à morte dos sapos e que papel ecológico os sapos exercem.",
+   "ref": "Os sapos são predadores de insetos e controlam suas populações na cadeia alimentar. Com a morte dos sapos, os insetos perderam seu predador e se multiplicaram, o que pode prejudicar a lavoura."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma mata, pesquisadores colocaram folhas secas em dois tipos de saquinho: um com malha fina, que impede a entrada de animais maiores que 0,5 mm, e outro com malha grossa, que permite a entrada de besouros, cupins e tatuzinhos-de-jardim. Depois de 60 dias, pesaram o que restou.",
+   "comando": "Explique a diferença de massa restante entre os saquinhos e o papel ecológico dos invertebrados envolvidos.",
+   "ref": "Na malha grossa os invertebrados entraram, fragmentaram e consumiram as folhas, e a massa caiu mais. Eles atuam como decompositores e detritívoros, acelerando a reciclagem de nutrientes para o solo."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "A horta da escola está com pulgões nas folhas de couve. Os alunos pensaram em usar veneno, mas a professora sugeriu atrair joaninhas, plantando flores ao redor dos canteiros. Eles contaram pulgões em dois canteiros durante três semanas, um com flores e outro sem.",
+   "comando": "Proponha uma explicação para a diferença entre os canteiros e justifique por que a medida é preferível ao veneno.",
+   "ref": "As flores atraem joaninhas, que são predadoras de pulgões, e por isso a população deles caiu no canteiro com flores. Essa medida é um controle biológico que protege o ambiente e evita matar outros insetos úteis, como as abelhas."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Na represa, uma colônia de pescadores notou que, depois de a prefeitura soltar uma espécie de peixe de outra região para aumentar a pesca, o número de lambaris e de pequenos crustáceos caiu bastante. Biólogos registraram os números em quatro meses.",
+   "comando": "Explique, com base nos dados, o que pode ter ocorrido com a cadeia alimentar e por que a introdução de uma espécie exige cuidado.",
+   "ref": "O peixe introduzido cresceu e provavelmente se alimenta de lambaris e crustáceos, que diminuíram, o que desequilibra a cadeia alimentar. Espécies de fora podem não ter predadores no novo ambiente, se multiplicar e reduzir a biodiversidade nativa."
+  }
+ ],
+ "7º ANO|2|Reconhecer o conceito de sustentabilidade e sua aplicação nas ações humanas e políticas ambientais.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Três grupos de alunos propuseram projetos para a horta da escola, avaliados após um mês. O projeto A usa adubo químico comprado e irrigação com mangueira aberta. O projeto B faz compostagem da merenda e irrigação por gotejamento. O projeto C faz o mesmo que B e ainda doa e vende o excedente para uma cooperativa do bairro.",
+   "comando": "Que avaliação considera corretamente o tripé da sustentabilidade (ambiental, social e econômico)?",
+   "alts": [
+    "O projeto A é o melhor, pois a maior colheita garante retorno econômico e resolve também os demais aspectos do tripé.",
+    "O projeto C é o mais equilibrado, pois mantém boa colheita, gasta menos água que A e atende o maior número de famílias.",
+    "O projeto B é o melhor, pois consome menos água e menos recursos, o que garante a sustentabilidade do conjunto.",
+    "Os projetos A e C são equivalentes, pois a perda de colheita de C é compensada pelo uso de compostagem e gotejamento."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma cooperativa de reciclagem de um bairro de São Paulo implantou a coleta seletiva em ruas vizinhas a um córrego. Um relatório comparou a situação antes e depois, e o grupo discute se o projeto é sustentável. O caminhão da cooperativa usa diesel e passou a rodar mais para cobrir as novas ruas.",
+   "comando": "Que afirmação sobre o projeto NÃO é sustentada pelos dados do relatório?",
+   "alts": [
+    "O projeto não trouxe custo ambiental, pois a redução dos resíduos no aterro compensa o uso do caminhão.",
+    "A renda média cresceu 50%, o que indica ganho social e econômico para quem trabalha na cooperativa do bairro.",
+    "A queda de 12 toneladas no aterro mostra ganho ambiental, mas o aumento dos quilômetros rodados pede acompanhamento.",
+    "O projeto ainda pode melhorar com rotas mais curtas ou um veículo menos poluente, reduzindo o efeito do diesel."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma colônia de pescadores da represa tem registrado a quantidade de peixes capturados por ano e uma estimativa do estoque de peixes que restava na represa ao final de cada ano. A associação comemora o aumento da captura, que elevou a renda das famílias, e discute se a pesca está sendo feita de modo sustentável.",
+   "comando": "Qual conclusão relaciona corretamente os dados ao conceito de sustentabilidade?",
+   "alts": [
+    "É sustentável, pois a captura e a renda das famílias crescem a cada ano, atendendo às necessidades de quem vive da pesca.",
+    "É sustentável, pois o estoque de 3300 kg ainda é grande e a captura anual representa uma pequena parte dele neste momento.",
+    "Não é sustentável, pois qualquer captura de peixes reduz o estoque e a pesca deveria ser interrompida na represa.",
+    "Não é sustentável, pois a captura crescente vem acompanhada de queda do estoque, o que ameaça a pesca das próximas gerações."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma escola pública estuda instalar painéis solares no telhado. A diretoria quer saber se a medida concilia os aspectos ambiental e econômico, e para isso reuniu as informações de um orçamento, feito a partir de uma estimativa de uso da escola.",
+   "comando": "Qual afirmação é sustentada pelos dados do orçamento?",
+   "alts": [
+    "Retorno em 40 meses e mais de 20 anos de geração depois, conciliando a economia com a redução de impactos.",
+    "O investimento não compensa, pois o custo de instalação é alto e a economia mensal parece pequena diante do valor pago.",
+    "O investimento é recuperado em 4 meses, pois a economia mensal já cobre uma parte importante do valor pago na instalação.",
+    "A medida é sustentável por gerar energia limpa, independentemente do tempo que leve para o investimento ser recuperado."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma prefeitura da região do Cantareira analisa dois projetos de loteamento em área próxima ao manancial que abastece milhões de pessoas. Um vereador defende o cenário X porque \"gera mais casas e mais empregos agora\". Um morador defende o cenário Y.",
+   "comando": "Qual argumento é mais coerente com o desenvolvimento sustentável?",
+   "alts": [
+    "O cenário X é mais coerente, pois mais casas e mais empregos atendem às necessidades sociais e econômicas da população.",
+    "O cenário Y é mais coerente, pois reduz as moradias, mas protege a água do manancial usada pela população atual e futura.",
+    "O cenário X é mais coerente, pois o impacto sobre o manancial é pequeno diante do benefício de moradias para mais famílias.",
+    "O cenário Y é mais coerente, pois qualquer obra prejudica a natureza e por isso deveria ser realizada em menor escala."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma horta comunitária de um bairro usa água de chuva armazenada e distribui verduras a 30 famílias a preço baixo. A tabela mostra o balanço de dois meses. A prefeitura estuda cortar o apoio porque a horta não se paga.",
+   "comando": "Analise a horta nos três aspectos da sustentabilidade com base nos dados e proponha uma ação para mantê-la funcionando.",
+   "ref": "No aspecto ambiental a horta é positiva, pois usa água da chuva, e no social atende 30 famílias, mas os voluntários caíram de 12 para 5. No econômico, a despesa passou da receita, o que ameaça a continuidade. Uma ação seria reajustar o preço de parte da produção ou criar parceria com a escola e a cooperativa para reduzir custos e atrair voluntários."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Todo mês, moradores fazem mutirão para tirar lixo de um córrego. Os registros mostram que a quantidade retirada tem crescido, apesar do esforço contínuo. O vereador sugere aumentar a frequência dos mutirões.",
+   "comando": "Explique por que os mutirões sozinhos não resolvem o problema a longo prazo e proponha uma medida preventiva coerente com a sustentabilidade.",
+   "ref": "A quantidade retirada cresce, o que indica que o descarte inadequado continua, e o mutirão só remove o resultado e não a causa. É preciso agir na origem, com educação ambiental, pontos de coleta e coleta seletiva regular, para que o córrego fique limpo para as próximas gerações."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma família de quatro pessoas quer reduzir o consumo de água em casa. Cada pessoa toma um banho por dia, e a família lava a calçada uma vez por dia. Os hábitos foram medidos durante uma semana.",
+   "comando": "Calcule quantos litros a família economizaria em 30 dias trocando apenas o tipo de banho, e explique a relação dessa mudança com a sustentabilidade.",
+   "ref": "Cada pessoa economiza 135 menos 45, ou 90 litros por dia, e a família de quatro economiza 360 litros diários, ou 10.800 litros em 30 dias. Essa mudança reduz a retirada de água dos mananciais e o gasto da família, garantindo o recurso para as gerações futuras."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Para reduzir o trânsito na Marginal, uma prefeitura discute criar faixas exclusivas de ônibus e ciclovias, em vez de ampliar as pistas para carros. Um técnico apresentou valores médios de emissão de gás carbônico por pessoa em cada meio de transporte.",
+   "comando": "Use os dados para defender a política de ônibus e bicicleta, relacionando-a a pelo menos dois aspectos da sustentabilidade.",
+   "ref": "Ônibus e bicicleta emitem bem menos gás carbônico por pessoa do que o carro, o que melhora o ar e reduz o impacto ambiental para as gerações futuras. Além disso, são meios mais baratos e acessíveis, o que traz benefício social e econômico para quem tem menos renda e perde menos tempo no trânsito."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um agricultor da região de Ribeirão Preto aumentou o uso de adubo químico e agrotóxico para elevar a produção. Ele afirma que o sistema é sustentável porque \"a colheita só cresce\". Um técnico acompanhou quatro safras.",
+   "comando": "Avalie a afirmação do agricultor com base nos dados e sugira uma prática que torne o sistema mais sustentável.",
+   "ref": "A afirmação está errada: a produção parou de crescer na terceira e quarta safras e a matéria orgânica caiu de 3,0 para 1,5%, o que indica empobrecimento do solo e risco para as colheitas futuras. A rotação de culturas e a adubação orgânica ajudam a recuperar o solo e manter a produção."
+  }
+ ],
+ "7º ANO|2|Reconhecer o efeito estufa como fenômeno natural e os impactos das ações humanas que o intensificam.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma turma de Campinas repetiu o experimento dos copos ao sol: dois copos com 200 mL de água na mesma temperatura inicial, um deles coberto com saco plástico transparente. Os alunos mediram a temperatura da água a cada 5 minutos, sempre na mesma sombra parcial e com o mesmo termômetro.",
+   "comando": "O que os dados permitem concluir sobre o modelo do experimento?",
+   "alts": [
+    "O saco plástico produziu calor próprio, de modo parecido com gases que geram energia na atmosfera",
+    "A cobertura dificultou a saída do calor, de modo parecido com gases que retêm calor no ar",
+    "O copo aberto não recebeu luz do Sol, e por isso aqueceu menos que o copo coberto no experimento",
+    "O copo coberto absorveu mais luz, já que o plástico aumenta a radiação recebida da fonte"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma reportagem local, um técnico ambiental explicou que, sem a camada de gases como o vapor de água e o gás carbônico, a temperatura média da Terra seria bem menor. Uma aluna leu que a média real é de cerca de 15 °C e que, sem esses gases, seria de cerca de -18 °C.",
+   "comando": "Qual interpretação dessas informações é correta?",
+   "alts": [
+    "O efeito estufa é uma consequência da poluição humana e deixa a Terra mais quente do que no passado",
+    "O efeito estufa natural é prejudicial e deve ser reduzido ao nível zero para proteger a vida na Terra",
+    "O efeito estufa depende do gás carbônico, e o vapor de água não participa do fenômeno natural",
+    "O efeito estufa natural mantém a Terra aquecida e é uma condição para a vida que conhecemos"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "A prefeitura de uma cidade paulista divulgou, em um balanço fictício, as principais fontes de emissão de gás carbônico do município num ano. Um morador comentou que, como a cidade tem muitas árvores, o problema estaria resolvido. Um vereador respondeu que seria preciso olhar as quantidades emitidas e a capacidade das árvores de absorvê-las.",
+   "comando": "Que conclusão a partir desses dados é coerente?",
+   "alts": [
+    "A maior parte vem do transporte, então reduzir essas emissões tem mais efeito que plantar árvores",
+    "As emissões das residências são as mais altas, pois cada casa consome energia ao longo do ano",
+    "A queima de resíduos é a maior fonte, por isso o plantio de árvores resolveria o problema",
+    "As árvores absorvem o gás emitido na mesma medida, e reduzir as fontes seria desnecessário"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma série de medições fictícias numa estação meteorológica mostra o aumento da concentração de gás carbônico no ar e da temperatura média anual ao longo de 50 anos. Um colega afirma: 'O gráfico prova que o gás carbônico sozinho causou todo o aumento da temperatura, e nada mais influencia o clima'.",
+   "comando": "Que afirmação sobre os dados é a mais adequada ao raciocínio científico?",
+   "alts": [
+    "Os dados indicam que o gás carbônico não se relaciona ao clima, pois a temperatura subiu pouco",
+    "Os dados mostram que a temperatura causou o aumento do gás carbônico, pois foi medida antes dele",
+    "As duas variáveis cresceram juntas, o que é coerente com o efeito estufa intensificado, mas a causa exige outros estudos",
+    "Os dados bastam para afirmar que o gás carbônico é o fator do clima, pois aumentou em cada medição"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em uma escola de Piracicaba, os estudantes compararam duas propostas para reduzir a emissão de gases de efeito estufa no bairro: trocar parte das viagens de carro por ônibus e bicicleta, ou manter o uso de carros e plantar mudas no pátio. Para cada proposta, estimaram a mudança por ano.",
+   "comando": "Qual proposta tem maior efeito sobre a redução dos gases emitidos e por quê?",
+   "alts": [
+    "Ônibus e bicicleta, pois evitam 48 t por ano, valor bem maior que as 3 t absorvidas pelas mudas",
+    "Plantio de mudas, pois as plantas absorvem gás carbônico e esse processo vale mais que reduzir emissões",
+    "As duas têm efeito igual, pois qualquer ação a favor do ambiente reduz a mesma quantidade de gás no ano",
+    "Plantio de mudas, pois 3 t absorvidas por ano é um valor maior que 0, o valor da outra proposta"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em uma feira de ciências, um aluno disse: 'Se o efeito estufa existe naturalmente, não existe problema em queimar mais combustíveis'. Uma colega mostrou o registro de gás carbônico no ar de uma estação ao longo de décadas.",
+   "comando": "Explique o erro do raciocínio do aluno, diferenciando o efeito estufa natural do intensificado, com apoio nos dados.",
+   "ref": "O efeito estufa natural é necessário para manter a temperatura da Terra adequada à vida, mas a queima de combustíveis lança mais gás carbônico na atmosfera, que passou de 317 para 412 ppm. Esse aumento intensifica o efeito estufa e pode elevar a temperatura média e alterar o clima."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Numa cidade paulista, um bairro com muitas áreas de asfalto e poucas árvores registrou temperaturas mais altas que um bairro arborizado, em dias de mesma condição de tempo. Os moradores pediram uma solução baseada em evidências para o bairro quente.",
+   "comando": "Proponha duas ações para o bairro quente, justificando como cada uma ajuda a reduzir o calor ou as emissões.",
+   "ref": "Ampliar a arborização, pois as árvores fazem sombra e liberam vapor de água, o que reduz a temperatura, e ainda absorvem gás carbônico. Incentivar transporte coletivo e bicicleta reduz a queima de combustíveis e, assim, a emissão de gases que intensificam o efeito estufa."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um grupo de alunos repetiu a atividade da estufa no copo, mas dessa vez usou dois copos de tamanhos diferentes, um aberto e um coberto. A professora disse que o resultado não permite comparação justa. Os alunos obtiveram 31 °C no coberto e 29 °C no aberto.",
+   "comando": "Aponte o erro do procedimento, explique por que a comparação não é justa e indique como corrigi-lo.",
+   "ref": "As variáveis volume de água e tamanho do copo diferem além da cobertura, então não se sabe qual causou a diferença. Para corrigir, usar copos iguais com o mesmo volume de água e mesma temperatura inicial, mudando apenas a cobertura."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma aula, a professora explicou que o metano liberado por aterros e pela pecuária e o gás carbônico emitido por veículos são gases de efeito estufa. Uma aluna fez um esquema sobre o caminho da radiação do Sol até a Terra e de volta ao espaço.",
+   "comando": "Explique, com base no esquema, como os gases de efeito estufa retêm calor e por que o aumento deles na atmosfera eleva a temperatura.",
+   "ref": "A superfície aquecida emite calor, e parte dele é absorvida e reemitida pelos gases de efeito estufa, que devolvem energia à Terra. Com mais gases, mais calor volta à superfície e menos escapa ao espaço, elevando a temperatura média."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma usina de biogás de um aterro sanitário paulista captura o metano do lixo orgânico, que seria liberado ao ar, e o usa para gerar energia. O texto da visita escolar informa que o metano retém muito mais calor que o gás carbônico, porém é queimado e se transforma em gás carbônico e água.",
+   "comando": "Explique por que capturar e queimar o metano pode reduzir o efeito estufa intensificado, mesmo liberando gás carbônico.",
+   "ref": "O metano retém cerca de 28 vezes mais calor que o gás carbônico, então impedir sua liberação ao ar é vantajoso. Ao queimá-lo, forma-se gás carbônico, que contribui bem menos para o efeito estufa, e ainda se gera energia útil."
+  }
+ ],
+ "7º ANO|2|Relacionar os impactos das atividades humanas com as mudanças climáticas globais e seus efeitos socioambientais.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma reportagem de Piracicaba mostrou medições de um projeto de monitoramento sobre a concentração de gás carbônico na atmosfera e a temperatura média do planeta. Júlia copiou os valores de três décadas para a aula e a professora pediu que a turma avaliasse o que os números permitem afirmar, lembrando que o gás carbônico retém calor na atmosfera.",
+   "comando": "Qual afirmação sobre esses dados é a mais bem fundamentada?",
+   "alts": [
+    "Os dois valores crescem juntos, e, como o gás retém calor, é plausível que ele contribua para o aquecimento, embora a tabela sozinha não prove a causa.",
+    "Os dois valores crescem juntos, o que prova que o aquecimento do planeta é o responsável por aumentar a quantidade de gás carbônico na atmosfera em cada década.",
+    "Os dois valores crescem juntos, o que mostra que o gás carbônico é o principal fator que influencia a temperatura, já que outros fatores não aparecem na tabela.",
+    "Os dois valores crescem juntos, mas essa relação é mera coincidência, pois um gás em pequena quantidade na atmosfera não teria como alterar a temperatura."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "A prefeitura de um município do interior paulista quer reduzir as emissões de gás carbônico e precisa escolher uma ação prioritária. Uma equipe levantou quanto cada fonte emite por ano na região. Parte do município tem canaviais e áreas de mata nativa, e o desmatamento de uma área nova foi aprovado para pastagem, com uso de fogo para limpar o terreno.",
+   "comando": "Qual decisão tem melhor justificativa com base nos dados e nos efeitos do desmatamento?",
+   "alts": [
+    "Reduzir os transportes, pois os veículos queimam combustíveis fósseis diariamente, e isso faz deles a maior fonte entre as quatro apresentadas.",
+    "Reduzir queimadas e desmatamento, pois são a maior fonte e a derrubada ainda retira árvores que absorveriam parte do gás carbônico emitido.",
+    "Reduzir as indústrias, pois elas concentram a emissão em poucos pontos, e isso permite fiscalizar mais facilmente do que as demais fontes.",
+    "Reduzir o consumo de energia nas casas, pois cada família pode agir diretamente, e a pequena emissão atual indica que é a fonte mais fácil de zerar."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma defesa civil da capital paulista registrou, em três décadas, o número de dias por ano com chuva acima de 50 mm e o número de famílias desalojadas por deslizamentos. Os técnicos lembram que o aquecimento global favorece chuvas mais intensas, e que parte dos bairros afetados fica em encostas sem drenagem, onde há moradias construídas sem projeto.",
+   "comando": "Que interpretação dos registros é a mais completa?",
+   "alts": [
+    "O número de famílias desalojadas aumentou por causa do crescimento da população da cidade, e o clima não influencia, já que chover muito faz parte da região há décadas.",
+    "O número de famílias desalojadas cresceu porque as chuvas fortes ficaram mais frequentes, e as condições de moradia dos bairros não interferem nesse efeito.",
+    "O número de famílias desalojadas cresceu porque as chuvas fortes ficaram mais frequentes e há moradias em encostas, unindo fatores climáticos e sociais.",
+    "O número de famílias desalojadas cresceu porque as moradias estão em áreas de risco, e a frequência das chuvas fortes não mudou no período analisado."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma frota de táxis de Campinas está discutindo trocar parte dos carros movidos a gasolina por carros movidos a etanol de cana. O etanol libera gás carbônico ao queimar, mas um técnico explicou que o saldo na atmosfera é diferente. Ele mostrou uma tabela com a quantidade liberada na queima e o saldo líquido que permanece na atmosfera para cada combustível.",
+   "comando": "Que explicação justifica a diferença entre a queima e o saldo do etanol na tabela?",
+   "alts": [
+    "A fumaça do etanol se dissolve na água das nuvens, o que retira o gás da atmosfera depois da queima, e a gasolina produz uma fumaça que não se dissolve.",
+    "O etanol queima mais devagar, o que libera menos gás carbônico na atmosfera por quilômetro, e o carbono da gasolina vem de uma queima mais rápida e completa.",
+    "A cana é uma planta que não tem carbono em sua composição, o que impede que o etanol libere gás carbônico, e a gasolina é feita de substâncias com carbono.",
+    "A cana absorve gás carbônico ao crescer, compensando grande parte do que o etanol libera, e o carbono da gasolina vem do petróleo armazenado no subsolo."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Estudantes de um clube de astronomia compararam a atmosfera de três planetas rochosos para discutir o efeito estufa. Eles queriam saber se a porcentagem de gás carbônico, sozinha, explica por que um planeta é mais quente que outro. Para isso, organizaram uma tabela com a porcentagem do gás, a pressão da atmosfera (em comparação com a Terra) e a temperatura média.",
+   "comando": "Qual conclusão é sustentada pelos dados da tabela?",
+   "alts": [
+    "O efeito estufa depende da porcentagem de gás carbônico, pois Marte e Vênus têm porcentagens parecidas e, por isso, deveriam ter temperaturas parecidas.",
+    "O efeito estufa depende da quantidade total de gás na atmosfera, pois Marte tem alta porcentagem de gás carbônico, mas pouco gás no total e é frio.",
+    "O efeito estufa depende da distância ao Sol, pois Marte está mais longe e é frio, e a quantidade de gás carbônico não interfere na temperatura.",
+    "O efeito estufa depende da presença de gases na atmosfera, pois a Terra tem pouco gás carbônico e, por isso, não tem aquecimento por esse efeito."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em uma aula sobre a Marginal Tietê, o professor mostrou que a frota de veículos da Grande São Paulo dobrou em vinte anos, e que o número de dias muito quentes por ano também aumentou. Um aluno disse que 'o carro esquenta a cidade na hora, com o motor'. A turma resolveu montar uma explicação mais completa, ligando os dois fatores.",
+   "comando": "Explique o caminho entre a queima de combustíveis dos veículos e o aumento de dias muito quentes, e diga por que os dados da tabela, sozinhos, não provam essa ligação.",
+   "ref": "A queima de gasolina e diesel libera gás carbônico, que se acumula na atmosfera e intensifica o efeito estufa, retendo mais calor e elevando a temperatura média. Os dados apenas mostram dois valores que aumentam juntos, e outros fatores (como urbanização) também influenciam, então não provam causa."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Pesquisadores compararam a temperatura e a umidade do ar ao meio-dia em dois terrenos vizinhos no interior paulista: um com mata preservada e outro desmatado, usado como pasto. A diferença chamou a atenção da comunidade, que depende do pasto, mas também de uma nascente que fica dentro da mata.",
+   "comando": "Explique que efeitos do desmatamento aparecem nos dados e por que ele também contribui para o aquecimento global.",
+   "ref": "No pasto a temperatura é maior e a umidade menor, porque sem as árvores há menos sombra e menos água liberada pelas plantas. O desmatamento, principalmente com fogo, libera gás carbônico e reduz as árvores que o absorvem, o que intensifica o efeito estufa."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma associação de produtores de uma região paulista registrou quantos focos de fogo foram detectados por satélite em cada mês de um ano. Muitos produtores usam fogo para limpar a terra, e o período de maior número de focos coincide com o de menos chuva. A fumaça chegou às cidades vizinhas e prejudicou a respiração de muitos moradores.",
+   "comando": "Descreva o padrão dos dados, explique por que ele ocorre e proponha duas ações para reduzir as queimadas e seus efeitos.",
+   "ref": "Os focos crescem de junho até setembro e caem em outubro, porque na época seca a vegetação seca facilita o fogo e a volta das chuvas o reduz. Como ações, é possível proibir o uso de fogo no período seco com fiscalização e usar alternativas de limpeza do terreno sem queima, o que evita a fumaça e as emissões."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Dois bairros de uma cidade do litoral paulista foram atingidos por chuvas fortes no mesmo mês. O bairro A tem muitas árvores e canais de drenagem, e o bairro B tem ruas quase sem vegetação e casas em um morro. Cientistas afirmam que eventos extremos de chuva tendem a ser mais frequentes com o aquecimento global.",
+   "comando": "Compare os dois bairros e explique por que o mesmo fenômeno climático pode causar impactos sociais diferentes.",
+   "ref": "O bairro B teve mais alagamentos e desalojados porque não tem vegetação para absorver a água, tem pouca drenagem e há casas em encosta sujeitas a deslizamentos. Assim, o impacto de um evento extremo depende do clima e também das condições do local, e por isso é preciso adaptar as cidades."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma turma de 7º ano calculou as emissões de gás carbônico por pessoa em três formas de ir à escola, considerando um mês de aulas. Em um bairro da zona leste de São Paulo, 100 estudantes vão de carro particular com os pais, e a escola quer saber o que aconteceria se eles passassem a usar o ônibus escolar.",
+   "comando": "Calcule quanto gás carbônico deixaria de ser emitido por mês se os 100 estudantes mudassem do carro para o ônibus e explique como isso se relaciona com as mudanças climáticas.",
+   "ref": "Cada estudante deixaria de emitir 120 - 25 = 95 kg por mês, e com 100 estudantes a redução seria de 9.500 kg de CO₂. Menos gás carbônico lançado por combustíveis fósseis diminui a intensificação do efeito estufa e, portanto, contribui para reduzir o aquecimento global."
+  }
+ ],
+ "7º ANO|3|Analisar os impactos das ações humanas nos biomas brasileiros e suas implicações para a preservação ambiental.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma região de Cerrado no interior de Goiás, parte da vegetação nativa foi substituída por lavouras ao longo de 20 anos. Moradores reclamam que o rio da fazenda secou na estiagem. Um técnico anotou a porcentagem de vegetação restante e a vazão do rio no período de seca, junto com a chuva anual.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "A vegetação e a vazão caíram em proporções iguais, o que comprova uma relação direta e exata entre as duas medidas.",
+    "A queda da vazão mostra que a chuva diminuiu na região, já que a vegetação nativa não influencia a quantidade de água dos rios.",
+    "A queda da vazão prova que as lavouras captam mais água do rio, sem qualquer relação com a perda da vegetação nativa.",
+    "Com a chuva praticamente constante, a queda da vazão acompanha a perda de vegetação, o que sugere menor infiltração de água no solo."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Na Mata Atlântica, pesquisadores contaram aves florestais em quatro áreas. As áreas A e E têm o mesmo tamanho, de 10 hectares, mas E está ligada por uma faixa de mata a uma floresta grande, enquanto A está cercada por pasto. Os resultados chamaram a atenção da equipe, que procura explicar a diferença.",
+   "comando": "Qual hipótese explica melhor a diferença de espécies entre A e E?",
+   "alts": [
+    "As espécies de E aumentaram porque a faixa de mata soma sua área à de E, e então E passou a ter o tamanho de C.",
+    "A faixa de mata permite que aves de C visitem e recolonizem E, reduzindo o isolamento que limita a fauna de A.",
+    "O tamanho explica o resultado, pois E tem mais espécies porque é maior que A, mesmo sem relação com a área C.",
+    "As aves de A se adaptaram à faixa de mata de E em poucos anos e passaram a ocupar toda a área de E."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma região da Caatinga, produtores aumentaram o número de cabras por hectare para vender mais leite. Um pesquisador mediu, em três parcelas com a mesma chuva e o mesmo tipo de solo, a cobertura vegetal do chão e a quantidade de terra levada pelas enxurradas ao longo do ano.",
+   "comando": "Qual orientação de manejo é mais bem sustentada pelos dados?",
+   "alts": [
+    "Manter a lotação de 6 cabras por ha e plantar espécies exóticas, pois a cobertura do solo não interfere na erosão.",
+    "Aumentar a lotação, pois mais animais deixam mais esterco e a perda de solo nas parcelas depende da chuva.",
+    "Reduzir a lotação para manter boa cobertura vegetal, pois a perda de solo cresce quando a vegetação diminui.",
+    "Aumentar a lotação gradualmente, pois a perda de solo de P2 é pequena e mostra que o solo se adapta a mais animais."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "No Cerrado, o fogo ocorre naturalmente e muitas plantas resistem a ele, mas queimadas muito frequentes preocupam os ambientalistas. Pesquisadores compararam parcelas com diferentes intervalos entre queimadas e contaram as espécies de árvores em cada uma, para avaliar o efeito do fogo.",
+   "comando": "Qual interpretação NÃO é sustentada pelos dados?",
+   "alts": [
+    "O fogo é prejudicial em qualquer frequência, pois a parcela sem fogo tem mais espécies que as parcelas queimadas.",
+    "Queimadas anuais reduzem a diversidade de árvores, pois a parcela queimada todo ano tem o menor número de espécies.",
+    "Intervalos longos entre queimadas parecem compatíveis com alta diversidade, pois a parcela de 10 anos tem 14 espécies.",
+    "A frequência do fogo influencia a diversidade, pois o número de espécies varia bastante entre as parcelas estudadas."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um projeto de recuperação de pastagens na Amazônia plantou mudas de árvores em duas áreas: uma sob árvores remanescentes e outra em pasto aberto. O técnico mediu a temperatura do solo às 14h e a umidade antes do plantio, e acompanhou a sobrevivência das mudas durante seis meses.",
+   "comando": "Qual explicação relaciona melhor os dados com o impacto da retirada da floresta?",
+   "alts": [
+    "O pasto aberto tem menos mudas vivas porque a temperatura do solo diminui a germinação, embora a umidade seja a mesma.",
+    "Sem a floresta o solo esfria e fica encharcado, e essas condições dificultam a sobrevivência das mudas no pasto aberto.",
+    "Sem a copa das árvores o solo aquece e seca, e essas condições dificultam a sobrevivência das mudas no pasto aberto.",
+    "A retirada da floresta não alterou o solo, e a morte das mudas no pasto se deve à falta de cuidado do técnico responsável."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em uma cidade da Mata Atlântica, três bacias de córregos receberam a mesma chuva forte de 50 mm. Os técnicos mediram quanto da bacia está coberta por asfalto e concreto e quanto tempo o córrego levou para atingir o nível máximo de cheia.",
+   "comando": "Explique a relação entre a área impermeabilizada e o tempo até a cheia máxima e proponha uma medida para reduzir enchentes.",
+   "ref": "Quanto maior a área impermeabilizada, menos água infiltra e mais escorre rapidamente para o córrego, então a cheia chega mais cedo e mais forte. Medidas possíveis: manter áreas verdes e matas ciliares, usar piso permeável e construir reservatórios de contenção."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Durante a seca no Pantanal, um incêndio avançou por dias. Uma equipe registrou, em um trecho, a quantidade de animais antes e depois do fogo e observou que a recuperação do local demorou meses, com o solo ainda exposto.",
+   "comando": "Descreva dois impactos do fogo sobre o bioma, ligando-os aos dados, e proponha uma ação de prevenção que envolva a comunidade.",
+   "ref": "O fogo destrói a vegetação, o alimento e o abrigo dos animais, por isso as contagens de aves e mamíferos caíram muito. Além disso, deixa o solo exposto e atrasa a recuperação. Prevenção: restringir queimadas na seca, abrir aceiros e treinar brigadas comunitárias."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "No Pampa gaúcho, uma área de campo nativo foi convertida em lavoura de soja. Um estudo comparou duas áreas vizinhas, com o mesmo solo e clima, contando espécies de plantas e de aves em cada uma durante um ano inteiro de observações.",
+   "comando": "Explique o impacto da monocultura sobre o ambiente, com base nos dados, e proponha uma prática que reduza esse impacto.",
+   "ref": "A monocultura reduz drasticamente a diversidade de plantas e de aves, pois oferece pouco alimento e abrigo, e deixa o solo descoberto e sujeito à erosão. Podem ajudar a rotação de culturas, a preservação de faixas de campo nativo e o plantio direto."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em um rio da Amazônia, o garimpo lança mercúrio na água. Um estudo mediu a quantidade desse metal em peixes de três hábitos alimentares, e as famílias ribeirinhas se alimentam principalmente de peixes capturados na região.",
+   "comando": "Explique por que o mercúrio é mais alto no peixe predador e qual risco isso traz às comunidades. Cite uma ação para reduzir o problema.",
+   "ref": "O mercúrio se acumula nos tecidos e se concentra de um nível alimentar para o seguinte, de modo que predadores, que comem muitos peixes, acumulam mais. As famílias que consomem esses peixes podem se intoxicar, com danos ao sistema nervoso. É preciso fiscalizar o garimpo e orientar sobre o consumo."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "No litoral de Santos, parte do manguezal foi aterrada para construir áreas urbanas. Pescadores notaram que a captura semanal de caranguejos caiu à medida que o manguezal diminuía, e levaram os registros à associação de pesca da região.",
+   "comando": "Relacione os dados e explique por que a redução do manguezal afeta a pesca e o ambiente. Sugira uma ação de preservação.",
+   "ref": "O manguezal é abrigo e berçário para caranguejos, peixes e aves; ao ser reduzido, a captura cai junto. Ele também protege a costa da erosão e filtra poluentes. É preciso impedir novos aterros e recuperar áreas degradadas com replantio."
+  }
+ ],
+ "7º ANO|3|Diferenciar Unidades de Conservação de proteção integral e de uso sustentável com base em seus objetivos e formas de uso.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula \"Parque ou reserva?\", o professor mostrou fotos do Parque Estadual da Serra do Mar e da Área de Proteção Ambiental (APA) Cananéia-Iguape-Peruíbe. A turma montou um quadro com o que cada unidade de conservação permite, com base nas regras da gestão, e depois discutiu o que o quadro revela sobre o objetivo de cada categoria.",
+   "comando": "Qual conclusão sobre os objetivos das duas categorias é sustentada pelo quadro?",
+   "alts": [
+    "A APA tem objetivo de preservar a natureza com o menor uso possível, e o parque admite moradia por ter regras menores.",
+    "O parque e a APA têm o mesmo objetivo de conservação, pois ambas permitem visitação, e a diferença está no nome dado pelo estado.",
+    "A APA protege menos a mata porque permite qualquer atividade agrícola, enquanto o parque limita o corte de árvores.",
+    "O parque preserva a natureza admitindo uso indireto, enquanto a APA concilia ocupação humana e uso dos recursos com limites."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um jornal regional publicou os dados abaixo, fictícios para esta atividade, sobre a área de unidades de conservação de um estado. Lucas leu o gráfico e concluiu: \"como a área de uso sustentável é maior, a biodiversidade está menos protegida no estado, porque essas áreas conservam pouco\".",
+   "comando": "Qual avaliação da conclusão de Lucas é a mais adequada?",
+   "alts": [
+    "A conclusão está correta, pois áreas maiores em uso sustentável provam que a maior parte do estado permite explorar a natureza sem limites.",
+    "Comparar tamanhos não mede proteção, pois as categorias têm objetivos diferentes e as de uso sustentável também conservam, com regras de uso.",
+    "A conclusão está incorreta, pois a área de proteção integral é menor e por isso protege mais espécies que a de uso sustentável.",
+    "A conclusão é válida para a área, mas inválida para a fauna, que depende da proteção integral para sobreviver."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Dona Neusa, moradora tradicional de uma comunidade caiçara do litoral sul paulista, vive da extração de ostras há gerações e quer saber qual das áreas protegidas da região ainda permitiria manter essa atividade. A gestão divulgou as regras de três áreas, e ela precisa compará-las com os objetivos de cada categoria de unidade.",
+   "comando": "Qual área atende à necessidade de Dona Neusa, e por quê?",
+   "alts": [
+    "A área 1, porque autoriza visitas e seria compatível com a atividade de extração desde que Neusa avisasse previamente a gestão.",
+    "A área 3, porque é aberta ao público para lazer e a coleta de animais é proibida para visitantes de fora da região.",
+    "A área 2, porque permite o uso dos recursos por população tradicional, desde que com limites que mantenham a espécie.",
+    "A área 2, porque proíbe a retirada de ostras e, assim, garante que os recursos sejam usados por futuras gerações."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Biólogos monitoraram aves em três trechos de uma mesma região do Vale do Ribeira, comparando um parque estadual e dois trechos de uma APA: um com zona de vida silvestre, onde o uso é restrito, e outro com zona de uso agrícola intenso. O objetivo era avaliar se o nome da categoria basta para prever o estado de conservação.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "alts": [
+    "O estado de conservação varia dentro da própria APA conforme o zoneamento, então o uso sustentável depende de regras cumpridas.",
+    "A APA tem menos espécies que o parque, o que prova que as categorias de uso sustentável não conservam a biodiversidade.",
+    "As três áreas têm riqueza de aves equivalente, pois a diferença entre elas é pequena diante do total de espécies da região.",
+    "A queda de espécies na zona agrícola mostra que a APA deveria ser transformada em parque, pois ele protege a mata."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um parque estadual paulista de proteção integral tem trilhas e cachoeiras que atraem turistas. O plano de manejo estima que o parque suporta cerca de 60 mil visitantes por ano sem prejuízo à natureza. A gestão registrou a visitação dos últimos anos e observou erosão nas trilhas e lixo perto das quedas-d'água.",
+   "comando": "Qual medida é mais coerente com os objetivos da unidade e com os dados?",
+   "alts": [
+    "Ampliar as trilhas e instalar loteamentos próximos às quedas-d'água, para dividir os turistas em várias áreas.",
+    "Mudar a categoria do parque para APA, de modo que a visitação possa crescer sem um limite fixado no plano.",
+    "Cobrar ingresso mais alto e usar o dinheiro para construir hotéis dentro do parque, pois isso aumenta a fiscalização.",
+    "Controlar o número de visitantes e manter as atividades de uso indireto, mesmo que a arrecadação diminua."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na atividade \"Parque ou reserva?\", os alunos receberam cartões com atividades e tinham de marcar se cada uma é permitida em um parque estadual (proteção integral) e em uma APA (uso sustentável). O grupo de Helena marcou os resultados abaixo.",
+   "comando": "Explique o padrão dos resultados relacionando-o ao objetivo de cada categoria de unidade de conservação.",
+   "ref": "No parque, o objetivo é preservar a natureza, com uso indireto como visitas e pesquisa, por isso hortas e criação não são permitidas. Na APA, o objetivo é compatibilizar a conservação com o uso sustentável dos recursos, por isso atividades com limites podem ocorrer."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um município paulista quer proteger as nascentes de uma região de sítios onde famílias plantam e criam animais há décadas. Parte dos moradores teme perder suas terras com a criação de uma unidade de conservação, e outra parte defende que a nascente fique sem nenhum uso.",
+   "comando": "Indique qual categoria (proteção integral ou uso sustentável) atenderia melhor à situação e justifique, citando o que cada lado precisa.",
+   "ref": "A categoria de uso sustentável, como uma APA, atenderia melhor: permite que as famílias continuem na terra, com regras de proteção das nascentes. A proteção integral exigiria retirar moradores e proibir os usos, e poderia ser aplicada apenas a uma área menor de nascentes."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Pesquisadores compararam, em cinco anos, a área desmatada em três tipos de local de uma mesma região da Mata Atlântica: dentro de um parque, dentro de uma APA e em terras vizinhas sem nenhuma unidade de conservação. Os valores são fictícios para a atividade.",
+   "comando": "Interprete o gráfico e explique por que a APA não zerou o desmatamento nem foi tão eficaz quanto o parque.",
+   "ref": "As unidades reduzem o desmatamento em relação às terras vizinhas, e o parque é a mais eficaz. Na APA há ocupação e uso permitidos e o controle depende de regras e fiscalização, por isso ainda há alguma perda."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Dois parques estaduais, cada um com uma população de onças-pardas, estão separados por 15 km de plantações e uma rodovia. Em um ano, foram registrados 18 atropelamentos de animais silvestres nesse trecho. A gestão discute criar uma área protegida entre os dois parques.",
+   "comando": "Explique por que a conexão entre as unidades pode ser importante para a conservação e que tipo de uso poderia existir no trecho que une os parques.",
+   "ref": "Parques isolados deixam as populações pequenas, com menos troca de indivíduos, e os animais acabam atropelados ao cruzar a rodovia. Uma área de uso sustentável, como um corredor com passagens de fauna, permitiria a travessia e manteria algum uso humano com regras."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma escola de Ubatuba planeja uma saída de campo a uma Reserva Biológica estadual, unidade de proteção integral. A professora leu as regras da gestão e a turma propôs três atividades: uma aula de observação de aves com guia, um piquenique com fogareiro e a coleta de bromélias para o viveiro da escola.",
+   "comando": "Avalie cada proposta da turma com base nas regras e explique o que elas revelam sobre o objetivo da unidade.",
+   "ref": "A observação de aves com guia é permitida, por ser educacional e de uso indireto. O piquenique com fogareiro e a coleta de bromélias não são permitidos, pois fogo e retirada de plantas ameaçam a natureza, e o objetivo da unidade é preservá-la."
+  }
+ ],
+ "7º ANO|3|Identificar os componentes e características dos ecossistemas aquáticos.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma turma do 7º ano visitou uma represa do interior paulista e mediu, em três pontos, a temperatura, o oxigênio dissolvido na água e a quantidade de peixes capturados em redes iguais. No ponto P2, a água estava parada e coberta por uma camada verde espessa de algas.",
+   "comando": "Qual hipótese explica melhor o menor número de peixes em P2?",
+   "alts": [
+    "A temperatura mais alta eleva o oxigênio dissolvido, o que atrai predadores e diminui os peixes em P2",
+    "O excesso de algas e a água mais quente reduzem o oxigênio dissolvido, o que limita a sobrevivência dos peixes",
+    "A corredeira de P1 aumenta o oxigênio e, por compensação, a água parada de P2 recebe menos luz do sol",
+    "O sombreamento de P3 reduz a fotossíntese e aumenta o oxigênio, o que explica menos peixes em P2"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em um laboratório de escola, foram montados tanques iguais com água de açude e fitoplâncton. O tanque A recebeu zooplâncton, que se alimenta de fitoplâncton; o B recebeu zooplâncton e peixes pequenos, que comem zooplâncton; o C não recebeu nenhum dos dois. Todos ficaram sob a mesma luz por 10 dias.",
+   "comando": "Qual interpretação dos resultados é sustentada pelos dados?",
+   "alts": [
+    "Os peixes reduzem o zooplâncton, que passa a consumir menos fitoplâncton, e por isso este aumenta em B",
+    "Os peixes de B comem fitoplâncton diretamente, mas liberam nutrientes que fazem o fitoplâncton crescer mais",
+    "O zooplâncton de A estimula o crescimento do fitoplâncton, e por isso A tem menos algas do que o tanque C",
+    "Em B o fitoplâncton aumenta porque os peixes liberam gás oxigênio, que acelera a divisão das algas"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um estuário do litoral de São Paulo, um biólogo registrou a salinidade da água e as espécies encontradas em três locais. Uma obra deve abrir comportas e fazer a salinidade do estuário cair de 15 para cerca de 3 g/L, valor próximo ao do rio.",
+   "comando": "Qual previsão é mais coerente com os dados?",
+   "alts": [
+    "As espécies do estuário aumentam, pois a água menos salgada facilita a respiração e abre espaço para elas",
+    "As espécies do mar passam a dominar o estuário, pois a queda de sal é muito melhor para os peixes de água salgada",
+    "Espécies adaptadas à salinidade intermediária tendem a diminuir, e espécies de água doce podem avançar",
+    "As espécies do estuário se mantêm, pois a salinidade é um fator abiótico que não limita os seres vivos"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um córrego urbano recebe esgoto não tratado em um ponto de lançamento. Pesquisadores mediram o oxigênio dissolvido e contaram os peixes em quatro pontos: antes do lançamento, no lançamento e em dois pontos depois dele. Os peixes voltam a aparecer ao longo do percurso.",
+   "comando": "Qual explicação relaciona a matéria orgânica do esgoto aos resultados?",
+   "alts": [
+    "O esgoto contém muito oxigênio, que se dissolve na água, mas é consumido pelos peixes que chegam depois dele",
+    "Os peixes mortos no lançamento aumentam o oxigênio, pois liberam gás durante a decomposição do corpo deles",
+    "A queda de oxigênio ocorre porque o esgoto aquece o córrego, e a água se esfria longe do ponto de lançamento",
+    "Os decompositores consomem oxigênio ao degradar o esgoto; a água se reoxigena e a carga orgânica diminui adiante"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um aquário escolar foi dividido em três partes iguais, cada uma com a mesma planta aquática, a mesma água e a mesma temperatura. A única diferença era o número de horas de luz por dia. A turma contou as bolhas de gás liberadas pelas folhas durante um minuto.",
+   "comando": "Qual conclusão é sustentada pelos dados do experimento?",
+   "alts": [
+    "A planta produz gás por respiração, que aumenta com a luz e depois cai no escuro, por falta de energia solar",
+    "A luz limita a fotossíntese da planta, e a liberação de gás aumenta com as horas de luz quando o resto é igual",
+    "A luz é consumida pela planta, e por isso a parte do aquário com 12 h de luz ficou com menos energia disponível",
+    "O gás liberado indica que a planta absorve luz e transforma o oxigênio em gás carbônico para crescer"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Durante uma seca prolongada, a equipe que monitora uma represa registrou o nível de água, a temperatura e o oxigênio dissolvido ao longo de meses. Na mesma época, pescadores relataram peixes mortos e menos aves pescando na margem.",
+   "comando": "Relacione a queda do nível da água ao oxigênio dissolvido e explique uma consequência para a cadeia alimentar.",
+   "ref": "Com menos água, a represa aquece mais, e a água quente dissolve menos oxigênio, que cai de 7,5 para 2,5 mg/L. Peixes e outros seres aeróbios morrem, e as aves perdem alimento, o que afeta toda a cadeia."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Num açude do interior, um produtor introduziu o tucunaré, um peixe predador de outros peixes, que não existia ali. A equipe de uma universidade acompanhou os seres vivos nos anos seguintes e anotou as mudanças.",
+   "comando": "Explique a sequência de mudanças observada, usando as relações de alimentação entre os organismos.",
+   "ref": "O tucunaré, um predador introduzido, caça os lambaris e reduz sua população. Com menos lambaris, o zooplâncton sofre menos predação e cresce; com mais zooplâncton, aumenta o consumo de fitoplâncton, cuja quantidade despenca. A introdução de uma espécie alterou os níveis da teia alimentar, mostrando que os organismos são interdependentes."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Alunos mediram a luz que chega a diferentes profundidades de um lago. Em outra etapa, coletaram amostras de água e viram que o fitoplâncton se concentrava perto da superfície, e que o fundo tinha muito lodo e bactérias.",
+   "comando": "Explique por que o fitoplâncton fica perto da superfície e que organismos dependem da matéria orgânica que desce ao fundo.",
+   "ref": "O fitoplâncton precisa de luz para fazer fotossíntese, que diminui rapidamente com a profundidade; por isso ele fica perto da superfície. Seus restos e os de outros seres afundam e alimentam decompositores e consumidores do fundo, como bactérias e animais do lodo."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um trecho de rio mantém a mata ciliar, a vegetação que cresce nas margens; outro trecho, a poucos quilômetros, teve a mata derrubada para uma plantação. Pesquisadores compararam os dois trechos em medidas de água e de peixes.",
+   "comando": "Explique como a retirada da mata ciliar pode causar as diferenças observadas e proponha uma ação de recuperação.",
+   "ref": "Sem mata, a chuva leva terra para o rio (erosão), o que deixa a água turva e reduz a luz. Sem sombra a água esquenta e perde oxigênio, e faltam folhas e insetos que alimentam os peixes, por isso há menos espécies. É preciso reflorestar as margens com espécies nativas."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Duas equipes estudaram dois ambientes aquáticos: um rio de correnteza rápida e uma lagoa de água parada, ambos com a mesma temperatura. Elas mediram a velocidade da água, o oxigênio e a quantidade de fitoplâncton em cada um.",
+   "comando": "Explique por que o fitoplâncton é mais abundante na lagoa e por que o oxigênio dissolvido é maior no rio.",
+   "ref": "Na lagoa a água parada mantém o fitoplâncton na zona iluminada, onde ele se acumula e se reproduz. No rio a correnteza o arrasta, mas agita a superfície e mistura o oxigênio do ar à água, que fica com mais O₂ dissolvido."
+  }
+ ],
+ "8º ANO|1|Associar as principais ISTs (HPV, Sífilis, HIV/Aids) aos seus sintomas, formas de transmissão e métodos de prevenção.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma UBS acompanha o teste de sífilis em um município paulista. Um jornal local publicou que \"os casos de sífilis triplicaram em três anos\", e uma agente de saúde foi convidada a explicar os números aos moradores usando o registro da unidade.",
+   "comando": "Que interpretação é sustentada pelos dados do registro da UBS?",
+   "alts": [
+    "Os casos mais que dobraram, e isso mostra que a transmissão da sífilis também cresceu na mesma proporção no município.",
+    "O aumento dos testes provocou o aumento dos casos, pois fazer o exame facilita a transmissão da infecção entre as pessoas.",
+    "Os casos cresceram, mas a proporção de positivos caiu de 5% para 4%, sugerindo que mais testes encontraram casos antes ocultos.",
+    "A proporção de positivos caiu, e isso mostra que a sífilis está eliminada do município, sem necessidade de novos exames."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma roda de conversa na UBS, estudantes de 14 anos receberam um quadro dos métodos de prevenção disponíveis no SUS. A enfermeira pediu que escolhessem a combinação que oferece maior proteção ao mesmo tempo contra gravidez, HIV e HPV.",
+   "comando": "Qual combinação atende ao pedido da enfermeira?",
+   "alts": [
+    "Preservativo e vacina, pois juntos cobrem gravidez, HIV e HPV, e a vacina completa a proteção parcial do preservativo.",
+    "Pílula e vacina, pois juntas cobrem gravidez e HPV e dispensam o uso de preservativo, já que a pílula também age sobre infecções.",
+    "Preservativo e DIU de cobre, pois juntos cobrem gravidez e HIV, e o preservativo protege totalmente contra o HPV em qualquer caso.",
+    "Pílula e DIU de cobre, pois os dois impedem a gravidez com alta eficácia e cobrem as infecções pela mesma via de transmissão."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Rafael teve uma relação sexual sem preservativo e, dez dias depois, fez um teste rápido de HIV na UBS, com resultado negativo. A tabela mostra, em dados ilustrativos de um serviço de saúde, a porcentagem de infecções detectadas pelo teste conforme o tempo desde a exposição.",
+   "comando": "Que orientação é a mais adequada a Rafael?",
+   "alts": [
+    "Considerar-se livre da infecção, pois o resultado negativo no teste feito na UBS dispensa qualquer outro cuidado a partir de agora.",
+    "Concluir que o parceiro também está livre da infecção, pois um resultado negativo em um dos dois vale para a outra pessoa.",
+    "Aceitar o resultado como definitivo, pois o teste detecta metade das infecções e esse valor já é alto o bastante para confirmar.",
+    "Repetir o teste mais adiante e usar preservativo até lá, pois nesta data o exame ainda deixa de detectar parte das infecções."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma maternidade analisou, em dados ilustrativos, quantos bebês entre 100 nascidos de gestantes com sífilis apresentaram a doença ao nascer, conforme o momento em que a mãe começou o tratamento com antibiótico no pré-natal.",
+   "comando": "Qual conclusão é sustentada pelos dados e orienta as ações de saúde?",
+   "alts": [
+    "O tratamento iniciado no 3º trimestre elimina o risco ao bebê, pois a redução de 60 para 20 já resolve a transmissão.",
+    "O tratamento iniciado cedo reduz a transmissão ao bebê, o que justifica testar a gestante nas primeiras consultas do pré-natal.",
+    "A gestante sem tratamento transmite a doença ao bebê na maioria dos casos, e por isso o tratamento é indicado depois do parto.",
+    "O momento do tratamento não altera o risco, pois a diferença entre os grupos de gestantes decorre do acaso estatístico."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Na campanha de vacinação contra o HPV de uma escola estadual, a coordenação reuniu a cobertura de estudantes já vacinados em cada faixa etária. A vacina é gratuita no SUS de 9 a 14 anos e é mais eficaz quando aplicada antes do início da vida sexual.",
+   "comando": "Que estratégia a escola deve reforçar com base no quadro?",
+   "alts": [
+    "Reforçar a vacinação nos mais novos, pois têm a menor cobertura e podem ser protegidos antes da exposição ao vírus.",
+    "Reforçar a vacinação dos mais velhos, pois a cobertura de 61% mostra que essa faixa aceita melhor a vacina do que as demais.",
+    "Vacinar as meninas, pois o HPV afeta principalmente as mulheres e os meninos não têm benefício com a vacina.",
+    "Esperar o início da vida sexual para vacinar, pois assim o estudante entende melhor a importância da prevenção."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Um colega afirma que \"dá para saber se alguém tem IST só olhando, e quem parece saudável não precisa se testar\". A professora trouxe um quadro sobre o tempo em que algumas infecções podem passar sem sinais visíveis.",
+   "comando": "Use o quadro para avaliar a afirmação do colega e diga que atitudes de prevenção e cuidado seriam adequadas.",
+   "ref": "A afirmação é falsa: várias ISTs ficam sem sinais ou têm sinais que somem, e a pessoa continua infectada e pode transmitir. Por isso são importantes os testes na UBS, o uso de preservativo, a vacina contra o HPV e a procura de atendimento mesmo sem sintomas."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Dois estudos ilustrativos acompanharam 100 casais durante um ano e contaram quantas gravidezes ocorreram conforme o uso do preservativo masculino. A professora usa os valores para discutir a prevenção de gravidez e de ISTs com os alunos.",
+   "comando": "Compare os três grupos e explique o que os dados mostram sobre a forma de usar o preservativo e sobre a proteção contra ISTs.",
+   "ref": "O uso correto em todas as relações reduz muito as gravidezes (2 contra 85), mas o uso irregular perde parte da proteção (13). O mesmo vale para ISTs, pois o preservativo só protege quando é usado do início ao fim de cada relação e de forma correta."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma semana de testagem rápida, uma UBS ofereceu exames gratuitos de HIV e sífilis a adolescentes e adultos jovens. O quadro mostra o balanço da semana. Uma aluna disse que \"é melhor não fazer, porque se der positivo não adianta\".",
+   "comando": "Rebata a fala da aluna com base nos dados e explique por que a testagem ajuda a pessoa e a comunidade.",
+   "ref": "A fala está errada: todos os positivos foram encaminhados ao tratamento. A sífilis tem cura com antibiótico, e o HIV, tratado com antirretrovirais, tem a carga viral controlada e deixa de ser transmitido. Descobrir cedo protege a saúde da pessoa e reduz a transmissão para outras."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em um grupo de mensagens, circulou a pergunta: \"Qual destas situações pode transmitir o HIV?\". A professora de Ciências listou quatro situações para a turma analisar, com letras de A a D.",
+   "comando": "Indique quais situações têm risco de transmissão do HIV e quais não têm, justificando com o modo como o vírus é transmitido.",
+   "ref": "C e D têm risco, e A e B não têm. O HIV é transmitido por sangue, esperma, secreção vaginal e leite materno, em contato com mucosas ou sangue, e não pelo contato comum, por saliva em copos ou abraços. Por isso o preconceito contra pessoas com HIV não tem base científica."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma jovem de 15 anos tomou a vacina contra o HPV no posto de saúde e disse à amiga que agora não precisa mais se preocupar com preservativo nem com exames. Uma agente de saúde mostrou os dados abaixo.",
+   "comando": "Avalie a conclusão da jovem usando os dados e explique que cuidados continuam necessários.",
+   "ref": "A conclusão é parcial: a vacina protege contra 4 dos cerca de 40 tipos, incluindo os mais ligados ao câncer de colo do útero, mas não cobre todos. Por isso continuam necessários o preservativo, que também protege contra outras ISTs, e os exames preventivos, como o Papanicolau, na idade indicada."
+  }
+ ]
+}

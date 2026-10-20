@@ -1,0 +1,1328 @@
+{
+ "4B|6º ANO|7": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "No simulador de visão de cores, Léo apontou uma lanterna de luz branca para uma tela. Primeiro colocou um filtro de cada vez na frente da lanterna; depois testou colocar dois filtros de cores diferentes, um logo após o outro.",
+   "comando": "Qual explicação do resultado com dois filtros é sustentada pelos dados?",
+   "alts": [
+    "Os filtros misturam as luzes que passam, como duas lâmpadas coloridas somadas, e dessa soma sai o preto escuro",
+    "O filtro verde cancela a luz vermelha do primeiro, e a tela escurece porque a lanterna perde potência",
+    "Cada filtro deixa passar sua cor e absorve as outras; a luz que passa no primeiro é absorvida pelo segundo",
+    "Os dois filtros juntos formam amarelo, mas a tela fica preta porque o olho não percebe luz tão fraca"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Na parte do simulador com lâmpadas coloridas, Léo ligou lâmpadas vermelha (R), verde (G) e azul (B) apontadas para o mesmo ponto de uma tela branca, em um quarto escuro. Ele anotou a cor vista na tela para quatro combinações.",
+   "comando": "Se Léo apagar a lâmpada verde do teste 4, qual cor deve aparecer?",
+   "alts": [
+    "Magenta, pois sobram as luzes vermelha e azul, que somadas dão a mesma cor do teste 3",
+    "Ciano, pois ao tirar o verde sobram o azul e o branco, e o azul predomina na soma das lâmpadas na tela",
+    "Amarela, pois a lâmpada vermelha é mais forte que a azul e sozinha determina a cor que o olho percebe",
+    "Preta, pois ao apagar uma das três lâmpadas a luz restante é insuficiente para formar uma cor visível"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Ao sair de uma sala bem iluminada para um cinema escuro, Bia percebeu que, depois de alguns minutos, enxergava os assentos e as pessoas em tons de cinza, sem distinguir bem as cores. Seu professor explicou que a retina tem dois tipos de células sensíveis à luz.",
+   "comando": "Que hipótese explica o que Bia percebeu?",
+   "alts": [
+    "Com pouca luz, predominam os cones, sensíveis a pouca luz e sem distinção de cores; os bastonetes exigem mais luz do ambiente",
+    "Com pouca luz, predominam os bastonetes, sensíveis a pouca luz e sem distinção de cores; os cones exigem mais luz",
+    "Com pouca luz, a pupila se contrai e deixa entrar menos luz, o que apaga as cores antes de chegarem à retina",
+    "Com pouca luz, o cérebro desliga a área das cores, e a retina deixa de enviar sinais ao nervo óptico"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma professora aplicou um teste de cores com placas de bolinhas. Na placa 1, formada por bolinhas vermelhas e verdes, o número escondido é 74; na placa 2, formada por bolinhas azuis e amarelas, é 52. Três alunos disseram o que enxergaram.",
+   "comando": "Que conclusão é sustentada pelos resultados?",
+   "alts": [
+    "Bruno e Clara confundem vermelho e verde, mas distinguem azul e amarelo, o que sugere alteração em cones específicos",
+    "Bruno e Clara têm a retina incapaz de captar luz, pois suas respostas diferem das de Ana na placa 1",
+    "Ana tem visão de cores melhor, pois viu 74; Bruno e Clara enxergam em preto e branco nas placas",
+    "Bruno e Clara têm problema no nervo óptico, que impede que a imagem seja formada corretamente no cérebro"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em uma peça de teatro, a figurinista testa como as roupas aparecem sob refletores de cores diferentes. Ela sabe que uma camisa vermelha reflete luz vermelha e absorve as demais cores; uma camisa branca reflete todas. Ela anotou o que viu sob cada luz.",
+   "comando": "Por que a camisa vermelha parece escura sob a luz verde?",
+   "alts": [
+    "O pigmento vermelho emite luz vermelha própria, que é apagada quando a luz verde incide sobre o tecido da camisa",
+    "O pigmento vermelho reflete luz vermelha e absorve a verde; sem luz vermelha incidente, quase nada chega ao olho",
+    "A luz verde destrói o pigmento vermelho da camisa e deixa o tecido sem cor até que a luz branca volte a incidir",
+    "O olho humano perde a sensibilidade ao vermelho sob luz verde, e a camisa passa a ser percebida como escura"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Maria ampliou a tela do celular com uma lupa e viu que ela é formada por pontinhos muito pequenos que acendem em vermelho, verde ou azul. Mesmo assim, a tela mostra a cor amarela na imagem de uma banana.",
+   "comando": "Explique como a tela mostra o amarelo sem ter pontinhos amarelos, relacionando luz, cones da retina e cérebro.",
+   "ref": "A tela soma luzes (combinação aditiva): o vermelho e o verde acesos juntos chegam aos olhos. Eles estimulam ao mesmo tempo os cones sensíveis a essas cores e o cérebro interpreta a combinação como amarelo. Os pontinhos são pequenos demais para serem distinguidos."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Para testar a reação do olho à luz, Pedro mediu o diâmetro da pupila de um colega em três ambientes. Em seguida, o colega saiu de um cinema para uma rua com sol forte e reclamou de ofuscamento por alguns segundos.",
+   "comando": "Explique a variação do diâmetro da pupila e o que ocorre ao sair do cinema para o sol forte.",
+   "ref": "A pupila dilata no escuro para deixar entrar mais luz e contrai no claro para proteger a retina. Ao sair do cinema, a pupila ainda está dilatada, entra luz demais e a pessoa fica ofuscada até a pupila se contrair."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma peça tem dois figurinos: um amarelo e um branco. A equipe sabe que o amarelo reflete luz vermelha e verde e absorve a azul, e que o branco reflete todas as cores. No final da peça, a iluminação passa para um refletor de luz azul.",
+   "comando": "Preveja a cor com que cada figurino será visto sob o refletor azul e justifique.",
+   "ref": "O figurino amarelo parecerá escuro, quase preto, pois não reflete luz azul, que é a única que chega a ele. O branco refletirá a luz azul e será visto azul. A cor percebida depende da luz que chega e da luz que o objeto reflete."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "No simulador, Rafael anotou dados de três cones da retina, que respondem a faixas diferentes de cores: S (curtos), M (médios) e L (longos). Ele testou luzes monocromáticas e viu que o amarelo estimula os cones de forma parecida com a mistura de vermelho e verde.",
+   "comando": "Explique como o cérebro distingue cores com apenas três tipos de cones e por que luz amarela pode ser confundida com a mistura de vermelha e verde.",
+   "ref": "O cérebro compara a intensidade relativa dos sinais dos três cones: cada cor produz um padrão. A luz amarela estimula M e L quase igualmente, padrão semelhante ao de verde e vermelha juntas, por isso o cérebro percebe a mesma cor."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um aluno afirmou: \"O filtro azul pinta a luz branca de azul\". Para testar, a turma usou luz branca com filtro azul e luz vermelha com filtro vermelho. Em seguida, quis prever o que aconteceria com luz vermelha e filtro azul, que ainda não havia sido testado.",
+   "comando": "Avalie a afirmação do aluno e preveja a cor na tela com luz vermelha e filtro azul, justificando.",
+   "ref": "A afirmação está incorreta: o filtro não pinta a luz, ele seleciona o que passa. A luz branca contém todas as cores, e o filtro azul absorve as outras e deixa passar o azul. Com luz vermelha, que não tem componente azul, o filtro absorve quase tudo e a tela fica preta."
+  }
+ ],
+ "4B|6º ANO|8": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Davi estava com o nariz entupido por causa de um resfriado e disse que a comida do almoço estava sem graça, embora ainda percebesse que o feijão estava salgado. Para entender o que ocorreu, a turma fez um teste: os alunos provaram quatro alimentos com o nariz livre e depois com o nariz tampado, e anotaram o que identificaram.",
+   "comando": "Qual conclusão é sustentada pelos dados do teste?",
+   "alts": [
+    "Os sabores básicos continuam sendo percebidos pela língua, mas a identificação do alimento depende também do cheiro captado no nariz.",
+    "O nariz identifica os sabores básicos como doce e azedo, e a língua identifica o alimento específico, como morango ou café.",
+    "Com o nariz tampado, os quimiorreceptores da língua deixam de funcionar, e por isso os alunos perderam a identificação do alimento.",
+    "Os quimiorreceptores do nariz e da língua recebem os mesmos estímulos, por isso o nariz tampado não deveria alterar o resultado."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma UBS de São Paulo, três pacientes com queixas de alteração nos sentidos foram avaliados por um teste simples. Para o olfato, cheiraram frascos com café e baunilha; para o paladar, provaram soluções com açúcar, sal, limão e quinino (amargo). O resultado foi registrado.",
+   "comando": "Qual interpretação do registro é cientificamente adequada?",
+   "alts": [
+    "No paciente 1, o problema está nos receptores da língua, pois a perda do cheiro e a presença do gosto mostram falha do paladar.",
+    "No paciente 3, a falha dos dois testes mostra que o encéfalo foi lesado, pois os receptores não estão envolvidos nesse caso.",
+    "No paciente 2, os receptores do nariz e da língua funcionam bem, pois o cheiro foi reconhecido e isso garante o paladar normal.",
+    "No paciente 1, o problema está ligado aos receptores do cheiro, no nariz, e no paciente 2, aos receptores de sabor, na língua."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma professora diluiu essência de baunilha em água, em concentrações cada vez menores, e pediu a 30 alunos que cheirassem cada frasco de olhos fechados. Ela quer que a turma relacione a detecção do cheiro com os quimiorreceptores do nariz e com o que chega até eles.",
+   "comando": "Que explicação os dados sustentam para a queda no número de alunos que sentiram o cheiro?",
+   "alts": [
+    "Com a diluição, a baunilha muda o tipo de molécula, e por isso os receptores do nariz deixam de reconhecer o cheiro.",
+    "Com a diluição, chegam menos moléculas aos quimiorreceptores do nariz, e a quantidade necessária para ativá-los varia de pessoa para pessoa.",
+    "Os alunos que não sentiram o cheiro não têm quimiorreceptores no nariz, e os demais têm receptores em número igual.",
+    "O cheiro é percebido pelo encéfalo, sem relação com as moléculas que chegam ao nariz, e por isso a diluição influencia pouco."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um grupo de alunos quis testar se o nariz influencia o reconhecimento de sabores. O grupo A provou jujubas de olhos vendados e com o nariz tampado. O grupo B provou as mesmas jujubas de olhos abertos e com o nariz livre. A professora disse que o teste tem uma falha de planejamento.",
+   "comando": "Qual correção torna o teste válido para concluir sobre o papel do nariz?",
+   "alts": [
+    "Os dois grupos devem provar de nariz livre, e só a visão deve ficar vendada em um deles e livre no outro.",
+    "O grupo A deve ter mais alunos que o B, e só o número de participantes deve diferir entre os grupos do teste.",
+    "Os dois grupos devem provar de olhos vendados, e só o nariz deve ficar tampado em um deles e livre no outro.",
+    "O grupo B deve provar jujubas de sabores mais fortes, e só o tipo de jujuba deve diferir entre os dois grupos."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um aluno disse que 'cada sabor é percebido em uma parte da língua: doce na ponta, azedo nas laterais e amargo no fundo'. A turma testou a ideia pingando soluções em três regiões da língua de voluntários, que deram notas de 0 a 10 para a intensidade percebida.",
+   "comando": "Qual conclusão é sustentada pelos dados da turma?",
+   "alts": [
+    "Todas as regiões responderam aos três sabores, com intensidades diferentes, o que indica receptores por toda a língua.",
+    "Cada sabor é percebido apenas na região que deu a maior nota, pois nas demais regiões a nota baixa indica que o sabor não é percebido.",
+    "A ideia do aluno está correta, pois a maior nota de cada sabor aparece na região indicada por ele, e isso comprova a divisão da língua.",
+    "As regiões da língua percebem sabores diferentes porque os quimiorreceptores do nariz mandam informações a cada região da língua."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma cozinheira com resfriado e o nariz entupido provou a sopa que preparava para a escola e achou que 'estava sem sabor', apesar de saber que havia colocado a quantidade certa de sal. Sua ajudante, sem resfriado, achou a sopa bem temperada. Elas deram notas de 0 a 10.",
+   "comando": "Explique por que a cozinheira teve essa impressão, relacionando olfato, paladar e a atuação do encéfalo.",
+   "ref": "Os quimiorreceptores da língua perceberam o sal, mas, com o nariz entupido, as moléculas de aroma não chegaram aos quimiorreceptores olfativos. O encéfalo integra as informações do paladar e do olfato para formar a percepção do sabor, e sem o cheiro a sopa pareceu sem graça."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "O gás de cozinha, por si só, não tem cheiro. As empresas adicionam a ele uma substância de cheiro forte para que vazamentos sejam percebidos. Em um teste, mediu-se o tempo que duas pessoas levaram para perceber o cheiro em uma cozinha com pequeno vazamento.",
+   "comando": "Explique como o cheiro chega ao encéfalo e por que a pessoa resfriada demorou mais para perceber o vazamento, indicando um cuidado que ela deve ter.",
+   "ref": "As moléculas da substância entram no nariz, ativam os quimiorreceptores olfativos, que enviam impulsos nervosos ao encéfalo, onde o cheiro é interpretado. Com o nariz entupido, poucas moléculas chegam aos receptores e a percepção demora; a pessoa deve redobrar a atenção e verificar se o gás está fechado e a cozinha, ventilada."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um paciente que teve uma infecção respiratória acompanhou sua recuperação sensorial. Todos os dias ele cheirava café e provava soluções com açúcar, sal, limão e quinino, e dava notas de 0 a 10 para o que sentia. Ele ficou surpreso porque, embora a comida lhe parecesse sem graça, sentia o sal e o açúcar.",
+   "comando": "Interprete o registro e explique por que a comida parecia sem graça mesmo com os sabores básicos preservados.",
+   "ref": "Os sabores básicos, percebidos pelos quimiorreceptores da língua, ficaram preservados, enquanto o olfato estava muito reduzido e só melhorou depois. Como o sabor do alimento depende da integração entre paladar e olfato no encéfalo, a comida parecia sem graça até o olfato se recuperar."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Para tomar um xarope amargo, uma mãe ensina a criança a tampar o nariz. A criança relatou que 'ajuda um pouco, mas ainda sinto o amargo'. A turma mediu o desagrado de voluntários ao tomar o xarope de duas formas.",
+   "comando": "Explique por que tampar o nariz reduz o desagrado, mas não o elimina, usando os dados.",
+   "ref": "O desagrado vem da soma do amargo, percebido pelos quimiorreceptores da língua, com o cheiro do xarope, percebido pelo nariz. Ao tampar o nariz, o aroma deixa de contribuir e a nota cai de 9 para 5, mas o gosto amargo continua sendo percebido pela língua."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma turma de 6º ano quer comprovar que o olfato contribui para o reconhecimento do sabor dos alimentos. A professora disponibilizou pedaços de maçã e de cebola cortados em cubos do mesmo tamanho, vendas para os olhos, prendedores de nariz e fichas para anotar.",
+   "comando": "Proponha um procedimento com controle de variáveis e diga o resultado esperado, explicando-o com o papel dos receptores.",
+   "ref": "Os voluntários, de olhos vendados em todas as provas, provariam cada alimento com o nariz livre e com o nariz tampado, em ordem sorteada, e anotariam o que identificaram. Espera-se que, com o nariz tampado, a identificação piore, pois os quimiorreceptores olfativos não recebem o aroma, embora o doce e o salgado continuem sendo percebidos pelos quimiorreceptores da língua."
+  }
+ ],
+ "4B|6º ANO|9": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, os alunos testaram o tato com um compasso de pontas. Com os olhos fechados, o colega tocava a pele com uma ou duas pontas ao mesmo tempo e dizia se sentia um ou dois pontos. O grupo anotou a menor distância entre as pontas em que o colega percebia dois pontos separados.",
+   "comando": "Que hipótese explica melhor as diferenças entre as regiões do corpo?",
+   "alts": [
+    "As regiões com distâncias menores têm mais receptores táteis por área de pele, e por isso separam melhor dois pontos próximos.",
+    "As regiões com distâncias menores têm pele mais grossa, e a espessura da pele aumenta a capacidade de perceber o toque.",
+    "As regiões com distâncias menores são mais treinadas pelo uso, o que faz o cérebro criar receptores novos na pele da região.",
+    "As regiões com distâncias menores são menos sensíveis, pois exigem que as pontas fiquem próximas para que o toque seja sentido."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma escola em São Paulo quer colocar placas em Braille nos corredores. Três modelos de placa, com alturas diferentes dos pontos, foram testados por três alunos cegos, que tentaram ler 10 letras em cada modelo, com dois minutos de tempo.",
+   "comando": "Qual conclusão é sustentada pelos dados e orienta a escolha da placa?",
+   "alts": [
+    "O modelo C deve ser escolhido, pois quanto mais alto o relevo, mais receptores de pressão são ativados e melhor é a leitura.",
+    "O modelo A deve ser escolhido, pois o relevo baixo evita desconforto na ponta dos dedos e garante precisão na leitura.",
+    "O modelo B foi o mais bem lido, o que sugere relevo alto o bastante para ativar os receptores, sem atrapalhar a leitura.",
+    "Não é possível escolher um modelo, pois três alunos fizeram o teste e isso impede conclusões sobre o relevo ideal."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma atividade de laboratório, Camila colocou uma das mãos em água fria e a outra em água quente por dois minutos. Depois, colocou as duas mãos ao mesmo tempo em uma bacia de água morna, que estava a uma temperatura única e constante.",
+   "comando": "Que explicação está de acordo com os resultados do quadro?",
+   "alts": [
+    "A água morna esquentou perto de uma mão e esfriou perto da outra, pois a água da bacia tem temperatura diferente em cada lado.",
+    "A mão direita tem receptores de calor e a esquerda tem receptores de frio, e cada mão percebe a temperatura de seu tipo.",
+    "A pele de cada mão guardou a temperatura da água anterior e a transferiu para a água morna, mudando a temperatura dela.",
+    "As mãos não são termômetros: os receptores respondem à mudança em relação ao que já sentiam e por isso se enganam."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Ao tocar sem querer uma panela quente, Rafael tirou a mão rapidamente e só depois disse que doía. Um professor mediu, com valores ilustrativos de uma simulação, os tempos de cada etapa desde o contato até a fala de Rafael.",
+   "comando": "Que interpretação dos tempos explica por que a mão se afastou antes de ele sentir dor?",
+   "alts": [
+    "O cérebro decide afastar a mão e depois processa a dor, pois ele recebe o sinal antes de qualquer outra parte do corpo.",
+    "O afastamento é um reflexo comandado pela medula, que responde antes de a informação chegar ao cérebro e gerar dor.",
+    "Os receptores de dor da pele funcionam depois de o cérebro receber a informação, e por isso a mão se afasta sem sentir.",
+    "A pele reage sozinha ao calor, sem nervos, e o sinal vai ao cérebro depois que a mão já se afastou da panela quente."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Dois trabalhadores participaram de um teste de sensibilidade da palma da mão. Um pedreiro, que usa as mãos para carregar peso há 20 anos, e uma professora, que escreve na lousa. Com fios de espessura crescente, mediu-se a menor força necessária para cada pessoa perceber o toque.",
+   "comando": "Qual conclusão relaciona corretamente os dados à função da pele?",
+   "alts": [
+    "A pele espessa do pedreiro protege contra atrito, mas exige mais força para ativar os receptores e reduz a sensibilidade.",
+    "A pele mais espessa do pedreiro é mais sensível, pois percebe o toque com uma força maior, e isso mostra uma resposta mais forte.",
+    "O pedreiro nasceu com menos receptores de pressão, e por isso a pele da palma da mão dele ficou mais espessa com o passar dos anos.",
+    "A professora tem pele mais fina porque escreve com frequência, e o uso do giz aumentou a quantidade de receptores nas mãos dela."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Gabriela, que não enxerga, lê textos em Braille com a ponta do dedo. Em uma pesquisa de sala de aula, um grupo testou quantas letras em Braille voluntários com visão, de olhos vendados, identificavam em 20 tentativas usando regiões diferentes do corpo.",
+   "comando": "Explique por que a leitura em Braille é feita com a ponta do dedo, usando os dados e o conceito de receptores.",
+   "ref": "A ponta do dedo identificou 19 letras e o antebraço apenas 1. Isso ocorre porque a pele da ponta do dedo tem muitos receptores táteis por área, que distinguem pequenos pontos em relevo, e o cérebro interpreta o padrão como letras."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma feira de Ciências, os visitantes tocaram quatro objetos escondidos em caixas e relataram a sensação. A organizadora quer um texto curto que relacione as sensações a tipos de receptores da pele.",
+   "comando": "Relacione cada sensação a um tipo de receptor e explique por que perceber a dor é importante para o corpo.",
+   "ref": "O toque leve e a pressão são percebidos por receptores de tato e de pressão, o frio por receptores de temperatura e a dor aguda por receptores de dor. A dor é importante porque é um alerta que faz a pessoa se afastar do perigo e protege o corpo de lesões."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Os sinais do corpo viajam pelos nervos como impulsos elétricos. Em uma simulação, o professor usou valores aproximados para calcular o tempo de resposta quando alguém encosta o dedo em um objeto quente e o sinal vai até o cérebro.",
+   "comando": "Calcule o tempo que o sinal leva da mão ao cérebro e explique o papel dos receptores nesse processo.",
+   "ref": "O tempo é 1,2 dividido por 60, ou seja, 0,02 segundo (20 milissegundos). Os receptores da pele detectam o estímulo, como o calor, e o transformam em sinal nervoso, que viaja pelos nervos até o cérebro, onde a sensação é percebida."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "A prefeitura instalou piso tátil nas calçadas e estações para orientar pessoas com deficiência visual. Antes de escolher o modelo, uma equipe testou quatro tipos de piso com 20 pessoas que usam bengala e pisam descalças ou com sapatos.",
+   "comando": "Interprete o resultado e explique por que o piso com relevo ajuda na orientação, relacionando ao tato.",
+   "ref": "Os pisos com barras e bolinhas foram identificados por 18 e 17 pessoas, e o liso por apenas 4. O relevo regular é percebido pelos receptores de pressão e de tato dos pés e, pela bengala, como vibração, e o padrão informa a direção ou o alerta, o que orienta o caminho."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em dias frios, Pedro percebe que seus dedos ficam \"dormentes\" e ele erra mais ao abotoar a camisa. Em um teste, um grupo mediu quantas texturas diferentes ele identificava com os dedos em temperaturas diferentes de pele.",
+   "comando": "Explique o que os dados indicam sobre a sensibilidade do tato no frio e sugira um cuidado para o dia a dia.",
+   "ref": "Quanto menor a temperatura da pele, menos texturas ele identificou (de 9 para 3). O frio reduz a atividade dos receptores e a condução dos sinais nervosos, e por isso chega menos informação ao cérebro. Usar luvas e aquecer as mãos antes de tarefas delicadas ajuda a manter a sensibilidade."
+  }
+ ],
+ "4B|7º ANO|1": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "João, 34 anos, morador da Zona Leste de São Paulo, fez um check-up na UBS e todos os exames saíram normais. Ele está desempregado há dois anos, vive sozinho em um quarto sem ventilação, dorme mal por preocupações e deixou de encontrar os amigos. Na UBS, a equipe analisou a ficha dele pelo conceito de saúde da Organização Mundial da Saúde (OMS).",
+   "comando": "Qual avaliação está de acordo com o conceito de saúde da OMS?",
+   "alts": [
+    "Exames normais não bastam: há prejuízos nas dimensões mental e social, e o bem-estar de João ainda não é completo.",
+    "João tem saúde plena, pois a ausência de doença nos exames é o que define a saúde segundo a OMS.",
+    "A saúde de João é boa no corpo e ruim na mente, e o aspecto social não faz parte do conceito de saúde, segundo a OMS.",
+    "João está doente, pois a falta de trabalho e renda é uma doença que a UBS deve tratar com medicamentos."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma secretaria municipal de saúde comparou três regiões. Em cada uma, contou as equipes de atenção primária (UBS e agentes comunitários) e as internações em hospital por problemas que podem ser evitados com acompanhamento, como pressão alta e diabetes não controlados. Os técnicos discutem o que os números sugerem.",
+   "comando": "Qual afirmação é sustentada pelos dados?",
+   "alts": [
+    "As internações evitáveis causam a redução das equipes, pois as regiões com mais internações fecham as UBS para concentrar os recursos locais.",
+    "Regiões com mais equipes têm menos internações evitáveis, compatível com o papel da atenção primária, embora os dados não provem a causa.",
+    "Para reduzir as internações da região Sul, o ideal é ampliar os hospitais, já que a atenção primária não evita internações.",
+    "A região Norte tem mais equipes porque tem menos doentes, e os dados mostram que as equipes causam pouco efeito."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Duas comunidades de uma mesma cidade foram acompanhadas por um mês. As duas têm UBS próxima e população de tamanho parecido, mas diferem no acesso a serviços básicos. A equipe de saúde coletiva quer escolher a ação com efeito mais duradouro para reduzir os casos de diarreia em crianças.",
+   "comando": "Que decisão é mais coerente com os dados e com a ideia de determinantes sociais da saúde?",
+   "alts": [
+    "Distribuir remédios para diarreia nas casas da Beira do Rio, o que cuida dos doentes e dispensa outras ações.",
+    "Orientar as famílias da Beira do Rio a ferver a água, o que resolve a causa do problema e dispensa obras públicas.",
+    "Ampliar o esgoto tratado na Beira do Rio e manter o atendimento na UBS, atuando na causa e no cuidado dos casos.",
+    "Ampliar o horário da UBS da Vila Nova, onde a população é maior e o número de casos é a base da decisão."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em um bairro de Campinas, o número de casos de dengue aumentou no verão. A prefeitura fez um mutirão de limpeza na terceira semana para retirar entulho e pneus com água parada, e as agentes de saúde visitaram as casas. A equipe acompanhou os focos do mosquito e os casos nas semanas seguintes.",
+   "comando": "Qual interpretação dos dados é a mais adequada?",
+   "alts": [
+    "Os casos não caíram na semana 3, o que prova que o mutirão não teve efeito sobre a transmissão da doença no bairro.",
+    "Os casos caíram porque cada morador se cuidou individualmente, e a limpeza do ambiente teve pouca influência nos resultados.",
+    "A queda dos focos aconteceu depois da queda dos casos, indicando que os doentes foram a causa da redução do mosquito.",
+    "Os focos caíram logo após o mutirão e os casos caíram depois, com atraso, o que mostra o efeito de uma ação coletiva sobre o ambiente."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma prefeitura recebeu verba para construir novas unidades básicas de saúde (UBS) e discute a distribuição. Dois vereadores têm propostas diferentes. O gestor quer aplicar o princípio de equidade do SUS, que busca oferecer mais a quem tem maior necessidade, e mostrou os indicadores de dois bairros.",
+   "comando": "Qual decisão aplica o princípio de equidade a esses dados?",
+   "alts": [
+    "Construir o mesmo número de UBS em cada bairro, pois tratar as pessoas de forma idêntica é o que o princípio determina.",
+    "Construir a maior parte das novas UBS na Periferia Leste, onde os indicadores de saúde são piores e há menos serviços.",
+    "Construir as UBS no Centro, onde há mais serviços e o gasto com cada atendimento tende a ser menor.",
+    "Construir as UBS conforme o número de moradores que pagam plano de saúde, pois assim se reduz o gasto do SUS."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Dona Rita, 58 anos, foi à UBS para um exame de rotina e está sem doenças diagnosticadas. Ela conta que dorme cinco horas por noite, não faz atividade física, almoça sozinha e quase nunca sai de casa, apesar de ter um parque ao lado e um grupo de caminhada gratuito no bairro.",
+   "comando": "Explique por que Dona Rita pode não estar com saúde plena segundo o conceito da OMS e proponha duas ações que a UBS pode oferecer.",
+   "ref": "A OMS considera saúde o bem-estar físico, mental e social, e não só a ausência de doença. O sono curto, a falta de atividade e o isolamento mostram prejuízos nessas dimensões. A UBS pode oferecer grupos de caminhada, atividades de convivência e orientação sobre sono."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "A tabela abaixo é ilustrativa e mostra a cobertura de atenção primária em regiões fictícias. O gestor quer decidir onde ampliar os serviços primeiro e afirmou que \"a região com menor cobertura é a que tem pior saúde\".",
+   "comando": "Interprete o gráfico, avalie a afirmação do gestor e diga que informação extra seria útil para decidir.",
+   "ref": "A região B tem a menor cobertura, mas a cobertura sozinha não mede a saúde da população. A afirmação pode estar certa, mas é preciso conhecer indicadores como mortalidade, doenças e condições de vida para decidir onde ampliar primeiro."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "O Sistema Único de Saúde (SUS) se organiza em níveis de atenção. Três situações chegaram ao atendimento em uma cidade do interior paulista na mesma semana: uma criança com tosse e febre leve, um motociclista com fratura exposta e uma paciente que aguarda transplante de rim.",
+   "comando": "Indique onde cada pessoa deve ser atendida, em qual nível de atenção, e explique por que a organização em níveis ajuda o sistema.",
+   "ref": "A criança deve ser atendida na UBS, atenção primária. O motociclista vai a pronto-socorro ou hospital de urgência, de média complexidade, e a paciente do transplante a um hospital de alta complexidade. Os níveis organizam o atendimento conforme a necessidade e evitam sobrecarregar os hospitais."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma cidade paulista, os moradores acompanharam três anos de dados sobre cobertura de esgoto e casos de hepatite A, doença transmitida por água e alimentos contaminados. A diretora de saúde pública apresentou os resultados em uma reunião.",
+   "comando": "Descreva a tendência dos dados e explique a relação entre saneamento e saúde coletiva, com cuidado ao falar em causa.",
+   "ref": "Quando a coleta de esgoto aumentou de 60% para 92%, os casos de hepatite A caíram de 18 para 2. O saneamento reduz a contaminação da água e dos alimentos, protegendo a população toda. Os dados mostram associação, mas outros fatores, como vacina, também podem ter contribuído."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em uma feira livre de Sorocaba, um fiscal encontrou um vendedor de caldo de cana com a moenda suja, sem gelo em recipiente limpo e sem lavar as mãos entre atendimentos. Vários clientes são crianças e idosos.",
+   "comando": "Explique qual é a função da vigilância sanitária (da qual a ANVISA faz parte) nesse caso e por que isso é uma questão de saúde coletiva.",
+   "ref": "A vigilância sanitária fiscaliza produtos e serviços, como alimentos vendidos ao público, para prevenir riscos à saúde. Como a contaminação pode atingir muitas pessoas, especialmente crianças e idosos, a fiscalização protege a coletividade e garante o direito à saúde."
+  }
+ ],
+ "4B|7º ANO|10": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma secretaria municipal de saúde, no interior paulista, acompanhou durante sete anos a cobertura da vacina contra o sarampo em crianças e o número de casos confirmados da doença. Um agente de saúde disse que 'cada criança só depende da própria vacina', mas a equipe queria entender se a proteção de um grupo também depende da proporção de pessoas vacinadas.",
+   "comando": "Qual interpretação dos dados é a mais adequada?",
+   "alts": [
+    "Quando a cobertura vacinal cai, mais pessoas ficam suscetíveis e a doença circula com mais facilidade, então a proteção depende também de quem está ao redor.",
+    "Quando a cobertura vacinal cai, a doença fica mais forte e infecta até quem está vacinado, de modo que a vacina deixou de funcionar para o grupo ao longo dos anos.",
+    "Quando a cobertura vacinal cai, a população cria defesas naturais mais fortes, de modo que os casos aumentam por conta da maior exposição ao agente da doença.",
+    "Quando a cobertura vacinal cai, o número de casos sobe por coincidência, de modo que os dados não permitem relacionar a vacinação com a ocorrência da doença."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "No fim do século XVIII, o médico inglês Edward Jenner ouviu relatos de que ordenhadoras que tinham pegado a varíola bovina, doença leve do gado, quase nunca adoeciam de varíola humana, que era grave. A tabela abaixo reúne observações inspiradas nesse tipo de relato. Os estudantes discutiram que hipótese os dados permitem formular e o que ainda precisava ser testado.",
+   "comando": "Qual alternativa expressa uma hipótese coerente com as observações e o passo seguinte do método científico?",
+   "alts": [
+    "O contato com o gado causa imunidade contra qualquer doença, e o passo seguinte é aplicar o contato com o gado em toda a população.",
+    "O contato com o agente da varíola bovina protege contra a varíola humana, e o passo seguinte é testar a hipótese de forma controlada.",
+    "O contato com o agente da varíola bovina prova que ela é a mesma doença que a humana, e o passo seguinte é encerrar o estudo e divulgar o resultado.",
+    "O contato com o agente da varíola bovina protege porque as ordenhadoras são mais saudáveis, e o passo seguinte é medir a saúde geral delas."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um pronto-socorro de Bauru, Marcos foi picado por uma cobra venenosa e a equipe aplicou um soro específico. Na UBS do bairro, o filho de Marcos recebeu uma vacina contra o tétano. O produto X e o produto Y da tabela correspondem a esses dois casos, e os alunos queriam explicar por que a picada exige soro, e não vacina.",
+   "comando": "Qual explicação é correta e usa os dados da tabela?",
+   "alts": [
+    "Marcos precisava de proteção duradoura, e o soro (X) contém o veneno enfraquecido, enquanto a vacina (Y) fornece anticorpos prontos e age em poucas horas.",
+    "Marcos precisava de proteção duradoura, e o soro (Y) estimula a memória imunológica, enquanto a vacina (X) fornece anticorpos prontos e age em poucas horas.",
+    "Marcos precisava de proteção imediata, e o soro (X) oferece anticorpos prontos, enquanto a vacina (Y) leva dias para o corpo produzir seus próprios anticorpos.",
+    "Marcos precisava de proteção imediata, e o soro (Y) oferece anticorpos prontos, enquanto a vacina (X) leva dias para o corpo produzir anticorpos."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "A cartilha de uma UBS de Campinas apresenta o esquema de uma vacina de três doses mais um reforço. A pequena Lia tomou a 1ª dose aos 2 meses e a 2ª aos 4 meses, mas a família faltou ao posto na época da 3ª e só voltou quando ela já tinha 9 meses. A mãe acredita que será preciso recomeçar tudo.",
+   "comando": "Qual orientação é coerente com o esquema vacinal da tabela?",
+   "alts": [
+    "Dispensar a 3ª dose, pois a criança já recebeu duas, o que garante proteção completa e o reforço aos 15 meses passa a ser desnecessário.",
+    "Recomeçar o esquema desde a 1ª dose, pois o atraso faz as doses anteriores perderem o efeito e o corpo não guarda a memória da vacinação feita.",
+    "Aplicar a 3ª dose agora e manter o reforço aos 15 meses, pois as doses recebidas continuam valendo e o atraso não exige recomeçar.",
+    "Aplicar a 3ª dose e adiantar o reforço para o mesmo dia, pois assim o esquema se completa de uma vez e a criança fica protegida mais cedo."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Durante a campanha de vacinação contra a gripe em maio, uma escola de Santos registrou um aumento no número de alunos com febre e coriza logo depois do dia da vacinação. Uma mensagem em rede social, repassada por um parente, afirmou que 'a vacina causou a doença'. A turma analisou os registros da escola e lembrou que a época coincide com o início do inverno.",
+   "comando": "Qual afirmação confunde correlação com causa nesse caso?",
+   "alts": [
+    "O número de alunos doentes aumentou no inverno, época em que vírus respiratórios circulam mais, o que pode explicar parte do aumento.",
+    "O número de alunos doentes aumentou depois da campanha, então a vacina causou a doença, sem considerar outras explicações.",
+    "O número de alunos doentes seguiu subindo em junho, mesmo com mais vacinados, o que indica que a vacina leva tempo para proteger.",
+    "O número de alunos doentes não permite concluir nada sobre a vacina, pois faltam informações sobre quais alunos adoeceram e quando foram vacinados."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "No início do século XX, o governo do Rio de Janeiro tornou obrigatória a vacina contra a varíola, e agentes sanitários passaram a entrar nas casas para vacinar a população, quase sem explicar o que estavam fazendo. A população se revoltou nas ruas, no episódio conhecido como Revolta da Vacina.",
+   "comando": "Explique por que a vacinação obrigatória, sem esclarecimento, gerou resistência e que cuidado as campanhas atuais devem ter.",
+   "ref": "A população desconhecia o que era a vacina e sentia medo e desconfiança, além de se sentir desrespeitada pela invasão das casas, o que gerou a revolta. Hoje as campanhas devem informar com clareza o que é a vacina, seus benefícios e sua segurança e respeitar a população para ganhar confiança."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Davi, de 2 meses, tomou sua primeira vacina na UBS. A mãe perguntou como o corpo 'aprende' a se defender. Uma pesquisadora mostrou o gráfico de um estudo (fictício) com a quantidade de anticorpos contra um agente, medida em um voluntário vacinado, em quatro momentos, sendo que no último ele entrou em contato com o agente real.",
+   "comando": "Interprete o gráfico e explique como a vacina prepara o corpo para uma infecção futura.",
+   "ref": "Antes da vacina não havia anticorpos; depois dela surgiram anticorpos, que diminuíram com o tempo. Quando o agente real chegou, a produção foi muito maior e mais rápida, pois o corpo guardou a memória imunológica da vacina e reconheceu o agente, evitando a doença ou deixando-a mais leve."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Antes de chegar às UBS, uma vacina nova passa por etapas de teste com voluntários, é avaliada pela Anvisa e depois incluída no Programa Nacional de Imunizações (PNI) para ser distribuída. A professora mostrou o número de voluntários em cada fase de um estudo (fictício) e pediu que a turma explicasse a lógica.",
+   "comando": "Explique por que o número de voluntários aumenta a cada fase e qual é o papel da Anvisa e do PNI.",
+   "ref": "O número aumenta porque primeiro se testa a segurança em poucas pessoas e depois, com mais voluntários, se avalia a dose adequada e a eficácia e se detectam efeitos raros. A Anvisa avalia os resultados e autoriza o uso, e o PNI organiza o calendário e a distribuição gratuita das vacinas pela rede pública."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma turma de 30 alunos de uma escola de Ribeirão Preto, 29 estão vacinados contra o sarampo. O aluno que falta não pôde ser vacinado porque faz um tratamento que enfraquece suas defesas, e por isso depende da proteção dos colegas. Um aluno disse: 'se eu estou vacinado, não faz diferença quem ao meu redor não está'.",
+   "comando": "Explique por que a vacinação dos outros 29 alunos protege o colega e responda ao comentário do aluno.",
+   "ref": "Se quase todos estão vacinados, o agente tem poucas pessoas suscetíveis para infectar e circula pouco, o que reduz a chance de o colega ser exposto: é a imunidade coletiva. Logo, a afirmação do aluno está incompleta, pois a vacinação de cada pessoa protege também quem não pode se vacinar."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "O Sr. Ribeiro recebeu em um grupo de mensagens um texto que dizia: 'a vacina da gripe dá gripe, não tome'. O texto não cita autor nem estudos. A filha dele, Clara, leva o assunto para a aula e a turma monta uma lista com as características da mensagem.",
+   "comando": "Avalie a confiabilidade da mensagem usando a lista e indique onde buscar informação confiável sobre vacinas.",
+   "ref": "A mensagem não é confiável, pois não informa o autor, não cita estudos e não foi revisada por especialistas. Para saber a verdade é preciso consultar fontes oficiais, como a UBS, o Ministério da Saúde, a Anvisa ou profissionais de saúde, que explicam que as vacinas usam agentes inativados ou partes deles, que não causam a doença."
+  }
+ ],
+ "4B|7º ANO|11": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma UBS, a enfermeira mostrou à turma um gráfico didático do nível de anticorpos de uma pessoa vacinada com duas doses de uma vacina, aplicadas com intervalo de quatro semanas. Ela pediu que os alunos explicassem por que a resposta depois da segunda dose foi tão diferente da primeira.",
+   "comando": "Que explicação é coerente com os dados?",
+   "alts": [
+    "A primeira dose formou células de memória, e por isso a resposta à segunda foi mais rápida e intensa.",
+    "A segunda dose tem mais vírus ativo que a primeira, e por isso os anticorpos produzidos chegaram a um valor bem maior.",
+    "Os anticorpos da primeira dose ficaram guardados no sangue e foram somados aos novos, sem produção nova.",
+    "A primeira dose não teve efeito, e a produção de anticorpos começou depois da segunda dose aplicada."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Quatro municípios paulistas de porte parecido tiveram surtos de sarampo no ano passado. A secretaria de saúde reuniu a cobertura vacinal de cada um (parte da população vacinada) e o número de casos. Um vereador disse que 'a vacina falhou na cidade D'.",
+   "comando": "Qual interpretação dos dados é a mais adequada?",
+   "alts": [
+    "Em D a vacina é menos eficaz que em A, pois os casos são muito mais numerosos onde a vacina foi aplicada em menos pessoas.",
+    "A proteção depende da pessoa vacinada, e os casos de C e D mostram o que ocorreu com quem escolheu não se vacinar.",
+    "Cobertura menor permite mais circulação do vírus, e os casos crescem até em quem não pôde se vacinar.",
+    "Os casos crescem com a cobertura, pois cidades mais vacinadas notificam mais casos, o que explica os valores de A e B."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma campanha de saúde, três vacinas foram apresentadas à comunidade, cada uma com um tipo de tecnologia. Uma moradora disse ter ouvido que 'a vacina de RNA muda o DNA' e que 'a vacina de vírus enfraquecido dá a doença completa'. O agente de saúde quer corrigir os boatos.",
+   "comando": "Qual afirmação sobre as três vacinas é correta?",
+   "alts": [
+    "A vacina 3 altera o DNA das células, porque o RNA mensageiro é copiado e integrado ao material genético do núcleo.",
+    "A vacina 1 provoca a doença completa, mas de forma mais branda, porque o vírus enfraquecido ainda se multiplica livremente.",
+    "A vacina 2 não produz memória, porque um fragmento de proteína é pequeno demais para ser reconhecido pelo sistema de defesa.",
+    "As três apresentam um antígeno do vírus ao sistema de defesa, que aprende a reconhecê-lo sem causar a doença."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "O Instituto Butantan produz parte da vacina contra a gripe em ovos de galinha embrionados. A coordenadora precisa entregar 600 000 doses em 30 dias para a campanha. Cada ovo viável rende uma dose, e a produção de ovos por dia é limitada.",
+   "comando": "Qual conclusão sobre a meta de 30 dias é correta?",
+   "alts": [
+    "A produção seria de 750 000 doses, e a meta de 600 000 seria cumprida com sobra de 150 000.",
+    "A produção seria de 525 000 doses, e faltariam 75 000: é preciso ampliar o prazo ou o número de ovos.",
+    "A produção seria de 600 000 doses, pois 70% dos ovos por dia bastam para chegar exatamente à meta.",
+    "A produção seria de 525 000 doses, e faltariam 175 000, porque as perdas devem ser descontadas duas vezes."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Antes de uma vacina ser liberada, ela passa por testes de segurança e eficácia com milhares de voluntários. Um grupo recebeu a vacina, e outro, uma injeção sem princípio ativo (placebo). Depois de seis meses, os pesquisadores contaram os casos da doença em cada grupo.",
+   "comando": "Qual interpretação dos resultados está correta?",
+   "alts": [
+    "A vacina protegeu 90% dos vacinados, e 10% dos vacinados adoeceram, pois isso corresponde a 10 casos entre 100.",
+    "Os 10 casos no grupo vacinado mostram que a vacina causou a doença nesses participantes durante o estudo.",
+    "A vacina reduziu em 90% o risco, pois o grupo vacinado teve 10 casos contra 100 do placebo.",
+    "O grupo placebo teve mais casos por ter recebido uma injeção, e a diferença vem do efeito da própria injeção."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "A UBS de um município paulista acompanhou a vacinação de crianças contra o sarampo ao longo de quatro anos, depois de uma campanha de busca ativa de crianças com a carteira atrasada. Os dados do município estão na tabela.",
+   "comando": "Explique a relação entre a cobertura vacinal e os casos e o papel do SUS para sustentar esse resultado.",
+   "ref": "Com mais crianças vacinadas, o vírus encontra menos pessoas suscetíveis e circula menos, então os casos caem até zero. O SUS garante vacina gratuita, campanhas e busca ativa, mantendo a cobertura alta e protegendo a coletividade."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Todo ano, as autoridades de saúde atualizam a vacina contra a gripe antes das campanhas. Um estudante questionou: 'Se já tomei no ano passado, por que preciso de outra dose?'. A tabela traz a proteção que a vacina do ano anterior ofereceria contra o vírus dominante no ano seguinte.",
+   "comando": "Explique, com base nos dados, por que a vacina da gripe é atualizada a cada ano.",
+   "ref": "Os vírus da gripe mudam com frequência, e os anticorpos produzidos contra um tipo reconhecem mal o tipo novo. A eficácia da vacina antiga cai (de 70% para 40% e 35%), e por isso é preciso atualizá-la para o vírus em circulação."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Antes de chegar ao posto, cada lote de vacina é analisado em laboratório. O lote só pode ser liberado se passar no teste de esterilidade e tiver potência mínima de 90% da dose esperada. Observe os resultados de três lotes.",
+   "comando": "Decida o que fazer com cada lote e justifique com os critérios.",
+   "ref": "O lote 1 pode ser liberado, pois passou na esterilidade e tem potência de 98%. O lote 2 deve ser retido porque a potência de 82% fica abaixo de 90%. O lote 3 deve ser descartado, pois foi reprovado na esterilidade, mesmo com boa potência."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Na fábrica de vacinas, o vírus da gripe é multiplicado dentro de ovos embrionados de galinha. Depois da coleta do líquido do ovo, o material ainda passa por etapas antes de ser envasado. Uma estudante perguntou por que não se usa direto o líquido coletado.",
+   "comando": "Explique por que o vírus cultivado precisa ser inativado e purificado e como isso se relaciona com a segurança.",
+   "ref": "O vírus multiplicado nos ovos está vivo e poderia causar a doença; a inativação o deixa incapaz de infectar, mas mantém o antígeno que treina as defesas. A purificação retira restos do ovo e impurezas, e juntas as etapas elevam a segurança, mesmo alongando o prazo para 12 dias."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "As vacinas precisam ser mantidas refrigeradas desde a fábrica até o posto de saúde, na chamada cadeia de frio. Um laboratório guardou amostras iguais em três temperaturas por 30 dias e mediu quanto da capacidade de proteção restou.",
+   "comando": "Explique por que a cadeia de frio é importante e que problema ela cria para levar vacinas a locais distantes.",
+   "ref": "Em temperaturas mais altas a vacina perde a capacidade de proteger, e com isso a pessoa vacinada fica desprotegida. A cadeia de frio evita esse problema, mas exige geladeiras e transporte refrigerado, o que é difícil em locais distantes ou sem energia elétrica."
+  }
+ ],
+ "4B|7º ANO|12": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma cidade fictícia do interior paulista, a secretaria de saúde acompanhou a vacinação contra o sarampo e os casos da doença em crianças ao longo de quatro anos. A vigilância avalia se houve relação entre os dois dados e quer orientar as ações do próximo ano.",
+   "comando": "Qual conclusão é mais bem sustentada pelos dados?",
+   "alts": [
+    "Quando a cobertura caiu abaixo de cerca de 90%, os casos aumentaram, e quando ela voltou a subir os casos diminuíram.",
+    "Os casos aumentaram em 2018 e 2019 porque a vacina perdeu o efeito, e a queda de 2020 se deve ao fim da doença.",
+    "A cobertura de 95% em 2016 garantiu que a doença não volta a ocorrer na cidade, qualquer que seja a cobertura posterior.",
+    "Os casos de 2019 mostram que a vacinação não funciona, pois muitos casos ocorreram mesmo com 79% de vacinados."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em quatro bairros de uma cidade fictícia, o posto de saúde contou os casos de uma doença imunoprevenível em bebês com menos de 1 ano, que ainda não podem tomar a vacina, e comparou os resultados com a cobertura vacinal das crianças de 1 a 5 anos que moram nos mesmos bairros.",
+   "comando": "Qual explicação é coerente com os dados?",
+   "alts": [
+    "Bebês adoecem porque recebem o agente da doença na vacina das crianças maiores, e por isso a doença aumenta onde há mais vacinados.",
+    "Crianças vacinadas diminuem a circulação do agente da doença e protegem de modo indireto os bebês não vacinados.",
+    "A vacina protege quem a toma, e os casos em bebês são independentes da cobertura dos vizinhos mais velhos.",
+    "Os bebês adoecem mais nos bairros pobres, e a cobertura vacinal não tem relação com os casos, que dependem da renda."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "A pequena Lia, de 5 anos, foi à UBS para atualizar o cartão de vacinas. A enfermeira consultou um calendário simplificado, usado como exercício, e conferiu as doses de poliomielite registradas no cartão antes de decidir o que fazer.",
+   "comando": "Qual orientação é mais adequada?",
+   "alts": [
+    "Dispensar a dose, pois as quatro doses registradas já garantem proteção permanente para toda a vida.",
+    "Reiniciar todo o esquema de vacinação, pois a dose atrasada anula a proteção das doses anteriores.",
+    "Não aplicar dose alguma, pois a doença foi eliminada no Brasil e o risco de ela voltar é inexistente.",
+    "Aplicar a dose de reforço dos 4 anos, que está atrasada, sem reiniciar as doses já registradas."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "O Brasil não registra casos de poliomielite causada por vírus selvagem há mais de 30 anos, mas a vacinação continua nas UBS. Um aluno questionou: se não há casos, por que vacinar? A professora mostrou um exercício com dados ilustrativos sobre as campanhas.",
+   "comando": "Qual argumento é mais bem sustentado?",
+   "alts": [
+    "Os casos zeraram por melhoria do saneamento, e a vacina não teve papel no resultado, mas é mantida por precaução.",
+    "Os casos zeraram porque a doença desapareceu do planeta, e a vacinação continua por tradição e por exigência de escolas.",
+    "Os casos zeraram pela vacinação em massa, e manter alta cobertura evita que o vírus de outros países volte a circular.",
+    "Os casos zeraram porque quem teve a doença ficou imune, e a vacinação das crianças atuais é desnecessária."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um estudo clínico fictício comparou 1000 pessoas que receberam uma vacina com 1000 que receberam um placebo, acompanhadas pelo mesmo período. A eficácia é a redução percentual dos casos no grupo vacinado em comparação com o grupo do placebo, e a equipe precisa calculá-la.",
+   "comando": "Qual é a eficácia da vacina nesse estudo?",
+   "alts": [
+    "5%, pois 4 casos correspondem a 5% dos 80 casos do placebo.",
+    "99,6%, pois 4 em 1000 pessoas vacinadas ficaram doentes.",
+    "76%, pois a diferença entre 80 e 4 casos é de 76 pessoas.",
+    "95%, pois (80 - 4) dividido por 80 resulta em 0,95."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em 1970, a taxa de mortalidade infantil de um município fictício era alta; hoje ela é muito menor. Um aluno afirmou que a queda se deve apenas às vacinas, mas o professor lembrou que outros fatores também mudaram nesse período e mostrou os dados.",
+   "comando": "Explique como as vacinas contribuíram para a queda e por que não se pode atribuir o resultado apenas a elas.",
+   "ref": "As vacinas preveniram doenças como sarampo, coqueluche e poliomielite, que matavam crianças. Mas a queda também depende de saneamento, acesso a água tratada, pré-natal e alimentação, que mudaram ao mesmo tempo, então vários fatores somam efeitos."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma mensagem circulou em grupos de uma cidade dizendo que não é preciso vacinar porque as doenças desapareceram. Um agente de saúde levou à reunião do bairro um quadro com os argumentos e pediu a ajuda da turma para respondê-los.",
+   "comando": "Escolha dois argumentos do quadro e responda a cada um com base no que se sabe sobre o PNI e a imunidade coletiva.",
+   "ref": "Resposta ao 1: as doenças estão controladas pela vacinação, mas os agentes continuam circulando e podem voltar se a cobertura cair. Resposta ao 2: a proteção coletiva só funciona se quase todos se vacinam, e quem não vacina vira ponto de entrada do agente. Resposta ao 3: o calendário tem vacinas para adolescentes, adultos e idosos."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "A UBS de um bairro atende 400 crianças que precisam estar com o esquema vacinal em dia. A coordenadora quer chegar a 95% de cobertura, que é a meta do exercício, e organizou uma campanha de multivacinação para atingir esse objetivo.",
+   "comando": "Calcule quantas crianças ainda precisam ser vacinadas e proponha duas ações para alcançá-las.",
+   "ref": "Meta: 95% de 400 = 380 crianças; hoje 72% de 400 = 288; faltam 92 crianças. Ações possíveis: busca ativa nas casas pelos agentes comunitários, vacinação nas escolas e horários ampliados ou aos sábados."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "O Programa Nacional de Imunizações oferece vacinas gratuitas a toda a população. Uma prefeitura simulou, com valores fictícios, quanto custaria enfrentar um surto de sarampo em comparação com manter a vacinação em dia.",
+   "comando": "Use os dados para justificar por que é importante que a vacinação seja uma política pública gratuita e universal.",
+   "ref": "Vacinar custa muito menos que tratar uma doença grave, e a gratuidade garante acesso às famílias sem condições de pagar. Como a proteção depende de muita gente vacinada, a oferta universal beneficia toda a sociedade, inclusive quem não pode se vacinar."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma pessoa com sarampo pode contagiar muitas outras, e por isso as autoridades de saúde dizem que é preciso vacinar quase toda a população contra ele. Para outras doenças, como a gripe, a cobertura necessária é menor, segundo os dados do exercício.",
+   "comando": "Explique, usando os dados, por que a cobertura necessária para controlar o sarampo é maior que a de uma doença menos contagiosa.",
+   "ref": "Quanto mais pessoas um doente contagia, maior a parte da população que precisa estar imune para interromper a cadeia de transmissão. O sarampo contagia de 12 a 18 pessoas, por isso exige cerca de 95% de cobertura, enquanto a gripe, que contagia de 1 a 2, exige menos."
+  }
+ ],
+ "4B|7º ANO|13": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em um município paulista, a equipe de saúde comparou a cobertura vacinal de crianças em duas áreas com o mesmo número de habitantes. Na área 1, a cobertura de uma vacina foi de 95%; na área 2, de 70%. Dias depois, houve casos de uma doença preveniível por essa vacina na área 2, e nenhum na área 1.",
+   "comando": "Qual interpretação é sustentada pelos dados?",
+   "alts": [
+    "A doença apareceu na área 2 porque as crianças dessa área são mais suscetíveis por natureza, e a vacina não teria efeito nelas.",
+    "A cobertura de 95% na área 1 garante que a criança daquela área fica totalmente protegida, mesmo que a doença circule na região.",
+    "Uma cobertura alta reduz a circulação do agente da doença na comunidade, protegendo também quem não foi vacinado.",
+    "O número de casos mostra que a vacina é ineficaz, pois a área 2 teve casos mesmo com cobertura de 70% das crianças."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um estudo acompanhou casos de sarampo em três regiões de São Paulo por dez anos. A cada ano, mediram a proporção de crianças vacinadas com a dose recomendada e o número de casos. Os resultados aparecem na tabela.",
+   "comando": "Qual padrão é o mais bem apoiado pelos dados?",
+   "alts": [
+    "Quando a vacinação cai, o número de casos sobe, e o padrão se mantém em todos os anos registrados.",
+    "A vacinação caiu porque os casos aumentaram, pois as famílias passaram a ter medo da doença e deixaram de levar as crianças.",
+    "O número de casos ficou estável nos quatro anos, e a queda da vacinação não teve efeito sobre a doença na população.",
+    "Os casos aumentaram por causa do clima, e a vacinação não tem relação com esse aumento, pois suas taxas caíram nos mesmos anos."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um professor pediu que a turma analisasse dois argumentos sobre não vacinar uma criança. Argumento 1: 'A vacina é perigosa porque algumas pessoas tiveram reações leves no braço.' Argumento 2: 'Se quase todos estão vacinados, a criança fica protegida mesmo sem vacina, mas só até a cobertura cair.' Os alunos devem avaliar qual deles é coerente com os dados sobre vacinação.",
+   "comando": "Qual avaliação dos argumentos é correta?",
+   "alts": [
+    "Os dois argumentos são fortes, pois reações leves comprovam que a vacina é perigosa e a proteção coletiva dispensa a vacinação individual.",
+    "O argumento 2 é fraco, porque a proteção coletiva independe da cobertura, e por isso a criança não precisa de vacina.",
+    "Os dois argumentos são fracos, pois as reações leves e a proteção coletiva não têm relação com a decisão de vacinar a criança.",
+    "O argumento 1 é fraco, pois confunde reações leves com riscos graves; o argumento 2 liga a proteção coletiva à cobertura alta."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Estudantes de uma escola de Sorocaba montaram um modelo de como a doença se espalha em uma sala de aula. Cada aluno representado por uma bolinha; pintaram algumas de vermelho (doentes) e pediram que cada uma transmitisse a cor a duas colegas próximas por rodada. Em um teste, as bolinhas vacinadas (em verde) não podiam mudar de cor.",
+   "comando": "Que mudança no modelo permitiria saber se a vacinação protege a turma como um todo?",
+   "alts": [
+    "Trocar as cores das bolinhas por formas diferentes, pois a forma das bolinhas influencia a velocidade de transmissão.",
+    "Aumentar o número de bolinhas verdes em várias rodadas, comparando quantas bolinhas vermelhas aparecem em cada situação, mantendo as demais regras.",
+    "Aumentar o tempo de cada rodada, pois assim as bolinhas vermelhas vão se espalhar mais e o modelo ficará mais realista.",
+    "Diminuir o número de bolinhas na sala, pois menos alunos fazem a doença se espalhar com mais facilidade pela turma."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma escola de Osasco registrou, ao longo de três anos, a porcentagem de alunos com todas as doses da vacina em dia e o número de faltas por doença infecciosa. Um aluno afirmou que a vacinação é a única explicação para a queda das faltas, mas outros fatores também mudaram no período.",
+   "comando": "Qual cuidado é necessário antes de atribuir a queda das faltas somente à vacinação?",
+   "alts": [
+    "Não é preciso cuidado, pois a vacinação é a principal variável que pode mudar o número de faltas de uma escola em um período.",
+    "Basta observar que as duas curvas estão em sentidos opostos, pois isso prova que cada falta evitada foi causada por uma dose aplicada.",
+    "Outros fatores, como higiene e atendimento, também podem ter mudado, e a associação não prova que a vacina sozinha causou a queda.",
+    "A escola deve ignorar o ano 1, pois os dados desse ano são menores que os dos anos seguintes e não servem para comparação."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma reportagem afirmou que 'a vacina não funciona porque pessoas vacinadas também ficaram doentes'. A equipe de saúde responde que a vacina reduz a chance e a gravidade da doença, mas não garante proteção de 100% para todos. Os dados de uma pesquisa mostram menos casos graves entre os vacinados.",
+   "comando": "Explique por que a conclusão da reportagem é incorreta, com base no que a vacina faz e nos dados da pesquisa.",
+   "ref": "A vacina reduz a probabilidade e a gravidade da doença, e a existência de alguns casos em vacinados não prova ineficácia. Os dados mostram muito mais casos e casos graves entre os não vacinados, o que sustenta a vacinação."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Os alunos de uma escola estão montando um cartaz sobre a importância da vacinação para a comunidade. Eles querem explicar por que a vacina protege também quem não pode tomá-la, como bebês muito pequenos e pessoas com certas condições de saúde.",
+   "comando": "Explique o conceito de imunidade coletiva e como a cobertura vacinal alta protege pessoas que não podem se vacinar.",
+   "ref": "Quando a maioria está vacinada, o agente tem poucas pessoas suscetíveis para infectar, e sua circulação diminui. Assim, pessoas que não podem se vacinar ficam protegidas porque o agente encontra poucos hospedeiros, o que é a imunidade coletiva."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma professora propôs um experimento sobre vacinação com bactérias em placas de Petri. Uma placa recebeu um antibiótico e outra não. A turma deve decidir como interpretar e como garantir que o resultado seja confiável.",
+   "comando": "Explique o que a comparação entre as placas mostra e indique um cuidado experimental necessário para que o resultado seja confiável.",
+   "ref": "A placa sem tratamento serve de controle, e a diferença de 120 para 4 colônias indica que o tratamento reduziu o crescimento. Para ser confiável, o experimento precisa repetir as placas e manter as condições iguais, como temperatura e quantidade de bactérias inicial."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma turma de 7º ano investigou por que algumas pessoas acreditam que vacinas causam doenças. Eles encontraram relatos pessoais muito marcantes, mas também dados de grandes estudos que não confirmam essa relação.",
+   "comando": "Explique por que relatos isolados não bastam para concluir que uma vacina causa uma doença, e como os dados de grandes grupos ajudam a avaliar a questão.",
+   "ref": "Um relato isolado pode ter outras causas e não tem grupo de comparação. Estudos com muitas pessoas comparam vacinados e não vacinados e conseguem separar o efeito da vacina de outras causas, por isso são mais confiáveis."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um laboratório escolar cultivou bactérias em duas placas: uma com um desinfetante e outra sem nada. Na placa com desinfetante, quase não houve crescimento. Os alunos querem concluir se o desinfetante funciona para todas as bactérias.",
+   "comando": "Explique por que um único tipo de bactéria não permite essa generalização e proponha um procedimento para avaliar outros tipos.",
+   "ref": "O teste usou apenas um tipo de bactéria, e outros tipos podem reagir de modo diferente ao desinfetante. Para avaliar a generalização, a turma deve testar vários tipos, com placas de controle, repetindo cada teste e mantendo as condições iguais."
+  }
+ ],
+ "4B|7º ANO|14": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Alunos de uma escola de São Paulo analisaram dados fictícios sobre um rio urbano, inspirados no que se discute sobre o rio Pinheiros. Mediram o oxigênio dissolvido na água em três pontos e observaram se havia peixes. Há um ponto de lançamento de esgoto doméstico sem tratamento entre o primeiro e o segundo pontos de coleta.",
+   "comando": "Qual explicação relaciona a queda do oxigênio com o lançamento de esgoto e com a recuperação mais adiante?",
+   "alts": [
+    "O esgoto contém oxigênio em excesso, que envenena os peixes, e por isso o ponto 2 é o trecho com pouco oxigênio.",
+    "O oxigênio caiu porque o rio esquentou ao receber o esgoto, e a recuperação do ponto 3 mostra que o calor desapareceu.",
+    "A falta de peixes no ponto 2 causou a queda do oxigênio, pois os peixes produzem esse gás e o liberam na água.",
+    "Microrganismos que decompõem a matéria orgânica do esgoto consomem oxigênio, e a água renovada o recupera adiante."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em dois bairros de uma cidade paulista, a mesma chuva de 60 mm foi acompanhada por técnicos de drenagem. O bairro A tem quase todo o solo coberto por asfalto e concreto, e o bairro B tem praças, quintais e calçadas com canteiros. Eles mediram a vazão máxima que chegou ao córrego em cada bairro e debatem como reduzir os alagamentos.",
+   "comando": "Qual medida de drenagem é mais coerente com os dados?",
+   "alts": [
+    "Cobrir o córrego com concreto no bairro A, para a água escoar mais depressa e sair rapidamente da área alagada.",
+    "Aumentar a coleta de lixo nas ruas do bairro A, o que elimina a causa principal da vazão alta mostrada nos dados.",
+    "Ampliar áreas permeáveis e reservatórios no bairro A, para a água infiltrar ou ficar retida antes do córrego.",
+    "Cimentar os quintais do bairro B, para que a vazão fique igual à do bairro A e o problema deixe de aparecer."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "O aterro sanitário de uma cidade do interior está perto da capacidade máxima. A prefeitura analisou a composição do lixo doméstico e a quantidade de material que chega ao programa de coleta seletiva. Os técnicos querem escolher a ação que mais reduza a massa enviada ao aterro.",
+   "comando": "Qual ação é mais coerente com os dados?",
+   "alts": [
+    "Incentivar a compostagem dos orgânicos e ampliar a coleta seletiva, as duas maiores frações pouco desviadas.",
+    "Priorizar a coleta seletiva dos secos, que são a maior fração do lixo e têm o menor nível de aproveitamento hoje.",
+    "Aumentar a frequência de coleta de lixo comum, o que reduz a quantidade de lixo que chega ao aterro.",
+    "Ampliar o aterro e manter a coleta, pois os rejeitos são a fração que mais pesa na massa recebida."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "A família de Pedro mora em uma chácara e usa água de um poço. A água do poço é transparente e sem cheiro, e o pai diz que, por isso, está pura. A filha, que faz curso técnico, levou uma amostra para análise em um laboratório municipal, e o resultado seguiu a comparação com os limites aceitos para consumo.",
+   "comando": "Que conclusão do resultado é a mais adequada?",
+   "alts": [
+    "A água está própria para beber, pois a turbidez baixa mostra que ela já passou pela filtragem necessária para o consumo.",
+    "Água transparente não é garantia de potabilidade: a presença de coliformes indica contaminação por fezes e exige desinfecção.",
+    "A água está contaminada porque a turbidez é baixa, já que a ausência de partículas indica a presença de microrganismos.",
+    "O cloro residual igual a zero comprova que a água está livre de coliformes, pois não há resíduo de produtos químicos."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma escola de Guarulhos iniciou um programa de educação ambiental com coleta seletiva. A coordenadora comparou a massa de lixo em março, antes do programa, e em junho, após quatro meses de campanha. Os alunos discutem o que os números permitem concluir sobre o efeito do programa.",
+   "comando": "Qual conclusão é sustentada pelos registros?",
+   "alts": [
+    "O programa reduziu o lixo total da escola a menos da metade, pois o lixo comum caiu de 210 kg para 150 kg.",
+    "O aumento dos recicláveis mostra que a escola passou a produzir mais lixo, já que 95 kg superam os 40 kg de março.",
+    "Parte do lixo mudou de destino, mas a massa total mudou pouco, então reduzir a geração exige outras ações, além de separar.",
+    "A queda do lixo comum prova que os alunos pararam de consumir produtos embalados, o que explica o aumento dos recicláveis."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Moradores de um bairro de Osasco relataram mau cheiro e espuma em um córrego que passa atrás das casas. Os agentes de saúde verificaram que algumas casas lançam o esgoto direto no córrego, enquanto outras usam fossas, e coletaram dados em dois trechos.",
+   "comando": "Explique a diferença entre os trechos e proponha duas ações de saneamento e uma de educação ambiental.",
+   "ref": "O trecho depois das casas tem pouco oxigênio porque o esgoto lançado traz matéria orgânica, cuja decomposição consome oxigênio e gera mau cheiro. São ações de saneamento ligar as casas à rede de esgoto e tratar o esgoto. Em educação ambiental, orientar os moradores a não lançar esgoto ou lixo no córrego."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "O quadro abaixo traz dados ilustrativos de acesso a serviços de saneamento em domicílios urbanos e rurais de uma região paulista. A prefeitura quer decidir onde investir primeiro e como organizar as ações para as áreas rurais.",
+   "comando": "Compare os dados e explique por que a diferença entre as áreas importa para a saúde, sugerindo uma solução para a área rural.",
+   "ref": "A área rural tem menos acesso à água tratada (60%) e, principalmente, à rede de esgoto (12%), o que aumenta o risco de doenças transmitidas pela água. Como a rede é cara em áreas dispersas, soluções como fossas adequadas e sistemas locais de tratamento podem ser priorizadas."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Na praça da escola, a água da chuva acumula depressa na parte asfaltada, enquanto na área com canteiros de plantas a água some mais rápido. Um grupo de alunos mediu a altura da água acumulada 30 minutos depois de uma chuva de 20 mm.",
+   "comando": "Explique a diferença entre os locais e proponha uma mudança de drenagem para a praça.",
+   "ref": "O asfalto impede a infiltração, então a água escorre e se acumula, enquanto o solo dos canteiros absorve a água. A praça pode ganhar mais áreas permeáveis, como canteiros, piso drenante e jardim de chuva, para infiltrar e reter a água e reduzir os alagamentos."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Depois de uma chuva forte em um bairro de Itaquaquecetuba, bueiros entupidos por lixo provocaram um alagamento. Dias depois, a UBS registrou casos de leptospirose, doença associada ao contato com água de enchente contaminada por urina de ratos.",
+   "comando": "Relacione lixo, drenagem e saúde na situação e elabore uma campanha de educação ambiental com duas ações.",
+   "ref": "O lixo jogado nas ruas entope os bueiros, a drenagem falha e a água alaga o bairro, espalhando contaminantes e ratos, o que aumenta o risco de leptospirose. A campanha pode ensinar a descarte correto do lixo e a coleta seletiva, e organizar mutirões de limpeza de bueiros e córregos."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em uma represa que abastece uma cidade, técnicos mediram, em dois pontos, a quantidade de fósforo (nutriente presente em esgotos e fertilizantes) e a de algas. O ponto 2 fica perto da foz de um córrego que recebe esgoto de bairros sem tratamento.",
+   "comando": "Explique a relação entre os dois dados e uma consequência possível para o abastecimento de água.",
+   "ref": "O esgoto traz fósforo, que funciona como nutriente e estimula o crescimento das algas no ponto 2. O excesso de algas piora a qualidade da água, pode liberar toxinas e consumir o oxigênio quando morre, o que encarece o tratamento e pode comprometer o abastecimento."
+  }
+ ],
+ "4B|7º ANO|15": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma agente comunitária de saúde de uma comunidade na Zona Leste de São Paulo comparou dois bairros. O bairro A tem rede de esgoto e água tratada em quase todas as casas. O bairro B tem valas abertas no meio da rua. Ela anotou casos de diarreia em crianças menores de 5 anos durante um ano.",
+   "comando": "Que conclusão os dados sustentam, com cuidado?",
+   "alts": [
+    "O bairro com menos esgoto tratado teve mais diarreia, o que sugere relação, mas outros fatores podem influir",
+    "O bairro com menos esgoto teve mais diarreia, o que prova que o esgoto explica por completo os casos",
+    "O bairro com mais esgoto teve mais diarreia, o que sugere relação, embora outros fatores possam influir",
+    "O bairro com menos esgoto teve mais diarreia, o que mostra que a falta de esgoto não se relaciona à saúde"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "A cidade de Franca divulgou um relatório sobre o abastecimento de água e a coleta de esgoto de seus bairros. Um professor pediu que os alunos interpretassem o gráfico de percentual de esgoto coletado em quatro regiões do estado, para discutir a desigualdade de acesso ao saneamento.",
+   "comando": "Qual interpretação é sustentada pelo gráfico?",
+   "alts": [
+    "A região D tem a maior cobertura, e quase dois terços da população dela têm esgoto coletado",
+    "A região A tem a maior cobertura e, por isso, cada morador da região tem esgoto coletado",
+    "A região C tem cobertura de 51%, e a região D tem cobertura maior que a da região B",
+    "A região D tem a menor cobertura, e quase dois terços da população dela não têm esgoto coletado"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Na Cantareira, a Sabesp (empresa de saneamento) trata a água antes de enviá-la às casas. Em uma visita, os alunos receberam uma sequência de etapas do tratamento, embaralhada, e deveriam entender por que cada etapa existe, relacionando com a água captada de um rio poluído.",
+   "comando": "Qual etapa tem como principal função remover as partículas maiores que ficam em suspensão e que a decantação não retira?",
+   "alts": [
+    "A cloração, pois o cloro elimina os micro-organismos e também deposita as partículas em suspensão",
+    "A coagulação, pois o produto químico mantém as partículas separadas e impede sua agregação",
+    "A filtração, pois a água passa por camadas de areia e carvão que retêm as partículas restantes",
+    "A decantação, pois o repouso na água retém as partículas menores que os flocos não conseguem formar"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "O Marco Legal do Saneamento (2020) prevê metas para que, até 2033, 99% da população tenha água tratada e 90% tenha coleta e tratamento de esgoto. Um estudante comparou as metas com a situação de um município fictício e precisa avaliar quanto falta para cumprir.",
+   "comando": "Que afirmação sobre o município é correta?",
+   "alts": [
+    "O maior esforço será na rede de esgoto, pois a lacuna do tratamento é de 50 pontos",
+    "O maior esforço será na água tratada, pois a lacuna da água tratada é de 50 pontos percentuais",
+    "O maior esforço será na coleta de esgoto, pois a lacuna da coleta é de 54 pontos percentuais",
+    "O maior esforço será igual nos serviços, pois as três lacunas são de 8 pontos percentuais"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "A professora mostrou a foto de uma comunidade de Paraisópolis em que as casas lançam o esgoto em uma vala a céu aberto, onde as crianças brincam. Ela apresentou uma tabela com doenças relacionadas à falta de saneamento e a forma de transmissão, para a turma pensar em ações do ODS 6.",
+   "comando": "Qual ação reduz, ao mesmo tempo, o risco das três doenças da tabela?",
+   "alts": [
+    "Aplicar vacina contra uma das doenças, para que as pessoas fiquem protegidas das outras duas",
+    "Implantar rede de esgoto e drenagem, que afastam fezes e água contaminada das pessoas",
+    "Dar antibiótico às crianças da comunidade, para tratar infecções por bactérias e por vírus",
+    "Colocar telas nas janelas das casas, para evitar a entrada de insetos que transmitem as doenças"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Marina mora em uma área sem rede de esgoto, onde o esgoto vai para um rio que, mais adiante, é usado para captar água de outra cidade. Ela quer entender como a falta de coleta e tratamento de esgoto pode afetar quem mora longe dali.",
+   "comando": "Explique o caminho da contaminação e proponha uma medida de saneamento para interromper esse caminho.",
+   "ref": "O esgoto lança micro-organismos e poluentes no rio, que chegam a quem usa a água a jusante e aumentam o custo e o risco do tratamento. Coletar e tratar o esgoto antes de devolvê-lo ao rio interrompe essa contaminação."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Após uma enchente no bairro, a UBS atendeu muitos casos de leptospirose. O secretário de saúde diz que 'é só distribuir remédio'. Uma técnica explicou que a enchente espalha água contaminada por urina de ratos. Veja o registro de atendimentos antes e depois da enchente.",
+   "comando": "Interprete os dados e explique por que a prevenção depende de saneamento, e não apenas de remédio.",
+   "ref": "Os casos aumentaram bastante depois da enchente, o que mostra relação com a água contaminada. O remédio trata o doente, mas não evita novos casos; a prevenção exige drenagem, coleta de lixo e controle de ratos."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "O ODS 6 da ONU busca garantir água potável e saneamento para todos. A escola montou uma tabela com ações possíveis em um bairro de periferia e pediu que os grupos escolhessem duas prioridades e justificassem com base nos objetivos.",
+   "comando": "Escolha duas ações da tabela e justifique como cada uma melhora a saúde e o ambiente.",
+   "ref": "Ligar as casas à rede de esgoto atende 600 famílias e impede que fezes contaminem a água, reduzindo doenças. Criar pontos de coleta de lixo atende 800 famílias e evita entupimento de córregos e enchentes."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em casa, a família de Pedro paga a conta de água e esgoto, mas um vizinho mora em área sem rede e usa fossa. Pedro questionou o pai por que a cobrança inclui o esgoto. A conta mostra a separação dos valores de água, coleta e tratamento.",
+   "comando": "Explique por que a coleta e o tratamento do esgoto são serviços diferentes, e por que ambos são necessários.",
+   "ref": "A coleta leva o esgoto das casas por tubulações até a estação, e o tratamento remove poluentes antes de devolver a água ao rio. Sem coleta, o esgoto fica nas ruas; sem tratamento, ele só muda de lugar e poluiria o rio."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma notícia local conta que moradores de um bairro de SP com ruas sem asfalto e sem rede de esgoto sofrem com mau cheiro e poças. Um engenheiro diz que a falta de saneamento afeta também a economia, pois os doentes faltam ao trabalho e à escola.",
+   "comando": "Use os dados para argumentar que investir em saneamento traz retorno para a sociedade.",
+   "ref": "Os moradores do bairro sem rede faltam mais (9 contra 3 dias na escola e 7 contra 2 no trabalho). Investir em saneamento reduz doenças, as faltas e os gastos com saúde, o que retorna benefícios para as pessoas e a economia."
+  }
+ ],
+ "4B|7º ANO|16": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "A secretaria de saúde de um município paulista fictício quer decidir onde reforçar a atenção ao pré-natal e ao recém-nascido. Ela reuniu o número de nascimentos e o de óbitos de crianças com menos de um ano em três regiões da cidade.",
+   "comando": "Qual região apresenta a pior situação de mortalidade infantil e qual é a justificativa correta?",
+   "alts": [
+    "Região C, pois tem o maior número de óbitos, o que mostra a pior situação entre as regiões comparadas.",
+    "Região B, pois a taxa de 14 por mil é a maior das três, mesmo com menos óbitos que a região C.",
+    "Região A, pois tem o maior número de nascimentos, o que torna maior o risco de morte para cada recém-nascido.",
+    "Região C, pois a taxa de 10 óbitos por mil nascidos vivos é a maior, já que seu total de óbitos é o mais alto."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "O portal de dados de um estado fictício divulgou a taxa de mortalidade infantil, ou seja, óbitos de menores de um ano por mil nascidos vivos, em quatro anos. Um jornal afirmou que 'a saúde infantil piorou recentemente'.",
+   "comando": "Qual interpretação do gráfico é sustentada pelos dados?",
+   "alts": [
+    "A taxa caiu na maior parte do período, mas subiu de 2020 para 2022, o que pede investigar as causas.",
+    "A taxa caiu de modo contínuo nos quatro anos analisados, o que confirma que as políticas de saúde foram eficazes.",
+    "O aumento de 2022 prova que as políticas de saúde fracassaram, pois a taxa voltou ao patamar do início do período.",
+    "A taxa caiu pela metade entre 2000 e 2020, o que mostra que a saúde infantil melhorou na mesma proporção."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma pesquisa fictícia comparou três bairros da capital paulista quanto à renda média das famílias, ao percentual de esgoto tratado e à mortalidade infantil. A prefeitura quer usar os dados para orientar investimentos em saúde.",
+   "comando": "Que conclusão e que política pública são coerentes com os dados?",
+   "alts": [
+    "A renda é a causa direta da morte infantil, então a política deve elevar a renda e adiar o saneamento.",
+    "O esgoto tratado não influencia a mortalidade infantil, pois a Vila tem esgoto alto e taxa maior que o Jardim.",
+    "A mortalidade infantil é maior onde renda e saneamento são menores, o que indica priorizar esses bairros.",
+    "A mortalidade infantil é menor nos bairros de renda baixa, o que sugere investir em saneamento nos bairros ricos."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma Unidade Básica de Saúde fictícia melhorou o agendamento e quis avaliar o resultado. A equipe reuniu números medidos e relatos de usuários, e a gerente pediu que os dois tipos de informação fossem usados juntos.",
+   "comando": "Qual leitura combina corretamente os dois tipos de indicador?",
+   "alts": [
+    "Os números mostram que tudo melhorou, e o relato dos usuários deve ser ignorado por ser opinião individual.",
+    "O relato mostra que o atendimento piorou, e por isso os números de espera não devem ser considerados.",
+    "O tempo de espera caiu e as consultas aumentaram, o que prova que a satisfação dos usuários também aumentou.",
+    "Os indicadores quantitativos mostram melhora no acesso, e o qualitativo revela falha de comunicação."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um país adotou o Objetivo de Desenvolvimento Sustentável 3, que inclui reduzir a mortalidade infantil. Para este exercício, a meta é uma taxa abaixo de 12 óbitos por mil nascidos vivos. Três municípios fictícios apresentaram seus valores.",
+   "comando": "Qual afirmação sobre o desempenho dos municípios é correta?",
+   "alts": [
+    "Z tem a melhor taxa e, por isso, a maior redução proporcional, de modo que seu progresso foi o mais expressivo.",
+    "X teve a maior redução, em pontos e em proporção, mas segue acima da meta de 12, enquanto Z já a atende.",
+    "Y já cumpre a meta, pois sua taxa caiu para menos que a do município X, que partia de um valor maior.",
+    "X cumpriu a meta, pois teve a maior queda em pontos e passou a ter taxa próxima à dos demais municípios."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma prefeitura fictícia ampliou as consultas de pré-natal nas UBSs. A equipe quer avaliar se o programa funcionou, mas o secretário alertou que associação nos dados não prova causa.",
+   "comando": "Interprete os dados e explique o que eles indicam e que cuidado é necessário ao concluir que o programa reduziu a mortalidade infantil.",
+   "ref": "Quando mais gestantes fizeram consultas, a mortalidade infantil diminuiu, o que indica uma associação favorável ao programa. Porém, outros fatores como saneamento, renda ou vacinação também mudam com o tempo, e por isso são necessárias comparações antes de afirmar que o programa foi a causa."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um levantamento fictício comparou a idade média de falecimento em três distritos da mesma cidade. Os gestores querem entender as diferenças e propor ações coerentes com o Objetivo de Desenvolvimento Sustentável 3.",
+   "comando": "Interprete o gráfico e proponha duas ações que reduzam as desigualdades de saúde entre os distritos, justificando cada uma.",
+   "ref": "A idade ao morrer cai 16 anos do central ao periférico, o que indica desigualdade no acesso a saúde e condições de vida. Ampliar UBSs e transporte no distrito periférico melhora o acesso ao cuidado, e investir em saneamento e moradia reduz doenças evitáveis."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma UBS fictícia comemorou o aumento de consultas, mas uma assistente social ouviu moradores e recebeu relatos preocupantes. A equipe quer saber se o número de consultas basta para avaliar o serviço.",
+   "comando": "Explique por que os indicadores quantitativos sozinhos podem não retratar a realidade, usando os dados e os relatos.",
+   "ref": "As consultas agendadas aumentaram, mas 38% dos pacientes faltam, e os relatos mostram que o transporte é um obstáculo. O indicador numérico não revela o motivo das faltas, e por isso a análise qualitativa completa os números e ajuda a propor soluções."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma equipe de saúde fictícia precisa escolher um problema prioritário para o próximo ano em um bairro, com base em metas do Objetivo de Desenvolvimento Sustentável 3. Ela reuniu a situação atual e a meta de cada indicador.",
+   "comando": "Compare os valores com as metas e justifique qual indicador deve ser a prioridade.",
+   "ref": "A vacinação está 13 pontos abaixo da meta, enquanto a mortalidade infantil e o pré-natal já cumprem os valores propostos. Por isso a vacinação deve ser a prioridade, pois a baixa cobertura expõe as crianças a doenças evitáveis."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um jornal comparou a capital paulista, com muitos nascimentos, a uma cidade pequena do interior e concluiu que 'a capital tem muito mais mortes infantis e é pior'. Uma estudante pediu para calcular a taxa antes de comparar.",
+   "comando": "Calcule as taxas por mil nascidos vivos e explique por que ela é melhor que o número absoluto para comparar locais.",
+   "ref": "A capital tem taxa de 10 por mil e a cidade pequena, de 15 por mil, então a situação da cidade pequena é pior apesar de ter menos óbitos. A taxa leva em conta o tamanho da população de nascimentos e permite comparar locais diferentes de forma justa."
+  }
+ ],
+ "4B|7º ANO|2": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula sobre vírus, a professora comparou três entidades: uma bactéria de iogurte, uma célula de levedura do pão e um vírus da gripe. Ela mostrou a escala de tamanho e perguntou à turma o que isso indica sobre onde cada um pode ser visto e como se reproduz.",
+   "comando": "Qual conclusão é sustentada pelos dados da tabela?",
+   "alts": [
+    "O vírus é muito menor e não tem estrutura celular nem ribossomos, por isso depende de uma célula hospedeira para fabricar proteínas",
+    "O vírus é muito menor e tem estrutura celular simples, por isso se reproduz fora de uma célula hospedeira sozinho",
+    "O vírus é muito menor e não tem estrutura celular, por isso fabrica proteínas usando as próprias organelas",
+    "O vírus tem tamanho parecido ao da bactéria e não tem ribossomos, por isso depende de uma célula hospedeira"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em um laboratório de universidade, um pesquisador adicionou o mesmo vírus a dois tubos: um com células vivas de cultura e outro com meio de cultura sem células. Após 24 horas, contou a quantidade de vírus em cada tubo, para entender como esses organismos se multiplicam.",
+   "comando": "Que interpretação dos resultados é coerente?",
+   "alts": [
+    "O vírus se multiplica com ou sem células, mas a multiplicação é mais rápida com células vivas",
+    "O vírus só se multiplica dentro de células vivas; sem células, a quantidade de partículas tende a subir",
+    "O vírus se multiplica no meio de cultura, mas precisa de células para produzir toxinas contra elas",
+    "O vírus só se multiplica dentro de células vivas; sem células, a quantidade de partículas tende a cair"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma reportagem sobre a gripe explicou que o vírus tem uma camada de gordura (envelope) em volta do capsídeo. Isso explica por que o sabão, ao dissolver gorduras, é eficiente para inativar o vírus. Um grupo de alunos testou três soluções em uma superfície contaminada fictícia.",
+   "comando": "Que conclusão os dados e a informação da reportagem sustentam?",
+   "alts": [
+    "O sabão e o álcool desorganizam o capsídeo de proteína e matam as células do vírus, enquanto a água sozinha as remove bem",
+    "O sabão e o álcool desorganizam o envelope lipídico e inativam o vírus, e a água sozinha remove a maior parte das partículas",
+    "O sabão e o álcool desorganizam o envelope lipídico e inativam o vírus; a água sozinha remove poucas partículas",
+    "O sabão e o álcool alteram o material genético do vírus no interior, e a água sozinha remove poucas partículas"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Na Fiocruz, pesquisadores descrevem que alguns vírus, os bacteriófagos, infectam bactérias. Em um experimento, duas placas com a mesma bactéria receberam, uma, o bacteriófago, e a outra, apenas água estéril. Após 12 h, os cientistas mediram o crescimento bacteriano em cada placa.",
+   "comando": "Qual explicação é coerente com os resultados?",
+   "alts": [
+    "O vírus infectou as bactérias, usou sua maquinaria para se multiplicar e as destruiu, o que reduziu a quantidade",
+    "O vírus infectou as bactérias, usou sua maquinaria para se multiplicar e as fortaleceu, o que reduziu a quantidade",
+    "O vírus liberou nutrientes que as bactérias não conseguiram consumir, o que reduziu a quantidade",
+    "O vírus competiu com as bactérias por nutrientes, pois ambos são seres vivos celulares, o que reduziu a quantidade"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um estudante leu que o vírus HIV pode permanecer sem causar sintomas por anos, enquanto outro, o da dengue, causa sintomas em poucos dias. O professor explicou que alguns vírus alternam entre ciclo lítico e lisogênico, e a turma analisou dois ciclos de um vírus fictício.",
+   "comando": "Que diferença entre os ciclos o registro permite concluir?",
+   "alts": [
+    "No ciclo X o vírus fica integrado ao DNA e é copiado a cada divisão, sem sintomas; no Y ele se multiplica e rompe a célula",
+    "No ciclo Y o vírus fica integrado ao DNA e é copiado a cada divisão, sem sintomas; no X ele se multiplica e rompe a célula",
+    "No ciclo Y o vírus fica livre no citoplasma e a célula se rompe de imediato, causando sintomas; no X ele se integra ao DNA",
+    "No ciclo Y o vírus fica integrado ao DNA, mas impede a divisão da célula e causa sintomas; no X ele rompe a célula"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma aluna afirma: 'Vírus são seres vivos porque se reproduzem e sofrem mutações'. O colega responde: 'Não são, porque não têm células'. A professora trouxe a tabela e pediu um posicionamento fundamentado.",
+   "comando": "Use os dados para explicar por que a classificação do vírus é discutida pelos cientistas.",
+   "ref": "O vírus tem material genético, sofre mutação e evolui, como os seres vivos. Mas não tem células nem metabolismo e só se reproduz dentro de uma célula hospedeira, por isso é considerado um parasita intracelular obrigatório, de classificação discutida."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma UBS aplica a vacina contra a gripe todo ano, pois o vírus muda e a vacina precisa ser atualizada. Um paciente perguntou por que um antibiótico não resolve a gripe. A enfermeira usou a tabela abaixo para explicar de forma simples ao paciente.",
+   "comando": "Explique por que o antibiótico não é eficaz contra a gripe, relacionando com a estrutura do vírus.",
+   "ref": "Os antibióticos atuam em estruturas das bactérias, como a parede celular e os ribossomos. O vírus não tem essas estruturas e se reproduz dentro das células do hospedeiro, então o antibiótico não o atinge."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um vídeo mostra o vírus da dengue em partículas muito pequenas, medindo cerca de 50 nm. Um estudante de 7º ano disse que 'dá para ver o vírus ao microscópio da escola, que aumenta 400 vezes'. Um professor mostrou dados de tamanho e de aumento dos microscópios.",
+   "comando": "Calcule o tamanho aparente do vírus no microscópio da escola e diga se a afirmação é correta.",
+   "ref": "O tamanho aparente é 50 x 400 = 20.000 nm, abaixo de 100.000 nm. Assim, o vírus continua invisível, e para observá-lo é preciso um microscópio eletrônico, de aumento muito maior."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um agricultor viu folhas de tomateiro com manchas amareladas e achou que era fungo. Um técnico do Instituto Biológico constatou que era um vírus transmitido por moscas-brancas. Ele explicou que vírus de plantas e de animais têm estruturas básicas semelhantes.",
+   "comando": "Descreva as partes básicas de um vírus e explique como a mosca-branca ajuda o vírus a se espalhar.",
+   "ref": "O vírus tem material genético (DNA ou RNA) envolto por um capsídeo de proteína, às vezes com envelope. A mosca-branca age como vetor: leva as partículas de uma planta a outra, e o vírus se multiplica nas células da planta nova."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Durante uma pandemia, o governo orientou o uso de máscaras e a higiene das mãos. Um jornalista perguntou como essas medidas podem reduzir a transmissão de um vírus respiratório. A tabela mostra o risco estimado em três situações fictícias.",
+   "comando": "Interprete os dados e explique por que cada medida reduz a transmissão.",
+   "ref": "A máscara retém gotículas com vírus, reduzindo a quantidade que entra no nariz ou boca (de 100 para 30). Lavar as mãos remove ou inativa partículas, e juntas as medidas reduzem ainda mais o risco (15)."
+  }
+ ],
+ "4B|7º ANO|3": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Seu Antônio, morador de Campinas, teve dengue em 2019 e ficou aliviado ao saber que o vírus tinha sorotipo 1. Em 2024, um novo surto atingiu o bairro e ele ficou preocupado. Um estudo fictício mediu a proteção de pessoas curadas contra cada sorotipo.",
+   "comando": "Que explicação é compatível com os dados e permite que Seu Antônio tenha dengue novamente?",
+   "alts": [
+    "A primeira infecção protege contra os quatro sorotipos por toda a vida, e uma nova doença ocorre por baixa imunidade.",
+    "A proteção duradoura vale para o sorotipo que causou a doença, então uma infecção por outro sorotipo pode ocorrer.",
+    "O vírus do sorotipo 1 muda de forma a cada ano e deixa de ser reconhecido, mesmo que a pessoa tenha anticorpos.",
+    "A proteção é maior contra os sorotipos 3 e 4, que são mais fracos, e menor contra o sorotipo 1 que causou a doença."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma cidade paulista fictícia acompanhou a vacinação contra o sarampo e os casos confirmados da doença em quatro anos. A meta da secretaria de saúde para essa vacina é cobrir pelo menos 95% das crianças.",
+   "comando": "Qual interpretação dos dados é sustentada?",
+   "alts": [
+    "Com a cobertura abaixo da meta os casos aumentaram, e ao subir de novo eles caíram, mostrando proteção coletiva.",
+    "O aumento de casos em 2019 prova que a vacina perdeu eficácia, pois a doença ressurgiu justamente quando mais crianças tomaram.",
+    "Os casos caíram de 140 para 9 porque o vírus enfraqueceu, e a cobertura vacinal não teve relação com essa queda.",
+    "Em 2017 a cobertura de 88% já garantia proteção da comunidade, e os 12 casos foram uma coincidência sem relação com a vacinação."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "A administração de um parque estadual de São Paulo encontrou macacos mortos em uma área de mata e avisou os moradores do bairro vizinho. A vigilância confirmou o vírus da febre amarela nos animais, e a equipe de saúde analisou a situação.",
+   "comando": "Qual ação é adequada e qual é a justificativa correta, segundo os dados?",
+   "alts": [
+    "Eliminar os macacos do parque, porque eles transmitem o vírus diretamente às pessoas pelo contato com o animal.",
+    "Aguardar os primeiros casos humanos, pois a febre amarela se espalha quando o mosquito da dengue está presente.",
+    "Ampliar a vacinação no bairro, pois o vírus circula entre macacos e mosquitos da mata e pode chegar às pessoas.",
+    "Fazer controle de criadouros em casa, porque a vacina não é indicada quando ainda não há casos em pessoas."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Todo ano, campanhas anunciam uma nova vacina contra a gripe. Para entender o motivo, um laboratório fictício testou a vacina produzida para a cepa A em pessoas que depois foram expostas a duas cepas diferentes do vírus influenza.",
+   "comando": "Que explicação é compatível com os resultados do laboratório?",
+   "alts": [
+    "A vacina da gripe perde a validade no corpo em um ano, porque os anticorpos desaparecem por completo depois desse período.",
+    "O vírus da gripe se esconde no organismo e reaparece, por isso a vacina precisa ser repetida para eliminá-lo das células.",
+    "A vacina induz o vírus a se modificar, e por isso a proteção contra cepas diferentes da usada é menor do que contra a cepa A.",
+    "O vírus da gripe sofre mutações e surgem cepas diferentes, então a vacina precisa ser atualizada."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em uma escola de São Paulo, circulou o boato de que o HIV pode ser transmitido pela picada de mosquitos. Os estudantes compararam dados fictícios de três bairros sobre dengue, transmitida por mosquito, e sobre HIV.",
+   "comando": "Qual conclusão é sustentada pelos dados dos bairros?",
+   "alts": [
+    "O bairro A tem mais mosquitos e menos casos de HIV, o que mostra que o mosquito impede a transmissão do vírus.",
+    "O HIV tem taxa parecida nos bairros apesar de a dengue variar muito, o que não sustenta transmissão por mosquito.",
+    "A taxa de HIV é parecida nos bairros porque o vírus é transmitido da mesma forma que a dengue, por meio de vetores.",
+    "O HIV é pouco transmitido por mosquitos porque a dengue é maior em A, que tem a menor taxa de HIV entre os bairros."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Moradores de um bairro de Campinas fizeram uma vistoria em um quintal e anotaram a quantidade de larvas de Aedes aegypti em quatro recipientes. Eles querem organizar as ações da semana.",
+   "comando": "Interprete os dados e proponha duas ações de prevenção da dengue, explicando por que elas funcionam.",
+   "ref": "Os recipientes com água parada têm larvas, e a caixa tampada não, pois o mosquito não consegue pôr ovos nela. Devem-se esvaziar pratos e pneus e limpar calhas, para eliminar os criadouros, e tampar caixas, o que interrompe o ciclo do mosquito e reduz a transmissão do vírus."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Três escolas fictícias de um município tiveram um surto de sarampo. A secretaria registrou a porcentagem de alunos vacinados e o número de casos em cada escola. Uma mãe disse que só quem não se vacina corre risco.",
+   "comando": "Interprete os dados e explique por que a vacinação de muitas pessoas também protege quem não pôde se vacinar.",
+   "ref": "Quanto menor a proporção de vacinados, mais casos houve. Quando muitas pessoas estão imunes, o vírus encontra poucos suscetíveis para infectar e circula menos, o que protege também quem não pode se vacinar, como bebês, e mostra que a afirmação da mãe é incompleta."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "A febre amarela pode ocorrer em dois ciclos de transmissão. Um técnico de saúde resumiu em um quadro quem participa de cada um, para orientar a população que vive perto de áreas de mata.",
+   "comando": "Compare os dois ciclos e explique por que a vacinação continua importante mesmo sem casos de febre amarela nas cidades.",
+   "ref": "No ciclo silvestre o vírus passa entre macacos e mosquitos da mata, e uma pessoa pode ser picada ao visitar esses locais. Se uma pessoa infectada chegar a uma cidade com Aedes aegypti, o ciclo urbano pode recomeçar, por isso vacinar a população evita casos e novos surtos."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em um posto de saúde fictício, 100 pessoas com gripe foram divididas em dois grupos. Um grupo recebeu antibiótico por conta própria e o outro apenas repouso e líquidos. A enfermeira anotou o tempo médio até a melhora.",
+   "comando": "Interprete os resultados e explique por que o antibiótico não age contra a gripe.",
+   "ref": "O tempo de melhora foi igual nos dois grupos, então o antibiótico não ajudou. Antibióticos atuam contra bactérias, e a gripe é causada por vírus, que não têm metabolismo próprio e se reproduzem dentro das células do hospedeiro; usar antibiótico sem necessidade ainda favorece bactérias resistentes."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um pesquisador fictício estimou quantas pessoas, em média, um doente contagia em uma população sem imunidade. Os valores ajudam a entender por que a meta de vacinação não é a mesma para todas as doenças.",
+   "comando": "Interprete os valores e explique por que o sarampo exige uma cobertura vacinal muito alta para que a doença seja controlada.",
+   "ref": "Um doente de sarampo contagia em média 15 pessoas, bem mais que na gripe. Como o vírus se espalha rápido, é preciso que quase toda a população esteja imune para que cada doente encontre poucos suscetíveis e a transmissão seja interrompida."
+  }
+ ]
+}

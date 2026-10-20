@@ -1,0 +1,1328 @@
+{
+ "8º ANO|3|Relacionar padrões de circulação atmosférica e oceânica aos climas regionais.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma praia de Caraguatatuba, a turma mediu a temperatura da areia e da água do mar e a direção do vento em dois horários. Os alunos perceberam que a direção do vento mudou entre a tarde e a noite, mesmo sem previsão de frente fria, e querem explicar o fenômeno com base nas temperaturas.",
+   "comando": "Qual explicação é coerente com os dados para o vento da noite?",
+   "alts": [
+    "À noite a areia esfria mais que o mar, o ar sobre o mar fica mais quente e sobe, e o ar da terra ocupa o seu lugar.",
+    "À noite o mar esfria mais que a areia, o ar sobre a terra fica mais quente e sobe, e o ar do mar desloca-se para ocupar o lugar.",
+    "À noite o vento muda porque a Lua atrai o ar da terra em direção ao mar, já que a areia e a água ficam na mesma temperatura.",
+    "À noite o ar sobre o mar fica mais frio e desce, e por isso o vento sopra do mar para a terra, como ocorria à tarde."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em anos de El Niño, a água da superfície do oceano Pacífico fica mais quente que o normal. Uma estudante comparou a chuva em duas regiões do Brasil, em um trimestre de ano normal e em um trimestre de ano de El Niño, usando registros de estações meteorológicas da região.",
+   "comando": "Qual hipótese é sustentada pelos dados?",
+   "alts": [
+    "O aquecimento do Pacífico não influencia o Brasil, pois a chuva do Sul e a do Nordeste variam por motivos locais.",
+    "O aquecimento do Pacífico aumenta a evaporação e, por isso, a chuva sobe de modo parecido em qualquer região do Brasil.",
+    "O aquecimento do Pacífico altera a circulação do ar e redistribui a chuva entre as regiões do país.",
+    "O aquecimento do Pacífico reduz a chuva em todo o país, pois o ar quente impede a formação de nuvens sobre o continente."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Santos fica no litoral, ao pé da Serra do Mar, e a cidade de São Paulo fica no planalto, do outro lado da serra. Ventos úmidos vindos do oceano sopram para o interior durante boa parte do ano. Um estudante comparou a chuva anual de três pontos desse trajeto, que estão em altitudes diferentes.",
+   "comando": "Qual explicação é mais coerente com os dados?",
+   "alts": [
+    "A altitude é que determina a chuva: quanto mais alto o local, mais chove, e por isso a encosta recebe mais chuva que o litoral.",
+    "O ar úmido sobe a encosta, esfria e condensa, chovendo muito ali; ao chegar ao planalto, já perdeu parte da umidade.",
+    "O ar úmido desce a encosta, esquenta e condensa, chovendo muito ali; no planalto o ar chega mais úmido e chove mais.",
+    "A encosta recebe mais chuva por estar mais perto do mar, e o planalto recebe menos por estar mais longe do oceano."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Duas cidades estão na mesma latitude, 23° Sul, uma em cada lado do continente sul-americano. A cidade A fica na costa leste, banhada por uma corrente marinha quente, e a cidade B fica na costa oeste, banhada por uma corrente marinha fria. Os alunos compararam as médias climáticas das duas cidades.",
+   "comando": "Qual hipótese explica melhor a diferença de clima entre as cidades?",
+   "alts": [
+    "As correntes marinhas influenciam a temperatura da água, e a chuva das cidades depende dos ventos que sopram no continente.",
+    "A corrente fria aumenta a evaporação e leva vapor ao ar, que traz chuva a B; a corrente quente deixa o ar mais seco em A.",
+    "A diferença se deve à latitude, pois as cidades recebem quantidades diferentes de luz solar e, por isso, têm climas diferentes.",
+    "A corrente quente aumenta a evaporação e umedece o ar de A; a corrente fria deixa o ar de B mais seco e frio."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma escola de Campinas quer instalar um aquecedor e um aparelho de ar-condicionado na biblioteca. Um termômetro foi colocado em dois pontos da sala em um dia frio, com o aquecedor ligado, e os valores foram registrados para decidir a posição dos aparelhos.",
+   "comando": "Qual explicação do movimento do ar ajuda a decidir onde instalar cada aparelho?",
+   "alts": [
+    "O ar quente sobe e o frio desce, então o aquecedor deve ficar embaixo e o ar-condicionado no alto, para o ar circular.",
+    "O ar quente desce e o frio sobe, então o aquecedor deve ficar no alto e o ar-condicionado embaixo, para o ar circular.",
+    "O ar quente sobe e o frio desce, então o aquecedor deve ficar no alto e o ar-condicionado embaixo, para o ar circular.",
+    "O ar se distribui por igual em qualquer altura, então a posição dos aparelhos não influencia a circulação do ar na sala."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma frente fria passou pela cidade de São Paulo. A estação meteorológica da escola registrou pressão, temperatura e vento em três dias seguidos, e os alunos precisam interpretar o que aconteceu com o ar durante a passagem da frente.",
+   "comando": "Interprete os dados: o que a queda e depois a subida da pressão e da temperatura indicam sobre as massas de ar? O que se espera para o dia 4?",
+   "ref": "No dia 1 havia ar quente e pressão mais baixa; no dia 2 a frente fria chegou, com chuva e queda de pressão; no dia 3 uma massa de ar frio e mais densa trouxe pressão alta, vento do sul e queda de temperatura. No dia 4, o tempo deve ficar frio e seco, com céu limpo."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em um inverno seco na capital paulista, a poluição ficou presa perto do chão por vários dias. O meteorologista mostrou a temperatura do ar medida em diferentes alturas em uma madrugada e disse que havia uma inversão térmica sobre a cidade.",
+   "comando": "Explique por que, nessa condição, os poluentes ficam retidos perto do solo e que cuidado a população deve tomar.",
+   "ref": "Normalmente o ar quente perto do chão sobe e leva os poluentes. Com a inversão, existe uma camada mais quente acima de uma camada fria de baixo, e o ar frio e denso não sobe, impedindo a dispersão. Recomenda-se evitar exercício ao ar livre e reduzir emissões, como o uso de carros."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em um copo de água em temperatura ambiente, Fernanda pingou uma gota de água gelada com corante azul, que desceu até o fundo, e depois uma gota de água morna com corante vermelho, que subiu até a superfície. Ela comparou o experimento ao oceano, em que águas polares frias afundam.",
+   "comando": "Explique o movimento das gotas e relacione com a circulação dos oceanos e a influência no clima.",
+   "ref": "A água fria é mais densa e afunda, e a água morna é menos densa e sobe, formando correntes de convecção. No oceano, a água polar fria afunda e a água quente tropical se desloca em superfície, o que transporta calor pelo planeta e influencia o clima das regiões costeiras."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Pescadores de Cabo Frio notam que, em certos meses, a água do mar fica fria e a pesca aumenta. A professora explica que os ventos mudam a circulação do mar e mostra os dados de dois locais do litoral paulista e fluminense, comparando temperatura e captura.",
+   "comando": "Explique por que a água fria está associada a mais peixes e que papel o vento tem nesse processo.",
+   "ref": "O vento empurra a água quente da superfície para longe da costa, e a água fria do fundo, rica em nutrientes, sobe para ocupar o lugar. Os nutrientes alimentam o plâncton, que sustenta os peixes, e por isso a captura é maior onde a água é mais fria."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Manaus fica perto do equador e chove quase todos os dias, enquanto grandes desertos, como o Saara, estão perto de 25° de latitude. A professora diz que os dois fatos estão ligados à circulação do ar na atmosfera e pede que a turma relacione os dados.",
+   "comando": "Explique como o movimento do ar quente e úmido perto do equador ajuda a entender esses dois climas.",
+   "ref": "No equador o Sol aquece mais, o ar quente e úmido sobe, esfria e condensa, causando muita chuva. Esse ar, já seco, desloca-se em altitude para os lados e desce perto de 25° a 30° de latitude, onde o ar descendente é seco e dificulta a formação de nuvens, formando desertos."
+  }
+ ],
+ "9º ANO|1|Analisar fenômenos relacionados às ondas mecânicas e eletromagnéticas em situações do cotidiano.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma aula prática em Santo André, estudantes prenderam uma corda a uma parede e a esticaram com a mesma força em todos os testes. Ao mexer a mão mais rápido, mais ondas passavam por segundo. Eles mediram a frequência e o comprimento de onda e calcularam a velocidade como o produto dos dois valores.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "Com a corda esticada do mesmo jeito, a velocidade da onda foi igual (3 m/s) e o comprimento diminuiu ao aumentar a frequência",
+    "A velocidade da onda aumentou com a frequência, pois o comprimento de onda diminuiu de 1,50 m para 0,75 m",
+    "A velocidade da onda diminuiu com a frequência, pois a mão se moveu mais rápido e deixou a corda mais frouxa",
+    "A velocidade foi igual nos testes porque o comprimento de onda e a frequência permaneceram os mesmos"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Durante uma tempestade em Campinas, uma moradora viu o clarão de um relâmpago e, depois, ouviu o trovão. Ela marcou o tempo em um cronômetro e sabia que o som se propaga no ar a cerca de 340 m/s, enquanto a luz chega quase de imediato.",
+   "comando": "Qual estimativa da distância e a explicação associada estão corretas?",
+   "alts": [
+    "Cerca de 6 km: o intervalo de 6 s corresponde a uma velocidade do som de 1 km por segundo no ar",
+    "Cerca de 2 km: o intervalo de 6 s mede a diferença entre a velocidade da luz e a do som, em km por segundo",
+    "Cerca de 2 km: a luz chega quase de imediato e o intervalo de 6 s é o tempo do som (340 m/s) para percorrer a distância",
+    "Cerca de 340 m: o intervalo de 6 s mostra que som e luz demoraram o mesmo tempo para chegar à moradora"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Estudantes colocaram um lápis em um copo de vidro com água e viram que a parte dentro da água parecia deslocada, como se estivesse quebrada. Uma aluna levou uma tabela com a velocidade da luz em cada material para ajudar a explicar o que eles viram.",
+   "comando": "Que explicação é sustentada pelos dados?",
+   "alts": [
+    "A luz é totalmente refletida na superfície da água, e o lápis parece quebrado por causa da imagem refletida",
+    "A água absorve parte do lápis, de modo que a parte submersa parece menor e mais afastada do observador",
+    "O vidro do copo funciona como um espelho, e a imagem do lápis dentro dele é invertida e deslocada",
+    "A luz muda de velocidade ao passar do ar para a água e para o vidro, e isso desvia a direção dos raios"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma radiodifusora de São Paulo estuda como diferentes ondas eletromagnéticas são usadas na comunicação. Um técnico lista, em um quadro de frequências, quatro serviços e pergunta aos estagiários qual deles usa ondas com o menor comprimento de onda, sabendo que todas se propagam com a mesma velocidade no ar.",
+   "comando": "Que alternativa responde corretamente à pergunta do técnico e justifica?",
+   "alts": [
+    "A rádio AM, pois a menor frequência corresponde ao menor comprimento de onda, já que a velocidade é igual",
+    "A rede sem fio, pois, com mesma velocidade, a maior frequência corresponde ao menor comprimento de onda",
+    "A rádio FM, pois a frequência de 100 MHz é um valor intermediário e fornece o menor comprimento de onda",
+    "A telefonia 4G, pois usa um sinal digital e, por isso, as ondas têm comprimento menor que as de rádio"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um laboratório da escola, um professor colocou um despertador tocando dentro de uma campânula de vidro e uma pequena lâmpada acesa ao lado dele. Com uma bomba, foi retirando o ar de dentro e os alunos anotaram, a cada etapa, o que ouviam e o que viam.",
+   "comando": "Que conclusão é sustentada pelas observações?",
+   "alts": [
+    "O som precisa de um meio material para se propagar, enquanto a luz se propaga mesmo com pouco ar",
+    "A luz precisa de ar para se propagar, e o som se propaga melhor quando há menos matéria no caminho",
+    "O som e a luz precisam de ar para se propagar, mas a luz é menos afetada pela retirada do ar",
+    "O despertador deixou de tocar com a retirada do ar, o que mostra que o ar produz o som"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Estudantes de Osasco usaram uma lanterna e um espelho plano sobre uma folha com um transferidor desenhado. Eles mediram o ângulo do raio que chega ao espelho e o do raio refletido em três posições da lanterna.",
+   "comando": "Explique o que os dados mostram sobre a reflexão da luz e cite uma aplicação cotidiana dessa regularidade.",
+   "ref": "Os ângulos de chegada e de saída são iguais em todas as posições, mostrando que a luz refletida segue uma regra fixa, a lei da reflexão. Isso permite prever o caminho da luz em retrovisores de carros, espelhos de banheiro e periscópios."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um motorista que dirige pela Marginal Pinheiros percebeu que o sinal da rádio FM some quando o carro entra em um túnel e volta ao sair. Um passageiro anotou a intensidade do sinal em três pontos: antes do túnel (ponto 1), dentro dele (ponto 2) e depois (ponto 3).",
+   "comando": "Proponha uma explicação para a perda do sinal no túnel, relacionando-a às ondas eletromagnéticas e aos materiais.",
+   "ref": "As ondas de rádio são ondas eletromagnéticas que podem ser refletidas ou absorvidas por paredes de concreto, ferragens e solo, que dificultam sua passagem. Dentro do túnel, o sinal chega muito enfraquecido, e ao sair o carro volta a receber as ondas diretamente."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma aula com uma mola longa, uma aluna fez dois movimentos: balançou a ponta de um lado para o outro, vendo a perturbação correr pela mola, e depois empurrou e puxou a mola para frente e para trás, vendo regiões de espirais juntas e afastadas.",
+   "comando": "Compare os dois tipos de onda produzidos pela aluna e relacione um deles ao som no ar.",
+   "ref": "No primeiro movimento a mola oscila perpendicularmente à direção de propagação, formando onda transversal. No segundo, oscila na mesma direção, com compressões e rarefações, formando onda longitudinal, que é como o som se propaga no ar."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um tutor vende apitos que, segundo o rótulo, emitem som de 25.000 Hz, ouvido por cães e imperceptível para pessoas. Um estudante de Guarulhos pesquisou a faixa de frequências que alguns animais e as pessoas percebem.",
+   "comando": "Explique por que uma pessoa não ouve o apito, mas o cão ouve, usando os dados.",
+   "ref": "O apito emite ondas sonoras de 25.000 Hz, acima do limite de 20.000 Hz que as pessoas percebem, mas dentro da faixa de 40 a 45.000 Hz do cão. Assim, o som é uma onda mecânica que existe, mas só é ouvido por quem tem sensibilidade àquela frequência."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Há cem anos, uma notícia de São Paulo para o Rio de Janeiro era enviada por carta ou por telégrafo, com fios. Hoje, uma mensagem de celular chega em segundos, sem fio entre os aparelhos. Uma professora organizou os tempos médios de cada meio e pediu que a turma explicasse a mudança.",
+   "comando": "Explique como o uso das ondas eletromagnéticas transformou a comunicação humana, com base nos dados.",
+   "ref": "As ondas eletromagnéticas se propagam em altíssima velocidade e até no vácuo, sem precisar de fios entre os aparelhos. Por isso as mensagens deixaram de levar dias e passaram a chegar em segundos, permitindo comunicação à distância quase instantânea."
+  }
+ ],
+ "9º ANO|1|Aplicar as Leis Ponderais em reações químicas.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "No laboratório da escola, Júlia queimou uma bolinha de palha de aço sobre o prato de uma balança e anotou a massa antes e depois da queima. Ao ver que o resultado foi maior, um colega disse que a reação tinha criado matéria e que a Lei de Lavoisier estava errada.",
+   "comando": "Que explicação é coerente com os dados e com a conservação da massa?",
+   "alts": [
+    "a chama adicionou massa ao ferro, pois a energia térmica fornecida na queima é convertida em matéria sólida",
+    "o ferro produziu mais matéria ao oxidar, pois nas reações em sistema aberto a massa dos produtos é maior que a dos reagentes",
+    "o ferro reagiu com o oxigênio do ar e o gás ficou incorporado ao sólido, conservando a massa total",
+    "a balança acusou valor maior porque o ar quente empurra o prato, e a massa de ferro permaneceu igual a 10,0 g"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "A turma de Tadeu fez a reação entre bicarbonato de sódio e vinagre dentro de uma garrafa, em duas situações: com a garrafa aberta e com um balão preso ao gargalo. Mediram a massa do conjunto antes da mistura e dois minutos depois.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "alts": [
+    "a massa se perdeu na garrafa aberta, pois a reação destruiu parte dos reagentes e o balão impediu essa destruição",
+    "a massa se conserva com balão, pois ele cria o gás extra que compensa a massa dos reagentes consumidos",
+    "a massa depende do tamanho do recipiente, pois na garrafa aberta houve mais espaço para a reação consumir o vinagre",
+    "a massa se conservou: na garrafa aberta o gás escapou, e com o balão ele ficou retido e foi pesado"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre a formação da água, a professora apresentou resultados de três experimentos feitos com diferentes massas de hidrogênio e de oxigênio. Todos os gases reagiram completamente até a reação parar, e o que não reagiu foi anotado como sobra.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "alts": [
+    "a quantidade de água formada depende da massa de hidrogênio, pois o experimento II teve mais hidrogênio",
+    "a água se forma na proporção de 1 g de hidrogênio para 8 g de oxigênio, e o excesso sobra",
+    "a proporção entre as massas varia com as quantidades usadas, pois o excesso se transforma em mais água",
+    "a massa de água formada é igual à massa do reagente em maior quantidade, pois o excesso também reage"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma fábrica de cal em Cajamar aquece calcário, que se decompõe em cal virgem (usada em obras) e gás carbônico, liberado pela chaminé. Um técnico testou a decomposição em laboratório com 100 g de calcário puro e depois quis prever o resultado para uma carga de 500 kg.",
+   "comando": "Quais são as massas previstas de cal virgem e de gás carbônico para os 500 kg?",
+   "alts": [
+    "280 kg de cal virgem e 220 kg de gás",
+    "220 kg de cal virgem e 280 kg de gás",
+    "280 kg de cal virgem e 22 kg de gás",
+    "500 kg de cal virgem e 220 kg de gás"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Camila assou um bolo e pesou a forma com a massa crua e depois de assada. Notou que a massa diminuiu e perguntou se parte da matéria tinha desaparecido. A professora lembrou que o fermento libera gás carbônico e que a água da massa vira vapor durante o forno.",
+   "comando": "Qual interpretação do resultado NÃO é sustentada pelos dados?",
+   "alts": [
+    "a massa diminuiu porque o forno é um sistema aberto, e parte dos produtos saiu como gás",
+    "os 60 g a menos correspondem à massa de gás carbônico e de vapor de água que deixaram a forma",
+    "os 60 g que faltam deixaram de existir no cozimento, e por isso a massa total diminuiu",
+    "para provar a conservação, seria preciso medir também a massa dos gases liberados durante o cozimento"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na garrafa aberta, Tadeu mediu 250,0 g antes da reação entre bicarbonato e vinagre e 248,6 g depois. Na garrafa com balão, a massa ficou em 250,0 g. Um colega concluiu que a reação sumiu com 1,4 g de matéria.",
+   "comando": "Calcule a massa de gás que escapou e explique, com a Lei de Lavoisier, por que o colega está errado.",
+   "ref": "O gás que escapou tem 250,0 menos 248,6, ou seja, 1,4 g. Pela Lei de Lavoisier, em sistema fechado a massa total se conserva, e o balão mostra isso; na garrafa aberta, a matéria não sumiu, apenas passou para o ar como gás."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "A água se forma na proporção de 1 g de hidrogênio para 8 g de oxigênio. Uma aluna misturou 5 g de hidrogênio com 16 g de oxigênio e disse que obteria 21 g de água, porque a massa total é a soma das massas.",
+   "comando": "Corrija o raciocínio da aluna: calcule a massa de água formada e a massa do reagente que sobra.",
+   "ref": "Como a proporção é 1 g de hidrogênio para 8 g de oxigênio, 16 g de oxigênio reagem com 2 g de hidrogênio. Formam-se 18 g de água e sobram 3 g de hidrogênio que não reagem."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma feira de ciências, um grupo queimou palha de aço em dois sistemas sobre uma balança: um prato aberto e um frasco de vidro fechado. A massa do prato aberto aumentou, e a do frasco fechado não mudou.",
+   "comando": "Explique a diferença entre os resultados dos dois sistemas e o que ela mostra sobre a conservação da massa.",
+   "ref": "No prato aberto, o ferro reage com o oxigênio do ar e a massa medida aumenta, porque o gás entra no sólido sem ser pesado antes. No frasco fechado, o oxigênio já estava dentro e nada entra nem sai, e por isso a massa total se conserva."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "A fábrica de cal decompõe o calcário e libera gás carbônico. Em cada 100 kg de calcário, 56 kg viram cal e 44 kg saem como gás. A fábrica processa 2 000 kg de calcário por hora e a prefeitura quer estimar a emissão diária em turno de 8 horas.",
+   "comando": "Calcule a massa de gás carbônico emitida por hora e por turno e explique por que o gás tem massa mesmo sendo invisível.",
+   "ref": "Em 2 000 kg de calcário saem 44% de gás, ou seja, 880 kg por hora, que em 8 horas somam 7 040 kg por turno. O gás é matéria formada pela reação, com massa que vem do calcário, e por isso a massa dos produtos é igual à dos reagentes."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Ao queimar uma folha de papel de 5,0 g em uma colher de metal, Davi obteve 0,6 g de cinza e disse que 4,4 g de matéria foram destruídos. A professora sugeriu repetir a queima dentro de um frasco fechado e pesar tudo.",
+   "comando": "Explique para onde foi a massa que Davi achou perdida e o que ele deve observar no frasco fechado.",
+   "ref": "A massa não foi destruída: virou gases, como gás carbônico e vapor de água, que escaparam para o ar, e o oxigênio consumido também faz parte da conta. No frasco fechado, a massa total antes e depois da queima deve ser igual, pois os gases ficam retidos."
+  }
+ ],
+ "9º ANO|1|Identificar os modelos atômicos considerando sua historicidade e pesquisa científica.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em um experimento histórico, um feixe de partículas alfa (carga positiva) foi lançado contra uma folha de ouro muito fina, e um detector registrou para onde elas iam. Os números abaixo foram ajustados para cada 10.000 partículas lançadas.",
+   "comando": "Que conclusão sobre a estrutura do átomo é sustentada por esses resultados?",
+   "alts": [
+    "O átomo é quase todo espaço vazio, com uma pequena região central densa e positiva",
+    "O átomo é uma esfera maciça e indivisível, pois a maioria das partículas passa sem sofrer qualquer desvio",
+    "A carga positiva está espalhada por todo o átomo, e por isso as partículas sofrem pequenos desvios",
+    "Os elétrons são mais pesados que as partículas alfa e as fazem voltar, o que explica os 5 casos"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "No fim do século XIX, um cientista estudou raios produzidos em tubos de vidro com gás a baixa pressão, ligados a uma fonte elétrica. Ele trocou o gás e o metal dos eletrodos e verificou para onde o feixe era desviado por uma placa carregada.",
+   "comando": "Qual conclusão os resultados sustentam sobre a constituição dos átomos?",
+   "alts": [
+    "Os átomos de cada gás emitem partículas diferentes, pois o feixe depende do tipo de gás e do metal usados",
+    "O feixe é formado por partículas positivas, pois é atraído pela placa que tem carga positiva no tubo",
+    "Partículas negativas iguais existem nos átomos de materiais diferentes, que não são indivisíveis",
+    "Os átomos são esferas maciças, e o feixe é luz comum que se curva por causa da placa carregada"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Num espetáculo de fogos de artifício, a turma observou que cada sal metálico queimado produz uma cor característica de chama. Um professor pediu que associassem o fenômeno a um dos modelos atômicos estudados.",
+   "comando": "Qual modelo explica melhor a cor característica de cada elemento?",
+   "alts": [
+    "Rutherford, pois o elétron girando em torno do núcleo perde energia aos poucos e emite cores variadas",
+    "Thomson, pois as cargas negativas ficam presas na massa positiva e vibram emitindo cores do elemento",
+    "Dalton, pois átomos de elementos diferentes têm massas diferentes, e isso define a cor da chama",
+    "Bohr, pois níveis de energia definidos fazem cada elemento emitir uma luz própria"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em um museu de ciências de São Paulo, uma exposição apresenta a evolução das ideias sobre o átomo em uma linha do tempo. Uma estudante anotou as evidências usadas por cada cientista para propor ou mudar seu modelo.",
+   "comando": "Qual afirmação sobre a construção do conhecimento científico é sustentada pela linha do tempo?",
+   "alts": [
+    "Cada cientista descartou o anterior por erro de cálculo, e o modelo mais recente é uma descrição definitiva",
+    "Cada modelo surgiu para explicar novas evidências que o anterior não explicava, ampliando ideias",
+    "Os modelos surgiram sem relação entre si, e cada cientista partiu do zero ignorando os experimentos de antes",
+    "O modelo de Dalton perdeu utilidade, pois deixou de explicar as proporções das massas nas reações químicas"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma turma estudou as partículas do átomo usando o modelo de Rutherford-Bohr. Depois, quatro estudantes escreveram interpretações do quadro, mas uma delas contraria os dados fornecidos.",
+   "comando": "Qual interpretação NÃO é sustentada pelo quadro?",
+   "alts": [
+    "A massa do átomo se divide igualmente entre núcleo e eletrosfera, pois as cargas se equilibram",
+    "Um átomo neutro tem número de prótons igual ao de elétrons, de modo que a soma das cargas é zero",
+    "A massa do átomo está quase toda no núcleo, onde ficam os prótons e os nêutrons",
+    "O nêutron aumenta a massa do átomo sem alterar sua carga elétrica total, que permanece neutra"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Um aluno esfregou uma régua de plástico no cabelo seco e ela atraiu pedacinhos de papel. Ele perguntou se o modelo de átomo como esfera maciça e indivisível, de Dalton, consegue explicar a atração, e o professor falou de um modelo posterior que considerava partículas com carga.",
+   "comando": "Explique por que o modelo de Dalton não explica o fenômeno e como o modelo de Thomson ajuda a explicá-lo.",
+   "ref": "No modelo de Dalton o átomo é maciço e indivisível, sem partículas com carga que possam ser transferidas, então não explica a eletrização. No modelo de Thomson o átomo tem elétrons de carga negativa em uma esfera positiva, e elétrons podem passar de um corpo para outro, deixando-os com cargas e atraindo o papel."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Se o modelo de Thomson (esfera positiva com elétrons embutidos, como passas num bolo) estivesse correto, os cientistas esperavam que as partículas alfa atravessassem a folha de ouro com desvios muito pequenos. Mas os resultados reais foram outros, como mostra o registro de 10.000 partículas.",
+   "comando": "Explique por que os resultados contrariam o modelo de Thomson e o que levaram Rutherford a propor.",
+   "ref": "Pelo modelo de Thomson, a carga positiva estaria espalhada e nenhuma partícula voltaria. Como algumas foram muito desviadas e outras voltaram, deve haver uma região pequena, densa e positiva, o núcleo, com a maior parte do átomo vazia, como Rutherford propôs."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em um espetáculo de fogos, o amarelo do sódio aparece quando o sal é aquecido. Uma estudante leu que isso acontece porque os elétrons recebem energia e depois a devolvem, mas não compreendeu por que a cor é sempre a mesma para um mesmo elemento.",
+   "comando": "Explique, pelo modelo de Bohr, por que cada elemento emite sempre a mesma cor.",
+   "ref": "No modelo de Bohr os elétrons ocupam níveis de energia definidos. Ao receber energia, o elétron salta para um nível mais afastado e, ao voltar, devolve a diferença de energia na forma de luz, e como os níveis são característicos de cada elemento, a cor emitida é sempre a mesma."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Quando se descobriu que o átomo de hélio tem massa cerca de 4 vezes maior que a do hidrogênio, mas possui apenas 2 prótons, os cientistas ficaram intrigados: os modelos da época não conseguiam explicar a diferença de massa. Anos depois, foi identificada uma partícula sem carga no núcleo.",
+   "comando": "Explique como essa descoberta mostra que os modelos atômicos são revisados e como ela resolve o problema de massa.",
+   "ref": "Os modelos são revisados quando novas evidências não cabem neles, e o dado de massa do hélio exigiu mudança. Os nêutrons, partículas sem carga e de massa semelhante à do próton, explicam o excedente: o hélio tem 2 prótons e 2 nêutrons, somando massa 4."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Na aula, grupos fizeram modelos de átomo com massinha, representando uma esfera maciça, uma esfera com 'passas' e um núcleo com elétrons em órbita. Um aluno disse que, como os modelos antigos foram superados, não precisam mais ser estudados.",
+   "comando": "Avalie a afirmação, explicando o que um modelo científico consegue e o que não consegue representar.",
+   "ref": "Um modelo é uma representação simplificada que explica certos fenômenos e tem limites, por isso pode ser substituído quando novas evidências aparecem. Os modelos antigos ainda importam, pois mostram como a ciência se constrói e continuam úteis para explicar alguns fatos, como a conservação de massa nas reações (Dalton)."
+  }
+ ],
+ "9º ANO|1|Identificar substâncias, misturas e transformações da matéria.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em um laboratório de escola, quatro substâncias puras foram identificadas apenas por letras. A turma recebeu suas temperaturas de fusão e de ebulição e preparou tubos fechados com cada uma, que foram mergulhados em um banho de água a 90 °C.",
+   "comando": "Qual previsão sobre o estado físico das substâncias no banho é correta?",
+   "alts": [
+    "A está no estado gasoso e D no líquido, pois 90 °C passa a fusão de A e também a fusão de D",
+    "B está no estado gasoso e C no líquido, pois 90 °C passa a ebulição de B e a fusão de C",
+    "B está no estado líquido e C no sólido, pois 90 °C não alcança a ebulição de B nem a fusão de C",
+    "A está no estado líquido e C no gasoso, pois 90 °C passa a fusão de A e a ebulição de C"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma amostra sólida foi aquecida lentamente em banho-maria, e um termômetro registrou a temperatura a cada dois minutos. Entre 2 e 6 minutos, a temperatura ficou parada, embora a chama continuasse acesa, e a amostra foi virando líquido.",
+   "comando": "O que explica a temperatura constante nesse intervalo e o que isso indica sobre a amostra?",
+   "alts": [
+    "A energia recebida rompe a organização do sólido na fusão, e a temperatura fixa sugere uma substância pura",
+    "A chama perdeu força nesse intervalo, e a amostra ficou sem receber energia até o aquecimento voltar",
+    "As partículas pararam de se mover durante a fusão, e por isso o termômetro registrou a mesma temperatura",
+    "A temperatura parada mostra que a amostra é uma mistura, pois mistura não varia a temperatura ao fundir"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Quatro situações do cotidiano foram testadas para saber se havia formação de novas substâncias. Em cada uma, a turma tentou recuperar a substância inicial por evaporação, resfriamento ou outro método simples, e anotou o resultado.",
+   "comando": "Qual classificação das situações 1 a 4 é a mais adequada?",
+   "alts": [
+    "As situações 1 e 2 são transformações físicas, pois o sal e o bicarbonato desaparecem e podem se misturar a líquidos",
+    "As situações 2 e 3 são transformações químicas, pois há bolhas e também mudança de estado físico da cera",
+    "As situações 1 e 3 são transformações físicas e as 2 e 4, químicas, pois nestas surgem novas substâncias",
+    "As situações 3 e 4 são transformações físicas, pois a cera e o pavio mudam de forma ao receber calor"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Dois líquidos transparentes, X e Y, foram aquecidos até ferver em frascos idênticos com termômetro. A turma anotou a temperatura a cada dois minutos durante a fervura e quer saber qual dos dois pode ser uma substância pura e qual é mistura de líquidos.",
+   "comando": "Qual interpretação é sustentada pelos dados?",
+   "alts": [
+    "Y é mistura de líquidos com pontos de ebulição diferentes, pois a temperatura sobe durante a fervura",
+    "X é mistura, porque ferve em temperatura alta, e Y é substância pura, pois ferve em temperatura mais baixa",
+    "Y é substância pura, pois a temperatura sobe quando o líquido recebe mais calor durante a fervura",
+    "X e Y são substâncias diferentes, pois a fervura de cada um começou em momentos distintos do aquecimento"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em uma aula, três copos com a mesma quantidade de água, a 10 °C, 25 °C e 60 °C, receberam uma gota de corante no centro. Sem mexer, a turma cronometrou o tempo até a água ficar com a cor uniforme e quis explicar o resultado usando o modelo de partículas.",
+   "comando": "Qual explicação do resultado é coerente com o modelo de partículas?",
+   "alts": [
+    "O calor faz as partículas de água aumentarem de tamanho, e elas empurram o corante para as bordas do copo",
+    "A água quente tem mais partículas por litro, e por isso o corante encontra mais partículas e se mistura antes",
+    "A temperatura maior aumenta a agitação das partículas, que espalham o corante mais depressa sem mudar sua natureza",
+    "O corante reage com a água quente e forma uma nova substância, que se espalha mais rápido pelo copo todo"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na cidade de Santos, ao nível do mar, a água ferve a 100 °C. Em Campos do Jordão, situada na serra, uma panela aberta com água fervendo cozinha o feijão mais devagar. Já a panela de pressão cozinha mais rápido que a panela aberta em qualquer cidade.",
+   "comando": "Explique por que a temperatura de ebulição da água muda com a altitude e como a panela de pressão aproveita esse fenômeno.",
+   "ref": "Em maiores altitudes a pressão atmosférica é menor, então as moléculas escapam do líquido com menos energia, e a água ferve em temperatura mais baixa. Na panela de pressão a pressão interna aumenta, a água ferve acima de 100 °C e o alimento cozinha mais rápido."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma estação de tratamento, a água barrenta de um rio passa por etapas. Os técnicos explicaram à turma que, ao final, ainda restam sais dissolvidos, que a filtração não remove, e que o cloro é adicionado no último passo.",
+   "comando": "Diga o tipo de mistura (heterogênea ou homogênea) no início e depois da filtração, e o que o cloro faz.",
+   "ref": "No início é mistura heterogênea (galhos e areia visíveis), e a decantação e a filtração retiram os sólidos. Após a filtração, a água com sais dissolvidos é mistura homogênea, pois os sais estão separados em partículas muito pequenas. O cloro causa uma transformação química que desinfeta a água."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma confeiteira fez duas massas de bolo iguais, mas só uma recebeu fermento químico (bicarbonato). Ambas foram ao forno nas mesmas condições. A turma mediu o volume e a massa antes e depois e notou que o bolo com fermento cresceu muito mais.",
+   "comando": "Explique por que o bolo com fermento cresceu e que tipo de transformação ocorreu. Justifique a diminuição da massa.",
+   "ref": "O fermento reage com o calor e com ácidos da massa e forma gás carbônico, uma nova substância; é transformação química. O gás fica preso na massa e se expande no forno, e o bolo cresce. A massa diminui porque a água evapora e parte do gás escapa."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Maria guarda bolinhas de naftalina nas gavetas. Ela notou que as bolinhas diminuem de tamanho e que a gaveta tem um cheiro forte, mas nunca viu poças de líquido. Uma turma pesou uma bolinha a cada dez dias.",
+   "comando": "Nomeie a mudança de estado envolvida e explique o que ocorre com as partículas e por que sentimos o cheiro.",
+   "ref": "É a sublimação, passagem direta do sólido para gás, sem formar líquido. As partículas da superfície ganham energia suficiente para escapar e se espalham pelo ar da gaveta, então sentimos o cheiro. A substância continua a mesma, e a transformação é física."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma joalheria vende alianças de ouro puro e de ouro 18 quilates, que leva cobre e prata na composição. Ao testar a fusão de uma peça, o técnico viu que ela começou a amolecer em uma temperatura e só ficou totalmente líquida em outra.",
+   "comando": "Argumente se o ouro 18 quilates é substância pura ou mistura, citando evidências dos dados.",
+   "ref": "É uma mistura (liga metálica homogênea): tem três componentes e funde em uma faixa de temperaturas (880 a 940 °C). Uma substância pura, como o ouro puro, funde em uma temperatura definida (1064 °C)."
+  }
+ ],
+ "9º ANO|1|Relacionar a organização dos átomos aos estados físicos da matéria e suas propriedades.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "No laboratório de uma escola técnica de Sorocaba, uma professora entregou aos alunos uma tabela com as temperaturas de fusão e de ebulição de quatro substâncias, medidas ao nível do mar. Em uma atividade, os alunos devem prever o estado físico de cada uma dentro de um banho de água quente mantido a 90 °C.",
+   "comando": "Qual alternativa descreve corretamente o estado físico das substâncias a 90 °C?",
+   "alts": [
+    "O etanol e a água estão no estado gasoso, enquanto o mercúrio e o naftaleno permanecem no estado líquido.",
+    "O etanol está no estado gasoso, enquanto a água, o mercúrio e o naftaleno estão no estado líquido.",
+    "O etanol está no estado líquido, e a água, o mercúrio e o naftaleno permanecem no estado sólido.",
+    "O etanol e o naftaleno estão no estado gasoso, enquanto a água e o mercúrio estão no estado líquido."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma aula prática, os alunos aqueceram de modo contínuo, em banho com chama constante, cubos de gelo de água pura e anotaram a temperatura a cada três minutos. Eles estranharam que, durante um período, o termômetro não subiu, mesmo com a chama acesa o tempo todo.",
+   "comando": "Que explicação é compatível com o patamar de temperatura observado nos registros?",
+   "alts": [
+    "A energia recebida está sendo usada para reorganizar as partículas na mudança de estado, e não para agitá-las mais.",
+    "As partículas pararam de se mover nesse intervalo, e por isso o termômetro registrou a mesma temperatura durante nove minutos.",
+    "A chama deixou de transferir energia ao gelo, pois o material já tinha atingido o limite de calor que podia receber.",
+    "O gelo perdeu energia para o ar da sala, e esse equilíbrio manteve a temperatura estável até o final da mudança de estado."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um experimento, um professor usou duas seringas sem agulha, uma contendo ar e a outra contendo água, ambas com 20 mL e com a ponta tampada. Um aluno empurrou o êmbolo de cada seringa com a mesma força e registrou o volume final. A turma deve explicar o resultado usando o modelo de partículas.",
+   "comando": "Qual explicação interpreta corretamente os resultados registrados?",
+   "alts": [
+    "No ar as partículas se achatam quando sofrem pressão, e na água elas não conseguem se achatar por serem maiores e mais rígidas.",
+    "O ar diminui de volume porque suas partículas se aproximam, e a água não muda porque suas partículas estão presas em posições fixas.",
+    "As partículas do ar são mais leves que as da água, e por isso o êmbolo desloca o ar com mais facilidade durante o teste.",
+    "No ar as partículas estão muito afastadas e podem se aproximar, e na água elas já estão praticamente encostadas."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Dona Marta mora em Santos e cozinha feijão em 40 minutos. Sua filha, que mora em Campos do Jordão, a 1600 m de altitude, notou que o mesmo feijão demora bem mais para cozinhar na panela comum, mesmo com a água fervendo. Uma pesquisa sobre a temperatura de ebulição da água foi feita em cidades de altitudes diferentes.",
+   "comando": "Qual explicação é sustentada pelos dados da pesquisa?",
+   "alts": [
+    "Com a altitude, a água ferve em temperatura menor porque suas ligações entre átomos se rompem e ela vira uma substância diferente.",
+    "Em cidades altas faz mais frio, e a água fervendo perde energia para o ar mais depressa, o que atrasa o cozimento do feijão.",
+    "Com a altitude, a pressão do ar diminui e a água ferve em temperatura menor, então o feijão recebe menos energia por minuto.",
+    "Em cidades altas há menos água disponível nas panelas, e a pequena quantidade de líquido demora mais para transferir energia ao feijão."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma bolinha de naftalina foi colocada em uma gaveta fechada de um guarda-roupa, em Campinas, e sua massa foi medida semanalmente. Em quatro semanas ela diminuiu bastante, e não havia líquido na gaveta nem resíduos no fundo. Os alunos discutem o que aconteceu com a massa que sumiu.",
+   "comando": "Qual explicação é cientificamente adequada para o desaparecimento da massa?",
+   "alts": [
+    "As partículas da superfície ganharam energia e passaram direto do sólido para o gás, indo para o ar, sem se destruir.",
+    "A naftalina derreteu lentamente e o líquido formado foi absorvido pela madeira da gaveta, o que explica a perda de massa.",
+    "As partículas de naftalina foram destruídas pelo calor do ambiente, e a matéria deixou de existir, diminuindo a massa.",
+    "Os átomos da naftalina se transformaram em outro elemento ao se aquecerem, e esse elemento novo é leve demais para ser pesado."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Rodrigo serviu suco com gelo em um copo de vidro fechado com tampa transparente e deixou sobre a mesa da cozinha em um dia úmido de verão. Depois de alguns minutos, apareceram gotas de água do lado de fora do copo, e ele achou que o vidro estava vazando.",
+   "comando": "Explique de onde vieram as gotas, usando o que acontece com as partículas de água, e diga como os dados do teste ajudam a descartar o vazamento.",
+   "ref": "As gotas vêm do vapor de água do ar, cujas partículas perdem energia ao encostar na parede fria e passam ao estado líquido (condensação). Não há vazamento porque o copo com suco em temperatura ambiente não tem gotas, e o pote de metal fechado também as apresenta, então o fator é a parede fria."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "O gás de cozinha usado nas casas de São Paulo é vendido em botijões de aço. Dentro do botijão fechado, o gás fica comprimido e boa parte dele se encontra no estado líquido. Quando o registro é aberto, o líquido vira gás e sai pela mangueira. Uma pesquisa mostrou os volumes envolvidos.",
+   "comando": "Explique, usando o modelo de partículas, por que é possível guardar tanta matéria em um botijão pequeno e o que muda quando o gás sai para o ambiente.",
+   "ref": "No gás as partículas estão muito afastadas, e por isso 1 kg ocupa centenas de litros. Sob pressão elas são aproximadas até formarem um líquido, em que ficam próximas e ocupam pouco espaço. Ao sair do botijão a pressão cai e as partículas se afastam e se espalham no ambiente."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma indústria de Jundiaí testa uma substância pura e anota o comportamento dela em três temperaturas, usando um recipiente transparente com marcas de volume. A equipe técnica quer relacionar o que viu com a organização das partículas em cada situação.",
+   "comando": "Identifique o estado físico da substância em cada temperatura e explique cada observação pelo arranjo e pelo movimento das partículas.",
+   "ref": "A -20 °C a substância é sólida: as partículas estão muito próximas e presas em posições fixas, apenas vibrando. A 25 °C é líquida: as partículas continuam próximas, mas deslizam umas sobre as outras, e por isso o líquido toma a forma do recipiente. A 120 °C é gasosa: as partículas estão afastadas e se movem livremente, ocupando todo o recipiente."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Os fios de alta tensão que atravessam a Marginal Tietê e as estradas do interior ficam um pouco mais frouxos nos dias quentes do que nos dias frios. Engenheiros mediram o comprimento de um trecho de cabo de aço, inicialmente com 100 m, em diferentes temperaturas.",
+   "comando": "Explique o que acontece com o comprimento do cabo e relacione essa mudança com o comportamento dos átomos do material.",
+   "ref": "O cabo aumenta de comprimento quando esquenta (dilatação). Com mais energia, os átomos do metal vibram com maior intensidade e ocupam um espaço maior, afastando-se um pouco uns dos outros, sem mudar de estado. Por isso o cabo fica mais frouxo no calor."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em um laboratório, um aluno pingou uma gota de corante em dois copos iguais com a mesma quantidade de água parada: um com água a 10 °C e outro com água a 40 °C. Ele cronometrou quanto tempo o corante levou para colorir toda a água de modo uniforme.",
+   "comando": "Explique, usando o modelo de partículas, por que o tempo foi diferente nos dois copos.",
+   "ref": "Na água mais quente as partículas têm mais energia e se movem com maior rapidez, colidindo mais e misturando o corante entre elas em menos tempo. Na água fria o movimento é menor e a mistura demora mais."
+  }
+ ],
+ "9º ANO|2|Analisar a aplicação da genética e da biotecnologia na sociedade, considerando aspectos éticos, científicos e tecnológicos.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Um laboratório de biotecnologia testou formas de produzir insulina humana em microrganismos. Em cada tubo, células foram cultivadas em condições iguais e, depois de dois dias, a equipe mediu se havia insulina humana no meio de cultura, registrando também se o gene humano estava inserido.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "A bactéria passou a produzir insulina porque foi exposta ao meio de cultura, sem relação com o gene humano inserido.",
+    "A produção de insulina humana depende da presença do gene inserido, e células de espécies diferentes conseguem ler esse gene.",
+    "A insulina é produzida por bactérias, pois a levedura modificada recebeu o gene mas não é capaz de produzi-la.",
+    "A bactéria comum não produz insulina porque não tem proteínas, e o gene inserido fornece uma proteína pronta."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma empresa de sementes testou soja convencional e soja transgênica, que recebeu um gene de resistência a um herbicida. Em três parcelas, foram medidas as plantas daninhas e a produtividade da soja, com e sem a aplicação do herbicida, para avaliar o desempenho das variedades.",
+   "comando": "Qual afirmação NÃO é sustentada pelos dados?",
+   "alts": [
+    "A soja transgênica é segura para o consumo humano, pois produziu mais que a convencional na presença do herbicida.",
+    "A soja convencional sofre prejuízo com o herbicida, pois sua produtividade caiu de 2,0 para 0,6 t/ha na presença dele.",
+    "O herbicida controla as plantas daninhas, pois nas parcelas tratadas há 3 plantas daninhas contra 40 sem tratamento.",
+    "A resistência permite usar o herbicida sem perder a produção, pois a variedade transgênica produziu 3,1 t/ha tratada."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um criador de gado do interior paulista clonou um touro campeão de produção de leite. Ele afirma que os quatro clones, por terem o mesmo DNA do touro, produzirão a mesma quantidade de leite. Os clones foram criados em fazendas diferentes, com pastagens distintas, e a produção de cada um foi anotada.",
+   "comando": "Qual interpretação do resultado explica a variação observada entre os clones?",
+   "alts": [
+    "Os clones não herdam as características do touro, pois o DNA não influencia a produção de leite, que depende da pastagem.",
+    "Os clones têm genes iguais, então a variação mostra que o clone 3 sofreu mutação que reduziu a produção de leite do animal.",
+    "Os clones têm genes diferentes, pois a clonagem produz cópias imperfeitas, e a variação se deve à diferença de DNA entre eles.",
+    "Os clones têm genes iguais, mas o ambiente, como alimentação e sombra, também influencia a produção, e por isso o leite varia."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em uma família, os pais têm a característica normal, mas um dos quatro filhos tem uma doença genética de herança recessiva. A geneticista da UBS explica a probabilidade de um possível quinto filho, usando a letra A para o alelo normal e a para o alelo da doença, e mostra um quadro com os dados.",
+   "comando": "Qual alternativa indica os genótipos dos pais e a chance de o próximo filho ser afetado?",
+   "alts": [
+    "Pais Aa e Aa; a chance de o próximo filho ser afetado é de 50%, pois cada pai transmite um alelo e metade deles carrega a doença.",
+    "Pais Aa e Aa; a chance de o próximo filho ser afetado é de 0%, pois a proporção de 3 normais para 1 afetado já se completou.",
+    "Pais Aa e Aa; a chance de o próximo filho ser afetado é de 25%, independentemente do que aconteceu com os filhos anteriores.",
+    "Um pai AA e outro aa; a chance de o próximo filho ser afetado é de 50%, pois o genótipo aa transmite o alelo da doença."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um caso de investigação de paternidade, um laboratório comparou marcadores de DNA da mãe, da criança e do suposto pai. A criança herda um alelo de cada genitor em cada marcador, e os números da tabela indicam o tamanho de cada alelo analisado no exame.",
+   "comando": "Qual conclusão é correta com base na tabela?",
+   "alts": [
+    "O resultado é inconclusivo, pois o marcador M3 pode ser desconsiderado quando os marcadores M1 e M2 apontam compatibilidade.",
+    "O suposto pai é provável, pois dois de três marcadores são compatíveis, o que corresponde a cerca de 66% de chance de paternidade.",
+    "O suposto pai é confirmado, pois a criança herdou o alelo 15 no marcador M1 e o alelo 10 no marcador M2 desse homem.",
+    "O suposto pai é excluído, pois a criança tem o alelo 13 no marcador M3, que não vem da mãe e não pode vir de um pai 14 e 14."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma prefeitura vai decidir se compra sementes de milho transgênico, que produz uma proteína contra lagartas, para famílias agricultoras. Em um teste, o lote A (convencional) e o lote B (transgênico) foram acompanhados na mesma época e no mesmo tipo de solo, com registro dos resultados.",
+   "comando": "Apresente um argumento científico a favor do milho transgênico com base nos dados e uma questão que ainda deveria ser investigada antes da decisão.",
+   "ref": "A favor: o lote B teve menos ataque (3% contra 30%), exigiu menos inseticida e produziu mais. Mas é preciso investigar os efeitos de longo prazo sobre insetos benéficos, o risco de as lagartas ficarem resistentes e o custo das sementes para pequenos agricultores."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um grupo de pesquisa propõe soltar mosquitos Aedes modificados em laboratório, para que seus descendentes não cheguem à fase adulta e a população da dengue diminua. No teste-piloto, dois bairros de uma cidade paulista foram comparados por armadilhas de larvas.",
+   "comando": "Explique, com base nos dados, o possível benefício dessa tecnologia e apresente um risco ou cuidado ético que a comunidade deve discutir.",
+   "ref": "O bairro com mosquitos modificados teve cerca de quatro vezes menos larvas, indicando redução da população do mosquito e menor risco de dengue. É preciso informar a população, obter autorização e acompanhar possíveis efeitos sobre o ambiente e a cadeia alimentar."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Antes da biotecnologia moderna, agricultores já melhoravam plantas por seleção artificial: a cada safra escolhiam as sementes das plantas mais produtivas para plantar na seguinte. Um produtor registrou o resultado de cinco safras de uma variedade de feijão.",
+   "comando": "Explique como a seleção artificial aumentou a produtividade e compare esse processo com a transgenia quanto ao modo de alterar os genes.",
+   "ref": "A cada safra o produtor escolheu e cruzou as plantas com características desejadas, e os genes ligados a elas ficaram mais comuns, aumentando a produtividade aos poucos. Na transgenia, o gene de interesse, mesmo de outra espécie, é inserido diretamente no DNA, em um processo mais rápido e dirigido."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em um cruzamento de ervilhas, Mendel usou a cor da flor, em que a cor roxa (R) é dominante sobre a branca (r). Uma planta de flor roxa de genótipo desconhecido foi cruzada com plantas de flor branca, e a descendência foi contada e registrada pelo pesquisador.",
+   "comando": "Descubra o genótipo da planta roxa e justifique usando os números do cruzamento.",
+   "ref": "A planta roxa é Rr (heterozigota). O cruzamento com rr (branca) produz metade de descendentes Rr (roxos) e metade rr (brancos), o que combina com 52 roxas e 48 brancas. Se fosse RR, todas seriam roxas."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um aplicativo vende testes genéticos feitos com amostra de saliva e guarda os dados dos clientes. Três instituições pediram acesso ao banco de dados, e a empresa precisa decidir quais pedidos aceitar, ouvindo os clientes e a sociedade.",
+   "comando": "Avalie os pedidos do quadro: qual uso é eticamente aceitável e qual representa maior risco aos clientes? Justifique.",
+   "ref": "O uso aceitável é a pesquisa, desde que os clientes tenham autorizado e os dados sejam protegidos. Os pedidos do plano de saúde e da empresa contratante geram risco de discriminação com base em informações genéticas, violando a privacidade e a igualdade de oportunidades."
+  }
+ ],
+ "9º ANO|2|Analisar os efeitos e aplicações das radiações ionizantes no organismo humano e na área médica.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Numa apresentação sobre o espectro eletromagnético, uma estudante de Mogi das Cruzes organizou cinco tipos de radiação em ordem de frequência. Ela contou que apenas as radiações de energia muito alta, que arrancam elétrons dos átomos e podem alterar moléculas de células vivas, são chamadas de ionizantes, e que a energia aumenta com a frequência.",
+   "comando": "Qual alternativa identifica corretamente a radiação ionizante e a sua justificativa?",
+   "alts": [
+    "Raios X, pois têm a maior frequência entre as listadas e energia suficiente para ionizar átomos",
+    "Micro-ondas, porque aquecem a água dos alimentos e, com isso, quebram as moléculas de seus constituintes",
+    "Infravermelho, porque é emitido por corpos quentes e a energia dele aquece e ioniza o material atingido",
+    "Luz visível, porque sensibiliza as células da retina e, por isso, é capaz de alterar o material genético"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma clínica de Campinas explicou a pacientes, em um cartaz, a dose de radiação de alguns exames, comparada com a radiação natural que todas as pessoas recebem do ambiente em um ano. Um paciente comentou que qualquer dose acima de zero tornava os exames perigosos e pediu uma avaliação mais cuidadosa.",
+   "comando": "Qual interpretação dos valores apresentados é a mais adequada?",
+   "alts": [
+    "A radiografia representa uma dose maior que a natural de um ano, e por isso deve ficar para emergências",
+    "A radiografia equivale a poucos dias de radiação natural, e a tomografia exige pesar benefício do diagnóstico e risco",
+    "A tomografia tem a menor dose entre os três itens, pois é a mais detalhada, e a radiografia, a maior dose",
+    "A radiação natural é inofensiva, e os exames médicos também, já que as doses de ambos são comparáveis"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Num curso de proteção radiológica, uma turma de Santos usou um detector com uma fonte radioativa fictícia, medindo as contagens por minuto em diferentes situações. O professor perguntou como combinar distância e blindagem para reduzir a exposição de um profissional que trabalha perto dessa fonte.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "alts": [
+    "A distância não altera a exposição, pois as contagens permanecem altas, e a placa de chumbo é o que a reduz",
+    "A placa de chumbo reduz a exposição quando está a 4 m, pois o chumbo é eficaz em grandes distâncias",
+    "Aumentar a distância reduz bastante a exposição e a placa de chumbo reduz ainda mais, então combinar protege melhor",
+    "Dobrar a distância reduz a exposição pela metade em cada passo, de modo que a placa de chumbo é desnecessária"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma equipe de radioterapia explicou a uma turma de visita que, no tratamento de certos tumores, a radiação é aplicada em vários feixes que partem de ângulos diferentes e se cruzam no tumor. Cada feixe, ao atravessar o corpo, entrega a mesma dose por onde passa.",
+   "comando": "Por que o uso de vários feixes de ângulos diferentes é vantajoso, segundo os dados?",
+   "alts": [
+    "As doses se somam apenas no cruzamento, e cada região saudável recebe uma fração da dose entregue no tumor",
+    "Os feixes se anulam nas regiões saudáveis, então os tecidos saudáveis nunca recebem radiação durante o tratamento",
+    "Cada feixe entrega no tumor mais radiação que nas outras regiões, pois o tumor atrai radiação para dentro dele",
+    "Os três feixes aumentam igualmente a dose em todas as regiões, mas o tumor resiste a doses mais altas"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um dia ensolarado, estudantes de uma escola de Presidente Prudente colocaram contas sensíveis à radiação ultravioleta em cinco situações e mediram quanto a cor das contas mudou, em uma escala de 0 a 10. Eles queriam avaliar as formas de se proteger durante um passeio.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "alts": [
+    "A sombra elimina a exposição ao ultravioleta, o que torna desnecessária qualquer outra forma de proteção",
+    "A roupa clara aumenta a exposição ao ultravioleta em relação à sombra, pois reflete a luz para a pele",
+    "O vidro da janela bloqueia a radiação ultravioleta igualmente ao protetor, sendo ambos equivalentes",
+    "A sombra reduz a exposição ao ultravioleta, mas não a elimina, e roupa ou protetor reduzem bem mais"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Num consultório odontológico, o dentista veste um avental e coloca um protetor no paciente para fazer radiografias. Um estudante testou em laboratório diferentes materiais entre uma fonte de raios X e um detector, contando os registros por minuto.",
+   "comando": "Explique por que se usam aventais com chumbo e por que o exame ainda é considerado útil, com base nos dados.",
+   "ref": "O chumbo reduz as contagens de 1000 para 20, bloqueando quase toda a radiação, e protege partes do corpo que não precisam ser expostas. O exame é útil porque a dose é pequena e controlada e o benefício do diagnóstico supera o risco."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma empresa de Campinas irradia morangos com radiação ionizante para prolongar a validade. Uma consumidora temeu que a fruta ficasse radioativa e perigosa para comer. O técnico mostrou dados de durabilidade dos morangos nas duas condições.",
+   "comando": "Explique como a irradiação ajuda a conservar o alimento e avalie o temor da consumidora.",
+   "ref": "A radiação ionizante danifica microrganismos que estragam o alimento, o que prolonga a validade de 5 para 15 dias. O alimento só ficaria radioativo se a fonte entrasse em contato direto com ele e o contaminasse, o que não ocorre na irradiação, então o temor não procede."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um hospital de São Paulo usa um material radioativo para exames, cuja atividade cai pela metade a cada 8 dias, o chamado tempo de meia-vida. Uma estudante queria saber por que o resíduo do exame é guardado por um tempo antes de ser descartado.",
+   "comando": "Explique o que os dados mostram e por que o hospital guarda o resíduo por um período antes do descarte.",
+   "ref": "A atividade cai à metade a cada 8 dias, e vai diminuindo, mas não chega a zero de imediato. O hospital guarda o resíduo até a atividade ficar bem baixa e segura para descarte, evitando exposição de pessoas e do ambiente."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma mãe de Sorocaba ficou preocupada com a rede sem fio (Wi-Fi) instalada na casa, pensando que o roteador emitia radiação perigosa como a dos aparelhos de raios X. Um técnico levou dados da frequência dos dois tipos de onda para esclarecer.",
+   "comando": "Compare as duas radiações com base nos dados e explique se a preocupação da mãe se justifica.",
+   "ref": "Os raios X têm frequência cerca de um bilhão de vezes maior que a do Wi-Fi e por isso têm energia para ionizar átomos e danificar células. O Wi-Fi é uma onda não ionizante de baixa energia, então a preocupação não se justifica por essa comparação."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Os profissionais de um serviço de radiologia usam dosímetros, aparelhos que medem a dose recebida durante o trabalho. Uma técnica anotou as leituras em três situações diferentes de posição, em uma semana de trabalho típica, para decidir como se proteger melhor.",
+   "comando": "Proponha duas medidas de proteção para a técnica e justifique cada uma com os dados.",
+   "ref": "Ficar mais longe da fonte, pois a dose cai de 8 para 1, e usar biombo de chumbo, que reduz a dose para 0,2 mesmo perto. Reduzir o tempo de exposição também diminui a dose recebida."
+  }
+ ],
+ "9º ANO|2|Aplicar os mecanismos da hereditariedade na explicação da transmissão das características genéticas segundo as Leis de Mendel e outros padrões de dominância.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Carlos plantou ervilhas na horta da escola. A cor roxa da flor (P) é dominante sobre a cor branca (p). Ele deixou uma planta de flor roxa se autofecundar e contou as 30 plantas obtidas, observando as cores das flores de cada uma.",
+   "comando": "O que esse resultado indica sobre o genótipo da planta de flor roxa original?",
+   "alts": [
+    "Ela é heterozigota Pp: as flores brancas mostram que carrega o alelo recessivo, e 23:7 se aproxima de 3:1.",
+    "Ela é homozigota PP, pois as flores roxas aparecem em maior número e isso mostra que o alelo dominante está em dose dupla.",
+    "Ela é homozigota pp, pois as flores brancas surgem de plantas que têm o alelo recessivo nos dois cromossomos.",
+    "Ela é heterozigota Pp, pois o alelo dominante vence e a cor branca da prole surge por mutação durante a autofecundação."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, cada dupla recebeu duas moedas que representam pais Aa: cara vale A e coroa vale a. Cada lançamento das duas moedas representa um filho. Uma dupla fez 40 lançamentos e anotou o genótipo de cada filho. O resultado esperado para 40 filhos seria 10 AA, 20 Aa e 10 aa.",
+   "comando": "Que interpretação dos resultados da dupla é cientificamente adequada?",
+   "alts": [
+    "O resultado mostra que o alelo A é mais forte que o alelo a, pois aparecem mais filhos Aa e AA do que o esperado em relação aos aa.",
+    "As diferenças em relação a 10, 20 e 10 são pequenas e esperadas pelo acaso em 40 lançamentos, e com mais lançamentos o resultado tende a se aproximar de 1:2:1.",
+    "O resultado mostra que a regra de 1:2:1 está errada para a dupla, pois a contagem de Aa deveria ser exatamente 20 em qualquer amostra.",
+    "O resultado mostra que o alelo a é mais forte, pois a contagem de aa (10) foi igual à de AA, apesar de ser um alelo recessivo."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma família, o albinismo (ausência de pigmento na pele) é causado por um alelo recessivo (a). O casal Paulo e Marta tem pigmentação normal, e o primeiro filho do casal é albino. Eles pensam em ter mais um filho e querem saber a chance de ele ser albino.",
+   "comando": "Qual é a probabilidade de o próximo filho ser albino e como se chega a ela?",
+   "alts": [
+    "50%, pois o filho albino mostra que um dos pais carrega o alelo recessivo e o outro é Aa, e metade dos filhos recebe aa.",
+    "0%, pois os dois pais têm pigmentação normal e o albinismo não pode aparecer em famílias em que os pais são normais.",
+    "25%, pois o filho albino (aa) mostra que ambos os pais são Aa, e o cruzamento Aa × Aa dá 1 aa em cada 4 possibilidades.",
+    "75%, pois o filho albino mostra que o alelo a é o mais comum na família e ele aparece em três quartos dos descendentes."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um viveirista cruzou flores de maravilha de cor vermelha com flores brancas e obteve apenas flores cor-de-rosa. Em seguida, cruzou duas flores cor-de-rosa entre si e contou as cores das flores da geração seguinte. Ele sabe que a cor é controlada por um par de alelos.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "Há mistura definitiva de pigmentos: as cores dos pais se fundem em rosa e passam a existir nesse tom nas gerações seguintes.",
+    "O vermelho é dominante sobre o branco, e as flores rosa são vermelhas com menos pigmento que aparecem em proporção de 3:1.",
+    "A cor rosa é característica fixa da espécie e as flores vermelhas e brancas da segunda geração surgiram por mutação.",
+    "Há dominância incompleta: o heterozigoto tem cor intermediária, e as proporções próximas de 1:2:1 mostram que o fenótipo reflete o genótipo."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma criadora de coelhos tem dois machos de pelo preto, cuja cor é dominante (B) sobre o branco (b), e quer saber se são homozigotos ou heterozigotos. Cada macho foi cruzado com fêmeas de pelo branco, e ela anotou as cores dos filhotes.",
+   "comando": "Qual interpretação dos resultados é mais adequada?",
+   "alts": [
+    "Os dois machos são Bb, pois ambos têm pelo preto e só os heterozigotos conseguem gerar filhotes de cor diferente da dos pais.",
+    "O macho 1 é provavelmente BB, pois todos os filhotes receberam B; o macho 2 é Bb, pois passou b a quase metade deles.",
+    "O macho 2 é bb, pois gerou filhotes brancos e isso só pode ocorrer se ele tiver o alelo recessivo nos dois cromossomos.",
+    "O macho 1 é Bb, pois qualquer macho de pelo preto gera filhotes pretos quando cruza com fêmeas de pelo branco."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Cada dupla de uma turma recebeu duas moedas que representam pais Aa (cara = A, coroa = a) e lançou-as 20 vezes. O professor lembrou que as moedas representam a formação dos gametas e a combinação deles na fecundação.",
+   "comando": "Explique o que cada lançamento representa e compare o resultado da dupla com o esperado, justificando por que se espera 1 AA : 2 Aa : 1 aa.",
+   "ref": "Cada moeda representa o gameta de um dos pais, que leva A ou a com igual chance, e o par é um filho. Espera-se 5 AA, 10 Aa e 5 aa (1:2:1), e a dupla obteve 6, 9 e 5, valores próximos. Aa é o dobro dos outros porque pode se formar de duas maneiras (A do pai e a da mãe, ou o contrário)."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em um experimento semelhante ao de Mendel, uma aluna cruzou ervilhas de sementes lisas puras com ervilhas de sementes rugosas puras. Toda a primeira geração teve sementes lisas. Ao cruzar entre si as plantas dessa geração, a aluna obteve a segunda geração.",
+   "comando": "Explique o resultado da primeira geração, por que as sementes rugosas reapareceram na segunda e qual é a proporção esperada.",
+   "ref": "O alelo para sementes lisas é dominante, então os híbridos da primeira geração (Ll) têm sementes lisas, mas carregam o alelo recessivo. Ao se cruzarem, os gametas L e l se combinam e 1/4 dos descendentes é ll, rugosa, em proporção de cerca de 3 lisas para 1 rugosa (372:128)."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma criadora de porquinhos-da-índia cruzou dois animais de pelo preto, cuja cor é dominante (B) sobre a branca (b), e registrou os filhotes de três ninhadas. Ela ficou surpresa porque nasceram filhotes brancos de pais pretos e porque as proporções variaram entre as ninhadas.",
+   "comando": "Explique como pais pretos podem ter filhotes brancos e por que a proporção de cada ninhada não foi exatamente igual à esperada.",
+   "ref": "Os pais são heterozigotos Bb, pois carregam o alelo recessivo que não aparece neles. Cada filhote tem 1/4 de chance de ser bb, branco, e o esperado é 3 pretos para 1 branco; como cada ninhada é pequena, o acaso faz a proporção variar, e juntas elas somam 18 pretos e 6 brancos, exatamente 3:1."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma maternidade, os pais de dois irmãos têm sangue tipo A (pai) e tipo B (mãe). O primeiro filho tem sangue tipo O e o segundo tem sangue tipo AB. O professor lembrou que os alelos IA e IB são codominantes e que o alelo i é recessivo.",
+   "comando": "Explique quais genótipos os pais devem ter para gerar os dois filhos e o que significa codominância no filho de tipo AB.",
+   "ref": "O filho de tipo O tem genótipo ii, então cada pai passou o alelo i, e o pai é IAi e a mãe é IBi. O filho AB herdou IA do pai e IB da mãe, e a codominância significa que os dois alelos se expressam ao mesmo tempo, sem que um esconda o outro."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um produtor de flores de uma cidade do interior paulista tem uma planta de flor roxa (dominante) e não sabe se ela é homozigota ou heterozigota. Ele só quer usá-la para produzir sementes se ela for homozigota, pois assim todas as plantas da próxima geração terão flores roxas.",
+   "comando": "Proponha um cruzamento que permita descobrir o genótipo da planta e explique como interpretar cada resultado possível.",
+   "ref": "Ele deve cruzar a planta roxa com uma planta de flor branca (homozigota recessiva). Se todos os descendentes forem roxos, a planta provavelmente é homozigota dominante (PP); se aparecerem flores brancas, em cerca de metade dos descendentes, ela é heterozigota (Pp), pois transmitiu o alelo recessivo."
+  }
+ ],
+ "9º ANO|2|Identificar as características e funções da mitose e da meiose nos ciclos celulares.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma aula prática, estudantes de Piracicaba observaram ao microscópio a ponta de uma raiz de cebola em crescimento. Eles dividiram a raiz em três regiões, contaram 100 células em cada região e anotaram quantas estavam em processo de divisão, com cromossomos visíveis e organizados.",
+   "comando": "Que interpretação dos dados explica o crescimento da raiz?",
+   "alts": [
+    "A multiplicação por mitose ocorre sobretudo na ponta, e é ela que aumenta o número de células da raiz.",
+    "As novas células da ponta se formam por meiose, processo que também gera as células do meio e da base da raiz.",
+    "A ponta cresce porque suas células aumentam de tamanho, e a divisão celular ocorre sobretudo na base da raiz.",
+    "A base tem poucas células em divisão porque nela as células já morreram e não são substituídas por novas."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "O corpo humano tem 46 cromossomos na maioria das células, mas o espermatozoide e o óvulo têm 23 cada um. Uma estudante imaginou o que aconteceria se uma falha na formação dos gametas os deixasse com 46 cromossomos cada, e a fecundação ocorresse normalmente.",
+   "comando": "Qual previsão é coerente com a função da meiose?",
+   "alts": [
+    "O zigoto teria 46 cromossomos, pois a mitose das primeiras divisões do embrião reduziria o número à metade.",
+    "O zigoto teria 69 cromossomos, pois a fecundação soma os gametas e o número se estabiliza no valor médio.",
+    "O zigoto teria 92 cromossomos, número que dobraria a cada geração sem a meiose para reduzi-lo.",
+    "O zigoto teria 92 cromossomos, e a mitose do embrião corrigiria o número para 46 antes do nascimento."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um produtor de morangos de Atibaia multiplica suas plantas pelos estolões (ramos que enraízam), enquanto outro cultiva a partir de sementes. Um laboratório comparou marcadores genéticos de uma planta-mãe e de três plantas-filhas, para entender a origem das diferenças.",
+   "comando": "Qual explicação interpreta corretamente os resultados?",
+   "alts": [
+    "As filhas de sementes são cópias da mãe formadas por mitose, e as diferenças surgiram de mudanças ocorridas depois do plantio.",
+    "O estolão forma uma cópia da mãe por mitose; as sementes resultam de meiose e fecundação, que recombinam genes.",
+    "A filha de estolão resulta de meiose e fecundação, e por isso tem os mesmos marcadores da planta-mãe.",
+    "As filhas se formaram por meiose, mas a de estolão recebeu gametas de uma mesma planta, o que gerou a cópia."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um professor representou a quantidade de DNA em uma célula durante dois processos de divisão, X e Y, ambos iniciados por uma célula com 2 unidades de DNA. As colunas mostram a quantidade de DNA por célula em cada etapa. O traço indica que o processo X termina antes dessa etapa.",
+   "comando": "Qual é a interpretação correta dos dados?",
+   "alts": [
+    "O processo X é a meiose, pois as células-filhas ficam com a quantidade de DNA da célula inicial depois de uma divisão.",
+    "O processo Y é a mitose, pois duas divisões seguidas formam mais células e mantêm o DNA da célula inicial.",
+    "Os processos X e Y são iguais até o fim, pois ambos duplicam o DNA e o dividem na primeira divisão celular.",
+    "Y é a meiose: uma duplicação do DNA seguida de duas divisões deixa as células finais com metade do DNA inicial."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Pesquisadores de uma universidade paulista observam que a frequência de bebês com três cópias do cromossomo 21 (trissomia) cresce com a idade da mãe. Eles associam o fenômeno a uma falha na separação dos cromossomos durante a formação do óvulo, e queriam apresentar os dados de modo claro.",
+   "comando": "Qual explicação relaciona os dados à divisão celular?",
+   "alts": [
+    "Na mitose do embrião, os cromossomos 21 se duplicam duas vezes, e o risco cresce porque as células da mãe envelhecem.",
+    "Na meiose, os cromossomos 21 podem não se separar e gerar óvulo com cópia extra, mais comum em mães mais velhas.",
+    "A trissomia é herdada do pai e da mãe como característica dominante, e por isso aparece mais em mães mais velhas.",
+    "O óvulo começa a se formar aos 30 anos, e a quantidade de cromossomos aumenta na meiose com o tempo de espera."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Para representar uma divisão celular, um grupo usou massinha para fazer uma célula com 4 cromossomos. Em duas rodadas, o grupo simulou dois tipos de divisão e anotou o resultado final, sem dizer o nome dos processos.",
+   "comando": "Identifique os processos A e B, compare os resultados e indique a função de cada um nos seres vivos.",
+   "ref": "A é a mitose: forma duas células idênticas à original e serve para crescimento, renovação e reparo de tecidos. B é a meiose: forma quatro células com metade dos cromossomos, que originam gametas e, na fecundação, restabelecem o número."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Maria machucou o joelho ao cair de bicicleta, e a ferida foi acompanhada por uma enfermeira da UBS durante duas semanas, até a pele se fechar. A enfermeira explicou que a pele nova tem as mesmas características da pele que existia antes.",
+   "comando": "Explique que divisão celular fecha a ferida, e por que as novas células da pele são geneticamente iguais às antigas.",
+   "ref": "A ferida se fecha por mitose: as células da borda se dividem e formam novas células de pele. Na mitose, o DNA é duplicado e distribuído igualmente, então cada célula-filha recebe a mesma informação genética da célula original."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Dois irmãos têm os mesmos pais e, mesmo assim, não são idênticos, enquanto gêmeos idênticos são muito parecidos. Um geneticista mediu a semelhança do material genético em três relações de parentesco.",
+   "comando": "Explique a diferença na semelhança, relacionando a meiose com a variabilidade entre irmãos e o modo de formação dos gêmeos idênticos.",
+   "ref": "Gêmeos idênticos vêm de um único zigoto que se divide e separa as células, com o mesmo DNA. Irmãos vêm de gametas diferentes, formados por meiose, em que os cromossomos se separam ao acaso e trocam pedaços, gerando combinações distintas."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma lavoura de banana do Vale do Ribeira, todas as plantas foram obtidas por mudas de uma única planta-mãe. Quando um fungo surgiu, ele atingiu quase todas elas, e em um sítio vizinho, com plantas de origens variadas, poucas adoeceram.",
+   "comando": "Explique, usando a mitose, por que a lavoura de mudas é tão vulnerável e como a reprodução sexuada ajudaria.",
+   "ref": "As mudas são formadas por mitose e são cópias idênticas da planta-mãe, então todas têm a mesma vulnerabilidade ao fungo. Na reprodução sexuada, a meiose e a fecundação geram combinações variadas, e algumas plantas podem ser resistentes."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "As células normais da pele param de se dividir quando encontram outras células à sua volta, e voltam a se dividir quando há uma ferida. Em um tumor, as células continuam a se dividir sem parar. Um laboratório comparou o tempo que cada tipo de célula leva para se dividir.",
+   "comando": "Explique a importância da mitose para o corpo e o que o dado indica sobre o que acontece em um tumor.",
+   "ref": "A mitose repõe células e permite crescimento e reparo, e é controlada pelo corpo. No tumor, as células perderam esse controle: dividem-se em 8 horas, bem mais rápido, e mesmo sem necessidade, acumulando-se em massa."
+  }
+ ],
+ "9º ANO|2|Reconhecer a função, composição e estrutura do DNA.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma aula de genética, a professora apresentou a proporção das quatro bases nitrogenadas (A, T, G e C) no DNA de três organismos, obtida por um laboratório fictício. Os alunos deveriam concluir apenas o que os números permitem afirmar.",
+   "comando": "Qual conclusão é sustentada pelos dados do laboratório?",
+   "alts": [
+    "Em cada organismo, A e T têm proporções próximas, assim como G e C, sugerindo pareamento A–T e G–C.",
+    "Em cada organismo, as quantidades de A e de G são próximas, o que sugere pareamento A–G e C–T na dupla hélice do DNA.",
+    "A proporção das quatro bases é a mesma nos três organismos, e por isso o DNA não permite diferenciar as espécies entre si.",
+    "A proximidade entre A e T e entre G e C mostra que, em cada espécie, as quatro bases ocorrem na mesma proporção de 25%."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um laboratório fictício aqueceu três amostras de DNA, todas com o mesmo comprimento de 1.000 pares de bases, e anotou a temperatura em que as duas fitas se separam por completo. O percentual de bases G e C varia entre as amostras.",
+   "comando": "Que explicação é compatível com os resultados do laboratório?",
+   "alts": [
+    "Os pares A–T se unem por três ligações de hidrogênio, então mais A–T exige mais calor para separar as fitas do DNA.",
+    "Os pares G–C se unem por três ligações de hidrogênio e os A–T por duas, então mais G–C exige mais energia para separar as fitas.",
+    "O calor rompe as ligações entre açúcar e fosfato de cada fita, e por isso as amostras com mais G–C se separam em temperatura maior.",
+    "A temperatura de separação depende do número de pares de bases e não da composição, embora as amostras tenham tamanhos iguais."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Para produzir uma sonda que se encaixe em um trecho de DNA, uma técnica de laboratório precisa conhecer a fita complementar. A sonda deve parear com a fita original base a base, e o trecho foi anotado como na figura.",
+   "comando": "Qual alternativa apresenta a sonda correta e a justificativa adequada?",
+   "alts": [
+    "UACGGAU, pois a sonda complementar troca a timina por uracila ao parear com cada base da fita original.",
+    "TAGCCAT, pois cada base é copiada de forma invertida, mas A e G pareiam com as bases opostas.",
+    "TACGGAT, pois cada base se liga à sua complementar, com A pareando com T e G pareando com C.",
+    "ATGCCTA, pois a fita complementar tem a mesma sequência de bases da fita original, porém em outra direção."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma equipe fictícia comparou o gene de uma enzima em três pessoas e mediu a atividade da enzima. Em cada caso, o laboratório indicou a alteração na sequência de DNA e a proteína formada, usando o código genético para ler a sequência.",
+   "comando": "Que interpretação dos dados é correta?",
+   "alts": [
+    "Uma troca de base pode não mudar a proteína, mas perder uma base desloca a leitura e altera todo o trecho seguinte.",
+    "Qualquer alteração na sequência de bases do DNA muda a proteína formada, e a perda de uma base teria o mesmo efeito.",
+    "A troca de GCT por GCC não é uma mutação, pois o produto e a função da enzima ficaram como na pessoa 1.",
+    "A perda de uma base afeta o aminoácido seguinte, e a função menor decorre de a proteína ficar curta."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma delegacia fictícia comparou marcadores de DNA (tamanho de trechos repetidos) de uma criança, da mãe e de dois homens em um teste de paternidade. Cada pessoa herda um trecho de cada genitor em cada marcador.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "O trecho 18 da mãe aparece no homem Y, o que torna Y compatível, já que a criança herdou o 18 de ambos.",
+    "A criança herdou o 12 e o 15 da mãe, que possui o 18, o que torna os dois homens incompatíveis com a paternidade.",
+    "O homem X é incompatível, pois possui o 20, que a criança não apresenta nos trechos analisados do exame.",
+    "O trecho 15 da criança não veio da mãe e o homem X o possui, então o resultado é compatível com X."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em uma aula prática, a turma extraiu DNA de morangos com materiais da cozinha, seguindo as etapas abaixo. Ao final, apareceram filamentos esbranquiçados na superfície do líquido.",
+   "comando": "Explique a função do detergente e a do álcool no procedimento e por que o método também funcionaria com outros seres vivos.",
+   "ref": "O detergente rompe as membranas das células e do núcleo, liberando o DNA, e o álcool gelado faz o DNA, que não se dissolve nele, se agrupar em filamentos visíveis. O método funciona com outros seres vivos porque todos têm DNA nas células."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma célula do pâncreas e uma célula do músculo de uma mesma pessoa possuem a mesma quantidade de DNA, mas produzem proteínas muito diferentes. Um aluno concluiu que o DNA de cada célula deve ser diferente.",
+   "comando": "Avalie a conclusão do aluno e explique, com base nos dados, como células com o mesmo DNA podem ter funções diferentes.",
+   "ref": "A conclusão não é sustentada, pois a quantidade de DNA é igual nas duas células. O DNA contém todos os genes, mas cada tipo de célula usa só parte deles, e por isso produz proteínas diferentes e exerce funções distintas."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em um programa de TV, um geneticista explicou quanto do DNA é compartilhado entre pessoas aparentadas. Os valores abaixo são aproximados e foram usados em uma atividade de interpretação.",
+   "comando": "Interprete o gráfico e explique por que gêmeos idênticos compartilham o DNA e por que os irmãos compartilham aproximadamente metade.",
+   "ref": "O percentual cai com o afastamento do parentesco, pois cada pessoa recebe metade do DNA de cada genitor. Gêmeos idênticos vêm de um mesmo óvulo fecundado que se dividiu, por isso têm o mesmo DNA, e irmãos recebem combinações diferentes dos mesmos pais."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma pesquisadora fictícia espalhou bactérias em placas com e sem antibiótico. Ela retirou as poucas colônias que cresceram na placa com antibiótico e as cultivou novamente na presença da mesma substância.",
+   "comando": "Explique por que algumas bactérias sobreviveram ao antibiótico e como essa característica passou às colônias seguintes.",
+   "ref": "Poucas bactérias tinham uma mutação no DNA que as tornava resistentes e por isso sobreviveram. Ao se dividirem, elas copiam o DNA com essa mutação, então os descendentes também resistem e quase todas as colônias crescem na placa C."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em um experimento clássico adaptado, bactérias foram cultivadas primeiro com nitrogênio pesado no DNA e depois transferidas para um meio com nitrogênio leve. Em cada geração, mediu-se a proporção de DNA pesado, intermediário e leve.",
+   "comando": "Interprete os dados e explique o que eles indicam sobre como o DNA se copia.",
+   "ref": "Na geração 1 todo o DNA é intermediário, pois cada molécula nova tem uma fita antiga e uma fita nova. Na geração 2 surge DNA leve, com as duas fitas novas, e o intermediário cai a 50%, o que mostra que a cópia é semiconservativa."
+  }
+ ],
+ "9º ANO|3|Analisar a importância do tratamento de água e esgoto para a qualidade ambiental e a saúde humana.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma turma de 9º ano visitou a estação de tratamento de água (ETA) de sua cidade, no interior paulista, e recebeu uma ficha com a turbidez da água em quatro pontos do processo. A água bruta vem de uma represa e, ao longo da visita, os alunos viram a floculação seguida de decantação, depois a filtração em areia e por fim a adição de cloro. Marcos concluiu que a cloração é dispensável.",
+   "comando": "Por que a conclusão de Marcos, baseada apenas na turbidez, não é adequada?",
+   "alts": [
+    "A turbidez mede a quantidade de microrganismos, mas o cloro remove cheiro e gosto, então a ausência de mudança mostra que a etapa melhora o sabor da água.",
+    "A turbidez mede partículas visíveis, e a cloração age sobre microrganismos, que não alteram esse valor, então a ausência de mudança não indica que seja desnecessária.",
+    "A turbidez já estava baixa após a filtração, então a cloração é uma etapa complementar que se justifica quando a água bruta apresenta turbidez acima de 100 uT.",
+    "A turbidez mede partículas visíveis, e o cloro age sobre essas partículas, então a ausência de mudança indica que o cloro adicionado foi insuficiente e deve ser aumentado."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em um município paulista, a secretaria de saúde comparou três bairros quanto à parcela do esgoto que passa por tratamento e ao número de casos de diarreia por 1.000 moradores em um ano. Cada bairro tem tamanho de população diferente, e os dados foram organizados para que a comparação fosse justa. Uma vereadora comentou que 'o bairro C tem mais casos porque tem mais gente'.",
+   "comando": "Qual leitura dos dados é a mais adequada?",
+   "alts": [
+    "Os casos por 1.000 moradores aumentam quando aumenta o esgoto tratado, o que indica que o tratamento não evita doenças, e o tamanho da população explica a diferença.",
+    "Os casos por 1.000 moradores diminuem quando aumenta o esgoto tratado, o que prova que o esgoto sem tratamento é a causa de toda diarreia, e a população não interfere.",
+    "Os casos por 1.000 moradores diminuem quando aumenta o esgoto tratado, mas isso é coincidência, pois a diarreia depende da população, e C é o maior bairro.",
+    "Os casos por 1.000 moradores diminuem quando aumenta o esgoto tratado, o que sugere associação entre saneamento e saúde, e o tamanho da população não explica a diferença."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Dois córregos de uma bacia hidrográfica do interior paulista recebem esgoto de bairros vizinhos. O córrego X recebe o esgoto sem tratamento, e o córrego Y recebe o esgoto depois de passar por uma estação de tratamento. Uma equipe mediu o oxigênio dissolvido nos dois trechos e registrou a presença de peixes, sabendo que a maioria das espécies precisa de mais de 5 mg/L de oxigênio.",
+   "comando": "Que explicação relaciona o tratamento do esgoto aos resultados?",
+   "alts": [
+    "No córrego X o esgoto lançado tem muitos peixes mortos, então as bactérias consomem o oxigênio da água e a quantidade fica baixa por causa da decomposição.",
+    "No córrego Y o esgoto lançado é potável, então os peixes bebem a água sem riscos e o oxigênio dissolvido mantém uma quantidade que sustenta os peixes.",
+    "No córrego Y o esgoto lançado tem menos matéria orgânica, então as bactérias consomem menos oxigênio e a água mantém uma quantidade que sustenta os peixes.",
+    "No córrego X o esgoto lançado tem menos oxigênio por natureza, então as bactérias precisam de água sem peixes e a quantidade medida fica baixa nesse trecho."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma cidade paulista de 50 mil habitantes quer saber quanto esgoto é lançado sem tratamento nos rios. Cada morador gera, em média, 150 litros de esgoto por dia. A rede coleta 80% do esgoto gerado, e a estação de tratamento trata 50% do que é coletado. O esgoto não coletado é lançado direto em córregos e em fossas irregulares.",
+   "comando": "Qual é o volume diário de esgoto que chega aos rios sem tratamento?",
+   "alts": [
+    "4,5 milhões de litros por dia, que correspondem ao esgoto não coletado somado ao esgoto coletado que não passa pela estação de tratamento.",
+    "3,0 milhões de litros por dia, que correspondem ao esgoto coletado e não tratado, sem considerar a parte que a rede não coleta.",
+    "1,5 milhão de litros por dia, que correspondem ao esgoto não coletado pela rede, sem considerar a parte coletada que não recebe tratamento.",
+    "6,0 milhões de litros por dia, que correspondem ao esgoto coletado pela rede, como se ele não passasse pelo tratamento."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Após uma chuva forte, um bairro de Guarulhos ficou sem abastecimento e os moradores passaram a coletar água de uma nascente. Uma equipe da vigilância sanitária analisou três amostras. A norma de potabilidade exige ausência de coliformes, que são bactérias indicadoras de contaminação por fezes, e os moradores acharam que a água transparente estava boa para beber.",
+   "comando": "Qual amostra pode ser considerada própria para beber e por quê?",
+   "alts": [
+    "A amostra B, pois é transparente e a contagem de 300 coliformes por 100 mL é baixa se comparada à da amostra A, que tem a água turva.",
+    "A amostra A, pois a turbidez mostra que a água tem sais minerais úteis, e a contagem de coliformes por 100 mL é um dado secundário.",
+    "A amostra C, pois, além de transparente, não apresenta coliformes, e a aparência sozinha não garante que a água esteja livre de microrganismos.",
+    "As amostras B e C, pois são transparentes e a diferença de coliformes por 100 mL importa se a contagem passar de 1.000 na análise."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Maria fez em casa uma atividade da escola: colocou água com terra em dois copos. O copo A ficou parado por 30 minutos sobre a mesa e o copo B teve a água despejada em um filtro de garrafa PET com areia e cascalho. Ao final, a turbidez foi medida com uma escala de 0 a 100. A professora avisou que nenhuma das duas águas estava pronta para beber.",
+   "comando": "Explique que processo cada copo reproduz do tratamento de água e por que, mesmo clara, a água ainda não é potável.",
+   "ref": "O copo A reproduz a decantação, em que as partículas mais pesadas se depositam no fundo, e o copo B a filtração, em que areia e cascalho retêm as partículas. A água clara ainda pode ter bactérias e vírus invisíveis, por isso falta a desinfecção (cloração) para torná-la potável."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Na região metropolitana de Campinas, a prefeitura divulgou a taxa de internações por diarreia em dois anos, antes e depois da ampliação da rede de esgoto e da estação de tratamento. A cobertura da rede passou de 40% para 90% dos domicílios. Um morador afirmou que a melhora só pode ter sido por causa de uma campanha de lavagem de mãos.",
+   "comando": "Explique a relação entre os dados e o saneamento e aponte uma limitação para afirmar que o esgoto é a única causa da queda.",
+   "ref": "Quando a cobertura de esgoto aumentou de 40% para 90%, as internações por diarreia caíram de 48 para 12, o que sugere que coletar e tratar o esgoto reduz a contaminação da água e das doenças. Mas outros fatores podem ter mudado no período, como campanhas de higiene, então os dados mostram associação e não provam sozinhos a causa."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma família de São José dos Campos quer reduzir o consumo de água em sua casa, em um período de estiagem na represa que abastece a cidade. O pai propôs trocar o banho de 15 minutos por banho de 5 minutos e lavar a calçada com vassoura em vez de mangueira. A família é composta por 4 pessoas, que tomam um banho por dia.",
+   "comando": "Calcule quantos litros a família economiza em 30 dias só com a mudança dos banhos e explique por que reduzir o consumo ajuda o ambiente e o abastecimento.",
+   "ref": "Cada banho economiza 135 - 45 = 90 L; para 4 pessoas são 360 L por dia e, em 30 dias, 10.800 L. Usar menos água preserva o manancial em período de seca, diminui a captação e também o volume de esgoto a ser tratado."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Duas cidades ficam no mesmo rio de uma bacia hidrográfica no estado de São Paulo. A cidade 1, a montante, lança o esgoto sem tratar. A cidade 2, a jusante, capta água desse mesmo rio para abastecer a população. Um técnico mediu bactérias indicadoras de contaminação em três pontos do rio.",
+   "comando": "Interprete os dados e explique que consequências o esgoto sem tratamento traz para a cidade 2, propondo uma iniciativa que beneficie as duas.",
+   "ref": "O esgoto da cidade 1 elevou os coliformes de 100 para 5.000 e a contaminação chega à captação da cidade 2 (3.000), o que exige mais tratamento, aumenta custos e eleva o risco de doenças. Uma iniciativa é a cidade 1 tratar o esgoto antes do lançamento, preservando o rio e a água de quem vive a jusante, com a gestão feita em conjunto na bacia."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um condomínio de São Paulo está discutindo uma pequena estação para tratar o esgoto das 80 famílias e reaproveitar parte da água na lavagem do pátio. Os moradores têm dúvidas: alguns dizem que a água tratada de esgoto jamais pode ser reaproveitada, e outros dizem que, depois de tratada, pode ser bebida. A síndica apresentou uma tabela com os usos possíveis.",
+   "comando": "Avalie as duas opiniões dos moradores usando a tabela e explique em que condições o reúso é adequado.",
+   "ref": "As duas opiniões estão incompletas: a água tratada pode ser reaproveitada em usos que não exigem potabilidade, como lavar o pátio, irrigar e dar descarga. Para beber é preciso um tratamento completo com desinfecção e controle de qualidade, e por isso o reúso reduz o consumo de água potável sem expor as pessoas a riscos."
+  }
+ ],
+ "9º ANO|3|Analisar evidências da ocorrência de evolução convergente e divergente em imagens, esquemas ou modelos comparativos de organismos.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em um museu de ciências de São Paulo, estudantes compararam um golfinho e um tubarão. Os dois têm corpo em forma de torpedo e nadadeira dorsal, e vivem em mares abertos. A guia pediu que observassem também características internas e de reprodução, registradas no quadro, antes de decidir se a semelhança vem de parentesco próximo.",
+   "comando": "Qual interpretação do quadro é mais coerente com a evolução?",
+   "alts": [
+    "A forma parecida indica parentesco próximo, pois animais que vivem no mar herdam o mesmo ancestral que tinha corpo de torpedo.",
+    "A forma parecida surgiu de modo independente, pois o ambiente aquático favoreceu corpos hidrodinâmicos em grupos de ancestrais diferentes.",
+    "A forma parecida mostra que o golfinho se originou do tubarão, já que os dois têm nadadeira dorsal e vivem na água.",
+    "As diferenças internas são mais importantes que a forma, e por isso o golfinho não sofreu pressão do ambiente aquático."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Pesquisadores compararam os ossos do membro anterior de quatro mamíferos: humano, morcego, baleia e cavalo. Em todos eles há um osso do braço, dois do antebraço e ossos da mão, embora em cada animal o membro sirva para uma função diferente e tenha proporções distintas.",
+   "comando": "Que hipótese explica melhor a mesma organização óssea em funções tão diferentes?",
+   "alts": [
+    "Os mamíferos herdaram o membro de um ancestral comum, e a seleção natural o modificou em cada ambiente, em evolução divergente.",
+    "O morcego e a baleia usaram o membro por muito tempo, e essa mudança de uso foi transmitida aos descendentes que o herdaram nas gerações seguintes.",
+    "As quatro espécies viveram em ambientes parecidos, e por isso o ambiente semelhante criou o mesmo arranjo de ossos em cada espécie.",
+    "A mesma organização óssea surgiu por acaso em cada grupo, e a função diferente indica que não há parentesco entre eles."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "O tamanduá-bandeira, da América do Sul, o pangolim, da Ásia e da África, e o porco-formigueiro, da África, têm focinho longo, língua comprida e pegajosa e garras fortes para abrir cupinzeiros. Os três grupos pertencem a ordens diferentes de mamíferos, sem ancestral comum recente.",
+   "comando": "Qual conclusão é sustentada pelos dados e pelo enunciado?",
+   "alts": [
+    "Os três animais têm focinho longo porque descendem de um ancestral comum recente que já comia formigas e cupins.",
+    "Cada animal criou o focinho e as garras para alcançar o alimento, e esse esforço foi herdado pelos descendentes ao longo das gerações.",
+    "A semelhança é coincidência, pois ambientes e dietas parecidos não influenciam as características dos animais.",
+    "A dieta de formigas e cupins selecionou características semelhantes em grupos separados, um caso de evolução convergente."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em um estudo comparativo de genes, pesquisadores mediram a semelhança de uma sequência de DNA entre o golfinho e outros animais. O golfinho tem forma de corpo parecida com a do tubarão, mas os fósseis mostram que seus ancestrais viviam em terra firme e tinham quatro patas.",
+   "comando": "Qual conclusão integra a forma do corpo e os dados de DNA?",
+   "alts": [
+    "O golfinho tem parentesco mais próximo com o tubarão, pois a forma do corpo é a evidência mais confiável de relação evolutiva.",
+    "O DNA do golfinho é parecido com o da vaca porque os dois vivem em ambientes semelhantes, o que explica sua forma de corpo.",
+    "O golfinho tem parentesco mais próximo com mamíferos terrestres, e a forma de corpo parecida com a do tubarão é convergente.",
+    "A semelhança de 45% com o tubarão prova que a forma de corpo foi herdada de um ancestral aquático comum entre eles."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre evidências da evolução, o professor mostrou o quadro abaixo sobre as asas de três animais. Em seguida, quatro alunos fizeram afirmações sobre as semelhanças e diferenças entre as asas, e a turma deveria identificar a afirmação que contraria as evidências do quadro.",
+   "comando": "Qual afirmação é INCORRETA?",
+   "alts": [
+    "As asas da ave e do inseto são homólogas, pois ambas permitem o voo e vieram de um ancestral que já voava.",
+    "As asas da ave e do morcego derivam do membro anterior, e o voo surgiu em cada grupo em momentos independentes.",
+    "A asa do inseto surgiu de forma independente da dos vertebrados, o que a torna exemplo de evolução convergente.",
+    "A semelhança de função entre as asas do morcego e do inseto não indica parentesco próximo entre esses grupos."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Cactos nativos das Américas e euforbiáceas suculentas da África vivem em regiões áridas e parecem muito semelhantes: caule grosso que guarda água, espinhos e poucas folhas. A análise das flores e do DNA mostra que pertencem a famílias diferentes.",
+   "comando": "Explique o tipo de evolução que aparece nesse caso e por que as características semelhantes não indicam parentesco próximo.",
+   "ref": "É um caso de evolução convergente: o clima árido favoreceu, em linhagens diferentes, caules que guardam água e espinhos. Como as flores e o DNA são diferentes, as plantas não têm ancestral comum recente, e a semelhança vem do ambiente."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma ilha vulcânica, aves de uma mesma espécie ancestral chegaram há milhares de anos e ocuparam três ambientes com alimentos diferentes. Hoje, as populações têm bicos de tamanhos e formatos distintos, e pesquisadores relacionaram esses bicos ao alimento disponível em cada local.",
+   "comando": "Explique como a divergência pode ter ocorrido e que evidência dos dados a sustenta.",
+   "ref": "A população ancestral variava no formato do bico. Em cada ambiente, sobreviveram e deixaram mais descendentes as aves com bicos adequados ao alimento, e com o tempo as populações divergiram. A relação entre bico e alimento é a evidência."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "O ictiossauro era um réptil marinho extinto que viveu há cerca de 200 milhões de anos, e o golfinho é um mamífero atual. Os dois têm focinho alongado, corpo fusiforme e nadadeiras, embora o golfinho seja de um grupo que surgiu muito depois.",
+   "comando": "Explique por que animais de épocas e grupos diferentes ficaram parecidos e que tipo de evolução isso representa.",
+   "ref": "Os dois grupos enfrentaram o mesmo desafio, nadar com rapidez no mar, e a seleção natural favoreceu corpo hidrodinâmico e nadadeiras. Como têm ancestrais diferentes, trata-se de evolução convergente, e a semelhança não vem de herança comum recente."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Para provar a diferença entre convergência e divergência, uma equipe de pesquisa quer decidir se a semelhança entre duas espécies de roedores de continentes distintos vem de ancestral comum recente ou de adaptação a ambientes parecidos. Ela pode usar fósseis, análise de DNA e comparação de ossos.",
+   "comando": "Proponha dois tipos de evidência para a equipe e explique o que cada resultado indicaria em cada hipótese.",
+   "ref": "Análise de DNA: alta semelhança indica ancestral comum recente, e baixa indica origens separadas. Comparação de ossos: estrutura interna igual indica homologia, e estruturas diferentes com função igual indicam convergência. Fósseis podem mostrar o ancestral."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Beatriz afirmou que o morcego é parente próximo das aves, \"porque os dois têm asas e voam\". O professor pediu que ela examinasse outras características do morcego e comparasse com o cão e a ave.",
+   "comando": "Com base no quadro, refute a afirmação de Beatriz e explique que tipo de semelhança é o voo.",
+   "ref": "O morcego compartilha pelos e amamentação com o cão, o que mostra parentesco com os mamíferos, e não com as aves. A semelhança do voo é adaptação surgida de forma independente, uma evolução convergente, e não prova ancestral comum recente."
+  }
+ ]
+}

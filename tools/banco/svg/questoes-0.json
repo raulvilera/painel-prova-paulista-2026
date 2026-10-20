@@ -1,0 +1,1328 @@
+{
+ "4B|6º ANO|1": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "No laboratório de uma escola de Santo André, a professora entregou quatro lâminas de tecidos humanos para os alunos examinarem ao microscópio, sem dizer o nome de cada uma. Cada grupo anotou o que viu: o formato das células, a disposição entre elas e o que havia entre as células.",
+   "comando": "Qual identificação das lâminas é a correta?",
+   "alts": [
+    "1 muscular, 2 epitelial, 3 nervoso e 4 conjuntivo",
+    "1 epitelial, 2 nervoso, 3 muscular, 4 conjuntivo",
+    "1 epitelial, 2 muscular, 3 nervoso, 4 conjuntivo",
+    "1 epitelial, 2 muscular, 3 conjuntivo e 4 nervoso"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um estudante de medicina apresentou, em uma feira de ciências, cortes de três órgãos do sistema digestivo e listou os tecidos que identificou em cada um. Ele afirmou que 'cada órgão é feito de um único tecido, e o sistema é só a soma de órgãos iguais'.",
+   "comando": "Qual conclusão dos dados contraria a afirmação do estudante?",
+   "alts": [
+    "Cada órgão reúne vários tecidos, e órgãos diferentes cooperam em um sistema para uma função em comum.",
+    "Os órgãos de um mesmo sistema reúnem os mesmos tecidos, e o sistema digestivo é um grande órgão.",
+    "O fígado, por ter dois tecidos, é um tecido misto, enquanto o estômago e o intestino são órgãos completos.",
+    "O tecido nervoso aparece em vários órgãos do corpo, e por isso o sistema nervoso é o responsável por digerir."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um paciente chegou ao pronto-socorro com infarto: parte das células do músculo do coração morreu por falta de oxigênio. A equipe médica acompanhou os sinais em outras partes do corpo. Uma estudante perguntou como uma lesão em um órgão pode causar problemas em lugares distantes.",
+   "comando": "Que explicação relaciona os registros aos níveis de organização do corpo?",
+   "alts": [
+    "As células do coração lesionadas liberam a doença aos tecidos vizinhos, que repassam o problema aos outros órgãos.",
+    "Os órgãos funcionam de modo independente, mas o cérebro e os rins repetem o sintoma por perceberem a dor do coração.",
+    "O músculo do coração é substituído por tecido nervoso, e esse tecido novo enfraquece o cérebro e os rins.",
+    "O coração integra o sistema que leva sangue ao corpo; se bombeia menos, órgãos distantes recebem menos oxigênio."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em uma atividade sobre os níveis de organização, uma estudante classificou cinco estruturas do corpo como célula, tecido, órgão ou sistema. A professora disse que apenas uma classificação está inadequada e pediu que a turma encontrasse o erro.",
+   "comando": "Qual afirmação sobre as classificações da estudante é correta?",
+   "alts": [
+    "Sangue como tecido está inadequado, pois não tem células e é um líquido do sistema circulatório.",
+    "Fêmur como tecido está inadequado, pois um osso reúne vários tecidos e funciona como órgão.",
+    "Estômago como órgão está inadequado, pois é formado por tecido muscular e epitelial.",
+    "Neurônio como célula está inadequado, pois o neurônio é um tecido do sistema nervoso."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Durante uma corrida de rua em São Paulo, um atleta teve a frequência do coração e a da respiração medidas em repouso, em plena corrida e dez minutos depois. A treinadora quer que os alunos relacionem os dados ao trabalho conjunto dos sistemas do corpo.",
+   "comando": "Que interpretação é sustentada pelos dados?",
+   "alts": [
+    "Circulatório e respiratório se ajustam juntos para levar mais oxigênio aos músculos e depois voltam ao normal.",
+    "O coração acelera para que o atleta consiga respirar mais, de modo que a respiração é uma consequência do batimento.",
+    "A respiração aumenta de forma independente do coração, pois os dois sistemas não trocam informação durante o esforço.",
+    "Os músculos mudam o ritmo durante a corrida, enquanto o coração e a respiração variam ao acaso, sem ligação entre si."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Ao examinar a parede do estômago ao microscópio, uma turma identificou camadas com características diferentes. A professora disse que o estômago é um órgão, e não um tecido, e perguntou por quê.",
+   "comando": "Use o registro para explicar por que o estômago é um órgão e o que aconteceria à digestão se a camada muscular falhasse.",
+   "ref": "É órgão porque reúne tecidos diferentes (epitelial, muscular, conjuntivo e nervoso) que atuam juntos numa função. Se o músculo falhasse, o alimento não seria bem misturado ao suco gástrico nem empurrado adiante, e a digestão seria prejudicada."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Na hora do almoço, um aluno mastiga, engole e, algumas horas depois, os nutrientes chegam às células. A professora pediu que a turma ordenasse as etapas do caminho do alimento e identificasse quais sistemas participam.",
+   "comando": "Explique como pelo menos três sistemas atuam juntos para que os nutrientes cheguem às células.",
+   "ref": "O sistema digestório quebra o alimento e absorve os nutrientes no intestino. O sistema circulatório leva os nutrientes pelo sangue até as células, e o respiratório fornece o oxigênio para usá-los. Os sistemas dependem uns dos outros."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Duas amostras de tecidos humanos, chamadas Alfa e Beta, foram observadas por alunos do 6º ano. A lâmina de cada uma traz a descrição e o local do corpo de onde foi retirada, mas o nome do tecido foi apagado.",
+   "comando": "Identifique o tecido de cada amostra e explique como a forma das células se relaciona com a função.",
+   "ref": "Alfa é tecido muscular: as fibras se encurtam e produzem movimento, como o do intestino empurrando o alimento. Beta é tecido nervoso: os prolongamentos conectam as células e conduzem sinais. A forma da célula está adaptada à função."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Maria recebeu o transplante de um rim e, depois, melhorou de modo geral: tinha cansaço, inchaço e pressão alta antes da cirurgia. Os exames de sangue mostram a substância creatinina, que os rins eliminam na urina.",
+   "comando": "Explique por que a falha de um único órgão afetava o corpo todo e como o transplante ajudou, relacionando órgão, sistema e organismo.",
+   "ref": "O rim é um órgão do sistema urinário que filtra o sangue e elimina resíduos. Com o rim doente, os resíduos se acumulam e prejudicam outros órgãos, afetando o organismo inteiro. O transplante restaurou a filtragem, e o exame mostra a queda da substância."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma bactéria é formada por uma única célula, enquanto uma esponja-do-mar tem poucos tipos de células e o corpo humano tem trilhões de células de muitos tipos, organizadas em tecidos, órgãos e sistemas. Uma tabela compara os três organismos.",
+   "comando": "Explique por que um organismo com muitos tipos de célula precisa de níveis de organização, enquanto a bactéria não precisa.",
+   "ref": "A bactéria realiza todas as funções em uma só célula. No ser humano, as células são especializadas em funções diferentes e se agrupam em tecidos, órgãos e sistemas que cooperam, o que permite realizar tarefas complexas com divisão de trabalho."
+  }
+ ],
+ "4B|6º ANO|10": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Para entender como o som chega ao interior da orelha, a turma montou um tambor com uma lata aberta e um balão esticado na boca, colocando grãos de arroz sobre ele. Um aluno falou em volume constante a diferentes distâncias e outro contou quantos grãos pularam.",
+   "comando": "Qual estrutura da orelha o balão representa e o que os dados mostram sobre ela?",
+   "alts": [
+    "o tímpano, que vibra com a onda sonora, e vibra menos quando o som chega mais fraco",
+    "a cóclea, que transforma o som em impulsos nervosos, e transforma menos quando o som chega mais forte",
+    "o pavilhão auricular, que reflete o som para o canal, e reflete mais quando o som chega mais longe",
+    "o nervo auditivo, que conduz o impulso ao cérebro, e conduz mais quando o som chega mais fraco"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um levantamento fictício de uma escola de Santo André perguntou a 300 alunos quantas horas por dia usam fone de ouvido em volume alto e testou a sensibilidade deles a sons agudos. Os resultados foram organizados em três grupos de tamanho semelhante.",
+   "comando": "Qual interpretação é sustentada pelos dados?",
+   "alts": [
+    "o levantamento prova que o fone endurece o tímpano, pois a perda aumenta com as horas de uso",
+    "a perda é maior no grupo de mais horas por defeito do nervo auditivo, que enfraquece com o uso do fone",
+    "há associação entre uso e perda, compatível com dano às células sensoriais da cóclea, sem provar a causa",
+    "o fone melhora a audição de sons agudos, pois quem o usa mais horas treina a cóclea e perde menos sensibilidade"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre equilíbrio, Beatriz ficou apoiada em uma perna e mediu quanto tempo se manteve estável em três condições: olhos abertos, olhos fechados e olhos fechados logo depois de girar dez vezes no mesmo lugar. A professora lembrou que o ouvido interno tem canais com líquido.",
+   "comando": "Que explicação é coerente com os dados?",
+   "alts": [
+    "o equilíbrio depende da visão, e o ouvido interno participa depois de girar, quando o líquido envia sinais",
+    "o equilíbrio depende do ouvido interno, e a visão não participa, pois a queda do tempo se deve ao giro",
+    "o equilíbrio depende dos músculos da perna, e o líquido do ouvido interno é importante para a audição",
+    "o equilíbrio combina visão e ouvido interno, e após girar o líquido ainda em movimento envia sinais enganosos"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Durante a decolagem de um avião em Guarulhos, Pedro sentiu o ouvido tapado, que melhorou quando ele mascou chiclete e bocejou. A cabine fica com pressão menor que a do solo, e a orelha média conecta-se à garganta por um canal fino chamado tuba auditiva.",
+   "comando": "Qual explicação relaciona os dados ao funcionamento da orelha?",
+   "alts": [
+    "ao mascar e bocejar o canal auditivo externo se abre, o que iguala a pressão da cabine com a do cérebro de Pedro",
+    "ao mascar e bocejar a tuba auditiva se abre e deixa o ar passar, o que iguala a pressão nos dois lados do tímpano",
+    "ao mascar e bocejar o tímpano se desloca, o que reduz a pressão da cabine para o mesmo valor da orelha média",
+    "ao mascar e bocejar a cóclea libera líquido, o que aumenta a pressão da orelha média até igualar à do solo"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Três pessoas procuraram uma UBS com queixas diferentes e o médico registrou o que encontrou em cada exame. Os estudantes de uma feira de ciências receberam as informações e precisam relacionar cada caso com a parte da orelha mais provavelmente envolvida.",
+   "comando": "Qual relação entre o caso e a parte da orelha é sustentada pelos dados?",
+   "alts": [
+    "o caso A sugere problema na orelha externa, que participa do equilíbrio, e o caso B sugere problema no ouvido interno, que conduz a vibração",
+    "o caso A sugere problema na orelha média, que participa do equilíbrio, e o caso B sugere problema no nervo auditivo, que conduz a vibração",
+    "o caso A sugere problema no ouvido interno, que participa do equilíbrio, e o caso B sugere problema na orelha média, que conduz a vibração",
+    "o caso C sugere problema no ouvido interno, que participa do equilíbrio, e o caso A sugere problema na orelha externa, que conduz a vibração"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Beatriz repetiu o teste de ficar em uma perna só e mediu o tempo em equilíbrio em duas condições. Ela percebeu que, de olhos fechados, os movimentos do corpo ficaram maiores, e que o ouvido interno enviava o aviso de que o corpo estava inclinando.",
+   "comando": "Explique por que o tempo caiu de olhos fechados e quais duas fontes de informação o cérebro continua usando.",
+   "ref": "De olhos fechados o cérebro perde as informações da visão, que ajudam a perceber a posição do corpo, e o equilíbrio fica mais difícil. Ele continua usando os sinais do ouvido interno, que sente a posição e o movimento da cabeça, e os sinais de músculos e articulações."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um paciente reclama de não ouvir bem. Seu médico fez testes em cada etapa do caminho do som: a membrana do canal vibrou normalmente, os ossinhos da orelha média se moveram normalmente, mas a estrutura em espiral do ouvido interno não produziu resposta elétrica ao som, embora o nervo auditivo estivesse íntegro.",
+   "comando": "Indique a estrutura que está com problema e explique, seguindo o caminho do som, por que o paciente não ouve bem.",
+   "ref": "A falha está na cóclea, que fica no ouvido interno. O som chega ao tímpano, passa pelos ossículos e chega à cóclea, que deveria transformar a vibração em impulsos nervosos; sem isso o nervo, mesmo íntegro, não tem sinal para levar ao cérebro."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Lucas, de 8 anos, passou a pedir que repetissem tudo e aumentava o volume da televisão. Na UBS, o médico viu uma bola de cera tampando o canal da orelha. Após a limpeza, o menor som que Lucas conseguia ouvir mudou bastante.",
+   "comando": "Explique por que a cera prejudicou a audição de Lucas sem lesar o nervo e a cóclea, usando os dados.",
+   "ref": "A cera tampou o canal auditivo e impediu que as ondas sonoras chegassem ao tímpano, por isso o som precisava ser mais forte. Após a limpeza, a audição voltou ao normal, o que mostra que nervo e cóclea estavam sãos."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Mônica sente enjoo quando lê no banco de trás de um carro em uma estrada sinuosa. Seus olhos estão fixos no livro, que parece parado, enquanto o ouvido interno sente os balanços do carro. Quando olha pela janela, o enjoo diminui.",
+   "comando": "Explique por que ocorre o enjoo e por que olhar pela janela ajuda.",
+   "ref": "O enjoo ocorre porque o cérebro recebe informações conflitantes: a visão indica que o corpo está parado e o ouvido interno indica movimento. Olhar pela janela faz a visão e o ouvido interno concordarem, e o cérebro integra as informações sem o conflito."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "A escola de Caio fica ao lado de uma avenida movimentada. A diretora pediu à turma que medisse o nível de som em três ambientes e sugerisse medidas. Sons contínuos acima de 70 decibéis podem prejudicar a audição com o tempo.",
+   "comando": "Compare os ambientes, indique qual oferece risco e explique como o ruído pode prejudicar a cóclea, propondo uma medida.",
+   "ref": "A sala com janelas abertas, com 75 decibéis, ultrapassa o limite de 70 e oferece risco. O ruído intenso e prolongado danifica as células sensoriais da cóclea, que não se regeneram. Fechar as janelas ou usar barreiras de som reduz o nível a valores seguros."
+  }
+ ],
+ "4B|6º ANO|11": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Léo, de 13 anos, quebrou o antebraço ao cair de skate em uma pista de Santos. O ortopedista colocou uma imobilização e pediu radiografias periódicas. A família estranhou: se o osso é duro, como pode \"se consertar\" sozinho?",
+   "comando": "Que explicação justifica a necessidade da imobilização durante as semanas registradas?",
+   "alts": [
+    "O osso é tecido vivo que se regenera, e a imobilização mantém as pontas alinhadas durante a formação",
+    "O gesso faz o osso crescer mais rápido, pois fornece cálcio que atravessa a pele e se deposita na fratura",
+    "O osso é uma estrutura sem vida, que se une pela cola natural do corpo, e a imobilização serve para evitar dor",
+    "As pontas do osso se afastam com o tempo, e a imobilização reduz a perda de cálcio no sangue do paciente"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma nutricionista analisou três grupos de adolescentes de uma escola, comparando o consumo diário de cálcio, estimado por questionários, com a densidade dos ossos medida por exame, em relação ao valor de referência de 100.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "A densidade aumenta na mesma proporção do cálcio, então 1300 mg dá ossos 30% mais densos que 1000 mg",
+    "O cálcio deixa os ossos mais densos nos adolescentes, e por isso os do grupo A têm ossos mais velhos",
+    "Mais cálcio na dieta acompanha ossos mais densos, mas o ganho diminui acima de 1000 mg por dia",
+    "O consumo de cálcio não altera os ossos, pois o grupo C tem 3 pontos a mais que o valor de referência"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em aulas de ginástica olímpica, a professora explicou que diferentes articulações permitem movimentos diferentes. Os alunos pesquisaram o número de eixos de movimento e a amplitude de algumas articulações do corpo humano.",
+   "comando": "Que relação entre estrutura e função das articulações é sustentada pelo quadro?",
+   "alts": [
+    "Articulações com mais eixos são menos móveis, e as suturas permitem movimentos que protegem o encéfalo",
+    "A amplitude de movimento depende da massa dos ossos, e por isso o ombro se move mais que o joelho",
+    "As articulações permitem movimentos amplos, e as suturas são exceção por serem feitas de cartilagem",
+    "Articulações com mais eixos permitem movimentos mais amplos, e as suturas fixas protegem o encéfalo"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma pesquisa acompanhou voluntários que ficaram 12 semanas com uma dieta pobre em cálcio, em condições controladas. A cada quatro semanas mediram o cálcio no sangue e a massa dos ossos, em relação ao valor inicial.",
+   "comando": "Qual explicação relaciona os resultados à função dos ossos?",
+   "alts": [
+    "O cálcio do sangue caiu porque os ossos absorveram o que havia, e por isso a massa óssea aumentou",
+    "Os ossos liberaram cálcio ao sangue para manter seu nível, o que reduziu a massa óssea",
+    "A dieta pobre em cálcio fez o corpo produzir cálcio nos músculos, o que manteve o nível do sangue",
+    "Os ossos não participam do equilíbrio do cálcio, e a queda na massa óssea decorreu da idade"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um aluno quer compreender a organização do esqueleto humano adulto e consultou um quadro com o número de ossos de cada região. O professor pediu que ele relacionasse a quantidade de ossos às funções do esqueleto axial e do apendicular.",
+   "comando": "Qual afirmação é coerente com o quadro?",
+   "alts": [
+    "O eixo central tem mais ossos (126) que os membros (80), e por isso o movimento depende da coluna",
+    "O esqueleto tem 206 ossos, dos quais 126 formam o crânio e as costelas, que protegem os órgãos internos",
+    "Membros e cinturas têm mais ossos (126) que o eixo central (80), que protege encéfalo e medula",
+    "Os membros e cinturas têm 80 ossos, e o restante se localiza no eixo central, que garante o movimento"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Durante missões espaciais, astronautas passam meses em microgravidade, onde os ossos das pernas e da coluna sustentam pouco peso. Exames mostraram perda de massa óssea, apesar de uma dieta adequada em cálcio, e os astronautas precisam fazer exercícios físicos todos os dias.",
+   "comando": "Explique por que a perda óssea ocorre em microgravidade e por que o exercício ajuda a reduzi-la.",
+   "ref": "O osso é um tecido vivo que responde ao esforço: sem peso para sustentar, o corpo retira cálcio dos ossos e a massa diminui. O exercício com carga reproduz o esforço, estimula a manutenção do tecido e reduz a perda, mesmo com dieta adequada."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Joana torceu o joelho em uma aula de educação física. O médico explicou que o joelho tem ossos unidos por articulação, com cartilagem e ligamentos. Ele disse que a cartilagem se recupera mais devagar que o osso, e Joana precisou de repouso por seis semanas.",
+   "comando": "Explique a função da cartilagem e da articulação no movimento e por que o repouso foi indicado.",
+   "ref": "A cartilagem reveste as extremidades dos ossos na articulação, reduz o atrito e amortece impactos, permitindo movimentos suaves. Como se recupera lentamente, o repouso evita novo esforço, permitindo que ela e os ligamentos se reparem e o joelho volte a funcionar."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "A escola vai comprar capacetes para a oficina de skate e alguns pais acharam desnecessário, pois \"o crânio já é duro\". A professora mostrou que o crânio é formado por ossos unidos por suturas e que protege o encéfalo.",
+   "comando": "Explique a função do crânio, por que ele não dispensa o capacete e como o esqueleto axial participa da proteção do corpo.",
+   "ref": "O crânio é formado por ossos unidos que envolvem e protegem o encéfalo, mas pode fraturar em um impacto forte e o capacete amortece a pancada. O esqueleto axial inclui ainda a coluna, que protege a medula espinal, e as costelas, que protegem coração e pulmões."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma escola de Guarulhos serve leite, queijo e couve no almoço. A nutricionista propôs mudar o cardápio para incluir mais alimentos ricos em cálcio, porque os alunos estão na fase em que os ossos mais crescem. Ela mostrou dois cardápios com o teor de cálcio.",
+   "comando": "Explique qual cardápio é mais adequado para adolescentes e por que o cálcio é importante para os ossos.",
+   "ref": "O cardápio 2 é mais adequado, pois fornece mais cálcio (620 mg contra 180 mg). Na adolescência o esqueleto cresce e acumula massa óssea, e o cálcio é a matéria-prima que deixa os ossos resistentes e serve de reserva para o corpo."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em um treino de ginástica, uma atleta de 14 anos faz saltos e rotações. O técnico observa que o ombro dela se movimenta em vários planos, enquanto o cotovelo só dobra e estica. Ele quer entender a diferença entre as articulações antes de planejar o treino.",
+   "comando": "Compare as articulações do ombro e do cotovelo e explique como a estrutura de cada uma se relaciona com o movimento que permite.",
+   "ref": "O ombro é uma articulação com grande liberdade, que permite movimentos em vários planos e amplos, mas fica mais exposta a lesões. O cotovelo é uma articulação do tipo dobradiça, que permite apenas dobrar e esticar, com mais estabilidade, ligando os ossos de modo mais firme."
+  }
+ ],
+ "4B|6º ANO|12": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Numa feira de ciências em Jundiaí, três cartões com observações de músculos de uma pessoa foram expostos sem identificação. Os visitantes deviam relacionar cada cartão a um tipo de músculo: esquelético, liso ou cardíaco. O monitor lembrou que a classificação depende de onde está o músculo, de como ele se contrai e de quem controla essa contração.",
+   "comando": "Que alternativa relaciona corretamente os três cartões aos tipos de músculo?",
+   "alts": [
+    "X é cardíaco, Y é liso e Z é esquelético, pelo ritmo e pelo local",
+    "X é esquelético, Y é liso e Z é cardíaco, pelo controle e local",
+    "X é esquelético, Y é cardíaco e Z é liso, pelo local e pelo ritmo",
+    "X é liso, Y é esquelético e Z é cardíaco, pelo cansaço e pelo local"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um professor de Educação Física de Franca pediu aos alunos que medissem a circunferência do bíceps (frente do braço) e do tríceps (parte de trás) com o braço estendido e com o cotovelo dobrado, com a mão carregando um peso leve. A turma queria explicar o movimento do braço.",
+   "comando": "Qual interpretação dos dados é correta?",
+   "alts": [
+    "No cotovelo dobrado, o bíceps e o tríceps se contraem juntos, e por isso os dois têm medidas diferentes",
+    "No cotovelo dobrado, o tríceps se contrai e o bíceps relaxa, pois o tríceps é o músculo que dobra o braço",
+    "No cotovelo dobrado, o tendão do bíceps se contrai e engrossa, enquanto o músculo acompanha o osso",
+    "No cotovelo dobrado, o bíceps se contrai e o tríceps relaxa; os dois trabalham em pares opostos"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Duas pessoas, Ana e Bruno, correram durante 10 minutos em uma pista pública do Parque da Juventude, e um técnico mediu os batimentos do coração em três momentos. Ana é sedentária e Bruno treina corrida há anos. Os alunos discutiram o que o resultado diz sobre o coração.",
+   "comando": "Qual conclusão sobre os dados é coerente?",
+   "alts": [
+    "O coração de Bruno parece mais eficiente, pois bate menos em repouso e se recupera mais rápido, e os ajustes ocorrem sem controle voluntário",
+    "O coração de Bruno bateu mais em repouso, pois o treino faz o músculo cardíaco trabalhar mais, e Ana controla seus batimentos conscientemente",
+    "O coração de Ana é mais eficiente, pois precisou de mais batimentos para chegar a 160, e por isso recupera mais rápido",
+    "O coração de Ana e o de Bruno se recuperaram igualmente, pois o músculo cardíaco aumenta a frequência da mesma forma após o esforço"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Duas equipes de corredores amadores de Sorocaba relataram o número de lesões musculares, como distensões, durante um mês de treino. A equipe A não fez aquecimento e treinou 90 minutos por dia; a equipe B fez 10 minutos de aquecimento e treinou 60 minutos por dia. Cada equipe tinha 10 pessoas.",
+   "comando": "Qual conclusão é sustentada pelos dados e pelo procedimento?",
+   "alts": [
+    "O aquecimento evita lesões, pois a equipe B teve menos lesões que a equipe A, e a duração do treino não importa",
+    "O treino longo causa lesões, pois a equipe A treinou 90 minutos, e o aquecimento não tem relação com elas",
+    "A equipe B teve menos lesões, mas, como duas condições mudam, a diferença não é atribuível ao aquecimento",
+    "Não há relação entre aquecimento e lesões, pois as duas equipes tiveram lesões no mesmo mês"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Para demonstrar a ação dos músculos do tubo digestório, uma monitora de museu em Piracicaba mediu quanto tempo um pequeno alimento leva para chegar ao estômago quando a pessoa o engole em posições diferentes. A turma estranhou ao ver que o tempo muda muito pouco de uma posição para outra.",
+   "comando": "Que explicação é coerente com os dados?",
+   "alts": [
+    "Contrações de músculos lisos empurram o alimento, sem depender da gravidade nem da vontade",
+    "A gravidade empurra o alimento, e o tempo mudaria bastante se não houvesse músculos nas paredes do esôfago",
+    "Os músculos esqueléticos do esôfago puxam o alimento sob comando da pessoa, por isso o tempo é parecido",
+    "O alimento escorrega pelo esôfago por ser líquido, e a posição do corpo muda o tempo se ele for sólido"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Um estudante contou que, no jogo de futebol, ele chuta a bola quando quer, mas não consegue mandar o coração parar de bater ou o intestino parar de se mexer. Uma professora mostrou um quadro com três ações do corpo.",
+   "comando": "Explique a diferença entre os movimentos voluntários e involuntários, associando cada ação do quadro ao tipo de músculo envolvido.",
+   "ref": "Chutar a bola é movimento voluntário, controlado pela pessoa e feito por músculo esquelético. Os batimentos e os movimentos do intestino são involuntários, feitos por músculo cardíaco e por músculo liso, respectivamente."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma aluna do 6º ano em Santo André tentou dobrar o cotovelo com o tríceps relaxado e depois com o tríceps tenso, usando um peso leve, e mediu quanto o braço dobrou nas duas tentativas. Ela queria entender como os músculos agem em pares.",
+   "comando": "Explique por que, para dobrar e esticar o cotovelo, o corpo usa dois músculos e como cada um age em cada movimento.",
+   "ref": "Os músculos só puxam quando se contraem, então um par é necessário: o bíceps se contrai e o tríceps relaxa para dobrar o cotovelo, e o inverso para esticá-lo. Quando o tríceps está tenso, ele se opõe ao bíceps e limita o movimento."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um jogador amador de Bauru sentiu dor no calcanhar e dificuldade para ficar na ponta dos pés depois de saltos repetidos. O médico explicou que houve inflamação do tendão que liga o músculo da panturrilha ao osso do calcanhar.",
+   "comando": "Explique a função do tendão no movimento e por que o problema no tendão prejudica ficar na ponta dos pés.",
+   "ref": "O tendão liga o músculo ao osso e transmite a força da contração para mover o osso. Com o tendão do calcanhar inflamado, a força não é transmitida bem e há dor, por isso o movimento fica prejudicado."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um grupo de adultos de uma academia de bairro, em São Bernardo do Campo, participou de um programa em que parte da turma treinava e parte ficava sem atividade. Após três meses, a força foi medida e comparada com a medida inicial.",
+   "comando": "Explique o resultado do grupo sedentário e do grupo que treinou e proponha dois hábitos para cuidar da saúde dos músculos.",
+   "ref": "Os músculos treinados ganham força e volume, e os músculos sem uso tendem a perder força. Para cuidar dos músculos, é recomendável praticar atividade física com regularidade e alongar-se, além de ter alimentação adequada com proteínas e dormir bem."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Ao final de uma corrida de 5 km, um estudante percebeu que respirava mais rápido, o coração batia mais forte e sentia calor. A professora disse que vários sistemas do corpo trabalham juntos, e os músculos esqueléticos são os que mais consomem energia.",
+   "comando": "Explique por que a respiração e os batimentos aumentam durante a corrida, relacionando o sistema muscular a esses sistemas.",
+   "ref": "Os músculos em contração gastam mais energia e precisam de mais gás oxigênio. A respiração mais rápida aumenta a entrada de oxigênio e o coração mais acelerado leva o sangue com oxigênio aos músculos, enquanto o gás carbônico é eliminado."
+  }
+ ],
+ "4B|6º ANO|13": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na oficina de tecnologia assistiva da escola, em Santo André, Lucas montou a base de uma mão biônica de papelão. Antes de cortar, ele consultou uma tabela com a quantidade de falanges (ossinhos dos dedos) de cada dedo. Para treinar, resolveu construir primeiro o polegar, usando uma tira de papelão para cada falange e uma dobra para cada articulação entre elas.",
+   "comando": "Qual montagem do polegar de papelão é coerente com a tabela e com o que cada peça representa?",
+   "alts": [
+    "Duas tiras e uma dobra entre elas, em que as tiras representam as falanges (ossos) e a dobra representa a articulação.",
+    "Três tiras e duas dobras entre elas, em que as tiras representam as falanges (ossos) e as dobras representam as articulações.",
+    "Duas tiras e uma dobra entre elas, em que as tiras representam as articulações e a dobra representa uma falange (osso).",
+    "Duas tiras e duas dobras entre elas, em que as tiras representam as falanges (ossos) e as dobras representam os músculos."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Ao visitar a própria escola, em Osasco, um grupo de estudantes verificou os locais que um colega cadeirante consegue usar. A norma que eles consultaram diz que a porta deve ter pelo menos 80 cm de largura e que um degrau maior que 2 cm exige rampa. Os alunos mediram os locais A (biblioteca), B (banheiro) e C (laboratório) e queriam apontar quais têm barreira de acesso.",
+   "comando": "Quais locais apresentam barreira para um cadeirante?",
+   "alts": [
+    "A biblioteca e o laboratório, pois ambos têm algum recurso de acesso que ainda precisa de revisão na escola.",
+    "A biblioteca, pelo degrau sem rampa, e o banheiro, pela porta estreita, mas não o laboratório.",
+    "O banheiro, por ter a menor largura, e o laboratório, por ter rampa, pois a rampa pode não ser segura.",
+    "A biblioteca, por ter o maior degrau, e o laboratório, por ter a porta mais larga, mas não o banheiro."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma feira de tecnologia de São Bernardo do Campo, três dispositivos foram apresentados. O dispositivo A é uma mão biônica que substitui uma mão ausente. O dispositivo B é uma tala que mantém o joelho alinhado após uma lesão, sem substituir nenhuma parte do corpo. O dispositivo C é um programa que lê textos em voz alta para pessoas com baixa visão.",
+   "comando": "Qual alternativa classifica corretamente os três dispositivos?",
+   "alts": [
+    "A é uma prótese, B é uma órtese e C não é uma tecnologia assistiva, pois não se liga a uma parte do corpo.",
+    "A é uma órtese, B é uma prótese e C é uma tecnologia assistiva, que também engloba os dispositivos A e B.",
+    "A é uma prótese, B é uma órtese e C é uma tecnologia assistiva, que também engloba os dispositivos A e B.",
+    "A é uma tecnologia assistiva, B é uma prótese e C é uma órtese, pois a tala apoia e o programa também corrige."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Para testar o dedo da mão biônica, os alunos prenderam um fio de náilon que fazia o dedo dobrar quando era puxado, e mediram a dobra com um transferidor. A professora explicou que o fio do modelo faz o papel do tendão, que no corpo é puxado pelo músculo, e pediu que o grupo previsse o ângulo para uma puxada que não foi testada.",
+   "comando": "Qual é a previsão para 2,5 cm de fio puxado e o que o fio representa?",
+   "alts": [
+    "60°, porque o fio puxado representa o músculo, que se contrai e dobra o dedo na articulação.",
+    "75°, porque o fio representa o tendão, que liga o músculo ao osso e dobra o dedo.",
+    "75°, porque o fio puxado representa o nervo, que envia o sinal elétrico e dobra o dedo.",
+    "90°, porque o fio puxado representa o osso, que se contrai e dobra o dedo na articulação."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma ONG de Campinas apresentou duas opções de prótese de mão para crianças: uma comercial e outra feita em impressora 3D. Os dados abaixo foram divulgados pela ONG. Um jornalista escreveu que a opção impressa é 'melhor em tudo' e quis saber se os números sustentam essa afirmação.",
+   "comando": "Qual conclusão os dados sustentam?",
+   "alts": [
+    "A prótese impressa é melhor em qualquer aspecto, pois custa menos e fica pronta mais rápido do que a prótese comercial, segundo a ONG.",
+    "A prótese comercial é a mais acessível, pois o custo maior indica mais tecnologia, e o tempo de produção maior garante um ajuste melhor para a criança.",
+    "A prótese impressa tem pior qualidade, pois o preço menor indica materiais frágeis, e as crianças terão de trocá-la com frequência em poucos meses de uso.",
+    "A prótese impressa custa menos e fica pronta antes, o que amplia o acesso, mas os dados não informam durabilidade nem ajuste, logo o exagero não se sustenta."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Para montar a base da mão biônica, a turma recebeu um roteiro ilustrado com os primeiros passos. Rafaela seguiu cada passo e, ao terminar, tentou relacionar cada peça do modelo à parte da mão humana que ela representa. A professora pediu que ela explicasse o que o modelo mostra sobre como os dedos se movem.",
+   "comando": "Relacione as peças do modelo às estruturas da mão e explique como o modelo ajuda a entender o movimento dos dedos.",
+   "ref": "As tiras representam as falanges (ossos), as dobras representam as articulações e o fio representa o tendão. Quando o fio é puxado, como o músculo puxa o tendão no corpo, os ossos se movem nas articulações e o dedo dobra."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um grupo comparou o dedo indicador humano com o dedo de papelão, tentando perceber o que o modelo reproduz e o que ele não reproduz. A professora lembrou que os músculos que movem os dedos ficam no antebraço, e não nos próprios dedos, e que o modelo é uma simplificação.",
+   "comando": "Aponte duas semelhanças e uma limitação do modelo em relação ao dedo humano, justificando com a tabela.",
+   "ref": "Semelhanças: o número de falanges (3) e de articulações (2) é igual nos dois. Uma limitação é que no modelo o movimento vem da mão do aluno puxando o fio, enquanto no corpo ele vem da contração de um músculo, o que mostra que o modelo simplifica o sistema real."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma escola de Guarulhos vai receber um aluno cadeirante no próximo ano. A comissão de acessibilidade mediu três pontos da escola e encontrou problemas. O diretor disse que 'acessibilidade é só colocar uma rampa na entrada' e que o restante pode esperar.",
+   "comando": "Use os dados para mostrar que a afirmação do diretor é incompleta e proponha duas adaptações com justificativa.",
+   "ref": "Além do degrau da entrada, há uma porta estreita no banheiro e as mesas do pátio impedem a circulação, então só a rampa não resolve. Duas adaptações são construir rampa na entrada e alargar a porta do banheiro, e reorganizar as mesas, de modo que o aluno use todos os espaços com autonomia."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um estudante de 8º ano de São José dos Campos projetou, com ajuda de um professor, uma prótese de mão impressa em 3D para um colega. A notícia citou que o custo do material foi de R$ 150, mas que um profissional de saúde precisou fazer medições do braço e acompanhar o uso. Algumas pessoas disseram que a ciência só importa quando o produto é caro.",
+   "comando": "Explique como esse tipo de projeto se relaciona com a qualidade de vida e por que o acompanhamento do profissional é importante.",
+   "ref": "A prótese devolve ao colega movimentos que ampliam sua autonomia nas tarefas do dia a dia, e o baixo custo mostra que a ciência e a tecnologia podem ser acessíveis. O profissional de saúde garante que a medida e o ajuste sejam adequados ao corpo, evitando dor ou lesões e permitindo adaptar a prótese quando necessário."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Para entender os limites do dedo de papelão, uma turma de Sorocaba puxou o fio em diferentes comprimentos e anotou o ângulo da dobra. A aluna Bia disse que 'quanto mais fio se puxa, mais o dedo dobra', mas o professor pediu que ela olhasse com atenção para o último valor da tabela antes de generalizar.",
+   "comando": "Descreva o padrão dos dados, avalie a afirmação de Bia e proponha uma explicação para o último valor.",
+   "ref": "Até 3 cm o ângulo cresce 30° a cada centímetro, mas em 4 cm ele permanece em 90°, então a afirmação de Bia só vale até certo limite. Uma explicação é que o dedo encontrou um limite físico (como a palma da mão ou a dobra do papelão), e o fio extra não consegue dobrar mais."
+  }
+ ],
+ "4B|6º ANO|14": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma oficina de robótica, os alunos montaram uma mão de papelão em que um barbante passa pela palma e prende a ponta de um dedo. O barbante representa um tendão. Eles testaram três montagens diferentes e anotaram o que acontecia com o dedo em cada uma.",
+   "comando": "Que conclusão sobre a mão humana pode ser tirada comparando as montagens?",
+   "alts": [
+    "No corpo, o dedo volta sozinho à posição inicial, pois os tendões são elásticos e puxam quando o músculo relaxa.",
+    "O elástico mostra que os tendões do dorso da mão não funcionam, pois o dedo estica quando algo o puxa de fora.",
+    "O barbante representa o músculo, e por isso o dedo dobra mais quando o barbante é puxado com maior força.",
+    "No corpo, o dedo é esticado por outro músculo com seu tendão, já que cada tendão puxa em um sentido."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "A equipe testou quanto peso a mão biônica conseguia segurar. Os objetos tinham formas e superfícies diferentes: um bloco de borracha, uma garrafa lisa e um copo liso. A equipe quer descobrir a massa máxima que a mão consegue segurar antes de escorregar.",
+   "comando": "Qual novo teste daria a resposta mais confiável?",
+   "alts": [
+    "Usar objetos de formatos variados e massas maiores que 800 g, pois quanto mais pesado, mais evidente o limite.",
+    "Repetir o teste com a borracha de 20 g várias vezes, pois um objeto leve mostra com precisão o ponto em que escorrega.",
+    "Usar objetos de mesmo formato e mesma superfície, com massas entre 150 g e 500 g, para ver em qual valor escorrega.",
+    "Trocar o formato e a massa dos objetos a cada teste, para que o limite apareça em situações diferentes."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma pesquisadora mediu o tempo que uma pessoa leva para reagir em três situações: afastar a mão de uma chapa quente, piscar quando poeira entra no olho e fechar a mão ao ouvir um sinal combinado. A turma tenta relacionar o tempo ao caminho que a informação percorre no corpo.",
+   "comando": "Que interpretação explica o tempo da ação voluntária?",
+   "alts": [
+    "A ação voluntária demora mais porque o sinal vai ao cérebro, é interpretado e a ordem volta pelos nervos.",
+    "A ação voluntária é mais lenta porque os músculos da mão contraem com menos força que os músculos do olho.",
+    "A ação voluntária é mais rápida em teoria, mas o som demora mais que o calor para chegar ao corpo.",
+    "Os três tempos são parecidos em pessoas saudáveis, e a diferença vem de erros de medição do cronômetro."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um programa público dispõe de R$ 120 000 para adquirir próteses de mão para pessoas que perderam a função de segurar objetos. O objetivo é devolver ao maior número possível de pessoas a capacidade de pegar objetos do dia a dia. A tabela mostra três opções.",
+   "comando": "Qual decisão atende melhor ao objetivo do programa?",
+   "alts": [
+    "Comprar as mioelétricas, que dão mais movimentos e atendem 2 pessoas com a melhor função possível.",
+    "Comprar as mecânicas, que dão a 24 pessoas a função de pegar objetos, e avaliar depois quem precisa de mais.",
+    "Comprar as estéticas, que atendem 80 pessoas e por isso beneficiam o maior número de pessoas.",
+    "Comprar uma mioelétrica e o restante em estéticas, porque assim se atende ao mesmo tempo qualidade e quantidade."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Três pacientes chegaram à clínica de reabilitação com problemas diferentes em um dedo após acidentes. A equipe fez dois testes simples em cada um: pedir que mexesse o dedo e tocar levemente a ponta do dedo para saber se sentia o toque.",
+   "comando": "Qual interpretação dos resultados é coerente com o que se sabe sobre tendões, músculos e nervos?",
+   "alts": [
+    "1: falha na via da sensibilidade; 2: falha na via do movimento; 3: lesão em um tendão do dedo da mão.",
+    "1: lesão nas duas vias; 2: falha na via da sensibilidade; 3: falha na via do movimento do dedo, no tendão.",
+    "1: falha na via do movimento (tendão ou nervo); 2: falha na via da sensibilidade; 3: lesão nas duas vias.",
+    "1: falha na via do movimento do dedo; 2: lesão nas duas vias; 3: falha na via da sensibilidade."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma turma compara a mão biônica de papelão com a mão humana. Os dados medidos e consultados estão na tabela abaixo. O professor lembrou que um modelo ajuda a entender como as coisas funcionam, mas tem limites.",
+   "comando": "Aponte dois limites do modelo em relação à mão humana, usando os dados, e explique por que o modelo ainda é útil.",
+   "ref": "O modelo segura com muito menos força (8 N contra 400 N) e não sente o toque, então não representa a mão por inteiro. Mesmo assim, ele mostra como tendões ligados a músculos puxam os ossos dos dedos, o que facilita entender o movimento."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Na mão biônica, o aluno puxa a ponta do barbante e o dedo de papelão se dobra. A professora pede que a turma compare esse teste com o movimento voluntário do dedo de uma pessoa, desde a decisão até o dedo dobrar.",
+   "comando": "Descreva a sequência real que ocorre no corpo e indique quais partes do modelo representam o músculo e o tendão.",
+   "ref": "No corpo, o cérebro decide o movimento e envia o sinal pelos nervos ao músculo, que se contrai e puxa o tendão preso ao osso do dedo, dobrando-o. No modelo, a mão do aluno faz o papel do músculo e o barbante é o tendão."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma escola recebeu um aluno que usa prótese em uma das mãos. A coordenadora cronometrou o tempo que ele leva para fazer duas tarefas da rotina escolar, antes e depois de pequenas adaptações, como uma pasta com zíper maior e um engrossador de lápis.",
+   "comando": "Explique como as adaptações favorecem a acessibilidade e a inclusão e proponha mais uma adaptação para a escola.",
+   "ref": "As adaptações reduzem o tempo e o esforço, permitindo que o aluno participe das mesmas atividades que os colegas, o que é inclusão. Outra adaptação seria usar mesas ajustáveis, ou apoios para livros e cadernos, ou atividades esportivas adaptadas."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "A equipe testou três materiais de fio para fazer o tendão da mão biônica. Em cada teste, contou quantas vezes o fio puxou o dedo até falhar (arrebentar ou soltar do nó) e anotou se o dedo dobrava por inteiro.",
+   "comando": "Escolha o material mais adequado e justifique, considerando mais de um critério.",
+   "ref": "A linha de pesca é a melhor, pois dobra o dedo por inteiro e resistiu a mais puxadas (85), ou seja, é mais durável. A lã é a pior, pois não dobra o dedo e falha logo. O barbante funciona, mas dura menos."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em uma prótese real, o usuário vê o que segura, mas não sente o objeto. Pesquisadores testaram quantas vezes uma pessoa consegue segurar um ovo cru sem quebrar, com e sem o uso da visão, em dez tentativas.",
+   "comando": "Levante uma hipótese para a diferença e proponha como uma prótese poderia ser melhorada para ajudar o usuário.",
+   "ref": "Sem visão, a pessoa não recebe informação sobre a força aplicada, pois a prótese não tem sensibilidade ao toque e à pressão. Uma melhoria seria colocar sensores de pressão que enviem sinais ao usuário, como vibração, para ajustar a força."
+  }
+ ],
+ "4B|6º ANO|15": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na escola de Dona Marta, uma pesquisa fictícia com seis estudantes comparou o consumo de bebidas energéticas, as horas de sono e o rendimento nas provas. Um colega concluiu que o energético causa as notas baixas, e a professora pediu que a turma avaliasse essa conclusão com base nos dados da tabela.",
+   "comando": "Qual afirmação confunde correlação com causa?",
+   "alts": [
+    "Os dados mostram uma associação, mas outros fatores podem influenciar as notas além do consumo de energéticos.",
+    "O consumo de energético pode atrapalhar o sono, e o sono curto pode ajudar a explicar as notas menores.",
+    "As notas diminuem junto com as horas de sono, então o sono é um fator que também deve ser considerado.",
+    "O consumo de energético causa a nota baixa, pois quem mais consome tem as menores notas."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre drogas, a professora apresentou três substâncias hipotéticas, A, B e C, com os efeitos relatados no sistema nervoso. A turma deve classificá-las em estimulantes, depressoras ou perturbadoras, conforme o modo de atuar sobre o organismo.",
+   "comando": "Qual classificação está INCORRETA?",
+   "alts": [
+    "A é estimulante, pois deixa o sistema nervoso mais ativo e provoca a sonolência observada nos relatos.",
+    "B é estimulante, pois acelera a atividade do sistema nervoso e provoca alerta excessivo.",
+    "C é perturbadora, pois altera a percepção da realidade sem aumentar ou diminuir a atividade do sistema nervoso.",
+    "A é depressora, pois reduz a atividade do sistema nervoso e provoca lentidão da fala e dos movimentos."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma campanha educativa em Campinas mostra quanto um carro a 60 km/h percorre entre o motorista perceber um obstáculo e começar a frear. A tabela compara um motorista descansado com outro que consumiu bebida alcoólica, que é uma substância depressora do sistema nervoso.",
+   "comando": "Qual conclusão é correta com base nos dados?",
+   "alts": [
+    "O álcool deixa a reação mais rápida, e o carro percorre cerca de 8 m a menos antes de começar a frear.",
+    "O álcool deixa a reação mais lenta, e o carro percorre cerca de 8 m a mais antes de começar a frear.",
+    "O álcool aumenta o tempo de reação, mas a distância percorrida não muda, pois a velocidade é a mesma nos dois casos.",
+    "O álcool aumenta o tempo de reação em 0,5 s, o que equivale a 0,5 m a mais percorridos até começar a frear."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Na feira de ciências, um grupo montou um experimento com fumaça de cigarro: a fumaça foi aspirada por uma garrafa PET com um chumaço de algodão branco na saída. O grupo quer concluir que a fumaça escurece o algodão, mas os colegas lembraram que a conclusão depende de comparação.",
+   "comando": "Qual item do procedimento torna a conclusão do grupo válida?",
+   "alts": [
+    "Usar um algodão maior no experimento com cigarro, para facilitar a observação do escurecimento no final do teste.",
+    "Aspirar a fumaça de cigarros de tipos diferentes na mesma garrafa para provar que os tipos escurecem o algodão de modo igual.",
+    "Repetir o procedimento sem o cigarro, com a mesma garrafa e o mesmo algodão, para mostrar que o escurecimento vem da fumaça.",
+    "Soltar a fumaça na sala fechada para ver se os colegas sentem o cheiro e comparar com o algodão escurecido."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Rafael, de 15 anos, começou a tomar café forte para estudar. Ele percebeu que, com o passar das semanas, precisa de mais xícaras para sentir o mesmo efeito de alerta, e que sente dor de cabeça nos dias em que não toma café. Ele anotou os números em um caderno.",
+   "comando": "Qual fenômeno explica o registro de Rafael?",
+   "alts": [
+    "Imunidade: o organismo fica protegido da substância e exige doses maiores, e a falta dela mostra que o café faz bem.",
+    "Tolerância: o organismo se adapta à substância e exige doses maiores; a falta dela pode causar abstinência.",
+    "Intoxicação: o organismo acumula a substância em pouco tempo, e a dor de cabeça é o efeito de uma dose pequena.",
+    "Aprendizagem: o cérebro memoriza o horário do café, e a dor de cabeça é o efeito de esquecer de estudar naquele dia."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Pedro, de 13 anos, tomou um energético de 250 mL e duas latas de refrigerante de cola no mesmo dia. Uma nutricionista da UBS comentou que, em exemplos de aula, adolescentes devem evitar passar de 100 mg de cafeína por dia, valor de referência usado no exercício.",
+   "comando": "Calcule a cafeína ingerida por Pedro e discuta o que ela pode provocar no sistema nervoso dele.",
+   "ref": "Pedro ingeriu 80 + 2 x 35 = 150 mg, acima do valor de referência de 100 mg. A cafeína é estimulante e pode causar agitação, aceleração dos batimentos e insônia, além de dependência com o uso frequente."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma escola de Santo André aplicou um questionário fictício a ex-alunos adultos sobre a idade em que começaram a consumir bebida alcoólica regularmente. Os resultados foram apresentados no mural da biblioteca, com a porcentagem de respostas em cada faixa de idade.",
+   "comando": "Interprete os dados e explique por que o início precoce do consumo preocupa especialistas, considerando o sistema nervoso de adolescentes.",
+   "ref": "Quanto mais cedo o consumo começa, maior a porcentagem de pessoas com dependência. O sistema nervoso do adolescente ainda está em desenvolvimento, por isso a substância depressora pode prejudicar a aprendizagem e a memória e aumentar o risco de dependência."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma festa, um amigo oferece um cigarro eletrônico a Ana, de 14 anos, e usa alguns argumentos para convencê-la. Ana quer responder com informações científicas sobre os efeitos no organismo e na dependência, e a turma está ajudando com ideias.",
+   "comando": "Escolha dois argumentos do quadro e responda a cada um com base em efeitos da nicotina no sistema nervoso e na dependência.",
+   "ref": "Resposta ao 1: o sabor não elimina a nicotina, que é estimulante e causa dependência. Resposta ao 3: a nicotina age no sistema de recompensa, e quanto mais se usa, mais difícil fica parar. Resposta ao 2: o vapor também carrega substâncias nocivas aos pulmões e ao organismo."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um professor perguntou à turma: se o café e o remédio para dor vendido na farmácia são legais, eles podem ser chamados de drogas? Os alunos montaram um quadro com substâncias comuns e anotaram se são lícitas e se alteram o sistema nervoso.",
+   "comando": "Explique o conceito de droga e por que uma substância ser lícita não quer dizer que ela seja inofensiva.",
+   "ref": "Droga é toda substância que altera o funcionamento do organismo, como o café e o álcool. A venda permitida mostra que a lei autoriza o comércio, mas não que a substância seja segura: o uso excessivo ou por menores pode causar dependência e danos à saúde."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Após meses de uso frequente de bebidas alcoólicas nos fins de semana, Rafael, de 17 anos, percebeu mudanças em sua rotina e conversou com a orientadora da escola. Ela pediu que ele comparasse sua vida antes e depois do início do consumo.",
+   "comando": "Descreva três aspectos da qualidade de vida de Rafael que foram afetados e explique como o consumo pode ter provocado cada um.",
+   "ref": "O sono diminuiu, o que reduz a atenção e a memória; as faltas aumentaram, prejudicando a aprendizagem; e o gasto financeiro cresceu, afetando a família. Esses efeitos mostram como a dependência pode comprometer saúde, estudos e relações."
+  }
+ ],
+ "4B|6º ANO|16": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma escola de Ribeirão Preto promoveu uma semana de prevenção. Uma equipe mediu, em voluntários adultos, o tempo de reação para apertar um botão quando uma luz acendia. Cada participante fez o teste sem substância, após uma bebida com cafeína (estimulante) e após uma bebida com um depressor leve do sistema nervoso. Os resultados estão na tabela.",
+   "comando": "Qual conclusão é sustentada pelos dados do teste?",
+   "alts": [
+    "O estimulante deixa a pessoa mais lenta porque aumenta a quantidade de sangue no cérebro, o que atrasa a reação do botão.",
+    "O depressor não altera a reação, pois o tempo maior se deve ao cansaço natural das pessoas durante o teste no fim da tarde.",
+    "Substâncias que agem no sistema nervoso alteram a velocidade de resposta, aceleram ou retardam a reação conforme a ação de cada uma.",
+    "A cafeína e o depressor agem da mesma forma, pois as duas bebidas são líquidos e por isso mudam a reação de modo parecido."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Pesquisadores de um hospital público de Campinas acompanharam, durante um ano, a frequência de atendimentos de adolescentes por acidentes de trânsito e a proporção de jovens que relataram ter ouvido, no último mês, uma campanha de prevenção na escola. Os dados estão na tabela.",
+   "comando": "Qual interpretação é INCORRETA, por não ser sustentada pelos dados?",
+   "alts": [
+    "A campanha de prevenção pode estar associada à queda dos atendimentos, pois ambas as curvas se movem em sentidos opostos ao longo do ano.",
+    "Os dados sugerem que a campanha reduziu sozinha os acidentes, já que a queda nos atendimentos coincide com o aumento das campanhas ouvidas.",
+    "A proporção de jovens que ouviram a campanha cresceu a cada semestre, o que mostra maior alcance das ações de prevenção.",
+    "Os atendimentos diminuíram a cada semestre, e a tendência é mais forte no período em que mais jovens relataram a campanha."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma turma de 6º ano montou uma atividade sobre prevenção. Eles compararam duas mensagens de cartaz feitas para a escola: uma só com informações técnicas e outra com um relato curto de um colega sobre a pressão do grupo. Depois, perguntaram a 60 alunos quais mensagens lembravam melhor.",
+   "comando": "Qual procedimento tornaria a comparação justa?",
+   "alts": [
+    "Mostrar o relato de colega, pois ele já mostrou ser mais eficiente e as informações técnicas podem ser descartadas.",
+    "Perguntar aos alunos mais velhos, pois eles entendem melhor as mensagens e vão dar respostas mais confiáveis.",
+    "Mostrar as mensagens em turmas diferentes sem sortear, pois cada turma tem sua própria forma de lembrar informações do cartaz.",
+    "Mostrar as duas mensagens ao mesmo número de alunos, em ordem sorteada, e registrar quantos lembram de cada uma logo após a leitura."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em um estudo com ratos de laboratório, pesquisadores observaram que animais expostos a uma substância depressora apresentavam menor atividade e demoravam mais para encontrar a saída de um labirinto. Após retirar a substância, a atividade voltou ao normal. O grupo quer explicar o efeito no cérebro.",
+   "comando": "Que explicação é compatível com a sequência de resultados observados?",
+   "alts": [
+    "A substância fica guardada no cérebro por muito tempo, e o retorno à atividade normal indica que os ratos se acostumaram com o labirinto.",
+    "A substância atua no sistema nervoso e reduz a velocidade das respostas, e o efeito desaparece quando ela deixa o organismo.",
+    "O labirinto ficou mais difícil na segunda fase, e por isso o tempo aumentou, sem relação com qualquer substância aplicada.",
+    "A substância aumenta a força dos músculos dos ratos, o que os faz se movimentar devagar no labirinto por excesso de energia."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um professor de ciências propôs que a turma analisasse uma tabela com os resultados de uma pesquisa sobre o uso de substâncias por adolescentes em duas escolas, uma com programa de prevenção e outra sem. Após dois anos, os alunos deveriam decidir o que os dados mostram.",
+   "comando": "Qual decisão é a mais bem apoiada pelos dados?",
+   "alts": [
+    "Cancelar o programa, pois a escola A tem menos alunos que relataram uso do que a escola C, o que mostra que o programa não serve.",
+    "Concluir que o programa aumenta o uso, pois a escola C, que tem o programa, teve mais relatos que a escola A, que também tem.",
+    "Manter o programa de prevenção, pois as escolas com ele apresentam, em média, menor proporção de alunos que relataram uso.",
+    "Decidir pela escola D, pois ela tem um número de relatos próximo da escola B, e isso prova que as duas são iguais."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma equipe de saúde da escola observou que alunos que participaram de rodas de conversa sobre prevenção relataram, depois de um semestre, mais confiança para dizer não a convites de risco. Porém, a equipe não tem certeza se as rodas causaram a mudança, pois os alunos que participaram já eram mais engajados.",
+   "comando": "Explique por que a comparação feita pela equipe não permite afirmar que as rodas causaram a mudança, e proponha um modo de testar melhor o efeito.",
+   "ref": "Os grupos podem diferir em outros aspectos, como o engajamento anterior, então a diferença pode vir deles e não das rodas. Um teste melhor sortearia os alunos entre os grupos e compararia a confiança antes e depois, mantendo as demais condições iguais."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um grupo de alunos leu o texto de um cartaz e observou que ele dizia: 'Quem usa substâncias fica sempre violento.' Eles pesquisaram e encontraram que a maioria das pessoas que usam essas substâncias não apresenta violência, e que o efeito varia com a pessoa, a dose e o contexto.",
+   "comando": "Explique por que a frase do cartaz é uma generalização indevida e como os dados pesquisados ajudam a corrigir a ideia.",
+   "ref": "A frase transforma um possível efeito em regra universal, desconsiderando que a maioria não apresenta violência e que o efeito depende de pessoa, dose e contexto. Os dados mostram variação, por isso a informação correta é que o risco existe e depende de condições, sem generalizações."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Joana e Paulo discutem se a escola deve colocar cartazes sobre efeitos das substâncias no corpo. Joana acha que bastam os cartazes; Paulo acha que a conversa em grupo com exemplos reais é mais eficaz. Eles aplicaram um questionário antes e depois de cada atividade, e os resultados estão na tabela.",
+   "comando": "Qual dos dois métodos os dados apoiam melhor e por quê? Cite um cuidado que a escola deve tomar ao avaliar a eficácia do programa.",
+   "ref": "A conversa em grupo teve maior ganho (de 5 para 8 acertos) do que os cartazes (de 5 para 6), o que favorece o método com troca de experiências. A escola deve comparar os grupos com o mesmo número de alunos e avaliar a mudança de longo prazo, não apenas logo após a atividade."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um grupo de alunos de uma escola de Sorocaba entrevistou profissionais de saúde para entender por que alguns adolescentes buscam substâncias por curiosidade. Eles registraram três motivos citados com mais frequência e querem propor ações de prevenção que atuem sobre a causa, e não só sobre o sintoma.",
+   "comando": "Explique por que a prevenção deve considerar o contexto e as motivações dos jovens, e não apenas a informação sobre os efeitos das substâncias.",
+   "ref": "Os motivos mostram que a decisão envolve grupo, emoções e contexto familiar, e não só falta de informação. Ações que tratam essas causas, como apoio emocional e habilidades para lidar com a pressão, tendem a ser mais eficazes do que apenas listar efeitos."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma escola organizou uma pesquisa para saber se a prevenção funciona melhor com palestras ou com oficinas práticas. Os resultados de um ano mostram a porcentagem de alunos que souberam recusar um convite de risco em um teste de situações-problema.",
+   "comando": "Compare os dois formatos com base nos dados e indique uma limitação que a escola deve considerar antes de decidir qual manter.",
+   "ref": "A oficina prática teve maior porcentagem de alunos que souberam recusar (71% contra 48%), o que sugere que treinar habilidades funciona melhor. A escola deve considerar que o teste mede a intenção logo após a atividade e que os grupos podem diferir em outros aspectos."
+  }
+ ],
+ "4B|6º ANO|2": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, Bruno encostou sem querer a mão em uma panela quente e a afastou rapidamente. O professor mostrou um registro com os tempos medidos por um aparelho de laboratório e perguntou qual estrutura comandou a retirada da mão, antes de a dor ser sentida.",
+   "comando": "Com base no registro, qual estrutura coordena essa resposta?",
+   "alts": [
+    "O cerebelo, pois ele coordena os movimentos e decidiu afastar a mão antes de o cérebro perceber a dor.",
+    "O cérebro, pois ele recebe a informação de dor e envia a ordem para a mão se afastar assim que a dor é percebida.",
+    "A medula espinal, pois a mão se afastou antes de a dor ser percebida, indicando um ato reflexo sem a participação do cérebro.",
+    "Os nervos motores, pois eles percebem o calor e movimentam a mão sozinhos, sem receber informação de outras estruturas."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Três pessoas foram atendidas em um pronto-socorro de Campinas após acidentes, e a médica registrou os sintomas de cada uma. Os alunos devem associar cada caso à estrutura do sistema nervoso provavelmente afetada, sem usar nomes de pacientes, apenas as letras do registro.",
+   "comando": "Qual associação é mais coerente com os sintomas?",
+   "alts": [
+    "A: cérebro; B: medula espinal; C: cerebelo e bulbo.",
+    "A: medula espinal; B: cerebelo; C: cérebro.",
+    "A: cerebelo; B: cérebro; C: medula espinal.",
+    "A: cerebelo; B: medula espinal; C: cérebro."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Laura pedala em uma rua de Sorocaba e freia ao ouvir uma buzina. Um professor de educação física mediu o tempo entre o som e o início da frenagem em três situações, para discutir como o sistema nervoso recebe o estímulo e envia a resposta aos músculos das pernas e dos braços.",
+   "comando": "Qual interpretação dos dados é correta?",
+   "alts": [
+    "O estímulo é captado pelos receptores e processado no sistema nervoso central; distração e sono atrasam o processamento.",
+    "O estímulo vai direto dos ouvidos aos músculos pelos nervos, e a música e o sono atrasam a condução nervosa.",
+    "A resposta depende dos músculos da perna, e a música e o sono reduzem a força muscular, o que atrasa a frenagem.",
+    "O tempo de reação é igual nas três situações, pois o impulso nervoso percorre a mesma distância até os músculos."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em uma consulta no dentista, uma voluntária recebeu anestesia local em um dedo da mão. A equipe testou o que ela sentia e o que conseguia fazer antes e depois do efeito da anestesia, para entender os caminhos dos impulsos nervosos que chegam e saem do dedo.",
+   "comando": "O que o resultado indica sobre os nervos que chegam ao dedo?",
+   "alts": [
+    "Os nervos sensitivos e os motores são a mesma via, e a anestesia bloqueou o impulso no sentido do dedo para o cérebro.",
+    "Os nervos sensitivos e os motores são vias diferentes, e a anestesia bloqueou os sensitivos, mas não os motores.",
+    "A anestesia bloqueou o cérebro da voluntária, que deixou de interpretar o toque, mas continuou comandando o movimento do dedo.",
+    "A anestesia bloqueou o músculo do dedo, que deixou de sentir o toque, mas continuou recebendo ordens do cérebro."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Após um acidente vascular cerebral, um senhor de 62 anos passou a ter fraqueza no braço e na perna do lado direito do corpo. A tomografia mostrou que a lesão estava no cérebro, e a equipe explicou à família onde ela ocorreu e quais movimentos foram afetados.",
+   "comando": "Qual explicação é coerente com o quadro?",
+   "alts": [
+    "Cada hemisfério comanda principalmente o lado oposto do corpo, então a lesão à esquerda afeta o lado direito.",
+    "Cada hemisfério comanda o mesmo lado do corpo, então a lesão à esquerda afetou o lado esquerdo, e o lado direito foi poupado.",
+    "A lesão atingiu o cerebelo, que comanda os músculos do lado direito, e por isso o hemisfério esquerdo foi afetado.",
+    "A lesão atingiu a medula espinal, que comanda os músculos do lado direito, e por isso a fala permaneceu normal."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma xícara de café muito quente é segurada por Camila, que a solta rapidamente antes de sentir dor. Os alunos estudaram um gráfico dos tempos em que cada etapa acontece no corpo após o contato com a xícara.",
+   "comando": "Descreva o caminho do impulso nervoso nesse ato reflexo e explique por que a mão se afasta antes de Camila sentir a dor.",
+   "ref": "Receptores da pele enviam o impulso por nervos sensitivos até a medula, que envia o comando por nervos motores aos músculos do braço. A resposta é rápida porque a medula decide sem esperar o cérebro; a dor é percebida depois, quando o sinal chega ao cérebro."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em um jogo de futebol, o goleiro Davi vê a bola chutada e se joga para o canto, mantendo o equilíbrio ao cair e se levantar logo em seguida. Um estudante quer saber quais estruturas do sistema nervoso entram em ação em cada parte dessa jogada.",
+   "comando": "Associe pelo menos três estruturas do sistema nervoso à sua função na defesa do goleiro.",
+   "ref": "Os olhos e os nervos sensitivos enviam a informação ao cérebro, que interpreta e decide o movimento. A medula e os nervos motores levam as ordens aos músculos, e o cerebelo coordena os movimentos e o equilíbrio durante o salto e a queda."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Durante o sono, o coração de Júlio bate e ele respira sem acordar e sem decidir fazê-lo. Um enfermeiro mediu esses sinais vitais ao longo da noite e comentou que uma parte do tronco encefálico controla essas funções.",
+   "comando": "Explique por que a respiração e os batimentos continuam durante o sono e que estrutura é responsável por isso.",
+   "ref": "Respiração e batimentos são funções automáticas e vitais controladas pelo bulbo, no tronco encefálico, sem depender da vontade nem da consciência. Por isso continuam funcionando mesmo durante o sono."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Dois motoristas sofreram acidentes diferentes e ficaram sem movimentos nas pernas. O primeiro teve a medula lesionada na região lombar, e o segundo na região do pescoço, mais acima. A médica explicou que a posição da lesão muda o que é perdido.",
+   "comando": "Explique por que a lesão no pescoço atinge mais partes do corpo do que a lesão lombar, usando o papel da medula.",
+   "ref": "A medula conduz impulsos entre o cérebro e o corpo, e cada região envia nervos para uma parte do corpo. Uma lesão no pescoço interrompe a passagem das informações para tudo o que está abaixo dela, incluindo braços e pernas, enquanto a lesão lombar atinge a parte inferior do corpo."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "A diretora de uma escola explicou que o sistema nervoso é uma rede de comunicação: um aviso sai da secretaria, chega à direção, e as ordens são levadas às salas. A turma montou um quadro comparando os elementos da escola com os do corpo humano.",
+   "comando": "Relacione cada elemento do quadro a uma parte do sistema nervoso e explique a função dessa parte na comunicação.",
+   "ref": "Sirene e microfone correspondem aos receptores sensoriais, que captam estímulos; os fios e alto-falantes correspondem aos nervos, que levam os impulsos; a sala da direção corresponde ao encéfalo e à medula, que processam a informação e decidem a resposta."
+  }
+ ],
+ "4B|6º ANO|3": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em um ambulatório de reabilitação de São Paulo, três pacientes com lesões em nervos da perna participaram de um teste simples. Um profissional encostou um cotonete no pé de cada um, com os olhos vendados, e pediu que mexessem o pé quando quisessem. Os resultados foram anotados.",
+   "comando": "Qual interpretação é sustentada pelos resultados, considerando os tipos de neurônio envolvidos?",
+   "alts": [
+    "O paciente A tem prejuízo na via que leva a ordem até o músculo, e o paciente B tem prejuízo na via que leva informação do pé ao sistema nervoso.",
+    "Os pacientes A e B têm lesão nos mesmos neurônios, pois nos dois casos a resposta do pé ficou diferente da resposta observada no paciente C.",
+    "O paciente A tem prejuízo na via que leva informação do pé ao sistema nervoso, e o paciente B tem prejuízo na via que leva a ordem até o músculo.",
+    "O paciente C não tem neurônios funcionando no pé, pois a resposta dele aconteceu sem que a comunicação nervosa fosse necessária."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em um laboratório de uma universidade pública, pesquisadores estimularam eletricamente pontos diferentes de um neurônio isolado e registraram se o sinal aparecia em outras regiões da célula. O objetivo era descobrir o sentido em que o impulso nervoso percorre um neurônio em condições normais.",
+   "comando": "Qual conclusão é sustentada pelos resultados do experimento?",
+   "alts": [
+    "O impulso segue no sentido dendritos, corpo celular e axônio, e termina nos terminais do axônio sem retornar aos dendritos.",
+    "O impulso pode seguir nos dois sentidos, pois o sinal foi registrado no axônio quando se estimularam os dendritos e o corpo celular.",
+    "O impulso nasce no axônio e vai em direção aos dendritos, pois é no axônio que o neurônio produz o sinal que será enviado.",
+    "O impulso depende do tempo de estímulo, pois em 3 ms o sinal chega ao axônio e passa ao neurônio vizinho, se houver contato."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um experimento com neurônios cultivados, dois neurônios, A e B, ficaram muito próximos, separados por um espaço minúsculo. Os pesquisadores estimularam A e registraram se havia impulso em A e em B. Depois repetiram o teste com uma substância que impede a liberação de mensageiros químicos pelo final do axônio de A.",
+   "comando": "Que interpretação é compatível com os resultados registrados?",
+   "alts": [
+    "A substância destrói o axônio de A, e por isso o impulso deixa de ser produzido em A e em B quando o teste é repetido.",
+    "A e B são ligados por um prolongamento contínuo, e a substância interrompe a passagem do impulso elétrico entre eles ao chegar no meio.",
+    "O neurônio B responde quando o corpo celular de A é estimulado, e a substância impede que esse corpo celular receba o sinal.",
+    "A comunicação de A para B depende de mensageiros químicos liberados no espaço entre eles, e a substância bloqueia essa etapa e não o impulso em A."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em um laboratório de ciências, os alunos compararam o tempo gasto em duas respostas do corpo: afastar a mão de uma superfície muito quente (reflexo) e apertar um botão ao ver uma luz acender (resposta voluntária). Para cada resposta foi anotado o caminho do impulso nervoso e o número de sinapses.",
+   "comando": "Que explicação é sustentada para o tempo menor do reflexo?",
+   "alts": [
+    "Os neurônios do reflexo têm axônios mais grossos, que conduzem o impulso com maior velocidade do que os da resposta voluntária.",
+    "O impulso passa por menos neurônios e sinapses, com o processamento na medula, e por isso a resposta ocorre em menos tempo.",
+    "O cérebro é muito lento para responder, e por isso evitá-lo é o modo de o corpo reagir com rapidez a um perigo.",
+    "O reflexo é mais rápido porque o impulso percorre um caminho mais curto, e o número de sinapses não influencia o tempo gasto."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma estudante desenhou um neurônio e anotou, a partir de uma pesquisa, características de cada parte: dendritos, corpo celular e axônio. Ela precisa escrever conclusões sobre o funcionamento do neurônio, mas uma de suas frases, escrita por engano, contradiz a tabela que ela mesma montou.",
+   "comando": "Qual das frases NÃO é sustentada pela tabela da estudante?",
+   "alts": [
+    "O axônio é longo e existe um por neurônio, o que combina com levar o sinal até pontos distantes, como os músculos do pé.",
+    "Os dendritos são vários e ramificados, o que amplia a superfície do neurônio para receber sinais de muitas células.",
+    "Como o axônio é longo e ramificado, é ele que recebe os sinais de vários neurônios ao mesmo tempo.",
+    "O corpo celular contém o núcleo e fica entre os dendritos e o axônio, no caminho do impulso nervoso."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em uma consulta, o médico bate com um martelo de borracha no joelho de um paciente sentado, e a perna dá um chute involuntário. O paciente diz que não decidiu mexer a perna. O médico explica que o exame avalia o caminho que o impulso nervoso faz entre a pele, a medula e o músculo.",
+   "comando": "Descreva o caminho do impulso nesse exame, indicando os tipos de neurônio envolvidos e explicando por que o movimento ocorre sem decisão do paciente.",
+   "ref": "O toque estimula receptores e um neurônio sensorial leva o impulso até a medula, onde passa por sinapse para um neurônio motor (às vezes por um interneurônio), que leva a ordem ao músculo. O movimento ocorre sem decisão porque a resposta é processada na medula, sem depender do cérebro."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Ao observar ao microscópio a imagem de um neurônio, uma turma de 6º ano numerou três partes: a parte 1 tem ramificações curtas e numerosas, a parte 2 é a região arredondada onde fica o núcleo, e a parte 3 é um prolongamento único e longo que termina em pequenas ramificações.",
+   "comando": "Dê o nome de cada parte, a função dela e o sentido em que o impulso nervoso percorre a célula.",
+   "ref": "A parte 1 são os dendritos, que recebem sinais de outros neurônios; a parte 2 é o corpo celular, que contém o núcleo e mantém a célula; a parte 3 é o axônio, que conduz o impulso para outras células. O impulso vai dos dendritos ao corpo celular e depois ao axônio."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "A toxina botulínica é usada em tratamentos médicos para relaxar músculos que se contraem demais. Ela impede que o final do axônio do neurônio motor libere o mensageiro químico que estimula a fibra muscular. Em testes com músculos de animais, os cientistas mediram a quantidade de mensageiro liberada e a força de contração.",
+   "comando": "Explique por que o músculo relaxa nesse tratamento, descrevendo o que ocorre na sinapse entre o neurônio e a fibra muscular.",
+   "ref": "O neurônio motor continua gerando impulso, mas a toxina impede a liberação do mensageiro químico na sinapse com o músculo. Sem esse mensageiro, a fibra muscular recebe pouca estimulação e se contrai com menos força, ficando relaxada."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma atividade de reação, Bruno segurou uma régua na vertical e Carol, com os dedos abertos na marca zero, tentou agarrá-la assim que ela foi solta, sem aviso. A régua caiu certa distância antes de ela fechar a mão. Foram quatro tentativas.",
+   "comando": "Explique por que existe um atraso entre ver a régua cair e fechar a mão, descrevendo o caminho do impulso nervoso nesse percurso.",
+   "ref": "A luz que vem da régua estimula receptores do olho, e neurônios sensoriais levam o impulso ao cérebro, onde interneurônios o processam. Neurônios motores levam a ordem aos músculos da mão. Esse percurso, com várias sinapses, leva tempo, e a régua cai nesse intervalo."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Ao ser picada no pé por um alfinete, uma pessoa sente primeiro uma dor aguda e, um instante depois, uma dor mais lenta e difusa. Os cientistas explicam que existem dois tipos de fibra nervosa transmitindo as informações de dor, com velocidades diferentes. O cérebro fica a cerca de 1,5 m do pé.",
+   "comando": "Calcule o tempo que o impulso leva para ir do pé ao cérebro em cada tipo de fibra e explique como isso ajuda a entender as duas dores.",
+   "ref": "Na fibra grossa o tempo é 1,5 m ÷ 100 m/s = 0,015 s, e na fina é 1,5 m ÷ 1 m/s = 1,5 s. Por isso o sinal da fibra grossa chega primeiro e dá a dor aguda e, bem depois, o da fibra fina traz a dor lenta e difusa."
+  }
+ ],
+ "4B|6º ANO|4": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, Ana e Tiago mediram o tempo de duas respostas do corpo. No reflexo patelar, um colega bateu de leve com a lateral da mão sob o joelho de Ana, e a perna dela se projetou. Na outra medida, Tiago apertou um botão assim que viu uma luz acender. Os tempos médios de vários testes estão no quadro.",
+   "comando": "Que explicação para a diferença de tempo é coerente com o funcionamento do sistema nervoso?",
+   "alts": [
+    "No reflexo, o cérebro decide mais rápido, pois recebe o estímulo do joelho antes de receber o estímulo visual da luz.",
+    "Os nervos do joelho conduzem o impulso mais rápido que os nervos do olho, e por isso a diferença depende dos nervos.",
+    "No reflexo, o comando é elaborado na medula espinal, em um caminho curto; no aperto do botão, o impulso passa pelo cérebro.",
+    "No aperto do botão o impulso passa pela medula e no reflexo não, pois o reflexo dispensa o sistema nervoso central."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Três pessoas sofreram acidentes de trânsito na Marginal Tietê e foram avaliadas na mesma semana em um hospital. Cada uma teve lesão em uma região diferente do encéfalo. Os sintomas registrados pela equipe médica estão no quadro. A tarefa da equipe de residentes era associar cada sintoma à região lesada.",
+   "comando": "Qual associação entre pessoa e região lesada é a mais coerente?",
+   "alts": [
+    "Pessoa 1: o cérebro; pessoa 2: o tronco encefálico; pessoa 3: o cerebelo.",
+    "Pessoa 1: cerebelo; pessoa 2: cérebro; pessoa 3: tronco encefálico.",
+    "Pessoa 1: tronco encefálico; pessoa 2: cerebelo; pessoa 3: cérebro.",
+    "Pessoa 1: cerebelo; pessoa 2: tronco encefálico; pessoa 3: cérebro."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Júlia começou a andar de skate em uma pista pública de Santos. Nas primeiras semanas, caía com frequência ao tentar uma manobra. Ela anotou o número de quedas por semana e viu que, com a prática, o número diminuiu bastante, embora sua atenção e vontade de aprender fossem as mesmas.",
+   "comando": "Qual explicação relaciona a melhora de Júlia com o sistema nervoso?",
+   "alts": [
+    "O tronco encefálico aprendeu a manobra, pois ele controla os movimentos voluntários mais precisos e o equilíbrio do corpo.",
+    "O cerebelo coordena e ajusta os movimentos, e a prática melhora esse controle do equilíbrio e da coordenação.",
+    "A medula espinal passou a decidir a manobra sem o cérebro, e por isso os movimentos ficaram mais rápidos.",
+    "O cérebro aprendeu a manobra e passou a dispensar o cerebelo, já que movimentos treinados não precisam de equilíbrio."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Seu Mauro caiu de uma escada na obra onde trabalha e passou por testes em uma UBS. O médico queria saber se o problema estava no encéfalo e na medula espinal (sistema nervoso central) ou nos nervos que ligam o corpo a eles (sistema nervoso periférico). Os resultados estão no quadro.",
+   "comando": "Que conclusão os resultados sustentam?",
+   "alts": [
+    "A lesão está em um nervo do braço direito, pois o encéfalo e a medula funcionam bem, como mostram a fala e o reflexo.",
+    "A lesão está no cérebro, pois a perda da sensibilidade dos dedos depende da região do cérebro que recebe essa informação.",
+    "A lesão está na medula espinal, pois a força reduzida dos dedos indica dano na região por onde passa o impulso.",
+    "A lesão está no sistema nervoso central, pois o reflexo patelar normal indica que o nervo do braço também está íntegro."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Beatriz tocou sem querer o cabo de uma panela quente e retirou a mão rapidamente. Só depois percebeu a dor e disse: \"Eu decidi tirar a mão porque doeu\". Seu irmão, que cronometrou a cena em um vídeo, anotou o instante de cada evento a partir do toque.",
+   "comando": "Qual interpretação do vídeo é sustentada pelos tempos registrados?",
+   "alts": [
+    "A dor chegou ao cérebro, que decidiu afastar a mão, mas o tempo registrado se deve ao atraso do vídeo.",
+    "A mão se afastou porque Beatriz percebeu a dor e decidiu retirá-la, o que mostra o papel da vontade na resposta.",
+    "A percepção da dor ocorreu depois porque a medula espinal conduz o impulso quando o cérebro autoriza o movimento.",
+    "O comando de afastar a mão partiu da medula, antes de o sinal chegar ao cérebro, por isso a dor foi percebida depois."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Miguel testou três respostas do corpo em colegas: soprou de leve o olho de um colega, pediu que outro apertasse um botão ao ouvir um sinal e perguntou a um terceiro quanto é 7 × 8. Cronometrou o tempo de cada resposta.",
+   "comando": "Classifique cada resposta como reflexa ou voluntária e explique, com base nos tempos, a diferença no caminho do impulso nervoso.",
+   "ref": "O piscar ao sopro é ato reflexo, rápido, pois é comandado por circuito curto sem passar pelo cérebro. Apertar o botão e responder a conta são voluntários, e demoram mais porque o impulso passa pelo cérebro, onde há interpretação e decisão."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um ciclista caiu na ciclovia e bateu a cabeça. Ao chegar à UPA, estava desacordado e não respondia a perguntas, mas respirava sozinho e o coração batia em ritmo normal. A equipe registrou os sinais para decidir os cuidados.",
+   "comando": "Indique que parte do encéfalo parece preservada e qual parece comprometida, justificando com os sinais registrados.",
+   "ref": "O tronco encefálico parece preservado, pois respiração e batimentos são mantidos. O cérebro parece comprometido, pois ele controla a consciência e os movimentos voluntários, que estão ausentes."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em um teste de equilíbrio, os participantes precisavam caminhar 10 passos sobre uma linha no chão. Uma jovem atleta saudável fez o teste, assim como um senhor que sofreu uma lesão no cerebelo após um acidente vascular. Os dois estavam atentos e entendiam o comando.",
+   "comando": "Explique a diferença entre os resultados e o que ela revela sobre a função do cerebelo.",
+   "ref": "O senhor teve muito mais desvios porque a lesão afetou o cerebelo, que coordena movimentos e equilíbrio. A compreensão do comando estava preservada, o que mostra que o problema não é de entendimento, e sim de coordenação motora."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Dois motociclistas sofreram quedas. O primeiro usava capacete e sofreu um forte golpe na cabeça, com apenas uma dor de cabeça forte. O segundo caiu sentado, sem lesões no crânio, e ficou com as pernas sem movimento e sem sensibilidade.",
+   "comando": "Explique que estruturas protegem o encéfalo e a medula espinal e por que a lesão do segundo motociclista causou as consequências relatadas.",
+   "ref": "O crânio protege o encéfalo, e o capacete reduz o impacto sobre ele. A coluna vertebral protege a medula espinal. No segundo caso, a lesão na medula interrompeu a passagem dos impulsos entre cérebro e pernas, causando perda de movimento e de sensibilidade."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma enfermeira da UBS explicou a uma criança que, ao pisar em um prego, a perna se levanta antes de a criança sentir dor. Na mesma situação, ela contou que a criança depois sente a dor, grita e decide procurar ajuda.",
+   "comando": "Descreva o caminho do impulso nervoso no ato reflexo e diferencie esse caminho da parte voluntária da reação da criança.",
+   "ref": "O receptor da pele envia o impulso por um nervo sensitivo até a medula espinal, que envia o comando por um nervo motor até o músculo, levantando a perna. O impulso também sobe ao cérebro, que gera a percepção da dor e a decisão voluntária de gritar e pedir ajuda."
+  }
+ ],
+ "4B|6º ANO|5": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Durante um jogo de futsal na quadra da escola, Letícia pisou em uma pedrinha e sentiu dor no pé. Em frações de segundo, retirou o pé e saltou. Um professor desenhou a sequência de eventos no quadro para que a turma identificasse o papel dos nervos do sistema nervoso periférico.",
+   "comando": "Qual alternativa descreve corretamente o papel dos nervos nessa sequência?",
+   "alts": [
+    "Nervos motores levam a informação ao sistema nervoso central, e nervos sensoriais levam a ordem aos músculos",
+    "Nervos sensoriais levam a informação ao sistema nervoso central, e os motores levam a ordem aos músculos",
+    "Os mesmos nervos levam a informação ao sistema nervoso central e, em seguida, levam a ordem aos músculos",
+    "Nervos sensoriais levam a informação aos músculos, e nervos motores levam a ordem ao sistema nervoso central"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma UBS, a enfermeira explicou a uma turma de visitantes por que o coração acelera quando alguém corre para pegar o ônibus na Marginal, mas ninguém precisa 'mandar' o coração bater mais rápido. Ela comparou o que ocorre em movimentos voluntários e involuntários do corpo.",
+   "comando": "Qual alternativa classifica corretamente os dois exemplos da tabela?",
+   "alts": [
+    "Acenar envolve o sistema nervoso somático, e a aceleração do coração, o sistema nervoso autônomo",
+    "Acenar envolve o sistema nervoso autônomo, e a aceleração do coração envolve o sistema nervoso somático",
+    "Acenar e a aceleração do coração envolvem o sistema nervoso somático, pois ambos usam músculos",
+    "Acenar e a aceleração do coração envolvem o sistema nervoso autônomo, pois ambos ocorrem no corpo"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, a turma estudou duas situações: uma criança que se assustou com um cachorro latindo e outra que está deitada, quase dormindo, após o almoço. Um professor registrou, com um monitor, a frequência cardíaca e o diâmetro da pupila de cada uma delas.",
+   "comando": "Que divisão do sistema nervoso autônomo explica o que ocorre na criança assustada em comparação com a que descansa?",
+   "alts": [
+    "O sistema parassimpático predomina na criança assustada, e o simpático predomina na que descansa",
+    "O sistema simpático predomina nas duas crianças, mas atua com mais intensidade na que descansa",
+    "O sistema simpático predomina na criança assustada, e o somático predomina na que descansa",
+    "O simpático predomina na criança assustada, e o parassimpático predomina na que descansa"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um motociclista sofreu uma queda e, após a lesão, ficou sem sentir o tato na mão direita, mas conseguia mexer os dedos. O médico explicou que a lesão atingiu apenas parte dos nervos do braço. Os alunos receberam uma tabela com a função de dois tipos de nervo.",
+   "comando": "Que conclusão sobre o nervo lesionado é coerente com o caso?",
+   "alts": [
+    "Os nervos motores foram afetados e os sensoriais foram preservados, pois ele perdeu o tato e manteve o movimento",
+    "Os nervos sensoriais e motores foram afetados, pois a mão perdeu o tato e o controle dos músculos",
+    "Os nervos sensoriais foram afetados e os motores preservados, pois ele perdeu o tato e manteve o movimento",
+    "Os nervos sensoriais foram preservados e os motores foram afetados, pois ele manteve o movimento"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um experimento de sala, os alunos mediram quanto tempo uma colega levava para segurar uma régua que era solta sem aviso. A distância que a régua caía indicava o tempo de reação. Eles compararam o teste com a colega descansada e depois cansada, e também com uma resposta reflexa de joelho.",
+   "comando": "Que interpretação dos dados é coerente?",
+   "alts": [
+    "O reflexo é mais rápido porque é processado na medula, e a fadiga pode atrasar respostas voluntárias",
+    "O reflexo é mais rápido porque o sinal é processado no encéfalo, e a fadiga atrasa as respostas voluntárias",
+    "O reflexo é mais rápido porque o sinal passa por menos nervos, e a fadiga acelera as respostas voluntárias",
+    "O reflexo é mais lento porque o sinal é processado na medula, e a fadiga atrasa as respostas voluntárias"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Marcos estava na fila da cantina e viu que o colega ao lado derrubou uma bandeja. Seu coração disparou, ele suou e arregalou os olhos. Depois de alguns minutos, tudo voltou ao normal. A professora pediu que relacionassem o ocorrido à divisão do sistema nervoso periférico responsável.",
+   "comando": "Explique qual divisão do sistema nervoso periférico regula essas reações e por que elas não dependem da vontade de Marcos.",
+   "ref": "O sistema nervoso autônomo, em sua parte simpática, preparou o corpo para reagir ao susto. Essas respostas dos órgãos internos são involuntárias, ou seja, ocorrem sem decisão consciente."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Alguns alunos do 6º ano disseram que 'os nervos do corpo são todos iguais e só levam dor ao cérebro'. A professora mostrou a tabela com a função de três nervos fictícios e pediu que a turma corrigisse a afirmação com base nas informações.",
+   "comando": "Mostre por que a afirmação está incorreta, usando os três nervos da tabela.",
+   "ref": "Os nervos têm funções diferentes: N1 é sensorial e leva informação do corpo ao sistema nervoso central; N2 é motor e leva ordens a músculos voluntários; N3 leva ordens a um órgão interno e faz parte do autônomo."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um jogador de vôlei da escola sempre sente o coração acelerar antes de uma partida decisiva, e, após o jogo, repousa e a respiração se normaliza. A professora quer que os alunos relacionem as duas fases do dia com as partes do sistema autônomo.",
+   "comando": "Compare a atuação do sistema simpático e do parassimpático antes e depois do jogo.",
+   "ref": "Antes do jogo, o simpático acelera coração e respiração para preparar o corpo para o esforço. Depois, no repouso, o parassimpático reduz esses ritmos e favorece a recuperação do organismo."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um gânglio é um agrupamento de corpos de neurônios fora do sistema nervoso central. Nos trajetos que levam sinais do encéfalo aos órgãos internos, o sinal costuma passar por um gânglio antes de chegar ao destino. Veja o esquema de um trajeto.",
+   "comando": "Explique a função dos nervos e dos gânglios nesse trajeto e diga a que parte do sistema nervoso eles pertencem.",
+   "ref": "Os nervos são feixes de fibras que conduzem os sinais entre o sistema nervoso central e o corpo, e os gânglios são pontos de conexão entre neurônios no caminho. Ambos fazem parte do sistema nervoso periférico."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em uma campanha de saúde, uma enfermeira explicou que, em um acidente, a lesão da medula pode impedir a pessoa de mexer as pernas, mas não impede o batimento do coração. Os alunos receberam dois exemplos para comparar.",
+   "comando": "Explique por que o batimento do coração continua funcionando e o movimento das pernas pode ser perdido.",
+   "ref": "Mexer as pernas depende de ordens que seguem pela medula, que foi lesada. O coração é regulado por nervos autônomos e por seu próprio ritmo, então continua a bater."
+  }
+ ],
+ "4B|6º ANO|6": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Pedro e Lia testaram em um quarto com as janelas vedadas quando é possível ver um livro de capa azul sobre a mesa. Eles variaram o estado de uma lanterna e a direção em que ela apontava, e Pedro anotou o que viu em cada situação.",
+   "comando": "Que conclusão sobre a visão de objetos que não produzem luz é sustentada pelas anotações?",
+   "alts": [
+    "Os olhos emitem feixes de luz que iluminam o objeto, e a visão ocorre quando o feixe volta aos olhos do observador.",
+    "Um objeto sem luz própria só é visto quando a luz de uma fonte o atinge e é refletida para os olhos do observador.",
+    "A lanterna acesa permite ver qualquer objeto do quarto, desde que o observador esteja olhando na direção dele.",
+    "O livro produz luz própria quando o ambiente está claro, e por isso aparece azul sob a luz da lanterna."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma oficina de teatro, Clara vestiu uma camiseta vermelha e a iluminaram sucessivamente com lâmpadas que emitem luz de uma única cor. Ela anotou a cor com que a camiseta parecia aos espectadores em cada caso.",
+   "comando": "Qual explicação é compatível com a cor observada em cada iluminação?",
+   "alts": [
+    "O tecido reflete a luz vermelha e absorve as outras cores, então sem vermelho na luz ele parece escuro.",
+    "O tecido produz luz vermelha quando é iluminado, e a luz verde ou azul anula essa luz e deixa a camiseta escura.",
+    "O tecido absorve a luz vermelha e reflete as demais cores, o que explica a cor vermelha sob a luz branca.",
+    "A cor vista depende do olho do espectador, e não da luz que o tecido reflete em direção a ele."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma enfermeira escolar mediu, com régua e lanterna de teste, o diâmetro da abertura escura no centro do olho de um aluno em três ambientes diferentes. O aluno ficou 2 minutos em cada ambiente antes da medida.",
+   "comando": "Qual interpretação dos valores é sustentada pelos dados?",
+   "alts": [
+    "A pupila aumenta no escuro porque produz luz própria, que permite ao aluno enxergar objetos pouco iluminados.",
+    "O cristalino se contrai sob luz forte e se dilata no escuro, o que muda o tamanho da abertura escura medida.",
+    "A íris regula a pupila, que diminui sob luz forte para limitar a entrada de luz e aumenta no escuro.",
+    "A retina diminui de tamanho no pátio ao sol para reduzir a luz recebida, o que reduz a abertura medida."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Para estudar a visão, Tomás usou óculos que invertem as imagens de cima para baixo e tentou pegar dez objetos por dia sobre a mesa. Ele sabia que, mesmo sem os óculos, a imagem formada na retina de qualquer pessoa já aparece invertida.",
+   "comando": "Qual conclusão é compatível com os resultados do experimento?",
+   "alts": [
+    "A imagem na retina é invertida normalmente, e o cérebro interpreta os sinais do nervo óptico e se adapta.",
+    "A imagem na retina é direita, e os óculos de Tomás inverteram a posição da retina e dificultaram a tarefa.",
+    "O cérebro de Tomás passou a produzir imagem invertida, e a melhora ao longo dos dias decorre do treino da retina.",
+    "A melhora de Tomás mostra que o nervo óptico passou a inverter as imagens antes de enviá-las ao olho."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Na aula sobre reflexão da luz, a professora apontou um feixe de laser com baixa potência, em um ambiente com pó de giz no ar, para quatro superfícies diferentes. Os alunos, sentados em cinco posições, anotaram em quantas posições conseguiam ver o ponto de luz na superfície.",
+   "comando": "Qual explicação é compatível com o número de posições de onde se vê o ponto de luz?",
+   "alts": [
+    "Superfícies lisas absorvem a maior parte da luz, e por isso o ponto aparece em menos posições do que nas superfícies rugosas.",
+    "Superfícies rugosas produzem luz própria ao receber o laser, o que explica o ponto visto das cinco posições.",
+    "Superfícies lisas refletem a luz em muitas direções, mas o pó de giz no ar reduz o número de posições com visão.",
+    "Superfícies rugosas espalham a luz em muitas direções, e as lisas a refletem em direção definida, atingindo poucas posições."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em uma aula sobre luz, um aluno colocou um feixe de luz branca para atravessar um prisma de vidro, e depois repetiu com luzes de uma só cor. Ele projetou a luz que saía em uma parede branca.",
+   "comando": "Interprete os resultados e explique o que eles indicam sobre a composição da luz branca.",
+   "ref": "A luz branca produz uma faixa com várias cores, enquanto as luzes vermelha e azul continuam com uma cor só. Isso indica que a luz branca é uma mistura de várias cores, que o prisma separa porque cada cor se desvia de modo diferente."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma ciclovia da Marginal Pinheiros, uma equipe de segurança testou, à noite, a que distância um motorista com farol baixo vê um ciclista usando diferentes roupas. O ciclista ficou parado e o carro se aproximou lentamente.",
+   "comando": "Explique por que a distância de visibilidade muda com a roupa, relacionando absorção, reflexão e o caminho da luz até o olho do motorista.",
+   "ref": "A roupa escura absorve boa parte da luz do farol e reflete pouco, então chega pouca luz ao olho do motorista. A roupa clara reflete mais, e a faixa refletiva devolve muita luz na direção do farol, o que torna o ciclista visível de mais longe."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma estudante montou um modelo de olho com uma lupa fixa e uma folha de papel que faz o papel de retina. Ela mudou a distância do objeto e procurou a posição da folha em que a imagem ficava nítida.",
+   "comando": "Interprete os dados e explique como o olho humano consegue enxergar com nitidez objetos a diferentes distâncias, mesmo com a retina sempre na mesma posição.",
+   "ref": "Com a lente fixa, cada distância do objeto exige uma posição diferente da folha. No olho, a retina não se move, e então o cristalino muda sua curvatura, ficando mais curvo para perto e mais achatado para longe, o que ajusta o foco sobre a retina."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Mariana disse que a Lua é uma fonte de luz como o Sol. A professora usou uma sala escura, uma lâmpada, uma lanterna e uma bola de espuma branca para testar a afirmação, e a turma anotou o que era visível.",
+   "comando": "Avalie a afirmação de Mariana com base nos dados e explique como vemos a Lua.",
+   "ref": "A afirmação não é sustentada: a lâmpada ligada é vista sozinha, e a bola de espuma só aparece quando recebe luz de outra fonte. Como a bola, a Lua não produz luz; nós a vemos porque ela reflete a luz do Sol até nossos olhos."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Para escolher materiais de uma janela e de uma divisória, um grupo mediu a porcentagem de luz que atravessava placas de mesmo tamanho. Eles queriam saber por qual delas era possível enxergar nitidamente do outro lado.",
+   "comando": "Interprete os valores e explique, usando os conceitos de reflexão e absorção, por que apenas um dos materiais permite ver nitidamente do outro lado.",
+   "ref": "O vidro liso deixa passar quase toda a luz de modo organizado, então vemos o outro lado com nitidez. O papel vegetal espalha e absorve parte da luz, e a madeira absorve e reflete toda a luz, sem deixar nada passar, por isso não se vê através dela."
+  }
+ ]
+}

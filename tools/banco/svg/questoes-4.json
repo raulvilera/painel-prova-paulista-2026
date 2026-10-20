@@ -1,0 +1,1328 @@
+{
+ "4B|9º ANO|12": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma turma do 9º ano montou uma tabela com a distância média de quatro planetas rochosos ao Sol e a temperatura média da superfície de cada um. Os alunos esperavam que Mercúrio, o mais próximo do Sol, fosse o mais quente, mas os dados mostraram algo diferente.",
+   "comando": "Qual explicação é coerente com os dados?",
+   "alts": [
+    "Mercúrio é mais quente que Vênus porque fica mais perto do Sol e recebe a radiação solar com menos perdas para o espaço.",
+    "Vênus é mais quente que Mercúrio porque sua atmosfera densa de CO2 retém o calor, em um efeito estufa intenso.",
+    "Vênus é mais quente porque é maior que a Terra e, por isso, guarda o calor do interior do planeta em seu núcleo de ferro.",
+    "A temperatura de Marte é baixa porque o planeta é pequeno e perde o calor interno mais depressa que os outros planetas rochosos."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma sonda mediu a pressão atmosférica na superfície de quatro corpos do Sistema Solar, em atmosferas de densidades muito diferentes. Os resultados foram registrados em uma barra por corpo, em atm, para que a equipe comparasse os valores.",
+   "comando": "Qual afirmação é sustentada pelos dados sobre a relação entre atmosfera e temperatura?",
+   "alts": [
+    "Marte tem pressão maior que a Terra por estar mais longe do Sol, pois a distância aumenta a densidade dos gases da atmosfera.",
+    "A Terra tem pressão alta porque tem a maior quantidade de água, e a água é o principal responsável pela pressão do ar.",
+    "Mercúrio tem superfície fria porque a pressão zero impede que o calor do Sol seja absorvido pelas rochas em qualquer horário.",
+    "Atmosferas mais densas, como a de Vênus, tendem a reter calor, o que contribui para superfícies mais quentes."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Modelos de formação do Sistema Solar propõem que a nuvem de gás e poeira que deu origem aos planetas tinha temperatura muito maior perto do centro. Uma aluna fez um esquema com as etapas de formação dos planetas internos e pediu que a turma explicasse por que eles são rochosos.",
+   "comando": "Por que os planetas rochosos estão mais próximos do Sol que os gigantes gasosos?",
+   "alts": [
+    "Perto do Sol, o calor afastou os gases leves, e sobraram rochas e metais para formar os planetas internos.",
+    "Os planetas gasosos se formaram perto do Sol, onde havia mais gás, e depois migraram para as regiões externas sem mudar a composição.",
+    "A gravidade do Sol atraía rochas com mais força que gases, e por isso os gases se afastaram para a periferia do sistema.",
+    "Os planetas rochosos cresceram perto do Sol porque o calor fundiu a poeira em uma massa de metal, que depois se resfriou."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Os cientistas estudam a estrutura interna da Terra por meio da propagação de ondas sísmicas. Uma tabela com a profundidade do início de cada camada foi montada por estudantes a partir de um modelo didático, para que a turma identificasse a organização do planeta.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "A crosta é a camada mais profunda, pois a profundidade de 0 km indica o centro do planeta, onde a pressão é menor.",
+    "O manto começa logo abaixo da superfície e chega até o centro, por isso o núcleo é uma camada fina de metal.",
+    "A crosta é a camada mais superficial, e o manto ocupa a faixa entre 35 km e 2 900 km de profundidade.",
+    "O núcleo externo é mais raso que o manto, porque sua profundidade de 2 900 km é menor que a de qualquer outra camada."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um estudante afirma que Vênus, por ter quase o mesmo tamanho da Terra, deveria ter temperatura parecida com a dela. A turma verificou os dados de diâmetro e de temperatura média dos quatro planetas rochosos antes de responder.",
+   "comando": "Qual explicação corrige a previsão do estudante?",
+   "alts": [
+    "Tamanho semelhante não garante temperatura parecida, pois a atmosfera densa de Vênus retém calor e a eleva muito.",
+    "Vênus é quase do tamanho da Terra, logo a gravidade superficial dos dois é idêntica e a temperatura também deveria ser igual.",
+    "O tamanho de Vênus e da Terra é parecido, mas a temperatura depende da distância ao Sol, que é maior para Vênus.",
+    "Vênus tem diâmetro menor que o da Terra, e por isso perde o calor interno mais depressa e fica com temperatura bem mais baixa."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Para a Terra manter água líquida, a temperatura da superfície precisa estar em uma faixa estreita. Uma equipe comparou três planetas com a presença de atmosfera e a temperatura média registrada na superfície.",
+   "comando": "Explique por que Marte, mesmo tendo calotas de gelo, não tem água líquida estável, e compare com a Terra usando os dados.",
+   "ref": "Marte tem atmosfera muito rarefeita, que retém pouco calor e não mantém a pressão necessária para a água líquida. Sua temperatura média de -63 °C faz a água existir como gelo. A Terra tem atmosfera capaz de manter temperaturas amenas e pressão suficiente para a água líquida."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma turma comparou o tamanho e a densidade média de planetas rochosos e gasosos. Os dados mostram que Júpiter é muito maior que a Terra, mas tem densidade bem menor, enquanto os planetas rochosos têm densidades mais altas.",
+   "comando": "Explique o que a densidade informa sobre a composição dos planetas e por que um planeta grande pode ter densidade baixa.",
+   "ref": "Densidade alta indica predomínio de materiais pesados, como rochas e metais, típicos dos planetas rochosos. Júpiter e Saturno são grandes e têm densidade baixa porque são compostos por gases leves, como hidrogênio e hélio, em grande volume."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um grupo de alunos estudou a diferença de temperatura entre dia e noite em Mercúrio e na Terra. A tabela mostra as temperaturas máxima e mínima, e a equipe precisava relacionar esses valores à presença de atmosfera.",
+   "comando": "Explique por que a variação térmica é muito maior em Mercúrio, usando os dados e o papel da atmosfera.",
+   "ref": "Mercúrio tem variação de cerca de 610 °C, enquanto a Terra varia 40 °C. A atmosfera da Terra retém calor à noite e espalha a energia solar durante o dia, suavizando as temperaturas. Mercúrio quase não tem atmosfera, então perde o calor rapidamente à noite."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma equipe comparou a gravidade superficial de quatro corpos com a presença de atmosfera. Os valores mostram que alguns corpos têm gravidade muito parecida, mas atmosferas bem diferentes, o que levou os alunos a questionar o papel da gravidade.",
+   "comando": "Explique por que Mercúrio e Marte têm atmosferas tão finas, enquanto Vênus e a Terra as têm mais densas, usando os dados.",
+   "ref": "A gravidade mais fraca de Mercúrio e de Marte dificulta a retenção de gases, que escapam com mais facilidade. Vênus e a Terra, com gravidade maior, retêm uma atmosfera mais densa, somada a outros fatores como temperatura e atividade geológica."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um professor mostrou à turma a contagem de crateras de impacto em quatro corpos. Os alunos perceberam que a Terra tem muito menos crateras do que os demais, e quiseram saber o motivo, já que todos foram atingidos por asteroides.",
+   "comando": "Explique a diferença de crateras, relacionando-a à atmosfera e aos processos de desgaste da superfície.",
+   "ref": "Mercúrio e a Lua quase não têm atmosfera, então pequenos asteroides atingem a superfície sem se desfazer, e as crateras se preservam. Na Terra, chuva, vento, rios e movimentos da crosta apagam as marcas com o tempo."
+  }
+ ],
+ "4B|9º ANO|13": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Astrônomos estimaram o tempo de vida de quatro estrelas com massas muito diferentes. Um estudante achou que a estrela mais massiva duraria mais, porque tem mais combustível. Os valores abaixo são aproximados e foram usados para discutir a relação entre massa e tempo de vida.",
+   "comando": "Qual hipótese explica a relação entre massa e tempo de vida mostrada nos dados?",
+   "alts": [
+    "Estrelas mais massivas têm mais combustível, então vivem mais, e a tabela mostra o contrário por falha na medição.",
+    "Estrelas mais massivas têm núcleo mais quente e denso, consomem o combustível muito mais depressa e vivem menos.",
+    "Estrelas mais massivas vivem menos porque têm menos hidrogênio no núcleo, o que acaba mais cedo do que nas pequenas.",
+    "Estrelas mais massivas vivem menos porque a gravidade as comprime e faz o combustível queimar a uma taxa constante."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "No núcleo do Sol, a fusão nuclear transforma hidrogênio em hélio e libera energia. Um estudante calculou a massa envolvida em um segundo no Sol e notou que as massas do início e do fim não são iguais. Os valores são aproximados e vêm do exercício de sala.",
+   "comando": "Qual interpretação do cálculo está correta?",
+   "alts": [
+    "Cerca de 4 milhões de toneladas por segundo permaneceram como hidrogênio, que não participou da fusão e ficou no núcleo.",
+    "Cerca de 4 milhões de toneladas por segundo foram perdidas por falha do cálculo, pois a massa deveria se conservar no hélio.",
+    "Cerca de 4 milhões de toneladas por segundo viraram energia, por isso o hélio formado tem menos massa que o hidrogênio.",
+    "Cerca de 4 milhões de toneladas por segundo viraram um elemento mais leve, como o hélio, que foi lançado para fora do Sol."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Daqui a bilhões de anos o Sol vai se tornar uma gigante vermelha. Um estudante comparou dois estágios e ficou intrigado: a superfície ficará mais fria, mas a estrela brilhará muito mais. A tabela traz valores aproximados para os dois estágios, para que a turma explique o resultado.",
+   "comando": "Qual explicação resolve a dúvida do estudante?",
+   "alts": [
+    "Com raio 100 vezes maior, a estrela tem mais hidrogênio no núcleo, e isso faz a fusão ocorrer mais rápido e brilhar mais.",
+    "Com raio 100 vezes maior, a estrela fica mais perto da Terra, e isso faz o brilho aumentar apesar da temperatura mais baixa.",
+    "Com temperatura mais baixa, a estrela libera mais energia por metro quadrado, e isso aumenta o brilho total da estrela.",
+    "Com raio 100 vezes maior, a superfície emissora fica milhares de vezes maior, e isso compensa a temperatura mais baixa."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Astrônomos catalogaram o destino de três estrelas depois que seu combustível acabou. Eles querem prever o que ocorrerá com uma estrela nova, de 1,3 vez a massa do Sol, a partir do padrão observado nas três estrelas do catálogo.",
+   "comando": "Qual é o destino mais provável da estrela de 1,3 massa solar?",
+   "alts": [
+    "Anã branca, pois sua massa é próxima à do Sol e bem menor que a das estrelas que explodem em supernova.",
+    "Estrela de nêutrons, pois sua massa é maior que a do Sol e as estrelas mais massivas passam por supernova.",
+    "Buraco negro, pois sua massa é maior que a do Sol e as estrelas maiores colapsam completamente.",
+    "Gigante vermelha permanente, pois sua massa é maior que a do Sol e a estrela não evolui para outro estágio."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Telescópios observaram uma nebulosa com várias regiões. Em uma delas há pontos brilhantes no infravermelho, que indicam objetos ainda em formação. A equipe quer saber em qual região é mais provável a formação de estrelas, com base nos dados de densidade e temperatura.",
+   "comando": "Em qual região é mais provável formarem-se estrelas e por quê?",
+   "alts": [
+    "Na região 3, pois a densidade média e a temperatura baixa impedem que a gravidade contraia o gás.",
+    "Na região 1, pois o gás frio e espalhado se contrai com facilidade e forma estrelas em pouco tempo.",
+    "Na região 2, pois a gravidade contrai o gás denso, a temperatura sobe e se forma uma protoestrela.",
+    "Na região 2, pois a alta temperatura expande o gás e permite que a fusão ocorra em toda a nebulosa."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "O Sol brilha há bilhões de anos sem explodir nem se contrair. Um professor mostrou a temperatura em duas regiões do Sol e pediu à turma que explicasse de onde vem a energia e por que o Sol se mantém estável.",
+   "comando": "Explique a origem da energia do Sol e como o equilíbrio entre duas forças mantém sua forma.",
+   "ref": "A energia vem da fusão nuclear no núcleo, onde, em temperaturas muito altas, o hidrogênio se funde em hélio e libera energia. O Sol é estável porque a pressão para fora gerada pela fusão equilibra a gravidade que tenta comprimi-lo para dentro."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "A professora disse que átomos de carbono, oxigênio e ferro do nosso corpo foram formados no interior de estrelas que morreram há muito tempo. Um aluno achou que era exagero e pediu os dados da composição do corpo humano para conferir.",
+   "comando": "Explique a frase 'somos feitos de poeira de estrelas' usando o que sabe sobre a vida e a morte das estrelas.",
+   "ref": "As estrelas fundem elementos leves em mais pesados, como carbono, oxigênio e ferro, durante a vida e nas explosões de supernovas. Esses elementos foram espalhados pelo espaço e formaram novas nuvens, estrelas e planetas, de modo que o material do nosso corpo foi produzido em estrelas anteriores."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Pesquisadores comparam três estrelas, X (0,3 massa solar), Y (como o Sol) e Z (15 massas solares), para procurar planetas com possibilidade de vida complexa. Na Terra, os seres complexos surgiram depois de vários bilhões de anos, e o grupo precisa decidir qual estrela observar.",
+   "comando": "Escolha a estrela mais promissora, justificando com os dados, e diga por que uma das outras não seria adequada.",
+   "ref": "A estrela Y (como o Sol) é promissora, pois vive 10 bilhões de anos, tempo suficiente para a evolução de vida complexa. A estrela Z vive cerca de 15 milhões de anos e explode em supernova, sem tempo para a vida evoluir. A X vive muito, mas é pouco brilhante."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em um observatório, uma estrela distante foi acompanhada por 200 dias. Seu brilho aumentou bilhões de vezes em poucos dias e depois caiu muito, até quase desaparecer, o que os astrônomos relacionaram ao fim da vida de uma estrela massiva.",
+   "comando": "Interprete o gráfico: que evento ocorreu e quais remanescentes são possíveis, dependendo da massa inicial da estrela?",
+   "ref": "O aumento súbito de brilho seguido de queda indica uma supernova, a explosão de uma estrela massiva ao fim de sua vida. O que sobra depende da massa: uma estrela de nêutrons, se a massa for menor, ou um buraco negro, se a massa for maior."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Cientistas projetaram o futuro do Sol a partir de modelos. Eles listaram eventos importantes em ordem do tempo, sem os nomes das fases, e pediram à turma que completasse o ciclo de vida do Sol.",
+   "comando": "Nomeie as fases do ciclo do Sol indicadas pelo quadro e diga qual será seu destino final.",
+   "ref": "As fases são nebulosa e protoestrela, estrela da sequência principal (hoje), gigante vermelha e nebulosa planetária. O destino final é uma anã branca, o núcleo quente que vai esfriando."
+  }
+ ],
+ "4B|9º ANO|14": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Um clube de astronomia de Campinas observou a mesma região do céu em duas noites, com a mesma luneta, e identificou um conjunto de estrelas formando a figura de um animal. Em outra noite, a mesma figura foi vista em outro ponto do céu, e os alunos pesquisaram a origem do nome do conjunto.",
+   "comando": "Qual afirmação sobre o conjunto de estrelas é sustentada pelas observações e pela pesquisa?",
+   "alts": [
+    "As estrelas do conjunto estão fisicamente próximas umas das outras, e por isso formam o desenho do animal em qualquer época e cultura.",
+    "O conjunto aparece no mesmo lugar do céu porque as estrelas estão paradas, e a figura não muda com o passar das horas.",
+    "A figura é uma convenção cultural: as estrelas não estão ligadas fisicamente, e cada povo criou seus desenhos para organizar o céu.",
+    "A figura é uma imposição científica, criada por astrônomos para medir a distância entre as estrelas e facilitar a leitura do céu."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma comparação de instrumentos, uma turma reuniu informações sobre a resolução (capacidade de separar objetos próximos) e o tipo de luz observada por três equipamentos. Os dados estão na tabela.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "Abertura maior capta mais luz e separa detalhes mais finos, e instrumentos fora da atmosfera observam faixas que o olho não vê.",
+    "A luneta de Galileu capta mais luz do que os telescópios espaciais, pois é mais antiga e tem lentes de vidro mais puras.",
+    "Os telescópios espaciais observam a luz visível, pois a faixa infravermelha é mais difícil de captar do que a luz que o olho vê.",
+    "A abertura não altera a qualidade da observação, pois o que importa é a época em que o instrumento foi criado."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma equipe de pesquisa acompanhou a trajetória de uma sonda enviada ao espaço. Ao longo de anos, a sonda enviou dados da distância percorrida, e os alunos usaram esses dados para estimar a velocidade média entre duas medições.",
+   "comando": "Qual estimativa é mais adequada para a velocidade média da sonda entre o ano 1 e o ano 3?",
+   "alts": [
+    "Cerca de 960 milhões de km por ano, pois o último valor da tabela indica a distância percorrida em cada ano de viagem.",
+    "Cerca de 300 milhões de km por ano, pois a sonda percorre a mesma distância no primeiro ano e mantém essa velocidade.",
+    "Cerca de 660 milhões de km por ano, pois a diferença total entre os anos é a velocidade média, sem considerar o tempo.",
+    "Cerca de 330 milhões de km por ano, pois a distância entre o ano 1 e o ano 3 é 660 milhões de km e a diferença de tempo é 2 anos."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um professor pediu que a turma avaliasse a afirmação: 'Os lixos espaciais só existem a partir dos satélites recentes, por isso as sondas antigas não geraram nenhum problema.' Para avaliar, os alunos usaram dados sobre o número de objetos rastreados por ano.",
+   "comando": "Qual avaliação dos dados é correta?",
+   "alts": [
+    "A afirmação é correta, pois o número de objetos cresceu principalmente depois de 2000, quando os satélites passaram a ser lançados em massa.",
+    "A afirmação é incorreta, pois o número de objetos cresceu desde os primeiros lançamentos e restos de sondas antigas continuam em órbita.",
+    "A afirmação é correta, pois as sondas antigas se desintegram ao voltar à atmosfera, e assim não deixam restos em órbita.",
+    "A afirmação é incorreta, pois o número de objetos diminuiu nas últimas décadas, já que os restos caem sozinhos na Terra."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um grupo de estudantes comparou a formação das imagens de duas lunetas construídas em aula: uma com lente objetiva de maior distância focal e outra com lente de menor distância focal. Ambas apontaram para a mesma estrela. Eles mediram o tamanho da imagem em cada luneta.",
+   "comando": "Que conclusão é sustentada pelo experimento?",
+   "alts": [
+    "A luneta de menor distância focal forma imagem maior, pois a imagem se amplia quando a lente fica mais próxima do observador.",
+    "As duas lunetas formam a mesma imagem, pois a estrela está à mesma distância e a ampliação não depende das lentes utilizadas.",
+    "A luneta de maior distância focal forma imagem maior, pois a ampliação depende da distância focal da objetiva em relação à ocular.",
+    "A luneta B forma imagem maior porque tem menos vidro, e a luz atravessa mais facilmente um material mais leve."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Um professor pediu que a turma comparasse as épocas em que as constelações foram usadas. Alguns povos usavam o céu para contar o tempo e marcar a época das plantações, e outros para orientar viagens. Os alunos devem explicar por que a mesma figura pode ter significados diferentes em culturas distintas.",
+   "comando": "Explique por que uma constelação pode ter significados diferentes em culturas distintas, relacionando o conjunto ao uso que cada povo fazia do céu.",
+   "ref": "A constelação é um agrupamento visual de estrelas, e cada povo a interpreta conforme suas necessidades, como calendário, navegação ou mitos. Por isso o mesmo conjunto recebe nomes e significados diferentes, sem que as estrelas tenham mudado."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma turma de 9º ano analisou um texto sobre o monitoramento de lixo espacial e observou que a rede de radares e telescópios acompanha milhares de objetos. Os alunos querem entender por que esse acompanhamento é importante para as missões que enviam equipamentos ao espaço.",
+   "comando": "Explique por que o monitoramento de objetos em órbita é importante e como ele se relaciona com a instrumentação astronômica.",
+   "ref": "O monitoramento permite prever aproximações e evitar colisões com satélites e sondas, protegendo missões. Os mesmos telescópios e radares que observam o céu também são usados para acompanhar a posição dos objetos, o que mostra a ligação entre a astronomia e a segurança das missões."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Dois alunos observaram o céu em uma noite sem nuvens. Um deles afirmou que as estrelas de uma constelação estão todas à mesma distância da Terra, pois elas parecem formar um desenho no mesmo plano. O outro discordou e disse que o desenho é só uma aparência.",
+   "comando": "Avalie a afirmação do primeiro aluno, explicando o que a observação a olho nu permite concluir sobre a distância das estrelas.",
+   "ref": "A afirmação é incorreta: as estrelas do desenho estão a distâncias muito diferentes da Terra, e a alinhamento é apenas aparente, do ponto de vista da observação. O brilho diferente não mostra distância sozinho, mas o desenho depende da posição de observação, não de uma ligação física."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um grupo de alunos observou a Lua por três noites consecutivas e registrou em que parte do céu ela aparecia no mesmo horário. Eles perceberam que as posições mudavam, e querem entender se isso se deve a um movimento da Lua ou da Terra.",
+   "comando": "Explique a mudança de posição observada e indique qual movimento da Terra ou do sistema Terra-Lua ajuda a explicar a diferença entre as noites.",
+   "ref": "A Terra gira em torno do próprio eixo e também se move ao redor do Sol, e a Lua se move em torno da Terra. Como a Lua se desloca cerca de um grau por dia em relação às estrelas, sua posição no mesmo horário muda de uma noite para a outra."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma escola de Piracicaba organizou um teste sobre os instrumentos de observação. Os alunos compararam a luneta de Galileu com um telescópio espacial e concluíram que os dois são igualmente úteis para qualquer tipo de estudo astronômico.",
+   "comando": "Avalie a conclusão dos alunos, indicando o que cada instrumento permite observar com base nas diferenças de abertura e de faixa de luz.",
+   "ref": "A conclusão não é sustentada: o telescópio espacial tem abertura muito maior e observa a faixa infravermelha, o que permite estudos que a luneta não faz. A luneta é útil para observações simples, mas não serve para os mesmos estudos."
+  }
+ ],
+ "4B|9º ANO|15": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma aldeia guarani do litoral paulista, os mais velhos observam o céu noturno há décadas e anotam quando determinadas constelações aparecem no fim da tarde. Durante três anos, a comunidade registrou a época em que a Ema (Nhandu) surge no horizonte e a época em que as primeiras chuvas chegam à aldeia.",
+   "comando": "Qual interpretação dos registros é sustentada pelos dados?",
+   "alts": [
+    "A Ema provoca as chuvas, já que aparece no céu meses antes delas e isso mostra que os astros controlam o clima da região.",
+    "As chuvas chegam mais cedo a cada ano, o que prova que a Ema se aproxima da Terra e altera o tempo nas estações.",
+    "A aparição da Ema anuncia a época das chuvas e ajuda a planejar o plantio, sem que o céu cause a chuva.",
+    "Como a Ema aparece em maio e em junho, o período de chuvas deve ser o mesmo em cada ano da aldeia, sem variação."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um grupo de estudantes fincou uma vareta vertical (gnômon) no pátio da escola e marcou, ao meio-dia, o tamanho da sombra em diferentes datas do ano. Eles querem comparar essas medidas com o uso da sombra por aldeias indígenas para acompanhar as estações e a passagem do tempo.",
+   "comando": "Qual conclusão a turma pode tirar das medidas da sombra?",
+   "alts": [
+    "A sombra mais longa ao meio-dia no inverno indica que o Sol está mais baixo no céu, o que ajuda a marcar as estações.",
+    "A sombra mais longa no inverno mostra que o Sol está mais quente nessa época, e por isso ele se aproxima da vareta.",
+    "A sombra curta no verão mostra que a Terra está mais perto do Sol, e essa distância explica toda a variação das estações.",
+    "Como a sombra muda de tamanho, a vareta deve estar se movendo ao longo do dia, o que indica o deslocamento da Terra."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma comunidade indígena do Vale do Ribeira, os jovens aprendem com os mais velhos que a constelação do Veado indica o período em que a caça é mais produtiva, pois os animais se deslocam mais perto da mata. Os jovens anotaram quantos animais foram caçados em duas épocas do ano e compararam com a posição do Veado no céu.",
+   "comando": "Qual explicação é mais coerente com os dados e com o conhecimento tradicional?",
+   "alts": [
+    "A constelação do Veado causa mais caça, pois os animais seguem o desenho das estrelas e se aproximam das aldeias nessa época.",
+    "A época de mais caça coincide com o Veado alto ao anoitecer, conforme o conhecimento tradicional.",
+    "A caça aumenta na madrugada porque os animais dormem menos nessa época, e o céu não tem relação com o que a turma registrou.",
+    "Os registros mostram menos caça na época A, logo o Veado deve ser observado tarde para garantir mais animais na aldeia."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Estudantes de uma escola em Parelheiros acompanharam, durante um ano, o horário em que o Homem Velho aparece no céu noturno e fizeram um calendário natural com a comunidade. Ao mesmo tempo, mediram a temperatura média da semana em que a constelação surge ao anoitecer, para ver se as duas informações combinam.",
+   "comando": "Qual procedimento tornaria a relação entre a constelação e a temperatura mais confiável?",
+   "alts": [
+    "Medir uma semana, escolhida no período em que a constelação aparece, para comparar com a temperatura do mesmo dia.",
+    "Registrar o horário da aparição sem medir a temperatura, pois a constelação já indica o clima da região.",
+    "Escolher a semana mais quente do ano e comparar com ela, para que a constelação revele a temperatura de forma exata.",
+    "Repetir as medições em vários anos e locais, para verificar se a relação se mantém e não é acaso local."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Pesquisadores de uma universidade paulista estudam os nomes de constelações de diferentes povos. Descobriram que, em alguns povos, a constelação da Anta corresponde a um grupo de estrelas diferente do que as escolas costumam ensinar, pois cada povo organiza o céu de acordo com seus animais e atividades. Os dados foram organizados em um quadro.",
+   "comando": "Qual conclusão é sustentada pelo quadro e pelo texto?",
+   "alts": [
+    "A organização do céu depende da cultura e das atividades de cada povo, por isso a mesma constelação pode ter contornos diferentes.",
+    "Como a Anta é um desenho fixo no céu, os povos a identificam com as mesmas estrelas e com o mesmo significado, sem variação.",
+    "As diferenças mostram que o céu muda de forma ao longo dos séculos, e por isso cada povo vê uma estrela diferente de sua constelação.",
+    "O quadro mostra que o conhecimento indígena sobre o céu é menos preciso que o científico, por isso deve ser descartado nas escolas."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na aula de etnoastronomia, a professora mostrou que a constelação da Ema (Nhandu) aparece no céu do fim da tarde em certas épocas do ano. Um grupo de alunos registrou a posição dessa constelação e a chegada das chuvas em uma comunidade guarani do litoral paulista durante três anos seguidos.",
+   "comando": "Explique a relação que os registros sugerem entre o céu e o calendário da comunidade, e diga por que essa relação não prova que o céu causa as chuvas.",
+   "ref": "A aparição da Ema antecede as chuvas em cada ano, formando um calendário natural que organiza o plantio. Isso sugere associação, não causa: a constelação indica a época, mas não produz a chuva."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um estudante do 9º ano fincou um gnômon de 50 cm no chão plano e mediu a sombra ao meio-dia em três datas do ano. Ele quer usar essas medidas para reconhecer as estações, como fazem povos que observam o céu e o Sol.",
+   "comando": "Explique por que a sombra muda de tamanho ao longo do ano e como essa medida ajuda a identificar as estações.",
+   "ref": "O Sol fica mais alto no verão, produzindo sombra curta, e mais baixo no inverno, produzindo sombra longa. Medindo a sombra ao meio-dia, é possível reconhecer o início de cada estação, como faziam os povos com o gnômon."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Na aldeia, os mais velhos contam que a constelação da Anta aparece no céu em certos meses e que, nessa época, é hora de preparar a terra para o plantio. Um pesquisador quis saber se os agricultores seguem esse calendário e comparou as datas de plantio de duas comunidades ao longo de cinco anos.",
+   "comando": "Compare as datas de plantio e explique o que o calendário natural oferece às comunidades, relacionando-o ao conhecimento transmitido entre gerações.",
+   "ref": "A comunidade que segue o calendário planta em datas mais regulares, perto de setembro e outubro, enquanto a outra varia bastante. O calendário natural transmite conhecimento entre gerações e organiza atividades, como plantio e colheita, a partir da observação do céu."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma escola recebeu a proposta de incluir no currículo as constelações de povos originários. Uma professora argumenta que isso valoriza a cultura indígena e a observação do céu; um colega considera que o tema pertence apenas à história e não às aulas de Ciências.",
+   "comando": "Com base nos conhecimentos da etnoastronomia, argumente sobre o lugar desse tema nas aulas de Ciências, indicando duas razões científicas.",
+   "ref": "Estudar as constelações indígenas mostra a observação sistemática do céu, base da astronomia, e permite compreender a relação entre cultura, calendário e ciclos da natureza, como as estações."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Na escola de uma comunidade indígena, os alunos construíram um mapa do céu com as constelações do Veado, da Anta e da Ema, indicando em que período do ano cada uma aparece ao anoitecer. Eles discutem como essas informações se relacionam com a caça, a pesca e a colheita ao longo das estações.",
+   "comando": "Explique como o mapa do céu ajuda a organizar as atividades da comunidade e cite uma limitação dessa forma de conhecimento para tomar decisões.",
+   "ref": "O mapa indica o período de cada constelação, orientando a caça, a pesca e a colheita pela passagem das estações. Uma limitação é que a observação depende de condições como nuvens e clima local, e as datas podem variar de um ano para outro."
+  }
+ ],
+ "4B|9º ANO|16": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula de Astronomia, Helena usou o Stellarium Web com a localização de São Paulo e fixou a hora em 21h, mudando apenas o mês. Ela anotou a altura de duas constelações acima do horizonte nos dois meses e quer explicar por que o céu visível à mesma hora muda ao longo do ano.",
+   "comando": "Que explicação é coerente com os registros?",
+   "alts": [
+    "A Terra muda de posição na órbita ao redor do Sol, então a parte do céu voltada para a noite muda ao longo do ano",
+    "A Terra gira mais depressa em julho, então a parte do céu voltada para a noite muda ao longo do ano",
+    "As estrelas se movem pelo espaço em um ciclo anual, então a parte do céu voltada para a noite muda",
+    "A inclinação do eixo muda a cada mês, então a parte do céu voltada para a noite muda ao longo do ano"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um estudante de Campinas usou o Stellarium para registrar o ponto do horizonte onde o Sol nasce em duas datas e achou estranho: ele esperava que o Sol nascesse sempre exatamente no ponto cardeal Leste. O professor pediu uma explicação baseada nos dados.",
+   "comando": "Qual conclusão os registros sustentam?",
+   "alts": [
+    "O Sol nasce no Leste em todas as datas; as diferenças de azimute se devem a erros de medida do programa",
+    "O Sol nasce no Leste só nos solstícios; no resto do ano o ponto muda por causa da inclinação do eixo",
+    "O Sol nasce no Leste só nos equinócios; no resto do ano o ponto muda por causa da inclinação do eixo",
+    "O Sol nasce no Leste só nas datas de equinócio; ao longo do ano o ponto muda porque a Terra se aproxima do Sol"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "No Stellarium, a turma acompanhou três pontos brilhantes próximos à constelação de Escorpião durante 20 noites e anotou a distância angular de cada um até a estrela Antares, que serve de referência. Os alunos querem identificar qual deles é um planeta.",
+   "comando": "Qual ponto é um planeta e que dado sustenta a resposta?",
+   "alts": [
+    "P2, pois sua posição muda em relação às estrelas de fundo, o que caracteriza um planeta",
+    "P1, pois sua posição não muda em relação às estrelas de fundo, o que caracteriza um corpo que orbita o Sol",
+    "P3, pois sua posição varia pouco em relação às estrelas de fundo, o que caracteriza um corpo que orbita o Sol",
+    "P2, pois sua posição muda em relação às estrelas de fundo, o que caracteriza uma estrela de luz variável"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um aluno percebeu que, no Stellarium, o Sol parece 'estar' em Peixes no dia 25 de março, mas o horóscopo do jornal diz que quem nasce nesse dia é de Áries. O professor pediu que a turma comparasse os dados do programa com as datas do horóscopo e explicasse a diferença.",
+   "comando": "Que explicação é coerente e científica para a diferença?",
+   "alts": [
+    "As datas dos signos foram fixadas há milênios, e a astrologia comprova a influência dos astros no comportamento",
+    "As datas dos signos são antigas, e o eixo da Terra mudou lentamente, deslocando a posição aparente do Sol",
+    "As datas dos signos acompanham a posição atual do Sol, e o programa apresenta erro de cálculo nas datas",
+    "As datas dos signos foram fixadas há milênios, e a Terra mudou de órbita, deslocando a posição aparente do Sol"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em uma noite de julho, em Londrina, Davi quer achar o ponto Sul usando o Cruzeiro do Sul no Stellarium. O programa mostra que o braço maior da cruz mede 6° no céu. O professor lembrou a regra: prolonga-se o braço maior 4,5 vezes e depois desce-se na vertical até o horizonte.",
+   "comando": "Qual procedimento leva ao ponto Sul?",
+   "alts": [
+    "Prolongar o braço menor em cerca de 18° a partir do pé da cruz e descer na vertical até o horizonte",
+    "Prolongar o braço maior em cerca de 6° a partir do pé da cruz e descer na vertical até o horizonte",
+    "Prolongar o braço maior em cerca de 27° a partir do pé da cruz e descer na vertical ao horizonte",
+    "Prolongar o braço maior em cerca de 27° na direção perpendicular à cruz e subir na vertical"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Gabriela comparou o Cruzeiro do Sul e Centauro no Stellarium, às 21h de São Paulo, em julho e em fevereiro. Ela quer explicar a um colega por que a posição das duas constelações mudou, e quer relacionar a observação ao movimento da Terra.",
+   "comando": "Descreva a mudança observada e explique-a pelo movimento da Terra.",
+   "ref": "As duas constelações estão altas em julho e muito baixas ou invisíveis em fevereiro, à mesma hora. Isso ocorre porque, pela translação, a Terra muda de posição ao redor do Sol e o lado noturno passa a ficar voltado para outra parte do céu."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma estudante observou no Stellarium três objetos brilhantes numa noite e viu que os planetas aparecem sempre perto da linha da eclíptica, a trajetória aparente do Sol no céu. Ela anotou a distância de cada objeto até essa linha.",
+   "comando": "Por que os planetas ficam perto da eclíptica? Explique relacionando a posição dos planetas com o plano do Sistema Solar.",
+   "ref": "Os planetas orbitam o Sol aproximadamente no mesmo plano da órbita da Terra. Vistos daqui, aparecem alinhados perto da eclíptica, enquanto estrelas distantes, como Sirius, ficam em qualquer lugar do céu."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma feira de ciências, um grupo comparou astronomia e astrologia usando o Stellarium. Um visitante disse que 'o signo define a personalidade'. Os alunos prepararam uma tabela para discutir como a ciência produz conhecimento e como testar essa afirmação.",
+   "comando": "Compare astronomia e astrologia e explique um teste que mostraria se a afirmação do visitante é sustentada.",
+   "ref": "A astronomia estuda os astros com observações e cálculos, e suas previsões se confirmam. A astrologia atribui efeitos aos signos sem comprovação. Um teste seria comparar, de modo cego, descrições de personalidade de várias pessoas com seus signos e ver se acertam além do acaso."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Mariana observa o céu de São Paulo pelo Stellarium e vê que, em dezembro, o Sol se põe muito mais tarde do que em junho. Ela quer entender essa diferença e relacioná-la à duração do dia e da noite em cada estação.",
+   "comando": "Explique por que a duração do dia muda ao longo do ano, usando os dados do Stellarium.",
+   "ref": "Em dezembro, o dia dura cerca de 13h30, e em junho, cerca de 10h45. A inclinação do eixo da Terra faz o hemisfério Sul receber luz solar por mais tempo e com maior incidência no verão do que no inverno."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um grupo da escola procurou o Sol entre as constelações do zodíaco no Stellarium, mês a mês. Eles perceberam que o Sol se desloca entre as constelações e que a Lua e os planetas ficam por perto, na mesma faixa do céu. Querem explicar o fenômeno.",
+   "comando": "Explique por que o Sol parece se deslocar entre as constelações ao longo do ano.",
+   "ref": "O deslocamento aparente do Sol é uma ilusão causada pela translação da Terra: a cada mês, olhamos o Sol por uma direção diferente e ele parece estar diante de outra constelação. Em um ano ele percorre a eclíptica e volta ao ponto inicial."
+  }
+ ],
+ "4B|9º ANO|19": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma equipe de astrobiologia fictícia comparou quatro corpos do Sistema Solar com a ajuda de uma tabela de sondas. A professora pediu à turma que verificasse quais condições básicas poderiam existir em cada um, sabendo que organismos conhecidos precisam de água líquida.",
+   "comando": "Qual alternativa relaciona corretamente as condições desses corpos à possibilidade de vida?",
+   "alts": [
+    "Marte seria habitável como a Terra, pois o gelo de sua superfície garante a mesma temperatura média e a mesma pressão atmosférica do planeta azul.",
+    "Vênus perdeu condições para a vida pelo efeito estufa intenso, e Marte, com atmosfera rarefeita e gelo, tem pouca água líquida.",
+    "A Lua tem temperatura amena e pode abrigar vida complexa, pois a ausência de atmosfera não impede organismos de manter água líquida.",
+    "Vênus teria vida se fosse mais distante do Sol, pois a atmosfera densa protege os organismos da radiação e retém água líquida na superfície."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Estudantes analisaram dados sobre a pressão atmosférica de três corpos, medidos em relação à Terra, que é tomada como 100%. Eles queriam explicar por que Marte tem tão pouca água líquida, mesmo recebendo luz solar.",
+   "comando": "Que hipótese explica melhor esse resultado?",
+   "alts": [
+    "Marte recebe pouca luz solar, por isso a água congela, e a pressão atmosférica não tem influência sobre a presença de água líquida.",
+    "Marte está mais longe do Sol que a Terra, por isso a água evapora na superfície, e o tamanho do planeta não altera esse resultado.",
+    "Marte tem atmosfera muito mais fina, então a pressão é baixa e a água tende a evaporar ou congelar em vez de permanecer líquida.",
+    "Marte tem menos água porque seu núcleo é frio, e a atmosfera fina meramente reduz a intensidade da luz que chega ao solo marciano."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma equipe fictícia calculou um planeta de mesmo tamanho que a Terra, que recebe 80% da luz solar da Terra, mas cuja atmosfera tem efeito estufa três vezes maior. Eles registraram o raciocínio em etapas para prever a temperatura da superfície.",
+   "comando": "Qual previsão é mais coerente com o raciocínio da equipe?",
+   "alts": [
+    "A superfície tende a ficar mais quente que a da Terra, pois o efeito estufa intenso compensa a luz recebida um pouco menor.",
+    "A superfície tende a ficar mais fria, pois a luz recebida é menor e o efeito estufa redistribui o calor para o espaço.",
+    "A temperatura não muda, pois o efeito estufa e a luz solar se anulam quando a atmosfera tem a mesma espessura da Terra.",
+    "A superfície fica igual à da Terra, porque a quantidade de calor depende da distância ao Sol e não da atmosfera."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Na aula sobre zona habitável, os alunos receberam uma tabela com a distância ao Sol de três planetas e a provável presença de água líquida. Um exoplaneta foi descoberto orbitando uma estrela semelhante ao Sol, a 1,1 UA de distância, e a turma deveria avaliar o caso.",
+   "comando": "O que os dados permitem concluir sobre esse exoplaneta?",
+   "alts": [
+    "Ele certamente tem vida, pois fica a uma distância próxima da Terra e a estrela semelhante ao Sol garante água líquida.",
+    "Ele não pode ter água, porque toda órbita além de 1 UA torna o planeta frio demais para qualquer forma de líquido.",
+    "Ele se parece com Marte, com temperatura negativa e água meramente congelada, pois a órbita de 1,1 UA fica além da Terra e recebe pouca luz.",
+    "Ele está próximo da zona habitável, onde a água pode ser líquida, mas a presença de vida depende também de atmosfera e de outros fatores."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma turma discutiu a exploração de luas geladas do Sistema Solar, como Europa e Encélado, em que sondas detectaram indícios de oceanos sob a camada de gelo. Alguns estudantes queriam saber o que essa descoberta muda na busca por vida.",
+   "comando": "Qual afirmação sobre esses corpos é a mais adequada?",
+   "alts": [
+    "Europa e Encélado são visitados para instalar cidades, já que o oceano sob o gelo oferece calor e oxigênio suficientes para pessoas.",
+    "A exploração de Europa e Encélado busca água líquida sob o gelo, pois ela pode abrigar condições favoráveis à vida microbiana.",
+    "A busca por vida em Encélado baseia-se em gravidade semelhante à da Terra, condição que garante atmosfera respirável para humanos.",
+    "Europa tem atmosfera densa com oxigênio livre, o que a torna o alvo mais provável de vida complexa, como animais terrestres."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma equipe de astrobiologia fictícia mediu a temperatura média da superfície de quatro corpos, em kelvin, e registrou se havia água líquida. Os alunos devem usar os dados para avaliar as condições de cada corpo para a vida como a conhecemos.",
+   "comando": "Interprete os valores e explique qual condição, além da temperatura, precisa estar presente para que a vida como a conhecemos seja possível, citando um exemplo dos dados.",
+   "ref": "A temperatura adequada é necessária, mas não basta: a Terra combina temperatura amena com água líquida, enquanto Vênus, a 737 K, e Marte, a 210 K, não mantêm água líquida. Por isso é preciso água líquida e uma atmosfera que a mantenha."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Na aula sobre o Sistema Solar, um aluno afirmou que a Terra é o único planeta com vida porque é o único com água, e que todo corpo com água teria vida. A professora pediu que a turma analisasse essa afirmação com base em um quadro de três corpos.",
+   "comando": "Avalie a afirmação do aluno: ela se sustenta? Justifique com base nos dados e nos requisitos para a vida.",
+   "ref": "A afirmação não se sustenta: a água é necessária, mas Europa tem água sob o gelo e vida não confirmada, e a atmosfera e a energia também contam. Assim, água sozinha não garante vida, e a ausência de vida detectada não prova que ela não exista."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um grupo de estudantes quer estimar onde a água poderia ser líquida em torno de uma estrela menor e mais fraca que o Sol. Eles seguiram etapas comparando a luz recebida a diferentes distâncias com a luz que a Terra recebe do Sol.",
+   "comando": "Explique como a intensidade da luz muda com a distância e o que a equipe deve concluir sobre a posição da zona habitável dessa estrela, comparada à do Sol.",
+   "ref": "A luz diminui com o quadrado da distância, então, por ser mais fraca, a estrela tem zona habitável mais próxima dela do que a do Sol. Isso mostra que a posição da zona depende da luminosidade da estrela, não apenas de sua existência."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma missão fictícia enviou um robô a uma lua gelada de Júpiter, onde a sonda detectou um oceano sob uma camada de gelo de dezenas de quilômetros. A equipe analisou a energia disponível e a composição química registrada, em um quadro de medidas.",
+   "comando": "Explique por que a equipe considera esse oceano um alvo para a busca de vida, mesmo sem luz solar, relacionando água, energia e composição química.",
+   "ref": "O oceano é líquido e pode existir sem luz do Sol, pois o calor interno gera energia química que sustenta micro-organismos. A presença de compostos orgânicos indica a matéria-prima para a vida, por isso ele é um alvo de busca."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um estudante argumentou que, como a vida na Terra surgiu em condições extremas, qualquer lugar com condições parecidas também teria vida. Sua professora pediu que ele avaliasse o argumento com base na diversidade de ambientes conhecidos e no que a ciência já comprovou.",
+   "comando": "Avalie o argumento: ele é válido? Explique usando a diferença entre o que é possível e o que é comprovado, e cite um tipo de evidência que poderia testá-lo.",
+   "ref": "O argumento é fraco: que a vida tenha surgido em condições extremas na Terra mostra que é possível, mas não prova que outro lugar com condições parecidas tenha vida. Para testar, seria preciso detectar biomarcadores, como certos gases ou moléculas, em amostras do ambiente."
+  }
+ ],
+ "4B|9º ANO|20": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Para uma exposição de ciências, uma turma organizou em ordem cronológica quatro marcos da exploração espacial, com o ano e o tipo de missão. A professora pediu uma conclusão que dependesse da leitura dos anos, e não apenas do conhecimento prévio sobre os fatos.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "Em 12 anos, a exploração foi de um satélite sem tripulação ao pouso humano na Lua, com voos orbitais no meio",
+    "Tereshkova voou antes de Gagarin, pois o voo dela teve mais órbitas e por isso foi o primeiro de um ser humano",
+    "A Apollo 11 pousou na Lua antes de qualquer humano orbitar a Terra, pois a Lua foi o primeiro destino tripulado",
+    "Os quatro marcos ocorreram em menos de cinco anos, o que mostra o ritmo acelerado da corrida espacial"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma prefeitura do interior precisa de dois serviços: internet para escolas rurais, que exige um satélite que fique sempre sobre o Brasil, e imagens frequentes de todo o território para acompanhar queimadas. A secretaria comparou três satélites brasileiros.",
+   "comando": "Qual associação entre a órbita e a função de cada satélite é a mais coerente?",
+   "alts": [
+    "O CBERS-4 fica fixo sobre o Brasil a 778 km e serve às comunicações; o SGDC-1 passa sobre toda a Terra e gera imagens",
+    "O Amazônia-1 fica fixo a 752 km e atende às comunicações; o SGDC-1 e o CBERS-4 geram imagens da floresta",
+    "O SGDC-1 fica fixo sobre o Brasil, a 36.000 km, e serve às comunicações; os de 750 km geram imagens",
+    "Os três satélites têm a mesma função, pois os três orbitam acima da atmosfera e transmitem sinais ao território"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "O Brasil acompanha, com a NASA e outras agências, a chegada de robôs a Marte. A distância entre a Terra e Marte muda ao longo do tempo, e os sinais de rádio viajam à velocidade da luz. Uma aluna observou que, em alguns períodos, o robô demora muito a responder.",
+   "comando": "Por que os robôs em Marte precisam de certa autonomia, de acordo com os dados?",
+   "alts": [
+    "O sinal leva até 22 minutos para ir, e a resposta demora outro tanto, o que impede pilotar em tempo real",
+    "O sinal viaja mais devagar no espaço do que na atmosfera, e por isso o robô precisa decidir sozinho certas tarefas",
+    "O atraso diminui quando Marte está mais longe, e por isso o robô precisa ser controlado em tempo real nesses períodos",
+    "O robô precisa de autonomia porque a energia solar em Marte é fraca e as ordens da Terra gastariam a bateria"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Astronautas da Estação Espacial Internacional (ISS) passam meses em órbita, onde se sentem flutuando. Médicos acompanharam a massa óssea de uma tripulação ao longo da missão e compararam com valores iniciais. Os valores abaixo são aproximados e servem ao estudo.",
+   "comando": "Que hipótese explica o resultado e qual medida é coerente para missões longas, como uma viagem a Marte?",
+   "alts": [
+    "Não há gravidade na ISS por estar longe da Terra, e os ossos perdem massa; a medida é descer a estação ao solo",
+    "A radiação espacial dissolve o cálcio dos ossos, e a medida é adicionar cálcio à dieta, pois o exercício é inútil",
+    "O alimento embalado das missões é pobre em cálcio, e a medida é incluir queijo, pois a gravidade não influi",
+    "A queda livre contínua tira a carga sobre os ossos, que perdem massa; exercícios resistidos reduzem a perda"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um foguete de testes tem massa de 500 t na decolagem e, após queimar todo o combustível do primeiro estágio e descartar seu tanque vazio, passa a ter 150 t. O empuxo (força do motor) é constante, de 7.000 kN, e a aceleração é dada por a = F/m.",
+   "comando": "Qual consequência de descartar o estágio vazio é correta?",
+   "alts": [
+    "Como o empuxo não mudou, a aceleração é a mesma nas duas fases, pois depende da força do motor do foguete",
+    "Com a mesma força e menos massa, a aceleração sobe (cerca de 14 para 47 m/s²), e por isso o desempenho melhora",
+    "Com menos massa, a aceleração diminui, pois o foguete passa a ter menos combustível para impulsionar a carga",
+    "Com menos massa, o empuxo cai na mesma proporção, e a aceleração se mantém igual à da fase de decolagem"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "A Estação Espacial Internacional orbita a Terra a cerca de 400 km de altitude. Uma aluna estranhou: se a gravidade existe nessa altitude, por que os astronautas flutuam dentro da estação? O professor mostrou uma tabela com a altitude de três satélites e a gravidade em relação à da superfície.",
+   "comando": "Explique por que os astronautas flutuam na ISS apesar de a gravidade ser ainda grande nessa altitude.",
+   "ref": "Na altitude da ISS a gravidade é de cerca de 89% da superfície, e por isso a estação não sai da órbita. Estação e astronautas estão em queda livre contínua: caem em direção à Terra, mas, com a grande velocidade lateral, erram o solo e giram ao redor. Sem apoio que os empurre, sentem peso aparente zero e flutuam."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "O rover marciano usa painéis solares. Durante uma tempestade de poeira, a equipe da missão registrou a energia gerada pelo rover em cinco dias marcianos seguidos e decidiu desligar equipamentos para economizar bateria.",
+   "comando": "Explique por que a energia gerada caiu e por que a equipe desligou equipamentos.",
+   "ref": "A poeira em suspensão bloqueia e espalha a luz do Sol e se deposita nos painéis, de modo que chega menos luz às células solares e a energia gerada cai de 900 para 60 Wh. Para não esgotar a bateria, a equipe desliga equipamentos e entra em modo de economia até a poeira diminuir."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma agência espacial estuda uma viagem tripulada a Marte. A equipe de saúde e de engenharia listou condições da missão que preocupam os especialistas, e os estudantes devem avaliar riscos e soluções possíveis.",
+   "comando": "Aponte dois problemas de uma missão a Marte com base nos dados e proponha uma solução para cada um.",
+   "ref": "A gravidade de 38% pode causar perda óssea e muscular, e a solução é fazer exercícios resistidos diariamente. O atraso de até 22 minutos impede controle em tempo real, e a solução é dar autonomia aos sistemas e preparar a tripulação para decidir. Outros: radiação (abrigo e blindagem) e suprimentos para 32 meses (cultivo e reciclagem)."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um estudante pesquisou tecnologias do dia a dia que se desenvolveram com a pesquisa espacial. Ele montou um quadro de exemplos, e a professora pediu que escolhesse um deles e explicasse como a necessidade de uma missão no espaço levou a uma melhoria na vida cotidiana.",
+   "comando": "Escolha uma tecnologia do quadro e explique o problema do espaço que levou ao seu desenvolvimento e o benefício atual na Terra.",
+   "ref": "Exemplo: painéis solares. Satélites distantes precisavam de energia contínua sem tomadas, e a pesquisa para torná-los leves, eficientes e duráveis reduziu custos. Hoje essa tecnologia gera eletricidade em casas, escolas e usinas, diminuindo o uso de combustíveis fósseis."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "A base de lançamento de Alcântara, no Maranhão, fica muito perto da linha do Equador. A Terra gira, e a superfície se move mais depressa nas regiões próximas ao Equador. Uma turma comparou três bases de lançamento ao redor do mundo.",
+   "comando": "Explique a vantagem de lançar foguetes perto do Equador, usando os dados.",
+   "ref": "Perto do Equador, a superfície gira mais rápido (1.670 km/h em Alcântara), e o foguete já sai com essa velocidade, que ajuda a atingir a órbita. Isso economiza combustível e permite levar mais carga, o que torna a base mais vantajosa."
+  }
+ ],
+ "6º ANO|1|Analisar as interações entre Sol, Terra e Lua na ocorrência das fases da Lua, dos eclipses e na medição do tempo.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Seu Antônio, pescador de Ubatuba, anota no caderno as datas das luas cheias para planejar a pesca noturna. Ele viu a Lua cheia na noite de 3 de maio. Sua neta quer saber como a Lua estará na noite de 18 de maio, data da festa da família, e pergunta se haverá lua cheia nessa noite.",
+   "comando": "Com base no registro, qual previsão para 18 de maio está correta?",
+   "alts": [
+    "A Lua estará cheia de novo, pois o ciclo das fases se repete a cada 15 dias e a Lua volta ao lado oposto do Sol.",
+    "A Lua estará em fase nova, pois passaram cerca de 15 dias desde a Lua cheia e a face voltada para a Terra fica escura.",
+    "A Lua estará no quarto minguante, pois após duas semanas ela já percorreu três quartos do seu ciclo de fases.",
+    "A Lua estará no quarto crescente, pois nas duas semanas seguintes à Lua cheia a parte iluminada vista aumenta."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Lucas contou 12 luas cheias no céu de Campinas em um ano, mas apenas 2 eclipses lunares foram anunciados no jornal. Ele pensou que, se a Terra fica entre o Sol e a Lua em toda Lua cheia, deveria haver um eclipse lunar a cada mês e quer entender a diferença.",
+   "comando": "Qual explicação é sustentada pelos dados e resolve a dúvida de Lucas?",
+   "alts": [
+    "O eclipse lunar depende da estação do ano, pois a sombra da Terra cobre a Lua em meses de inverno, quando a Terra se afasta do Sol.",
+    "A sombra da Terra alcança a Lua em alguns meses porque a distância Terra-Lua varia e, em certas luas cheias, a Lua fica mais próxima da Terra.",
+    "Na maior parte dos meses a Terra não está entre o Sol e a Lua, por isso a Lua cheia aparece do mesmo lado do Sol que a Terra ilumina.",
+    "A órbita da Lua é inclinada em relação à órbita da Terra, então, na maioria das luas cheias, a Lua passa acima ou abaixo da sombra da Terra."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um povo antigo marcava as festas da colheita com 12 meses lunares seguidos, sem nenhum ajuste. Cada mês lunar vai de uma Lua nova à seguinte. O plantio, porém, depende das estações, que seguem o ano da Terra em torno do Sol, e a comunidade percebeu mudanças nas datas das festas ao longo dos anos.",
+   "comando": "Depois de três anos usando esse calendário, o que acontece com a data da festa em relação às estações?",
+   "alts": [
+    "A festa passa a cair cerca de um mês antes da época da colheita, porque o ano lunar de 354 dias é mais curto que o ano solar.",
+    "A festa passa a cair cerca de um mês depois da época da colheita, porque os 12 ciclos lunares somam mais dias que o ano solar.",
+    "A festa passa a cair cerca de 11 dias antes da época da colheita, porque a diferença de um ano não se acumula nos anos seguintes.",
+    "A festa continua na mesma época das estações, pois a Lua e a Terra completam suas voltas ao redor do Sol no mesmo período."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Às 15h, em Santos, Pedro viu a Lua baixa no lado leste, com metade do disco iluminada, enquanto o Sol estava no lado oeste. A parte iluminada da Lua estava voltada para o Sol. Pedro quer dizer qual é a fase da Lua e justificar sua resposta para a turma.",
+   "comando": "Qual alternativa identifica corretamente a fase e a justificativa?",
+   "alts": [
+    "Lua cheia: a Lua aparece a leste, do lado oposto ao Sol, e metade do disco está coberta pela sombra que a Terra projeta.",
+    "Quarto minguante: a Lua aparece a leste porque está perdendo a parte iluminada, como acontece no fim do ciclo de fases.",
+    "Quarto crescente: vista da Terra, a Lua forma um ângulo de cerca de 90 graus com o Sol, e a metade iluminada aponta para ele.",
+    "Quarto crescente: a Terra projeta sombra sobre metade da Lua, que aparece a leste porque o Sol está a oeste."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Ana fincou uma estaca vertical no pátio da escola e mediu a sombra em três horários do dia, para usá-la como relógio de sol. Ela registrou o comprimento e a direção da sombra e afirmou que o Sol parece se deslocar pelo céu durante o dia, o que pode ser explicado pelo movimento da Terra.",
+   "comando": "Qual afirmação é sustentada pelos dados da Ana?",
+   "alts": [
+    "A sombra é mais curta ao meio-dia porque, nesse horário, o Sol está mais perto da Terra do que de manhã e à tarde.",
+    "A sombra muda de tamanho e direção porque a rotação da Terra altera a posição aparente do Sol.",
+    "A sombra aponta para o oeste de manhã porque o Sol se desloca de oeste para leste em torno da Terra ao longo do dia.",
+    "A sombra muda ao longo do dia porque a Terra dá uma volta completa em torno do Sol em cerca de seis horas."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Letícia segura uma bolinha de isopor num palito, com o braço esticado diante de uma lanterna acesa, e gira devagar. Ela anotou o que via em três posições da bolinha e percebeu que, em qualquer uma delas, metade da bolinha estava iluminada pela lanterna, mas a parte que ela enxergava mudava.",
+   "comando": "Associe cada posição a uma fase da Lua e explique por que a parte iluminada que Letícia enxerga muda mesmo com metade da bolinha sempre iluminada.",
+   "ref": "A é Lua nova, B é quarto (crescente ou minguante) e C é Lua cheia. A lanterna (Sol) ilumina sempre uma metade da bolinha, mas Letícia (Terra) vê uma parte maior ou menor dessa metade conforme o ângulo entre as duas."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um jornal de Presidente Prudente noticiou um eclipse solar em que a faixa de totalidade tinha cerca de 200 km de largura e durou 4 minutos. Meses depois, um eclipse lunar foi visto por toda a cidade durante mais de uma hora, do início ao fim da fase total.",
+   "comando": "Explique por que o eclipse solar foi total só em uma faixa estreita, enquanto o eclipse lunar foi visto por toda a cidade. Diga em que fase da Lua cada um ocorre.",
+   "ref": "O eclipse solar ocorre na Lua nova: a Lua fica entre o Sol e a Terra e sua sombra, pequena, cobre só uma faixa estreita da Terra. O eclipse lunar ocorre na Lua cheia: a Lua entra na sombra da Terra, que é grande, então qualquer lugar onde é noite vê o fenômeno."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Marina anotou a Lua ao entardecer, sempre às 18h30, em uma semana de agosto. No dia 1 viu uma Lua fina e baixa, perto do horizonte oeste, logo após o pôr do Sol. Nos dias seguintes ela apareceu cada vez mais alta no céu e com mais parte iluminada visível.",
+   "comando": "A Lua de Marina estava em fase crescente ou minguante? Justifique com os dados e diga como ela estará por volta do dia 15.",
+   "ref": "Estava em fase crescente: a Lua é vista ao entardecer perto do Sol poente e sua parte iluminada aumenta a cada dia. Por volta do dia 15 ela estará cheia, nascendo a leste quando o Sol se põe."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um agricultor de Ribeirão Preto comenta que o dia, o mês e o ano vêm de movimentos diferentes. Ele pensa em usar um calendário de 12 meses lunares para o plantio, mas o vizinho avisa que as datas ficariam fora das estações do ano, e os dois querem entender a diferença.",
+   "comando": "Relacione dia, mês e ano a movimentos de Terra e Lua e explique por que o calendário de 12 meses lunares se desloca das estações.",
+   "ref": "O dia vem da rotação da Terra, o mês das fases da Lua (volta da Lua em torno da Terra) e o ano da translação da Terra em torno do Sol. Doze meses lunares têm 354 dias, 11 a menos que o ano, então a diferença se acumula e as datas antecipam em relação às estações."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um astronauta está parado na face da Lua que fica sempre voltada para a Terra. Ele observa o céu durante uma noite de Lua nova vista do Brasil, quando o Sol está do outro lado da Lua, ou seja, atrás dela em relação ao astronauta.",
+   "comando": "Descreva como o astronauta enxerga a Terra nesse momento e explique por que, usando as posições de Sol, Lua e Terra.",
+   "ref": "Ele vê a Terra 'cheia', toda iluminada. O Sol está atrás da Lua, então ilumina o hemisfério da Terra voltado para a Lua, e o astronauta olha justamente para esse hemisfério, enquanto a face lunar dele está na noite."
+  }
+ ],
+ "6º ANO|1|Classificar os corpos celestes do Sistema Solar.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "O clube de astronomia de uma escola de Campinas observou quatro pontos brilhantes do céu durante 30 noites seguidas de julho, usando binóculo e um sensor que estima a temperatura da superfície de cada objeto. Os alunos anotaram os resultados na tabela e querem classificar cada ponto.",
+   "comando": "Qual classificação é coerente com os registros da tabela?",
+   "alts": [
+    "P1 é estrela; P3 é asteroide; P2 e P4 são planetas",
+    "P1 é planeta; P3 é cometa; P2 e P4 são estrelas",
+    "P1 é estrela; P3 é cometa; P2 e P4 são planetas",
+    "P1 é estrela; P3 é cometa; P2 e P4 são satélites"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Joana afirmou no grupo de estudo que a Lua é um planeta pequeno, pois é redonda e brilha no céu. O professor entregou a tabela abaixo, com informações de quatro corpos do Sistema Solar, e pediu que a turma verificasse a afirmação com base nos dados.",
+   "comando": "Qual argumento refuta a afirmação de Joana?",
+   "alts": [
+    "Ela reflete a luz do Sol, característica que define os satélites naturais",
+    "Ela gira ao redor da Terra, e não do Sol, o que a classifica como satélite natural",
+    "Ela tem diâmetro menor que o da Terra, e corpos menores que um planeta são satélites",
+    "Ela não produz a luz que emite, ao contrário dos planetas, que são luminosos"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma notícia local informou que um corpo recém-descoberto passa pela região entre Marte e Júpiter e outro vem de regiões bem distantes. Para entender as diferenças, uma turma do 6º ano comparou os dois corpos, B e C, observados por telescópio ao longo de um ano.",
+   "comando": "Por que somente o corpo C desenvolve cauda ao se aproximar do Sol?",
+   "alts": [
+    "A gravidade do Sol estica o corpo e forma uma cauda apontando para a estrela",
+    "A rotação rápida lança poeira para trás e deixa um rastro de luz atrás do corpo",
+    "O corpo entra em combustão na atmosfera solar e queima como se fosse um meteoro",
+    "O calor solar vaporiza o gelo e libera gás e poeira, que são empurrados para longe do Sol"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Três corpos foram descobertos orbitando o Sol e receberam nomes provisórios. Para classificá-los, os astrônomos usam três critérios: orbita o Sol, tem formato arredondado e há outros corpos de tamanho parecido na mesma órbita. Veja os registros enviados por um observatório.",
+   "comando": "Qual classificação respeita os critérios da tabela?",
+   "alts": [
+    "X é planeta anão; Y é asteroide; Z é satélite natural",
+    "X é planeta; Y é asteroide; Z é satélite natural",
+    "X é planeta anão; Y é planeta anão; Z é satélite natural",
+    "X é planeta anão; Y é asteroide; Z é asteroide"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um estudante acompanhou um ponto brilhante no céu de São Paulo e anotou o que viu em três momentos. Ele quer saber se o ponto é uma estrela ou outro tipo de corpo e pediu ajuda ao professor para levantar uma hipótese coerente com as observações.",
+   "comando": "Que hipótese é coerente com todas as observações?",
+   "alts": [
+    "É uma estrela que se apaga durante semanas e volta a brilhar com a mesma intensidade",
+    "É um planeta de órbita menor que a da Terra, que reflete a luz solar e muda de posição",
+    "É um planeta mais distante que Júpiter, que some quando a Terra gira mais rápido",
+    "É um cometa que se afasta do Sol e retorna ao céu com uma cauda cada vez maior"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "A professora levou três cartas para a aula sobre Sistema Solar. Cada carta traz dados de um corpo diferente. Os alunos devem classificar cada um (planeta, planeta anão, satélite natural, asteroide, cometa ou estrela) usando os dados e não apenas o nome do corpo.",
+   "comando": "Classifique os três corpos e justifique cada classificação com um dado da tabela.",
+   "ref": "Titã é satélite natural, pois orbita Saturno. Ceres é planeta anão: orbita o Sol, é arredondado e divide a órbita com outros corpos. Halley é cometa, pois tem órbita alongada e forma cauda quando se aproxima do Sol."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em um debate, Pedro disse: 'Tudo que brilha no céu à noite é estrela, inclusive Vênus e Júpiter'. Marina discordou. Os astrônomos sabem que o brilho de planetas vem do Sol, e que, em noites seguidas, alguns pontos mudam de posição em relação aos outros.",
+   "comando": "Quem tem razão? Explique a diferença entre estrela e planeta e como um observador pode distingui-los no céu.",
+   "ref": "Marina tem razão. Estrelas produzem a própria luz e parecem fixas umas em relação às outras, enquanto planetas apenas refletem a luz do Sol e mudam de posição noite após noite, por orbitarem o Sol."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "O Sol concentra quase toda a massa do Sistema Solar, e os demais corpos formam uma parte pequena do total. Observe os valores aproximados de uma maquete didática, em que a massa total do sistema foi dividida em partes.",
+   "comando": "Com base nos dados, explique por que planetas, asteroides e cometas orbitam o Sol e não o contrário.",
+   "ref": "O Sol tem massa muito maior que a soma de todos os outros corpos, por isso sua gravidade é a mais intensa e prende os demais em órbita. Os corpos pequenos não conseguem atrair o Sol de modo significativo."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em 2023, moradores do interior paulista viram uma bola de fogo cruzar o céu e, dias depois, um fragmento de rocha de 200 g foi achado numa fazenda. Veja a sequência descrita por um pesquisador da universidade para explicar o fenômeno.",
+   "comando": "Dê o nome de cada etapa (asteroide, meteoro, meteorito) e explique por que o fragmento brilhou ao cruzar o céu.",
+   "ref": "A etapa 1 é um asteroide (ou meteoroide), a 2 é o meteoro e a 3 é o meteorito. O brilho surge porque o atrito com o ar da atmosfera aquece a rocha a altas temperaturas, que incandesce e se desfaz em parte."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Numa maquete em escala feita na quadra da escola, o Sol foi representado por uma bola de 14 cm de diâmetro. A turma mediu as distâncias e os tamanhos dos planetas na mesma escala e percebeu que não era fácil enxergá-los de longe.",
+   "comando": "O que os dados da maquete mostram sobre o espaço entre os corpos do Sistema Solar? Explique usando os números.",
+   "ref": "Os corpos são muito pequenos em comparação com as distâncias entre eles: a Terra tem 1,3 mm e está a 15 m do Sol. Isso mostra que o Sistema Solar é formado em sua maior parte por espaço vazio."
+  }
+ ],
+ "6º ANO|1|Reconhecer a formação e transformação da Terra ao longo do tempo.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, a turma de Marina esticou 4,6 m de barbante no pátio, com 1 m representando 1 bilhão de anos, e anotou a distância de cada cartão até a ponta final, que representa o presente. O professor lembrou que o oxigênio livre passou a se acumular no ar muito tempo depois do surgimento dos primeiros seres vivos.",
+   "comando": "Qual afirmação é sustentada pelos registros da turma?",
+   "alts": [
+    "Os primeiros seres vivos surgiram 3,8 bilhões de anos depois da formação da Terra, valor lido no cartão.",
+    "O oxigênio livre já estava no ar quando surgiram os primeiros seres vivos, pois os cartões ficam no mesmo lado.",
+    "Entre os primeiros seres vivos e o acúmulo de oxigênio no ar passaram-se cerca de 1,4 bilhão de anos.",
+    "Os dinossauros viveram em boa parte da história da Terra, pois seu cartão fica próximo da ponta final."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma exposição em São Paulo, um painel resume o que se sabe sobre a Terra primitiva: a superfície era de rocha fundida, esfriou e formou crosta; vulcões liberavam gases e muito vapor de água; depois de milhões de anos de resfriamento, o vapor condensou e a chuva encheu as depressões da crosta.",
+   "comando": "Qual relação entre as esferas da Terra é compatível com a sequência do painel?",
+   "alts": [
+    "A hidrosfera se formou sobre uma litosfera já solidificada, com a água vinda do vapor liberado pelos vulcões.",
+    "A hidrosfera surgiu antes da litosfera, e foi a água líquida que se solidificou até formar a crosta rochosa.",
+    "A atmosfera atual surgiu da ação dos seres vivos, que depois permitiram a formação da crosta e das chuvas.",
+    "A água dos oceanos chegou do espaço depois que a litosfera estava formada, sem relação com os gases vulcânicos."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um grupo de pesquisa estima o oxigênio no ar ao longo do tempo. Há registros de fósseis de seres que faziam fotossíntese com cerca de 3,5 bilhões de anos, mas as rochas ricas em ferro oxidado, sinal de oxigênio livre, só aparecem a partir de 2,4 bilhões de anos. A porcentagem de oxigênio no ar subiu devagar depois disso.",
+   "comando": "Que hipótese explica o intervalo entre os primeiros fósseis fotossintetizantes e o aumento do oxigênio no ar?",
+   "alts": [
+    "Os seres fotossintetizantes consumiam o oxigênio da atmosfera, por isso ele foi baixo até surgirem os vulcões.",
+    "A formação dos oceanos liberou o oxigênio da água, o que explica o aumento do ar depois de 2,4 bilhões de anos.",
+    "O oxigênio já era abundante antes da vida, e as rochas de ferro oxidado mostram apenas sua redução no ar.",
+    "O oxigênio produzido reagiu com o ferro dissolvido nos oceanos e nas rochas, e só depois passou a se acumular no ar."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Pedro olhou a linha do tempo do barbante (1 m = 1 bilhão de anos) e disse: \"os cartões dos dinossauros extintos, a 6,6 cm do fim, e dos humanos, a menos de 1 mm, estão tão perto que os dois grupos devem ter convivido\". Marina discordou e fez as contas com a escala.",
+   "comando": "Qual argumento de Marina refuta a conclusão de Pedro?",
+   "alts": [
+    "Pela escala, 6,6 cm equivalem a 6,6 milhões de anos, intervalo curto que ainda permitiria algum encontro entre os grupos.",
+    "Pela escala, 6,6 cm equivalem a 66 milhões de anos, e os humanos aparecem menos de 1 milhão de anos antes do presente.",
+    "O barbante indica a ordem dos eventos, mas a distância entre os cartões não permite estimar o tempo entre eles.",
+    "Cartões a menos de 7 cm do fim indicam eventos da mesma era, e a convivência depende de os animais terem o mesmo tamanho."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um corte de estrada na Serra do Mar, a 800 m de altitude, uma aluna registrou três camadas de rocha. Ela sabe que sedimentos se depositam em camadas, as mais novas por cima das mais antigas, e que conchas de animais marinhos vivem no fundo do mar.",
+   "comando": "Qual interpretação é sustentada pelo registro?",
+   "alts": [
+    "O nível do mar chegou a 800 m acima do atual, sem qualquer movimento da litosfera, e depois baixou até a posição de hoje.",
+    "O granito da base é a camada mais nova, pois está embaixo, e as conchas do topo são os registros mais antigos.",
+    "Sedimentos com conchas se depositaram em ambiente aquático e depois foram soterrados e elevados pelos movimentos da litosfera.",
+    "O granito se formou da compactação das conchas, e a ausência de fósseis nele mostra que o mar não cobriu a região."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na represa do Sistema Cantareira, um grupo de alunos em visita registrou: água da represa a 18 °C, rochas nas margens, árvores de mata ciliar, ar úmido com neblina pela manhã e peixes perto da superfície. Um dos alunos notou que, depois de uma semana sem chuva, o nível da água baixou e as rochas das margens ficaram expostas.",
+   "comando": "Classifique cada elemento observado em uma esfera da Terra e explique uma interação entre duas dessas esferas na situação descrita.",
+   "ref": "Água é hidrosfera, rochas são litosfera, neblina e ar são atmosfera, árvores e peixes são biosfera. Interação possível: sem chuva (atmosfera), o nível da água (hidrosfera) baixou e expôs as rochas (litosfera)."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma turma quer marcar o surgimento da espécie humana (cerca de 300 mil anos) no barbante de 4,6 m, em que 1 m representa 1 bilhão de anos. O professor mostrou que, nessa escala, a idade da Terra cabe no pátio, mas a história humana quase some.",
+   "comando": "Calcule a distância aproximada entre o cartão dos humanos e a ponta final do barbante e explique por que o cartão é difícil de colocar.",
+   "ref": "Como 1 m vale 1 bilhão de anos, 300 mil anos correspondem a 0,0003 m, ou 0,3 mm. Essa distância é minúscula perto de 4,6 m, mostrando que a presença humana é muito recente na história da Terra."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Ao longo de um rio paulista, Rafael mediu o tamanho médio dos seixos (pedras de rio) em quatro pontos: na nascente da serra, onde a água corre rápido em declive forte, e mais abaixo, em trechos de declive cada vez menor, até a foz. Ele quer entender como o rio transforma a rocha.",
+   "comando": "Explique a tendência dos dados e cite o que aconteceu com as rochas ao longo do percurso.",
+   "ref": "Os seixos diminuem rio abaixo porque a água os desgasta e quebra ao arrastá-los, num processo de erosão. Os fragmentos mais finos são transportados e depositados nos trechos mais baixos, transformando a litosfera."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Fósseis de organismos que faziam fotossíntese têm mais de 3 bilhões de anos. Depois de muito tempo, a quantidade de oxigênio na atmosfera aumentou até permitir a vida de seres que respiram esse gás, como os animais.",
+   "comando": "Explique como a biosfera mudou a atmosfera e qual consequência isso teve para a vida na Terra.",
+   "ref": "Seres fotossintetizantes liberaram oxigênio, e a biosfera foi modificando a composição da atmosfera. Com mais oxigênio, surgiram seres que respiram esse gás e, com o tempo, houve maior diversidade de vida."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Duas turmas de escolas diferentes querem montar uma linha do tempo da Terra de 4,6 bilhões de anos. A turma A usa 1 m para cada 1 bilhão de anos, e a turma B usa 1 cm para cada 1 milhão de anos. As duas têm um pátio com 10 m de comprimento.",
+   "comando": "Calcule o comprimento de cada linha do tempo e diga qual das duas escalas cabe no pátio, justificando.",
+   "ref": "A turma A usa 4,6 m, pois 4,6 bilhões de anos × 1 m por bilhão dá 4,6 m. A turma B precisaria de 4.600 cm, ou 46 m, que não cabe em 10 m. Só a escala da turma A cabe no pátio."
+  }
+ ],
+ "6º ANO|1|Reconhecer os efeitos da gravidade na organização do Sistema Solar e em fenômenos observáveis no cotidiano.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências, Marina e Caio soltaram da mesma altura, 2 metros, duas folhas de papel idênticas: uma aberta e outra amassada. Depois repetiram a queda dentro de um tubo transparente do qual a professora retirou quase todo o ar com uma bomba. Eles cronometraram o tempo de queda em cada situação.",
+   "comando": "Qual explicação é coerente com os tempos registrados?",
+   "alts": [
+    "A gravidade puxa com mais intensidade a folha amassada, por ela ser mais compacta, e o tubo igualou esse efeito.",
+    "O ar atrasa mais a folha aberta; sem ele, as duas caem juntas porque a gravidade acelera ambas do mesmo jeito.",
+    "A folha aberta tem menos massa que a amassada, por isso é puxada com menos força pela gravidade no ar livre.",
+    "Dentro do tubo a gravidade quase desapareceu, e por isso as duas folhas chegaram ao fundo no mesmo instante."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um clube de astronomia de Campinas montou a tabela abaixo com a distância média de quatro planetas ao Sol e o tempo que cada um leva para completar uma volta ao redor dele. Júpiter, o maior deles, é também o que demora mais. Um colega concluiu que o tempo da volta depende do tamanho do planeta.",
+   "comando": "Considerando apenas os dados da tabela e a ação da gravidade do Sol, qual conclusão é a mais bem sustentada?",
+   "alts": [
+    "Os planetas mais distantes levam mais tempo para dar a volta, o que combina com a atração do Sol ser mais fraca longe dele.",
+    "O tempo da volta cresce na mesma proporção da distância, pois Marte está 1,5 vez mais longe que a Terra e demora 1,5 vez mais.",
+    "Os planetas maiores demoram mais para completar a volta porque o Sol precisa puxar uma massa maior para mantê-los em órbita.",
+    "A atração do Sol organiza as órbitas dos planetas rochosos, e por isso o tempo de Júpiter segue outra regra."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma tábua de marés do porto de Santos, um estudante anotou a diferença entre a maré alta e a maré baixa (amplitude) em quatro dias, cada um com uma fase diferente da Lua. Ele quer explicar por que a amplitude muda ao longo do mês, já que a Lua puxa a água do mar o tempo todo.",
+   "comando": "Qual explicação é compatível com a tabela e com a gravidade?",
+   "alts": [
+    "A Lua cheia ilumina mais o mar e o aquece, o que dilata a água e explica as maiores amplitudes registradas na tabela.",
+    "A Lua puxa a água do lado voltado para ela, e por isso a amplitude depende de qual lado da Terra está sob a Lua.",
+    "Com Sol, Terra e Lua alinhados, as atrações se somam sobre o mar e a amplitude aumenta; fora do alinhamento elas se compensam em parte.",
+    "O Sol atrapalha a atração da Lua nas fases de quarto, e nas demais fases ele deixa de atuar sobre a água do oceano."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma astronauta de 60 kg de massa participa de um treino para visitar outros corpos celestes. A equipe calculou o peso (força com que o corpo é atraído) dela na Terra, na Lua e em Marte. Um jornalista escreveu que 'a astronauta ficaria mais magra na Lua, pois lá ela pesa menos'.",
+   "comando": "Com base na tabela, qual afirmação corrige corretamente a frase do jornalista?",
+   "alts": [
+    "A massa diminui na Lua durante a visita, pois o peso menor indica que há menos matéria sendo atraída pelo solo.",
+    "Marte tem peso maior que a Lua porque possui atmosfera, e a atmosfera acrescenta massa à astronauta durante a permanência.",
+    "O peso na Terra é igual à massa, e isso mostra que na Lua e em Marte a gravidade é uma força que muda a massa do corpo.",
+    "A quantidade de matéria dela não muda; o peso varia porque a atração gravitacional é diferente em cada corpo celeste."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Para representar o Sol e um planeta, Beatriz prendeu uma meia a um barbante e a girou em círculos acima da cabeça, segurando a ponta. Ela observou o que ocorria em três situações e anotou os resultados. O barbante faz o papel da atração gravitacional do Sol sobre o planeta.",
+   "comando": "Se a atração do Sol sobre a Terra deixasse de existir de repente, o que o modelo permite prever?",
+   "alts": [
+    "A Terra pararia no ponto da órbita em que estava, já que sem a atração do Sol nada manteria o seu movimento.",
+    "A Terra deixaria a órbita e seguiria em linha reta, na direção em que se movia no instante em que a atração acabou.",
+    "A Terra seria puxada para o Sol em linha reta, pois a sua própria gravidade a atrairia para o astro maior.",
+    "A Terra continuaria a girar em círculo, porque o movimento circular se mantém sozinho depois de iniciado."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "A Estação Espacial Internacional orbita a cerca de 400 km de altura, e os astronautas parecem flutuar lá dentro. Um aluno disse: 'Eles flutuam porque lá não existe gravidade'. A tabela mostra a intensidade da gravidade (aceleração) em três altitudes acima da Terra.",
+   "comando": "Use os dados da tabela para mostrar que a afirmação do aluno está equivocada e explique por que os astronautas flutuam.",
+   "ref": "A 400 km a gravidade ainda é cerca de 90% da de superfície, então ela existe. Estação e astronautas estão em queda contínua em torno da Terra, caindo juntos, por isso nenhum apoia no outro e parecem flutuar."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Satélites e a Lua orbitam a Terra, todos mantidos por sua gravidade. A tabela mostra a distância ao centro da Terra e o tempo de uma volta de três deles. Uma empresa de TV quer um satélite que fique sempre sobre o mesmo ponto do Brasil.",
+   "comando": "Compare os três corpos, relacione distância e tempo de volta e explique qual deles serve à empresa, justificando.",
+   "ref": "Quanto mais longe da Terra, mais lenta e demorada é a volta, pois a atração da gravidade é menor. O satélite de TV gasta 24 horas, igual à rotação da Terra, e por isso acompanha o mesmo ponto do planeta."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Na represa do Sistema Cantareira, a água segue por túneis até a estação de tratamento. O engenheiro anotou o desnível de dois trechos: no primeiro a água chega sozinha, e no segundo é preciso ligar bombas, que gastam energia elétrica.",
+   "comando": "Explique, usando a ação da gravidade, por que o segundo trecho exige bombas e o primeiro não.",
+   "ref": "A gravidade puxa a água para baixo, então no primeiro trecho ela desce sozinha, 40 m abaixo. No segundo ela precisa subir 25 m, contra a gravidade, e as bombas fornecem a energia para isso."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em um teste, Rafael soltou ao mesmo tempo uma bolinha de gude e uma folha de papel e disse: 'A gravidade puxa mais o que é pesado, por isso a gude chegou primeiro'. Em seguida, amassou a folha e repetiu o teste, com os resultados abaixo.",
+   "comando": "Explique o que mudou entre os dois testes e o que isso mostra sobre a conclusão de Rafael.",
+   "ref": "Só mudou a forma da folha, e o tempo dela caiu de 2,0 s para 0,7 s, quase igual ao da gude. Logo a diferença do teste 1 vinha da resistência do ar sobre a folha aberta, e a conclusão de Rafael sobre a gravidade não se sustenta."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "O Sol tem muito mais massa que os planetas, e a Lua gira em torno da Terra, não do Sol. A tabela compara a massa de alguns corpos usando a Terra como unidade (a Terra vale 1).",
+   "comando": "Use os dados para explicar por que os planetas giram em torno do Sol, e não o contrário, e por que a Lua gira em torno da Terra.",
+   "ref": "A atração gravitacional cresce com a massa, e o Sol tem massa enorme, então domina o Sistema Solar e mantém os planetas em órbita. A Lua tem massa bem menor que a Terra, que a atrai mais fortemente, por isso orbita nosso planeta."
+  }
+ ],
+ "6º ANO|1|Relacionar as estações do ano como consequência da inclinação do eixo terrestre e do movimento de translação da Terra ao redor do Sol.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre estações do ano, a professora Lúcia pediu que os alunos pesquisassem a duração do dia em duas cidades brasileiras em datas próximas aos solstícios. Porto Alegre (RS) fica bem ao sul do país, e Fortaleza (CE) fica perto da linha do Equador.",
+   "comando": "Qual conclusão é sustentada pelos dados pesquisados pelos alunos?",
+   "alts": [
+    "A mudança na duração do dia é maior em Porto Alegre porque essa cidade fica mais perto do Sol que Fortaleza durante o ano inteiro.",
+    "Em Fortaleza a duração do dia não muda ao longo do ano, pois a inclinação do eixo afeta as cidades do hemisfério norte.",
+    "A mudança na duração do dia é maior na cidade mais afastada do Equador, o que combina com o eixo inclinado da Terra.",
+    "O dia é mais longo em dezembro nas duas cidades porque a rotação da Terra fica mais lenta durante o verão no hemisfério sul."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Camila mora em Curitiba (hemisfério sul) e seu primo Davi mora em Lisboa (hemisfério norte). Em um telefonema em dezembro, ela reclamou do calor e ele do frio. Os dois anotaram a temperatura média de dois meses do ano para comparar.",
+   "comando": "Que explicação é compatível com o padrão que os dois primos encontraram?",
+   "alts": [
+    "No mesmo mês, os dois hemisférios recebem a luz do Sol com inclinações diferentes, porque o eixo da Terra é inclinado durante a volta ao redor do Sol.",
+    "Em dezembro a Terra está bem mais perto do Sol, e por isso Curitiba esquenta mais do que Lisboa, que fica mais distante do Sol no mapa.",
+    "Quando é dia no hemisfério sul é noite no hemisfério norte, e essa alternância de dia e noite faz as estações serem contrárias.",
+    "As estações são iguais nos dois hemisférios, e a diferença de temperatura vem das correntes marítimas que esquentam mais o Brasil."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um grupo de alunos montou dois modelos com uma lanterna fixa e um globo que dá uma volta completa ao redor dela. No modelo A o eixo do globo ficou na vertical; no modelo B ele ficou inclinado, apontando sempre para a mesma parede. Um sensor de luz foi fixado em um ponto do hemisfério sul do globo.",
+   "comando": "O que os resultados medidos pelo grupo permitem concluir sobre as estações do ano?",
+   "alts": [
+    "A luz recebida no ponto muda ao longo da volta no modelo de eixo inclinado e quase não muda no de eixo vertical, então a inclinação gera as estações.",
+    "A mudança no modelo B vem da variação da distância entre a lanterna e o globo, que foi maior nesse modelo do que no modelo A.",
+    "A translação explica as estações por si própria, pois nos dois modelos o globo completou a volta ao redor da lanterna.",
+    "O modelo B recebe mais luz que o modelo A em cada posição, logo a inclinação aumenta a energia total recebida pelo hemisfério."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Para testar se a distância até o Sol causa as estações, um grupo mediu a temperatura da superfície de um globo iluminado por uma lanterna durante 5 minutos. Na montagem A a lanterna ficou perto e o eixo do globo estava inclinado; na montagem B a lanterna ficou longe e o eixo estava na vertical.",
+   "comando": "Qual é a principal falha que impede o grupo de concluir que a distância causa a diferença de temperatura?",
+   "alts": [
+    "O tempo de 5 minutos foi curto demais, e com um tempo maior a distância provavelmente se revelaria a causa da diferença observada.",
+    "Distância e inclinação mudaram ao mesmo tempo, e assim não dá para saber qual delas provocou a diferença de temperatura.",
+    "A lanterna deveria ser maior que o globo, para representar de modo fiel o tamanho real do Sol em relação à Terra.",
+    "O termômetro deveria medir o ar da sala em vez da superfície do globo, pois são as camadas de ar que definem o clima."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Dois colegas discutem se a distância entre a Terra e o Sol explica as estações. A órbita da Terra é uma elipse levemente achatada. Eles reuniram a distância média mensal ao Sol e as temperaturas médias de uma cidade do hemisfério sul (São Paulo) e de uma do hemisfério norte (Londres).",
+   "comando": "Qual das interpretações dos dados reunidos NÃO é sustentada por eles?",
+   "alts": [
+    "A distância ao Sol muda cerca de 5 milhões de km ao longo do ano e não acompanha o padrão de temperatura registrado em Londres.",
+    "São Paulo e Londres têm temperaturas opostas nos mesmos meses, o que indica que a distância ao Sol não decide a estação.",
+    "Em julho a Terra está no ponto mais distante do Sol e, ainda assim, Londres apresenta a sua maior temperatura média.",
+    "A menor distância ao Sol coincide com o verão nas duas cidades, logo a distância determina o início de cada estação."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Um estudante finlandês vai passar dezembro em uma escola de Campinas. Ele acredita que a Terra fica mais perto do Sol no verão e mais longe no inverno, por isso está levando casacos pesados. Seus amigos brasileiros dizem que ele vai sentir calor nessa época do ano.",
+   "comando": "Explique por que o clima que ele encontrará será diferente do de seu país e por que a distância até o Sol não é a causa dessa diferença.",
+   "ref": "Em dezembro o hemisfério sul está inclinado em direção ao Sol, recebendo raios mais diretos e dias mais longos, enquanto a Finlândia recebe raios inclinados e dias curtos. A distância ao Sol varia pouco e é a mesma para os dois países no mesmo mês."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em Florianópolis, uma turma fincou uma estaca de 1 m de altura na vertical, no pátio, e mediu a sombra ao meio-dia solar em quatro datas. Os valores abaixo são aproximados e mostram que o Sol fica em posições diferentes no céu conforme a época.",
+   "comando": "Compare a sombra de dezembro com a de junho e explique o que isso indica sobre a luz recebida e sobre a temperatura em cada época, relacionando com a inclinação do eixo da Terra.",
+   "ref": "A sombra curta de dezembro indica Sol alto e raios quase perpendiculares, que concentram mais energia e esquentam mais; a sombra longa de junho indica raios inclinados, que espalham a energia. Isso ocorre porque o eixo inclinado muda a posição do Sol no céu ao longo da translação."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma professora quer mostrar à turma, com materiais simples, que as estações não dependem da distância entre a Terra e o Sol. Ela dispõe de uma lanterna, um globo com eixo que pode ser inclinado, uma régua e um termômetro de superfície.",
+   "comando": "Proponha um procedimento para a demonstração, dizendo o que deve ser mantido igual, o que deve ser variado e o que deve ser medido.",
+   "ref": "Manter a distância entre lanterna e globo igual em todas as posições, variar a posição do globo na volta mantendo o eixo inclinado para o mesmo lado, e medir a temperatura ou a luz em um ponto do globo. Se o valor mudar mesmo com a distância fixa, a inclinação é a causa."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Quito, no Equador, fica quase sobre a linha do Equador. São Paulo está a cerca de 23° ao sul dessa linha, e Oslo, na Noruega, está bem ao norte. O gráfico mostra a duração aproximada do dia em 21 de dezembro em cada cidade.",
+   "comando": "Explique por que a duração do dia em dezembro é tão diferente entre essas cidades, relacionando com a inclinação do eixo da Terra e com a latitude.",
+   "ref": "Com o eixo inclinado, no hemisfério sul há mais tempo de luz em dezembro e, no norte, menos, e a diferença cresce com a latitude. Perto do Equador os dias ficam próximos de 12 horas o ano todo; em Oslo, longe do Equador, o dia é curto."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Imagine um planeta igual à Terra, com a mesma órbita e a mesma distância do Sol, mas cujo eixo de rotação fosse perfeitamente vertical em relação ao plano da órbita, sem nenhuma inclinação.",
+   "comando": "O que você espera que aconteça com as estações do ano em São Paulo nesse planeta? Justifique sua previsão.",
+   "ref": "Quase não haveria estações marcadas. Sem inclinação, os raios solares incidiriam do mesmo modo em cada latitude durante toda a volta, e a duração do dia seria praticamente a mesma ao longo do ano, de modo que a temperatura mudaria pouco."
+  }
+ ],
+ "6º ANO|1|Relacionar o movimento de rotação terrestre com a ocorrência da sucessão dia e noite.": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na aula de Ciências de uma escola de Sorocaba, a turma apagou as luzes e usou uma lanterna fixa sobre a mesa. Um aluno segurou uma laranja com adesivos em dois pontos, um marcando o Brasil e outro o Japão, e a girou lentamente em torno do palito. A turma anotou o que cada adesivo recebia de luz ao longo de uma volta completa.",
+   "comando": "Qual explicação para a sucessão de dia e noite é sustentada pelas anotações da turma?",
+   "alts": [
+    "Um mesmo lado da laranja fica voltado para a lanterna por um tempo e depois sai da região iluminada, de modo que a alternância depende do giro da própria laranja.",
+    "A lanterna dá voltas ao redor da laranja e ilumina um lado por vez, de modo que a alternância depende do deslocamento da fonte de luz.",
+    "A laranja se aproxima e se afasta da lanterna durante a volta, de modo que a alternância depende da distância entre os dois objetos.",
+    "Um lado da laranja é coberto pela sombra de outro objeto durante a volta, de modo que a alternância depende de um corpo que bloqueia a luz."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma praça de Campinas, Lia fixou um poste de 1 m no chão e mediu o comprimento da sombra em cinco horários de um mesmo dia de céu aberto. Ela percebeu que a sombra também mudou de direção ao longo do dia. Seu professor pediu que ela relacionasse esse resultado a um movimento da Terra.",
+   "comando": "Qual interpretação dos valores medidos por Lia está de acordo com o movimento que causa o dia e a noite?",
+   "alts": [
+    "A sombra muda porque a Terra completa uma volta em torno do Sol em um dia, e a posição do Sol parece variar conforme o local avança nessa trajetória.",
+    "A sombra muda porque a Terra gira em torno do próprio eixo, e a posição aparente do Sol no céu se altera conforme o local se desloca nessa rotação.",
+    "A sombra muda porque o Sol sobe e desce em movimento real ao redor da Terra, e a luz incide em ângulos diferentes sobre o poste fixo.",
+    "A sombra muda porque a inclinação do eixo terrestre se altera durante as horas do dia, e isso modifica o ângulo da luz que chega ao poste."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Quando são 20h em São Paulo, a ligação de vídeo de Marina com a prima mostra que, em Tóquio, já é manhã. Em Manaus, no mesmo instante, são 19h e o céu também está escuro. Marina anotou os horários locais e o aspecto do céu nas três cidades e quer entender por que não há dia ou noite ao mesmo tempo em todo o planeta.",
+   "comando": "Que conclusão é sustentada pelos registros de Marina?",
+   "alts": [
+    "Como a Terra gira em torno do Sol, as cidades mais afastadas dele ficam no escuro, e por isso locais de países diferentes têm horas diferentes.",
+    "Como a Terra é esférica e gira, a luz solar chega mais forte a cidades do Hemisfério Norte, e por isso Tóquio tem manhã quando São Paulo tem noite.",
+    "Como a Terra é esférica e gira, em cada instante apenas uma parte da superfície recebe luz, e por isso locais distantes em longitude têm horas diferentes.",
+    "Como a Terra tem formato esférico, o Sol ilumina o planeta inteiro de uma vez, e as horas diferentes são só uma convenção entre os países."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Os alunos do 6º ano repetiram a atividade da lanterna e da laranja, agora com um giro completo da laranja em 24 segundos, para representar um dia de 24 horas. Um adesivo marcava a cidade de Ribeirão Preto, e a turma cronometrou quanto tempo ele ficou na parte iluminada e na parte escura. Depois, cada grupo escreveu uma conclusão sobre o modelo.",
+   "comando": "Qual das conclusões abaixo NÃO é sustentada pelo modelo e pelos tempos cronometrados?",
+   "alts": [
+    "O adesivo fica no escuro porque o Sol se afasta da laranja e depois volta a se aproximar, como numa órbita que dura um dia.",
+    "O adesivo passa metade do giro na região iluminada e metade na escura, o que representa a divisão aproximada do dia em claro e escuro.",
+    "A lanterna permanece parada durante o giro, então a alternância de luz e escuro se deve ao movimento da laranja e não ao da luz.",
+    "Se a laranja parasse de girar, o adesivo ficaria na região iluminada ou na escura, sem alternância, conforme a posição do início."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Astrônomos estudam planetas hipotéticos para comparar com a Terra. O planeta Y completa uma rotação em 10 horas terrestres, e o planeta X completa uma rotação em 48 horas terrestres. Na Terra, uma rotação leva 24 horas. Uma turma de Santos imaginou um observador fixo na superfície de cada planeta, durante 48 horas terrestres, contando quantas sucessões de dia e noite ele veria.",
+   "comando": "Qual previsão é coerente com os tempos de rotação da tabela?",
+   "alts": [
+    "No planeta Y o observador veria dias e noites mais longos que os da Terra, pois ele gira mais depressa e fica mais tempo exposto à luz.",
+    "No planeta X o observador veria duas sucessões completas em 48 horas, pois cada rotação do planeta define um período de claro e de escuro.",
+    "No planeta X o observador veria mais sucessões que na Terra, pois um giro demorado faz o dia terminar e recomeçar com maior frequência.",
+    "No planeta Y o observador veria quase cinco sucessões em 48 horas, pois quanto menor o tempo de uma rotação, mais sucessões ocorrem."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Na atividade com a lanterna parada e uma laranja espetada num palito, Caio girou a laranja uma volta completa no sentido anti-horário. Um adesivo colado no Brasil ficou algum tempo na região iluminada e algum tempo na região escura. A professora pediu que a turma relacionasse a laranja, a lanterna e o adesivo às partes do sistema real.",
+   "comando": "Relacione cada elemento do modelo ao que ele representa e explique por que o adesivo alterna entre claro e escuro.",
+   "ref": "A lanterna representa o Sol, a laranja a Terra e o adesivo o Brasil. O adesivo alterna porque a Terra gira em torno do próprio eixo (rotação): quando o Brasil fica voltado para o Sol é dia, e quando gira para o lado oposto é noite."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Marcos afirmou que a noite chega porque a Terra se afasta do Sol à noite e se aproxima de dia. Para testar a ideia, a turma consultou o registro de um observatório fictício sobre a distância entre a Terra e o Sol em dois instantes de um mesmo dia, um em pleno dia no Brasil e outro de madrugada.",
+   "comando": "Use os valores para avaliar a hipótese de Marcos e apresente a explicação correta para a noite.",
+   "ref": "A hipótese não se sustenta, pois a distância é praticamente a mesma ao meio-dia e à meia-noite. A noite ocorre porque a Terra gira em torno do próprio eixo e o local fica voltado para o lado oposto ao Sol, que está sem iluminação."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma turma de Piracicaba construiu um relógio de sol no pátio, usando uma haste vertical de 50 cm. A tabela mostra o comprimento da sombra da haste em quatro horários de um dia de céu limpo. Os alunos notaram que a sombra era menor perto do meio-dia e que apontava para lados diferentes de manhã e à tarde.",
+   "comando": "Explique, com base nos dados, por que a sombra muda e por que o relógio de sol funciona como marcador de horas.",
+   "ref": "A sombra muda porque a posição aparente do Sol no céu varia ao longo do dia, efeito da rotação da Terra: de manhã e à tarde o Sol está baixo e a sombra é longa, e ao meio-dia está alto e a sombra é curta. Como essa variação se repete em ciclos de 24 horas, o comprimento e a direção da sombra permitem estimar o horário."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Pedro mora em São Paulo e liga às 21h para o tio, que vive em Nagoya, no Japão. O tio atende e diz que já é 9h do dia seguinte e que está tomando café. Pedro estranha, pois no mesmo instante ele está jantando. Ele quer entender como é possível haver horas tão diferentes no mesmo momento.",
+   "comando": "Explique por que as duas cidades têm horas diferentes e por que não é correto dizer que o Sol 'dorme' em uma delas.",
+   "ref": "A Terra gira em torno do próprio eixo, e em cada instante só metade da superfície está voltada para o Sol; São Paulo está no lado escuro (noite) e Nagoya no iluminado (manhã). O Sol continua emitindo luz o tempo todo, o que muda é qual lado da Terra está voltado para ele."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Os alunos imaginaram que a Terra passasse a girar mais devagar, completando uma rotação em 48 horas, como o planeta X da tabela. Eles querem prever o que mudaria para quem mora em Campinas, considerando que o Sol continuaria emitindo luz do mesmo jeito.",
+   "comando": "Compare as duas situações e explique o que aconteceria com a duração do dia claro e da noite em Campinas.",
+   "ref": "Se a rotação durasse 48 horas, cada lado do planeta ficaria voltado para o Sol por cerca de 24 horas e no escuro por cerca de 24 horas, o que dobraria a duração do dia claro e da noite em relação ao dia de 24 horas. A causa é que a sucessão de dia e noite depende do tempo de uma rotação."
+  }
+ ]
+}

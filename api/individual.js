@@ -333,7 +333,7 @@ module.exports = async function individual(req, res) {
       const m = await montar(String(q.turma || ''), String(q.nome || ''), true, q.modo === 'simulado' ? 'simulado' : ''); if (!m.aluno) return erro(404, 'Aluno não encontrado nesta turma.');
       { const ja = await jaEnviou(String(q.turma || ''), m.aluno, q.modo === 'simulado'); if (ja) return ok({ nome: m.aluno, aviso: MSG_JA(ja, q.modo === 'simulado'), itens: [], adapt: null }); }
       return ok({ nome: m.aluno, aviso: m.itens.length ? '' : (m.falhou ? 'Estamos preparando suas questões. Tente de novo em 1 minuto.' : 'Ainda não há atividade para você. Fale com o professor.'),
-        itens: m.itens.map(i => ({ desc: i.desc, tipo: i.q.tipo, enunciado: i.q.enunciado, comando: i.q.comando, figura: i.q.figura || null, alts: i.q.tipo === 'obj' ? i.q.alts : [],
+        itens: m.itens.map(i => ({ desc: i.desc, tipo: i.q.tipo, enunciado: i.q.enunciado, comando: i.q.comando, figura: i.q.figura || null, svg: i.q.svg || undefined, alts: i.q.tipo === 'obj' ? i.q.alts : [],
           linhas: i.q.tipo === 'assoc' ? i.q.itens : undefined, banco: i.q.tipo === 'assoc' ? i.q.banco : undefined, passos: i.q.tipo === 'ordem' ? i.q.passos : undefined,
           imagem: i.q.ilus ? '/api/individual?acao=imagem&v=4&k=' + i.q.ilus.k : undefined, imagemAlt: i.q.ilus ? i.q.ilus.alt : undefined, imagemOpc: i.q.imgOpc ? true : undefined })),
         adapt: m.pei ? Object.assign({}, m.pei.flags) : null });

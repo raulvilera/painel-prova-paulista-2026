@@ -1,0 +1,1328 @@
+{
+ "4B|7º ANO|4": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma aula de microbiologia, a turma observou ao microscópio quatro amostras e anotou a forma, a presença de núcleo delimitado e o tamanho das células. A professora pediu que usassem esses dados, e não apenas o tamanho, para agrupar os seres observados.",
+   "comando": "Qual afirmação é sustentada pelos dados?",
+   "alts": [
+    "A, B e D são procariontes de formas diferentes (coco, bacilo e espiral), e C tem núcleo e é eucarionte",
+    "A é a menor e por isso deve ser um vírus, enquanto B, C e D são bactérias de formas bem distintas",
+    "B e D formam um grupo por serem maiores que A, e C é bactéria por ter forma oval, como um bacilo",
+    "A forma da célula indica se o ser é procarionte, e a presença de núcleo em C mostra que ele é um coco"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma bactéria de um alimento esquecido fora da geladeira se divide por fissão binária a cada 30 minutos, em condições ideais de temperatura e nutrientes. Em um tubo de teste, a turma contou as bactérias a cada 30 minutos, a partir de 100 células, e quer prever a população depois de 3 horas.",
+   "comando": "Quantas bactérias haverá após 3 horas, mantendo-se o ritmo e as condições?",
+   "alts": [
+    "700 bactérias, pois a população aumenta 100 células a cada 30 minutos e 3 horas têm 6 intervalos",
+    "6.400 bactérias, pois a população dobra a cada 30 minutos e 3 horas têm 6 intervalos",
+    "3.200 bactérias, pois a população dobra a cada 30 minutos, mas foram contados 5 intervalos",
+    "1.200 bactérias, pois a população dobra a cada 60 minutos em vez de a cada 30 minutos de intervalo"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um laboratório de uma UBS, discos de papel com antibióticos diferentes foram colocados sobre uma placa semeada com uma bactéria. Um disco sem antibiótico serviu de comparação. Depois de um dia, mediu-se a zona transparente (sem bactérias) ao redor de cada disco.",
+   "comando": "Qual conclusão é sustentada pelos resultados?",
+   "alts": [
+    "A bactéria é sensível ao A, menos ao C e resistente ao B, e o disco sem antibiótico mostra que a zona vem do remédio",
+    "A bactéria é mais sensível ao B, pois ao redor dele houve crescimento, e o disco de comparação confirma o seu efeito",
+    "O antibiótico C é o mais eficaz, pois sua zona menor indica que ele age com maior precisão sobre as bactérias",
+    "A zona transparente indica onde as bactérias mais se multiplicaram, e por isso o antibiótico A estimulou o crescimento"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma turma preparou iogurte caseiro com leite pasteurizado em três potes. O pote 1 recebeu fermento lácteo (bactérias) e ficou na estufa a 40 °C; o pote 2 recebeu o mesmo fermento e ficou na geladeira; o pote 3 ficou na estufa sem fermento. Após 8 horas, mediu-se o pH, que diminui quando se formam ácidos.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "alts": [
+    "As bactérias do pote 2 morreram na geladeira, e por isso o pH não diminuiu como no pote 1, que ficou aquecido",
+    "O pote 3 mostra que o leite pasteurizado não tem bactérias, já que o pH não diminuiu na estufa sem o fermento",
+    "A queda do pH no pote 1 é causada pelo calor da estufa e não pelas bactérias do fermento adicionado",
+    "A fermentação depende das bactérias do fermento e de temperatura adequada para elas se multiplicarem"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em vasos com solo pobre em nitrogênio, uma turma plantou feijão e milho. Em metade dos vasos de cada planta, as sementes foram tratadas com um inoculante, produto com bactérias que se instalam nas raízes de leguminosas e transformam o nitrogênio do ar em formas que a planta usa. Após 40 dias, mediu-se a massa seca.",
+   "comando": "Que hipótese é sustentada pelos resultados?",
+   "alts": [
+    "As bactérias do inoculante funcionam como adubo mineral e aumentam a massa de qualquer planta cultivada",
+    "As bactérias produzem nitrogênio a partir do solo pobre, que as plantas absorvem se tiverem folhas largas",
+    "As bactérias se associam às raízes do feijão e fornecem nitrogênio aproveitável; o milho não tem essa associação",
+    "O inoculante contém nutrientes dissolvidos que o feijão absorve, e o milho não os aproveita por ter raízes finas"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Para saber o efeito de lavar as mãos, uma turma encostou as mãos em placas com meio de cultura em quatro situações. Depois de dois dias, contou as colônias de bactérias que cresceram em cada placa. A professora lembrou que muitas bactérias da pele não causam doenças.",
+   "comando": "Interprete os dados e explique por que lavar as mãos é importante, mesmo que nem todas as bactérias sejam nocivas.",
+   "ref": "O sabão remove mecanicamente os microrganismos e reduziu as colônias de 120 para 8, mais do que a água. Algumas bactérias da pele fazem parte da microbiota e são inofensivas ou até protetoras, mas lavar as mãos reduz o risco de transmitir as que causam doenças."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um restaurante guarda sobras de comida em temperaturas diferentes. Para entender o motivo, um técnico colocou o mesmo caldo com a mesma quantidade inicial de bactérias em quatro temperaturas e contou as bactérias após 4 horas.",
+   "comando": "Explique por que se guardam alimentos na geladeira e por que ferver o alimento reduz as bactérias, relacionando com a divisão das bactérias.",
+   "ref": "Em temperaturas baixas, o metabolismo das bactérias fica lento e a divisão por fissão binária diminui (2 mil a 5 °C), por isso se guarda na geladeira. A cerca de 37 °C as condições são ideais e elas se multiplicam muito. Em temperaturas altas, as proteínas e enzimas são alteradas e as bactérias morrem."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma trilha, alunos coletaram amostras de solo de uma mata e mediram o nitrato, que é uma forma de nitrogênio que as plantas absorvem. Os alunos repetiram a medida depois de espalhar folhas caídas sobre uma parte do solo e esperar algumas semanas.",
+   "comando": "Explique a relação entre o resultado e a ação das bactérias no ciclo do nitrogênio.",
+   "ref": "Bactérias e fungos decompõem as folhas e liberam o nitrogênio na forma de amônia. Outras bactérias transformam a amônia em nitrato, que as raízes absorvem. Isso explica o aumento do nitrato e o maior crescimento das plantas, mostrando o papel das bactérias na reciclagem de nutrientes."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma estudante comparou o desenho de uma bactéria e de uma célula animal para explicar por que as bactérias são chamadas de procariontes. Ela organizou as diferenças em um quadro e quer relacionar a estrutura da bactéria com a forma como ela se reproduz.",
+   "comando": "Com base no quadro, explique por que a bactéria é procarionte e como sua estrutura se relaciona com a fissão binária.",
+   "ref": "A bactéria é procarionte porque não tem núcleo delimitado nem organelas com membrana, e o DNA fica solto no citoplasma. Na fissão binária, ela duplica o DNA e divide a célula em duas, sem as etapas da mitose, o que é possível por essa organização simples."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma estação de tratamento de esgoto usa um tanque no qual bactérias digerem a matéria orgânica da água. Nesse tanque, bombas injetam ar em grande quantidade. Os técnicos mediram a quantidade de matéria orgânica em três pontos do processo.",
+   "comando": "Explique por que o tanque recebe ar e qual é o benefício dessa etapa para o rio que recebe a água tratada.",
+   "ref": "As bactérias aeróbias usam o oxigênio do ar para decompor a matéria orgânica, e a injeção de ar acelera o processo, reduzindo-a de 300 para 40 mg/L. No rio, isso evita que as bactérias consumam o oxigênio da água, o que matará peixes."
+  }
+ ],
+ "4B|7º ANO|5": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Marcos, de 17 anos, foi diagnosticado com tuberculose na UBS do bairro, doença causada por uma bactéria que se espalha pelo ar quando a pessoa doente tosse. Na casa dele moram sete pessoas. A equipe de saúde acompanhou outras famílias que tiveram um caso e comparou medidas de cuidado adotadas em casa com o número de familiares que adoeceram.",
+   "comando": "Qual conclusão é sustentada pelos dados da equipe de saúde?",
+   "alts": [
+    "Ventilar os ambientes e iniciar o tratamento reduz o risco, pois a bactéria é transmitida pelo ar, e não por talheres e copos.",
+    "Separar talheres e copos protege bem os contatos, pois a bactéria passa pela saliva depositada nos objetos de uso comum.",
+    "Fechar janelas e dividir o quarto reduz o risco, pois isso evita que o ar frio entre e agrave a doença dos familiares.",
+    "As três medidas têm efeito parecido, pois a diferença entre 6 e 20 casos em cada 100 contatos é pequena para uma doença grave."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Rafael pisou em um prego enferrujado no quintal e feriu o pé. Ele comentou que não podia 'pegar tétano de ninguém', pois só ficaria doente se um colega doente tossisse perto dele. O enfermeiro mostrou dados sobre casos de tétano em pessoas de acordo com a situação de vacinação.",
+   "comando": "Qual interpretação dos dados corrige o raciocínio de Rafael?",
+   "alts": [
+    "O tétano é transmitido pela tosse de outra pessoa doente, e a vacina em dia diminui os casos por reduzir a transmissão pelo ar.",
+    "O tétano é causado por ferrugem do prego, e a vacina em dia diminui os casos por limpar o metal antes do ferimento.",
+    "O tétano não passa pela tosse: a bactéria do ambiente entra por ferimentos, e a vacina em dia reduz mais os casos.",
+    "O tétano é transmitido pelo contato com pessoas doentes, e a vacina atrasada tem o mesmo efeito que a vacina em dia."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um estudo, pesquisadores contaram a proporção de bactérias E. coli, causadoras de infecção urinária, resistentes a um antibiótico comum em quatro faixas de idade. A proporção de resistentes aumenta com a idade. Quatro estudantes escreveram interpretações diferentes.",
+   "comando": "Qual interpretação NÃO é sustentada pelos dados?",
+   "alts": [
+    "A idade avançada transforma as bactérias do paciente em resistentes, pois o organismo idoso produz bactérias assim.",
+    "A proporção de resistentes cresce com a idade, mas os dados mostram associação e não provam sozinhos a causa do aumento.",
+    "Na faixa de 20 a 40 anos, a maioria das bactérias ainda é sensível ao antibiótico, pois a proporção de resistentes é baixa.",
+    "Pessoas mais velhas podem ter usado antibióticos mais vezes, o que favorece a seleção de bactérias resistentes."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em uma escola de São Paulo, 40 estudantes tiveram infecção urinária no semestre. Ela é causada principalmente pela bactéria E. coli, que vive normalmente no intestino. A enfermeira escolar fez um levantamento dos hábitos de higiene das estudantes, em dois grupos de 20 alunas.",
+   "comando": "Que explicação os dados sustentam para a diferença entre os grupos?",
+   "alts": [
+    "A infecção é transmitida pelo assento sanitário da escola, e a diferença entre os grupos mostra quem usou banheiros mais sujos.",
+    "A E. coli passa de uma aluna para outra pelo ar, e as que se limpam de trás para a frente ficam mais próximas das doentes.",
+    "A E. coli causa infecção em quem se limpa da frente para trás, pois esse sentido espalha a bactéria pelo corpo.",
+    "Limpar-se de trás para a frente pode levar bactérias do intestino à abertura da uretra, o que aumenta a chance de infecção."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "A vigilância de um município paulista acompanhou a vacinação contra a coqueluche, doença causada por bactéria, e o número de casos em três anos. Em 2021, os serviços de saúde ficaram parcialmente fechados por causa de uma outra crise, e muitos casos podem não ter sido notificados.",
+   "comando": "Que conclusão é mais bem sustentada pelos dados, considerando a observação sobre 2021?",
+   "alts": [
+    "O aumento de casos mostra que a vacina causou a doença, pois os casos subiram nos anos em que a vacinação também subiu.",
+    "Menos vacinação coincidiu com mais casos, compatível com a proteção da vacina; o dado de 2021 pode estar subestimado.",
+    "A bactéria da coqueluche ficou mais forte ao longo dos anos, e por isso mais pessoas adoeceram apesar da vacinação.",
+    "A vacinação tem pouca relação com o número de casos, pois a doença aumentou em anos de coberturas diferentes."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Marcos, com tuberculose, começou o tratamento e sentiu melhora rápida. No segundo mês, ele disse que se sentia curado e pensou em parar de tomar os remédios. O médico explicou que a bactéria ainda podia estar presente e mostrou o acompanhamento de outro paciente.",
+   "comando": "Explique, com base nos dados, por que a melhora dos sintomas não indica que se pode interromper o tratamento e qual o risco de fazê-lo.",
+   "ref": "No segundo mês a tosse diminuiu, mas o exame ainda mostrava bactérias, que só desaparecem após o tratamento completo. Interromper antes pode deixar bactérias vivas, permitir que a doença volte e selecionar bactérias resistentes, além de continuar transmitindo a doença."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma UBS, uma pesquisa mostrou que, entre os adultos com tosse e febre que procuraram atendimento, muitos saíram com receita de antibiótico. O exame mostrou que a maioria dos casos era causada por vírus, contra os quais o antibiótico não age.",
+   "comando": "Explique por que antibiótico não resolve doenças causadas por vírus e por que o uso desnecessário desses remédios é um problema para a saúde pública.",
+   "ref": "Antibióticos atuam sobre bactérias e não sobre vírus, então não curam doenças virais. O uso desnecessário expõe as bactérias do corpo ao medicamento, favorece a seleção de bactérias resistentes e pode fazer o remédio falhar quando for realmente necessário."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma campanha da UBS, uma enfermeira comparou duas doenças causadas por bactérias: a tuberculose e o tétano. Um estudante comentou que, se ambas são causadas por bactérias, devem ser transmitidas do mesmo jeito e evitadas pelas mesmas medidas.",
+   "comando": "Compare a forma de transmissão e a prevenção das duas doenças e avalie o comentário do estudante.",
+   "ref": "O comentário está errado: bactérias diferentes têm transmissão diferente. A tuberculose passa pelo ar, por gotículas de quem tosse, e se previne com ambientes ventilados, diagnóstico e tratamento dos doentes. O tétano não passa de pessoa a pessoa, pois a bactéria do ambiente entra por ferimentos, e se previne com a vacina em dia e a limpeza dos ferimentos."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma família de um bairro da zona rural de Itapetininga usa água de poço. Uma análise de três poços mediu as bactérias coliformes, que vêm de fezes e indicam contaminação, e a distância de cada um até a fossa da casa.",
+   "comando": "Interprete os dados, explique a relação entre a distância da fossa e a contaminação e indique uma medida para tornar a água mais segura.",
+   "ref": "Quanto mais perto da fossa, mais coliformes, pois bactérias das fezes se infiltram no solo e chegam à água do poço. Para tornar a água segura, o poço deve ficar afastado da fossa e a água pode ser tratada com cloro ou fervida antes de beber, reduzindo o risco de doenças causadas por bactérias."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em uma escola, a coordenação registrou casos de coqueluche, doença bacteriana transmitida por gotículas de tosse, em três turmas. A direção quer decidir quais medidas tomar no pátio, na sala e na UBS vizinha.",
+   "comando": "Use os dados para explicar a relação entre vacinação e casos e proponha duas medidas de prevenção para a escola.",
+   "ref": "As turmas com menos alunos vacinados tiveram mais casos, o que sugere que a vacina protege contra a doença. Medidas: conferir as carteiras e atualizar a vacinação na UBS, e ventilar as salas e afastar quem estiver com tosse persistente até a avaliação médica."
+  }
+ ],
+ "4B|7º ANO|6": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "A vigilância epidemiológica de uma região de São Paulo compara, em cada município, o número de casos de dengue em uma semana com a média das mesmas semanas dos últimos cinco anos. Considera-se epidemia quando os casos ficam muito acima do esperado para aquela área e época.",
+   "comando": "Qual município está em situação de epidemia de dengue, segundo o critério descrito?",
+   "alts": [
+    "O município C, pois tem o maior número de casos da semana, o que mostra que a transmissão ali é a mais intensa.",
+    "O município B, pois o número de casos é mais de cinco vezes maior que o esperado para a época, o que supera o padrão da região.",
+    "Os municípios A e C, pois os dois têm casos acima da média esperada, ainda que o aumento seja pequeno em cada um deles.",
+    "Não há epidemia, pois ela exige que a região inteira tenha casos acima da média esperada ao mesmo tempo."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma escola estadual, vários alunos tiveram vômito e diarreia depois de comer um mesmo lanche vendido na cantina na terça-feira. A diretoria acompanhou o número de novos casos por dia e o município não registrou aumento de casos fora da escola.",
+   "comando": "Como a situação deve ser classificada e por quê?",
+   "alts": [
+    "Surto, pois houve aumento rápido de casos em um local restrito, com possível origem comum, e depois a ocorrência voltou a cair.",
+    "Epidemia, pois o número de casos em poucos dias é muito maior que o habitual e mostra que a doença atingiu muitos estudantes.",
+    "Endemia, pois a diarreia é frequente na população e faz parte do que se espera de uma escola com muitos estudantes.",
+    "Pandemia, pois a doença se espalhou rapidamente entre muitos estudantes e pode se estender para outras escolas da região."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um município do interior do Pará registra casos de malária todos os anos, com número parecido, e os profissionais de saúde mantêm campanhas permanentes de uso de mosquiteiros e de controle do mosquito. Os dados dos últimos cinco anos foram reunidos em uma tabela.",
+   "comando": "Qual classificação e conclusão são coerentes com os dados?",
+   "alts": [
+    "Trata-se de epidemia, pois cento e vinte casos por ano formam um número alto, e o município precisa de uma campanha de emergência.",
+    "Trata-se de doença controlada, pois os casos não aumentaram nos cinco anos, e as ações de prevenção podem ser interrompidas.",
+    "Trata-se de surto, pois os casos se concentraram em um município pequeno, e o problema deve acabar em algumas semanas.",
+    "Trata-se de endemia, pois a doença ocorre todo ano com número estável de casos, e a prevenção deve ser contínua."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma turma montou a linha do tempo abaixo a partir de notícias sobre a covid-19. A professora perguntou qual critério levou a Organização Mundial da Saúde a classificar a situação como pandemia em março de 2020, e não apenas como epidemia.",
+   "comando": "Qual critério é sustentado pela linha do tempo?",
+   "alts": [
+    "A doença se espalhou por vários continentes, o que mostra que a ocorrência já não estava restrita a uma região.",
+    "A doença foi muito grave, com muitas mortes, e a gravidade é o que diferencia uma pandemia de uma epidemia.",
+    "O vírus era novo e desconhecido, e por isso toda doença causada por um vírus novo é automaticamente uma pandemia.",
+    "O Brasil registrou o primeiro caso em fevereiro, e a chegada ao país foi o critério que definiu a pandemia mundial."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Os dados de casos de dengue e de chuva de um município paulista foram reunidos por um grupo de estudantes. Eles sabem que o mosquito transmissor se reproduz em água parada e que as larvas levam cerca de uma ou duas semanas para virar mosquitos adultos.",
+   "comando": "Que interpretação é sustentada pelos dados?",
+   "alts": [
+    "A chuva transmite a dengue diretamente às pessoas, e por isso os meses mais chuvosos são os que têm o maior número de casos.",
+    "Os casos aumentam semanas depois das chuvas fortes, pois a água parada favorece o mosquito, e a prevenção deve começar antes.",
+    "O pico de casos em março mostra que a chuva de março é a causa, pois nesse mês os casos e a chuva foram altos ao mesmo tempo.",
+    "A chuva não se relaciona com a dengue, pois em maio, com 20 mm, ainda houve 150 casos, e em janeiro choveu mais com menos casos."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma notícia informou que um município decretou estado de emergência por dengue. Um morador achou exagero, pois \"são só alguns milhares de casos\". A secretaria de saúde apresentou o quadro abaixo.",
+   "comando": "Calcule a incidência (casos por 100 mil habitantes) em cada ano e explique por que a situação foi chamada de epidemia.",
+   "ref": "Em 2022 a incidência foi de 300 casos por 100 mil habitantes e, em 2023, de 1300, mais de quatro vezes maior. Esse aumento muito acima do esperado, em todo o município, caracteriza epidemia, e justifica ações como eliminar focos de água parada e reforçar o atendimento."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em três escolas, a secretaria de saúde comparou a proporção de estudantes vacinados contra o sarampo e o número de casos registrados em um surto causado por um estudante que voltou de viagem.",
+   "comando": "Interprete os dados e explique como a vacinação protege não só quem é vacinado, mas também a comunidade.",
+   "ref": "Quanto maior a proporção de vacinados, menor o número de casos: 98% teve 0 casos e 70% teve 12. Com muitos vacinados, o vírus encontra poucas pessoas suscetíveis e a transmissão não se mantém, o que protege também quem não pode se vacinar."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "O jornal da escola quer publicar uma matéria sobre os termos usados em notícias de saúde. A turma recebeu quatro situações diferentes para classificar em surto, epidemia, endemia ou pandemia.",
+   "comando": "Classifique cada situação (A a D) e justifique brevemente.",
+   "ref": "A é surto, pois há poucos casos em um local restrito e tempo curto. B é endemia, pois a doença é constante na região. C é epidemia, pois há aumento acima do esperado em uma área ampla. D é pandemia, pois a doença atingiu vários continentes."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em um bairro, as UBS notificam à vigilância epidemiológica os casos suspeitos de uma doença transmitida por mosquito. A equipe acompanha o número de notificações por semana.",
+   "comando": "Explique o que os dados indicam e por que a notificação rápida ajuda a conter a transmissão.",
+   "ref": "As notificações aumentaram de 5 para 45 em quatro semanas, o que indica início de epidemia ou surto crescente. A notificação rápida permite identificar onde estão os casos, fazer bloqueio, eliminar criadouros do mosquito e orientar a população antes que a doença se espalhe mais."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em uma pandemia, a doença se espalha com rapidez entre países porque pessoas viajam. Um grupo de pesquisa registrou quantos países tinham casos de uma doença nova em três momentos.",
+   "comando": "Explique o que os dados mostram e cite duas medidas que a população pode adotar para reduzir a transmissão.",
+   "ref": "O número de países com casos cresceu de 1 para 40 em 60 dias, o que mostra que a doença se espalhou rápido pelo deslocamento de pessoas e virou pandemia. A população pode reduzir a transmissão com vacinação, lavar as mãos e usar máscara em locais de risco, além de evitar aglomerações quando estiver doente."
+  }
+ ],
+ "4B|7º ANO|7": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "A Secretaria de Saúde recebeu três comunicados sobre uma doença infecciosa respiratória fictícia, em locais de tamanhos diferentes. Um técnico precisa classificar cada situação como surto, epidemia ou pandemia para informar o público, considerando a abrangência e o número de casos em relação ao esperado.",
+   "comando": "Qual classificação das três situações está adequada?",
+   "alts": [
+    "X é epidemia, Y é pandemia e Z é surto, pois a classificação depende do número de casos em relação ao esperado",
+    "X é surto, Y é epidemia e Z é pandemia, pois a abrangência e os casos crescem de X para Z",
+    "X é surto, Y é pandemia e Z é epidemia, pois a abrangência do estado inteiro supera a de 40 países",
+    "X é epidemia, Y é epidemia e Z é pandemia, pois um aumento em um bairro já é uma epidemia local"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Durante o início de uma epidemia fictícia em uma cidade do interior, o hospital registrou o número de novos casos por semana. A prefeitura quer prever a situação da semana seguinte, supondo que o ritmo de crescimento continue o mesmo e que nenhuma medida seja adotada.",
+   "comando": "Qual previsão para a semana 6 e qual interpretação da tendência são adequadas?",
+   "alts": [
+    "cerca de 240 casos, pois o número aumenta 80 por semana, o que indica um crescimento constante e previsível",
+    "cerca de 200 casos, pois o número aumenta 40 por semana, o que indica um crescimento que está desacelerando",
+    "cerca de 320 casos, pois o número dobra a cada semana, o que indica crescimento acelerado",
+    "cerca de 160 casos, pois o número se estabilizou na última semana, o que indica o fim da fase de crescimento"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um modelo de contágio, 20 alunos tocaram em um objeto coberto de glitter, que representa os micróbios, e depois apertaram a mão de colegas. Em seguida, cada grupo lavou as mãos de um jeito diferente, e a turma contou quantos alunos ficaram com glitter nas mãos após os cumprimentos.",
+   "comando": "Que conclusão é sustentada pelos dados do modelo?",
+   "alts": [
+    "lavar com água e sabão reduziu a transmissão mais que só água, mas ambos foram melhores que não lavar",
+    "lavar com água sozinha não alterou a transmissão em relação a não lavar, mas o sabão reduziu bastante o glitter",
+    "lavar com água e sabão eliminou a transmissão, pois ficou muito pouco glitter nas mãos dos alunos",
+    "o modelo prova que os micróbios passam pelas mãos e não pelo ar, pois o glitter foi passado no aperto de mão"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um paciente com febre, tosse e coriza pediu antibiótico ao médico da UBS, dizendo que um vizinho se curou rápido assim. O médico explicou que o remédio depende do agente da doença e mostrou uma comparação entre dois tipos de agentes infecciosos fictícios.",
+   "comando": "Qual análise explica por que o médico não receitou antibiótico para uma gripe?",
+   "alts": [
+    "o agente da gripe se parece com o B, uma bactéria que se multiplica fora de células, e o antibiótico não funciona se o paciente tem febre",
+    "o agente da gripe se parece com o A, que é grande demais para o antibiótico alcançar, e por isso o remédio não funciona",
+    "o agente da gripe se parece com o B, uma bactéria eliminada pelo antibiótico, mas só depois de uma semana de tratamento",
+    "o agente da gripe se parece com o A, um vírus que só se multiplica dentro de células, e o antibiótico atua contra bactérias, como o B"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um simulador de epidemia permitiu comparar três cenários para a mesma doença fictícia em uma cidade com 500 leitos hospitalares disponíveis. Estudantes analisaram o maior número de infectados ao mesmo tempo e o dia em que isso ocorreu em cada cenário.",
+   "comando": "Que interpretação é sustentada pelos dados?",
+   "alts": [
+    "as medidas reduzem e adiam o pico, e o distanciamento sozinho já manteve o pico abaixo de 500 leitos",
+    "as medidas reduzem o pico, mas antecipam o dia do pico, e a combinação manteve o pico abaixo da capacidade",
+    "as medidas reduzem e adiam o pico, mas a combinação delas manteve o pico abaixo de 500 leitos",
+    "as medidas não alteram o total de infectados no pico, e o dia em que ele ocorre muda de cenário para cenário"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Após enchentes na capital paulista, um hospital atendeu pacientes com leptospirose, causada por bactéria, e outros com gripe, causada por vírus. A leptospirose passa pela água suja, e a gripe, por gotículas no ar.",
+   "comando": "Explique por que as medidas de prevenção e o tratamento são diferentes para cada doença, relacionando-os ao tipo de agente.",
+   "ref": "A leptospirose é causada por bactéria e se previne evitando contato com água de enchente; como é bactéria, o antibiótico trata. A gripe é causada por vírus, transmitido pelo ar, e se previne com vacina e cuidados respiratórios; antibiótico não age contra vírus."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em um município de São Paulo, a prefeitura acompanhou por quatro meses a chuva e o número de casos de dengue. A doença é transmitida pelo mosquito Aedes aegypti, que deposita ovos em água parada.",
+   "comando": "Explique a relação entre chuva e casos, considerando o ciclo do mosquito, e proponha duas medidas de prevenção.",
+   "ref": "A chuva forma poças e acumula água em recipientes, onde o mosquito põe ovos, e semanas depois aumentam os mosquitos adultos e os casos; por isso os casos sobem depois das chuvas. Pode-se evitar água parada em vasos, pneus e caixas e usar telas e repelentes."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um vírus fictício tem a característica de que cada pessoa infectada passa a doença a 3 pessoas na geração seguinte. Outro vírus, controlado por medidas de prevenção, faz cada infectado passar para menos de 1 pessoa. Uma turma começou a simulação com 1 infectado em cada caso.",
+   "comando": "Calcule o número de infectados na 4ª geração do primeiro vírus e explique o que ocorre com o segundo vírus.",
+   "ref": "No primeiro vírus, cada geração triplica: 1, 3, 9, 27 e 81, então a 4ª geração tem 81 infectados. No segundo, cada infectado passa para menos de uma pessoa, o número de casos diminui a cada geração e a doença tende a desaparecer."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Dois países fictícios identificaram o primeiro caso de uma nova doença no mesmo dia. O país A avisou a Organização Mundial da Saúde e iniciou o rastreamento de contatos no dia 2; o país B avisou no dia 12.",
+   "comando": "Use os dados para explicar a importância de comunicar rapidamente a doença e do papel da OMS.",
+   "ref": "Quanto antes se comunica a doença, menos casos existem quando as medidas começam, e o país A tinha 30 casos contra 900 do B. A OMS reúne as informações, alerta outros países e orienta as medidas, o que ajuda a conter a doença antes de ela se espalhar."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Três municípios paulistas fictícios tiveram surtos de sarampo, doença viral, em um mesmo ano. Os agentes de saúde registraram a proporção de crianças vacinadas em cada um e o número de casos.",
+   "comando": "Interprete os dados e explique por que a vacinação protege também quem não foi vacinado.",
+   "ref": "Quanto maior a proporção de vacinados, menos casos houve, pois o município A teve 0 e o B teve 25. Com muitos vacinados, o vírus encontra poucas pessoas para infectar, a transmissão diminui e quem não foi vacinado fica mais protegido."
+  }
+ ],
+ "4B|7º ANO|8": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma menina de 9 anos teve infecção por um vírus respiratório e depois, meses mais tarde, entrou em contato com o mesmo vírus. Um laboratório mediu o início da produção de anticorpos e o valor máximo em cada exposição.",
+   "comando": "Que característica do sistema imune é indicada pela diferença entre as duas exposições?",
+   "alts": [
+    "A imunidade inata: as barreiras do corpo agem antes e produzem anticorpos em quantidade maior",
+    "A fagocitose: os glóbulos brancos engolem o vírus e produzem anticorpos desde o início da infecção",
+    "A febre: o aumento da temperatura acelera a resposta e explica o pico mais alto no segundo caso",
+    "A memória imunológica: linfócitos da 1ª exposição respondem mais rápido e com mais intensidade"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Após cair de patins, Caio ralou o joelho. Em uma aula de saúde, a professora mostrou um registro de laboratório com a quantidade de bactérias (unidades formadoras de colônia) encontradas em feridas semelhantes, 30 minutos após cada procedimento.",
+   "comando": "Que explicação justifica a importância de lavar o ferimento com água e sabão?",
+   "alts": [
+    "Reduz o número de microrganismos que passaram pela barreira, diminuindo o trabalho das células de defesa",
+    "O sabão estimula a produção de linfócitos, que eliminam os microrganismos que entraram no corpo",
+    "A água e o sabão formam uma nova barreira de pele, que bloqueia a entrada de bactérias na ferida",
+    "A limpeza elimina as bactérias por completo e dispensa a ação do sistema imune e a vacina contra o tétano"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um hospital universitário, foram registrados hemogramas de três pacientes fictícios. O valor de referência para leucócitos é de 4 a 11 mil por mm³ de sangue, e a produção dessas células ocorre na medula óssea.",
+   "comando": "Qual interpretação dos resultados é adequada?",
+   "alts": [
+    "O paciente B tem leucócitos abaixo do esperado, o que sugere que sua medula óssea produz poucas defesas",
+    "O paciente A tem leucócitos acima do esperado, o que indica infecção em curso, assim como no paciente B",
+    "O paciente C tem menos leucócitos que o esperado, o que sugere falha na medula óssea e risco de infecções",
+    "O paciente C tem excesso de leucócitos, o que indica que seu sistema imune está mais ativo que o de A"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em um laboratório, camundongos foram expostos a uma mesma bactéria. Um grupo era normal, outro não produzia anticorpos e o terceiro tinha a pele lesionada na região de exposição. Os pesquisadores contaram quantos sobreviveram após 20 dias.",
+   "comando": "Qual conclusão é sustentada pelos resultados?",
+   "alts": [
+    "Os anticorpos não influenciam a sobrevivência, e a pele lesionada foi o fator decisivo no grupo de 40%",
+    "Tanto a pele íntegra como os anticorpos aumentam a sobrevivência, e a falta de anticorpos teve maior efeito",
+    "A pele lesionada é mais prejudicial que a falta de anticorpos, pois o grupo sem anticorpos teve mais sobreviventes",
+    "A ausência de qualquer defesa elimina os camundongos, o que se observa nos 40% do grupo sem anticorpos"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um surto de sarampo em uma cidade, uma equipe de saúde registrou, entre 20 crianças expostas de cada grupo, quantas adoeceram segundo o número de doses de vacina recebidas.",
+   "comando": "Qual afirmação é sustentada pelos dados e pelo funcionamento da vacina?",
+   "alts": [
+    "A vacina fornece anticorpos prontos, e por isso uma dose protege tanto quanto duas doses aplicadas",
+    "A vacina causa a doença de forma leve, e quem não adoeceu tem sistema imune que dispensa as doses",
+    "A vacina expõe o corpo a antígenos sem causar a doença e forma memória, com proteção crescente por dose",
+    "A vacina protege porque elimina o vírus do ambiente, o que reduz casos mesmo em crianças sem doses"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Marcos arranhou o braço no mato e a região ficou vermelha, quente e inchada em poucas horas. Dias depois, ao tomar um novo contato com o mesmo microrganismo, quase não teve sintomas. A professora pediu que ele relacionasse os dois episódios às imunidades inata e adaptativa.",
+   "comando": "Compare a resposta inata e a adaptativa, explicando qual delas aparece no primeiro episódio e qual explica o segundo.",
+   "ref": "A resposta inata age logo, de forma geral: a pele é barreira e os leucócitos causam inflamação (vermelhidão e inchaço) no primeiro episódio. A resposta adaptativa, com linfócitos B e T específicos, forma memória e no segundo contato elimina o microrganismo rápido, sem sintomas fortes."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Algumas crianças nascem com deficiência grave do sistema imune e precisam ficar em ambientes protegidos, com cuidados especiais, enquanto recebem tratamento. Uma reportagem explicou que até uma gripe comum pode ser perigosa para elas.",
+   "comando": "Explique por que a ausência de um sistema imune funcional torna perigosas infecções comuns.",
+   "ref": "O sistema imune reconhece e elimina os microrganismos que passam pelas barreiras do corpo. Sem leucócitos e linfócitos funcionais, as infecções comuns se espalham sem controle, e por isso essas crianças precisam de ambientes protegidos e tratamento."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Durante uma infecção, Ana teve febre de 38,5 °C. Os familiares queriam baixar a temperatura de qualquer modo, mas o médico explicou que a febre moderada faz parte da resposta do corpo e deve ser acompanhada, usando remédios só conforme orientação.",
+   "comando": "Explique por que a febre pode ser parte da defesa do corpo e por que se deve procurar orientação médica.",
+   "ref": "A temperatura mais alta reduz a multiplicação das bactérias e favorece as células de defesa, então a febre moderada ajuda a combater a infecção. Mesmo assim, febre alta ou persistente pode indicar doença grave, e por isso é preciso orientação médica."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Na UBS do bairro, uma enfermeira explica que a segunda dose de uma vacina é importante: após a 1ª dose, os anticorpos aparecem aos poucos, e depois da 2ª dose chegam a um nível bem maior. Um pai perguntou por que não basta apenas uma aplicação.",
+   "comando": "Explique por que a segunda dose produz resposta mais forte e duradoura que a primeira.",
+   "ref": "A 1ª dose apresenta o antígeno e os linfócitos B e T começam a produzir anticorpos e células de memória. Na 2ª dose, essas células de memória reconhecem o antígeno rapidamente e se multiplicam mais, produzindo resposta maior e mais duradoura."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um paciente com leucemia tem a medula óssea produzindo leucócitos imaturos em excesso, que não funcionam como defesa, apesar de o total de células brancas estar elevado. O médico disse que o risco de infecção é alto, e a família não entendeu.",
+   "comando": "Explique por que ter muitos leucócitos no sangue não garante proteção e qual é o papel da medula óssea.",
+   "ref": "A medula óssea produz os leucócitos que defendem o corpo, mas, quando eles são imaturos, não reconhecem nem eliminam os microrganismos. Assim, o número total é alto e a defesa real é baixa, pois só 10% funcionam, o que deixa o paciente exposto a infecções."
+  }
+ ],
+ "4B|7º ANO|9": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na UBS de um bairro de Guarulhos, uma agente de saúde explicou duas formas de proteção. Maria tomou uma vacina e, dias depois, seu corpo começou a produzir os próprios anticorpos. João, que sofreu um ferimento grave, recebeu um soro já pronto, com anticorpos produzidos em outro organismo.",
+   "comando": "Que alternativa interpreta corretamente os dados sobre as duas formas de proteção?",
+   "alts": [
+    "A vacina estimula anticorpos e memória e demora a agir; o soro dá anticorpos prontos, de ação rápida e curta",
+    "A vacina fornece anticorpos prontos e age de imediato; o soro estimula o corpo a produzir anticorpos e memória",
+    "A vacina e o soro estimulam o corpo a produzir anticorpos, e a diferença está na velocidade com que fazem isso",
+    "A vacina protege por mais tempo porque contém anticorpos de longa duração, enquanto o soro contém antígenos de curta duração"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Pesquisadores de uma universidade paulista acompanharam bebês nos primeiros meses de vida e mediram anticorpos contra um vírus comum no sangue deles. Os dados desse estudo fictício mostram que o valor fica alto ao nascer, cai com o tempo e aumenta de novo quando o bebê toma a vacina contra esse vírus.",
+   "comando": "Qual interpretação do comportamento dos anticorpos é a mais adequada?",
+   "alts": [
+    "Os anticorpos que o bebê tem ao nascer são produzidos por ele e diminuem porque as células perdem a memória",
+    "Os anticorpos da mãe protegem por um tempo e diminuem; após a vacina, o bebê passa a produzir os seus",
+    "A queda aos 4 meses mostra que a vacina não é necessária, pois o bebê continuaria protegido sem ela",
+    "O aumento aos 6 meses mostra que o bebê recebeu anticorpos prontos da vacina, como ocorre com o soro"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma enfermeira mostrou a uma turma de Taubaté um acompanhamento fictício de anticorpos de uma pessoa que tomou duas doses de uma mesma vacina, com intervalo de 30 dias. Os alunos devem relacionar o resultado com as células de defesa.",
+   "comando": "Que hipótese explica melhor o valor muito maior de anticorpos após a segunda dose?",
+   "alts": [
+    "A segunda dose contém mais anticorpos prontos que a primeira, e por isso o valor medido no dia 44 é maior",
+    "O corpo se acostumou ao antígeno e passou a produzir menos células de defesa após a segunda dose",
+    "Linfócitos guardaram memória do antígeno após a primeira dose e responderam mais rápido e forte",
+    "Os anticorpos da primeira dose ficaram guardados e somaram-se aos novos, sem mudar a produção de células"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um centro de saúde fictício de Campinas organizou registros de pacientes adultos com diferentes quantidades de linfócitos T, células que coordenam a defesa do organismo, e contou quantas infecções incomuns cada grupo teve em um ano. Os dados foram usados em uma aula sobre o sistema imune.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "alts": [
+    "Menos linfócitos T se associam a mais infecções, coerente com o papel dessas células na defesa",
+    "Mais linfócitos T provocam mais infecções, pois essas células atacam o organismo e enfraquecem a defesa",
+    "Os linfócitos T são produzidos em resposta às infecções, então a queda deles prova que não houve doença",
+    "As infecções diminuem os linfócitos T, mas os dados provam que elas são a causa da queda"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um município paulista fictício, os dados de cobertura vacinal contra uma doença infecciosa e o número de casos por 10 mil habitantes foram comparados em quatro bairros. A prefeitura discutia se vacinar alguém protege só a própria pessoa ou também as outras.",
+   "comando": "Qual interpretação dos dados é INCORRETA?",
+   "alts": [
+    "Quanto maior a cobertura vacinal, menor o número de casos observado nos bairros comparados",
+    "Mesmo os não vacinados tendem a ter menos risco onde muitos vizinhos estão vacinados",
+    "A vacinação protege os vacinados, mas não interfere no risco dos não vacinados do bairro",
+    "O bairro D, com cobertura menor, teve mais casos que o bairro A, que tem cobertura maior"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma mãe de Osasco perguntou por que o bebê dela, que mama no peito, adoeceu menos nos primeiros meses, mas precisa tomar vacinas no calendário. A pediatra mostrou o quanto de anticorpos da mãe ainda está no sangue do bebê a cada mês.",
+   "comando": "Explique por que o leite materno protege o bebê no início e por que as vacinas ainda são necessárias, usando os dados.",
+   "ref": "O leite e a placenta passam anticorpos prontos da mãe, o que dá proteção temporária, chamada imunização passiva natural. Como esses anticorpos diminuem de 100 para 10 até o mês 6, o bebê precisa de vacinas para produzir seus próprios anticorpos e memória."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Na horta de uma escola em Itu, um estudante se feriu com um arame, e a ferida ficou vermelha e quente nas primeiras horas. A professora explicou que o corpo tem barreiras e células que respondem ao ferimento antes mesmo de os linfócitos agirem.",
+   "comando": "Explique o que ocorre no corpo após o ferimento, citando a primeira linha de defesa e a resposta dos linfócitos.",
+   "ref": "A pele é uma barreira que, ao se romper, deixa entrar microrganismos. Células fagocitárias e a inflamação (vermelhidão e calor) combatem os invasores rapidamente, e os linfócitos produzem depois uma resposta específica, com anticorpos e memória."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma UBS de Santos convoca crianças para uma segunda dose de reforço de vacina. Uma mãe disse que, se a primeira dose já deu proteção, o reforço seria desnecessário. A enfermeira mostrou os níveis de anticorpos ao longo do tempo após a primeira dose e após o reforço.",
+   "comando": "Explique o objetivo da dose de reforço com base nos dados.",
+   "ref": "Após a primeira dose os anticorpos caem para 3, o que deixa a proteção fraca. O reforço reativa os linfócitos de memória, que produzem anticorpos mais rápido e em maior quantidade (80), prolongando a proteção."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Num teste de laboratório fictício, o soro de uma pessoa que se recuperou de uma doença foi misturado a três tipos de microrganismos diferentes. Só ocorreu agrupamento, sinal de reação, com um dos microrganismos.",
+   "comando": "Explique por que houve reação apenas com um microrganismo, relacionando antígeno e anticorpo.",
+   "ref": "Cada anticorpo reconhece um antígeno específico, como uma chave que se encaixa em uma fechadura. A pessoa produziu anticorpos contra o vírus Y, por isso só ele reagiu, e os outros microrganismos têm antígenos diferentes."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um grupo de estudantes pesquisou a história de crianças que nascem com falhas graves no sistema imune e precisam viver em ambientes protegidos. A turma queria entender a importância do sistema imune e propor cuidados com a saúde de toda a comunidade.",
+   "comando": "Explique o que acontece com o organismo quando o sistema imune falha e proponha dois hábitos ou ações coletivas que ajudam a manter a defesa do corpo.",
+   "ref": "Sem defesa adequada, microrganismos que o corpo normalmente controla causam infecções graves e frequentes, como mostram as 8 por ano. Ajudam a manter a defesa o calendário de vacinação em dia, boa alimentação, sono suficiente e higiene, além de evitar contato com doentes."
+  }
+ ],
+ "4B|8º ANO|1": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Duas lâmpadas, uma incandescente e uma de LED, iluminam um mesmo cômodo com a mesma quantidade de luz. Um técnico mediu, para cada lâmpada, a potência elétrica recebida, a potência emitida como luz e a potência liberada como calor.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "O LED fornece a mesma luz com menor consumo, pois converte menor parte da energia elétrica em calor",
+    "A incandescente é mais eficiente, pois recebe mais energia elétrica e por isso produz mais calor para o ambiente",
+    "O calor liberado pelas lâmpadas desaparece e não conta no balanço, pois a luz é a energia que interessa",
+    "As duas convertem a mesma fração da energia em luz, pois emitem os mesmos 3 W e têm a mesma eficiência"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma usina hidrelétrica de pequeno porte tem uma queda de água cuja altura varia com o nível da represa. Durante uma estiagem, o nível baixou e a altura da queda caiu de 40 m para 20 m. A equipe testou duas formas de compensar a perda de potência.",
+   "comando": "Qual explicação relaciona os dados à conversão de energia?",
+   "alts": [
+    "A energia da água depende da altura e não da vazão, e por isso a potência cairia mesmo com mais água",
+    "A energia potencial da água depende da altura e da massa que desce; com a altura menor, dobrar a vazão devolve a potência",
+    "A energia elétrica se perde na queda, e a vazão maior compensa a perda porque a água ganha energia na turbina",
+    "A potência cai porque a turbina gira mais lenta com menor altura, e a vazão maior aumenta o atrito e a potência"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um parque de diversões de São Paulo, um carrinho de montanha-russa parte do ponto mais alto e é medido em quatro pontos do trilho. Considere que o atrito é pequeno e que a energia mecânica (potencial mais cinética) se conserva aproximadamente.",
+   "comando": "Qual afirmação sobre as transformações de energia é sustentada pelos dados?",
+   "alts": [
+    "Em C a energia total é maior porque a velocidade é máxima, e a energia gravitacional mais alta de A se perdeu na descida",
+    "Em B a energia cinética é maior que em C, porque B está mais alto e a energia de altura aumenta a velocidade",
+    "Ao descer, a energia potencial vira cinética e esta é máxima em C; a energia mecânica total se mantém quase constante",
+    "Em D a energia potencial é menor que em B, porque D tem menor velocidade e a energia cinética substituiu a potencial"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma família comparou três formas de aquecer 1 litro de água em casa. Para cada fonte, mediu a energia fornecida pelo combustível ou pela rede elétrica e a energia que de fato chegou à água, descontando o calor perdido para o ar e para a panela.",
+   "comando": "Qual conclusão sobre aproveitamento de energia é correta?",
+   "alts": [
+    "A indução aproveita 80% da energia, a maior fração entre as três; o restante se dissipa como calor, sem desaparecer",
+    "A lenha é a mais eficiente, pois fornece mais energia total, e a quantidade fornecida define o aproveitamento",
+    "O gás e a lenha têm o mesmo aproveitamento, pois ambos são combustíveis queimados que liberam energia química",
+    "O gás aproveita 350 kJ de 700, ou seja, 35%, valor próximo ao da indução, e perde o restante da energia"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um dia de sol, um painel solar de uma escola recebe luz e a transforma em eletricidade para carregar baterias. Um técnico mediu a potência da luz que chega ao painel e a potência elétrica gerada, e quis entender o destino da energia que não virou eletricidade.",
+   "comando": "Qual é o destino da energia restante, de acordo com a conservação da energia?",
+   "alts": [
+    "Foi armazenada pela bateria na forma de energia química, e a eletricidade medida é a parcela que sobrou",
+    "Desapareceu, pois o painel converte uma parte da luz e a energia não aproveitada deixa de existir",
+    "Parte é refletida e a maior parte aquece o painel e o ar; nada desaparece, mesmo sem virar eletricidade",
+    "Foi transformada em energia nuclear no interior do painel, pois o silício libera energia ao absorver luz solar"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Ao pedalar uma bicicleta com dínamo, Lucas nota que, com a lâmpada apagada, pedalar é leve, e com a lâmpada acesa fica mais pesado, mesmo na mesma velocidade. A turma mediu a sensação de esforço em duas situações.",
+   "comando": "Descreva as transformações de energia desde o alimento de Lucas até a luz e explique por que pedalar fica mais pesado com a lâmpada acesa.",
+   "ref": "A energia química do alimento vira energia cinética nas pernas e na bicicleta; o dínamo a converte em energia elétrica, que a lâmpada transforma em luz e calor. Com a lâmpada acesa, parte da energia do pedal é retirada pelo dínamo, e é preciso fazer mais força para manter a velocidade."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma escola instalou um painel solar e registrou a energia gerada em cinco horários de um dia ensolarado, sem nuvens. À noite, a biblioteca usa a eletricidade guardada em baterias.",
+   "comando": "Explique a variação da energia gerada ao longo do dia e a necessidade de baterias, indicando a forma de energia armazenada.",
+   "ref": "A energia gerada depende da luz do Sol, que é mais intensa perto do meio-dia e fraca de manhã e à tarde, por isso o painel produz mais às 12 h. À noite não há luz, então a eletricidade excedente é guardada nas baterias na forma de energia química e depois volta a ser elétrica."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um corredor de 60 kg foi monitorado por um relógio especial em repouso e durante uma corrida de 10 km. O aparelho estimou a potência total consumida pelo corpo e quanto dela se transformou em movimento e em calor.",
+   "comando": "Explique por que o corpo esquenta e transpira durante a corrida, usando os dados e as transformações de energia.",
+   "ref": "A energia química dos alimentos é convertida em movimento (cinética) apenas em parte: na corrida 200 W viram movimento e 600 W viram calor. Esse calor aquece o corpo, e o suor, ao evaporar, retira calor da pele e ajuda a manter a temperatura."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Na Central Nuclear de Angra dos Reis, a energia sai do núcleo de átomos de urânio e termina como eletricidade nas casas. Um técnico explicou que o vapor, depois de girar a turbina, precisa ser resfriado com água do mar para voltar a ser líquido.",
+   "comando": "Identifique as formas de energia em cada passagem do processo e explique por que é necessário resfriar o vapor.",
+   "ref": "A energia nuclear do reator vira térmica na água, depois cinética na turbina e, no gerador, elétrica. Parte da energia não é aproveitada e sai como calor, que precisa ser retirado. Resfriar o vapor o condensa em água, para repetir o ciclo."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma família quer entender sua conta de luz. Considerando que o motor da geladeira fica ligado o tempo todo, em um modelo simplificado, ela anotou a potência e o tempo de uso diário de três aparelhos. Lembre que energia (kWh) = potência (kW) × tempo (h).",
+   "comando": "Calcule a energia diária do chuveiro e da geladeira e explique por que a maior potência não significa o maior consumo.",
+   "ref": "Chuveiro: 5,5 kW × 0,5 h = 2,75 kWh. Geladeira: 0,15 kW × 24 h = 3,6 kWh. A geladeira consome mais, embora tenha potência bem menor, porque o consumo depende da potência e do tempo de uso."
+  }
+ ],
+ "4B|8º ANO|10": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "No laboratório da escola, em Jundiaí, os alunos montaram um circuito simples com pilha e lâmpada, deixando dois fios soltos para encostar nos materiais testados. Se a lâmpada acende, há passagem de corrente. Depois dos testes, o grupo tentou explicar a diferença entre os materiais em termos de elétrons e fazer uma previsão para um material que não foi testado.",
+   "comando": "Qual explicação e previsão são coerentes com os resultados?",
+   "alts": [
+    "O cobre e o alumínio perdem os seus elétrons no circuito, e a borracha e o vidro os mantêm; por isso, um prego de ferro deve deixar a lâmpada apagada.",
+    "O cobre e o alumínio brilham e refletem a luz, e a borracha e o vidro não; por isso, um prego de ferro, que também é metal, deve fazer a lâmpada acender.",
+    "O cobre e o alumínio têm elétrons que se movem com facilidade, e a borracha e o vidro não; por isso, um palito de madeira seco deve fazer a lâmpada acender.",
+    "O cobre e o alumínio têm elétrons que se movem com facilidade, e a borracha e o vidro não; por isso, um prego de ferro, que também é metal, deve fazer a lâmpada acender."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre segurança elétrica, o professor de Londrina montou o circuito com lâmpada e testou quatro amostras entre os fios soltos. Ao final, perguntou por que as instruções de segurança dizem para não mexer em aparelhos elétricos com as mãos molhadas, e alguns alunos disseram que 'água conduz eletricidade' sem distinguir o tipo de água.",
+   "comando": "Qual explicação é consistente com todos os resultados da tabela?",
+   "alts": [
+    "A água pura conduz bem, e os sais dissolvidos deixam o brilho mais forte, e por isso o corpo molhado é perigoso por causa das moléculas de água em si.",
+    "A água pura conduz mal, mas sais dissolvidos liberam partículas carregadas que se movem, e por isso a água comum, que contém sais, conduz e o corpo molhado é perigoso.",
+    "O sal seco conduz bem, mas dentro da água, e por isso a água comum, que contém sais, conduz e o corpo molhado é perigoso por causa dos cristais.",
+    "A água pura não conduz e a comum também não, mas o suor conduz, e por isso o corpo molhado é perigoso por causa dos sais que existem na pele."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma empresa de Campinas vai trocar os fios de uma casa e precisa escolher o metal do fio interno. O engenheiro apresentou uma tabela comparando quatro metais quanto à capacidade de conduzir corrente (valor relativo ao cobre, que vale 100) e ao custo. A casa tem orçamento limitado, mas o fio precisa conduzir bem para evitar aquecimento.",
+   "comando": "Qual escolha tem a melhor justificativa com base nos dados?",
+   "alts": [
+    "Prata, pois é o metal que melhor conduz a corrente e, como o fio precisa conduzir bem, o custo muito alto pode ser ignorado.",
+    "Ferro, pois é um metal e conduz a corrente, e como o orçamento é limitado, o custo baixo é o fator decisivo para a escolha.",
+    "Cobre, pois conduz quase tanto quanto a prata e tem custo médio, o que equilibra a boa condução com o orçamento limitado.",
+    "Alumínio, pois conduz mais do que o cobre e tem custo baixo, o que o torna a melhor escolha para as instalações em geral."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em um experimento, um grupo de Franca testou quatro objetos pequenos no circuito com lâmpada: um prego de ferro limpo, um prego de ferro pintado com tinta, uma mina de grafite e um palito de madeira seco. O grupo escreveu cinco interpretações do resultado, mas a professora disse que uma delas não é sustentada pelos dados.",
+   "comando": "Qual interpretação NÃO é sustentada pelos resultados?",
+   "alts": [
+    "O prego pintado não conduziu porque o ferro perdeu seus elétrons livres ao ser pintado, o que mostra que a tinta muda o material do prego.",
+    "O prego pintado não conduziu porque a tinta funcionou como camada isolante entre o prego e o fio, e o mesmo ocorre com a capa de um fio elétrico.",
+    "A mina de grafite acendeu a lâmpada, o que mostra que nem todo material que conduz é metal, pois esse material não é um metal.",
+    "O palito de madeira seco não acendeu a lâmpada, o que indica que a madeira seca dificulta a passagem da corrente quando as condições são essas."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Carlos precisa trocar uma lâmpada no banheiro de casa, onde o piso está molhado e ele acabou de lavar as mãos. Em uma aula de segurança elétrica, a turma viu um gráfico (fictício) que compara a passagem relativa de corrente pelo corpo em duas condições, mantida a mesma fonte elétrica, para discutir a conduta mais segura.",
+   "comando": "Qual conduta de Carlos é a mais segura e como os dados a justificam?",
+   "alts": [
+    "Desligar o disjuntor, secar as mãos e o piso e só então trocar a lâmpada, pois a água com sais aumenta a passagem de corrente pelo corpo.",
+    "Trocar a lâmpada com chinelos de borracha, ainda que molhados, pois a borracha é isolante e protege totalmente, mesmo com a água no chão.",
+    "Trocar a lâmpada com rapidez, de modo que o corpo fique pouco tempo em contato com a água, pois o risco depende do tempo e não da umidade.",
+    "Trocar a lâmpada com uma luva de tecido molhada, pois o tecido absorve a água e impede que ela chegue à pele, reduzindo a passagem de corrente."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "O fio de um ventilador de Piracicaba tem, por dentro, um metal (cobre) e, por fora, uma capa plástica (PVC). O pai de Paulo disse que, se a capa rachar, é perigoso usar o aparelho. Paulo quer entender por que cada parte do fio é feita de um material diferente.",
+   "comando": "Explique a função do cobre e do PVC no fio e o risco de uma capa rachada, usando a ideia de elétrons livres.",
+   "ref": "O cobre tem elétrons livres que se movem com facilidade e conduzem a corrente até o aparelho, enquanto o PVC é isolante, pois seus elétrons não se movem livremente, e evita que a corrente passe para quem toca o fio. Se a capa rachar, o metal fica exposto e a pessoa pode receber um choque ou ocorrer um curto-circuito."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma construtora de Santos precisa escolher o material do suporte dos fios em um forno elétrico, que fica na cozinha, num ambiente úmido e quente. Os engenheiros testaram quatro materiais, A (borracha), B (PVC), C (cerâmica) e D (madeira), quanto à passagem de corrente, à umidade e ao calor, e precisam justificar a escolha para o setor de compras.",
+   "comando": "Escolha o material mais adequado para esse suporte e justifique com os dados, explicando por que os outros são menos adequados.",
+   "ref": "A cerâmica é a mais adequada, pois é isolante, não absorve umidade e só amolece a 1000 °C, suportando o calor do forno. O PVC amolece a 70 °C, a borracha a 100 °C e a madeira absorve muita umidade, o que reduz seu poder isolante."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Os alunos de um grupo de 8º ano colocaram sal de cozinha em copos com a mesma quantidade de água destilada e testaram cada copo no circuito com lâmpada, mantendo os mesmos fios e a mesma pilha. Eles repetiram o teste três vezes, aumentando a quantidade de sal de um copo para o outro, e observaram o brilho da lâmpada.",
+   "comando": "Descreva o padrão dos resultados, explique por que a água passa a conduzir e relacione a conclusão a um cuidado dentro de casa.",
+   "ref": "Quanto mais sal dissolvido, maior o brilho, e sem sal a lâmpada não acende. O sal dissolvido libera partículas carregadas (íons) que se movem e conduzem a corrente, por isso a água comum, que contém sais, conduz; em casa não se deve tocar em tomadas e aparelhos com as mãos molhadas."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Eletricistas usam alicates com a parte metálica das pontas e o cabo coberto por borracha grossa, e também usam botas de sola de borracha. Um aluno de Ribeirão Preto pediu que a turma explicasse por que cada parte da ferramenta é de um material diferente.",
+   "comando": "Explique por que a ponta do alicate é metálica e o cabo é de borracha, e por que isso aumenta a segurança do eletricista.",
+   "ref": "A ponta é de aço, um metal condutor, resistente e que corta e segura os fios, enquanto o cabo é de borracha, isolante, que impede a passagem da corrente para a mão do eletricista. A borracha não tem elétrons livres para conduzir, então diminui o risco de choque se o metal encostar em uma parte energizada."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um grupo de estudantes recebeu três amostras desconhecidas X, Y e Z para classificar como condutoras ou isoladoras, antes de usá-las em um projeto. Cada amostra foi testada no circuito com lâmpada e foram anotadas também algumas características visíveis. O grupo concluiu que 'só metais conduzem corrente'.",
+   "comando": "Classifique as amostras e avalie a conclusão do grupo, justificando com os dados da tabela.",
+   "ref": "X e Z são condutoras, pois a lâmpada acendeu, e Y é isolante, pois ficou apagada. A conclusão do grupo está errada: Z não parece um metal (é preta e risca o papel, como o grafite) e conduz, então condução depende de elétrons livres e não só de ser metal."
+  }
+ ],
+ "4B|8º ANO|11": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Ao estudar o Balanço Energético Nacional, um grupo notou algo curioso: o petróleo e seus derivados têm grande participação na matriz energética do Brasil, mas aparecem muito pouco na matriz elétrica. A professora pediu que a turma explicasse essa diferença usando a tabela de valores aproximados.",
+   "comando": "Qual explicação é coerente com os dados?",
+   "alts": [
+    "O petróleo é renovável, por isso entra pouco na geração elétrica, que tem prioridade para fontes que se esgotam rapidamente.",
+    "O petróleo serve sobretudo a veículos e indústrias, e não à geração elétrica, que é dominada pelas hidrelétricas.",
+    "O petróleo é caro demais para gerar eletricidade, e por isso as usinas do país preferem hidrelétricas, que custam menos para operar.",
+    "A eletricidade representa uma parcela pequena da energia consumida, de modo que o petróleo aparece menos na matriz elétrica."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma empresa leva eletricidade de uma usina até uma cidade a 500 km de distância. Em dois projetos, a mesma potência de 100 MW é transmitida pelos mesmos fios, mas com tensões diferentes. A perda de energia nos fios por aquecimento é proporcional ao quadrado da corrente (I²).",
+   "comando": "Qual conclusão sobre as perdas nos fios é correta?",
+   "alts": [
+    "As perdas no projeto B são cerca de 25 vezes menores, pois a corrente é 5 vezes menor e a perda varia com o seu quadrado.",
+    "As perdas no projeto B são cerca de 5 vezes menores, pois a corrente caiu 5 vezes e a perda cresce na mesma proporção.",
+    "As perdas são iguais nos dois projetos, pois a potência transmitida é a mesma de 100 MW em ambos os casos.",
+    "As perdas no projeto B são maiores, pois a tensão elevada de 500 kV aquece mais os fios que a de 100 kV."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma casa de São Paulo, a família quer reduzir a conta de luz e levantou a potência e o tempo de uso diário de quatro aparelhos. Um irmão afirmou que o chuveiro elétrico é, de longe, o aparelho que mais gasta energia por dia. O pai pediu que conferissem a conta.",
+   "comando": "Qual conclusão a respeito do consumo diário de energia é sustentada pelos dados?",
+   "alts": [
+    "O chuveiro consome mais, com cerca de 5,5 kWh por dia, pois a potência dele é a maior entre os aparelhos da tabela e exige fios mais grossos.",
+    "O chuveiro e a geladeira consomem a mesma energia, pois o produto da potência pelo tempo se compensa nos dois.",
+    "A geladeira consome cerca de 3,6 kWh por dia e o chuveiro cerca de 2,75 kWh, pois ela fica ligada durante muito mais tempo.",
+    "As lâmpadas LED consomem mais que a geladeira, pois ficam acesas várias horas e somam a potência de cada uma."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma usina solar do interior paulista foi acompanhada em um dia útil, ao lado da demanda de eletricidade da região. O operador do sistema quer saber como garantir energia no fim da tarde, quando muita gente chega em casa e liga chuveiros e luzes.",
+   "comando": "Que conclusão a leitura dos dados permite?",
+   "alts": [
+    "Instalar mais painéis resolve o pico das 18 h, porque a geração solar cresce junto com a demanda ao longo de todo o dia.",
+    "A geração solar do meio-dia deve ser desligada, pois, a essa hora, ela produz mais do que a região consome.",
+    "A demanda das 18 h existe porque a geração solar é baixa, e por isso a energia disponível determina o consumo.",
+    "No pico da tarde a geração solar é baixa, e fontes controláveis, como hidrelétricas com reservatório, devem cobri-lo."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "O Estado de São Paulo gera eletricidade em hidrelétricas e também queimando o bagaço da cana-de-açúcar, resíduo da produção de açúcar e etanol. Técnicos compararam, mês a mês, a chuva, a geração das hidrelétricas e a geração a partir do bagaço em dois meses típicos.",
+   "comando": "Que conclusão sobre as fontes é sustentada pelos dados?",
+   "alts": [
+    "A geração pelo bagaço cresce na seca, quando a safra de cana está em andamento, e complementa a queda das hidrelétricas.",
+    "A geração pelo bagaço depende da chuva, pois ela cresce em janeiro e cai em julho, quando falta água nos rios e reservatórios.",
+    "As hidrelétricas geram mais em julho, pois, com menos chuva, o rio fica estável e as turbinas funcionam melhor.",
+    "O bagaço é fonte não renovável, e sua geração sobe em julho porque o estado reduz o uso de hidrelétricas."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma usina hidrelétrica gera eletricidade em 13,8 kV. Antes de chegar à casa de um morador, a tensão muda várias vezes. A tabela mostra a tensão em quatro pontos do caminho da energia entre a usina e a tomada.",
+   "comando": "Explique por que a tensão é elevada na saída da usina e reduzida perto das casas, indicando o equipamento responsável.",
+   "ref": "Os transformadores elevam a tensão para a transmissão porque, com tensão alta, a corrente é menor e as perdas por aquecimento nos fios diminuem. Perto das casas, outros transformadores reduzem a tensão para valores seguros ao consumo."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em muitas cidades paulistas há tomadas de 127 V e de 220 V. Um eletricista mediu a corrente de um mesmo chuveiro, de 5 500 W de potência, ligado nas duas tensões, e explicou que a escolha do fio depende da corrente.",
+   "comando": "Compare as correntes e explique o que muda na instalação e na segurança em cada caso.",
+   "ref": "Com 220 V, a corrente é menor (25 A contra 43 A) para a mesma potência. Corrente menor permite fios mais finos e esquenta menos a fiação, reduzindo perdas e riscos de sobreaquecimento. Em 127 V, os fios precisam ser mais grossos."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "O Brasil tem uma matriz elétrica em que predominam fontes renováveis, e a maior delas é a hidráulica. Em anos de seca severa, porém, os reservatórios baixam e o governo precisa acionar usinas térmicas, que são mais caras e poluentes.",
+   "comando": "Use os dados para explicar a vantagem da matriz elétrica brasileira e o risco de depender de uma única fonte.",
+   "ref": "Mais de 85% da geração vem de fontes renováveis, o que emite menos gases de efeito estufa. Mas a hidráulica passa de metade do total e depende da chuva; em secas, falta água e é preciso acionar térmicas caras e poluentes, então diversificar reduz o risco."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma escola quer economizar trocando 30 lâmpadas fluorescentes de 40 W por lâmpadas de LED de 18 W. As lâmpadas ficam acesas 10 horas por dia, durante 22 dias letivos por mês. O preço da energia é de R$ 0,90 por kWh.",
+   "comando": "Calcule a economia mensal em kWh e em reais, mostrando o raciocínio.",
+   "ref": "A diferença é de 22 W por lâmpada; para 30 lâmpadas, 660 W (0,66 kW). Em 10 h por dia e 22 dias, são 220 h, ou 0,66 x 220 = 145,2 kWh. A economia é de 145,2 x 0,90, cerca de R$ 130,68 por mês."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Em uma noite de tempestade, uma torre de transmissão caiu e três cidades ficaram sem energia por quatro horas, embora a usina que as abastece continuasse funcionando normalmente. A concessionária explicou que o problema estava no caminho da energia.",
+   "comando": "Explique por que houve falta de energia mesmo com a usina funcionando e indique uma medida para evitar que isso se repita.",
+   "ref": "A energia só chega ao consumidor se todas as etapas funcionarem: geração, transmissão, distribuição e consumo. Com a torre caída, a energia gerada não chegou às subestações. Linhas alternativas ou redundantes permitem desviar o caminho e evitar o apagão."
+  }
+ ],
+ "4B|8º ANO|12": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na oficina da escola, Bia montou uma lanterna com pilha, interruptor, lâmpada e fios, mas a lâmpada não acende com o interruptor fechado. Para achar a falha, ela testou cada peça separadamente em outro circuito que funcionava, e registrou os resultados em uma tabela.",
+   "comando": "Qual conclusão e correção são coerentes com os testes?",
+   "alts": [
+    "A lâmpada está queimada e interrompe o circuito, por isso deve ser trocada por outra nova.",
+    "A pilha está descarregada e não consegue fechar o circuito, por isso deve ser trocada por outra nova.",
+    "O fio 2 não conduz e mantém o circuito aberto, por isso deve ser trocado por outro condutor.",
+    "O interruptor está aberto mesmo fechado e interrompe o circuito, por isso deve ser trocado por outro."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Na cozinha de uma lanchonete, a tomada alimenta aparelhos ligados a um disjuntor de 20 A. O dono quer saber quais aparelhos pode ligar ao mesmo tempo sem que o disjuntor desarme, usando a corrente de cada um registrada no catálogo do fabricante.",
+   "comando": "Qual combinação pode ficar ligada ao mesmo tempo sem desarmar o disjuntor?",
+   "alts": [
+    "Ferro e forno ligados juntos, que somam 21 A, pois cada um fica abaixo do limite do disjuntor.",
+    "Ferro e micro-ondas ligados juntos, que somam 15 A, valor abaixo do limite do disjuntor.",
+    "Micro-ondas e forno ligados juntos, que somam 26 A, pois cada um tem uma corrente diferente.",
+    "Os três aparelhos ligados juntos, pois o disjuntor desarma se um deles passar de 20 A."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma loja de decoração de Piracicaba vende dois tipos de enfeites de Natal. Em um, quando uma lâmpada queima, todas as outras apagam. No outro, as demais continuam acesas. A turma testou as duas montagens e anotou o comportamento das lâmpadas.",
+   "comando": "Qual montagem deve ser usada nas tomadas de uma casa e por quê?",
+   "alts": [
+    "A montagem Y, em paralelo, pois cada aparelho recebe a tensão total e funciona de forma independente.",
+    "A montagem X, em série, pois a corrente é a mesma em cada aparelho, o que torna o consumo mais econômico.",
+    "A montagem X, em série, pois se um aparelho falhar os demais desligam, o que evita sobrecarga em toda a casa.",
+    "A montagem Y, em paralelo, pois a tensão se divide entre os aparelhos e cada um recebe a mesma corrente."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um eletricista explicou que os fios de uma casa são feitos de cobre e cobertos por plástico. Para entender o motivo, a turma testou materiais em um circuito simples com pilha e lâmpada, e anotou se a lâmpada acendia em cada caso.",
+   "comando": "Qual conclusão e cuidado são coerentes com o teste?",
+   "alts": [
+    "Condutores como a madeira seca levam a corrente e isolantes como o cobre a contêm; a umidade melhora a condução.",
+    "Isolantes como o cobre levam a corrente e condutores como o plástico a contêm; a umidade melhora o isolamento do material.",
+    "Qualquer material conduz corrente se a pilha for forte, e a cobertura de plástico serve de enfeite nos fios da casa.",
+    "Condutores como o cobre levam a corrente e isolantes como o plástico a contêm; a umidade pode reduzir o isolamento."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Caio ligou um LED a uma pilha de 9 V, e o primeiro LED queimou na hora. Em seguida, a professora repetiu a montagem com resistores diferentes em série com o LED e anotou o brilho obtido em cada caso, para discutir a função do resistor.",
+   "comando": "Qual explicação é coerente com o registro?",
+   "alts": [
+    "O resistor limita a corrente: sem ele a corrente era alta demais, e com resistência muito maior a corrente ficou baixa e o brilho diminuiu.",
+    "O resistor aumenta a corrente: sem ele a corrente era baixa demais, e com resistência muito maior a corrente ficou alta e o brilho diminuiu.",
+    "O resistor produz a luz: sem ele não havia fonte de brilho, e com resistência muito maior a luz ficou mais fraca por causa do calor.",
+    "O resistor armazena carga: sem ele o LED recebeu carga demais, e com resistência muito maior a carga armazenada diminuiu o brilho."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Julia construiu uma lanterna caseira com uma pilha, uma lâmpada pequena, fios e um clipe de papel como interruptor. Ao encostar o clipe nos dois fios, a lâmpada acendeu, e ao afastar o clipe, a lâmpada apagou, o que ela registrou no caderno.",
+   "comando": "Explique como o clipe funciona como interruptor, descrevendo o caminho da corrente e o que muda quando ele é afastado.",
+   "ref": "Quando o clipe encosta nos dois fios, o circuito fica fechado e a corrente vai da pilha pela lâmpada e volta à pilha, acendendo a lâmpada. Ao afastar o clipe o circuito fica aberto, a corrente não circula e a lâmpada apaga."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma casa de São José dos Campos, o disjuntor de 30 A desarma sempre que o chuveiro e o ferro de passar são ligados ao mesmo tempo, embora cada um funcione bem quando ligado sozinho. A família quer entender o motivo antes de trocar o disjuntor.",
+   "comando": "Explique por que o disjuntor desarma e qual é a função dele na instalação elétrica.",
+   "ref": "As correntes dos aparelhos ligados ao mesmo circuito se somam: 24 + 10 = 34 A, acima de 30 A. O disjuntor desarma para interromper a corrente excessiva, que aqueceria os fios e poderia causar incêndio."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um computador antigo ocupava uma sala inteira e usava muitas válvulas. Hoje um celular cabe no bolso e realiza muito mais tarefas. O professor mostrou um quadro comparativo com valores aproximados, para a turma discutir a miniaturização dos componentes.",
+   "comando": "Explique o que permitiu a miniaturização dos circuitos e cite duas mudanças que ela trouxe para a vida das pessoas.",
+   "ref": "A miniaturização foi possível com os transistores e os circuitos integrados (microchips), que reúnem bilhões de componentes numa pequena pastilha. Isso tornou os aparelhos menores, mais baratos e mais eficientes, permitindo celulares, computadores pessoais e eletrodomésticos inteligentes."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "O chuveiro elétrico da casa de Marina tem uma chave com duas posições, verão e inverno, que muda o trecho de resistência usado. Com a mesma tensão de 220 V, a água sai mais quente em uma das posições, e ela anotou os valores de cada posição.",
+   "comando": "Explique, com base nos dados, por que a posição inverno aquece mais a água, relacionando resistência, corrente e calor.",
+   "ref": "Com a mesma tensão, a menor resistência permite maior corrente (24,7 A contra 14,6 A). A corrente maior dissipa mais energia na resistência por segundo, e por isso a água recebe mais calor e sai mais quente."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Marcelo levou um choque ao tocar na carcaça metálica de uma máquina de lavar com defeito, enquanto estava descalço no chão molhado. Outro morador, na mesma casa, não sentiu nada ao tocar a máquina porque a instalação tinha fio terra.",
+   "comando": "Explique por que a corrente passou pelo corpo de Marcelo e como o fio terra e o disjuntor ajudam a proteger as pessoas.",
+   "ref": "Com a falha, a carcaça ficou energizada e o corpo de Marcelo, molhado, formou um caminho condutor até o chão. O fio terra oferece um caminho mais fácil para a corrente escapar, afastando-a das pessoas, e o disjuntor ou dispositivo de proteção desliga o circuito quando há fuga de corrente."
+  }
+ ],
+ "4B|8º ANO|13": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em um circuito montado na aula, três resistores de 2 Ω, 6 Ω e 3 Ω estão ligados em paralelo a uma bateria de 12 V. Um grupo mediu a corrente total e a corrente em cada ramo. A resistência equivalente deve ser calculada antes de comparar as correntes.",
+   "comando": "Qual afirmação sobre o circuito é sustentada pelos cálculos do grupo?",
+   "alts": [
+    "Em paralelo a corrente é igual em cada ramo, e a tensão se divide entre os resistores conforme o valor de cada um deles no circuito.",
+    "A resistência equivalente é a soma dos três valores, 11 Ω, e por isso a corrente total é menor do que a de qualquer ramo isolado.",
+    "Em paralelo a tensão é igual em cada ramo, e a corrente se divide, com mais corrente no ramo de menor resistência.",
+    "O ramo de 6 Ω recebe a maior corrente, pois é o resistor de maior valor e deixa a corrente passar com mais facilidade pelo circuito."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma aluna mediu a corrente em um circuito com duas lâmpadas. Quando uma lâmpada queimou, a outra continuou acesa no circuito A e apagou no circuito B. Os registros de medição estão na tabela.",
+   "comando": "Qual explicação é compatível com os resultados?",
+   "alts": [
+    "No circuito em série a corrente passa por cada componente, e a queima de um deles interrompe o caminho; no paralelo cada ramo tem seu próprio caminho.",
+    "No circuito em paralelo a corrente é maior do que no em série, e por isso a lâmpada restante brilha mais e não se apaga com a queima da outra lâmpada.",
+    "No circuito B a tensão se divide entre as lâmpadas, e por isso a lâmpada restante fica sem energia para continuar acesa, como se houvesse um interruptor aberto.",
+    "A lâmpada que queimou no circuito A não interrompe a corrente porque as lâmpadas em paralelo recebem energia pela mesma tensão e dividem a corrente igualmente."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um grupo montou um circuito com dois resistores e mediu a corrente total com a mesma bateria em duas ligações: série e paralelo. Eles querem explicar a diferença na corrente total medida.",
+   "comando": "Qual justificativa explica a diferença na corrente total?",
+   "alts": [
+    "Em paralelo a resistência equivalente é maior, porque os ramos se somam, e a corrente total aumenta porque a bateria fornece mais energia ao circuito.",
+    "Em série a corrente é maior porque ela passa por cada resistor e se acumula antes de cada um deles no circuito, aumentando o valor medido.",
+    "A corrente total não depende da ligação, pois a bateria fornece a mesma corrente em qualquer circuito, e a diferença vem do tamanho dos fios.",
+    "Em paralelo a resistência equivalente é menor, pois há mais caminhos para a corrente, e por isso a corrente total aumenta com a mesma tensão."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em um circuito com três lâmpadas, um estudante mediu as correntes nos pontos A, B e C. A corrente no ponto A é 3 A, e no ponto B, que sai de um ramo, é 1 A. O estudante deve usar a lei dos nós para descobrir a corrente no ponto C.",
+   "comando": "Qual é a corrente no ponto C e o raciocínio correto para obtê-la?",
+   "alts": [
+    "A corrente no ponto C é 4 A, pois as correntes dos ramos se somam ao entrar no nó, e por isso a soma dos ramos é maior que a entrada.",
+    "A corrente no ponto C é 2 A, pois a corrente que entra em um nó se divide entre os ramos que saem dele, com soma igual à entrada.",
+    "A corrente no ponto C é 3 A, pois a corrente tem o mesmo valor em cada ponto de um circuito, independentemente dos ramos que existam.",
+    "A corrente no ponto C é 1 A, pois o ponto C tem a mesma corrente do ponto B, já que os dois estão no mesmo ramo do circuito."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Duas turmas compararam o brilho de lâmpadas em um circuito. A turma 1 usou lâmpadas em série com a bateria; a turma 2 usou lâmpadas em paralelo, cada uma com a mesma bateria. Ao final, registraram o brilho relativo, medido por um sensor de luz, em cada circuito.",
+   "comando": "Qual conclusão é sustentada pelos dados das duas turmas?",
+   "alts": [
+    "No paralelo as lâmpadas recebem menos energia, pois a corrente se divide, e por isso brilham menos do que no circuito em série.",
+    "Nos dois circuitos as lâmpadas brilham de forma parecida, pois a bateria fornece a mesma tensão e a mesma corrente em qualquer caso.",
+    "No paralelo cada lâmpada recebe a tensão total da bateria, por isso brilha mais que no circuito em série, onde a tensão é dividida.",
+    "No circuito em série a lâmpada 1 brilha mais do que a 2, pois a corrente chega à primeira lâmpada antes de passar pela segunda."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Um grupo de estudantes montou um circuito com uma bateria de 9 V e dois resistores em série: um de 3 Ω e outro de 6 Ω. Eles querem prever a corrente total e a tensão em cada resistor, e depois comparar com o mesmo circuito ligado em paralelo.",
+   "comando": "Calcule a corrente total e a tensão em cada resistor no circuito em série, e explique por que a corrente é a mesma em todos os componentes.",
+   "ref": "A resistência total é 9 Ω, então a corrente é 9 V ÷ 9 Ω = 1 A. A tensão é 3 V no resistor de 3 Ω e 6 V no de 6 Ω, somando 9 V. A corrente é a mesma em todos os componentes em série porque há um único caminho para a carga passar."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma oficina de eletricidade, um aluno quer decidir se usa ligação em série ou em paralelo para três lâmpadas idênticas em uma casa, ligadas à mesma rede de tensão. Ele precisa justificar a escolha com base na independência entre as lâmpadas e no consumo de corrente.",
+   "comando": "Escolha uma das ligações, justifique com base nos efeitos de queima de uma lâmpada e na corrente total, e explique por que a outra não é a melhor opção.",
+   "ref": "O paralelo é a melhor escolha, porque cada lâmpada recebe a tensão da rede e funciona de modo independente, de modo que a queima de uma não apaga as outras. A corrente total é maior, mas a série faria as lâmpadas receberem menos tensão e apagaria todas ao queimar uma."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma aluna montou um circuito com um resistor de 4 Ω ligado a uma bateria de 8 V. Depois acrescentou em série um segundo resistor de 4 Ω. Ela quer prever como a corrente muda ao acrescentar o resistor.",
+   "comando": "Calcule a corrente antes e depois de acrescentar o resistor e explique a mudança com base na resistência total.",
+   "ref": "Com um resistor, a corrente é 8 V ÷ 4 Ω = 2 A. Com dois em série, a resistência total é 8 Ω e a corrente cai para 8 V ÷ 8 Ω = 1 A, pois a resistência total aumentou e a tensão da bateria foi mantida."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Um grupo quis construir um circuito para acender uma lâmpada de 6 V, usando uma bateria de 12 V. Eles têm dois resistores à disposição e precisam decidir como ligá-los para que a lâmpada não receba tensão acima do que suporta.",
+   "comando": "Explique como a ligação em série permite dividir a tensão, e diga qual é a tensão sobre cada componente quando a lâmpada e um resistor de mesmo valor estão em série.",
+   "ref": "Em série, a tensão total se divide entre os componentes conforme suas resistências. Com lâmpada e resistor de mesmo valor, cada um recebe 6 V, pois a soma das quedas de tensão deve ser igual aos 12 V da bateria."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Dois circuitos com a mesma bateria foram comparados por um grupo: no circuito X, dois resistores estão em paralelo; no circuito Y, os mesmos resistores estão em série. O grupo quer prever qual circuito consome mais corrente e por quê.",
+   "comando": "Explique qual circuito consome mais corrente da bateria, relacionando a resistência equivalente de cada ligação com a corrente total.",
+   "ref": "O circuito X consome mais corrente, pois em paralelo a resistência equivalente é menor e, com a mesma tensão, a corrente total é maior. Em série a resistência equivalente é maior e a corrente total diminui."
+  }
+ ],
+ "4B|8º ANO|14": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em uma casa em Osasco, a tomada da cozinha está ligada a um circuito protegido por um disjuntor de 20 A, em rede de 127 V. A família quer usar três aparelhos ao mesmo tempo com um benjamim (adaptador que liga vários aparelhos na mesma tomada). Lembre-se de que a corrente elétrica é dada pela potência dividida pela tensão.",
+   "comando": "Qual afirmação sobre o uso dos três aparelhos é a mais adequada?",
+   "alts": [
+    "Pelo aparelho de maior potência, 1.500 W, a corrente é de cerca de 12 A, abaixo do limite, e o circuito suporta o uso.",
+    "A soma é 3.700 W, cerca de 29 A, acima dos 20 A do disjuntor, que deve desarmar e proteger a fiação.",
+    "A soma dá cerca de 29 A, mas o disjuntor desarma se alguém levar choque, e não por excesso de corrente elétrica.",
+    "A soma é 3.700 W e o disjuntor de 20 A suporta essa potência, pois o limite se refere à tensão de 127 V da tomada."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Um técnico de eletrodomésticos de Guarulhos testou duas geladeiras iguais que apresentavam um defeito de isolamento interno, que energiza a carcaça metálica. Uma estava ligada em tomada sem fio terra, e a outra em tomada com fio terra. Ele mediu a tensão entre a carcaça e o chão, onde uma pessoa descalça pisaria.",
+   "comando": "Que conclusão os dados sustentam sobre o aterramento?",
+   "alts": [
+    "O fio terra impede que o defeito de isolamento aconteça no aparelho, e por isso a geladeira 2 não tem o defeito.",
+    "O fio terra faz o aparelho consumir menos energia, e a tensão baixa da geladeira 2 mostra essa economia de energia.",
+    "O fio terra desvia a corrente de fuga para a terra, e a carcaça fica quase sem tensão, reduzindo o risco de choque.",
+    "A tensão de 98 V na geladeira 1 é normal em carcaças, e o fio terra serve para igualar as tensões."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma casa antiga de São Bernardo do Campo, o fusível de 10 A do circuito da sala queimava sempre que o morador ligava o ferro e a TV ao mesmo tempo. Cansado, ele trocou o fusível por um pedaço de fio de cobre grosso. Um eletricista fez uma simulação para ver o que acontece com os dois dispositivos quando a corrente aumenta.",
+   "comando": "Por que a troca feita pelo morador é perigosa?",
+   "alts": [
+    "O fio grosso interrompe o circuito em 1 s com 30 A, mas ele conduz pouca corrente e a casa fica sem energia.",
+    "O fusível de 10 A era inadequado e protegia o circuito de choques, o que o fio grosso melhora por conduzir melhor.",
+    "O fio grosso faz a corrente do circuito cair para 8 A, pois conduz melhor e reduz o consumo dos aparelhos ligados.",
+    "O fio grosso não desarma em corrente alta, e a fiação pode superaquecer, aumentando o risco de incêndio."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma professora de Ciências do 8º ano explicou que o perigo de um choque depende da corrente que passa pelo corpo, calculada por tensão dividida por resistência. Em uma oficina de segurança, os alunos analisaram valores aproximados de resistência elétrica do corpo humano em três condições, para uma tensão de 127 V.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "Com a pele molhada, a resistência cai e a corrente fica cerca de 100 vezes maior, aumentando o risco de choque.",
+    "Com a pele seca, a resistência é maior e a corrente é maior, por isso o risco é grande para quem tem as mãos secas.",
+    "A corrente no corpo depende da tensão da tomada e não do estado da pele, e a umidade pouco muda o risco de choque.",
+    "Com a pele molhada, a corrente é cerca de 10 vezes maior, já que a resistência é dez vezes menor que a da pele seca."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em uma obra, um fio de uma extensão teve a capa descascada, e seus dois condutores encostaram um no outro, com o aparelho ligado. A turma de Eletricidade comparou, para a tensão de 127 V, a resistência do circuito em funcionamento normal e a resistência do caminho criado pelo contato entre os fios.",
+   "comando": "O que explica o risco de incêndio nessa situação?",
+   "alts": [
+    "A resistência aumenta muito, a corrente fica enorme e aquece os fios, e o disjuntor desarma por causa do excesso de tensão.",
+    "A tensão da tomada aumenta quando os fios encostam, e a corrente fica enorme por causa dessa maior tensão no circuito.",
+    "A resistência cai muito, a corrente fica enorme e aquece os fios, característica do curto-circuito.",
+    "A corrente cai a quase zero, mas o contato entre os fios aquece o circuito e queima a capa pelo atrito entre eles."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Joana comprou um ventilador com plugue de três pinos, mas a tomada do quarto tem apenas dois furos. A vendedora vendeu um adaptador que permite ligar, e Joana pensou em cortar o pino redondo do meio do plugue para que ele encaixasse na tomada.",
+   "comando": "Explique a função desse pino, o risco de eliminá-lo e como reconhecer uma tomada com aterramento.",
+   "ref": "O pino do meio liga o aparelho ao fio terra, que desvia para a terra a corrente de fuga da carcaça metálica. Sem ele, em caso de defeito, a carcaça pode ficar energizada e causar choque. A tomada com aterramento tem três furos, sendo um deles o terra."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um grupo de alunos fotografou a casa de uma vizinha, para uma campanha de segurança, e listou situações que oferecem risco: um secador de cabelo ligado ao lado da pia, um benjamim com quatro aparelhos de potência alta e um fio remendado com fita adesiva comum.",
+   "comando": "Explique o risco de cada situação listada e proponha uma correção para cada uma.",
+   "ref": "Perto da água há risco de choque, e o secador deve ser usado longe da pia e com mãos secas. O benjamim sobrecarrega o circuito e pode superaquecer, devendo-se usar uma tomada para cada aparelho de potência alta. O fio remendado fica exposto e pode causar curto, devendo ser trocado ou emendado com material isolante adequado."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Na casa de Marcos, o disjuntor de 20 A do circuito da lavanderia desarma sempre que ele liga o ferro de passar e o forno elétrico ao mesmo tempo, em rede de 127 V. Ele acha que o disjuntor está com defeito e quer trocá-lo por um de 40 A.",
+   "comando": "Calcule a corrente total e explique por que trocar o disjuntor por um de 40 A é uma decisão perigosa.",
+   "ref": "A potência total é 3.000 W, e a corrente é cerca de 3.000 ÷ 127 ≈ 24 A, acima dos 20 A, por isso o disjuntor desarma corretamente. Trocá-lo por um de 40 A deixaria a fiação, feita para suportar menos corrente, aquecer sem que o circuito fosse desligado, com risco de incêndio."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Dois irmãos empinavam pipa em um terreno vazio de Campinas, perto de uma linha de transmissão de alta tensão. A linha da pipa estava coberta de cerol (mistura com vidro moído), e uma das crianças, ao ver a pipa presa em um fio, quis puxá-la pela linha.",
+   "comando": "Explique por que isso é perigoso e dê duas orientações de segurança para atividades perto de redes elétricas.",
+   "ref": "Se a linha encostar no fio de alta tensão, a corrente pode passar pela linha e pelo corpo, causando choque grave, pois o cerol e a umidade ajudam a conduzir corrente. Orientações: não empinar pipa perto de fios e, se a pipa prender, não puxar a linha e avisar a companhia de energia."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "O eletricista Rui vai instalar um chuveiro elétrico de 5.500 W em uma casa com rede de 220 V. Ele consultou uma tabela com a corrente máxima que cada fio suporta sem aquecer demais e precisa escolher a bitola (espessura) do fio.",
+   "comando": "Calcule a corrente do chuveiro e escolha o fio adequado, justificando a escolha com os dados.",
+   "ref": "A corrente é 5.500 W ÷ 220 V = 25 A. O fio de 1,5 mm² (15 A) e o de 2,5 mm² (21 A) não suportam essa corrente e aqueceriam. O de 4 mm², que aguenta 28 A, é adequado, pois está acima da corrente do chuveiro."
+  }
+ ],
+ "4B|8º ANO|15": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "No laboratório de informática, Camila usou um simulador de circuitos com bateria de 9 V e um resistor, trocando só o valor da resistência e anotando a corrente indicada pelo amperímetro. Ela quer prever o resultado de um teste que ainda não fez, com um resistor de 60 Ω.",
+   "comando": "Qual previsão para a corrente é coerente com os dados?",
+   "alts": [
+    "Cerca de 0,15 A, pois a tensão fica em 9 V e a corrente é a tensão dividida pela resistência",
+    "Cerca de 0,60 A, pois a corrente aumenta junto com a resistência e acompanha o valor de 60 Ω",
+    "Cerca de 0,30 A, pois a corrente se mantém no valor intermediário entre os resistores testados",
+    "Cerca de 1,50 A, pois a corrente é o produto da resistência pela tensão aplicada pela bateria"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre circuitos, o professor montou duas lâmpadas iguais em série com uma bateria de 12 V. Um amperímetro marcou 0,4 A e um voltímetro, ligado em cada lâmpada, marcou 6 V. Depois, um aluno retirou a lâmpada 2 do soquete, deixando o circuito interrompido.",
+   "comando": "O que o aluno deve observar na lâmpada 1 e no amperímetro depois da retirada?",
+   "alts": [
+    "A lâmpada 1 brilha mais e o amperímetro marca 0,8 A, pois toda a tensão passa a atuar sobre ela",
+    "A lâmpada 1 apaga e o amperímetro marca zero, pois o circuito em série abre e a corrente cessa",
+    "A lâmpada 1 continua acesa e o amperímetro marca 0,4 A, pois cada lâmpada recebe a própria corrente",
+    "A lâmpada 1 apaga e o amperímetro marca 0,4 A, pois a corrente continua passando pelo fio"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Pedro montou um circuito com bateria, interruptor e lâmpada. Na montagem A, ligou o amperímetro em série com a lâmpada. Na montagem B, ligou o amperímetro em paralelo com a lâmpada. Na B, a lâmpada apagou e o amperímetro marcou um valor muito alto. Ele quer entender o fenômeno.",
+   "comando": "Que explicação é coerente com os registros?",
+   "alts": [
+    "O amperímetro tem resistência muito alta, e em paralelo desvia a corrente da lâmpada, como um curto-circuito",
+    "O amperímetro tem resistência muito baixa, e em paralelo reduz a tensão da bateria até a lâmpada apagar",
+    "O amperímetro tem resistência muito baixa, e em paralelo aumenta a resistência total e a lâmpada apaga",
+    "O amperímetro tem resistência muito baixa, e em paralelo desvia a corrente da lâmpada, como um curto-circuito"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em um simulador de circuitos, Rita ligou em série dois resistores, de 10 Ω e de 20 Ω, a uma bateria de 6 V. Ela mediu a corrente e depois quis calcular a tensão em cada resistor para verificar se a soma bate com a da bateria.",
+   "comando": "Que valores de tensão são esperados em cada resistor?",
+   "alts": [
+    "2 V em R1 e 4 V em R2, pois a corrente de 0,2 A é a mesma e a tensão é I vezes R",
+    "3 V em R1 e 3 V em R2, pois a tensão se divide em partes iguais, independentemente da resistência",
+    "6 V em R1 e 6 V em R2, pois cada resistor recebe a tensão total da bateria quando ligado em série",
+    "4 V em R1 e 2 V em R2, pois o resistor de menor resistência recebe a maior parte da tensão"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um eletricista explicou que um curto-circuito ocorre quando um fio desencapado liga os dois polos da fonte, sem passar por nenhum aparelho. Os alunos compararam, no simulador, um circuito com lâmpada e outro em que um fio liga diretamente os polos de uma bateria de 12 V.",
+   "comando": "Por que o curto-circuito é perigoso, de acordo com os dados?",
+   "alts": [
+    "A tensão da bateria aumenta muito, e a corrente se torna muito alta, o que aquece os fios e pode causar incêndio",
+    "A resistência cai muito e a corrente se torna muito baixa, o que aquece os fios e pode causar incêndio",
+    "A resistência cai muito e a corrente se torna muito alta, o que aquece os fios e pode causar incêndio",
+    "A resistência aumenta muito e a corrente se torna muito alta, o que aquece os fios e pode causar incêndio"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Gabriel investigou no simulador a relação entre tensão e corrente num resistor fixo de 30 Ω. Ele aumentou a tensão da bateria e anotou a corrente indicada. Seu grupo quer descrever a relação e fazer uma previsão para uma tensão ainda não testada.",
+   "comando": "Descreva a relação entre tensão e corrente e calcule a corrente esperada para 12 V.",
+   "ref": "A corrente é proporcional à tensão (V = R x I): dobrando a tensão, dobra a corrente. Para 12 V, a corrente é 12/30 = 0,4 A."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Beatriz montou duas lâmpadas iguais em série com uma bateria de 12 V e notou que o brilho de cada uma era menor do que quando usava só uma lâmpada. Ela anotou a corrente em cada situação e não entendeu por que o brilho diminuiu.",
+   "comando": "Explique, com base nos dados, por que o brilho diminuiu quando a segunda lâmpada foi acrescentada.",
+   "ref": "Ao ligar a segunda lâmpada em série, a resistência total dobra de 12 para 24 Ω, e a corrente cai pela metade (de 1,0 para 0,5 A). Com menos corrente em cada lâmpada, o brilho diminui."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em um simulador, dois resistores desconhecidos, R1 e R2, foram ligados, separadamente, à mesma bateria de 6 V. Os alunos mediram as correntes e precisam descobrir a resistência de cada um e qual dos dois limita mais a corrente.",
+   "comando": "Calcule a resistência de R1 e de R2 e indique qual limita mais a corrente.",
+   "ref": "R = V/I: R1 = 6/0,20 = 30 Ω e R2 = 6/0,10 = 60 Ω. O resistor R2 limita mais a corrente, pois tem maior resistência e, com a mesma tensão, passa menos corrente."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em um circuito simples com bateria de 9 V, lâmpada e interruptor, Lucas mediu a tensão nos terminais do interruptor com o voltímetro em duas situações. Ele ficou surpreso com a leitura de 9 V no interruptor aberto, pensando que 'se não passa corrente, não deveria haver tensão'.",
+   "comando": "Explique por que o voltímetro marca 9 V com o interruptor aberto e 0 V com ele fechado.",
+   "ref": "Com o interruptor aberto, o circuito não tem corrente e toda a tensão da bateria fica sobre ele, pois não há queda de tensão na lâmpada. Fechado, o interruptor é um fio sem resistência, e a tensão sobre ele é nula."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Na sala de uma casa, uma extensão com várias tomadas alimenta aparelhos ligados ao mesmo tempo (em paralelo) na rede de 127 V. O disjuntor do circuito é de 20 A. Os alunos calcularam a corrente exigida por cada aparelho e verificaram o risco de sobrecarga.",
+   "comando": "Some as correntes e diga se o disjuntor deve desarmar. Explique o que a soma representa.",
+   "ref": "Os aparelhos ligados em paralelo somam as correntes: 8 + 7 + 1 + 1 = 17 A, abaixo de 20 A, então o disjuntor não deve desarmar. Se ligasse outro aparelho de 4 A, a soma passaria de 20 A e causaria sobrecarga."
+  }
+ ]
+}

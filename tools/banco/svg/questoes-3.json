@@ -1,0 +1,1328 @@
+{
+ "4B|8º ANO|16": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Ana usou um simulador de circuitos e montou dois circuitos com a mesma bateria e três lâmpadas iguais em cada um. Ela retirou a lâmpada L2 de cada circuito e anotou o que ocorreu com as demais, além do brilho observado antes de retirar.",
+   "comando": "Qual interpretação relaciona as observações ao tipo de ligação e à instalação de uma casa?",
+   "alts": [
+    "No circuito 2 as lâmpadas estão em paralelo, com caminho próprio, como em casa; no 1, em série.",
+    "No circuito 1 as lâmpadas estão em paralelo, cada uma com caminho próprio, como na instalação residencial.",
+    "No circuito 2 as lâmpadas estão em série, pois continuam acesas porque a corrente se divide igualmente entre elas.",
+    "Os dois circuitos estão em série, e a diferença de brilho entre eles ocorre por causa do número de baterias."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em uma aula de eletricidade, o professor Caio montou uma bancada com uma fonte e dois resistores ligados entre os mesmos pontos, de modo que cada um tem seu próprio ramo. Os alunos deveriam determinar a resistência equivalente e a corrente que sai da fonte.",
+   "comando": "Qual alternativa apresenta a resistência equivalente e a corrente total corretas?",
+   "alts": [
+    "9 Ω e cerca de 1,3 A, pois a resistência equivalente é a soma das resistências e a corrente é 12 V ÷ 9 Ω.",
+    "4,5 Ω e cerca de 2,7 A, pois a resistência equivalente é a média das resistências e a corrente é 12 V ÷ 4,5 Ω.",
+    "2 Ω e 6 A, pois em paralelo 1/Req = 1/6 + 1/3 dá Req = 2 Ω, e a corrente é 12 V ÷ 2 Ω.",
+    "2 Ω e 24 A, pois a corrente total é o produto da tensão de 12 V pela resistência equivalente do circuito."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em uma casa de São Paulo com rede de 127 V, a família ligou na mesma régua de tomadas um ferro de passar, uma televisão e um ventilador. Poucos segundos depois, o disjuntor de 10 A do circuito desarmou, e o pai pediu que Lia explicasse o motivo.",
+   "comando": "Qual explicação é sustentada pelos dados do consumo dos aparelhos?",
+   "alts": [
+    "Os aparelhos em série dividem a tensão de 127 V, e por isso a corrente total aumentou e desarmou o disjuntor.",
+    "Os aparelhos em paralelo somam correntes: 1300 W ÷ 127 V ≈ 10,2 A, acima do limite de 10 A.",
+    "A tensão da tomada aumentou ao ligar três aparelhos, o que fez o disjuntor desarmar pela soma das tensões.",
+    "O ferro sozinho já ultrapassa 10 A, e os outros aparelhos, de pouca potência, não alteram a corrente do circuito."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "No laboratório da escola, Rita montou um circuito misto com uma fonte de 12 V. O resistor R1 de 10 Ω está em série com um conjunto de dois resistores, R2 e R3, de 20 Ω cada, ligados entre os mesmos pontos. Ela quer saber a corrente que passa por R2.",
+   "comando": "Qual é a corrente em R2 e qual é a justificativa correta?",
+   "alts": [
+    "0,3 A, pois a corrente total de 0,6 A se divide igualmente entre R2 e R3, que têm o mesmo valor.",
+    "0,6 A, pois a corrente que passa por R1 é a mesma que passa em cada resistor do ramo com dois resistores.",
+    "0,2 A, pois a corrente total se divide em três partes iguais, uma para cada resistor do circuito.",
+    "0,4 A, pois a resistência total é 30 Ω e a corrente em R2 é a tensão da fonte dividida por esse valor."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Para medir a corrente e a tensão de uma lâmpada ligada a uma pilha, Davi testou três montagens com um multímetro, que funciona como amperímetro ou como voltímetro. Ele anotou o que ocorreu com a lâmpada e a leitura em cada montagem.",
+   "comando": "Qual alternativa descreve o procedimento correto de ligação dos instrumentos?",
+   "alts": [
+    "O amperímetro mede a corrente e deve ficar em paralelo com a lâmpada, enquanto o voltímetro fica em série com ela.",
+    "Os dois instrumentos devem ficar em série com a lâmpada, pois assim a mesma corrente passa por cada elemento.",
+    "Os dois instrumentos devem ficar em paralelo com a lâmpada, pois assim eles medem a mesma tensão da pilha.",
+    "O amperímetro fica em série com a lâmpada para medir a corrente, e o voltímetro em paralelo para medir a tensão."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Antes do Natal, a família de Bia comprou um pisca-pisca de lâmpadas pequenas ligadas em série e observou que, quando uma queimava, todas apagavam. Um técnico mediu a tensão em cada lâmpada de uma fonte de 12 V em diferentes montagens.",
+   "comando": "Interprete os dados e explique por que, em série, uma lâmpada queimada apaga todas e por que a tensão de cada uma diminui.",
+   "ref": "Em série há um único caminho para a corrente, então se uma lâmpada queima o circuito abre e todas apagam. A tensão da fonte se divide entre as lâmpadas iguais, e por isso cada uma recebe 12 V dividido pelo número de lâmpadas."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Um chuveiro elétrico de 220 V tem duas posições, verão e inverno, que usam resistências diferentes. Um eletricista mediu os valores abaixo e quer explicar por que a água esquenta mais em uma posição do que na outra.",
+   "comando": "Calcule a corrente em cada posição e explique, com base nos valores, por que a posição inverno aquece mais.",
+   "ref": "A corrente é 220 ÷ 22 = 10 A no verão e 220 ÷ 11 = 20 A no inverno. Menor resistência permite maior corrente e maior potência de aquecimento, por isso a posição inverno aquece mais, mas exige fios e disjuntor para corrente maior."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Para comparar o brilho de duas lâmpadas iguais, a turma montou três circuitos com a mesma bateria: uma lâmpada sozinha, duas em série e duas em paralelo. Um sensor mediu o brilho de cada lâmpada em relação ao da lâmpada sozinha.",
+   "comando": "Interprete o gráfico e explique a diferença de brilho com a tensão que cada lâmpada recebe.",
+   "ref": "Em série, a tensão da bateria se divide entre as duas lâmpadas, então cada uma recebe metade e o brilho cai bastante. Em paralelo, cada lâmpada recebe a tensão total da bateria, e por isso brilha como se estivesse sozinha."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em uma oficina, Rafael ligou uma fonte de 12 V a uma lâmpada e mediu a corrente. Depois, por engano, uniu os terminais da fonte com um fio de cobre grosso e sentiu o fio esquentar rapidamente. Um colega explicou que aconteceu um curto-circuito.",
+   "comando": "Calcule ou compare as correntes e explique por que o curto-circuito é perigoso e como o fusível protege a instalação.",
+   "ref": "A corrente com a lâmpada é 12 ÷ 6 = 2 A e, com o fio, 12 ÷ 0,1 = 120 A. A corrente enorme aquece muito os fios e pode causar incêndio, e o fusível derrete ou o disjuntor desarma ao passar do limite, interrompendo o circuito."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Na sala de uma casa, duas lâmpadas são acesas por um único interruptor. A moradora fez dois testes para entender como a instalação está ligada e anotou os resultados. Ela queria saber se as lâmpadas dependem uma da outra e se o interruptor controla todo o circuito.",
+   "comando": "Explique que tipo de ligação existe entre as duas lâmpadas e entre o interruptor e o conjunto, usando os testes.",
+   "ref": "As lâmpadas estão em paralelo entre si, pois ao retirar uma a outra segue acesa, já que cada uma tem seu caminho. O interruptor está em série com o conjunto, porque ao desligá-lo o circuito se abre e as duas apagam, o que forma um circuito misto."
+  }
+ ],
+ "4B|8º ANO|17": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Na cozinha de uma casa em rede de 220 V, um mesmo circuito, protegido por um disjuntor de 30 A, alimenta uma tomada onde Rita costuma ligar o chuveiro elétrico. Hoje, uma vizinha propôs ligar um ferro de passar roupa nessa mesma tomada, ao mesmo tempo que o chuveiro.",
+   "comando": "Qual avaliação é correta, usando P = U × I?",
+   "alts": [
+    "As correntes são 30 A e 5 A; somam 35 A, acima do limite de 30 A, e o disjuntor desarma",
+    "As correntes são 30 A e 5 A; como a tensão é a mesma de 220 V, elas não se somam e o circuito suporta",
+    "As correntes são 3 A e 0,5 A, pois a potência é dividida por mil; a soma é 3,5 A e o circuito suporta",
+    "As correntes são 30 A e 5 A, mas o disjuntor considera o chuveiro, por ser o maior consumidor"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Duas casas, uma em uma cidade com rede de 127 V e outra em cidade com rede de 220 V, instalaram o mesmo modelo de chuveiro de 4.400 W. O eletricista da primeira casa precisou usar fios mais grossos do que o da segunda, e a turma quis entender por quê.",
+   "comando": "Qual comparação entre as duas casas é correta?",
+   "alts": [
+    "Com a mesma potência, a casa A tem corrente menor (cerca de 12 A), pois a tensão menor reduz a corrente do chuveiro",
+    "Com a mesma potência, a casa A tem corrente maior (cerca de 35 A contra 20 A), e a corrente maior exige fios mais grossos",
+    "Com a mesma potência, as duas casas têm a mesma corrente de 20 A, e os fios mais grossos são por segurança extra",
+    "Com a mesma potência, a casa B tem corrente maior, pois a tensão maior empurra mais corrente pelo circuito elétrico"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma família de Campinas quer reduzir a conta de energia e listou os aparelhos que mais usa. A conta é calculada em kWh, e uma estudante lembrou que energia = potência (kW) × tempo (h). Ela precisa decidir em qual aparelho agir primeiro.",
+   "comando": "Qual aparelho mais contribui para a conta e por quê?",
+   "alts": [
+    "O chuveiro, com 5,5 kWh por dia, pois o consumo é maior no aparelho com a maior potência instalada",
+    "O ferro de passar, com 3,3 kWh por dia, pois o consumo cresce com a potência e a corrente do aparelho",
+    "O ar-condicionado, com 11,2 kWh por dia, pois o consumo depende da potência e também do tempo de uso",
+    "A televisão, com 6 kWh por dia, pois o consumo cresce com o tempo, mesmo que a potência seja baixa"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em uma casa em que a tensão é de 220 V, uma extensão com tomadas é protegida para suportar até 10 A. Júlio quer ligar vários aparelhos nela ao mesmo tempo, mas não quer que a extensão aqueça ou que o disjuntor desarme.",
+   "comando": "Qual combinação de aparelhos pode ser ligada na extensão sem ultrapassar o limite de 10 A?",
+   "alts": [
+    "Chaleira elétrica e liquidificador, que somam 2.500 W, abaixo do limite, pois a tensão de 220 V é alta",
+    "Micro-ondas, ferro e ventilador, que somam 2.700 W, pois cada aparelho tem menos de 10 A isoladamente",
+    "Ferro e chaleira, que somam 3.200 W, pois a potência da extensão aumenta com a quantidade de aparelhos",
+    "O conjunto que soma 2.000 W, o que dá cerca de 9,1 A na tensão de 220 V, abaixo do limite"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um chuveiro elétrico de 220 V tem uma chave com duas posições, verão e inverno, que muda a resistência elétrica interna. Mariana notou que, na posição inverno, a água sai mais quente com a mesma vazão, e consultou as características do aparelho.",
+   "comando": "Por que a água sai mais quente na posição inverno?",
+   "alts": [
+    "A corrente é maior (cerca de 25 A contra 16 A), e por isso mais energia é convertida em calor a cada segundo",
+    "A tensão da rede aumenta na posição inverno, e por isso o aparelho recebe energia de forma mais intensa",
+    "A corrente é menor na posição inverno, e a água fica mais tempo em contato com a resistência elétrica",
+    "O chuveiro consome menos energia por segundo no inverno, e essa energia se acumula e aquece mais a água"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em uma casa de rede de 220 V, o eletricista vai escolher o fio e o disjuntor para três aparelhos: geladeira, televisão e chuveiro. Um aprendiz sugeriu usar para o chuveiro o mesmo fio fino, que suporta 10 A, usado nos outros dois.",
+   "comando": "Calcule a corrente de cada aparelho e explique o que poderia acontecer com o fio fino ligado ao chuveiro.",
+   "ref": "Usando I = P/U: geladeira 1,5 A; televisão 1 A; chuveiro 25 A. O fio fino de 10 A não suporta 25 A: ele aquece muito (efeito Joule), pode derreter a isolação e causar curto-circuito ou incêndio. Deve-se usar fio mais grosso e disjuntor adequado."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "A família de Davi deixa vários aparelhos ligados na tomada o dia inteiro, em modo de espera, como TV e decodificador. O pai quer calcular quanto isso consome por mês. Lembre que energia (kWh) = potência (kW) × tempo (h) e que um mês tem cerca de 30 dias.",
+   "comando": "Calcule a energia que o decodificador consome em um mês em modo de espera e sugira uma medida.",
+   "ref": "O decodificador tem 12 W = 0,012 kW; em 24 h por 30 dias são 720 h, e a energia é 0,012 × 720 = 8,64 kWh por mês. Para reduzir, pode-se desligar da tomada ou usar um filtro de linha com interruptor quando os aparelhos não estiverem em uso."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Para trocar lâmpadas, uma família comparou uma lâmpada incandescente com uma de LED, que dão a mesma quantidade de luz, e pretende usar cada uma por 5 horas por dia durante 30 dias. A tarifa é de R$ 0,80 por kWh.",
+   "comando": "Calcule a economia mensal com o LED e em quanto tempo ela paga a diferença de preço das lâmpadas.",
+   "ref": "Incandescente: 0,06 kW × 150 h = 9 kWh, ou R$ 7,20. LED: 0,009 kW × 150 h = 1,35 kWh, ou R$ 1,08. A economia é de R$ 6,12 por mês, e a diferença de R$ 8 no preço é paga em cerca de 1,3 mês."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Em um circuito simples, Ana ligou uma lâmpada a uma pilha e depois a duas pilhas iguais em série, mantendo a mesma lâmpada. Ela mediu a tensão e a corrente em cada caso e notou que a lâmpada brilhou mais na segunda montagem.",
+   "comando": "Calcule a potência da lâmpada nas duas montagens e explique, com base em P = U × I, por que o brilho aumentou.",
+   "ref": "Com 1 pilha, P = 1,5 × 0,10 = 0,15 W; com 2 pilhas, P = 3,0 × 0,20 = 0,60 W. Dobrando a tensão, a corrente também dobrou (a resistência da lâmpada é a mesma), então a potência ficou 4 vezes maior e a lâmpada brilhou mais."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Muitas vezes se vê um pássaro pousado em um fio de alta tensão sem sofrer choque. Um técnico mostrou a situação e depois explicou que, se a ave encostasse a asa em outro fio da rede ou no poste, o resultado seria diferente.",
+   "comando": "Explique por que a ave não leva choque no primeiro caso e por que levaria no segundo.",
+   "ref": "Com os dois pés no mesmo fio, os pés estão quase na mesma tensão, então a diferença de potencial no corpo é desprezível e a corrente passa pelo fio, não pela ave. No segundo caso, o corpo liga pontos de tensões diferentes, estabelece uma diferença de potencial e a corrente atravessa a ave."
+  }
+ ],
+ "4B|8º ANO|18": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Dona Célia vai comprar uma geladeira de 400 litros e comparou dois modelos: o de classe A, mais caro, e o de classe C, mais barato. A tarifa de energia na sua cidade é de R$ 0,90 por kWh. Ela quer saber em quanto tempo a economia na conta de luz compensa a diferença de preço entre os modelos.",
+   "comando": "Em quanto tempo a economia na conta compensa a diferença de preço?",
+   "alts": [
+    "Cerca de 33 meses, pois a economia é de 17 kWh por mês, ou R$ 15,30, e R$ 500 ÷ R$ 15,30 dá cerca de 33.",
+    "Cerca de 12 meses, pois R$ 500 divididos pelo gasto mensal do modelo Y, de R$ 40,50, dão cerca de 12.",
+    "Cerca de 20 meses, pois R$ 500 divididos pelo gasto mensal do modelo X, de R$ 25,20, dão cerca de 20.",
+    "Cerca de 29 meses, pois R$ 500 divididos pela economia de 17 kWh dão cerca de 29, sem usar a tarifa."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma família de Guarulhos quer reduzir a conta de luz e listou os aparelhos que mais usa, com a potência e o tempo médio diário de uso. A tarifa é de R$ 0,80 por kWh, e o mês tem 30 dias. O pai acha que o chuveiro é o maior responsável, por ser o aparelho de maior potência.",
+   "comando": "Qual aparelho tem o maior consumo mensal e qual é o custo dele na conta?",
+   "alts": [
+    "O chuveiro, com 66 kWh por mês, que custam R$ 52,80, pois é o aparelho de maior potência e isso define o maior consumo.",
+    "O ar-condicionado, com 7,2 kWh por mês, que custam R$ 5,76, pois a potência de 1,2 kW usada por 6 h resulta em 7,2.",
+    "O ar-condicionado, com 216 kWh por mês (R$ 172,80), pois 1,2 kW por 6 h diárias em 30 dias supera o chuveiro.",
+    "A televisão, com 15 kWh por mês, que custam R$ 12,00, pois é a que fica ligada mais horas entre os aparelhos citados."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um comprador comparou duas geladeiras com a etiqueta de eficiência energética. A etiqueta classifica os aparelhos de uma mesma categoria e capacidade, mas ele só olhou os números da tabela. Uma colega disse que 'o modelo com menor consumo em kWh é sempre o mais eficiente'.",
+   "comando": "Qual conclusão é sustentada pelos dados?",
+   "alts": [
+    "O modelo Q é mais eficiente, pois consome menos kWh por mês, e a classe serve para indicar o preço do aparelho.",
+    "Os dois modelos têm eficiência parecida, pois a diferença de 5 kWh entre eles é pequena e a classe não tem relação com o consumo.",
+    "O modelo P é menos eficiente, pois gasta 50 kWh por mês, mais do que o Q, e por isso a classe A não garante economia.",
+    "O modelo P é mais eficiente: consome 0,125 kWh por litro, contra 0,225 kWh por litro do Q, mesmo gastando mais no total."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um estudante mediu a potência de alguns aparelhos ligados na tomada em uso e em modo de espera (aguardando o comando), e estimou por quantas horas por dia ficam em cada modo. Ele quer saber em quais aparelhos o consumo em espera é relevante, pois acha que 'o que está desligado do botão não gasta nada'.",
+   "comando": "Qual afirmação sobre o consumo diário é sustentada pelos cálculos dos dados?",
+   "alts": [
+    "Na televisão, o consumo diário em espera, de cerca de 0,5 kWh, é igual ao consumo em uso, de 0,5 kWh.",
+    "No videogame, o consumo diário em espera, de cerca de 0,26 kWh, é próximo do consumo em uso, de 0,30 kWh.",
+    "No carregador, o consumo diário em espera, de cerca de 0,21 kWh, é maior que o consumo em uso, de 0,03 kWh.",
+    "Em cada aparelho, o consumo em espera é nulo, pois um aparelho aguardando o comando não gasta energia."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Duas cidades têm redes elétricas diferentes: na cidade A a tensão da tomada é de 127 V e na cidade B é de 220 V. Uma mesma marca vende o mesmo chuveiro elétrico, de 4.400 W, nas duas cidades, e uma pessoa tem o mesmo hábito de banho em ambas. A potência elétrica é dada por P = U × I.",
+   "comando": "Qual afirmação sobre corrente e consumo é correta?",
+   "alts": [
+    "O consumo é maior em B, pois a tensão é maior, e a corrente é igual nas duas cidades por terem a mesma potência.",
+    "O consumo em kWh é o mesmo nas duas cidades, e a corrente é maior em A, cerca de 35 A, do que em B, de 20 A.",
+    "O consumo é maior em A, pois a corrente é maior, e isso faz o chuveiro gastar mais energia no mesmo tempo de banho.",
+    "O consumo é igual nas duas cidades, e a corrente também é igual, pois a mesma potência exige a mesma corrente."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma família vai comprar um ar-condicionado e comparou dois modelos. Eles usam o aparelho 6 horas por dia, durante 30 dias, e a tarifa é de R$ 0,80 por kWh. A etiqueta do modelo A tem classe A e a do modelo B, classe C.",
+   "comando": "Calcule o custo mensal de cada modelo e indique em quantos meses a economia compensa a diferença de preço.",
+   "ref": "Modelo A: 0,9 kW × 6 h × 30 dias = 162 kWh, ou R$ 129,60. Modelo B: 1,2 × 6 × 30 = 216 kWh, ou R$ 172,80. A economia mensal é de R$ 43,20, e a diferença de preço de R$ 500 é compensada em cerca de 12 meses."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma casa consome 190 kWh por mês, distribuídos entre alguns aparelhos. A família quer reduzir o consumo sem comprar equipamentos novos e pensa em diminuir o tempo do banho, que hoje dura em média 15 minutos por pessoa. A tarifa é de R$ 0,80 por kWh.",
+   "comando": "Use os dados para indicar o aparelho em que a mudança de hábito teria maior efeito e calcule a economia mensal ao reduzir o banho para 10 minutos.",
+   "ref": "O chuveiro é o que mais consome (90 kWh). Reduzindo o banho de 15 para 10 minutos, o consumo cai para 90 × 10/15 = 60 kWh, uma economia de 30 kWh, ou R$ 24,00 por mês."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma sala, uma lâmpada incandescente de 60 W é usada 5 horas por dia. Um morador pensa em trocá-la por uma lâmpada de LED que produz a mesma quantidade de luz. A tarifa é de R$ 0,80 por kWh, e o mês tem 30 dias.",
+   "comando": "Calcule a economia mensal de energia e de dinheiro com a troca e explique o que a etiqueta de eficiência ajuda a decidir.",
+   "ref": "A incandescente consome 0,06 × 5 × 30 = 9 kWh por mês e o LED, 0,009 × 5 × 30 = 1,35 kWh. A economia é de 7,65 kWh, ou cerca de R$ 6,12 por mês. A etiqueta de eficiência ajuda a escolher o aparelho que fornece o mesmo serviço com menor consumo."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma moradora ligou, na mesma tomada com um adaptador em T, um secador de cabelo de 1.500 W e um forno elétrico de 1.800 W, ambos em uma rede de 127 V. A tomada e o fio dessa parte da casa suportam no máximo cerca de 15 A. Pouco depois, o disjuntor desarmou.",
+   "comando": "Use P = U × I para explicar por que o disjuntor desarmou e indique uma atitude mais segura.",
+   "ref": "A corrente de cada aparelho é I = P ÷ U: cerca de 11,8 A no secador e 14,2 A no forno. Juntos somam 26 A, bem acima do limite de 15 A, o que aquece os fios e faz o disjuntor desarmar para evitar incêndio. O mais seguro é ligar cada aparelho em uma tomada diferente, sem adaptadores, e não usar os dois ao mesmo tempo."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma escola paga uma conta de energia alta e a diretora pediu aos alunos que propusessem um plano de economia. Eles levantaram o consumo mensal por tipo de uso. A tarifa é de R$ 0,80 por kWh, e uma troca para lâmpadas de LED reduz o consumo de iluminação em cerca de 70%.",
+   "comando": "Proponha duas medidas para reduzir o consumo, indicando em qual uso a economia pode ser maior e calculando a economia da troca das lâmpadas.",
+   "ref": "O ar-condicionado é o maior consumo; uma medida é regular a temperatura e desligar o aparelho ao sair da sala, outra é trocar as lâmpadas por LED. Na iluminação, 70% de 400 kWh são 280 kWh, uma economia de R$ 224,00 por mês."
+  }
+ ],
+ "4B|8º ANO|19": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Dona Marta recebeu a conta de luz de um mês com bandeira vermelha 1. Ela quer conferir o valor sem impostos. A bandeira tarifária cobra um adicional por blocos de 100 kWh consumidos, e não um valor único por conta. Os dados abaixo são ilustrativos.",
+   "comando": "Qual é o valor da conta sem impostos e como ele é obtido?",
+   "alts": [
+    "R$ 175,00, pois a bandeira altera o valor de quem passa de 300 kWh, e o consumo de Marta está abaixo disso.",
+    "R$ 1.300,00, pois o adicional de R$ 4,50 é cobrado a cada kWh consumido, somando-se à tarifa de R$ 0,70 por kWh.",
+    "R$ 186,25, pois a tarifa dá R$ 175,00 e o adicional de R$ 4,50 vale por bloco de 100 kWh, somando 2,5 blocos e R$ 11,25.",
+    "R$ 179,50, pois o adicional de R$ 4,50 é cobrado uma vez na conta, qualquer que seja o consumo, e soma-se a R$ 175,00."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "A família Souza consumiu 300 kWh em abril, com bandeira verde, e 300 kWh em agosto, com bandeira vermelha. Os dois valores aparecem no quadro, e a tarifa por kWh não mudou. Os filhos discutem por que a conta de agosto veio mais cara.",
+   "comando": "Que interpretação é sustentada pelos dados?",
+   "alts": [
+    "A diferença de R$ 30 vem da bandeira vermelha, que indica custo maior de geração, pois o consumo da família foi igual nos dois meses.",
+    "A família gastou mais energia em agosto, e a diferença de R$ 30 mostra o aumento de consumo causado pelo uso de mais aparelhos.",
+    "A bandeira vermelha indica que choveu muito nos reservatórios, e por isso a energia foi cobrada mais cara pela distribuidora.",
+    "A tarifa por kWh aumentou em agosto, e o valor extra de R$ 30 mostra que a distribuidora reajustou o preço de toda a energia."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma família quer diminuir a conta de luz e listou a potência de aparelhos da casa. O consumo em quilowatts-hora (kWh) é a potência em quilowatts multiplicada pelo tempo de uso em horas. A família pode escolher só uma mudança de hábito para começar.",
+   "comando": "Qual mudança de hábito reduz mais o consumo em um mês de 30 dias?",
+   "alts": [
+    "Diminuir o banho em 10 minutos por dia, pois o chuveiro tem potência muito alta e cada 10 minutos economizam mais que as outras ações.",
+    "Passar roupa 30 minutos a menos por dia, pois o ferro tem alta potência e a economia é maior que a de aparelhos pequenos.",
+    "Manter a televisão desligada 2 horas a mais por dia, pois ela fica ligada durante muito tempo ao longo do dia.",
+    "Apagar as lâmpadas 2 horas a mais por dia, pois a iluminação funciona por muitas horas e é o hábito mais fácil de mudar."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Os técnicos do setor elétrico definem a bandeira tarifária do mês com base no custo de gerar a energia. Um grupo de estudantes reuniu dados ilustrativos de três meses do ano e quer relacionar o nível dos reservatórios das hidrelétricas, as usinas térmicas ligadas e a bandeira.",
+   "comando": "Que relação é sustentada pelos dados?",
+   "alts": [
+    "A bandeira vermelha 2 provoca a queda do nível dos reservatórios, pois os consumidores passam a gastar mais água com a conta alta.",
+    "A bandeira depende do consumo de cada família no mês, e por isso a bandeira vermelha 2 aparece quando as casas gastam mais.",
+    "Com menos água nos reservatórios, mais térmicas são ligadas, e como elas custam mais, a bandeira muda e a conta fica mais cara.",
+    "As térmicas são ligadas quando os reservatórios estão cheios, pois são mais baratas, e por isso a bandeira sobe nos meses de baixa."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Uma família recebeu a conta de luz do mês e discute como reduzi-la. O quadro mostra os itens que compõem o total. A taxa de iluminação pública é um valor fixo definido pela prefeitura. Os impostos são calculados sobre o consumo e a bandeira.",
+   "comando": "Qual afirmação NÃO é sustentada pelo quadro?",
+   "alts": [
+    "Se o consumo caísse pela metade, o total da conta também cairia pela metade, pois todos os itens dependem do consumo da residência.",
+    "O consumo é o item de maior peso, pois responde por cerca de dois terços do total da conta, mais que a soma dos demais itens.",
+    "A taxa de iluminação pública não muda quando a família reduz o consumo, pois é um valor fixo definido pela prefeitura.",
+    "Com bandeira verde, a conta seria menor que R$ 350, pois o adicional de R$ 20 deixaria de ser cobrado nesse mês."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma notícia sobre a Aneel informou que o mês começou com bandeira vermelha 1. Uma família de 500 kWh mensais quer saber quanto isso pesa na conta. A tarifa e o adicional estão no quadro, e os valores são ilustrativos.",
+   "comando": "Calcule o valor da conta sem impostos, quanto desse valor vem da bandeira e cite duas ações de economia.",
+   "ref": "A tarifa dá 500 x 0,75 = R$ 375,00 e o adicional é 5 x 4,50 = R$ 22,50, totalizando R$ 397,50 sem impostos, dos quais R$ 22,50 vêm da bandeira. A família pode economizar com banhos mais curtos e desligando aparelhos que não estão em uso ou trocando lâmpadas por LED."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma reportagem mostrou os adicionais cobrados em cada bandeira tarifária. Os valores do gráfico são ilustrativos, por 100 kWh consumidos. Um morador disse que \"a bandeira é só uma forma de o governo cobrar mais\".",
+   "comando": "Interprete o gráfico e explique o que a bandeira tarifária indica sobre a geração de energia, usando os dados.",
+   "ref": "O adicional cresce de R$ 0 na bandeira verde para R$ 8 na vermelha 2. A bandeira sinaliza o custo de gerar energia no período: quando chove pouco e os reservatórios baixam, usinas térmicas, mais caras, são ligadas e o custo extra é repassado, o que também estimula o consumo consciente."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma casa, o consumo mensal está distribuído entre alguns aparelhos. A família quer reduzir o consumo total e pensa em encurtar os banhos em 25%, mantendo o restante dos hábitos como estão.",
+   "comando": "Calcule a economia em kWh e a porcentagem do consumo total, e proponha mais uma ação baseada no quadro.",
+   "ref": "O consumo total é 240 kWh. Banhos 25% mais curtos economizam 0,25 x 120 = 30 kWh, ou 12,5% do total. Outra ação seria passar roupa de uma só vez em menos dias ou trocar as lâmpadas por LED, que usam menos energia para a mesma luz."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma família avalia substituir o chuveiro elétrico por um aquecedor solar de água. Eles reuniram o custo inicial e o gasto mensal de energia nas duas opções, em valores ilustrativos.",
+   "comando": "Calcule em quantos meses a troca se paga e discuta uma vantagem ambiental e uma social ou econômica.",
+   "ref": "A economia mensal é 90 menos 30, ou R$ 60, e 2400 dividido por 60 dá 40 meses. Depois disso a família passa a economizar. A vantagem ambiental é usar uma fonte renovável e reduzir a demanda de eletricidade, e a econômica é a conta menor nos anos seguintes."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma moradora afirma que \"não adianta eu economizar luz sozinha, porque a bandeira vermelha só depende de quanta gente gasta\". Um técnico mostrou a demanda de energia de uma cidade em horários diferentes. As usinas térmicas só entram em operação quando a demanda passa de 900 MW.",
+   "comando": "Analise os dados e explique como ações coletivas de economia em certos horários podem reduzir o uso de térmicas e o custo.",
+   "ref": "Só às 19 h a demanda, de 1000 MW, ultrapassa os 900 MW e exige térmicas, que são mais caras. Se muitas pessoas evitarem usar chuveiro e outros aparelhos nesse horário, a demanda cai abaixo de 900 MW, as térmicas não são ligadas e o custo de geração diminui, o que ajuda a manter bandeiras mais baratas."
+  }
+ ],
+ "4B|8º ANO|2": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "A turma do 8º ano de uma escola de Piracicaba pesquisou a participação de cada fonte na matriz elétrica brasileira e precisou calcular quanto da eletricidade vem de fontes renováveis. A professora lembrou que a biomassa, como o bagaço de cana, é considerada renovável, porque a planta é cultivada de novo a cada safra.",
+   "comando": "Qual alternativa traz a porcentagem correta de fontes renováveis e os grupos considerados?",
+   "alts": [
+    "93%, somando as renováveis e o gás natural, pois o gás natural é considerado limpo e, por isso, renovável.",
+    "78%, somando hidrelétrica, eólica e solar, pois a biomassa libera gás carbônico na queima e por isso não é renovável.",
+    "58%, contando a hidrelétrica, pois o movimento da água é a fonte que se renova em escala de tempo humana.",
+    "86%, que é a soma de hidrelétrica, eólica, biomassa e solar, fontes renováveis em escala de tempo humana."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma cidade do interior de São Paulo estuda trocar a usina que gera energia queimando carvão por outra que queima gás natural. A usina produz 100 MWh por dia, ou seja, 100.000 kWh. Os técnicos consultaram a emissão de gás carbônico por kWh gerado em cada fonte.",
+   "comando": "Qual é a redução diária de emissões com a troca e o que ela mostra sobre a nova fonte?",
+   "alts": [
+    "A redução é de cerca de 33 toneladas de CO₂ por dia, mas a usina continua emitindo, pois o gás natural é fóssil e não renovável.",
+    "A redução é de cerca de 33 toneladas de CO₂ por dia, o que torna o gás natural uma fonte renovável, pois emite menos que o carvão.",
+    "A redução é de cerca de 82 toneladas de CO₂ por dia, valor que o carvão emitia, e as emissões da usina passam a ser nulas.",
+    "A redução é de cerca de 49 toneladas de CO₂ por dia, valor emitido pelo gás natural, que passa a substituir o carvão."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Um estudo comparou três usinas hidrelétricas brasileiras quanto à área alagada pelo reservatório e à potência instalada. Uma estudante afirmou que, como a água é uma fonte renovável, a hidrelétrica não causa impacto ambiental, e que quanto maior a área alagada, maior a energia gerada.",
+   "comando": "Qual interpretação dos dados é sustentada?",
+   "alts": [
+    "Maior área alagada significa maior potência, pois a usina B, que alagou mais, é a que produz mais energia entre as três.",
+    "Mesmo com fonte renovável, há impacto na área alagada, e a relação potência por área varia muito: a usina B gera pouca energia para a área que alaga.",
+    "A usina C é a menos eficiente, pois tem a menor área alagada e por isso gera menos energia por quilômetro quadrado.",
+    "Como a água se renova, as três usinas têm impacto ambiental baixo, pois a área alagada não altera os ecossistemas locais."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em um ano de seca no Sudeste, os reservatórios das hidrelétricas ficaram baixos e o governo acionou usinas termelétricas movidas a combustíveis fósseis. Uma reportagem local comparou dois anos: um normal e outro de seca. Os leitores discutiram o que fazer para evitar problemas futuros no abastecimento.",
+   "comando": "Qual argumento a favor de diversificar a matriz com fontes renováveis é sustentado pelos dados?",
+   "alts": [
+    "Deve-se abandonar a energia hidrelétrica, pois a queda de 60% para 48% mostra que a água é uma fonte pouco confiável.",
+    "Deve-se expandir as termelétricas, pois elas não dependem da chuva e garantiram a energia no ano de seca sem outros custos.",
+    "Fontes pouco dependentes da água, como solar e eólica, reduzem a vulnerabilidade às secas e o uso de termelétricas caras.",
+    "A tarifa subiu porque o consumo de energia aumentou no ano de seca, o que indica que a população gastou mais."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um grupo de alunos pesquisou por que o etanol da cana-de-açúcar é considerado menos prejudicial ao clima que a gasolina, apesar de também liberar gás carbônico ao queimar. Eles encontraram valores de emissão na queima e de absorção de CO₂ pela cana durante o crescimento, por litro de combustível.",
+   "comando": "Que explicação os dados sustentam para o etanol ter balanço de carbono menor?",
+   "alts": [
+    "O etanol não libera gás carbônico ao queimar, pois a cana é uma planta e os combustíveis de origem vegetal têm queima limpa.",
+    "Parte do CO₂ liberado pelo etanol foi absorvida recentemente pela cana, enquanto o da gasolina vem de carbono guardado há milhões de anos.",
+    "O etanol emite menos porque a queima é mais rápida, pois combustíveis renováveis liberam o carbono antes de a planta crescer de novo.",
+    "A gasolina emite mais porque é menos refinada, e a refinação do etanol retira o carbono antes de o combustível ser usado."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "O Brasil tem grande parte da eletricidade vinda de fontes renováveis, mas a energia usada em transportes e na indústria ainda depende bastante de petróleo e gás. Uma estudante comentou que 'se a eletricidade é limpa, o país já é limpo em todos os usos de energia'.",
+   "comando": "Explique a diferença entre matriz elétrica e matriz energética e avalie o comentário da estudante com os dados.",
+   "ref": "A matriz elétrica considera só as fontes de eletricidade, enquanto a energética inclui todos os usos, como combustíveis de transporte e calor da indústria. O comentário é inadequado: com 86% renovável na eletricidade e 49% no total, ainda há muito uso de fósseis, então a transição precisa avançar também nos transportes e na indústria."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma escola de Campinas instalou painéis solares no telhado e acompanhou a geração de energia elétrica ao longo de um dia de sol. A direção pretende usar a energia solar para alimentar a escola, que funciona de manhã e à noite.",
+   "comando": "Interprete os dados do dia e explique uma vantagem e uma limitação dessa fonte, propondo como contornar a limitação.",
+   "ref": "A geração é maior ao meio-dia e nula à noite, porque depende da luz do Sol. A vantagem é produzir energia renovável sem emitir gases poluentes durante o uso; a limitação é a falta de geração à noite e em dias nublados, que pode ser contornada com baterias para armazenar o excedente ou com a ligação à rede elétrica."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Em uma comunidade rural, os moradores usam lenha para cozinhar e uma família produz biogás a partir de esterco de animais. A turma de Ciências visitou o local e registrou o tempo que cada recurso leva para se formar ou ser reposto.",
+   "comando": "Classifique cada fonte como renovável ou não renovável com base nos dados e explique o critério usado.",
+   "ref": "A lenha de eucalipto plantado e o biogás do esterco são renováveis, pois se repõem em tempo humano (anos ou dias). O petróleo é não renovável, pois leva milhões de anos para se formar e é consumido muito mais depressa do que se forma."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "A prefeitura de uma cidade paulista fez um inventário das emissões de gases do efeito estufa por setor e quer lançar um plano de transição energética. O orçamento permite começar por um único setor.",
+   "comando": "Escolha o setor que deve ser priorizado, justifique com os dados e proponha duas medidas para reduzir as emissões desse setor.",
+   "ref": "O setor de transportes deve ser priorizado, pois responde pela maior parte das emissões (45%) e usa combustíveis fósseis. Duas medidas são ampliar o transporte público movido a eletricidade ou biocombustível e criar ciclovias e incentivos ao uso do etanol, substituindo parte do diesel e da gasolina."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um jornal local publicou que 'fontes renováveis resolvem todos os problemas de energia' e que 'fontes não renováveis são sempre mais baratas e confiáveis'. Uma turma de 8º ano discutiu as duas frases, considerando os impactos e as limitações de cada tipo de fonte.",
+   "comando": "Avalie criticamente as duas frases, apresentando um impacto de uma fonte renovável e uma vantagem de uma fonte não renovável.",
+   "ref": "As duas frases são exageradas. Fontes renováveis também têm impactos, como a área alagada por hidrelétricas ou a variação da geração solar e eólica com o clima; já as não renováveis têm vantagem de gerar energia de modo contínuo, mas se esgotam e liberam poluentes e gases de efeito estufa. Por isso a transição energética busca combinar diversas fontes, reduzindo o uso de fósseis."
+  }
+ ],
+ "4B|8º ANO|20": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Ao usar o simulador de uma casa-modelo, Rafaela viu que o chuveiro elétrico tem a maior potência entre os aparelhos e concluiu que ele é o que mais consome energia por dia. Para testar a ideia, ela anotou potência e tempo de uso diário de quatro aparelhos.",
+   "comando": "Qual aparelho tem o maior consumo diário e como isso se relaciona à conclusão de Rafaela?",
+   "alts": [
+    "o chuveiro, com 5,4 kWh por dia, pois a maior potência garante o maior consumo entre os aparelhos",
+    "o chuveiro, com 1,8 kWh por dia, valor maior que o da geladeira, que consome 0,15 kWh por dia",
+    "a televisão, com 4 kWh por dia, pois o tempo de uso de quatro horas supera o dos demais aparelhos",
+    "a geladeira, com 3,6 kWh por dia contra 1,8 do chuveiro, pois o tempo de uso compensa a potência menor"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "A casa-modelo do Museu mostra o consumo mensal em quatro cômodos nos perfis de uso padrão e econômico. A turma quer saber em quais cômodos a economia é mais relevante e vai comparar tanto a redução em kWh quanto a redução percentual.",
+   "comando": "Qual cômodo teve a maior economia absoluta e qual teve a maior economia percentual?",
+   "alts": [
+    "a maior economia absoluta foi no quarto, com 15 kWh, e a maior percentual foi no banheiro, com 30%",
+    "a maior economia absoluta foi no banheiro, com 36 kWh, e a percentual no quarto, com 50%",
+    "a maior economia absoluta foi na cozinha, com 81 kWh, e a maior percentual foi na sala, com 40%",
+    "a maior economia absoluta foi no banheiro, com 36 kWh, e a maior percentual foi na sala, com 40%"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma família de São Bernardo do Campo trocou 10 lâmpadas incandescentes por lâmpadas de LED. As lâmpadas ficam acesas 5 horas por dia, durante 30 dias do mês, e a companhia cobra o valor de R$ 0,80 por kWh. A família quer saber a economia mensal.",
+   "comando": "Qual é a economia mensal na conta de luz com a troca?",
+   "alts": [
+    "R$ 61,20 por mês",
+    "R$ 6,12 por mês",
+    "R$ 10,80 por mês",
+    "R$ 612,00 por mês"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Um medidor de tomada mostrou que, mesmo desligada pelo controle remoto, uma televisão continua consumindo energia em modo de espera. Davi mediu a potência nos dois estados e calculou o consumo diário, supondo 4 horas de uso e 20 horas de espera por dia.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "alts": [
+    "o consumo em espera é desprezível, pois 6 W é uma potência muito menor que 90 W e não altera a conta de luz",
+    "o consumo em espera é maior que o da televisão ligada, pois ela fica 20 horas por dia em modo de espera",
+    "o consumo em espera é pequeno por hora, mas o longo tempo o faz chegar a um quarto do consumo diário",
+    "o consumo em espera é cerca de metade do consumo diário, pois a espera dura 20 horas das 24 do dia"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Para comparar hábitos, uma aluna usou o simulador para rodar o perfil padrão e o perfil econômico de uma casa. Os resultados mostraram uma queda grande no consumo, e ela concluiu que todas as ações econômicas foram responsáveis por essa queda.",
+   "comando": "Qual é a falha que impede essa conclusão?",
+   "alts": [
+    "o perfil econômico usou menos aparelhos, e assim não se sabe quanto da queda vem do banho e quanto vem da geladeira",
+    "a estação e o banho mudaram juntos, e assim não se sabe quanto da queda vem das ações e quanto do clima",
+    "a duração do banho não mudou entre os perfis, e assim não se sabe quanto da queda vem das ações e quanto do clima",
+    "a estação do ano não influencia a conta, e assim a queda pode ser atribuída ao tempo do banho e ao clima"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em uma casa de Campinas, um ar-condicionado de 1,5 kW é usado 6 horas por dia durante 30 dias. A família pensa em trocá-lo por um ventilador de 80 W usado pelo mesmo tempo. O preço do kWh é de R$ 0,90.",
+   "comando": "Calcule o consumo mensal e o custo de cada aparelho e explique o que a comparação indica sobre a escolha dos aparelhos.",
+   "ref": "O ar-condicionado consome 1,5 kW vezes 6 h vezes 30 dias, ou 270 kWh, o que custa R$ 243,00. O ventilador consome 0,08 kW vezes 6 h vezes 30, ou 14,4 kWh, que custam R$ 12,96. A potência do aparelho pesa muito no consumo, mas é preciso avaliar se o ventilador oferece o mesmo conforto."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "O banho com chuveiro elétrico de 5 500 W é responsável por grande parte da conta de uma família. Em casa, cada um dos 4 moradores toma um banho por dia, hoje de 15 minutos, e a meta é reduzir o tempo para 8 minutos.",
+   "comando": "Calcule o consumo diário da casa nos dois casos e a economia em kWh por dia, explicando o raciocínio.",
+   "ref": "Em 15 minutos, ou 0,25 h, o chuveiro consome 5,5 kW vezes 0,25 h, ou 1,375 kWh por banho, o que dá 5,5 kWh para quatro banhos. Em 8 minutos, cerca de 0,133 h, são 0,73 kWh por banho e cerca de 2,9 kWh para os quatro. A economia é de cerca de 2,6 kWh por dia."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "O simulador do museu mostrou como o consumo mensal de uma casa-modelo se divide entre os aparelhos. A família de Aline quer reduzir a conta de luz e decidiu escolher dois aparelhos como prioridade.",
+   "comando": "Escolha duas prioridades, justifique com os dados e proponha uma ação concreta para cada uma.",
+   "ref": "As prioridades podem ser o chuveiro, com 35% do consumo, e a geladeira, com 25%, pois juntos somam 60%. No chuveiro, pode-se reduzir o tempo de banho ou usar a posição verão; na geladeira, evitar abrir a porta e regular a temperatura, ou trocar por modelo mais eficiente."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Os moradores de uma casa em Sorocaba compararam a leitura do medidor no início e no fim do mês com a conta do ano anterior. A tarifa é de R$ 0,85 por kWh, e o consumo do mesmo mês no ano anterior foi de 240 kWh.",
+   "comando": "Calcule o consumo e o valor deste mês, a redução percentual em relação ao ano anterior e cite duas ações que podem ter contribuído.",
+   "ref": "O consumo foi 12 520 menos 12 340, ou seja, 180 kWh, o que custa 180 vezes R$ 0,85, ou R$ 153,00. Em relação a 240 kWh, a redução foi de 60 kWh, ou 25%. Podem ter contribuído banhos mais curtos e a troca de lâmpadas por LED."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma família avalia trocar a geladeira antiga, que consome 60 kWh por mês, por uma nova com selo de alta eficiência, que consome 30 kWh por mês e custa R$ 1 500 a mais. O kWh custa R$ 0,90 e a geladeira dura cerca de 10 anos.",
+   "comando": "Calcule em quanto tempo a economia na conta paga a diferença de preço e diga se a troca vale a pena.",
+   "ref": "A economia é de 30 kWh por mês, ou 360 kWh por ano, o que dá R$ 324,00 por ano. Dividindo R$ 1 500 por R$ 324, o retorno ocorre em cerca de 4,6 anos. Como a geladeira dura cerca de 10 anos, a troca vale a pena do ponto de vista financeiro e reduz o consumo de energia."
+  }
+ ],
+ "4B|8º ANO|21": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma cidade litorânea testou três formas de reduzir o uso de sacolas plásticas descartáveis nos mercados. Cada estratégia foi aplicada por três meses em mercados semelhantes, e os técnicos mediram a redução no número de sacolas distribuídas.",
+   "comando": "Qual conclusão sobre o papel de empresas e governo é sustentada pelos dados?",
+   "alts": [
+    "Regras e preços tiveram maior efeito que a informação, mas a educação continua importante",
+    "A campanha educativa teve o maior efeito, o que mostra que o consumidor é o principal responsável",
+    "A proibição por lei funciona melhor, pois a cobrança por sacola depende da escolha dos consumidores",
+    "A cobrança pelos mercados foi menos eficaz que a campanha, pois reduziu menos que a ação da prefeitura"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma fábrica de embalagens de Sorocaba estuda três modelos de produção. No modelo linear, a matéria-prima é usada uma vez e as sobras vão para o aterro. Nos outros, parte dos materiais volta ao processo. Os engenheiros registraram o consumo anual de cada modelo.",
+   "comando": "Que fator explica a diferença entre o modelo circular e o linear?",
+   "alts": [
+    "O uso de matéria-prima mais barata, que reduz o resíduo ao aterro porque a fábrica passa a produzir menos",
+    "O retorno dos materiais ao processo, que reduz a extração de matéria-prima e o resíduo ao aterro",
+    "O aumento da produção, que dilui o resíduo por unidade e diminui a necessidade de matéria-prima nova",
+    "A venda de resíduos a outras empresas, que reduz o aterro, mas não altera a matéria-prima necessária"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma turma do 8º ano fez um registro das roupas de cada estudante em um ano, buscando uma ação para reduzir o impacto da moda descartável. Dois colegas compararam o número de peças compradas com o número médio de usos de cada peça.",
+   "comando": "Qual atitude do consumidor reduz mais o impacto, segundo os dados?",
+   "alts": [
+    "Comprar mais peças baratas, desde que cada uma seja usada em poucas ocasiões e depois seja doada",
+    "Comprar peças novas com frequência, pois a indústria passa a produzir mais empregos para a sociedade",
+    "Comprar menos e usar cada peça por mais tempo, com conserto, troca ou compra de segunda mão",
+    "Trocar o guarda-roupa a cada estação, pois a roupa nova usa menos materiais do que a lavagem da antiga"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em quatro bairros de uma cidade, a prefeitura verificou a porcentagem de famílias que separam o lixo reciclável em casa e se existe coleta seletiva no bairro. Um jornal afirmou que \"a culpa é dos moradores que não se esforçam\".",
+   "comando": "Qual interpretação do quadro é adequada para avaliar essa afirmação?",
+   "alts": [
+    "A adesão é maior onde há serviço, o que indica que a infraestrutura pública também influi no comportamento",
+    "A adesão é maior onde há serviço porque os moradores já eram mais conscientes e pediram a coleta",
+    "A adesão é baixa nos bairros B e D porque seus moradores se recusam a separar, mesmo com a coleta",
+    "A coleta seletiva não influencia a separação do lixo, pois famílias de bairros com e sem serviço adotam o hábito"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Três cidades testaram políticas para ampliar o uso de energia solar em residências. Uma fez campanha de informação, outra deu desconto no imposto predial e a terceira combinou desconto com financiamento de baixo juro. Mediu-se a parcela de domicílios com painéis.",
+   "comando": "Qual afirmação é sustentada pelos dados, considerando seus limites?",
+   "alts": [
+    "A campanha foi suficiente para mudar o comportamento, já que a cidade Y teve aumento positivo no período",
+    "Incentivos econômicos aumentaram mais, e a combinação foi melhor, sem separar o efeito de cada medida",
+    "O financiamento causou todo o aumento em Z, pois o desconto isolado de X teve efeito semelhante",
+    "As três cidades tiveram resultado igual, pois partiram do mesmo valor inicial de 2% de domicílios"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Um debate em sala discutiu quem é responsável por tornar a sociedade mais sustentável. Uma colega disse que a responsabilidade é só do consumidor, que deve escolher produtos melhores, enquanto outro disse que cabe ao governo e às empresas.",
+   "comando": "Argumente que a responsabilidade é compartilhada, propondo uma ação de cada um: consumidor, governo e empresa.",
+   "ref": "A responsabilidade é compartilhada porque as escolhas do consumidor dependem do que o governo e as empresas oferecem. O consumidor pode reduzir desperdício e reutilizar; o governo pode criar coleta seletiva e leis de incentivo; a empresa pode projetar produtos duráveis e recicláveis, com a economia circular."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma empresa de bebidas de Jundiaí passou a recolher as garrafas de vidro vazias para lavar e reutilizar, em vez de usar embalagens novas a cada venda. A direção registrou os resultados em um ano e quer comunicá-los ao público.",
+   "comando": "Explique por que essa prática é um exemplo de economia circular e quais benefícios os dados mostram.",
+   "ref": "A economia circular mantém os materiais em uso, reduzindo a extração e o descarte. Ao recolher e reutilizar as garrafas, a empresa diminuiu a fabricação de garrafas novas em 80% e o vidro descartado em 80%, economizando recursos e energia."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Uma família compra frutas e verduras no supermercado, que as traz de caminhão de outro estado, mas uma feira de bairro vende produtos de sítios a 50 km da cidade. A feira costuma ter menos embalagens, mas nem sempre tem todos os produtos nem horário amplo.",
+   "comando": "Compare as duas opções do ponto de vista da sustentabilidade, apontando um benefício e uma dificuldade da feira.",
+   "ref": "A feira reduz a distância de transporte e as embalagens plásticas, diminuindo a emissão de gases e os resíduos, além de apoiar produtores locais. A dificuldade é a variedade e o horário limitados, que exigem planejamento do consumidor ou oferta de mais feiras pelo poder público."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Para reduzir o lixo nas praias do litoral paulista, o governo discute três medidas: multar quem descarta lixo, ampliar a coleta seletiva e criar uma lei que obriga empresas a recolher as embalagens que vendem. Os moradores divergem sobre qual medida priorizar.",
+   "comando": "Escolha uma das medidas e justifique como ela muda o comportamento de consumidores ou empresas, indicando uma limitação.",
+   "ref": "Ao escolher a lei da logística reversa, as empresas passam a recolher as embalagens que vendem, e por isso têm interesse em fazer embalagens recicláveis, reduzindo o lixo que chega às praias. A limitação é a necessidade de fiscalização e de infraestrutura de coleta, para que a regra seja cumprida."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um bairro de periferia não tem coleta seletiva nem pontos de entrega, e os moradores reclamam que o poder público não faz sua parte. Outros dizem que, mesmo sem serviço, cada pessoa deve fazer o que puder. A associação de moradores quer propor soluções.",
+   "comando": "Proponha uma ação dos moradores e uma do poder público que, juntas, aumentem a reciclagem no bairro.",
+   "ref": "Os moradores podem se organizar para separar o lixo e levar a uma cooperativa, além de informar vizinhos sobre a reciclagem. O poder público pode implantar coleta seletiva e pontos de entrega, pois sem estrutura a adesão é baixa, e as duas ações juntas aumentam a reciclagem."
+  }
+ ],
+ "4B|8º ANO|3": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em um parque de diversões, engenheiros mediram a altura e a velocidade de um carrinho de montanha-russa em quatro pontos do trajeto. O carrinho é solto do repouso no ponto mais alto e depois percorre outros trechos, com atrito dos trilhos e resistência do ar.",
+   "comando": "Que interpretação é sustentada pelos dados da medição?",
+   "alts": [
+    "A energia total do carrinho desapareceu a cada descida, e por isso a velocidade em D é menor que em B e o morro C é mais baixo que A.",
+    "A energia potencial é maior nas bases, onde a velocidade é maior, e isso explica por que o carrinho chega a D com velocidade menor que em B.",
+    "Parte da energia mecânica virou calor e som pelo atrito, por isso o segundo morro é mais baixo e a velocidade em D é menor que em B.",
+    "A energia cinética é constante durante todo o trajeto, e a diferença entre as bases decorre de erros de medição do carrinho."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma escola comparou o desempenho de duas lâmpadas de mesma potência medindo, durante um minuto, quanta energia elétrica elas recebem e em que formas essa energia é liberada. A diretoria quer escolher a mais eficiente.",
+   "comando": "Qual conclusão é correta com base no princípio de conservação da energia?",
+   "alts": [
+    "A LED transforma quatro vezes mais energia em luz, e nas duas a energia total liberada é igual à recebida, o resto é calor.",
+    "A lâmpada incandescente produz mais energia que a LED, pois libera mais calor e isso mostra que a energia pode ser criada.",
+    "A lâmpada LED libera menos energia que recebe, pois o calor dela é menor e a diferença desaparece no próprio circuito elétrico.",
+    "As duas lâmpadas têm o mesmo rendimento, pois recebem a mesma energia elétrica e por isso liberam a mesma quantidade de luz."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma hidrelétrica do interior paulista foi analisada em três etapas do processo de transformação da energia da água em energia elétrica. Um engenheiro mediu a energia que entra e a energia útil que sai em cada etapa, e os alunos devem analisar as afirmações sobre o quadro.",
+   "comando": "Qual afirmação NÃO é sustentada pelos dados do quadro?",
+   "alts": [
+    "A etapa com maior dissipação é a do duto e da turbina, onde 10 MJ não chegam à etapa seguinte como energia útil.",
+    "O rendimento total é de 80%, pois de cada 100 MJ que entram no processo, 80 MJ chegam à cidade como energia elétrica.",
+    "A energia que não é aproveitada vai para o ambiente, principalmente como calor, e o total de energia se mantém.",
+    "Os 20 MJ que não chegam à cidade desapareceram, pois a energia se perde sempre que passa de uma forma para outra."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em uma avenida movimentada de São Paulo, uma autoescola testou um carro em pista seca, medindo a distância necessária para parar totalmente após acionar os freios em velocidades diferentes. O professor quer que os alunos relacionem os dados com a energia do movimento.",
+   "comando": "Que conclusão é sustentada pelos dados e pelo conceito de energia cinética?",
+   "alts": [
+    "Dobrar a velocidade dobra a distância, pois a energia cinética e a distância de frenagem aumentam na mesma proporção.",
+    "Dobrar a velocidade quadruplica a distância, pois a energia cinética cresce com o quadrado da velocidade e vira calor nos freios.",
+    "Os freios criam a energia necessária para parar o carro, e por isso a distância é maior quando a velocidade é maior.",
+    "A distância de frenagem não depende da velocidade, e as diferenças do quadro se devem a erros na medição da pista seca."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em uma aula de laboratório, uma bolinha presa a um fio é solta de uma altura de 20 cm e balança de um lado para o outro. O grupo mediu a altura máxima atingida em cada oscilação e percebeu que ela diminui, até a bolinha parar.",
+   "comando": "Que hipótese explica a redução das alturas e pode ser testada pelo grupo?",
+   "alts": [
+    "A bolinha perde massa em cada oscilação, e por isso a energia potencial na altura máxima fica menor em cada nova oscilação.",
+    "A gravidade diminui a cada oscilação, e por isso a bolinha sobe menos, até que a energia do movimento deixa de existir.",
+    "O atrito do ar e do fio transforma parte da energia mecânica em calor, e um fio mais liso e uma bolinha compacta devem reduzir a queda.",
+    "A energia é destruída pelo movimento, e a redução das alturas pode ser evitada aumentando a altura inicial da bolinha."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em uma casa em Campinas, os painéis solares recebem a energia da luz do Sol durante uma hora. Um técnico mediu, nesse tempo, a energia recebida e as formas de energia liberadas pelo conjunto.",
+   "comando": "Descreva as transformações de energia no sistema e explique por que o total de energia é conservado, apesar de a energia elétrica ser menor que a recebida.",
+   "ref": "A energia da luz do Sol é transformada em energia elétrica (200 kJ) e em calor (800 kJ). A soma de 200 e 800 é 1000 kJ, igual à recebida, então a energia total é conservada e a parte que não é aproveitada foi dissipada como calor no ambiente."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma bolinha de 0,5 kg é largada de 2 m de altura em uma quadra e quica algumas vezes. Os alunos mediram a altura máxima em cada quique. Considere g = 10 m/s² e energia potencial igual à massa vezes g vezes a altura.",
+   "comando": "Calcule a energia potencial inicial e a energia dissipada no primeiro quique e explique para onde ela foi.",
+   "ref": "A energia potencial inicial é 0,5 x 10 x 2, ou 10 J, e depois do primeiro quique é 0,5 x 10 x 1,5, ou 7,5 J. Foram dissipados 2,5 J, que se transformaram em calor e som na colisão com o chão e no atrito com o ar, e a energia total se conserva."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um carro movido a gasolina anda pela Marginal Pinheiros. O engenheiro explica que o motor aproveita apenas uma parte da energia contida no combustível. Para cada 100 MJ de energia do combustível queimado, ele registrou os destinos da energia.",
+   "comando": "Explique o que significa um rendimento de 25% e por que nenhum motor pode transformar 100% da energia em movimento.",
+   "ref": "O rendimento de 25% significa que 25 dos 100 MJ viram movimento. O restante, 75 MJ, é dissipado como calor, atrito e ruído, e não pode ser reaproveitado totalmente. Como em toda transformação há atrito e aquecimento, nenhum motor chega a 100%, embora a energia total seja conservada."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma lanterna de manivela, usada em acampamentos, acende sem pilhas quando uma pessoa gira a manivela. Um grupo descreveu o que ocorre em cada etapa do funcionamento e percebeu que a lâmpada fica quente depois de algum tempo.",
+   "comando": "Identifique a forma de energia em cada etapa e explique por que a lâmpada esquenta.",
+   "ref": "A energia química dos alimentos da pessoa vira energia cinética (movimento) na manivela, o gerador a transforma em energia elétrica, e a lâmpada a transforma em luz. A lâmpada esquenta porque parte da energia elétrica é dissipada como calor, e toda transformação de energia tem uma parte assim."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um engenheiro projeta uma montanha-russa em que o carrinho é puxado até o primeiro morro e depois percorre os outros sem motor, apenas pela descida. Ele recebeu a proposta abaixo para as alturas dos três primeiros morros.",
+   "comando": "Indique qual morro não pode ser vencido pelo carrinho sem energia extra e explique por que, usando a conservação e a dissipação de energia.",
+   "ref": "O 3º morro, de 32 m, é mais alto que o 1º, de 30 m, e não pode ser vencido. Sem motor, a energia mecânica do carrinho só diminui, pois parte dela é dissipada como calor e som por atrito, então ele nunca alcança altura maior que a inicial. Seria necessário um motor para fornecer energia extra."
+  }
+ ],
+ "4B|8º ANO|4": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Uma usina solar do interior paulista monitorou a potência gerada ao longo de um dia de céu limpo. Ao mesmo tempo, a companhia elétrica informou que o consumo da cidade atinge o valor mais alto entre 19h e 21h, quando as pessoas voltam para casa.",
+   "comando": "Que limitação da fonte solar os dados mostram e que solução é coerente?",
+   "alts": [
+    "a geração é maior em horários de menor luz, o que pede mais painéis para captar a luz fraca do fim do dia",
+    "a geração é intermitente e quase nula no pico de consumo, o que pede armazenamento ou outra fonte",
+    "a geração cai ao meio-dia pelo calor excessivo, o que pede o resfriamento dos painéis com água do rio",
+    "a geração é contínua durante o dia, mas a energia se perde no transporte, o que pede o uso de cabos mais grossos"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Duas cidades paulistas fictícias estudam instalar parques eólicos. Os engenheiros compararam um local de ventos fracos e um de ventos fortes, com quantidade de turbinas e energia anual gerada diferentes, e querem decidir qual local aproveita melhor cada turbina.",
+   "comando": "Qual local é mais vantajoso por turbina e por quê?",
+   "alts": [
+    "o local A, pois tem mais turbinas e por isso gera 2,5 GWh por turbina, valor maior que o do B, que gera 11 GWh",
+    "o local B, pois tem mais turbinas e por isso gera mais energia total do que o local A, que tem ventos fracos",
+    "o local A, pois o vento mais fraco desgasta menos as turbinas e por isso a energia gerada por turbina é maior",
+    "o local B, pois cada turbina gera 11 GWh por ano contra 2,5 no A, e o vento forte compensa o número menor"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma usina de açúcar e etanol de Ribeirão Preto queima o bagaço da cana para gerar eletricidade. Um estudante argumentou que, por vir de planta, essa energia não tem nenhum impacto no ambiente, e a professora pediu que ele avaliasse a afirmação.",
+   "comando": "Qual avaliação é mais coerente com os dados e com a análise da fonte?",
+   "alts": [
+    "o bagaço é resíduo renovável, mas sua queima libera gás carbônico e a cana ocupa terra",
+    "o bagaço é renovável, e por isso sua queima não libera gás carbônico nem outros poluentes na atmosfera",
+    "o bagaço é um resíduo, e por isso a cana não ocupa terra que poderia ser usada para plantar alimentos",
+    "o bagaço é renovável, e por isso a queima libera um gás carbônico que a cana não consegue absorver"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "O governo avalia duas usinas hidrelétricas para um rio do interior. Os técnicos compararam a potência de cada usina com a área que seria alagada pelo reservatório, já que o alagamento afeta a vegetação, a fauna e as famílias que moram na região.",
+   "comando": "Que conclusão é sustentada por esses dados?",
+   "alts": [
+    "a usina B gera cerca de 2,5 MW por km² alagado, contra 4,7 da A, e por isso tem o menor impacto local entre as duas",
+    "a usina A gera mais potência, e por isso é a de menor impacto, pois o impacto depende da potência",
+    "a usina A gera 4,7 MW por km² alagado, contra 0,4 da B, mas o impacto também depende de fauna e famílias",
+    "a usina B alaga mais área, e por isso é a que gera mais energia, pois o tamanho do reservatório define a potência"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "O gráfico a seguir resume a participação de cada fonte na geração de eletricidade de um estado fictício. Quatro estudantes escreveram conclusões, e a professora pediu que identificassem a que os dados não sustentam.",
+   "comando": "Qual conclusão NÃO é sustentada pelos dados?",
+   "alts": [
+    "a hidrelétrica é a maior fonte, pois responde por mais da metade da eletricidade gerada no estado",
+    "mais de um terço da eletricidade vem de fontes não renováveis, e o estado depende de fósseis",
+    "a eólica e a solar somam 20% da geração, o que é menos que a quarta parte da eletricidade total",
+    "as fontes renováveis somam 84% da geração, o que corresponde à maior parte da eletricidade do estado"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Um grupo de alunos planeja um bairro sustentável no interior de São Paulo e levantou os recursos da região. A região recebe muito sol, tem vento fraco, um rio pequeno de pouca vazão e um grande canavial a 5 km do local.",
+   "comando": "Escolha duas fontes de energia para o bairro, justifique com os dados e aponte uma desvantagem de uma delas.",
+   "ref": "Podem ser escolhidas a solar, por causa das 6,5 horas de sol por dia, e a biomassa, pois o canavial próximo fornece resíduo. A eólica e a hidrelétrica seriam fracas por causa do vento fraco e do rio pequeno. Uma desvantagem da solar é a geração nula à noite, que pede armazenamento."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma cooperativa quer combinar energia solar e eólica numa fazenda do interior. Os técnicos mediram as horas de sol e a velocidade do vento nas duas estações, e perceberam que as duas fontes se comportam de formas diferentes: no verão, 8 horas de sol por dia e vento médio de 3 m/s; no inverno, 6 horas de sol e vento médio de 7 m/s.",
+   "comando": "Explique como combinar as duas fontes pode reduzir o problema da intermitência, usando os dados.",
+   "ref": "No verão há mais sol e menos vento, e no inverno há menos sol e mais vento, de modo que cada fonte compensa a queda da outra em parte do ano. Assim a soma das duas gera energia de forma mais estável que uma fonte sozinha, embora ainda seja preciso armazenar para a noite."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "A escola quer instalar painéis solares no telhado para reduzir a conta de luz. O consumo é de 3 000 kWh por mês, e cada metro quadrado de painel gera cerca de 20 kWh por mês na região. O telhado disponível tem 100 m².",
+   "comando": "Calcule a área de painéis necessária para atender todo o consumo, diga se o telhado basta e cite dois fatores que a escola deve considerar.",
+   "ref": "A área necessária é 3 000 dividido por 20, ou seja, 150 m². O telhado tem 100 m² e não basta, pois só atende dois terços do consumo. A escola deve considerar o custo da instalação e o fato de os painéis não gerarem à noite nem em dias nublados."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma empresa propõe uma hidrelétrica de 50 MW em um rio perto de uma cidade paulista. O reservatório alagaria 30 km², e 400 famílias teriam de ser deslocadas. Os moradores se dividiram entre apoiar e se opor.",
+   "comando": "Apresente dois argumentos a favor e dois contra o projeto, com base nos dados e nas características dessa fonte.",
+   "ref": "A favor: a fonte é renovável e gera energia sem queimar combustíveis, e fornece 50 MW de forma contínua. Contra: o reservatório alaga 30 km² de vegetação e habitats, e obriga 400 famílias a deixarem suas casas, com impactos sociais e ambientais."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma granja de Tietê instalou um biodigestor, equipamento onde o esterco dos animais se decompõe sem oxigênio e libera biogás, rico em metano. O gás é usado para aquecer os galpões, e o material que sobra serve de adubo.",
+   "comando": "Explique por que essa solução é considerada energia renovável e cite uma vantagem e um cuidado necessário.",
+   "ref": "É renovável porque o esterco é renovado continuamente pelos animais e o gás vem da decomposição desse resíduo. Uma vantagem é aproveitar um resíduo, gerando calor e adubo e evitando liberar metano no ar; um cuidado é evitar vazamentos, pois o gás é inflamável e o metano contribui para o aquecimento global."
+  }
+ ],
+ "4B|8º ANO|8": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Numa casa de São Bernardo do Campo, será instalado um aquecedor elétrico de 220 V cuja resistência é de 10 Ω. O eletricista consulta uma tabela com a corrente máxima que cada espessura de fio suporta sem aquecer demais e quer usar o fio mais fino que seja seguro.",
+   "comando": "Qual fio ele deve escolher?",
+   "alts": [
+    "O de 2,5 mm², pois a corrente do aquecedor é de 22 A, valor muito próximo da capacidade desse fio",
+    "O de 4 mm², pois a corrente do aquecedor é de 22 A, que o fio suporta com margem",
+    "O de 1,5 mm², pois a corrente do aquecedor é de 2,2 A e não exige fio mais grosso",
+    "O de 6 mm², pois a corrente do aquecedor é de 22 A e precisa de capacidade bem acima desse valor"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Na aula de laboratório, os estudantes ligaram dois resistores diferentes, R1 e R2, a uma fonte de tensão ajustável e mediram a corrente com um amperímetro. Os valores foram anotados para quatro tensões.",
+   "comando": "Qual afirmação é coerente com os dados, segundo a 1ª Lei de Ohm?",
+   "alts": [
+    "R2 tem resistência três vezes menor que R1 (20 Ω e 60 Ω), pois conduz menos corrente na mesma tensão",
+    "R1 e R2 têm a mesma resistência, pois nos dois a corrente aumenta na mesma proporção da tensão",
+    "R1 tem resistência de 0,05 Ω, e R2 de 0,15 Ω, pois a resistência é igual à corrente dividida pela tensão",
+    "R2 tem resistência três vezes maior que R1 (60 Ω e 20 Ω), pois conduz menos corrente na mesma tensão"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Uma estudante mediu a resistência de quatro fios para entender que fatores a alteram. Ela quer concluir qual é o efeito do comprimento do fio, mantendo as demais características iguais.",
+   "comando": "Que comparação permite concluir sobre o efeito do comprimento?",
+   "alts": [
+    "A com B, que diferem só no comprimento, mostrando que o dobro do comprimento dobra a resistência",
+    "A com D, pois ambos têm 10 m, o que mostra que o material não altera a resistência do fio",
+    "A com C, que diferem na seção, mostrando que o dobro da seção dobra a resistência do fio",
+    "B com C, pois tem o dobro do comprimento e a metade da seção, o que isola o efeito do comprimento"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Em uma casa com rede de 127 V, o disjuntor desliga se a corrente passar de 15 A. A família costuma ligar vários aparelhos na mesma extensão, e a resistência de cada aparelho em funcionamento é conhecida.",
+   "comando": "Qual ligação conjunta ultrapassa o limite do disjuntor?",
+   "alts": [
+    "Ferro e ventilador, que somam cerca de 17 A, acima do limite de 15 A",
+    "Secador e ventilador, cuja soma das resistências é alta e aquece o fio",
+    "Ferro e secador, que somam cerca de 19 A, acima do limite de 15 A",
+    "O ferro sozinho, pois 127 V sobre 12 Ω resulta em corrente maior que o limite"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um grupo mediu a corrente em dois componentes ligados a tensões crescentes: um resistor de fio metálico e uma lâmpada de filamento. Depois, calcularam V/I para cada ponto e compararam os resultados.",
+   "comando": "Qual interpretação é sustentada pelos dados?",
+   "alts": [
+    "O resistor mantém 40 Ω, e a lâmpada vai de 40 a cerca de 70 Ω, provavelmente por aquecimento do filamento",
+    "As duas mantêm resistência constante, pois a corrente aumenta com a tensão nos dois componentes",
+    "A lâmpada tem resistência menor que o resistor em qualquer tensão, pois conduz menos corrente",
+    "O resistor tem resistência crescente, pois a corrente aumenta mais depressa que a tensão"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Em uma casa em Osasco, um chuveiro de 220 V tem resistência de 11 Ω na posição inverno e 22 Ω na posição verão. O morador quer saber a corrente em cada posição e por que a água esquenta mais na posição inverno.",
+   "comando": "Calcule a corrente nas duas posições e explique a diferença no aquecimento.",
+   "ref": "Pela 1ª Lei de Ohm, I = V/R: no inverno a corrente é 220/11 = 20 A e no verão é 220/22 = 10 A. Com resistência menor a corrente é maior, e o chuveiro libera mais energia térmica por segundo, aquecendo mais a água."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma extensão muito fina foi usada para ligar um aquecedor em um quarto. Depois de uma hora, o fio da extensão estava quente e o plástico derreteu. O eletricista explicou que o fio estava inadequado, e a família não entendeu por que um fio fino esquenta mais.",
+   "comando": "Explique por que o fio fino esquentou e por que isso é um risco para a segurança.",
+   "ref": "Quanto menor a seção, maior a resistência do fio. Ao passar a corrente do aquecedor por um fio de resistência alta, mais energia vira calor, e o fio esquenta, derrete o isolante e pode causar curto-circuito ou incêndio."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um aluno testou se o material do fio altera sua resistência. Ele comparou um fio de cobre de 5 m e 1 mm² com um fio de níquel-cromo de 20 m e 0,5 mm², e concluiu que o níquel-cromo tem resistência maior por ser de outro material.",
+   "comando": "Avalie o teste do aluno, indicando a falha e como corrigi-lo.",
+   "ref": "O teste varia três fatores ao mesmo tempo (material, comprimento e seção), e por isso não se pode atribuir a diferença ao material. Para corrigir, os fios devem ter mesmo comprimento e mesma seção, mudando apenas o material."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma lâmpada projetada para 127 V tem resistência de 254 Ω. Por engano, um morador ligou essa lâmpada em uma tomada de 220 V e ela queimou rapidamente. Um colega disse que \"a tomada de 220 V só tem mais força, mas a corrente é igual\".",
+   "comando": "Calcule a corrente nas duas situações e explique por que a lâmpada queimou.",
+   "ref": "Em 127 V a corrente é 127/254 = 0,5 A; em 220 V, com a mesma resistência, a corrente é 220/254 = cerca de 0,87 A. Com tensão maior a corrente aumenta, o filamento libera muito mais calor do que suporta e queima, de modo que a afirmação do colega está errada."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Um estudante mediu a tensão e a corrente em um resistor e obteve os valores abaixo. Em seguida, repetiu a medição com outro resistor, que apresentou correntes sempre menores para a mesma tensão. O professor pediu que ele concluísse algo sobre as resistências.",
+   "comando": "Calcule a resistência do primeiro resistor e compare com a do segundo, justificando.",
+   "ref": "A resistência do primeiro resistor é R = V/I = 10/0,5 = 20 Ω em todas as medidas. O segundo apresentou corrente menor com a mesma tensão, então sua resistência é maior que 20 Ω, pois resistência e corrente variam em sentidos opostos."
+  }
+ ],
+ "4B|8º ANO|9": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Um técnico mediu, com um aparelho que registra a tensão ao longo do tempo, duas fontes de uma oficina em Sorocaba: uma bateria de 9 V e uma tomada da rede elétrica. Os valores foram anotados em instantes sucessivos, em milissegundos (ms), e os alunos devem relacionar o comportamento da tensão ao tipo de corrente e à frequência.",
+   "comando": "Que alternativa interpreta corretamente as duas fontes?",
+   "alts": [
+    "X fornece corrente contínua, e Y corrente alternada, que inverte de sentido em ciclo de 16 ms, ou seja, cerca de 60 Hz",
+    "X fornece corrente alternada, pois sua tensão é estável, e Y corrente contínua com frequência de cerca de 16 Hz",
+    "X fornece corrente contínua, e Y corrente alternada, que inverte de sentido em ciclo de 16 ms, ou seja, cerca de 16 Hz",
+    "X e Y fornecem corrente contínua, pois as duas têm tensão medida em volts e a mantêm no mesmo sentido"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma concessionária de energia explicou a estudantes de Campinas que a energia elétrica gerada em usinas distantes é transmitida em alta tensão por longas linhas e depois reduzida na cidade. Ela mostrou valores fictícios de uma linha que transporta a mesma potência de 100 MW (megawatts) em duas tensões diferentes.",
+   "comando": "Qual explicação é coerente com os dados para o uso de alta tensão na transmissão?",
+   "alts": [
+    "Com maior tensão, a corrente é maior, e por isso os fios aquecem menos e a energia é transmitida com mais eficiência",
+    "Com maior tensão, a mesma potência exige menor corrente, o que reduz o aquecimento dos fios e as perdas",
+    "A alta tensão torna os fios melhores condutores, e por isso a perda de energia diminui de 20% para 0,5%",
+    "A alta tensão é usada porque a energia fica mais barata ao ser gerada, e as perdas não dependem da corrente"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Estudantes de São José dos Campos montaram um gerador simples: um ímã preso a uma manivela gira perto de uma bobina ligada a um voltímetro. Eles variaram a velocidade do giro e o número de espiras da bobina e anotaram a tensão induzida.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "alts": [
+    "A tensão induzida existe com o ímã parado, pois ele cria o campo, e muda com o número de espiras",
+    "A tensão induzida depende do número de espiras, pois ao dobrar o giro o valor não se altera",
+    "A tensão induzida aumenta com o movimento do ímã e com o número de espiras, e é nula com o ímã parado",
+    "A tensão induzida diminui quando o ímã gira mais rápido, pois o campo passa menos tempo perto das espiras"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma escola-abrigo no interior de São Paulo, sem rede elétrica, receberá painéis fotovoltaicos, que geram corrente contínua, e uma bateria. Os alunos listaram os equipamentos e o tipo de corrente de cada um para decidir como ligá-los.",
+   "comando": "Qual proposta de ligação é adequada aos dados?",
+   "alts": [
+    "Ligar os equipamentos diretamente à bateria, pois ela fornece corrente que funciona em qualquer aparelho",
+    "Ligar o ventilador e a geladeira à bateria por um transformador, que converte corrente contínua em alternada",
+    "Ligar a lâmpada e o carregador à bateria por um inversor, e o ventilador e a geladeira diretamente à bateria",
+    "Ligar lâmpada e carregador à bateria, e ventilador e geladeira à bateria por meio de um inversor"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Um morador de uma comunidade rural em Itapeva instalou um painel fotovoltaico e anotou, em um dia de sol, a potência que o painel gerava a cada duas horas. Ele quer usar uma lâmpada de manhã, à tarde e à noite, e pediu ajuda a uma técnica.",
+   "comando": "Que conclusão sobre o uso de energia é sustentada pelos dados?",
+   "alts": [
+    "A geração varia com a luz do Sol e é nula às 18 h, então é preciso uma bateria para usar a lâmpada à noite",
+    "A geração é maior às 14 h, e por isso a lâmpada deve ser usada nesse horário, quando o painel funciona melhor",
+    "O painel gera corrente alternada, então não pode carregar uma bateria e a lâmpada funciona de dia",
+    "O painel gera a mesma energia durante o dia, e a lâmpada funcionaria à noite sem depender de bateria"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Uma estudante de Osasco carrega o celular na tomada de casa, mas a bateria do celular só funciona com corrente contínua e baixa tensão. O carregador converte a energia da tomada em uma forma adequada. Ela quer entender por que isso é necessário.",
+   "comando": "Explique o que o carregador faz com a corrente e a tensão da tomada, com base nos dados.",
+   "ref": "A tomada fornece corrente alternada de 127 V, e a bateria do celular usa corrente contínua de 5 V. O carregador reduz a tensão e converte a corrente alternada em contínua, assim a bateria é carregada com segurança."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Em uma usina hidrelétrica de uma bacia paulista, a água do rio cai e faz girar uma turbina ligada a um gerador. Um monitor mostrou aos estudantes um esquema simplificado das etapas até a energia chegar às casas.",
+   "comando": "Explique como o movimento da água se transforma em energia elétrica e qual o papel do gerador, usando as etapas.",
+   "ref": "A energia do movimento da água faz a turbina girar o eixo, e no gerador os ímãs girando perto de bobinas induzem uma corrente elétrica, por indução eletromagnética. A corrente alternada produzida passa por um transformador, que eleva a tensão para a transmissão."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Um aluno trouxe de uma viagem um ventilador feito para a rede de 50 Hz e o ligou na tomada de 60 Hz de sua casa em Santo André. Ele percebeu que o ventilador girava mais rápido do que o indicado no manual, e quis entender o motivo.",
+   "comando": "Explique o que é a frequência da corrente alternada e como ela se relaciona com a velocidade do ventilador, usando os dados.",
+   "ref": "A frequência é o número de vezes por segundo em que a corrente alternada completa um ciclo de inversão de sentido. O motor do ventilador acompanha esses ciclos, então com 60 Hz ele gira mais rápido (1800 rpm) do que com 50 Hz (1500 rpm)."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Uma escola-abrigo recebeu um painel solar que fornece, em média, 500 Wh por dia. A turma calculou o consumo diário dos equipamentos da escola, multiplicando a potência pelas horas de uso, e quer saber se o painel é suficiente.",
+   "comando": "Calcule o consumo diário total, avalie se um painel basta e proponha uma solução.",
+   "ref": "O consumo é 40×5 + 60×8 + 10×4 = 200 + 480 + 40 = 720 Wh por dia, maior que os 500 Wh do painel, que não basta. Pode-se acrescentar outro painel, reduzir as horas de uso do ventilador ou usar equipamentos mais econômicos, com bateria para armazenar."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Durante um apagão em um bairro de São Paulo, um nobreak de um escritório manteve um computador ligado. O aparelho tem uma bateria interna, que armazena energia em corrente contínua, e um circuito que fornece ao computador a energia de que ele precisa.",
+   "comando": "Explique como o nobreak consegue alimentar o computador com a rede apagada, relacionando os tipos de corrente.",
+   "ref": "A bateria guarda energia em corrente contínua de 12 V. Durante o apagão, um inversor converte essa corrente contínua em alternada de 127 V, que alimenta o computador por um tempo limitado."
+  }
+ ],
+ "4B|9º ANO|10": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Um clube de astronomia amador de São Carlos acompanhou o planeta Marte por vários meses, sempre no mesmo horário da noite, anotando se ele se movia para leste ou para oeste entre as estrelas de fundo. Os integrantes se surpreenderam: durante algumas semanas, o planeta pareceu 'andar para trás'.",
+   "comando": "Como cada modelo explica esse movimento aparente de Marte?",
+   "alts": [
+    "Em Ptolomeu, porque a Terra ultrapassa Marte; em Copérnico, por epiciclos que giram em torno do Sol e de Marte",
+    "Em Ptolomeu, por epiciclos; em Copérnico, porque a Terra, mais rápida, ultrapassa Marte e muda a visão",
+    "Nos dois modelos, Marte inverte de fato o seu sentido de giro em torno do Sol e depois volta ao sentido anterior",
+    "Nos dois modelos, a Terra para de se mover por algumas semanas, e Marte parece voltar enquanto ela fica parada"
+   ],
+   "correta": 1
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Em janeiro de 1610, Galileu apontou sua luneta para Júpiter e viu pequenos pontos de luz alinhados ao lado do planeta. Em noites seguidas, ele desenhou as posições, e um grupo de alunos refez a tabela com as contagens dos pontos de cada lado do planeta.",
+   "comando": "Que conclusão as observações sustentam em relação ao modelo geocêntrico?",
+   "alts": [
+    "Os pontos são estrelas distantes que Júpiter encobre em cada noite, o que não altera o modelo geocêntrico",
+    "Os pontos seguem a Terra, mas passam atrás de Júpiter a cada noite, o que confirma o modelo geocêntrico",
+    "Os pontos mudam de número por falhas da luneta, o que não permite concluir nada sobre os modelos antigos ou novos",
+    "Os pontos mudam de lado em torno de Júpiter, o que mostra que nem todo corpo celeste gira em torno da Terra"
+   ],
+   "correta": 3
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Johannes Kepler analisou observações muito precisas da posição de Marte. Um grupo de estudantes de Ribeirão Preto comparou, com dados fictícios, o erro de dois modelos que tentam reproduzir essas observações: um com órbita circular e outro com órbita em forma de elipse.",
+   "comando": "Qual conclusão é sustentada pelos dados e pela forma de trabalho da ciência?",
+   "alts": [
+    "A elipse concorda melhor com as observações e foi adotada, mesmo contrariando a ideia de círculos perfeitos",
+    "A órbita circular deve ser mantida, pois círculos são formas perfeitas e erros de 8 minutos de arco são pequenos",
+    "Os dois modelos devem ser rejeitados, pois um modelo vale se reproduzir os dados sem erro algum",
+    "A órbita elíptica foi aceita porque a maioria dos cientistas gostava dessa forma, e não por causa dos dados"
+   ],
+   "correta": 0
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Para os seguidores de Aristóteles, se a Terra se movesse, uma bola lançada para cima cairia atrás do ponto de lançamento. Um grupo de estudantes de São Paulo testou essa ideia em um ônibus que trafega na Marginal Pinheiros, jogando uma bola para cima com a mão e observando onde ela caía.",
+   "comando": "Que interpretação dos resultados enfraquece o argumento aristotélico?",
+   "alts": [
+    "A bola cai na mão nos dois casos porque o ônibus está em repouso em relação à estrada na maior parte do tempo",
+    "A bola cai na mão porque o ar empurra a bola para a frente e compensa por completo o movimento do ônibus ao longo do trajeto",
+    "A bola mantém o movimento horizontal do ônibus ao subir, então cair na mão não prova que ele esteja parado",
+    "A bola cairia atrás da mão se o ônibus fosse bem mais rápido, o que confirma o argumento aristotélico"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um mural da escola, uma turma de Diadema organizou uma linha do tempo com cinco nomes ligados à passagem do modelo geocêntrico ao heliocêntrico, anotando o ano aproximado e o tipo de trabalho de cada um. A professora pediu que analisassem o que o mural mostra sobre como a ciência é construída.",
+   "comando": "Qual interpretação do mural é INCORRETA?",
+   "alts": [
+    "A obra de Ptolomeu reuniu observações anteriores, como as de Hiparco, em um modelo capaz de prever posições",
+    "O trabalho de Kepler dependeu de dados coletados por outros observadores, o que mostra a ciência como obra coletiva",
+    "Copérnico comprovou o heliocentrismo sozinho, sem apoio de observações anteriores nem posteriores",
+    "As observações de Galileu com luneta forneceram evidências novas que ajudaram a sustentar o heliocentrismo"
+   ],
+   "correta": 2
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Galileu observou Vênus com a luneta e notou que o planeta passa por fases, como a Lua, e que seu tamanho aparente muda ao longo dos meses. No modelo de Ptolomeu, Vênus ficava sempre entre a Terra e o Sol e nunca poderia aparecer quase cheio.",
+   "comando": "Explique por que as observações de Galileu favorecem o modelo heliocêntrico, usando os dados.",
+   "ref": "Vênus aparece quase cheio quando está pequeno, isto é, mais distante da Terra, o que só é possível se ele passar atrás do Sol ao orbitá-lo. Isso contraria o modelo de Ptolomeu e é coerente com o heliocentrismo, em que Vênus gira em torno do Sol."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "O modelo de Ptolomeu, com epiciclos, foi aceito por mais de mil anos. Uma estudante de Campinas comparou, com dados fictícios, o erro de previsão de posição de um planeta de três modelos na época de Copérnico e pensou que o modelo de Copérnico não parecia superior.",
+   "comando": "Explique por que o modelo de Ptolomeu foi usado por tanto tempo e por que o de Copérnico demorou a ser aceito.",
+   "ref": "O modelo de Ptolomeu previa as posições com precisão suficiente para a época e concordava com a observação cotidiana de um céu em movimento. O de Copérnico, no início, não era mais preciso e contrariava o senso comum, por isso só se firmou depois de novas evidências, como as de Kepler e Galileu."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Para discutir a ideia de que a Terra se move sem que sintamos, uma professora de Piracicaba contou que Galileu propôs imaginar uma pedra solta do alto do mastro de um navio. Ela mostrou os resultados esperados de um experimento mental.",
+   "comando": "Explique o que o experimento do navio mostra sobre o movimento da Terra e qual princípio físico ele envolve.",
+   "ref": "A pedra cai no mesmo lugar nas duas situações, pois ela mantém o movimento horizontal do navio, o princípio da inércia. Assim, o fato de objetos caírem na vertical na Terra não prova que ela esteja parada."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "A distância da Terra ao Sol é medida ao longo do ano. Uma estudante de Sorocaba notou que a distância muda pouco entre os meses e perguntou se a órbita é circular, como imaginavam os antigos astrônomos.",
+   "comando": "Explique o que os dados indicam sobre a forma da órbita e quem a descreveu.",
+   "ref": "A distância varia entre 147 e 152 milhões de km, então a órbita não é um círculo perfeito, mas uma elipse pouco achatada. Essa forma foi descrita por Kepler, que a obteve ao analisar observações de Marte."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Uma turma de 9º ano em Mauá preencheu uma tabela com Aristóteles, Hiparco, Ptolomeu, Copérnico, Kepler e Galileu e percebeu que as ideias se ligam entre si ao longo de séculos. Alguns, como Kepler, usaram dados que outros coletaram.",
+   "comando": "Escolha três cientistas da tabela e explique como o trabalho de um ajudou o de outro na passagem do geocentrismo ao heliocentrismo.",
+   "ref": "Exemplo: Hiparco reuniu observações dos astros que Ptolomeu usou para criar um modelo geocêntrico com epiciclos. Copérnico propôs o modelo com o Sol no centro, e Galileu, com a luneta, obteve evidências a favor dele, o que mostra a ciência como construção coletiva."
+  }
+ ],
+ "4B|9º ANO|11": [
+  {
+   "i": 0,
+   "tipo": "obj",
+   "enunciado": "Em um planetário de Campinas, o guia mostrou medidas de galáxias distantes: quanto mais longe uma galáxia está da Terra, mais depressa ela parece se afastar. Os astrônomos usaram esses dados para propor a origem do Universo. Um visitante disse que isso prova que a Terra está no centro de tudo.",
+   "comando": "O que os dados sugerem sobre o Universo, e qual afirmação do visitante não é sustentada?",
+   "alts": [
+    "O Universo está em expansão, pois o afastamento cresce com a distância; por isso a Terra não está no centro, pois todas as galáxias se afastam de nós de modo parecido.",
+    "O Universo está em expansão, pois o afastamento cresce com a distância; por isso a Terra está no centro, pois todas as galáxias se afastam dela.",
+    "O Universo está parado, pois as galáxias se afastam da Terra apenas por efeito de luz; por isso a Terra não está no centro, pois não há afastamento real.",
+    "O Universo está encolhendo, pois as galáxias mais distantes se afastam mais devagar; por isso a Terra está no centro, pois é o ponto de partida."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 1,
+   "tipo": "obj",
+   "enunciado": "Uma turma de Sorocaba montou um modelo de formação do Sistema Solar com um balão cheio de poeira e água com corante, que girava devagar. Os alunos observaram que a massa escura se concentrou no centro e pequenas gotas se agruparam em anéis e depois em bolas separadas.",
+   "comando": "Qual interpretação do modelo é a mais adequada para a formação do Sistema Solar?",
+   "alts": [
+    "O Sol se formou depois dos planetas, que se agruparam primeiro e depois puxaram a poeira para o centro do giro, como uma bola de gude.",
+    "O Sol se formou no centro de uma nuvem que girava, e a poeira ao redor se agrupou em corpos menores, como planetas, que se movem em órbitas.",
+    "Os planetas se formaram separadamente do Sol, a partir de pedaços que caíram do Big Bang, e o giro os manteve no lugar.",
+    "O Sol e os planetas surgiram ao mesmo tempo, em uma explosão que espalhou a poeira em várias direções, sem giro."
+   ],
+   "correta": 1
+  },
+  {
+   "i": 2,
+   "tipo": "obj",
+   "enunciado": "Em um concurso de astronomia, dois grupos discutiram um corpo encontrado perto da Terra. O grupo 1 disse que ele é um planeta, pois gira ao redor do Sol. O grupo 2 disse que é um asteroide, pois tem formato irregular e fica em uma órbita entre Marte e Júpiter. Um terceiro grupo lembrou que um satélite gira ao redor de outro corpo, e não diretamente ao redor do Sol.",
+   "comando": "Qual classificação do corpo é a mais bem justificada pelas características da tabela?",
+   "alts": [
+    "É um satélite, pois tem órbita entre dois planetas e formato irregular, e os satélites também podem girar em torno do Sol.",
+    "É um planeta, pois orbita o Sol e não domina a região de sua órbita, e o formato irregular é comum entre os planetas.",
+    "É um asteroide, pois orbita o Sol entre Marte e Júpiter, tem formato irregular e não domina a região de sua órbita.",
+    "É um cometa, pois tem órbita entre Marte e Júpiter e formato irregular, e os cometas costumam ficar perto da Terra."
+   ],
+   "correta": 2
+  },
+  {
+   "i": 3,
+   "tipo": "obj",
+   "enunciado": "Uma escola de Mauá testou quatro afirmações sobre o Big Bang em uma roda de conversa. Todas usavam a expressão 'explosão', mas os alunos precisavam identificar qual delas está de acordo com as evidências da expansão do Universo, como o afastamento das galáxias e a radiação de fundo.",
+   "comando": "Qual afirmação está de acordo com as evidências da expansão do Universo?",
+   "alts": [
+    "O Big Bang foi uma expansão do espaço em todas as direções, sem ponto de origem, a partir de um estado quente e denso do Universo.",
+    "O Big Bang foi uma explosão de matéria dentro de um espaço já existente, e as galáxias se afastam porque empurram o espaço vazio para os lados.",
+    "O Big Bang foi uma explosão de matéria que ocorreu em um ponto determinado do espaço vazio, e a expansão ocorre a partir desse ponto.",
+    "O Big Bang foi uma colisão entre duas galáxias gigantes, e a radiação de fundo é a luz que sobrou dessa colisão no espaço vazio."
+   ],
+   "correta": 0
+  },
+  {
+   "i": 4,
+   "tipo": "obj",
+   "enunciado": "Em um projeto sobre o Sistema Solar, uma aluna de Piracicaba registrou o tamanho e a distância de quatro corpos em relação ao Sol. Ela percebeu que a Terra é maior que a Lua, mas que a Lua tem órbita ao redor da Terra, e não ao redor do Sol. Ela quer classificar os corpos sem confundir critérios.",
+   "comando": "Qual classificação dos corpos é coerente com a tabela?",
+   "alts": [
+    "Terra e Netuno são planetas; Lua é um asteroide; Ceres é satélite, pois são corpos que giram ao redor de algo.",
+    "Terra e Ceres são planetas, pois ambos orbitam o Sol; Lua é um satélite; Netuno é um asteroide, pois está longe do Sol e é frio.",
+    "Terra e Lua são planetas; Netuno é um satélite; Ceres é um cometa, pois gira em torno do Sol e tem órbita muito longa.",
+    "Terra e Netuno são planetas; Lua é um satélite; Ceres é um asteroide, pois orbita o Sol sem dominar a sua região."
+   ],
+   "correta": 3
+  },
+  {
+   "i": 5,
+   "tipo": "dis",
+   "enunciado": "Um grupo do 9º ano estudou a origem do Sistema Solar. Parte da turma acreditava que os planetas sempre existiram com a forma atual, e outra parte lembrou da nebulosa e do disco de poeira. A professora pediu que a turma analisasse qual ideia é apoiada pelas evidências de que o Sol e os planetas têm idades parecidas.",
+   "comando": "Explique qual ideia é sustentada pelos dados e por que as duas ideias não são equivalentes.",
+   "ref": "A ideia de formação a partir de uma nebulosa é a que os dados sustentam, pois o Sol, a Terra e os meteoritos têm idades quase iguais, o que indica que se formaram juntos a partir da mesma nuvem de poeira e gás. A ideia de que os planetas sempre existiram na forma atual não explica essa idade comum nem o disco de poeira."
+  },
+  {
+   "i": 6,
+   "tipo": "dis",
+   "enunciado": "Uma escola de Campinas recebeu a notícia de que astrônomos descobriram um corpo celeste que orbita uma estrela distante e tem tamanho próximo ao de Marte. Os alunos querem classificar o corpo, mas faltam dados sobre o que ele domina em sua órbita e se gira ao redor de um planeta.",
+   "comando": "Diga quais dados seriam necessários para classificar o corpo como planeta, asteroide ou satélite, e justifique.",
+   "ref": "Seria preciso saber se o corpo domina a região de sua órbita, pois isso distingue planeta de asteroide, e se ele gira ao redor de outro corpo, o que caracterizaria um satélite. Com o tamanho e a órbita, dá para saber se ele é um planeta; sem a órbita, a classificação fica incompleta."
+  },
+  {
+   "i": 7,
+   "tipo": "dis",
+   "enunciado": "Lúcia leu que o Universo começou com o Big Bang e que, por isso, ele tem uma idade. Ela perguntou ao professor: 'se houve uma explosão, onde ela aconteceu, e o que havia antes?' O professor respondeu que essa pergunta é um dos desafios da ciência.",
+   "comando": "Explique por que a expansão do Universo não tem um centro definido e por que a pergunta de Lúcia sobre o 'onde' é difícil de responder.",
+   "ref": "Na expansão, o próprio espaço se estende, e todas as galáxias se afastam umas das outras, de modo que nenhuma ocupa um centro privilegiado. A pergunta sobre o 'onde' é difícil porque o Big Bang foi o início do próprio espaço e do tempo, e não uma explosão dentro de um espaço já existente; o que havia antes ainda não é conhecido com segurança."
+  },
+  {
+   "i": 8,
+   "tipo": "dis",
+   "enunciado": "Após estudar a origem do Sistema Solar, uma turma de Santos discutiu se um meteorito que caiu perto da escola veio de um planeta ou de um asteroide. Os alunos mediram a idade do meteorito e a compararam com a do Sol, e também anotaram a composição química.",
+   "comando": "Use a tabela para avaliar a origem do meteorito e explique o que a idade comum revela sobre a formação do Sistema Solar.",
+   "ref": "A idade igual à do Sol e a composição rochosa sugerem que ele é remanescente da formação do Sistema Solar, como um asteroide ou fragmento, e não de um planeta, que passou por processos internos que mudam sua composição. A idade comum indica que o meteorito e o Sol se formaram a partir da mesma nuvem de poeira e gás."
+  },
+  {
+   "i": 9,
+   "tipo": "dis",
+   "enunciado": "Pedro achou que a Terra é o planeta mais próximo do Sol. Sua colega Sofia disse que a ordem depende da distância média de cada planeta. A professora mostrou uma tabela com a distância média de quatro planetas ao Sol, em milhões de quilômetros, e pediu que a turma comparasse.",
+   "comando": "Compare as distâncias e explique por que a afirmação de Pedro está incorreta, justificando com a tabela.",
+   "ref": "Pela tabela, Mercúrio (58) está mais próximo do Sol do que a Terra (150), então a afirmação de Pedro está incorreta. A ordem depende da distância média, e a Terra é o terceiro planeta a partir do Sol, não o mais próximo."
+  }
+ ]
+}
