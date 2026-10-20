@@ -1485,5 +1485,631 @@
     "propor redução do consumo ou reciclagem ou energia renovável"
    ]
   }
+ ],
+ "4B|6º ANO|10": [
+  {
+   "tipo": "obj",
+   "enunciado": "Para entender como o som chega ao interior da orelha, a turma montou um tambor com uma lata aberta e um balão esticado na boca, colocando grãos de arroz sobre ele. Um aluno falou em volume constante a diferentes distâncias e outro contou quantos grãos pularam.",
+   "comando": "Qual estrutura da orelha o balão representa e o que os dados mostram sobre ela?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: tambor de lata",
+    "colunas": [
+     "Distância da voz",
+     "Grãos que pularam"
+    ],
+    "linhas": [
+     [
+      "5 cm",
+      "12"
+     ],
+     [
+      "30 cm",
+      "4"
+     ],
+     [
+      "1 m",
+      "0"
+     ]
+    ]
+   },
+   "alts": [
+    "o tímpano, que vibra com a onda sonora, e vibra menos quando o som chega mais fraco",
+    "a cóclea, que transforma o som em impulsos nervosos, e transforma menos quando o som chega mais forte",
+    "o pavilhão auricular, que reflete o som para o canal, e reflete mais quando o som chega mais longe",
+    "o nervo auditivo, que conduz o impulso ao cérebro, e conduz mais quando o som chega mais fraco"
+   ],
+   "correta": 0,
+   "explicacao": "O balão se comporta como o tímpano, uma membrana que vibra, e o número de grãos acompanha a intensidade do som que chega. Os distratores atribuem ao modelo estruturas que convertem sinais ou invertem a relação entre distância e vibração."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um levantamento fictício de uma escola de Santo André perguntou a 300 alunos quantas horas por dia usam fone de ouvido em volume alto e testou a sensibilidade deles a sons agudos. Os resultados foram organizados em três grupos de tamanho semelhante.",
+   "comando": "Qual interpretação é sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: uso de fone e audição",
+    "colunas": [
+     "Uso diário de fone",
+     "Alunos com perda de sensibilidade"
+    ],
+    "linhas": [
+     [
+      "até 1 hora",
+      "5%"
+     ],
+     [
+      "2 a 3 horas",
+      "12%"
+     ],
+     [
+      "5 horas ou mais",
+      "30%"
+     ]
+    ]
+   },
+   "alts": [
+    "o levantamento prova que o fone endurece o tímpano, pois a perda aumenta com as horas de uso",
+    "a perda é maior no grupo de mais horas por defeito do nervo auditivo, que enfraquece com o uso do fone",
+    "há associação entre uso e perda, compatível com dano às células sensoriais da cóclea, sem provar a causa",
+    "o fone melhora a audição de sons agudos, pois quem o usa mais horas treina a cóclea e perde menos sensibilidade"
+   ],
+   "correta": 2,
+   "explicacao": "A perda cresce de 5% para 30% com as horas de uso, o que sugere dano à cóclea, mas estudo de associação não prova causa sozinho. Os distratores afirmam causa comprovada, indicam estrutura errada ou invertem o sentido da relação."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre equilíbrio, Beatriz ficou apoiada em uma perna e mediu quanto tempo se manteve estável em três condições: olhos abertos, olhos fechados e olhos fechados logo depois de girar dez vezes no mesmo lugar. A professora lembrou que o ouvido interno tem canais com líquido.",
+   "comando": "Que explicação é coerente com os dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: equilíbrio em uma perna",
+    "colunas": [
+     "Condição",
+     "Tempo em equilíbrio"
+    ],
+    "linhas": [
+     [
+      "Olhos abertos",
+      "30 s"
+     ],
+     [
+      "Olhos fechados",
+      "8 s"
+     ],
+     [
+      "Olhos fechados após girar",
+      "3 s"
+     ]
+    ]
+   },
+   "alts": [
+    "o equilíbrio depende da visão, e o ouvido interno participa depois de girar, quando o líquido envia sinais",
+    "o equilíbrio depende do ouvido interno, e a visão não participa, pois a queda do tempo se deve ao giro",
+    "o equilíbrio depende dos músculos da perna, e o líquido do ouvido interno é importante para a audição",
+    "o equilíbrio combina visão e ouvido interno, e após girar o líquido ainda em movimento envia sinais enganosos"
+   ],
+   "correta": 3,
+   "explicacao": "O tempo caiu sem visão e caiu mais depois de girar, o que mostra que visão e ouvido interno se integram e que o líquido em movimento confunde o cérebro. Os distratores excluem uma das fontes de informação ou deslocam o equilíbrio para outra estrutura."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Durante a decolagem de um avião em Guarulhos, Pedro sentiu o ouvido tapado, que melhorou quando ele mascou chiclete e bocejou. A cabine fica com pressão menor que a do solo, e a orelha média conecta-se à garganta por um canal fino chamado tuba auditiva.",
+   "comando": "Qual explicação relaciona os dados ao funcionamento da orelha?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de pressão durante o voo",
+    "colunas": [
+     "Local",
+     "Pressão"
+    ],
+    "linhas": [
+     [
+      "Solo",
+      "100 kPa"
+     ],
+     [
+      "Cabine em voo",
+      "75 kPa"
+     ],
+     [
+      "Orelha média no início",
+      "100 kPa"
+     ]
+    ]
+   },
+   "alts": [
+    "ao mascar e bocejar o canal auditivo externo se abre, o que iguala a pressão da cabine com a do cérebro de Pedro",
+    "ao mascar e bocejar a tuba auditiva se abre e deixa o ar passar, o que iguala a pressão nos dois lados do tímpano",
+    "ao mascar e bocejar o tímpano se desloca, o que reduz a pressão da cabine para o mesmo valor da orelha média",
+    "ao mascar e bocejar a cóclea libera líquido, o que aumenta a pressão da orelha média até igualar à do solo"
+   ],
+   "correta": 1,
+   "explicacao": "A orelha média ficou com 100 kPa e a cabine com 75 kPa, e a tuba auditiva, ao se abrir, permite que o ar passe e iguale os valores. Os distratores atribuem a função de equilibrar pressões ao canal externo, ao tímpano ou à cóclea."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Três pessoas procuraram uma UBS com queixas diferentes e o médico registrou o que encontrou em cada exame. Os estudantes de uma feira de ciências receberam as informações e precisam relacionar cada caso com a parte da orelha mais provavelmente envolvida.",
+   "comando": "Qual relação entre o caso e a parte da orelha é sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de três atendimentos fictícios",
+    "colunas": [
+     "Pessoa",
+     "Audição",
+     "Equilíbrio",
+     "Exame"
+    ],
+    "linhas": [
+     [
+      "A",
+      "normal",
+      "tontura ao virar a cabeça",
+      "tímpano normal"
+     ],
+     [
+      "B",
+      "ouve mal sons fracos",
+      "normal",
+      "líquido atrás do tímpano"
+     ],
+     [
+      "C",
+      "normal",
+      "normal",
+      "cera no canal"
+     ]
+    ]
+   },
+   "alts": [
+    "o caso A sugere problema na orelha externa, que participa do equilíbrio, e o caso B sugere problema no ouvido interno, que conduz a vibração",
+    "o caso A sugere problema na orelha média, que participa do equilíbrio, e o caso B sugere problema no nervo auditivo, que conduz a vibração",
+    "o caso A sugere problema no ouvido interno, que participa do equilíbrio, e o caso B sugere problema na orelha média, que conduz a vibração",
+    "o caso C sugere problema no ouvido interno, que participa do equilíbrio, e o caso A sugere problema na orelha externa, que conduz a vibração"
+   ],
+   "correta": 2,
+   "explicacao": "A tontura com audição normal indica o labirinto no ouvido interno, e o líquido atrás do tímpano compromete a transmissão da vibração pela orelha média. Os distratores atribuem o equilíbrio e a condução às estruturas erradas."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Beatriz repetiu o teste de ficar em uma perna só e mediu o tempo em equilíbrio em duas condições. Ela percebeu que, de olhos fechados, os movimentos do corpo ficaram maiores, e que o ouvido interno enviava o aviso de que o corpo estava inclinando.",
+   "comando": "Explique por que o tempo caiu de olhos fechados e quais duas fontes de informação o cérebro continua usando.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: equilíbrio",
+    "colunas": [
+     "Condição",
+     "Tempo"
+    ],
+    "linhas": [
+     [
+      "Olhos abertos",
+      "30 s"
+     ],
+     [
+      "Olhos fechados",
+      "8 s"
+     ]
+    ]
+   },
+   "ref": "De olhos fechados o cérebro perde as informações da visão, que ajudam a perceber a posição do corpo, e o equilíbrio fica mais difícil. Ele continua usando os sinais do ouvido interno, que sente a posição e o movimento da cabeça, e os sinais de músculos e articulações.",
+   "conceitos": [
+    "sem visão o cérebro perde informação de posição",
+    "ouvido interno sente posição e movimento da cabeça",
+    "músculos e articulações enviam informações"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um paciente reclama de não ouvir bem. Seu médico fez testes em cada etapa do caminho do som: a membrana do canal vibrou normalmente, os ossinhos da orelha média se moveram normalmente, mas a estrutura em espiral do ouvido interno não produziu resposta elétrica ao som, embora o nervo auditivo estivesse íntegro.",
+   "comando": "Indique a estrutura que está com problema e explique, seguindo o caminho do som, por que o paciente não ouve bem.",
+   "figura": null,
+   "ref": "A falha está na cóclea, que fica no ouvido interno. O som chega ao tímpano, passa pelos ossículos e chega à cóclea, que deveria transformar a vibração em impulsos nervosos; sem isso o nervo, mesmo íntegro, não tem sinal para levar ao cérebro.",
+   "conceitos": [
+    "problema na cóclea no ouvido interno",
+    "tímpano e ossículos transmitem a vibração normalmente",
+    "cóclea converte vibração em impulso nervoso",
+    "sem impulso o nervo não leva sinal ao cérebro"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Lucas, de 8 anos, passou a pedir que repetissem tudo e aumentava o volume da televisão. Na UBS, o médico viu uma bola de cera tampando o canal da orelha. Após a limpeza, o menor som que Lucas conseguia ouvir mudou bastante.",
+   "comando": "Explique por que a cera prejudicou a audição de Lucas sem lesar o nervo e a cóclea, usando os dados.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do atendimento: menor som ouvido",
+    "unidade": "decibéis",
+    "itens": [
+     {
+      "rotulo": "Antes da limpeza",
+      "valor": 40
+     },
+     {
+      "rotulo": "Depois da limpeza",
+      "valor": 10
+     }
+    ]
+   },
+   "ref": "A cera tampou o canal auditivo e impediu que as ondas sonoras chegassem ao tímpano, por isso o som precisava ser mais forte. Após a limpeza, a audição voltou ao normal, o que mostra que nervo e cóclea estavam sãos.",
+   "conceitos": [
+    "cera tampa o canal e impede a chegada das ondas ao tímpano",
+    "som precisa ser mais forte para ser ouvido",
+    "recuperação após a limpeza indica nervo e cóclea sãos"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Mônica sente enjoo quando lê no banco de trás de um carro em uma estrada sinuosa. Seus olhos estão fixos no livro, que parece parado, enquanto o ouvido interno sente os balanços do carro. Quando olha pela janela, o enjoo diminui.",
+   "comando": "Explique por que ocorre o enjoo e por que olhar pela janela ajuda.",
+   "figura": null,
+   "ref": "O enjoo ocorre porque o cérebro recebe informações conflitantes: a visão indica que o corpo está parado e o ouvido interno indica movimento. Olhar pela janela faz a visão e o ouvido interno concordarem, e o cérebro integra as informações sem o conflito.",
+   "conceitos": [
+    "visão e ouvido interno informam coisas diferentes",
+    "cérebro recebe informações conflitantes",
+    "olhar pela janela faz as informações coincidirem"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A escola de Caio fica ao lado de uma avenida movimentada. A diretora pediu à turma que medisse o nível de som em três ambientes e sugerisse medidas. Sons contínuos acima de 70 decibéis podem prejudicar a audição com o tempo.",
+   "comando": "Compare os ambientes, indique qual oferece risco e explique como o ruído pode prejudicar a cóclea, propondo uma medida.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do experimento: nível de som",
+    "unidade": "decibéis",
+    "itens": [
+     {
+      "rotulo": "Sala com janelas abertas",
+      "valor": 75
+     },
+     {
+      "rotulo": "Sala com janelas fechadas",
+      "valor": 55
+     },
+     {
+      "rotulo": "Biblioteca",
+      "valor": 40
+     }
+    ]
+   },
+   "ref": "A sala com janelas abertas, com 75 decibéis, ultrapassa o limite de 70 e oferece risco. O ruído intenso e prolongado danifica as células sensoriais da cóclea, que não se regeneram. Fechar as janelas ou usar barreiras de som reduz o nível a valores seguros.",
+   "conceitos": [
+    "sala com janelas abertas acima de 70 dB oferece risco",
+    "ruído intenso danifica células sensoriais da cóclea",
+    "propor fechar janelas ou isolar o som"
+   ]
+  }
+ ],
+ "4B|7º ANO|7": [
+  {
+   "tipo": "obj",
+   "enunciado": "A Secretaria de Saúde recebeu três comunicados sobre uma doença infecciosa respiratória fictícia, em locais de tamanhos diferentes. Um técnico precisa classificar cada situação como surto, epidemia ou pandemia para informar o público, considerando a abrangência e o número de casos em relação ao esperado.",
+   "comando": "Qual classificação das três situações está adequada?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados dos comunicados da Secretaria",
+    "colunas": [
+     "Situação",
+     "Abrangência",
+     "Casos"
+    ],
+    "linhas": [
+     [
+      "X",
+      "um bairro",
+      "15 (esperado 1)"
+     ],
+     [
+      "Y",
+      "um estado inteiro",
+      "20 000 (esperado 3 000)"
+     ],
+     [
+      "Z",
+      "40 países em 5 continentes",
+      "2 milhões"
+     ]
+    ]
+   },
+   "alts": [
+    "X é epidemia, Y é pandemia e Z é surto, pois a classificação depende do número de casos em relação ao esperado",
+    "X é surto, Y é epidemia e Z é pandemia, pois a abrangência e os casos crescem de X para Z",
+    "X é surto, Y é pandemia e Z é epidemia, pois a abrangência do estado inteiro supera a de 40 países",
+    "X é epidemia, Y é epidemia e Z é pandemia, pois um aumento em um bairro já é uma epidemia local"
+   ],
+   "correta": 1,
+   "explicacao": "O aumento em um bairro é surto, em um estado é epidemia e em vários continentes é pandemia. Os distratores trocam a ordem de abrangência ou ignoram a escala geográfica."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Durante o início de uma epidemia fictícia em uma cidade do interior, o hospital registrou o número de novos casos por semana. A prefeitura quer prever a situação da semana seguinte, supondo que o ritmo de crescimento continue o mesmo e que nenhuma medida seja adotada.",
+   "comando": "Qual previsão para a semana 6 e qual interpretação da tendência são adequadas?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do hospital: novos casos por semana",
+    "unidade": "casos",
+    "itens": [
+     {
+      "rotulo": "Semana 1",
+      "valor": 10
+     },
+     {
+      "rotulo": "Semana 2",
+      "valor": 20
+     },
+     {
+      "rotulo": "Semana 3",
+      "valor": 40
+     },
+     {
+      "rotulo": "Semana 4",
+      "valor": 80
+     },
+     {
+      "rotulo": "Semana 5",
+      "valor": 160
+     }
+    ]
+   },
+   "alts": [
+    "cerca de 240 casos, pois o número aumenta 80 por semana, o que indica um crescimento constante e previsível",
+    "cerca de 200 casos, pois o número aumenta 40 por semana, o que indica um crescimento que está desacelerando",
+    "cerca de 320 casos, pois o número dobra a cada semana, o que indica crescimento acelerado",
+    "cerca de 160 casos, pois o número se estabilizou na última semana, o que indica o fim da fase de crescimento"
+   ],
+   "correta": 2,
+   "explicacao": "Os valores dobram a cada semana, então a semana 6 teria 320 casos, com crescimento exponencial. Os distratores interpretam o crescimento como linear, desacelerando ou estabilizado."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em um modelo de contágio, 20 alunos tocaram em um objeto coberto de glitter, que representa os micróbios, e depois apertaram a mão de colegas. Em seguida, cada grupo lavou as mãos de um jeito diferente, e a turma contou quantos alunos ficaram com glitter nas mãos após os cumprimentos.",
+   "comando": "Que conclusão é sustentada pelos dados do modelo?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: glitter nas mãos",
+    "colunas": [
+     "Higiene das mãos",
+     "Alunos com glitter (de 20)"
+    ],
+    "linhas": [
+     [
+      "Sem lavar",
+      "18"
+     ],
+     [
+      "Só água",
+      "11"
+     ],
+     [
+      "Água e sabão",
+      "3"
+     ]
+    ]
+   },
+   "alts": [
+    "lavar com água e sabão reduziu a transmissão mais que só água, mas ambos foram melhores que não lavar",
+    "lavar com água sozinha não alterou a transmissão em relação a não lavar, mas o sabão reduziu bastante o glitter",
+    "lavar com água e sabão eliminou a transmissão, pois ficou muito pouco glitter nas mãos dos alunos",
+    "o modelo prova que os micróbios passam pelas mãos e não pelo ar, pois o glitter foi passado no aperto de mão"
+   ],
+   "correta": 0,
+   "explicacao": "Com água e sabão ficaram 3 alunos com glitter, contra 11 apenas com água e 18 sem lavar. Os distratores negam o efeito da água, afirmam eliminação total ou generalizam o modelo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um paciente com febre, tosse e coriza pediu antibiótico ao médico da UBS, dizendo que um vizinho se curou rápido assim. O médico explicou que o remédio depende do agente da doença e mostrou uma comparação entre dois tipos de agentes infecciosos fictícios.",
+   "comando": "Qual análise explica por que o médico não receitou antibiótico para uma gripe?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados de dois agentes infecciosos",
+    "colunas": [
+     "Característica",
+     "Agente A",
+     "Agente B"
+    ],
+    "linhas": [
+     [
+      "Tamanho",
+      "0,1 micrômetro",
+      "2 micrômetros"
+     ],
+     [
+      "Multiplica-se fora de células vivas",
+      "não",
+      "sim"
+     ],
+     [
+      "Resposta ao antibiótico",
+      "nenhuma",
+      "eliminado"
+     ]
+    ]
+   },
+   "alts": [
+    "o agente da gripe se parece com o B, uma bactéria que se multiplica fora de células, e o antibiótico não funciona se o paciente tem febre",
+    "o agente da gripe se parece com o A, que é grande demais para o antibiótico alcançar, e por isso o remédio não funciona",
+    "o agente da gripe se parece com o B, uma bactéria eliminada pelo antibiótico, mas só depois de uma semana de tratamento",
+    "o agente da gripe se parece com o A, um vírus que só se multiplica dentro de células, e o antibiótico atua contra bactérias, como o B"
+   ],
+   "correta": 3,
+   "explicacao": "O antibiótico elimina agentes como o B, e o vírus da gripe é como o A, que não responde a ele e se multiplica dentro de células. Os distratores trocam o tipo de agente ou atribuem a falha ao tamanho ou ao tempo."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Um simulador de epidemia permitiu comparar três cenários para a mesma doença fictícia em uma cidade com 500 leitos hospitalares disponíveis. Estudantes analisaram o maior número de infectados ao mesmo tempo e o dia em que isso ocorreu em cada cenário.",
+   "comando": "Que interpretação é sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do simulador: três cenários",
+    "colunas": [
+     "Cenário",
+     "Pico de infectados",
+     "Dia do pico"
+    ],
+    "linhas": [
+     [
+      "Sem medidas",
+      "2 400",
+      "30"
+     ],
+     [
+      "Distanciamento",
+      "600",
+      "55"
+     ],
+     [
+      "Distanciamento e vacinação",
+      "300",
+      "70"
+     ]
+    ]
+   },
+   "alts": [
+    "as medidas reduzem e adiam o pico, e o distanciamento sozinho já manteve o pico abaixo de 500 leitos",
+    "as medidas reduzem o pico, mas antecipam o dia do pico, e a combinação manteve o pico abaixo da capacidade",
+    "as medidas reduzem e adiam o pico, mas a combinação delas manteve o pico abaixo de 500 leitos",
+    "as medidas não alteram o total de infectados no pico, e o dia em que ele ocorre muda de cenário para cenário"
+   ],
+   "correta": 2,
+   "explicacao": "O pico caiu de 2 400 para 600 e para 300, e só o último ficou abaixo de 500 leitos; o dia do pico também se atrasou. Os distratores erram a comparação com 500, o sentido do dia do pico ou negam a redução."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Após enchentes na capital paulista, um hospital atendeu pacientes com leptospirose, causada por bactéria, e outros com gripe, causada por vírus. A leptospirose passa pela água suja, e a gripe, por gotículas no ar.",
+   "comando": "Explique por que as medidas de prevenção e o tratamento são diferentes para cada doença, relacionando-os ao tipo de agente.",
+   "figura": null,
+   "ref": "A leptospirose é causada por bactéria e se previne evitando contato com água de enchente; como é bactéria, o antibiótico trata. A gripe é causada por vírus, transmitido pelo ar, e se previne com vacina e cuidados respiratórios; antibiótico não age contra vírus.",
+   "conceitos": [
+    "leptospirose é bacteriana e tratada com antibiótico",
+    "prevenção ligada à forma de transmissão",
+    "gripe é causada por vírus e antibiótico não age",
+    "vacina e cuidados respiratórios previnem a gripe"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um município de São Paulo, a prefeitura acompanhou por quatro meses a chuva e o número de casos de dengue. A doença é transmitida pelo mosquito Aedes aegypti, que deposita ovos em água parada.",
+   "comando": "Explique a relação entre chuva e casos, considerando o ciclo do mosquito, e proponha duas medidas de prevenção.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do município: chuva e dengue",
+    "colunas": [
+     "Mês",
+     "Chuva",
+     "Casos"
+    ],
+    "linhas": [
+     [
+      "Dezembro",
+      "80 mm",
+      "20"
+     ],
+     [
+      "Janeiro",
+      "220 mm",
+      "65"
+     ],
+     [
+      "Fevereiro",
+      "250 mm",
+      "180"
+     ],
+     [
+      "Março",
+      "90 mm",
+      "120"
+     ]
+    ]
+   },
+   "ref": "A chuva forma poças e acumula água em recipientes, onde o mosquito põe ovos, e semanas depois aumentam os mosquitos adultos e os casos; por isso os casos sobem depois das chuvas. Pode-se evitar água parada em vasos, pneus e caixas e usar telas e repelentes.",
+   "conceitos": [
+    "chuva acumula água parada onde o mosquito põe ovos",
+    "casos aumentam algumas semanas depois",
+    "eliminar água parada",
+    "medida de proteção como tela ou repelente"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um vírus fictício tem a característica de que cada pessoa infectada passa a doença a 3 pessoas na geração seguinte. Outro vírus, controlado por medidas de prevenção, faz cada infectado passar para menos de 1 pessoa. Uma turma começou a simulação com 1 infectado em cada caso.",
+   "comando": "Calcule o número de infectados na 4ª geração do primeiro vírus e explique o que ocorre com o segundo vírus.",
+   "figura": null,
+   "ref": "No primeiro vírus, cada geração triplica: 1, 3, 9, 27 e 81, então a 4ª geração tem 81 infectados. No segundo, cada infectado passa para menos de uma pessoa, o número de casos diminui a cada geração e a doença tende a desaparecer.",
+   "conceitos": [
+    "cada geração triplica",
+    "81 infectados na 4ª geração",
+    "com menos de 1 por infectado os casos diminuem"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Dois países fictícios identificaram o primeiro caso de uma nova doença no mesmo dia. O país A avisou a Organização Mundial da Saúde e iniciou o rastreamento de contatos no dia 2; o país B avisou no dia 12.",
+   "comando": "Use os dados para explicar a importância de comunicar rapidamente a doença e do papel da OMS.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados dos dois países",
+    "colunas": [
+     "País",
+     "Dia do aviso",
+     "Casos ao iniciar as medidas"
+    ],
+    "linhas": [
+     [
+      "A",
+      "2",
+      "30"
+     ],
+     [
+      "B",
+      "12",
+      "900"
+     ]
+    ]
+   },
+   "ref": "Quanto antes se comunica a doença, menos casos existem quando as medidas começam, e o país A tinha 30 casos contra 900 do B. A OMS reúne as informações, alerta outros países e orienta as medidas, o que ajuda a conter a doença antes de ela se espalhar.",
+   "conceitos": [
+    "aviso rápido reduz casos no início das medidas",
+    "comparação 30 casos contra 900",
+    "OMS alerta e orienta os países"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Três municípios paulistas fictícios tiveram surtos de sarampo, doença viral, em um mesmo ano. Os agentes de saúde registraram a proporção de crianças vacinadas em cada um e o número de casos.",
+   "comando": "Interprete os dados e explique por que a vacinação protege também quem não foi vacinado.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados dos municípios: sarampo",
+    "colunas": [
+     "Município",
+     "Crianças vacinadas",
+     "Casos"
+    ],
+    "linhas": [
+     [
+      "A",
+      "95%",
+      "0"
+     ],
+     [
+      "B",
+      "70%",
+      "25"
+     ],
+     [
+      "C",
+      "85%",
+      "3"
+     ]
+    ]
+   },
+   "ref": "Quanto maior a proporção de vacinados, menos casos houve, pois o município A teve 0 e o B teve 25. Com muitos vacinados, o vírus encontra poucas pessoas para infectar, a transmissão diminui e quem não foi vacinado fica mais protegido.",
+   "conceitos": [
+    "mais vacinados e menos casos",
+    "vírus encontra poucas pessoas suscetíveis",
+    "quem não se vacinou fica protegido"
+   ]
+  }
  ]
 }
