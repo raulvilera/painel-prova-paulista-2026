@@ -905,5 +905,585 @@
     "propor preservar mata ou polinização manual"
    ]
   }
+ ],
+ "9º ANO|1|Aplicar as Leis Ponderais em reações químicas.": [
+  {
+   "tipo": "obj",
+   "enunciado": "No laboratório da escola, Júlia queimou uma bolinha de palha de aço sobre o prato de uma balança e anotou a massa antes e depois da queima. Ao ver que o resultado foi maior, um colega disse que a reação tinha criado matéria e que a Lei de Lavoisier estava errada.",
+   "comando": "Que explicação é coerente com os dados e com a conservação da massa?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: palha de aço",
+    "colunas": [
+     "Momento",
+     "Massa"
+    ],
+    "linhas": [
+     [
+      "Antes de queimar",
+      "10,0 g"
+     ],
+     [
+      "Depois de queimar",
+      "12,8 g"
+     ]
+    ]
+   },
+   "alts": [
+    "a chama adicionou massa ao ferro, pois a energia térmica fornecida na queima é convertida em matéria sólida",
+    "o ferro produziu mais matéria ao oxidar, pois nas reações em sistema aberto a massa dos produtos é maior que a dos reagentes",
+    "o ferro reagiu com o oxigênio do ar e o gás ficou incorporado ao sólido, conservando a massa total",
+    "a balança acusou valor maior porque o ar quente empurra o prato, e a massa de ferro permaneceu igual a 10,0 g"
+   ],
+   "correta": 2,
+   "explicacao": "O ganho de 2,8 g corresponde ao oxigênio do ar que se combinou com o ferro, e a massa total, incluindo o gás, se conserva. Os distratores atribuem o ganho à energia, afirmam que a massa não se conserva ou culpam a balança."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A turma de Tadeu fez a reação entre bicarbonato de sódio e vinagre dentro de uma garrafa, em duas situações: com a garrafa aberta e com um balão preso ao gargalo. Mediram a massa do conjunto antes da mistura e dois minutos depois.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: bicarbonato e vinagre",
+    "colunas": [
+     "Situação",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Garrafa aberta",
+      "250,0 g",
+      "248,6 g"
+     ],
+     [
+      "Garrafa com balão",
+      "250,0 g",
+      "250,0 g"
+     ]
+    ]
+   },
+   "alts": [
+    "a massa se perdeu na garrafa aberta, pois a reação destruiu parte dos reagentes e o balão impediu essa destruição",
+    "a massa se conserva com balão, pois ele cria o gás extra que compensa a massa dos reagentes consumidos",
+    "a massa depende do tamanho do recipiente, pois na garrafa aberta houve mais espaço para a reação consumir o vinagre",
+    "a massa se conservou: na garrafa aberta o gás escapou, e com o balão ele ficou retido e foi pesado"
+   ],
+   "correta": 3,
+   "explicacao": "A diferença de 1,4 g entre os sistemas é o gás que escapou da garrafa aberta, e o balão provou a conservação. Os distratores afirmam que a matéria foi destruída, que o balão cria gás ou que o recipiente altera a massa."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Em uma aula sobre a formação da água, a professora apresentou resultados de três experimentos feitos com diferentes massas de hidrogênio e de oxigênio. Todos os gases reagiram completamente até a reação parar, e o que não reagiu foi anotado como sobra.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: formação de água",
+    "colunas": [
+     "Exp.",
+     "Reagentes",
+     "Água",
+     "Sobra"
+    ],
+    "linhas": [
+     [
+      "I",
+      "2 g H e 16 g O",
+      "18 g",
+      "nada"
+     ],
+     [
+      "II",
+      "3 g H e 16 g O",
+      "18 g",
+      "1 g de H"
+     ],
+     [
+      "III",
+      "1 g H e 16 g O",
+      "9 g",
+      "8 g de O"
+     ]
+    ]
+   },
+   "alts": [
+    "a quantidade de água formada depende da massa de hidrogênio, pois o experimento II teve mais hidrogênio",
+    "a água se forma na proporção de 1 g de hidrogênio para 8 g de oxigênio, e o excesso sobra",
+    "a proporção entre as massas varia com as quantidades usadas, pois o excesso se transforma em mais água",
+    "a massa de água formada é igual à massa do reagente em maior quantidade, pois o excesso também reage"
+   ],
+   "correta": 1,
+   "explicacao": "Em I, 2 g de hidrogênio reagem com 16 g de oxigênio, e em II e III o excesso sobra, o que mostra proporção fixa. Os distratores ignoram o oxigênio, negam a proporção ou fazem o excesso reagir."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma fábrica de cal em Cajamar aquece calcário, que se decompõe em cal virgem (usada em obras) e gás carbônico, liberado pela chaminé. Um técnico testou a decomposição em laboratório com 100 g de calcário puro e depois quis prever o resultado para uma carga de 500 kg.",
+   "comando": "Quais são as massas previstas de cal virgem e de gás carbônico para os 500 kg?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: decomposição do calcário",
+    "colunas": [
+     "Material",
+     "Massa"
+    ],
+    "linhas": [
+     [
+      "Calcário usado",
+      "100 g"
+     ],
+     [
+      "Cal virgem obtida",
+      "56 g"
+     ],
+     [
+      "Gás liberado",
+      "44 g"
+     ]
+    ]
+   },
+   "alts": [
+    "280 kg de cal virgem e 220 kg de gás",
+    "220 kg de cal virgem e 280 kg de gás",
+    "280 kg de cal virgem e 22 kg de gás",
+    "500 kg de cal virgem e 220 kg de gás"
+   ],
+   "correta": 0,
+   "explicacao": "A proporção 56 g para 44 g em cada 100 g se mantém, logo 500 kg dão 280 kg de cal e 220 kg de gás, somando 500 kg. Os distratores trocam as massas, erram a ordem de grandeza ou não conservam a massa total."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Camila assou um bolo e pesou a forma com a massa crua e depois de assada. Notou que a massa diminuiu e perguntou se parte da matéria tinha desaparecido. A professora lembrou que o fermento libera gás carbônico e que a água da massa vira vapor durante o forno.",
+   "comando": "Qual interpretação do resultado NÃO é sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Registro de pesagens do bolo",
+    "colunas": [
+     "Momento",
+     "Massa da forma com massa"
+    ],
+    "linhas": [
+     [
+      "Antes do forno",
+      "850 g"
+     ],
+     [
+      "Depois do forno",
+      "790 g"
+     ]
+    ]
+   },
+   "alts": [
+    "a massa diminuiu porque o forno é um sistema aberto, e parte dos produtos saiu como gás",
+    "os 60 g a menos correspondem à massa de gás carbônico e de vapor de água que deixaram a forma",
+    "os 60 g que faltam deixaram de existir no cozimento, e por isso a massa total diminuiu",
+    "para provar a conservação, seria preciso medir também a massa dos gases liberados durante o cozimento"
+   ],
+   "correta": 2,
+   "explicacao": "A massa que falta saiu como vapor e gás carbônico, e não desapareceu, o que contraria a conservação da massa. As outras três frases estão de acordo com o fato de o forno ser aberto e de os gases terem massa."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Na garrafa aberta, Tadeu mediu 250,0 g antes da reação entre bicarbonato e vinagre e 248,6 g depois. Na garrafa com balão, a massa ficou em 250,0 g. Um colega concluiu que a reação sumiu com 1,4 g de matéria.",
+   "comando": "Calcule a massa de gás que escapou e explique, com a Lei de Lavoisier, por que o colega está errado.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: massa do conjunto",
+    "colunas": [
+     "Situação",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Garrafa aberta",
+      "250,0 g",
+      "248,6 g"
+     ],
+     [
+      "Garrafa com balão",
+      "250,0 g",
+      "250,0 g"
+     ]
+    ]
+   },
+   "ref": "O gás que escapou tem 250,0 menos 248,6, ou seja, 1,4 g. Pela Lei de Lavoisier, em sistema fechado a massa total se conserva, e o balão mostra isso; na garrafa aberta, a matéria não sumiu, apenas passou para o ar como gás.",
+   "conceitos": [
+    "cálculo de 1,4 g de gás",
+    "massa se conserva em sistema fechado",
+    "na garrafa aberta o gás saiu para o ar",
+    "matéria não desaparece"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A água se forma na proporção de 1 g de hidrogênio para 8 g de oxigênio. Uma aluna misturou 5 g de hidrogênio com 16 g de oxigênio e disse que obteria 21 g de água, porque a massa total é a soma das massas.",
+   "comando": "Corrija o raciocínio da aluna: calcule a massa de água formada e a massa do reagente que sobra.",
+   "figura": null,
+   "ref": "Como a proporção é 1 g de hidrogênio para 8 g de oxigênio, 16 g de oxigênio reagem com 2 g de hidrogênio. Formam-se 18 g de água e sobram 3 g de hidrogênio que não reagem.",
+   "conceitos": [
+    "16 g de oxigênio reagem com 2 g de hidrogênio",
+    "formam-se 18 g de água",
+    "sobram 3 g de hidrogênio",
+    "a proporção fixa limita a reação"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em uma feira de ciências, um grupo queimou palha de aço em dois sistemas sobre uma balança: um prato aberto e um frasco de vidro fechado. A massa do prato aberto aumentou, e a do frasco fechado não mudou.",
+   "comando": "Explique a diferença entre os resultados dos dois sistemas e o que ela mostra sobre a conservação da massa.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: palha de aço",
+    "colunas": [
+     "Sistema",
+     "Antes",
+     "Depois"
+    ],
+    "linhas": [
+     [
+      "Prato aberto",
+      "20,0 g",
+      "24,0 g"
+     ],
+     [
+      "Frasco fechado",
+      "120,0 g",
+      "120,0 g"
+     ]
+    ]
+   },
+   "ref": "No prato aberto, o ferro reage com o oxigênio do ar e a massa medida aumenta, porque o gás entra no sólido sem ser pesado antes. No frasco fechado, o oxigênio já estava dentro e nada entra nem sai, e por isso a massa total se conserva.",
+   "conceitos": [
+    "no sistema aberto o ferro reage com o oxigênio do ar",
+    "massa aumenta porque o gás se incorpora ao sólido",
+    "no frasco fechado nada entra nem sai",
+    "massa total se conserva"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "A fábrica de cal decompõe o calcário e libera gás carbônico. Em cada 100 kg de calcário, 56 kg viram cal e 44 kg saem como gás. A fábrica processa 2 000 kg de calcário por hora e a prefeitura quer estimar a emissão diária em turno de 8 horas.",
+   "comando": "Calcule a massa de gás carbônico emitida por hora e por turno e explique por que o gás tem massa mesmo sendo invisível.",
+   "figura": null,
+   "ref": "Em 2 000 kg de calcário saem 44% de gás, ou seja, 880 kg por hora, que em 8 horas somam 7 040 kg por turno. O gás é matéria formada pela reação, com massa que vem do calcário, e por isso a massa dos produtos é igual à dos reagentes.",
+   "conceitos": [
+    "880 kg de gás por hora",
+    "7 040 kg em 8 horas",
+    "gás é matéria e tem massa",
+    "massa dos produtos igual à dos reagentes"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Ao queimar uma folha de papel de 5,0 g em uma colher de metal, Davi obteve 0,6 g de cinza e disse que 4,4 g de matéria foram destruídos. A professora sugeriu repetir a queima dentro de um frasco fechado e pesar tudo.",
+   "comando": "Explique para onde foi a massa que Davi achou perdida e o que ele deve observar no frasco fechado.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do experimento: queima do papel",
+    "colunas": [
+     "Material",
+     "Massa"
+    ],
+    "linhas": [
+     [
+      "Papel antes",
+      "5,0 g"
+     ],
+     [
+      "Cinza depois",
+      "0,6 g"
+     ]
+    ]
+   },
+   "ref": "A massa não foi destruída: virou gases, como gás carbônico e vapor de água, que escaparam para o ar, e o oxigênio consumido também faz parte da conta. No frasco fechado, a massa total antes e depois da queima deve ser igual, pois os gases ficam retidos.",
+   "conceitos": [
+    "massa virou gases que escaparam",
+    "oxigênio do ar participa da reação",
+    "em frasco fechado a massa total é igual antes e depois"
+   ]
+  }
+ ],
+ "9º ANO|3|Reconhecer o conceito de pegada ecológica como indicador do impacto das atividades humanas sobre o meio ambiente.": [
+  {
+   "tipo": "obj",
+   "enunciado": "Na aula sobre pegada ecológica, três alunos da escola calcularam a área de natureza usada diariamente no trajeto de casa até a escola, incluindo a energia do veículo e a área necessária para absorver o gás carbônico emitido. Cada um usa um meio de transporte diferente.",
+   "comando": "Que conclusão é sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do exercício: trajeto até a escola",
+    "colunas": [
+     "Aluno",
+     "Meio",
+     "Distância",
+     "Área usada"
+    ],
+    "linhas": [
+     [
+      "Ana",
+      "carro",
+      "12 km",
+      "18 m²"
+     ],
+     [
+      "Bruno",
+      "ônibus",
+      "12 km",
+      "4 m²"
+     ],
+     [
+      "Caio",
+      "bicicleta",
+      "3 km",
+      "0,1 m²"
+     ]
+    ]
+   },
+   "alts": [
+    "a distância percorrida determina a pegada, pois Caio, que percorre o menor trajeto, usa a menor área entre os três",
+    "o ônibus tem pegada maior que a bicicleta, pois Bruno e Caio percorrem trajetos de comprimentos diferentes",
+    "o meio de transporte pesa mais que a distância, pois Ana e Bruno percorrem 12 km e a área de Ana é maior",
+    "o carro tem pegada pequena por passageiro, pois Ana percorreu a mesma distância que Bruno e usou mais área"
+   ],
+   "correta": 2,
+   "explicacao": "Ana e Bruno percorrem a mesma distância com áreas de 18 m² e 4 m², então o modo de transporte pesa na pegada. Os distratores generalizam a partir de Caio, comparam trajetos diferentes ou leem o dado ao contrário."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A pegada ecológica média de um habitante de um país é medida em hectares globais, e a Terra dispõe de cerca de 1,6 hectare global de natureza por pessoa para se regenerar. Uma turma comparou três países usando valores de exercício e perguntou quantos planetas seriam necessários se todos vivessem como um habitante de cada país.",
+   "comando": "Se todas as pessoas do mundo vivessem como a média do país A, qual seria a conclusão?",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do exercício: pegada por habitante",
+    "unidade": "hectares globais",
+    "itens": [
+     {
+      "rotulo": "País A",
+      "valor": 8.0
+     },
+     {
+      "rotulo": "País B",
+      "valor": 2.9
+     },
+     {
+      "rotulo": "País C",
+      "valor": 1.2
+     }
+    ]
+   },
+   "alts": [
+    "seriam necessários cerca de 5 planetas, pois a pegada de 8,0 é cinco vezes a natureza disponível por pessoa",
+    "seriam necessários cerca de 0,2 planeta, pois a pegada de 8,0 é bem menor que a natureza disponível por pessoa",
+    "seria necessário cerca de 1 planeta, pois a Terra consegue sustentar qualquer hábito de consumo de um país",
+    "seriam necessários cerca de 9,6 planetas, pois a pegada de 8,0 deve ser somada à natureza disponível por pessoa"
+   ],
+   "correta": 0,
+   "explicacao": "Dividindo 8,0 por 1,6 obtêm-se 5, o que mostra que o estilo de vida do país A não é sustentável em escala global. Os distratores invertem a divisão, ignoram o limite ou somam as grandezas."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma nutricionista da UBS comparou a área de natureza usada na produção de dois pratos de almoço de porções parecidas, como parte de um projeto sobre consumo consciente. Os dados foram calculados por refeição, na mesma região do estado de São Paulo.",
+   "comando": "Que explicação justifica a diferença de pegada entre os pratos?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do exercício: pegada por refeição",
+    "colunas": [
+     "Prato",
+     "Área de terra",
+     "Água",
+     "Energia"
+    ],
+    "linhas": [
+     [
+      "Bife com arroz",
+      "5 m²",
+      "1,5 m³",
+      "3 unid."
+     ],
+     [
+      "Feijão com arroz",
+      "1 m²",
+      "0,3 m³",
+      "0,5 unid."
+     ]
+    ]
+   },
+   "alts": [
+    "o feijão exige mais área de plantio por porção, mas a água e a energia do bife aumentam sua pegada total",
+    "o bife tem pegada maior por ser mais nutritivo, e a pegada de um alimento cresce com a sua qualidade nutricional",
+    "os dois pratos têm pegada parecida, pois a quantidade de arroz é igual e esse ingrediente define o resultado",
+    "o bife exige mais pasto, água e energia por refeição, e por isso tem pegada maior com porções parecidas"
+   ],
+   "correta": 3,
+   "explicacao": "Os dados mostram que o bife usa cinco vezes mais área e água, o que explica a pegada maior. Os distratores invertem a leitura da tabela, ligam pegada a valor nutricional ou ignoram a diferença entre os pratos."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "A diretoria de uma escola de Guarulhos quer reduzir em pelo menos 1,5 hectare global por ano a pegada da escola, escolhendo duas ações entre quatro. A comissão estimou o quanto cada ação reduz a pegada anual da escola e lembrou que ações combinadas somam seus efeitos.",
+   "comando": "Qual combinação de duas ações atinge a meta?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do exercício: redução estimada",
+    "colunas": [
+     "Ação",
+     "Redução por ano"
+    ],
+    "linhas": [
+     [
+      "Trocar as lâmpadas",
+      "0,3 ha"
+     ],
+     [
+      "Reduzir o desperdício da merenda",
+      "1,1 ha"
+     ],
+     [
+      "Reciclar o papel",
+      "0,2 ha"
+     ],
+     [
+      "Fazer compostagem",
+      "0,5 ha"
+     ]
+    ]
+   },
+   "alts": [
+    "reduzir o desperdício da merenda e trocar as lâmpadas, que somadas reduzem 1,4 ha por ano e ficam perto da meta",
+    "reduzir o desperdício da merenda e fazer compostagem, que somadas reduzem 1,6 ha por ano e superam a meta",
+    "fazer compostagem e reciclar o papel, que somadas reduzem 0,7 ha por ano e ficam abaixo da meta definida",
+    "reduzir o desperdício da merenda e reciclar o papel, que somadas reduzem 1,3 ha por ano e ficam abaixo da meta"
+   ],
+   "correta": 1,
+   "explicacao": "Só a soma de 1,1 e 0,5 chega a 1,6 ha e atinge a meta de 1,5 ha. Os distratores somam valores que não chegam a 1,5 ha, ficando próximos mas insuficientes."
+  },
+  {
+   "tipo": "obj",
+   "enunciado": "Uma entidade ambiental divulgou o dia do ano em que a humanidade já usou todos os recursos que a Terra consegue repor naquele ano. Estudantes receberam três valores de exercício de anos diferentes e precisam interpretá-los.",
+   "comando": "Qual interpretação é sustentada pelos dados?",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do exercício: dia da sobrecarga",
+    "colunas": [
+     "Ano",
+     "Dia"
+    ],
+    "linhas": [
+     [
+      "1975",
+      "10 de dezembro"
+     ],
+     [
+      "1995",
+      "5 de novembro"
+     ],
+     [
+      "2015",
+      "13 de agosto"
+     ]
+    ]
+   },
+   "alts": [
+    "a data ocorre mais cedo, o que indica que a Terra produz menos recursos a cada ano que passa",
+    "a data ocorre mais cedo, o que indica que a população diminuiu e que consome menos recursos",
+    "a data ocorre mais cedo, o que indica que a demanda por recursos supera a capacidade de renovação por mais tempo",
+    "a data ocorre mais tarde a cada período, o que indica que a humanidade passou a usar os recursos com mais cuidado"
+   ],
+   "correta": 2,
+   "explicacao": "A data adiantada de dezembro para agosto mostra que o consumo esgota a capacidade de reposição em menos tempo. Os distratores atribuem a mudança à produção da Terra, à queda populacional ou leem a data ao contrário."
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Mariana respondeu a um questionário de pegada ecológica na escola e anotou os hábitos semanais da família: 20 viagens de carro, 10 refeições com carne bovina, 7 banhos de 5 minutos e 2 garrafas plásticas descartadas. A professora explicou que a pegada ecológica estima a área de natureza necessária para sustentar o estilo de vida de uma pessoa ou grupo.",
+   "comando": "Escolha dois hábitos que mais aumentam a pegada da família e explique por que, propondo uma mudança para cada um.",
+   "figura": null,
+   "ref": "Os hábitos que mais aumentam a pegada são as 20 viagens de carro e as 10 refeições com carne bovina, pois consomem combustível e muita área e água. Pode-se trocar parte das viagens por ônibus, bicicleta ou carona e reduzir a carne bovina, substituindo-a por feijão e outros alimentos.",
+   "conceitos": [
+    "viagens de carro e carne bovina como principais hábitos",
+    "relação com consumo de combustível, área e água",
+    "propor mudança para cada hábito"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Em um bairro perto da represa do Cantareira, o consumo de água por pessoa cresceu e a empresa de saneamento pediu ajuda à escola para uma campanha. Os alunos mediram o consumo em duas casas, uma que usa mangueira para lavar o quintal e outra que reaproveita a água da máquina de lavar.",
+   "comando": "Explique como o consumo de água se relaciona com a pegada ecológica e proponha duas iniciativas para o bairro.",
+   "figura": {
+    "tipo": "barras",
+    "titulo": "Dados do exercício: consumo de água",
+    "unidade": "litros por pessoa por dia",
+    "itens": [
+     {
+      "rotulo": "Casa com mangueira",
+      "valor": 220
+     },
+     {
+      "rotulo": "Casa com reaproveitamento",
+      "valor": 130
+     }
+    ]
+   },
+   "ref": "Quanto maior o consumo de água, maior a área de natureza necessária para captar, tratar e repor a água, o que aumenta a pegada. O bairro pode adotar o reaproveitamento da água da lavagem e trocar a mangueira por balde, além de proteger a mata ao redor da represa.",
+   "conceitos": [
+    "maior consumo de água aumenta a pegada",
+    "propor reaproveitamento ou balde no lugar da mangueira",
+    "propor proteção da mata e da bacia"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Quatro estudantes moram a 10 km da escola, na zona leste da capital, e vão para a aula cada um em seu carro, no trânsito da Marginal. Um deles propôs uma carona solidária. Cada carro emite cerca de 0,2 kg de gás carbônico por quilômetro, e a emissão faz parte da pegada de carbono.",
+   "comando": "Calcule a emissão diária de ida do grupo nas duas situações e explique o que a carona mostra sobre pegada ecológica.",
+   "figura": null,
+   "ref": "Em quatro carros, a emissão de ida é 4 vezes 10 km vezes 0,2 kg, ou seja, 8 kg; com um carro, é 2 kg, uma redução de 6 kg por viagem. A carona mostra que dividir o veículo diminui a pegada ecológica sem reduzir o deslocamento.",
+   "conceitos": [
+    "emissão de 8 kg com quatro carros",
+    "emissão de 2 kg com um carro",
+    "diferença de 6 kg",
+    "dividir o veículo reduz a pegada"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Uma escola de Sorocaba descarta cerca de 90 kg de restos de comida por semana e envia tudo ao aterro. Uma proposta da turma é reduzir o desperdício e fazer compostagem com a sobra para adubar a horta.",
+   "comando": "Explique como essa proposta reduz a pegada ecológica da escola e cite uma dificuldade que a turma terá de enfrentar.",
+   "figura": null,
+   "ref": "Reduzir o desperdício diminui a quantidade de alimento produzido e transportado, e a compostagem evita o envio de resíduos ao aterro e produz adubo, o que reduz a área de natureza usada. Uma dificuldade é manter a rotina de separar os restos e cuidar da composteira, para evitar mau cheiro e pragas.",
+   "conceitos": [
+    "reduzir o desperdício diminui recursos usados",
+    "compostagem evita resíduo no aterro e gera adubo",
+    "citar dificuldade de organização da rotina"
+   ]
+  },
+  {
+   "tipo": "dis",
+   "enunciado": "Um país A tem pegada média de 4,0 hectares globais por pessoa, mas sua natureza disponível é de 1,0 por pessoa. Um país B tem pegada de 1,2 e natureza disponível de 3,5. Estudantes comparam os dois países para entender quem depende dos recursos de outros lugares.",
+   "comando": "Interprete os valores de cada país e indique uma iniciativa para o país que usa mais do que dispõe.",
+   "figura": {
+    "tipo": "tabela",
+    "titulo": "Dados do exercício: pegada e natureza disponível",
+    "colunas": [
+     "País",
+     "Pegada",
+     "Natureza disponível"
+    ],
+    "linhas": [
+     [
+      "A",
+      "4,0",
+      "1,0"
+     ],
+     [
+      "B",
+      "1,2",
+      "3,5"
+     ]
+    ]
+   },
+   "ref": "O país A usa quatro vezes mais natureza do que possui, e por isso depende de recursos de outros locais ou esgota os próprios. O país B usa menos do que tem e mantém uma reserva. O país A pode reduzir o consumo, reciclar, usar energia renovável e proteger suas áreas de vegetação.",
+   "conceitos": [
+    "país A usa mais natureza do que dispõe",
+    "país B usa menos do que dispõe",
+    "propor redução do consumo ou reciclagem ou energia renovável"
+   ]
+  }
  ]
 }
