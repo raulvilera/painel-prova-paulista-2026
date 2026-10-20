@@ -18,7 +18,7 @@ fs.readdirSync(__dirname+'/banco').filter(f=>/^saida2-\d+\.json$/.test(f)).forEa
 const {bloqueado}=require('./banco/svg/bloqueios.js'); let svgs=0, vetados=0; fs.readdirSync(__dirname+'/banco/svg').filter(f=>/^resultado-\d+\.json$/.test(f)).forEach(f=>{
  const R=JSON.parse(fs.readFileSync(path.join(__dirname,'banco/svg',f),'utf8'));
  Object.keys(R).forEach(k=>{ if(!out[k]) return; (R[k]||[]).forEach((svg,i)=>{ const q=out[k][i]; if(!q||svg==null) return;
-  const s=String(svg).trim(); if(!/^<svg[\s\S]*<\/svg>$/.test(s)||!/viewBox="0 0 \d+ \d+"/.test(s)||/<\s*(script|foreignObject|image|use|iframe|style)\b|\son[a-z]+\s*=|href\s*=|xlink:|https?:\/\//i.test(s)||s.length>9000) return;
+  const s=String(svg).trim(); if(!/^<svg[\s\S]*<\/svg>$/.test(s)||!/viewBox="0 0 \d+ \d+"/.test(s)||/<\s*(script|foreignObject|image|use|iframe|style)\b|\son[a-z]+\s*=|href\s*=|xlink:|https?:\/\//i.test(s.replace(/xmlns="http:\/\/www\.w3\.org\/2000\/svg"/g,''))||s.length>9000) return;
   const textos=[...s.matchAll(/>([^<>]+)</g)].map(m=>m[1].trim()).filter(Boolean); if(!textos.length) return;
   if(I.entregaResposta(Object.assign({},q,{figura:{tipo:'svg',titulo:'',textos}}))) return;
   if(bloqueado(s)){vetados++;return;} q.svg=s; svgs++; }); }); });

@@ -18,7 +18,7 @@ arqs.forEach(a => {
       const s = String(svg).trim(), erros = [];
       if (!/^<svg[\s\S]*<\/svg>$/.test(s)) erros.push('não é um <svg> completo');
       if (!/viewBox="0 0 \d+ \d+"/.test(s)) erros.push('falta viewBox');
-      if (PROIBIDO.test(s)) erros.push('conteúdo não permitido (script/on*/foreignObject/link externo)');
+      if (PROIBIDO.test(s.replace(/xmlns="http:\/\/www\.w3\.org\/2000\/svg"/g, ''))) erros.push('conteúdo não permitido (script/on*/foreignObject/link externo)');
       if (s.length > 9000) erros.push('muito grande (' + s.length + ' caracteres; máx. 9000)');
       const bl = bloqueado(s); if (bl) erros.push(bl);
       const textos = [...s.matchAll(/>([^<>]+)</g)].map(m => m[1].trim()).filter(Boolean);
