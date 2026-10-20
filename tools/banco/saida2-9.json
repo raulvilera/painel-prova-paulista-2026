@@ -3018,10 +3018,10 @@
     ]
    },
    "alts": [
-    "R$ 175,00, pois a bandeira altera o valor de quem passa de 300 kWh, e o consumo de Marta está abaixo disso.",
-    "R$ 1.300,00, pois o adicional de R$ 4,50 é cobrado a cada kWh consumido, somando-se à tarifa de R$ 0,70 por kWh.",
+    "R$ 175,00, pois a bandeira só muda o valor acima de 300 kWh.",
+    "R$ 1.300,00, pois o adicional de R$ 4,50 vale a cada kWh consumido.",
     "R$ 186,25, pois R$ 175,00 mais 2,5 blocos de R$ 4,50 (R$ 11,25).",
-    "R$ 179,50, pois o adicional de R$ 4,50 é cobrado uma vez, qualquer que seja o consumo."
+    "R$ 179,50, pois o adicional de R$ 4,50 é cobrado uma vez na conta."
    ],
    "correta": 2,
    "explicacao": "O consumo de 250 kWh a R$ 0,70 dá R$ 175,00 e o adicional é 2,5 x R$ 4,50 = R$ 11,25, totalizando R$ 186,25. Os distratores tratam o adicional como valor fixo, aplicam um limite que não existe ou cobram o adicional por kWh em vez de por bloco."
