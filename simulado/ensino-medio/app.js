@@ -223,14 +223,10 @@
 
   function populateProvas() {
     const turma = TURMAS.find((item) => item.value === refs.turma.value);
-    const options = turma && turma.serie === '2'
-      ? [
-          { value: 'paulista', label: PROVAS.paulista.label },
-          { value: 'provao', label: PROVAS.provao.label }
-        ]
-      : turma
-        ? [{ value: 'provao', label: PROVAS.provao.label }]
-        : [];
+    // Todas as turmas do Ensino Médio fazem só o Provão Paulista.
+    const options = turma
+      ? [{ value: 'provao', label: PROVAS.provao.label }]
+      : [];
     fillSelect(refs.prova, turma ? 'Selecione a prova-alvo' : 'Escolha o componente primeiro', options, !turma || !refs.componente.value);
   }
 
@@ -273,13 +269,9 @@
 
   function onComponenteChange() {
     const turma = TURMAS.find((item) => item.value === refs.turma.value);
+    // Todas as turmas do Ensino Médio fazem só o Provão Paulista.
     const options = turma && refs.componente.value
-      ? (turma.serie === '2'
-        ? [
-            { value: 'paulista', label: PROVAS.paulista.label },
-            { value: 'provao', label: PROVAS.provao.label }
-          ]
-        : [{ value: 'provao', label: PROVAS.provao.label }])
+      ? [{ value: 'provao', label: PROVAS.provao.label }]
       : [];
     fillSelect(refs.prova, refs.componente.value ? 'Selecione a prova-alvo' : 'Escolha o componente primeiro', options, !refs.componente.value);
     renderSummary();
