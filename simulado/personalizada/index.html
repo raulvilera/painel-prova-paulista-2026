@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Atividade personalizada · Ensino Médio</title>
+<style>
+  :root { --bg:#f5f7f9; --card:#ffffff; --txt:#1d2a33; --muted:#5b6b75; --acc:#145a32; --borda:#d6dde3; --ok:#c9ddf7; --erro:#f6c6c6; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg:#101820; --card:#1a2630; --txt:#e8eef2; --muted:#9fb0bb; --acc:#4fb37a; --borda:#2c3d49; --ok:#1d3c63; --erro:#5a2424; }
+  }
+  :root[data-theme="dark"] { --bg:#101820; --card:#1a2630; --txt:#e8eef2; --muted:#9fb0bb; --acc:#4fb37a; --borda:#2c3d49; --ok:#1d3c63; --erro:#5a2424; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt); font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.45; }
+  main { max-width: 760px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 1.35rem; margin: 8px 0 4px; color: var(--acc); }
+  p.sub { margin: 0 0 16px; color: var(--muted); }
+  .card { background: var(--card); border:1px solid var(--borda); border-radius: 12px; padding: 16px; margin-bottom: 14px; }
+  label { display:block; font-weight:600; margin: 8px 0 4px; }
+  select, button { width:100%; font: inherit; padding: 10px 12px; border-radius: 8px; border:1px solid var(--borda); background: var(--card); color: var(--txt); }
+  button { background: var(--acc); color:#fff; border:none; font-weight:700; cursor:pointer; margin-top: 12px; }
+  button:disabled { opacity:.5; cursor:not-allowed; }
+  .q { border-top:1px solid var(--borda); padding: 14px 0 6px; }
+  .q:first-child { border-top:none; padding-top: 0; }
+  .q h3 { font-size: 1rem; margin: 0 0 8px; }
+  .enun { white-space: pre-line; margin: 0 0 10px; }
+  .alt { display:flex; gap:10px; align-items:flex-start; padding: 6px 8px; border-radius:8px; cursor:pointer; }
+  .alt:hover { background: var(--bg); }
+  .alt input { margin-top: 4px; }
+  .msg { padding: 12px; border-radius: 8px; margin-top: 12px; }
+  .msg.erro { background: var(--erro); }
+  .msg.ok { background: var(--ok); }
+  .res { font-size: 1.1rem; font-weight: 700; }
+  .hidden { display:none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Atividade personalizada</h1>
+  <p class="sub">Escolha sua turma e seu nome. A atividade tem 10 questões, feitas a partir das suas dificuldades.</p>
+
+  <section class="card">
+    <label for="turma">Turma</label>
+    <select id="turma"><option value="">Escolha a turma</option></select>
+    <label for="nome">Nome</label>
+    <select id="nome" disabled><option value="">Escolha seu nome</option></select>
+    <button id="abrir" disabled>Abrir minha atividade</button>
+    <div id="aviso" class="msg erro hidden" role="alert"></div>
+  </section>
+
+  <section id="atividade" class="card hidden">
+    <div id="cabec"></div>
+    <form id="form"></form>
+    <button id="enviar" type="button">Enviar respostas</button>
+    <div id="resultado" class="msg ok hidden" role="status"></div>
+  </section>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  var API = '/api/personalizada-em';
+  var N = 10;
+  var atual = null;   // { turma, nome, questoes }
+
+  var $ = function (id) { return document.getElementById(id); };
+  var turmaEl = $('turma'), nomeEl = $('nome'), abrirEl = $('abrir'), avisoEl = $('aviso');
+  var atividadeEl = $('atividade'), cabecEl = $('cabec'), formEl = $('form'), enviarEl = $('enviar'), resEl = $('resultado');
+
+  function mostrarAviso(texto) { avisoEl.textContent = texto; avisoEl.classList.remove('hidden'); }
+  function esconderAviso() { avisoEl.classList.add('hidden'); avisoEl.textContent = ''; }
+
+  function opcao(select, valor, texto) {
+    var o = document.createElement('option'); o.value = valor; o.textContent = texto; select.appendChild(o);
+  }
+
+  function getJson(url) {
+    return fetch(url, { credentials: 'same-origin' }).then(function (r) {
+      return r.json().catch(function () { return { ok: false, erro: 'Resposta inesperada do servidor.' }; })
+        .then(function (d) { return { status: r.status, dados: d }; });
+    });
+  }
+
+  // 1) Turmas disponíveis; os nomes são carregados ao escolher a turma
+  ['2ª SÉRIE A MANHÃ (Des. Sistemas)', '2ª SÉRIE C NOITE', '3ª SÉRIE F NOITE'].forEach(function (t) { opcao(turmaEl, t, t); });
+
+  turmaEl.addEventListener('change', function () {
+    esconderAviso(); atividadeEl.classList.add('hidden');
+    nomeEl.innerHTML = ''; opcao(nomeEl, '', 'Escolha seu nome');
+    nomeEl.disabled = true; abrirEl.disabled = true;
+    if (!turmaEl.value) return;
+    getJson(API + '?turma=' + encodeURIComponent(turmaEl.value)).then(function (r) {
+      if (!r.dados.ok) { mostrarAviso(r.dados.erro || 'Não foi possível carregar os nomes.'); return; }
+      r.dados.alunos.forEach(function (n) { opcao(nomeEl, n, n); });
+      nomeEl.disabled = false;
+    }).catch(function () { mostrarAviso('Não foi possível carregar os nomes. Tente de novo.'); });
+  });
+
+  nomeEl.addEventListener('change', function () {
+    esconderAviso(); atividadeEl.classList.add('hidden');
+    abrirEl.disabled = !nomeEl.value;
+  });
+
+  // 2) Abre a atividade do aluno
+  abrirEl.addEventListener('click', function () {
+    esconderAviso(); resEl.classList.add('hidden');
+    abrirEl.disabled = true; abrirEl.textContent = 'Carregando…';
+    var url = API + '?turma=' + encodeURIComponent(turmaEl.value) + '&nome=' + encodeURIComponent(nomeEl.value);
+    getJson(url).then(function (r) {
+      abrirEl.textContent = 'Abrir minha atividade'; abrirEl.disabled = false;
+      if (!r.dados.ok) { mostrarAviso(r.dados.erro || 'Não foi possível abrir a atividade.'); return; }
+      atual = { turma: r.dados.turma, nome: r.dados.nome, questoes: r.dados.questoes };
+      montar(r.dados);
+    }).catch(function () {
+      abrirEl.textContent = 'Abrir minha atividade'; abrirEl.disabled = false;
+      mostrarAviso('Falha de conexão. Tente de novo.');
+    });
+  });
+
+  function montar(d) {
+    cabecEl.innerHTML = '';
+    var h = document.createElement('h2'); h.style.fontSize = '1.1rem'; h.style.margin = '0 0 4px'; h.textContent = d.nome;
+    var p = document.createElement('p'); p.className = 'sub'; p.style.margin = '0 0 12px';
+    p.textContent = d.componente + ' · ' + d.turma;
+    cabecEl.appendChild(h); cabecEl.appendChild(p);
+
+    formEl.innerHTML = '';
+    d.questoes.forEach(function (q, i) {
+      var box = document.createElement('div'); box.className = 'q';
+      var t = document.createElement('h3'); t.textContent = 'Questão ' + (i + 1);
+      var e = document.createElement('p'); e.className = 'enun'; e.textContent = q.enunciado;
+      box.appendChild(t); box.appendChild(e);
+      q.alts.forEach(function (txt, k) {
+        var lab = document.createElement('label'); lab.className = 'alt';
+        var inp = document.createElement('input'); inp.type = 'radio'; inp.name = 'q' + i; inp.value = String(k);
+        var span = document.createElement('span'); span.textContent = 'ABCDE'.charAt(k) + ') ' + txt;
+        lab.appendChild(inp); lab.appendChild(span); box.appendChild(lab);
+      });
+      formEl.appendChild(box);
+    });
+    atividadeEl.classList.remove('hidden');
+    enviarEl.disabled = false;
+    resEl.classList.add('hidden');
+    atividadeEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // 3) Envia as respostas (uma vez só)
+  enviarEl.addEventListener('click', function () {
+    if (!atual) return;
+    var respostas = [], faltando = 0;
+    for (var i = 0; i < N; i++) {
+      var sel = formEl.querySelector('input[name="q' + i + '"]:checked');
+      if (!sel) faltando++;
+      respostas.push(sel ? Number(sel.value) : null);
+    }
+    if (faltando) { mostrarAviso('Faltam ' + faltando + ' resposta(s). Responda todas antes de enviar.'); return; }
+    esconderAviso();
+    enviarEl.disabled = true; enviarEl.textContent = 'Enviando…';
+    fetch(API, {
+      method: 'POST', credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ turma: atual.turma, nome: atual.nome, respostas: respostas })
+    }).then(function (r) { return r.json().catch(function () { return { ok: false, erro: 'Resposta inesperada do servidor.' }; }); })
+      .then(function (d) {
+        enviarEl.textContent = 'Enviar respostas';
+        if (!d.ok) { enviarEl.disabled = false; mostrarAviso(d.erro || 'Não foi possível enviar.'); return; }
+        formEl.querySelectorAll('input').forEach(function (x) { x.disabled = true; });
+        resEl.textContent = 'Você acertou ' + d.acertos + ' de ' + d.total + ' questões. Respostas enviadas.';
+        resEl.classList.remove('hidden');
+        enviarEl.disabled = true;
+      })
+      .catch(function () {
+        enviarEl.textContent = 'Enviar respostas'; enviarEl.disabled = false;
+        mostrarAviso('Falha de conexão ao enviar. Tente de novo.');
+      });
+  });
+})();
+</script>
+</body>
+</html>
