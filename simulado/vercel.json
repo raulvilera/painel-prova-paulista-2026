@@ -48,6 +48,10 @@
     {
       "source": "/api/individual",
       "destination": "https://painel-prova-paulista-2026.vercel.app/api/individual"
+    },
+    {
+      "source": "/api/personalizada-em",
+      "destination": "https://painel-prova-paulista-2026.vercel.app/api/personalizada-em"
     }
   ]
 }
