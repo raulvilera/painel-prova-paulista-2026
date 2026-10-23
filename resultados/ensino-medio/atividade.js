@@ -36,8 +36,21 @@
       var r = await fetch('/api/atividade-professor?turma=' + encodeURIComponent(t) + '&nome=' + encodeURIComponent(nm), { headers: { Authorization: 'Bearer ' + TOKEN } });
       var j = await r.json().catch(function () { return { ok: false, erro: 'resposta inválida (HTTP ' + r.status + ')' }; });
       if (!j.ok) { msg(esc(j.erro)); return; }
-      msg(''); desenha(j);
+      msg(''); desenha(j); mostraEmail(nm);
     } catch (e) { msg('Falha de conexão. Tente de novo.'); }
+  }
+
+  /* e-mail institucional do aluno: consulta a pasta "Dados das Turmas" no momento da escolha (nada fica guardado) */
+  async function mostraEmail(nm) {
+    var el = $('atvEmail'); el.innerHTML = 'E-mail institucional: consultando…';
+    try {
+      var r = await fetch('/api/email-aluno?nome=' + encodeURIComponent(nm), { headers: { Authorization: 'Bearer ' + TOKEN } });
+      var j = await r.json().catch(function () { return { ok: false, erro: 'resposta inválida' }; });
+      if (!j.ok) { el.innerHTML = 'E-mail institucional: ' + esc(j.erro); return; }
+      if (!j.encontrado) { el.innerHTML = 'E-mail institucional: não encontrado nas listas da pasta.'; return; }
+      if (j.ambiguo) { el.innerHTML = 'E-mail institucional: há mais de um e-mail para este nome (' + j.emails.map(esc).join(', ') + '). Confira.'; return; }
+      el.innerHTML = 'E-mail institucional: <b>' + esc(j.email) + '</b>';
+    } catch (e) { el.innerHTML = 'E-mail institucional: falha ao consultar.'; }
   }
 
   function desenha(d) {

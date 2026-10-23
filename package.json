@@ -1,0 +1,8 @@
+{
+  "name": "painel-prova-paulista-2026",
+  "private": true,
+  "description": "Painel de resultados e atividades (Vercel)",
+  "dependencies": {
+    "xlsx": "0.18.5"
+  }
+}
