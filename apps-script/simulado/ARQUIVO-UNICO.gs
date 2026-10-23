@@ -986,13 +986,12 @@ const EM_ABA_CRITERIOS = 'EM · Critérios';                                    
 function emLetra_(n) { let s = ''; while (n > 0) { const m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = Math.floor((n - 1) / 26); } return s; }
 
 /* Nota final (0–10): as 10 questões valem igual. Objetivas: 1 ponto por acerto; dissertativas: nota 0–1 do professor.
-   Só aparece depois que o professor preenche as duas notas das dissertativas. */
+   Calculada automaticamente com o que já está registrado: dissertativa ainda vazia conta 0 até ser preenchida. */
 function emFormulaFinal_(linha) {
   const acertos = emLetra_(EM_COL_FIM_OBJ) + linha;
   const notas = [];
-  for (let k = 0; k < EM_N_DIS; k++) notas.push(emLetra_(EM_COL_DIS + k * EM_POR_DIS + 1) + linha);
-  const todas = notas.map(c => c + '<>""').join(',');
-  return '=IF(AND(' + todas + '),ROUND((' + acertos + '+' + notas.join('+') + ')/' + (EM_N_OBJ + EM_N_DIS) + '*10,1),"")';
+  for (let k = 0; k < EM_N_DIS; k++) notas.push('N(' + emLetra_(EM_COL_DIS + k * EM_POR_DIS + 1) + linha + ')');
+  return '=IF(' + acertos + '="","",ROUND(' + acertos + '+' + notas.join('+') + ',1))';
 }
 
 /* Evita que um texto digitado pelo aluno seja interpretado como fórmula pela planilha. */
