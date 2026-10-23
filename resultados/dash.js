@@ -32,7 +32,7 @@
         else if (typeof i.nota === 'number') v = Math.max(0, Math.min(1, i.nota));
         else if (typeof i.parcial === 'number') v = Math.max(0, Math.min(1, i.parcial));   // ligar/ordenar (atividade adaptada): acerto parcial vale
         const m = j.meta[CFG.fonte === 'em' ? i.id : i.k] || {};
-        const q = { ia: i.ia && i.ia.nivel ? i.ia : null, n: m.n || ix + 1, tipo: i.tipo, enun: m.enun || i.enun || '', enunCompleto: !m.enun && !!i.enun, tResp: i.textoResp || '', tCor: i.textoCorreta || '', cor: m.cor || '', coment: i.comentario || '', nota: typeof i.nota === 'number' ? i.nota : null,
+        const q = { ia: i.ia && i.ia.nivel ? i.ia : null, n: m.n || ix + 1, tipo: i.tipo, enun: i.enun || m.enun || '', enunCompleto: !!i.enun, alts: Array.isArray(i.alts) && i.alts.length ? i.alts : null, correta: typeof i.correta === 'number' ? i.correta : null, marcIdx: typeof i.resp === 'number' ? i.resp : null, tResp: i.textoResp || '', tCor: i.textoCorreta || '', cor: m.cor || '', coment: i.comentario || '', nota: typeof i.nota === 'number' ? i.nota : null,
           marcou: i.tipo === 'obj' ? (typeof i.resp === 'number' ? 'ABCDE'[i.resp] : (i.resp || '')) : '', texto: i.tipo === 'dis' ? String(i.resp || i.resposta || '') : '' };
         if (v === null) return;   // dissertativa ainda sem nota: entra assim que for corrigida
         if (CFG.fonte === 'em') itens.push({ v, q, ae: m.ae ? m.ae + (m.hab ? ' · ' + m.hab : '') : (m.hab || 'Mapa do Provão'), desc: m.objeto || '—', bim: '', rot: m.objeto });
@@ -215,7 +215,17 @@
       '<details class="qs"><summary>Por aprendizagem essencial: como os alunos se distribuem em cada uma (' + por('ae').length + ')</summary>' + gal(por('ae'), 'ae', 'tema') + '</details>' +
       '<details class="qs"><summary>Por descritor: como os alunos se distribuem em cada um (' + por('desc').length + ')</summary>' + gal(por('desc'), 'desc', 'descritor') + '</details></div>';
   }
-    function linhaQ(i) {
+    /* alternativas completas: a marcada pelo aluno e a correta (quando o envio guardou as alternativas) */
+  function altsHtml(q, i) {
+    var corIdx = q.correta != null ? q.correta : (q.tCor ? q.alts.findIndex(function (x) { return String(x).trim() === String(q.tCor).trim(); }) : -1);
+    return '<ol type="A" class="alts">' + q.alts.map(function (a, k) {
+      var c = [];
+      if (k === corIdx) c.push('cert');
+      if (k === q.marcIdx && k !== corIdx) c.push('marc');
+      return '<li' + (c.length ? ' class="' + c.join(' ') + '"' : '') + '>' + esc(a) + '</li>';
+    }).join('') + '</ol>';
+  }
+  function linhaQ(i) {
       const q = i.q; let st, tx;
       if (q.tipo === 'obj') {
         const ok = i.v === 1; st = ok ? 'ok' : 'er';
@@ -231,6 +241,7 @@
         '<div><b>Questão ' + q.n + '</b> <span class="muted">· ' + tx + '</span></div>' +
         '<div class="qd"><b>Aprendizagem/habilidade:</b> ' + esc(i.ae) + '</div><div class="qd"><b>Descritor:</b> ' + esc(i.desc) + '</div>' +
         (q.enun ? '<div class="qe">' + esc(q.enun) + (q.enun.length >= 255 && !q.enunCompleto ? '…' : '') + '</div>' : '') +
+        (q.alts ? altsHtml(q, i) : '') +
         (q.ia ? '<div class="iaw ' + esc(q.ia.nivel) + '"><b>⚠ Possível uso de IA (' + (q.ia.nivel === 'alto' ? 'indício forte' : 'indício moderado') + ')</b> — ' + esc(q.ia.motivo || '') + (q.ia.zerada ? '<br><b>Nota zerada pelo critério</b>' + (q.ia.notaOriginal != null ? ' (nota original da correção: ' + nf(q.ia.notaOriginal) + ')' : '') : '') + '<br><span class="muted">É um indício, não uma prova: converse com o aluno e peça que explique a resposta com as próprias palavras.</span></div>' : '') + (q.texto ? '<blockquote class="qt">' + esc(q.texto) + '</blockquote>' : '') + (q.coment ? '<div class="qd muted"><b>Comentário da correção:</b> ' + esc(q.coment) + '</div>' : '') + '</div></div>';
   }
   function planoAluno(a, tm) {
