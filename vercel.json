@@ -3,7 +3,8 @@
     "api/corrigir-em.js": { "maxDuration": 60 },
     "api/personalizada-em.js": { "maxDuration": 30 },
     "api/individual.js": { "maxDuration": 60 },
-    "api/resultados.js": { "maxDuration": 30 }
+    "api/resultados.js": { "maxDuration": 30 },
+    "api/jogo.js": { "maxDuration": 30 }
   },
   "headers": [
     {

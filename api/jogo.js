@@ -1,5 +1,6 @@
 /* Jogo da Trilha SARESP (Fundamental, 6º ao 9º ano) — só para o professor, projetado em sala.
    GET /api/jogo            → lista de turmas
+   GET /api/jogo?img=<id>   → foto livre (Wikimedia Commons, com crédito) de um conceito da rodada "Imagem e definição"
    GET /api/jogo?turma=…    → temas do SARESP da série da turma, com o peso de cada tema na turma e questões objetivas do banco
    O peso vem do plano de cada aluno derivado do painel (descritores com defasagem), somado por turma: só números agregados,
    nenhum nome de aluno sai daqui. Exige o login do professor (Bearer token do Supabase), porque as questões levam o gabarito. */
@@ -8,6 +9,30 @@ const LOGIN_KEY = process.env.PAINEL_SUPABASE_KEY || 'sb_publishable_FbMU5x7WBpx
 const PAINEL = require('./_plano-painel.js');
 const CAT = require('./_catalogo-indiv.js');
 const BANCO = require('./_banco-indiv.js');
+const CONCEITOS = require('./_conceitos-jogo.js');
+const { wikiImagem } = require('./_wiki-img.js');
+/* fotos dos conceitos ficam guardadas no mesmo Supabase da atividade individual (tabela indiv_banco, chave jogoimg:<id>) */
+const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), SKEY = process.env.SUPABASE_SERVICE_KEY || '';
+async function rest(path, opt) {
+  const r = await fetch(SB + '/rest/v1/' + path, Object.assign({ headers: { apikey: SKEY, Authorization: 'Bearer ' + SKEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' } }, opt || {}));
+  const t = await r.text(); if (!r.ok) throw new Error('Supabase ' + r.status);
+  return t ? JSON.parse(t) : null;
+}
+const FOTOS = {};   // cache em memória enquanto a função estiver quente
+async function fotoConceito(id) {
+  const cc = CONCEITOS.find(x => x.id === id); if (!cc) return null;
+  if (FOTOS[id]) return FOTOS[id];
+  const chave = 'jogoimg:' + id + ':' + cc.wiki.join('|').length;
+  if (SB && SKEY) {
+    try { const r = await rest('indiv_banco?select=questoes&k=eq.' + encodeURIComponent(chave)); if (r && r[0] && r[0].questoes && r[0].questoes.dados) return (FOTOS[id] = r[0].questoes); } catch (e) { /* segue sem cache */ }
+  }
+  const why = [], img = await wikiImagem(cc.wiki, why);
+  if (!img) return (FOTOS[id] = { semFoto: true });
+  if (SB && SKEY) {
+    try { await rest('indiv_banco?on_conflict=k', { method: 'POST', headers: { apikey: SKEY, Authorization: 'Bearer ' + SKEY, 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify({ k: chave, questoes: img }) }); } catch (e) { /* sem cache */ }
+  }
+  return (FOTOS[id] = img);
+}
 
 const Q_POR_TEMA = 4;
 
@@ -36,7 +61,11 @@ function dadosTurma(turma) {
     };
   }).filter(t => t.qs.length);
   temas.sort((a, b) => a.bim.localeCompare(b.bim) || b.defasagem - a.defasagem);
-  return { turma, serie, alunos: alunos.length, temas };
+  const conceitos = CONCEITOS.filter(x => x.serie === serie).map(x => {
+    const t = temas.find(tt => tt.desc.includes(x.tema));
+    return { id: x.id, nome: x.nome, emoji: x.emoji, def: x.def, k: t ? t.k : '', defasagem: t ? t.defasagem : 0 };
+  });
+  return { turma, serie, alunos: alunos.length, temas, conceitos };
 }
 
 module.exports = async function jogo(req, res) {
@@ -46,6 +75,14 @@ module.exports = async function jogo(req, res) {
   try {
     if (req.method !== 'GET') return out(405, { ok: false, erro: 'Use GET.' });
     if (!(await professor(req))) return out(401, { ok: false, erro: 'Entre primeiro no painel com o seu login de professor.' });
+    const img = String((req.query && req.query.img) || '').trim();
+    if (img) {
+      const f = await fotoConceito(img);
+      if (!f) return out(404, { ok: false, erro: 'Conceito não encontrado.' });
+      if (f.semFoto) return out(200, { ok: true, semFoto: true });
+      res.setHeader('Cache-Control', 'private, max-age=86400');
+      return out(200, { ok: true, mime: f.mime, dados: f.dados, credito: f.credito, fonte: f.fonte });
+    }
     const turma = String((req.query && req.query.turma) || '').trim();
     if (!turma) return out(200, { ok: true, turmas: Object.keys(PAINEL).sort((a, b) => a.localeCompare(b, 'pt')) });
     const d = dadosTurma(turma);

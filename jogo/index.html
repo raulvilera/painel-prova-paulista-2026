@@ -5,16 +5,16 @@
 :root{
   --bg:#f3f5f1;--card:#ffffff;--ink:#17231c;--mut:#5d6b62;--line:#d9e0da;--pri:#165c36;--pri2:#1f7a49;
   --ok:#1e7d3c;--okbg:#e3f4e7;--err:#b3261e;--errbg:#fbe6e4;--warn:#9a6700;--warnbg:#fff4d6;
-  --b1:#2f6fb5;--b2:#c26a12;--b3:#7a4bb3;--b4:#1f8a70;
+  --b1:#2f6fb5;--b2:#c26a12;--b3:#7a4bb3;--b4:#1f8a70;--assocbg:#e8f0fb;
   --t1:#d1342f;--t2:#2a64c9;--t3:#e0a100;--t4:#7b3fb8;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--pri2:#7fd4a5;
-  --ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19;--warn:#f0c14b;--warnbg:#3a3015;
+  --ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19;--warn:#f0c14b;--warnbg:#3a3015;--assocbg:#16233a;
 }}
 :root[data-theme="dark"]{
   --bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--pri2:#7fd4a5;
-  --ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19;--warn:#f0c14b;--warnbg:#3a3015;
+  --ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19;--warn:#f0c14b;--warnbg:#3a3015;--assocbg:#16233a;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 "Segoe UI",Roboto,Arial,sans-serif}
@@ -91,6 +91,27 @@ figure.ilus svg{display:block;width:100%;max-width:620px;height:auto;margin:0 au
 .bars .b{display:grid;grid-template-columns:minmax(80px,30%) 1fr auto;gap:8px;align-items:center;font-size:.85em;margin:3px 0}
 .bars .bt{background:#e4ebe6;border-radius:4px;height:14px;overflow:hidden}.bars .bt i{display:block;height:100%;background:#2f6fb5}
 .steps{margin:0;padding-left:1.4em;font-size:.9em}
+/* ---------- imagem e definição ---------- */
+.casa.assoc{border-color:var(--b1);background:var(--assocbg)}
+.casa.assoc .hab{color:var(--b1)}
+.acards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:12px 0}
+.acard{position:relative;border:3px solid var(--line);border-radius:14px;background:var(--bg);padding:0;cursor:pointer;overflow:hidden;text-align:left;display:flex;flex-direction:column}
+.acard.sel{border-color:var(--pri);box-shadow:0 0 0 4px var(--okbg)}
+.acard .foto{aspect-ratio:4/3;background:#fff;display:flex;align-items:center;justify-content:center;font-size:4.5em;overflow:hidden}
+.acard .foto img{width:100%;height:100%;object-fit:cover;display:block}
+.acard .n{position:absolute;left:8px;top:8px;width:1.7em;height:1.7em;border-radius:50%;background:var(--pri);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+.acard .par{position:absolute;right:8px;top:8px;min-width:1.7em;height:1.7em;padding:0 .4em;border-radius:999px;background:var(--warn);color:#fff;font-weight:800;display:none;align-items:center;justify-content:center}
+.acard .par.on{display:flex}
+.acard .nome{padding:6px 10px;font-weight:800;display:none}
+.acard .cred{font-size:.5em;color:var(--mut);padding:2px 8px 6px;line-height:1.2}
+.acard.certa{border-color:var(--ok)}.acard.certa .nome{display:block;background:var(--okbg)}
+.acard.errada{border-color:var(--err)}.acard.errada .nome{display:block;background:var(--errbg)}
+.defs{display:grid;gap:10px}
+.def{display:flex;gap:12px;align-items:flex-start;text-align:left;background:var(--bg);border:2px solid var(--line);border-radius:12px;padding:10px 14px;cursor:pointer}
+.def b{flex:none;width:1.8em;height:1.8em;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--b1);color:#fff}
+.def .lig{margin-left:auto;font-weight:800;color:var(--warn);white-space:nowrap}
+.def:disabled{cursor:default}
+@media (max-width:700px){.acards{grid-template-columns:1fr}}
 /* ---------- fim ---------- */
 #fim{display:none}#fim.on{display:block}
 table.rel{border-collapse:collapse;width:100%;font-size:.95rem}
@@ -118,7 +139,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
 
 <section id="jogo">
   <div class="card"><div class="board" id="board"></div>
-    <div class="leg muted" style="margin-top:12px"><span><i style="background:var(--b1)"></i>1º bimestre</span><span><i style="background:var(--b2)"></i>2º bimestre</span><span><i style="background:var(--b3)"></i>3º bimestre</span><span><i style="background:var(--b4)"></i>4º bimestre</span><span>⚡ Desafio: tema com mais defasagem na turma, vale o dobro</span></div>
+    <div class="leg muted" style="margin-top:12px"><span><i style="background:var(--b1)"></i>1º bimestre</span><span><i style="background:var(--b2)"></i>2º bimestre</span><span><i style="background:var(--b3)"></i>3º bimestre</span><span><i style="background:var(--b4)"></i>4º bimestre</span><span>⚡ Desafio: tema com mais defasagem na turma, vale o dobro</span><span>🖼️ Imagem e definição: ligar cada foto ao conceito certo</span></div>
   </div>
   <aside class="side">
     <div class="card"><div class="muted sm" id="vezTxt"></div><div class="dado" id="dado" aria-live="polite">🎲</div>
@@ -128,6 +149,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       <li>Role o dado e ande. A equipe responde a questão do tema da casa.</li>
       <li>Acertou: fica na casa e ganha 10 pontos (⚡ 20).</li>
       <li>Errou: volta para onde estava. A turma vê a explicação.</li>
+      <li>🖼️ Ligue as 3 fotos às 3 definições: 5 pontos por par certo; com 2 ou 3 pares certos a equipe fica na casa.</li>
       <li>Vence quem chegar primeiro. Empate de casa: mais pontos.</li></ul>
       <button class="btn sec" id="bEncerrar" style="margin-top:10px;width:100%">Encerrar e ver relatório</button></div>
   </aside>
@@ -179,7 +201,10 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       while (tent < 40 && (casas[pos - 1] === k || casas[pos] === k || Math.abs(casas.indexOf(k) - pos) < 4));
       casas.splice(pos, 0, k);
     });
-    return { casas: casas.map(k => ({ k, des: desafio.has(k) })), desafio: [...desafio] };
+    const out = casas.map(k => ({ k, des: desafio.has(k) }));
+    // casas "Imagem e definição": uma a cada 6 casas, mais ou menos
+    if ((DADOS.conceitos || []).length >= 3) for (let i = 4; i < out.length; i += 6) out.splice(i, 0, { assoc: true });
+    return { casas: out, desafio: [...desafio] };
   }
 
   /* ---------- desenho ---------- */
@@ -192,7 +217,9 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       const pinos = G.eq.map((e, ix) => e.pos === i ? `<span class="pino${ix === G.vez ? ' vez' : ''}" style="background:${CORES[ix]}" title="${esc(e.nome)}"></span>` : '').join('');
       if (i === 0) { cel.push(`<div class="casa ini">Início<div class="pinos">${pinos}</div></div>`); continue; }
       if (i === n - 1) { cel.push(`<div class="casa fim">🏁 Chegada<div class="pinos">${pinos}</div></div>`); continue; }
-      const c = G.casas[i - 1], t = temaDe(c.k);
+      const c = G.casas[i - 1];
+      if (c.assoc) { cel.push(`<div class="casa assoc" title="Imagem e definição: ligar fotos de conceitos às suas definições"><span class="bim" style="background:var(--b1)"></span><div class="num">${i}</div><div class="hab">🖼️ Imagem e definição</div><div class="pinos">${pinos}</div></div>`); continue; }
+      const t = temaDe(c.k);
       cel.push(`<div class="casa b${esc(t.bim)}${c.des ? ' desafio' : ''}" title="${esc(t.bim)}º bim. · ${esc(t.hab)} · ${esc(t.desc)} — ${t.bim === '4' ? '4º bimestre: ainda sem resultado no painel' : t.defasagem + '% da turma com defasagem'}"><span class="bim"></span><div class="num">${i}</div><div class="hab">${esc(t.hab)}</div>${c.des ? '<span class="ico">⚡</span>' : ''}<div class="pinos">${pinos}</div></div>`);
     }
     // trilha em zigue-zague: linhas ímpares de trás para frente
@@ -237,7 +264,9 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
     if (e.pos >= G.casas.length + 1) {   // última casa antes da chegada vale a vitória direta
       G.fim = true; guardar(); ocupado = false; return terminar(G.vez);
     }
-    const c = G.casas[e.pos - 1], t = temaDe(c.k);
+    const c = G.casas[e.pos - 1];
+    if (c.assoc) return abrirAssociacao(de);
+    const t = temaDe(c.k);
     const ix = (G.usadas[c.k] || 0) % t.qs.length; G.usadas[c.k] = (G.usadas[c.k] || 0) + 1;
     abrirQuestao(t, t.qs[ix], c.des, de);
   }
@@ -268,7 +297,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       const b = $('bSeguir'); b.hidden = false; b.focus();
       guardar();
     };
-    G.respondido = false;
+    G.respondido = false; G.modo = 'q';
     alts.forEach(b => b.onclick = () => responder(+b.dataset.i));
     $('bSeguir').onclick = () => { $('qbox').classList.remove('on'); proximo(); };
     G.responder = responder;
@@ -278,7 +307,81 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       relogio = setInterval(() => { s--; show(); if (s <= 0) { clearInterval(relogio); responder(-1); } }, 1000);
     }
   }
+  /* ---------- fotos dos conceitos (Wikimedia Commons, com crédito) ---------- */
+  const FOTO = new Map();
+  function foto(id) {
+    if (!FOTO.has(id)) FOTO.set(id, api({ img: id }).then(j => j.semFoto ? null : { src: 'data:' + j.mime + ';base64,' + j.dados, credito: j.credito || '' }).catch(() => null));
+    return FOTO.get(id);
+  }
+  async function preCarregar() { for (const c of (DADOS && DADOS.conceitos) || []) { await foto(c.id); } }
+
+  function escolherConceitos() {
+    const L = DADOS.conceitos || []; G.assocUsados = G.assocUsados || [];
+    let livres = L.filter(c => !G.assocUsados.includes(c.id)); if (livres.length < 3) { G.assocUsados = []; livres = L.slice(); }
+    const esc3 = livres.map(c => ({ c, p: (c.defasagem || 0) + Math.random() * 60 })).sort((a, b) => b.p - a.p).slice(0, 3).map(x => x.c);
+    esc3.forEach(c => G.assocUsados.push(c.id));
+    return esc3;
+  }
+  function abrirAssociacao(de) {
+    const e = G.eq[G.vez], tempo = +G.tempo, cs = escolherConceitos();
+    let ordem = embaralhar([0, 1, 2]); if (ordem.every((v, i) => v === i)) ordem = [1, 2, 0];   // ordem das definições (A, B, C), nunca igual à das imagens
+    const par = {}; let sel = null;
+    G.modo = 'assoc'; G.respondido = false;
+    $('qcard').innerHTML = `
+      <div class="qtop"><span><span class="tag" style="background:${CORES[G.vez]};color:#fff">${esc(e.nome)}</span> <span class="tag" style="background:var(--assocbg);color:var(--b1)">🖼️ Imagem e definição</span></span>${tempo ? `<span class="timer" id="tmr"></span>` : ''}</div>
+      <p class="qcom" id="qTit">Ligue cada imagem à sua definição: toque na imagem (ou tecla 1, 2, 3) e depois na definição (A, B, C).</p>
+      <div class="acards">${cs.map((c, i) => `<button class="acard" data-i="${i}"><span class="n">${i + 1}</span><span class="par" id="par${i}"></span><div class="foto" id="foto${i}">${esc(c.emoji)}</div><div class="cred" id="cred${i}"></div><div class="nome" id="nome${i}">${esc(c.nome)}</div></button>`).join('')}</div>
+      <div class="defs">${ordem.map((ci, j) => `<button class="def" data-j="${j}"><b>${LETRA[j]}</b><span>${esc(cs[ci].def)}</span><span class="lig" id="lig${j}"></span></button>`).join('')}</div>
+      <div class="res" id="res"></div>
+      <div class="qfim"><button class="btn" id="bConferir" disabled>Conferir</button><button class="btn" id="bSeguir" hidden>Continuar</button></div>`;
+    $('qbox').classList.add('on'); $('qbox').scrollTop = 0;
+    cs.forEach((c, i) => foto(c.id).then(f => { if (!f || !$('foto' + i)) return; $('foto' + i).innerHTML = `<img alt="${esc(c.nome)}" src="${f.src}">`; $('cred' + i).textContent = f.credito; }));
+    const cards = [...$('qcard').querySelectorAll('.acard')], defs = [...$('qcard').querySelectorAll('.def')];
+    const pintar = () => {
+      cards.forEach((b, i) => { b.classList.toggle('sel', sel === i); const p = $('par' + i); p.textContent = par[i] != null ? LETRA[par[i]] : ''; p.classList.toggle('on', par[i] != null); });
+      defs.forEach((b, j) => { const i = Object.keys(par).find(k => par[k] === j); $('lig' + j).textContent = i != null ? '← ' + (+i + 1) : ''; });
+      $('bConferir').disabled = Object.keys(par).length < 3;
+    };
+    const escolherImg = i => { if (G.respondido) return; sel = sel === i ? null : i; pintar(); };
+    const escolherDef = j => {
+      if (G.respondido || sel == null) return;
+      Object.keys(par).forEach(k => { if (par[k] === j) delete par[k]; });
+      par[sel] = j; const prox = [0, 1, 2].find(i => par[i] == null); sel = prox == null ? null : prox; pintar();
+    };
+    const conferir = forcado => {
+      if (G.respondido) return; G.respondido = true; clearInterval(relogio);
+      let ac = 0;
+      cs.forEach((c, i) => {
+        const ok = par[i] != null && ordem[par[i]] === i; if (ok) ac++;
+        cards[i].classList.add(ok ? 'certa' : 'errada'); cards[i].classList.remove('sel');
+        const certaJ = ordem.indexOf(i); $('nome' + i).textContent = (ok ? '✓ ' : '✗ ') + c.nome + (ok ? '' : ' → definição ' + LETRA[certaJ]);
+        const h = G.histC[c.id] || (G.histC[c.id] = { a: 0, n: 0 }); h.n++; if (ok) h.a++;
+        if (c.k) { const ht = G.hist[c.k] || (G.hist[c.k] = { a: 0, n: 0 }); ht.n++; if (ok) ht.a++; }
+      });
+      cards.concat(defs).forEach(b => b.disabled = true);
+      const pts = ac * 5, fica = ac >= 2;
+      e.pts += pts; e.acertos = (e.acertos || 0) + ac; e.tent = (e.tent || 0) + 3; if (!fica) e.pos = de;
+      const r = $('res'); r.className = 'res on ' + (fica ? 'ok' : 'no');
+      r.innerHTML = `<b>${forcado && Object.keys(par).length < 3 ? 'Tempo esgotado. ' : ''}${ac} de 3 pares certos: +${pts} pontos.</b> ` + (fica ? `${esc(e.nome)} fica na casa.` : `${esc(e.nome)} volta para a casa ${de}.`) +
+        `<div style="margin-top:6px">${cs.map((c, i) => `<div><b>${i + 1}. ${esc(c.nome)}</b>: ${esc(c.def)}</div>`).join('')}</div>`;
+      $('bConferir').hidden = true; const b = $('bSeguir'); b.hidden = false; b.focus();
+      guardar();
+    };
+    cards.forEach(b => b.onclick = () => escolherImg(+b.dataset.i));
+    defs.forEach(b => b.onclick = () => escolherDef(+b.dataset.j));
+    $('bConferir').onclick = () => conferir(false);
+    $('bSeguir').onclick = () => { $('qbox').classList.remove('on'); proximo(); };
+    G.teclaAssoc = k => { const n = '123'.indexOf(k), l = 'ABC'.indexOf(k.toUpperCase()); if (n >= 0) { escolherImg(n); return true; } if (l >= 0) { escolherDef(l); return true; } if (k === 'Enter' && !$('bConferir').disabled && !G.respondido) { conferir(false); return true; } return false; };
+    sel = 0; pintar();
+    if (tempo) {
+      let s = tempo; const show = () => { const el = $('tmr'); if (el) { el.textContent = '⏱ ' + Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); el.classList.toggle('fim', s <= 10); } };
+      show(); clearInterval(relogio);
+      relogio = setInterval(() => { s--; show(); if (s <= 0) { clearInterval(relogio); conferir(true); } }, 1000);
+    }
+  }
+
   function proximo() {
+    G.modo = ''; G.teclaAssoc = null;
     G.responder = null; G.vez = (G.vez + 1) % G.eq.length; ocupado = false; $('bDado').disabled = false;
     $('dado').textContent = '🎲'; redesenhar(); guardar();
   }
@@ -301,6 +404,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       <table class="rel"><thead><tr><th>Bim.</th><th>Habilidade</th><th>Tema</th><th>Acertos no jogo</th><th>Defasagem no painel (bim. 1–3)</th></tr></thead><tbody>
       ${linhas.map(t => `<tr${t.h.a < t.h.n ? ' style="background:var(--errbg)"' : ''}><td>${esc(t.bim)}º</td><td>${esc(t.hab)}</td><td>${esc(t.desc)}</td><td>${t.h.a}/${t.h.n}</td><td>${def(t)}</td></tr>`).join('')}
       </tbody></table>
+      ${(() => { const cz = (DADOS.conceitos || []).filter(c => G.histC && G.histC[c.id] && G.histC[c.id].a < G.histC[c.id].n); return cz.length ? `<h3>Conceitos para revisar (Imagem e definição)</h3><ul>${cz.map(c => `<li><b>${esc(c.nome)}</b>: ${esc(c.def)}</li>`).join('')}</ul>` : ''; })()}
       ${naoSorteados.length ? `<p class="muted sm" style="margin-top:12px">Temas que não caíram nesta partida (${naoSorteados.length}): ${[...new Set(naoSorteados.map(t => t.hab))].map(esc).join(', ')}</p>` : ''}
       <div class="row" style="margin-top:14px"><button class="btn" id="bCopiar">Copiar resumo</button><button class="btn sec" id="bNovo">Novo jogo</button></div>`;
     $('fim').classList.add('on');
@@ -325,9 +429,9 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       DADOS = await api({ turma });
       const tr = montarTrilha(DADOS.temas, $('fTam').value);
       const nomes = [...$('nomesEq').querySelectorAll('input')].map((i, ix) => i.value.trim() || 'Equipe ' + (ix + 1));
-      G = { casas: tr.casas, eq: nomes.map(nome => ({ nome, pos: 0, pts: 0, acertos: 0, tent: 0 })), vez: 0, usadas: {}, hist: {}, tempo: $('fTempo').value, fim: false };
+      G = { casas: tr.casas, eq: nomes.map(nome => ({ nome, pos: 0, pts: 0, acertos: 0, tent: 0 })), vez: 0, usadas: {}, hist: {}, histC: {}, assocUsados: [], tempo: $('fTempo').value, fim: false };
       DADOS.temas.forEach(t => embaralhar(t.qs));
-      iniciarTela(); guardar();
+      iniciarTela(); guardar(); preCarregar();
       msg(`${DADOS.turma}: ${DADOS.temas.length} temas do SARESP do ${DADOS.serie}º ano, ${G.casas.length} casas.`);
     } catch (e) { msg(esc(e.message) + (e.status === 401 ? ' <a href="/">Abrir o painel</a>' : ''), true); }
     $('bComecar').disabled = false;
@@ -340,6 +444,8 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
   document.addEventListener('keydown', ev => {
     if (ev.target && /INPUT|SELECT|TEXTAREA/.test(ev.target.tagName)) return;
     if ($('qbox').classList.contains('on')) {
+      if (G && G.modo === 'assoc' && !G.respondido && G.teclaAssoc) { if (G.teclaAssoc(ev.key)) ev.preventDefault(); return; }
+      if (G && G.modo === 'assoc') { if (ev.key === 'Enter' && !$('bSeguir').hidden) { ev.preventDefault(); $('bSeguir').click(); } return; }
       const i = LETRA.indexOf(ev.key.toUpperCase()); const n = '1234'.indexOf(ev.key);
       if (G && G.responder && !G.respondido && (i >= 0 || n >= 0)) { ev.preventDefault(); G.responder(i >= 0 ? i : n); }
       else if (ev.key === 'Enter' && !$('bSeguir').hidden) { ev.preventDefault(); $('bSeguir').click(); }
@@ -351,7 +457,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
   $('bEncerrar').onclick = () => { if (G && !G.fim) terminar(null); };
   $('fEq').onchange = camposEquipes;
   $('bComecar').onclick = comecar;
-  $('bRetomar').onclick = () => { const s = lerSalvo(); if (!s) return; G = s.G; DADOS = s.DADOS; iniciarTela(); };
+  $('bRetomar').onclick = () => { const s = lerSalvo(); if (!s) return; G = s.G; DADOS = s.DADOS; G.histC = G.histC || {}; iniciarTela(); preCarregar(); };
 
   async function iniciar() {
     camposEquipes();
