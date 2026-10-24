@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Quiz ao vivo · Professor</title>
+<style>
+:root{--bg:#f3f5f1;--card:#fff;--ink:#17231c;--mut:#5d6b62;--line:#d9e0da;--pri:#165c36;--ok:#1e7d3c;--okbg:#e3f4e7;--err:#b3261e;--errbg:#fbe6e4;--warn:#9a6700;--warnbg:#fff4d6;
+  --a0:#e21b3c;--a1:#1368ce;--a2:#b7860b;--a3:#26890c;--a4:#864cbf}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19;--warn:#f0c14b;--warnbg:#3a3015}}
+:root[data-theme="dark"]{--bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19;--warn:#f0c14b;--warnbg:#3a3015}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 "Segoe UI",Roboto,Arial,sans-serif}
+button,select,input{font:inherit;color:inherit}
+.wrap{max-width:1300px;margin:0 auto;padding:16px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px}
+h1{margin:0;font-size:1.5rem;color:var(--pri)}
+nav a{color:var(--pri);text-decoration:none;margin-left:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+.muted{color:var(--mut)}.sm{font-size:.9rem}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:end}
+label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600;color:var(--mut)}
+select{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:150px}
+.btn{background:var(--pri);color:#fff;border:0;border-radius:10px;padding:11px 20px;font-weight:700;cursor:pointer}
+.btn.sec{background:transparent;color:var(--pri);border:2px solid var(--pri)}
+.btn.grande{font-size:1.25rem;padding:14px 28px}
+.btn:disabled{opacity:.45;cursor:default}
+.erro{color:var(--err)}
+table{border-collapse:collapse;width:100%}
+th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+/* sala de espera */
+.pinbox{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.pin{font-size:clamp(48px,8vw,96px);font-weight:900;letter-spacing:.12em;color:var(--pri);line-height:1}
+.nomes{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.nome{background:var(--okbg);border:0;border-radius:999px;padding:6px 14px;font-weight:700;cursor:pointer}
+.nome:hover{background:var(--errbg)}
+/* pergunta (projetar) */
+.qtop{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.tag{display:inline-block;border-radius:999px;padding:3px 12px;font-weight:700;background:var(--okbg);color:var(--pri)}
+.relogio{font-size:2.6rem;font-weight:900;font-variant-numeric:tabular-nums}
+.relogio.fim{color:var(--err)}
+.enun{font-size:clamp(18px,1.6vw,24px);margin:10px 0}
+.com{font-size:clamp(19px,1.7vw,26px);font-weight:800;margin:12px 0}
+.alts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.alt{display:flex;gap:12px;align-items:center;border-radius:14px;padding:14px 16px;color:#fff;font-weight:700;font-size:clamp(16px,1.35vw,21px);position:relative}
+.alt .f{font-size:1.6em;flex:none}
+.alt.apaga{opacity:.28}
+.alt .cnt{margin-left:auto;font-size:1.4em;font-weight:900;flex:none}
+.alt.certa{outline:5px solid var(--ink)}
+.controles{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:14px}
+.contagem{font-size:1.5rem;font-weight:800}
+figure.infog{margin:10px 0;background:#fff;color:#17231c;border:1px solid var(--line);border-radius:10px;padding:8px;overflow:auto}
+figure.infog figcaption{font-weight:700;margin-bottom:6px}
+figure.infog table{font-size:.95rem}figure.infog th,figure.infog td{border:1px solid #cfd8d2}
+figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 auto}
+.bars .b{display:grid;grid-template-columns:minmax(80px,30%) 1fr auto;gap:8px;align-items:center;margin:3px 0}
+.bars .bt{background:#e4ebe6;border-radius:4px;height:14px;overflow:hidden}.bars .bt i{display:block;height:100%;background:#2f6fb5}
+.expl{background:var(--okbg);border-radius:12px;padding:12px 16px;margin-top:12px;font-size:clamp(16px,1.3vw,20px)}
+.rank{display:grid;gap:6px;margin-top:10px}
+.rank div{display:flex;justify-content:space-between;background:var(--bg);border-radius:10px;padding:8px 14px;font-weight:700;font-size:1.1rem}
+.pct{display:inline-block;min-width:3.2em;font-weight:800}
+.baixo{background:var(--errbg)}
+.estadio{position:relative;border-radius:14px;overflow:hidden;height:min(52vh,520px);background:#0d1b2a}
+.estadio #e3d{position:absolute;inset:0}
+.golTxt{position:absolute;left:0;right:0;top:16%;text-align:center;font-size:clamp(36px,6vw,80px);font-weight:900;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.75);opacity:0;transform:scale(.6);transition:all .35s;pointer-events:none}
+.golTxt.on{opacity:1;transform:scale(1)}
+.jogos{position:absolute;left:12px;right:12px;bottom:12px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.jogo{display:flex;align-items:center;gap:8px;background:rgba(10,18,28,.82);color:#fff;border-radius:10px;padding:6px 12px;font-weight:800;font-size:clamp(13px,1.1vw,17px)}
+.jogo .c{width:12px;height:12px;border-radius:3px}.jogo .g{font-size:1.35em;font-variant-numeric:tabular-nums;padding:0 4px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-weight:800}.chip i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.campeao{font-size:clamp(22px,2.4vw,34px);font-weight:900;text-align:center;margin:6px 0 4px}
+@media (max-width:800px){.alts{grid-template-columns:1fr}}
+</style></head>
+<body><div class="wrap">
+<header><div><h1>Quiz ao vivo · Ciências</h1><div class="muted sm">Estilo Kahoot, dentro da plataforma: você libera o quiz e acompanha as respostas dos alunos em tempo real</div></div>
+<nav><a href="/">← Painel</a><a href="/jogo/">Trilha SARESP</a></nav></header>
+<div id="app"><div class="card muted">Carregando…</div></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../estadio3d.js?v=1"></script>
+<script>
+(function(){
+  const SB_URL = 'https://ykrjfjepnqeoqlgupsbe.supabase.co', SB_KEY = 'sb_publishable_FbMU5x7WBpxzHmmVzOfh2g_0M1xxAh5';
+  const FORMAS = ['▲', '◆', '●', '■', '★'], LETRA = 'ABCDE';
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const app = h => { $('app').innerHTML = h; };
+  const ATIVA = 'quiz_prof_sessao';
+  let TOKEN = '', S = null, poll = null, chaveTela = '', ocupado = false, verPerguntas = false;
+
+  let SBC = null;
+  async function api(q, body) {
+    if (SBC) { try { const { data } = await SBC.auth.getSession(); if (data && data.session) TOKEN = data.session.access_token; } catch (e) {} }   // renova o login em aulas longas
+    const r = await fetch('/api/quiz' + (q ? '?' + new URLSearchParams(q) : ''), body ? { method: 'POST', headers: { Authorization: 'Bearer ' + TOKEN, 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : { headers: { Authorization: 'Bearer ' + TOKEN } });
+    const j = await r.json().catch(() => ({ ok: false, erro: 'Resposta inesperada do servidor.' }));
+    if (!j.ok) throw Object.assign(new Error(j.erro || 'Erro'), { status: r.status });
+    return j;
+  }
+  const guardarAtiva = id => { try { id ? localStorage.setItem(ATIVA, id) : localStorage.removeItem(ATIVA); } catch (e) {} };
+  const lerAtiva = () => { try { return localStorage.getItem(ATIVA) || ''; } catch (e) { return ''; } };
+  const linkAluno = pin => location.origin + '/quiz/?pin=' + pin;
+
+  function figura(f) {
+    if (!f) return '';
+    const cap = f.titulo ? `<figcaption>${esc(f.titulo)}</figcaption>` : '';
+    if (f.tipo === 'tabela') return `<figure class="infog">${cap}<table><thead><tr>${f.colunas.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${f.linhas.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></figure>`;
+    if (f.tipo === 'barras') { const max = Math.max(...f.itens.map(i => i.valor)) || 1; return `<figure class="infog">${cap}<div class="bars">${f.itens.map(i => `<div class="b"><span>${esc(i.rotulo)}</span><span class="bt"><i style="width:${Math.max(3, i.valor / max * 100)}%"></i></span><span>${esc(String(i.valor).replace('.', ','))}${f.unidade ? ' ' + esc(f.unidade) : ''}</span></div>`).join('')}</div></figure>`; }
+    if (f.tipo === 'etapas') return `<figure class="infog">${cap}<ol>${f.etapas.map(e => `<li>${esc(e)}</li>`).join('')}</ol></figure>`;
+    return '';
+  }
+
+  /* ---------- início: criar partida e histórico ---------- */
+  async function inicio(msgErro) {
+    clearInterval(poll); S = null; chaveTela = '';
+    app(`<div class="card"><h2 style="margin-top:0">Nova partida</h2><div class="row">
+        <label>Turma<select id="fTurma"><option>Carregando…</option></select></label>
+        <label>Perguntas<select id="fN"><option>8</option><option selected>12</option><option>16</option><option>20</option></select></label>
+        <label>Tempo por pergunta<select id="fT"><option value="30">30 s</option><option value="45">45 s</option><option value="60" selected>1 min</option><option value="90">1 min 30 s</option><option value="120">2 min</option></select></label>
+        <button class="btn" id="bCriar" disabled>Criar partida</button></div>
+        <p class="muted sm">As perguntas vêm do banco do SARESP da série, com prioridade para os temas em que a turma tem mais defasagem. Os alunos entram com o PIN no celular e escolhem o nome na lista da turma.</p>
+        <p class="erro" id="m">${esc(msgErro || '')}</p></div>
+      <div class="card"><h2 style="margin-top:0">Partidas anteriores</h2><div id="hist" class="muted">Carregando…</div></div>`);
+    try {
+      const t = await api({ turmas: 1 });
+      $('fTurma').innerHTML = '<option value="">Selecione</option>' + t.turmas.map(x => `<option>${esc(x)}</option>`).join('');
+      $('fTurma').onchange = () => { $('bCriar').disabled = !$('fTurma').value; };
+      $('bCriar').onclick = async () => {
+        $('bCriar').disabled = true; $('m').textContent = '';
+        try { const r = await api(null, { acao: 'criar', turma: $('fTurma').value, n: $('fN').value, tempo: $('fT').value }); guardarAtiva(r.id); abrir(r.id); }
+        catch (e) { $('m').textContent = e.message; $('bCriar').disabled = false; }
+      };
+      const h = await api({ historico: 1 });
+      $('hist').innerHTML = h.partidas.length ? `<table><thead><tr><th>Data</th><th>Turma</th><th>Perguntas</th><th>Situação</th><th></th></tr></thead><tbody>${h.partidas.map(p => `<tr><td>${new Date(p.criado).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })}</td><td>${esc(p.turma)}</td><td>${p.n}</td><td>${p.estado === 'fim' ? 'Encerrada' : 'Em andamento'}</td><td><button class="btn sec" data-id="${esc(p.id)}">${p.estado === 'fim' ? 'Ver resultados' : 'Retomar'}</button></td></tr>`).join('')}</tbody></table>` : 'Nenhuma partida ainda.';
+      document.querySelectorAll('#hist [data-id]').forEach(b => b.onclick = () => abrir(b.dataset.id));
+    } catch (e) { $('m').innerHTML = esc(e.message) + (e.status === 401 ? ' <a href="/">Abrir o painel</a>' : ''); }
+  }
+
+  /* ---------- partida ao vivo ---------- */
+  function abrir(id) { clearInterval(poll); chaveTela = ''; S = { id }; atualizar(); poll = setInterval(atualizar, 2000); }
+  async function atualizar() {
+    if (!S || ocupado) return;
+    let s; try { s = await api({ sessao: S.id }); } catch (e) { if (e.status === 404) { guardarAtiva(''); return inicio('Partida não encontrada.'); } return; }
+    S = s;
+    if (s.estado === 'fim') { clearInterval(poll); guardarAtiva(''); }
+    desenhar(s);
+  }
+  async function acao(a, extra) {
+    if (ocupado) return; ocupado = true;
+    try { const s = await api(null, Object.assign({ acao: a, id: S.id }, extra || {})); S = s; chaveTela = ''; desenhar(s); }
+    catch (e) { alertar(e.message); }
+    ocupado = false;
+  }
+  function alertar(t) { const m = $('m'); if (m) m.textContent = t; }
+
+  function desenhar(s) {
+    if (s.estado !== 'aberto' && s.estado !== 'pergunta' && s.estado !== 'resultado') { modoTela = ''; EST = null; golsAnt = null; filaGols = []; }
+    if (s.estado === 'espera') return salaEspera(s);
+    if (s.estado === 'fim') { if (chaveTela !== 'fim') { chaveTela = 'fim'; telaFim(s); } return; }
+    return aoVivo(s);   // 'aberto' (e partidas antigas em 'pergunta'/'resultado')
+  }
+
+  function salaEspera(s) {
+    const html = `<div class="card"><div class="pinbox"><div><div class="muted">Entre em <b>${esc(location.host)}/quiz</b> e digite o PIN</div><div class="pin">${esc(s.pin)}</div><div class="muted sm">${esc(s.turma)} · ${s.n} perguntas · ${s.tempo} s cada</div></div>
+      <div style="text-align:right"><div class="contagem">${s.jogadores.length} na sala</div><div class="muted sm">${s.faltam} da turma ainda não entraram</div>
+      <div class="row" style="justify-content:flex-end;margin-top:10px"><button class="btn sec" id="bCopiar">Copiar link para os alunos</button><button class="btn grande" id="bComecar" ${s.jogadores.length ? '' : 'disabled'}>Liberar o quiz ▶</button></div></div></div>
+      <div class="nomes">${s.jogadores.map(j => `<button class="nome" data-j="${esc(j.id)}" title="Tirar do jogo">${esc(j.nome)}</button>`).join('') || '<span class="muted">Aguardando os alunos…</span>'}</div>
+      <div style="margin-top:14px"><div class="row"><b style="font-size:1.1rem">Duplas</b><button class="btn sec" id="bDuplas" ${s.jogadores.length >= 2 ? '' : 'disabled'}>${s.grupos && s.grupos.length ? 'Refazer duplas' : 'Formar duplas'}</button></div>
+      ${s.grupos && s.grupos.length ? `<div class="nomes">${s.grupos.map(g => `<span class="nome" style="cursor:default;background:var(--warnbg)" title="Níveis no painel: ${g.membros.map(m => esc(m.nome) + ' ' + String(m.nivel).replace('.', ',')).join(' · ')}">${chip(g.grupo)} ${nomeDupla(g)}</span>`).join('')}</div>
+        <p class="muted sm">Cada dupla junta um aluno mais avançado com um que tem mais defasagem no painel (passe o mouse para ver os níveis; os alunos não veem). Sentem juntos: cada um responde no seu celular, mas podem conversar e se ajudar.</p>`
+        : '<p class="muted sm">As duplas são formadas pelos níveis dos alunos no painel: quem está mais avançado com quem tem mais defasagem. Se você não formar, elas são formadas ao liberar o quiz.</p>'}</div>
+      <p class="muted sm">Ao liberar, cada aluno recebe as perguntas no celular e avança no próprio ritmo (${s.tempo} s por pergunta). Você acompanha tudo por aqui, sem precisar liberar pergunta por pergunta. Quem chegar depois ainda pode entrar.</p>
+      <p class="muted sm">Toque em um nome para tirar o aluno do jogo (ele pode entrar de novo, por exemplo se trocou de celular).</p><p class="erro" id="m"></p>
+      <button class="btn sec" id="bCancelar">Cancelar partida</button></div>`;
+    if (html === chaveTela) return; chaveTela = html; app(html);
+    $('bComecar').onclick = () => acao('abrir');
+    $('bDuplas').onclick = () => acao('duplas');
+    $('bCopiar').onclick = () => navigator.clipboard.writeText(linkAluno(s.pin)).then(() => { $('bCopiar').textContent = 'Link copiado'; }, () => {});
+    $('bCancelar').onclick = () => acao('encerrar');
+    document.querySelectorAll('[data-j]').forEach(b => b.onclick = () => acao('remover', { jogador: b.dataset.j }));
+  }
+
+  const nomeDupla = g => g.membros.map(m => esc(m.nome)).join(' + ');
+  function cardDuplas(s, final) {
+    if (!s.grupos || !s.grupos.length) return '';
+    return `<div class="card"><h3 style="margin-top:0">${final ? '🏆 Placar final das duplas' : 'Placar das duplas (ao vivo)'}</h3>
+      <table><thead><tr><th>#</th><th>Dupla</th><th>Progresso</th><th>Média de pontos</th><th>Bônus de cooperação</th><th>Total</th></tr></thead><tbody>
+      ${s.grupos.map((g, i) => `<tr${final && i < 3 ? ' style="font-weight:700"' : ''}><td>${final && i < 3 ? ['🥇', '🥈', '🥉'][i] : i + 1}</td><td>${nomeDupla(g)}</td><td class="sm">${g.membros.map(m => `${m.feitas}/${s.n}`).join(' · ')}</td><td>${g.pontos}</td><td>+${g.bonus}</td><td><b>${g.total}</b></td></tr>`).join('')}
+      </tbody></table><p class="muted sm">Total da dupla = média dos pontos dos dois + 300 por pergunta em que os dois acertaram. Assim, ajudar o colega vale ponto para a dupla.</p></div>`;
+  }
+
+  /* ---------- Copa SARESP ---------- */
+  const TIME = g => (window.Estadio3D ? Estadio3D.time(g) : { nome: 'Time ' + g, cor: '#165c36' });
+  const chip = g => `<span class="chip"><i style="background:${TIME(g).cor}"></i>${esc(TIME(g).nome)}</span>`;
+  const membrosDe = (s, g) => { const t = s.copa && s.copa.tabela.find(x => x.grupo === g); return t ? t.membros.map(esc).join(' + ') : ''; };
+  function jogosOverlay(s) { return s.copa ? s.copa.jogos.map(j => `<div class="jogo"><i class="c" style="background:${TIME(j.a).cor}"></i>${esc(TIME(j.a).nome)}<span class="g">${j.ga} × ${j.gb}</span>${esc(TIME(j.b).nome)}<i class="c" style="background:${TIME(j.b).cor}"></i></div>`).join('') : ''; }
+  function copaHtml(s, final) {
+    if (!s.copa) return '';
+    const c = s.copa, camp = c.tabela[0];
+    return `<div class="card"><h3 style="margin-top:0">⚽ Copa SARESP · ${final ? 'resultado final' : 'ao vivo'}</h3>
+      ${final && camp ? `<div class="campeao">🏆 Campeão: ${chip(camp.grupo)}</div><p class="centro muted" style="text-align:center;margin-top:0">${membrosDe(s, camp.grupo)}</p>` : ''}
+      <table><thead><tr><th>Time</th><th style="text-align:center">Placar</th><th>Adversário</th></tr></thead><tbody>
+      ${c.jogos.map(j => `<tr><td>${chip(j.a)}<div class="muted sm">${membrosDe(s, j.a)}</div></td><td style="text-align:center;font-size:1.4rem;font-weight:900">${j.ga} × ${j.gb}</td><td>${chip(j.b)}<div class="muted sm">${membrosDe(s, j.b)}</div></td></tr>`).join('')}
+      </tbody></table>
+      <h4>Classificação</h4><table><thead><tr><th>#</th><th>Time</th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th></tr></thead><tbody>
+      ${c.tabela.map((t, i) => `<tr${i === 0 && final ? ' style="font-weight:800"' : ''}><td>${i + 1}</td><td>${chip(t.grupo)}</td><td><b>${t.pts}</b></td><td>${t.j}</td><td>${t.v}</td><td>${t.e}</td><td>${t.d}</td><td>${t.gp}</td><td>${t.gc}</td><td>${t.sg}</td></tr>`).join('')}
+      </tbody></table><p class="muted sm">Cada pergunta que alguém do time acerta vale 1 gol; se os dois acertam a mesma pergunta, é gol de placa (+1). Vitória 3 pontos, empate 1. Desempate: saldo de gols e gols marcados.</p></div>`;
+  }
+  /* gols novos desde a última atualização viram cobranças animadas no estádio 3D */
+  let EST = null, golsAnt = null, filaGols = [], animando = false, restoAnt = '', modoTela = '';
+  function detectarGols(s) {
+    if (!s.copa) return;
+    const g = s.copa.gols;
+    if (golsAnt) Object.keys(g).forEach(k => { for (let i = (golsAnt[k] || 0); i < g[k]; i++) filaGols.push(+k); });
+    golsAnt = Object.assign({}, g);
+    if (filaGols.length > 6) filaGols = filaGols.slice(-6);   // muitos gols juntos: mostra só os últimos
+    tocarGols(s);
+  }
+  async function tocarGols(s) {
+    if (animando || !EST || !filaGols.length) return;
+    animando = true;
+    while (filaGols.length && EST) {
+      const g = filaGols.shift(), jogo = (s.copa.jogos || []).find(j => j.a === g || j.b === g), adv = jogo ? (jogo.a === g ? jogo.b : jogo.a) : null;
+      const txt = $('golTxt'); if (!txt) break;
+      txt.innerHTML = `GOOOL! ⚽<div style="font-size:.45em;color:${TIME(g).cor};text-shadow:0 2px 6px #fff">${esc(TIME(g).nome)}</div>`; txt.classList.remove('on');
+      setTimeout(() => { const t = $('golTxt'); if (t) t.classList.add('on'); }, 950);
+      await EST.chute({ resultado: 'gol', corGoleiro: adv ? TIME(adv).cor : '#1368ce' });
+      const t2 = $('golTxt'); if (t2) t2.classList.remove('on');
+    }
+    animando = false;
+  }
+
+  /* acompanhamento ao vivo: progresso de cada aluno, placar e acertos por pergunta */
+  function aoVivo(s) {
+    const alunos = s.porAluno.slice().sort((a, b) => b.pontos - a.pontos || b.feitas - a.feitas);
+    if (modoTela !== 'vivo' || !$('vivoResto')) {
+      modoTela = 'vivo'; EST = null; restoAnt = '';
+      const cab = `<div class="card"><div class="pinbox"><div><span class="tag">Quiz liberado</span> <span class="muted">${esc(s.turma)} · PIN <b>${esc(s.pin)}</b> · ${s.n} perguntas · ${s.tempo} s cada</span></div>
+        <div class="row"><span class="contagem" id="contagem">${s.terminaram} de ${alunos.length} terminaram</span><button class="btn grande" id="bFim">Encerrar e ver resultado final</button></div></div><p class="erro" id="m"></p></div>`;
+      app(cab + (s.copa ? `<div class="card" style="padding:10px"><div class="estadio" id="estadioBox"><div id="e3d"></div><div class="golTxt" id="golTxt"></div><div class="jogos" id="jogosOv"></div></div></div>` : '') + '<div id="vivoResto"></div>');
+      if (s.copa && window.Estadio3D) { try { EST = Estadio3D.criar($('e3d'), { largo: true }); } catch (e) { EST = null; } }
+      $('app').onclick = ev => { const id = ev.target && ev.target.id; if (id === 'bFim') acao('encerrar'); if (id === 'bVerQ') { verPerguntas = !verPerguntas; restoAnt = ''; aoVivo(S); } };
+    }
+    const cont = $('contagem'); if (cont) cont.textContent = `${s.terminaram} de ${alunos.length} terminaram`;
+    const ov = $('jogosOv'); if (ov) { const h = jogosOverlay(s); if (ov.innerHTML !== h) ov.innerHTML = h; }
+    const resto = `${s.copa ? copaHtml(s, false) : cardDuplas(s, false)}
+      <div class="card"><h3 style="margin-top:0">Alunos (ao vivo)</h3>${alunos.length ? `<table><thead><tr><th>#</th><th>Aluno</th><th style="width:34%">Progresso</th><th>Acertos</th><th>Pontos</th></tr></thead><tbody>
+        ${alunos.map((a, i) => `<tr><td>${i + 1}</td><td>${esc(a.nome)}</td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:10px;border-radius:99px;background:var(--line);overflow:hidden"><i style="display:block;height:100%;width:${a.feitas / s.n * 100}%;background:${a.feitas >= s.n ? 'var(--ok)' : 'var(--pri)'}"></i></div><span class="sm">${a.feitas}/${s.n}</span></div></td><td>${a.acertos}/${a.respostas}${a.semResp ? ` <span class="muted sm">(${a.semResp} sem resposta)</span>` : ''}</td><td><b>${a.pontos}</b></td></tr>`).join('')}
+        </tbody></table>` : '<p class="muted">Ninguém entrou ainda.</p>'}</div>
+      <div class="card"><div class="row" style="justify-content:space-between"><h3 style="margin:0">Acertos por pergunta</h3><button class="btn sec" id="bVerQ">${verPerguntas ? 'Ocultar' : 'Mostrar'}</button></div>
+      ${verPerguntas ? `<table style="margin-top:10px"><thead><tr><th>#</th><th>%</th><th>Habilidade</th><th>Tema</th><th>Respostas por alternativa</th></tr></thead><tbody>
+        ${s.porQ.map(q => { const pc = q.respostas ? Math.round(q.acertos / q.respostas * 100) : null; return `<tr class="${pc != null && pc < 50 ? 'baixo' : ''}"><td>${q.i + 1}</td><td><span class="pct">${pc == null ? '—' : pc + '%'}</span></td><td>${esc(q.hab)}</td><td class="sm">${esc(q.desc)}</td><td class="sm">${q.dist.map((d, k) => `<span style="color:var(--a${k});font-weight:800">${FORMAS[k]}${LETRA[k]}</span> ${d}`).join(' · ')}${q.semResp ? ` · ⏱ ${q.semResp}` : ''}</td></tr>`; }).join('')}
+      </tbody></table><p class="muted sm">Atenção: com a tela projetada, a porcentagem e as respostas por alternativa podem dar pistas da resposta certa. Em vermelho, perguntas com menos de 50% de acerto até agora.</p>` : '<p class="muted sm">Oculto enquanto o quiz está aberto, porque a porcentagem e as respostas por alternativa podem dar pistas da resposta certa na tela projetada. Toque em Mostrar para ver só no seu computador.</p>'}</div>`;
+    if (resto !== restoAnt) { restoAnt = resto; $('vivoResto').innerHTML = resto; }
+    detectarGols(s);
+  }
+
+
+  function telaFim(s) {
+    const podio = s.jogadores.slice(0, 3), jogadas = s.porQ.filter(q => q.jogada);
+    const resumo = () => `Quiz ao vivo · ${s.turma} · ${new Date(s.criado).toLocaleDateString('pt-BR')}\n` +
+      s.porAluno.map((a, i) => `${i + 1}º ${a.nome}: ${a.pontos} pts, ${a.acertos}/${a.respostas} acertos`).join('\n') +
+      (s.copa ? '\n\nCopa SARESP · classificação:\n' + s.copa.tabela.map((t, i) => `${i + 1}º ${TIME(t.grupo).nome} (${t.membros.join(' + ')}): ${t.pts} pts, ${t.gp} gols`).join('\n') : '') +
+      (s.grupos && s.grupos.length ? '\n\nDuplas:\n' + s.grupos.map((g, i) => `${i + 1}º ${g.membros.map(m => m.nome).join(' + ')}: ${g.total} pts (bônus ${g.bonus})`).join('\n') : '') +
+      '\n\nPor tema:\n' + jogadas.map(q => `- ${q.bim}º bim. ${q.hab}: ${q.respostas ? Math.round(q.acertos / q.respostas * 100) : 0}% (${q.desc})`).join('\n');
+    app((s.copa ? copaHtml(s, true) : cardDuplas(s, true)) + `<div class="card"><h2 style="margin-top:0">🏆 Resultado final · ${esc(s.turma)}</h2>
+      <div class="rank">${podio.map((j, i) => `<div><span>${['🥇', '🥈', '🥉'][i]} ${esc(j.nome)}</span><span>${j.pontos}</span></div>`).join('') || '<span class="muted">Ninguém jogou.</span>'}</div></div>
+      <div class="card"><h3 style="margin-top:0">Acertos por tema</h3><table><thead><tr><th>%</th><th>Bim.</th><th>Habilidade</th><th>Tema</th><th>Acertos</th></tr></thead><tbody>
+      ${jogadas.slice().sort((a, b) => (a.respostas ? a.acertos / a.respostas : 0) - (b.respostas ? b.acertos / b.respostas : 0)).map(q => { const pc = q.respostas ? Math.round(q.acertos / q.respostas * 100) : 0; return `<tr class="${pc < 50 ? 'baixo' : ''}"><td><span class="pct">${pc}%</span></td><td>${esc(q.bim)}º</td><td>${esc(q.hab)}</td><td>${esc(q.desc)}</td><td>${q.acertos}/${q.respostas}</td></tr>`; }).join('')}
+      </tbody></table><p class="muted sm">Em vermelho, temas com menos de 50% de acerto: bons candidatos para retomar.</p></div>
+      <div class="card"><h3 style="margin-top:0">Por aluno</h3><table><thead><tr><th>#</th><th>Aluno</th><th>Pontos</th><th>Acertos</th><th>Errou em</th></tr></thead><tbody>
+      ${s.porAluno.map((a, i) => `<tr><td>${i + 1}</td><td>${esc(a.nome)}</td><td>${a.pontos}</td><td>${a.acertos}/${a.respostas}${a.respostas < jogadas.length ? ` <span class="muted sm">(${jogadas.length - a.respostas} sem resposta)</span>` : ''}</td><td class="sm">${esc([...new Set(a.erros)].join(', '))}</td></tr>`).join('')}
+      </tbody></table></div>
+      <div class="row"><button class="btn" id="bCopiar">Copiar resumo</button><button class="btn sec" id="bNova">Nova partida</button></div>`);
+    $('bCopiar').onclick = () => navigator.clipboard.writeText(resumo()).then(() => { $('bCopiar').textContent = 'Copiado'; }, () => {});
+    $('bNova').onclick = () => inicio();
+  }
+
+  async function iniciar() {
+    try {
+      const sb = SBC = window.supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false, flowType: 'implicit' } });
+      const { data } = await sb.auth.getSession();
+      if (!data || !data.session) return app('<div class="card erro">Entre primeiro no painel com o seu login de professor. <a href="/">Abrir o painel</a></div>');
+      TOKEN = data.session.access_token;
+      const ativa = lerAtiva(); if (ativa) abrir(ativa); else inicio();
+    } catch (e) { app('<div class="card erro">Não foi possível carregar: ' + esc(e.message) + '</div>'); }
+  }
+  iniciar();
+})();
+</script>
+</body></html>

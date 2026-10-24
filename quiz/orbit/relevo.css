@@ -1,0 +1,38 @@
+/* Botões de resposta em alto relevo: ao tocar, o botão afunda e fica verde musgo, com o texto branco em negrito (fica marcado). */
+.answer-option{
+  position:relative;
+  background:linear-gradient(180deg,#14456a 0%,#0b2a44 100%);
+  border:1px solid #6fc9ee66;
+  border-radius:14px;
+  box-shadow:0 7px 0 #051726,0 9px 16px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.18);
+  transform:translateY(0);
+  transition:transform .09s ease,box-shadow .09s ease,background .2s,border-color .2s;
+}
+.answer-option:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 9px 0 #051726,0 12px 18px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.22)}
+.answer-option:active:not(:disabled){transform:translateY(6px);box-shadow:0 1px 0 #051726,0 2px 6px rgba(0,0,0,.4),inset 0 2px 6px rgba(0,0,0,.35)}
+/* resposta escolhida: afundada, verde musgo, texto branco em negrito */
+.answer-option.is-selected,.answer-option.is-selected:hover:not(:disabled){
+  color:#fff;
+  font-weight:700;
+  background:linear-gradient(180deg,#5f7a3a 0%,#4a5f2c 100%);
+  border-color:#8aa35d;
+  transform:translateY(6px);
+  box-shadow:0 1px 0 #2c3a19,inset 0 3px 8px rgba(0,0,0,.35);
+}
+.answer-option.is-selected .answer-letter{color:#fff;font-weight:700;border-color:#ffffff80;background:#ffffff1f}
+.answer-option.is-selected>i,.answer-option.is-selected span{color:#fff;font-weight:700}
+/* depois da conferência: escolhida e certa = azul-escuro; escolhida e errada = vermelho (texto branco em negrito) */
+.answer-option.is-selected.is-correct,.answer-option.is-selected.is-correct:hover:not(:disabled){
+  background:linear-gradient(180deg,#1f4f8f 0%,#123a6e 100%);
+  border-color:#6f9fe0;
+  box-shadow:0 1px 0 #0a2142,inset 0 3px 8px rgba(0,0,0,.35);
+}
+.answer-option.is-selected.is-wrong,.answer-option.is-selected.is-wrong:hover:not(:disabled){
+  background:linear-gradient(180deg,#d33a3a 0%,#a51f24 100%);
+  border-color:#ff9a9a;
+  box-shadow:0 1px 0 #5e0f12,inset 0 3px 8px rgba(0,0,0,.35);
+}
+.answer-option.is-selected.is-correct .answer-letter,.answer-option.is-selected.is-wrong .answer-letter{color:#fff;border-color:#ffffff99;background:#ffffff26}
+.answer-option.is-selected.is-correct>i,.answer-option.is-selected.is-wrong>i{color:#fff}
+.answer-option .answer-letter{border-radius:9px}
+@media (prefers-reduced-motion:reduce){.answer-option{transition:none}}
