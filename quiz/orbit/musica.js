@@ -1,5 +1,5 @@
 /* Trilha sonora do Orbit Quiz: músicas de game originais, geradas no próprio navegador (Web Audio), sem arquivos de áudio
-   e sem direitos autorais de terceiros. Cada pergunta troca de faixa (4 faixas em rodízio); na tela final toca uma vinheta.
+   e sem direitos autorais de terceiros. Cada pergunta tem a sua própria música (12 faixas diferentes); na tela final toca uma vinheta.
    Começa no primeiro toque do aluno (os navegadores só liberam som depois de um toque). Botão 🔊/🔇 no canto para desligar. */
 (function () {
   const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return;
@@ -9,12 +9,22 @@
 
   const nota = n => 440 * Math.pow(2, (n - 69) / 12);   // número MIDI → Hz
   // acordes como notas MIDI (fundamental, terça, quinta)
-  const A = { Am: [57, 60, 64], F: [53, 57, 60], C: [48, 52, 55], G: [55, 59, 62], Dm: [50, 53, 57], Bb: [46, 50, 53], Em: [52, 55, 59], D: [50, 54, 57], Cm: [48, 51, 55], Ab: [44, 48, 51], Eb: [51, 55, 58], Gm: [55, 58, 62] };
+  const A = { Am: [57, 60, 64], F: [53, 57, 60], C: [48, 52, 55], G: [55, 59, 62], Dm: [50, 53, 57], Bb: [46, 50, 53], Em: [52, 55, 59], D: [50, 54, 57], Cm: [48, 51, 55], Ab: [44, 48, 51], Eb: [51, 55, 58], Gm: [55, 58, 62],
+    E: [52, 56, 59], A: [57, 61, 64], Bm: [59, 62, 66], Fm: [53, 56, 60], Db: [49, 53, 56], Bbm: [46, 49, 53], Gb: [54, 58, 61], Fsm: [54, 57, 61], B: [59, 63, 66], Csm: [49, 52, 56] };
+  /* uma faixa diferente para cada pergunta (12). bat: estilo da bateria; oit: oitava do arpejo; lo: onda da melodia */
   const FAIXAS = [
-    { nome: 'Órbita',     bpm: 118, acordes: ['Am', 'F', 'C', 'G'],   arp: [0, 1, 2, 1, 0, 2, 1, 2], lead: [12, -1, 14, 12, -1, 16, 14, -1, 12, -1, 11, -1, 12, -1, -1, -1], onda: 'square' },
-    { nome: 'Nebulosa',   bpm: 96,  acordes: ['Dm', 'Bb', 'F', 'C'],  arp: [0, 2, 1, 2, 0, 2, 1, 2], lead: [14, -1, -1, 12, -1, -1, 9, -1, 10, -1, -1, 9, -1, 7, -1, -1], onda: 'triangle' },
-    { nome: 'Propulsão',  bpm: 138, acordes: ['Em', 'C', 'G', 'D'],   arp: [0, 1, 2, 0, 1, 2, 0, 2], lead: [12, 12, -1, 14, -1, 15, 14, -1, 12, -1, 10, -1, 12, -1, -1, -1], onda: 'square' },
-    { nome: 'Gravidade',  bpm: 108, acordes: ['Cm', 'Ab', 'Eb', 'Bb'], arp: [0, 2, 1, 0, 2, 1, 0, 1], lead: [12, -1, 15, -1, 14, -1, 12, -1, 10, -1, 12, -1, -1, 7, -1, -1], onda: 'sawtooth' }
+    { nome: 'Órbita',        bpm: 118, acordes: ['Am', 'F', 'C', 'G'],    arp: [0, 1, 2, 1, 0, 2, 1, 2], lead: [12, -1, 14, 12, -1, 16, 14, -1, 12, -1, 11, -1, 12, -1, -1, -1], onda: 'square', bat: 'pop' },
+    { nome: 'Nebulosa',      bpm: 92,  acordes: ['Dm', 'Bb', 'F', 'C'],   arp: [0, 2, 1, 2, 0, 2, 1, 2], lead: [14, -1, -1, 12, -1, -1, 9, -1, 10, -1, -1, 9, -1, 7, -1, -1], onda: 'triangle', bat: 'leve' },
+    { nome: 'Propulsão',     bpm: 140, acordes: ['Em', 'C', 'G', 'D'],    arp: [0, 1, 2, 0, 1, 2, 0, 2], lead: [12, 12, -1, 14, -1, 15, 14, -1, 12, -1, 10, -1, 12, -1, -1, -1], onda: 'square', bat: 'rapida' },
+    { nome: 'Gravidade',     bpm: 104, acordes: ['Cm', 'Ab', 'Eb', 'Bb'], arp: [0, 2, 1, 0, 2, 1, 0, 1], lead: [12, -1, 15, -1, 14, -1, 12, -1, 10, -1, 12, -1, -1, 7, -1, -1], onda: 'sawtooth', bat: 'meia' },
+    { nome: 'Cometa',        bpm: 128, acordes: ['A', 'E', 'Fsm', 'D'],   arp: [0, 1, 2, 1, 2, 1, 0, 1], lead: [16, -1, 14, -1, 12, -1, 14, 16, -1, -1, 19, -1, 16, -1, -1, -1], onda: 'square', bat: 'pop', oit: 24 },
+    { nome: 'Eclipse',       bpm: 84,  acordes: ['Fm', 'Db', 'Ab', 'Eb'], arp: [0, 1, 2, 2, 1, 0, 1, 2], lead: [12, -1, -1, -1, 15, -1, 13, -1, 12, -1, -1, -1, 8, -1, -1, -1], onda: 'triangle', bat: 'leve', lo: 'triangle' },
+    { nome: 'Supernova',     bpm: 150, acordes: ['Bm', 'G', 'D', 'A'],    arp: [0, 2, 0, 2, 1, 2, 1, 2], lead: [12, 14, 15, 14, 12, -1, 10, -1, 12, 14, 15, 17, 15, -1, 14, -1], onda: 'sawtooth', bat: 'rapida' },
+    { nome: 'Satélite',      bpm: 112, acordes: ['G', 'Em', 'C', 'D'],    arp: [0, 1, 2, 1, 0, 1, 2, 1], lead: [12, -1, 16, -1, 19, -1, 16, -1, 17, -1, 16, -1, 14, -1, 12, -1], onda: 'square', bat: 'quebrada' },
+    { nome: 'Buraco Negro',  bpm: 96,  acordes: ['Gm', 'Eb', 'Bb', 'D'],  arp: [0, 0, 2, 0, 1, 0, 2, 1], lead: [12, -1, -1, 10, -1, -1, 12, -1, 15, -1, -1, 14, -1, -1, 12, -1], onda: 'sawtooth', bat: 'meia', oit: 0 },
+    { nome: 'Aurora',        bpm: 122, acordes: ['D', 'A', 'Bm', 'G'],    arp: [0, 2, 1, 2, 0, 2, 1, 2], lead: [14, -1, 12, -1, 9, -1, 12, -1, 14, -1, 16, -1, 14, -1, -1, -1], onda: 'triangle', bat: 'pop', lo: 'triangle' },
+    { nome: 'Asteroides',    bpm: 146, acordes: ['Csm', 'A', 'E', 'B'],   arp: [0, 1, 2, 1, 0, 1, 2, 1], lead: [12, -1, 12, 15, -1, 12, 19, -1, 17, -1, 15, -1, 12, -1, -1, -1], onda: 'square', bat: 'quebrada', oit: 24 },
+    { nome: 'Via Láctea',    bpm: 100, acordes: ['Bbm', 'Gb', 'Db', 'Ab'], arp: [0, 1, 2, 1, 2, 1, 0, 1], lead: [12, -1, -1, 15, -1, -1, 17, -1, 15, -1, -1, 12, -1, -1, 10, -1], onda: 'triangle', bat: 'leve' }
   ];
   const FINAL = { nome: 'Missão cumprida', bpm: 124, acordes: ['C', 'G', 'Am', 'F'], arp: [0, 1, 2, 1, 0, 1, 2, 1], lead: [12, -1, 14, -1, 16, -1, 19, -1, 17, -1, 16, -1, 14, -1, 12, -1], onda: 'square' };
 
@@ -41,13 +51,16 @@
 
   /* cada passo = semicolcheia; 16 passos por compasso; 1 acorde por compasso */
   function tocarPasso(F, p, t) {
-    const sc = 60 / F.bpm / 4, ac = A[F.acordes[Math.floor(p / 16) % F.acordes.length]], i = p % 16;
-    if (i % 2 === 0) tom(nota(ac[F.arp[(i / 2) % 8]] + 12), t, sc * 1.8, F.onda, 0.045);   // arpejo
+    const sc = 60 / F.bpm / 4, ac = A[F.acordes[Math.floor(p / 16) % F.acordes.length]], i = p % 16, oit = F.oit == null ? 12 : F.oit;
+    if (i % 2 === 0) tom(nota(ac[F.arp[(i / 2) % 8]] + oit), t, sc * 1.8, F.onda, 0.045);   // arpejo
     if (i % 4 === 0) tom(nota(ac[0] - 12), t, sc * 3.6, 'triangle', 0.16);              // baixo
-    const l = F.lead[i]; if (l >= 0 && Math.floor(p / 16) % 2 === 1) tom(nota(ac[0] + l), t, sc * 1.9, 'square', 0.035);   // melodia (compassos alternados)
-    if (i % 8 === 0) bumbo(t);
-    if (i % 8 === 4) ruido(t, 0.12, 0.18, 1800);                                         // caixa
-    if (i % 2 === 1) ruido(t, 0.03, 0.06, 7000);                                         // chimbal
+    const l = F.lead[i]; if (l >= 0 && Math.floor(p / 16) % 2 === 1) tom(nota(ac[0] + l), t, sc * 1.9, F.lo || 'square', 0.035);   // melodia (compassos alternados)
+    const b = F.bat || 'pop';                                                              // bateria de cada faixa
+    if (b === 'pop') { if (i % 8 === 0) bumbo(t); if (i % 8 === 4) ruido(t, 0.12, 0.18, 1800); if (i % 2 === 1) ruido(t, 0.03, 0.06, 7000); }
+    else if (b === 'leve') { if (i === 0 || i === 10) bumbo(t); if (i === 8) ruido(t, 0.1, 0.1, 2500); if (i % 4 === 2) ruido(t, 0.03, 0.04, 8000); }
+    else if (b === 'rapida') { if (i % 4 === 0) bumbo(t); if (i % 8 === 4) ruido(t, 0.12, 0.2, 1600); ruido(t, 0.02, 0.045, 8000); }
+    else if (b === 'meia') { if (i === 0 || i === 6) bumbo(t); if (i === 8) ruido(t, 0.16, 0.2, 1400); if (i % 2 === 0) ruido(t, 0.03, 0.05, 7000); }
+    else if (b === 'quebrada') { if (i === 0 || i === 3 || i === 10) bumbo(t); if (i === 4 || i === 12) ruido(t, 0.12, 0.18, 1800); if (i % 2 === 1) ruido(t, 0.03, 0.06, 7000); }
   }
   function agendar() {
     if (!atual) return;
