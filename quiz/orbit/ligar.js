@@ -29,6 +29,18 @@
   document.head.appendChild(css);
   const emb = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
 
+  function porTemas(n) {   // ligar: 1º–4º, 5º–8º e 9º–12º conceitos de maior defasagem da turma
+    const T = window.__orbitTemas; if (!T) return null;
+    const i = { 2: 0, 6: 4, 9: 8 }[n]; if (i == null) return null;
+    const f = T.slice(i, i + 4); return f.length === 4 ? f.map(c => [c.def.split(/\.\s/)[0].replace(/\.$/, ''), c.nome, c.defasagem]) : null;
+  }
+  function estudar(pares, aoFim) {   // passo de memorização: o aluno lê os conceitos antes de ligar
+    const ov = document.createElement('div'); ov.id = 'ligar-ov';
+    ov.innerHTML = '<h2>📖 Memorize antes de jogar</h2><p>Estes temas foram os que a sua turma mais errou. Leia com calma.</p><div class="lg-col" style="width:min(900px,100%)">' +
+      pares.map(p => '<div class="lg-alvo certo" style="align-items:flex-start;text-align:left"><span>' + p[1] + (p[2] ? ' <small>· ' + p[2] + '% da turma errou</small>' : '') + '</span><small>' + p[0] + '</small></div>').join('') + '</div>';
+    const b = document.createElement('button'); b.className = 'seguir'; b.textContent = 'Já li, começar ▶'; b.onclick = () => { ov.remove(); aoFim(); }; ov.appendChild(b);
+    document.body.appendChild(ov);
+  }
   function abrir(pares, aoFim) {
     const ov = document.createElement('div'); ov.id = 'ligar-ov';
     ov.innerHTML = '<h2>🧩 Ligue o conceito à palavra</h2><p>Arraste cada peça até a palavra certa.</p><div class="lg-cols"><div class="lg-col lg-pecas"></div><div class="lg-col lg-alvos"></div></div><div class="lg-rod"></div>';
@@ -69,7 +81,7 @@
   function verificar() {
     const ui = document.getElementById('ui'); if (!ui || document.getElementById('ligar-ov') || document.getElementById('cartas-ov')) return;
     const m = /PERGUNTA\s*(\d+)/i.exec(ui.textContent || ''); if (!m) return;
-    const n = +m[1]; if (RODADAS[n] && !feitas[n]) { feitas[n] = true; abrir(RODADAS[n]); }
+    const n = +m[1]; const T = porTemas(n), R = T || RODADAS[n]; if (R && !feitas[n]) { feitas[n] = true; T ? estudar(R, () => abrir(R)) : abrir(R); }
   }
   (function iniciar() { const ui = document.getElementById('ui'); if (!ui) return setTimeout(iniciar, 300); new MutationObserver(verificar).observe(ui, { childList: true, subtree: true }); })();
   window.__orbitLigar = n => abrir(RODADAS[n] || RODADAS[2]);

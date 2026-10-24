@@ -14,9 +14,15 @@
     }
     throw ult;
   }
+  window.__orbitTemas = null;
+  async function carregarTemas(id) {   // conceitos em que a turma mais errou (só números da turma, sem nomes)
+    window.__orbitTemas = null;
+    try { const r = await fetch('/api/jogo?estudo=' + encodeURIComponent(id), { cache: 'no-store' }); const j = await r.json(); if (j.ok && j.conceitos && j.conceitos.length >= 4) window.__orbitTemas = j.conceitos; } catch (e) { /* segue com os temas fixos */ }
+  }
   window.__orbitCarregarAlunos = async function (id) {
     window.__orbitAlunos = []; window.__orbitMsg = '';
     if (!id) return;
+    carregarTemas(id);
     try {
       const d = await api({ api: 'alunos', id }).catch(e => /api desconhecida/.test(e.message) ? api({ api: 'turma', id }) : Promise.reject(e));
       const nomes = (d.alunos || []).map(a => a.nome).filter(Boolean).sort((a, b) => a.localeCompare(b, 'pt'));

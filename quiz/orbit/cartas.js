@@ -31,17 +31,22 @@
 
   function embaralhar(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
+  function porTemas(n) {   // 4 conceitos de maior defasagem da turma: n=4 → 1º ao 4º, 7 → 5º ao 8º, 10 → 9º ao 12º
+    const T = window.__orbitTemas; if (!T) return null;
+    const i = { 4: 0, 7: 4, 10: 8 }[n]; if (i == null) return null;
+    const f = T.slice(i, i + 4); return f.length === 4 ? f.map(c => [null, c.nome, c.emoji]) : null;
+  }
   function abrir(pares, aoFim) {
-    const cartas = embaralhar(pares.flatMap(([img, nome], i) => [{ id: i, tipo: 'img', img, nome }, { id: i, tipo: 'txt', nome }]));
+    const cartas = embaralhar(pares.flatMap(([img, nome, emoji], i) => [{ id: i, tipo: 'img', img, nome, emoji }, { id: i, tipo: 'txt', nome }]));
     const ov = document.createElement('div'); ov.id = 'cartas-ov';
-    ov.innerHTML = '<h2>🃏 Rodada das cartas</h2><p>Vire duas cartas: combine cada imagem com a palavra dela.</p><div class="cartas-grade"></div><div class="cartas-rod"></div>';
+    ov.innerHTML = '<h2>🃏 Rodada das cartas</h2><p>Vire duas cartas: combine cada figura com a palavra dela.</p><div class="cartas-grade"></div><div class="cartas-rod"></div>';
     const grade = ov.querySelector('.cartas-grade'), rod = ov.querySelector('.cartas-rod');
     let aberta = [], trava = false, acertos = 0, jogadas = 0;
     const placar = () => { rod.textContent = 'Pares: ' + acertos + '/' + pares.length + ' · Jogadas: ' + jogadas; };
     placar();
     cartas.forEach(c => {
       const b = document.createElement('button'); b.className = 'carta'; b.type = 'button'; b.setAttribute('aria-label', 'Carta virada para baixo');
-      b.innerHTML = '<div class="carta-in"><div class="carta-f">❓</div><div class="carta-v">' + (c.tipo === 'img' ? '<img alt="' + c.nome + '" src="' + A + c.img + '">' : '<b>' + c.nome + '</b>') + '</div></div>';
+      b.innerHTML = '<div class="carta-in"><div class="carta-f">❓</div><div class="carta-v">' + (c.tipo === 'img' ? (c.img ? '<img alt="' + c.nome + '" src="' + A + c.img + '">' : '<span style="font-size:clamp(34px,6vw,64px)" aria-label="' + c.nome + '">' + c.emoji + '</span>') : '<b>' + c.nome + '</b>') + '</div></div>';
       b.onclick = () => {
         if (trava || b.classList.contains('aberta') || b.classList.contains('par')) return;
         b.classList.add('aberta'); aberta.push({ c, b });
@@ -68,7 +73,7 @@
     const ui = document.getElementById('ui'); if (!ui || document.getElementById('cartas-ov')) return;
     const m = /PERGUNTA\s*(\d+)/i.exec(ui.textContent || ''); if (!m) return;
     const n = +m[1];
-    if (RODADAS[n] && !feitas[n]) { feitas[n] = true; abrir(RODADAS[n]); }
+    const R = porTemas(n) || RODADAS[n]; if (R && !feitas[n]) { feitas[n] = true; abrir(R); }
   }
   function iniciar() {
     const ui = document.getElementById('ui'); if (!ui) return setTimeout(iniciar, 300);
