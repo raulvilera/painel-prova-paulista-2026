@@ -68,12 +68,29 @@ function dadosTurma(turma) {
   return { turma, serie, alunos: alunos.length, temas, conceitos };
 }
 
+/* Temas de estudo da turma para o Orbit Quiz (aberto aos alunos): só os conceitos de maior defasagem, sem nome de aluno e sem gabarito.
+   O nome da turma vem da lista do Simulado ("7º Ano A"); procura a(s) turma(s) do painel com a mesma série e letra e junta os pesos. */
+function estudo(nome) {
+  const m = /(\d)\s*º\s*ANO\s*([A-Z])?/i.exec(String(nome).normalize('NFC')); if (!m) return null;
+  const serie = m[1], letra = (m[2] || '').toUpperCase(), lydia = /lydia/i.test(nome);
+  let chaves = Object.keys(PAINEL).filter(k => serieDe(k) === serie && (lydia || !letra || new RegExp('ANO ' + letra + ' ').test(k)));
+  if (!chaves.length) chaves = Object.keys(PAINEL).filter(k => serieDe(k) === serie);
+  if (!chaves.length) return null;
+  const acc = {}; let alunos = 0;
+  chaves.forEach(k => { const d = dadosTurma(k); alunos += d.alunos; d.conceitos.forEach(c => { const a = acc[c.id] = acc[c.id] || { id: c.id, nome: c.nome, emoji: c.emoji, def: c.def, soma: 0 }; a.soma += c.defasagem * d.alunos; }); });
+  const lista = Object.values(acc).map(a => ({ nome: a.nome, emoji: a.emoji, def: a.def, defasagem: Math.round(a.soma / (alunos || 1)) }))
+    .sort((a, b) => b.defasagem - a.defasagem).slice(0, 12);
+  return { serie, conceitos: lista };
+}
+
 module.exports = async function jogo(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   const out = (c, v) => res.status(c).json(v);
   try {
     if (req.method !== 'GET') return out(405, { ok: false, erro: 'Use GET.' });
+    const est = String((req.query && req.query.estudo) || '').trim();
+    if (est) { const e = estudo(est); if (!e) return out(404, { ok: false, erro: 'Turma não encontrada.' }); res.setHeader('Cache-Control', 'public, max-age=300'); return out(200, Object.assign({ ok: true }, e)); }
     if (!(await professor(req))) return out(401, { ok: false, erro: 'Entre primeiro no painel com o seu login de professor.' });
     const img = String((req.query && req.query.img) || '').trim();
     if (img) {
@@ -93,3 +110,4 @@ module.exports = async function jogo(req, res) {
   }
 };
 module.exports.dadosTurma = dadosTurma;
+module.exports.estudo = estudo;
