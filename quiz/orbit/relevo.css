@@ -1,0 +1,27 @@
+/* Botões de resposta em alto relevo: ao tocar, o botão afunda e fica verde brilhante (fica marcado). */
+.answer-option{
+  position:relative;
+  background:linear-gradient(180deg,#14456a 0%,#0b2a44 100%);
+  border:1px solid #6fc9ee66;
+  border-radius:14px;
+  box-shadow:0 7px 0 #051726,0 9px 16px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.18);
+  transform:translateY(0);
+  transition:transform .09s ease,box-shadow .09s ease,background .2s,border-color .2s;
+}
+.answer-option:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 9px 0 #051726,0 12px 18px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.22)}
+.answer-option:active:not(:disabled){transform:translateY(6px);box-shadow:0 1px 0 #051726,0 2px 6px rgba(0,0,0,.4),inset 0 2px 6px rgba(0,0,0,.35)}
+/* resposta escolhida: afundada e verde brilhante */
+.answer-option.is-selected,.answer-option.is-selected:hover:not(:disabled){
+  color:#04210f;
+  background:linear-gradient(180deg,#5dff9a 0%,#1fdc66 100%);
+  border-color:#b8ffd2;
+  transform:translateY(6px);
+  box-shadow:0 1px 0 #0a7a36,0 0 18px rgba(57,255,128,.75),0 0 38px rgba(57,255,128,.35),inset 0 3px 8px rgba(0,60,25,.35);
+}
+.answer-option.is-selected .answer-letter{color:#04210f;border-color:#04210f80;background:#ffffff55}
+.answer-option.is-selected>i{color:#04210f}
+.answer-option.is-selected span{color:#04210f}
+/* se a escolhida estava errada, continua verde e afundada, mas com contorno vermelho e o × para indicar o erro */
+.answer-option.is-selected.is-wrong{outline:3px solid var(--coral,#ff7794);outline-offset:2px}
+.answer-option .answer-letter{border-radius:9px}
+@media (prefers-reduced-motion:reduce){.answer-option{transition:none}}
