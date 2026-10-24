@@ -3,9 +3,9 @@
 <title>Quiz ao vivo · Ciências</title>
 <style>
 :root{--bg:#f3f5f1;--card:#fff;--ink:#17231c;--mut:#5d6b62;--line:#d9e0da;--pri:#165c36;--ok:#1e7d3c;--okbg:#e3f4e7;--err:#b3261e;--errbg:#fbe6e4;
-  --a0:#e21b3c;--a1:#1368ce;--a2:#b7860b;--a3:#26890c;--a4:#864cbf}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19}}
-:root[data-theme="dark"]{--bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19}
+  --warnbg:#fff4d6;--a0:#e21b3c;--a1:#1368ce;--a2:#b7860b;--a3:#26890c;--a4:#864cbf}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19;--warnbg:#3a3015}}
+:root[data-theme="dark"]{--bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19;--warnbg:#3a3015}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.4 "Segoe UI",Roboto,Arial,sans-serif;min-height:100vh}
 button,input,select{font:inherit;color:inherit}
@@ -44,6 +44,7 @@ figure.infog th{background:#eef4ef}
 figure.ilus svg{display:block;width:100%;height:auto}
 .bars .b{display:grid;grid-template-columns:minmax(70px,32%) 1fr auto;gap:6px;align-items:center;font-size:.85rem;margin:3px 0}
 .bars .bt{background:#e4ebe6;border-radius:4px;height:12px;overflow:hidden}.bars .bt i{display:block;height:100%;background:#2f6fb5}
+.dup{background:var(--warnbg,#fff4d6);border-radius:12px;padding:8px 12px;margin:10px 0;font-size:.95rem}
 .barra{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:6px}.barra i{display:block;height:100%;background:var(--pri);transition:width 1s linear}
 </style></head>
 <body><div class="wrap">
@@ -110,12 +111,15 @@ figure.ilus svg{display:block;width:100%;height:auto}
   function comecar() { $('quem').textContent = EU.nome; qMostrada = -1; atualizar(); }
   function aguardar(ms) { parar(); timer = setInterval(atualizar, ms); }
 
+  const dupla = s => s.parceiros && s.parceiros.length ? s.parceiros.map(x => esc(x.nome)).join(' e ') : '';
+  const linhaDupla = s => s.parceiros && s.parceiros.length ? `<div class="dup">👥 Dupla com <b>${dupla(s)}</b>${s.estado === 'aberto' ? ' · ' + s.parceiros.map(x => `pergunta ${Math.min(x.q + 1, s.n)} de ${s.n}`).join(', ') : ''}<br><span class="sm">Dupla: <b>${s.grupoTotal || 0} pts</b> · ${s.grupoPos}º de ${s.grupos}${s.grupoBonus ? ` · bônus +${s.grupoBonus}` : ''}</span></div>` : '';
+
   async function atualizar() {
     let s; try { s = await rpc('quiz_estado', { p_pin: EU.pin, p_token: EU.token }); } catch (e) { if (!timer) aguardar(3000); return; }   // rede instável: tenta de novo
     if (!s.ok) { parar(); gravar(null); EU = null; return telaPin(s.saiu ? 'Você saiu do jogo. Entre de novo com o PIN.' : s.erro); }
-    if (s.estado === 'fim') { parar(); gravar(null); return tela(`<div class="big">Fim de jogo!</div><p class="centro" style="font-size:1.3rem">Você ficou em <b>${s.posicao}º lugar</b> de ${s.jogadores}, com <b>${s.pontos} pontos</b> e <b>${s.acertos} de ${s.n}</b> acertos.</p><p class="centro muted">Obrigado por jogar!</p>`); }
-    if (s.estado === 'espera') { if (!timer) aguardar(2500); return tela(`<div class="big">Você está no jogo! 🎉</div><p class="centro">Aguarde o professor liberar o quiz. As perguntas vão aparecer aqui.</p><div class="spin"></div><p class="centro muted sm">${s.jogadores} na sala</p>`); }
-    if (s.q >= s.n || !s.pergunta) { if (!timer) aguardar(5000); return tela(`<div class="big">Você terminou! ✅</div><p class="centro" style="font-size:1.2rem"><b>${s.acertos} de ${s.n}</b> acertos · <b>${s.pontos} pontos</b></p><p class="centro">Agora você está em <b>${s.posicao}º lugar</b> de ${s.jogadores}. Aguarde o professor encerrar o jogo.</p><div class="spin"></div>`); }
+    if (s.estado === 'fim') { parar(); gravar(null); return tela(`<div class="big">Fim de jogo!</div>${s.grupo ? `<p class="centro" style="font-size:1.3rem">Sua dupla com <b>${dupla(s)}</b> ficou em <b>${s.grupoPos}º lugar</b> de ${s.grupos}, com <b>${s.grupoTotal} pontos</b>.</p>` : ''}<p class="centro">Você: <b>${s.pontos} pontos</b> e <b>${s.acertos} de ${s.n}</b> acertos (${s.posicao}º de ${s.jogadores}).</p><p class="centro muted">Obrigado por jogar!</p>`); }
+    if (s.estado === 'espera') { if (!timer) aguardar(2500); return tela(`<div class="big">Você está no jogo! 🎉</div><p class="centro">Aguarde o professor liberar o quiz. As perguntas vão aparecer aqui.</p>${s.parceiros && s.parceiros.length ? `<div class="dup centro">👥 Você joga em dupla com <b>${dupla(s)}</b>. Sentem juntos: cada um responde no seu celular, mas vocês podem conversar e se ajudar. Quando os dois acertam a mesma pergunta, a dupla ganha +300 pontos de bônus.</div>` : ''}<div class="spin"></div><p class="centro muted sm">${s.jogadores} na sala</p>`); }
+    if (s.q >= s.n || !s.pergunta) { if (!timer) aguardar(5000); return tela(`<div class="big">Você terminou! ✅</div><p class="centro" style="font-size:1.2rem"><b>${s.acertos} de ${s.n}</b> acertos · <b>${s.pontos} pontos</b></p><p class="centro">Agora você está em <b>${s.posicao}º lugar</b> de ${s.jogadores}. ${s.parceiros && s.parceiros.length ? 'Ajude sua dupla a terminar: conversem sobre as perguntas!' : ''} Aguarde o professor encerrar o jogo.</p>${linhaDupla(s)}<div class="spin"></div>`); }
     parar();
     if (qMostrada === s.q) { setTimeout(atualizar, 1200); return; }   // o servidor ainda não fechou a pergunta anterior: confere de novo
     qMostrada = s.q; pergunta(s);
@@ -125,7 +129,7 @@ figure.ilus svg{display:block;width:100%;height:auto}
     const p = s.pergunta, total = s.tempo * 1000; let fimEm = Date.now() + s.restante, respondida = false;
     tela(`<div class="top"><span class="muted">Pergunta ${s.q + 1} de ${s.n}</span><span><b>${s.pontos}</b> pontos</span></div>
       <div class="top" style="margin-top:4px"><span class="muted sm">${p.bim ? esc(p.bim) + 'º bim. · ' : ''}${esc(p.hab || '')}</span><span class="timer" id="tmr"></span></div>
-      <div class="barra"><i id="br" style="width:${s.restante / total * 100}%"></i></div>
+      <div class="barra"><i id="br" style="width:${s.restante / total * 100}%"></i></div>${linhaDupla(s)}
       <div class="enun">${esc(p.enunciado || '')}</div>
       ${p.svg ? `<figure class="infog ilus" role="img" aria-label="Ilustração da questão">${p.svg}</figure>` : ''}${figura(p.figura)}
       <p class="com">${esc(p.comando || 'Escolha a resposta certa.')}</p>

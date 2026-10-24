@@ -73,7 +73,7 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const app = h => { $('app').innerHTML = h; };
   const ATIVA = 'quiz_prof_sessao';
-  let TOKEN = '', S = null, poll = null, chaveTela = '', ocupado = false;
+  let TOKEN = '', S = null, poll = null, chaveTela = '', ocupado = false, verPerguntas = false;
 
   let SBC = null;
   async function api(q, body) {
@@ -150,14 +150,28 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
       <div style="text-align:right"><div class="contagem">${s.jogadores.length} na sala</div><div class="muted sm">${s.faltam} da turma ainda não entraram</div>
       <div class="row" style="justify-content:flex-end;margin-top:10px"><button class="btn sec" id="bCopiar">Copiar link para os alunos</button><button class="btn grande" id="bComecar" ${s.jogadores.length ? '' : 'disabled'}>Liberar o quiz ▶</button></div></div></div>
       <div class="nomes">${s.jogadores.map(j => `<button class="nome" data-j="${esc(j.id)}" title="Tirar do jogo">${esc(j.nome)}</button>`).join('') || '<span class="muted">Aguardando os alunos…</span>'}</div>
+      <div style="margin-top:14px"><div class="row"><b style="font-size:1.1rem">Duplas</b><button class="btn sec" id="bDuplas" ${s.jogadores.length >= 2 ? '' : 'disabled'}>${s.grupos && s.grupos.length ? 'Refazer duplas' : 'Formar duplas'}</button></div>
+      ${s.grupos && s.grupos.length ? `<div class="nomes">${s.grupos.map(g => `<span class="nome" style="cursor:default;background:var(--warnbg)" title="Níveis no painel: ${g.membros.map(m => esc(m.nome) + ' ' + String(m.nivel).replace('.', ',')).join(' · ')}">Dupla ${g.grupo}: ${nomeDupla(g)}</span>`).join('')}</div>
+        <p class="muted sm">Cada dupla junta um aluno mais avançado com um que tem mais defasagem no painel (passe o mouse para ver os níveis; os alunos não veem). Sentem juntos: cada um responde no seu celular, mas podem conversar e se ajudar.</p>`
+        : '<p class="muted sm">As duplas são formadas pelos níveis dos alunos no painel: quem está mais avançado com quem tem mais defasagem. Se você não formar, elas são formadas ao liberar o quiz.</p>'}</div>
       <p class="muted sm">Ao liberar, cada aluno recebe as perguntas no celular e avança no próprio ritmo (${s.tempo} s por pergunta). Você acompanha tudo por aqui, sem precisar liberar pergunta por pergunta. Quem chegar depois ainda pode entrar.</p>
       <p class="muted sm">Toque em um nome para tirar o aluno do jogo (ele pode entrar de novo, por exemplo se trocou de celular).</p><p class="erro" id="m"></p>
       <button class="btn sec" id="bCancelar">Cancelar partida</button></div>`;
     if (html === chaveTela) return; chaveTela = html; app(html);
     $('bComecar').onclick = () => acao('abrir');
+    $('bDuplas').onclick = () => acao('duplas');
     $('bCopiar').onclick = () => navigator.clipboard.writeText(linkAluno(s.pin)).then(() => { $('bCopiar').textContent = 'Link copiado'; }, () => {});
     $('bCancelar').onclick = () => acao('encerrar');
     document.querySelectorAll('[data-j]').forEach(b => b.onclick = () => acao('remover', { jogador: b.dataset.j }));
+  }
+
+  const nomeDupla = g => g.membros.map(m => esc(m.nome)).join(' + ');
+  function cardDuplas(s, final) {
+    if (!s.grupos || !s.grupos.length) return '';
+    return `<div class="card"><h3 style="margin-top:0">${final ? '🏆 Placar final das duplas' : 'Placar das duplas (ao vivo)'}</h3>
+      <table><thead><tr><th>#</th><th>Dupla</th><th>Progresso</th><th>Média de pontos</th><th>Bônus de cooperação</th><th>Total</th></tr></thead><tbody>
+      ${s.grupos.map((g, i) => `<tr${final && i < 3 ? ' style="font-weight:700"' : ''}><td>${final && i < 3 ? ['🥇', '🥈', '🥉'][i] : i + 1}</td><td>${nomeDupla(g)}</td><td class="sm">${g.membros.map(m => `${m.feitas}/${s.n}`).join(' · ')}</td><td>${g.pontos}</td><td>+${g.bonus}</td><td><b>${g.total}</b></td></tr>`).join('')}
+      </tbody></table><p class="muted sm">Total da dupla = média dos pontos dos dois + 300 por pergunta em que os dois acertaram. Assim, ajudar o colega vale ponto para a dupla.</p></div>`;
   }
 
   /* acompanhamento ao vivo: progresso de cada aluno, placar e acertos por pergunta */
@@ -165,22 +179,26 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
     const alunos = s.porAluno.slice().sort((a, b) => b.pontos - a.pontos || b.feitas - a.feitas);
     const html = `<div class="card"><div class="pinbox"><div><span class="tag">Quiz liberado</span> <span class="muted">${esc(s.turma)} · PIN <b>${esc(s.pin)}</b> · ${s.n} perguntas · ${s.tempo} s cada</span></div>
         <div class="row"><span class="contagem">${s.terminaram} de ${alunos.length} terminaram</span><button class="btn grande" id="bFim">Encerrar e ver resultado final</button></div></div><p class="erro" id="m"></p></div>
+      ${cardDuplas(s, false)}
       <div class="card"><h3 style="margin-top:0">Alunos (ao vivo)</h3>${alunos.length ? `<table><thead><tr><th>#</th><th>Aluno</th><th style="width:34%">Progresso</th><th>Acertos</th><th>Pontos</th></tr></thead><tbody>
         ${alunos.map((a, i) => `<tr><td>${i + 1}</td><td>${esc(a.nome)}</td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:10px;border-radius:99px;background:var(--line);overflow:hidden"><i style="display:block;height:100%;width:${a.feitas / s.n * 100}%;background:${a.feitas >= s.n ? 'var(--ok)' : 'var(--pri)'}"></i></div><span class="sm">${a.feitas}/${s.n}</span></div></td><td>${a.acertos}/${a.respostas}${a.semResp ? ` <span class="muted sm">(${a.semResp} sem resposta)</span>` : ''}</td><td><b>${a.pontos}</b></td></tr>`).join('')}
         </tbody></table>` : '<p class="muted">Ninguém entrou ainda.</p>'}</div>
-      <div class="card"><h3 style="margin-top:0">Acertos por pergunta</h3><table><thead><tr><th>#</th><th>%</th><th>Habilidade</th><th>Tema</th><th>Respostas por alternativa</th></tr></thead><tbody>
+      <div class="card"><div class="row" style="justify-content:space-between"><h3 style="margin:0">Acertos por pergunta</h3><button class="btn sec" id="bVerQ">${verPerguntas ? 'Ocultar' : 'Mostrar'}</button></div>
+      ${verPerguntas ? `<table style="margin-top:10px"><thead><tr><th>#</th><th>%</th><th>Habilidade</th><th>Tema</th><th>Respostas por alternativa</th></tr></thead><tbody>
         ${s.porQ.map(q => { const pc = q.respostas ? Math.round(q.acertos / q.respostas * 100) : null; return `<tr class="${pc != null && pc < 50 ? 'baixo' : ''}"><td>${q.i + 1}</td><td><span class="pct">${pc == null ? '—' : pc + '%'}</span></td><td>${esc(q.hab)}</td><td class="sm">${esc(q.desc)}</td><td class="sm">${q.dist.map((d, k) => `<span style="color:var(--a${k});font-weight:800">${FORMAS[k]}${LETRA[k]}</span> ${d}`).join(' · ')}${q.semResp ? ` · ⏱ ${q.semResp}` : ''}</td></tr>`; }).join('')}
-      </tbody></table><p class="muted sm">A alternativa certa não aparece aqui enquanto o quiz está aberto, para a tela poder ficar projetada. Em vermelho, perguntas com menos de 50% de acerto até agora.</p></div>`;
+      </tbody></table><p class="muted sm">Atenção: com a tela projetada, a porcentagem e as respostas por alternativa podem dar pistas da resposta certa. Em vermelho, perguntas com menos de 50% de acerto até agora.</p>` : '<p class="muted sm">Oculto enquanto o quiz está aberto, porque a porcentagem e as respostas por alternativa podem dar pistas da resposta certa na tela projetada. Toque em Mostrar para ver só no seu computador.</p>'}</div>`;
     if (html === chaveTela) return; chaveTela = html; app(html);
     $('bFim').onclick = () => acao('encerrar');
+    $('bVerQ').onclick = () => { verPerguntas = !verPerguntas; chaveTela = ''; aoVivo(S); };
   }
 
   function telaFim(s) {
     const podio = s.jogadores.slice(0, 3), jogadas = s.porQ.filter(q => q.jogada);
     const resumo = () => `Quiz ao vivo · ${s.turma} · ${new Date(s.criado).toLocaleDateString('pt-BR')}\n` +
       s.porAluno.map((a, i) => `${i + 1}º ${a.nome}: ${a.pontos} pts, ${a.acertos}/${a.respostas} acertos`).join('\n') +
+      (s.grupos && s.grupos.length ? '\n\nDuplas:\n' + s.grupos.map((g, i) => `${i + 1}º ${g.membros.map(m => m.nome).join(' + ')}: ${g.total} pts (bônus ${g.bonus})`).join('\n') : '') +
       '\n\nPor tema:\n' + jogadas.map(q => `- ${q.bim}º bim. ${q.hab}: ${q.respostas ? Math.round(q.acertos / q.respostas * 100) : 0}% (${q.desc})`).join('\n');
-    app(`<div class="card"><h2 style="margin-top:0">🏆 Resultado final · ${esc(s.turma)}</h2>
+    app(cardDuplas(s, true) + `<div class="card"><h2 style="margin-top:0">🏆 Resultado final · ${esc(s.turma)}</h2>
       <div class="rank">${podio.map((j, i) => `<div><span>${['🥇', '🥈', '🥉'][i]} ${esc(j.nome)}</span><span>${j.pontos}</span></div>`).join('') || '<span class="muted">Ninguém jogou.</span>'}</div></div>
       <div class="card"><h3 style="margin-top:0">Acertos por tema</h3><table><thead><tr><th>%</th><th>Bim.</th><th>Habilidade</th><th>Tema</th><th>Acertos</th></tr></thead><tbody>
       ${jogadas.slice().sort((a, b) => (a.respostas ? a.acertos / a.respostas : 0) - (b.respostas ? b.acertos / b.respostas : 0)).map(q => { const pc = q.respostas ? Math.round(q.acertos / q.respostas * 100) : 0; return `<tr class="${pc < 50 ? 'baixo' : ''}"><td><span class="pct">${pc}%</span></td><td>${esc(q.bim)}º</td><td>${esc(q.hab)}</td><td>${esc(q.desc)}</td><td>${q.acertos}/${q.respostas}</td></tr>`; }).join('')}

@@ -3,7 +3,8 @@
    GET  /api/quiz?historico=1      → partidas anteriores
    GET  /api/quiz?sessao=<id>      → acompanhamento ao vivo: progresso de cada aluno, placar e acertos por tema
    POST {acao:'criar', turma, n, tempo}  → cria a partida e devolve o PIN (alunos entram e aguardam)
-   POST {acao:'abrir'|'encerrar', id}    → libera o jogo (cada aluno avança no próprio ritmo) / encerra
+   POST {acao:'duplas', id}              → forma as duplas com níveis diferentes (quem está mais avançado com quem tem mais defasagem)
+   POST {acao:'abrir'|'encerrar', id}    → libera o jogo (forma as duplas se ainda não houver; cada aluno avança no próprio ritmo) / encerra
    POST {acao:'remover', id, jogador}           → tira um aluno (ele pode entrar de novo)
    Os alunos usam as funções quiz_* do Supabase (PIN + token), que nunca devolvem o gabarito antes da hora.
    Variáveis da Vercel: SUPABASE_URL, SUPABASE_SERVICE_KEY (as mesmas da atividade individual). */
@@ -28,6 +29,27 @@ async function rest(path, opt) {
   return t ? JSON.parse(t) : null;
 }
 const embaralhar = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+/* nível do aluno pelo painel: média dos níveis (0 a 3) nos descritores do plano dele; sem dado = mediana da turma */
+function niveis(turma, nomes) {
+  const T = PAINEL[turma] || {}, v = {};
+  nomes.forEach(n => { const l = T[n]; if (l && l.length) v[n] = l.reduce((a, x) => a + (Number(x[1]) || 0), 0) / l.length; });
+  const conh = Object.values(v).sort((a, b) => a - b), med = conh.length ? conh[Math.floor(conh.length / 2)] : 1;
+  nomes.forEach(n => { if (v[n] == null) v[n] = med; });
+  return v;
+}
+/* duplas heterogêneas: o 1º mais avançado com o mais distante do esperado, o 2º com o penúltimo…; número ímpar: o do meio entra na dupla com menor nível somado */
+function formarDuplas(jog, turma) {
+  const nv = niveis(turma, jog.map(j => j.nome));
+  const ord = jog.slice().sort((a, b) => nv[b.nome] - nv[a.nome] || a.nome.localeCompare(b.nome, 'pt'));
+  const grupos = [];
+  for (let i = 0, k = ord.length - 1; i < k; i++, k--) grupos.push([ord[i], ord[k]]);
+  if (ord.length % 2) {
+    const meio = ord[Math.floor(ord.length / 2)];
+    if (!grupos.length) grupos.push([meio]);
+    else grupos.slice().sort((a, b) => a.reduce((x, j) => x + nv[j.nome], 0) - b.reduce((x, j) => x + nv[j.nome], 0))[0].push(meio);
+  }
+  return grupos;
+}
 const nomesTurma = turma => { const ro = ROSTER.da(turma); return (ro ? ro.map(x => x.nome) : Object.keys(PAINEL[turma] || {})).sort((a, b) => a.localeCompare(b, 'pt')); };
 
 async function criar(b) {
@@ -53,9 +75,21 @@ async function criar(b) {
   return { id: row.id, pin };
 }
 
+async function placarDuplas(s, jog, porAluno) {
+  if (!jog.some(j => j.grupo != null)) return [];
+  const pl = await rest('rpc/quiz_placar_', { method: 'POST', body: JSON.stringify({ p_sessao: s.id }) }) || [];
+  const nv = niveis(s.turma, jog.map(j => j.nome));
+  return pl.map(g => ({ grupo: g.grupo, pontos: g.pontos, bonus: g.bonus, total: g.total,
+    membros: porAluno.filter(a => (jog.find(j => j.id === a.id) || {}).grupo === g.grupo).map(a => Object.assign({ nivel: Math.round(nv[a.nome] * 10) / 10 }, a)) }))
+    .sort((a, b) => b.total - a.total || a.grupo - b.grupo);
+}
+async function gravarDuplas(id, turma, jog) {
+  const grupos = formarDuplas(jog, turma);
+  await Promise.all(grupos.map((g, i) => rest('quiz_jogador?sessao=eq.' + enc(id) + '&id=in.(' + g.map(j => j.id).join(',') + ')', { method: 'PATCH', body: JSON.stringify({ grupo: i + 1 }), headers: { Prefer: 'return=minimal' } })));
+}
 async function sessao(id) {
   const s = (await rest('quiz_sessao?select=*&id=eq.' + enc(id)))[0]; if (!s) return null;
-  const jog = await rest('quiz_jogador?select=id,nome,pontos,q_atual,criado&sessao=eq.' + enc(id) + '&order=pontos.desc,criado.asc') || [];
+  const jog = await rest('quiz_jogador?select=id,nome,pontos,q_atual,grupo,criado&sessao=eq.' + enc(id) + '&order=pontos.desc,criado.asc') || [];
   const resp = await rest('quiz_resposta?select=jogador,q_idx,escolha,ms,certa,pontos&sessao=eq.' + enc(id)) || [];
   // relatório ao vivo: por pergunta (tema) e por aluno; escolha -1 = tempo esgotado sem resposta
   const porQ = s.perguntas.map((p, i) => { const rs = resp.filter(r => r.q_idx === i); return { i, hab: p.hab, bim: p.bim, desc: p.desc, respostas: rs.length, acertos: rs.filter(r => r.certa).length, semResp: rs.filter(r => r.escolha < 0).length, dist: p.alts.map((_, k) => rs.filter(r => r.escolha === k).length), correta: s.gabarito[i], jogada: rs.length > 0 }; });
@@ -63,6 +97,7 @@ async function sessao(id) {
   return {
     id: s.id, pin: s.pin, turma: s.turma, serie: s.serie, estado: s.estado, n: s.perguntas.length, tempo: s.tempo, criado: s.criado,
     terminaram: porAluno.filter(a => a.feitas >= s.perguntas.length).length,
+    grupos: await placarDuplas(s, jog, porAluno),
     jogadores: jog.map(j => ({ id: j.id, nome: j.nome, pontos: j.pontos })), porQ, porAluno,
     faltam: (s.nomes || []).filter(n => !jog.some(j => j.nome === n)).length
   };
@@ -91,9 +126,12 @@ module.exports = async function quiz(req, res) {
     const id = String(b.id || ''); const s = (await rest('quiz_sessao?select=id,estado,q_idx,perguntas&id=eq.' + enc(id)))[0];
     if (!s) return out(404, { ok: false, erro: 'Partida não encontrada.' });
     const muda = campos => rest('quiz_sessao?id=eq.' + enc(id), { method: 'PATCH', body: JSON.stringify(campos), headers: { Prefer: 'return=minimal' } });
-    if (b.acao === 'abrir') {
+    if (b.acao === 'duplas' || b.acao === 'abrir') {
       if (s.estado === 'fim') return out(409, { ok: false, erro: 'A partida já foi encerrada.' });
-      await muda({ estado: 'aberto' });
+      const jog = await rest('quiz_jogador?select=id,nome,grupo&sessao=eq.' + enc(id)) || [];
+      if (b.acao === 'duplas' && s.estado !== 'espera') return out(409, { ok: false, erro: 'As duplas só podem ser refeitas antes de liberar o quiz.' });
+      if (b.acao === 'duplas' || (jog.length && jog.every(j => j.grupo == null))) await gravarDuplas(id, (await rest('quiz_sessao?select=turma&id=eq.' + enc(id)))[0].turma, jog);
+      if (b.acao === 'abrir') await muda({ estado: 'aberto' });
     } else if (b.acao === 'encerrar') {
       await muda({ estado: 'fim', encerrado: new Date().toISOString() });
     } else if (b.acao === 'remover') {
