@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 2,
+  "publicationOrigin": "https://orbitquiz-bfcdtbks.manus.game",
+  "title": "Orbit Quiz · Ciências",
+  "description": "Quiz educativo 3D de Ciências para turmas do 6º ano, com perguntas ao vivo, pontuação e investigação em dupla.",
+  "defaultCaptions": {
+    "x": "Orbit Quiz · Ciências — uma missão espacial de perguntas para aprender em dupla.",
+    "facebook": "Decole rumo ao conhecimento com o Orbit Quiz.",
+    "reddit": "Um quiz de Ciências em 3D para aprender investigando.",
+    "discord": "Orbit Quiz · Ciências: observe, pense e responda."
+  },
+  "assets": {
+    "favicon": {
+      "digest": "sha256:adbff9f2394286596f97b3e352ac825a965872f8ac43f5f44597156b6b3bceb7",
+      "path": "share/adbff9f2394286596f97b3e352ac825a965872f8ac43f5f44597156b6b3bceb7.png",
+      "mime": "image/png",
+      "width": 256,
+      "height": 256,
+      "sizeBytes": 13734,
+      "sourcePath": "assets/share/favicon.png"
+    }
+  }
+}
