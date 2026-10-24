@@ -83,6 +83,27 @@ async function placarDuplas(s, jog, porAluno) {
     membros: porAluno.filter(a => (jog.find(j => j.id === a.id) || {}).grupo === g.grupo).map(a => Object.assign({ nivel: Math.round(nv[a.nome] * 10) / 10 }, a)) }))
     .sort((a, b) => b.total - a.total || a.grupo - b.grupo);
 }
+/* Copa SARESP: cada dupla é um time. Gols por pergunta: 1 se alguém da dupla acertou + 1 (gol de placa) se todos acertaram.
+   Jogos 1×2, 3×4…; com número ímpar de times, o último enfrenta o time 1. Vitória 3 pontos, empate 1. */
+function copa(jog, resp) {
+  const gs = [...new Set(jog.filter(j => j.grupo != null).map(j => j.grupo))].sort((a, b) => a - b);
+  if (gs.length < 2) return null;
+  const gols = g => {
+    const ms = jog.filter(j => j.grupo === g), ids = new Set(ms.map(j => j.id)), porQ = {};
+    resp.filter(r => ids.has(r.jogador) && r.certa).forEach(r => { porQ[r.q_idx] = (porQ[r.q_idx] || 0) + 1; });
+    return Object.values(porQ).reduce((a, ok) => a + 1 + (ms.length >= 2 && ok === ms.length ? 1 : 0), 0);
+  };
+  const G = {}; gs.forEach(g => { G[g] = gols(g); });
+  const k = gs[gs.length - 1], jogos = [];
+  for (let g = 1; g <= k; g += 2) { if (G[g] == null) continue; const b = g + 1 <= k ? g + 1 : (g !== 1 ? 1 : null); if (b != null && G[b] != null) jogos.push({ a: g, b, ga: G[g], gb: G[b] }); }
+  const tab = {}; gs.forEach(g => { tab[g] = { grupo: g, pts: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0 }; });
+  jogos.forEach(x => {
+    [[x.a, x.ga, x.gb], [x.b, x.gb, x.ga]].forEach(([g, pro, contra]) => { const t = tab[g]; t.j++; t.gp += pro; t.gc += contra; if (pro > contra) { t.v++; t.pts += 3; } else if (pro === contra) { t.e++; t.pts += 1; } else t.d++; });
+  });
+  const tabela = Object.values(tab).map(t => Object.assign(t, { sg: t.gp - t.gc, membros: jog.filter(j => j.grupo === t.grupo).map(j => j.nome) }))
+    .sort((a, b) => b.pts - a.pts || b.sg - a.sg || b.gp - a.gp || a.grupo - b.grupo);
+  return { gols: G, jogos, tabela };
+}
 async function gravarDuplas(id, turma, jog) {
   const grupos = formarDuplas(jog, turma);
   await Promise.all(grupos.map((g, i) => rest('quiz_jogador?sessao=eq.' + enc(id) + '&id=in.(' + g.map(j => j.id).join(',') + ')', { method: 'PATCH', body: JSON.stringify({ grupo: i + 1 }), headers: { Prefer: 'return=minimal' } })));
@@ -98,6 +119,7 @@ async function sessao(id) {
     id: s.id, pin: s.pin, turma: s.turma, serie: s.serie, estado: s.estado, n: s.perguntas.length, tempo: s.tempo, criado: s.criado,
     terminaram: porAluno.filter(a => a.feitas >= s.perguntas.length).length,
     grupos: await placarDuplas(s, jog, porAluno),
+    copa: copa(jog, resp),
     jogadores: jog.map(j => ({ id: j.id, nome: j.nome, pontos: j.pontos })), porQ, porAluno,
     faltam: (s.nomes || []).filter(n => !jog.some(j => j.nome === n)).length
   };
