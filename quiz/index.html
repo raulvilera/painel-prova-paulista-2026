@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Quiz ao vivo · Ciências</title>
+<style>
+:root{--bg:#f3f5f1;--card:#fff;--ink:#17231c;--mut:#5d6b62;--line:#d9e0da;--pri:#165c36;--ok:#1e7d3c;--okbg:#e3f4e7;--err:#b3261e;--errbg:#fbe6e4;
+  --a0:#e21b3c;--a1:#1368ce;--a2:#b7860b;--a3:#26890c;--a4:#864cbf}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19}}
+:root[data-theme="dark"]{--bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.4 "Segoe UI",Roboto,Arial,sans-serif;min-height:100vh}
+button,input,select{font:inherit;color:inherit}
+.wrap{max-width:640px;margin:0 auto;padding:16px}
+header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+h1{margin:0;font-size:1.25rem;color:var(--pri)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.muted{color:var(--mut)}.sm{font-size:.88rem}
+label{display:block;font-weight:600;margin:10px 0 6px}
+input,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--card);font-size:1.1rem}
+#pin{font-size:1.8rem;letter-spacing:.2em;text-align:center;font-weight:800}
+.btn{display:block;width:100%;margin-top:14px;background:var(--pri);color:#fff;border:0;border-radius:12px;padding:14px;font-weight:700;font-size:1.05rem;cursor:pointer}
+.btn:disabled{opacity:.5}
+.msg{margin-top:10px;color:var(--err);min-height:1.2em}
+.big{font-size:1.5rem;font-weight:800;text-align:center;margin:8px 0}
+.centro{text-align:center}
+.alts{display:grid;gap:10px;margin-top:12px}
+.alt{display:flex;gap:12px;align-items:center;text-align:left;border:0;border-radius:14px;padding:14px;color:#fff;font-weight:600;min-height:64px;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.25)}
+.alt .f{flex:none;font-size:1.5rem;width:1.4em;text-align:center}
+.alt:active{transform:translateY(2px)}
+.alt:disabled{opacity:.35}
+.alt.minha{opacity:1;outline:4px solid var(--ink)}
+.timer{font-weight:800;font-variant-numeric:tabular-nums}
+.res{border-radius:16px;padding:24px;text-align:center;font-size:1.25rem;font-weight:800}
+.res.ok{background:var(--okbg);color:var(--ok)}.res.no{background:var(--errbg);color:var(--err)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.9rem}
+.spin{width:44px;height:44px;border-radius:50%;border:5px solid var(--line);border-top-color:var(--pri);margin:16px auto;animation:g 1s linear infinite}
+@keyframes g{to{transform:rotate(360deg)}}
+</style></head>
+<body><div class="wrap">
+<header><h1>Quiz ao vivo · Ciências</h1><span class="muted sm" id="quem"></span></header>
+<main id="tela" class="card" aria-live="polite"></main>
+</div>
+<script>
+(function(){
+  const SB = 'https://oxohpnappygkmwjyowvq.supabase.co', KEY = 'sb_publishable_EjJenZkxMWv_I6vXWTz6aQ_iz9XEU4N';
+  const FORMAS = ['▲', '◆', '●', '■', '★'], LETRA = 'ABCDE';
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const SAVE = 'quiz_aluno_v1';
+  let EU = null, timer = null, ultimo = '', enviando = false;
+  const ler = () => { try { return JSON.parse(localStorage.getItem(SAVE) || 'null'); } catch (e) { return null; } };
+  const gravar = v => { try { v ? localStorage.setItem(SAVE, JSON.stringify(v)) : localStorage.removeItem(SAVE); } catch (e) {} };
+
+  async function rpc(fn, args) {
+    const r = await fetch(SB + '/rest/v1/rpc/' + fn, { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json' }, body: JSON.stringify(args) });
+    if (!r.ok) throw new Error('Sem conexão com o jogo (' + r.status + ')');
+    return r.json();
+  }
+  const tela = h => { $('tela').innerHTML = h; };
+
+  /* ---------- entrar ---------- */
+  function telaPin(erro, pin) {
+    clearInterval(timer); $('quem').textContent = '';
+    tela(`<label for="pin">PIN do jogo</label><input id="pin" inputmode="numeric" maxlength="6" autocomplete="off" value="${esc(pin || '')}" placeholder="000000">
+      <button class="btn" id="bPin">Continuar</button><div class="msg">${esc(erro || '')}</div>
+      <p class="muted sm">O PIN aparece na tela projetada pelo professor.</p>`);
+    $('bPin').onclick = () => { const p = $('pin').value.replace(/\D/g, ''); if (p.length === 6) telaNome(p); };
+    $('pin').onkeydown = e => { if (e.key === 'Enter') $('bPin').click(); };
+  }
+  async function telaNome(pin) {
+    tela('<div class="spin"></div><p class="centro muted">Procurando o jogo…</p>');
+    let j; try { j = await rpc('quiz_nomes', { p_pin: pin }); } catch (e) { return telaPin(e.message, pin); }
+    if (!j.ok) return telaPin(j.erro, pin);
+    tela(`<p class="muted sm">Turma: <b>${esc(j.turma)}</b></p><label for="nome">Seu nome</label>
+      <select id="nome"><option value="">Selecione</option>${j.nomes.map(n => `<option>${esc(n)}</option>`).join('')}</select>
+      <button class="btn" id="bEntrar">Entrar no jogo</button><div class="msg" id="m"></div>
+      <p class="muted sm">Não achou seu nome? Ele já pode estar no jogo; avise o professor.</p>`);
+    $('bEntrar').onclick = async () => {
+      const nome = $('nome').value; if (!nome) return;
+      $('bEntrar').disabled = true;
+      try {
+        const r = await rpc('quiz_entrar', { p_pin: pin, p_nome: nome });
+        if (!r.ok) { $('m').textContent = r.erro; $('bEntrar').disabled = false; return; }
+        EU = { pin, token: r.token, nome: r.nome }; gravar(EU); comecar();
+      } catch (e) { $('m').textContent = e.message; $('bEntrar').disabled = false; }
+    };
+  }
+
+  /* ---------- jogo ---------- */
+  function comecar() { $('quem').textContent = EU.nome; ultimo = ''; clearInterval(timer); timer = setInterval(atualizar, 1000); atualizar(); }
+  async function atualizar() {
+    let s; try { s = await rpc('quiz_estado', { p_pin: EU.pin, p_token: EU.token }); } catch (e) { return; }   // rede instável: tenta no próximo segundo
+    if (!s.ok) { gravar(null); EU = null; return telaPin(s.saiu ? 'Você saiu do jogo. Entre de novo com o PIN.' : s.erro); }
+    const chave = [s.estado, s.q, s.respondeu, s.estado === 'resultado' ? s.posicao : ''].join('|');
+    if (s.estado === 'pergunta' && !s.respondeu) { const t = $('tmr'); if (t) t.textContent = '⏱ ' + Math.ceil(s.restante / 1000) + ' s'; }
+    if (chave === ultimo) return; ultimo = chave;
+    const topo = `<div class="top"><span class="muted">${s.q >= 0 ? 'Pergunta ' + (s.q + 1) + ' de ' + s.n : ''}</span><span><b>${s.pontos}</b> pontos</span></div>`;
+    if (s.estado === 'espera') return tela(`<div class="big">Você está no jogo! 🎉</div><p class="centro">Olhe para a tela do professor. A primeira pergunta aparece aqui quando ele liberar.</p><div class="spin"></div><p class="centro muted sm">${s.jogadores} na sala</p>`);
+    if (s.estado === 'fim') { clearInterval(timer); gravar(null); return tela(`<div class="big">Fim de jogo!</div><p class="centro" style="font-size:1.3rem">Você ficou em <b>${s.posicao}º lugar</b> de ${s.jogadores}, com <b>${s.pontos} pontos</b>.</p><p class="centro muted">Obrigado por jogar!</p>`); }
+    if (s.estado === 'pergunta' && !s.respondeu) {
+      enviando = false;
+      tela(`${topo}<div class="top" style="margin-top:6px"><span class="muted sm">${esc(s.hab || '')}</span><span class="timer" id="tmr">⏱ ${Math.ceil(s.restante / 1000)} s</span></div>
+        <p style="font-weight:700;margin:12px 0 4px">${esc(s.comando || 'Escolha a resposta certa.')}</p><p class="muted sm" style="margin:0">Leia a pergunta completa na tela do professor.</p>
+        <div class="alts">${s.alts.map((a, i) => `<button class="alt" data-i="${i}" style="background:var(--a${i})"><span class="f">${FORMAS[i]}</span><span>${LETRA[i]}) ${esc(a)}</span></button>`).join('')}</div><div class="msg" id="m"></div>`);
+      [...document.querySelectorAll('.alt')].forEach(b => b.onclick = async () => {
+        if (enviando) return; enviando = true;
+        document.querySelectorAll('.alt').forEach(x => { x.disabled = true; }); b.classList.add('minha');
+        try { const r = await rpc('quiz_responder', { p_pin: EU.pin, p_token: EU.token, p_q: s.q, p_escolha: +b.dataset.i }); if (!r.ok) $('m').textContent = r.erro; }
+        catch (e) { $('m').textContent = e.message; enviando = false; document.querySelectorAll('.alt').forEach(x => { x.disabled = false; }); return; }
+        ultimo = ''; atualizar();
+      });
+      return;
+    }
+    if (s.estado === 'pergunta' && s.respondeu) return tela(`${topo}<div class="big" style="margin-top:20px">Resposta enviada!</div><p class="centro">Você marcou <b style="color:var(--a${s.escolha})">${FORMAS[s.escolha]} ${LETRA[s.escolha]}</b>. Aguarde o professor mostrar o resultado.</p><div class="spin"></div>`);
+    if (s.estado === 'resultado') {
+      const resp = s.respondeu;
+      return tela(`${topo}<div class="res ${s.certa ? 'ok' : 'no'}" style="margin-top:12px">${s.certa ? '✓ Acertou! +' + s.ganhou + ' pontos' : resp ? '✗ Não foi dessa vez' : '⏱ Sem resposta'}</div>
+        <p class="centro">Resposta certa: <b style="color:var(--a${s.correta})">${FORMAS[s.correta]} ${LETRA[s.correta]}</b></p>
+        <p class="centro" style="font-size:1.15rem">Você está em <b>${s.posicao}º lugar</b> de ${s.jogadores}.</p>`);
+    }
+  }
+
+  const sv = ler(), pinUrl = (new URLSearchParams(location.search).get('pin') || '').replace(/\D/g, '');
+  if (sv && sv.token && (!pinUrl || pinUrl === sv.pin)) { EU = sv; comecar(); }
+  else if (pinUrl.length === 6) telaNome(pinUrl);
+  else telaPin('', '');
+})();
+</script>
+</body></html>
