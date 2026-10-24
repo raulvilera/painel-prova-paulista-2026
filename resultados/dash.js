@@ -17,6 +17,7 @@
   function msg(html) { $('app').innerHTML = '<div class="card msg">' + html + '</div>'; }
 
   /* ---------- normalização: cada envio vira {turma, aluno, aval, itens:[{v, ae, desc, bim, rot}]} ---------- */
+  const REV = {};   // envio bruto de cada aluno (simulado), para a revisão
   function norm(j) {
     const ult = new Map();
     (j.rows || []).forEach(r => {   // só o último envio de cada aluno em cada avaliação
@@ -40,7 +41,7 @@
       });
       const parcial = (r.itens || []).some(i => i.tipo === 'dis' && typeof i.nota !== 'number');
       const rotAval = CFG.fonte === 'em' ? [r.componente, r.prova, (r.avaliacao.split('-')[1] || '') + 'ª série'].filter(Boolean).join(' · ') : (CFG.fonte === 'simulado' ? 'Simulado SARESP' : 'Atividade individual');
-      return { turma, aluno: r.nome, id: r.id, aval, rotAval, itens, parcial, nota: itens.length ? media(itens.map(i => i.v)) * 10 : null, criado: r.criado };
+      return { turma, aluno: r.nome, id: r.id, aval, rotAval, itens, parcial, raw: r, nota: itens.length ? media(itens.map(i => i.v)) * 10 : null, criado: r.criado };
     });
   }
 
@@ -90,7 +91,7 @@
       const al = new Map();
       (ROSTER[t] || []).forEach(n => al.set(n, { n, notas: [], itens: [], feito: false }));
       dados.filter(x => x.turma === t).forEach(x => {
-        const o = al.get(x.aluno) || { n: x.aluno, notas: [], itens: [], feito: false }; o.feito = true; o.id = x.id; o.turma = t; if (x.criado && (!o.criado || new Date(x.criado) > new Date(o.criado))) o.criado = x.criado;
+        const o = al.get(x.aluno) || { n: x.aluno, notas: [], itens: [], feito: false }; o.feito = true; o.id = x.id; o.turma = t; if (x.raw && (!o.raw || !o.criado || new Date(x.criado) >= new Date(o.criado))) o.raw = x.raw; if (x.criado && (!o.criado || new Date(x.criado) > new Date(o.criado))) o.criado = x.criado;
         if (x.nota !== null) o.notas.push(x.nota); o.itens.push(...x.itens); o.parcial = o.parcial || x.parcial; al.set(x.aluno, o);
       });
       const alunos = [...al.values()].sort((a, b) => a.n.localeCompare(b.n, 'pt-BR'));
@@ -297,6 +298,7 @@
     };
     const refAe = new Map(agrega(tm.itens, 'ae').map(x => [x.k, x.p])), refDs = new Map(agrega(tm.itens, 'desc').map(x => [x.k, x.p]));
     return (a.criado ? '<p class="muted sm" style="margin:0 0 8px">📅 Atividade realizada em <b>' + esc(fmtData(a.criado)) + '</b></p>' : '') +
+      (CFG.fonte === 'simulado' && a.raw ? (REV[tm.t + '|' + a.n] = a.raw, '<p class="lib"><button class="revb" data-k="' + esc(tm.t + '|' + a.n) + '">📄 Ver a atividade como o aluno fez</button><span class="muted sm"> Abre a prova do jeito que o aluno viu, com as respostas dele marcadas.</span></p>') : '') +
       (podeLiberar() ? '<p class="lib"><button class="libb" data-t="' + esc(tm.t) + '" data-a="' + esc(a.n) + '" data-id="' + esc(a.id == null ? '' : a.id) + '">🔓 Liberar novo envio</button><span class="muted sm"> Use se o aluno diz que não fez e aparece “já enviou”. O envio atual é apagado.</span></p>' : '') + questoes(a) + planoAluno(a, tm) + pizzasAluno(a) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
       '<p class="muted sm">Barra = aproveitamento do aluno; traço preto = média da turma. Atingido: aproveitamento a partir de 50% (Adequado ou Avançado).' + (a.parcial ? ' Nota parcial: dissertativa ainda em correção.' : '') + '</p>';
   }
@@ -353,6 +355,12 @@
     $('fStatus').onchange = e => { S.status = e.target.value; desenha(); };
     $('fBusca').oninput = e => { S.busca = e.target.value; desenha(); };
     $('app').addEventListener('click', e => { const b = e.target.closest && e.target.closest('.libb'); if (b) { e.preventDefault(); liberar(b); } });
+    $('app').addEventListener('click', e => {   // revisão: abre a página do simulado com as respostas do aluno
+      const b = e.target.closest && e.target.closest('.revb'); if (!b) return; e.preventDefault();
+      const r = REV[b.dataset.k]; if (!r) return;
+      try { localStorage.setItem('revisao_simulado', JSON.stringify({ turma: r.turma, nome: r.nome, criado: r.criado, itens: r.itens })); } catch (x) { alert('O navegador bloqueou o armazenamento local; não foi possível abrir a revisão.'); return; }
+      window.open('/simulado/?revisao=1', '_blank');
+    });
     $('app').addEventListener('toggle', e => { const d = e.target; if (!d.dataset || !d.dataset.k) return; if (d.open) { S.open.add(d.dataset.k); preenche(d); } else S.open.delete(d.dataset.k); }, true);
     if (!window.supabase) return msg('Não foi possível carregar o login. Atualize a página.');
     const sb = window.supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, detectSessionInUrl: false, flowType: 'implicit' } });
