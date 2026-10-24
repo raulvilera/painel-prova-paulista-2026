@@ -368,7 +368,7 @@ module.exports = async function individual(req, res) {
       det.forEach((d, i) => {   // guarda o enunciado e os textos das alternativas para o relatório do professor (nunca vai para o aluno)
         const q0 = m.itens[i].q, q = q0.pt ? Object.assign({}, q0, q0.pt) : q0;
         d.enun = (String(q.enunciado || '') + (q.comando ? ' — ' + q.comando : '')).slice(0, 420);
-        if (d.tipo === 'obj' && q.alts) { d.textoCorreta = String(q.alts[q.correta] || '').slice(0, 200); if (d.resp != null) d.textoResp = String(q.alts[d.resp] || '').slice(0, 200); }
+        if (d.tipo === 'obj' && q.alts) { d.alts = q.alts.slice(0, 6).map(x => String(x).slice(0, 200)); d.textoCorreta = String(q.alts[q.correta] || '').slice(0, 200); if (d.resp != null) d.textoResp = String(q.alts[d.resp] || '').slice(0, 200); }
         if (d.tipo === 'assoc' || d.tipo === 'ordem') { d.textoCorreta = textoAA(q, q.correta).slice(0, 400); if (d.resp != null) d.textoResp = textoAA(q, d.resp).slice(0, 400); }
       });
       const rotulo = m.pei ? status + (m.pei.flags && m.pei.flags.lang === 'ru' ? (m.pei.simulado ? ' · simulado em russo' : ' · em russo') : (m.pei.simulado ? ' · simulado adaptado' : ' · adaptada')) : status;

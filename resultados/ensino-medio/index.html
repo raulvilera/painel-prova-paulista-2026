@@ -6,6 +6,12 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Resultados · Ensino Médio</title>
 <link rel="stylesheet" href="../dash.css?v=12">
+<style>
+.q{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0;background:var(--surface-2)}
+.q.ok{border-left:4px solid var(--lv2)}.q.err{border-left:4px solid var(--lv0)}.q.vazia{border-left:4px solid var(--muted)}
+.q ol{margin:6px 0 4px 18px;padding:0}.q li{margin:2px 0}
+.q li.cert{color:var(--lv2);font-weight:700}.q li.marc{color:var(--lv0);text-decoration:underline}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -16,10 +22,14 @@
 <div class="field"><label for="fStatus">Situação</label><select id="fStatus"><option value="">Todos</option><option value="ok">Realizaram</option><option value="pend">Pendentes</option></select></div>
 <div class="field"><label for="fBusca">Buscar aluno</label><input id="fBusca" type="search" placeholder="Digite o nome" autocomplete="off"></div>
 </div>
+<section class="card" id="atv" style="margin-bottom:14px"><h2>Atividade do aluno</h2>
+<div class="filters" style="border:0;margin:0 0 6px;padding:0"><div class="field"><label for="atvTurma">Turma</label><select id="atvTurma"></select></div><div class="field"><label for="atvNome">Aluno</label><select id="atvNome" disabled><option value="">Escolha o aluno</option></select></div></div>
+<div id="atvMsg" class="muted sm"></div><div id="atvCorpo"></div></section>
 <main id="app"><div class="card msg">Carregando…</div></main>
 </div>
 <script>window.RES_CFG={fonte:'em'};</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-<script src="../dash.js?v=11"></script>
+<script src="../dash.js?v=12"></script>
+<script src="atividade.js?v=1"></script>
 </body>
 </html>

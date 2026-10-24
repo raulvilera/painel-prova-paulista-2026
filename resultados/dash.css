@@ -97,3 +97,6 @@ details.qs>summary{cursor:pointer;padding:9px 12px;font-weight:700;font-size:.9r
 
 .lib{margin:0 0 10px}.libb{font:inherit;font-weight:700;font-size:.84rem;background:var(--surface-2);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}.libb:hover{border-color:var(--accent);color:var(--accent)}.libb:disabled{opacity:.6;cursor:wait}
 @media print{.lib{display:none}}
+
+/* alternativas da questão (painel): correta em verde, marcada pelo aluno (errada) sublinhada em vermelho */
+.alts{margin:6px 0 4px 18px;padding:0}.alts li{margin:2px 0}.alts li.cert{color:var(--lv2);font-weight:700}.alts li.marc{color:var(--lv0);text-decoration:underline}
