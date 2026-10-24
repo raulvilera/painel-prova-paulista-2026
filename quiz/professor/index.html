@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Quiz ao vivo · Professor</title>
+<style>
+:root{--bg:#f3f5f1;--card:#fff;--ink:#17231c;--mut:#5d6b62;--line:#d9e0da;--pri:#165c36;--ok:#1e7d3c;--okbg:#e3f4e7;--err:#b3261e;--errbg:#fbe6e4;--warn:#9a6700;--warnbg:#fff4d6;
+  --a0:#e21b3c;--a1:#1368ce;--a2:#b7860b;--a3:#26890c;--a4:#864cbf}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19;--warn:#f0c14b;--warnbg:#3a3015}}
+:root[data-theme="dark"]{--bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19;--warn:#f0c14b;--warnbg:#3a3015}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 "Segoe UI",Roboto,Arial,sans-serif}
+button,select,input{font:inherit;color:inherit}
+.wrap{max-width:1300px;margin:0 auto;padding:16px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px}
+h1{margin:0;font-size:1.5rem;color:var(--pri)}
+nav a{color:var(--pri);text-decoration:none;margin-left:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+.muted{color:var(--mut)}.sm{font-size:.9rem}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:end}
+label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600;color:var(--mut)}
+select{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:150px}
+.btn{background:var(--pri);color:#fff;border:0;border-radius:10px;padding:11px 20px;font-weight:700;cursor:pointer}
+.btn.sec{background:transparent;color:var(--pri);border:2px solid var(--pri)}
+.btn.grande{font-size:1.25rem;padding:14px 28px}
+.btn:disabled{opacity:.45;cursor:default}
+.erro{color:var(--err)}
+table{border-collapse:collapse;width:100%}
+th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+/* sala de espera */
+.pinbox{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.pin{font-size:clamp(48px,8vw,96px);font-weight:900;letter-spacing:.12em;color:var(--pri);line-height:1}
+.nomes{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.nome{background:var(--okbg);border:0;border-radius:999px;padding:6px 14px;font-weight:700;cursor:pointer}
+.nome:hover{background:var(--errbg)}
+/* pergunta (projetar) */
+.qtop{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.tag{display:inline-block;border-radius:999px;padding:3px 12px;font-weight:700;background:var(--okbg);color:var(--pri)}
+.relogio{font-size:2.6rem;font-weight:900;font-variant-numeric:tabular-nums}
+.relogio.fim{color:var(--err)}
+.enun{font-size:clamp(18px,1.6vw,24px);margin:10px 0}
+.com{font-size:clamp(19px,1.7vw,26px);font-weight:800;margin:12px 0}
+.alts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.alt{display:flex;gap:12px;align-items:center;border-radius:14px;padding:14px 16px;color:#fff;font-weight:700;font-size:clamp(16px,1.35vw,21px);position:relative}
+.alt .f{font-size:1.6em;flex:none}
+.alt.apaga{opacity:.28}
+.alt .cnt{margin-left:auto;font-size:1.4em;font-weight:900;flex:none}
+.alt.certa{outline:5px solid var(--ink)}
+.controles{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:14px}
+.contagem{font-size:1.5rem;font-weight:800}
+figure.infog{margin:10px 0;background:#fff;color:#17231c;border:1px solid var(--line);border-radius:10px;padding:8px;overflow:auto}
+figure.infog figcaption{font-weight:700;margin-bottom:6px}
+figure.infog table{font-size:.95rem}figure.infog th,figure.infog td{border:1px solid #cfd8d2}
+figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 auto}
+.bars .b{display:grid;grid-template-columns:minmax(80px,30%) 1fr auto;gap:8px;align-items:center;margin:3px 0}
+.bars .bt{background:#e4ebe6;border-radius:4px;height:14px;overflow:hidden}.bars .bt i{display:block;height:100%;background:#2f6fb5}
+.expl{background:var(--okbg);border-radius:12px;padding:12px 16px;margin-top:12px;font-size:clamp(16px,1.3vw,20px)}
+.rank{display:grid;gap:6px;margin-top:10px}
+.rank div{display:flex;justify-content:space-between;background:var(--bg);border-radius:10px;padding:8px 14px;font-weight:700;font-size:1.1rem}
+.pct{display:inline-block;min-width:3.2em;font-weight:800}
+.baixo{background:var(--errbg)}
+@media (max-width:800px){.alts{grid-template-columns:1fr}}
+</style></head>
+<body><div class="wrap">
+<header><div><h1>Quiz ao vivo · Ciências</h1><div class="muted sm">Estilo Kahoot, dentro da plataforma: você libera cada pergunta e vê as respostas em tempo real</div></div>
+<nav><a href="/">← Painel</a><a href="/jogo/">Trilha SARESP</a></nav></header>
+<div id="app"><div class="card muted">Carregando…</div></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+(function(){
+  const SB_URL = 'https://ykrjfjepnqeoqlgupsbe.supabase.co', SB_KEY = 'sb_publishable_FbMU5x7WBpxzHmmVzOfh2g_0M1xxAh5';
+  const FORMAS = ['▲', '◆', '●', '■', '★'], LETRA = 'ABCDE';
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const app = h => { $('app').innerHTML = h; };
+  const ATIVA = 'quiz_prof_sessao';
+  let TOKEN = '', S = null, poll = null, chaveTela = '', autoMostrou = -1, ocupado = false;
+
+  let SBC = null;
+  async function api(q, body) {
+    if (SBC) { try { const { data } = await SBC.auth.getSession(); if (data && data.session) TOKEN = data.session.access_token; } catch (e) {} }   // renova o login em aulas longas
+    const r = await fetch('/api/quiz' + (q ? '?' + new URLSearchParams(q) : ''), body ? { method: 'POST', headers: { Authorization: 'Bearer ' + TOKEN, 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : { headers: { Authorization: 'Bearer ' + TOKEN } });
+    const j = await r.json().catch(() => ({ ok: false, erro: 'Resposta inesperada do servidor.' }));
+    if (!j.ok) throw Object.assign(new Error(j.erro || 'Erro'), { status: r.status });
+    return j;
+  }
+  const guardarAtiva = id => { try { id ? localStorage.setItem(ATIVA, id) : localStorage.removeItem(ATIVA); } catch (e) {} };
+  const lerAtiva = () => { try { return localStorage.getItem(ATIVA) || ''; } catch (e) { return ''; } };
+  const linkAluno = pin => location.origin + '/quiz/?pin=' + pin;
+
+  function figura(f) {
+    if (!f) return '';
+    const cap = f.titulo ? `<figcaption>${esc(f.titulo)}</figcaption>` : '';
+    if (f.tipo === 'tabela') return `<figure class="infog">${cap}<table><thead><tr>${f.colunas.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${f.linhas.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></figure>`;
+    if (f.tipo === 'barras') { const max = Math.max(...f.itens.map(i => i.valor)) || 1; return `<figure class="infog">${cap}<div class="bars">${f.itens.map(i => `<div class="b"><span>${esc(i.rotulo)}</span><span class="bt"><i style="width:${Math.max(3, i.valor / max * 100)}%"></i></span><span>${esc(String(i.valor).replace('.', ','))}${f.unidade ? ' ' + esc(f.unidade) : ''}</span></div>`).join('')}</div></figure>`; }
+    if (f.tipo === 'etapas') return `<figure class="infog">${cap}<ol>${f.etapas.map(e => `<li>${esc(e)}</li>`).join('')}</ol></figure>`;
+    return '';
+  }
+
+  /* ---------- início: criar partida e histórico ---------- */
+  async function inicio(msgErro) {
+    clearInterval(poll); S = null; chaveTela = '';
+    app(`<div class="card"><h2 style="margin-top:0">Nova partida</h2><div class="row">
+        <label>Turma<select id="fTurma"><option>Carregando…</option></select></label>
+        <label>Perguntas<select id="fN"><option>8</option><option selected>12</option><option>16</option><option>20</option></select></label>
+        <label>Tempo por pergunta<select id="fT"><option value="30">30 s</option><option value="45">45 s</option><option value="60" selected>1 min</option><option value="90">1 min 30 s</option><option value="120">2 min</option></select></label>
+        <button class="btn" id="bCriar" disabled>Criar partida</button></div>
+        <p class="muted sm">As perguntas vêm do banco do SARESP da série, com prioridade para os temas em que a turma tem mais defasagem. Os alunos entram com o PIN no celular e escolhem o nome na lista da turma.</p>
+        <p class="erro" id="m">${esc(msgErro || '')}</p></div>
+      <div class="card"><h2 style="margin-top:0">Partidas anteriores</h2><div id="hist" class="muted">Carregando…</div></div>`);
+    try {
+      const t = await api({ turmas: 1 });
+      $('fTurma').innerHTML = '<option value="">Selecione</option>' + t.turmas.map(x => `<option>${esc(x)}</option>`).join('');
+      $('fTurma').onchange = () => { $('bCriar').disabled = !$('fTurma').value; };
+      $('bCriar').onclick = async () => {
+        $('bCriar').disabled = true; $('m').textContent = '';
+        try { const r = await api(null, { acao: 'criar', turma: $('fTurma').value, n: $('fN').value, tempo: $('fT').value }); guardarAtiva(r.id); abrir(r.id); }
+        catch (e) { $('m').textContent = e.message; $('bCriar').disabled = false; }
+      };
+      const h = await api({ historico: 1 });
+      $('hist').innerHTML = h.partidas.length ? `<table><thead><tr><th>Data</th><th>Turma</th><th>Perguntas</th><th>Situação</th><th></th></tr></thead><tbody>${h.partidas.map(p => `<tr><td>${new Date(p.criado).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })}</td><td>${esc(p.turma)}</td><td>${p.n}</td><td>${p.estado === 'fim' ? 'Encerrada' : 'Em andamento'}</td><td><button class="btn sec" data-id="${esc(p.id)}">${p.estado === 'fim' ? 'Ver resultados' : 'Retomar'}</button></td></tr>`).join('')}</tbody></table>` : 'Nenhuma partida ainda.';
+      document.querySelectorAll('#hist [data-id]').forEach(b => b.onclick = () => abrir(b.dataset.id));
+    } catch (e) { $('m').innerHTML = esc(e.message) + (e.status === 401 ? ' <a href="/">Abrir o painel</a>' : ''); }
+  }
+
+  /* ---------- partida ao vivo ---------- */
+  function abrir(id) { clearInterval(poll); chaveTela = ''; autoMostrou = -1; S = { id }; atualizar(); poll = setInterval(atualizar, 1500); }
+  async function atualizar() {
+    if (!S || ocupado) return;
+    let s; try { s = await api({ sessao: S.id }); } catch (e) { if (e.status === 404) { guardarAtiva(''); return inicio('Partida não encontrada.'); } return; }
+    S = s;
+    if (s.estado === 'fim') { clearInterval(poll); guardarAtiva(''); }
+    // fim do tempo ou todos responderam: mostra a resposta sozinho (uma vez por pergunta)
+    if (s.estado === 'pergunta' && autoMostrou !== s.q && ((s.restante <= 0) || (s.jogadores.length && s.respondidos >= s.jogadores.length))) { autoMostrou = s.q; return acao('mostrar'); }
+    desenhar(s);
+  }
+  async function acao(a, extra) {
+    if (ocupado) return; ocupado = true;
+    try { const s = await api(null, Object.assign({ acao: a, id: S.id }, extra || {})); S = s; chaveTela = ''; desenhar(s); }
+    catch (e) { alertar(e.message); }
+    ocupado = false;
+  }
+  function alertar(t) { const m = $('m'); if (m) m.textContent = t; }
+
+  function desenhar(s) {
+    const chave = [s.estado, s.q].join('|');
+    if (s.estado === 'espera') return salaEspera(s);
+    if (s.estado === 'pergunta') {
+      if (chave !== chaveTela) { chaveTela = chave; telaPergunta(s); }
+      $('rel').textContent = Math.ceil(s.restante / 1000); $('rel').classList.toggle('fim', s.restante <= 10000);
+      $('cont').textContent = `${s.respondidos} de ${s.jogadores.length} responderam`;
+      return;
+    }
+    if (s.estado === 'resultado') { if (chave !== chaveTela) { chaveTela = chave; telaResultado(s); } return; }
+    if (s.estado === 'fim') { if (chave !== chaveTela) { chaveTela = chave; telaFim(s); } }
+  }
+
+  function salaEspera(s) {
+    const html = `<div class="card"><div class="pinbox"><div><div class="muted">Entre em <b>${esc(location.host)}/quiz</b> e digite o PIN</div><div class="pin">${esc(s.pin)}</div><div class="muted sm">${esc(s.turma)} · ${s.n} perguntas · ${s.tempo} s cada</div></div>
+      <div style="text-align:right"><div class="contagem">${s.jogadores.length} na sala</div><div class="muted sm">${s.faltam} da turma ainda não entraram</div>
+      <div class="row" style="justify-content:flex-end;margin-top:10px"><button class="btn sec" id="bCopiar">Copiar link para os alunos</button><button class="btn grande" id="bComecar" ${s.jogadores.length ? '' : 'disabled'}>Começar ▶</button></div></div></div>
+      <div class="nomes">${s.jogadores.map(j => `<button class="nome" data-j="${esc(j.id)}" title="Tirar do jogo">${esc(j.nome)}</button>`).join('') || '<span class="muted">Aguardando os alunos…</span>'}</div>
+      <p class="muted sm">Toque em um nome para tirar o aluno do jogo (ele pode entrar de novo, por exemplo se trocou de celular).</p><p class="erro" id="m"></p>
+      <button class="btn sec" id="bCancelar">Cancelar partida</button></div>`;
+    if (html === chaveTela) return; chaveTela = html; app(html);
+    $('bComecar').onclick = () => acao('liberar');
+    $('bCopiar').onclick = () => navigator.clipboard.writeText(linkAluno(s.pin)).then(() => { $('bCopiar').textContent = 'Link copiado'; }, () => {});
+    $('bCancelar').onclick = () => acao('encerrar');
+    document.querySelectorAll('[data-j]').forEach(b => b.onclick = () => acao('remover', { jogador: b.dataset.j }));
+  }
+
+  function cabecalho(s) { const p = s.pergunta; return `<div class="qtop"><span><span class="tag">Pergunta ${s.q + 1} de ${s.n}</span> <span class="tag">${esc(p.bim)}º bim. · ${esc(p.hab)}</span></span><span class="muted">PIN <b>${esc(s.pin)}</b></span></div>`; }
+  function corpo(p) { return `<div class="enun">${esc(p.enunciado)}</div>${p.svg ? `<figure class="infog ilus">${p.svg}</figure>` : ''}${figura(p.figura)}<div class="com">${esc(p.comando || '')}</div>`; }
+
+  function telaPergunta(s) {
+    const p = s.pergunta;
+    app(`<div class="card">${cabecalho(s)}${corpo(p)}
+      <div class="alts">${p.alts.map((a, i) => `<div class="alt" style="background:var(--a${i})"><span class="f">${FORMAS[i]}</span><span>${LETRA[i]}) ${esc(a)}</span></div>`).join('')}</div>
+      <div class="controles"><span class="contagem" id="cont"></span><span class="relogio" id="rel"></span><button class="btn" id="bMostrar">Encerrar tempo e mostrar resposta</button></div><p class="erro" id="m"></p></div>`);
+    $('bMostrar').onclick = () => { autoMostrou = s.q; acao('mostrar'); };
+  }
+
+  function telaResultado(s) {
+    const p = s.pergunta, tot = s.dist.reduce((a, b) => a + b, 0), ult = s.q + 1 >= s.n;
+    const top = s.jogadores.slice(0, 5);
+    app(`<div class="card">${cabecalho(s)}<div class="com">${esc(p.comando || '')}</div>
+      <div class="alts">${p.alts.map((a, i) => `<div class="alt ${i === p.correta ? 'certa' : 'apaga'}" style="background:var(--a${i})"><span class="f">${i === p.correta ? '✓' : FORMAS[i]}</span><span>${LETRA[i]}) ${esc(a)}</span><span class="cnt">${s.dist[i]}</span></div>`).join('')}</div>
+      <div class="expl"><b>${tot ? Math.round(s.dist[p.correta] / tot * 100) : 0}% acertaram.</b> ${esc(p.explicacao || '')}</div>
+      <div class="controles"><div style="flex:1;min-width:260px"><b>Placar</b><div class="rank">${top.map((j, i) => `<div><span>${i + 1}º ${esc(j.nome)}</span><span>${j.pontos}</span></div>`).join('')}</div></div>
+      <div class="row"><button class="btn sec" id="bFim">Encerrar partida</button><button class="btn grande" id="bProx">${ult ? 'Ver resultado final' : 'Próxima pergunta ▶'}</button></div></div><p class="erro" id="m"></p></div>`);
+    $('bProx').onclick = () => acao(ult ? 'encerrar' : 'liberar');
+    $('bFim').onclick = () => acao('encerrar');
+  }
+
+  function telaFim(s) {
+    const podio = s.jogadores.slice(0, 3), jogadas = s.porQ.filter(q => q.jogada);
+    const resumo = () => `Quiz ao vivo · ${s.turma} · ${new Date(s.criado).toLocaleDateString('pt-BR')}\n` +
+      s.porAluno.map((a, i) => `${i + 1}º ${a.nome}: ${a.pontos} pts, ${a.acertos}/${a.respostas} acertos`).join('\n') +
+      '\n\nPor tema:\n' + jogadas.map(q => `- ${q.bim}º bim. ${q.hab}: ${q.respostas ? Math.round(q.acertos / q.respostas * 100) : 0}% (${q.desc})`).join('\n');
+    app(`<div class="card"><h2 style="margin-top:0">🏆 Resultado final · ${esc(s.turma)}</h2>
+      <div class="rank">${podio.map((j, i) => `<div><span>${['🥇', '🥈', '🥉'][i]} ${esc(j.nome)}</span><span>${j.pontos}</span></div>`).join('') || '<span class="muted">Ninguém jogou.</span>'}</div></div>
+      <div class="card"><h3 style="margin-top:0">Acertos por tema</h3><table><thead><tr><th>%</th><th>Bim.</th><th>Habilidade</th><th>Tema</th><th>Acertos</th></tr></thead><tbody>
+      ${jogadas.slice().sort((a, b) => (a.respostas ? a.acertos / a.respostas : 0) - (b.respostas ? b.acertos / b.respostas : 0)).map(q => { const pc = q.respostas ? Math.round(q.acertos / q.respostas * 100) : 0; return `<tr class="${pc < 50 ? 'baixo' : ''}"><td><span class="pct">${pc}%</span></td><td>${esc(q.bim)}º</td><td>${esc(q.hab)}</td><td>${esc(q.desc)}</td><td>${q.acertos}/${q.respostas}</td></tr>`; }).join('')}
+      </tbody></table><p class="muted sm">Em vermelho, temas com menos de 50% de acerto: bons candidatos para retomar.</p></div>
+      <div class="card"><h3 style="margin-top:0">Por aluno</h3><table><thead><tr><th>#</th><th>Aluno</th><th>Pontos</th><th>Acertos</th><th>Errou em</th></tr></thead><tbody>
+      ${s.porAluno.map((a, i) => `<tr><td>${i + 1}</td><td>${esc(a.nome)}</td><td>${a.pontos}</td><td>${a.acertos}/${a.respostas}${a.respostas < jogadas.length ? ` <span class="muted sm">(${jogadas.length - a.respostas} sem resposta)</span>` : ''}</td><td class="sm">${esc([...new Set(a.erros)].join(', '))}</td></tr>`).join('')}
+      </tbody></table></div>
+      <div class="row"><button class="btn" id="bCopiar">Copiar resumo</button><button class="btn sec" id="bNova">Nova partida</button></div>`);
+    $('bCopiar').onclick = () => navigator.clipboard.writeText(resumo()).then(() => { $('bCopiar').textContent = 'Copiado'; }, () => {});
+    $('bNova').onclick = () => inicio();
+  }
+
+  async function iniciar() {
+    try {
+      const sb = SBC = window.supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false, flowType: 'implicit' } });
+      const { data } = await sb.auth.getSession();
+      if (!data || !data.session) return app('<div class="card erro">Entre primeiro no painel com o seu login de professor. <a href="/">Abrir o painel</a></div>');
+      TOKEN = data.session.access_token;
+      const ativa = lerAtiva(); if (ativa) abrir(ativa); else inicio();
+    } catch (e) { app('<div class="card erro">Não foi possível carregar: ' + esc(e.message) + '</div>'); }
+  }
+  iniciar();
+})();
+</script>
+</body></html>
