@@ -44,13 +44,24 @@ figure.infog th{background:#eef4ef}
 figure.ilus svg{display:block;width:100%;height:auto}
 .bars .b{display:grid;grid-template-columns:minmax(70px,32%) 1fr auto;gap:6px;align-items:center;font-size:.85rem;margin:3px 0}
 .bars .bt{background:#e4ebe6;border-radius:4px;height:12px;overflow:hidden}.bars .bt i{display:block;height:100%;background:#2f6fb5}
+.campo{position:relative;margin-top:12px;border-radius:16px;overflow:hidden;aspect-ratio:16/10;background:#0d1b2a}
+.campo #c3d{position:absolute;inset:0}
+.golTxt{position:absolute;left:0;right:0;top:12%;text-align:center;font-size:2.6rem;font-weight:900;color:#fff;text-shadow:0 3px 12px rgba(0,0,0,.7);opacity:0;transform:scale(.6);transition:all .35s}
+.golTxt.on{opacity:1;transform:scale(1)}
+.placar{display:flex;align-items:center;justify-content:center;gap:10px;background:#0d1b2a;color:#fff;border-radius:12px;padding:8px 10px;margin:8px 0;font-weight:800}
+.placar .t{flex:1;font-size:.9rem;display:flex;align-items:center;gap:6px}.placar .t:last-child{justify-content:flex-end;text-align:right}
+.placar .c{width:12px;height:12px;border-radius:3px;flex:none}
+.placar .g{font-size:1.6rem;font-variant-numeric:tabular-nums}
 .dup{background:var(--warnbg,#fff4d6);border-radius:12px;padding:8px 12px;margin:10px 0;font-size:.95rem}
 .barra{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:6px}.barra i{display:block;height:100%;background:var(--pri);transition:width 1s linear}
 </style></head>
 <body><div class="wrap">
 <header><h1>Quiz ao vivo · Ciências</h1><span class="muted sm" id="quem"></span></header>
 <main id="tela" class="card" aria-live="polite"></main>
+<div id="campo" class="campo" hidden><div id="c3d"></div><div class="golTxt" id="golTxt"></div></div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="estadio3d.js?v=1"></script>
 <script>
 (function(){
   const SB = 'https://oxohpnappygkmwjyowvq.supabase.co', KEY = 'sb_publishable_EjJenZkxMWv_I6vXWTz6aQ_iz9XEU4N';
@@ -112,14 +123,18 @@ figure.ilus svg{display:block;width:100%;height:auto}
   function aguardar(ms) { parar(); timer = setInterval(atualizar, ms); }
 
   const dupla = s => s.parceiros && s.parceiros.length ? s.parceiros.map(x => esc(x.nome)).join(' e ') : '';
+  const TIME = g => (window.Estadio3D ? Estadio3D.time(g) : { nome: 'Time ' + g, cor: '#165c36' });
+  const placar = s => s.grupo && s.adv ? `<div class="placar"><span class="t"><i class="c" style="background:${TIME(s.grupo).cor}"></i>${esc(TIME(s.grupo).nome)}</span><span class="g">${s.gols} × ${s.golsAdv}</span><span class="t">${esc(TIME(s.adv).nome)}<i class="c" style="background:${TIME(s.adv).cor}"></i></span></div>` : '';
+  let ultimoS = null;
   const linhaDupla = s => s.parceiros && s.parceiros.length ? `<div class="dup">👥 Dupla com <b>${dupla(s)}</b>${s.estado === 'aberto' ? ' · ' + s.parceiros.map(x => `pergunta ${Math.min(x.q + 1, s.n)} de ${s.n}`).join(', ') : ''}<br><span class="sm">Dupla: <b>${s.grupoTotal || 0} pts</b> · ${s.grupoPos}º de ${s.grupos}${s.grupoBonus ? ` · bônus +${s.grupoBonus}` : ''}</span></div>` : '';
 
   async function atualizar() {
     let s; try { s = await rpc('quiz_estado', { p_pin: EU.pin, p_token: EU.token }); } catch (e) { if (!timer) aguardar(3000); return; }   // rede instável: tenta de novo
+    if (s.ok) ultimoS = s;
     if (!s.ok) { parar(); gravar(null); EU = null; return telaPin(s.saiu ? 'Você saiu do jogo. Entre de novo com o PIN.' : s.erro); }
-    if (s.estado === 'fim') { parar(); gravar(null); return tela(`<div class="big">Fim de jogo!</div>${s.grupo ? `<p class="centro" style="font-size:1.3rem">Sua dupla com <b>${dupla(s)}</b> ficou em <b>${s.grupoPos}º lugar</b> de ${s.grupos}, com <b>${s.grupoTotal} pontos</b>.</p>` : ''}<p class="centro">Você: <b>${s.pontos} pontos</b> e <b>${s.acertos} de ${s.n}</b> acertos (${s.posicao}º de ${s.jogadores}).</p><p class="centro muted">Obrigado por jogar!</p>`); }
-    if (s.estado === 'espera') { if (!timer) aguardar(2500); return tela(`<div class="big">Você está no jogo! 🎉</div><p class="centro">Aguarde o professor liberar o quiz. As perguntas vão aparecer aqui.</p>${s.parceiros && s.parceiros.length ? `<div class="dup centro">👥 Você joga em dupla com <b>${dupla(s)}</b>. Sentem juntos: cada um responde no seu celular, mas vocês podem conversar e se ajudar. Quando os dois acertam a mesma pergunta, a dupla ganha +300 pontos de bônus.</div>` : ''}<div class="spin"></div><p class="centro muted sm">${s.jogadores} na sala</p>`); }
-    if (s.q >= s.n || !s.pergunta) { if (!timer) aguardar(5000); return tela(`<div class="big">Você terminou! ✅</div><p class="centro" style="font-size:1.2rem"><b>${s.acertos} de ${s.n}</b> acertos · <b>${s.pontos} pontos</b></p><p class="centro">Agora você está em <b>${s.posicao}º lugar</b> de ${s.jogadores}. ${s.parceiros && s.parceiros.length ? 'Ajude sua dupla a terminar: conversem sobre as perguntas!' : ''} Aguarde o professor encerrar o jogo.</p>${linhaDupla(s)}<div class="spin"></div>`); }
+    if (s.estado === 'fim') { parar(); gravar(null); return tela(`<div class="big">Fim de jogo!</div>${placar(s)}${s.grupo && s.adv ? `<p class="centro" style="font-size:1.2rem">${s.gols > s.golsAdv ? '🏆 Vitória do ' + esc(TIME(s.grupo).nome) + '!' : s.gols === s.golsAdv ? 'Empate!' : 'Vitória do ' + esc(TIME(s.adv).nome) + '. Fica para a próxima!'}</p>` : ''}${s.grupo ? `<p class="centro" style="font-size:1.3rem">Sua dupla com <b>${dupla(s)}</b> ficou em <b>${s.grupoPos}º lugar</b> de ${s.grupos}, com <b>${s.grupoTotal} pontos</b>.</p>` : ''}<p class="centro">Você: <b>${s.pontos} pontos</b> e <b>${s.acertos} de ${s.n}</b> acertos (${s.posicao}º de ${s.jogadores}).</p><p class="centro muted">Obrigado por jogar!</p>`); }
+    if (s.estado === 'espera') { if (!timer) aguardar(2500); return tela(`<div class="big">Você está no jogo! 🎉</div><p class="centro">Aguarde o professor liberar o quiz. As perguntas vão aparecer aqui.</p>${s.parceiros && s.parceiros.length ? `<div class="dup centro">⚽ Seu time: <b style="color:${TIME(s.grupo).cor}">${esc(TIME(s.grupo).nome)}</b>${s.adv ? ` · adversário: <b>${esc(TIME(s.adv).nome)}</b>` : ''}<br>👥 Você joga em dupla com <b>${dupla(s)}</b>. Sentem juntos: cada um responde no seu celular, mas vocês podem conversar e se ajudar. Cada pergunta que alguém do time acerta vale 1 gol; se os dois acertam, é gol de placa: +1 gol (e +300 pontos de bônus).</div>` : ''}<div class="spin"></div><p class="centro muted sm">${s.jogadores} na sala</p>`); }
+    if (s.q >= s.n || !s.pergunta) { if (!timer) aguardar(5000); return tela(`<div class="big">Você terminou! ✅</div><p class="centro" style="font-size:1.2rem"><b>${s.acertos} de ${s.n}</b> acertos · <b>${s.pontos} pontos</b></p><p class="centro">Agora você está em <b>${s.posicao}º lugar</b> de ${s.jogadores}. ${s.parceiros && s.parceiros.length ? 'Ajude sua dupla a terminar: conversem sobre as perguntas!' : ''} Aguarde o professor encerrar o jogo.</p>${linhaDupla(s)}${placar(s)}<div class="spin"></div>`); }
     parar();
     if (qMostrada === s.q) { setTimeout(atualizar, 1200); return; }   // o servidor ainda não fechou a pergunta anterior: confere de novo
     qMostrada = s.q; pergunta(s);
@@ -129,7 +144,7 @@ figure.ilus svg{display:block;width:100%;height:auto}
     const p = s.pergunta, total = s.tempo * 1000; let fimEm = Date.now() + s.restante, respondida = false;
     tela(`<div class="top"><span class="muted">Pergunta ${s.q + 1} de ${s.n}</span><span><b>${s.pontos}</b> pontos</span></div>
       <div class="top" style="margin-top:4px"><span class="muted sm">${p.bim ? esc(p.bim) + 'º bim. · ' : ''}${esc(p.hab || '')}</span><span class="timer" id="tmr"></span></div>
-      <div class="barra"><i id="br" style="width:${s.restante / total * 100}%"></i></div>${linhaDupla(s)}
+      <div class="barra"><i id="br" style="width:${s.restante / total * 100}%"></i></div>${placar(s)}${linhaDupla(s)}
       <div class="enun">${esc(p.enunciado || '')}</div>
       ${p.svg ? `<figure class="infog ilus" role="img" aria-label="Ilustração da questão">${p.svg}</figure>` : ''}${figura(p.figura)}
       <p class="com">${esc(p.comando || 'Escolha a resposta certa.')}</p>
@@ -154,11 +169,29 @@ figure.ilus svg{display:block;width:100%;height:auto}
       }
     });
   }
-  function feedback(r, q) {
+  let EST = null;
+  async function feedback(r, q) {
     clearInterval(relogio);
-    tela(`<div class="res ${r.certa ? 'ok' : 'no'}" style="margin-top:8px">${r.certa ? '✓ Acertou! +' + r.ganhou + ' pontos' : r.tempo ? '⏱ Tempo esgotado' : '✗ Não foi dessa vez'}</div><p class="centro muted">Próxima pergunta em instantes…</p><div class="spin"></div>`);
-    setTimeout(() => { qMostrada = q; atualizar(); }, 2200);
+    const res = r.certa ? 'gol' : r.tempo ? 'fora' : 'defesa', S = ultimoS || {};
+    tela(`<div class="res ${r.certa ? 'ok' : 'no'}" style="margin-top:8px">${r.certa ? '✓ Acertou! +' + r.ganhou + ' pontos' : r.tempo ? '⏱ Tempo esgotado' : '✗ Não foi dessa vez'}</div>${r.certa && S.grupo ? '<p class="centro">⚽ Gol do ' + esc(TIME(S.grupo).nome) + '!</p>' : ''}<p class="centro muted">Próxima pergunta em instantes…</p>`);
+    let mostrou = false;
+    try {
+      if (window.Estadio3D && Estadio3D.suportado()) {
+        $('campo').hidden = false;
+        if (!EST) EST = Estadio3D.criar($('c3d'), { largo: false });
+        if (EST) {
+          mostrou = true; EST.desenhar();
+          const txt = $('golTxt'); txt.textContent = res === 'gol' ? 'GOOOL! ⚽' : res === 'defesa' ? 'Defendeu! 🧤' : 'Pra fora! ⏱'; txt.classList.remove('on');
+          setTimeout(() => txt.classList.add('on'), res === 'gol' ? 950 : 800);
+          await EST.chute({ resultado: res, corGoleiro: S.adv ? TIME(S.adv).cor : '#1368ce' });
+          txt.classList.remove('on');
+        }
+      }
+    } catch (e) { /* sem 3D: segue normalmente */ }
+    $('campo').hidden = true;
+    setTimeout(() => { qMostrada = q; atualizar(); }, mostrou ? 200 : 2200);
   }
+
 
   const sv = ler(), pinUrl = (new URLSearchParams(location.search).get('pin') || '').replace(/\D/g, '');
   if (sv && sv.token && (!pinUrl || pinUrl === sv.pin)) { EU = sv; comecar(); }
