@@ -21,7 +21,18 @@
 }
 .answer-option.is-selected .answer-letter{color:#fff;font-weight:700;border-color:#ffffff80;background:#ffffff1f}
 .answer-option.is-selected>i,.answer-option.is-selected span{color:#fff;font-weight:700}
-/* se a escolhida estava errada, continua verde e afundada, mas com contorno vermelho e o × para indicar o erro */
-.answer-option.is-selected.is-wrong{outline:3px solid var(--coral,#ff7794);outline-offset:2px}
+/* depois da conferência: escolhida e certa = azul-escuro; escolhida e errada = vermelho (texto branco em negrito) */
+.answer-option.is-selected.is-correct,.answer-option.is-selected.is-correct:hover:not(:disabled){
+  background:linear-gradient(180deg,#1f4f8f 0%,#123a6e 100%);
+  border-color:#6f9fe0;
+  box-shadow:0 1px 0 #0a2142,inset 0 3px 8px rgba(0,0,0,.35);
+}
+.answer-option.is-selected.is-wrong,.answer-option.is-selected.is-wrong:hover:not(:disabled){
+  background:linear-gradient(180deg,#d33a3a 0%,#a51f24 100%);
+  border-color:#ff9a9a;
+  box-shadow:0 1px 0 #5e0f12,inset 0 3px 8px rgba(0,0,0,.35);
+}
+.answer-option.is-selected.is-correct .answer-letter,.answer-option.is-selected.is-wrong .answer-letter{color:#fff;border-color:#ffffff99;background:#ffffff26}
+.answer-option.is-selected.is-correct>i,.answer-option.is-selected.is-wrong>i{color:#fff}
 .answer-option .answer-letter{border-radius:9px}
 @media (prefers-reduced-motion:reduce){.answer-option{transition:none}}
