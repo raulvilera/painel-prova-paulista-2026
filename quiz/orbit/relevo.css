@@ -36,3 +36,5 @@
 .answer-option.is-selected.is-correct>i,.answer-option.is-selected.is-wrong>i{color:#fff}
 .answer-option .answer-letter{border-radius:9px}
 @media (prefers-reduced-motion:reduce){.answer-option{transition:none}}
+
+#turma-select{margin-bottom:6px}.lobby-card .select-wrap+label{margin-top:16px;display:block}
