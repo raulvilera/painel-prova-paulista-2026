@@ -51,6 +51,15 @@
   .codra input{width:130px !important;text-transform:uppercase;letter-spacing:.1em}
   .codra button{font:inherit;font-weight:700;border:0;border-radius:10px;padding:9px 14px;background:var(--verde);color:#fff;cursor:pointer}
   .carreg{font-size:.8rem;color:var(--suave);margin-left:6px}
+  /* revisão do professor */
+  .revisao{background:#FFF4D6;border:1px solid #E8C96A;border-radius:12px;padding:12px 14px;margin:0 0 14px}
+  .alternativa.rev-certa{background:#E3F1E7;border-color:#1e7d3c;color:#123}
+  .alternativa.rev-certa .l::after{content:' ✓';color:#1e7d3c}
+  .alternativa.selecionada.rev-errada{background:#B3261E;border-color:#B3261E;color:#fff}
+  .alternativa.selecionada.rev-certa{background:#145A32;border-color:#145A32;color:#fff}
+  .alternativa.selecionada.rev-certa .l::after{color:#fff}
+  .alternativa:disabled{cursor:default;opacity:1}
+  .revnota{margin-top:8px;padding:8px 12px;border-radius:10px;background:#EEF4EF;font-size:.92rem}
 </style>
 </head>
 <body>
@@ -191,6 +200,37 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
   document.addEventListener('input', e => { if (e.target.matches('textarea[data-q]')) resp[+e.target.dataset.q] = e.target.value; });
 
   const msg = (t, ok) => { const m = $('#msg'); m.className = 'msg ' + (ok ? 'ok' : 'erro'); m.textContent = t; m.scrollIntoView({behavior:'smooth', block:'center'}); };
+  /* ---------- revisão do professor: ?revisao=1 mostra a prova como o aluno fez (somente leitura) ---------- */
+  if (new URLSearchParams(location.search).get('revisao')) {
+    let R = null; try { R = JSON.parse(localStorage.getItem('revisao_simulado') || 'null'); } catch (e) {}
+    document.querySelector('.ident').style.display = 'none'; const av = document.querySelector('.aviso'); if (av) av.style.display = 'none';
+    if (!R) { $('#qs').innerHTML = '<p class="vazio">Abra a revisão pelo painel de resultados do professor.</p>'; }
+    else {
+      const t = TURMAS.find(x => x.id === R.turma) || { serie: (/(\d)º/.exec(R.turma) || [])[1], escola: '' };
+      Q = (window.QUESTOES_PUB || {})[t.serie] || [];
+      $('#esc').textContent = t.escola || ''; $('#sub').textContent = R.turma + ' · revisão do professor';
+      desenhar(); $('#btn').hidden = true;
+      const quando = R.criado ? new Date(R.criado).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' }) : '';
+      $('#qs').insertAdjacentHTML('afterbegin', `<div class="revisao"><b>Revisão do professor</b> · atividade de <b>${esc(R.nome)}</b> (${esc(R.turma)})${quando ? ' · enviada em ' + esc(quando) : ''}.<br><span style="font-size:.9rem">Em verde escuro, a alternativa que o aluno marcou e acertou; em vermelho, a que marcou e errou; com ✓, a correta.</span></div>`);
+      (R.itens || []).forEach(it => {
+        const i = +String(it.k || '').split('-')[1]; if (isNaN(i) || !Q[i]) return;
+        if (Q[i].tipo === 'obj') {
+          const marc = 'ABCDE'.indexOf(String(it.resp || '').trim().toUpperCase()), cor = typeof it.correta === 'number' ? it.correta : -1;
+          document.querySelectorAll(`.alternativa[data-q="${i}"]`).forEach(b => {
+            const k = +b.dataset.k; b.disabled = true;
+            if (k === marc) { b.classList.add('selecionada', k === cor ? 'rev-certa' : 'rev-errada'); b.setAttribute('aria-checked', 'true'); }
+            if (k === cor) b.classList.add('rev-certa');
+          });
+          if (marc < 0) document.getElementById('q' + i).insertAdjacentHTML('beforeend', '<div class="revnota">O aluno não marcou nenhuma alternativa.</div>');
+        } else {
+          const ta = document.querySelector(`textarea[data-q="${i}"]`); if (ta) { ta.value = String(it.resp || ''); ta.readOnly = true; if (!ta.value) ta.placeholder = '(sem resposta)'; }
+          const nota = typeof it.nota === 'number' ? String(it.nota).replace('.', ',') : null;
+          document.getElementById('q' + i).insertAdjacentHTML('beforeend', `<div class="revnota">${nota != null ? '<b>Nota: ' + nota + ' de 1</b>' : 'Ainda sem nota.'}${it.comentario ? ' · ' + esc(it.comentario) : ''}${it.ia && it.ia.nivel ? '<br>⚠ Possível uso de IA (' + esc(it.ia.nivel) + ')' : ''}</div>`);
+        }
+      });
+    }
+    return;
+  }
   $('#btn').onclick = () => {
     if (!fT.value || !fN.value || !D) return msg('Escolha a sua turma e o seu nome antes de enviar.', false);
     const falta = resp.map((r, i) => (r === null || r === '') ? i + 1 : 0).filter(Boolean);
