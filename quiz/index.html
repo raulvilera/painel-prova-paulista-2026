@@ -34,6 +34,17 @@ input,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:
 .top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.9rem}
 .spin{width:44px;height:44px;border-radius:50%;border:5px solid var(--line);border-top-color:var(--pri);margin:16px auto;animation:g 1s linear infinite}
 @keyframes g{to{transform:rotate(360deg)}}
+.enun{margin:10px 0}
+.com{font-weight:800;margin:12px 0 4px}
+figure.infog{margin:10px 0;background:#fff;color:#17231c;border:1px solid var(--line);border-radius:10px;padding:6px;overflow:auto}
+figure.infog figcaption{font-weight:700;font-size:.9rem;margin-bottom:4px}
+figure.infog table{border-collapse:collapse;width:100%;font-size:.85rem}
+figure.infog th,figure.infog td{border:1px solid #cfd8d2;padding:4px 6px;text-align:left}
+figure.infog th{background:#eef4ef}
+figure.ilus svg{display:block;width:100%;height:auto}
+.bars .b{display:grid;grid-template-columns:minmax(70px,32%) 1fr auto;gap:6px;align-items:center;font-size:.85rem;margin:3px 0}
+.bars .bt{background:#e4ebe6;border-radius:4px;height:12px;overflow:hidden}.bars .bt i{display:block;height:100%;background:#2f6fb5}
+.barra{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:6px}.barra i{display:block;height:100%;background:var(--pri);transition:width 1s linear}
 </style></head>
 <body><div class="wrap">
 <header><h1>Quiz ao vivo · Ciências</h1><span class="muted sm" id="quem"></span></header>
@@ -46,7 +57,7 @@ input,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:
   const $ = id => document.getElementById(id);
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const SAVE = 'quiz_aluno_v1';
-  let EU = null, timer = null, ultimo = '', enviando = false;
+  let EU = null, timer = null;
   const ler = () => { try { return JSON.parse(localStorage.getItem(SAVE) || 'null'); } catch (e) { return null; } };
   const gravar = v => { try { v ? localStorage.setItem(SAVE, JSON.stringify(v)) : localStorage.removeItem(SAVE); } catch (e) {} };
 
@@ -85,38 +96,64 @@ input,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:
     };
   }
 
-  /* ---------- jogo ---------- */
-  function comecar() { $('quem').textContent = EU.nome; ultimo = ''; clearInterval(timer); timer = setInterval(atualizar, 1000); atualizar(); }
+  /* ---------- jogo: depois que o professor libera, cada aluno avança no próprio ritmo ---------- */
+  function figura(f) {
+    if (!f) return '';
+    const cap = f.titulo ? `<figcaption>${esc(f.titulo)}</figcaption>` : '';
+    if (f.tipo === 'tabela') return `<figure class="infog">${cap}<table><thead><tr>${f.colunas.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${f.linhas.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></figure>`;
+    if (f.tipo === 'barras') { const max = Math.max(...f.itens.map(i => i.valor)) || 1; return `<figure class="infog">${cap}<div class="bars">${f.itens.map(i => `<div class="b"><span>${esc(i.rotulo)}</span><span class="bt"><i style="width:${Math.max(3, i.valor / max * 100)}%"></i></span><span>${esc(String(i.valor).replace('.', ','))}${f.unidade ? ' ' + esc(f.unidade) : ''}</span></div>`).join('')}</div></figure>`; }
+    if (f.tipo === 'etapas') return `<figure class="infog">${cap}<ol style="margin:0;padding-left:1.3em">${f.etapas.map(e => `<li>${esc(e)}</li>`).join('')}</ol></figure>`;
+    return '';
+  }
+  let relogio = null, qMostrada = -1;
+  const parar = () => { clearInterval(timer); clearInterval(relogio); timer = relogio = null; };
+  function comecar() { $('quem').textContent = EU.nome; qMostrada = -1; atualizar(); }
+  function aguardar(ms) { parar(); timer = setInterval(atualizar, ms); }
+
   async function atualizar() {
-    let s; try { s = await rpc('quiz_estado', { p_pin: EU.pin, p_token: EU.token }); } catch (e) { return; }   // rede instável: tenta no próximo segundo
-    if (!s.ok) { gravar(null); EU = null; return telaPin(s.saiu ? 'Você saiu do jogo. Entre de novo com o PIN.' : s.erro); }
-    const chave = [s.estado, s.q, s.respondeu, s.estado === 'resultado' ? s.posicao : ''].join('|');
-    if (s.estado === 'pergunta' && !s.respondeu) { const t = $('tmr'); if (t) t.textContent = '⏱ ' + Math.ceil(s.restante / 1000) + ' s'; }
-    if (chave === ultimo) return; ultimo = chave;
-    const topo = `<div class="top"><span class="muted">${s.q >= 0 ? 'Pergunta ' + (s.q + 1) + ' de ' + s.n : ''}</span><span><b>${s.pontos}</b> pontos</span></div>`;
-    if (s.estado === 'espera') return tela(`<div class="big">Você está no jogo! 🎉</div><p class="centro">Olhe para a tela do professor. A primeira pergunta aparece aqui quando ele liberar.</p><div class="spin"></div><p class="centro muted sm">${s.jogadores} na sala</p>`);
-    if (s.estado === 'fim') { clearInterval(timer); gravar(null); return tela(`<div class="big">Fim de jogo!</div><p class="centro" style="font-size:1.3rem">Você ficou em <b>${s.posicao}º lugar</b> de ${s.jogadores}, com <b>${s.pontos} pontos</b>.</p><p class="centro muted">Obrigado por jogar!</p>`); }
-    if (s.estado === 'pergunta' && !s.respondeu) {
-      enviando = false;
-      tela(`${topo}<div class="top" style="margin-top:6px"><span class="muted sm">${esc(s.hab || '')}</span><span class="timer" id="tmr">⏱ ${Math.ceil(s.restante / 1000)} s</span></div>
-        <p style="font-weight:700;margin:12px 0 4px">${esc(s.comando || 'Escolha a resposta certa.')}</p><p class="muted sm" style="margin:0">Leia a pergunta completa na tela do professor.</p>
-        <div class="alts">${s.alts.map((a, i) => `<button class="alt" data-i="${i}" style="background:var(--a${i})"><span class="f">${FORMAS[i]}</span><span>${LETRA[i]}) ${esc(a)}</span></button>`).join('')}</div><div class="msg" id="m"></div>`);
-      [...document.querySelectorAll('.alt')].forEach(b => b.onclick = async () => {
-        if (enviando) return; enviando = true;
-        document.querySelectorAll('.alt').forEach(x => { x.disabled = true; }); b.classList.add('minha');
-        try { const r = await rpc('quiz_responder', { p_pin: EU.pin, p_token: EU.token, p_q: s.q, p_escolha: +b.dataset.i }); if (!r.ok) $('m').textContent = r.erro; }
-        catch (e) { $('m').textContent = e.message; enviando = false; document.querySelectorAll('.alt').forEach(x => { x.disabled = false; }); return; }
-        ultimo = ''; atualizar();
-      });
-      return;
-    }
-    if (s.estado === 'pergunta' && s.respondeu) return tela(`${topo}<div class="big" style="margin-top:20px">Resposta enviada!</div><p class="centro">Você marcou <b style="color:var(--a${s.escolha})">${FORMAS[s.escolha]} ${LETRA[s.escolha]}</b>. Aguarde o professor mostrar o resultado.</p><div class="spin"></div>`);
-    if (s.estado === 'resultado') {
-      const resp = s.respondeu;
-      return tela(`${topo}<div class="res ${s.certa ? 'ok' : 'no'}" style="margin-top:12px">${s.certa ? '✓ Acertou! +' + s.ganhou + ' pontos' : resp ? '✗ Não foi dessa vez' : '⏱ Sem resposta'}</div>
-        <p class="centro">Resposta certa: <b style="color:var(--a${s.correta})">${FORMAS[s.correta]} ${LETRA[s.correta]}</b></p>
-        <p class="centro" style="font-size:1.15rem">Você está em <b>${s.posicao}º lugar</b> de ${s.jogadores}.</p>`);
-    }
+    let s; try { s = await rpc('quiz_estado', { p_pin: EU.pin, p_token: EU.token }); } catch (e) { if (!timer) aguardar(3000); return; }   // rede instável: tenta de novo
+    if (!s.ok) { parar(); gravar(null); EU = null; return telaPin(s.saiu ? 'Você saiu do jogo. Entre de novo com o PIN.' : s.erro); }
+    if (s.estado === 'fim') { parar(); gravar(null); return tela(`<div class="big">Fim de jogo!</div><p class="centro" style="font-size:1.3rem">Você ficou em <b>${s.posicao}º lugar</b> de ${s.jogadores}, com <b>${s.pontos} pontos</b> e <b>${s.acertos} de ${s.n}</b> acertos.</p><p class="centro muted">Obrigado por jogar!</p>`); }
+    if (s.estado === 'espera') { if (!timer) aguardar(2500); return tela(`<div class="big">Você está no jogo! 🎉</div><p class="centro">Aguarde o professor liberar o quiz. As perguntas vão aparecer aqui.</p><div class="spin"></div><p class="centro muted sm">${s.jogadores} na sala</p>`); }
+    if (s.q >= s.n || !s.pergunta) { if (!timer) aguardar(5000); return tela(`<div class="big">Você terminou! ✅</div><p class="centro" style="font-size:1.2rem"><b>${s.acertos} de ${s.n}</b> acertos · <b>${s.pontos} pontos</b></p><p class="centro">Agora você está em <b>${s.posicao}º lugar</b> de ${s.jogadores}. Aguarde o professor encerrar o jogo.</p><div class="spin"></div>`); }
+    parar();
+    if (qMostrada === s.q) { setTimeout(atualizar, 1200); return; }   // o servidor ainda não fechou a pergunta anterior: confere de novo
+    qMostrada = s.q; pergunta(s);
+  }
+
+  function pergunta(s) {
+    const p = s.pergunta, total = s.tempo * 1000; let fimEm = Date.now() + s.restante, respondida = false;
+    tela(`<div class="top"><span class="muted">Pergunta ${s.q + 1} de ${s.n}</span><span><b>${s.pontos}</b> pontos</span></div>
+      <div class="top" style="margin-top:4px"><span class="muted sm">${p.bim ? esc(p.bim) + 'º bim. · ' : ''}${esc(p.hab || '')}</span><span class="timer" id="tmr"></span></div>
+      <div class="barra"><i id="br" style="width:${s.restante / total * 100}%"></i></div>
+      <div class="enun">${esc(p.enunciado || '')}</div>
+      ${p.svg ? `<figure class="infog ilus" role="img" aria-label="Ilustração da questão">${p.svg}</figure>` : ''}${figura(p.figura)}
+      <p class="com">${esc(p.comando || 'Escolha a resposta certa.')}</p>
+      <div class="alts">${p.alts.map((a, i) => `<button class="alt" data-i="${i}" style="background:var(--a${i})"><span class="f">${FORMAS[i]}</span><span>${LETRA[i]}) ${esc(a)}</span></button>`).join('')}</div><div class="msg" id="m"></div>`);
+    window.scrollTo(0, 0);
+    const tick = () => {
+      const r = Math.max(0, fimEm - Date.now()); const t = $('tmr'), b = $('br');
+      if (t) t.textContent = '⏱ ' + Math.ceil(r / 1000) + ' s'; if (b) b.style.width = (r / total * 100) + '%';
+      if (r <= 0 && !respondida) { respondida = true; clearInterval(relogio); feedback({ tempo: true, certa: false, ganhou: 0 }, s.q); }
+    };
+    tick(); relogio = setInterval(tick, 250);
+    [...document.querySelectorAll('.alt')].forEach(b => b.onclick = async () => {
+      if (respondida) return; respondida = true;
+      document.querySelectorAll('.alt').forEach(x => { x.disabled = true; }); b.classList.add('minha');
+      try {
+        const r = await rpc('quiz_responder', { p_pin: EU.pin, p_token: EU.token, p_q: s.q, p_escolha: +b.dataset.i });
+        clearInterval(relogio);
+        if (!r.ok) { $('m').textContent = r.erro; setTimeout(atualizar, 1500); return; }
+        feedback(r, s.q);
+      } catch (e) {
+        $('m').textContent = 'Falha de conexão. Toque de novo.'; respondida = false; document.querySelectorAll('.alt').forEach(x => { x.disabled = false; }); b.classList.remove('minha');
+      }
+    });
+  }
+  function feedback(r, q) {
+    clearInterval(relogio);
+    tela(`<div class="res ${r.certa ? 'ok' : 'no'}" style="margin-top:8px">${r.certa ? '✓ Acertou! +' + r.ganhou + ' pontos' : r.tempo ? '⏱ Tempo esgotado' : '✗ Não foi dessa vez'}</div><p class="centro muted">Próxima pergunta em instantes…</p><div class="spin"></div>`);
+    setTimeout(() => { qMostrada = q; atualizar(); }, 2200);
   }
 
   const sv = ler(), pinUrl = (new URLSearchParams(location.search).get('pin') || '').replace(/\D/g, '');

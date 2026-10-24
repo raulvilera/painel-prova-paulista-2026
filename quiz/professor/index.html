@@ -60,7 +60,7 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
 @media (max-width:800px){.alts{grid-template-columns:1fr}}
 </style></head>
 <body><div class="wrap">
-<header><div><h1>Quiz ao vivo · Ciências</h1><div class="muted sm">Estilo Kahoot, dentro da plataforma: você libera cada pergunta e vê as respostas em tempo real</div></div>
+<header><div><h1>Quiz ao vivo · Ciências</h1><div class="muted sm">Estilo Kahoot, dentro da plataforma: você libera o quiz e acompanha as respostas dos alunos em tempo real</div></div>
 <nav><a href="/">← Painel</a><a href="/jogo/">Trilha SARESP</a></nav></header>
 <div id="app"><div class="card muted">Carregando…</div></div>
 </div>
@@ -73,7 +73,7 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const app = h => { $('app').innerHTML = h; };
   const ATIVA = 'quiz_prof_sessao';
-  let TOKEN = '', S = null, poll = null, chaveTela = '', autoMostrou = -1, ocupado = false;
+  let TOKEN = '', S = null, poll = null, chaveTela = '', ocupado = false;
 
   let SBC = null;
   async function api(q, body) {
@@ -123,14 +123,12 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
   }
 
   /* ---------- partida ao vivo ---------- */
-  function abrir(id) { clearInterval(poll); chaveTela = ''; autoMostrou = -1; S = { id }; atualizar(); poll = setInterval(atualizar, 1500); }
+  function abrir(id) { clearInterval(poll); chaveTela = ''; S = { id }; atualizar(); poll = setInterval(atualizar, 2000); }
   async function atualizar() {
     if (!S || ocupado) return;
     let s; try { s = await api({ sessao: S.id }); } catch (e) { if (e.status === 404) { guardarAtiva(''); return inicio('Partida não encontrada.'); } return; }
     S = s;
     if (s.estado === 'fim') { clearInterval(poll); guardarAtiva(''); }
-    // fim do tempo ou todos responderam: mostra a resposta sozinho (uma vez por pergunta)
-    if (s.estado === 'pergunta' && autoMostrou !== s.q && ((s.restante <= 0) || (s.jogadores.length && s.respondidos >= s.jogadores.length))) { autoMostrou = s.q; return acao('mostrar'); }
     desenhar(s);
   }
   async function acao(a, extra) {
@@ -142,52 +140,38 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
   function alertar(t) { const m = $('m'); if (m) m.textContent = t; }
 
   function desenhar(s) {
-    const chave = [s.estado, s.q].join('|');
     if (s.estado === 'espera') return salaEspera(s);
-    if (s.estado === 'pergunta') {
-      if (chave !== chaveTela) { chaveTela = chave; telaPergunta(s); }
-      $('rel').textContent = Math.ceil(s.restante / 1000); $('rel').classList.toggle('fim', s.restante <= 10000);
-      $('cont').textContent = `${s.respondidos} de ${s.jogadores.length} responderam`;
-      return;
-    }
-    if (s.estado === 'resultado') { if (chave !== chaveTela) { chaveTela = chave; telaResultado(s); } return; }
-    if (s.estado === 'fim') { if (chave !== chaveTela) { chaveTela = chave; telaFim(s); } }
+    if (s.estado === 'fim') { if (chaveTela !== 'fim') { chaveTela = 'fim'; telaFim(s); } return; }
+    return aoVivo(s);   // 'aberto' (e partidas antigas em 'pergunta'/'resultado')
   }
 
   function salaEspera(s) {
     const html = `<div class="card"><div class="pinbox"><div><div class="muted">Entre em <b>${esc(location.host)}/quiz</b> e digite o PIN</div><div class="pin">${esc(s.pin)}</div><div class="muted sm">${esc(s.turma)} · ${s.n} perguntas · ${s.tempo} s cada</div></div>
       <div style="text-align:right"><div class="contagem">${s.jogadores.length} na sala</div><div class="muted sm">${s.faltam} da turma ainda não entraram</div>
-      <div class="row" style="justify-content:flex-end;margin-top:10px"><button class="btn sec" id="bCopiar">Copiar link para os alunos</button><button class="btn grande" id="bComecar" ${s.jogadores.length ? '' : 'disabled'}>Começar ▶</button></div></div></div>
+      <div class="row" style="justify-content:flex-end;margin-top:10px"><button class="btn sec" id="bCopiar">Copiar link para os alunos</button><button class="btn grande" id="bComecar" ${s.jogadores.length ? '' : 'disabled'}>Liberar o quiz ▶</button></div></div></div>
       <div class="nomes">${s.jogadores.map(j => `<button class="nome" data-j="${esc(j.id)}" title="Tirar do jogo">${esc(j.nome)}</button>`).join('') || '<span class="muted">Aguardando os alunos…</span>'}</div>
+      <p class="muted sm">Ao liberar, cada aluno recebe as perguntas no celular e avança no próprio ritmo (${s.tempo} s por pergunta). Você acompanha tudo por aqui, sem precisar liberar pergunta por pergunta. Quem chegar depois ainda pode entrar.</p>
       <p class="muted sm">Toque em um nome para tirar o aluno do jogo (ele pode entrar de novo, por exemplo se trocou de celular).</p><p class="erro" id="m"></p>
       <button class="btn sec" id="bCancelar">Cancelar partida</button></div>`;
     if (html === chaveTela) return; chaveTela = html; app(html);
-    $('bComecar').onclick = () => acao('liberar');
+    $('bComecar').onclick = () => acao('abrir');
     $('bCopiar').onclick = () => navigator.clipboard.writeText(linkAluno(s.pin)).then(() => { $('bCopiar').textContent = 'Link copiado'; }, () => {});
     $('bCancelar').onclick = () => acao('encerrar');
     document.querySelectorAll('[data-j]').forEach(b => b.onclick = () => acao('remover', { jogador: b.dataset.j }));
   }
 
-  function cabecalho(s) { const p = s.pergunta; return `<div class="qtop"><span><span class="tag">Pergunta ${s.q + 1} de ${s.n}</span> <span class="tag">${esc(p.bim)}º bim. · ${esc(p.hab)}</span></span><span class="muted">PIN <b>${esc(s.pin)}</b></span></div>`; }
-  function corpo(p) { return `<div class="enun">${esc(p.enunciado)}</div>${p.svg ? `<figure class="infog ilus">${p.svg}</figure>` : ''}${figura(p.figura)}<div class="com">${esc(p.comando || '')}</div>`; }
-
-  function telaPergunta(s) {
-    const p = s.pergunta;
-    app(`<div class="card">${cabecalho(s)}${corpo(p)}
-      <div class="alts">${p.alts.map((a, i) => `<div class="alt" style="background:var(--a${i})"><span class="f">${FORMAS[i]}</span><span>${LETRA[i]}) ${esc(a)}</span></div>`).join('')}</div>
-      <div class="controles"><span class="contagem" id="cont"></span><span class="relogio" id="rel"></span><button class="btn" id="bMostrar">Encerrar tempo e mostrar resposta</button></div><p class="erro" id="m"></p></div>`);
-    $('bMostrar').onclick = () => { autoMostrou = s.q; acao('mostrar'); };
-  }
-
-  function telaResultado(s) {
-    const p = s.pergunta, tot = s.dist.reduce((a, b) => a + b, 0), ult = s.q + 1 >= s.n;
-    const top = s.jogadores.slice(0, 5);
-    app(`<div class="card">${cabecalho(s)}<div class="com">${esc(p.comando || '')}</div>
-      <div class="alts">${p.alts.map((a, i) => `<div class="alt ${i === p.correta ? 'certa' : 'apaga'}" style="background:var(--a${i})"><span class="f">${i === p.correta ? '✓' : FORMAS[i]}</span><span>${LETRA[i]}) ${esc(a)}</span><span class="cnt">${s.dist[i]}</span></div>`).join('')}</div>
-      <div class="expl"><b>${tot ? Math.round(s.dist[p.correta] / tot * 100) : 0}% acertaram.</b> ${esc(p.explicacao || '')}</div>
-      <div class="controles"><div style="flex:1;min-width:260px"><b>Placar</b><div class="rank">${top.map((j, i) => `<div><span>${i + 1}º ${esc(j.nome)}</span><span>${j.pontos}</span></div>`).join('')}</div></div>
-      <div class="row"><button class="btn sec" id="bFim">Encerrar partida</button><button class="btn grande" id="bProx">${ult ? 'Ver resultado final' : 'Próxima pergunta ▶'}</button></div></div><p class="erro" id="m"></p></div>`);
-    $('bProx').onclick = () => acao(ult ? 'encerrar' : 'liberar');
+  /* acompanhamento ao vivo: progresso de cada aluno, placar e acertos por pergunta */
+  function aoVivo(s) {
+    const alunos = s.porAluno.slice().sort((a, b) => b.pontos - a.pontos || b.feitas - a.feitas);
+    const html = `<div class="card"><div class="pinbox"><div><span class="tag">Quiz liberado</span> <span class="muted">${esc(s.turma)} · PIN <b>${esc(s.pin)}</b> · ${s.n} perguntas · ${s.tempo} s cada</span></div>
+        <div class="row"><span class="contagem">${s.terminaram} de ${alunos.length} terminaram</span><button class="btn grande" id="bFim">Encerrar e ver resultado final</button></div></div><p class="erro" id="m"></p></div>
+      <div class="card"><h3 style="margin-top:0">Alunos (ao vivo)</h3>${alunos.length ? `<table><thead><tr><th>#</th><th>Aluno</th><th style="width:34%">Progresso</th><th>Acertos</th><th>Pontos</th></tr></thead><tbody>
+        ${alunos.map((a, i) => `<tr><td>${i + 1}</td><td>${esc(a.nome)}</td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:10px;border-radius:99px;background:var(--line);overflow:hidden"><i style="display:block;height:100%;width:${a.feitas / s.n * 100}%;background:${a.feitas >= s.n ? 'var(--ok)' : 'var(--pri)'}"></i></div><span class="sm">${a.feitas}/${s.n}</span></div></td><td>${a.acertos}/${a.respostas}${a.semResp ? ` <span class="muted sm">(${a.semResp} sem resposta)</span>` : ''}</td><td><b>${a.pontos}</b></td></tr>`).join('')}
+        </tbody></table>` : '<p class="muted">Ninguém entrou ainda.</p>'}</div>
+      <div class="card"><h3 style="margin-top:0">Acertos por pergunta</h3><table><thead><tr><th>#</th><th>%</th><th>Habilidade</th><th>Tema</th><th>Respostas por alternativa</th></tr></thead><tbody>
+        ${s.porQ.map(q => { const pc = q.respostas ? Math.round(q.acertos / q.respostas * 100) : null; return `<tr class="${pc != null && pc < 50 ? 'baixo' : ''}"><td>${q.i + 1}</td><td><span class="pct">${pc == null ? '—' : pc + '%'}</span></td><td>${esc(q.hab)}</td><td class="sm">${esc(q.desc)}</td><td class="sm">${q.dist.map((d, k) => `<span style="color:var(--a${k});font-weight:800">${FORMAS[k]}${LETRA[k]}</span> ${d}`).join(' · ')}${q.semResp ? ` · ⏱ ${q.semResp}` : ''}</td></tr>`; }).join('')}
+      </tbody></table><p class="muted sm">A alternativa certa não aparece aqui enquanto o quiz está aberto, para a tela poder ficar projetada. Em vermelho, perguntas com menos de 50% de acerto até agora.</p></div>`;
+    if (html === chaveTela) return; chaveTela = html; app(html);
     $('bFim').onclick = () => acao('encerrar');
   }
 

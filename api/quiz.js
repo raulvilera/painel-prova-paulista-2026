@@ -1,9 +1,9 @@
 /* Quiz ao vivo da plataforma (estilo Kahoot), lado do professor. Exige o login do professor (Bearer token do Supabase do painel).
    GET  /api/quiz?turmas=1         → turmas do Fundamental
    GET  /api/quiz?historico=1      → partidas anteriores
-   GET  /api/quiz?sessao=<id>      → estado ao vivo: pergunta atual (com gabarito), jogadores, respostas e relatório
-   POST {acao:'criar', turma, n, tempo}         → cria a partida e devolve o PIN
-   POST {acao:'liberar'|'mostrar'|'encerrar', id} → controla a partida
+   GET  /api/quiz?sessao=<id>      → acompanhamento ao vivo: progresso de cada aluno, placar e acertos por tema
+   POST {acao:'criar', turma, n, tempo}  → cria a partida e devolve o PIN (alunos entram e aguardam)
+   POST {acao:'abrir'|'encerrar', id}    → libera o jogo (cada aluno avança no próprio ritmo) / encerra
    POST {acao:'remover', id, jogador}           → tira um aluno (ele pode entrar de novo)
    Os alunos usam as funções quiz_* do Supabase (PIN + token), que nunca devolvem o gabarito antes da hora.
    Variáveis da Vercel: SUPABASE_URL, SUPABASE_SERVICE_KEY (as mesmas da atividade individual). */
@@ -55,19 +55,15 @@ async function criar(b) {
 
 async function sessao(id) {
   const s = (await rest('quiz_sessao?select=*&id=eq.' + enc(id)))[0]; if (!s) return null;
-  const jog = await rest('quiz_jogador?select=id,nome,pontos,criado&sessao=eq.' + enc(id) + '&order=pontos.desc,criado.asc') || [];
+  const jog = await rest('quiz_jogador?select=id,nome,pontos,q_atual,criado&sessao=eq.' + enc(id) + '&order=pontos.desc,criado.asc') || [];
   const resp = await rest('quiz_resposta?select=jogador,q_idx,escolha,ms,certa,pontos&sessao=eq.' + enc(id)) || [];
-  const restante = s.estado === 'pergunta' && s.q_inicio ? Math.max(0, s.tempo * 1000 - (Date.now() - Date.parse(s.q_inicio))) : 0;
-  const atual = s.q_idx >= 0 ? s.perguntas[s.q_idx] : null;
-  const daAtual = resp.filter(r => r.q_idx === s.q_idx);
-  const dist = atual ? atual.alts.map((_, i) => daAtual.filter(r => r.escolha === i).length) : [];
-  // relatório: por pergunta (tema) e por aluno, com o que já foi jogado
-  const porQ = s.perguntas.map((p, i) => { const rs = resp.filter(r => r.q_idx === i); return { i, hab: p.hab, bim: p.bim, desc: p.desc, respostas: rs.length, acertos: rs.filter(r => r.certa).length, jogada: i <= s.q_idx }; });
-  const porAluno = jog.map(j => { const rs = resp.filter(r => r.jogador === j.id); return { id: j.id, nome: j.nome, pontos: j.pontos, respostas: rs.length, acertos: rs.filter(r => r.certa).length, erros: rs.filter(r => !r.certa).map(r => s.perguntas[r.q_idx] && s.perguntas[r.q_idx].hab) }; });
+  // relatório ao vivo: por pergunta (tema) e por aluno; escolha -1 = tempo esgotado sem resposta
+  const porQ = s.perguntas.map((p, i) => { const rs = resp.filter(r => r.q_idx === i); return { i, hab: p.hab, bim: p.bim, desc: p.desc, respostas: rs.length, acertos: rs.filter(r => r.certa).length, semResp: rs.filter(r => r.escolha < 0).length, dist: p.alts.map((_, k) => rs.filter(r => r.escolha === k).length), correta: s.gabarito[i], jogada: rs.length > 0 }; });
+  const porAluno = jog.map(j => { const rs = resp.filter(r => r.jogador === j.id); return { id: j.id, nome: j.nome, pontos: j.pontos, feitas: Math.min(j.q_atual, s.perguntas.length), respostas: rs.length, acertos: rs.filter(r => r.certa).length, semResp: rs.filter(r => r.escolha < 0).length, erros: rs.filter(r => !r.certa).map(r => s.perguntas[r.q_idx] && s.perguntas[r.q_idx].hab) }; });
   return {
-    id: s.id, pin: s.pin, turma: s.turma, serie: s.serie, estado: s.estado, q: s.q_idx, n: s.perguntas.length, tempo: s.tempo, restante, criado: s.criado,
-    pergunta: atual ? Object.assign({}, atual, { correta: s.gabarito[s.q_idx] }) : null,
-    respondidos: daAtual.length, dist, jogadores: jog.map(j => ({ id: j.id, nome: j.nome, pontos: j.pontos })), porQ, porAluno,
+    id: s.id, pin: s.pin, turma: s.turma, serie: s.serie, estado: s.estado, n: s.perguntas.length, tempo: s.tempo, criado: s.criado,
+    terminaram: porAluno.filter(a => a.feitas >= s.perguntas.length).length,
+    jogadores: jog.map(j => ({ id: j.id, nome: j.nome, pontos: j.pontos })), porQ, porAluno,
     faltam: (s.nomes || []).filter(n => !jog.some(j => j.nome === n)).length
   };
 }
@@ -95,12 +91,9 @@ module.exports = async function quiz(req, res) {
     const id = String(b.id || ''); const s = (await rest('quiz_sessao?select=id,estado,q_idx,perguntas&id=eq.' + enc(id)))[0];
     if (!s) return out(404, { ok: false, erro: 'Partida não encontrada.' });
     const muda = campos => rest('quiz_sessao?id=eq.' + enc(id), { method: 'PATCH', body: JSON.stringify(campos), headers: { Prefer: 'return=minimal' } });
-    if (b.acao === 'liberar') {
+    if (b.acao === 'abrir') {
       if (s.estado === 'fim') return out(409, { ok: false, erro: 'A partida já foi encerrada.' });
-      if (s.q_idx + 1 >= s.perguntas.length) return out(409, { ok: false, erro: 'Não há mais perguntas.' });
-      await muda({ estado: 'pergunta', q_idx: s.q_idx + 1, q_inicio: new Date().toISOString() });
-    } else if (b.acao === 'mostrar') {
-      if (s.estado === 'pergunta') await muda({ estado: 'resultado' });
+      await muda({ estado: 'aberto' });
     } else if (b.acao === 'encerrar') {
       await muda({ estado: 'fim', encerrado: new Date().toISOString() });
     } else if (b.acao === 'remover') {
