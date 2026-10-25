@@ -77,13 +77,30 @@
   q(9, 'Planeta rochoso', 'EF09CI14', 'Qual é um planeta rochoso?', 'Marte', ['Júpiter', 'Saturno', 'Netuno'], 'Mercúrio, Vênus, Terra e Marte têm superfície sólida.');
   q(9, 'Satélite artificial', 'EF09CI20', 'Para que servem os satélites artificiais?', 'Para comunicação, previsão do tempo e localização (GPS)', ['Para produzir chuva', 'Para gerar marés', 'Para iluminar a Terra à noite'], 'Eles orbitam a Terra lançados pelo ser humano.');
 
+  /* eixo (unidade temática do SARESP) e subtema de cada conceito: o jogo mistura os eixos e evita dois subtemas iguais */
+  const T = 'Terra e Universo', V = 'Vida e Evolução', M = 'Matéria e Energia', AREA = {};
+  const ar = (e, g, ...nomes) => nomes.forEach(n => AREA[n] = [e, g || n]);   // sem subtema: cada conceito é o seu próprio tema
+  ar(T, 'movimentos', 'Rotação da Terra', 'Translação'); ar(T, 'lua', 'Fases da Lua', 'Eclipse solar', 'Eclipse lunar'); ar(T, null, 'Gravidade', 'Planeta', 'Erosão', 'Marés', 'Inclinação do eixo', 'Pluviômetro', 'Anemômetro');
+  ar(T, 'rochas', 'Rocha sedimentar', 'Fóssil'); ar(T, null, 'Rocha magmática', 'Efeito estufa', 'Poluição do ar', 'Aquecimento global', 'Placas tectônicas', 'Vulcão', 'Tsunami', 'Heliocentrismo', 'Nebulosa', 'Constelação', 'Planeta rochoso', 'Satélite artificial');
+  ar(V, 'célula', 'Célula', 'Núcleo celular', 'Microscópio'); ar(V, 'microrganismos', 'Bactéria', 'Fungo', 'Vírus'); ar(V, 'animais', 'Vertebrados', 'Invertebrados'); ar(V, 'digestão', 'Estômago', 'Intestino delgado');
+  ar(V, null, 'Neurônio', 'Pupila', 'Esqueleto', 'Manguezal', 'Bioma', 'Unidade de Conservação', 'Vacina', 'Saneamento básico', 'Pandemia', 'Pulmões', 'Polinização', 'Reprodução assexuada', 'DNA', 'Mitose', 'Alelo dominante', 'Seleção natural', 'Especiação');
+  ar(M, 'máquinas', 'Alavanca', 'Plano inclinado'); ar(M, 'condutores', 'Condutor elétrico', 'Isolante elétrico'); ar(M, 'ondas', 'Onda eletromagnética', 'Onda mecânica');
+  ar(M, null, 'Fusão', 'Combustível fóssil', 'Energia eólica', 'Usina hidrelétrica', 'Circuito elétrico', 'Mistura heterogênea', 'Modelo de Rutherford-Bohr', 'Radiografia (raios X)', 'Tratamento de água', 'Reciclagem', 'Aterro sanitário');
   const emb = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0;[a[i], a[j]] = [a[j], a[i]]; } return a; };
   /* troca, dentro da lista t do jogo, as 12 questões fixas por 12 do banco da série da turma, priorizando os temas de maior defasagem */
   window.__orbitMontar = function (t) {
     const m = /(\d)\s*º/.exec((window.__game && window.__game.getState().turma) || ''); const pool = m && B[m[1]]; if (!pool) return;
     const ordem = (window.__orbitTemas || []).map(c => c.nome);
     const rank = r => { const i = ordem.indexOf(r[0]); return i < 0 ? 99 : i; };
-    const esc = emb(pool).sort((a, b) => rank(a) - rank(b)).slice(0, 12);
+    const porEixo = {};
+    emb(pool).sort((a, b) => rank(a) - rank(b)).forEach(r => { const e = (AREA[r[0]] || [T])[0]; (porEixo[e] = porEixo[e] || []).push(r); });
+    const eixos = emb(Object.keys(porEixo)), usados = {}, esc = [];
+    const livre = r => !usados[(AREA[r[0]] || [])[1]];
+    const prox = (e, estrito) => { const l = porEixo[e]; let i = l.findIndex(livre); if (i < 0) { if (estrito) return null; i = 0; } return l.splice(i, 1)[0]; };
+    while (esc.length < 12 && eixos.some(e => porEixo[e].length)) {   // um tema por pergunta, alternando os eixos do SARESP
+      const estrito = eixos.some(e => porEixo[e].some(livre));        // só repete subtema quando não sobrou nenhum novo
+      for (const e of eixos) { if (esc.length >= 12) break; if (!porEixo[e].length) continue; const r = prox(e, estrito); if (!r) continue; usados[(AREA[r[0]] || [])[1]] = 1; esc.push(r); }
+    }
     const novas = esc.map((r, i) => {
       const op = emb([r[3]].concat(r[4])), K = ['A', 'B', 'C', 'D'];
       return { id: i + 1, bimester: 'SARESP', code: r[1], prompt: r[2], options: op.map((x, k) => ({ key: K[k], text: x })), correct: K[op.indexOf(r[3])], explanation: r[5] };
