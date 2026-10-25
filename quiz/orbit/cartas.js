@@ -24,7 +24,12 @@
     rochaMagmatica: 'q20-igneous-rock.webp',
     fossil: 'q21-fossil.webp',
     celula: 'q22-cell.webp',
-    microscopio: 'q23-microscope.webp'
+    microscopio: 'q23-microscope.webp',
+    translacao: 'q24-translation-orbit.webp',
+    erosao: 'q25-erosion.webp',
+    eclipseLunar: 'q26-lunar-eclipse.webp',
+    mares: 'q27-tides.webp',
+    eixoEstacoes: 'q28-seasons-axis.webp'
   };
   const RODADAS = {
     4: [['q01-day-night-v2.webp', 'Dia e noite'], ['q02-moon-phases-v2.webp', 'Fases da Lua'], ['q03-energy-lamp-v2.webp', 'Energia elétrica'], ['q04-food-chain-v2.webp', 'Cadeia alimentar']],
@@ -59,18 +64,23 @@
     const t = String(nome || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     if (/rotacao da terra/.test(t)) return IMAGENS.dia;
     if (/eclipse solar/.test(t)) return IMAGENS.eclipseSolar;
+    if (/eclipse lunar/.test(t)) return IMAGENS.eclipseLunar;
     if (/gravidade/.test(t)) return IMAGENS.gravidade;
+    if (/translacao/.test(t)) return IMAGENS.translacao;
     if (/rocha sedimentar/.test(t)) return IMAGENS.rochaSedimentar;
     if (/rocha magmatica/.test(t)) return IMAGENS.rochaMagmatica;
     if (/fosse?il/.test(t)) return IMAGENS.fossil;
     if (/celula/.test(t)) return IMAGENS.celula;
     if (/microscopio/.test(t)) return IMAGENS.microscopio;
+    if (/erosao/.test(t)) return IMAGENS.erosao;
+    if (/mares/.test(t)) return IMAGENS.mares;
+    if (/inclinacao do eixo|estacoes/.test(t)) return IMAGENS.eixoEstacoes;
     if (/alavanca/.test(t)) return IMAGENS.alavanca;
     if (/plano inclinado|rampa/.test(t)) return IMAGENS.planoInclinado;
     if (/manguezal/.test(t)) return IMAGENS.manguezal;
     if (/placas? tectonicas?/.test(t)) return IMAGENS.placasTectonicas;
-    if (/planeta|erosao|vulcao|tsunami|terra/.test(t)) return IMAGENS.terra;
-    if (/lua|eclipse|mare|translacao|estacao|dia|noite/.test(t)) return IMAGENS.lua;
+    if (/planeta|vulcao|tsunami|terra/.test(t)) return IMAGENS.terra;
+    if (/lua|dia|noite/.test(t)) return IMAGENS.lua;
     if (/energia|eletric|circuito|condutor|isolante|combustivel/.test(t)) return IMAGENS.energia;
     if (/cadeia|vertebrado|invertebrado|bioma|conservacao|selecao natural/.test(t)) return IMAGENS.cadeia;
     if (/reciclag|poluicao|aquecimento global|efeito estufa|saneamento|pandemia/.test(t)) return IMAGENS.reciclagem;
