@@ -22,7 +22,9 @@
     gravidade: 'q18-gravity.webp',
     rochaSedimentar: 'q19-sedimentary-rock.webp',
     rochaMagmatica: 'q20-igneous-rock.webp',
-    fossil: 'q21-fossil.webp'
+    fossil: 'q21-fossil.webp',
+    celula: 'q22-cell.webp',
+    microscopio: 'q23-microscope.webp'
   };
   const RODADAS = {
     4: [['q01-day-night-v2.webp', 'Dia e noite'], ['q02-moon-phases-v2.webp', 'Fases da Lua'], ['q03-energy-lamp-v2.webp', 'Energia elétrica'], ['q04-food-chain-v2.webp', 'Cadeia alimentar']],
@@ -61,6 +63,8 @@
     if (/rocha sedimentar/.test(t)) return IMAGENS.rochaSedimentar;
     if (/rocha magmatica/.test(t)) return IMAGENS.rochaMagmatica;
     if (/fosse?il/.test(t)) return IMAGENS.fossil;
+    if (/celula/.test(t)) return IMAGENS.celula;
+    if (/microscopio/.test(t)) return IMAGENS.microscopio;
     if (/alavanca/.test(t)) return IMAGENS.alavanca;
     if (/plano inclinado|rampa/.test(t)) return IMAGENS.planoInclinado;
     if (/manguezal/.test(t)) return IMAGENS.manguezal;
