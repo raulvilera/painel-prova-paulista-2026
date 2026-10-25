@@ -3,9 +3,9 @@
 (function () {
   const A = './assets/';
   const RODADAS = {
-    4: [['q01-day-night-D-c4SU6l.webp', 'Dia e noite'], ['q02-moon-phases-Bsjsdxca.webp', 'Fases da Lua'], ['q03-energy-lamp-CSDVXWRy.webp', 'Energia elétrica'], ['q04-food-chain-DiMaEDP_.webp', 'Cadeia alimentar']],
-    7: [['q05-recycling-DTsfHUbh.webp', 'Reciclagem'], ['q06-wind-DxMISwho.webp', 'Vento'], ['q07-heart-DvMaYsNb.webp', 'Coração'], ['q08-condensation-Sd3O82f5.webp', 'Condensação']],
-    10: [['q09-magnet-BBpxklRr.webp', 'Ímã'], ['q10-earth-layers-Ct7uFzDx.webp', 'Camadas da Terra'], ['q11-photosynthesis-D8HA1vgb.webp', 'Fotossíntese'], ['q12-investigation-qfVZ82hB.webp', 'Investigação científica']]
+    4: [['q01-day-night-v2.webp', 'Dia e noite'], ['q02-moon-phases-v2.webp', 'Fases da Lua'], ['q03-energy-lamp-v2.webp', 'Energia elétrica'], ['q04-food-chain-v2.webp', 'Cadeia alimentar']],
+    7: [['q05-recycling-v2.webp', 'Reciclagem'], ['q06-wind-v2.webp', 'Vento'], ['q07-heart-v2.webp', 'Coração'], ['q08-condensation-v2.webp', 'Condensação']],
+    10: [['q09-magnet-v2.webp', 'Ímã'], ['q10-earth-layers-v2.webp', 'Camadas da Terra'], ['q11-photosynthesis-v2.webp', 'Fotossíntese'], ['q12-investigation-v2.webp', 'Investigação científica']]
   };
   const feitas = {};
   const css = document.createElement('style');
@@ -14,13 +14,13 @@
   #cartas-ov h2{margin:0 0 4px;font-size:clamp(20px,3.4vw,34px)}
   #cartas-ov p{margin:0 0 14px;opacity:.85;font-size:clamp(13px,1.8vw,18px)}
   .cartas-grade{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;width:min(900px,100%)}
-  .carta{aspect-ratio:1/1.05;perspective:700px;border:0;background:none;padding:0;cursor:pointer}
+  .carta{aspect-ratio:4/3;perspective:700px;border:0;background:none;padding:0;cursor:pointer}
   .carta-in{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
   .carta.aberta .carta-in,.carta.par .carta-in{transform:rotateY(180deg)}
   .carta-f,.carta-v{position:absolute;inset:0;backface-visibility:hidden;border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 6px 0 #051726,0 8px 14px rgba(0,0,0,.45)}
   .carta-f{background:linear-gradient(180deg,#14456a,#0b2a44);border:1px solid #6fc9ee66;font-size:clamp(28px,5vw,54px)}
   .carta-v{transform:rotateY(180deg);background:#10304a;border:2px solid #6fc9ee;padding:6px}
-  .carta-v img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+  .carta-v img{width:100%;height:100%;object-fit:contain;background:#fbf6e6;border-radius:10px}
   .carta-v b{color:#fff;font-size:clamp(14px,2.2vw,26px);text-align:center;line-height:1.15}
   .carta.par .carta-v{background:linear-gradient(180deg,#5f7a3a,#4a5f2c);border-color:#8aa35d}
   .carta.erro .carta-v{background:#a51f24;border-color:#d33a3a}
