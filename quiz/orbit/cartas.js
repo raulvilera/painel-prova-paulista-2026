@@ -11,6 +11,7 @@
     vento: 'q06-wind-v2.webp',
     corpo: 'q07-heart-v2.webp',
     agua: 'q08-condensation-v2.webp',
+    magnetismo: 'q09-magnet-v2.webp',
     terra: 'q10-earth-layers-v2.webp',
     planta: 'q11-photosynthesis-v2.webp',
     investigacao: 'q12-investigation-v2.webp',
@@ -63,6 +64,8 @@
   function imagemPorTema(nome, i) {
     const t = String(nome || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     if (/rotacao da terra/.test(t)) return IMAGENS.dia;
+    if (/dia e noite/.test(t)) return IMAGENS.dia;
+    if (/fases? da lua/.test(t)) return IMAGENS.lua;
     if (/eclipse solar/.test(t)) return IMAGENS.eclipseSolar;
     if (/eclipse lunar/.test(t)) return IMAGENS.eclipseLunar;
     if (/gravidade/.test(t)) return IMAGENS.gravidade;
@@ -79,17 +82,16 @@
     if (/plano inclinado|rampa/.test(t)) return IMAGENS.planoInclinado;
     if (/manguezal/.test(t)) return IMAGENS.manguezal;
     if (/placas? tectonicas?/.test(t)) return IMAGENS.placasTectonicas;
-    if (/planeta|vulcao|tsunami|terra/.test(t)) return IMAGENS.terra;
-    if (/lua|dia|noite/.test(t)) return IMAGENS.lua;
-    if (/energia|eletric|circuito|condutor|isolante|combustivel/.test(t)) return IMAGENS.energia;
-    if (/cadeia|vertebrado|invertebrado|bioma|conservacao|selecao natural/.test(t)) return IMAGENS.cadeia;
-    if (/reciclag|poluicao|aquecimento global|efeito estufa|saneamento|pandemia/.test(t)) return IMAGENS.reciclagem;
-    if (/vento|clima|pluviometro|anemometro|onda|som|luz/.test(t)) return IMAGENS.vento;
-    if (/coracao|pulmao|estomago|intestino|neuronio|pupila|esqueleto|virus|vacina/.test(t)) return IMAGENS.corpo;
-    if (/condensacao|fusao|mistura|quimic|agua/.test(t)) return IMAGENS.agua;
-    if (/planta|fotossintese|polinizacao|reproducao|fungo/.test(t)) return IMAGENS.planta;
-    if (/celula|microscopio|nucleo|bacteria|dna|mitose|alelo|ciencia|investigacao/.test(t)) return IMAGENS.investigacao;
-    return [IMAGENS.investigacao, IMAGENS.terra, IMAGENS.planta, IMAGENS.energia][i % 4];
+    if (/camadas? da terra/.test(t)) return IMAGENS.terra;
+    if (/energia eletrica|energia eletrica/.test(t)) return IMAGENS.energia;
+    if (/reciclagem/.test(t)) return IMAGENS.reciclagem;
+    if (/vento|energia eolica/.test(t)) return IMAGENS.vento;
+    if (/coracao/.test(t)) return IMAGENS.corpo;
+    if (/condensacao/.test(t)) return IMAGENS.agua;
+    if (/fotossintese/.test(t)) return IMAGENS.planta;
+    if (/investigacao cientifica/.test(t)) return IMAGENS.investigacao;
+    if (/magnetismo|ima/.test(t)) return IMAGENS.magnetismo;
+    return null;
   }
   function porTemas(n) {   // 4 conceitos de maior defasagem da turma: n=4 → 1º ao 4º, 7 → 5º ao 8º, 10 → 9º ao 12º
     const T = window.__orbitTemas; if (!T) return null;
