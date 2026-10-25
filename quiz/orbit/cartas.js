@@ -17,7 +17,12 @@
     alavanca: 'q13-lever.webp',
     planoInclinado: 'q14-inclined-plane.webp',
     manguezal: 'q15-mangrove.webp',
-    placasTectonicas: 'q16-tectonic-plates.webp'
+    placasTectonicas: 'q16-tectonic-plates.webp',
+    eclipseSolar: 'q17-solar-eclipse.webp',
+    gravidade: 'q18-gravity.webp',
+    rochaSedimentar: 'q19-sedimentary-rock.webp',
+    rochaMagmatica: 'q20-igneous-rock.webp',
+    fossil: 'q21-fossil.webp'
   };
   const RODADAS = {
     4: [['q01-day-night-v2.webp', 'Dia e noite'], ['q02-moon-phases-v2.webp', 'Fases da Lua'], ['q03-energy-lamp-v2.webp', 'Energia elétrica'], ['q04-food-chain-v2.webp', 'Cadeia alimentar']],
@@ -50,11 +55,17 @@
 
   function imagemPorTema(nome, i) {
     const t = String(nome || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    if (/rotacao da terra/.test(t)) return IMAGENS.dia;
+    if (/eclipse solar/.test(t)) return IMAGENS.eclipseSolar;
+    if (/gravidade/.test(t)) return IMAGENS.gravidade;
+    if (/rocha sedimentar/.test(t)) return IMAGENS.rochaSedimentar;
+    if (/rocha magmatica/.test(t)) return IMAGENS.rochaMagmatica;
+    if (/fosse?il/.test(t)) return IMAGENS.fossil;
     if (/alavanca/.test(t)) return IMAGENS.alavanca;
     if (/plano inclinado|rampa/.test(t)) return IMAGENS.planoInclinado;
     if (/manguezal/.test(t)) return IMAGENS.manguezal;
     if (/placas? tectonicas?/.test(t)) return IMAGENS.placasTectonicas;
-    if (/rotacao|planeta|rocha|fosse?il|erosao|vulcao|tsunami|gravidade|terra/.test(t)) return IMAGENS.terra;
+    if (/planeta|erosao|vulcao|tsunami|terra/.test(t)) return IMAGENS.terra;
     if (/lua|eclipse|mare|translacao|estacao|dia|noite/.test(t)) return IMAGENS.lua;
     if (/energia|eletric|circuito|condutor|isolante|combustivel/.test(t)) return IMAGENS.energia;
     if (/cadeia|vertebrado|invertebrado|bioma|conservacao|selecao natural/.test(t)) return IMAGENS.cadeia;
