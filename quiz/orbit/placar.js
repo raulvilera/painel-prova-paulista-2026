@@ -5,34 +5,36 @@
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const css = document.createElement('style');
   css.textContent = `
-  #placar{position:fixed;max-height:55vh;overflow:auto;right:14px;bottom:76px;width:230px;z-index:50;background:linear-gradient(180deg,#0f3a5ce6,#071525ee);border:1px solid #6fc9ee66;border-radius:16px;padding:12px;color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.45);font-size:13px}
-  #placar h4{margin:0 0 8px;font-size:12px;letter-spacing:.12em;color:#6fc9ee;display:flex;justify-content:space-between;align-items:center}
-  #placar button{all:unset;cursor:pointer;color:#6fc9ee}
-  #placar ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
-  #placar li{display:grid;grid-template-columns:24px 1fr auto;gap:6px;align-items:center;padding:5px 8px;border-radius:9px;background:#ffffff0f}
-  #placar li b{font-variant-numeric:tabular-nums}
+  #placar{position:fixed;left:0;right:0;top:0;z-index:50;background:linear-gradient(180deg,#0b2a44f2,#071525f2);border-bottom:1px solid #6fc9ee66;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.45);font-size:13px;padding:6px 10px}
+  body.tem-placar #ui{padding-top:46px}
+  #placar .barra{display:flex;align-items:center;gap:8px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+  #placar .barra::-webkit-scrollbar{display:none}
+  #placar .tit{color:#6fc9ee;font-size:11px;letter-spacing:.1em;flex:none}
+  #placar .chip{flex:none;display:flex;gap:6px;align-items:center;padding:5px 10px;border-radius:999px;background:#ffffff14}
+  #placar .chip.eu{background:linear-gradient(180deg,#5f7a3a,#4a5f2c);border:1px solid #8aa35d;font-weight:700;font-size:14px}
+  #placar button{all:unset;cursor:pointer;color:#6fc9ee;flex:none;margin-left:auto;padding:4px 8px}
+  #placar ol{list-style:none;margin:8px auto 2px;padding:0;display:flex;flex-direction:column;gap:4px;max-width:520px;max-height:50vh;overflow:auto}
+  #placar li{display:grid;grid-template-columns:34px 1fr auto;gap:6px;padding:5px 10px;border-radius:9px;background:#ffffff0f}
+  #placar li.eu{background:linear-gradient(180deg,#5f7a3a,#4a5f2c);border:1px solid #8aa35d;font-weight:700}
   #placar li span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  #placar li.eu{background:linear-gradient(180deg,#5f7a3a,#4a5f2c);border:1px solid #8aa35d;font-weight:700;font-size:14px;transform:scale(1.03)}
-  #placar li.sep{background:none;padding:0;text-align:center;opacity:.6;display:block;line-height:.6}
-  #placar .vz{opacity:.7;padding:6px 2px}
-  @media(max-width:900px){#placar{bottom:76px;right:10px;left:10px;width:auto;padding:8px 10px}#placar.min ol,#placar.min .vz{display:none}#placar ol{max-height:30vh;overflow:auto}}`;
+  #placar .vz{opacity:.7;text-align:center;padding:4px 0}`;
   document.head.appendChild(css);
   const box = document.createElement('aside'); box.id = 'placar'; box.hidden = true; box.setAttribute('aria-label', 'Ranking da turma');
   document.body.appendChild(box);
-  let lista = [], ultimo = '', min = matchMedia('(max-width:900px)').matches;
-  box.classList.toggle('min', min);
-  box.addEventListener('click', e => { if (e.target.closest('button')) { min = !min; box.classList.toggle('min', min); desenhar(); } });
+  let lista = [], ultimo = '', min = true;
+  box.addEventListener('click', e => { if (e.target.closest('button')) { min = !min; desenhar(); } });
 
   function estado() { try { return window.__game && window.__game.getState(); } catch (e) { return null; } }
+  const medalha = n => n === 1 ? '🥇' : n === 2 ? '🥈' : n === 3 ? '🥉' : n + 'º';
   function desenhar() {
-    const s = estado(); if (!s || !s.student || !s.turma || (s.screen !== 'quiz' && s.screen !== 'results')) { box.hidden = true; return; }
-    box.hidden = false;
-    const pos = lista.findIndex(x => x.nome === s.student);
-    let linhas = lista.slice(0, 6).map((x, i) => [i + 1, x]);
-    if (pos >= 6) linhas.push(null, [pos + 1, lista[pos]]);
-    if (pos < 0) linhas.push(null, ['–', { nome: s.student, pontos: s.score }]);
-    const li = linhas.map(l => l === null ? '<li class="sep">⋮</li>' : '<li class="' + (l[1].nome === s.student ? 'eu' : '') + '"><b>' + (l[0] === 1 ? '🥇' : l[0] === 2 ? '🥈' : l[0] === 3 ? '🥉' : l[0] + 'º') + '</b><span>' + esc(l[1].nome) + '</span><b>' + (l[1].nome === s.student ? s.score : l[1].pontos) + '</b></li>').join('');
-    box.innerHTML = '<h4><span>🏆 ' + (min ? (pos >= 0 ? (pos + 1) + 'º lugar' : 'Ranking') + ' · ' + s.score + ' pts' : 'RANKING · ' + esc(s.turma)) + '</span><button aria-label="Recolher ou abrir ranking">' + (min ? '▲' : '▼') + '</button></h4>' + (lista.length ? '<ol>' + li + '</ol>' : '<div class="vz">Você é o primeiro a jogar nesta turma.</div><ol>' + li + '</ol>') + '<div class="vz">' + (pos >= 0 ? 'Você está em ' + (pos + 1) + 'º de ' + lista.length : 'Responda para entrar no ranking') + ' · ' + s.correct + ' acertos</div>';
+    const s = estado(); if (!s || !s.student || !s.turma || (s.screen !== 'quiz' && s.screen !== 'results')) { box.hidden = true; document.body.classList.remove('tem-placar'); return; }
+    box.hidden = false; document.body.classList.add('tem-placar');
+    const pos = lista.findIndex(x => x.nome === s.student), nm = x => esc(x.nome.split(' ')[0]);
+    const chips = lista.slice(0, 3).map((x, i) => x.nome === s.student ? '' : '<span class="chip">' + medalha(i + 1) + ' ' + nm(x) + ' <b>' + x.pontos + '</b></span>').join('');
+    const eu = '<span class="chip eu">' + (pos >= 0 ? medalha(pos + 1) : '•') + ' ' + esc(s.student.split(' ')[0]) + ' <b>' + s.score + ' pts</b></span>';
+    const todos = lista.map((x, i) => '<li class="' + (x.nome === s.student ? 'eu' : '') + '"><b>' + medalha(i + 1) + '</b><span>' + esc(x.nome) + '</span><b>' + (x.nome === s.student ? s.score : x.pontos) + '</b></li>').join('');
+    box.innerHTML = '<div class="barra"><span class="tit">🏆 ' + esc(s.turma) + '</span>' + eu + chips + '<button aria-label="Abrir ou fechar o ranking completo">' + (min ? '▼' : '▲') + '</button></div>' +
+      (min ? '' : '<ol>' + todos + '</ol><div class="vz">' + (pos >= 0 ? 'Você está em ' + (pos + 1) + 'º de ' + lista.length : 'Responda para entrar no ranking') + ' · ' + s.correct + ' acertos</div>');
   }
   async function enviar(s) {
     const resp = s.questionIndex + (s.answered || s.timedOut ? 1 : 0) + (s.screen === 'results' ? 0 : 0);
