@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Ranking Orbit Quiz</title>
+<style>
+:root{--bg:#071525;--card:#0b2a44;--ac:#6fc9ee;--v:#5f7a3a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#0f3a5c,var(--bg) 65%);color:#fff;font-family:system-ui,sans-serif;min-height:100vh;padding:18px 22px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+h1{margin:0;font-size:clamp(22px,3.4vw,40px);flex:1}
+select,button{font:inherit;color:#fff;background:var(--card);border:1px solid #6fc9ee88;border-radius:10px;padding:9px 14px;cursor:pointer}
+.pod{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:end;max-width:900px;margin:10px auto 22px}
+.p{background:linear-gradient(180deg,#14456a,var(--card));border:1px solid #6fc9ee77;border-radius:16px;padding:14px;text-align:center;box-shadow:0 8px 0 #051726}
+.p.n1{padding-top:34px;padding-bottom:30px;border-color:#f2c14e}.p .m{font-size:clamp(30px,5vw,56px)}.p .n{font-size:clamp(15px,2.3vw,28px);font-weight:700;margin:4px 0;overflow-wrap:anywhere}.p .t{opacity:.8;font-size:clamp(11px,1.4vw,15px)}.p .s{font-size:clamp(20px,3.4vw,40px);color:#f2c14e;font-weight:800}
+ol{list-style:none;margin:0 auto;padding:0;max-width:900px;display:flex;flex-direction:column;gap:7px}
+li{display:grid;grid-template-columns:56px 1fr auto auto;gap:12px;align-items:center;background:#ffffff10;border-radius:12px;padding:10px 16px;font-size:clamp(14px,2vw,24px)}
+li .t{opacity:.7;font-size:.7em}li b{font-variant-numeric:tabular-nums}
+.vz{text-align:center;opacity:.75;padding:40px;font-size:20px}.st{opacity:.65;font-size:13px;text-align:center;margin-top:14px}
+</style></head><body>
+<header><h1>🏆 Ranking Orbit Quiz</h1><select id="t"><option value="">Todas as turmas</option></select><button id="fs">⛶ Tela cheia</button></header>
+<div id="pod" class="pod"></div><ol id="lista"></ol><div class="st" id="st">Carregando…</div>
+<script>
+const SB='https://oxohpnappygkmwjyowvq.supabase.co',KEY='sb_publishable_EjJenZkxMWv_I6vXWTz6aQ_iz9XEU4N';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const med=n=>n===1?'🥇':n===2?'🥈':n===3?'🥉':n+'º';
+let dados=[],sel=document.getElementById('t');
+async function carregar(){
+  try{
+    const r=await fetch(SB+'/rest/v1/rpc/orbit_ranking_todas',{method:'POST',headers:{apikey:KEY,Authorization:'Bearer '+KEY,'Content-Type':'application/json'},body:'{}'});
+    if(!r.ok)throw 0;dados=await r.json();
+    const turmas=[...new Set(dados.map(x=>x.turma))].sort((a,b)=>a.localeCompare(b,'pt')),atual=sel.value;
+    sel.innerHTML='<option value="">Todas as turmas</option>'+turmas.map(t=>'<option'+(t===atual?' selected':'')+'>'+esc(t)+'</option>').join('');
+    document.getElementById('st').textContent='Atualiza sozinho a cada 4 segundos · '+new Date().toLocaleTimeString('pt-BR');
+  }catch(e){document.getElementById('st').textContent='Sem conexão com o ranking. Tentando de novo…'}
+  desenhar();
+}
+function desenhar(){
+  const f=dados.filter(x=>!sel.value||x.turma===sel.value);
+  const pod=document.getElementById('pod'),ol=document.getElementById('lista');
+  if(!f.length){pod.innerHTML='';ol.innerHTML='<div class="vz">Nenhum aluno jogou ainda. Os nomes aparecem aqui assim que as primeiras respostas chegarem.</div>';return}
+  const c=(x,i)=>'<div class="p n'+(i+1)+'"><div class="m">'+med(i+1)+'</div><div class="n">'+esc(x.nome)+'</div><div class="t">'+esc(x.turma)+' · '+x.acertos+' acertos</div><div class="s">'+x.pontos+'</div></div>';
+  const top=f.slice(0,3);pod.innerHTML=[top[1],top[0],top[2]].map((x,k)=>x?c(x,[1,0,2][k]):'<div></div>').join('');
+  ol.innerHTML=f.slice(3,30).map((x,i)=>'<li><b>'+med(i+4)+'</b><span>'+esc(x.nome)+' <span class="t">'+esc(x.turma)+'</span></span><span class="t">'+x.acertos+' acertos · '+x.respondidas+'/12</span><b>'+x.pontos+'</b></li>').join('');
+}
+sel.onchange=desenhar;
+document.getElementById('fs').onclick=()=>document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();
+carregar();setInterval(carregar,4000);
+</script></body></html>
