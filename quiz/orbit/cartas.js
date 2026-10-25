@@ -13,7 +13,11 @@
     agua: 'q08-condensation-v2.webp',
     terra: 'q10-earth-layers-v2.webp',
     planta: 'q11-photosynthesis-v2.webp',
-    investigacao: 'q12-investigation-v2.webp'
+    investigacao: 'q12-investigation-v2.webp',
+    alavanca: 'q13-lever.webp',
+    planoInclinado: 'q14-inclined-plane.webp',
+    manguezal: 'q15-mangrove.webp',
+    placasTectonicas: 'q16-tectonic-plates.webp'
   };
   const RODADAS = {
     4: [['q01-day-night-v2.webp', 'Dia e noite'], ['q02-moon-phases-v2.webp', 'Fases da Lua'], ['q03-energy-lamp-v2.webp', 'Energia elétrica'], ['q04-food-chain-v2.webp', 'Cadeia alimentar']],
@@ -46,10 +50,14 @@
 
   function imagemPorTema(nome, i) {
     const t = String(nome || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    if (/rotacao|planeta|rocha|fosse?il|erosao|placa tectonica|vulcao|tsunami|gravidade|terra/.test(t)) return IMAGENS.terra;
+    if (/alavanca/.test(t)) return IMAGENS.alavanca;
+    if (/plano inclinado|rampa/.test(t)) return IMAGENS.planoInclinado;
+    if (/manguezal/.test(t)) return IMAGENS.manguezal;
+    if (/placas? tectonicas?/.test(t)) return IMAGENS.placasTectonicas;
+    if (/rotacao|planeta|rocha|fosse?il|erosao|vulcao|tsunami|gravidade|terra/.test(t)) return IMAGENS.terra;
     if (/lua|eclipse|mare|translacao|estacao|dia|noite/.test(t)) return IMAGENS.lua;
     if (/energia|eletric|circuito|condutor|isolante|combustivel/.test(t)) return IMAGENS.energia;
-    if (/cadeia|vertebrado|invertebrado|bioma|manguezal|conservacao|selecao natural/.test(t)) return IMAGENS.cadeia;
+    if (/cadeia|vertebrado|invertebrado|bioma|conservacao|selecao natural/.test(t)) return IMAGENS.cadeia;
     if (/reciclag|poluicao|aquecimento global|efeito estufa|saneamento|pandemia/.test(t)) return IMAGENS.reciclagem;
     if (/vento|clima|pluviometro|anemometro|onda|som|luz/.test(t)) return IMAGENS.vento;
     if (/coracao|pulmao|estomago|intestino|neuronio|pupila|esqueleto|virus|vacina/.test(t)) return IMAGENS.corpo;
