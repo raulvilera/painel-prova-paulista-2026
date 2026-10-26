@@ -1,6 +1,7 @@
 /* Quiz ao vivo da plataforma (estilo Kahoot), lado do professor. Exige o login do professor (Bearer token do Supabase do painel).
    GET  /api/quiz?turmas=1         → turmas do Fundamental
    GET  /api/quiz?historico=1      → partidas anteriores
+   GET  /api/quiz?orbit=1          → jogadores e respostas do Orbit Quiz (relatório de Gamificação)
    GET  /api/quiz?sessao=<id>      → acompanhamento ao vivo: progresso de cada aluno, placar e acertos por tema
    POST {acao:'criar', turma, n, tempo}  → cria a partida e devolve o PIN (alunos entram e aguardam)
    POST {acao:'duplas', id}              → forma as duplas com níveis diferentes (quem está mais avançado com quem tem mais defasagem)
@@ -138,6 +139,13 @@ module.exports = async function quiz(req, res) {
       if (q.historico) {
         const ss = await rest('quiz_sessao?select=id,pin,turma,estado,criado,perguntas&turma=not.like.TESTE*&order=criado.desc&limit=30') || [];
         return out(200, { ok: true, partidas: ss.map(s => ({ id: s.id, turma: s.turma, estado: s.estado, criado: s.criado, n: (s.perguntas || []).length })) });
+      }
+      if (q.orbit) {   // relatório de Gamificação: jogadores do Orbit Quiz e as respostas por tema
+        const [jog, resp] = await Promise.all([
+          rest('orbit_placar?select=turma,nome,pontos,acertos,respondidas,atualizado&order=atualizado.desc&limit=2000'),
+          rest('orbit_resposta?select=turma,nome,conceito,habilidade,eixo,correta,marcada,ordem,criado&order=criado.asc&limit=20000')
+        ]);
+        return out(200, { ok: true, jogadores: jog || [], respostas: resp || [] });
       }
       if (q.sessao) { const s = await sessao(String(q.sessao)); return s ? out(200, Object.assign({ ok: true }, s)) : out(404, { ok: false, erro: 'Partida não encontrada.' }); }
       return out(400, { ok: false, erro: 'Pedido inválido.' });

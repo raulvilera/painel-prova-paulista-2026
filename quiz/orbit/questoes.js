@@ -103,9 +103,9 @@
     }
     const novas = esc.map((r, i) => {
       const op = emb([r[3]].concat(r[4])), K = ['A', 'B', 'C', 'D'];
-      return { id: i + 1, bimester: 'SARESP', code: r[1], prompt: r[2], options: op.map((x, k) => ({ key: K[k], text: x })), correct: K[op.indexOf(r[3])], explanation: r[5] };
+      return { id: i + 1, conceito: r[0], eixo: (AREA[r[0]] || [T])[0], bimester: 'SARESP', code: r[1], prompt: r[2], options: op.map((x, k) => ({ key: K[k], text: x })), correct: K[op.indexOf(r[3])], explanation: r[5] };
     });
-    t.splice(0, t.length, ...novas);
+    t.splice(0, t.length, ...novas); window.__orbitQuestoes = novas;
   };
   window.__orbitBanco = B;
 })();
