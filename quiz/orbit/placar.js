@@ -41,11 +41,21 @@
     const chave = [s.turma, s.student, s.score, s.correct, resp].join('|'); if (chave === ultimo) return; ultimo = chave;
     await rpc('orbit_registrar', { p_turma: s.turma, p_nome: s.student, p_pontos: s.score, p_acertos: s.correct, p_respondidas: s.screen === 'results' ? 12 : resp });
   }
+  /* registra cada resposta (tema, habilidade, acerto) para o relatório de Gamificação do professor */
+  const enviadas = {};
+  function registrarResposta(s) {
+    const Q = window.__orbitQuestoes; if (!Q || s.screen !== 'quiz' || !(s.answered || s.timedOut)) return;
+    const q = Q[s.questionIndex]; if (!q) return;
+    const k = [s.turma, s.student, q.conceito].join('|'); if (enviadas[k]) return; enviadas[k] = 1;
+    fetch(SB + '/rest/v1/rpc/orbit_responder', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ p_turma: s.turma, p_nome: s.student, p_conceito: q.conceito, p_habilidade: q.code, p_eixo: q.eixo, p_correta: !s.timedOut && s.answered === q.correct, p_marcada: s.answered || '', p_ordem: s.questionIndex + 1, p_pontos: 0 }) })
+      .then(r => { if (!r.ok) delete enviadas[k]; }).catch(() => { delete enviadas[k]; });
+  }
   async function ciclo() {
+    { const s0 = estado(); if (s0 && s0.student && s0.turma) registrarResposta(s0); }
     const s = estado(); if (s && s.student && s.turma && (s.screen === 'quiz' || s.screen === 'results')) {
       await enviar(s); const r = await rpc('orbit_ranking', { p_turma: s.turma }); if (Array.isArray(r)) lista = r;
     }
     desenhar();
   }
-  setInterval(ciclo, 3000); setInterval(desenhar, 700);
+  setInterval(ciclo, 3000); setInterval(desenhar, 700); setInterval(() => { const s = estado(); if (s && s.student && s.turma) registrarResposta(s); }, 800);
 })();
