@@ -3,6 +3,7 @@
   const API = 'https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu_dupRvY-GzoHPNZhL2ft3KpSK7odGF0amqn7Yc7P/exec';
   window.__orbitTurmas = ['6º Ano A', '6º Ano C', '6º Ano A (Lydia)', '6º Ano B (Lydia)', '6º Ano C (Lydia)', '7º Ano A', '7º Ano B', '8º Ano A', '8º Ano B', '9º Ano A', '9º Ano B'];
   window.__orbitAlunos = []; window.__orbitMsg = '';
+  const EXTRAS = { '6º Ano A': ['NAOMI PAGES ROJOS'] };   // alunos ainda fora da planilha (nº 38)
   const espera = ms => new Promise(r => setTimeout(r, ms));
   async function api(q) {
     let ult;
@@ -28,6 +29,7 @@
     try {
       const d = await api({ api: 'alunos', id }).catch(e => /api desconhecida/.test(e.message) ? api({ api: 'turma', id }) : Promise.reject(e));
       const nomes = (d.alunos || []).map(a => a.nome).filter(Boolean).sort((a, b) => a.localeCompare(b, 'pt'));
+      (EXTRAS[id] || []).forEach(x => { if (!nomes.includes(x)) nomes.push(x); }); nomes.sort((a, b) => a.localeCompare(b, 'pt'));
       window.__orbitAlunos = nomes;
       if (!nomes.length) window.__orbitMsg = 'Nenhum aluno encontrado nesta turma. Avise o professor.';
     } catch (e) {
