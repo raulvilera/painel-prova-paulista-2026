@@ -44,7 +44,9 @@
   /* registra cada resposta (tema, habilidade, acerto) para o relatório de Gamificação do professor */
   const enviadas = {};
   function registrarResposta(s) {
-    const Q = window.__orbitQuestoes; if (!Q || s.screen !== 'quiz' || !(s.answered || s.timedOut)) return;
+    if (s.screen !== 'quiz') { for (const x in enviadas) delete enviadas[x]; return; }   // fora do quiz (resultado/saguão): a próxima partida registra tudo de novo
+    if (s.questionIndex === 0 && !s.answered && !s.timedOut) for (const x in enviadas) delete enviadas[x];
+    const Q = window.__orbitQuestoes; if (!Q || !(s.answered || s.timedOut)) return;
     const q = Q[s.questionIndex]; if (!q) return;
     const k = [s.turma, s.student, q.conceito].join('|'); if (enviadas[k]) return; enviadas[k] = 1;
     fetch(SB + '/rest/v1/rpc/orbit_responder', { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ p_turma: s.turma, p_nome: s.student, p_conceito: q.conceito, p_habilidade: q.code, p_eixo: q.eixo, p_correta: !s.timedOut && s.answered === q.correct, p_marcada: s.answered || '', p_ordem: s.questionIndex + 1, p_pontos: 0 }) })
