@@ -34,7 +34,6 @@ th.ord{cursor:pointer;user-select:none}th.ord:hover{color:var(--accent)}.nt{font
 </div>
 <div id="app"><div class="card muted">Carregando…</div></div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script>
 (function () {
   const SB_URL = 'https://ykrjfjepnqeoqlgupsbe.supabase.co', SB_KEY = 'sb_publishable_FbMU5x7WBpxzHmmVzOfh2g_0M1xxAh5';
@@ -94,13 +93,22 @@ th.ord{cursor:pointer;user-select:none}th.ord:hover{color:var(--accent)}.nt{font
   }
   $('#fTurma').onchange = desenhar; $('#fOrd').onchange = desenhar; $('#fAluno').oninput = desenhar; $('#bCsv').onclick = csv;
   $('#bAtu').onclick = () => carregar().catch(e => app('<div class="card">' + esc(e.message) + '</div>'));
-  (async function () {
+  /* Lê o login que o painel já guardou neste navegador, sem criar outro cliente: assim esta página não renova o token por conta própria
+     (duas abas renovando juntas derrubavam o login do painel). Se o acesso venceu, volta ao painel, que renova e abre a tela inicial. */
+  function sessao() {
     try {
-      const sb = window.supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false, flowType: 'implicit' } });
-      const { data } = await sb.auth.getSession();
-      if (!data || !data.session) return app('<div class="card">Entre primeiro no painel com o seu login de professor. <a href="/">Abrir o painel</a></div>');
-      TOKEN = data.session.access_token; await carregar(); setInterval(() => carregar().catch(() => {}), 20000);
-    } catch (e) { app('<div class="card">Não foi possível carregar: ' + esc(e.message) + '</div>'); }
+      const k = Object.keys(localStorage).find(x => /^sb-.*-auth-token$/.test(x)); if (!k) return null;
+      const v = JSON.parse(localStorage.getItem(k) || 'null'); const s = v && (v.currentSession || v);
+      return s && s.access_token ? s : null;
+    } catch (e) { return null; }
+  }
+  (async function () {
+    const ss = sessao();
+    if (!ss) return app('<div class="card">Entre primeiro no painel com o seu login de professor. <a href="/">Abrir o painel</a></div>');
+    if (ss.expires_at && ss.expires_at * 1000 < Date.now() + 30000) { app('<div class="card">Renovando o seu acesso…</div>'); return location.replace('/'); }
+    TOKEN = ss.access_token;
+    try { await carregar(); setInterval(() => { const n = sessao(); if (n) TOKEN = n.access_token; carregar().catch(() => {}); }, 20000); }
+    catch (e) { app('<div class="card">' + (/professor|login|401/i.test(e.message) ? 'Seu acesso expirou. <a href="/">Voltar ao painel</a>' : 'Não foi possível carregar: ' + esc(e.message)) + '</div>'); }
   })();
 })();
 </script>
