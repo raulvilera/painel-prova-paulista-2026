@@ -1259,10 +1259,19 @@ sb.auth.onAuthStateChange((ev, session)=>{ if(ev==="PASSWORD_RECOVERY" && sessio
   const hp=new URLSearchParams(location.hash.slice(1));
   if(hp.get("error_description")){ showLogin(); msg("O link do e-mail expirou ou já foi usado. Peça um novo link."); history.replaceState(null,"",location.pathname); return; }
   $("authLoading").hidden=false;
-  const { data } = await sb.auth.getSession();
+  /* Ao voltar de outra tela do painel (Resultados, jogos…) a leitura do login pode falhar por um instante, porque outra aba está renovando o acesso.
+     Só mostra a tela de login se não houver login guardado neste navegador, ou se ele não valer depois de algumas tentativas. */
+  const guardado=()=>{ try{ const k=Object.keys(localStorage).find(x=>/^sb-.*-auth-token$/.test(x)); const v=k&&JSON.parse(localStorage.getItem(k)||"null"); return (v&&(v.currentSession||v))||null; }catch(e){ return null; } };
+  let sess=null;
+  for(let i=0;i<4&&!sess;i++){
+    const { data } = await sb.auth.getSession(); sess=data&&data.session;
+    if(sess||!guardado()) break;
+    await new Promise(r=>setTimeout(r,600*(i+1)));
+  }
+  if(!sess){ const g=guardado(); if(g&&g.refresh_token){ try{ const r=await sb.auth.refreshSession({refresh_token:g.refresh_token}); sess=r&&r.data&&r.data.session; }catch(e){} } }
   $("authLoading").hidden=true;
   if(location.hash.includes("access_token")) history.replaceState(null,"",location.pathname);
-  if(data.session) openApp(data.session); else showLogin();
+  if(sess) openApp(sess); else showLogin();
 })();
 </script>
 
