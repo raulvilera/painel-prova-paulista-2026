@@ -134,6 +134,8 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
   <p id="msg" class="muted sm"></p>
 </section>
 
+<section class="card" id="dupla" hidden><h2 id="dTit" style="margin-top:0"></h2><p id="dTxt"></p><div id="dSel" class="row"></div><div id="dAcoes" class="row" style="margin-top:10px"></div></section>
+
 <section id="jogo">
   <div class="card"><div class="board" id="board"></div>
     <div class="leg muted" style="margin-top:12px"><span><i style="background:var(--b1)"></i>1º bimestre</span><span><i style="background:var(--b2)"></i>2º bimestre</span><span><i style="background:var(--b3)"></i>3º bimestre</span><span><i style="background:var(--b4)"></i>4º bimestre</span><span>⚡ Desafio: tema importante para a turma, vale o dobro</span><span>🖼️ Imagem e definição: ligar cada foto ao conceito certo</span></div>
@@ -228,7 +230,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
   }
   function desenharPlacar() {
     $('placar').innerHTML = '<b>Placar</b>' + G.eq.map((e, i) => `<div class="equipe${i === G.vez ? ' vez' : ''}"><span class="cor" style="background:${CORES[i]}"></span><span class="nm">${esc(e.nome)}</span><span class="muted sm">casa ${e.pos}</span><span class="pt">${e.pts}</span></div>`).join('');
-    $('vezTxt').innerHTML = `Vez de <b>${esc(G.eq[G.vez].nome)}</b>`;
+    $('vezTxt').innerHTML = G.dupla ? `⚔️ Corrida contra <b>${esc(G.eq[1].nome)}</b>: quem chegar primeiro vence` : `Vez de <b>${esc(G.eq[G.vez].nome)}</b>`;
   }
   const redesenhar = () => { desenharTabuleiro(); desenharPlacar(); };
 
@@ -382,7 +384,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
 
   function proximo() {
     G.modo = ''; G.teclaAssoc = null;
-    G.responder = null; G.vez = (G.vez + 1) % G.eq.length; ocupado = false; $('bDado').disabled = false;
+    G.responder = null; G.vez = G.dupla ? 0 : (G.vez + 1) % G.eq.length; ocupado = false; $('bDado').disabled = false;
     $('dado').textContent = '🎲'; redesenhar(); guardar();
   }
 
@@ -400,20 +402,21 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
     $('fim').innerHTML = `<h2 style="margin-top:0">${chegou ? '🏆 ' + esc(G.eq[venc].nome) + ' venceu!' : 'Partida encerrada · na frente: ' + esc(G.eq[venc].nome)}</h2>
       <div class="pod">${rank.map(e => `<div class="equipe"><span class="cor" style="background:${CORES[e.i]}"></span><span class="nm">${esc(e.nome)}</span><span class="muted sm">casa ${e.pos} · ${e.acertos || 0}/${e.tent || 0} acertos</span><span class="pt">${e.pts}</span></div>`).join('')}</div>
       <h3>Temas para você revisar antes do SARESP</h3>
-      ${retomar.length ? '' : '<p class="muted">Você acertou todos os temas desta partida. Parabéns!</p>'}
+      ${retomar.length || !linhas.length ? '' : '<p class="muted">Você acertou todos os temas desta partida. Parabéns!</p>'}
       <table class="rel"><thead><tr><th>Bim.</th><th>Habilidade</th><th>Tema</th><th>Seus acertos</th></tr></thead><tbody>
       ${linhas.map(t => `<tr${t.h.a < t.h.n ? ' style="background:var(--errbg)"' : ''}><td>${esc(t.bim)}º</td><td>${esc(t.hab)}</td><td>${esc(t.desc)}</td><td>${t.h.a}/${t.h.n}</td></tr>`).join('')}
       </tbody></table>
       ${(() => { const cz = (DADOS.conceitos || []).filter(c => G.histC && G.histC[c.id] && G.histC[c.id].a < G.histC[c.id].n); return cz.length ? `<h3>Conceitos para revisar (Imagem e definição)</h3><ul>${cz.map(c => `<li><b>${esc(c.nome)}</b>: ${esc(c.def)}</li>`).join('')}</ul>` : ''; })()}
       ${naoSorteados.length ? `<p class="muted sm" style="margin-top:12px">Temas que não caíram nesta partida (${naoSorteados.length}): ${[...new Set(naoSorteados.map(t => t.hab))].map(esc).join(', ')}</p>` : ''}
-      <div class="row" style="margin-top:14px"><button class="btn" id="bCopiar">Copiar meu resultado</button><button class="btn sec" id="bNovo">Jogar de novo</button></div>`;
+      <div class="row" style="margin-top:14px"><button class="btn" id="bCopiar">Copiar meu resultado</button>${G.dupla ? '<button class="btn" id="bRev">⚔️ Revanche</button><button class="btn sec" id="bDes">Desfazer dupla</button>' : '<button class="btn sec" id="bNovo">Jogar de novo</button>'}</div><p id="fimMsg" class="muted sm"></p>`;
     $('fim').classList.add('on');
     $('bCopiar').onclick = () => {
       const txt = `Trilha SARESP · ${DADOS.turma}\n${chegou ? 'Vencedora' : 'Na frente'}: ${G.eq[venc].nome}\n` + rank.map(e => `${e.nome}: ${e.pts} pts, ${e.acertos || 0}/${e.tent || 0} acertos`).join('\n') +
         `\n\nTemas para retomar:\n` + (retomar.length ? retomar.map(t => `- ${t.bim}º bim. ${t.hab}: ${t.desc} (${t.h.a}/${t.h.n})`).join('\n') : '- nenhum');
       navigator.clipboard.writeText(txt).then(() => { $('bCopiar').textContent = 'Copiado'; }, () => { $('bCopiar').textContent = 'Não foi possível copiar'; });
     };
-    $('bNovo').onclick = () => { apagarSalvo(); $('fim').classList.remove('on'); $('config').hidden = false; G = null; $('bRetomar').hidden = true; };
+    if (G.dupla) ligarFimDupla();
+    else $('bNovo').onclick = () => { apagarSalvo(); $('fim').classList.remove('on'); $('config').hidden = false; G = null; $('bRetomar').hidden = true; };
     G.fim = true; apagarSalvo(); enviarProg();
   }
 
@@ -422,7 +425,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
     const n = +$('fEq').value, ant = [...$('nomesEq').querySelectorAll('input')].map(i => i.value);
     $('nomesEq').innerHTML = Array.from({ length: n }, (_, i) => `<label><span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${CORES[i]}"></span> Equipe ${i + 1}</span><input type="text" maxlength="24" value="${esc(ant[i] || 'Equipe ' + (i + 1))}"></label>`).join('');
   }
-  async function comecar() {
+  async function comecarSolo() {
     const turma = $('fTurma').value, aluno = $('fAluno').value; if (!turma || !aluno) return;
     $('bComecar').disabled = true; msg('Montando a trilha…');
     try {
@@ -437,8 +440,125 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
     } catch (e) { msg(esc(e.message), true); }
     $('bComecar').disabled = false;
   }
+
+  /* ---------- dupla: um aluno escolhe o outro e os dois disputam ---------- */
+  const rpcJ = async (fn, b) => { try { const r = await fetch(SBG + '/rest/v1/rpc/' + fn, { method: 'POST', headers: { apikey: KEYG, Authorization: 'Bearer ' + KEYG, 'Content-Type': 'application/json' }, body: JSON.stringify(b) }); return r.ok ? await r.json() : null; } catch (e) { return null; } };
+  const hash = x => { let h = 2166136261; for (const c of String(x)) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+  function embSeed(a, seed) { let t0 = seed >>> 0; const r = () => { t0 = (t0 + 0x6D2B79F5) | 0; let t = Math.imul(t0 ^ (t0 >>> 15), 1 | t0); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  let POLL = null, ESPERA = null;
+  const painelD = (tit, txt, acoes, sel) => {
+    $('config').hidden = true; $('dupla').hidden = false; $('dTit').textContent = tit; $('dTxt').innerHTML = txt;
+    $('dSel').innerHTML = sel || ''; $('dAcoes').innerHTML = (acoes || []).map((a, i) => `<button class="btn${a.sec ? ' sec' : ''}" data-i="${i}">${esc(a.t)}</button>`).join('');
+    [...$('dAcoes').querySelectorAll('button')].forEach(b => b.onclick = () => acoes[+b.dataset.i].f());
+  };
+  const voltarConfig = () => { clearInterval(ESPERA); $('dupla').hidden = true; $('config').hidden = false; msg('Escolha a sua turma e o seu nome.'); };
+  async function iniciarFluxo() {
+    const turma = $('fTurma').value, aluno = $('fAluno').value; if (!turma || !aluno) return;
+    $('bComecar').disabled = true; msg('Verificando sua dupla…');
+    const d = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno });
+    $('bComecar').disabled = false;
+    if (!d) return msg('Sem conexão. Tente de novo.', true);
+    msg(''); seguir(turma, aluno, d);
+  }
+  async function seguir(turma, aluno, d) {
+    clearInterval(ESPERA);
+    if (!d.existe) {
+      const s = lerSalvo();
+      if (s && s.G && !s.G.fim && !s.G.dupla && s.DADOS && s.DADOS.turma === turma && s.G.eq[0].nome === aluno) { G = s.G; DADOS = s.DADOS; G.histC = G.histC || {}; iniciarTela(); preCarregar(); return; }
+      return escolherParceiro(turma, aluno);
+    }
+    if (d.aceita) return entrarDupla(turma, aluno, d);
+    if (d.souA) return aguardando(turma, aluno, d);
+    return convite(turma, aluno, d);
+  }
+  async function escolherParceiro(turma, aluno, erro) {
+    painelD('Com quem você quer jogar?', 'Escolha um colega da sua turma. Vocês dois disputam a mesma trilha: <b>quem chegar primeiro vence</b>. Depois de formada, a dupla só joga entre si.', [], '<span class="muted">Carregando colegas…</span>');
+    const oc = (await rpcJ('trilha_ocupados', { p_turma: turma })) || [];
+    const nomes = [...$('fAluno').options].map(o => o.value).filter(v => v && v !== aluno && !oc.includes(v));
+    const cont = [];
+    painelD('Com quem você quer jogar?', (erro ? `<span class="erro">${esc(erro)}</span><br>` : '') + 'Escolha um colega da sua turma. Vocês dois disputam a mesma trilha: <b>quem chegar primeiro vence</b>. Depois de formada, a dupla só joga entre si.', [
+      { t: '⚔️ Convidar', f: () => { const v = $('fPar').value; if (v) convidar(turma, aluno, v); } },
+      { t: 'Jogar sozinho', sec: 1, f: () => comecarSolo() },
+      { t: 'Voltar', sec: 1, f: voltarConfig }
+    ], nomes.length ? `<label>Colega<select id="fPar"><option value="">Selecione</option>${nomes.map(n => `<option>${esc(n)}</option>`).join('')}</select></label>` : '<span class="muted">Nenhum colega livre agora. Você pode jogar sozinho ou esperar alguém.</span><select id="fPar" hidden></select>');
+  }
+  async function convidar(turma, aluno, par) {
+    painelD('Montando a trilha…', 'Aguarde um instante.', []);
+    try {
+      DADOS = await api({ turma });
+      const tr = montarTrilha(DADOS.temas, 'normal');
+      const r = await rpcJ('trilha_convidar', { p_turma: turma, p_a: aluno, p_b: par, p_casas: tr.casas, p_seed: Math.floor(Math.random() * 2000000000) });
+      if (!r) return escolherParceiro(turma, aluno, 'Sem conexão. Tente de novo.');
+      if (!r.ok) { const d = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno }); if (d && d.existe) return seguir(turma, aluno, d); return escolherParceiro(turma, aluno, r.erro); }
+      const d = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno }); seguir(turma, aluno, d);
+    } catch (e) { escolherParceiro(turma, aluno, e.message); }
+  }
+  function aguardando(turma, aluno, d) {
+    painelD('Convite enviado', `Você escolheu <b>${esc(d.parceiro)}</b>. Peça para ele(a) abrir este mesmo link, escolher o próprio nome e entrar na dupla. O jogo começa sozinho assim que ele(a) entrar.`, [
+      { t: 'Cancelar convite', sec: 1, f: async () => { clearInterval(ESPERA); const r = await rpcJ('trilha_desfazer', { p_turma: turma, p_nome: aluno }); if (r && r.ok) voltarConfig(); else msg((r && r.erro) || 'Não foi possível cancelar.', true); } }
+    ]);
+    clearInterval(ESPERA);
+    ESPERA = setInterval(async () => { const e = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno }); if (!e) return; if (!e.existe) { clearInterval(ESPERA); voltarConfig(); } else if (e.aceita) { clearInterval(ESPERA); entrarDupla(turma, aluno, e); } }, 2000);
+  }
+  function convite(turma, aluno, d) {
+    painelD(esc(d.parceiro) + ' escolheu você!', `Vocês dois vão disputar a mesma trilha: <b>quem chegar primeiro vence</b>. Ao entrar, você só joga com <b>${esc(d.parceiro)}</b>.`, [
+      { t: '⚔️ Entrar na dupla', f: async () => { const r = await rpcJ('trilha_aceitar', { p_turma: turma, p_nome: aluno }); const e = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno }); if (r && r.ok && e && e.existe) entrarDupla(turma, aluno, e); else msg('Não foi possível entrar. Tente de novo.', true); } },
+      { t: 'Voltar', sec: 1, f: voltarConfig }
+    ]);
+    $('dTit').textContent = d.parceiro + ' escolheu você!';
+    ESPERA = setInterval(async () => { const e = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno }); if (e && !e.existe) { clearInterval(ESPERA); voltarConfig(); } }, 3000);
+  }
+  function aplicarPar(p) { if (!p || !G || !G.eq[1]) return; const e = G.eq[1]; e.pos = p.casa; e.pts = p.pontos; e.acertos = p.acertos; e.tent = p.tentativas; }
+  async function entrarDupla(turma, aluno, d) {
+    clearInterval(ESPERA);
+    painelD('Montando a trilha…', 'Aguarde um instante.', []);
+    try {
+      DADOS = await api({ turma });
+      const s = lerSalvo();
+      if (s && s.G && s.G.dupla && s.G.dupla.id === d.id && s.G.rodada === d.rodada && s.G.eq[0].nome === aluno && !(d.eu && d.eu.fim) && !(d.par && d.par.fim)) { G = s.G; DADOS = s.DADOS; G.histC = G.histC || {}; }
+      else {
+        G = { casas: d.casas, eq: [{ nome: aluno, pos: 0, pts: 0, acertos: 0, tent: 0 }, { nome: d.parceiro, pos: 0, pts: 0, acertos: 0, tent: 0 }], vez: 0, usadas: {}, hist: {}, histC: {}, assocUsados: [], tempo: $('fTempo').value, fim: false, dupla: { id: d.id, turma }, rodada: d.rodada };
+        DADOS.temas.forEach(t => embSeed(t.qs, (d.seed ^ hash(t.k)) >>> 0));
+        if (d.eu) { G.eq[0].pos = d.eu.casa; G.eq[0].pts = d.eu.pontos; G.eq[0].acertos = d.eu.acertos; G.eq[0].tent = d.eu.tentativas; }
+      }
+      aplicarPar(d.par); G.dupla.turma = turma;
+      iniciarTela();
+      if ((d.eu && d.eu.fim) || (d.par && d.par.fim)) { terminar(null); iniciarPoll(); return; }
+      guardar(); preCarregar(); iniciarPoll();
+      msg('');
+    } catch (e) { escolherParceiro(turma, aluno, e.message); }
+  }
+  function iniciarPoll() {
+    clearInterval(POLL);
+    POLL = setInterval(async () => {
+      if (!G || !G.dupla) return;
+      const d = await rpcJ('trilha_dupla_estado', { p_turma: G.dupla.turma, p_nome: G.eq[0].nome });
+      if (!d || !d.existe) return;
+      if (d.rodada > G.rodada) { if (G.fim && $('bRev') && !G.novaRodada) { G.novaRodada = d; $('bRev').textContent = '⚔️ Entrar na nova rodada'; $('fimMsg').textContent = G.eq[1].nome + ' pediu revanche!'; } return; }
+      if (G.fim) return;
+      aplicarPar(d.par); redesenhar();
+      if (d.par && d.par.fim) terminar(null);
+    }, 2500);
+  }
+  function ligarFimDupla() {
+    $('bRev').onclick = async () => {
+      const turma = G.dupla.turma, aluno = G.eq[0].nome;
+      let d = G.novaRodada;
+      if (!d) {
+        const tr = montarTrilha(DADOS.temas, 'normal');
+        await rpcJ('trilha_revanche', { p_turma: turma, p_nome: aluno, p_casas: tr.casas, p_seed: Math.floor(Math.random() * 2000000000) });
+        d = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno });
+      }
+      if (d && d.existe && d.rodada > G.rodada) entrarDupla(turma, aluno, d); else $('fimMsg').textContent = 'Não foi possível iniciar a revanche agora.';
+    };
+    $('bDes').onclick = async () => {
+      const r = await rpcJ('trilha_desfazer', { p_turma: G.dupla.turma, p_nome: G.eq[0].nome });
+      if (!r || !r.ok) return ($('fimMsg').textContent = (r && r.erro) || 'Não foi possível desfazer.');
+      clearInterval(POLL); apagarSalvo(); G = null; $('fim').classList.remove('on'); voltarConfig();
+    };
+  }
   function iniciarTela() {
-    $('config').hidden = true; $('fim').classList.remove('on'); $('jogo').classList.add('on');
+    $('config').hidden = true; $('dupla').hidden = true; $('fim').classList.remove('on'); $('jogo').classList.add('on');
     ocupado = false; $('bDado').disabled = false; $('dado').textContent = '🎲'; redesenhar();
   }
 
@@ -457,7 +577,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
   $('bDado').onclick = rolar;
   $('bEncerrar').onclick = () => { if (G && !G.fim) terminar(null); };
   $('fEq').onchange = camposEquipes;
-  $('bComecar').onclick = comecar;
+  $('bComecar').onclick = iniciarFluxo;
   $('bRetomar').onclick = () => { const s = lerSalvo(); if (!s) return; G = s.G; DADOS = s.DADOS; G.histC = G.histC || {}; iniciarTela(); preCarregar(); };
 
   const API_PL = 'https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu_dupRvY-GzoHPNZhL2ft3KpSK7odGF0amqn7Yc7P/exec';
@@ -491,7 +611,6 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       } catch (e) { $('fAluno').innerHTML = '<option value="">—</option>'; msg(/carga|liber|bloque/i.test(e.message || '') ? 'A lista desta turma ainda não foi liberada. Avise o professor.' : 'Não consegui carregar os nomes. Verifique a internet e escolha a turma de novo.', true); }
     };
     $('fAluno').onchange = () => { $('bComecar').disabled = !$('fAluno').value; };
-    const s = lerSalvo(); if (s && s.G && !s.G.fim && s.DADOS && (!uma || s.DADOS.turma === uma)) { $('bRetomar').hidden = false; $('bRetomar').textContent = 'Retomar jogo salvo (' + s.G.eq[0].nome + ')'; }
     if (uma) { $('fTurma').disabled = true; $('fTurma').onchange(); } else msg('Escolha a sua turma e o seu nome.');
   }
   iniciar();
