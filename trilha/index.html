@@ -470,7 +470,8 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
         const ac = new AbortController(), tm = setTimeout(() => ac.abort(), 25000);
         const r = await fetch(API_PL + '?' + new URLSearchParams({ nc: Date.now(), api: 'alunos', id }), { redirect: 'follow', cache: 'no-store', credentials: 'omit', signal: ac.signal }).finally(() => clearTimeout(tm));
         const j = await r.json(); if (!j.ok) throw Object.assign(new Error(j.erro || 'erro'), { srv: true });
-        return (j.alunos || []).map(a => a.nome).filter(Boolean).sort((a, b) => a.localeCompare(b, 'pt'));
+        const n = (j.alunos || []).map(a => a.nome).filter(Boolean); ((id === '6º Ano A') ? ['NAOMI PAGES ROJOS'] : []).forEach(x => { if (!n.includes(x)) n.push(x); });
+        return n.sort((a, b) => a.localeCompare(b, 'pt'));
       } catch (e) { ult = e; if (e.srv) throw e; await espera(1500 * (k + 1)); }
     }
     throw ult;
