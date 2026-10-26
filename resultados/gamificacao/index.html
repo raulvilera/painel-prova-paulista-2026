@@ -17,7 +17,8 @@ td,th{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}
 .tag{display:inline-block;font-size:.72rem;padding:1px 7px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--muted)}
 .nota{font-size:.82rem;color:var(--muted);margin:8px 0}
 .btn{font:inherit;font-weight:600;color:var(--accent);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
-.scroll{overflow-x:auto}
+.scroll{overflow-x:auto}input[type=search]{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px;min-width:210px}
+th.ord{cursor:pointer;user-select:none}th.ord:hover{color:var(--accent)}.nt{font-weight:800;font-variant-numeric:tabular-nums}.nt.b{color:var(--lv0)}.nt.m{color:var(--lv1)}.nt.a{color:var(--lv2)}.parc{font-size:.7rem;color:var(--muted);font-weight:400}
 </style>
 </head>
 <body>
@@ -26,6 +27,8 @@ td,th{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}
 <nav><a href="/">← Painel</a><a href="../simulado/">Simulado SARESP →</a><a href="../individual/">Atividade individual →</a><a href="/quiz/orbit/ranking/" target="_blank" rel="noopener">Projetar ranking →</a></nav></header>
 <div class="filters">
 <div class="field"><label for="fTurma">Turma</label><select id="fTurma"><option value="">Todas as turmas</option></select></div>
+<div class="field"><label for="fAluno">Aluno</label><input id="fAluno" type="search" placeholder="Buscar pelo nome…" autocomplete="off"></div>
+<div class="field"><label for="fOrd">Ordenar por</label><select id="fOrd"><option value="turma">Turma (A–Z)</option><option value="nome">Nome do aluno (A–Z)</option><option value="nota">Nota (maior primeiro)</option><option value="pontos">Pontos (maior primeiro)</option><option value="acertos">Acertos (maior primeiro)</option><option value="recente">Atividade mais recente</option></select></div>
 <div class="field"><button class="btn" id="bCsv" type="button">Baixar CSV</button></div>
 <div class="field"><button class="btn" id="bAtu" type="button">Atualizar</button></div>
 </div>
@@ -40,6 +43,10 @@ td,th{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}
   const pct = (a, b) => b ? Math.round(a / b * 100) : null;
   const dt = s => { try { return new Date(s).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }); } catch (e) { return ''; } };
   let TOKEN = '', D = { jogadores: [], respostas: [] }, aberto = '';
+  const nota = x => Math.round(x.acertos / 12 * 100) / 10;   // 0 a 10: acertos entre as 12 perguntas do jogo
+  const nt = x => { const n = nota(x); return '<span class="nt ' + (n < 5 ? 'b' : n < 7 ? 'm' : 'a') + '">' + n.toFixed(1).replace('.', ',') + '</span>' + (x.respondidas < 12 ? ' <span class="parc">parcial</span>' : ''); };
+  const norm = v => String(v || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const cmpTurma = (a, b) => a.localeCompare(b, 'pt', { numeric: true });
 
   async function carregar() {
     const r = await fetch('/api/quiz?orbit=1', { headers: { Authorization: 'Bearer ' + TOKEN }, cache: 'no-store' });
@@ -49,34 +56,43 @@ td,th{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}
     desenhar();
   }
   function desenhar() {
-    const t = $('#fTurma').value, J = D.jogadores.filter(x => !t || x.turma === t), R = D.respostas.filter(x => !t || x.turma === t);
+    const t = $('#fTurma').value, q = norm($('#fAluno').value.trim()), J = D.jogadores.filter(x => (!t || x.turma === t) && (!q || norm(x.nome).includes(q))), R = D.respostas.filter(x => (!t || x.turma === t) && (!q || norm(x.nome).includes(q)));
     const resp = {}; R.forEach(r => (resp[r.turma + '|' + r.nome] = resp[r.turma + '|' + r.nome] || []).push(r));
     const totAc = J.reduce((a, x) => a + x.acertos, 0), totRe = J.reduce((a, x) => a + x.respondidas, 0);
-    const alunos = J.map(x => ({ x, lista: resp[x.turma + '|' + x.nome] || [] })).sort((a, b) => b.x.pontos - a.x.pontos || b.x.acertos - a.x.acertos);
+    const ord = $('#fOrd').value, cmp = {
+      turma: (a, b) => cmpTurma(a.turma, b.turma) || b.acertos - a.acertos || b.pontos - a.pontos,
+      nome: (a, b) => a.nome.localeCompare(b.nome, 'pt'),
+      nota: (a, b) => b.acertos - a.acertos || b.pontos - a.pontos,
+      pontos: (a, b) => b.pontos - a.pontos || b.acertos - a.acertos,
+      acertos: (a, b) => b.acertos - a.acertos || b.pontos - a.pontos,
+      recente: (a, b) => String(b.atualizado).localeCompare(String(a.atualizado))
+    }[ord];
+    const alunos = J.map(x => ({ x, lista: resp[x.turma + '|' + x.nome] || [] })).sort((a, b) => cmp(a.x, b.x));
     // temas: onde a turma mais errou
     const tm = {}; R.forEach(r => { const k = r.conceito; const o = tm[k] = tm[k] || { conceito: k, hab: r.habilidade, eixo: r.eixo, n: 0, ok: 0 }; o.n++; if (r.correta) o.ok++; });
     const temas = Object.values(tm).sort((a, b) => a.ok / a.n - b.ok / b.n || b.n - a.n);
     let h = '<div class="kpis"><div class="kpi"><b>' + J.length + '</b><span>alunos que jogaram</span></div><div class="kpi"><b>' + (pct(totAc, totRe) == null ? '–' : pct(totAc, totRe) + '%') + '</b><span>de acerto geral</span></div><div class="kpi"><b>' + totRe + '</b><span>respostas (total dos alunos)</span></div><div class="kpi"><b>' + R.length + '</b><span>respostas com detalhe de tema</span></div></div>';
-    h += '<div class="card"><h2>Alunos</h2><div class="nota">Clique no nome para ver as respostas dele, tema a tema. Alunos que jogaram antes do relatório detalhado têm só o total de pontos e acertos.</div><div class="scroll"><table><thead><tr><th>#</th><th>Aluno</th><th>Turma</th><th>Pontos</th><th>Acertos</th><th>Respondidas</th><th>% acerto</th><th>Última atividade</th></tr></thead><tbody>' +
+    h += '<div class="card"><h2>Alunos</h2><div class="nota">Clique no nome para ver as respostas dele, tema a tema. Alunos que jogaram antes do relatório detalhado têm só o total de pontos e acertos.</div><div class="scroll"><table><thead><tr><th>#</th><th class="ord" data-o="nome">Aluno</th><th class="ord" data-o="turma">Turma</th><th class="ord" data-o="nota">Nota (0–10)</th><th class="ord" data-o="pontos">Pontos</th><th class="ord" data-o="acertos">Acertos</th><th>Respondidas</th><th>% acerto</th><th class="ord" data-o="recente">Última atividade</th></tr></thead><tbody>' +
       (alunos.length ? alunos.map((a, i) => {
         const k = a.x.turma + '|' + a.x.nome, p = pct(a.x.acertos, a.x.respondidas);
-        let r = '<tr class="al" data-k="' + esc(k) + '"><td>' + (i + 1) + '</td><td><b>' + esc(a.x.nome) + '</b></td><td>' + esc(a.x.turma) + '</td><td>' + a.x.pontos + '</td><td>' + a.x.acertos + '</td><td>' + a.x.respondidas + '/12</td><td>' + (p == null ? '–' : p + '%') + '</td><td>' + dt(a.x.atualizado) + '</td></tr>';
-        if (aberto === k) r += '<tr class="det"><td></td><td colspan="7">' + (a.lista.length ? '<table><thead><tr><th>Pergunta</th><th>Tema</th><th>Habilidade</th><th>Marcou</th><th>Resultado</th></tr></thead><tbody>' + a.lista.sort((p, q) => (p.ordem || 0) - (q.ordem || 0)).map(z => '<tr><td>' + (z.ordem || '') + '</td><td>' + esc(z.conceito) + ' <span class="tag">' + esc(z.eixo || '') + '</span></td><td>' + esc(z.habilidade || '') + '</td><td>' + esc(z.marcada || '—') + '</td><td class="' + (z.correta ? 'ok' : 'er') + '">' + (z.correta ? '✓ acertou' : '✗ errou') + '</td></tr>').join('') + '</tbody></table>' : '<span class="muted">Sem respostas detalhadas: este aluno jogou antes de o relatório por tema existir. Os totais acima foram preservados.</span>') + '</td></tr>';
+        let r = '<tr class="al" data-k="' + esc(k) + '"><td>' + (i + 1) + '</td><td><b>' + esc(a.x.nome) + '</b></td><td>' + esc(a.x.turma) + '</td><td>' + nt(a.x) + '</td><td>' + a.x.pontos + '</td><td>' + a.x.acertos + '</td><td>' + a.x.respondidas + '/12</td><td>' + (p == null ? '–' : p + '%') + '</td><td>' + dt(a.x.atualizado) + '</td></tr>';
+        if (aberto === k) r += '<tr class="det"><td></td><td colspan="8">' + (a.lista.length ? '<table><thead><tr><th>Pergunta</th><th>Tema</th><th>Habilidade</th><th>Marcou</th><th>Resultado</th></tr></thead><tbody>' + a.lista.sort((p, q) => (p.ordem || 0) - (q.ordem || 0)).map(z => '<tr><td>' + (z.ordem || '') + '</td><td>' + esc(z.conceito) + ' <span class="tag">' + esc(z.eixo || '') + '</span></td><td>' + esc(z.habilidade || '') + '</td><td>' + esc(z.marcada || '—') + '</td><td class="' + (z.correta ? 'ok' : 'er') + '">' + (z.correta ? '✓ acertou' : '✗ errou') + '</td></tr>').join('') + '</tbody></table>' : '<span class="muted">Sem respostas detalhadas: este aluno jogou antes de o relatório por tema existir. Os totais acima foram preservados.</span>') + '</td></tr>';
         return r;
-      }).join('') : '<tr><td colspan="8" class="muted">Nenhum aluno jogou ainda.</td></tr>') + '</tbody></table></div></div>';
+      }).join('') : '<tr><td colspan="9" class="muted">Nenhum aluno encontrado com esses filtros.</td></tr>') + '</tbody></table></div></div>';
     h += '<div class="card" style="margin-top:14px"><h2>Temas em que a turma mais errou no jogo</h2><div class="nota">Do menor para o maior % de acerto. Mostra onde reforçar antes do SARESP.</div>' +
       (temas.length ? temas.map(x => { const p = pct(x.ok, x.n); return '<div class="bar"><div class="nm">' + esc(x.conceito) + '<small>' + esc(x.eixo || '') + ' · ' + esc(x.hab || '') + ' · ' + x.n + ' respostas</small></div><div class="track"><i style="width:' + p + '%;background:' + (p < 50 ? 'var(--lv0)' : p < 75 ? 'var(--lv1)' : 'var(--lv2)') + ';display:block;height:10px;border-radius:6px"></i></div><div class="val"><b>' + p + '%</b></div></div>'; }).join('') : '<div class="muted">Os temas aparecem aqui conforme os alunos responderem a partir de agora.</div>') + '</div>';
     app(h);
+    document.querySelectorAll('th.ord').forEach(th => th.onclick = () => { $('#fOrd').value = th.dataset.o; desenhar(); });
     document.querySelectorAll('tr.al').forEach(tr => tr.onclick = () => { aberto = aberto === tr.dataset.k ? '' : tr.dataset.k; desenhar(); });
   }
   function csv() {
     const t = $('#fTurma').value, L = [['Turma', 'Aluno', 'Pergunta', 'Tema', 'Eixo', 'Habilidade', 'Marcou', 'Resultado', 'Data']];
     D.respostas.filter(x => !t || x.turma === t).forEach(r => L.push([r.turma, r.nome, r.ordem, r.conceito, r.eixo, r.habilidade, r.marcada, r.correta ? 'acertou' : 'errou', r.criado]));
-    D.jogadores.filter(x => !t || x.turma === t).forEach(j => L.push([j.turma, j.nome, 'TOTAL', '', '', '', '', j.acertos + '/' + j.respondidas + ' acertos · ' + j.pontos + ' pts', j.atualizado]));
+    D.jogadores.filter(x => !t || x.turma === t).forEach(j => L.push([j.turma, j.nome, 'TOTAL', '', '', '', '', j.acertos + '/' + j.respondidas + ' acertos · ' + j.pontos + ' pts · nota ' + nota(j).toFixed(1).replace('.', ','), j.atualizado]));
     const txt = '﻿' + L.map(l => l.map(c => '"' + String(c == null ? '' : c).replace(/"/g, '""') + '"').join(';')).join('\n');
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/csv;charset=utf-8' })); a.download = 'gamificacao-orbit.csv'; a.click();
   }
-  $('#fTurma').onchange = desenhar; $('#bCsv').onclick = csv;
+  $('#fTurma').onchange = desenhar; $('#fOrd').onchange = desenhar; $('#fAluno').oninput = desenhar; $('#bCsv').onclick = csv;
   $('#bAtu').onclick = () => carregar().catch(e => app('<div class="card">' + esc(e.message) + '</div>'));
   (async function () {
     try {
