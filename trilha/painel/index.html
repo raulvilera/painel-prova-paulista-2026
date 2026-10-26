@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Trilha SARESP · Ao vivo</title>
+<style>
+:root{--bg:#071525;--card:#0b2a44;--ac:#6fc9ee;--ok:#5fcf80;--no:#ff7b7b;--am:#f2c14e}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#0f3a5c,var(--bg) 65%);color:#fff;font-family:system-ui,sans-serif;min-height:100vh;padding:18px 22px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+h1{margin:0;font-size:clamp(20px,3vw,34px);flex:1}h2{margin:0 0 10px;font-size:18px}
+select,input,button{font:inherit;color:#fff;background:var(--card);border:1px solid #6fc9ee88;border-radius:10px;padding:8px 12px}button{cursor:pointer}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.kpi,.card{background:#ffffff10;border:1px solid #6fc9ee33;border-radius:14px;padding:14px}.kpi b{display:block;font-size:clamp(24px,4vw,40px);color:var(--ac)}.kpi span{opacity:.75;font-size:13px}
+.card{margin-bottom:16px;overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:15px}th,td{padding:8px 10px;text-align:left;border-bottom:1px solid #ffffff18;white-space:nowrap}th{font-size:12px;opacity:.7;text-transform:uppercase;letter-spacing:.05em}
+.bar{display:inline-block;width:140px;height:10px;background:#ffffff22;border-radius:9px;vertical-align:middle;overflow:hidden}.bar i{display:block;height:100%;background:var(--ac)}
+.bar.ok i{background:var(--ok)}.bar.no i{background:var(--no)}
+.tag{padding:2px 9px;border-radius:99px;font-size:12px}.jog{background:#2d7a4a}.fim{background:#6b5aa8}.par{background:#555}
+.nota{opacity:.7;font-size:13px;margin:0 0 10px}.st{opacity:.65;font-size:13px;text-align:center}.vz{padding:30px;text-align:center;opacity:.75}
+tr.al{cursor:pointer}tr.al:hover{background:#ffffff0c}.det td{background:#00000030;white-space:normal}
+</style></head><body>
+<header><h1>🎲 Trilha SARESP · desempenho ao vivo</h1><select id="fT"><option value="">Todas as turmas</option></select><input id="fN" placeholder="Buscar aluno" type="search"><select id="fO"><option value="at">Mais recente</option><option value="casa">Casa (maior)</option><option value="pts">Pontos</option><option value="pa">% acerto (maior)</option><option value="pb">% acerto (menor)</option><option value="nome">Nome</option></select><button id="cp">🔗 Copiar link dos alunos</button><button id="fs">⛶ Tela cheia</button></header>
+<div class="kpis" id="kpis"></div>
+<div class="card"><h2>Alunos</h2><p class="nota">Clique no aluno para ver as respostas dele. “Jogando” = atividade nos últimos 3 minutos.</p><div id="alunos"></div></div>
+<div class="card"><h2>Temas em que a turma mais errou</h2><p class="nota">Do menor para o maior % de acerto (somando as respostas de todos os alunos do filtro).</p><div id="temas"></div></div>
+<div class="st" id="st">Carregando…</div>
+<script>
+const SB='https://oxohpnappygkmwjyowvq.supabase.co',KEY='sb_publishable_EjJenZkxMWv_I6vXWTz6aQ_iz9XEU4N';
+const $=id=>document.getElementById(id),esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pct=(a,b)=>b?Math.round(a/b*100):null,bar=(p,cl)=>'<span class="bar '+(cl||'')+'"><i style="width:'+(p||0)+'%"></i></span>';
+let D={jogadores:[],respostas:[]},aberto=null;
+const ts=x=>new Date(x).getTime();
+async function carregar(){
+  try{const r=await fetch(SB+'/rest/v1/rpc/trilha_painel',{method:'POST',headers:{apikey:KEY,Authorization:'Bearer '+KEY,'Content-Type':'application/json'},body:'{}'});
+    if(!r.ok)throw 0;D=await r.json();
+    const ats=$('fT').value,ts_=[...new Set(D.jogadores.map(x=>x.turma))].sort((a,b)=>a.localeCompare(b,'pt'));
+    $('fT').innerHTML='<option value="">Todas as turmas</option>'+ts_.map(t=>'<option'+(t===ats?' selected':'')+'>'+esc(t)+'</option>').join('');
+    $('st').textContent='Atualiza sozinho a cada 4 segundos · '+new Date().toLocaleTimeString('pt-BR');
+  }catch(e){$('st').textContent='Sem conexão. Tentando de novo…'}
+  desenhar();
+}
+function desenhar(){
+  const t=$('fT').value,q=$('fN').value.trim().toUpperCase(),agora=Date.now();
+  let J=D.jogadores.filter(x=>(!t||x.turma===t)&&(!q||x.nome.toUpperCase().includes(q)));
+  const R=D.respostas.filter(x=>(!t||x.turma===t)&&(!q||x.nome.toUpperCase().includes(q)));
+  const jog=J.filter(x=>!x.fim&&agora-ts(x.atualizado)<180000).length,fim=J.filter(x=>x.fim).length;
+  const ac=J.reduce((s,x)=>s+x.acertos,0),te=J.reduce((s,x)=>s+x.tentativas,0),prog=J.length?Math.round(J.reduce((s,x)=>s+(x.total_casas?Math.min(100,x.casa/(x.total_casas+1)*100):0),0)/J.length):0;
+  $('kpis').innerHTML=[[J.length,'alunos que entraram'],[jog,'jogando agora'],[fim,'terminaram'],[pct(ac,te)==null?'–':pct(ac,te)+'%','de acerto geral'],[prog+'%','progresso médio na trilha']].map(k=>'<div class="kpi"><b>'+k[0]+'</b><span>'+k[1]+'</span></div>').join('');
+  const o=$('fO').value,p=x=>pct(x.acertos,x.tentativas);
+  J=J.slice().sort({at:(a,b)=>ts(b.atualizado)-ts(a.atualizado),casa:(a,b)=>b.casa-a.casa||b.pontos-a.pontos,pts:(a,b)=>b.pontos-a.pontos,pa:(a,b)=>(p(b)??-1)-(p(a)??-1),pb:(a,b)=>(p(a)??101)-(p(b)??101),nome:(a,b)=>a.nome.localeCompare(b.nome,'pt')}[o]);
+  if(!J.length)$('alunos').innerHTML='<div class="vz">Nenhum aluno jogou ainda. Os nomes aparecem aqui assim que entrarem.</div>';
+  else $('alunos').innerHTML='<table><thead><tr><th>Aluno</th><th>Turma</th><th>Situação</th><th>Progresso</th><th>Pontos</th><th>Acertos</th><th>% acerto</th><th>Última atividade</th></tr></thead><tbody>'+J.map(x=>{
+    const k=x.turma+'|'+x.nome,vivo=!x.fim&&agora-ts(x.atualizado)<180000,pr=x.total_casas?Math.min(100,Math.round(x.casa/(x.total_casas+1)*100)):0,pc=p(x);
+    let h='<tr class="al" data-k="'+esc(k)+'"><td><b>'+esc(x.nome)+'</b></td><td>'+esc(x.turma)+'</td><td><span class="tag '+(x.fim?'fim':vivo?'jog':'par')+'">'+(x.fim?'Terminou':vivo?'Jogando':'Parou')+'</span></td><td>'+bar(pr)+' '+pr+'%</td><td>'+x.pontos+'</td><td>'+x.acertos+'/'+x.tentativas+'</td><td>'+(pc==null?'–':pc+'%')+'</td><td>'+new Date(x.atualizado).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})+'</td></tr>';
+    if(aberto===k){const L=D.respostas.filter(r=>r.turma===x.turma&&r.nome===x.nome).sort((a,b)=>a.ordem-b.ordem);
+      h+='<tr class="det"><td colspan="8">'+(L.length?'<table><thead><tr><th>#</th><th>Bim.</th><th>Habilidade</th><th>Tema</th><th>Marcou</th><th>Resultado</th></tr></thead><tbody>'+L.map(r=>'<tr><td>'+r.ordem+'</td><td>'+esc(r.bimestre)+'º</td><td>'+esc(r.habilidade)+'</td><td style="white-space:normal">'+esc(r.descricao)+'</td><td>'+esc(r.marcada||'—')+'</td><td style="color:var(--'+(r.correta?'ok':'no')+')"><b>'+(r.correta?'✓ acertou':'✗ errou')+'</b></td></tr>').join('')+'</tbody></table>':'<span class="nota">Ainda sem respostas nesta partida.</span>')+'</td></tr>'}
+    return h}).join('')+'</tbody></table>';
+  const T={};R.forEach(r=>{const k=r.habilidade+'|'+r.descricao,o=T[k]=T[k]||{hab:r.habilidade,desc:r.descricao,bim:r.bimestre,n:0,ok:0};o.n++;if(r.correta)o.ok++});
+  const L=Object.values(T).sort((a,b)=>a.ok/a.n-b.ok/b.n||b.n-a.n);
+  $('temas').innerHTML=L.length?'<table><thead><tr><th>Bim.</th><th>Habilidade</th><th>Tema</th><th>Respostas</th><th>% acerto</th></tr></thead><tbody>'+L.map(x=>{const q=pct(x.ok,x.n);return '<tr><td>'+esc(x.bim)+'º</td><td>'+esc(x.hab)+'</td><td style="white-space:normal">'+esc(x.desc)+'</td><td>'+x.ok+'/'+x.n+'</td><td>'+bar(q,q<50?'no':'ok')+' '+q+'%</td></tr>'}).join('')+'</tbody></table>':'<div class="vz">Sem respostas ainda.</div>';
+}
+document.addEventListener('click',e=>{const tr=e.target.closest&&e.target.closest('tr.al');if(!tr)return;aberto=aberto===tr.dataset.k?null:tr.dataset.k;desenhar()});
+['fT','fO'].forEach(i=>$(i).onchange=desenhar);$('fN').oninput=desenhar;
+$('cp').onclick=()=>{const u=location.origin+'/trilha/';(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>{$('cp').textContent='✓ Copiado: '+u},()=>{prompt('Copie o link:',u)})};
+$('fs').onclick=()=>document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();
+carregar();setInterval(carregar,4000);
+</script><script src="/voltar-painel.js" data-sempre defer></script></body></html>

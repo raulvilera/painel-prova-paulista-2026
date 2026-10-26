@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Trilha SARESP · Ciências</title>
+<style>
+:root{
+  --bg:#f3f5f1;--card:#ffffff;--ink:#17231c;--mut:#5d6b62;--line:#d9e0da;--pri:#165c36;--pri2:#1f7a49;
+  --ok:#1e7d3c;--okbg:#e3f4e7;--err:#b3261e;--errbg:#fbe6e4;--warn:#9a6700;--warnbg:#fff4d6;
+  --b1:#2f6fb5;--b2:#c26a12;--b3:#7a4bb3;--b4:#1f8a70;--assocbg:#e8f0fb;
+  --t1:#d1342f;--t2:#2a64c9;--t3:#e0a100;--t4:#7b3fb8;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--pri2:#7fd4a5;
+  --ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19;--warn:#f0c14b;--warnbg:#3a3015;--assocbg:#16233a;
+}}
+:root[data-theme="dark"]{
+  --bg:#101612;--card:#18211b;--ink:#e8efe9;--mut:#9fb0a5;--line:#2c3a31;--pri:#5cc08a;--pri2:#7fd4a5;
+  --ok:#6fd38f;--okbg:#173322;--err:#ff8a80;--errbg:#3a1b19;--warn:#f0c14b;--warnbg:#3a3015;--assocbg:#16233a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 "Segoe UI",Roboto,Arial,sans-serif}
+button,select,input{font:inherit;color:inherit}
+.wrap{max-width:1400px;margin:0 auto;padding:16px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px}
+h1{margin:0;font-size:1.5rem;color:var(--pri)}
+.muted{color:var(--mut)}.sm{font-size:.9rem}
+nav a{color:var(--pri);text-decoration:none;margin-left:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.btn{background:var(--pri);color:#fff;border:0;border-radius:10px;padding:10px 18px;font-weight:600;cursor:pointer}
+.btn:disabled{opacity:.45;cursor:default}
+.btn.sec{background:transparent;color:var(--pri);border:2px solid var(--pri)}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:end}
+label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600;color:var(--mut)}
+select,input[type=text]{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:160px}
+#msg{margin:10px 0 0}
+#msg.erro{color:var(--err)}
+/* ---------- jogo ---------- */
+#jogo{display:none;grid-template-columns:minmax(0,1fr) 300px;gap:16px;align-items:start}
+#jogo.on{display:grid}
+.board{display:grid;grid-template-columns:repeat(var(--cols,8),minmax(0,1fr));gap:8px}
+.casa{position:relative;border-radius:12px;border:2px solid var(--line);background:var(--card);min-height:86px;padding:6px 7px 22px;cursor:help;overflow:hidden}
+.casa .num{font-size:.75rem;font-weight:700;color:var(--mut)}
+.casa .hab{font-size:.78rem;font-weight:700;line-height:1.15;margin-top:2px}
+.casa .bim{position:absolute;left:0;right:0;top:0;height:6px}
+.casa.b1 .bim{background:var(--b1)}.casa.b2 .bim{background:var(--b2)}.casa.b3 .bim{background:var(--b3)}.casa.b4 .bim{background:var(--b4)}
+.casa.desafio{border-color:var(--warn);background:var(--warnbg)}
+.casa .ico{position:absolute;right:6px;top:8px;font-size:1rem}
+.casa.ini,.casa.fim{display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;background:var(--pri);border-color:var(--pri);padding:6px;cursor:default}
+.casa.ini .num,.casa.fim .num{display:none}
+.pinos{position:absolute;left:6px;bottom:4px;display:flex;gap:3px}
+.pino{width:18px;height:18px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.35);transition:transform .25s}
+.pino.vez{transform:scale(1.25)}
+.side{display:flex;flex-direction:column;gap:12px;position:sticky;top:12px}
+.dado{font-size:4.2rem;line-height:1;text-align:center;margin:6px 0;min-height:70px;user-select:none}
+.dado.rola{animation:rola .5s linear infinite}
+@keyframes rola{to{transform:rotate(360deg)}}
+.equipe{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;border:2px solid transparent}
+.equipe.vez{border-color:var(--pri);background:var(--okbg)}
+.equipe .cor{width:20px;height:20px;border-radius:50%;flex:none}
+.equipe .nm{flex:1;font-weight:700}
+.equipe .pt{font-weight:800;font-size:1.15rem}
+.leg{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:.82rem}
+.leg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:4px;vertical-align:-1px}
+/* ---------- questão (tela cheia, para projetar) ---------- */
+#qbox{position:fixed;inset:0;background:rgba(10,20,14,.6);display:none;align-items:flex-start;justify-content:center;padding:2vh 2vw;z-index:10;overflow:auto}
+#qbox.on{display:flex}
+.qcard{background:var(--card);color:var(--ink);border-radius:18px;max-width:1150px;width:100%;padding:22px 28px;font-size:clamp(17px,1.55vw,24px);box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.qtop{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:10px;font-size:.8em}
+.tag{display:inline-block;border-radius:999px;padding:3px 12px;font-weight:700;background:var(--okbg);color:var(--pri)}
+.tag.des{background:var(--warnbg);color:var(--warn)}
+.timer{font-weight:800;font-variant-numeric:tabular-nums}
+.timer.fim{color:var(--err)}
+.qdesc{color:var(--mut);font-size:.78em;margin:0 0 8px}
+.qcom{font-weight:700;margin:10px 0}
+.alts{display:grid;gap:10px;margin-top:10px}
+.alt{display:flex;gap:12px;align-items:flex-start;text-align:left;background:var(--bg);border:2px solid var(--line);border-radius:12px;padding:10px 14px;cursor:pointer}
+.alt b{flex:none;width:1.8em;height:1.8em;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--pri);color:#fff}
+.alt:hover:not(:disabled){border-color:var(--pri)}
+.alt.certa{border-color:var(--ok);background:var(--okbg)}
+.alt.errada{border-color:var(--err);background:var(--errbg)}
+.alt:disabled{cursor:default}
+.res{margin-top:14px;padding:12px 16px;border-radius:12px;display:none}
+.res.on{display:block}
+.res.ok{background:var(--okbg)}.res.no{background:var(--errbg)}
+.qfim{display:flex;justify-content:flex-end;gap:10px;margin-top:14px}
+figure.infog{margin:10px 0;background:#fff;color:#17231c;border:1px solid var(--line);border-radius:10px;padding:8px;overflow:auto}
+figure.infog figcaption{font-weight:700;font-size:.85em;margin-bottom:6px}
+figure.infog table{border-collapse:collapse;width:100%;font-size:.85em}
+figure.infog th,figure.infog td{border:1px solid #cfd8d2;padding:4px 8px;text-align:left}
+figure.infog th{background:#eef4ef}
+figure.ilus svg{display:block;width:100%;max-width:620px;height:auto;margin:0 auto}
+.bars .b{display:grid;grid-template-columns:minmax(80px,30%) 1fr auto;gap:8px;align-items:center;font-size:.85em;margin:3px 0}
+.bars .bt{background:#e4ebe6;border-radius:4px;height:14px;overflow:hidden}.bars .bt i{display:block;height:100%;background:#2f6fb5}
+.steps{margin:0;padding-left:1.4em;font-size:.9em}
+/* ---------- imagem e definição ---------- */
+.casa.assoc{border-color:var(--b1);background:var(--assocbg)}
+.casa.assoc .hab{color:var(--b1)}
+.acards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:12px 0}
+.acard{position:relative;border:3px solid var(--line);border-radius:14px;background:var(--bg);padding:0;cursor:pointer;overflow:hidden;text-align:left;display:flex;flex-direction:column}
+.acard.sel{border-color:var(--pri);box-shadow:0 0 0 4px var(--okbg)}
+.acard .foto{aspect-ratio:4/3;background:#fff;display:flex;align-items:center;justify-content:center;font-size:4.5em;overflow:hidden}
+.acard .foto img{width:100%;height:100%;object-fit:cover;display:block}
+.acard .n{position:absolute;left:8px;top:8px;width:1.7em;height:1.7em;border-radius:50%;background:var(--pri);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+.acard .par{position:absolute;right:8px;top:8px;min-width:1.7em;height:1.7em;padding:0 .4em;border-radius:999px;background:var(--warn);color:#fff;font-weight:800;display:none;align-items:center;justify-content:center}
+.acard .par.on{display:flex}
+.acard .nome{padding:6px 10px;font-weight:800;display:none}
+.acard .cred{font-size:.5em;color:var(--mut);padding:2px 8px 6px;line-height:1.2}
+.acard.certa{border-color:var(--ok)}.acard.certa .nome{display:block;background:var(--okbg)}
+.acard.errada{border-color:var(--err)}.acard.errada .nome{display:block;background:var(--errbg)}
+.defs{display:grid;gap:10px}
+.def{display:flex;gap:12px;align-items:flex-start;text-align:left;background:var(--bg);border:2px solid var(--line);border-radius:12px;padding:10px 14px;cursor:pointer}
+.def b{flex:none;width:1.8em;height:1.8em;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--b1);color:#fff}
+.def .lig{margin-left:auto;font-weight:800;color:var(--warn);white-space:nowrap}
+.def:disabled{cursor:default}
+@media (max-width:700px){.acards{grid-template-columns:1fr}}
+/* ---------- fim ---------- */
+#fim{display:none}#fim.on{display:block}
+table.rel{border-collapse:collapse;width:100%;font-size:.95rem}
+table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.pod{display:flex;flex-wrap:wrap;gap:12px;margin:10px 0 16px}
+.pod .equipe{border-color:var(--line)}
+@media (max-width:900px){#jogo.on{grid-template-columns:1fr}.side{position:static}.board{--cols:5!important}}
+</style></head>
+<body><div class="wrap">
+<header><div><h1>Trilha SARESP · Ciências</h1><div class="muted sm">Role o dado, ande pela trilha e responda às questões do SARESP. Cada acerto leva você mais longe!</div></div></header>
+
+<section class="card" id="config">
+  <div class="row">
+    <label>Turma<select id="fTurma"></select></label>
+    <label>Seu nome<select id="fAluno" disabled><option value="">Escolha a turma primeiro</option></select></label>
+    <button class="btn" id="bComecar" disabled>Começar</button>
+    <button class="btn sec" id="bRetomar" hidden>Retomar jogo salvo</button>
+  </div>
+  <div hidden><select id="fEq"><option selected>1</option></select><select id="fTempo"><option value="90" selected>90</option></select><select id="fTam"><option value="normal" selected>normal</option></select><div id="nomesEq"></div></div>
+  <p id="msg" class="muted sm"></p>
+</section>
+
+<section id="jogo">
+  <div class="card"><div class="board" id="board"></div>
+    <div class="leg muted" style="margin-top:12px"><span><i style="background:var(--b1)"></i>1º bimestre</span><span><i style="background:var(--b2)"></i>2º bimestre</span><span><i style="background:var(--b3)"></i>3º bimestre</span><span><i style="background:var(--b4)"></i>4º bimestre</span><span>⚡ Desafio: tema importante para a turma, vale o dobro</span><span>🖼️ Imagem e definição: ligar cada foto ao conceito certo</span></div>
+  </div>
+  <aside class="side">
+    <div class="card"><div class="muted sm" id="vezTxt"></div><div class="dado" id="dado" aria-live="polite">🎲</div>
+      <button class="btn" id="bDado" style="width:100%">Rolar o dado (espaço)</button></div>
+    <div class="card" id="placar"></div>
+    <div class="card sm"><b>Regras</b><ul style="margin:6px 0 0;padding-left:1.2em">
+      <li>Role o dado e ande. Você responde à questão do tema da casa.</li>
+      <li>Acertou: fica na casa e ganha 10 pontos (⚡ 20).</li>
+      <li>Errou: volta para onde estava. A turma vê a explicação.</li>
+      <li>🖼️ Ligue as 3 fotos às 3 definições: 5 pontos por par certo; com 2 ou 3 pares certos você fica na casa.</li>
+      <li>Chegue à última casa para completar a trilha!</li></ul>
+      <button class="btn sec" id="bEncerrar" style="margin-top:10px;width:100%">Encerrar e ver meu resultado</button></div>
+  </aside>
+</section>
+
+<section class="card" id="fim"></section>
+</div>
+
+<div id="qbox" role="dialog" aria-modal="true" aria-labelledby="qTit"><div class="qcard" id="qcard"></div></div>
+
+<script>
+(function(){
+    const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const CORES = ['var(--t1)', 'var(--t2)', 'var(--t3)', 'var(--t4)'];
+  const LETRA = 'ABCDE';
+  const DADO = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+  const SAVE = 'trilha_saresp_aluno_v1';
+  let TOKEN = '', DADOS = null, G = null, ocupado = false, relogio = null;
+
+  const msg = (t, erro) => { $('msg').className = erro ? 'erro sm' : 'muted sm'; $('msg').innerHTML = t; };
+  const guardar = () => { try { localStorage.setItem(SAVE, JSON.stringify({ G, DADOS })); } catch (e) {} enviarProg(); };
+  const lerSalvo = () => { try { return JSON.parse(localStorage.getItem(SAVE) || 'null'); } catch (e) { return null; } };
+  const apagarSalvo = () => { try { localStorage.removeItem(SAVE); } catch (e) {} };
+
+  const SBG = 'https://oxohpnappygkmwjyowvq.supabase.co', KEYG = 'sb_publishable_EjJenZkxMWv_I6vXWTz6aQ_iz9XEU4N';
+  const rpc = (fn, b) => fetch(SBG + '/rest/v1/rpc/' + fn, { method: 'POST', headers: { apikey: KEYG, Authorization: 'Bearer ' + KEYG, 'Content-Type': 'application/json' }, body: JSON.stringify(b), keepalive: true }).catch(() => {});
+  function enviarProg() { if (!G || !G.eq[0] || !DADOS) return; const e = G.eq[0]; rpc('trilha_progresso', { p_turma: DADOS.turma, p_nome: e.nome, p_casa: e.pos, p_pontos: e.pts, p_acertos: e.acertos || 0, p_tent: e.tent || 0, p_fim: !!G.fim }); }
+  async function api(q) {
+    const u = q.turma ? '?trilha=' + encodeURIComponent(q.turma) : '?foto=' + encodeURIComponent(q.img);
+    const r = await fetch('/api/jogo' + u);
+    const j = await r.json().catch(() => ({ ok: false, erro: 'Resposta inesperada do servidor.' }));
+    if (!j.ok) throw Object.assign(new Error(j.erro || 'Erro'), { status: r.status });
+    return j;
+  }
+
+  /* ---------- montagem da trilha ---------- */
+  function embaralhar(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  function montarTrilha(temas, tam) {
+    const porDef = temas.slice().sort((a, b) => b.defasagem - a.defasagem);
+    const desafio = new Set(porDef.filter(t => t.defasagem > 0).slice(0, 5).map(t => t.k));
+    let base;
+    if (tam === 'curta') base = porDef.slice(0, Math.min(16, porDef.length));   // os temas que mais precisam de revisão
+    else base = temas.slice();                                                   // todos os temas do SARESP da série
+    const extras = porDef.filter(t => t.defasagem >= 40).slice(0, tam === 'longa' ? 14 : tam === 'normal' ? 8 : 4);
+    // distribui: cada bimestre aparece espalhado e os temas extras (repetidos) não ficam colados ao original
+    const casas = embaralhar(base.map(t => t.k)), rep = embaralhar(extras.map(t => t.k));
+    rep.forEach(k => {
+      let pos, tent = 0;
+      do { pos = Math.floor(Math.random() * (casas.length + 1)); tent++; }
+      while (tent < 40 && (casas[pos - 1] === k || casas[pos] === k || Math.abs(casas.indexOf(k) - pos) < 4));
+      casas.splice(pos, 0, k);
+    });
+    const out = casas.map(k => ({ k, des: desafio.has(k) }));
+    // casas "Imagem e definição": uma a cada 6 casas, mais ou menos
+    if ((DADOS.conceitos || []).length >= 3) for (let i = 4; i < out.length; i += 6) out.splice(i, 0, { assoc: true });
+    return { casas: out, desafio: [...desafio] };
+  }
+
+  /* ---------- desenho ---------- */
+  const temaDe = k => DADOS.temas.find(t => t.k === k);
+  function desenharTabuleiro() {
+    const n = G.casas.length + 2, cols = n > 48 ? 10 : n > 30 ? 9 : 8;
+    $('board').style.setProperty('--cols', cols);
+    const cel = [];
+    for (let i = 0; i < n; i++) {
+      const pinos = G.eq.map((e, ix) => e.pos === i ? `<span class="pino${ix === G.vez ? ' vez' : ''}" style="background:${CORES[ix]}" title="${esc(e.nome)}"></span>` : '').join('');
+      if (i === 0) { cel.push(`<div class="casa ini">Início<div class="pinos">${pinos}</div></div>`); continue; }
+      if (i === n - 1) { cel.push(`<div class="casa fim">🏁 Chegada<div class="pinos">${pinos}</div></div>`); continue; }
+      const c = G.casas[i - 1];
+      if (c.assoc) { cel.push(`<div class="casa assoc" title="Imagem e definição: ligar fotos de conceitos às suas definições"><span class="bim" style="background:var(--b1)"></span><div class="num">${i}</div><div class="hab">🖼️ Imagem e definição</div><div class="pinos">${pinos}</div></div>`); continue; }
+      const t = temaDe(c.k);
+      cel.push(`<div class="casa b${esc(t.bim)}${c.des ? ' desafio' : ''}" title="${esc(t.bim)}º bim. · ${esc(t.hab)} · ${esc(t.desc)}"><span class="bim"></span><div class="num">${i}</div><div class="hab">${esc(t.hab)}</div>${c.des ? '<span class="ico">⚡</span>' : ''}<div class="pinos">${pinos}</div></div>`);
+    }
+    // trilha em zigue-zague: linhas ímpares de trás para frente
+    const linhas = [];
+    for (let i = 0; i < cel.length; i += cols) linhas.push(cel.slice(i, i + cols));
+    $('board').innerHTML = linhas.map((l, r) => { if (r % 2) { l = l.slice().reverse(); while (l.length < cols) l.unshift('<div></div>'); } return l.join(''); }).join('');
+  }
+  function desenharPlacar() {
+    $('placar').innerHTML = '<b>Placar</b>' + G.eq.map((e, i) => `<div class="equipe${i === G.vez ? ' vez' : ''}"><span class="cor" style="background:${CORES[i]}"></span><span class="nm">${esc(e.nome)}</span><span class="muted sm">casa ${e.pos}</span><span class="pt">${e.pts}</span></div>`).join('');
+    $('vezTxt').innerHTML = `Vez de <b>${esc(G.eq[G.vez].nome)}</b>`;
+  }
+  const redesenhar = () => { desenharTabuleiro(); desenharPlacar(); };
+
+  function figura(f) {
+    if (!f) return '';
+    const cap = f.titulo ? `<figcaption>${esc(f.titulo)}</figcaption>` : '';
+    if (f.tipo === 'tabela') return `<figure class="infog">${cap}<table><thead><tr>${f.colunas.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${f.linhas.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></figure>`;
+    if (f.tipo === 'barras') { const max = Math.max(...f.itens.map(i => i.valor)) || 1; return `<figure class="infog">${cap}<div class="bars">${f.itens.map(i => `<div class="b"><span>${esc(i.rotulo)}</span><span class="bt"><i style="width:${Math.max(3, i.valor / max * 100)}%"></i></span><span>${esc(String(i.valor).replace('.', ','))}${f.unidade ? ' ' + esc(f.unidade) : ''}</span></div>`).join('')}</div></figure>`; }
+    if (f.tipo === 'etapas') return `<figure class="infog">${cap}<ol class="steps">${f.etapas.map(e => `<li>${esc(e)}</li>`).join('')}</ol></figure>`;
+    return '';
+  }
+
+  /* ---------- turno ---------- */
+  function rolar() {
+    if (ocupado || !G || G.fim) return;
+    ocupado = true; $('bDado').disabled = true;
+    const d = $('dado'); d.classList.add('rola');
+    let k = 0; const it = setInterval(() => { d.textContent = DADO[Math.floor(Math.random() * 6)]; if (++k > 8) { clearInterval(it); fimRolagem(); } }, 70);
+  }
+  function fimRolagem() {
+    const v = 1 + Math.floor(Math.random() * 6), d = $('dado'); d.classList.remove('rola'); d.textContent = DADO[v - 1];
+    const e = G.eq[G.vez], ult = G.casas.length + 1, de = e.pos;
+    let para = Math.min(ult, e.pos + v);
+    // anda casa a casa para a turma acompanhar
+    let p = e.pos; const passo = setInterval(() => {
+      p++; e.pos = p; redesenhar();
+      if (p >= para) { clearInterval(passo); setTimeout(() => chegou(de), 350); }
+    }, 220);
+  }
+  function chegou(de) {
+    const e = G.eq[G.vez];
+    if (e.pos >= G.casas.length + 1) {   // última casa antes da chegada vale a vitória direta
+      G.fim = true; guardar(); ocupado = false; return terminar(G.vez);
+    }
+    const c = G.casas[e.pos - 1];
+    if (c.assoc) return abrirAssociacao(de);
+    const t = temaDe(c.k);
+    const ix = (G.usadas[c.k] || 0) % t.qs.length; G.usadas[c.k] = (G.usadas[c.k] || 0) + 1;
+    abrirQuestao(t, t.qs[ix], c.des, de);
+  }
+
+  function abrirQuestao(t, q, des, de) {
+    const e = G.eq[G.vez], tempo = +G.tempo;
+    $('qcard').innerHTML = `
+      <div class="qtop"><span><span class="tag" style="background:${CORES[G.vez]};color:#fff">${esc(e.nome)}</span> <span class="tag">${esc(t.bim)}º bimestre · ${esc(t.hab)}</span>${des ? ' <span class="tag des">⚡ Desafio · vale 20</span>' : ''}</span>${tempo ? `<span class="timer" id="tmr"></span>` : ''}</div>
+      <p class="qdesc" id="qTit">${esc(t.desc)}</p>
+      <div>${esc(q.enunciado)}</div>
+      ${q.svg ? `<figure class="infog ilus" role="img" aria-label="Ilustração da questão">${q.svg}</figure>` : ''}${figura(q.figura)}
+      <div class="qcom">${esc(q.comando || '')}</div>
+      <div class="alts">${q.alts.map((a, i) => `<button class="alt" data-i="${i}"><b>${LETRA[i]}</b><span>${esc(a)}</span></button>`).join('')}</div>
+      <div class="res" id="res"></div>
+      <div class="qfim"><button class="btn" id="bSeguir" hidden>Continuar</button></div>`;
+    $('qbox').classList.add('on'); $('qbox').scrollTop = 0;
+    const alts = [...$('qcard').querySelectorAll('.alt')];
+    const responder = i => {
+      if (G.respondido) return; G.respondido = true; clearInterval(relogio);
+      const ok = i === q.correta;
+      alts.forEach((b, j) => { b.disabled = true; if (j === q.correta) b.classList.add('certa'); else if (j === i) b.classList.add('errada'); });
+      const r = $('res'); r.className = 'res on ' + (ok ? 'ok' : 'no');
+      const pts = ok ? (des ? 20 : 10) : 0;
+      r.innerHTML = (ok ? `<b>Acertou! +${pts} pontos.</b>` : `<b>${i < 0 ? 'Tempo esgotado.' : 'Não foi dessa vez.'} A resposta certa é ${LETRA[q.correta]}.</b> ${esc(e.nome)} volta para a casa ${de}.`) + (q.explicacao ? `<div style="margin-top:6px">${esc(q.explicacao)}</div>` : '');
+      e.pts += pts; if (!ok) e.pos = de;
+      const h = G.hist[t.k] || (G.hist[t.k] = { a: 0, n: 0 }); h.n++; if (ok) h.a++;
+      e.acertos = (e.acertos || 0) + (ok ? 1 : 0); e.tent = (e.tent || 0) + 1;
+      rpc('trilha_responder', { p_turma: DADOS.turma, p_nome: e.nome, p_ordem: e.tent, p_tema: t.k, p_hab: t.hab, p_bim: t.bim, p_desc: t.desc, p_correta: ok, p_marcada: i >= 0 ? LETRA[i] : '' });
+      const b = $('bSeguir'); b.hidden = false; b.focus();
+      guardar();
+    };
+    G.respondido = false; G.modo = 'q';
+    alts.forEach(b => b.onclick = () => responder(+b.dataset.i));
+    $('bSeguir').onclick = () => { $('qbox').classList.remove('on'); proximo(); };
+    G.responder = responder;
+    if (tempo) {
+      let s = tempo; const show = () => { const el = $('tmr'); if (el) { el.textContent = '⏱ ' + Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); el.classList.toggle('fim', s <= 10); } };
+      show(); clearInterval(relogio);
+      relogio = setInterval(() => { s--; show(); if (s <= 0) { clearInterval(relogio); responder(-1); } }, 1000);
+    }
+  }
+  /* ---------- fotos dos conceitos (Wikimedia Commons, com crédito) ---------- */
+  const FOTO = new Map();
+  function foto(id) {
+    if (!FOTO.has(id)) FOTO.set(id, api({ img: id }).then(j => j.semFoto ? null : { src: 'data:' + j.mime + ';base64,' + j.dados, credito: j.credito || '' }).catch(() => null));
+    return FOTO.get(id);
+  }
+  async function preCarregar() { for (const c of (DADOS && DADOS.conceitos) || []) { await foto(c.id); } }
+
+  function escolherConceitos() {
+    const L = DADOS.conceitos || []; G.assocUsados = G.assocUsados || [];
+    let livres = L.filter(c => !G.assocUsados.includes(c.id)); if (livres.length < 3) { G.assocUsados = []; livres = L.slice(); }
+    const esc3 = livres.map(c => ({ c, p: (c.defasagem || 0) + Math.random() * 60 })).sort((a, b) => b.p - a.p).slice(0, 3).map(x => x.c);
+    esc3.forEach(c => G.assocUsados.push(c.id));
+    return esc3;
+  }
+  function abrirAssociacao(de) {
+    const e = G.eq[G.vez], tempo = +G.tempo, cs = escolherConceitos();
+    let ordem = embaralhar([0, 1, 2]); if (ordem.every((v, i) => v === i)) ordem = [1, 2, 0];   // ordem das definições (A, B, C), nunca igual à das imagens
+    const par = {}; let sel = null;
+    G.modo = 'assoc'; G.respondido = false;
+    $('qcard').innerHTML = `
+      <div class="qtop"><span><span class="tag" style="background:${CORES[G.vez]};color:#fff">${esc(e.nome)}</span> <span class="tag" style="background:var(--assocbg);color:var(--b1)">🖼️ Imagem e definição</span></span>${tempo ? `<span class="timer" id="tmr"></span>` : ''}</div>
+      <p class="qcom" id="qTit">Ligue cada imagem à sua definição: toque na imagem (ou tecla 1, 2, 3) e depois na definição (A, B, C).</p>
+      <div class="acards">${cs.map((c, i) => `<button class="acard" data-i="${i}"><span class="n">${i + 1}</span><span class="par" id="par${i}"></span><div class="foto" id="foto${i}">${esc(c.emoji)}</div><div class="cred" id="cred${i}"></div><div class="nome" id="nome${i}">${esc(c.nome)}</div></button>`).join('')}</div>
+      <div class="defs">${ordem.map((ci, j) => `<button class="def" data-j="${j}"><b>${LETRA[j]}</b><span>${esc(cs[ci].def)}</span><span class="lig" id="lig${j}"></span></button>`).join('')}</div>
+      <div class="res" id="res"></div>
+      <div class="qfim"><button class="btn" id="bConferir" disabled>Conferir</button><button class="btn" id="bSeguir" hidden>Continuar</button></div>`;
+    $('qbox').classList.add('on'); $('qbox').scrollTop = 0;
+    cs.forEach((c, i) => foto(c.id).then(f => { if (!f || !$('foto' + i)) return; $('foto' + i).innerHTML = `<img alt="${esc(c.nome)}" src="${f.src}">`; $('cred' + i).textContent = f.credito; }));
+    const cards = [...$('qcard').querySelectorAll('.acard')], defs = [...$('qcard').querySelectorAll('.def')];
+    const pintar = () => {
+      cards.forEach((b, i) => { b.classList.toggle('sel', sel === i); const p = $('par' + i); p.textContent = par[i] != null ? LETRA[par[i]] : ''; p.classList.toggle('on', par[i] != null); });
+      defs.forEach((b, j) => { const i = Object.keys(par).find(k => par[k] === j); $('lig' + j).textContent = i != null ? '← ' + (+i + 1) : ''; });
+      $('bConferir').disabled = Object.keys(par).length < 3;
+    };
+    const escolherImg = i => { if (G.respondido) return; sel = sel === i ? null : i; pintar(); };
+    const escolherDef = j => {
+      if (G.respondido || sel == null) return;
+      Object.keys(par).forEach(k => { if (par[k] === j) delete par[k]; });
+      par[sel] = j; const prox = [0, 1, 2].find(i => par[i] == null); sel = prox == null ? null : prox; pintar();
+    };
+    const conferir = forcado => {
+      if (G.respondido) return; G.respondido = true; clearInterval(relogio);
+      let ac = 0;
+      cs.forEach((c, i) => {
+        const ok = par[i] != null && ordem[par[i]] === i; if (ok) ac++;
+        cards[i].classList.add(ok ? 'certa' : 'errada'); cards[i].classList.remove('sel');
+        const certaJ = ordem.indexOf(i); $('nome' + i).textContent = (ok ? '✓ ' : '✗ ') + c.nome + (ok ? '' : ' → definição ' + LETRA[certaJ]);
+        const h = G.histC[c.id] || (G.histC[c.id] = { a: 0, n: 0 }); h.n++; if (ok) h.a++;
+        if (c.k) { const ht = G.hist[c.k] || (G.hist[c.k] = { a: 0, n: 0 }); ht.n++; if (ok) ht.a++; }
+      });
+      cards.concat(defs).forEach(b => b.disabled = true);
+      const pts = ac * 5, fica = ac >= 2;
+      e.pts += pts; e.acertos = (e.acertos || 0) + ac; e.tent = (e.tent || 0) + 3; if (!fica) e.pos = de;
+      const r = $('res'); r.className = 'res on ' + (fica ? 'ok' : 'no');
+      r.innerHTML = `<b>${forcado && Object.keys(par).length < 3 ? 'Tempo esgotado. ' : ''}${ac} de 3 pares certos: +${pts} pontos.</b> ` + (fica ? `${esc(e.nome)} fica na casa.` : `${esc(e.nome)} volta para a casa ${de}.`) +
+        `<div style="margin-top:6px">${cs.map((c, i) => `<div><b>${i + 1}. ${esc(c.nome)}</b>: ${esc(c.def)}</div>`).join('')}</div>`;
+      $('bConferir').hidden = true; const b = $('bSeguir'); b.hidden = false; b.focus();
+      guardar();
+    };
+    cards.forEach(b => b.onclick = () => escolherImg(+b.dataset.i));
+    defs.forEach(b => b.onclick = () => escolherDef(+b.dataset.j));
+    $('bConferir').onclick = () => conferir(false);
+    $('bSeguir').onclick = () => { $('qbox').classList.remove('on'); proximo(); };
+    G.teclaAssoc = k => { const n = '123'.indexOf(k), l = 'ABC'.indexOf(k.toUpperCase()); if (n >= 0) { escolherImg(n); return true; } if (l >= 0) { escolherDef(l); return true; } if (k === 'Enter' && !$('bConferir').disabled && !G.respondido) { conferir(false); return true; } return false; };
+    sel = 0; pintar();
+    if (tempo) {
+      let s = tempo; const show = () => { const el = $('tmr'); if (el) { el.textContent = '⏱ ' + Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); el.classList.toggle('fim', s <= 10); } };
+      show(); clearInterval(relogio);
+      relogio = setInterval(() => { s--; show(); if (s <= 0) { clearInterval(relogio); conferir(true); } }, 1000);
+    }
+  }
+
+  function proximo() {
+    G.modo = ''; G.teclaAssoc = null;
+    G.responder = null; G.vez = (G.vez + 1) % G.eq.length; ocupado = false; $('bDado').disabled = false;
+    $('dado').textContent = '🎲'; redesenhar(); guardar();
+  }
+
+  /* ---------- fim e relatório ---------- */
+  function terminar(venc) {
+    clearInterval(relogio); $('qbox').classList.remove('on');
+    const rank = G.eq.map((e, i) => Object.assign({ i }, e)).sort((a, b) => b.pos - a.pos || b.pts - a.pts);
+    if (venc == null) venc = rank[0].i;
+    const linhas = DADOS.temas.filter(t => G.hist[t.k]).map(t => Object.assign({ h: G.hist[t.k] }, t)).sort((a, b) => (a.h.a / a.h.n) - (b.h.a / b.h.n) || b.defasagem - a.defasagem);
+    const retomar = linhas.filter(t => t.h.a < t.h.n);
+    const naoSorteados = DADOS.temas.filter(t => !G.hist[t.k]).sort((a, b) => b.defasagem - a.defasagem);
+    $('jogo').classList.remove('on');
+    const chegou = G.eq[venc].pos >= G.casas.length + 1;
+    const def = t => t.bim === '4' ? '—' : t.defasagem + '%';
+    $('fim').innerHTML = `<h2 style="margin-top:0">${chegou ? '🏆 ' + esc(G.eq[venc].nome) + ' venceu!' : 'Partida encerrada · na frente: ' + esc(G.eq[venc].nome)}</h2>
+      <div class="pod">${rank.map(e => `<div class="equipe"><span class="cor" style="background:${CORES[e.i]}"></span><span class="nm">${esc(e.nome)}</span><span class="muted sm">casa ${e.pos} · ${e.acertos || 0}/${e.tent || 0} acertos</span><span class="pt">${e.pts}</span></div>`).join('')}</div>
+      <h3>Temas para você revisar antes do SARESP</h3>
+      ${retomar.length ? '' : '<p class="muted">Você acertou todos os temas desta partida. Parabéns!</p>'}
+      <table class="rel"><thead><tr><th>Bim.</th><th>Habilidade</th><th>Tema</th><th>Seus acertos</th></tr></thead><tbody>
+      ${linhas.map(t => `<tr${t.h.a < t.h.n ? ' style="background:var(--errbg)"' : ''}><td>${esc(t.bim)}º</td><td>${esc(t.hab)}</td><td>${esc(t.desc)}</td><td>${t.h.a}/${t.h.n}</td></tr>`).join('')}
+      </tbody></table>
+      ${(() => { const cz = (DADOS.conceitos || []).filter(c => G.histC && G.histC[c.id] && G.histC[c.id].a < G.histC[c.id].n); return cz.length ? `<h3>Conceitos para revisar (Imagem e definição)</h3><ul>${cz.map(c => `<li><b>${esc(c.nome)}</b>: ${esc(c.def)}</li>`).join('')}</ul>` : ''; })()}
+      ${naoSorteados.length ? `<p class="muted sm" style="margin-top:12px">Temas que não caíram nesta partida (${naoSorteados.length}): ${[...new Set(naoSorteados.map(t => t.hab))].map(esc).join(', ')}</p>` : ''}
+      <div class="row" style="margin-top:14px"><button class="btn" id="bCopiar">Copiar meu resultado</button><button class="btn sec" id="bNovo">Jogar de novo</button></div>`;
+    $('fim').classList.add('on');
+    $('bCopiar').onclick = () => {
+      const txt = `Trilha SARESP · ${DADOS.turma}\n${chegou ? 'Vencedora' : 'Na frente'}: ${G.eq[venc].nome}\n` + rank.map(e => `${e.nome}: ${e.pts} pts, ${e.acertos || 0}/${e.tent || 0} acertos`).join('\n') +
+        `\n\nTemas para retomar:\n` + (retomar.length ? retomar.map(t => `- ${t.bim}º bim. ${t.hab}: ${t.desc} (${t.h.a}/${t.h.n})`).join('\n') : '- nenhum');
+      navigator.clipboard.writeText(txt).then(() => { $('bCopiar').textContent = 'Copiado'; }, () => { $('bCopiar').textContent = 'Não foi possível copiar'; });
+    };
+    $('bNovo').onclick = () => { apagarSalvo(); $('fim').classList.remove('on'); $('config').hidden = false; G = null; $('bRetomar').hidden = true; };
+    G.fim = true; apagarSalvo(); enviarProg();
+  }
+
+  /* ---------- configuração ---------- */
+  function camposEquipes() {
+    const n = +$('fEq').value, ant = [...$('nomesEq').querySelectorAll('input')].map(i => i.value);
+    $('nomesEq').innerHTML = Array.from({ length: n }, (_, i) => `<label><span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${CORES[i]}"></span> Equipe ${i + 1}</span><input type="text" maxlength="24" value="${esc(ant[i] || 'Equipe ' + (i + 1))}"></label>`).join('');
+  }
+  async function comecar() {
+    const turma = $('fTurma').value, aluno = $('fAluno').value; if (!turma || !aluno) return;
+    $('bComecar').disabled = true; msg('Montando a trilha…');
+    try {
+      DADOS = await api({ turma });
+      const tr = montarTrilha(DADOS.temas, $('fTam').value);
+      const nomes = [aluno];
+      G = { casas: tr.casas, eq: nomes.map(nome => ({ nome, pos: 0, pts: 0, acertos: 0, tent: 0 })), vez: 0, usadas: {}, hist: {}, histC: {}, assocUsados: [], tempo: $('fTempo').value, fim: false };
+      DADOS.temas.forEach(t => embaralhar(t.qs));
+      await rpc('trilha_iniciar', { p_turma: DADOS.turma, p_nome: aluno, p_total: G.casas.length });
+      iniciarTela(); guardar(); preCarregar();
+      msg(`${DADOS.turma}: ${DADOS.temas.length} temas do SARESP do ${DADOS.serie}º ano, ${G.casas.length} casas.`);
+    } catch (e) { msg(esc(e.message), true); }
+    $('bComecar').disabled = false;
+  }
+  function iniciarTela() {
+    $('config').hidden = true; $('fim').classList.remove('on'); $('jogo').classList.add('on');
+    ocupado = false; $('bDado').disabled = false; $('dado').textContent = '🎲'; redesenhar();
+  }
+
+  document.addEventListener('keydown', ev => {
+    if (ev.target && /INPUT|SELECT|TEXTAREA/.test(ev.target.tagName)) return;
+    if ($('qbox').classList.contains('on')) {
+      if (G && G.modo === 'assoc' && !G.respondido && G.teclaAssoc) { if (G.teclaAssoc(ev.key)) ev.preventDefault(); return; }
+      if (G && G.modo === 'assoc') { if (ev.key === 'Enter' && !$('bSeguir').hidden) { ev.preventDefault(); $('bSeguir').click(); } return; }
+      const i = LETRA.indexOf(ev.key.toUpperCase()); const n = '1234'.indexOf(ev.key);
+      if (G && G.responder && !G.respondido && (i >= 0 || n >= 0)) { ev.preventDefault(); G.responder(i >= 0 ? i : n); }
+      else if (ev.key === 'Enter' && !$('bSeguir').hidden) { ev.preventDefault(); $('bSeguir').click(); }
+      return;
+    }
+    if (ev.code === 'Space' && $('jogo').classList.contains('on')) { ev.preventDefault(); rolar(); }
+  });
+  $('bDado').onclick = rolar;
+  $('bEncerrar').onclick = () => { if (G && !G.fim) terminar(null); };
+  $('fEq').onchange = camposEquipes;
+  $('bComecar').onclick = comecar;
+  $('bRetomar').onclick = () => { const s = lerSalvo(); if (!s) return; G = s.G; DADOS = s.DADOS; G.histC = G.histC || {}; iniciarTela(); preCarregar(); };
+
+  const API_PL = 'https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu_dupRvY-GzoHPNZhL2ft3KpSK7odGF0amqn7Yc7P/exec';
+  const TURMAS = ['6º Ano A', '6º Ano C', '6º Ano A (Lydia)', '6º Ano B (Lydia)', '6º Ano C (Lydia)', '7º Ano A', '7º Ano B', '8º Ano A', '8º Ano B', '9º Ano A', '9º Ano B'];
+  const espera = ms => new Promise(r => setTimeout(r, ms));
+  async function alunosDe(id) {
+    let ult;
+    for (let k = 0; k < 3; k++) {
+      try {
+        const ac = new AbortController(), tm = setTimeout(() => ac.abort(), 25000);
+        const r = await fetch(API_PL + '?' + new URLSearchParams({ nc: Date.now(), api: 'alunos', id }), { redirect: 'follow', cache: 'no-store', credentials: 'omit', signal: ac.signal }).finally(() => clearTimeout(tm));
+        const j = await r.json(); if (!j.ok) throw Object.assign(new Error(j.erro || 'erro'), { srv: true });
+        return (j.alunos || []).map(a => a.nome).filter(Boolean).sort((a, b) => a.localeCompare(b, 'pt'));
+      } catch (e) { ult = e; if (e.srv) throw e; await espera(1500 * (k + 1)); }
+    }
+    throw ult;
+  }
+  async function iniciar() {
+    $('fTurma').innerHTML = '<option value="">Selecione</option>' + TURMAS.map(t => `<option>${esc(t)}</option>`).join('');
+    $('fTurma').onchange = async () => {
+      const id = $('fTurma').value; $('bComecar').disabled = true; $('fAluno').disabled = true;
+      if (!id) { $('fAluno').innerHTML = '<option value="">Escolha a turma primeiro</option>'; return; }
+      $('fAluno').innerHTML = '<option value="">Carregando nomes…</option>'; msg('Carregando a lista de alunos…');
+      try {
+        const n = await alunosDe(id);
+        if (!n.length) { $('fAluno').innerHTML = '<option value="">—</option>'; return msg('Nenhum aluno encontrado nesta turma. Avise o professor.', true); }
+        $('fAluno').innerHTML = '<option value="">Selecione seu nome</option>' + n.map(x => `<option>${esc(x)}</option>`).join('');
+        $('fAluno').disabled = false; msg('Escolha o seu nome e clique em Começar. Atalhos: espaço rola o dado; A, B, C, D marcam a resposta; Enter continua.');
+      } catch (e) { $('fAluno').innerHTML = '<option value="">—</option>'; msg(/carga|liber|bloque/i.test(e.message || '') ? 'A lista desta turma ainda não foi liberada. Avise o professor.' : 'Não consegui carregar os nomes. Verifique a internet e escolha a turma de novo.', true); }
+    };
+    $('fAluno').onchange = () => { $('bComecar').disabled = !$('fAluno').value; };
+    const s = lerSalvo(); if (s && s.G && !s.G.fim) { $('bRetomar').hidden = false; $('bRetomar').textContent = 'Retomar jogo salvo (' + s.G.eq[0].nome + ')'; }
+    msg('Escolha a sua turma e o seu nome.');
+  }
+  iniciar();
+})();
+</script>
+</body></html>

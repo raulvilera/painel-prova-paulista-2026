@@ -83,6 +83,17 @@ function estudo(nome) {
   return { serie, conceitos: lista };
 }
 
+/* Trilha SARESP para os alunos (aberta): dados da turma pelo nome usado no Orbit/Simulado ("7º Ano A"); escolhe a turma do painel de mesma série/letra com mais alunos. */
+function dadosAluno(nome) {
+  const m = /(\d)\s*º\s*ANO\s*([A-Z])?/i.exec(String(nome).normalize('NFC')); if (!m) return null;
+  const serie = m[1], letra = (m[2] || '').toUpperCase(), lydia = /lydia/i.test(nome);
+  let ch = Object.keys(PAINEL).filter(k => serieDe(k) === serie && (lydia || !letra || new RegExp('ANO ' + letra + ' ').test(k)));
+  if (!ch.length) ch = Object.keys(PAINEL).filter(k => serieDe(k) === serie);
+  if (!ch.length) return null;
+  ch.sort((a, b) => Object.keys(PAINEL[b]).length - Object.keys(PAINEL[a]).length);
+  const d = dadosTurma(ch[0]); d.turma = String(nome); return d;
+}
+
 module.exports = async function jogo(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -91,6 +102,16 @@ module.exports = async function jogo(req, res) {
     if (req.method !== 'GET') return out(405, { ok: false, erro: 'Use GET.' });
     const est = String((req.query && req.query.estudo) || '').trim();
     if (est) { const e = estudo(est); if (!e) return out(404, { ok: false, erro: 'Turma não encontrada.' }); res.setHeader('Cache-Control', 'public, max-age=300'); return out(200, Object.assign({ ok: true }, e)); }
+    const tri = String((req.query && req.query.trilha) || '').trim();
+    if (tri) { const d = dadosAluno(tri); if (!d) return out(404, { ok: false, erro: 'Turma não encontrada.' }); res.setHeader('Cache-Control', 'public, max-age=120'); return out(200, Object.assign({ ok: true }, d)); }
+    const foto = String((req.query && req.query.foto) || '').trim();
+    if (foto) {
+      const f = await fotoConceito(foto);
+      if (!f) return out(404, { ok: false, erro: 'Conceito não encontrado.' });
+      if (f.semFoto) return out(200, { ok: true, semFoto: true });
+      res.setHeader('Cache-Control', 'public, max-age=86400');
+      return out(200, { ok: true, mime: f.mime, dados: f.dados, credito: f.credito, fonte: f.fonte });
+    }
     if (!(await professor(req))) return out(401, { ok: false, erro: 'Entre primeiro no painel com o seu login de professor.' });
     const img = String((req.query && req.query.img) || '').trim();
     if (img) {
@@ -111,3 +132,4 @@ module.exports = async function jogo(req, res) {
 };
 module.exports.dadosTurma = dadosTurma;
 module.exports.estudo = estudo;
+module.exports.dadosAluno = dadosAluno;
