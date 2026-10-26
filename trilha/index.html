@@ -473,14 +473,19 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
   }
   async function escolherParceiro(turma, aluno, erro) {
     painelD('Com quem você quer jogar?', 'Escolha um colega da sua turma. Vocês dois disputam a mesma trilha: <b>quem chegar primeiro vence</b>. Depois de formada, a dupla só joga entre si.', [], '<span class="muted">Carregando colegas…</span>');
-    const oc = (await rpcJ('trilha_ocupados', { p_turma: turma })) || [];
-    const nomes = [...$('fAluno').options].map(o => o.value).filter(v => v && v !== aluno && !oc.includes(v));
-    const cont = [];
-    painelD('Com quem você quer jogar?', (erro ? `<span class="erro">${esc(erro)}</span><br>` : '') + 'Escolha um colega da sua turma. Vocês dois disputam a mesma trilha: <b>quem chegar primeiro vence</b>. Depois de formada, a dupla só joga entre si.', [
+    const todos = [...$('fAluno').options].map(o => o.value).filter(v => v && v !== aluno);
+    const lista = oc => `<label>Colega<select id="fPar"><option value="">Selecione</option>${todos.map(n => oc.includes(n) ? `<option disabled>${esc(n)} · já está em dupla</option>` : `<option>${esc(n)}</option>`).join('')}</select></label>`;
+    const oc0 = (await rpcJ('trilha_ocupados', { p_turma: turma })) || [];
+    painelD('Com quem você quer jogar?', (erro ? `<span class="erro">${esc(erro)}</span><br>` : '') + 'Escolha um colega da sua turma. Vocês dois disputam a mesma trilha: <b>quem chegar primeiro vence</b>. Quem já está em uma dupla aparece bloqueado e não pode ser escolhido.', [
       { t: '⚔️ Convidar', f: () => { const v = $('fPar').value; if (v) convidar(turma, aluno, v); } },
       { t: 'Jogar sozinho', sec: 1, f: () => comecarSolo() },
       { t: 'Voltar', sec: 1, f: voltarConfig }
-    ], nomes.length ? `<label>Colega<select id="fPar"><option value="">Selecione</option>${nomes.map(n => `<option>${esc(n)}</option>`).join('')}</select></label>` : '<span class="muted">Nenhum colega livre agora. Você pode jogar sozinho ou esperar alguém.</span><select id="fPar" hidden></select>');
+    ], lista(oc0));
+    clearInterval(ESPERA);
+    ESPERA = setInterval(async () => {   // a lista se atualiza sozinha: quem acabou de entrar em uma dupla fica bloqueado
+      const oc = await rpcJ('trilha_ocupados', { p_turma: turma }); const sel = $('fPar'); if (!oc || !sel) return;
+      const atual = sel.value; $('dSel').innerHTML = lista(oc); if (oc.includes(atual)) { msg(atual + ' acabou de entrar em outra dupla. Escolha outro colega.', true); } else $('fPar').value = atual;
+    }, 3000);
   }
   async function convidar(turma, aluno, par) {
     painelD('Montando a trilha…', 'Aguarde um instante.', []);
@@ -607,7 +612,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
         const n = await alunosDe(id);
         if (!n.length) { $('fAluno').innerHTML = '<option value="">—</option>'; return msg('Nenhum aluno encontrado nesta turma. Avise o professor.', true); }
         $('fAluno').innerHTML = '<option value="">Selecione seu nome</option>' + n.map(x => `<option>${esc(x)}</option>`).join('');
-        $('fAluno').disabled = false; msg('Escolha o seu nome e clique em Começar. Atalhos: espaço rola o dado; A, B, C, D marcam a resposta; Enter continua.');
+        $('fAluno').disabled = false; rpcJ('trilha_ocupados', { p_turma: id }).then(oc => { if (oc && oc.length) [...$('fAluno').options].forEach(o => { if (oc.includes(o.value)) { const v = o.value; o.value = v; o.textContent = v + ' · em dupla'; } }); }); msg('Escolha o seu nome e clique em Começar. Atalhos: espaço rola o dado; A, B, C, D marcam a resposta; Enter continua.');
       } catch (e) { $('fAluno').innerHTML = '<option value="">—</option>'; msg(/carga|liber|bloque/i.test(e.message || '') ? 'A lista desta turma ainda não foi liberada. Avise o professor.' : 'Não consegui carregar os nomes. Verifique a internet e escolha a turma de novo.', true); }
     };
     $('fAluno').onchange = () => { $('bComecar').disabled = !$('fAluno').value; };
