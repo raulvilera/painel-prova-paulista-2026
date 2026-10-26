@@ -477,7 +477,8 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
     throw ult;
   }
   async function iniciar() {
-    $('fTurma').innerHTML = '<option value="">Selecione</option>' + TURMAS.map(t => `<option>${esc(t)}</option>`).join('');
+    const fixa = (new URLSearchParams(location.search).get('turma') || '').trim().toLowerCase(), uma = TURMAS.find(t => t.toLowerCase() === fixa);   // link por turma: /trilha/?turma=6º Ano A
+    $('fTurma').innerHTML = (uma ? '' : '<option value="">Selecione</option>') + (uma ? [uma] : TURMAS).map(t => `<option>${esc(t)}</option>`).join('');
     $('fTurma').onchange = async () => {
       const id = $('fTurma').value; $('bComecar').disabled = true; $('fAluno').disabled = true;
       if (!id) { $('fAluno').innerHTML = '<option value="">Escolha a turma primeiro</option>'; return; }
@@ -490,8 +491,8 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       } catch (e) { $('fAluno').innerHTML = '<option value="">—</option>'; msg(/carga|liber|bloque/i.test(e.message || '') ? 'A lista desta turma ainda não foi liberada. Avise o professor.' : 'Não consegui carregar os nomes. Verifique a internet e escolha a turma de novo.', true); }
     };
     $('fAluno').onchange = () => { $('bComecar').disabled = !$('fAluno').value; };
-    const s = lerSalvo(); if (s && s.G && !s.G.fim) { $('bRetomar').hidden = false; $('bRetomar').textContent = 'Retomar jogo salvo (' + s.G.eq[0].nome + ')'; }
-    msg('Escolha a sua turma e o seu nome.');
+    const s = lerSalvo(); if (s && s.G && !s.G.fim && s.DADOS && (!uma || s.DADOS.turma === uma)) { $('bRetomar').hidden = false; $('bRetomar').textContent = 'Retomar jogo salvo (' + s.G.eq[0].nome + ')'; }
+    if (uma) { $('fTurma').disabled = true; $('fTurma').onchange(); } else msg('Escolha a sua turma e o seu nome.');
   }
   iniciar();
 })();

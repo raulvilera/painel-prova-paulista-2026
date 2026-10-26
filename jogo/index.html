@@ -469,8 +469,20 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       const j = await api();
       $('fTurma').innerHTML = '<option value="">Selecione</option>' + j.turmas.map(t => `<option>${esc(t)}</option>`).join('');
       $('fTurma').disabled = false;
-      $('fTurma').onchange = () => { $('bComecar').disabled = !$('fTurma').value; };
-      const s = lerSalvo(); if (s && s.G && !s.G.fim) { $('bRetomar').hidden = false; $('bRetomar').textContent = 'Retomar jogo salvo (' + s.DADOS.turma + ')'; }
+      const salvo = () => { const s = lerSalvo(); return s && s.G && !s.G.fim && s.DADOS ? s : null; };
+      const atualiza = () => {   // o jogo salvo só aparece para a turma a que ele pertence
+        $('bComecar').disabled = !$('fTurma').value;
+        const s = salvo(); $('bRetomar').hidden = !(s && s.DADOS.turma === $('fTurma').value);
+        if (s) $('bRetomar').textContent = 'Retomar jogo salvo (' + s.DADOS.turma + ')';
+      };
+      $('fTurma').onchange = atualiza;
+      const pt = new URLSearchParams(location.search), fixa = (pt.get('turma') || '').trim().toLowerCase();   // link por turma: ?turma=...&equipes=2
+      if (pt.get('equipes') && ['2', '3', '4'].includes(pt.get('equipes'))) { $('fEq').value = pt.get('equipes'); camposEquipes(); }
+      if (fixa) {
+        const op = [...$('fTurma').options].find(o => o.value && o.value.toLowerCase() === fixa);
+        if (op) { [...$('fTurma').options].forEach(o => { if (o !== op) o.remove(); }); $('fTurma').value = op.value; $('fTurma').disabled = true; }
+      }
+      atualiza();
       msg('Escolha a turma e o número de equipes. Atalhos: espaço rola o dado; A, B, C, D marcam a resposta; Enter continua.');
     } catch (e) { msg('Não foi possível carregar: ' + esc(e.message) + (e.status === 401 ? ' <a href="/">Abrir o painel</a>' : ''), true); }
   }
