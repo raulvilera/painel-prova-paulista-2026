@@ -36,4 +36,6 @@ const R8A = `1 ALICE CARDOSO DE ALCANTARA
 
 const chave = t => { const m = /(\d)\s*º?\s*ANO\s*([A-Z])\b/.exec(String(t).normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase()); return m ? m[1] + m[2] : ''; };
 const TURMAS = { '8A': R8A };
-module.exports = { da: turma => TURMAS[chave(turma)] || null };
+/* Alunos acrescentados à mão (ainda fora da lista do painel/planilha): somam-se à turma ao criar o jogo. */
+const EXTRAS = { '6A': ['NAOMI PAGES ROJOS'], '8A': ['ZLATA EVGENIEVNA SAFOROVA'], '9B': ['DANILO SANTOS CONCEIÇÃO'] };
+module.exports = { da: turma => TURMAS[chave(turma)] || null, extras: turma => (/lydia/i.test(turma) ? [] : EXTRAS[chave(turma)] || []) };
