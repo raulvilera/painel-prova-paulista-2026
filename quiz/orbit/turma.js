@@ -33,7 +33,7 @@
       window.__orbitAlunos = nomes;
       if (!nomes.length) window.__orbitMsg = 'Nenhum aluno encontrado nesta turma. Avise o professor.';
     } catch (e) {
-      if (id === '8º Ano A') { window.__orbitAlunos = R8A.slice().sort((a, b) => a.localeCompare(b, 'pt')); return; }
+      if (id === '8º Ano A') { window.__orbitAlunos = R8A.concat(EXTRAS[id] || []).filter((x, i, a) => a.indexOf(x) === i).sort((a, b) => a.localeCompare(b, 'pt')); return; }
       window.__orbitMsg = /carga|liber|bloque/i.test(e.message || '') ? 'A lista desta turma ainda não foi liberada. Avise o professor.' : 'Não consegui carregar os nomes. Verifique a internet e escolha a turma de novo.';
     }
   };
