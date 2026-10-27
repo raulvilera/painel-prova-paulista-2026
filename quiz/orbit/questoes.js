@@ -102,8 +102,9 @@
       for (const e of eixos) { if (esc.length >= 12) break; if (!porEixo[e].length) continue; const r = prox(e, estrito); if (!r) continue; usados[(AREA[r[0]] || [])[1]] = 1; esc.push(r); }
     }
     const novas = esc.map((r, i) => {
-      const op = emb([r[3]].concat(r[4])), K = ['A', 'B', 'C', 'D'];
-      return { id: i + 1, conceito: r[0], eixo: (AREA[r[0]] || [T])[0], bimester: 'SARESP', code: r[1], prompt: r[2], options: op.map((x, k) => ({ key: K[k], text: x })), correct: K[op.indexOf(r[3])], explanation: r[5] };
+      const ru = window.__orbitRuLigado && window.__orbitRuLigado() && window.__orbitRU && window.__orbitRU[r[0]];   // aluna com versão em russo (ru.js)
+      const K = ['A', 'B', 'C', 'D'], textos = ru ? [ru.c].concat(ru.e) : [r[3]].concat(r[4]), ix = emb([0, 1, 2, 3]), op = ix.map(j => textos[j]);
+      return { id: i + 1, conceito: r[0], eixo: (AREA[r[0]] || [T])[0], bimester: 'SARESP', code: r[1], prompt: ru ? ru.q : r[2], options: op.map((x, k) => ({ key: K[k], text: x })), correct: K[ix.indexOf(0)], explanation: ru ? ru.x : r[5] };
     });
     t.splice(0, t.length, ...novas); window.__orbitQuestoes = novas;
   };

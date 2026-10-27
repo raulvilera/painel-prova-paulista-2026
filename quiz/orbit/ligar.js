@@ -79,6 +79,7 @@
     document.body.appendChild(ov);
   }
   function verificar() {
+    if (window.__orbitRuLigado && window.__orbitRuLigado()) return;   // versão em russo: sem as rodadas de ligar/cartas (textos em português)
     const ui = document.getElementById('ui'); if (!ui || document.getElementById('ligar-ov') || document.getElementById('cartas-ov')) return;
     const m = /PERGUNTA\s*(\d+)/i.exec(ui.textContent || ''); if (!m) return;
     const n = +m[1]; const T = porTemas(n), R = T || RODADAS[n]; if (R && !feitas[n]) { feitas[n] = true; T ? estudar(R, () => abrir(R)) : abrir(R); }
