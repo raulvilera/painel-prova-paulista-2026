@@ -132,6 +132,7 @@
   }
 
   function verificar() {
+    if (window.__orbitRuLigado && window.__orbitRuLigado()) return;   // versão em russo: sem as rodadas de ligar/cartas (textos em português)
     const ui = document.getElementById('ui'); if (!ui || document.getElementById('cartas-ov')) return;
     const m = /PERGUNTA\s*(\d+)/i.exec(ui.textContent || ''); if (!m) return;
     const n = +m[1];
