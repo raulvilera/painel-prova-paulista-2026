@@ -51,7 +51,7 @@ function formarDuplas(jog, turma) {
   }
   return grupos;
 }
-const nomesTurma = turma => { const ro = ROSTER.da(turma); return (ro ? ro.map(x => x.nome) : Object.keys(PAINEL[turma] || {})).sort((a, b) => a.localeCompare(b, 'pt')); };
+const nomesTurma = turma => { const ro = ROSTER.da(turma); const L = ro ? ro.map(x => x.nome) : Object.keys(PAINEL[turma] || {}); ROSTER.extras(turma).forEach(n => { if (!L.includes(n)) L.push(n); }); return L.sort((a, b) => a.localeCompare(b, 'pt')); };
 
 async function criar(b) {
   const turma = String(b.turma || ''); if (!PAINEL[turma]) throw Object.assign(new Error('Turma não encontrada.'), { cod: 404 });
