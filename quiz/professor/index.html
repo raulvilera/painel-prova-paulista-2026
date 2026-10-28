@@ -151,6 +151,7 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
   function alertar(t) { const m = $('m'); if (m) m.textContent = t; }
 
   function desenhar(s) {
+    window.__ultimoEstado = s;
     if (s.estado !== 'aberto' && s.estado !== 'pergunta' && s.estado !== 'resultado') { modoTela = ''; EST = null; golsAnt = null; filaGols = []; }
     if (s.estado === 'espera') return salaEspera(s);
     if (s.estado === 'fim') { if (chaveTela !== 'fim') { chaveTela = 'fim'; telaFim(s); } return; }
@@ -161,7 +162,7 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
     const html = `<div class="card"><div class="pinbox"><div><div class="muted">Entre em <b>${esc(location.host)}/quiz</b> e digite o PIN</div><div class="pin">${esc(s.pin)}</div><div class="muted sm">${esc(s.turma)} · ${s.n} perguntas · ${s.tempo} s cada</div></div>
       <div style="text-align:right"><div class="contagem">${s.jogadores.length} na sala</div><div class="muted sm">${s.faltam} da turma ainda não entraram</div>
       <div class="row" style="justify-content:flex-end;margin-top:10px"><button class="btn sec" id="bCopiar">Copiar link para os alunos</button><button class="btn grande" id="bComecar" ${s.jogadores.length ? '' : 'disabled'}>Liberar o quiz ▶</button></div></div></div>
-      <div class="nomes">${s.jogadores.map(j => `<button class="nome" data-j="${esc(j.id)}" title="Tirar do jogo">${esc(j.nome)}</button>`).join('') || '<span class="muted">Aguardando os alunos…</span>'}</div>
+      <div class="nomes">${s.jogadores.slice().sort(cmpAZ).map(j => `<button class="nome" data-j="${esc(j.id)}" title="Tirar do jogo">${esc(j.nome)}</button>`).join('') || '<span class="muted">Aguardando os alunos…</span>'}</div>
       <div style="margin-top:14px"><div class="row"><b style="font-size:1.1rem">Duplas</b><button class="btn sec" id="bDuplas" ${s.jogadores.length >= 2 ? '' : 'disabled'}>${s.grupos && s.grupos.length ? 'Refazer duplas' : 'Formar duplas'}</button></div>
       ${s.grupos && s.grupos.length ? `<div class="nomes">${s.grupos.map(g => `<span class="nome" style="cursor:default;background:var(--warnbg)" title="Níveis no painel: ${g.membros.map(m => esc(m.nome) + ' ' + String(m.nivel).replace('.', ',')).join(' · ')}">${chip(g.grupo)} ${nomeDupla(g)}</span>`).join('')}</div>
         <p class="muted sm">Cada dupla junta um aluno mais avançado com um que tem mais defasagem no painel (passe o mouse para ver os níveis; os alunos não veem). Sentem juntos: cada um responde no seu celular, mas podem conversar e se ajudar.</p>`
@@ -204,6 +205,11 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
       </tbody></table><p class="muted sm">Cada pergunta que alguém do time acerta vale 1 gol; se os dois acertam a mesma pergunta, é gol de placa (+1). Vitória 3 pontos, empate 1. Desempate: saldo de gols e gols marcados.</p></div>`;
   }
   /* gols novos desde a última atualização viram cobranças animadas no estádio 3D */
+  let ordemAZ = false; try { ordemAZ = localStorage.getItem('quiz_ordem') === 'az'; } catch (_) {}
+  const cmpAZ = (a, b) => String(a.nome).localeCompare(String(b.nome), 'pt', { sensitivity: 'base' });
+  const ordenar = l => ordemAZ ? l.slice().sort(cmpAZ) : l;
+  const btnOrd = () => `<button class="btn sec bOrd" style="padding:4px 12px;font-size:.85em" title="Alternar a ordem da lista">${ordemAZ ? 'Ordem: A–Z · ver por pontos' : 'Ordem: pontos · ver A–Z'}</button>`;
+  document.addEventListener('click', ev => { if (!(ev.target && ev.target.classList && ev.target.classList.contains('bOrd'))) return; ordemAZ = !ordemAZ; try { localStorage.setItem('quiz_ordem', ordemAZ ? 'az' : 'pontos'); } catch (_) {} restoAnt = ''; chaveTela = ''; if (S && S.id) desenhar(window.__ultimoEstado || S); });
   let EST = null, golsAnt = null, filaGols = [], animando = false, restoAnt = '', modoTela = '';
   function detectarGols(s) {
     if (!s.copa) return;
@@ -229,7 +235,7 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
 
   /* acompanhamento ao vivo: progresso de cada aluno, placar e acertos por pergunta */
   function aoVivo(s) {
-    const alunos = s.porAluno.slice().sort((a, b) => b.pontos - a.pontos || b.feitas - a.feitas);
+    const alunos = ordenar(s.porAluno.slice().sort((a, b) => b.pontos - a.pontos || b.feitas - a.feitas));
     if (modoTela !== 'vivo' || !$('vivoResto')) {
       modoTela = 'vivo'; EST = null; restoAnt = '';
       const cab = `<div class="card"><div class="pinbox"><div><span class="tag">Quiz liberado</span> <span class="muted">${esc(s.turma)} · PIN <b>${esc(s.pin)}</b> · ${s.n} perguntas · ${s.tempo} s cada</span></div>
@@ -241,7 +247,7 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
     const cont = $('contagem'); if (cont) cont.textContent = `${s.terminaram} de ${alunos.length} terminaram`;
     const ov = $('jogosOv'); if (ov) { const h = jogosOverlay(s); if (ov.innerHTML !== h) ov.innerHTML = h; }
     const resto = `${s.copa ? copaHtml(s, false) : cardDuplas(s, false)}
-      <div class="card"><h3 style="margin-top:0">Alunos (ao vivo)</h3>${alunos.length ? `<table><thead><tr><th>#</th><th>Aluno</th><th style="width:34%">Progresso</th><th>Acertos</th><th>Pontos</th></tr></thead><tbody>
+      <div class="card"><div class="row" style="justify-content:space-between"><h3 style="margin:0">Alunos (ao vivo)</h3>${btnOrd()}</div>${alunos.length ? `<table><thead><tr><th>#</th><th>Aluno</th><th style="width:34%">Progresso</th><th>Acertos</th><th>Pontos</th></tr></thead><tbody>
         ${alunos.map((a, i) => `<tr><td>${i + 1}</td><td>${esc(a.nome)}</td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:10px;border-radius:99px;background:var(--line);overflow:hidden"><i style="display:block;height:100%;width:${a.feitas / s.n * 100}%;background:${a.feitas >= s.n ? 'var(--ok)' : 'var(--pri)'}"></i></div><span class="sm">${a.feitas}/${s.n}</span></div></td><td>${a.acertos}/${a.respostas}${a.semResp ? ` <span class="muted sm">(${a.semResp} sem resposta)</span>` : ''}</td><td><b>${a.pontos}</b></td></tr>`).join('')}
         </tbody></table>` : '<p class="muted">Ninguém entrou ainda.</p>'}</div>
       <div class="card"><div class="row" style="justify-content:space-between"><h3 style="margin:0">Acertos por pergunta</h3><button class="btn sec" id="bVerQ">${verPerguntas ? 'Ocultar' : 'Mostrar'}</button></div>
@@ -265,8 +271,8 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
       <div class="card"><h3 style="margin-top:0">Acertos por tema</h3><table><thead><tr><th>%</th><th>Bim.</th><th>Habilidade</th><th>Tema</th><th>Acertos</th></tr></thead><tbody>
       ${jogadas.slice().sort((a, b) => (a.respostas ? a.acertos / a.respostas : 0) - (b.respostas ? b.acertos / b.respostas : 0)).map(q => { const pc = q.respostas ? Math.round(q.acertos / q.respostas * 100) : 0; return `<tr class="${pc < 50 ? 'baixo' : ''}"><td><span class="pct">${pc}%</span></td><td>${esc(q.bim)}º</td><td>${esc(q.hab)}</td><td>${esc(q.desc)}</td><td>${q.acertos}/${q.respostas}</td></tr>`; }).join('')}
       </tbody></table><p class="muted sm">Em vermelho, temas com menos de 50% de acerto: bons candidatos para retomar.</p></div>
-      <div class="card"><h3 style="margin-top:0">Por aluno</h3><table><thead><tr><th>#</th><th>Aluno</th><th>Pontos</th><th>Acertos</th><th>Errou em</th></tr></thead><tbody>
-      ${s.porAluno.map((a, i) => `<tr><td>${i + 1}</td><td>${esc(a.nome)}</td><td>${a.pontos}</td><td>${a.acertos}/${a.respostas}${a.respostas < jogadas.length ? ` <span class="muted sm">(${jogadas.length - a.respostas} sem resposta)</span>` : ''}</td><td class="sm">${esc([...new Set(a.erros)].join(', '))}</td></tr>`).join('')}
+      <div class="card"><div class="row" style="justify-content:space-between"><h3 style="margin:0">Por aluno</h3>${btnOrd()}</div><table><thead><tr><th>#</th><th>Aluno</th><th>Pontos</th><th>Acertos</th><th>Errou em</th></tr></thead><tbody>
+      ${ordenar(s.porAluno).map((a, i) => `<tr><td>${i + 1}</td><td>${esc(a.nome)}</td><td>${a.pontos}</td><td>${a.acertos}/${a.respostas}${a.respostas < jogadas.length ? ` <span class="muted sm">(${jogadas.length - a.respostas} sem resposta)</span>` : ''}</td><td class="sm">${esc([...new Set(a.erros)].join(', '))}</td></tr>`).join('')}
       </tbody></table></div>
       <div class="row"><button class="btn" id="bCopiar">Copiar resumo</button><button class="btn sec" id="bNova">Nova partida</button></div>`);
     $('bCopiar').onclick = () => navigator.clipboard.writeText(resumo()).then(() => { $('bCopiar').textContent = 'Copiado'; }, () => {});
