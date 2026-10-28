@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Bateria com resistência interna</title>
+<desc>Circuito com bateria de força eletromotriz 1,50 V e resistência interna r, ligada a uma carga, com amperímetro e voltímetro.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Bateria com resistência interna</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">E em circuito aberto = 1,50 V · sob carga: I = 0,50 A e V = 1,30 V</text>
+<rect x="60" y="110" width="330" height="180" rx="14" fill="none" stroke="#37474f" stroke-width="3"/>
+<rect x="80" y="100" width="170" height="40" rx="8" fill="#fff" stroke="#2c5f8a" stroke-width="3"/>
+<text x="190" y="126" font-size="14" font-weight="700" fill="#1f3347" text-anchor="middle">bateria</text>
+<text x="165" y="92" font-size="14" font-weight="700" fill="#3b82c4" text-anchor="middle">E = 1,50 V</text>
+<rect x="110" y="100" width="36" height="40" rx="3" fill="#fdecc8" stroke="#b9770e" stroke-width="2"/>
+<text x="128" y="124" font-size="15" font-weight="700" fill="#b9770e" text-anchor="middle">r</text>
+<rect x="200" y="275" width="120" height="30" rx="6" fill="#fff" stroke="#37474f" stroke-width="3"/>
+<text x="260" y="296" font-size="14" font-weight="700" fill="#1f3347" text-anchor="middle">carga</text>
+<circle cx="60" cy="200" r="26" fill="#fff" stroke="#37474f" stroke-width="3"/>
+<text x="60" y="206" font-size="17" font-weight="700" fill="#1f3347" text-anchor="middle">A</text>
+<text x="95" y="204" font-size="13" font-weight="700" fill="#1f3347" text-anchor="start">I = 0,50 A</text>
+<circle cx="390" cy="200" r="26" fill="#fff" stroke="#37474f" stroke-width="3"/>
+<text x="390" y="206" font-size="17" font-weight="700" fill="#1f3347" text-anchor="middle">V</text>
+<text x="285" y="204" font-size="13" font-weight="700" fill="#1f3347" text-anchor="start">V = 1,30 V</text>
+<text x="285" y="224" font-size="11.5" font-weight="400" fill="#5a7186" text-anchor="start">(nos terminais)</text>
+<rect x="440" y="80" width="306" height="240" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="454" y="102" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Modelo adotado</text>
+<text x="456" y="128" font-size="22" font-weight="700" fill="#3b82c4" text-anchor="start">V = E − r·I</text>
+<text x="456" y="164" font-size="13" font-weight="400" fill="#1f3347" text-anchor="start">r: resistência interna, considerada</text>
+<text x="456" y="181" font-size="13" font-weight="400" fill="#1f3347" text-anchor="start">constante.</text>
+<text x="456" y="214" font-size="13" font-weight="400" fill="#5a7186" text-anchor="start">Em circuito aberto (I = 0), a tensão</text>
+<text x="456" y="231" font-size="13" font-weight="400" fill="#5a7186" text-anchor="start">medida é E = 1,50 V.</text>
+</svg>

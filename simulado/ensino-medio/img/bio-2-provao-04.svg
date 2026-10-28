@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Do gene à proteína</title>
+<desc>Fluxo DNA, RNA mensageiro e cadeia polipeptídica, com a fita molde fornecida e espaços para o mRNA e a proteína.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Do gene à proteína</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Fita molde 3′-TAC CCG AAA ATT-5′ · lida pela RNA-polimerase</text>
+<text x="30" y="100" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">DNA (fita molde)</text>
+<text x="30" y="124" font-size="15" font-weight="700" fill="#25402f" text-anchor="start">3′</text>
+<rect x="52" y="104" width="90" height="32" rx="6" fill="#d6efe1" stroke="#2e8b57" stroke-width="2"/>
+<text x="97" y="127" font-size="17" font-weight="700" fill="#25402f" text-anchor="middle">TAC</text>
+<rect x="152" y="104" width="90" height="32" rx="6" fill="#d6efe1" stroke="#2e8b57" stroke-width="2"/>
+<text x="197" y="127" font-size="17" font-weight="700" fill="#25402f" text-anchor="middle">CCG</text>
+<rect x="252" y="104" width="90" height="32" rx="6" fill="#d6efe1" stroke="#2e8b57" stroke-width="2"/>
+<text x="297" y="127" font-size="17" font-weight="700" fill="#25402f" text-anchor="middle">AAA</text>
+<rect x="352" y="104" width="90" height="32" rx="6" fill="#d6efe1" stroke="#2e8b57" stroke-width="2"/>
+<text x="397" y="127" font-size="17" font-weight="700" fill="#25402f" text-anchor="middle">ATT</text>
+<text x="456" y="124" font-size="15" font-weight="700" fill="#25402f" text-anchor="start">5′</text>
+<line x1="250" y1="144" x2="250" y2="184" stroke="#e07b39" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M250 184 L245.6503446588877 174.99552897647322 L254.3496553411123 174.99552897647322 Z" fill="#e07b39"/>
+<text x="262" y="170" font-size="12.5" font-weight="700" fill="#e07b39" text-anchor="start">transcrição (RNA-polimerase)</text>
+<text x="30" y="206" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">RNA mensageiro</text>
+<rect x="52" y="214" width="90" height="32" rx="6" fill="#fff" stroke="#e07b39" stroke-width="2"/>
+<rect x="152" y="214" width="90" height="32" rx="6" fill="#fff" stroke="#e07b39" stroke-width="2"/>
+<rect x="252" y="214" width="90" height="32" rx="6" fill="#fff" stroke="#e07b39" stroke-width="2"/>
+<rect x="352" y="214" width="90" height="32" rx="6" fill="#fff" stroke="#e07b39" stroke-width="2"/>
+<text x="97" y="237" font-size="17" font-weight="700" fill="#5d7a69" text-anchor="middle">?</text>
+<text x="197" y="237" font-size="17" font-weight="700" fill="#5d7a69" text-anchor="middle">?</text>
+<text x="297" y="237" font-size="17" font-weight="700" fill="#5d7a69" text-anchor="middle">?</text>
+<text x="397" y="237" font-size="17" font-weight="700" fill="#5d7a69" text-anchor="middle">?</text>
+<line x1="250" y1="254" x2="250" y2="290" stroke="#8e5bb5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M250 290 L245.6503446588877 280.9955289764732 L254.3496553411123 280.9955289764732 Z" fill="#8e5bb5"/>
+<text x="262" y="278" font-size="12.5" font-weight="700" fill="#8e5bb5" text-anchor="start">tradução (ribossomo)</text>
+<circle cx="97" cy="308" r="18" fill="#fff" stroke="#8e5bb5" stroke-width="2.5"/>
+<text x="97" y="314" font-size="15" font-weight="700" fill="#5d7a69" text-anchor="middle">?</text>
+<circle cx="197" cy="308" r="18" fill="#fff" stroke="#8e5bb5" stroke-width="2.5"/>
+<text x="197" y="314" font-size="15" font-weight="700" fill="#5d7a69" text-anchor="middle">?</text>
+<line x1="115" y1="308" x2="179" y2="308" stroke="#8e5bb5" stroke-width="3" stroke-linecap="round"/>
+<circle cx="297" cy="308" r="18" fill="#fff" stroke="#8e5bb5" stroke-width="2.5"/>
+<text x="297" y="314" font-size="15" font-weight="700" fill="#5d7a69" text-anchor="middle">?</text>
+<line x1="215" y1="308" x2="279" y2="308" stroke="#8e5bb5" stroke-width="3" stroke-linecap="round"/>
+<rect x="520" y="84" width="226" height="236" rx="12" fill="#fff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="536" y="108" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Lembrete</text>
+<text x="536" y="134" font-size="12.5" font-weight="400" fill="#25402f" text-anchor="start">A RNA-polimerase lê a fita</text>
+<text x="536" y="152" font-size="12.5" font-weight="400" fill="#25402f" text-anchor="start">molde e o ribossomo lê o mRNA</text>
+<text x="536" y="170" font-size="12.5" font-weight="400" fill="#25402f" text-anchor="start">em códons (trincas). O trecho</text>
+<text x="536" y="188" font-size="12.5" font-weight="400" fill="#25402f" text-anchor="start">termina em um códon de parada.</text>
+</svg>

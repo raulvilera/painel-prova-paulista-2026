@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Relato de laboratório: H₂ e O₂ com faísca</title>
+<desc>Frasco com os gases H2 e O2 antes da faísca e o mesmo frasco depois, com gotículas na parede e termômetro indicando aquecimento.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Relato de laboratório: H₂ e O₂ com faísca</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">Frasco rígido e fechado · gases incolores antes do evento</text>
+<path d="M115 110 V169.5 L70 274 Q68 280 78 280 H212 Q222 280 220 274 L175 169.5 V110" fill="rgba(255,255,255,.6)" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M83.76555023923444 278.3 H206.23444976076556 L215 274 Q221 278 212 278 H78 Q69 278 75 274Z" fill="rgba(0,0,0,0)" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.8"/>
+<circle cx="125" cy="215" r="10" fill="#3b82c4" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<text x="125" y="218.5" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">H</text>
+<circle cx="165" cy="215" r="10" fill="#3b82c4" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<text x="165" y="218.5" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">H</text>
+<circle cx="125" cy="241" r="10" fill="#3b82c4" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<text x="125" y="244.5" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">H</text>
+<circle cx="165" cy="241" r="10" fill="#3b82c4" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<text x="165" y="244.5" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">H</text>
+<circle cx="115" cy="180" r="11" fill="#c0392b" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<text x="115" y="183.85" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">O</text>
+<circle cx="175" cy="180" r="11" fill="#c0392b" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<text x="175" y="183.85" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">O</text>
+<text x="145" y="308" font-size="13" font-weight="700" fill="#1f3347" text-anchor="middle">Antes</text>
+<path d="M435 110 V169.5 L390 274 Q388 280 398 280 H532 Q542 280 540 274 L495 169.5 V110" fill="rgba(255,255,255,.6)" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M403.76555023923447 278.3 H526.2344497607655 L535 274 Q541 278 532 278 H398 Q389 278 395 274Z" fill="rgba(0,0,0,0)" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.8"/>
+<path d="M430 232 C435.4 237.4 434.2 242.8 430 242.8 C425.8 242.8 424.6 237.4 430 232Z" fill="#5aa9e6" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M448 210 C453.4 215.4 452.2 220.8 448 220.8 C443.8 220.8 442.6 215.4 448 210Z" fill="#5aa9e6" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M466 232 C471.4 237.4 470.2 242.8 466 242.8 C461.8 242.8 460.6 237.4 466 232Z" fill="#5aa9e6" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M484 210 C489.4 215.4 488.2 220.8 484 220.8 C479.8 220.8 478.6 215.4 484 210Z" fill="#5aa9e6" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M502 232 C507.4 237.4 506.2 242.8 502 242.8 C497.8 242.8 496.6 237.4 502 232Z" fill="#5aa9e6" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="410" cy="190" r="5" fill="#5aa9e6" stroke="none" stroke-width="1"/>
+<text x="465" y="308" font-size="13" font-weight="700" fill="#1f3347" text-anchor="middle">Depois</text>
+<line x1="250" y1="200" x2="360" y2="200" stroke="#e07b39" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M360 200 L350.9955289764732 204.3496553411123 L350.9955289764732 195.6503446588877 Z" fill="#e07b39"/>
+<text x="305" y="184" font-size="13" font-weight="700" fill="#e07b39" text-anchor="middle">faísca</text>
+<text x="305" y="222" font-size="26" font-weight="400" fill="#1f3347" text-anchor="middle">⚡</text>
+<rect x="580" y="110" width="14" height="120" rx="7" fill="#fff" stroke="#37474f" stroke-width="2"/>
+<rect x="584" y="160" width="6" height="70" rx="3" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="587" cy="238" r="13" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="612" y="164" font-size="12.5" font-weight="700" fill="#1f3347" text-anchor="start">frasco aquece</text>
+<text x="612" y="262" font-size="12.5" font-weight="700" fill="#3b82c4" text-anchor="start">gotículas nas paredes</text>
+</svg>

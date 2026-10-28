@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Mistura de limalha, areia, sal e água</title>
+<desc>Béquer com a mistura e cartões com a propriedade de cada componente: ferro atraído por ímã, areia insolúvel, sal dissolvido e água mais volátil.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Mistura de limalha, areia, sal e água</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">A 25 °C · recuperar cada componente sem transformação química</text>
+<rect x="42" y="170" width="146" height="88" rx="0" fill="#cfe3f3" stroke="none" stroke-width="1" opacity="0.75"/>
+<path d="M40 110 V252 Q40 260 48 260 H182 Q190 260 190 252 V110" fill="none" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="70" cy="236" r="4" fill="#c9b27c" stroke="none" stroke-width="1"/>
+<circle cx="87" cy="230" r="4" fill="#c9b27c" stroke="none" stroke-width="1"/>
+<circle cx="104" cy="236" r="4" fill="#c9b27c" stroke="none" stroke-width="1"/>
+<circle cx="121" cy="230" r="4" fill="#c9b27c" stroke="none" stroke-width="1"/>
+<circle cx="138" cy="236" r="4" fill="#c9b27c" stroke="none" stroke-width="1"/>
+<circle cx="155" cy="230" r="4" fill="#c9b27c" stroke="none" stroke-width="1"/>
+<rect x="66" y="246" width="8" height="3" rx="1" fill="#546e7a" stroke="none" stroke-width="1"/>
+<rect x="88" y="246" width="8" height="3" rx="1" fill="#546e7a" stroke="none" stroke-width="1"/>
+<rect x="110" y="246" width="8" height="3" rx="1" fill="#546e7a" stroke="none" stroke-width="1"/>
+<rect x="132" y="246" width="8" height="3" rx="1" fill="#546e7a" stroke="none" stroke-width="1"/>
+<text x="115" y="290" font-size="12.5" font-weight="700" fill="#1f3347" text-anchor="middle">ferro + areia + NaCl + água</text>
+<rect x="250" y="78" width="496" height="54" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<circle cx="278" cy="105" r="12" fill="#546e7a" stroke="none" stroke-width="1"/>
+<text x="304" y="102" font-size="15" font-weight="700" fill="#1f3347" text-anchor="start">Ferro</text>
+<text x="304" y="122" font-size="13" font-weight="400" fill="#5a7186" text-anchor="start">atraído por ímã</text>
+<rect x="250" y="140" width="496" height="54" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<circle cx="278" cy="167" r="12" fill="#c9b27c" stroke="none" stroke-width="1"/>
+<text x="304" y="164" font-size="15" font-weight="700" fill="#1f3347" text-anchor="start">Areia</text>
+<text x="304" y="184" font-size="13" font-weight="400" fill="#5a7186" text-anchor="start">insolúvel em água</text>
+<rect x="250" y="202" width="496" height="54" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<circle cx="278" cy="229" r="12" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="304" y="226" font-size="15" font-weight="700" fill="#1f3347" text-anchor="start">NaCl</text>
+<text x="304" y="246" font-size="13" font-weight="400" fill="#5a7186" text-anchor="start">permanece dissolvido</text>
+<rect x="250" y="264" width="496" height="54" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<circle cx="278" cy="291" r="12" fill="#17a2a2" stroke="none" stroke-width="1"/>
+<text x="304" y="288" font-size="15" font-weight="700" fill="#1f3347" text-anchor="start">Água</text>
+<text x="304" y="308" font-size="13" font-weight="400" fill="#5a7186" text-anchor="start">ebulição antes do NaCl</text>
+</svg>

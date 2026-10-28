@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Área úmida antes e depois da plantação a montante</title>
+<desc>Barras antes e após três meses para nitrato, fosfato, cobertura de algas, oxigênio dissolvido e táxons sensíveis.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Área úmida antes e depois da plantação a montante</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Medidas ao amanhecer · sem trecho-controle · valores ilustrativos</text>
+<rect x="14" y="70" width="235" height="118" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Nitrato (mg/L)</text>
+<text x="76" y="120" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Antes</text>
+<rect x="84" y="101" width="14.56" height="28" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="104.56" y="120" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">0,8</text>
+<text x="76" y="160" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Após 3 m</text>
+<rect x="84" y="141" width="83.72" height="28" rx="4" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="173.72" y="160" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">4,6</text>
+<rect x="261" y="70" width="235" height="118" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="275" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Fosfato (mg/L)</text>
+<text x="323" y="120" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Antes</text>
+<rect x="331" y="101" width="7.28" height="28" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="344.28" y="120" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">0,04</text>
+<text x="323" y="160" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Após 3 m</text>
+<rect x="331" y="141" width="74.61999999999999" height="28" rx="4" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="411.62" y="160" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">0,41</text>
+<rect x="508" y="70" width="235" height="118" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="522" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Cobertura de algas (%)</text>
+<text x="570" y="120" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Antes</text>
+<rect x="578" y="101" width="13.65" height="28" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="597.65" y="120" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">12</text>
+<text x="570" y="160" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Após 3 m</text>
+<rect x="578" y="141" width="77.35" height="28" rx="4" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="661.35" y="160" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">68</text>
+<rect x="14" y="198" width="235" height="118" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="220" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">O₂ dissolvido (mg/L)</text>
+<text x="76" y="248" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Antes</text>
+<rect x="84" y="229" width="84.175" height="28" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="174.175" y="248" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">7,4</text>
+<text x="76" y="288" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Após 3 m</text>
+<rect x="84" y="269" width="26.162499999999998" height="28" rx="4" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="116.1625" y="288" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">2,3</text>
+<rect x="261" y="198" width="235" height="118" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="275" y="220" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Táxons sensíveis</text>
+<text x="323" y="248" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Antes</text>
+<rect x="331" y="229" width="81.9" height="28" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="418.9" y="248" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">18</text>
+<text x="323" y="288" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Após 3 m</text>
+<rect x="331" y="269" width="13.65" height="28" rx="4" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="350.65" y="288" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">3</text>
+<rect x="508" y="198" width="238" height="118" rx="12" fill="#fff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="522" y="226" font-size="12.5" font-weight="400" fill="#25402f" text-anchor="start">Plantação instalada a montante</text>
+<text x="522" y="244" font-size="12.5" font-weight="400" fill="#25402f" text-anchor="start">entre as duas medidas; outras</text>
+<text x="522" y="262" font-size="12.5" font-weight="400" fill="#25402f" text-anchor="start">condições foram registradas.</text>
+</svg>

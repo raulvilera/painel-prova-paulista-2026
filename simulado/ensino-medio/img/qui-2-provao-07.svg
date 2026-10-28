@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Decaimento radioativo de X</title>
+<desc>Curva exponencial decrescente da atividade ao longo do tempo, com marcações a cada 8 dias e atividade inicial de 640 becquerels.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Decaimento radioativo de X</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">Meia-vida de 8 dias · atividade inicial de 640 Bq</text>
+<rect x="14" y="70" width="520" height="250" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Atividade da amostra × tempo</text>
+<line x1="70" y1="270" x2="500" y2="270" stroke="#5a7186" stroke-width="2" stroke-linecap="round"/>
+<line x1="70" y1="110" x2="70" y2="270" stroke="#5a7186" stroke-width="2" stroke-linecap="round"/>
+<path d="M70 120 L83.4 132.44939351929932 L96.8 143.8655377119428 L110.2 154.33418809440442 L123.6 163.93398282201787 L137 172.73703340117427 L150.4 180.80946637479593 L163.8 188.21192005010568 L177.2 195 L190.60000000000002 201.22469675964965 L204 206.9327688559714 L217.4 212.16709404720223 L230.8 216.96699141100893 L244.20000000000002 221.36851670058712 L257.6 225.40473318739797 L271 229.10596002505284 L284.4 232.5 L297.8 235.61234837982482 L311.20000000000005 238.4663844279857 L324.6 241.0835470236011 L338 243.48349570550448 L351.40000000000003 245.68425835029356 L364.8 247.70236659369897 L378.2 249.5529800125264 L391.6 251.25 L405 252.8061741899124 L418.40000000000003 254.23319221399285 L431.8 255.54177351180056 L445.2 256.7417478527522 L458.6 257.8421291751468 L472 258.8511832968495 L485.40000000000003 259.7764900062632 L498.8 260.625" fill="none" stroke="#e07b39" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="70" y1="270" x2="70" y2="276" stroke="#5a7186" stroke-width="2" stroke-linecap="round"/>
+<text x="70" y="292" font-size="12" font-weight="400" fill="#1f3347" text-anchor="middle">0</text>
+<line x1="70" y1="120" x2="70" y2="270" stroke="#e3e9f0" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4"/>
+<line x1="177.2" y1="270" x2="177.2" y2="276" stroke="#5a7186" stroke-width="2" stroke-linecap="round"/>
+<text x="177.2" y="292" font-size="12" font-weight="400" fill="#1f3347" text-anchor="middle">8</text>
+<line x1="177.2" y1="120" x2="177.2" y2="270" stroke="#e3e9f0" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4"/>
+<line x1="284.4" y1="270" x2="284.4" y2="276" stroke="#5a7186" stroke-width="2" stroke-linecap="round"/>
+<text x="284.4" y="292" font-size="12" font-weight="400" fill="#1f3347" text-anchor="middle">16</text>
+<line x1="284.4" y1="120" x2="284.4" y2="270" stroke="#e3e9f0" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4"/>
+<line x1="391.6" y1="270" x2="391.6" y2="276" stroke="#5a7186" stroke-width="2" stroke-linecap="round"/>
+<text x="391.6" y="292" font-size="12" font-weight="400" fill="#1f3347" text-anchor="middle">24</text>
+<line x1="391.6" y1="120" x2="391.6" y2="270" stroke="#e3e9f0" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4"/>
+<line x1="498.8" y1="270" x2="498.8" y2="276" stroke="#5a7186" stroke-width="2" stroke-linecap="round"/>
+<text x="498.8" y="292" font-size="12" font-weight="400" fill="#1f3347" text-anchor="middle">32</text>
+<line x1="498.8" y1="120" x2="498.8" y2="270" stroke="#e3e9f0" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4"/>
+<text x="285" y="312" font-size="12" font-weight="400" fill="#5a7186" text-anchor="middle">tempo (dias)</text>
+<circle cx="70" cy="120" r="6" fill="#e07b39" stroke="#fff" stroke-width="2"/>
+<text x="82" y="112" font-size="14" font-weight="700" fill="#c0392b" text-anchor="start">640 Bq</text>
+<rect x="546" y="70" width="200" height="250" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="560" y="92" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Núcleos</text>
+<circle cx="576" cy="118" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="616" cy="118" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="656" cy="118" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="696" cy="118" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="576" cy="158" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="616" cy="158" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="656" cy="158" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="696" cy="158" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="576" cy="198" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="616" cy="198" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="656" cy="198" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="696" cy="198" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="576" cy="238" r="12" fill="#cfd8dc" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="616" cy="238" r="12" fill="#cfd8dc" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="656" cy="238" r="12" fill="#cfd8dc" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="696" cy="238" r="12" fill="#cfd8dc" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<text x="560" y="292" font-size="11" font-weight="400" fill="#5a7186" text-anchor="start">esquema: núcleos que se</text>
+<text x="560" y="307" font-size="11" font-weight="400" fill="#5a7186" text-anchor="start">desintegram com o tempo</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Protozooses registradas em três bairros</title>
+<desc>Para cada bairro, barras de giardíase e amebíase, com condição de água e esgoto e de manipulação de alimentos.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Protozooses registradas em três bairros</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">% da população · valores ilustrativos</text>
+<rect x="14" y="70" width="235" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Bairro A</text>
+<text x="28" y="112" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">poço sem tratamento · esgoto</text>
+<text x="28" y="128" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">incompleto</text>
+<text x="92" y="178" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Giardíase</text>
+<rect x="100" y="155" width="63.875" height="36" rx="4" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="169.875" y="178" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">7%</text>
+<text x="92" y="226" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Amebíase</text>
+<rect x="100" y="203" width="45.625" height="36" rx="4" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="151.625" y="226" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">5%</text>
+<text x="28" y="285" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">manipulação: falhas frequentes</text>
+<rect x="261" y="70" width="235" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="275" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Bairro B</text>
+<text x="275" y="112" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">rede tratada · esgoto regular</text>
+<text x="339" y="178" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Giardíase</text>
+<rect x="347" y="155" width="9.125" height="36" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="362.125" y="178" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">1%</text>
+<text x="339" y="226" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Amebíase</text>
+<rect x="347" y="203" width="9.125" height="36" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="362.125" y="226" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">1%</text>
+<text x="275" y="285" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">manipulação: falhas ocasionais</text>
+<rect x="508" y="70" width="235" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="522" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Bairro C</text>
+<text x="522" y="112" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">rede tratada · baixa higiene</text>
+<text x="522" y="128" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">alimentar</text>
+<text x="586" y="178" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Giardíase</text>
+<rect x="594" y="155" width="18.25" height="36" rx="4" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="618.25" y="178" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">2%</text>
+<text x="586" y="226" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Amebíase</text>
+<rect x="594" y="203" width="36.5" height="36" rx="4" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="636.5" y="226" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">4%</text>
+<text x="522" y="285" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">manipulação: falhas frequentes</text>
+</svg>

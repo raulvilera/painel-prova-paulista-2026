@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Redução do óxido de ferro em escala didática</title>
+<desc>Lote de 200 g com 160 g de Fe2O3 e 40 g de inerte, 84 g de CO e rendimento de 80%.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Redução do óxido de ferro em escala didática</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">Fe₂O₃(s) + 3 CO(g) → 2 Fe(s) + 3 CO₂(g)</text>
+<rect x="14" y="70" width="360" height="250" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Lote de minério: 200 g</text>
+<rect x="34" y="104" width="320" height="44" rx="6" fill="#fff" stroke="#b4cadf" stroke-width="2"/>
+<rect x="34" y="104" width="256" height="44" rx="6" fill="#c77d4f" stroke="none" stroke-width="1"/>
+<rect x="290" y="104" width="64" height="44" rx="6" fill="#b0bec5" stroke="none" stroke-width="1"/>
+<text x="162" y="132" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Fe₂O₃: 160 g (1,00 mol)</text>
+<text x="322" y="132" font-size="11" font-weight="700" fill="#1f3347" text-anchor="middle">40 g inerte</text>
+<rect x="34" y="176" width="320" height="44" rx="6" fill="#fff" stroke="#b4cadf" stroke-width="2"/>
+<rect x="34" y="176" width="320" height="44" rx="6" fill="#b7e0d6" stroke="none" stroke-width="1"/>
+<text x="194" y="204" font-size="13" font-weight="700" fill="#1f3347" text-anchor="middle">CO: 84 g (3,00 mol)</text>
+<text x="34" y="262" font-size="12.5" font-weight="400" fill="#5a7186" text-anchor="start">M: Fe₂O₃ = 160 · CO = 28 · Fe = 56 g/mol</text>
+<text x="34" y="288" font-size="15" font-weight="700" fill="#3b82c4" text-anchor="start">Rendimento: 80% do Fe teórico</text>
+<rect x="386" y="70" width="360" height="250" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="400" y="92" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Alto-forno (esquema)</text>
+<path d="M520 100 L610 100 L630 190 L610 300 L520 300 L500 190 Z" fill="#e8e0d6" stroke="#8d6e63" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M530 270 L600 270" fill="none" stroke="#c0392b" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="565" y="242" font-size="12" font-weight="700" fill="#1f3347" text-anchor="middle">Fe₂O₃ + CO</text>
+<line x1="440" y1="250" x2="500" y2="250" stroke="#2e8b57" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M500 250 L490.9955289764732 254.3496553411123 L490.9955289764732 245.6503446588877 Z" fill="#2e8b57"/>
+<text x="440" y="238" font-size="12" font-weight="700" fill="#1f3347" text-anchor="middle">CO</text>
+<line x1="630" y1="160" x2="700" y2="130" stroke="#37474f" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M700 130 L693.4369983918158 137.54499899873898 L690.0101720297516 129.54907082058924 Z" fill="#37474f"/>
+<text x="700" y="120" font-size="12" font-weight="700" fill="#1f3347" text-anchor="middle">CO₂</text>
+<line x1="570" y1="300" x2="570" y2="316" stroke="#e07b39" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M570 316 L565.6503446588877 306.9955289764732 L574.3496553411123 306.9955289764732 Z" fill="#e07b39"/>
+</svg>

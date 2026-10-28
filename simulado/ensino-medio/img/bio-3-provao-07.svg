@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Cladograma (A,(B,(C,D)))</title>
+<desc>Árvore filogenética enraizada com A separado primeiro, depois B, e C e D como táxons mais próximos entre si.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Cladograma (A,(B,(C,D)))</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Raiz à esquerda · ramos indicam ancestralidade comum, não escala de progresso</text>
+<line x1="70" y1="190" x2="140" y2="190" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<line x1="140" y1="110" x2="140" y2="260" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<line x1="140" y1="110" x2="560" y2="110" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<line x1="140" y1="260" x2="250" y2="260" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<line x1="250" y1="190" x2="250" y2="300" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<line x1="250" y1="190" x2="560" y2="190" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<line x1="250" y1="300" x2="340" y2="300" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<line x1="340" y1="250" x2="340" y2="320" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<line x1="340" y1="250" x2="560" y2="250" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<line x1="340" y1="320" x2="560" y2="320" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<circle cx="570" cy="110" r="14" fill="#d6efe1" stroke="#2e8b57" stroke-width="3"/>
+<text x="570" y="115" font-size="15" font-weight="700" fill="#25402f" text-anchor="middle">A</text>
+<circle cx="570" cy="190" r="14" fill="#d6efe1" stroke="#2e8b57" stroke-width="3"/>
+<text x="570" y="195" font-size="15" font-weight="700" fill="#25402f" text-anchor="middle">B</text>
+<circle cx="570" cy="250" r="14" fill="#d6efe1" stroke="#2e8b57" stroke-width="3"/>
+<text x="570" y="255" font-size="15" font-weight="700" fill="#25402f" text-anchor="middle">C</text>
+<circle cx="570" cy="320" r="14" fill="#d6efe1" stroke="#2e8b57" stroke-width="3"/>
+<text x="570" y="325" font-size="15" font-weight="700" fill="#25402f" text-anchor="middle">D</text>
+<text x="52" y="194" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="end">raiz</text>
+<text x="640" y="190" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">táxons atuais</text>
+</svg>

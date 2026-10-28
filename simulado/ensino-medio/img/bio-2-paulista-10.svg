@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Protozooses em duas áreas</title>
+<desc>Comparação de giardíase e amebíase entre a área 1 (sem saneamento regular) e a área 2 (água tratada e coleta de esgoto).</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Protozooses em duas áreas</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Casos por 1.000 habitantes · valores ilustrativos</text>
+<rect x="14" y="70" width="360" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Área 1</text>
+<text x="28" y="112" font-size="14" font-weight="400" fill="#25402f" text-anchor="start"></text>
+<text x="28" y="112" font-size="12.5" font-weight="400" fill="#5d7a69" text-anchor="start">água sem tratamento · esgoto irregular</text>
+<text x="112" y="160" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Giardíase</text>
+<rect x="120" y="135" width="153" height="40" rx="4" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="279" y="160" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">18</text>
+<text x="112" y="212" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Amebíase</text>
+<rect x="120" y="187" width="118.99999999999999" height="40" rx="4" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="245" y="212" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">14</text>
+<path d="M44 268 q20 -14 40 0 t40 0 t40 0" fill="none" stroke="#a1887f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="204" y="273" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">esgoto a céu aberto</text>
+<rect x="386" y="70" width="360" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="400" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Área 2</text>
+<text x="400" y="112" font-size="14" font-weight="400" fill="#25402f" text-anchor="start"></text>
+<text x="400" y="112" font-size="12.5" font-weight="400" fill="#5d7a69" text-anchor="start">água tratada · coleta regular</text>
+<text x="484" y="160" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Giardíase</text>
+<rect x="492" y="135" width="42.5" height="40" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="540.5" y="160" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">5</text>
+<text x="484" y="212" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Amebíase</text>
+<rect x="492" y="187" width="34" height="40" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="532" y="212" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">4</text>
+<path d="M416 262 h26 q10 0 10 10 v8" fill="none" stroke="#546e7a" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M452 286 C457.4 291.4 456.2 296.8 452 296.8 C447.8 296.8 446.6 291.4 452 286Z" fill="#5aa9e6" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M452 305 C456.5 309.5 455.5 314 452 314 C448.5 314 447.5 309.5 452 305Z" fill="#5aa9e6" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="486" y="285" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">água tratada + rede de esgoto</text>
+</svg>

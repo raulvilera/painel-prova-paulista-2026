@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Ensaio com enzimas digestivas</title>
+<desc>Três tubos com glicose, amido e amido com fibra e gráfico de barras dos açúcares liberados.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Ensaio com enzimas digestivas</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Açúcares redutores liberados após 20 min (mg) · valores ilustrativos</text>
+<path d="M40 85 V213 A22 22 0 0 0 84 213 V85" fill="none" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M41.5 122.5 V213 A20.5 20.5 0 0 0 82.5 213 V122.5Z" fill="#f6e7a7" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+<text x="62" y="262" font-size="12" font-weight="700" fill="#25402f" text-anchor="middle">Glicose</text>
+<path d="M140 85 V213 A22 22 0 0 0 184 213 V85" fill="none" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M141.5 122.5 V213 A20.5 20.5 0 0 0 182.5 213 V122.5Z" fill="#efe6d2" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+<text x="162" y="262" font-size="12" font-weight="700" fill="#25402f" text-anchor="middle">Amido</text>
+<path d="M240 85 V213 A22 22 0 0 0 284 213 V85" fill="none" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M241.5 122.5 V213 A20.5 20.5 0 0 0 282.5 213 V122.5Z" fill="#d6c79c" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+<text x="262" y="262" font-size="12" font-weight="700" fill="#25402f" text-anchor="middle">Amido + fibra</text>
+<text x="165" y="290" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="middle">+ enzimas digestivas · 20 min</text>
+<rect x="350" y="70" width="396" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="364" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Açúcares redutores liberados (mg)</text>
+<text x="460" y="132" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Glicose</text>
+<rect x="468" y="105" width="166.66666666666669" height="44" rx="4" fill="#e0b64a" stroke="none" stroke-width="1"/>
+<text x="640.6666666666667" y="132" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">20</text>
+<text x="460" y="188" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Amido</text>
+<rect x="468" y="161" width="150" height="44" rx="4" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="624" y="188" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">18</text>
+<text x="460" y="244" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Amido + fibra</text>
+<rect x="468" y="217" width="91.66666666666666" height="44" rx="4" fill="#2e8b57" stroke="none" stroke-width="1"/>
+<text x="565.6666666666666" y="244" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">11</text>
+<text x="548" y="300" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="middle" font-style="italic">Não representa absorção em uma pessoa.</text>
+</svg>

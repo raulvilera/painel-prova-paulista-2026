@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Combustão do carbono em duas etapas</title>
+<desc>Diagrama de entalpia: C(s) + O2(g), depois CO(g) + 1/2 O2(g) e por fim CO2(g), com as variações de cada etapa e a reação-alvo.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Combustão do carbono em duas etapas</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">Valores ilustrativos de ΔH (kJ mol⁻¹)</text>
+<line x1="120" y1="96" x2="420" y2="96" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<text x="430" y="101" font-size="15" font-weight="700" fill="#1f3347" text-anchor="start">C(s) + O₂(g)</text>
+<line x1="120" y1="186" x2="420" y2="186" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<text x="430" y="191" font-size="15" font-weight="700" fill="#1f3347" text-anchor="start">CO(g) + ½ O₂(g)</text>
+<line x1="120" y1="282" x2="420" y2="282" stroke="#37474f" stroke-width="4" stroke-linecap="round"/>
+<text x="430" y="287" font-size="15" font-weight="700" fill="#1f3347" text-anchor="start">CO₂(g)</text>
+<line x1="200" y1="98" x2="200" y2="184" stroke="#3b82c4" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M200 184 L195.6503446588877 174.99552897647322 L204.3496553411123 174.99552897647322 Z" fill="#3b82c4"/>
+<text x="214" y="146" font-size="13" font-weight="700" fill="#3b82c4" text-anchor="start">Etapa 1: ΔH = −110,5</text>
+<line x1="200" y1="188" x2="200" y2="280" stroke="#e07b39" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M200 280 L195.6503446588877 270.9955289764732 L204.3496553411123 270.9955289764732 Z" fill="#e07b39"/>
+<text x="214" y="238" font-size="13" font-weight="700" fill="#e07b39" text-anchor="start">Etapa 2: ΔH = −283,0</text>
+<path d="M105 98 Q70 190 105 280" fill="none" stroke="#8e5bb5" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 5"/>
+<line x1="105" y1="270" x2="105" y2="282" stroke="#8e5bb5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M105 282 L100.6503446588877 272.9955289764732 L109.34965534111231 272.9955289764732 Z" fill="#8e5bb5"/>
+<text x="24" y="196" font-size="15" font-weight="700" fill="#8e5bb5" text-anchor="start">ΔH = ?</text>
+<text x="40" y="322" font-size="12" font-weight="400" fill="#5a7186" text-anchor="start" font-style="italic">Alvo: C(s) + O₂(g) → CO₂(g) · níveis fora de escala</text>
+</svg>

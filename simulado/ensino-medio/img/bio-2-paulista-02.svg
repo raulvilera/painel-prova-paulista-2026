@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Hormônios e ovulação: dois grupos comparados</title>
+<desc>Barras comparando FSH inicial, LH máximo e estradiol máximo entre o grupo H (formulação hormonal) e o controle C.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Hormônios e ovulação: dois grupos comparados</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Valores da tabela (unidades arbitrárias)</text>
+<rect x="14" y="70" width="235" height="190" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">FSH inicial</text>
+<text x="48" y="129" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">H</text>
+<rect x="56" y="105" width="17.55" height="38" rx="4" fill="#8e5bb5" stroke="none" stroke-width="1"/>
+<text x="79.55" y="129" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">6</text>
+<text x="48" y="179" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">C</text>
+<rect x="56" y="155" width="20.474999999999998" height="38" rx="4" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="82.475" y="179" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">7</text>
+<rect x="261" y="70" width="235" height="190" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="275" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">LH máximo</text>
+<text x="295" y="129" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">H</text>
+<rect x="303" y="105" width="23.400000000000002" height="38" rx="4" fill="#8e5bb5" stroke="none" stroke-width="1"/>
+<text x="332.4" y="129" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">8</text>
+<text x="295" y="179" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">C</text>
+<rect x="303" y="155" width="93.60000000000001" height="38" rx="4" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="402.6" y="179" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">32</text>
+<rect x="508" y="70" width="235" height="190" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="522" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Estradiol máximo</text>
+<text x="542" y="129" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">H</text>
+<rect x="550" y="105" width="42.12" height="38" rx="4" fill="#8e5bb5" stroke="none" stroke-width="1"/>
+<text x="598.12" y="129" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">90</text>
+<text x="542" y="179" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">C</text>
+<rect x="550" y="155" width="107.64" height="38" rx="4" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="663.64" y="179" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">230</text>
+<rect x="14" y="278" width="12" height="12" rx="3" fill="#8e5bb5" stroke="none" stroke-width="1"/>
+<text x="31" y="288" font-size="12" font-weight="400" fill="#25402f" text-anchor="start">H — formulação hormonal (marcador de ovulação: ausente)</text>
+<rect x="449" y="278" width="12" height="12" rx="3" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="466" y="288" font-size="12" font-weight="400" fill="#25402f" text-anchor="start">C — controle (marcador: presente)</text>
+<text x="14" y="318" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start" font-style="italic">O marcador de ovulação é um indicador do protocolo, não um exame clínico.</text>
+</svg>

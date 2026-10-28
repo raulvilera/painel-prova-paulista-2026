@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Energia disponível em quatro níveis tróficos</title>
+<desc>Pirâmide de energia com produtores, consumidores primários, secundários e terciários e suas energias.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Energia disponível em quatro níveis tróficos</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">kJ · valores ilustrativos · E(n+1) = 0,10 × E(n)</text>
+<rect x="60" y="250" width="560" height="48" rx="6" fill="#2e8b57" stroke="none" stroke-width="1" opacity="0.9"/>
+<text x="340" y="271" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Produtores</text>
+<text x="340" y="289" font-size="13" font-weight="400" fill="#fff" text-anchor="middle">10 000 kJ</text>
+<rect x="125" y="192" width="430" height="48" rx="6" fill="#e0b64a" stroke="none" stroke-width="1" opacity="0.9"/>
+<text x="340" y="213" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Consumidores primários</text>
+<text x="340" y="231" font-size="13" font-weight="400" fill="#fff" text-anchor="middle">1 000 kJ</text>
+<rect x="190" y="134" width="300" height="48" rx="6" fill="#e07b39" stroke="none" stroke-width="1" opacity="0.9"/>
+<text x="340" y="155" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Consumidores secundários</text>
+<text x="340" y="173" font-size="13" font-weight="400" fill="#fff" text-anchor="middle">100 kJ</text>
+<rect x="255" y="76" width="170" height="48" rx="6" fill="#c0392b" stroke="none" stroke-width="1" opacity="0.9"/>
+<text x="340" y="97" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Consumidores terciários</text>
+<text x="340" y="115" font-size="13" font-weight="400" fill="#fff" text-anchor="middle">10 kJ</text>
+<line x1="640" y1="290" x2="640" y2="90" stroke="#5d7a69" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M640 90 L644.3496553411123 99.00447102352678 L635.6503446588877 99.00447102352678 Z" fill="#5d7a69"/>
+<text x="690" y="190" font-size="13" font-weight="400" fill="#5d7a69" text-anchor="middle" transform="rotate(90 690 190)">energia</text>
+<text x="22" y="330" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start" font-style="italic">Os valores não representam biomassa nem a energia total do ecossistema.</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Pilha Mg/Cu em condições padrão</title>
+<desc>Pilha com eletrodos de magnésio e de cobre, ponte salina e voltímetro, e potenciais-padrão de redução.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Pilha Mg/Cu em condições padrão</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">Circuito externo e ponte salina</text>
+<rect x="42" y="208" width="176" height="70" rx="0" fill="#dcecdc" stroke="none" stroke-width="1" opacity="0.75"/>
+<path d="M40 160 V272 Q40 280 48 280 H212 Q220 280 220 272 V160" fill="none" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="302" y="208" width="176" height="70" rx="0" fill="#a9d6e5" stroke="none" stroke-width="1" opacity="0.75"/>
+<path d="M300 160 V272 Q300 280 308 280 H472 Q480 280 480 272 V160" fill="none" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="115" y="110" width="14" height="150" rx="2" fill="#cfd8dc" stroke="#37474f" stroke-width="1.5"/>
+<rect x="375" y="110" width="14" height="150" rx="2" fill="#c77d4f" stroke="#37474f" stroke-width="1.5"/>
+<text x="130" y="306" font-size="13" font-weight="700" fill="#1f3347" text-anchor="middle">Mg | Mg²⁺</text>
+<text x="390" y="306" font-size="13" font-weight="700" fill="#1f3347" text-anchor="middle">Cu | Cu²⁺</text>
+<path d="M190 150 V176 H330 V150" fill="none" stroke="#8d6e63" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M190 150 V176 H330 V150" fill="none" stroke="#efe3d0" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M122 110 L122 88 L225 88" fill="none" stroke="#37474f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M295 88 L382 88 L382 110" fill="none" stroke="#37474f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="260" cy="88" r="26" fill="#fff" stroke="#37474f" stroke-width="3"/>
+<text x="260" y="94" font-size="17" font-weight="700" fill="#1f3347" text-anchor="middle">V</text>
+<rect x="510" y="74" width="236" height="200" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="524" y="96" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">E° de redução (V)</text>
+<text x="526" y="126" font-size="14" font-weight="700" fill="#1f3347" text-anchor="start">Cu²⁺ + 2e⁻ → Cu</text>
+<text x="526" y="148" font-size="18" font-weight="700" fill="#e07b39" text-anchor="start">+0,34 V</text>
+<text x="526" y="196" font-size="14" font-weight="700" fill="#1f3347" text-anchor="start">Mg²⁺ + 2e⁻ → Mg</text>
+<text x="526" y="218" font-size="18" font-weight="700" fill="#3b82c4" text-anchor="start">−2,37 V</text>
+</svg>

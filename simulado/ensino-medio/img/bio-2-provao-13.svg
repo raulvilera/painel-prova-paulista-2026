@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Edição de DNA e validação por PCR</title>
+<desc>Quatro códons da fita molde com destaque para CTT e CAT, e gel de PCR com banda na linhagem editada e controle negativo sem banda.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Edição de DNA e validação por PCR</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Fita molde normal: 3′-TAC GGA CTT ACT-5′ · códon CTT trocado por CAT</text>
+<rect x="14" y="70" width="732" height="124" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Fita molde</text>
+<rect x="40" y="106" width="96" height="34" rx="6" fill="#d6efe1" stroke="#2e8b57" stroke-width="2"/>
+<text x="88" y="130" font-size="18" font-weight="700" fill="#25402f" text-anchor="middle">TAC</text>
+<rect x="150" y="106" width="96" height="34" rx="6" fill="#d6efe1" stroke="#2e8b57" stroke-width="2"/>
+<text x="198" y="130" font-size="18" font-weight="700" fill="#25402f" text-anchor="middle">GGA</text>
+<rect x="260" y="106" width="96" height="34" rx="6" fill="#fde3c8" stroke="#e07b39" stroke-width="2"/>
+<text x="308" y="130" font-size="18" font-weight="700" fill="#25402f" text-anchor="middle">CTT</text>
+<rect x="370" y="106" width="96" height="34" rx="6" fill="#d6efe1" stroke="#2e8b57" stroke-width="2"/>
+<text x="418" y="130" font-size="18" font-weight="700" fill="#25402f" text-anchor="middle">ACT</text>
+<text x="308" y="168" font-size="13" font-weight="700" fill="#e07b39" text-anchor="middle">↓ edição: CAT</text>
+<text x="500" y="126" font-size="12.5" font-weight="400" fill="#5d7a69" text-anchor="start">linhagem normal  →  linhagem editada</text>
+<text x="500" y="150" font-size="12.5" font-weight="400" fill="#5d7a69" text-anchor="start">só o códon CTT é alterado</text>
+<rect x="14" y="204" width="732" height="120" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="226" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">PCR (eletroforese)</text>
+<rect x="300" y="232" width="300" height="84" rx="8" fill="#2b3a42" stroke="none" stroke-width="1"/>
+<rect x="350" y="238" width="50" height="7" rx="0" fill="#10171b" stroke="none" stroke-width="1"/>
+<rect x="350" y="268" width="50" height="8" rx="3" fill="#9fe8ff" stroke="none" stroke-width="1"/>
+<text x="375" y="307" font-size="10.5" font-weight="700" fill="#fff" text-anchor="middle">Editada</text>
+<rect x="470" y="238" width="50" height="7" rx="0" fill="#10171b" stroke="none" stroke-width="1"/>
+<text x="495" y="307" font-size="10.5" font-weight="700" fill="#fff" text-anchor="middle">Controle (−)</text>
+<text x="40" y="270" font-size="12.5" font-weight="400" fill="#25402f" text-anchor="start">banda no tamanho esperado na</text>
+<text x="40" y="290" font-size="12.5" font-weight="400" fill="#25402f" text-anchor="start">linhagem editada; sem banda no controle</text>
+</svg>

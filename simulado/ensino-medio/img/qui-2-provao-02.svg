@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>N₂O₄(g) ⇌ 2 NO₂(g) em êmbolo móvel</title>
+<desc>Dois cilindros com êmbolo: equilíbrio original com concentrações 0,20 e 0,40 mol por litro, e o mesmo sistema com volume reduzido à metade.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">N₂O₄(g) ⇌ 2 NO₂(g) em êmbolo móvel</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">Temperatura constante · compressão instantânea do volume à metade</text>
+<rect x="60" y="130" width="200" height="170" rx="4" fill="#e9f4fb" stroke="#37474f" stroke-width="3"/>
+<rect x="50" y="118" width="220" height="12" rx="3" fill="#78909c" stroke="none" stroke-width="1"/>
+<line x1="160" y1="70" x2="160" y2="118" stroke="#78909c" stroke-width="6" stroke-linecap="round"/>
+<circle cx="90" cy="160" r="9" fill="#8e5bb5" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="150" cy="160" r="9" fill="#8e5bb5" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="210" cy="160" r="9" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="90" cy="194" r="9" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="150" cy="194" r="9" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="210" cy="194" r="9" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<text x="160" y="322" font-size="12.5" font-weight="700" fill="#1f3347" text-anchor="middle">Equilíbrio original</text>
+<rect x="470" y="215" width="200" height="85" rx="4" fill="#e9f4fb" stroke="#37474f" stroke-width="3"/>
+<rect x="460" y="203" width="220" height="12" rx="3" fill="#78909c" stroke="none" stroke-width="1"/>
+<line x1="570" y1="155" x2="570" y2="203" stroke="#78909c" stroke-width="6" stroke-linecap="round"/>
+<circle cx="500" cy="245" r="9" fill="#8e5bb5" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="560" cy="245" r="9" fill="#8e5bb5" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="620" cy="245" r="9" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="500" cy="279" r="9" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="560" cy="279" r="9" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="620" cy="279" r="9" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<text x="570" y="322" font-size="12.5" font-weight="700" fill="#1f3347" text-anchor="middle">Logo após reduzir à metade</text>
+<line x1="290" y1="215" x2="440" y2="215" stroke="#e07b39" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M440 215 L430.9955289764732 219.3496553411123 L430.9955289764732 210.6503446588877 Z" fill="#e07b39"/>
+<text x="365" y="205" font-size="13" font-weight="700" fill="#e07b39" text-anchor="middle">V → V/2</text>
+<text x="365" y="255" font-size="12.5" font-weight="700" fill="#8e5bb5" text-anchor="middle">[N₂O₄] = 0,20 mol L⁻¹</text>
+<text x="365" y="275" font-size="12.5" font-weight="700" fill="#e07b39" text-anchor="middle">[NO₂] = 0,40 mol L⁻¹</text>
+<text x="365" y="295" font-size="11" font-weight="400" fill="#5a7186" text-anchor="middle">(no equilíbrio original)</text>
+</svg>
