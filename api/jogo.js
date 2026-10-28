@@ -102,6 +102,16 @@ module.exports = async function jogo(req, res) {
     if (req.method !== 'GET') return out(405, { ok: false, erro: 'Use GET.' });
     const est = String((req.query && req.query.estudo) || '').trim();
     if (est) { const e = estudo(est); if (!e) return out(404, { ok: false, erro: 'Turma não encontrada.' }); res.setHeader('Cache-Control', 'public, max-age=300'); return out(200, Object.assign({ ok: true }, e)); }
+    const nomesT = String((req.query && req.query.nomes) || '').trim();   // lista de nomes da turma (Trilha): o servidor busca na planilha, com cache
+    if (nomesT) {
+      try {
+        const ac = new AbortController(), tm = setTimeout(() => ac.abort(), 20000);
+        const r = await fetch('https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu_dupRvY-GzoHPNZhL2ft3KpSK7odGF0amqn7Yc7P/exec?' + new URLSearchParams({ api: 'alunos', id: nomesT }), { redirect: 'follow', signal: ac.signal }).finally(() => clearTimeout(tm));
+        const j = await r.json(); if (!j || !j.ok) return out(502, { ok: false, erro: (j && j.erro) || 'Planilha indisponível.' });
+        res.setHeader('Cache-Control', 'public, s-maxage=600, stale-while-revalidate=86400');
+        return out(200, { ok: true, alunos: (j.alunos || []).map(a => ({ nome: a.nome })).filter(a => a.nome) });
+      } catch (e) { return out(502, { ok: false, erro: 'Planilha indisponível.' }); }
+    }
     const tri = String((req.query && req.query.trilha) || '').trim();
     if (tri) { const d = dadosAluno(tri); if (!d) return out(404, { ok: false, erro: 'Turma não encontrada.' }); res.setHeader('Cache-Control', 'public, max-age=120'); return out(200, Object.assign({ ok: true }, d)); }
     const foto = String((req.query && req.query.foto) || '').trim();
