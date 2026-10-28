@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Escala de potenciais-padrão de redução</title>
+<desc>Reta vertical com Mg, Zn, Cu e Ag posicionados por E°red, e os pares I (Mg/Ag) e II (Zn/Cu).</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Escala de potenciais-padrão de redução</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">E°red (V) · valores usados na atividade</text>
+<rect x="14" y="70" width="430" height="258" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Potencial-padrão de redução (V)</text>
+<line x1="100" y1="100" x2="100" y2="300" stroke="#5a7186" stroke-width="2" stroke-linecap="round"/>
+<circle cx="100" cy="118" r="7" fill="#9aa5ab" stroke="#fff" stroke-width="2"/>
+<text x="116" y="123" font-size="14" font-weight="700" fill="#1f3347" text-anchor="start">Ag⁺/Ag</text>
+<text x="86" y="123" font-size="13" font-weight="400" fill="#1f3347" text-anchor="end">+0,80</text>
+<circle cx="100" cy="143.82965299684543" r="7" fill="#e07b39" stroke="#fff" stroke-width="2"/>
+<text x="116" y="148.82965299684543" font-size="14" font-weight="700" fill="#1f3347" text-anchor="start">Cu²⁺/Cu</text>
+<text x="86" y="148.82965299684543" font-size="13" font-weight="400" fill="#1f3347" text-anchor="end">+0,34</text>
+<circle cx="100" cy="205.596214511041" r="7" fill="#3b82c4" stroke="#fff" stroke-width="2"/>
+<text x="116" y="210.596214511041" font-size="14" font-weight="700" fill="#1f3347" text-anchor="start">Zn²⁺/Zn</text>
+<text x="86" y="210.596214511041" font-size="13" font-weight="400" fill="#1f3347" text-anchor="end">−0,76</text>
+<circle cx="100" cy="296" r="7" fill="#2e8b57" stroke="#fff" stroke-width="2"/>
+<text x="116" y="301" font-size="14" font-weight="700" fill="#1f3347" text-anchor="start">Mg²⁺/Mg</text>
+<text x="86" y="301" font-size="13" font-weight="400" fill="#1f3347" text-anchor="end">−2,37</text>
+<line x1="100" y1="162.9211356466877" x2="330" y2="162.9211356466877" stroke="#cfd8dc" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 5"/>
+<text x="336" y="166.9211356466877" font-size="11" font-weight="400" fill="#5a7186" text-anchor="start">0,00</text>
+<rect x="462" y="92" width="284" height="108" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="476" y="114" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Par I</text>
+<text x="478" y="148" font-size="16" font-weight="700" fill="#2e8b57" text-anchor="start">Mg²⁺/Mg e Ag⁺/Ag</text>
+<text x="478" y="172" font-size="11.5" font-weight="400" fill="#5a7186" text-anchor="start">mesmo critério: maior E°red → cátodo</text>
+<rect x="462" y="212" width="284" height="108" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="476" y="234" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Par II</text>
+<text x="478" y="268" font-size="16" font-weight="700" fill="#3b82c4" text-anchor="start">Zn²⁺/Zn e Cu²⁺/Cu</text>
+<text x="478" y="292" font-size="11.5" font-weight="400" fill="#5a7186" text-anchor="start">mesmo critério: maior E°red → cátodo</text>
+</svg>

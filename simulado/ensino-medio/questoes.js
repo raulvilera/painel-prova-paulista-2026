@@ -30,12 +30,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-02",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Pilule_contraceptive.jpg?width=640",
-          "leg": "Cartela de medicamento hormonal em uso oral.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Pilule_contraceptive.jpg"
-        },
+        "foto": {"src":"img/bio-2-paulista-02.svg","leg":"Hormônios e ovulação: dois grupos comparados","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Sistema endócrino, ciclo ovariano e contracepção hormonal",
         "hab": "EM13CNT207",
@@ -79,12 +74,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-04",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_brain_preserved_in_formaldehyde.jpg?width=640",
-          "leg": "Encéfalo humano preservado para estudo.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Human_brain_preserved_in_formaldehyde.jpg"
-        },
+        "foto": {"src":"img/bio-2-paulista-04.svg","leg":"Álcool, energético e tempo de reação","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Drogas psicoativas, sistema nervoso e dependência",
         "hab": "EM13CNT207",
@@ -127,12 +117,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-05",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Hookah_0890.jpg?width=640",
-          "leg": "Narguilé.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Hookah_0890.jpg"
-        },
+        "foto": {"src":"img/bio-2-paulista-05.svg","leg":"Três formas de consumo de nicotina","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Tabaco, nicotina, narguilé e cigarro eletrônico",
         "hab": "EM13CNT207",
@@ -151,12 +136,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-07",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Testing_Blood_Sugar_Levels.jpg?width=640",
-          "leg": "Medição de glicose no sangue.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Testing_Blood_Sugar_Levels.jpg"
-        },
+        "foto": {"src":"img/bio-2-paulista-07.svg","leg":"Teste de carga de glicose: grupos A e B","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Insulina, glicemia e diabetes tipo 2",
         "hab": "EM13CNT310",
@@ -203,12 +183,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-08",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_beans_and_rice.jpg?width=640",
-          "leg": "Prato com arroz e feijão.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Red_beans_and_rice.jpg"
-        },
+        "foto": {"src":"img/bio-2-paulista-08.svg","leg":"Ensaio com enzimas digestivas","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Carboidratos, fibras e disponibilidade de glicose",
         "hab": "EM13CNT310",
@@ -247,12 +222,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-10",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Giardia_lamblia_SEM_8698_lores.jpg?width=640",
-          "leg": "Protozoário visto ao microscópio eletrônico.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Giardia_lamblia_SEM_8698_lores.jpg"
-        },
+        "foto": {"src":"img/bio-2-paulista-10.svg","leg":"Protozooses em duas áreas","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Protozooses: giardíase, amebíase e transmissão",
         "hab": "EM13CNT310",
@@ -293,12 +263,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-11",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Open_sewer_(2731597018).jpg?width=640",
-          "leg": "Esgoto a céu aberto em área urbana.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Open_sewer_(2731597018).jpg"
-        },
+        "foto": {"src":"img/bio-2-paulista-11.svg","leg":"Casos antes e depois de obras de saneamento","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Saneamento, incidência e interpretação de dados",
         "hab": "EM13CNT310",
@@ -349,12 +314,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-13",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Package_of_Lutera_Birth_Control_Pills.jpg?width=640",
-          "leg": "Embalagem de medicamento de uso hormonal.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Package_of_Lutera_Birth_Control_Pills.jpg"
-        },
+        "foto": {"src":"img/bio-2-paulista-13.svg","leg":"Mensagem em rede social sobre saúde sexual","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "dis",
         "objeto": "Sistema endócrino e reprodutor; contraceptivos hormonais e prevenção de IST",
         "hab": "EM13CNT207",
@@ -367,12 +327,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "bio-2-paulista-14",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa%C3%BAde_street_Market,_S%C3%A3o_Paulo,_Brazil.jpg?width=640",
-          "leg": "Feira livre em São Paulo.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Sa%C3%BAde_street_Market,_S%C3%A3o_Paulo,_Brazil.jpg"
-        },
+        "foto": {"src":"img/bio-2-paulista-14.svg","leg":"Indicadores comunitários: bairros X e Y","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "dis",
         "objeto": "Alimentação, insulina/diabetes tipo 2, protozooses e saneamento",
         "hab": "EM13CNT310",
@@ -440,12 +395,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-02",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Zinc_and_copper_sulfate.JPG?width=640",
-          "leg": "Metal em contato com solução aquosa.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Zinc_and_copper_sulfate.JPG"
-        },
+        "foto": {"src":"img/qui-2-paulista-02.svg","leg":"Escala de potenciais-padrão de redução","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Potenciais-padrão de redução; reatividade e ddp de pilhas",
         "hab": "EM13CNT107; EM13CNT308",
@@ -483,12 +433,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-04",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Salt_-_close-up.jpg?width=640",
-          "leg": "Cristais de sal de cozinha.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Salt_-_close-up.jpg"
-        },
+        "foto": {"src":"img/qui-2-paulista-04.svg","leg":"Condutividade de soluções (mesmo aparelho, mesma temperatura)","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Condutividade elétrica de soluções; espécies carregadas móveis",
         "hab": "EM13CNT107; EM13CNT308",
@@ -536,12 +481,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-05",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Elektrolyse1.jpg?width=640",
-          "leg": "Montagem de laboratório com fonte de energia elétrica.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Elektrolyse1.jpg"
-        },
+        "foto": {"src":"img/qui-2-paulista-05.svg","leg":"Eletrólise aquosa de CuCl₂ com eletrodos inertes","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Eletrólise aquosa; estequiometria de elétrons e carga elétrica",
         "hab": "EM13CNT107; EM13CNT308",
@@ -580,12 +520,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-07",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Rusted_chain.jpg?width=640",
-          "leg": "Corrente de ferro enferrujada.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Rusted_chain.jpg"
-        },
+        "foto": {"src":"img/qui-2-paulista-07.svg","leg":"Corrosão de pregos de aço em sete dias","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Corrosão do ferro; efeito da água, do oxigênio e da condutividade do meio",
         "hab": "EM13CNT107; EM13CNT308",
@@ -628,12 +563,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-08",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Photo-CarBattery.jpg?width=640",
-          "leg": "Bateria automotiva.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Photo-CarBattery.jpg"
-        },
+        "foto": {"src":"img/qui-2-paulista-08.svg","leg":"Bateria com resistência interna","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Bateria; ddp terminal e resistência interna",
         "hab": "EM13CNT107; EM13CNT308",
@@ -652,12 +582,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-10",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Lithium-ion_polymer_battery.jpg?width=640",
-          "leg": "Bateria recarregável de dispositivo eletrônico.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Lithium-ion_polymer_battery.jpg"
-        },
+        "foto": {"src":"img/qui-2-paulista-10.svg","leg":"Duas baterias sob a mesma carga","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Desempenho de baterias; capacidade, resistência interna e tensão sob carga",
         "hab": "EM13CNT107; EM13CNT308",
@@ -698,12 +623,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-11",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratsk_Aluminium_Smelter_(34988213595).jpg?width=640",
-          "leg": "Complexo industrial de produção de alumínio.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Bratsk_Aluminium_Smelter_(34988213595).jpg"
-        },
+        "foto": {"src":"img/qui-2-paulista-11.svg","leg":"NaCl fundido × NaCl em solução aquosa","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "obj",
         "objeto": "Eletrólise ígnea e aquosa; competição entre íons e água",
         "hab": "EM13CNT107; EM13CNT308",
@@ -722,12 +642,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-13",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/LR44_Button_Cell_Battery.jpg?width=640",
-          "leg": "Pilha em formato de botão.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:LR44_Button_Cell_Battery.jpg"
-        },
+        "foto": {"src":"img/qui-2-paulista-13.svg","leg":"Pilha Zn/Cu: dados para a montagem","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "dis",
         "objeto": "Pilha galvânica; semirreações, reação global, fluxo de elétrons e ddp",
         "hab": "EM13CNT107; EM13CNT308",
@@ -740,12 +655,7 @@ window.AVALIACOES_EM = {
       },
       {
         "id": "qui-2-paulista-14",
-        "foto": {
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Electro-etching_on_copper_plate_with_copper_sulphate_solution_(electrolyte)_and_small_battery_charge.jpg?width=640",
-          "leg": "Placa de cobre em solução ligada a uma pequena bateria.",
-          "cred": "Wikimedia Commons (autoria e licença na página do arquivo)",
-          "url": "https://commons.wikimedia.org/wiki/File:Electro-etching_on_copper_plate_with_copper_sulphate_solution_(electrolyte)_and_small_battery_charge.jpg"
-        },
+        "foto": {"src":"img/qui-2-paulista-14.svg","leg":"Galvanoplastia didática com cobre","cred":"Ilustração autoral","ilustracao":true},
         "tipo": "dis",
         "objeto": "Eletrólise e galvanoplastia; lei de Faraday; sustentabilidade",
         "hab": "EM13CNT107; EM13CNT308",

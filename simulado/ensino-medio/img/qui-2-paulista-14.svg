@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Galvanoplastia didática com cobre</title>
+<desc>Cuba com solução de sulfato de cobre, peça a revestir e placa de cobre ligadas a uma fonte de corrente contínua.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Galvanoplastia didática com cobre</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">Solução aquosa de CuSO₄ · I = 2,50 A durante 20,0 min</text>
+<rect x="92" y="192" width="296" height="106" rx="0" fill="#a9d6e5" stroke="none" stroke-width="1" opacity="0.75"/>
+<path d="M90 150 V292 Q90 300 98 300 H382 Q390 300 390 292 V150" fill="none" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="240" y="252" font-size="16" font-weight="700" fill="#1d4e6b" text-anchor="middle">CuSO₄(aq)</text>
+<rect x="138" y="100" width="14" height="120" rx="0" fill="#c77d4f" stroke="#37474f" stroke-width="1.5"/>
+<text x="145" y="322" font-size="12.5" font-weight="400" fill="#1f3347" text-anchor="middle">placa de cobre</text>
+<rect x="318" y="96" width="12" height="10" rx="0" fill="#37474f" stroke="none" stroke-width="1"/>
+<path d="M324 106 L324 170 q-22 8 -22 34 q22 12 44 0 q0 -26 -22 -34" fill="#cfd8dc" stroke="#37474f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="324" y="322" font-size="12.5" font-weight="400" fill="#1f3347" text-anchor="middle">peça a revestir</text>
+<path d="M145 100 L145 70 L190 70" fill="none" stroke="#37474f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M324 96 L324 70 L290 70" fill="none" stroke="#37474f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="190" y="52" width="100" height="36" rx="6" fill="#fff" stroke="#37474f" stroke-width="3"/>
+<text x="240" y="76" font-size="14" font-weight="700" fill="#1f3347" text-anchor="middle">fonte CC</text>
+<rect x="440" y="80" width="306" height="230" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="454" y="102" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Dados</text>
+<text x="456" y="122" font-size="12" font-weight="400" fill="#5a7186" text-anchor="start">Corrente</text>
+<text x="456" y="140" font-size="16" font-weight="700" fill="#1f3347" text-anchor="start">2,50 A</text>
+<text x="456" y="166" font-size="12" font-weight="400" fill="#5a7186" text-anchor="start">Tempo</text>
+<text x="456" y="184" font-size="16" font-weight="700" fill="#1f3347" text-anchor="start">20,0 min</text>
+<text x="456" y="210" font-size="12" font-weight="400" fill="#5a7186" text-anchor="start">M(Cu)</text>
+<text x="456" y="228" font-size="16" font-weight="700" fill="#1f3347" text-anchor="start">63,5 g·mol⁻¹</text>
+<text x="456" y="254" font-size="12" font-weight="400" fill="#5a7186" text-anchor="start">F</text>
+<text x="456" y="272" font-size="16" font-weight="700" fill="#1f3347" text-anchor="start">9,65 × 10⁴ C·mol⁻¹ de e⁻</text>
+</svg>

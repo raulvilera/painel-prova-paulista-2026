@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>NaCl fundido × NaCl em solução aquosa</title>
+<desc>Dois recipientes com eletrodos inertes ligados a geradores: um com NaCl fundido, outro com solução aquosa de NaCl.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">NaCl fundido × NaCl em solução aquosa</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">Eletrólise com eletrodos inertes · compare os produtos catódicos</text>
+<rect x="14" y="70" width="360" height="252" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<rect x="86" y="189" width="216" height="89" rx="0" fill="#f3c89a" stroke="none" stroke-width="1" opacity="0.75"/>
+<path d="M84 150 V272 Q84 280 92 280 H296 Q304 280 304 272 V150" fill="none" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="129" y="112" width="14" height="130" rx="2" fill="#546e7a" stroke="#37474f" stroke-width="1.5"/>
+<rect x="245" y="112" width="14" height="130" rx="2" fill="#546e7a" stroke="#37474f" stroke-width="1.5"/>
+<path d="M136 112 L136 100 L204 100" fill="none" stroke="#37474f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M252 112 L252 100 L244 100" fill="none" stroke="#37474f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="204" y="86" width="40" height="28" rx="5" fill="#fff" stroke="#37474f" stroke-width="2.5"/>
+<text x="224" y="106" font-size="12" font-weight="700" fill="#1f3347" text-anchor="middle">CC</text>
+<text x="28" y="98" font-size="14" font-weight="700" fill="#1f3347" text-anchor="start">NaCl fundido</text>
+<text x="194" y="304" font-size="12" font-weight="400" fill="#5a7186" text-anchor="middle">NaCl(ℓ) · alta temperatura</text>
+<path d="M104 150 q6 -9 0 -18" fill="none" stroke="#e07b39" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M124 150 q6 -9 0 -18" fill="none" stroke="#e07b39" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M144 150 q6 -9 0 -18" fill="none" stroke="#e07b39" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="386" y="70" width="360" height="252" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<rect x="458" y="189" width="216" height="89" rx="0" fill="#cfe3f3" stroke="none" stroke-width="1" opacity="0.75"/>
+<path d="M456 150 V272 Q456 280 464 280 H668 Q676 280 676 272 V150" fill="none" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="501" y="112" width="14" height="130" rx="2" fill="#546e7a" stroke="#37474f" stroke-width="1.5"/>
+<rect x="617" y="112" width="14" height="130" rx="2" fill="#546e7a" stroke="#37474f" stroke-width="1.5"/>
+<path d="M508 112 L508 100 L576 100" fill="none" stroke="#37474f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M624 112 L624 100 L616 100" fill="none" stroke="#37474f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="576" y="86" width="40" height="28" rx="5" fill="#fff" stroke="#37474f" stroke-width="2.5"/>
+<text x="596" y="106" font-size="12" font-weight="700" fill="#1f3347" text-anchor="middle">CC</text>
+<text x="400" y="98" font-size="14" font-weight="700" fill="#1f3347" text-anchor="start">NaCl(aq) em solução</text>
+<text x="566" y="304" font-size="12" font-weight="400" fill="#5a7186" text-anchor="middle">NaCl(aq) · a água também participa</text>
+<path d="M686 192 C693.2 199.2 691.6 206.4 686 206.4 C680.4 206.4 678.8 199.2 686 192Z" fill="#5aa9e6" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M706 223 C712.3 229.3 710.9 235.6 706 235.6 C701.1 235.6 699.7 229.3 706 223Z" fill="#5aa9e6" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

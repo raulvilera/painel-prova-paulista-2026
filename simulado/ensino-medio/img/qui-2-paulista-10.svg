@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Duas baterias sob a mesma carga</title>
+<desc>Cartões das baterias A e B com força eletromotriz, capacidade e resistência interna, ligadas a um circuito com corrente de 0,60 A.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Duas baterias sob a mesma carga</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">I = 0,60 A · Vterminal = E − r·I · t ideal = capacidade / I</text>
+<rect x="14" y="70" width="360" height="190" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Bateria A</text>
+<rect x="38" y="102" width="120" height="52" rx="8" fill="#fff" stroke="#3b82c4" stroke-width="3"/>
+<rect x="158" y="117.6" width="9" height="20.8" rx="2" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<rect x="46" y="110" width="54" height="36" rx="4" fill="#7bc47f" stroke="none" stroke-width="1"/>
+<text x="140" y="134" font-size="20" font-weight="700" fill="#3b82c4" text-anchor="middle">+</text>
+<text x="184" y="118" font-size="12" font-weight="400" fill="#5a7186" text-anchor="start">E nominal</text>
+<text x="276" y="118" font-size="17" font-weight="700" fill="#1f3347" text-anchor="start">3,70 V</text>
+<text x="184" y="152" font-size="12" font-weight="400" fill="#5a7186" text-anchor="start">Capacidade</text>
+<text x="276" y="152" font-size="17" font-weight="700" fill="#1f3347" text-anchor="start">2,40 Ah</text>
+<text x="184" y="186" font-size="12" font-weight="400" fill="#5a7186" text-anchor="start">r interna</text>
+<text x="276" y="186" font-size="17" font-weight="700" fill="#1f3347" text-anchor="start">0,20 Ω</text>
+<rect x="386" y="70" width="360" height="190" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="400" y="92" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Bateria B</text>
+<rect x="410" y="102" width="120" height="52" rx="8" fill="#fff" stroke="#2e8b57" stroke-width="3"/>
+<rect x="530" y="117.6" width="9" height="20.8" rx="2" fill="#2e8b57" stroke="none" stroke-width="1"/>
+<rect x="418" y="110" width="54" height="36" rx="4" fill="#7bc47f" stroke="none" stroke-width="1"/>
+<text x="512" y="134" font-size="20" font-weight="700" fill="#2e8b57" text-anchor="middle">+</text>
+<text x="556" y="118" font-size="12" font-weight="400" fill="#5a7186" text-anchor="start">E nominal</text>
+<text x="648" y="118" font-size="17" font-weight="700" fill="#1f3347" text-anchor="start">3,60 V</text>
+<text x="556" y="152" font-size="12" font-weight="400" fill="#5a7186" text-anchor="start">Capacidade</text>
+<text x="648" y="152" font-size="17" font-weight="700" fill="#1f3347" text-anchor="start">1,80 Ah</text>
+<text x="556" y="186" font-size="12" font-weight="400" fill="#5a7186" text-anchor="start">r interna</text>
+<text x="648" y="186" font-size="17" font-weight="700" fill="#1f3347" text-anchor="start">0,05 Ω</text>
+<rect x="190" y="280" width="380" height="40" rx="20" fill="#fff" stroke="#37474f" stroke-width="3"/>
+<text x="380" y="306" font-size="16" font-weight="700" fill="#1f3347" text-anchor="middle">mesma carga: I = 0,60 A</text>
+</svg>
