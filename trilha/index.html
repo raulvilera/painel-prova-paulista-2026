@@ -593,7 +593,8 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
     for (let k = 0; k < 3; k++) {
       try {
         const ac = new AbortController(), tm = setTimeout(() => ac.abort(), 25000);
-        const r = await fetch(API_PL + '?' + new URLSearchParams({ nc: Date.now(), api: 'alunos', id }), { redirect: 'follow', cache: 'no-store', credentials: 'omit', signal: ac.signal }).finally(() => clearTimeout(tm));
+        // 1º tenta pelo nosso servidor (com cache, mais estável no celular); se falhar, vai direto à planilha
+        const r = await fetch('/api/jogo?nomes=' + encodeURIComponent(id), { signal: ac.signal }).then(x => { if (!x.ok) throw new Error('proxy'); return x; }).catch(() => fetch(API_PL + '?' + new URLSearchParams({ nc: Date.now(), api: 'alunos', id }), { redirect: 'follow', cache: 'no-store', credentials: 'omit', signal: ac.signal })).finally(() => clearTimeout(tm));
         const j = await r.json(); if (!j.ok) throw Object.assign(new Error(j.erro || 'erro'), { srv: true });
         const n = (j.alunos || []).map(a => a.nome).filter(Boolean); ({ '6º Ano A': ['NAOMI PAGES ROJOS'], '9º Ano B': ['DANILO SANTOS CONCEIÇÃO'], '8º Ano A': ['ZLATA EVGENIEVNA SAFOROVA'] }[id] || []).forEach(x => { if (!n.includes(x)) n.push(x); });
         return n.sort((a, b) => a.localeCompare(b, 'pt'));
