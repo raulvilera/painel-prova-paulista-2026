@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Referência × variante: do DNA à proteína</title>
+<desc>Tabela visual com DNA, mRNA e trecho proteico de duas amostras, destacando o segundo códon: GAA e GTA.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Referência × variante: do DNA à proteína</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Fita codificadora 5′→3′ · mesmo protocolo · valores ilustrativos</text>
+<rect x="14" y="74" width="732" height="116" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="96" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Referência</text>
+<text x="40" y="118" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">DNA codificador</text>
+<rect x="40" y="128" width="60" height="36" rx="6" fill="#fff" stroke="#2e8b57" stroke-width="2"/>
+<text x="70" y="153" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">ATG</text>
+<rect x="106" y="128" width="60" height="36" rx="6" fill="#fde3c8" stroke="#e07b39" stroke-width="2"/>
+<text x="136" y="153" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">GAA</text>
+<rect x="172" y="128" width="60" height="36" rx="6" fill="#fff" stroke="#2e8b57" stroke-width="2"/>
+<text x="202" y="153" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">TCC</text>
+<text x="275" y="118" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">mRNA</text>
+<rect x="275" y="128" width="60" height="36" rx="6" fill="#fff" stroke="#e07b39" stroke-width="2"/>
+<text x="305" y="153" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">AUG</text>
+<rect x="341" y="128" width="60" height="36" rx="6" fill="#fde3c8" stroke="#e07b39" stroke-width="2"/>
+<text x="371" y="153" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">GAA</text>
+<rect x="407" y="128" width="60" height="36" rx="6" fill="#fff" stroke="#e07b39" stroke-width="2"/>
+<text x="437" y="153" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">UCC</text>
+<text x="510" y="118" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">Proteína</text>
+<rect x="510" y="128" width="60" height="36" rx="6" fill="#fff" stroke="#8e5bb5" stroke-width="2"/>
+<text x="540" y="153" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">Met</text>
+<rect x="576" y="128" width="60" height="36" rx="6" fill="#fde3c8" stroke="#e07b39" stroke-width="2"/>
+<text x="606" y="153" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">Glu</text>
+<rect x="642" y="128" width="60" height="36" rx="6" fill="#fff" stroke="#8e5bb5" stroke-width="2"/>
+<text x="672" y="153" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">Ser</text>
+<rect x="14" y="200" width="732" height="116" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="222" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Variante</text>
+<text x="40" y="244" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">DNA codificador</text>
+<rect x="40" y="254" width="60" height="36" rx="6" fill="#fff" stroke="#2e8b57" stroke-width="2"/>
+<text x="70" y="279" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">ATG</text>
+<rect x="106" y="254" width="60" height="36" rx="6" fill="#fde3c8" stroke="#e07b39" stroke-width="2"/>
+<text x="136" y="279" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">GTA</text>
+<rect x="172" y="254" width="60" height="36" rx="6" fill="#fff" stroke="#2e8b57" stroke-width="2"/>
+<text x="202" y="279" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">TCC</text>
+<text x="275" y="244" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">mRNA</text>
+<rect x="275" y="254" width="60" height="36" rx="6" fill="#fff" stroke="#e07b39" stroke-width="2"/>
+<text x="305" y="279" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">AUG</text>
+<rect x="341" y="254" width="60" height="36" rx="6" fill="#fde3c8" stroke="#e07b39" stroke-width="2"/>
+<text x="371" y="279" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">GUA</text>
+<rect x="407" y="254" width="60" height="36" rx="6" fill="#fff" stroke="#e07b39" stroke-width="2"/>
+<text x="437" y="279" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">UCC</text>
+<text x="510" y="244" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">Proteína</text>
+<rect x="510" y="254" width="60" height="36" rx="6" fill="#fff" stroke="#8e5bb5" stroke-width="2"/>
+<text x="540" y="279" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">Met</text>
+<rect x="576" y="254" width="60" height="36" rx="6" fill="#fde3c8" stroke="#e07b39" stroke-width="2"/>
+<text x="606" y="279" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">Val</text>
+<rect x="642" y="254" width="60" height="36" rx="6" fill="#fff" stroke="#8e5bb5" stroke-width="2"/>
+<text x="672" y="279" font-size="16" font-weight="700" fill="#25402f" text-anchor="middle">Ser</text>
+</svg>

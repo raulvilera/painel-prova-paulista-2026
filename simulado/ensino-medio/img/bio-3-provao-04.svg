@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Leveduras em três frascos</title>
+<desc>Três frascos fechados com levedura: A com oxigênio e glicose, B sem oxigênio e com glicose, C sem oxigênio e sem glicose, e gráficos de CO2 e etanol relativos.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Leveduras em três frascos</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Mesmo volume, temperatura e densidade inicial · valores ilustrativos</text>
+<rect x="14" y="70" width="235" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Frasco A</text>
+<path d="M53 96 V127.5 L32 180 Q30 186 40 186 H94 Q104 186 102 180 L81 127.5 V96" fill="rgba(255,255,255,.6)" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M48.2 145.5 H85.8 L97 180 Q103 184 94 184 H40 Q31 184 37 180Z" fill="#f6e7a7" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.8"/>
+<text x="114" y="118" font-size="12" font-weight="400" fill="#25402f" text-anchor="start">com O₂ · com</text>
+<text x="114" y="134" font-size="12" font-weight="400" fill="#25402f" text-anchor="start">glicose</text>
+<line x1="42" y1="266" x2="232" y2="266" stroke="#5d7a69" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="42" y1="NaN" x2="232" y2="NaN" stroke="#e3ebe6" stroke-width="1" stroke-linecap="round"/>
+<text x="36" y="NaN" font-size="11" font-weight="400" fill="#5d7a69" text-anchor="end">NaN</text>
+<rect x="68.5" y="208.13333333333333" width="42" height="57.86666666666667" rx="3" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="89.5" y="203.13333333333333" font-size="11" font-weight="700" fill="#25402f" text-anchor="middle">42</text>
+<text x="89.5" y="283" font-size="11" font-weight="400" fill="#25402f" text-anchor="middle">CO₂</text>
+<rect x="163.5" y="264.5" width="42" height="1.5" rx="3" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="184.5" y="259.5" font-size="11" font-weight="700" fill="#25402f" text-anchor="middle">0</text>
+<text x="184.5" y="283" font-size="11" font-weight="400" fill="#25402f" text-anchor="middle">Etanol</text>
+<rect x="261" y="70" width="235" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="275" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Frasco B</text>
+<path d="M300 96 V127.5 L279 180 Q277 186 287 186 H341 Q351 186 349 180 L328 127.5 V96" fill="rgba(255,255,255,.6)" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M295.2 145.5 H332.8 L344 180 Q350 184 341 184 H287 Q278 184 284 180Z" fill="#f6e7a7" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.8"/>
+<text x="361" y="118" font-size="12" font-weight="400" fill="#25402f" text-anchor="start">sem O₂ · com</text>
+<text x="361" y="134" font-size="12" font-weight="400" fill="#25402f" text-anchor="start">glicose</text>
+<line x1="289" y1="266" x2="479" y2="266" stroke="#5d7a69" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="289" y1="NaN" x2="479" y2="NaN" stroke="#e3ebe6" stroke-width="1" stroke-linecap="round"/>
+<text x="283" y="NaN" font-size="11" font-weight="400" fill="#5d7a69" text-anchor="end">NaN</text>
+<rect x="315.5" y="213.64444444444445" width="42" height="52.355555555555554" rx="3" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="336.5" y="208.64444444444445" font-size="11" font-weight="700" fill="#25402f" text-anchor="middle">38</text>
+<text x="336.5" y="283" font-size="11" font-weight="400" fill="#25402f" text-anchor="middle">CO₂</text>
+<rect x="410.5" y="241.2" width="42" height="24.8" rx="3" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="431.5" y="236.2" font-size="11" font-weight="700" fill="#25402f" text-anchor="middle">18</text>
+<text x="431.5" y="283" font-size="11" font-weight="400" fill="#25402f" text-anchor="middle">Etanol</text>
+<rect x="508" y="70" width="235" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="522" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Frasco C</text>
+<path d="M547 96 V127.5 L526 180 Q524 186 534 186 H588 Q598 186 596 180 L575 127.5 V96" fill="rgba(255,255,255,.6)" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M542.2 145.5 H579.8 L591 180 Q597 184 588 184 H534 Q525 184 531 180Z" fill="#e7eef2" stroke="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.8"/>
+<text x="608" y="118" font-size="12" font-weight="400" fill="#25402f" text-anchor="start">sem O₂ · sem</text>
+<text x="608" y="134" font-size="12" font-weight="400" fill="#25402f" text-anchor="start">glicose</text>
+<line x1="536" y1="266" x2="726" y2="266" stroke="#5d7a69" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="536" y1="NaN" x2="726" y2="NaN" stroke="#e3ebe6" stroke-width="1" stroke-linecap="round"/>
+<text x="530" y="NaN" font-size="11" font-weight="400" fill="#5d7a69" text-anchor="end">NaN</text>
+<rect x="562.5" y="263.24444444444447" width="42" height="2.7555555555555555" rx="3" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="583.5" y="258.24444444444447" font-size="11" font-weight="700" fill="#25402f" text-anchor="middle">2</text>
+<text x="583.5" y="283" font-size="11" font-weight="400" fill="#25402f" text-anchor="middle">CO₂</text>
+<rect x="657.5" y="264.5" width="42" height="1.5" rx="3" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="678.5" y="259.5" font-size="11" font-weight="700" fill="#25402f" text-anchor="middle">0</text>
+<text x="678.5" y="283" font-size="11" font-weight="400" fill="#25402f" text-anchor="middle">Etanol</text>
+</svg>

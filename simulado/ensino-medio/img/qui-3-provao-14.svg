@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Dois materiais para embalagens</title>
+<desc>Cartões com os monômeros e observações de P (de CH2=CHCl, persiste) e Q (de ácido lático, ligações éster, libera água, hidrólise rápida em compostagem).</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Dois materiais para embalagens</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">Propriedades são condições do estudo, não generalização</text>
+<rect x="14" y="70" width="360" height="250" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<rect x="28" y="90" width="332" height="40" rx="8" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="44" y="116" font-size="17" font-weight="700" fill="#fff" text-anchor="start">Material P</text>
+<text x="194" y="168" font-size="15" font-weight="700" fill="#1f3347" text-anchor="middle">CH₂=CHCl → [–CH₂–CHCl–]ₙ</text>
+<circle cx="64" cy="214" r="11" fill="#fff" stroke="#3b82c4" stroke-width="3"/>
+<line x1="75" y1="214" x2="107" y2="214" stroke="#3b82c4" stroke-width="3" stroke-linecap="round"/>
+<circle cx="118" cy="214" r="11" fill="#fff" stroke="#3b82c4" stroke-width="3"/>
+<line x1="129" y1="214" x2="161" y2="214" stroke="#3b82c4" stroke-width="3" stroke-linecap="round"/>
+<circle cx="172" cy="214" r="11" fill="#fff" stroke="#3b82c4" stroke-width="3"/>
+<line x1="183" y1="214" x2="215" y2="214" stroke="#3b82c4" stroke-width="3" stroke-linecap="round"/>
+<circle cx="226" cy="214" r="11" fill="#fff" stroke="#3b82c4" stroke-width="3"/>
+<line x1="237" y1="214" x2="269" y2="214" stroke="#3b82c4" stroke-width="3" stroke-linecap="round"/>
+<circle cx="280" cy="214" r="11" fill="#fff" stroke="#3b82c4" stroke-width="3"/>
+<text x="38" y="262" font-size="13" font-weight="400" fill="#1f3347" text-anchor="start">• sem molécula pequena detectada</text>
+<text x="38" y="286" font-size="13" font-weight="400" fill="#1f3347" text-anchor="start">• persiste no ambiente</text>
+<rect x="386" y="70" width="360" height="250" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<rect x="400" y="90" width="332" height="40" rx="8" fill="#2e8b57" stroke="none" stroke-width="1"/>
+<text x="416" y="116" font-size="17" font-weight="700" fill="#fff" text-anchor="start">Material Q</text>
+<text x="566" y="168" font-size="13.5" font-weight="700" fill="#1f3347" text-anchor="middle">HO–CH(CH₃)–COOH · ligações éster</text>
+<circle cx="436" cy="214" r="11" fill="#fff" stroke="#2e8b57" stroke-width="3"/>
+<line x1="447" y1="214" x2="479" y2="214" stroke="#2e8b57" stroke-width="3" stroke-linecap="round"/>
+<circle cx="490" cy="214" r="11" fill="#fff" stroke="#2e8b57" stroke-width="3"/>
+<line x1="501" y1="214" x2="533" y2="214" stroke="#2e8b57" stroke-width="3" stroke-linecap="round"/>
+<circle cx="544" cy="214" r="11" fill="#fff" stroke="#2e8b57" stroke-width="3"/>
+<line x1="555" y1="214" x2="587" y2="214" stroke="#2e8b57" stroke-width="3" stroke-linecap="round"/>
+<circle cx="598" cy="214" r="11" fill="#fff" stroke="#2e8b57" stroke-width="3"/>
+<line x1="609" y1="214" x2="641" y2="214" stroke="#2e8b57" stroke-width="3" stroke-linecap="round"/>
+<circle cx="652" cy="214" r="11" fill="#fff" stroke="#2e8b57" stroke-width="3"/>
+<text x="410" y="262" font-size="13" font-weight="400" fill="#1f3347" text-anchor="start">• libera H₂O a cada etapa</text>
+<text x="410" y="286" font-size="13" font-weight="400" fill="#1f3347" text-anchor="start">• hidrólise mais rápida em compostagem industrial</text>
+</svg>

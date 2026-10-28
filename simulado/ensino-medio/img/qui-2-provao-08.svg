@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Fórmula estrutural de um aromatizante</title>
+<desc>Fórmula estrutural condensada desenhada com ligações: carbono carbonílico com oxigênio duplo, oxigênio ligado a um grupo etila.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Fórmula estrutural de um aromatizante</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">CH₃–C(=O)–O–CH₂–CH₃</text>
+<rect x="14" y="70" width="732" height="250" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Conectividade dos átomos</text>
+<text x="100" y="230" font-size="24" font-weight="700" fill="#1f3347" text-anchor="middle">CH₃</text>
+<line x1="135" y1="224" x2="180" y2="224" stroke="#1f3347" stroke-width="3" stroke-linecap="round"/>
+<text x="200" y="230" font-size="24" font-weight="700" fill="#1f3347" text-anchor="middle">C</text>
+<line x1="200" y1="206" x2="200" y2="170" stroke="#1f3347" stroke-width="3" stroke-linecap="round"/>
+<line x1="208" y1="206" x2="208" y2="170" stroke="#1f3347" stroke-width="3" stroke-linecap="round"/>
+<text x="204" y="158" font-size="24" font-weight="700" fill="#c0392b" text-anchor="middle">O</text>
+<line x1="222" y1="224" x2="268" y2="224" stroke="#1f3347" stroke-width="3" stroke-linecap="round"/>
+<text x="288" y="230" font-size="24" font-weight="700" fill="#c0392b" text-anchor="middle">O</text>
+<line x1="308" y1="224" x2="352" y2="224" stroke="#1f3347" stroke-width="3" stroke-linecap="round"/>
+<text x="392" y="230" font-size="24" font-weight="700" fill="#1f3347" text-anchor="middle">CH₂</text>
+<line x1="428" y1="224" x2="470" y2="224" stroke="#1f3347" stroke-width="3" stroke-linecap="round"/>
+<text x="510" y="230" font-size="24" font-weight="700" fill="#1f3347" text-anchor="middle">CH₃</text>
+<text x="190" y="258" font-size="12" font-weight="400" fill="#5a7186" text-anchor="middle">carbonila</text>
+<text x="340" y="282" font-size="12" font-weight="400" fill="#5a7186" text-anchor="middle">oxigênio entre dois carbonos</text>
+<rect x="574" y="110" width="160" height="150" rx="10" fill="#f6f9fb" stroke="#b4cadf" stroke-width="2"/>
+<text x="586" y="134" font-size="12.5" font-weight="400" fill="#1f3347" text-anchor="start">Identificar o</text>
+<text x="586" y="151" font-size="12.5" font-weight="400" fill="#1f3347" text-anchor="start">composto exige ler</text>
+<text x="586" y="168" font-size="12.5" font-weight="400" fill="#1f3347" text-anchor="start">como os átomos se</text>
+<text x="586" y="185" font-size="12.5" font-weight="400" fill="#1f3347" text-anchor="start">ligam, não só a</text>
+<text x="586" y="202" font-size="12.5" font-weight="400" fill="#1f3347" text-anchor="start">presença de oxigênio.</text>
+</svg>

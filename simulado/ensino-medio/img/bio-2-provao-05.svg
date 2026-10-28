@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Eletroforese de amplicons (PCR)</title>
+<desc>Gel de eletroforese com cinco canaletas: amostra da cena, suspeitos 1, 2 e 3 e controle negativo, e bandas de 120, 180 e 250 pb.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Eletroforese de amplicons (PCR)</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Três loci · tamanhos em pares de bases (pb)</text>
+<rect x="110" y="78" width="630" height="238" rx="12" fill="#2b3a42" stroke="none" stroke-width="1"/>
+<rect x="150" y="90" width="68" height="10" rx="2" fill="#10171b" stroke="none" stroke-width="1"/>
+<rect x="150" y="240" width="68" height="9" rx="3" fill="#9fe8ff" stroke="none" stroke-width="1" opacity="0.95"/>
+<rect x="150" y="190" width="68" height="9" rx="3" fill="#9fe8ff" stroke="none" stroke-width="1" opacity="0.95"/>
+<rect x="150" y="140" width="68" height="9" rx="3" fill="#9fe8ff" stroke="none" stroke-width="1" opacity="0.95"/>
+<text x="184" y="308" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Cena</text>
+<rect x="268" y="90" width="68" height="10" rx="2" fill="#10171b" stroke="none" stroke-width="1"/>
+<rect x="268" y="240" width="68" height="9" rx="3" fill="#9fe8ff" stroke="none" stroke-width="1" opacity="0.95"/>
+<rect x="268" y="190" width="68" height="9" rx="3" fill="#9fe8ff" stroke="none" stroke-width="1" opacity="0.95"/>
+<text x="302" y="308" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Suspeito 1</text>
+<rect x="386" y="90" width="68" height="10" rx="2" fill="#10171b" stroke="none" stroke-width="1"/>
+<rect x="386" y="240" width="68" height="9" rx="3" fill="#9fe8ff" stroke="none" stroke-width="1" opacity="0.95"/>
+<rect x="386" y="190" width="68" height="9" rx="3" fill="#9fe8ff" stroke="none" stroke-width="1" opacity="0.95"/>
+<rect x="386" y="140" width="68" height="9" rx="3" fill="#9fe8ff" stroke="none" stroke-width="1" opacity="0.95"/>
+<text x="420" y="308" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Suspeito 2</text>
+<rect x="504" y="90" width="68" height="10" rx="2" fill="#10171b" stroke="none" stroke-width="1"/>
+<rect x="504" y="190" width="68" height="9" rx="3" fill="#9fe8ff" stroke="none" stroke-width="1" opacity="0.95"/>
+<rect x="504" y="140" width="68" height="9" rx="3" fill="#9fe8ff" stroke="none" stroke-width="1" opacity="0.95"/>
+<text x="538" y="308" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Suspeito 3</text>
+<rect x="622" y="90" width="68" height="10" rx="2" fill="#10171b" stroke="none" stroke-width="1"/>
+<text x="656" y="308" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Controle (−)</text>
+<text x="100" y="148" font-size="12" font-weight="700" fill="#25402f" text-anchor="end">250 pb</text>
+<line x1="104" y1="144" x2="112" y2="144" stroke="#25402f" stroke-width="2" stroke-linecap="round"/>
+<text x="100" y="198" font-size="12" font-weight="700" fill="#25402f" text-anchor="end">180 pb</text>
+<line x1="104" y1="194" x2="112" y2="194" stroke="#25402f" stroke-width="2" stroke-linecap="round"/>
+<text x="100" y="248" font-size="12" font-weight="700" fill="#25402f" text-anchor="end">120 pb</text>
+<line x1="104" y1="244" x2="112" y2="244" stroke="#25402f" stroke-width="2" stroke-linecap="round"/>
+<text x="30" y="120" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">poço</text>
+<line x1="30" y1="128" x2="30" y2="290" stroke="#5d7a69" stroke-width="2" stroke-linecap="round"/>
+<path d="M30 290 L25.650344658887697 280.9955289764732 L34.3496553411123 280.9955289764732 Z" fill="#5d7a69"/>
+<text x="20" y="310" font-size="11" font-weight="400" fill="#5d7a69" text-anchor="start">migração</text>
+</svg>

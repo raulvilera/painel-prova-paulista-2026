@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Três amostras puras</title>
+<desc>Três cartões: A sólido quebradiço de alto ponto de fusão que conduz só fundido, B metal maleável condutor, C líquido molecular com grupo OH miscível em água e não condutor.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Três amostras puras</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">Evidências de cada amostra</text>
+<rect x="14" y="70" width="235" height="250" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<circle cx="44" cy="104" r="16" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="44" y="110" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">A</text>
+<circle cx="74" cy="140" r="12" fill="#3b82c4" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="110" cy="140" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="146" cy="140" r="12" fill="#3b82c4" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="182" cy="140" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="74" cy="174" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="110" cy="174" r="12" fill="#3b82c4" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="146" cy="174" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="182" cy="174" r="12" fill="#3b82c4" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="74" cy="208" r="12" fill="#3b82c4" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="110" cy="208" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="146" cy="208" r="12" fill="#3b82c4" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<circle cx="182" cy="208" r="12" fill="#e07b39" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+<text x="131" y="242" font-size="14" font-weight="700" fill="#1f3347" text-anchor="middle">Sólido quebradiço</text>
+<text x="131" y="262" font-size="12" font-weight="400" fill="#5a7186" text-anchor="middle">alto ponto de fusão</text>
+<text x="131" y="296" font-size="12.5" font-weight="700" fill="#c0392b" text-anchor="middle">conduz somente fundida</text>
+<rect x="261" y="70" width="235" height="250" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<circle cx="291" cy="104" r="16" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="291" y="110" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">B</text>
+<circle cx="321" cy="140" r="12" fill="#c5ced3" stroke="#78909c" stroke-width="2"/>
+<circle cx="357" cy="140" r="12" fill="#c5ced3" stroke="#78909c" stroke-width="2"/>
+<circle cx="393" cy="140" r="12" fill="#c5ced3" stroke="#78909c" stroke-width="2"/>
+<circle cx="429" cy="140" r="12" fill="#c5ced3" stroke="#78909c" stroke-width="2"/>
+<circle cx="321" cy="174" r="12" fill="#c5ced3" stroke="#78909c" stroke-width="2"/>
+<circle cx="357" cy="174" r="12" fill="#c5ced3" stroke="#78909c" stroke-width="2"/>
+<circle cx="393" cy="174" r="12" fill="#c5ced3" stroke="#78909c" stroke-width="2"/>
+<circle cx="429" cy="174" r="12" fill="#c5ced3" stroke="#78909c" stroke-width="2"/>
+<circle cx="321" cy="208" r="12" fill="#c5ced3" stroke="#78909c" stroke-width="2"/>
+<circle cx="357" cy="208" r="12" fill="#c5ced3" stroke="#78909c" stroke-width="2"/>
+<circle cx="393" cy="208" r="12" fill="#c5ced3" stroke="#78909c" stroke-width="2"/>
+<circle cx="429" cy="208" r="12" fill="#c5ced3" stroke="#78909c" stroke-width="2"/>
+<circle cx="339" cy="123" r="3.5" fill="#e0b64a" stroke="none" stroke-width="1"/>
+<circle cx="367" cy="157" r="3.5" fill="#e0b64a" stroke="none" stroke-width="1"/>
+<circle cx="395" cy="191" r="3.5" fill="#e0b64a" stroke="none" stroke-width="1"/>
+<circle cx="423" cy="123" r="3.5" fill="#e0b64a" stroke="none" stroke-width="1"/>
+<circle cx="451" cy="157" r="3.5" fill="#e0b64a" stroke="none" stroke-width="1"/>
+<circle cx="479" cy="191" r="3.5" fill="#e0b64a" stroke="none" stroke-width="1"/>
+<text x="378" y="242" font-size="14" font-weight="700" fill="#1f3347" text-anchor="middle">Sólido maleável</text>
+<text x="378" y="262" font-size="12" font-weight="400" fill="#5a7186" text-anchor="middle">conduz no sólido e no líquido</text>
+<text x="378" y="296" font-size="12.5" font-weight="700" fill="#c0392b" text-anchor="middle"></text>
+<rect x="508" y="70" width="235" height="250" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<circle cx="538" cy="104" r="16" fill="#2e8b57" stroke="none" stroke-width="1"/>
+<text x="538" y="110" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">C</text>
+<circle cx="578" cy="152" r="11" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="598" cy="136" r="7" fill="#fff" stroke="#78909c" stroke-width="2"/>
+<circle cx="558" cy="136" r="7" fill="#fff" stroke="#78909c" stroke-width="2"/>
+<circle cx="648" cy="152" r="11" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="668" cy="136" r="7" fill="#fff" stroke="#78909c" stroke-width="2"/>
+<circle cx="628" cy="136" r="7" fill="#fff" stroke="#78909c" stroke-width="2"/>
+<circle cx="718" cy="152" r="11" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="738" cy="136" r="7" fill="#fff" stroke="#78909c" stroke-width="2"/>
+<circle cx="698" cy="136" r="7" fill="#fff" stroke="#78909c" stroke-width="2"/>
+<text x="625" y="242" font-size="14" font-weight="700" fill="#1f3347" text-anchor="middle">Líquido molecular</text>
+<text x="625" y="262" font-size="12" font-weight="400" fill="#5a7186" text-anchor="middle">miscível em água · grupo O–H</text>
+<text x="625" y="296" font-size="12.5" font-weight="700" fill="#c0392b" text-anchor="middle">não condutora</text>
+</svg>

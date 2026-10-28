@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Vacina × soro: anticorpos e memória</title>
+<desc>Curvas qualitativas de anticorpos para vacina (baixos na semana 1, altos na 4) e soro (altos na semana 1, baixos na 4) e células de memória.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Vacina × soro: anticorpos e memória</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Semanas 1 e 4 · níveis relativos (esquema qualitativo)</text>
+<rect x="14" y="70" width="520" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Anticorpos</text>
+<line x1="70" y1="270" x2="510" y2="270" stroke="#5d7a69" stroke-width="2" stroke-linecap="round"/>
+<line x1="70" y1="110" x2="70" y2="270" stroke="#5d7a69" stroke-width="2" stroke-linecap="round"/>
+<path d="M110 250 Q250 245 470 130" fill="none" stroke="#2e8b57" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M110 140 Q300 190 470 250" fill="none" stroke="#c0392b" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="110" y="292" font-size="12.5" font-weight="400" fill="#25402f" text-anchor="middle">semana 1</text>
+<text x="470" y="292" font-size="12.5" font-weight="400" fill="#25402f" text-anchor="middle">semana 4</text>
+<rect x="160" y="296" width="12" height="12" rx="3" fill="#2e8b57" stroke="none" stroke-width="1"/>
+<text x="177" y="306" font-size="12" font-weight="400" fill="#25402f" text-anchor="start">Vacina</text>
+<rect x="226.4" y="296" width="12" height="12" rx="3" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="243.4" y="306" font-size="12" font-weight="400" fill="#25402f" text-anchor="start">Soro</text>
+<rect x="546" y="70" width="200" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="560" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Células de memória (final)</text>
+<text x="646" y="150" font-size="14" font-weight="700" fill="#2e8b57" text-anchor="middle">Vacina</text>
+<text x="646" y="180" font-size="15" font-weight="400" fill="#25402f" text-anchor="middle">detectadas</text>
+<ellipse cx="646" cy="220" rx="26" ry="20" fill="#2e8b57" stroke="rgba(0,0,0,.25)" stroke-width="2"/>
+<circle cx="648.6" cy="220" r="8.4" fill="rgba(0,0,0,.25)" stroke="none" stroke-width="1"/>
+<text x="646" y="268" font-size="14" font-weight="700" fill="#c0392b" text-anchor="middle">Soro</text>
+<text x="646" y="294" font-size="15" font-weight="400" fill="#25402f" text-anchor="middle">não detectadas</text>
+</svg>

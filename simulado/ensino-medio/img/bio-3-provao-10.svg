@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Cinco culturas bacterianas em placas com antibiótico</title>
+<desc>Cinco placas de Petri com 0, 12, 1, 8 e 0 colônias resistentes, cultivadas antes sem antibiótico.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Cinco culturas bacterianas em placas com antibiótico</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Colônias resistentes por placa · valores ilustrativos</text>
+<rect x="14" y="74" width="140" height="190" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="96" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Cultura 1</text>
+<circle cx="84" cy="160" r="54" fill="#f7efd5" stroke="#b7a56a" stroke-width="4"/>
+<text x="84" y="248" font-size="13" font-weight="700" fill="#25402f" text-anchor="middle">0 colônias</text>
+<rect x="162" y="74" width="140" height="190" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="176" y="96" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Cultura 2</text>
+<circle cx="232" cy="160" r="54" fill="#f7efd5" stroke="#b7a56a" stroke-width="4"/>
+<circle cx="202.1028038813692" cy="161.84960501992313" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="246.7861713726286" cy="173.10468037760046" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="205.3427535276362" cy="169.98017186921558" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="265.0276169585161" cy="177.7586579920725" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="210.27744856953856" cy="146.38203379644915" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="224.44034397944492" cy="194.53778307247654" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="225.8999200881539" cy="150.76312340308573" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="212.6071705539905" cy="160.2073514172188" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="224.48340152879695" cy="145.9905457715384" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="206.04672529641326" cy="149.7025932556732" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="236.007804662999" cy="168.00338052717754" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="268.50193706639595" cy="145.18696018030374" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="232" y="248" font-size="13" font-weight="700" fill="#25402f" text-anchor="middle">12 colônias</text>
+<rect x="310" y="74" width="140" height="190" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="324" y="96" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Cultura 3</text>
+<circle cx="380" cy="160" r="54" fill="#f7efd5" stroke="#b7a56a" stroke-width="4"/>
+<circle cx="399.3535199768254" cy="178.33582780730254" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="380" y="248" font-size="13" font-weight="700" fill="#25402f" text-anchor="middle">1 colônia</text>
+<rect x="458" y="74" width="140" height="190" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="472" y="96" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Cultura 4</text>
+<circle cx="528" cy="160" r="54" fill="#f7efd5" stroke="#b7a56a" stroke-width="4"/>
+<circle cx="544.7120323420909" cy="155.16938294393833" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="502.0851058010134" cy="174.45402866077097" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="517.9672245607119" cy="141.32744247192855" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="547.0651967149577" cy="194.8354316792984" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="509.8318877985662" cy="166.48586736236166" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="505.9939945943986" cy="153.33988549155526" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="548.035950032717" cy="188.89804591062253" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<circle cx="513.9072272545953" cy="179.01270416284044" r="3.6" fill="#c0392b" stroke="none" stroke-width="1"/>
+<text x="528" y="248" font-size="13" font-weight="700" fill="#25402f" text-anchor="middle">8 colônias</text>
+<rect x="606" y="74" width="140" height="190" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="620" y="96" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Cultura 5</text>
+<circle cx="676" cy="160" r="54" fill="#f7efd5" stroke="#b7a56a" stroke-width="4"/>
+<text x="676" y="248" font-size="13" font-weight="700" fill="#25402f" text-anchor="middle">0 colônias</text>
+<text x="380" y="296" font-size="12.5" font-weight="400" fill="#5d7a69" text-anchor="middle">Antes: crescimento sem antibiótico até a mesma densidade; depois: placas com antibiótico.</text>
+<text x="380" y="316" font-size="12.5" font-weight="400" fill="#5d7a69" text-anchor="middle">Placas sem antibiótico: crescimento semelhante.</text>
+</svg>

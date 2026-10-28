@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Dois trechos de um reservatório</title>
+<desc>Comparação dos trechos A e B em nitrato, fosfato, cobertura de algas e oxigênio dissolvido.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Dois trechos de um reservatório</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Estação chuvosa · valores ilustrativos · O₂ medido ao amanhecer</text>
+<rect x="14" y="70" width="360" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Trecho A</text>
+<rect x="28" y="92" width="332" height="40" rx="8" fill="#cfe8f3" stroke="none" stroke-width="1"/>
+<text x="194" y="118" font-size="14" font-weight="700" fill="#1f3a2a" text-anchor="middle">algas: baixa</text>
+<text x="122" y="172" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Nitrato (mg/L)</text>
+<rect x="130" y="147" width="3.9024390243902447" height="40" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="139.90243902439025" y="172" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">0,2</text>
+<text x="122" y="224" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Fosfato (mg/L)</text>
+<rect x="130" y="199" width="2" height="40" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="138" y="224" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">0,03</text>
+<text x="122" y="276" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">O₂ (mg/L)</text>
+<rect x="130" y="251" width="160" height="40" rx="4" fill="#17a2a2" stroke="none" stroke-width="1"/>
+<text x="296" y="276" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">8,2</text>
+<rect x="386" y="70" width="360" height="250" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="400" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Trecho B</text>
+<rect x="400" y="92" width="332" height="40" rx="8" fill="#b7d9a0" stroke="none" stroke-width="1"/>
+<text x="566" y="118" font-size="14" font-weight="700" fill="#1f3a2a" text-anchor="middle">algas: alta</text>
+<text x="494" y="172" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Nitrato (mg/L)</text>
+<rect x="502" y="147" width="93.65853658536587" height="40" rx="4" fill="#2e8b57" stroke="none" stroke-width="1"/>
+<text x="601.6585365853658" y="172" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">4,8</text>
+<text x="494" y="224" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">Fosfato (mg/L)</text>
+<rect x="502" y="199" width="11.707317073170733" height="40" rx="4" fill="#2e8b57" stroke="none" stroke-width="1"/>
+<text x="519.7073170731708" y="224" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">0,6</text>
+<text x="494" y="276" font-size="12" font-weight="400" fill="#25402f" text-anchor="end">O₂ (mg/L)</text>
+<rect x="502" y="251" width="40.97560975609756" height="40" rx="4" fill="#17a2a2" stroke="none" stroke-width="1"/>
+<text x="548.9756097560976" y="276" font-size="12" font-weight="700" fill="#25402f" text-anchor="start">2,1</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Bairros X e Y: saneamento e alimentação</title>
+<desc>Comparação dos bairros X e Y em giardíase, amebíase, consumo de ultraprocessados e indicador glicêmico populacional.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Bairros X e Y: saneamento e alimentação</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Dados de vigilância agregados · valores ilustrativos</text>
+<text x="14" y="82" font-size="14" font-weight="400" fill="#25402f" text-anchor="start"></text>
+<rect x="14" y="70" width="360" height="108" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Giardíase (%)</text>
+<text x="98" y="120" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Bairro X</text>
+<rect x="106" y="103" width="161" height="24" rx="4" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="273" y="120" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">7%</text>
+<text x="98" y="156" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Bairro Y</text>
+<rect x="106" y="139" width="23" height="24" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="135" y="156" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">1%</text>
+<rect x="386" y="70" width="360" height="108" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="400" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Amebíase (%)</text>
+<text x="470" y="120" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Bairro X</text>
+<rect x="478" y="103" width="115" height="24" rx="4" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="599" y="120" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">5%</text>
+<text x="470" y="156" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Bairro Y</text>
+<rect x="478" y="139" width="23" height="24" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="507" y="156" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">1%</text>
+<rect x="14" y="188" width="360" height="108" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="28" y="210" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Consumo frequente de ultraprocessados (%)</text>
+<text x="98" y="238" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Bairro X</text>
+<rect x="106" y="221" width="134.93333333333334" height="24" rx="4" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="246.93333333333334" y="238" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">22%</text>
+<text x="98" y="274" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Bairro Y</text>
+<rect x="106" y="257" width="153.33333333333334" height="24" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="265.33333333333337" y="274" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">25%</text>
+<rect x="386" y="188" width="360" height="108" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="400" y="210" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Indicador glicêmico populacional (%)</text>
+<text x="470" y="238" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Bairro X</text>
+<rect x="478" y="221" width="122.66666666666666" height="24" rx="4" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="606.6666666666666" y="238" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">8%</text>
+<text x="470" y="274" font-size="13" font-weight="400" fill="#25402f" text-anchor="end">Bairro Y</text>
+<rect x="478" y="257" width="138" height="24" rx="4" fill="#3b82c4" stroke="none" stroke-width="1"/>
+<text x="622" y="274" font-size="13" font-weight="700" fill="#25402f" text-anchor="start">9%</text>
+<text x="14" y="322" font-size="12.5" font-weight="400" fill="#5d7a69" text-anchor="start">X: poços sem tratamento e esgoto incompleto · Y: rede tratada e esgoto regular</text>
+</svg>

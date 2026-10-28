@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>Do gene ao polipeptídeo</title>
+<desc>Fita molde com três códons, espaços para o mRNA e a cadeia polipeptídica, e tabela de premissas.</desc>
+<rect width="760" height="340" fill="#eef6f1"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#1f6f4a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">Do gene ao polipeptídeo</text><text x="28" y="49" font-size="12.5" fill="#d8efe2">Fita molde 3′–TAC CGA ATT–5′ · início AUG · parada UAA</text>
+<rect x="70" y="100" width="96" height="34" rx="6" fill="#d6efe1" stroke="#2e8b57" stroke-width="2"/>
+<text x="118" y="124" font-size="18" font-weight="700" fill="#25402f" text-anchor="middle">TAC</text>
+<rect x="180" y="100" width="96" height="34" rx="6" fill="#d6efe1" stroke="#2e8b57" stroke-width="2"/>
+<text x="228" y="124" font-size="18" font-weight="700" fill="#25402f" text-anchor="middle">CGA</text>
+<rect x="290" y="100" width="96" height="34" rx="6" fill="#d6efe1" stroke="#2e8b57" stroke-width="2"/>
+<text x="338" y="124" font-size="18" font-weight="700" fill="#25402f" text-anchor="middle">ATT</text>
+<text x="24" y="124" font-size="15" font-weight="700" fill="#25402f" text-anchor="start">3′</text>
+<text x="404" y="124" font-size="15" font-weight="700" fill="#25402f" text-anchor="start">5′</text>
+<text x="24" y="92" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">DNA (fita molde)</text>
+<line x1="240" y1="142" x2="240" y2="186" stroke="#e07b39" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M240 186 L235.6503446588877 176.99552897647322 L244.3496553411123 176.99552897647322 Z" fill="#e07b39"/>
+<text x="254" y="170" font-size="12.5" font-weight="700" fill="#e07b39" text-anchor="start">transcrição</text>
+<text x="24" y="208" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">mRNA (lido de 5′ para 3′)</text>
+<rect x="70" y="216" width="96" height="34" rx="6" fill="#fff" stroke="#e07b39" stroke-width="2"/>
+<text x="118" y="240" font-size="18" font-weight="700" fill="#5d7a69" text-anchor="middle">?</text>
+<rect x="180" y="216" width="96" height="34" rx="6" fill="#fff" stroke="#e07b39" stroke-width="2"/>
+<text x="228" y="240" font-size="18" font-weight="700" fill="#5d7a69" text-anchor="middle">?</text>
+<rect x="290" y="216" width="96" height="34" rx="6" fill="#fff" stroke="#e07b39" stroke-width="2"/>
+<text x="338" y="240" font-size="18" font-weight="700" fill="#5d7a69" text-anchor="middle">?</text>
+<line x1="240" y1="258" x2="240" y2="292" stroke="#8e5bb5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M240 292 L235.6503446588877 282.9955289764732 L244.3496553411123 282.9955289764732 Z" fill="#8e5bb5"/>
+<text x="254" y="280" font-size="12.5" font-weight="700" fill="#8e5bb5" text-anchor="start">tradução</text>
+<rect x="470" y="84" width="276" height="236" rx="12" fill="#ffffff" stroke="#b9d3c3" stroke-width="2"/>
+<text x="484" y="106" font-size="13" font-weight="700" fill="#5d7a69" text-anchor="start">Premissas</text>
+<text x="486" y="128" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">Pareamento</text>
+<text x="486" y="146" font-size="14" font-weight="700" fill="#25402f" text-anchor="start">complementar, com U no RNA</text>
+<text x="486" y="176" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">Leitura do mRNA</text>
+<text x="486" y="194" font-size="14" font-weight="700" fill="#25402f" text-anchor="start">5′ → 3′</text>
+<text x="486" y="224" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">AUG</text>
+<text x="486" y="242" font-size="14" font-weight="700" fill="#25402f" text-anchor="start">inicia a tradução</text>
+<text x="486" y="272" font-size="12" font-weight="400" fill="#5d7a69" text-anchor="start">UAA</text>
+<text x="486" y="290" font-size="14" font-weight="700" fill="#25402f" text-anchor="start">códon de parada</text>
+</svg>

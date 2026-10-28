@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" font-family="Segoe UI,Arial,sans-serif">
+<title>N₂O₄(g) ⇌ 2 NO₂(g) a 298 K</title>
+<desc>Concentrações no equilíbrio inicial de N2O4 e NO2 e seta indicando a adição de N2O4 ao recipiente fechado.</desc>
+<rect width="760" height="340" fill="#eef4fa"/>
+<rect x="10" y="8" width="740" height="50" rx="12" fill="#2c5f8a"/><text x="28" y="31" font-size="19" font-weight="700" fill="#fff">N₂O₄(g) ⇌ 2 NO₂(g) a 298 K</text><text x="28" y="49" font-size="12.5" fill="#d6e6f4">Equilíbrio inicial e perturbação: + 0,20 mol/L de N₂O₄ (T constante)</text>
+<rect x="14" y="70" width="440" height="250" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="28" y="92" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Equilíbrio inicial (mol/L)</text>
+<line x1="60" y1="252" x2="430" y2="252" stroke="#5a7186" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="60" y1="252" x2="430" y2="252" stroke="#e3ebe6" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="256" font-size="11" font-weight="400" fill="#5a7186" text-anchor="end">0</text>
+<line x1="60" y1="205.33333333333334" x2="430" y2="205.33333333333334" stroke="#e3ebe6" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="209.33333333333334" font-size="11" font-weight="400" fill="#5a7186" text-anchor="end">0,2</text>
+<line x1="60" y1="158.66666666666669" x2="430" y2="158.66666666666669" stroke="#e3ebe6" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="162.66666666666669" font-size="11" font-weight="400" fill="#5a7186" text-anchor="end">0,4</text>
+<line x1="60" y1="112" x2="430" y2="112" stroke="#e3ebe6" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="116" font-size="11" font-weight="400" fill="#5a7186" text-anchor="end">0,6</text>
+<rect x="131.5" y="135.33333333333331" width="42" height="116.66666666666667" rx="3" fill="#8e5bb5" stroke="none" stroke-width="1"/>
+<text x="152.5" y="130.33333333333331" font-size="11" font-weight="700" fill="#1f3347" text-anchor="middle">0,50</text>
+<text x="152.5" y="269" font-size="12" font-weight="400" fill="#1f3347" text-anchor="middle">[N₂O₄]</text>
+<rect x="316.5" y="228.66666666666666" width="42" height="23.333333333333336" rx="3" fill="#e07b39" stroke="none" stroke-width="1"/>
+<text x="337.5" y="223.66666666666666" font-size="11" font-weight="700" fill="#1f3347" text-anchor="middle">0,10</text>
+<text x="337.5" y="269" font-size="12" font-weight="400" fill="#1f3347" text-anchor="middle">[NO₂]</text>
+<rect x="466" y="70" width="280" height="250" rx="12" fill="#ffffff" stroke="#b4cadf" stroke-width="2"/>
+<text x="480" y="92" font-size="13" font-weight="700" fill="#5a7186" text-anchor="start">Perturbação</text>
+<rect x="542" y="152" width="126" height="106" rx="0" fill="#e9f4fb" stroke="none" stroke-width="1" opacity="0.75"/>
+<path d="M540 140 V252 Q540 260 548 260 H662 Q670 260 670 252 V140" fill="none" stroke="#546e7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="605" y1="92" x2="605" y2="138" stroke="#8e5bb5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M605 138 L600.6503446588877 128.99552897647322 L609.3496553411123 128.99552897647322 Z" fill="#8e5bb5"/>
+<text x="605" y="108" font-size="14" font-weight="700" fill="#8e5bb5" text-anchor="middle">+ N₂O₄</text>
+<text x="606" y="304" font-size="14" font-weight="700" fill="#1f3347" text-anchor="middle">Kc (298 K) = 0,020</text>
+</svg>
