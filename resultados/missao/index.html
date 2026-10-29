@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Resultados · Missão Ciências</title>
+<link rel="stylesheet" href="../dash.css?v=12">
+<style>
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi b{display:block;font-size:1.6rem}.kpi span{color:var(--muted);font-size:.8rem}
+tr.al{cursor:pointer}tr.al:hover td{background:var(--surface-2)}
+td,th{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+.det td{background:var(--surface-2)}.nota{font-size:.82rem;color:var(--muted);margin:8px 0}
+.btn{font:inherit;font-weight:600;color:var(--accent);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
+.scroll{overflow-x:auto}input[type=search]{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px;min-width:210px}
+.nt{font-weight:800}.nt.b{color:var(--lv0)}.nt.m{color:var(--lv1)}.nt.a{color:var(--lv2)}.ok{color:var(--lv2);font-weight:700}.er{color:var(--lv0);font-weight:700}
+.tag{display:inline-block;font-size:.72rem;padding:1px 7px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div><h1>Resultados · Missão Ciências</h1><div class="muted sm">Recomposição 8º Ano A e B · cada tentativa fica gravada no banco de dados</div></div>
+<nav><a href="/">← Painel</a><a href="../gamificacao/">Gamificação →</a></nav></header>
+<div class="filters">
+<div class="field"><label for="fTurma">Turma</label><select id="fTurma"><option value="">Todas as turmas</option><option>8º Ano A</option><option>8º Ano B</option></select></div>
+<div class="field"><label for="fAluno">Aluno</label><input id="fAluno" type="search" placeholder="Buscar pelo nome…" autocomplete="off"></div>
+<div class="field"><label for="fOrd">Ordenar por</label><select id="fOrd"><option value="nome">Nome (A–Z)</option><option value="nota">Nota (maior primeiro)</option><option value="recente">Mais recente</option></select></div>
+<div class="field"><button class="btn" id="bCsv" type="button">Baixar CSV</button></div>
+<div class="field"><button class="btn" id="bAtu" type="button">Atualizar</button></div>
+</div>
+<div id="app"><div class="card muted">Carregando…</div></div>
+</div>
+<script>
+(function () {
+  const $ = s => document.querySelector(s), app = h => $('#app').innerHTML = h;
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const dt = s => { try { return new Date(s).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }); } catch (e) { return ''; } };
+  const norm = v => String(v || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const fm = n => Number(n).toFixed(1).replace('.', ',');
+  const nt = n => '<span class="nt ' + (n < 5 ? 'b' : n < 7 ? 'm' : 'a') + '">' + fm(n) + '</span>';
+  let TOKEN = '', D = [], aberto = '';
+  const ETAPA = { associacao: 'Cartas', roleta: 'Roleta', milhao: 'Show do Milhão' };
+  async function carregar() {
+    const r = await fetch('/api/quiz?missao=1', { headers: { Authorization: 'Bearer ' + TOKEN }, cache: 'no-store' });
+    const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro'); D = j.resultados || []; desenhar();
+  }
+  function desenhar() {
+    const t = $('#fTurma').value, q = norm($('#fAluno').value.trim()), ord = $('#fOrd').value;
+    const L = D.filter(x => (!t || x.turma === t) && (!q || norm(x.nome).includes(q)));
+    // melhor tentativa concluída por aluno
+    const por = {}; L.forEach(x => { const k = x.turma + '|' + x.nome; (por[k] = por[k] || []).push(x); });
+    const alunos = Object.entries(por).map(([k, tent]) => { tent.sort((a, b) => String(b.atualizado).localeCompare(String(a.atualizado))); const conc = tent.filter(x => x.concluido); const melhor = (conc.length ? conc : tent).slice().sort((a, b) => b.nota - a.nota)[0]; return { k, tent, melhor, ult: tent[0] }; });
+    alunos.sort(ord === 'nota' ? (a, b) => b.melhor.nota - a.melhor.nota : ord === 'recente' ? (a, b) => String(b.ult.atualizado).localeCompare(String(a.ult.atualizado)) : (a, b) => a.melhor.nome.localeCompare(b.melhor.nome, 'pt'));
+    const concl = L.filter(x => x.concluido), media = concl.length ? concl.reduce((a, x) => a + Number(x.nota), 0) / concl.length : null;
+    let h = '<div class="kpis"><div class="kpi"><b>' + alunos.length + '</b><span>alunos que iniciaram</span></div><div class="kpi"><b>' + concl.length + '</b><span>tentativas concluídas</span></div><div class="kpi"><b>' + (media == null ? '–' : fm(media)) + '</b><span>média das concluídas</span></div></div>';
+    h += '<div class="card"><h2>Alunos</h2><div class="nota">Clique no nome para ver as tentativas e as respostas de cada etapa. A nota mostrada é a da melhor tentativa concluída.</div><div class="scroll"><table><thead><tr><th>#</th><th>Aluno</th><th>Turma</th><th>Nota</th><th>Pontos</th><th>Tentativas</th><th>Última</th></tr></thead><tbody>' +
+      (alunos.length ? alunos.map((a, i) => { const m = a.melhor; let r = '<tr class="al" data-k="' + esc(a.k) + '"><td>' + (i + 1) + '</td><td><b>' + esc(m.nome) + '</b></td><td>' + esc(m.turma) + '</td><td>' + nt(Number(m.nota)) + (m.concluido ? '' : ' <span class="tag">incompleta</span>') + '</td><td>' + m.pontuacao + '/' + m.total + '</td><td>' + a.tent.length + '</td><td>' + dt(a.ult.atualizado) + '</td></tr>';
+        if (aberto === a.k) r += '<tr class="det"><td></td><td colspan="6">' + a.tent.map(x => '<div style="margin-bottom:10px"><b>' + dt(x.acesso_em || x.atualizado) + '</b> · ' + (x.concluido ? 'concluída' : 'incompleta') + ' · ' + x.pontuacao + '/' + x.total + ' · nota ' + fm(x.nota) + '<div>' + (x.respostas || []).map((r, n) => '<span class="' + (r.correta ? 'ok' : 'er') + '" title="' + esc((ETAPA[r.etapa] || r.etapa) + (r.tema ? ' · ' + r.tema : r.item ? ' · ' + r.item : r.pergunta ? ' · pergunta ' + r.pergunta : '')) + '">' + (r.correta ? '✔' : '✘') + '</span> ').join('') + ' <span class="muted sm">(passe o mouse em cada marca para ver a etapa)</span></div></div>').join('') + '</td></tr>';
+        return r; }).join('') : '<tr><td colspan="7" class="muted">Nenhum resultado ainda.</td></tr>') + '</tbody></table></div></div>';
+    app(h);
+    document.querySelectorAll('tr.al').forEach(tr => tr.onclick = () => { aberto = aberto === tr.dataset.k ? '' : tr.dataset.k; desenhar(); });
+  }
+  function csv() {
+    const t = $('#fTurma').value, L = [['Turma', 'Aluno', 'Início', 'Concluída', 'Pontos', 'Total', 'Nota', 'Respostas (etapa:acerto)']];
+    D.filter(x => !t || x.turma === t).forEach(x => L.push([x.turma, x.nome, x.acesso_em, x.concluido ? 'sim' : 'não', x.pontuacao, x.total, fm(x.nota), (x.respostas || []).map(r => (r.etapa || '') + ':' + (r.correta ? 'acertou' : 'errou')).join(' | ')]));
+    const txt = '﻿' + L.map(l => l.map(c => '"' + String(c == null ? '' : c).replace(/"/g, '""') + '"').join(';')).join('\n');
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/csv;charset=utf-8' })); a.download = 'missao-ciencias.csv'; a.click();
+  }
+  $('#fTurma').onchange = desenhar; $('#fOrd').onchange = desenhar; $('#fAluno').oninput = desenhar; $('#bCsv').onclick = csv;
+  $('#bAtu').onclick = () => carregar().catch(e => app('<div class="card">' + esc(e.message) + '</div>'));
+  function sessao() { try { const k = Object.keys(localStorage).find(x => /^sb-.*-auth-token$/.test(x)); if (!k) return null; const v = JSON.parse(localStorage.getItem(k) || 'null'); const s = v && (v.currentSession || v); return s && s.access_token ? s : null; } catch (e) { return null; } }
+  (async function () {
+    const ss = sessao();
+    if (!ss) return app('<div class="card">Entre primeiro no painel com o seu login de professor. <a href="/">Abrir o painel</a></div>');
+    if (ss.expires_at && ss.expires_at * 1000 < Date.now() + 30000) { app('<div class="card">Renovando o seu acesso…</div>'); return location.replace('/'); }
+    TOKEN = ss.access_token;
+    try { await carregar(); setInterval(() => { const n = sessao(); if (n) TOKEN = n.access_token; carregar().catch(() => {}); }, 20000); }
+    catch (e) { app('<div class="card">' + (/professor|login|401/i.test(e.message) ? 'Seu acesso expirou. <a href="/">Voltar ao painel</a>' : 'Não foi possível carregar: ' + esc(e.message)) + '</div>'); }
+  })();
+})();
+</script>
+<script src="/voltar-painel.js" data-sempre defer></script>
+</body></html>
