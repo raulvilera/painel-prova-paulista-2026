@@ -42,7 +42,7 @@ td,th{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top;tex
   const nt = n => '<span class="nt ' + (n < 5 ? 'b' : n < 7 ? 'm' : 'a') + '">' + fm(n) + '</span>';
   let TOKEN = '', D = [], aberto = '';
   const TEMAS = ['Digestão e absorção', 'Respiração e troca gasosa', 'Prevenção de ISTs', 'Aquecimento global e clima', 'Astronomia (estações, Lua e eclipses)'];
-  const MAPA_ITEM = { pulmao: TEMAS[1], digestao: TEMAS[0], prevencao: TEMAS[2], clima: TEMAS[3] }, MAPA_ROLETA = { 'Digestão': TEMAS[0], 'Eclipses': TEMAS[4], 'ISTs': TEMAS[2], 'Clima': TEMAS[3] }, MAPA_MILHAO = { 1: TEMAS[4], 2: TEMAS[0], 3: TEMAS[2], 4: TEMAS[3] };
+  const MAPA_ITEM = { pulmao: TEMAS[1], digestao: TEMAS[0], prevencao: TEMAS[2], clima: TEMAS[3] }, MAPA_ROLETA = { 'Digestão': TEMAS[0], 'Eclipses': TEMAS[4], 'ISTs': TEMAS[2], 'Clima': TEMAS[3], 'Respiração': TEMAS[1], 'Estações': TEMAS[4], 'Vacinas': TEMAS[2], 'Efeito estufa': TEMAS[3], 'Nutrientes': TEMAS[0], 'Fases da Lua': TEMAS[4], 'HPV': TEMAS[2], 'Desmatamento': TEMAS[3], 'Enzimas': TEMAS[0], 'Sistema Solar': TEMAS[4], 'Tabagismo': TEMAS[1], 'Energia limpa': TEMAS[3] }, MAPA_MILHAO = { 1: TEMAS[4], 2: TEMAS[0], 3: TEMAS[2], 4: TEMAS[3] };
   const MAPA_TREM = { 'Sistema respiratório': TEMAS[1], 'Lua e eclipses': TEMAS[4], 'Saúde e prevenção': TEMAS[2] };
   const temaDe = r => r.etapa === 'associacao' ? MAPA_ITEM[r.item] : r.etapa === 'roleta' ? MAPA_ROLETA[r.tema] : r.etapa === 'milhao' ? MAPA_MILHAO[r.pergunta] : r.etapa === 'trem' ? MAPA_TREM[r.tema] : null;
   const porTema = resp => { const o = {}; TEMAS.forEach(t => o[t] = { ok: 0, er: 0 }); (resp || []).forEach(x => { const t = temaDe(x); if (t) o[t][x.correta ? 'ok' : 'er']++; }); return o; };
