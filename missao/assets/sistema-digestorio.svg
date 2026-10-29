@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" font-family="Segoe UI,Arial,sans-serif"><title>Sistema digestório e absorção de nutrientes</title><rect width="400" height="300" fill="#fdf3e6"/><path d="M200 30 V90" stroke="#c98b6b" stroke-width="16" stroke-linecap="round"/>
+<path d="M200 90 C140 90 130 150 175 160 C215 168 240 140 225 112" fill="#f2b38f" stroke="#c0724b" stroke-width="5"/>
+<path d="M120 190 H280 V270 H120 Z" fill="none" stroke="#c0724b" stroke-width="5" stroke-linejoin="round" opacity=".0"/>
+<path d="M175 165 C130 190 130 250 190 250 C250 250 240 215 205 215 C170 215 165 235 195 235" fill="none" stroke="#e4a07a" stroke-width="16" stroke-linecap="round"/>
+<path d="M100 150 V275 H300 V150 C300 135 280 135 280 150 V255 H120 V150 C120 135 100 135 100 150Z" fill="#d9a07a" stroke="#a9643f" stroke-width="4"/>
+<text x="200" y="22" font-size="17" font-weight="700" text-anchor="middle" fill="#5a3a22">Absorção de nutrientes</text></svg>
