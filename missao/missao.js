@@ -13,28 +13,28 @@
   ];
   const roletaRodadas = [
     [
-      { tema:'Digestão', pergunta:'Qual órgão realiza a maior parte da absorção de nutrientes?', opcoes:['Estômago','Intestino delgado','Intestino grosso'], correta:1 },
-      { tema:'Eclipses', pergunta:'No eclipse solar, qual é a ordem dos astros?', opcoes:['Sol–Lua–Terra','Sol–Terra–Lua','Lua–Sol–Terra'], correta:0 },
-      { tema:'ISTs', pergunta:'Qual método também ajuda a prevenir ISTs?', opcoes:['Camisinha','Pílula anticoncepcional','Tabela'], correta:0 },
-      { tema:'Clima', pergunta:'Qual ação reduz a emissão de gases do efeito estufa?', opcoes:['Aumentar queimadas','Proteger florestas','Desperdiçar energia'], correta:1 }
+      { tema:'Digestão', pergunta:'Qual órgão realiza a maior parte da absorção de nutrientes?', opcoes:["Intestino delgado", "Estômago", "Intestino grosso", "Esôfago", "Fígado"], correta:0 },
+      { tema:'Eclipses', pergunta:'O que acontece em um eclipse solar?', opcoes:["A Lua passa entre o Sol e a Terra e sua sombra atinge a Terra", "A Terra passa entre o Sol e a Lua e sua sombra cobre a Lua", "O Sol passa entre a Terra e a Lua", "A Lua entra na sombra da Terra e fica avermelhada", "As nuvens bloqueiam a luz do Sol em toda a Terra"], correta:0 },
+      { tema:'ISTs', pergunta:'Qual método de prevenção da gravidez também protege contra ISTs?', opcoes:["Camisinha", "Pílula anticoncepcional", "Tabelinha (método do calendário)", "Coito interrompido", "DIU de cobre"], correta:0 },
+      { tema:'Clima', pergunta:'Qual ação reduz a emissão de gases do efeito estufa?', opcoes:["Substituir combustíveis fósseis por fontes renováveis de energia", "Ampliar a queima de carvão para gerar eletricidade", "Expandir o desmatamento para abrir pastagens", "Trocar o transporte coletivo por carros individuais a gasolina", "Manter lixões sem captura do gás metano"], correta:0 }
     ],
     [
-      { tema:'Respiração', pergunta:'Em que estrutura dos pulmões ocorre a troca gasosa?', opcoes:['Alvéolos','Traqueia','Laringe'], correta:0 },
-      { tema:'Estações', pergunta:'Qual estação do ano começa em dezembro no Hemisfério Sul?', opcoes:['Inverno','Verão','Outono'], correta:1 },
-      { tema:'Vacinas', pergunta:'Qual é a principal função de uma vacina?', opcoes:['Estimular o corpo a produzir defesas','Eliminar todos os microrganismos do ar','Substituir a alimentação'], correta:0 },
-      { tema:'Efeito estufa', pergunta:'Qual gás é um dos principais responsáveis pelo reforço do efeito estufa?', opcoes:['Gás carbônico (CO₂)','Gás nitrogênio','Gás hélio'], correta:0 }
+      { tema:'Respiração', pergunta:'Em que estrutura dos pulmões ocorre a troca gasosa?', opcoes:["Alvéolos", "Brônquios", "Traqueia", "Pleura", "Diafragma"], correta:0 },
+      { tema:'Estações', pergunta:'Qual estação do ano começa em dezembro no Hemisfério Sul?', opcoes:["Verão", "Inverno", "Outono", "Primavera", "Nenhuma: o Brasil não tem estações definidas"], correta:0 },
+      { tema:'Vacinas', pergunta:'Qual é a principal função de uma vacina?', opcoes:["Preparar o sistema imunológico para reconhecer e combater um agente infeccioso", "Matar os microrganismos que já estão no corpo", "Fornecer anticorpos prontos de forma permanente", "Aumentar a temperatura do corpo para evitar infecções", "Substituir os antibióticos em qualquer doença"], correta:0 },
+      { tema:'Efeito estufa', pergunta:'Qual gás é um dos principais responsáveis pelo reforço do efeito estufa?', opcoes:["Gás carbônico (CO₂)", "Gás oxigênio (O₂)", "Gás nitrogênio (N₂)", "Gás hélio (He)", "Gás argônio (Ar)"], correta:0 }
     ],
     [
-      { tema:'Nutrientes', pergunta:'Qual nutriente é a principal fonte de energia rápida do corpo?', opcoes:['Carboidratos','Vitaminas','Água'], correta:0 },
-      { tema:'Fases da Lua', pergunta:'Em qual fase a face da Lua voltada para a Terra aparece totalmente iluminada?', opcoes:['Lua nova','Lua cheia','Quarto crescente'], correta:1 },
-      { tema:'HPV', pergunta:'A vacina contra o HPV ajuda a prevenir qual problema?', opcoes:['Câncer do colo do útero','Dengue','Gripe'], correta:0 },
-      { tema:'Desmatamento', pergunta:'Qual é uma consequência do desmatamento?', opcoes:['Redução da biodiversidade','Aumento do número de árvores','Diminuição do CO₂ no ar'], correta:0 }
+      { tema:'Nutrientes', pergunta:'Qual nutriente é a principal fonte de energia rápida do corpo?', opcoes:["Carboidratos", "Proteínas", "Vitaminas", "Sais minerais", "Fibras alimentares"], correta:0 },
+      { tema:'Fases da Lua', pergunta:'Em qual fase a face da Lua voltada para a Terra aparece totalmente iluminada?', opcoes:["Lua cheia", "Lua nova", "Quarto crescente", "Quarto minguante", "Eclipse lunar"], correta:0 },
+      { tema:'HPV', pergunta:'A vacina contra o HPV ajuda a prevenir qual problema?', opcoes:["Câncer do colo do útero", "Hepatite A", "Dengue", "Tuberculose", "Sarampo"], correta:0 },
+      { tema:'Desmatamento', pergunta:'Qual é uma consequência do desmatamento?', opcoes:["Perda de biodiversidade e de habitats", "Aumento da umidade do ar em toda a região", "Maior absorção de gás carbônico pela vegetação", "Fortalecimento do solo contra a erosão", "Aumento da fertilidade natural do solo a longo prazo"], correta:0 }
     ],
     [
-      { tema:'Enzimas', pergunta:'O que fazem as enzimas digestivas?', opcoes:['Quebram os alimentos em partes menores','Produzem oxigênio','Aquecem o sangue'], correta:0 },
-      { tema:'Sistema Solar', pergunta:'Qual astro está no centro do Sistema Solar?', opcoes:['Terra','Sol','Lua'], correta:1 },
-      { tema:'Tabagismo', pergunta:'Qual sistema é diretamente prejudicado pela fumaça do cigarro?', opcoes:['Respiratório','Esquelético','Excretor'], correta:0 },
-      { tema:'Energia limpa', pergunta:'Qual fonte de energia emite menos gases do efeito estufa?', opcoes:['Solar','Carvão mineral','Petróleo'], correta:0 }
+      { tema:'Enzimas', pergunta:'O que fazem as enzimas digestivas?', opcoes:["Quebram moléculas grandes do alimento em partes menores", "Armazenam a energia dos alimentos como gordura", "Transportam nutrientes das células para o intestino", "Produzem a bile no fígado", "Absorvem a água dos resíduos no intestino grosso"], correta:0 },
+      { tema:'Sistema Solar', pergunta:'Qual afirmação sobre o Sistema Solar está correta?', opcoes:["O Sol concentra a maior parte da massa do sistema", "A Lua é um planeta que orbita o Sol", "A Terra é o maior planeta do sistema", "Júpiter fica entre a Terra e o Sol", "As estrelas giram em torno da Terra"], correta:0 },
+      { tema:'Tabagismo', pergunta:'Qual sistema é diretamente prejudicado pela fumaça do cigarro?', opcoes:["Respiratório", "Esquelético", "Excretor", "Muscular", "Tegumentar"], correta:0 },
+      { tema:'Energia limpa', pergunta:'Qual fonte de energia emite menos gases do efeito estufa na geração de eletricidade?', opcoes:["Solar", "Carvão mineral", "Petróleo", "Gás natural", "Queima de lenha"], correta:0 }
     ]
   ];
   const roletaPerguntas = roletaRodadas.map(x => x[0]);
@@ -73,28 +73,28 @@
   const assocRu = { pulmao:{label:'Лёгкие',term:'Газообмен'}, digestao:{label:'Пищеварительная система',term:'Всасывание питательных веществ'}, prevencao:{label:'Вакцинация от ВПЧ',term:'Профилактика ИППП'}, clima:{label:'Тающий ледник',term:'Глобальное потепление'} };
   const roletaRu = [
     [
-      { tema:'Пищеварение', pergunta:'Какой орган выполняет основную часть всасывания питательных веществ?', opcoes:['Желудок','Тонкий кишечник','Толстый кишечник'] },
-      { tema:'Затмения', pergunta:'Каков порядок небесных тел при солнечном затмении?', opcoes:['Солнце–Луна–Земля','Солнце–Земля–Луна','Луна–Солнце–Земля'] },
-      { tema:'ИППП', pergunta:'Какой метод также помогает предотвратить ИППП?', opcoes:['Презерватив','Противозачаточные таблетки','Календарный метод'] },
-      { tema:'Климат', pergunta:'Какое действие сокращает выбросы парниковых газов?', opcoes:['Увеличивать количество пожаров','Охранять леса','Расточительно тратить энергию'] }
+      { tema:'Пищеварение', pergunta:'Какой орган выполняет основную часть всасывания питательных веществ?', opcoes:["Тонкий кишечник", "Желудок", "Толстый кишечник", "Пищевод", "Печень"] },
+      { tema:'Затмения', pergunta:'Что происходит при солнечном затмении?', opcoes:["Луна проходит между Солнцем и Землёй, и её тень падает на Землю", "Земля проходит между Солнцем и Луной, и её тень покрывает Луну", "Солнце проходит между Землёй и Луной", "Луна попадает в тень Земли и становится красноватой", "Облака закрывают свет Солнца по всей Земле"] },
+      { tema:'ИППП', pergunta:'Какой метод предотвращения беременности также защищает от ИППП?', opcoes:["Презерватив", "Противозачаточные таблетки", "Календарный метод", "Прерванный половой акт", "Медная внутриматочная спираль"] },
+      { tema:'Климат', pergunta:'Какое действие сокращает выбросы парниковых газов?', opcoes:["Заменять ископаемое топливо возобновляемыми источниками энергии", "Увеличивать сжигание угля для производства электричества", "Расширять вырубку лесов под пастбища", "Заменять общественный транспорт личными бензиновыми автомобилями", "Устраивать свалки без улавливания метана"] }
     ],
     [
-      { tema:'Дыхание', pergunta:'В какой структуре лёгких происходит газообмен?', opcoes:['Альвеолы','Трахея','Гортань'] },
-      { tema:'Времена года', pergunta:'Какое время года начинается в декабре в Южном полушарии?', opcoes:['Зима','Лето','Осень'] },
-      { tema:'Вакцины', pergunta:'Какова основная функция вакцины?', opcoes:['Стимулировать организм вырабатывать защиту','Уничтожать все микроорганизмы в воздухе','Заменять питание'] },
-      { tema:'Парниковый эффект', pergunta:'Какой газ — один из главных виновников усиления парникового эффекта?', opcoes:['Углекислый газ (CO₂)','Азот','Гелий'] }
+      { tema:'Дыхание', pergunta:'В какой структуре лёгких происходит газообмен?', opcoes:["Альвеолы", "Бронхи", "Трахея", "Плевра", "Диафрагма"] },
+      { tema:'Времена года', pergunta:'Какое время года начинается в декабре в Южном полушарии?', opcoes:["Лето", "Зима", "Осень", "Весна", "Ни одно: в Бразилии нет чётко выраженных времён года"] },
+      { tema:'Вакцины', pergunta:'Какова основная функция вакцины?', opcoes:["Подготовить иммунную систему к распознаванию и борьбе с возбудителем инфекции", "Убить микроорганизмы, которые уже находятся в организме", "Постоянно вводить готовые антитела", "Повышать температуру тела, чтобы избежать инфекций", "Заменить антибиотики при любой болезни"] },
+      { tema:'Парниковый эффект', pergunta:'Какой газ — один из главных виновников усиления парникового эффекта?', opcoes:["Углекислый газ (CO₂)", "Кислород (O₂)", "Азот (N₂)", "Гелий (He)", "Аргон (Ar)"] }
     ],
     [
-      { tema:'Питание', pergunta:'Какое питательное вещество — главный источник быстрой энергии для организма?', opcoes:['Углеводы','Витамины','Вода'] },
-      { tema:'Фазы Луны', pergunta:'В какой фазе обращённая к Земле сторона Луны полностью освещена?', opcoes:['Новолуние','Полнолуние','Первая четверть'] },
-      { tema:'ВПЧ', pergunta:'Какую проблему помогает предотвратить вакцина от ВПЧ?', opcoes:['Рак шейки матки','Лихорадка денге','Грипп'] },
-      { tema:'Вырубка лесов', pergunta:'Что является последствием вырубки лесов?', opcoes:['Сокращение биоразнообразия','Рост числа деревьев','Уменьшение CO₂ в воздухе'] }
+      { tema:'Питание', pergunta:'Какое питательное вещество — главный источник быстрой энергии для организма?', opcoes:["Углеводы", "Белки", "Витамины", "Минеральные соли", "Пищевые волокна"] },
+      { tema:'Фазы Луны', pergunta:'В какой фазе обращённая к Земле сторона Луны полностью освещена?', opcoes:["Полнолуние", "Новолуние", "Первая четверть", "Последняя четверть", "Лунное затмение"] },
+      { tema:'ВПЧ', pergunta:'Какую проблему помогает предотвратить вакцина от ВПЧ?', opcoes:["Рак шейки матки", "Гепатит A", "Лихорадка денге", "Туберкулёз", "Корь"] },
+      { tema:'Вырубка лесов', pergunta:'Что является последствием вырубки лесов?', opcoes:["Потеря биоразнообразия и мест обитания", "Повышение влажности воздуха по всему региону", "Усиленное поглощение углекислого газа растительностью", "Укрепление почвы против эрозии", "Рост естественного плодородия почвы в долгосрочной перспективе"] }
     ],
     [
-      { tema:'Ферменты', pergunta:'Что делают пищеварительные ферменты?', opcoes:['Расщепляют пищу на более мелкие частицы','Производят кислород','Нагревают кровь'] },
-      { tema:'Солнечная система', pergunta:'Какое небесное тело находится в центре Солнечной системы?', opcoes:['Земля','Солнце','Луна'] },
-      { tema:'Курение', pergunta:'Какая система напрямую страдает от сигаретного дыма?', opcoes:['Дыхательная','Скелетная','Выделительная'] },
-      { tema:'Чистая энергия', pergunta:'Какой источник энергии выделяет меньше всего парниковых газов?', opcoes:['Солнечная','Каменный уголь','Нефть'] }
+      { tema:'Ферменты', pergunta:'Что делают пищеварительные ферменты?', opcoes:["Расщепляют крупные молекулы пищи на более мелкие частицы", "Хранят энергию пищи в виде жира", "Переносят питательные вещества из клеток в кишечник", "Вырабатывают желчь в печени", "Всасывают воду из отходов в толстом кишечнике"] },
+      { tema:'Солнечная система', pergunta:'Какое утверждение о Солнечной системе верно?', opcoes:["В Солнце сосредоточена основная часть массы системы", "Луна — планета, обращающаяся вокруг Солнца", "Земля — самая большая планета системы", "Юпитер находится между Землёй и Солнцем", "Звёзды вращаются вокруг Земли"] },
+      { tema:'Курение', pergunta:'Какая система напрямую страдает от сигаретного дыма?', opcoes:["Дыхательная", "Скелетная", "Выделительная", "Мышечная", "Покровная"] },
+      { tema:'Чистая энергия', pergunta:'Какой источник энергии выделяет меньше всего парниковых газов при выработке электричества?', opcoes:["Солнечная", "Каменный уголь", "Нефть", "Природный газ", "Сжигание дров"] }
     ]
   ];
   /* Embaralha as alternativas (PT e RU com a mesma ordem) para a correta não ficar sempre na mesma posição. */
