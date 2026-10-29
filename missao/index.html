@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Missão Ciências · 8º Ano A e B</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#eef4f3;color:#0f172a}
+.topo{width:min(1200px,94%);margin:18px auto 0;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.topo a{color:#115e59;font-weight:700;text-decoration:none}
+.mission-btn{border:0;border-radius:12px;padding:13px 20px;font-weight:800;font-size:16px;cursor:pointer;background:#fbbf24;color:#0f172a;box-shadow:0 4px 0 #d39a0b;margin-top:14px;font-family:inherit}
+.mission-btn:hover{filter:brightness(1.04);transform:translateY(-1px)}
+.mission-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+#missao-recomposicao{width:min(1200px,94%);margin:12px auto 28px;padding:28px;border-radius:20px;background:#f8fafc;color:#0f172a;box-shadow:0 10px 30px rgba(15,23,42,.12)}
+.mission-head{display:flex;gap:18px;justify-content:space-between;align-items:flex-start;margin-bottom:18px}
+.mission-head h1{margin:0;color:#115e59;font-size:32px}.mission-head p{margin:6px 0 0;color:#475569}
+.mission-identification{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:18px;background:#e6fffb;border:1px solid #99f6e4;border-radius:16px;margin-bottom:18px}
+.mission-identification label{display:flex;flex-direction:column;gap:6px;font-weight:800;color:#115e59}
+.mission-identification select{margin:0;padding:12px;border-radius:8px;border:1px solid #99f6e4;color:#0f172a;font-size:15px;background:#fff;font-family:inherit}
+.mission-meta{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+.mission-meta span{background:#fff;border:1px solid #e2e8f0;border-radius:999px;padding:8px 12px;font-size:13px;color:#475569}
+.mission-progress{height:10px;background:#e2e8f0;border-radius:999px;overflow:hidden;margin:12px 0 24px}
+.mission-progress>span{display:block;height:100%;width:0;background:linear-gradient(90deg,#0f766e,#fbbf24);transition:width .2s ease}
+.mission-stage{background:#fff;border-radius:16px;padding:22px;border:1px solid #e2e8f0}
+.mission-stage h3{color:#115e59;margin:0 0 8px;font-size:24px}.mission-stage .stage-help{color:#475569;margin:0 0 18px}
+.mission-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.mission-image-card{border:2px solid #e2e8f0;border-radius:14px;padding:8px;background:#fff;cursor:pointer;text-align:center;font-family:inherit}
+.mission-image-card img{width:100%;height:145px;object-fit:cover;border-radius:10px;display:block}
+.mission-image-card small{display:block;padding:8px 0 2px;color:#64748b;font-weight:800}
+.mission-image-card.selected{border-color:#fbbf24;box-shadow:0 0 0 3px #fef3c7}
+.mission-image-card.matched{border-color:#0f766e;background:#ecfdf5;opacity:.8}
+.mission-terms{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.mission-term{border:2px dashed #0f766e;background:#f0fdfa;color:#115e59;border-radius:12px;padding:12px 15px;font-weight:800;cursor:pointer;font-family:inherit;font-size:15px}
+.mission-term.selected{background:#fbbf24;border-color:#d39a0b;color:#0f172a}.mission-term.matched{background:#d1fae5;border-style:solid;cursor:default}
+.mission-feedback{min-height:24px;font-weight:800;margin-top:14px}.mission-feedback.ok{color:#047857}.mission-feedback.error{color:#b91c1c}
+.mission-wheel-wrap{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center}
+.mission-wheel{width:270px;height:270px;border-radius:50%;border:12px solid #0f172a;background:conic-gradient(#0f766e 0 45deg,#ff6b6b 45deg 90deg,#fbbf24 90deg 135deg,#0f766e 135deg 180deg,#ff6b6b 180deg 225deg,#fbbf24 225deg 270deg,#0f766e 270deg 315deg,#ff6b6b 315deg);display:flex;align-items:center;justify-content:center;margin:auto;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.mission-wheel span{width:82px;height:82px;display:grid;place-items:center;border-radius:50%;background:#0f172a;color:#fff;font-weight:900;text-align:center;font-size:14px}
+.mission-prompt{background:#f1f5f9;padding:18px;border-radius:12px;font-size:20px;font-weight:800;min-height:70px}
+.mission-options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.mission-option{text-align:left;border:1px solid #cbd5e1;background:#fff;color:#0f172a;border-radius:10px;padding:13px;cursor:pointer;font-weight:700;font-family:inherit;font-size:15px}
+.mission-option:hover{border-color:#0f766e;background:#f0fdfa}.mission-option:disabled{cursor:default;opacity:.7}
+.million-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.million-card{border:1px solid #e2e8f0;border-top:5px solid #0f766e;border-radius:14px;padding:18px;background:#fff}.million-card h4{margin:0 0 14px;font-size:18px}
+.mission-result{padding:22px;border-radius:16px;background:#115e59;color:#fff;text-align:center}.mission-result strong{color:#fbbf24;font-size:34px}.mission-result p{color:#e2e8f0}
+.mission-note{margin-top:14px;color:#64748b;font-size:12px}
+@media(max-width:800px){.mission-identification,.mission-wheel-wrap{grid-template-columns:1fr}.mission-cards{grid-template-columns:repeat(2,1fr)}.million-grid,.mission-options{grid-template-columns:1fr}.mission-head{flex-direction:column}#missao-recomposicao{padding:16px}}
+</style></head><body>
+<div class="topo"><a href="/">← Painel</a></div>
+<section id="missao-recomposicao" aria-labelledby="missao-app-titulo">
+  <div class="mission-head"><div><h1 id="missao-app-titulo">Missão Ciências — 8º Ano A e B</h1><p>Atividade interativa de recuperação das aprendizagens prioritárias da Prova Paulista: cartas de associação, roleta de conexões e Show do Milhão.</p></div></div>
+  <div class="mission-identification">
+    <label for="missao-turma">Turma<select id="missao-turma" required><option value="">Selecione sua turma</option><option value="8º Ano A">8º Ano A</option><option value="8º Ano B">8º Ano B</option></select></label>
+    <label for="missao-aluno">Nome do aluno<select id="missao-aluno" required disabled><option value="">Primeiro selecione a turma</option></select></label>
+  </div>
+  <div class="mission-meta" aria-live="polite"><span id="missao-status">Aguardando identificação</span><span id="missao-acesso">Acesso: —</span><span id="missao-pontos">Pontuação: 0</span></div>
+  <div class="mission-progress" aria-label="Progresso da atividade"><span id="missao-progresso"></span></div>
+  <div id="missao-conteudo" class="mission-stage"><h3>Comece escolhendo sua turma e seu nome.</h3><p class="stage-help">Depois, clique em “Iniciar missão” para liberar as três etapas.</p><button type="button" class="mission-btn" id="btnIniciarMissao" disabled>Iniciar missão</button></div>
+  <p class="mission-note">O resultado é enviado à planilha da atividade. Se o envio falhar, uma cópia fica salva neste dispositivo, sem apagar as respostas.</p>
+</section>
+<script src="missao.js?v=1"></script>
+</body></html>

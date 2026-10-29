@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" font-family="Segoe UI,Arial,sans-serif"><title>Vacinação</title><rect width="400" height="300" fill="#eef6f1"/><rect x="150" y="70" width="120" height="30" rx="6" transform="rotate(-35 210 85)" fill="#fff" stroke="#37474f" stroke-width="5"/><rect x="170" y="78" width="60" height="14" rx="4" transform="rotate(-35 210 85)" fill="#7bc47f"/>
+<path d="M258 56 L300 26" stroke="#37474f" stroke-width="6" stroke-linecap="round"/><path d="M150 112 L105 150" stroke="#78909c" stroke-width="4"/>
+<path d="M60 210 C60 170 130 170 150 190 L175 215 C185 225 175 240 160 235 L120 222 L120 262 H70 Z" fill="#f2c9a5" stroke="#b27a52" stroke-width="4"/><rect x="60" y="205" width="62" height="14" fill="#fff" opacity=".0"/>
+<circle cx="305" cy="215" r="28" fill="#fff" stroke="#3b82c4" stroke-width="5"/><path d="M293 215 l9 9 l17 -19" stroke="#2e8b57" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="200" y="285" font-size="17" font-weight="700" text-anchor="middle" fill="#25402f">Prevenção por vacinação</text></svg>
