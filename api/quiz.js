@@ -148,7 +148,7 @@ module.exports = async function quiz(req, res) {
         return out(200, { ok: true, jogadores: jog || [], respostas: resp || [] });
       }
       if (q.missao) {   // resultados da Missão Ciências (8º A e B)
-        const m = await rest('missao_resultado?select=id,turma,nome,pontuacao,total,percentual,nota,concluido,acesso_em,concluido_em,respostas,atualizado&order=atualizado.desc&limit=3000');
+        const m = await rest('missao_resultado?oculto=eq.false&select=id,turma,nome,pontuacao,total,percentual,nota,concluido,acesso_em,concluido_em,respostas,atualizado&order=atualizado.desc&limit=3000');
         return out(200, { ok: true, resultados: m || [] });
       }
       if (q.sessao) { const s = await sessao(String(q.sessao)); return s ? out(200, Object.assign({ ok: true }, s)) : out(404, { ok: false, erro: 'Partida não encontrada.' }); }
