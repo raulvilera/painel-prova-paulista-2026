@@ -43,11 +43,12 @@ td,th{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top;tex
   let TOKEN = '', D = [], aberto = '';
   const TEMAS = ['Digestão e absorção', 'Respiração e troca gasosa', 'Prevenção de ISTs', 'Aquecimento global e clima', 'Astronomia (estações, Lua e eclipses)'];
   const MAPA_ITEM = { pulmao: TEMAS[1], digestao: TEMAS[0], prevencao: TEMAS[2], clima: TEMAS[3] }, MAPA_ROLETA = { 'Digestão': TEMAS[0], 'Eclipses': TEMAS[4], 'ISTs': TEMAS[2], 'Clima': TEMAS[3] }, MAPA_MILHAO = { 1: TEMAS[4], 2: TEMAS[0], 3: TEMAS[2], 4: TEMAS[3] };
-  const temaDe = r => r.etapa === 'associacao' ? MAPA_ITEM[r.item] : r.etapa === 'roleta' ? MAPA_ROLETA[r.tema] : r.etapa === 'milhao' ? MAPA_MILHAO[r.pergunta] : null;
+  const MAPA_TREM = { 'Sistema respiratório': TEMAS[1], 'Lua e eclipses': TEMAS[4], 'Saúde e prevenção': TEMAS[2] };
+  const temaDe = r => r.etapa === 'associacao' ? MAPA_ITEM[r.item] : r.etapa === 'roleta' ? MAPA_ROLETA[r.tema] : r.etapa === 'milhao' ? MAPA_MILHAO[r.pergunta] : r.etapa === 'trem' ? MAPA_TREM[r.tema] : null;
   const porTema = resp => { const o = {}; TEMAS.forEach(t => o[t] = { ok: 0, er: 0 }); (resp || []).forEach(x => { const t = temaDe(x); if (t) o[t][x.correta ? 'ok' : 'er']++; }); return o; };
   const pc = o => (o.ok + o.er) ? Math.round(o.ok / (o.ok + o.er) * 100) : null;
   const cel = o => !(o.ok + o.er) ? '<span class="muted">–</span>' : '<span class="' + (pc(o) >= 70 ? 'ok' : pc(o) < 50 ? 'er' : '') + '">' + o.ok + '✔ ' + o.er + '✘</span>';
-  const ETAPA = { associacao: 'Cartas', roleta: 'Roleta', milhao: 'Show do Milhão' };
+  const ETAPA = { associacao: 'Cartas', roleta: 'Roleta', milhao: 'Show do Milhão', trem: 'Trem dos conteúdos' };
   async function carregar() {
     const r = await fetch('/api/quiz?missao=1', { headers: { Authorization: 'Bearer ' + TOKEN }, cache: 'no-store' });
     const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro'); D = j.resultados || []; desenhar();
