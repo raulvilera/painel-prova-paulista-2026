@@ -11,12 +11,33 @@
     { id:'prevencao', image:'assets/vacina-hpv.svg', label:'Vacinação contra HPV', term:'Prevenção de ISTs' },
     { id:'clima', image:'assets/geleira.svg', label:'Geleira em derretimento', term:'Aquecimento global' }
   ];
-  const roletaPerguntas = [
-    { tema:'Digestão', pergunta:'Qual órgão realiza a maior parte da absorção de nutrientes?', opcoes:['Estômago','Intestino delgado','Intestino grosso'], correta:1 },
-    { tema:'Eclipses', pergunta:'No eclipse solar, qual é a ordem dos astros?', opcoes:['Sol–Lua–Terra','Sol–Terra–Lua','Lua–Sol–Terra'], correta:0 },
-    { tema:'ISTs', pergunta:'Qual método também ajuda a prevenir ISTs?', opcoes:['Camisinha','Pílula anticoncepcional','Tabela'], correta:0 },
-    { tema:'Clima', pergunta:'Qual ação reduz a emissão de gases do efeito estufa?', opcoes:['Aumentar queimadas','Proteger florestas','Desperdiçar energia'], correta:1 }
+  const roletaRodadas = [
+    [
+      { tema:'Digestão', pergunta:'Qual órgão realiza a maior parte da absorção de nutrientes?', opcoes:['Estômago','Intestino delgado','Intestino grosso'], correta:1 },
+      { tema:'Eclipses', pergunta:'No eclipse solar, qual é a ordem dos astros?', opcoes:['Sol–Lua–Terra','Sol–Terra–Lua','Lua–Sol–Terra'], correta:0 },
+      { tema:'ISTs', pergunta:'Qual método também ajuda a prevenir ISTs?', opcoes:['Camisinha','Pílula anticoncepcional','Tabela'], correta:0 },
+      { tema:'Clima', pergunta:'Qual ação reduz a emissão de gases do efeito estufa?', opcoes:['Aumentar queimadas','Proteger florestas','Desperdiçar energia'], correta:1 }
+    ],
+    [
+      { tema:'Respiração', pergunta:'Em que estrutura dos pulmões ocorre a troca gasosa?', opcoes:['Alvéolos','Traqueia','Laringe'], correta:0 },
+      { tema:'Estações', pergunta:'Qual estação do ano começa em dezembro no Hemisfério Sul?', opcoes:['Inverno','Verão','Outono'], correta:1 },
+      { tema:'Vacinas', pergunta:'Qual é a principal função de uma vacina?', opcoes:['Estimular o corpo a produzir defesas','Eliminar todos os microrganismos do ar','Substituir a alimentação'], correta:0 },
+      { tema:'Efeito estufa', pergunta:'Qual gás é um dos principais responsáveis pelo reforço do efeito estufa?', opcoes:['Gás carbônico (CO₂)','Gás nitrogênio','Gás hélio'], correta:0 }
+    ],
+    [
+      { tema:'Nutrientes', pergunta:'Qual nutriente é a principal fonte de energia rápida do corpo?', opcoes:['Carboidratos','Vitaminas','Água'], correta:0 },
+      { tema:'Fases da Lua', pergunta:'Em qual fase a face da Lua voltada para a Terra aparece totalmente iluminada?', opcoes:['Lua nova','Lua cheia','Quarto crescente'], correta:1 },
+      { tema:'HPV', pergunta:'A vacina contra o HPV ajuda a prevenir qual problema?', opcoes:['Câncer do colo do útero','Dengue','Gripe'], correta:0 },
+      { tema:'Desmatamento', pergunta:'Qual é uma consequência do desmatamento?', opcoes:['Redução da biodiversidade','Aumento do número de árvores','Diminuição do CO₂ no ar'], correta:0 }
+    ],
+    [
+      { tema:'Enzimas', pergunta:'O que fazem as enzimas digestivas?', opcoes:['Quebram os alimentos em partes menores','Produzem oxigênio','Aquecem o sangue'], correta:0 },
+      { tema:'Sistema Solar', pergunta:'Qual astro está no centro do Sistema Solar?', opcoes:['Terra','Sol','Lua'], correta:1 },
+      { tema:'Tabagismo', pergunta:'Qual sistema é diretamente prejudicado pela fumaça do cigarro?', opcoes:['Respiratório','Esquelético','Excretor'], correta:0 },
+      { tema:'Energia limpa', pergunta:'Qual fonte de energia emite menos gases do efeito estufa?', opcoes:['Solar','Carvão mineral','Petróleo'], correta:0 }
+    ]
   ];
+  const roletaPerguntas = roletaRodadas.map(x => x[0]);
   const milhao = [
     { pergunta:'O que explica principalmente as estações do ano?', opcoes:['A distância Terra–Sol','A inclinação do eixo terrestre','As fases da Lua','As marés'], correta:1 },
     { pergunta:'Onde ocorre a maior parte da absorção de nutrientes?', opcoes:['Esôfago','Estômago','Intestino delgado','Intestino grosso'], correta:2 },
@@ -51,11 +72,33 @@
   const NOME_RU = 'Zlata Evgenievna Saforova';
   const assocRu = { pulmao:{label:'Лёгкие',term:'Газообмен'}, digestao:{label:'Пищеварительная система',term:'Всасывание питательных веществ'}, prevencao:{label:'Вакцинация от ВПЧ',term:'Профилактика ИППП'}, clima:{label:'Тающий ледник',term:'Глобальное потепление'} };
   const roletaRu = [
-    { tema:'Пищеварение', pergunta:'Какой орган выполняет основную часть всасывания питательных веществ?', opcoes:['Желудок','Тонкий кишечник','Толстый кишечник'] },
-    { tema:'Затмения', pergunta:'Каков порядок небесных тел при солнечном затмении?', opcoes:['Солнце–Луна–Земля','Солнце–Земля–Луна','Луна–Солнце–Земля'] },
-    { tema:'ИППП', pergunta:'Какой метод также помогает предотвратить ИППП?', opcoes:['Презерватив','Противозачаточные таблетки','Календарный метод'] },
-    { tema:'Климат', pergunta:'Какое действие сокращает выбросы парниковых газов?', opcoes:['Увеличивать количество пожаров','Охранять леса','Расточительно тратить энергию'] }
+    [
+      { tema:'Пищеварение', pergunta:'Какой орган выполняет основную часть всасывания питательных веществ?', opcoes:['Желудок','Тонкий кишечник','Толстый кишечник'] },
+      { tema:'Затмения', pergunta:'Каков порядок небесных тел при солнечном затмении?', opcoes:['Солнце–Луна–Земля','Солнце–Земля–Луна','Луна–Солнце–Земля'] },
+      { tema:'ИППП', pergunta:'Какой метод также помогает предотвратить ИППП?', opcoes:['Презерватив','Противозачаточные таблетки','Календарный метод'] },
+      { tema:'Климат', pergunta:'Какое действие сокращает выбросы парниковых газов?', opcoes:['Увеличивать количество пожаров','Охранять леса','Расточительно тратить энергию'] }
+    ],
+    [
+      { tema:'Дыхание', pergunta:'В какой структуре лёгких происходит газообмен?', opcoes:['Альвеолы','Трахея','Гортань'] },
+      { tema:'Времена года', pergunta:'Какое время года начинается в декабре в Южном полушарии?', opcoes:['Зима','Лето','Осень'] },
+      { tema:'Вакцины', pergunta:'Какова основная функция вакцины?', opcoes:['Стимулировать организм вырабатывать защиту','Уничтожать все микроорганизмы в воздухе','Заменять питание'] },
+      { tema:'Парниковый эффект', pergunta:'Какой газ — один из главных виновников усиления парникового эффекта?', opcoes:['Углекислый газ (CO₂)','Азот','Гелий'] }
+    ],
+    [
+      { tema:'Питание', pergunta:'Какое питательное вещество — главный источник быстрой энергии для организма?', opcoes:['Углеводы','Витамины','Вода'] },
+      { tema:'Фазы Луны', pergunta:'В какой фазе обращённая к Земле сторона Луны полностью освещена?', opcoes:['Новолуние','Полнолуние','Первая четверть'] },
+      { tema:'ВПЧ', pergunta:'Какую проблему помогает предотвратить вакцина от ВПЧ?', opcoes:['Рак шейки матки','Лихорадка денге','Грипп'] },
+      { tema:'Вырубка лесов', pergunta:'Что является последствием вырубки лесов?', opcoes:['Сокращение биоразнообразия','Рост числа деревьев','Уменьшение CO₂ в воздухе'] }
+    ],
+    [
+      { tema:'Ферменты', pergunta:'Что делают пищеварительные ферменты?', opcoes:['Расщепляют пищу на более мелкие частицы','Производят кислород','Нагревают кровь'] },
+      { tema:'Солнечная система', pergunta:'Какое небесное тело находится в центре Солнечной системы?', opcoes:['Земля','Солнце','Луна'] },
+      { tema:'Курение', pergunta:'Какая система напрямую страдает от сигаретного дыма?', opcoes:['Дыхательная','Скелетная','Выделительная'] },
+      { tema:'Чистая энергия', pergunta:'Какой источник энергии выделяет меньше всего парниковых газов?', opcoes:['Солнечная','Каменный уголь','Нефть'] }
+    ]
   ];
+  /* Embaralha as alternativas (PT e RU com a mesma ordem) para a correta não ficar sempre na mesma posição. */
+  roletaRodadas.forEach((rod,a)=>rod.forEach((q,b)=>{ const perm=q.opcoes.map((_,i)=>i); for(let i=perm.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[perm[i],perm[j]]=[perm[j],perm[i]];} const ru2=roletaRu[a][b]; const op=q.opcoes.slice(), opr=ru2.opcoes.slice(); q.opcoes=perm.map(i=>op[i]); ru2.opcoes=perm.map(i=>opr[i]); q.correta=perm.indexOf(q.correta); }));
   const milhaoRu = [
     { pergunta:'Что в основном объясняет смену времён года?', opcoes:['Расстояние от Земли до Солнца','Наклон земной оси','Фазы Луны','Приливы и отливы'] },
     { pergunta:'Где происходит основная часть всасывания питательных веществ?', opcoes:['Пищевод','Желудок','Тонкий кишечник','Толстый кишечник'] },
@@ -68,7 +111,7 @@
     { tema:'Здоровье и профилактика', balão:'Инфекции, передающиеся половым путём (ИППП), вызываются вирусами, бактериями и другими микроорганизмами и передаются главным образом при незащищённом половом контакте.', vagoes:[['Денге','Генитальный герпес','Туберкулёз','ВИЧ/СПИД'],['Сифилис','Гонорея','Хламидиоз','ВИЧ/СПИД'],['Грипп','Гонорея','Малярия','Сифилис']] }
   ];
   const el = id => document.getElementById(id);
-  const estado = { turma:'', aluno:'', pontos:0, maxPontos:assoc.length+roletaPerguntas.length+milhao.length+tremQuestoes.length, acesso:null, assocImagem:null, assocFeitos:new Set(), roletaIndex:0, roletaOrdem:[0,1,2,3], roletaAngulo:0, roletaSorteada:false, roletaRespondida:false, milhaoIndex:0, milhaoRespondida:false, tremIndex:0, tremEstourado:false, tremRespondida:false, respostas:[] };
+  const estado = { turma:'', aluno:'', pontos:0, maxPontos:assoc.length+roletaPerguntas.length+milhao.length+tremQuestoes.length, acesso:null, assocImagem:null, assocFeitos:new Set(), roletaIndex:0, roletaOrdem:[0,0,0,0], roletaAngulo:0, roletaSorteada:false, roletaRespondida:false, milhaoIndex:0, milhaoRespondida:false, tremIndex:0, tremEstourado:false, tremRespondida:false, respostas:[] };
   const ru = () => estado.aluno === NOME_RU, t = (p, x) => ru() ? x : p;
   const turmaEl = el('missao-turma'), alunoEl = el('missao-aluno'), conteudoEl = el('missao-conteudo'), progressoEl = el('missao-progresso');
   const agoraLocal = () => { const d=new Date(), p=n=>String(n).padStart(2,'0'); return {iso:d.toISOString(),data:`${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`,hora:`${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`}; };
@@ -98,13 +141,13 @@
     document.querySelectorAll('[data-assoc-term]').forEach(b=>b.addEventListener('click',()=>{ if(!estado.assocImagem){ el('assoc-feedback').innerHTML=feedback(t('Escolha uma imagem primeiro.','Сначала выберите картинку.'),'error'); return; } const correta=estado.assocImagem===b.dataset.assocTerm; estado.respostas.push({etapa:'associacao',item:estado.assocImagem,correta}); if(correta){ estado.assocFeitos.add(estado.assocImagem); estado.pontos++; } estado.assocImagem=null; salvarBanco(false); updateMeta(); renderAssociacao(correta?[t('Associação correta! +1 ponto.','Верно! +1 балл.'),'ok']:[t('Ainda não. Observe a função indicada pela imagem e tente novamente.','Пока неверно. Посмотрите внимательно на функцию, показанную на картинке, и попробуйте снова.'),'error']); }));
     if(el('btnIrRoleta')) el('btnIrRoleta').addEventListener('click',()=>{estado.roletaIndex=0;estado.roletaSorteada=false;estado.roletaRespondida=false;renderRoleta();}); updateMeta();
   }
-  const embaralharRoleta=()=>{ const a=roletaPerguntas.map((_,i)=>i); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; };
+  const embaralharRoleta=()=>roletaRodadas.map(rod=>Math.floor(Math.random()*rod.length));
   function renderRoleta(){
-    const k=estado.roletaOrdem[estado.roletaIndex], q=roletaPerguntas[k], qd=ru()?Object.assign({},q,roletaRu[k]):q;
-    const rotulos=roletaPerguntas.map((x,i)=>`<i class="wl" style="--a:${i*90+45-90}deg">${esc(ru()?roletaRu[i].tema:x.tema)}</i>`).join('');
+    const rod=roletaRodadas[estado.roletaIndex], k=estado.roletaOrdem[estado.roletaIndex], q=rod[k], qd=ru()?Object.assign({},q,roletaRu[estado.roletaIndex][k]):q;
+    const rotulos=rod.map((x,i)=>`<i class="wl" style="--a:${i*90+45-90}deg">${esc(ru()?roletaRu[estado.roletaIndex][i].tema:x.tema)}</i>`).join('');
     conteudoEl.innerHTML=`<h3>${t('Missão 2 — Roleta das conexões','Миссия 2 — Рулетка связей')}</h3><p class="stage-help">${t('Gire a roleta. Depois responda à pergunta do tema sorteado.','Крутите рулетку. Затем ответьте на вопрос выпавшей темы.')}</p><div class="mission-wheel-wrap"><div><div class="wheel-box"><div class="wheel-arrow" aria-hidden="true"></div><div class="mission-wheel" id="roleta" style="transform:rotate(${estado.roletaAngulo}deg)">${rotulos}<span>${estado.roletaSorteada?qd.tema:t('GIRE','КРУТИ')}</span></div></div><button type="button" class="mission-btn" id="btnGirar" ${estado.roletaSorteada?'disabled':''}>${estado.roletaSorteada?t('Tema sorteado','Тема выпала'):t('Girar roleta','Крутить рулетку')}</button></div><div><div class="mission-prompt">${estado.roletaSorteada?esc(qd.pergunta):t('Clique em “Girar roleta” para receber um tema.','Нажмите «Крутить рулетку», чтобы получить тему.')}</div><div class="mission-options">${estado.roletaSorteada?qd.opcoes.map((op,i)=>`<button type="button" class="mission-option" data-roleta-op="${i}" ${estado.roletaRespondida?'disabled':''}>${String.fromCharCode(65+i)}) ${esc(op)}</button>`).join(''):''}</div><div id="roleta-feedback"></div></div></div>`;
     if(el('btnGirar')) el('btnGirar').addEventListener('click',()=>{ const r=el('roleta'), base=estado.roletaAngulo-(estado.roletaAngulo%360), alvo=base+1440+(360-(k*90+45))+Math.floor(Math.random()*50-25); estado.roletaAngulo=alvo; r.style.transition='transform 2.6s cubic-bezier(.12,.7,.15,1)'; r.style.transform=`rotate(${alvo}deg)`; el('btnGirar').disabled=true; setTimeout(()=>{estado.roletaSorteada=true;renderRoleta();},2800); });
-    document.querySelectorAll('[data-roleta-op]').forEach(b=>b.addEventListener('click',()=>{ if(estado.roletaRespondida)return; const i=Number(b.dataset.roletaOp), correta=i===q.correta; estado.roletaRespondida=true; if(correta)estado.pontos++; estado.respostas.push({etapa:'roleta',tema:q.tema,resposta:i,correta}); salvarBanco(false); document.querySelectorAll('[data-roleta-op]').forEach(x=>x.disabled=true); const ultimo=estado.roletaIndex===roletaPerguntas.length-1; el('roleta-feedback').innerHTML=feedback(correta?t('Resposta correta! +1 ponto.','Правильный ответ! +1 балл.'):t(`A resposta correta era ${String.fromCharCode(65+q.correta)}.`,`Правильный ответ был ${String.fromCharCode(65+q.correta)}.`),correta?'ok':'error')+(ultimo?`<button type="button" class="mission-btn" id="btnIrMilhao">${t('Ir para o Show do Milhão','Перейти к «Кто хочет стать миллионером»')}</button>`:`<button type="button" class="mission-btn" id="btnProximaRoleta">${t('Próximo tema','Следующая тема')}</button>`); updateMeta(); if(el('btnProximaRoleta'))el('btnProximaRoleta').addEventListener('click',()=>{estado.roletaIndex++;estado.roletaSorteada=false;estado.roletaRespondida=false;renderRoleta();}); if(el('btnIrMilhao'))el('btnIrMilhao').addEventListener('click',()=>{estado.milhaoIndex=0;estado.milhaoRespondida=false;renderMilhao();}); })); updateMeta();
+    document.querySelectorAll('[data-roleta-op]').forEach(b=>b.addEventListener('click',()=>{ if(estado.roletaRespondida)return; const i=Number(b.dataset.roletaOp), correta=i===q.correta; estado.roletaRespondida=true; if(correta)estado.pontos++; estado.respostas.push({etapa:'roleta',rodada:estado.roletaIndex+1,tema:q.tema,resposta:i,correta}); salvarBanco(false); document.querySelectorAll('[data-roleta-op]').forEach(x=>x.disabled=true); const ultimo=estado.roletaIndex===roletaPerguntas.length-1; el('roleta-feedback').innerHTML=feedback(correta?t('Resposta correta! +1 ponto.','Правильный ответ! +1 балл.'):t(`A resposta correta era ${String.fromCharCode(65+q.correta)}.`,`Правильный ответ был ${String.fromCharCode(65+q.correta)}.`),correta?'ok':'error')+(ultimo?`<button type="button" class="mission-btn" id="btnIrMilhao">${t('Ir para o Show do Milhão','Перейти к «Кто хочет стать миллионером»')}</button>`:`<button type="button" class="mission-btn" id="btnProximaRoleta">${t('Próximo tema','Следующая тема')}</button>`); updateMeta(); if(el('btnProximaRoleta'))el('btnProximaRoleta').addEventListener('click',()=>{estado.roletaIndex++;estado.roletaSorteada=false;estado.roletaRespondida=false;renderRoleta();}); if(el('btnIrMilhao'))el('btnIrMilhao').addEventListener('click',()=>{estado.milhaoIndex=0;estado.milhaoRespondida=false;renderMilhao();}); })); updateMeta();
   }
   function renderMilhao(){
     const q=milhao[estado.milhaoIndex], qd=ru()?Object.assign({},q,milhaoRu[estado.milhaoIndex]):q, img=['assets/fases-lua.svg','assets/sistema-digestorio.svg','assets/vacina-hpv.svg','assets/geleira.svg'][estado.milhaoIndex];
