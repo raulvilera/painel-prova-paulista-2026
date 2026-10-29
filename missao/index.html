@@ -41,10 +41,35 @@
 .mission-result{padding:22px;border-radius:16px;background:#115e59;color:#fff;text-align:center}.mission-result strong{color:#fbbf24;font-size:34px}.mission-result p{color:#e2e8f0}
 .mission-note{margin-top:14px;color:#64748b;font-size:12px}
 @media(max-width:800px){.mission-identification,.mission-wheel-wrap{grid-template-columns:1fr}.mission-cards{grid-template-columns:repeat(2,1fr)}.million-grid,.mission-options{grid-template-columns:1fr}.mission-head{flex-direction:column}#missao-recomposicao{padding:16px}}
+
+.train-scene { position: relative; overflow: hidden; padding: 24px 14px 12px; border-radius: 16px; background: linear-gradient(#bae6fd 0 62%, #d1fae5 62%); min-height: 320px; }
+        .train-cloud { position: absolute; top: 20px; font-size: 38px; opacity: .75; animation: trainCloud 18s linear infinite; }
+        .train-cloud.one { left: 8%; }
+        .train-cloud.two { left: 58%; animation-delay: -8s; }
+        @keyframes trainCloud { from { transform: translateX(0); } to { transform: translateX(360px); } }
+        .train-balloon { position: relative; z-index: 2; display: block; width: min(520px, 92%); margin: 8px auto 22px; border: 0; border-radius: 50% 50% 46% 46%; padding: 24px 22px 30px; background: #fb7185; color: #fff; font-weight: 900; font-size: 17px; line-height: 1.25; cursor: pointer; box-shadow: 0 8px 0 #be123c; animation: balloonFloat 2.2s ease-in-out infinite; }
+        .train-balloon:after { content: ''; position: absolute; bottom: -19px; left: calc(50% - 10px); border: 10px solid transparent; border-top-color: #fb7185; }
+        .train-balloon.popped { animation: balloonPop .35s ease forwards; pointer-events: none; }
+        @keyframes balloonFloat { 50% { transform: translateY(-7px) rotate(1deg); } }
+        @keyframes balloonPop { to { transform: scale(1.35); opacity: 0; } }
+        .train-track { position: absolute; left: 0; right: 0; bottom: 22px; height: 14px; background: repeating-linear-gradient(90deg, #64748b 0 32px, transparent 32px 44px); border-top: 4px solid #475569; }
+        .train { position: relative; z-index: 1; display: flex; align-items: end; gap: 6px; width: max-content; margin: 18px auto 0; animation: trainMove 3.5s ease-in-out infinite alternate; }
+        @keyframes trainMove { from { transform: translateX(-12px); } to { transform: translateX(12px); } }
+        .train-engine, .train-wagon { min-width: 150px; height: 108px; border: 4px solid #0f172a; border-radius: 12px 12px 8px 8px; background: #fbbf24; color: #0f172a; padding: 10px; font-weight: 900; text-align: center; position: relative; }
+        .train-engine { min-width: 118px; background: #ef4444; color: #fff; }
+        .train-engine:before { content: '🚂'; display: block; font-size: 32px; }
+        .train-wagon { background: #f8fafc; border-color: #0f766e; }
+        .train-wagon:before { content: '●  ●'; position: absolute; bottom: -22px; left: 28px; color: #0f172a; letter-spacing: 54px; }
+        .train-wagon.correct-target { border-color: #fbbf24; box-shadow: 0 0 0 4px #fef3c7; }
+        .train-wagon.has-balloon { background: #d1fae5; animation: wagonLand .45s ease; }
+        .wagon-balloon { display: block; margin-top: 10px; color: #047857; font-size: 13px; }
+        @keyframes wagonLand { 0% { transform: translateY(-20px); } 70% { transform: translateY(5px); } 100% { transform: translateY(0); } }
+        .train-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+        @media(max-width:800px){.train{flex-wrap:wrap;justify-content:center;width:auto;animation:none}.train-engine,.train-wagon{min-width:130px}}
 </style></head><body>
 <div class="topo"><a href="/">← Painel</a></div>
 <section id="missao-recomposicao" aria-labelledby="missao-app-titulo">
-  <div class="mission-head"><div><h1 id="missao-app-titulo">Missão Ciências — 8º Ano A e B</h1><p>Atividade interativa de recuperação das aprendizagens prioritárias da Prova Paulista: cartas de associação, roleta de conexões e Show do Milhão.</p></div></div>
+  <div class="mission-head"><div><h1 id="missao-app-titulo">Missão Ciências — 8º Ano A e B</h1><p>Atividade interativa de recuperação das aprendizagens prioritárias da Prova Paulista: cartas de associação, roleta de conexões, Show do Milhão e trem dos conteúdos.</p></div></div>
   <div class="mission-identification">
     <label for="missao-turma">Turma<select id="missao-turma" required><option value="">Selecione sua turma</option><option value="8º Ano A">8º Ano A</option><option value="8º Ano B">8º Ano B</option></select></label>
     <label for="missao-aluno">Nome do aluno<select id="missao-aluno" required disabled><option value="">Primeiro selecione a turma</option></select></label>
@@ -54,5 +79,5 @@
   <div id="missao-conteudo" class="mission-stage"><h3>Comece escolhendo sua turma e seu nome.</h3><p class="stage-help">Depois, clique em “Iniciar missão” para liberar as três etapas.</p><button type="button" class="mission-btn" id="btnIniciarMissao" disabled>Iniciar missão</button></div>
   <p class="mission-note">O resultado é enviado à planilha da atividade. Se o envio falhar, uma cópia fica salva neste dispositivo, sem apagar as respostas.</p>
 </section>
-<script src="missao.js?v=3"></script>
+<script src="missao.js?v=4"></script>
 </body></html>
