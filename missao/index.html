@@ -52,14 +52,19 @@
         .train-balloon.popped { animation: balloonPop .35s ease forwards; pointer-events: none; }
         @keyframes balloonFloat { 50% { transform: translateY(-7px) rotate(1deg); } }
         @keyframes balloonPop { to { transform: scale(1.35); opacity: 0; } }
-        .train-track { position: absolute; left: 0; right: 0; bottom: 22px; height: 14px; background: repeating-linear-gradient(90deg, #64748b 0 32px, transparent 32px 44px); border-top: 4px solid #475569; }
-        .train { position: relative; z-index: 1; display: flex; align-items: end; gap: 6px; width: max-content; margin: 18px auto 0; animation: trainMove 3.5s ease-in-out infinite alternate; }
+        .train-track { position: absolute; left: 0; right: 0; bottom: 20px; height: 18px; background: repeating-linear-gradient(90deg, #6b7280 0 8px, transparent 8px 42px), linear-gradient(#374151 0 4px, transparent 4px 14px, #374151 14px 18px); border-top: 4px solid #1f2937; }
+        .train { position: relative; z-index: 1; display: flex; align-items: end; gap: 10px; width: max-content; margin: 18px auto 0; padding-bottom: 26px; animation: trainMove 3.5s ease-in-out infinite alternate; filter: drop-shadow(0 9px 4px rgba(15,23,42,.28)); }
         @keyframes trainMove { from { transform: translateX(-12px); } to { transform: translateX(12px); } }
-        .train-engine, .train-wagon { min-width: 150px; height: 108px; border: 4px solid #0f172a; border-radius: 12px 12px 8px 8px; background: #fbbf24; color: #0f172a; padding: 10px; font-weight: 900; text-align: center; position: relative; }
-        .train-engine { min-width: 118px; background: #ef4444; color: #fff; }
-        .train-engine:before { content: '🚂'; display: block; font-size: 32px; }
-        .train-wagon { background: #f8fafc; border-color: #0f766e; }
-        .train-wagon:before { content: '●  ●'; position: absolute; bottom: -22px; left: 28px; color: #0f172a; letter-spacing: 54px; }
+        .train-engine, .train-wagon { min-width: 150px; height: 108px; border: 3px solid #111827; border-radius: 7px 7px 4px 4px; background: linear-gradient(#f8fafc 0 12px, #cbd5e1 12px 18px, #f8fafc 18px); color: #0f172a; padding: 13px 10px 8px; font-weight: 900; text-align: center; position: relative; cursor: pointer; }
+        .train-engine { min-width: 132px; background: linear-gradient(#991b1b 0 14px, #dc2626 14px 82%, #7f1d1d 82%); color: #fff; border-radius: 16px 6px 4px 4px; padding-top: 38px; }
+        .train-engine:before { content: ''; position: absolute; width: 48px; height: 34px; left: 34px; top: 8px; border: 3px solid #111827; border-radius: 5px; background: linear-gradient(90deg, #7dd3fc 0 45%, #1e3a8a 45% 55%, #7dd3fc 55%); }
+        .train-engine:after { content: '●'; position: absolute; left: 52px; top: -38px; width: 24px; height: 28px; color: #d1d5db; font-size: 38px; text-shadow: 10px -13px 0 #e5e7eb, -7px -22px 0 #f3f4f6; }
+        .train-wagon { background: linear-gradient(#b45309 0 12px, #f59e0b 12px 82%, #92400e 82%); border-color: #451a03; color: #fff; padding-top: 52px; }
+        .train-wagon:before { content: ''; position: absolute; left: 13px; right: 13px; top: 17px; height: 29px; border: 3px solid #451a03; border-radius: 4px; background: repeating-linear-gradient(90deg, #93c5fd 0 28px, #1e3a8a 28px 34px); }
+        .train-engine:after, .train-wagon:after { bottom: -33px; top: auto; left: 24px; width: 24px; height: 24px; border-radius: 50%; background: radial-gradient(circle, #d1d5db 0 18%, #111827 20% 48%, #4b5563 50% 66%, #111827 68%); box-shadow: 76px 0 0 -1px #111827, 76px 0 0 5px #4b5563; color: transparent; font-size: 0; text-shadow: none; }
+        .train-wagon span { position: relative; z-index: 1; }
+        .train-wagon:disabled { opacity: 1; }
+        .train-wagon:disabled:hover { transform: none; }
         .train-wagon.correct-target { border-color: #fbbf24; box-shadow: 0 0 0 4px #fef3c7; }
         .train-wagon.has-balloon { background: #d1fae5; animation: wagonLand .45s ease; }
         .wagon-balloon { display: block; margin-top: 10px; color: #047857; font-size: 13px; }
@@ -79,5 +84,5 @@
   <div id="missao-conteudo" class="mission-stage"><h3>Comece escolhendo sua turma e seu nome.</h3><p class="stage-help">Depois, clique em “Iniciar missão” para liberar as três etapas.</p><button type="button" class="mission-btn" id="btnIniciarMissao" disabled>Iniciar missão</button></div>
   <p class="mission-note" id="missao-nota">O resultado é enviado à planilha da atividade. Se o envio falhar, uma cópia fica salva neste dispositivo, sem apagar as respostas.</p>
 </section>
-<script src="missao.js?v=12"></script>
+<script src="missao.js?v=13"></script>
 </body></html>
