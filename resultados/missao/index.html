@@ -11,7 +11,7 @@
 .kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 .kpi b{display:block;font-size:1.6rem}.kpi span{color:var(--muted);font-size:.8rem}
 tr.al{cursor:pointer}tr.al:hover td{background:var(--surface-2)}
-td,th{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+table{border-collapse:collapse}td,th{padding:7px 8px;border:1px solid rgba(148,163,184,.6);vertical-align:top;text-align:left}th{background:var(--surface-2)}
 .det td{background:var(--surface-2)}.nota{font-size:.82rem;color:var(--muted);margin:8px 0}
 .btn{font:inherit;font-weight:600;color:var(--accent);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
 .scroll{overflow-x:auto}input[type=search]{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px;min-width:210px}
@@ -26,7 +26,7 @@ td,th{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top;tex
 <div class="filters">
 <div class="field"><label for="fTurma">Turma</label><select id="fTurma"><option value="">Todas as turmas</option><option>8º Ano A</option><option>8º Ano B</option></select></div>
 <div class="field"><label for="fAluno">Aluno</label><input id="fAluno" type="search" placeholder="Buscar pelo nome…" autocomplete="off"></div>
-<div class="field"><label for="fOrd">Ordenar por</label><select id="fOrd"><option value="nome">Nome (A–Z)</option><option value="nota">Nota (maior primeiro)</option><option value="recente">Mais recente</option></select></div>
+<div class="field"><label for="fOrd">Ordenar por</label><select id="fOrd"><option value="nome">Turma e nome (A–Z)</option><option value="nota">Nota (maior primeiro)</option><option value="recente">Mais recente</option></select></div>
 <div class="field"><button class="btn" id="bCsv" type="button">Baixar CSV</button></div>
 <div class="field"><button class="btn" id="bAtu" type="button">Atualizar</button></div>
 </div>
@@ -60,7 +60,7 @@ td,th{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top;tex
     // melhor tentativa concluída por aluno
     const por = {}; L.forEach(x => { const k = x.turma + '|' + x.nome; (por[k] = por[k] || []).push(x); });
     const alunos = Object.entries(por).map(([k, tent]) => { tent.sort((a, b) => String(b.atualizado).localeCompare(String(a.atualizado))); const conc = tent.filter(x => x.concluido); const melhor = (conc.length ? conc : tent).slice().sort((a, b) => b.nota - a.nota)[0]; return { k, tent, melhor, ult: tent[0] }; });
-    alunos.sort(ord === 'nota' ? (a, b) => b.melhor.nota - a.melhor.nota : ord === 'recente' ? (a, b) => String(b.ult.atualizado).localeCompare(String(a.ult.atualizado)) : (a, b) => a.melhor.nome.localeCompare(b.melhor.nome, 'pt'));
+    alunos.sort(ord === 'nota' ? (a, b) => b.melhor.nota - a.melhor.nota : ord === 'recente' ? (a, b) => String(b.ult.atualizado).localeCompare(String(a.ult.atualizado)) : (a, b) => a.melhor.turma.localeCompare(b.melhor.turma, 'pt') || a.melhor.nome.localeCompare(b.melhor.nome, 'pt'));
     const concl = L.filter(x => x.concluido), media = concl.length ? concl.reduce((a, x) => a + Number(x.nota), 0) / concl.length : null;
     let h = '<div class="kpis"><div class="kpi"><b>' + alunos.length + '</b><span>alunos que iniciaram</span></div><div class="kpi"><b>' + concl.length + '</b><span>tentativas concluídas</span></div><div class="kpi"><b>' + (media == null ? '–' : fm(media)) + '</b><span>média das concluídas</span></div></div>';
     const T0 = {}; TEMAS.forEach(t => T0[t] = { ok: 0, er: 0 }); const lin = alunos.map(a => ({ a, t: porTema(a.melhor.respostas) }));
