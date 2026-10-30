@@ -24,7 +24,8 @@ select{background:var(--card);border:1px solid var(--line);border-radius:8px;pad
 .btn:disabled{opacity:.45;cursor:default}
 .erro{color:var(--err)}
 table{border-collapse:collapse;width:100%}
-th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th,td{border:1px solid #aebcb4;padding:6px 8px;text-align:left;vertical-align:top}
+th{background:#eef3ef}tbody tr:nth-child(even) td{background:#f8faf8}
 /* sala de espera */
 .pinbox{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
 .pin{font-size:clamp(48px,8vw,96px);font-weight:900;letter-spacing:.12em;color:var(--pri);line-height:1}
@@ -205,11 +206,11 @@ figure.ilus svg{display:block;width:100%;max-width:560px;height:auto;margin:0 au
       </tbody></table><p class="muted sm">Cada pergunta que alguém do time acerta vale 1 gol; se os dois acertam a mesma pergunta, é gol de placa (+1). Vitória 3 pontos, empate 1. Desempate: saldo de gols e gols marcados.</p></div>`;
   }
   /* gols novos desde a última atualização viram cobranças animadas no estádio 3D */
-  let ordemAZ = false; try { ordemAZ = localStorage.getItem('quiz_ordem') === 'az'; } catch (_) {}
+  let ordemAZ = true; try { const v = localStorage.getItem('quiz_ordem2'); if (v) ordemAZ = v === 'az'; } catch (_) {}
   const cmpAZ = (a, b) => String(a.nome).localeCompare(String(b.nome), 'pt', { sensitivity: 'base' });
   const ordenar = l => ordemAZ ? l.slice().sort(cmpAZ) : l;
   const btnOrd = () => `<button class="btn sec bOrd" style="padding:4px 12px;font-size:.85em" title="Alternar a ordem da lista">${ordemAZ ? 'Ordem: A–Z · ver por pontos' : 'Ordem: pontos · ver A–Z'}</button>`;
-  document.addEventListener('click', ev => { if (!(ev.target && ev.target.classList && ev.target.classList.contains('bOrd'))) return; ordemAZ = !ordemAZ; try { localStorage.setItem('quiz_ordem', ordemAZ ? 'az' : 'pontos'); } catch (_) {} restoAnt = ''; chaveTela = ''; if (S && S.id) desenhar(window.__ultimoEstado || S); });
+  document.addEventListener('click', ev => { if (!(ev.target && ev.target.classList && ev.target.classList.contains('bOrd'))) return; ordemAZ = !ordemAZ; try { localStorage.setItem('quiz_ordem2', ordemAZ ? 'az' : 'pontos'); } catch (_) {} restoAnt = ''; chaveTela = ''; if (S && S.id) desenhar(window.__ultimoEstado || S); });
   let EST = null, golsAnt = null, filaGols = [], animando = false, restoAnt = '', modoTela = '';
   function detectarGols(s) {
     if (!s.copa) return;
