@@ -11,7 +11,7 @@
 .kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 .kpi b{display:block;font-size:1.6rem}.kpi span{color:var(--muted);font-size:.8rem}
 tr.al{cursor:pointer}tr.al:hover td{background:var(--surface-2)}
-table{border-collapse:collapse}td,th{padding:7px 8px;border:1px solid rgba(148,163,184,.6);vertical-align:middle;text-align:center}th{background:var(--surface-2)}
+table{border-collapse:collapse}.turma-bloco{margin-top:26px;padding-top:6px;border-top:4px solid var(--accent)}.turma-tit{margin:12px 0 8px;font-size:1.5rem;color:var(--accent)}td,th{padding:7px 8px;border:1px solid rgba(148,163,184,.6);vertical-align:middle;text-align:center}th{background:var(--surface-2)}
 .det td{background:var(--surface-2)}.nota{font-size:.82rem;color:var(--muted);margin:8px 0}
 .btn{font:inherit;font-weight:600;color:var(--accent);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
 .scroll{overflow-x:auto}input[type=search]{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px;min-width:210px}
@@ -56,7 +56,9 @@ table{border-collapse:collapse}td,th{padding:7px 8px;border:1px solid rgba(148,1
   }
   function desenhar() {
     const t = $('#fTurma').value, q = norm($('#fAluno').value.trim()), ord = $('#fOrd').value;
-    const L = D.filter(x => (!t || x.turma === t) && (!q || norm(x.nome).includes(q)));
+    const LL = D.filter(x => (!t || x.turma === t) && (!q || norm(x.nome).includes(q)));
+    const turmas = Array.from(new Set(LL.map(x => x.turma))).sort((a, b) => a.localeCompare(b, 'pt'));
+    const blocoTurma = (L, t) => {
     // melhor tentativa concluída por aluno
     const por = {}; L.forEach(x => { const k = x.turma + '|' + x.nome; (por[k] = por[k] || []).push(x); });
     const alunos = Object.entries(por).map(([k, tent]) => { tent.sort((a, b) => String(b.atualizado).localeCompare(String(a.atualizado))); const conc = tent.filter(x => x.concluido); const melhor = (conc.length ? conc : tent).slice().sort((a, b) => b.nota - a.nota)[0]; return { k, tent, melhor, ult: tent[0] }; });
@@ -66,15 +68,17 @@ table{border-collapse:collapse}td,th{padding:7px 8px;border:1px solid rgba(148,1
     const T0 = {}; TEMAS.forEach(t => T0[t] = { ok: 0, er: 0 }); const lin = alunos.map(a => ({ a, t: porTema(a.melhor.respostas) }));
     lin.forEach(l => TEMAS.forEach(t => { T0[t].ok += l.t[t].ok; T0[t].er += l.t[t].er; }));
     const ordT = TEMAS.slice().sort((x, y) => (pc(T0[x]) == null ? 101 : pc(T0[x])) - (pc(T0[y]) == null ? 101 : pc(T0[y])));
-    h += '<div class="card"><h2>Visão geral da turma por tema</h2><div class="nota">Aproveitamento = acertos ÷ (acertos + erros), somando a melhor tentativa de cada aluno' + (t ? ' · ' + esc(t) : ' · todas as turmas') + '. Nas cartas, cada associação errada conta como erro. Do tema mais frágil para o mais forte.</div>' +
+    h += '<div class="card"><h3>Visão geral da turma por tema</h3><div class="nota">Aproveitamento = acertos ÷ (acertos + erros), somando a melhor tentativa de cada aluno' + ' · ' + esc(t) + '. Nas cartas, cada associação errada conta como erro. Do tema mais frágil para o mais forte.</div>' +
       (ordT.some(x => T0[x].ok + T0[x].er) ? ordT.map(x => { const p = pc(T0[x]); return '<div style="margin:8px 0"><div style="display:flex;justify-content:space-between;gap:8px"><b>' + esc(x) + '</b><span>' + (p == null ? '–' : p + '%') + ' <span class="muted sm">(' + T0[x].ok + (T0[x].ok === 1 ? ' acerto · ' : ' acertos · ') + T0[x].er + (T0[x].er === 1 ? ' erro)' : ' erros)') + '</span></span></div><div style="height:10px;border-radius:99px;background:var(--line);overflow:hidden"><i style="display:block;height:100%;width:' + (p || 0) + '%;background:' + (p >= 70 ? 'var(--lv2)' : p < 50 ? 'var(--lv0)' : 'var(--lv1)') + '"></i></div></div>'; }).join('') : '<div class="muted">Ainda sem respostas.</div>') + '</div>';
     h += '<div class="card" style="margin-top:14px"><h2>Acertos e erros por aluno em cada tema</h2><div class="scroll"><table><thead><tr><th>Aluno</th>' + TEMAS.map(x => '<th>' + esc(x) + '</th>').join('') + '</tr></thead><tbody>' +
-      (lin.length ? lin.map(l => '<tr><td><b>' + esc(l.a.melhor.nome) + '</b> <span class="muted sm">' + esc(l.a.melhor.turma) + '</span></td>' + TEMAS.map(x => '<td>' + cel(l.t[x]) + '</td>').join('') + '</tr>').join('') + '<tr><td><b>Turma</b></td>' + TEMAS.map(x => '<td><b>' + (pc(T0[x]) == null ? '–' : pc(T0[x]) + '%') + '</b></td>').join('') + '</tr>' : '<tr><td colspan="6" class="muted">Nenhum resultado ainda.</td></tr>') + '</tbody></table></div></div>';
+      (lin.length ? lin.map(l => '<tr><td><b>' + esc(l.a.melhor.nome) + '</b> <span class="muted sm">' + esc(l.a.melhor.turma) + '</span></td>' + TEMAS.map(x => '<td>' + cel(l.t[x]) + '</td>').join('') + '</tr>').join('') + '<tr><td><b>Total da turma</b></td>' + TEMAS.map(x => '<td><b>' + (pc(T0[x]) == null ? '–' : pc(T0[x]) + '%') + '</b></td>').join('') + '</tr>' : '<tr><td colspan="6" class="muted">Nenhum resultado ainda.</td></tr>') + '</tbody></table></div></div>';
     h += '<div class="card" style="margin-top:14px"><h2>Alunos</h2><div class="nota">Clique no nome para ver as tentativas e as respostas de cada etapa. A nota mostrada é a da melhor tentativa concluída.</div><div class="scroll"><table><thead><tr><th>#</th><th>Aluno</th><th>Turma</th><th>Nota</th><th>Pontos</th><th>Tentativas</th><th>Última</th></tr></thead><tbody>' +
       (alunos.length ? alunos.map((a, i) => { const m = a.melhor; let r = '<tr class="al" data-k="' + esc(a.k) + '"><td>' + (i + 1) + '</td><td><b>' + esc(m.nome) + '</b></td><td>' + esc(m.turma) + '</td><td>' + nt(Number(m.nota)) + (m.concluido ? '' : ' <span class="tag">incompleta</span>') + '</td><td>' + m.pontuacao + '/' + m.total + '</td><td>' + a.tent.length + '</td><td>' + dt(a.ult.atualizado) + '</td></tr>';
         if (aberto === a.k) r += '<tr class="det"><td></td><td colspan="6">' + a.tent.map(x => '<div style="margin-bottom:10px"><b>' + dt(x.acesso_em || x.atualizado) + '</b> · ' + (x.concluido ? 'concluída' : 'incompleta') + ' · ' + x.pontuacao + '/' + x.total + ' · nota ' + fm(x.nota) + '<div class="sm" style="margin:4px 0">' + (() => { const pt = porTema(x.respostas); return TEMAS.filter(k => pt[k].ok + pt[k].er).map(k => esc(k) + ': ' + cel(pt[k])).join(' · '); })() + '</div><div>' + (x.respostas || []).map((r, n) => '<span class="' + (r.correta ? 'ok' : 'er') + '" title="' + esc((ETAPA[r.etapa] || r.etapa) + (r.tema ? ' · ' + r.tema : r.item ? ' · ' + r.item : r.pergunta ? ' · pergunta ' + r.pergunta : '')) + '">' + (r.correta ? '✔' : '✘') + '</span> ').join('') + ' <span class="muted sm">(passe o mouse em cada marca para ver a etapa)</span></div></div>').join('') + '</td></tr>';
         return r; }).join('') : '<tr><td colspan="7" class="muted">Nenhum resultado ainda.</td></tr>') + '</tbody></table></div></div>';
-    app(h);
+    return '<section class="turma-bloco"><h2 class="turma-tit">' + esc(t) + '</h2>' + h + '</section>';
+    };
+    app(turmas.length ? turmas.map(tm => blocoTurma(LL.filter(x => x.turma === tm), tm)).join('') : '<div class="card muted">Nenhum resultado ainda.</div>');
     document.querySelectorAll('tr.al').forEach(tr => tr.onclick = () => { aberto = aberto === tr.dataset.k ? '' : tr.dataset.k; desenhar(); });
   }
   function csv() {
