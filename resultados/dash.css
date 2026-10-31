@@ -64,7 +64,7 @@ details.sub{border:1px dashed var(--line);border-radius:10px;margin-bottom:10px}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:900px){.g2{grid-template-columns:1fr}}
 .g2 h3{margin:6px 0}h4.gn,h4.ga{margin:10px 0 2px;font-size:.82rem}h4.gn{color:#c62828}h4.ga{color:#2e7d32}
 @media (prefers-color-scheme:dark){h4.gn{color:#ff8a80}h4.ga{color:#7ad07a}}
-.arow{display:grid;grid-template-columns:34px minmax(160px,1fr) 110px 60px 150px 80px;gap:10px;align-items:center;padding:7px 8px}
+.arow{display:grid;grid-template-columns:34px minmax(160px,1fr) 110px 60px 150px 80px 150px;gap:10px;align-items:center;padding:7px 8px}
 details.al{border-bottom:1px solid var(--line)}details.al>summary{cursor:pointer;list-style:none}details.al>summary::-webkit-details-marker{display:none}
 details.al>summary:hover{background:var(--surface-2)}details.al[open]>summary{background:var(--surface-2)}
 .nmal{font-weight:600}details.al>summary .nmal::before{content:'▸ ';color:var(--accent)}details.al[open]>summary .nmal::before{content:'▾ '}
@@ -100,3 +100,6 @@ details.qs>summary{cursor:pointer;padding:9px 12px;font-weight:700;font-size:.9r
 
 /* alternativas da questão (painel): correta em verde, marcada pelo aluno (errada) sublinhada em vermelho */
 .alts{margin:6px 0 4px 18px;padding:0}.alts li{margin:2px 0}.alts li.cert{color:var(--lv2);font-weight:700}.alts li.marc{color:var(--lv0);text-decoration:underline}
+
+.dcol{font-size:.78rem;color:var(--muted)}.arow:not(.head) .dcol{white-space:nowrap}.dmob{display:none}
+@media(max-width:760px){.dmob{display:inline}}
