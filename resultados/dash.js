@@ -308,12 +308,12 @@
     if (S.status === 'ok') lin = lin.filter(a => a.feito); else if (S.status === 'pend') lin = lin.filter(a => !a.feito);
     if (q) lin = lin.filter(a => a.n.toUpperCase().indexOf(q) >= 0);
     const vis = '<details class="sub" data-k="' + esc(tm.t) + '|#turma"' + (S.open.has(tm.t + '|#turma') ? ' open' : '') + '><summary>Desempenho da turma por aprendizagem essencial e descritor</summary><div class="lz"></div></details>';
-    const cab = '<div class="arow head"><span>Nº</span><span>Aluno</span><span>Situação</span><span class="num">Nota</span><span>Nível</span><span class="num">Aproveit.</span></div>';
+    const cab = '<div class="arow head"><span>Nº</span><span>Aluno</span><span>Situação</span><span class="num">Nota</span><span>Nível</span><span class="num">Aproveit.</span><span class="dcol">Realizado em</span></div>';
     return vis + '<div class="alist">' + cab + (lin.length ? lin.map((a, i) => {
       const k = tm.t + '|' + a.n;
       return '<details class="al' + (a.feito ? '' : ' pendr') + '" data-k="' + esc(k) + '" data-t="' + esc(tm.t) + '" data-a="' + esc(a.n) + '"' + (S.open.has(k) ? ' open' : '') + '><summary class="arow"><span class="muted">' + (tm.alunos.indexOf(a) + 1) + '</span><span class="nmal">' + esc(a.n) + '</span>' +
-        '<span>' + (a.feito ? '<span class="st ok">✓ Realizou</span>' + (podeLiberar() ? '<br><button class="libb" style="margin-top:4px;font-size:.72rem;padding:2px 8px;cursor:pointer" title="Apaga o envio e deixa o aluno refazer" data-t="' + esc(tm.t) + '" data-a="' + esc(a.n) + '" data-id="' + esc(a.id == null ? '' : a.id) + '">🔓 Liberar</button>' : '') + (a.criado ? '<br><span class="muted" style="font-size:.72rem">' + esc(fmtData(a.criado)) + '</span>' : '') : '<span class="st pend">Pendente</span>') + '</span>' +
-        '<span class="num">' + (a.nota === null ? '—' : '<b>' + nf(a.nota) + '</b>') + '</span><span>' + (a.nota === null ? '—' : chip(a.nota)) + '</span><span class="num">' + (a.apr === null ? '—' : pct(a.apr)) + '</span></summary><div class="lz"></div></details>';
+        '<span>' + (a.feito ? '<span class="st ok">✓ Realizou</span>' + (podeLiberar() ? '<br><button class="libb" style="margin-top:4px;font-size:.72rem;padding:2px 8px;cursor:pointer" title="Apaga o envio e deixa o aluno refazer" data-t="' + esc(tm.t) + '" data-a="' + esc(a.n) + '" data-id="' + esc(a.id == null ? '' : a.id) + '">🔓 Liberar</button>' : '') + (a.criado ? '<br><span class="muted dmob" style="font-size:.72rem">' + esc(fmtData(a.criado)) + '</span>' : '') : '<span class="st pend">Pendente</span>') + '</span>' +
+        '<span class="num">' + (a.nota === null ? '—' : '<b>' + nf(a.nota) + '</b>') + '</span><span>' + (a.nota === null ? '—' : chip(a.nota)) + '</span><span class="num">' + (a.apr === null ? '—' : pct(a.apr)) + '</span><span class="dcol">' + (a.criado ? esc(fmtData(a.criado)) : '—') + '</span></summary><div class="lz"></div></details>';
     }).join('') : '<p class="muted sm" style="padding:8px">Nenhum aluno para este filtro.</p>') + '</div>';
   }
 
