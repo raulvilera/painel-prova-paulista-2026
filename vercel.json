@@ -18,7 +18,7 @@
   },
   "headers": [
     {
-      "source": "/missao/(.*)",
+      "source": "/(missao|aula30)/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
