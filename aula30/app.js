@@ -93,7 +93,7 @@
   }
   function passoQuestao(B) {
     var q = B.obj, st = S.b, fez = st.obj !== null, max = B.niv === 0 ? 2 : 1, done = st.acertou || st.tent >= max;
-    var h = '<div class="card"><h2>2. Resolva</h2><p>' + esc(q.enunciado) + '</p>' + figura(q) + '<p><b>' + esc(q.comando) + '</b></p>';
+    var h = '<div class="card"><h2>2. Resolva</h2><p>' + esc(q.enunciado) + '</p>' + (B.qimg ? '<img class="img" src="' + esc(B.qimg) + '" alt="Ilustração da situação do enunciado: ' + esc(B.tema) + '">' : '') + figura(B.qimg ? Object.assign({}, q, { svg: null }) : q) + '<p><b>' + esc(q.comando) + '</b></p>';
     h += q.alts.map(function (a, i) {
       var cl = 'alt'; if (fez) { if (done && i === q.correta) cl += ' ok'; else if (i === st.obj && i !== q.correta) cl += ' er'; }
       return '<button class="' + cl + '" data-alt="' + i + '"' + (done ? ' disabled' : '') + '><b>' + LET[i] + '</b><span>' + esc(a) + '</span></button>';
