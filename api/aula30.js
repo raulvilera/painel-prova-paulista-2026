@@ -4,6 +4,18 @@ const PAINEL = require('./_plano-painel.js');
 const ROSTER = require('./_roster.js');
 const IMG = require('./_aula30-img.js');
 const crypto = require('crypto');
+const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.env.SUPABASE_SERVICE_KEY || '';
+const LOGIN_URL = process.env.PAINEL_SUPABASE_URL || 'https://ykrjfjepnqeoqlgupsbe.supabase.co', LOGIN_KEY = process.env.PAINEL_SUPABASE_KEY || 'sb_publishable_FbMU5x7WBpxzHmmVzOfh2g_0M1xxAh5';
+async function rest(path, opt) {
+  const r = await fetch(SB + '/rest/v1/' + path, Object.assign({ headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' } }, opt || {}));
+  const t = await r.text(); if (!r.ok) throw new Error('Supabase ' + r.status + ': ' + t.slice(0, 160));
+  return t ? JSON.parse(t) : [];
+}
+async function professor(req) {
+  const m = /^Bearer (.+)$/.exec(req.headers.authorization || ''); if (!m) return false;
+  const r = await fetch(LOGIN_URL + '/auth/v1/user', { headers: { apikey: LOGIN_KEY, Authorization: 'Bearer ' + m[1] } });
+  return r.ok;
+}
 let BANCO = {}; try { BANCO = require('./_banco-indiv.js'); } catch (e) { BANCO = {}; }
 
 const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim().toUpperCase();
@@ -48,25 +60,47 @@ function montar(turma, nome) {
   return { aluno: al ? al.nome : nome, perfil, temas: base, minutos: MIN_TOTAL, niveis: NIVEL, blocos };
 }
 
-module.exports = function aula30(req, res) {
+module.exports = async function aula30(req, res) {
   res.setHeader('Cache-Control', 'no-store'); res.setHeader('X-Content-Type-Options', 'nosniff'); res.setHeader('Content-Type', 'application/json; charset=utf-8');
-  if (req.method !== 'GET') { res.setHeader('Allow', 'GET'); return res.status(405).json({ ok: false, erro: 'Use GET.' }); }
-  const q = req.query || {}, acao = String(q.acao || ''), ok = o => res.status(200).json(Object.assign({ ok: true }, o));
+  const q = req.query || {}, acao = String(q.acao || ''), ok = o => res.status(200).json(Object.assign({ ok: true }, o)), er = (c, m) => res.status(c).json({ ok: false, erro: m });
   try {
+    if (req.method === 'POST') {   // o aluno envia o resultado ao concluir a aula
+      let b = req.body; if (typeof b === 'string') { try { b = JSON.parse(b); } catch (e) { b = {}; } } b = b || {};
+      if (b.acao !== 'enviar') return er(400, 'Ação inválida.');
+      if (!SB || !KEY) return er(503, 'Banco não configurado.');
+      const t = String(b.turma || ''), al = achaAluno(t, String(b.nome || ''));
+      const ro = ROSTER.da(t), nome = al ? al.nome : ((ro || []).find(x => norm(x.nome) === norm(b.nome)) || {}).nome || (Object.keys(PAINEL[t] || {}).find(x => norm(x) === norm(b.nome)));
+      if (!PAINEL[t] || !nome) return er(400, 'Aluno não encontrado.');
+      const bl = (Array.isArray(b.blocos) ? b.blocos : []).slice(0, 8).filter(x => x && CAT[x.k]).map(x => ({
+        k: x.k, tema: CAT[x.k].nome, desc: CAT[x.k].desc, hab: CAT[x.k].hab, niv: Math.max(0, Math.min(3, Number(x.niv) || 0)),
+        obj: [0, 0.5, 1].includes(Number(x.obj)) ? Number(x.obj) : 0, conf: Math.max(0, Math.min(1, Number(x.conf) || 0))
+      }));
+      if (!bl.length) return er(400, 'Nada para gravar.');
+      await rest('aula30_resultados', { method: 'POST', body: JSON.stringify({ turma: t, nome, minutos: Math.max(0, Math.min(99, Math.round(Number(b.minutos) || 0))), blocos: bl }) });
+      return ok({ gravado: true });
+    }
+    if (req.method !== 'GET') { res.setHeader('Allow', 'GET, POST'); return er(405, 'Use GET ou POST.'); }
+    if (acao === 'relatorio') {   // só o professor
+      if (!SB || !KEY) return er(503, 'Banco não configurado.');
+      if (!(await professor(req))) return er(401, 'Entre primeiro no painel com o seu login de professor.');
+      const rows = await rest('aula30_resultados?select=id,criado,turma,nome,minutos,blocos&order=criado.asc&limit=5000');
+      const roster = {}; Object.keys(PAINEL).forEach(t => { roster[t] = Object.keys(PAINEL[t]); });
+      return ok({ rows, roster });
+    }
     if (acao === 'turmas') {
       const a = String(q.ano || ''); const t = Object.keys(PAINEL).filter(x => serie(x) === a).sort((x, y) => x.localeCompare(y, 'pt'));
       return ok({ turmas: t });
     }
     if (acao === 'nomes') {
-      const t = String(q.turma || ''); if (!PAINEL[t]) return res.status(404).json({ ok: false, erro: 'Turma não encontrada.' });
+      const t = String(q.turma || ''); if (!PAINEL[t]) return er(404, 'Turma não encontrada.');
       const nm = Object.keys(PAINEL[t]); const ro = ROSTER.da(t); if (ro) ro.forEach(x => { if (!nm.some(y => norm(y) === norm(x.nome))) nm.push(x.nome); });
       return ok({ nomes: nm.sort((x, y) => x.localeCompare(y, 'pt')) });
     }
     if (acao === 'aula') {
-      const t = String(q.turma || ''), n = String(q.nome || ''); if (!PAINEL[t] || !n) return res.status(400).json({ ok: false, erro: 'Informe turma e nome.' });
-      const a = montar(t, n); if (!a.blocos.length) return res.status(404).json({ ok: false, erro: 'Sem conteúdo para esta turma.' });
+      const t = String(q.turma || ''), n = String(q.nome || ''); if (!PAINEL[t] || !n) return er(400, 'Informe turma e nome.');
+      const a = montar(t, n); if (!a.blocos.length) return er(404, 'Sem conteúdo para esta turma.');
       return ok({ aula: a });
     }
-    return res.status(400).json({ ok: false, erro: 'Ação inválida.' });
-  } catch (e) { return res.status(500).json({ ok: false, erro: 'Falha ao montar a aula.' }); }
+    return er(400, 'Ação inválida.');
+  } catch (e) { return er(500, 'Falha: ' + String(e.message || e).slice(0, 120)); }
 };
