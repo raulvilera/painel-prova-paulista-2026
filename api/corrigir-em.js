@@ -368,6 +368,7 @@ const N_DISSERTATIVAS = 2;
 const QID_DIS_BASE = 12;   // ids das dissertativas continuam -13 e -14
 const TEMPO_REGISTRO_MS = 50000;   // inclui a correção das dissertativas pela IA no Apps Script
 const ALUNOS = require('./_alunos-em.js');   // listas de chamada (nome + RA ficam só no servidor)
+const { bloqueada: turmaBloqueada, MENSAGEM: MSG_ENCERRADA } = require('./_prazo-em.js');
 const CONTEXTO_DIS = require('./_dissertativas-em.js');   // enunciado + descritores oficiais de cada dissertativa
 
 function limpar(texto, max) {
@@ -489,6 +490,7 @@ module.exports = async function corrigirEM(req, res) {
     if (!Object.keys(body).every(k => permitidas.includes(k)) || !('avaliacao' in body) || !('respostas' in body)) {
       return reply(400, {ok:false, erro:'Solicitação inválida: campos não reconhecidos.'});
     }
+    if (turmaBloqueada(body.turma) || (typeof body.avaliacao === 'string' && /^(bio|qui)-3-/.test(body.avaliacao) && turmaBloqueada('3f-noite'))) return reply(403, {ok:false, erro:MSG_ENCERRADA});
     const id = body.avaliacao;
     if (typeof id !== 'string' || !Object.prototype.hasOwnProperty.call(GABARITO, id)) return reply(400, {ok:false, erro:'Avaliação desconhecida.'});
     const q = GABARITO[id], respostas = body.respostas;
