@@ -1,118 +1,171 @@
 (function () {
   'use strict';
-  const DADOS = window.AULA30, TOTAL_S = 30 * 60, POR_BLOCO_S = 3 * 60;
-  const app = document.getElementById('app');
-  const S = { ano: null, i: 0, res: [], tent: 0, errados: [], t0: 0, timer: null, concluido: false, tFim: 0 };
-  const L = 'ABCD';
+  var app = document.getElementById('app');
+  var S = { ano: '', turma: '', nome: '', turmas: [], nomes: [], aula: null, i: 0, passo: 0, t0: 0, tm: null, res: [], b: null };
+  var LET = ['A', 'B', 'C', 'D'];
 
-  const mmss = s => { s = Math.max(0, Math.round(s)); return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0'); };
-  const el = (html) => { const d = document.createElement('div'); d.innerHTML = html; return d.firstElementChild; };
-  const topo = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function api(qs) { return fetch('/api/aula30?' + qs, { cache: 'no-store' }).then(function (r) { return r.json(); }); }
+  function cab() { return '<p class="escola">Ciências · SARESP</p>'; }
+  function embaralha(a) { var b = a.slice(), i, j, t; for (i = b.length - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = b[i]; b[i] = b[j]; b[j] = t; } return b; }
 
-  function cabecalho() {
-    return '<p class="escola">E.E. Profª Wanda Mascagni de Sá</p><h1>Aula online de Ciências · 30 minutos</h1>';
+  function figura(q) {
+    if (q.svg) return '<div class="fig">' + q.svg + '</div>';
+    var f = q.figura; if (!f) return '';
+    var h = '<div class="fig"><b>' + esc(f.titulo || '') + '</b>';
+    if (f.tipo === 'tabela') h += '<table><tr>' + f.colunas.map(function (c) { return '<th>' + esc(c) + '</th>'; }).join('') + '</tr>' + f.linhas.map(function (l) { return '<tr>' + l.map(function (c) { return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</table>';
+    else if (f.tipo === 'barras') h += '<table>' + f.itens.map(function (i) { return '<tr><td>' + esc(i.rotulo) + '</td><td>' + esc(i.valor) + ' ' + esc(f.unidade || '') + '</td></tr>'; }).join('') + '</table>';
+    else if (f.tipo === 'etapas') h += '<ol style="text-align:left">' + f.etapas.map(function (e) { return '<li>' + esc(e) + '</li>'; }).join('') + '</ol>';
+    return h + '</div>';
   }
 
-  /* ---------- tela inicial ---------- */
-  function inicio() {
-    pararTimer();
-    S.concluido = false;
-    app.innerHTML = cabecalho() +
-      '<p class="sub">Atividade autoexplicativa baseada no Guia Priorizado de Ciências 2026 e nos descritores do SARESP.</p>' +
-      '<section class="card"><h2>1. Escolha o seu ano</h2><div class="anos" role="group" aria-label="Ano">' +
-      [6, 7, 8, 9].map(a => '<button class="ano" data-a="' + a + '" aria-pressed="' + (S.ano === a) + '">' + a + 'º ano<small>' + DADOS[a].faixa + '</small></button>').join('') + '</div>' +
-      '<div id="apr" class="sub" style="margin:6px 0 0">' + (S.ano ? DADOS[S.ano].apresentacao : 'Cada ano tem 10 blocos, um para cada descritor cobrado no SARESP.') + '</div>' +
-      '<button class="btn" id="comecar"' + (S.ano ? '' : ' disabled') + '>Começar a atividade</button></section>' +
-      '<section class="card"><h2>Como funciona (30 minutos)</h2><ul class="plano">' +
-      '<li><b>10 blocos</b><span>cerca de 3 minutos em cada um</span></li>' +
-      '<li><b>① Ideia</b><span>leia a explicação curta do tema</span></li>' +
-      '<li><b>② Observe</b><span>veja a tabela, o esquema ou o gráfico</span></li>' +
-      '<li><b>③ Analise</b><span>responda usando a ideia e o que observou</span></li>' +
-      '<li><b>④ Confira</b><span>a devolutiva explica o porquê, inclusive dos erros. Se errar, você pode tentar de novo (vale meio ponto).</span></li>' +
-      '</ul></section>';
-    app.querySelectorAll('.ano').forEach(b => b.addEventListener('click', () => { S.ano = +b.dataset.a; inicio(); }));
-    const c = document.getElementById('comecar');
-    if (c) c.addEventListener('click', comecar);
-  }
-
-  function comecar() {
-    S.i = 0; S.res = new Array(DADOS[S.ano].blocos.length).fill(null); S.errados = []; S.tent = 0; S.t0 = Date.now(); S.concluido = false;
-    iniciarTimer(); bloco();
-  }
-
-  /* ---------- cronômetro ---------- */
-  function decorrido() { return S.concluido ? S.tFim : (Date.now() - S.t0) / 1000; }
-  function pararTimer() { if (S.timer) { clearInterval(S.timer); S.timer = null; } }
-  function iniciarTimer() { pararTimer(); S.timer = setInterval(atualizaTempo, 1000); }
-  function atualizaTempo() {
-    const t = document.getElementById('tempo'); if (!t) return;
-    const dec = decorrido(), rest = TOTAL_S - dec;
-    t.textContent = rest >= 0 ? '⏱ ' + mmss(rest) : '⏱ +' + mmss(-rest);
-    t.className = 'tempo' + (rest < 0 ? ' fim' : (dec > (S.i + 1) * POR_BLOCO_S ? ' atraso' : ''));
-    t.title = rest < 0 ? 'O tempo da aula acabou: termine o bloco atual com calma.' : (dec > (S.i + 1) * POR_BLOCO_S ? 'Você está um pouco atrás do ritmo (3 min por bloco).' : 'Ritmo ideal: 3 minutos por bloco.');
-  }
-
-  /* ---------- um bloco ---------- */
-  function pontos() {
-    return '<div class="pontos" aria-hidden="true">' + S.res.map((r, k) => '<i class="' + (k === S.i ? 'at ' : '') + (r === 1 ? 'c1' : r === 2 ? 'c2' : r === 0 ? 'c0' : '') + '"></i>').join('') + '</div>';
-  }
-
-  function bloco() {
-    const B = DADOS[S.ano].blocos, b = B[S.i];
-    S.tent = 0; S.errados = [];
-    app.innerHTML =
-      '<div class="topo"><div class="linha"><span><b>' + S.ano + 'º ano</b> · bloco ' + (S.i + 1) + ' de ' + B.length + '</span><span class="tempo" id="tempo"></span></div>' + pontos() + '</div>' +
-      '<section class="card">' +
-      '<span class="chip">' + b.tema + '</span><span class="chip">' + b.hab + '</span>' +
-      '<p class="desc"><b>Descritor:</b> ' + b.d + '</p>' +
-      '<div class="passo">① Ideia-chave</div><p class="ideia">' + b.ideia + '</p>' +
-      '<div class="passo">② Observe</div><div class="fig">' + b.fig + '</div>' +
-      '<div class="passo">③ Analise</div><p class="pergunta">' + b.p + '</p>' +
-      '<div class="alts" id="alts">' + b.alts.map((a, k) => '<button class="alt" data-k="' + k + '"><span class="l">' + L[k] + ')</span><span>' + a + '</span></button>').join('') + '</div>' +
-      '<div id="dev"></div></section>';
-    app.querySelectorAll('.alt').forEach(btn => btn.addEventListener('click', () => responder(+btn.dataset.k)));
-    atualizaTempo(); topo();
-  }
-
-  function responder(k) {
-    const b = DADOS[S.ano].blocos[S.i], dev = document.getElementById('dev');
-    const botoes = app.querySelectorAll('.alt');
-    S.tent++;
-    if (k === b.c) {
-      S.res[S.i] = S.tent === 1 ? 1 : 2;
-      botoes.forEach(x => { x.disabled = true; });
-      botoes[k].classList.add('certa');
-      dev.innerHTML = '<div class="dev ok"><p><b>' + (S.tent === 1 ? '✔ Correto!' : '✔ Agora acertou!') + '</b> ' + b.ok + '</p><p class="dica"><b>Como o SARESP cobra:</b> ' + b.saresp + '</p></div>' + proximo();
-    } else if (S.tent === 1) {
-      botoes[k].classList.add('errada'); botoes[k].disabled = true; S.errados.push(k);
-      dev.innerHTML = '<div class="dev no"><p><b>✖ Ainda não.</b> ' + b.er[k] + '</p><p>Releia a <b>ideia-chave</b> e a figura, e tente de novo (vale meio ponto).</p></div>';
-    } else {
-      S.res[S.i] = 0;
-      botoes.forEach(x => { x.disabled = true; });
-      botoes[k].classList.add('errada'); botoes[b.c].classList.add('certa');
-      dev.innerHTML = '<div class="dev rev"><p><b>Vamos entender juntos.</b> A resposta certa é a <b>' + L[b.c] + ')</b>. ' + b.ok + '</p><p>' + b.er[k] + '</p><p class="dica"><b>Como o SARESP cobra:</b> ' + b.saresp + '</p></div>' + proximo();
+  /* ---------- 1. escolha: ano → turma → nome ---------- */
+  function escolha() {
+    parar();
+    var h = cab() + '<h1>Aula online · 30 minutos</h1><p class="sub">Escolha seu ano, sua turma e seu nome. A aula é montada para você, com os temas das últimas provas Paulistas.</p>';
+    h += '<div class="card"><h2>1. Seu ano</h2><div class="grade q4">' + ['6', '7', '8', '9'].map(function (a) { return '<button class="opc" data-ano="' + a + '" aria-pressed="' + (S.ano === a) + '">' + a + 'º ano<small>Ensino Fundamental</small></button>'; }).join('') + '</div></div>';
+    if (S.ano) {
+      h += '<div class="card"><h2>2. Sua turma</h2>';
+      if (!S.turmas.length) h += '<p class="muted">Carregando…</p>';
+      else h += '<div class="grade">' + S.turmas.map(function (t) { return '<button class="opc" data-turma="' + esc(t) + '" aria-pressed="' + (S.turma === t) + '">' + esc(t.replace(/^\d.\sANO\s/, '')) + '</button>'; }).join('') + '</div>';
+      h += '</div>';
     }
-    const topoEl = app.querySelector('.topo'); if (topoEl) { const p = topoEl.querySelector('.pontos'); if (p) p.outerHTML = pontos(); }
-    const n = document.getElementById('prox'); if (n) { n.addEventListener('click', avancar); n.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    if (S.turma) {
+      h += '<div class="card"><h2>3. Seu nome</h2>';
+      if (!S.nomes.length) h += '<p class="muted">Carregando…</p>';
+      else h += '<select id="nome"><option value="">Selecione seu nome…</option>' + S.nomes.map(function (n) { return '<option' + (S.nome === n ? ' selected' : '') + '>' + esc(n) + '</option>'; }).join('') + '</select><button class="btn" id="ir"' + (S.nome ? '' : ' disabled') + '>Ver meu plano de aula</button>';
+      h += '</div>';
+    }
+    app.innerHTML = h;
+    Array.prototype.forEach.call(app.querySelectorAll('[data-ano]'), function (b) { b.onclick = function () { S.ano = b.dataset.ano; S.turma = ''; S.nome = ''; S.turmas = []; S.nomes = []; escolha(); api('acao=turmas&ano=' + S.ano).then(function (r) { S.turmas = r.turmas || []; escolha(); }); }; });
+    Array.prototype.forEach.call(app.querySelectorAll('[data-turma]'), function (b) { b.onclick = function () { S.turma = b.dataset.turma; S.nome = ''; S.nomes = []; escolha(); api('acao=nomes&turma=' + encodeURIComponent(S.turma)).then(function (r) { S.nomes = r.nomes || []; escolha(); }); }; });
+    var sel = document.getElementById('nome'); if (sel) sel.onchange = function () { S.nome = sel.value; document.getElementById('ir').disabled = !S.nome; };
+    var ir = document.getElementById('ir'); if (ir) ir.onclick = carregar;
   }
-  function proximo() { return '<button class="btn" id="prox">' + (S.i === DADOS[S.ano].blocos.length - 1 ? 'Ver meu resultado' : 'Próximo bloco →') + '</button>'; }
-  function avancar() { if (S.i < DADOS[S.ano].blocos.length - 1) { S.i++; bloco(); } else fim(); }
 
-  /* ---------- resultado ---------- */
+  function carregar() {
+    app.innerHTML = cab() + '<div class="card"><p>Montando a sua aula…</p></div>';
+    api('acao=aula&turma=' + encodeURIComponent(S.turma) + '&nome=' + encodeURIComponent(S.nome)).then(function (r) {
+      if (!r.ok) { app.innerHTML = cab() + '<div class="card"><p>' + esc(r.erro || 'Não foi possível montar a aula.') + '</p><button class="btn sec" id="v">Voltar</button></div>'; document.getElementById('v').onclick = escolha; return; }
+      S.aula = r.aula; plano();
+    }).catch(function () { app.innerHTML = cab() + '<div class="card"><p>Sem conexão. Tente novamente.</p><button class="btn sec" id="v">Voltar</button></div>'; document.getElementById('v').onclick = escolha; });
+  }
+
+  /* ---------- 2. plano individual ---------- */
+  function plano() {
+    var A = S.aula, nv = {}, ord = [];
+    A.blocos.forEach(function (b) { if (!nv[b.niv]) { nv[b.niv] = 1; ord.push(b.niv); } });
+    var h = cab() + '<h1>Olá, ' + esc(A.aluno.split(' ')[0]) + '!</h1><p class="sub">' + (A.perfil ? 'Sua aula foi montada com o seu desempenho nas últimas três provas Paulistas: os temas são os mesmos da turma, mas a forma de explicar muda conforme o seu nível.' : 'Não encontramos seu histórico; a aula usa os temas mais importantes da turma.') + '</p>';
+    h += '<div class="card"><h2>Seu plano de hoje · ' + A.blocos.length + ' temas · ' + A.minutos + ' min</h2><ul class="plano">' + A.blocos.map(function (b) { return '<li><span>' + b.n + '. ' + esc(b.tema) + '<br><span class="muted">' + esc(b.desc) + '</span></span><span class="badge n' + b.niv + '">' + esc(A.niveis[b.niv].nome) + '</span></li>'; }).join('') + '</ul></div>';
+    h += '<div class="card"><h2>Como você vai estudar</h2>' + ord.sort().map(function (n) { return '<p><span class="badge n' + n + '">' + esc(A.niveis[n].nome) + '</span> ' + esc(A.niveis[n].estrategia) + '</p>'; }).join('') + '<p class="muted">Em cada tema: 1) observar, 2) resolver uma questão, 3) explicar com suas palavras e conferir.</p></div>';
+    h += '<button class="btn" id="go">Começar a aula (30 min)</button><button class="btn sec" id="v">Trocar de aluno</button>';
+    app.innerHTML = h;
+    document.getElementById('go').onclick = function () { S.i = 0; S.passo = 0; S.res = []; S.t0 = Date.now(); S.tm = setInterval(tick, 1000); bloco(); };
+    document.getElementById('v').onclick = function () { S.nome = ''; escolha(); };
+  }
+
+  /* ---------- tempo ---------- */
+  function parar() { if (S.tm) { clearInterval(S.tm); S.tm = null; } }
+  function restante() { return Math.max(0, S.aula.minutos * 60 - Math.floor((Date.now() - S.t0) / 1000)); }
+  function fmt(s) { return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
+  function tick() { var el = document.getElementById('tempo'); if (!el) return; var r = restante(); el.textContent = r > 0 ? fmt(r) : 'tempo esgotado'; el.className = 'tempo' + (r === 0 ? ' fim' : ''); }
+  function topo() {
+    var A = S.aula, pct = Math.round((S.i * 3 + S.passo) / (A.blocos.length * 3) * 100), r = restante();
+    return '<div class="topo"><span>Tema <b>' + (S.i + 1) + '/' + A.blocos.length + '</b></span><div class="barra"><i style="width:' + pct + '%"></i></div><span class="tempo' + (r === 0 ? ' fim' : '') + '" id="tempo">' + (r > 0 ? fmt(r) : 'tempo esgotado') + '</span></div>';
+  }
+
+  /* ---------- 3. bloco: observar → questão → auto-explicação ---------- */
+  function bloco() {
+    var A = S.aula, B = A.blocos[S.i]; if (!B) return fim();
+    if (S.passo === 0) S.b = { obj: null, tent: 0, acertou: false, conf: 0, texto: '' };
+    var h = cab() + topo() + '<span class="badge n' + B.niv + '">' + esc(A.niveis[B.niv].nome) + '</span>';
+    if (S.passo === 0) h += passoObservar(B);
+    else if (S.passo === 1) h += passoQuestao(B);
+    else h += passoExplicar(B);
+    app.innerHTML = h; ligar(B);
+    window.scrollTo(0, 0);
+  }
+  function passoObservar(B) {
+    return '<h1>' + esc(B.tema) + '</h1><p class="muted">' + esc(B.desc) + ' (' + esc(B.hab) + ')</p><div class="card"><h2>1. Observe</h2>' +
+      (B.img ? '<img class="img" src="' + esc(B.img) + '" alt="Ilustração do experimento: ' + esc(B.tema) + '">' : '') +
+      '<div class="analogia"><b>Pense nesta situação:</b> ' + esc(B.analogia) + '</div>' +
+      '<p><b>Pergunta-guia:</b> o que, nessa situação, representa o fenômeno real que você vai estudar? Pense por alguns segundos antes de continuar.</p></div><button class="btn" id="prox">Continuar</button>';
+  }
+  function passoQuestao(B) {
+    var q = B.obj, st = S.b, fez = st.obj !== null, max = B.niv === 0 ? 2 : 1, done = st.acertou || st.tent >= max;
+    var h = '<div class="card"><h2>2. Resolva</h2><p>' + esc(q.enunciado) + '</p>' + figura(q) + '<p><b>' + esc(q.comando) + '</b></p>';
+    h += q.alts.map(function (a, i) {
+      var cl = 'alt'; if (fez) { if (done && i === q.correta) cl += ' ok'; else if (i === st.obj && i !== q.correta) cl += ' er'; }
+      return '<button class="' + cl + '" data-alt="' + i + '"' + (done ? ' disabled' : '') + '><b>' + LET[i] + '</b><span>' + esc(a) + '</span></button>';
+    }).join('');
+    if (fez) {
+      if (st.acertou) h += '<div class="msg ok"><b>Isso mesmo!</b> ' + esc(q.explicacao) + '</div>';
+      else if (!done) h += '<div class="msg er"><b>Quase.</b> Releia a imagem e os dados, e tente outra alternativa.</div>';
+      else h += '<div class="msg er"><b>A resposta certa é a ' + LET[q.correta] + '.</b> ' + esc(q.explicacao) + '</div>';
+    }
+    h += '</div><button class="btn" id="prox"' + (done ? '' : ' disabled') + '>Continuar para a auto-explicação</button>';
+    return h;
+  }
+  function passoExplicar(B) {
+    var d = B.dis, st = S.b, n = B.niv, rev = !!st.rev;
+    var h = '<div class="card"><h2>3. Explique com suas palavras</h2><p>' + esc(d.enunciado) + '</p>' + figura(d) + '<p><b>' + esc(d.comando) + '</b></p>';
+    if (n === 0) {
+      if (!st.chips) st.chips = embaralha(d.conceitos);
+      h += '<div class="msg info"><b>Banco de palavras</b> — use estas ideias na sua explicação:</div><div class="chips">' + st.chips.map(function (c) { return '<span class="chip">' + esc(c) + '</span>'; }).join('') + '</div>';
+    } else if (n === 1) {
+      h += '<div class="msg info"><button class="btn sec" id="dica" style="margin:0"' + (st.dica ? ' disabled' : '') + '>' + (st.dica ? 'Dica:' : 'Preciso de uma dica') + '</button>' + (st.dica ? '<p>Comece por: <i>' + esc(d.conceitos[0]) + '</i></p>' : '') + '</div>';
+    }
+    h += '<textarea id="txt" placeholder="Escreva sua explicação aqui…"' + (rev ? ' readonly' : '') + '>' + esc(st.texto) + '</textarea>';
+    if (!rev) h += '<button class="btn" id="rev" disabled>Ver a explicação-modelo e conferir</button>';
+    else {
+      h += '<div class="modelo"><b>Explicação-modelo</b><br>' + esc(d.ref) + '</div><h3>Compare: a sua explicação trouxe cada ideia?</h3>';
+      h += d.conceitos.map(function (c, i) { return '<label class="chk"><input type="checkbox" data-c="' + i + '"' + (st.marc && st.marc[i] ? ' checked' : '') + '><span>' + esc(c) + '</span></label>'; }).join('');
+      if (n === 3) h += '<h3>Desafio final</h3><p>Explique a mesma ideia em duas linhas, como se ensinasse a um colega do ano anterior:</p><textarea id="par" style="min-height:70px">' + esc(st.par || '') + '</textarea>';
+      h += '<p class="muted">Marque com honestidade: o que ficou de fora é o que vale rever.</p>';
+    }
+    h += '</div>';
+    if (rev) h += '<button class="btn" id="fimb">' + (S.i + 1 < S.aula.blocos.length ? 'Concluir tema e seguir' : 'Concluir a aula') + '</button>';
+    return h;
+  }
+
+  function ligar(B) {
+    var st = S.b, prox = document.getElementById('prox');
+    if (prox) prox.onclick = function () { S.passo++; bloco(); };
+    Array.prototype.forEach.call(app.querySelectorAll('[data-alt]'), function (b) {
+      b.onclick = function () {
+        var i = +b.dataset.alt, max = B.niv === 0 ? 2 : 1; st.tent++; st.obj = i;
+        if (i === B.obj.correta) { st.acertou = true; st.ponto = st.tent === 1 ? 1 : 0.5; }
+        else if (st.tent >= max) st.ponto = 0;
+        bloco();
+      };
+    });
+    var t = document.getElementById('txt'), rv = document.getElementById('rev');
+    if (t && rv) t.oninput = function () { st.texto = t.value; rv.disabled = t.value.trim().length < 15; };
+    if (t && rv) rv.disabled = (t.value.trim().length < 15);
+    if (rv) rv.onclick = function () { st.texto = t.value; st.rev = true; bloco(); };
+    var dica = document.getElementById('dica'); if (dica) dica.onclick = function () { st.texto = t ? t.value : st.texto; st.dica = true; bloco(); };
+    Array.prototype.forEach.call(app.querySelectorAll('[data-c]'), function (c) { c.onchange = function () { st.marc = st.marc || {}; st.marc[c.dataset.c] = c.checked; }; });
+    var par = document.getElementById('par'); if (par) par.oninput = function () { st.par = par.value; };
+    var fb = document.getElementById('fimb');
+    if (fb) fb.onclick = function () {
+      var n = B.dis.conceitos.length, ok = 0, k; for (k = 0; k < n; k++) if (st.marc && st.marc[k]) ok++;
+      S.res.push({ b: B, obj: st.ponto || 0, conf: n ? ok / n : 0, faltou: B.dis.conceitos.filter(function (c, i) { return !(st.marc && st.marc[i]); }) });
+      S.i++; S.passo = 0; bloco();
+    };
+  }
+
+  /* ---------- 4. relatório ---------- */
   function fim() {
-    S.concluido = true; S.tFim = (Date.now() - S.t0) / 1000; pararTimer();
-    const B = DADOS[S.ano].blocos, pts = S.res.reduce((s, r) => s + (r === 1 ? 1 : r === 2 ? 0.5 : 0), 0);
-    const msg = pts >= 8 ? 'Excelente! Você domina a maior parte dos descritores.' : pts >= 5 ? 'Bom caminho! Revise os blocos marcados e tente novamente.' : 'Você já deu o primeiro passo. Releia as ideias-chave dos blocos marcados e refaça a atividade.';
-    app.innerHTML = cabecalho() +
-      '<section class="card"><p class="sub" style="margin:0">' + S.ano + 'º ano · tempo usado: <b>' + mmss(S.tFim) + '</b></p><p class="res-grande">' + String(pts).replace('.', ',') + ' / ' + B.length + '</p><p>' + msg + '</p>' +
-      '<div class="leg"><span>✅ acertou de primeira (1 ponto)</span><span>🟨 acertou na 2ª tentativa (0,5)</span><span>🔁 revisar</span></div>' +
-      '<ul class="lista-res">' + B.map((b, k) => '<li><div class="t">' + (S.res[k] === 1 ? '✅' : S.res[k] === 2 ? '🟨' : '🔁') + ' ' + (k + 1) + '. ' + b.tema + ' <span class="chip">' + b.hab + '</span></div>' +
-        (S.res[k] === 1 ? '' : '<div class="s"><b>Para revisar:</b> ' + b.ideia + '</div>') + '</li>').join('') + '</ul>' +
-      '<button class="btn" id="refazer">Refazer a atividade</button><button class="btn sec" id="outro">Escolher outro ano</button></section>';
-    document.getElementById('refazer').addEventListener('click', comecar);
-    document.getElementById('outro').addEventListener('click', inicio);
-    topo();
+    parar();
+    var A = S.aula, gasto = Math.min(99, Math.round((Date.now() - S.t0) / 60000));
+    var h = cab() + '<h1>Aula concluída!</h1><p class="sub">' + esc(A.aluno) + ' · ' + esc(S.turma) + ' · ' + gasto + ' min</p><div class="card"><h2>Seu resumo</h2>';
+    h += S.res.map(function (r) {
+      var s = (r.obj + r.conf) / 2, tag = s >= 0.75 ? 'Dominei' : s >= 0.45 ? 'Quase lá' : 'Rever';
+      return '<div class="res"><span><b>' + esc(r.b.tema) + '</b><br><span class="muted">Questão: ' + (r.obj === 1 ? 'acertou de primeira' : r.obj > 0 ? 'acertou na 2ª tentativa' : 'errou') + ' · Explicação: ' + Math.round(r.conf * 100) + '% das ideias' + (r.faltou.length ? '<br>Rever: ' + esc(r.faltou.slice(0, 2).join('; ')) : '') + '</span></span><span class="badge n' + (s >= 0.75 ? 2 : s >= 0.45 ? 1 : 0) + '">' + tag + '</span></div>';
+    }).join('');
+    h += '</div><p class="muted">A conferência das ideias é feita por você mesmo. Mostre este resumo ao professor.</p><button class="btn" id="novo">Fazer de novo com outro aluno</button>';
+    app.innerHTML = h; document.getElementById('novo').onclick = function () { S.nome = ''; S.aula = null; escolha(); };
   }
 
-  inicio();
+  escolha();
 })();
