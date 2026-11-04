@@ -128,7 +128,7 @@
   }
   function passoExplicar(B) {
     var d = B.dis, st = S.b, n = B.niv, rev = !!st.rev;
-    var h = '<div class="card"><h2>' + T('3. Explique com suas palavras') + '</h2>' + som(d.enunciado + ' ' + d.comando) + '<p>' + esc(d.enunciado) + '</p>' + figura(d) + '<p><b>' + esc(d.comando) + '</b></p>';
+    var h = '<div class="card"><h2>' + T('3. Explique com suas palavras') + '</h2>' + som(d.enunciado + ' ' + d.comando) + '<p>' + esc(d.enunciado) + '</p>' + (B.dimg ? '<img class="img" src="' + esc(B.dimg) + '" alt="' + T('Ilustração da situação do enunciado: ') + esc(B.tema) + '">' : '') + figura(B.dimg ? Object.assign({}, d, { svg: null }) : d) + '<p><b>' + esc(d.comando) + '</b></p>';
     if (n === 0) {
       if (!st.chips) st.chips = embaralha(d.conceitos);
       h += '<div class="msg info"><b>' + T('Banco de palavras') + '</b>' + T(' — use estas ideias na sua explicação:') + '</div><div class="chips">' + st.chips.map(function (c) { return '<span class="chip">' + esc(c) + '</span>'; }).join('') + '</div>';
