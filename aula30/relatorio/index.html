@@ -82,10 +82,11 @@ tr.al{cursor:pointer}tr.al:hover td{background:var(--surface-2)}
       return '<div class="rc">' + rosca(c.map(function (v, i) { return { v: v, c: NIV[i].c }; }), pc(med(o.a)), o.a.length + ' alunos') + '<h4>' + esc(o.b.tema) + '</h4><p>' + esc(o.b.desc) + '</p><p>' + c.map(function (v, i) { return v ? '<span style="color:' + NIV[i].c + '">●</span> ' + v : ''; }).join(' ') + '</p></div>';
     }).join('') + (ks.length ? '' : '<p class="muted">Ainda sem resultados.</p>') + '</div></div>';
     var fz = {}; fez.forEach(function (r) { fz[r.nome] = r; });
-    h += '<div class="card"><h2>Alunos</h2><table><tr><th>Aluno</th><th>Compreensão</th><th>Nível</th><th>Feito em</th></tr>' + nomes.slice().sort(function (a, b) { return a.localeCompare(b, 'pt'); }).map(function (n) {
-      var r = fz[n]; if (!r) return '<tr><td>' + esc(n) + '</td><td class="muted" colspan="3">ainda não fez</td></tr>';
-      var l = lvl(r.m); return '<tr class="al" data-n="' + esc(n) + '"><td>' + esc(n) + '</td><td>' + pc(r.m) + '</td><td><span class="tag" style="background:' + NIV[l].c + '">' + NIV[l].n + '</span></td><td>' + new Date(r.criado).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }) + '</td></tr>';
-    }).join('') + '</table><p class="nota">Clique em um aluno para abrir o relatório individual.</p></div>';
+    h += '<div class="card"><h2>Alunos</h2><table><tr><th>Aluno</th><th>Início</th><th>Término</th><th>Nota</th><th>Compreensão</th><th>Nível</th></tr>' + nomes.slice().sort(function (a, b) { return a.localeCompare(b, 'pt'); }).map(function (n) {
+      var r = fz[n]; if (!r) return '<tr><td>' + esc(n) + '</td><td class="muted" colspan="5">ainda não fez</td></tr>';
+      var l = lvl(r.m); var fim = new Date(r.criado), ini = new Date(fim.getTime() - (Number(r.minutos) || 0) * 60000), hf = function (d) { return d.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }); };
+      return '<tr class="al" data-n="' + esc(n) + '"><td>' + esc(n) + '</td><td>' + hf(ini) + '</td><td>' + hf(fim) + '</td><td><b>' + (r.m * 10).toFixed(1).replace('.', ',') + '</b></td><td>' + pc(r.m) + '</td><td><span class="tag" style="background:' + NIV[l].c + '">' + NIV[l].n + '</span></td></tr>';
+    }).join('') + '</table><p class="nota">Início = término menos o tempo gasto na aula; nota de 0 a 10 = compreensão ÷ 10. Clique em um aluno para abrir o relatório individual.</p></div>';
     return h;
   }
   function alunoView(t, n, R) {
