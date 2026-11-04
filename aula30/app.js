@@ -158,12 +158,15 @@
   function fim() {
     parar();
     var A = S.aula, gasto = Math.min(99, Math.round((Date.now() - S.t0) / 60000));
+    fetch('/api/aula30', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ acao: 'enviar', turma: S.turma, nome: S.nome, minutos: gasto, blocos: S.res.map(function (r) { return { k: r.b.k, niv: r.b.niv, obj: r.obj, conf: r.conf }; }) }) })
+      .then(function (x) { return x.json(); }).then(function (j) { var el = document.getElementById('env'); if (el) el.textContent = j.ok ? 'Resultado enviado ao professor.' : 'Não foi possível enviar o resultado ao professor.'; })
+      .catch(function () { var el = document.getElementById('env'); if (el) el.textContent = 'Não foi possível enviar o resultado ao professor.'; });
     var h = cab() + '<h1>Aula concluída!</h1><p class="sub">' + esc(A.aluno) + ' · ' + esc(S.turma) + ' · ' + gasto + ' min</p><div class="card"><h2>Seu resumo</h2>';
     h += S.res.map(function (r) {
       var s = (r.obj + r.conf) / 2, tag = s >= 0.75 ? 'Dominei' : s >= 0.45 ? 'Quase lá' : 'Rever';
       return '<div class="res"><span><b>' + esc(r.b.tema) + '</b><br><span class="muted">Questão: ' + (r.obj === 1 ? 'acertou de primeira' : r.obj > 0 ? 'acertou na 2ª tentativa' : 'errou') + ' · Explicação: ' + Math.round(r.conf * 100) + '% das ideias' + (r.faltou.length ? '<br>Rever: ' + esc(r.faltou.slice(0, 2).join('; ')) : '') + '</span></span><span class="badge n' + (s >= 0.75 ? 2 : s >= 0.45 ? 1 : 0) + '">' + tag + '</span></div>';
     }).join('');
-    h += '</div><p class="muted">A conferência das ideias é feita por você mesmo. Mostre este resumo ao professor.</p><button class="btn" id="novo">Fazer de novo com outro aluno</button>';
+    h += '</div><p class="muted">A conferência das ideias é feita por você mesmo. <span id="env">Enviando o resultado…</span></p><button class="btn" id="novo">Fazer de novo com outro aluno</button>';
     app.innerHTML = h; document.getElementById('novo').onclick = function () { S.nome = ''; S.aula = null; escolha(); };
   }
 

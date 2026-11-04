@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Relatório · Aula online de 30 min</title>
+<link rel="stylesheet" href="/resultados/dash.css?v=13">
+<style>
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}.kpi b{display:block;font-size:1.6rem}.kpi span{color:var(--muted);font-size:.8rem}
+.rosc{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:10px 0}
+.rc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 10px 12px;text-align:center;box-shadow:var(--shadow)}
+.rc svg{width:100%;height:auto;display:block}.rc h4{margin:4px 0 2px;font-size:.92rem}.rc p{margin:2px 0;font-size:.8rem;color:var(--muted)}
+.big{display:grid;grid-template-columns:minmax(240px,340px) 1fr;gap:18px;align-items:center}@media(max-width:700px){.big{grid-template-columns:1fr}}
+.leg{list-style:none;padding:0;margin:0}.leg li{display:flex;align-items:center;gap:8px;margin:5px 0}.leg i{width:14px;height:14px;border-radius:4px;display:inline-block}
+table{border-collapse:collapse;width:100%}td,th{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left}th{background:var(--surface-2);font-size:.8rem}
+tr.al{cursor:pointer}tr.al:hover td{background:var(--surface-2)}
+.tag{display:inline-block;font-size:.72rem;padding:1px 8px;border-radius:999px;color:#fff;font-weight:700}
+.btn{font:inherit;font-weight:600;color:var(--accent);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
+.nota{font-size:.82rem;color:var(--muted);margin:8px 0}
+@media print{.filters,nav,.noprint{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div><h1>Relatório · Aula online de 30 min</h1><div class="muted sm">Nível de compreensão por descritor, por turma e por aluno</div></div>
+<nav><a href="/">← Painel</a><a href="/aula30/" target="_blank" rel="noopener">Aula dos alunos</a></nav></header>
+<div class="filters">
+<div class="field"><label for="fTurma">Turma</label><select id="fTurma"></select></div>
+<div class="field"><label for="fAluno">Aluno</label><select id="fAluno"><option value="">Visão da turma</option></select></div>
+<div class="field"><button class="btn" id="bAtu" type="button">Atualizar</button> <button class="btn" id="bPdf" type="button">Imprimir / PDF</button></div>
+</div>
+<div id="app"><div class="card muted">Carregando…</div></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (s) { return document.querySelector(s); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var NIV = [{ n: 'Abaixo do Básico', c: '#d64545' }, { n: 'Básico', c: '#e8a23a' }, { n: 'Adequado', c: '#4f9a4a' }, { n: 'Avançado', c: '#2f6fb7' }];
+  var SB_URL = 'https://ykrjfjepnqeoqlgupsbe.supabase.co', SB_KEY = 'sb_publishable_FbMU5x7WBpxzHmmVzOfh2g_0M1xxAh5';
+  var NP = ['Construção guiada', 'Passo a passo', 'Aprofundamento', 'Desafio'];
+  var lvl = function (p) { return p < .25 ? 0 : p < .5 ? 1 : p < .75 ? 2 : 3; };
+  var pc = function (v) { return Math.round(v * 100) + '%'; };
+  var med = function (a) { return a.length ? a.reduce(function (x, y) { return x + y; }, 0) / a.length : 0; };
+  var D = { rows: [], roster: {} }, TOKEN = '';
+
+  /* ---------- rosca 3D (SVG): anel em perspectiva com espessura ---------- */
+  function escurece(hex, f) { var n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255; return 'rgb(' + Math.round(r * f) + ',' + Math.round(g * f) + ',' + Math.round(b * f) + ')'; }
+  function seg(cx, cy, rx, ry, ir, iy, a0, a1, dy) {
+    var P = function (a, x, y) { return (cx + x * Math.cos(a)).toFixed(1) + ' ' + (cy + dy + y * Math.sin(a)).toFixed(1); }, big = a1 - a0 > Math.PI ? 1 : 0;
+    return 'M' + P(a0, rx, ry) + ' A' + rx + ' ' + ry + ' 0 ' + big + ' 1 ' + P(a1, rx, ry) + ' L' + P(a1, ir, iy) + ' A' + ir + ' ' + iy + ' 0 ' + big + ' 0 ' + P(a0, ir, iy) + ' Z';
+  }
+  function rosca(parts, centro, sub) {
+    var tot = parts.reduce(function (s, p) { return s + p.v; }, 0), cx = 100, cy = 58, rx = 84, ry = 44, ir = 46, iy = 24, prof = 18, h = '';
+    var segs = [];
+    if (!tot) segs = [{ a0: -Math.PI / 2, a1: 1.5 * Math.PI - 1e-3, c: '#9aa9ad' }];
+    else { var a = -Math.PI / 2; parts.forEach(function (p) { if (p.v <= 0) return; var d = p.v / tot * 2 * Math.PI; segs.push({ a0: a, a1: a + d - (p.v === tot ? 1e-3 : 0), c: p.c }); a += d; }); }
+    for (var dy = prof; dy >= 0; dy -= 2) segs.forEach(function (s) { h += '<path d="' + seg(cx, cy, rx, ry, ir, iy, s.a0, s.a1, dy) + '" fill="' + (dy ? escurece(s.c, .55) : s.c) + '" stroke="' + (dy ? 'none' : 'rgba(255,255,255,.7)') + '" stroke-width="1"/>'; });
+    h += '<text x="100" y="' + (cy + 6) + '" text-anchor="middle" font-size="19" font-weight="800" fill="#13262b" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">' + esc(centro) + '</text>';
+    if (sub) h += '<text x="100" y="' + (cy + 19) + '" text-anchor="middle" font-size="8.5" font-weight="700" fill="#13262b" stroke="#fff" stroke-width="2.5" paint-order="stroke">' + esc(sub) + '</text>';
+    return '<svg viewBox="0 0 200 ' + (cy + ry + prof + 6) + '" role="img" aria-label="Gráfico de rosca 3D">' + h + '</svg>';
+  }
+  function legenda(cont) { return '<ul class="leg">' + NIV.map(function (n, i) { return '<li><i style="background:' + n.c + '"></i>' + n.n + ': <b>' + cont[i] + '</b></li>'; }).join('') + '</ul>'; }
+
+  /* ---------- dados: último envio de cada aluno ---------- */
+  function ultimos() {
+    var m = {}; D.rows.forEach(function (r) { m[r.turma + '|' + r.nome] = r; });
+    return Object.keys(m).map(function (k) { var r = m[k]; r.sc = (r.blocos || []).map(function (b) { return Object.assign({}, b, { s: (b.obj + b.conf) / 2 }); }); r.m = med(r.sc.map(function (b) { return b.s; })); return r; });
+  }
+  function turmaView(t, R) {
+    var nomes = D.roster[t] || [], fez = R.filter(function (r) { return r.turma === t; });
+    var cont = [0, 0, 0, 0]; fez.forEach(function (r) { cont[lvl(r.m)]++; });
+    var h = '<div class="kpis"><div class="kpi"><b>' + fez.length + '/' + nomes.length + '</b><span>alunos que fizeram a aula</span></div><div class="kpi"><b>' + (fez.length ? pc(med(fez.map(function (r) { return r.m; }))) : '–') + '</b><span>compreensão média da turma</span></div><div class="kpi"><b>' + (fez.length ? Math.round(med(fez.map(function (r) { return r.minutos || 0; }))) + ' min' : '–') + '</b><span>tempo médio</span></div></div>';
+    h += '<div class="card"><h2>Nível de compreensão da turma</h2><div class="big"><div>' + rosca(cont.map(function (v, i) { return { v: v, c: NIV[i].c }; }), fez.length ? pc(med(fez.map(function (r) { return r.m; }))) : '–', fez.length + ' alunos') + '</div><div>' + legenda(cont) + '<p class="nota">Nível de cada aluno = média entre o acerto na questão e as ideias da auto-explicação conferidas por ele em todos os descritores da aula.</p></div></div></div>';
+    var D2 = {}; fez.forEach(function (r) { r.sc.forEach(function (b) { (D2[b.k] = D2[b.k] || { b: b, a: [] }).a.push(b.s); }); });
+    var ks = Object.keys(D2).sort(function (x, y) { return med(D2[x].a) - med(D2[y].a); });
+    h += '<div class="card"><h2>Por descritor (do mais frágil ao mais forte)</h2><div class="rosc">' + ks.map(function (k) {
+      var o = D2[k], c = [0, 0, 0, 0]; o.a.forEach(function (s) { c[lvl(s)]++; });
+      return '<div class="rc">' + rosca(c.map(function (v, i) { return { v: v, c: NIV[i].c }; }), pc(med(o.a)), o.a.length + ' alunos') + '<h4>' + esc(o.b.tema) + '</h4><p>' + esc(o.b.desc) + '</p><p>' + c.map(function (v, i) { return v ? '<span style="color:' + NIV[i].c + '">●</span> ' + v : ''; }).join(' ') + '</p></div>';
+    }).join('') + (ks.length ? '' : '<p class="muted">Ainda sem resultados.</p>') + '</div></div>';
+    var fz = {}; fez.forEach(function (r) { fz[r.nome] = r; });
+    h += '<div class="card"><h2>Alunos</h2><table><tr><th>Aluno</th><th>Compreensão</th><th>Nível</th><th>Feito em</th></tr>' + nomes.slice().sort(function (a, b) { return a.localeCompare(b, 'pt'); }).map(function (n) {
+      var r = fz[n]; if (!r) return '<tr><td>' + esc(n) + '</td><td class="muted" colspan="3">ainda não fez</td></tr>';
+      var l = lvl(r.m); return '<tr class="al" data-n="' + esc(n) + '"><td>' + esc(n) + '</td><td>' + pc(r.m) + '</td><td><span class="tag" style="background:' + NIV[l].c + '">' + NIV[l].n + '</span></td><td>' + new Date(r.criado).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }) + '</td></tr>';
+    }).join('') + '</table><p class="nota">Clique em um aluno para abrir o relatório individual.</p></div>';
+    return h;
+  }
+  function alunoView(t, n, R) {
+    var r = R.filter(function (x) { return x.turma === t && x.nome === n; })[0];
+    if (!r) return '<div class="card muted">' + esc(n) + ' ainda não fez a aula.</div>';
+    var cont = [0, 0, 0, 0]; r.sc.forEach(function (b) { cont[lvl(b.s)]++; }); var l = lvl(r.m);
+    var h = '<div class="card"><h2>' + esc(n) + ' · ' + esc(t) + '</h2><div class="big"><div>' + rosca(cont.map(function (v, i) { return { v: v, c: NIV[i].c }; }), pc(r.m), 'compreensão geral') + '</div><div><p><span class="tag" style="background:' + NIV[l].c + '">' + NIV[l].n + '</span> · ' + r.minutos + ' min</p>' + legenda(cont) + '<p class="nota">Cada fatia é um descritor cobrado na aula.</p></div></div></div>';
+    h += '<div class="card"><h2>Compreensão em cada descritor</h2><div class="rosc">' + r.sc.map(function (b) {
+      var li = lvl(b.s); return '<div class="rc">' + rosca([{ v: b.s, c: NIV[li].c }, { v: 1 - b.s, c: '#c9d3d6' }], pc(b.s), NIV[li].n) + '<h4>' + esc(b.tema) + '</h4><p>' + esc(b.desc) + '</p><p>Questão: ' + (b.obj === 1 ? 'acertou' : b.obj > 0 ? 'acertou na 2ª' : 'errou') + ' · Ideias: ' + pc(b.conf) + '</p><p>Estratégia: ' + NP[b.niv] + '</p></div>';
+    }).join('') + '</div><p class="nota">As ideias da auto-explicação são conferidas pelo próprio aluno. A estratégia reflete o nível no plano das últimas três Provas Paulistas.</p></div>';
+    return h;
+  }
+  function desenhar() {
+    var R = ultimos(), t = $('#fTurma').value, n = $('#fAluno').value;
+    $('#app').innerHTML = !t ? '<div class="card muted">Escolha uma turma.</div>' : n ? alunoView(t, n, R) : turmaView(t, R);
+    Array.prototype.forEach.call(document.querySelectorAll('tr.al'), function (tr) { tr.onclick = function () { $('#fAluno').value = tr.dataset.n; desenhar(); window.scrollTo(0, 0); }; });
+  }
+  function opcoes() {
+    var ts = Object.keys(D.roster).sort(function (a, b) { return a.localeCompare(b, 'pt'); }), cur = $('#fTurma').value || ts[0];
+    $('#fTurma').innerHTML = ts.map(function (t) { return '<option' + (t === cur ? ' selected' : '') + '>' + esc(t) + '</option>'; }).join('');
+    alunosOpt();
+  }
+  function alunosOpt() { var t = $('#fTurma').value, cur = $('#fAluno').value; $('#fAluno').innerHTML = '<option value="">Visão da turma</option>' + (D.roster[t] || []).slice().sort(function (a, b) { return a.localeCompare(b, 'pt'); }).map(function (n) { return '<option' + (n === cur ? ' selected' : '') + '>' + esc(n) + '</option>'; }).join(''); }
+  async function carregar() {
+    $('#app').innerHTML = '<div class="card muted">Carregando…</div>';
+    try {
+      var r = await fetch('/api/aula30?acao=relatorio', { headers: { Authorization: 'Bearer ' + TOKEN }, cache: 'no-store' }), j = await r.json();
+      if (!j.ok) { $('#app').innerHTML = '<div class="card">' + esc(j.erro || 'Erro') + (r.status === 401 ? '<br><br><a href="/">Abrir o painel</a>' : '') + '</div>'; return; }
+      D = j; opcoes(); desenhar();
+    } catch (e) { $('#app').innerHTML = '<div class="card">Falha ao carregar.</div>'; }
+  }
+  async function init() {
+    if (!window.supabase) { $('#app').innerHTML = '<div class="card">Não foi possível carregar o login. Atualize a página.</div>'; return; }
+    var sb = window.supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, detectSessionInUrl: false, flowType: 'implicit' } });
+    var s = (await sb.auth.getSession()).data.session;
+    if (!s) { $('#app').innerHTML = '<div class="card">Para ver o relatório, entre primeiro no painel com o seu login de professor.<br><br><a href="/">Abrir o painel</a></div>'; return; }
+    TOKEN = s.access_token;
+    $('#fTurma').onchange = function () { $('#fAluno').value = ''; alunosOpt(); desenhar(); };
+    $('#fAluno').onchange = desenhar; $('#bAtu').onclick = carregar; $('#bPdf').onclick = function () { window.print(); };
+    carregar();
+  }
+  init();
+})();
+</script>
+</body>
+</html>
