@@ -12,7 +12,30 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<style>[hidden]{display:none!important}body{margin:0}</style>
+<style>[hidden]{display:none!important}body{margin:0}
+/* Botões de navegação em alto relevo; ao pressionar (ou na ferramenta aberta) ficam afundados */
+.relat a,.sim-btn{position:relative;border:1px solid rgba(255,255,255,.35)!important;border-bottom-color:rgba(0,0,0,.45)!important;border-right-color:rgba(0,0,0,.3)!important;
+ background-image:linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,0) 55%,rgba(0,0,0,.14));
+ box-shadow:0 1px 0 rgba(255,255,255,.55) inset,0 -2px 0 rgba(0,0,0,.22) inset,0 4px 0 rgba(0,0,0,.35),0 7px 10px rgba(0,0,0,.4);
+ transform:translateY(0);transition:transform .08s,box-shadow .08s,filter .15s;text-shadow:0 1px 0 rgba(255,255,255,.25)}
+.relat a[style*="color:#fff"]{text-shadow:0 -1px 0 rgba(0,0,0,.4)}
+.relat a:hover,.sim-btn:hover{filter:brightness(1.1)}
+.relat a:active,.sim-btn:active,.relat a.on,.sim-btn.on{transform:translateY(4px);filter:brightness(.92);
+ background-image:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.08) 60%,rgba(0,0,0,.02));
+ box-shadow:0 3px 7px rgba(0,0,0,.55) inset,0 -1px 0 rgba(255,255,255,.2) inset,0 0 0 rgba(0,0,0,0);text-shadow:none}
+.relat a:focus-visible,.sim-btn:focus-visible{outline:2px solid #fff;outline-offset:2px}
+/* Visor: abre as ferramentas dentro do painel, sem novas abas */
+#vw{position:fixed;inset:0;z-index:9999;display:none;flex-direction:column;background:var(--bg,#0b1416)}
+#vw.on{display:flex}
+#vw .vb{display:flex;gap:8px;align-items:center;padding:8px 12px;background:#0f1d20;border-bottom:1px solid #ffffff22}
+#vw .vb b{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.95rem}
+#vw .vb button,#vw .vb select{font:inherit;font-size:.85rem;font-weight:700;color:#0f172a;background:#67c4cf;border:1px solid rgba(255,255,255,.35);border-bottom-color:rgba(0,0,0,.45);border-radius:8px;padding:7px 12px;cursor:pointer;
+ box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 -2px 0 rgba(0,0,0,.2) inset,0 3px 0 rgba(0,0,0,.4);transition:transform .08s,box-shadow .08s}
+#vw .vb button:active{transform:translateY(3px);box-shadow:0 3px 6px rgba(0,0,0,.55) inset}
+#vw .vb select{max-width:34vw}
+#vw iframe{flex:1;border:0;width:100%;background:#fff}
+@media(max-width:640px){#vw .vb b{display:none}}
+</style>
 <title>Painel Prova Paulista 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1284,5 +1307,27 @@ bI.addEventListener("click",async()=>{ if(!pedidoInstalar) return; pedidoInstala
 window.addEventListener("appinstalled",()=>{ bI.hidden=true; });
 </script>
 
+
+<div id="vw" role="dialog" aria-label="Ferramenta aberta no painel"><div class="vb"><button type="button" id="vwBack">← Painel</button><b id="vwT"></b><select id="vwSel" aria-label="Ir para outra ferramenta"></select><button type="button" id="vwCp">Copiar link</button><button type="button" id="vwNew" title="Abrir em outra aba">↗</button></div><iframe id="vwF" title="Ferramenta" allow="clipboard-write; microphone; autoplay"></iframe></div>
+<script>
+(function(){
+  const vw=document.getElementById("vw"),fr=document.getElementById("vwF"),tt=document.getElementById("vwT"),sel=document.getElementById("vwSel");
+  let cur=null,open=false;
+  const interno=a=>{try{const u=new URL(a.href,location.href);return u.origin===location.origin&&u.pathname!=="/"&&!/\.(pdf|png|jpg|zip)$/i.test(u.pathname)}catch(e){return false}};
+  const nome=a=>(a.textContent||"").replace(/\s+/g," ").trim()||a.getAttribute("href");
+  function lista(){const m=new Map();document.querySelectorAll("nav.relat a[href],a.sim-btn[href]").forEach(a=>{if(interno(a)&&!m.has(a.href))m.set(a.href,nome(a))});sel.innerHTML=[...m].map(([h,n])=>`<option value="${h}">${n.replace(/</g,"&lt;")}</option>`).join("")}
+  function marca(){document.querySelectorAll("nav.relat a,a.sim-btn").forEach(a=>a.classList.toggle("on",open&&cur&&a.href===cur))}
+  function abrir(href,titulo,push){cur=new URL(href,location.href).href;lista();if(![...sel.options].some(o=>o.value===cur)){const o=new Option(titulo,cur);sel.add(o)}sel.value=cur;tt.textContent=titulo;fr.src=cur;vw.classList.add("on");document.body.style.overflow="hidden";open=true;marca();if(push)history.pushState({vw:1},"")}
+  function fechar(back){if(!open)return;open=false;vw.classList.remove("on");fr.src="about:blank";document.body.style.overflow="";marca();if(back&&history.state&&history.state.vw)history.back()}
+  document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest("a[target=_blank]");if(!a||e.ctrlKey||e.metaKey||e.shiftKey||e.button||!interno(a))return;e.preventDefault();abrir(a.href,nome(a),true)},true);
+  fr.addEventListener("load",()=>{try{fr.contentDocument.addEventListener("click",e=>{const l=e.target.closest&&e.target.closest("a[href]");if(!l||!open)return;const u=new URL(l.href,fr.contentWindow.location.href);if(u.origin===location.origin&&u.pathname==="/"){e.preventDefault();fechar(true)}},true)}catch(x){}});
+  document.getElementById("vwBack").onclick=()=>fechar(true);
+  sel.onchange=()=>abrir(sel.value,sel.options[sel.selectedIndex].text,false);
+  document.getElementById("vwNew").onclick=()=>window.open(cur,"_blank","noopener");
+  document.getElementById("vwCp").onclick=function(){const b=this;(navigator.clipboard?navigator.clipboard.writeText(cur):Promise.reject()).then(()=>{b.textContent="Copiado ✓"}).catch(()=>{prompt("Copie o link:",cur)}).finally(()=>setTimeout(()=>{b.textContent="Copiar link"},1500))};
+  window.addEventListener("popstate",()=>fechar(false));
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&open)fechar(true)});
+})();
+</script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 /* Botão fixo "← Painel" para voltar à tela inicial da plataforma. Nas telas só do professor aparece sempre (data-sempre);
    nas telas que os alunos também usam (ex.: Orbit Quiz) só aparece se este navegador tiver o login do professor. */
 (function () {
+  if (window.top !== window.self) return; /* dentro do visor do painel já existe a barra "← Painel" */
   const me = document.currentScript;
   let prof = false;
   try { prof = Object.keys(localStorage).some(k => /^sb-ykrjfjepnqeoqlgupsbe-auth-token$/.test(k)); } catch (e) { /* sem acesso ao armazenamento */ }
