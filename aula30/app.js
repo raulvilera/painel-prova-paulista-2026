@@ -64,7 +64,7 @@
 
   function carregar() {
     app.innerHTML = cab() + '<div class="card"><p>' + T('Montando a sua aula…') + '</p></div>';
-    api('acao=aula&turma=' + encodeURIComponent(S.turma) + '&nome=' + encodeURIComponent(S.nome)).then(function (r) {
+    api('acao=aula&cv=5&turma=' + encodeURIComponent(S.turma) + '&nome=' + encodeURIComponent(S.nome)).then(function (r) {
       if (!r.ok) { app.innerHTML = cab() + '<div class="card"><p>' + esc(r.erro || T('Não foi possível montar a aula.')) + '</p><button class="btn sec" id="v">' + T('Voltar') + '</button></div>'; document.getElementById('v').onclick = escolha; return; }
       S.aula = r.aula; if (S.aula.lang === 'ru') setLang('ru'); plano();
     }).catch(function () { app.innerHTML = cab() + '<div class="card"><p>' + T('Sem conexão. Tente novamente.') + '</p><button class="btn sec" id="v">' + T('Voltar') + '</button></div>'; document.getElementById('v').onclick = escolha; });

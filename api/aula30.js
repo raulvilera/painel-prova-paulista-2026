@@ -109,6 +109,7 @@ module.exports = async function aula30(req, res) {
     if (acao === 'aula') {
       const t = String(q.turma || ''), n = String(q.nome || ''); if (!PAINEL[t] || !n) return er(400, 'Informe turma e nome.');
       const a = montar(t, n); if (!a.blocos.length) return er(404, 'Sem conteúdo para esta turma.');
+      if (a.lang === 'ru' && Number(q.cv) < 5) return er(409, 'Recarregue a página para continuar · Перезагрузите страницу (обновите её), чтобы продолжить.');
       return ok({ aula: a });
     }
     return er(400, 'Ação inválida.');
