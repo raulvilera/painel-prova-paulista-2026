@@ -9,6 +9,8 @@
   const st = document.createElement('style');
   st.textContent = '#voltar-painel{position:fixed;left:12px;bottom:12px;z-index:2147483000;display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:999px;background:#0f6e7a;color:#fff;font:700 14px/1 system-ui,-apple-system,"Segoe UI",sans-serif;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.35);border:1px solid #ffffff55}#voltar-painel:hover,#voltar-painel:focus-visible{background:#0b5760;outline:2px solid #fff}@media print{#voltar-painel{display:none}}';
   document.head.appendChild(st);
-  const a = document.createElement('a'); a.id = 'voltar-painel'; a.href = '/'; a.textContent = '← Painel'; a.setAttribute('aria-label', 'Voltar à tela inicial do painel');
+  const a = document.createElement('a'); a.id = 'voltar-painel'; a.href = '/'; a.textContent = '← Painel';
+  /* Se esta tela foi aberta em outra aba a partir do painel, volta para a aba do painel e fecha esta (sem acumular abas nem passar pelo login) */
+  a.addEventListener('click', function (e) { try { if (window.opener && !window.opener.closed && window.opener.location.origin === location.origin) { e.preventDefault(); window.opener.focus(); window.close(); } } catch (x) { /* segue para / */ } }); a.setAttribute('aria-label', 'Voltar à tela inicial do painel');
   document.body.appendChild(a);
 })();
