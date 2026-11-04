@@ -4,6 +4,7 @@ const PAINEL = require('./_plano-painel.js');
 const ROSTER = require('./_roster.js');
 const IMG = require('./_aula30-img.js');
 let RU = require('./_aula30-ru.js');
+let QFOTO = {}; try { QFOTO = require('./_aula30-qfoto.js'); } catch (e) { QFOTO = {}; }
 let QIMG = {}; try { QIMG = require('./_aula30-qimg.js'); } catch (e) { QIMG = {}; }
 const crypto = require('crypto');
 const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.env.SUPABASE_SERVICE_KEY || '';
@@ -56,7 +57,7 @@ function montar(turma, nome) {
     const tier = it.niv <= 1 ? 'A' : 'B', oi = tier === 'A' ? 1 : 3, o = objs[oi] || pick(objs, e.ob, h), d = pick(dis, e.db, h + 1);
     return {
       k: it.k, n: idx + 1, niv: it.niv, extra: !!it.extra, min, tema: c.nome, desc: c.desc, hab: c.hab, habTxt: c.habTxt,
-      tier, qimg: QIMG[it.k + '|' + tier] ? 'img/q/' + QIMG[it.k + '|' + tier] + '.png' : '', analogia: c.concreta || '', img: IMG[it.k] ? 'img/' + IMG[it.k] + '.png' : '', obj: o, dis: d
+      tier, qfoto: QFOTO[it.k + '|' + tier] || null, qimg: QIMG[it.k + '|' + tier] ? 'img/q/' + QIMG[it.k + '|' + tier] + '.png' : '', analogia: c.concreta || '', img: IMG[it.k] ? 'img/' + IMG[it.k] + '.png' : '', obj: o, dis: d
     };
   }).filter(b => b.obj && b.dis);
   const out = { aluno: al ? al.nome : nome, perfil, temas: base, minutos: MIN_TOTAL, niveis: NIVEL, blocos };
