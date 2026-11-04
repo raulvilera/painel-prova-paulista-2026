@@ -44,6 +44,11 @@
     { value: '3f-noite', label: '3ª Série F Noite', serie: '3', componentes: ['biologia', 'quimica'] }
   ];
 
+  /* Encerramento (a verificação definitiva é feita no servidor): 3ª Série F Noite, a partir das 23h de 03/11/2026 (Brasília). */
+  const ENCERRA = { '3f-noite': Date.parse('2026-11-03T23:00:00-03:00') };
+  const MSG_ENCERRADA = 'Esta atividade foi encerrada para a 3ª Série F às 23h de 03/11/2026.';
+  function encerrada(valor) { const t = ENCERRA[String(valor || '')]; return typeof t === 'number' && Date.now() >= t; }
+
   const state = {
     assessment: null,
     questions: [],
@@ -85,6 +90,7 @@
     const turma = TURMAS.find((item) => item.value === refs.turma.value);
     clear(refs.nome);
     if (!turma) { option(refs.nome, '', 'Escolha a turma primeiro'); refs.nome.disabled = true; return; }
+    if (encerrada(turma.value)) { option(refs.nome, '', 'Atividade encerrada para esta turma'); refs.nome.disabled = true; return; }
     option(refs.nome, '', 'Carregando a lista de alunos…');
     refs.nome.disabled = true;
     try {
@@ -243,7 +249,7 @@
       return;
     }
 
-    const invalidReason = validateAssessment(assessment);
+    const invalidReason = encerrada(refs.turma.value) ? MSG_ENCERRADA : validateAssessment(assessment);
     const box = element('div');
     const title = element('p', 'resumo-titulo', assessment.titulo || PROVAS[refs.prova.value].label);
     const duration = Number(assessment.duracaoMin);
