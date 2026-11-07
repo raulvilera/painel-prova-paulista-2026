@@ -438,7 +438,7 @@
       mostrarAviso("");
     } catch (e) {
       selNome.innerHTML = '<option value="">Não foi possível carregar</option>';
-      mostrarAviso("Não foi possível carregar a lista de alunos. Recarregue a página.");
+      mostrarAviso("Não foi possível carregar a lista de alunos. " + (e && e.message ? e.message : ""));
     }
   }
 

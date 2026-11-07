@@ -29,9 +29,13 @@ module.exports = async function atividadeQuimica(req, res) {
     const nomes = [...new Set(dados.A.filter(a => idx.has(a[0])).map(a => String(a[2] || '').trim()).filter(Boolean))]
       .sort((a, b) => a.localeCompare(b, 'pt'))
       .map(nome => ({ numero: null, nome }));
-    if (!nomes.length) return erro(404, 'Nenhum aluno da 2ª Série C encontrado.');
+    if (!nomes.length) {
+      // Diagnóstico: só os nomes das turmas (sem dados de alunos), para conferir o nome exato no painel.
+      const turmas = [...new Set(dados.T.map(t => String(t && t.n || '')))].filter(Boolean).sort((a, b) => a.localeCompare(b, 'pt'));
+      return res.status(404).json({ ok: false, erro: 'Nenhum aluno da 2ª Série C encontrado. Turmas no painel: ' + turmas.join(' | '), turmas });
+    }
     return ok({ nomes });
   } catch (e) {
-    return erro(500, 'Falha ao consultar o banco.');
+    return erro(500, 'Falha ao consultar o banco: ' + String(e && e.message || e).slice(0, 160));
   }
 };
