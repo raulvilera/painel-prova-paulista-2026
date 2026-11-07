@@ -52,6 +52,8 @@
     <div>
       <label for="chamada">Nº de chamada</label>
       <input id="chamada" type="text" readonly placeholder="Automático">
+      <label for="data" style="margin-top:12px">Data</label>
+      <input id="data" type="text" readonly>
     </div>
   </section>
 
@@ -317,6 +319,7 @@ function marcar(el) {
 const selTurma = document.getElementById("turma");
 const selNome = document.getElementById("nome");
 const inputChamada = document.getElementById("chamada");
+const inputData = document.getElementById("data");
 
 function limparCampos() {
   inputChamada.value = "";
@@ -324,13 +327,15 @@ function limparCampos() {
 
 function iniciarIdentificacao() {
   document.getElementById("escola").textContent = ESCOLA;
+  // Data preenchida automaticamente com a data de hoje (horário de Brasília)
+  inputData.value = new Date().toLocaleDateString("pt-BR", { timeZone: "America/Sao_Paulo" });
   selTurma.add(new Option("Selecione a turma", ""));
   Object.keys(TURMAS).forEach(t => selTurma.add(new Option(t, t)));
 
   selTurma.addEventListener("change", () => {
     selNome.innerHTML = "";
     selNome.add(new Option("Selecione seu nome", ""));
-    (TURMAS[selTurma.value] || []).forEach((aluno, i) => selNome.add(new Option(aluno.c + " - " + aluno.n, i)));
+    (TURMAS[selTurma.value] || []).forEach((aluno, i) => selNome.add(new Option(aluno.n, i)));
     selNome.disabled = !selTurma.value;
     limparCampos();
   });
