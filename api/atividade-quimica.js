@@ -1,12 +1,8 @@
 /* Nomes dos alunos da 2ª Série C para a atividade de Química (/atividade-quimica-2c/).
-   Lê o painel_dados (id 'main') no servidor, com SUPABASE_SERVICE_KEY, e devolve só nome da turma.
-   Nenhum dado de aluno fica no HTML nem no repositório (LGPD). Variáveis na Vercel: PAINEL_SUPABASE_URL (opcional) e PAINEL_SERVICE_KEY. */
-/* O painel_dados fica no projeto do painel (o mesmo do login), não no projeto de SUPABASE_URL. */
-const SB = (process.env.PAINEL_SUPABASE_URL || 'https://ykrjfjepnqeoqlgupsbe.supabase.co').replace(/\/$/, ''), KEY = process.env.PAINEL_SERVICE_KEY || '';
-
-const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim().toUpperCase();
-/* Turma "2ª SÉRIE C" (com ou sem sufixo de período). */
-const SERIE_C = /^2\s*[ºª°o]?\s*SERIE\s*C\b/;
+   Lê a tabela alunos (chamada e nome) no servidor, com SUPABASE_URL e SUPABASE_SERVICE_KEY, e devolve só a turma pedida.
+   Nenhum dado de aluno fica no HTML nem no repositório (LGPD). */
+const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.env.SUPABASE_SERVICE_KEY || '';
+const TURMA = '2ª Série C';
 
 module.exports = async function atividadeQuimica(req, res) {
   res.setHeader('Cache-Control', 'no-store');
@@ -14,30 +10,20 @@ module.exports = async function atividadeQuimica(req, res) {
   if (req.method !== 'GET') return erro(405, 'Método não permitido.');
   const q = req.query || {};
   if (q.acao !== 'nomes') return erro(400, 'Ação desconhecida.');
-  if (!SB || !KEY) return erro(503, 'Servidor não configurado: falta PAINEL_SERVICE_KEY na Vercel.');
+  if (!SB || !KEY) return erro(503, 'Servidor não configurado (SUPABASE_URL / SUPABASE_SERVICE_KEY).');
 
   try {
-    const r = await fetch(SB + '/rest/v1/painel_dados?select=dados&id=eq.main', {
-      headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, Accept: 'application/json' }
-    });
+    const url = SB + '/rest/v1/alunos?select=chamada,nome&turma=eq.' + encodeURIComponent(TURMA) + '&order=chamada.asc';
+    const r = await fetch(url, { headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, Accept: 'application/json' } });
     if (!r.ok) {
       const corpo = (await r.text()).slice(0, 160).replace(/\s+/g, ' ');
       return erro(502, 'Banco indisponível (HTTP ' + r.status + '): ' + corpo);
     }
     const linhas = await r.json();
-    const dados = linhas && linhas[0] && linhas[0].dados;
-    if (!dados || !Array.isArray(dados.T) || !Array.isArray(dados.A)) return erro(404, 'Dados não encontrados.');
-
-    const idx = new Set();
-    dados.T.forEach((t, i) => { if (SERIE_C.test(norm(t && t.n))) idx.add(i); });
-    const nomes = [...new Set(dados.A.filter(a => idx.has(a[0])).map(a => String(a[2] || '').trim()).filter(Boolean))]
-      .sort((a, b) => a.localeCompare(b, 'pt'))
-      .map(nome => ({ numero: null, nome }));
-    if (!nomes.length) {
-      // Diagnóstico: só os nomes das turmas (sem dados de alunos), para conferir o nome exato no painel.
-      const turmas = [...new Set(dados.T.map(t => String(t && t.n || '')))].filter(Boolean).sort((a, b) => a.localeCompare(b, 'pt'));
-      return res.status(404).json({ ok: false, erro: 'Nenhum aluno da 2ª Série C encontrado. Turmas no painel: ' + turmas.join(' | '), turmas });
-    }
+    const nomes = (linhas || [])
+      .filter(a => a && a.nome)
+      .map(a => ({ numero: a.chamada != null ? a.chamada : null, nome: String(a.nome).trim() }));
+    if (!nomes.length) return erro(404, 'Nenhum aluno encontrado para a turma ' + TURMA + '.');
     return ok({ nomes });
   } catch (e) {
     return erro(500, 'Falha ao consultar o banco: ' + String(e && e.message || e).slice(0, 160));
