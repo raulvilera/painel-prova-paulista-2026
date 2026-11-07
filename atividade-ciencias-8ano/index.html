@@ -215,17 +215,17 @@ const QUESTOES = [
   {
     n: 7, tipo: "objetiva", grupo: 3, habilidade: "EF08CI04 (AE13)",
     enunciado: "Observe a tabela. Em um mês de 30 dias, qual aparelho consome mais energia e qual é a diferença entre os dois consumos? (Energia = potência × tempo)",
-    figura: `<svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
-      <rect x="10" y="10" width="280" height="110" fill="#fff" stroke="#333" stroke-width="2"/>
-      <line x1="10" y1="40" x2="290" y2="40" stroke="#333" stroke-width="2"/>
-      <line x1="10" y1="85" x2="290" y2="85" stroke="#333" stroke-width="2"/>
-      <line x1="150" y1="10" x2="150" y2="120" stroke="#333" stroke-width="2"/>
-      <text x="20" y="32" font-weight="bold">Aparelho</text>
-      <text x="160" y="32" font-weight="bold">Potência e tempo de uso</text>
-      <text x="20" y="70">Ar-condicionado</text>
-      <text x="160" y="70">1000 W · 4 h por dia</text>
-      <text x="20" y="108">Ventilador</text>
-      <text x="160" y="108">100 W · 8 h por dia</text>
+    figura: `<svg viewBox="0 0 340 130" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+      <rect x="10" y="10" width="320" height="110" fill="#fff" stroke="#333" stroke-width="2"/>
+      <line x1="10" y1="40" x2="330" y2="40" stroke="#333" stroke-width="2"/>
+      <line x1="10" y1="85" x2="330" y2="85" stroke="#333" stroke-width="2"/>
+      <line x1="140" y1="10" x2="140" y2="120" stroke="#333" stroke-width="2"/>
+      <text x="22" y="32" font-weight="bold">Aparelho</text>
+      <text x="152" y="32" font-weight="bold">Potência · tempo de uso</text>
+      <text x="22" y="70">Ar-condicionado</text>
+      <text x="152" y="70">1000 W · 4 h por dia</text>
+      <text x="22" y="108">Ventilador</text>
+      <text x="152" y="108">100 W · 8 h por dia</text>
     </svg>`,
     alternativas: [
       "Ventilador, com 24 kWh a mais.",
@@ -250,13 +250,14 @@ const QUESTOES = [
   {
     n: 10, tipo: "dissertativa", grupo: 3, habilidade: "EF08CI04 (AE13)",
     enunciado: "Observe a conta de energia. Considerando o consumo de 320 kWh em um mês com bandeira vermelha, proponha duas ações para reduzir esse consumo e justifique cada uma com base na potência ou no tempo de uso de um aparelho.",
-    figura: `<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="12">
-      <rect x="20" y="10" width="260" height="130" rx="8" fill="#fff" stroke="#333" stroke-width="2"/>
-      <text x="35" y="36" font-weight="bold">Conta de energia – mês de referência</text>
-      <text x="35" y="62">Consumo: 320 kWh</text>
-      <text x="35" y="84">Bandeira tarifária: vermelha</text>
-      <text x="35" y="106">Aparelhos: chuveiro, ar-condicionado, geladeira</text>
-      <text x="35" y="126" font-size="11" fill="#555">Valor a pagar: conforme a tarifa da distribuidora</text>
+    figura: `<svg viewBox="0 0 340 170" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="12">
+      <rect x="10" y="10" width="320" height="150" rx="8" fill="#fff" stroke="#333" stroke-width="2"/>
+      <text x="25" y="36" font-weight="bold">Conta de energia – mês de referência</text>
+      <text x="25" y="62">Consumo: 320 kWh</text>
+      <text x="25" y="84">Bandeira tarifária: vermelha</text>
+      <text x="25" y="106">Aparelhos: chuveiro, ar-condicionado,</text>
+      <text x="25" y="124">geladeira</text>
+      <text x="25" y="146" font-size="11" fill="#555">Valor a pagar: conforme a tarifa da distribuidora</text>
     </svg>`,
     criterios: ["identificar o aparelho de maior potência ou tempo de uso", "propor ação concreta (reduzir tempo do chuveiro, ajustar o ar-condicionado, trocar lâmpadas por LED, eliminar consumo em stand-by)", "relacionar a ação ao cálculo de energia (potência × tempo)"]
   }
