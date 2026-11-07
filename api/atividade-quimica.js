@@ -19,7 +19,10 @@ module.exports = async function atividadeQuimica(req, res) {
     const r = await fetch(SB + '/rest/v1/painel_dados?select=dados&id=eq.main', {
       headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, Accept: 'application/json' }
     });
-    if (!r.ok) return erro(502, 'Banco indisponível.');
+    if (!r.ok) {
+      const corpo = (await r.text()).slice(0, 160).replace(/\s+/g, ' ');
+      return erro(502, 'Banco indisponível (HTTP ' + r.status + '): ' + corpo);
+    }
     const linhas = await r.json();
     const dados = linhas && linhas[0] && linhas[0].dados;
     if (!dados || !Array.isArray(dados.T) || !Array.isArray(dados.A)) return erro(404, 'Dados não encontrados.');
