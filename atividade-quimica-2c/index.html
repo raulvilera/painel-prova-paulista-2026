@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atividade de Química – 2ª Série C – Pilhas, Baterias e Oxirredução</title>
+<style>
+  :root {
+    --azul: #1d4e89;
+    --azul-claro: #e8f0fa;
+    --verde: #1b7f4b;
+    --verde-claro: #e6f5ec;
+    --vermelho: #b3261e;
+    --vermelho-claro: #fbe9e7;
+    --texto: #1f2328;
+    --cinza: #5f6b76;
+    --borda: #d5dde6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--texto);
+    background: #f4f6f9;
+    line-height: 1.55;
+  }
+  header.topo {
+    background: var(--azul);
+    color: #fff;
+    padding: 28px 20px 24px;
+  }
+  header.topo h1 { margin: 0 0 6px; font-size: 1.6rem; }
+  header.topo p { margin: 0; opacity: .92; }
+  main { max-width: 860px; margin: 0 auto; padding: 20px; }
+  .cartao {
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .cartao h2 { margin-top: 0; color: var(--azul); font-size: 1.25rem; }
+  .identificacao { display: grid; grid-template-columns: 2fr .6fr 1fr 1fr; gap: 12px; }
+  .identificacao select {
+    width: 100%; min-height: 56px; padding: 12px 10px; font-size: 1.1rem;
+    border: 1px solid var(--borda); border-radius: 8px; background: #fff;
+  }
+  .identificacao label { display: block; font-size: .9rem; color: var(--cinza); margin-bottom: 4px; }
+  .identificacao input {
+    width: 100%; padding: 10px; font-size: 1rem;
+    border: 1px solid var(--borda); border-radius: 8px;
+  }
+  @media (max-width: 600px) { .identificacao { grid-template-columns: 1fr; } }
+  .orientacoes p { margin: 6px 0; }
+  table.tabela {
+    width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .95rem;
+  }
+  table.tabela th, table.tabela td {
+    border: 1px solid var(--borda); padding: 8px 10px; text-align: left;
+  }
+  table.tabela th { background: var(--azul-claro); }
+  h2.aula {
+    color: var(--azul);
+    border-left: 5px solid var(--azul);
+    padding-left: 12px;
+    margin: 32px 0 14px;
+    font-size: 1.3rem;
+  }
+  article.questao {
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  article.questao figure { margin: 0 0 14px; }
+  article.questao img {
+    width: 100%; height: auto; max-height: 340px; object-fit: cover;
+    border-radius: 8px; display: block; background: #e9edf2;
+  }
+  article.questao figcaption {
+    font-size: .82rem; color: var(--cinza); margin-top: 6px;
+  }
+  .enunciado { margin: 0 0 12px; }
+  ul.alternativas { list-style: none; padding: 0; margin: 0; }
+  ul.alternativas li { margin: 6px 0; }
+  ul.alternativas label {
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 9px 12px; border: 1px solid var(--borda); border-radius: 8px;
+    cursor: pointer; transition: background .15s;
+  }
+  ul.alternativas label:hover { background: #f7f9fc; }
+  ul.alternativas input[type="radio"] { margin-top: 4px; }
+  ul.alternativas label.certa { background: var(--verde-claro); border-color: var(--verde); }
+  ul.alternativas label.errada { background: var(--vermelho-claro); border-color: var(--vermelho); }
+  .acoes { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+  button {
+    font: inherit; cursor: pointer;
+    padding: 10px 16px; border-radius: 8px; border: 1px solid var(--azul);
+    background: var(--azul); color: #fff;
+  }
+  button.secundario { background: #fff; color: var(--azul); }
+  button:disabled { opacity: .5; cursor: not-allowed; }
+  .feedback {
+    margin-top: 12px; padding: 12px 14px; border-radius: 8px; font-size: .95rem;
+  }
+  .feedback.ok { background: var(--verde-claro); border: 1px solid var(--verde); }
+  .feedback.nok { background: var(--vermelho-claro); border: 1px solid var(--vermelho); }
+  .resultado { font-size: 1.1rem; }
+  .nota {
+    font-size: 2.2rem; font-weight: 700; color: var(--azul); margin: 6px 0;
+  }
+  .aviso { color: var(--vermelho); font-weight: 600; min-height: 1.2em; }
+  .creditos { font-size: .85rem; color: var(--cinza); }
+  .creditos a { color: var(--azul); }
+  #login-professor { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--borda); }
+  .linha-login { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+  .linha-login input {
+    flex: 1 1 220px; padding: 10px; font-size: 1rem;
+    border: 1px solid var(--borda); border-radius: 8px;
+  }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <h1>Atividade de Química – 2ª Série C</h1>
+  <p>Pilhas, baterias e oxirredução · 4º bimestre · AE8 (EM13CNT107 e EM13CNT308)</p>
+</header>
+
+<main>
+
+  <section class="cartao">
+    <h2>Identificação</h2>
+    <div class="identificacao">
+      <div>
+        <label for="nome">Nome do aluno</label>
+        <select id="nome" disabled>
+          <option value="">Carregando lista…</option>
+        </select>
+      </div>
+      <div>
+        <label for="numero">Número</label>
+        <input id="numero" type="text" readonly placeholder="—">
+      </div>
+      <div>
+        <label for="turma">Turma</label>
+        <input id="turma" type="text" value="2ª C" readonly>
+      </div>
+      <div>
+        <label for="data">Data</label>
+        <input id="data" type="date" value="">
+      </div>
+    </div>
+    <p class="aviso" id="aviso-nome"></p>
+  </section>
+
+  <section class="cartao orientacoes">
+    <h2>Orientações</h2>
+    <p>Esta atividade tem <strong>10 questões</strong> no estilo ENEM, divididas em três aulas. Cada questão tem cinco alternativas, e apenas uma está correta.</p>
+    <p>Escolha uma alternativa e clique em <strong>Corrigir</strong> para ver o resultado e a explicação. Ao final, clique em <strong>Finalizar atividade</strong> para ver sua nota.</p>
+    <table class="tabela">
+      <thead>
+        <tr><th>Aula</th><th>Conteúdo</th><th>Questões</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>História e evolução das pilhas e baterias</td><td>1 a 3</td></tr>
+        <tr><td>2</td><td>Processos eletroquímicos</td><td>4 a 6</td></tr>
+        <tr><td>3</td><td>Oxirredução e condução de energia</td><td>7 a 10</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============ AULA 1 ============ -->
+  <h2 class="aula">Aula 1 – História e evolução das pilhas e baterias</h2>
+
+  <article class="questao" data-numero="1" data-correta="B"
+           data-explicacao="A pilha converte energia química, liberada em reações de oxirredução, em energia elétrica. Por isso, a alternativa correta é a B.">
+    <figure>
+      <img src="https://images.unsplash.com/photo-1574087631700-abf928509b80?w=900&amp;q=70&amp;fm=jpg&amp;fit=max"
+           alt="Dínamo multipolar de Edison, gravura histórica">
+      <figcaption>Dínamo multipolar de Edison, gravura histórica. Foto: British Library, no Unsplash.</figcaption>
+    </figure>
+    <p class="enunciado"><strong>Questão 1.</strong> Em 1800, Alessandro Volta empilhou discos de zinco e de prata, separados por papelão embebido em solução salina. O dispositivo produziu a primeira fonte contínua de corrente elétrica e deu origem às pilhas. Nesse dispositivo, a energia convertida em energia elétrica tem origem:</p>
+    <ul class="alternativas">
+      <li><label><input type="radio" name="q1" value="A"><span>A) nuclear.</span></label></li>
+      <li><label><input type="radio" name="q1" value="B"><span>B) química.</span></label></li>
+      <li><label><input type="radio" name="q1" value="C"><span>C) luminosa.</span></label></li>
+      <li><label><input type="radio" name="q1" value="D"><span>D) mecânica.</span></label></li>
+      <li><label><input type="radio" name="q1" value="E"><span>E) térmica.</span></label></li>
+    </ul>
+    <div class="acoes"><button class="corrigir" data-q="1">Corrigir</button></div>
+    <div class="feedback" hidden></div>
+  </article>
+
+  <article class="questao" data-numero="2" data-correta="B"
+           data-explicacao="Metais pesados como mercúrio, cádmio e chumbo não se degradam e contaminam solo e água. A logística reversa devolve esses produtos para tratamento adequado. Por isso, a alternativa correta é a B.">
+    <figure>
+      <img src="https://images.unsplash.com/photo-1619641805634-b867f535071c?w=900&amp;q=70&amp;fm=jpg&amp;fit=max"
+           alt="Pilhas e baterias usadas, reunidas para descarte">
+      <figcaption>Pilhas e baterias usadas, reunidas para descarte. Foto: Roberto Sorin, no Unsplash.</figcaption>
+    </figure>
+    <p class="enunciado"><strong>Questão 2.</strong> Pilhas e baterias descartadas no lixo comum podem liberar metais como mercúrio, cádmio e chumbo, que contaminam o solo e a água. A logística reversa devolve esses produtos a fabricantes ou pontos de coleta. A principal justificativa ambiental para essa prática é:</p>
+    <ul class="alternativas">
+      <li><label><input type="radio" name="q2" value="A"><span>A) aumentar a produção de energia química nas cidades.</span></label></li>
+      <li><label><input type="radio" name="q2" value="B"><span>B) impedir a contaminação do solo e da água por metais pesados.</span></label></li>
+      <li><label><input type="radio" name="q2" value="C"><span>C) eliminar a necessidade de reciclagem dos metais.</span></label></li>
+      <li><label><input type="radio" name="q2" value="D"><span>D) reduzir o consumo de energia elétrica nas residências.</span></label></li>
+      <li><label><input type="radio" name="q2" value="E"><span>E) transformar as pilhas em combustível para veículos.</span></label></li>
+    </ul>
+    <div class="acoes"><button class="corrigir" data-q="2">Corrigir</button></div>
+    <div class="feedback" hidden></div>
+  </article>
+
+  <article class="questao" data-numero="3" data-correta="A"
+           data-explicacao="Ordem cronológica: 1800 (pilha de Volta), 1859 (bateria de chumbo-ácido), 1866 (pilha seca de Leclanché) e 1991 (bateria de íon-lítio comercial). Por isso, a alternativa correta é a A.">
+    <p class="enunciado"><strong>Questão 3.</strong> Observe a sequência de quatro eventos da história das pilhas e baterias:</p>
+    <p>I. Pilha de Volta, em 1800.<br>
+       II. Bateria de chumbo-ácido, em 1859.<br>
+       III. Pilha seca de Leclanché, em 1866.<br>
+       IV. Bateria de íon-lítio comercial, em 1991.</p>
+    <p class="enunciado">A ordem cronológica correta desses eventos é:</p>
+    <ul class="alternativas">
+      <li><label><input type="radio" name="q3" value="A"><span>A) I, II, III, IV.</span></label></li>
+      <li><label><input type="radio" name="q3" value="B"><span>B) I, III, II, IV.</span></label></li>
+      <li><label><input type="radio" name="q3" value="C"><span>C) II, I, III, IV.</span></label></li>
+      <li><label><input type="radio" name="q3" value="D"><span>D) IV, I, II, III.</span></label></li>
+      <li><label><input type="radio" name="q3" value="E"><span>E) I, IV, II, III.</span></label></li>
+    </ul>
+    <div class="acoes"><button class="corrigir" data-q="3">Corrigir</button></div>
+    <div class="feedback" hidden></div>
+  </article>
+
+  <!-- ============ AULA 2 ============ -->
+  <h2 class="aula">Aula 2 – Processos eletroquímicos</h2>
+
+  <section class="cartao">
+    <p><strong>Tabela de potenciais-padrão de redução (25 °C)</strong></p>
+    <table class="tabela">
+      <thead>
+        <tr><th>Semirreação de redução</th><th>E° (V)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Zn²⁺ + 2 e⁻ → Zn(s)</td><td>−0,76</td></tr>
+        <tr><td>Cu²⁺ + 2 e⁻ → Cu(s)</td><td>+0,34</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <article class="questao" data-numero="4" data-correta="B"
+           data-explicacao="O zinco é o ânodo, pois sofre oxidação (Zn → Zn²⁺ + 2 e⁻). Os elétrons percorrem o circuito externo até o cobre, que é o cátodo. Por isso, a alternativa correta é a B.">
+    <figure>
+      <img src="https://images.unsplash.com/photo-1704131809595-936882d7a25d?w=900&amp;q=70&amp;fm=jpg&amp;fit=max"
+           alt="Fatias de limão sobre fundo azul">
+      <figcaption>Limões, usados na montagem de uma pilha caseira. Foto: Sophie Popplewell, no Unsplash.</figcaption>
+    </figure>
+    <p class="enunciado"><strong>Questão 4.</strong> Uma pilha de limão é montada com um eletrodo de zinco e outro de cobre inseridos na fruta. Sobre o funcionamento dessa pilha, é correto afirmar que:</p>
+    <ul class="alternativas">
+      <li><label><input type="radio" name="q4" value="A"><span>A) o cobre sofre oxidação e atua como ânodo.</span></label></li>
+      <li><label><input type="radio" name="q4" value="B"><span>B) o zinco sofre oxidação, e os elétrons fluem do zinco para o cobre pelo circuito externo.</span></label></li>
+      <li><label><input type="radio" name="q4" value="C"><span>C) os elétrons fluem do cobre para o zinco pelo circuito externo.</span></label></li>
+      <li><label><input type="radio" name="q4" value="D"><span>D) o zinco sofre redução e atua como cátodo.</span></label></li>
+      <li><label><input type="radio" name="q4" value="E"><span>E) a reação é não espontânea, e a pilha só gera corrente com energia externa.</span></label></li>
+    </ul>
+    <div class="acoes"><button class="corrigir" data-q="4">Corrigir</button></div>
+    <div class="feedback" hidden></div>
+  </article>
+
+  <article class="questao" data-numero="5" data-correta="C"
+           data-explicacao="ddp = E°(cátodo) − E°(ânodo) = (+0,34) − (−0,76) = +1,10 V. Por isso, a alternativa correta é a C.">
+    <p class="enunciado"><strong>Questão 5.</strong> Com base na tabela de potenciais-padrão, a diferença de potencial de uma pilha formada por zinco e cobre, nas condições-padrão, é:</p>
+    <ul class="alternativas">
+      <li><label><input type="radio" name="q5" value="A"><span>A) 0,42 V</span></label></li>
+      <li><label><input type="radio" name="q5" value="B"><span>B) 0,76 V</span></label></li>
+      <li><label><input type="radio" name="q5" value="C"><span>C) 1,10 V</span></label></li>
+      <li><label><input type="radio" name="q5" value="D"><span>D) 1,44 V</span></label></li>
+      <li><label><input type="radio" name="q5" value="E"><span>E) 0,34 V</span></label></li>
+    </ul>
+    <div class="acoes"><button class="corrigir" data-q="5">Corrigir</button></div>
+    <div class="feedback" hidden></div>
+  </article>
+
+  <article class="questao" data-numero="6" data-correta="A"
+           data-explicacao="O zinco se oxida (Zn → Zn²⁺) e o Cu²⁺ se reduz (Cu²⁺ → Cu). Somando as semirreações, a reação global espontânea é Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s). Por isso, a alternativa correta é a A.">
+    <p class="enunciado"><strong>Questão 6.</strong> Em uma pilha de zinco e cobre, em condições-padrão, a reação global espontânea é:</p>
+    <ul class="alternativas">
+      <li><label><input type="radio" name="q6" value="A"><span>A) Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s)</span></label></li>
+      <li><label><input type="radio" name="q6" value="B"><span>B) Cu(s) + Zn²⁺(aq) → Cu²⁺(aq) + Zn(s)</span></label></li>
+      <li><label><input type="radio" name="q6" value="C"><span>C) Zn(s) + Cu(s) → Zn²⁺(aq) + Cu²⁺(aq)</span></label></li>
+      <li><label><input type="radio" name="q6" value="D"><span>D) Zn²⁺(aq) + Cu²⁺(aq) → Zn(s) + Cu(s)</span></label></li>
+      <li><label><input type="radio" name="q6" value="E"><span>E) Cu(s) + 2 e⁻ → Cu²⁺(aq)</span></label></li>
+    </ul>
+    <div class="acoes"><button class="corrigir" data-q="6">Corrigir</button></div>
+    <div class="feedback" hidden></div>
+  </article>
+
+  <!-- ============ AULA 3 ============ -->
+  <h2 class="aula">Aula 3 – Oxirredução e condução de energia</h2>
+
+  <article class="questao" data-numero="7" data-correta="C"
+           data-explicacao="Zn: 0 → +2 (oxidação), logo é o agente redutor. Mn: +4 → +3 (redução), logo o MnO₂ é o agente oxidante. Por isso, a alternativa correta é a C.">
+    <figure>
+      <img src="https://images.unsplash.com/photo-1597184119205-139c15045376?w=900&amp;q=70&amp;fm=jpg&amp;fit=max"
+           alt="Metal enferrujado, exemplo de oxidação">
+      <figcaption>Metal enferrujado, exemplo de oxidação. Foto: Pablo Martinez, no Unsplash.</figcaption>
+    </figure>
+    <p class="enunciado"><strong>Questão 7.</strong> A pilha seca de Leclanché pode ser representada, de forma simplificada, pela equação:</p>
+    <p class="enunciado" style="text-align:center;font-family:Georgia,serif;">Zn(s) + 2 MnO₂(s) + 2 NH₄⁺(aq) → Zn²⁺(aq) + Mn₂O₃(s) + 2 NH₃(aq) + H₂O(ℓ)</p>
+    <p class="enunciado">Nessa reação, o número de oxidação do zinco passa de 0 para +2, e o do manganês passa de +4 para +3. Assinale a afirmativa correta.</p>
+    <ul class="alternativas">
+      <li><label><input type="radio" name="q7" value="A"><span>A) O zinco é agente oxidante, pois seu número de oxidação diminui.</span></label></li>
+      <li><label><input type="radio" name="q7" value="B"><span>B) O MnO₂ é agente redutor, pois o manganês perde elétrons.</span></label></li>
+      <li><label><input type="radio" name="q7" value="C"><span>C) O zinco é agente redutor, pois sofre oxidação, e o MnO₂ é agente oxidante.</span></label></li>
+      <li><label><input type="radio" name="q7" value="D"><span>D) O MnO₂ sofre oxidação, pois o número de oxidação do manganês aumenta.</span></label></li>
+      <li><label><input type="radio" name="q7" value="E"><span>E) O NH₄⁺ é o agente redutor, pois recebe elétrons.</span></label></li>
+    </ul>
+    <div class="acoes"><button class="corrigir" data-q="7">Corrigir</button></div>
+    <div class="feedback" hidden></div>
+  </article>
+
+  <article class="questao" data-numero="8" data-correta="B"
+           data-explicacao="O NaCl dissolvido se dissocia em íons Na⁺ e Cl⁻, que se movem e transportam carga. A água destilada tem poucos íons, por isso conduz pouco. Por isso, a alternativa correta é a B.">
+    <p class="enunciado"><strong>Questão 8.</strong> Uma solução aquosa de cloreto de sódio conduz corrente elétrica, enquanto a água destilada praticamente não conduz. A explicação para essa diferença é:</p>
+    <ul class="alternativas">
+      <li><label><input type="radio" name="q8" value="A"><span>A) o NaCl libera elétrons livres na solução.</span></label></li>
+      <li><label><input type="radio" name="q8" value="B"><span>B) o NaCl se dissocia em íons Na⁺ e Cl⁻ móveis, que transportam carga elétrica.</span></label></li>
+      <li><label><input type="radio" name="q8" value="C"><span>C) a água destilada possui mais elétrons que a solução de NaCl.</span></label></li>
+      <li><label><input type="radio" name="q8" value="D"><span>D) o NaCl forma uma camada isolante que impede a passagem da corrente.</span></label></li>
+      <li><label><input type="radio" name="q8" value="E"><span>E) a dissolução transforma o NaCl em um metal condutor.</span></label></li>
+    </ul>
+    <div class="acoes"><button class="corrigir" data-q="8">Corrigir</button></div>
+    <div class="feedback" hidden></div>
+  </article>
+
+  <article class="questao" data-numero="9" data-correta="B"
+           data-explicacao="Na recarga, a energia elétrica da rede força uma reação que não é espontânea. Baterias de íon-lítio são recarregáveis, por isso a alternativa D está errada. Por isso, a alternativa correta é a B.">
+    <figure>
+      <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=900&amp;q=70&amp;fm=jpg&amp;fit=max"
+           alt="Carregador conectado a um veículo elétrico">
+      <figcaption>Carregador conectado a um veículo elétrico. Foto: CHUTTERSNAP, no Unsplash.</figcaption>
+    </figure>
+    <p class="enunciado"><strong>Questão 9.</strong> Um veículo elétrico é recarregado em um carregador ligado à rede. Durante a recarga, a energia elétrica é convertida em energia química armazenada na bateria. Nesse processo, a reação química da bateria é:</p>
+    <ul class="alternativas">
+      <li><label><input type="radio" name="q9" value="A"><span>A) espontânea, pois a bateria libera energia ao ser ligada à rede.</span></label></li>
+      <li><label><input type="radio" name="q9" value="B"><span>B) não espontânea, pois exige o fornecimento de energia elétrica externa.</span></label></li>
+      <li><label><input type="radio" name="q9" value="C"><span>C) espontânea, pois é a mesma reação da descarga.</span></label></li>
+      <li><label><input type="radio" name="q9" value="D"><span>D) impossível, pois as baterias de íon-lítio não são reversíveis.</span></label></li>
+      <li><label><input type="radio" name="q9" value="E"><span>E) nuclear, pois a energia armazenada tem origem radioativa.</span></label></li>
+    </ul>
+    <div class="acoes"><button class="corrigir" data-q="9">Corrigir</button></div>
+    <div class="feedback" hidden></div>
+  </article>
+
+  <article class="questao" data-numero="10" data-correta="B"
+           data-explicacao="Sem a ponte salina, o circuito iônico se rompe. Sem ele, a corrente cessa e a diferença de potencial cai a zero. Por isso, a alternativa correta é a B.">
+    <p class="enunciado"><strong>Questão 10.</strong> Em uma pilha de Daniell, a ponte salina contém um eletrólito e fecha o circuito interno da pilha. Se a ponte salina for retirada, o que ocorre?</p>
+    <ul class="alternativas">
+      <li><label><input type="radio" name="q10" value="A"><span>A) A diferença de potencial da pilha aumenta.</span></label></li>
+      <li><label><input type="radio" name="q10" value="B"><span>B) O circuito interno deixa de ser fechado, a corrente cessa e a diferença de potencial cai a zero.</span></label></li>
+      <li><label><input type="radio" name="q10" value="C"><span>C) O zinco deixa de reagir, e o cobre passa a ser o ânodo permanentemente.</span></label></li>
+      <li><label><input type="radio" name="q10" value="D"><span>D) Os elétrons passam a fluir pela própria ponte salina.</span></label></li>
+      <li><label><input type="radio" name="q10" value="E"><span>E) A reação torna-se nuclear.</span></label></li>
+    </ul>
+    <div class="acoes"><button class="corrigir" data-q="10">Corrigir</button></div>
+    <div class="feedback" hidden></div>
+  </article>
+
+  <!-- ============ FINALIZAÇÃO ============ -->
+  <section class="cartao" id="final">
+    <h2>Finalizar atividade</h2>
+    <p>Ao finalizar, sua nota será calculada com base nas alternativas marcadas. Você pode copiar o resultado para enviar ao professor.</p>
+    <div class="acoes">
+      <button id="finalizar">Finalizar atividade</button>
+      <button id="reiniciar" class="secundario">Recomeçar</button>
+    </div>
+    <p class="aviso" id="aviso-final"></p>
+    <div id="resultado" hidden>
+      <p class="resultado">Nota final:</p>
+      <p class="nota" id="nota-final"></p>
+      <p id="detalhe-aulas"></p>
+      <div class="acoes">
+        <button id="copiar" class="secundario">Copiar resultado</button>
+      </div>
+      <p id="status-copia" class="creditos"></p>
+    </div>
+  </section>
+
+  <section class="cartao creditos">
+    <p><strong>Fonte curricular:</strong> Guia Priorizado de Química, Ensino Médio, 2ª série, 4º bimestre, AE8 (habilidades EM13CNT107 e EM13CNT308), Secretaria da Educação do Estado de São Paulo.</p>
+    <p><strong>Imagens:</strong> fotos do Unsplash, com os autores indicados nas legendas. Dínamo de Edison: British Library. Limões: Sophie Popplewell. Pilhas usadas: Roberto Sorin. Metal enferrujado: Pablo Martinez. Carregador de veículo elétrico: CHUTTERSNAP.</p>
+  </section>
+
+</main>
+
+<script>
+  // ===== CONFIGURAÇÃO =====
+  // Opcional: cole aqui a URL de um Google Apps Script publicado como Web App.
+  // Se ficar vazio, a página apenas mostra e copia o resultado.
+  const URL_PLANILHA = "";
+
+  // ===== NOMES DOS ALUNOS (banco do painel, via /api/atividade-quimica) =====
+  // O servidor lê a lista no banco e devolve só nome. Nenhum dado de aluno fica no arquivo.
+  const selNome = document.getElementById("nome");
+  const avisoLogin = document.getElementById("aviso-login");
+
+  function mostrarAviso(msg) {
+    avisoLogin.textContent = msg;
+  }
+
+  function preencherNomes(lista) {
+    selNome.innerHTML = '<option value="">Selecione seu nome</option>';
+    for (const a of lista) {
+      const opt = document.createElement("option");
+      opt.value = a.nome;
+      opt.textContent = a.nome;
+      if (a.numero != null) opt.dataset.numero = a.numero;
+      selNome.appendChild(opt);
+    }
+    selNome.disabled = false;
+    document.getElementById("numero").value = "";
+  }
+
+  // Ao escolher o nome, mostra o número do aluno no campo ao lado (quando o banco tiver o número).
+  selNome.addEventListener("change", () => {
+    const op = selNome.selectedOptions[0];
+    document.getElementById("numero").value = op && op.dataset.numero ? op.dataset.numero : "";
+  });
+
+  async function carregarAlunos() {
+    selNome.disabled = true;
+    selNome.innerHTML = '<option value="">Carregando lista…</option>';
+    try {
+      const r = await fetch("/api/atividade-quimica?acao=nomes", { cache: "no-store" });
+      const j = await r.json();
+      if (!r.ok || !j.ok || !j.nomes || j.nomes.length === 0) throw new Error(j.erro || "lista vazia");
+      preencherNomes(j.nomes);
+      mostrarAviso("");
+    } catch (e) {
+      selNome.innerHTML = '<option value="">Não foi possível carregar</option>';
+      mostrarAviso("Não foi possível carregar a lista de alunos. Recarregue a página.");
+    }
+  }
+
+  // Preenche a data com o dia de hoje (horário local).
+  (function preencherData() {
+    const agora = new Date();
+    const local = new Date(agora.getTime() - agora.getTimezoneOffset() * 60000);
+    document.getElementById("data").value = local.toISOString().slice(0, 10);
+  })();
+
+  // Carrega a lista ao abrir a página.
+  carregarAlunos();
+
+  const TOTAL = 10;
+  const POR_AULA = { "Aula 1": [1, 2, 3], "Aula 2": [4, 5, 6], "Aula 3": [7, 8, 9, 10] };
+
+  function artigo(n) {
+    return document.querySelector('article.questao[data-numero="' + n + '"]');
+  }
+
+  function marcada(n) {
+    const sel = document.querySelector('input[name="q' + n + '"]:checked');
+    return sel ? sel.value : null;
+  }
+
+  function limparDestaque(n) {
+    const art = artigo(n);
+    art.querySelectorAll("label").forEach(l => l.classList.remove("certa", "errada"));
+    const fb = art.querySelector(".feedback");
+    fb.hidden = true;
+    fb.className = "feedback";
+    fb.textContent = "";
+  }
+
+  function corrigir(n) {
+    const art = artigo(n);
+    const correta = art.dataset.correta;
+    const escolhida = marcada(n);
+    const fb = art.querySelector(".feedback");
+    limparDestaque(n);
+
+    if (!escolhida) {
+      fb.hidden = false;
+      fb.classList.add("nok");
+      fb.textContent = "Escolha uma alternativa antes de corrigir.";
+      return;
+    }
+
+    art.querySelectorAll('input[name="q' + n + '"]').forEach(input => {
+      const label = input.closest("label");
+      if (input.value === correta) label.classList.add("certa");
+      if (input.value === escolhida && escolhida !== correta) label.classList.add("errada");
+    });
+
+    fb.hidden = false;
+    if (escolhida === correta) {
+      fb.classList.add("ok");
+      fb.innerHTML = "<strong>Correto!</strong> " + art.dataset.explicacao;
+    } else {
+      fb.classList.add("nok");
+      fb.innerHTML = "<strong>Não foi desta vez.</strong> A resposta correta é a " + correta + ". " + art.dataset.explicacao;
+    }
+  }
+
+  document.querySelectorAll("button.corrigir").forEach(btn => {
+    btn.addEventListener("click", () => corrigir(Number(btn.dataset.q)));
+  });
+
+  function nomeValido() {
+    return document.getElementById("nome").value.trim().length >= 3;
+  }
+
+  function calcularResultado() {
+    let acertos = 0;
+    const porAula = {};
+    for (const aula in POR_AULA) {
+      porAula[aula] = { acertos: 0, total: POR_AULA[aula].length };
+    }
+    for (let n = 1; n <= TOTAL; n++) {
+      const correta = artigo(n).dataset.correta;
+      const ok = marcada(n) === correta;
+      if (ok) acertos++;
+      for (const aula in POR_AULA) {
+        if (POR_AULA[aula].includes(n) && ok) porAula[aula].acertos++;
+      }
+    }
+    const nota = (acertos / TOTAL) * 10;
+    return { acertos, nota, porAula };
+  }
+
+  function textoResultado(r, nome, turma, data) {
+    const linhas = [
+      "Atividade de Química – Pilhas, Baterias e Oxirredução",
+      "Aluno(a): " + nome,
+      "Turma: " + turma,
+      "Data: " + (data || "não informada"),
+      "Acertos: " + r.acertos + " de " + TOTAL,
+      "Nota: " + r.nota.toFixed(1).replace(".", ",")
+    ];
+    for (const aula in r.porAula) {
+      const a = r.porAula[aula];
+      linhas.push(aula + ": " + a.acertos + " de " + a.total);
+    }
+    return linhas.join("\n");
+  }
+
+  let ultimoTexto = "";
+
+  document.getElementById("finalizar").addEventListener("click", () => {
+    const aviso = document.getElementById("aviso-final");
+    const avisoNome = document.getElementById("aviso-nome");
+    if (!nomeValido()) {
+      avisoNome.textContent = "Selecione seu nome na lista para finalizar.";
+      avisoNome.scrollIntoView({ behavior: "smooth", block: "center" });
+      aviso.textContent = "";
+      return;
+    }
+    avisoNome.textContent = "";
+    const r = calcularResultado();
+    const nome = document.getElementById("nome").value.trim();
+    const turma = document.getElementById("turma").value;
+    const data = document.getElementById("data").value;
+
+    document.getElementById("nota-final").textContent = r.nota.toFixed(1).replace(".", ",") + " / 10";
+    const det = Object.entries(r.porAula)
+      .map(([aula, a]) => aula + ": " + a.acertos + "/" + a.total)
+      .join(" · ");
+    document.getElementById("detalhe-aulas").textContent = "Acertos por aula – " + det + ".";
+    document.getElementById("resultado").hidden = false;
+    ultimoTexto = textoResultado(r, nome, turma, data);
+
+    if (URL_PLANILHA) {
+      fetch(URL_PLANILHA, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({ nome, turma, data, acertos: r.acertos, nota: r.nota, porAula: r.porAula })
+      }).then(() => {
+        aviso.textContent = "Resultado enviado ao professor.";
+      }).catch(() => {
+        aviso.textContent = "Não foi possível enviar. Copie o resultado e envie ao professor.";
+      });
+    } else {
+      aviso.textContent = "Resultado pronto. Clique em Copiar resultado para enviá-lo ao professor.";
+    }
+    document.getElementById("resultado").scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+
+  document.getElementById("copiar").addEventListener("click", async () => {
+    const status = document.getElementById("status-copia");
+    try {
+      await navigator.clipboard.writeText(ultimoTexto);
+      status.textContent = "Resultado copiado.";
+    } catch (e) {
+      // Plano B quando a área de transferência não está disponível.
+      const area = document.createElement("textarea");
+      area.value = ultimoTexto;
+      document.body.appendChild(area);
+      area.select();
+      let ok = false;
+      try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
+      area.remove();
+      status.textContent = ok ? "Resultado copiado." : "Não foi possível copiar. Selecione o texto manualmente.";
+    }
+  });
+
+  document.getElementById("reiniciar").addEventListener("click", () => {
+    if (!window.confirm || window.confirm("Apagar todas as respostas e recomeçar?")) {
+      for (let n = 1; n <= TOTAL; n++) {
+        document.querySelectorAll('input[name="q' + n + '"]').forEach(i => i.checked = false);
+        limparDestaque(n);
+      }
+      document.getElementById("resultado").hidden = true;
+      document.getElementById("aviso-final").textContent = "";
+      ultimoTexto = "";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+</script>
+</body>
+</html>
