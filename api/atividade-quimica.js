@@ -1,7 +1,8 @@
 /* Nomes dos alunos da 2ª Série C para a atividade de Química (/atividade-quimica-2c/).
    Lê o painel_dados (id 'main') no servidor, com SUPABASE_SERVICE_KEY, e devolve só nome da turma.
-   Nenhum dado de aluno fica no HTML nem no repositório (LGPD). Variáveis na Vercel: SUPABASE_URL, SUPABASE_SERVICE_KEY. */
-const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.env.SUPABASE_SERVICE_KEY || '';
+   Nenhum dado de aluno fica no HTML nem no repositório (LGPD). Variáveis na Vercel: PAINEL_SUPABASE_URL (opcional) e PAINEL_SERVICE_KEY. */
+/* O painel_dados fica no projeto do painel (o mesmo do login), não no projeto de SUPABASE_URL. */
+const SB = (process.env.PAINEL_SUPABASE_URL || 'https://ykrjfjepnqeoqlgupsbe.supabase.co').replace(/\/$/, ''), KEY = process.env.PAINEL_SERVICE_KEY || '';
 
 const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim().toUpperCase();
 /* Turma "2ª SÉRIE C" (com ou sem sufixo de período). */
@@ -13,7 +14,7 @@ module.exports = async function atividadeQuimica(req, res) {
   if (req.method !== 'GET') return erro(405, 'Método não permitido.');
   const q = req.query || {};
   if (q.acao !== 'nomes') return erro(400, 'Ação desconhecida.');
-  if (!SB || !KEY) return erro(503, 'Servidor não configurado (SUPABASE_URL / SUPABASE_SERVICE_KEY).');
+  if (!SB || !KEY) return erro(503, 'Servidor não configurado: falta PAINEL_SERVICE_KEY na Vercel.');
 
   try {
     const r = await fetch(SB + '/rest/v1/painel_dados?select=dados&id=eq.main', {
