@@ -72,7 +72,8 @@
 const ESCOLA = "E. E. PROFª WANDA MASCAGNI DE SÁ";
 
 // Cole aqui a URL do Web App publicado no Google Apps Script
-const URL_APPS_SCRIPT = "COLE_AQUI_A_URL_DO_WEB_APP";
+// Respostas gravadas no banco pelo endpoint do próprio site (api/atividade-ciencias.js)
+const URL_ENVIO = "/api/atividade-ciencias";
 
 // Alunos por turma (nº de chamada e nome), extraídos das listas de chamada da escola.
 // O aluno digita o próprio RA.
@@ -382,13 +383,13 @@ btn.addEventListener("click", async () => {
   msg.textContent = "Enviando...";
 
   try {
-    // no-cors: o navegador não consegue ler a resposta do Apps Script, então a confirmação é de envio
-    await fetch(URL_APPS_SCRIPT, {
+    const resp = await fetch(URL_ENVIO, {
       method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
     });
+    const dados = await resp.json().catch(() => ({}));
+    if (!resp.ok || !dados.ok) throw new Error(dados.erro || "falha");
     msg.style.color = "#145A32";
     msg.textContent = "Respostas enviadas. Obrigado!";
   } catch (erro) {
