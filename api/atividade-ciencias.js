@@ -19,7 +19,6 @@ module.exports = async function handler(req, res) {
   const turma = String(d.turma || '');
   const nome = String(d.nome || '').trim().slice(0, 120);
   const chamada = parseInt(d.chamada, 10);
-  const ra = String(d.ra || '').trim().slice(0, 20);
   if (!TURMAS.includes(turma) || !nome || !(chamada >= 1 && chamada <= 60)) {
     res.statusCode = 400; return res.end(JSON.stringify({ ok: false, erro: 'turma, chamada ou nome inválidos' }));
   }
@@ -34,7 +33,7 @@ module.exports = async function handler(req, res) {
   const dissertativas = {};
   for (const q of [8, 9, 10]) dissertativas[q] = String((d.dissertativas || {})[q] || '').slice(0, 2000);
 
-  const linha = { escola: ESCOLA, turma, chamada, nome, ra, respostas, dissertativas, acertos, total_objetivas: 7 };
+  const linha = { escola: ESCOLA, turma, chamada, nome, respostas, dissertativas, acertos, total_objetivas: 7 };
   try {
     const r = await fetch(SB + '/rest/v1/atividade_ciencias_respostas', {
       method: 'POST',

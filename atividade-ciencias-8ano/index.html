@@ -53,10 +53,6 @@
       <label for="chamada">Nº de chamada</label>
       <input id="chamada" type="text" readonly placeholder="Automático">
     </div>
-    <div>
-      <label for="ra">RA</label>
-      <input id="ra" type="text" placeholder="Digite seu RA">
-    </div>
   </section>
 
   <div id="questoes"></div>
@@ -76,7 +72,6 @@ const ESCOLA = "E. E. PROFª WANDA MASCAGNI DE SÁ";
 const URL_ENVIO = "/api/atividade-ciencias";
 
 // Alunos por turma (nº de chamada e nome), extraídos das listas de chamada da escola.
-// O aluno digita o próprio RA.
 const TURMAS = {
   "8º Ano A": [
     {c: 1, n: "ALICE CARDOSO DE ALCANTARA"},
@@ -320,12 +315,10 @@ function marcar(el) {
 // ============================================================
 const selTurma = document.getElementById("turma");
 const selNome = document.getElementById("nome");
-const inputRA = document.getElementById("ra");
 const inputChamada = document.getElementById("chamada");
 
 function limparCampos() {
   inputChamada.value = "";
-  inputRA.value = "";
 }
 
 function iniciarIdentificacao() {
@@ -359,7 +352,6 @@ btn.addEventListener("click", async () => {
   const aluno = (TURMAS[turma] || [])[parseInt(selNome.value, 10)];
   const nome = aluno ? aluno.n : "";
   const chamada = inputChamada.value;
-  const ra = inputRA.value;
 
   if (!turma || !nome) {
     msg.style.color = "#B00020";
@@ -376,7 +368,7 @@ btn.addEventListener("click", async () => {
     dissertativas[q.n] = el ? el.value.trim() : "";
   });
 
-  const payload = { escola: ESCOLA, turma, chamada, nome, ra, respostas, dissertativas };
+  const payload = { escola: ESCOLA, turma, chamada, nome, respostas, dissertativas };
 
   btn.disabled = true;
   msg.style.color = "#1f3b57";
