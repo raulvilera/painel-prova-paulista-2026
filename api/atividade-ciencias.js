@@ -33,7 +33,8 @@ module.exports = async function handler(req, res) {
   const dissertativas = {};
   for (const q of [8, 9, 10]) dissertativas[q] = String((d.dissertativas || {})[q] || '').slice(0, 2000);
 
-  const linha = { escola: ESCOLA, turma, chamada, nome, respostas, dissertativas, acertos, total_objetivas: 7 };
+  const idioma = d.idioma === 'ru' ? 'ru' : 'pt';
+  const linha = { escola: ESCOLA, turma, chamada, nome, idioma, respostas, dissertativas, acertos, total_objetivas: 7 };
   try {
     const r = await fetch(SB + '/rest/v1/atividade_ciencias_respostas', {
       method: 'POST',

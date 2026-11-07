@@ -36,7 +36,7 @@
 
 <header>
   <h1 id="escola"></h1>
-  <p>Ciências · 8º Ano · 4º Bimestre · Circuitos elétricos, consumo e segurança</p>
+  <p id="subtitulo">Ciências · 8º Ano · 4º Bimestre · Circuitos elétricos, consumo e segurança</p>
 </header>
 
 <main>
@@ -273,27 +273,141 @@ const estado = {};
 // Questões que exigem resolução: recebem área de cálculos (rascunho, não é enviado)
 const CALCULO = [4, 5, 6, 7];
 
+// ============================================================
+// IDIOMA: a aluna Zlata (8º Ano A) vê a atividade sempre em russo
+// ============================================================
+const ALUNA_RUSSO = { turma: "8º Ano A", nome: "ZLATA EVGENIEVNA SAFOROVA" };
+let idioma = "pt";
+
+const I18N = {
+  pt: {
+    subtitulo: "Ciências · 8º Ano · 4º Bimestre · Circuitos elétricos, consumo e segurança",
+    lblTurma: "Turma", lblNome: "Nome", lblChamada: "Nº de chamada", lblData: "Data",
+    phAuto: "Automático", selTurma: "Selecione a turma", selNome: "Selecione seu nome",
+    tObj: "Objetiva", tDis: "Dissertativa", habil: "Habilidade:", questao: "Questão",
+    phDis: "Escreva sua resposta aqui...", calcLabel: "Espaço para cálculos (rascunho, não é enviado)",
+    calcPh: "Escreva aqui as contas que você fizer...", enviar: "Enviar respostas",
+    msgSel: "Selecione a sua turma e o seu nome antes de enviar.", msgEnv: "Enviando...",
+    msgOk: "Respostas enviadas. Obrigado!", msgErr: "Não foi possível enviar. Verifique a conexão e tente de novo.",
+    locale: "pt-BR"
+  },
+  ru: {
+    subtitulo: "Естествознание · 8 класс · 4-й биместр · Электрические цепи, потребление и безопасность",
+    lblTurma: "Класс", lblNome: "Имя ученика", lblChamada: "Номер в журнале", lblData: "Дата",
+    phAuto: "Автоматически", selTurma: "Выберите класс", selNome: "Выберите имя",
+    tObj: "С выбором ответа", tDis: "Открытый вопрос", habil: "Навык:", questao: "Вопрос",
+    phDis: "Напишите ответ здесь...", calcLabel: "Место для вычислений (черновик, не отправляется)",
+    calcPh: "Запишите здесь все вычисления...", enviar: "Отправить ответы",
+    msgSel: "Выберите класс и имя перед отправкой.", msgEnv: "Отправка...",
+    msgOk: "Ответы отправлены. Спасибо!", msgErr: "Не удалось отправить. Проверьте соединение и попробуйте снова.",
+    locale: "ru-RU"
+  }
+};
+function T(k) { return I18N[idioma][k]; }
+
+// Textos em russo das questões (mesma ordem e mesma letra das alternativas em português)
+const QRU = {
+  1: { e: "Посмотрите на схему цепи. Какой элемент позволяет пропускать или прерывать электрический ток?",
+       a: ["Батарейка", "Проводник", "Лампа", "Выключатель", "Батарейка и лампа вместе"] },
+  2: { e: "Рассмотрите три способа получения электрической энергии. Какой из них использует возобновляемый источник?",
+       a: ["Угольная электростанция", "Нефтяная скважина", "Солнечная панель", "Природный газ", "Атомная электростанция (уран)"] },
+  3: { e: "В доме лампы подключены так, как показано на схеме. Если лампа L1 перегорит, что произойдёт с лампой L2?",
+       a: ["L2 тоже погаснет, потому что получает питание через L1.",
+           "L2 продолжит гореть, потому что получает напряжение батарейки по собственной ветви.",
+           "L2 будет гореть ярче, потому что получит весь ток, который шёл через L1.",
+           "L2 будет мигать, пока батарейка не разрядится.",
+           "L2 получит половину напряжения батарейки."] },
+  4: { e: "Резистор на рисунке имеет сопротивление 10 Ом и подключён к источнику 12 В. Используя закон Ома (U = R × I), найдите силу тока, которая проходит через резистор.",
+       a: ["0,83 А", "1,2 А", "2,2 А", "12 А", "120 А"] },
+  5: { e: "Электрический душ мощностью 5000 Вт работает 30 минут в день. Каков суточный расход энергии в кВт·ч? (Энергия = мощность × время)",
+       a: ["0,5 кВт·ч", "2,5 кВт·ч", "5 кВт·ч", "10 кВт·ч", "150 кВт·ч"] },
+  6: { e: "Распределительный щит на 127 В защищён автоматическим выключателем (disjuntor) на 15 А. Если душ (3000 Вт) и духовка (1500 Вт) включены одновременно в этой цепи, что должно произойти? (Используйте I = P / U)",
+       a: ["Ничего, потому что автомат выдерживает любой ток.",
+           "Автомат отключится, потому что ток около 35 А превышает предел 15 А.",
+           "Напряжение поднимется до 220 В, и приборы будут работать лучше.",
+           "Ток уменьшится вдвое, и цепь будет защищена.",
+           "Лампа на кухне будет светить ярче."] },
+  7: { e: "Посмотрите на таблицу. За месяц из 30 дней какой прибор потребляет больше энергии и какова разница между двумя расходами? (Энергия = мощность × время)",
+       a: ["Вентилятор, на 24 кВт·ч больше.", "Кондиционер, на 96 кВт·ч больше.", "Вентилятор, на 96 кВт·ч больше.",
+           "Кондиционер, на 24 кВт·ч больше.", "Оба потребляют одинаковое количество энергии."] },
+  8: { e: "Посмотрите на трёхполюсную розетку. Опишите функцию каждого контакта (фаза, нейтраль и заземление) и объясните, почему контакт заземления важен для безопасности людей." },
+  9: { e: "Посмотрите на схему с двумя лампами, подключёнными параллельно к розетке на 127 В. Объясните, почему в домах электрические лампы и розетки монтируют параллельно, а не последовательно." },
+  10: { e: "Посмотрите на счёт за электроэнергию. При потреблении 320 кВт·ч за месяц с красным тарифным флагом предложите два действия, которые снизят этот расход, и обоснуйте каждое из них мощностью или временем использования прибора." }
+};
+
+// Textos das figuras (SVG) em russo
+const SVG_RU = {
+  3: { "Pilha": "Батарейка" },
+  7: { "Aparelho": "Прибор", "Potência · tempo de uso": "Мощность · время использования",
+       "Ar-condicionado": "Кондиционер", "1000 W · 4 h por dia": "1000 Вт · 4 ч в день",
+       "Ventilador": "Вентилятор", "100 W · 8 h por dia": "100 Вт · 8 ч в день" },
+  10: { "Conta de energia – mês de referência": "Счёт за электроэнергию – расчётный месяц",
+        "Consumo: 320 kWh": "Потребление: 320 кВт·ч",
+        "Bandeira tarifária: vermelha": "Тарифный флаг: красный",
+        "Aparelhos: chuveiro, ar-condicionado,": "Приборы: душ, кондиционер,",
+        "geladeira": "холодильник",
+        "Valor a pagar: conforme a tarifa da distribuidora": "К оплате: по тарифу распределительной компании" }
+};
+
+function figuraTexto(q) {
+  let fig = q.figura;
+  if (idioma === "ru" && SVG_RU[q.n]) {
+    for (const [pt, ru] of Object.entries(SVG_RU[q.n])) fig = fig.split(">" + pt + "<").join(">" + ru + "<");
+  }
+  return fig;
+}
+
+function aplicarIdioma() {
+  document.getElementById("subtitulo").textContent = T("subtitulo");
+  document.querySelector('label[for="turma"]').textContent = T("lblTurma");
+  document.querySelector('label[for="nome"]').textContent = T("lblNome");
+  document.querySelector('label[for="chamada"]').textContent = T("lblChamada");
+  document.querySelector('label[for="data"]').textContent = T("lblData");
+  inputChamada.placeholder = T("phAuto");
+  document.getElementById("btnEnviar").textContent = T("enviar");
+  inputData.value = new Date().toLocaleDateString(T("locale"), { timeZone: "America/Sao_Paulo" });
+  if (selTurma.options.length) selTurma.options[0].textContent = T("selTurma");
+  if (selNome.options.length) selNome.options[0].textContent = T("selNome");
+}
+
+function setIdioma(novo) {
+  if (novo === idioma) return;
+  const guardados = {};
+  document.querySelectorAll("#questoes textarea").forEach(t => { guardados[t.id] = t.value; });
+  idioma = novo;
+  document.documentElement.lang = novo === "ru" ? "ru" : "pt-BR";
+  aplicarIdioma();
+  document.getElementById("questoes").innerHTML = "";
+  renderQuestoes();
+  Object.keys(guardados).forEach(id => { const t = document.getElementById(id); if (t) t.value = guardados[id]; });
+}
+
+
 function renderQuestoes() {
   const box = document.getElementById("questoes");
   for (const q of QUESTOES) {
+    const ru = idioma === "ru" ? QRU[q.n] : null;
+    const enunciado = ru ? ru.e : q.enunciado;
+    const alternativas = ru && ru.a ? ru.a : q.alternativas;
     const sec = document.createElement("section");
     sec.className = "questao";
-    const tipoTxt = q.tipo === "objetiva" ? "Objetiva" : "Dissertativa";
-    let html = `<div class="meta"><span class="badge">Questão ${q.n}</span><span class="badge">${tipoTxt}</span>Habilidade: ${q.habilidade}</div>`;
-    html += `<div class="enunciado">${q.enunciado}</div>`;
-    html += `<div class="figura">${q.figura}</div>`;
+    const tipoTxt = q.tipo === "objetiva" ? T("tObj") : T("tDis");
+    let html = `<div class="meta"><span class="badge">${T("questao")} ${q.n}</span><span class="badge">${tipoTxt}</span>${T("habil")} ${q.habilidade}</div>`;
+    html += `<div class="enunciado">${enunciado}</div>`;
+    html += `<div class="figura">${figuraTexto(q)}</div>`;
     if (q.tipo === "objetiva") {
       html += '<div class="alternativas">' +
-        q.alternativas.map((t, i) => {
+        alternativas.map((t, i) => {
           const L = "ABCDE"[i];
-          return `<div class="alternativa" data-q="${q.n}" data-l="${L}" role="button" tabindex="0"><b>${L})</b> ${t}</div>`;
+          const sel = estado[q.n] === L ? " selecionada" : "";
+          return `<div class="alternativa${sel}" data-q="${q.n}" data-l="${L}" role="button" tabindex="0"><b>${L})</b> ${t}</div>`;
         }).join("") +
         "</div>";
     } else {
-      html += `<textarea id="d${q.n}" placeholder="Escreva sua resposta aqui..."></textarea>`;
+      html += `<textarea id="d${q.n}" placeholder="${T("phDis")}"></textarea>`;
     }
     if (q.tipo === "objetiva" && CALCULO.includes(q.n)) {
-      html += `<div class="calculo"><label for="c${q.n}">Espaço para cálculos (rascunho, não é enviado)</label><textarea id="c${q.n}" placeholder="Escreva aqui as contas que você fizer..."></textarea></div>`;
+      html += `<div class="calculo"><label for="c${q.n}">${T("calcLabel")}</label><textarea id="c${q.n}" placeholder="${T("calcPh")}"></textarea></div>`;
     }
     sec.innerHTML = html;
     box.appendChild(sec);
@@ -327,14 +441,14 @@ function limparCampos() {
 
 function iniciarIdentificacao() {
   document.getElementById("escola").textContent = ESCOLA;
-  // Data preenchida automaticamente com a data de hoje (horário de Brasília)
-  inputData.value = new Date().toLocaleDateString("pt-BR", { timeZone: "America/Sao_Paulo" });
-  selTurma.add(new Option("Selecione a turma", ""));
+  selTurma.add(new Option(T("selTurma"), ""));
   Object.keys(TURMAS).forEach(t => selTurma.add(new Option(t, t)));
+  aplicarIdioma();
 
   selTurma.addEventListener("change", () => {
+    setIdioma("pt");
     selNome.innerHTML = "";
-    selNome.add(new Option("Selecione seu nome", ""));
+    selNome.add(new Option(T("selNome"), ""));
     (TURMAS[selTurma.value] || []).forEach((aluno, i) => selNome.add(new Option(aluno.n, i)));
     selNome.disabled = !selTurma.value;
     limparCampos();
@@ -344,6 +458,8 @@ function iniciarIdentificacao() {
     const aluno = (TURMAS[selTurma.value] || [])[parseInt(selNome.value, 10)];
     if (!aluno) { limparCampos(); return; }
     inputChamada.value = aluno.c;
+    const russo = selTurma.value === ALUNA_RUSSO.turma && aluno.n === ALUNA_RUSSO.nome;
+    setIdioma(russo ? "ru" : "pt");
   });
 }
 
@@ -361,7 +477,7 @@ btn.addEventListener("click", async () => {
 
   if (!turma || !nome) {
     msg.style.color = "#B00020";
-    msg.textContent = "Selecione a sua turma e o seu nome antes de enviar.";
+    msg.textContent = T("msgSel");
     return;
   }
 
@@ -374,11 +490,11 @@ btn.addEventListener("click", async () => {
     dissertativas[q.n] = el ? el.value.trim() : "";
   });
 
-  const payload = { escola: ESCOLA, turma, chamada, nome, respostas, dissertativas };
+  const payload = { escola: ESCOLA, turma, chamada, nome, idioma, respostas, dissertativas };
 
   btn.disabled = true;
   msg.style.color = "#1f3b57";
-  msg.textContent = "Enviando...";
+  msg.textContent = T("msgEnv");
 
   try {
     const resp = await fetch(URL_ENVIO, {
@@ -389,11 +505,11 @@ btn.addEventListener("click", async () => {
     const dados = await resp.json().catch(() => ({}));
     if (!resp.ok || !dados.ok) throw new Error(dados.erro || "falha");
     msg.style.color = "#145A32";
-    msg.textContent = "Respostas enviadas. Obrigado!";
+    msg.textContent = T("msgOk");
   } catch (erro) {
     btn.disabled = false;
     msg.style.color = "#B00020";
-    msg.textContent = "Não foi possível enviar. Verifique a conexão e tente de novo.";
+    msg.textContent = T("msgErr");
   }
 });
 
