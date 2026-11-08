@@ -1,10 +1,6 @@
 /* Missão Ciências — recomposição 8º A e B (cartas de associação, roleta de conexões e Show do Milhão). */
 (() => {
   const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbz3T1TGIK2VH7Z-HW2Nff9P2h8x9dPI8W6JLCsNeRFrC3zLRdlXZ1Omkj_yQv437lEZ/exec';
-  const alunosPorTurma = {
-    '8º Ano A': ['Alice Cardoso De Alcantara','Ana Luiza Valenca Paiva','Bryan Diniz Silva','Carlos Eduardo Menezes Machado','Diogo Da Silva Veloso','Evandro Cutolo Teixeira','Gabriela Santos Costa','Guilherme Carmo Rodrigues','Gustavo Henrique Da Silva','Isaac Fernandes De Andrade','Kauan Henrique De Araujo Silva','Kelvin Duarte Goncalves','Kemillyn Andrade De Souza Silva','Laura Vitória Rocha','Leticia Custodio Lima','Lucas Eduardo Da Silva Santana','Manoella Dos Anjos Santos','Mariana Charrua Gaia Mion Silva','Matheus Kauã Dos Santos Nascimento','Mayara Caetano De Oliveira Pina','Miguel Lima De Mesquita','Nicolas Rocha Silva','Paolla Michelline Dos Santos Marques','Pedro Henrique Correa De Brito','Pedro Leonardo De Andrade Marques','Quézia Do Espirito Santo Roberti','Rafael Henrique Siqueira Bernardes Zia','Raphael Mathias Nunes Miranda','Ryan Gabriel Pereira De Sousa','Samuel Alves Da Costa','Sofia Azeredo Cubas','Sophia Lacerda Andrade','Thaylla Duanny Venancio Scaquito','Thays Rodrigues Da Silva','Victor Henrique Benvindo','Zlata Evgenievna Saforova'],
-    '8º Ano B': ['Angello Gabriel Cutolo Teixeira','Arthur Henrique Marques Endres','Bernardo Goncalves Janelli','Bianca Cristina Da Silva Santos','Brayan Da Silva Ferreira','Brayan Duarte Da Silva','Bruno Luiz Nascimento Da Silva','Cristiano Marques Batista De Souza','Daniel Rodrigues Santos Dias','Diego Barrio Novo Amaral De Andrade','Ester Codina De Jesus','Fabricio Lorenzo Parma','Gabriela Paulina Ferreira Martins','Guilherme Alves Miranda Brandino','Hyllary Victoria Nercir De França','Isaac Bonfim Vidotto','Jhonas Keyrrison Trocatis Da Silva','Julia Vitoria Severa Lins','Kesia Dos Santos Soste','Khiara De Oliveira Silva','Laura Borges Azevedo','Luan Dantas Nicolucci','Luan Ribeiro Silva','Marcelo Gomes Thomaz','Marcos Célio De Jesus','Maria Eduarda Machado De Lima','Mateus De Jesus Jacinto Dos Santos','Pablo Henrique Duarte Da Silva','Paulo César Lambert Gonçalves','Pietro Martins Nobre','Sophia França De Carvalho','Victor Hugo Prado Santos De Barros','Wallif Leandro De Jesus Lessa']
-  };
   const assoc = [
     { id:'pulmao', image:'assets/pulmoes-modelo.svg', label:'Pulmões', term:'Troca gasosa' },
     { id:'digestao', image:'assets/sistema-digestorio.svg', label:'Sistema digestório', term:'Absorção de nutrientes' },
@@ -50,8 +46,8 @@
   let tentativaId = '', fila = Promise.resolve();
   function salvarBanco(concluido) {
     if (!tentativaId) return Promise.resolve(false);
-    const corpo = JSON.stringify({ p_id: tentativaId, p_turma: estado.turma, p_nome: estado.aluno, p_pontuacao: estado.pontos, p_total: estado.maxPontos, p_concluido: !!concluido, p_acesso: estado.acesso ? estado.acesso.iso : null, p_respostas: estado.respostas });
-    const envia = async () => { for (let k = 0; k < 4; k++) { try { const r = await fetch(SBG + '/rest/v1/rpc/missao_registrar', { method: 'POST', headers: { apikey: KEYG, Authorization: 'Bearer ' + KEYG, 'Content-Type': 'application/json' }, body: corpo, keepalive: true }); if (r.ok) return true; } catch (e) {} await new Promise(x => setTimeout(x, 1200 * (k + 1))); } return false; };
+    const corpo = JSON.stringify({ p_token: (window.alunoAcesso && window.alunoAcesso.token()) || '', p_id: tentativaId, p_pontuacao: estado.pontos, p_total: estado.maxPontos, p_concluido: !!concluido, p_acesso: estado.acesso ? estado.acesso.iso : null, p_respostas: estado.respostas });
+    const envia = async () => { for (let k = 0; k < 4; k++) { try { const r = await fetch(SBG + '/rest/v1/rpc/missao_registrar_aluno', { method: 'POST', headers: { apikey: KEYG, Authorization: 'Bearer ' + KEYG, 'Content-Type': 'application/json' }, body: corpo, keepalive: true }); if (r.ok) return true; } catch (e) {} await new Promise(x => setTimeout(x, 1200 * (k + 1))); } return false; };
     fila = fila.then(envia); return fila;
   }
   /* Palavras-chave embaralhadas a cada tentativa, nunca na mesma posição da imagem correspondente. */
@@ -275,5 +271,18 @@
     progressoEl.style.width='100%'; conteudoEl.innerHTML=`<div class="mission-result"><p>${gravadoBanco?t('Resultado registrado com sucesso no banco de dados.','Результат успешно записан в базу данных.'):t('Resultado calculado. O registro ficou pendente de conexão, mas uma cópia foi preservada neste dispositivo; avise o professor.','Результат подсчитан. Запись ожидает подключения, но копия сохранена на этом устройстве; сообщите учителю.')}</p><strong>${percentual}%</strong><p>${t('Nota','Оценка')}: ${nota} · ${esc(estado.turma)} · ${esc(estado.aluno)}<br>${t('Data','Дата')}: ${fim.data} · ${t('Horário','Время')}: ${fim.hora}</p><button type="button" class="mission-btn" id="btnNovaTentativa">${t('Fazer nova tentativa','Попробовать снова')}</button></div>`;
     el('btnNovaTentativa').addEventListener('click',()=>{ estado.pontos=0;estado.assocFeitos=new Set();estado.roletaIndex=0;estado.roletaOrdem=embaralharRoleta();estado.roletaAngulo=0;estado.roletaSorteada=false;estado.roletaRespondida=false;estado.milhaoIndex=0;estado.milhaoRespondida=false;estado.tremIndex=0;estado.tremEstourado=false;estado.tremRespondida=false;estado.cartaIdx=0;estado.respostas=[];estado.acesso=agoraLocal();tentativaId=novoId();embaralharTermos();salvarBanco(false);updateMeta();renderAssociacao(); });
   }
+  /* identidade pelo login do aluno (RA + dígito + senha); sem lista de nomes no código */
+  (async () => {
+    while (!window.alunoAcesso) await new Promise(r => setTimeout(r, 50));
+    await window.alunoAcesso.exigir();
+    const r = await fetch(SBG + '/rest/v1/rpc/trilha_colegas_aluno', { method: 'POST', headers: { apikey: KEYG, 'Content-Type': 'application/json' }, body: JSON.stringify({ p_token: window.alunoAcesso.token() }) });
+    const j = await r.json().catch(() => ({}));
+    if (!j.ok) return;
+    estado.turma = j.turma; estado.aluno = j.nome;
+    turmaEl.innerHTML = ''; const o1 = document.createElement('option'); o1.value = j.turma; o1.textContent = j.turma; o1.selected = true; turmaEl.appendChild(o1); turmaEl.disabled = true;
+    alunoEl.innerHTML = ''; const o2 = document.createElement('option'); o2.value = j.nome; o2.textContent = j.nome; o2.selected = true; alunoEl.appendChild(o2); alunoEl.disabled = true;
+    el('btnIniciarMissao').disabled = false;
+    updateMeta();
+  })();
   updateMeta();
 })();
