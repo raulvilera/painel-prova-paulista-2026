@@ -73,13 +73,17 @@
     padding: 20px;
     margin-bottom: 16px;
   }
-  article.questao figure { margin: 0 0 14px; }
+  article.questao figure {
+    margin: 0 0 14px; padding: 12px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #0b2a63 0%, #04122e 55%, #000000 100%);
+  }
   article.questao img {
-    width: 100%; height: auto; max-height: 340px; object-fit: cover;
-    border-radius: 8px; display: block; background: #e9edf2;
+    width: 100%; height: auto; max-height: 340px; object-fit: contain;
+    border-radius: 8px; display: block; background: transparent;
   }
   article.questao figcaption {
-    font-size: .82rem; color: var(--cinza); margin-top: 6px;
+    font-size: .82rem; color: #e5e7eb; margin-top: 8px;
   }
   .enunciado { margin: 0 0 12px; }
   ul.alternativas { list-style: none; padding: 0; margin: 0; }
