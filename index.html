@@ -1254,8 +1254,8 @@ window.onTurnstileLoad=()=>{ if($("authView") && !$("authView").hidden) renderCa
 function resetCaptcha(){ if(window.turnstile && captchaWidget!==null) window.turnstile.reset(captchaWidget); captchaToken=null; }
 const $=id=>document.getElementById(id);
 function msg(t,kind){ const m=$("authMsg"); if(!t){ m.hidden=true; return; } m.textContent=t; m.className="msg "+(kind||"err"); m.hidden=false; }
-function showLock(){ $("authView").hidden=false; $("appView").hidden=true; $("fLogin").hidden=true; $("fSenha").hidden=true; $("fLock").hidden=false; $("authTitle").textContent="Desbloquear painel"; msg(""); }
-function showLogin(){ $("authView").hidden=false; $("appView").hidden=true; $("fLock").hidden=true; $("fLogin").hidden=false; setTimeout(renderCaptcha,0); $("fSenha").hidden=true; $("authTitle").textContent="Entrar no painel"; $("authLoading").hidden=true; }
+function showLock(){ sessionStorage.removeItem("painel_desbloqueado"); $("authView").hidden=false; $("appView").hidden=true; $("fLogin").hidden=true; $("fSenha").hidden=true; $("fLock").hidden=false; $("authTitle").textContent="Desbloquear painel"; msg(""); }
+function showLogin(){ sessionStorage.removeItem("painel_desbloqueado"); $("authView").hidden=false; $("appView").hidden=true; $("fLock").hidden=true; $("fLogin").hidden=false; setTimeout(renderCaptcha,0); $("fSenha").hidden=true; $("authTitle").textContent="Entrar no painel"; $("authLoading").hidden=true; }
 function showSetPassword(){ $("authView").hidden=false; $("appView").hidden=true; $("fLock").hidden=true; $("fLogin").hidden=true; $("fSenha").hidden=false; $("authTitle").textContent="Crie sua senha"; msg("E-mail confirmado. Agora defina sua senha.","ok"); $("nSenha").focus(); }
 function decode(v){
   const C=["Ciências","Biologia","Química"], P=x=>x==null?null:x/1000;
@@ -1265,6 +1265,7 @@ function decode(v){
 }
 async function openApp(session){
   const email=(session.user.email||"").toLowerCase();
+  sessionStorage.setItem("painel_desbloqueado","1");   /* liberado para as páginas do painel (ex.: trilha ao vivo) nesta aba */
   if(email!==EMAIL_OK){ await sb.auth.signOut(); showLogin(); msg("Este painel é de uso restrito do e-mail "+EMAIL_OK+"."); return; }
   if(!(session.user.user_metadata||{}).senha_definida){ showSetPassword(); return; }
   $("authLoading").hidden=false;

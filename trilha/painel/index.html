@@ -22,13 +22,25 @@ tr.al{cursor:pointer}tr.al:hover{background:#ffffff0c}.det td{background:#000000
 <div class="card"><h2>Temas em que a turma mais errou</h2><p class="nota">Do menor para o maior % de acerto (somando as respostas de todos os alunos do filtro).</p><div id="temas"></div></div>
 <div class="st" id="st">Carregando…</div>
 <script>
-const SB='https://oxohpnappygkmwjyowvq.supabase.co',KEY='sb_publishable_EjJenZkxMWv_I6vXWTz6aQ_iz9XEU4N';
+
 const $=id=>document.getElementById(id),esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pct=(a,b)=>b?Math.round(a/b*100):null,bar=(p,cl)=>'<span class="bar '+(cl||'')+'"><i style="width:'+(p||0)+'%"></i></span>';
 let D={jogadores:[],respostas:[]},aberto=null;
 const ts=x=>new Date(x).getTime();
+/* Só o professor que desbloqueou o painel nesta aba vê os dados. O token vem da sessão do painel (mesma origem). */
+function tokenPainel(){
+  try{ const k=Object.keys(localStorage).find(x=>/^sb-ykrjfjepnqeoqlgupsbe.*-auth-token$/.test(x));
+    const v=k&&JSON.parse(localStorage.getItem(k)||'null'), s=(v&&(v.currentSession||v))||null;
+    if(!s||!s.access_token) return null;
+    if(s.expires_at && s.expires_at*1000<Date.now()) return null;
+    return s.access_token;
+  }catch(e){ return null; }
+}
 async function carregar(){
-  try{const r=await fetch(SB+'/rest/v1/rpc/trilha_painel',{method:'POST',headers:{apikey:KEY,Authorization:'Bearer '+KEY,'Content-Type':'application/json'},body:'{}'});
+  const tk=tokenPainel();
+  if(!tk||!sessionStorage.getItem('painel_desbloqueado')){ $('st').innerHTML='Desbloqueie o painel com a sua biometria primeiro: <a href="/" style="color:#6fc9ee">abrir o painel</a>'; return; }
+  try{const r=await fetch('/api/trilha-painel',{headers:{Authorization:'Bearer '+tk},cache:'no-store'});
+    if(r.status===401){ $('st').innerHTML='Sessão expirada. <a href="/" style="color:#6fc9ee">Desbloquear o painel</a>'; return; }
     if(!r.ok)throw 0;D=await r.json();
     const ats=$('fT').value,ts_=[...new Set(D.jogadores.map(x=>x.turma))].sort((a,b)=>a.localeCompare(b,'pt'));
     $('fT').innerHTML='<option value="">Todas as turmas</option>'+ts_.map(t=>'<option'+(t===ats?' selected':'')+'>'+esc(t)+'</option>').join('');
