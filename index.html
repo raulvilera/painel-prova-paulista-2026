@@ -419,7 +419,7 @@ footer{margin-top:18px}
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js"></script>
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad" async defer></script>
 <script>
 let DATA = null;
 const LV = ["Abaixo do Básico","Básico","Adequado","Avançado"];
@@ -1243,6 +1243,8 @@ function renderCaptcha(){
   captchaToken=null;
   captchaWidget=window.turnstile.render("#turnstileBox",{ sitekey:TURNSTILE_SITE_KEY, callback:t=>{ captchaToken=t; }, "expired-callback":()=>{ captchaToken=null; }, "error-callback":()=>{ captchaToken=null; } });
 }
+/* chamado pelo Turnstile quando o script termina de carregar (ele pode chegar depois da tela de login) */
+window.onTurnstileLoad=()=>{ if($("authView") && !$("authView").hidden) renderCaptcha(); };
 function resetCaptcha(){ if(window.turnstile && captchaWidget!==null) window.turnstile.reset(captchaWidget); captchaToken=null; }
 const $=id=>document.getElementById(id);
 function msg(t,kind){ const m=$("authMsg"); if(!t){ m.hidden=true; return; } m.textContent=t; m.className="msg "+(kind||"err"); m.hidden=false; }
