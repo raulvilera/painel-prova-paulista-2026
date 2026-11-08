@@ -17,9 +17,7 @@
   h1 { font-size: 1.35rem; margin: 8px 0 4px; color: var(--acc); }
   p.sub { margin: 0 0 16px; color: var(--muted); }
   .card { background: var(--card); border:1px solid var(--borda); border-radius: 12px; padding: 16px; margin-bottom: 14px; }
-  label { display:block; font-weight:600; margin: 8px 0 4px; }
-  select, button { width:100%; font: inherit; padding: 10px 12px; border-radius: 8px; border:1px solid var(--borda); background: var(--card); color: var(--txt); }
-  button { background: var(--acc); color:#fff; border:none; font-weight:700; cursor:pointer; margin-top: 12px; }
+  button { width:100%; font: inherit; padding: 10px 12px; border-radius: 8px; border:none; background: var(--acc); color:#fff; font-weight:700; cursor:pointer; margin-top: 12px; }
   button:disabled { opacity:.5; cursor:not-allowed; }
   .q { border-top:1px solid var(--borda); padding: 14px 0 6px; }
   .q:first-child { border-top:none; padding-top: 0; }
@@ -38,14 +36,10 @@
 <body>
 <main>
   <h1>Atividade personalizada</h1>
-  <p class="sub">Escolha sua turma e seu nome. A atividade tem 10 questões, feitas a partir das suas dificuldades.</p>
+  <p class="sub">Entre com seu RA, dígito e senha. A atividade tem 10 questões, feitas a partir das suas dificuldades.</p>
 
   <section class="card">
-    <label for="turma">Turma</label>
-    <select id="turma"><option value="">Escolha a turma</option></select>
-    <label for="nome">Nome</label>
-    <select id="nome" disabled><option value="">Escolha seu nome</option></select>
-    <button id="abrir" disabled>Abrir minha atividade</button>
+    <div id="ident">Entrando…</div>
     <div id="aviso" class="msg erro hidden" role="alert"></div>
   </section>
 
@@ -57,6 +51,7 @@
   </section>
 </main>
 
+<script src="/aluno-acesso.js" defer></script>
 <script>
 (function () {
   'use strict';
@@ -65,58 +60,45 @@
   var atual = null;   // { turma, nome, questoes }
 
   var $ = function (id) { return document.getElementById(id); };
-  var turmaEl = $('turma'), nomeEl = $('nome'), abrirEl = $('abrir'), avisoEl = $('aviso');
+  var identEl = $('ident'), avisoEl = $('aviso');
   var atividadeEl = $('atividade'), cabecEl = $('cabec'), formEl = $('form'), enviarEl = $('enviar'), resEl = $('resultado');
 
   function mostrarAviso(texto) { avisoEl.textContent = texto; avisoEl.classList.remove('hidden'); }
   function esconderAviso() { avisoEl.classList.add('hidden'); avisoEl.textContent = ''; }
 
-  function opcao(select, valor, texto) {
-    var o = document.createElement('option'); o.value = valor; o.textContent = texto; select.appendChild(o);
-  }
+  function token() { return (window.alunoAcesso && window.alunoAcesso.token()) || ''; }
 
-  function getJson(url) {
-    return fetch(url, { credentials: 'same-origin' }).then(function (r) {
+  function pedir(url, opcoes) {
+    opcoes = opcoes || {};
+    opcoes.headers = Object.assign({ Authorization: 'Bearer ' + token() }, opcoes.headers || {});
+    opcoes.credentials = 'same-origin';
+    return fetch(url, opcoes).then(function (r) {
       return r.json().catch(function () { return { ok: false, erro: 'Resposta inesperada do servidor.' }; })
         .then(function (d) { return { status: r.status, dados: d }; });
     });
   }
 
-  // 1) Turmas disponíveis; os nomes são carregados ao escolher a turma
-  ['2ª SÉRIE A MANHÃ (Des. Sistemas)', '2ª SÉRIE C NOITE', '3ª SÉRIE F NOITE'].forEach(function (t) { opcao(turmaEl, t, t); });
+  // 1) Entrada pelo login do aluno; depois abre a atividade dele automaticamente
+  function aguardaAluno() { return window.alunoAcesso ? window.alunoAcesso.exigir() : new Promise(function (r) { setTimeout(r, 50); }).then(aguardaAluno); }
 
-  turmaEl.addEventListener('change', function () {
-    esconderAviso(); atividadeEl.classList.add('hidden');
-    nomeEl.innerHTML = ''; opcao(nomeEl, '', 'Escolha seu nome');
-    nomeEl.disabled = true; abrirEl.disabled = true;
-    if (!turmaEl.value) return;
-    getJson(API + '?turma=' + encodeURIComponent(turmaEl.value)).then(function (r) {
-      if (!r.dados.ok) { mostrarAviso(r.dados.erro || 'Não foi possível carregar os nomes.'); return; }
-      r.dados.alunos.forEach(function (n) { opcao(nomeEl, n, n); });
-      nomeEl.disabled = false;
-    }).catch(function () { mostrarAviso('Não foi possível carregar os nomes. Tente de novo.'); });
-  });
+  aguardaAluno().then(function () {
+    var al = window.alunoAcesso.dados() || {};
+    identEl.innerHTML = '';
+    var b = document.createElement('strong'); b.textContent = al.nome || '';
+    var s = document.createElement('span'); s.textContent = ' · ' + (al.turma || '') + (al.chamada ? ' · nº ' + al.chamada : '');
+    identEl.appendChild(b); identEl.appendChild(s);
+    abrir();
+  }).catch(function () { identEl.textContent = 'Não foi possível entrar. Recarregue a página.'; });
 
-  nomeEl.addEventListener('change', function () {
-    esconderAviso(); atividadeEl.classList.add('hidden');
-    abrirEl.disabled = !nomeEl.value;
-  });
-
-  // 2) Abre a atividade do aluno
-  abrirEl.addEventListener('click', function () {
+  // 2) Abre a atividade do aluno logado (turma e nome vêm do servidor, a partir do login)
+  function abrir() {
     esconderAviso(); resEl.classList.add('hidden');
-    abrirEl.disabled = true; abrirEl.textContent = 'Carregando…';
-    var url = API + '?turma=' + encodeURIComponent(turmaEl.value) + '&nome=' + encodeURIComponent(nomeEl.value);
-    getJson(url).then(function (r) {
-      abrirEl.textContent = 'Abrir minha atividade'; abrirEl.disabled = false;
+    pedir(API).then(function (r) {
       if (!r.dados.ok) { mostrarAviso(r.dados.erro || 'Não foi possível abrir a atividade.'); return; }
       atual = { turma: r.dados.turma, nome: r.dados.nome, questoes: r.dados.questoes };
       montar(r.dados);
-    }).catch(function () {
-      abrirEl.textContent = 'Abrir minha atividade'; abrirEl.disabled = false;
-      mostrarAviso('Falha de conexão. Tente de novo.');
-    });
-  });
+    }).catch(function () { mostrarAviso('Falha de conexão. Recarregue a página para tentar de novo.'); });
+  }
 
   function montar(d) {
     cabecEl.innerHTML = '';
@@ -157,12 +139,12 @@
     if (faltando) { mostrarAviso('Faltam ' + faltando + ' resposta(s). Responda todas antes de enviar.'); return; }
     esconderAviso();
     enviarEl.disabled = true; enviarEl.textContent = 'Enviando…';
-    fetch(API, {
-      method: 'POST', credentials: 'same-origin',
+    pedir(API, {
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ turma: atual.turma, nome: atual.nome, respostas: respostas })
-    }).then(function (r) { return r.json().catch(function () { return { ok: false, erro: 'Resposta inesperada do servidor.' }; }); })
-      .then(function (d) {
+      body: JSON.stringify({ respostas: respostas })
+    }).then(function (r) {
+        var d = r.dados;
         enviarEl.textContent = 'Enviar respostas';
         if (!d.ok) { enviarEl.disabled = false; mostrarAviso(d.erro || 'Não foi possível enviar.'); return; }
         formEl.querySelectorAll('input').forEach(function (x) { x.disabled = true; });
