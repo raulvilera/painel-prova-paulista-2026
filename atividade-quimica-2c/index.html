@@ -155,6 +155,26 @@
     width: 44px; height: 44px; border-radius: 50%; border: 0;
     background: #ffffff; color: #04122e; font-size: 26px; line-height: 1; cursor: pointer;
   }
+  /* Alternativas em alto relevo, com efeito de mola ao pressionar; a marcada fica mais baixa */
+  ul.alternativas li label {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #8b98ab, 0 10px 16px rgba(0, 0, 0, 0.45);
+    transform: translateY(0);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  ul.alternativas li label:active {
+    transform: translateY(5px);
+    box-shadow: 0 1px 0 #8b98ab, 0 3px 6px rgba(0, 0, 0, 0.35);
+  }
+  ul.alternativas li label:has(input:checked) {
+    background: #14532d;
+    border-color: #0b3a1f;
+    transform: translateY(6px);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.55);
+  }
 </style>
 </head>
 <body>
