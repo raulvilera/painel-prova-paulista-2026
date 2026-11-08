@@ -46,10 +46,6 @@
   .foto img{display:block;width:100%;max-height:340px;object-fit:cover;background:#E8ECE8}
   .foto figcaption{font-size:.82rem;color:var(--suave);padding:6px 10px}
   .foto figcaption a{color:inherit}
-  .codra{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.85rem;color:var(--suave)}
-  .codra[hidden]{display:none}
-  .codra input{width:130px !important;text-transform:uppercase;letter-spacing:.1em}
-  .codra button{font:inherit;font-weight:700;border:0;border-radius:10px;padding:9px 14px;background:var(--verde);color:#fff;cursor:pointer}
   .carreg{font-size:.8rem;color:var(--suave);margin-left:6px}
   /* revisão do professor */
   .revisao{background:#FFF4D6;border:1px solid #E8C96A;border-radius:12px;padding:12px 14px;margin:0 0 14px}
@@ -75,7 +71,6 @@
     <div class="nome"><label for="nome">Nome</label><select id="nome" disabled><option value="">Escolha a turma primeiro</option></select></div>
     <div><label for="num">Nº</label><input id="num" readonly placeholder="—"></div>
     <div><label for="ra">RA</label><input id="ra" readonly placeholder="—" inputmode="numeric"></div>
-    <div class="codra" id="codra" hidden><label for="cod" style="margin:0;text-transform:none;letter-spacing:0;font-weight:600">Para ver o RA completo, digite o código da turma (o professor informa):</label><input id="cod" maxlength="8" autocomplete="off" placeholder="código"><button type="button" id="codok">Ver RA</button><span id="codmsg"></span></div>
   </section>
 
   <p class="aviso">Leia o enunciado e as imagens com atenção. Compare todas as alternativas antes de escolher: algumas apresentam explicações próximas, mas apenas uma responde corretamente ao que foi solicitado.</p>
@@ -114,64 +109,29 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
   TURMAS = [['6º Ano A','6',WANDA],['6º Ano C','6',WANDA],['6º Ano A (Lydia)','6',LYDIA],['6º Ano B (Lydia)','6',LYDIA],['6º Ano C (Lydia)','6',LYDIA],
     ['7º Ano A','7',WANDA],['7º Ano B','7',WANDA],['8º Ano A','8',WANDA],['8º Ano B','8',WANDA],['9º Ano A','9',WANDA],['9º Ano B','9',WANDA]]
     .map(([id, serie, escola]) => ({ id, serie, escola }));
-  fT.innerHTML = '<option value="">Selecione</option>' + TURMAS.map(t => `<option>${esc(t.id)}</option>`).join('');
+  fT.innerHTML = '<option value="">Entre para continuar</option>';   // a turma vem do login do aluno; a página não lista turmas nem nomes
   api({ api: 'turmas' }).catch(() => {});            // "acorda" o servidor da planilha enquanto o aluno escolhe a turma
 
-  function limpar(){ fN.disabled = true; fN.innerHTML = '<option value="">Escolha a turma primeiro</option>'; fNum.value = ''; fRa.value = ''; fRa.readOnly = true; }
-  const codGuardado = () => { try { return sessionStorage.getItem('cod_' + fT.value) || ''; } catch (e) { return ''; } };
-  const R8A = '1 ALICE CARDOSO DE ALCANTARA|3 ANA LUIZA VALENCA PAIVA|5 BRYAN DINIZ SILVA|6 CARLOS EDUARDO MENEZES MACHADO|7 EVANDRO CUTOLO TEIXEIRA|9 GABRIELA SANTOS COSTA|11 GUILHERME CARMO RODRIGUES|12 GUSTAVO HENRIQUE DA SILVA|13 ISAAC FERNANDES DE ANDRADE|15 KELVIN DUARTE GONCALVES|16 LAURA VITÓRIA ROCHA|18 LETICIA CUSTÓDIO LIMA|19 LUCAS EDUARDO DA SILVA SANTANA|20 MATHEUS KAUÃ DOS SANTOS NASCIMENTO|21 MAYARA CAETANO DE OLIVEIRA PINA|22 MIGUEL LIMA DE MESQUITA|24 NICOLAS ROCHA SILVA|25 PAOLLA MICHELLINE DOS SANTOS MARQUES|27 PEDRO HENRIQUE CORREA DE BRITO|28 PEDRO LEONARDO DE ANDRADE MARQUES|29 RAFAEL HENRIQUE SIQUEIRA BERNARDES ZIA|30 RAPHAEL MATHIAS NUNES MIRANDA|34 SAMUEL ALVES DA COSTA|35 SOFIA AZEREDO CUBAS|36 SOPHIA LACERDA ANDRADE|37 THAYLLA DUANNY VENANCIO SCAQUITO|38 THAYS RODRIGUES DA SILVA|40 MANOELLA DOS ANJOS SANTOS|41 MARIANA CHARRUA GAIA MION SILVA|42 DIOGO DA SILVA VELOSO|43 QUÉZIA DO ESPIRITO SANTO ROBERTI|44 KEMILLYN ANDRADE DE SOUZA SILVA|45 KAUAN HENRIQUE DE ARAUJO SILVA|46 ZLATA EVGENIEVNA SAFOROVA'.split('|').map(l => { const m = /^(\d+) (.+)$/.exec(l); return { n: +m[1], nome: m[2] }; });   // lista oficial do 8º Ano A (sem RA)
-  const semAc = x => String(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase().replace(/\s+/g, ' ').trim();
-  const mesclar = (id, al) => id !== '8º Ano A' ? al : R8A.map(r => { const o = (al || []).find(x => semAc(x.nome) === semAc(r.nome)); return { n: r.n, nome: r.nome, ra: o && o.ra ? o.ra : '' }; });
-  function carregarNomes(t, cod) {
-    const sel = fN.value;
-    fN.disabled = true; fN.innerHTML = '<option value="">Carregando nomes… (pode levar até 30 segundos na primeira vez; leia as questões enquanto isso)</option>';
-    return api(Object.assign({ api: 'alunos', id: t.id }, cod ? { cod } : {}))
-      .catch(e => /api desconhecida/.test(e.message) ? api({ api: 'turma', id: t.id }) : Promise.reject(e))
-      .then(d => {
-        if (fT.value !== t.id) return;
-        d = Object.assign({}, d, { alunos: mesclar(t.id, d.alunos) });
-        D = { alunos: d.alunos, codOk: !!d.codOk };
-        fN.disabled = false;
-        fN.innerHTML = '<option value="">Selecione o seu nome</option>' + d.alunos.slice().sort((a,b) => a.nome.localeCompare(b.nome,'pt'))
-          .map(a => `<option value="${esc(a.n)}|${esc(a.nome)}">${esc(a.nome)}</option>`).join('');
-        if (sel) { fN.value = sel; fN.onchange(); }
-        $('#codra').hidden = !!d.codOk || !('codOk' in d);
-        return d;
-      })
-      .catch(e => { fN.innerHTML = '<option value="">Nomes indisponíveis</option>'; msg('Não foi possível carregar os nomes: ' + falhaRede(e) + '.', false); });
-  }
-
-  fT.onchange = () => {
-    limpar(); D = null; $('#btn').hidden = true; $('#msg').className = 'msg'; $('#codra').hidden = true; $('#codmsg').textContent = ''; $('#cod').value = '';
-    if (!fT.value) { $('#qs').innerHTML = '<p class="vazio">As questões aparecem aqui depois que você escolher a turma.</p>'; return; }
-    const t = TURMAS.find(x => x.id === fT.value);
+  function limpar(){ fN.disabled = true; fN.innerHTML = '<option value="">—</option>'; fNum.value = ''; fRa.value = ''; fRa.readOnly = true; }
+  /* Identidade vem só do login do aluno (RA + dígito + senha). Sem lista de nomes na página. */
+  function identificar(al) {
+    const t = TURMAS.find(x => x.id === al.turma);
+    if (!t) { msg('A sua turma (' + al.turma + ') não tem simulado nesta página. Procure o professor.', false); return; }
+    fT.innerHTML = `<option>${esc(t.id)}</option>`; fT.value = t.id; fT.disabled = true;
     $('#esc').textContent = t.escola;
     $('#sub').textContent = `${t.id} · ${t.serie}º ano · temas dos 4 bimestres que caem no SARESP`;
+    const ra = al.ra ? al.ra + (al.digito || '') : '';
+    D = { alunos: [{ n: al.chamada, nome: al.nome, ra }] };
+    fN.innerHTML = `<option value="${esc(al.chamada)}|${esc(al.nome)}">${esc(al.nome)}</option>`; fN.value = fN.options[0].value; fN.disabled = true;
+    fNum.value = al.chamada; fRa.value = ra; fRa.readOnly = true;
     Q = (window.QUESTOES_PUB || {})[t.serie] || []; resp = Q.map(() => null);
-    desenhar();                                       // questões aparecem na hora (vêm do próprio simulado)
-    carregarNomes(t, codGuardado());                  // nomes chegam da planilha em paralelo
-  };
-  $('#codok').onclick = () => {
-    const t = TURMAS.find(x => x.id === fT.value); const c = $('#cod').value.trim().toUpperCase(); if (!t || !c) return;
-    $('#codmsg').textContent = 'conferindo…';
-    carregarNomes(t, c).then(d => {
-      if (!d) return;
-      if (d.codOk) { try { sessionStorage.setItem('cod_' + t.id, c); } catch (e) {} $('#codmsg').textContent = ''; }
-      else $('#codmsg').textContent = 'código incorreto';
-    });
-  };
-  fN.onchange = () => {
-    const [n, ...nm] = fN.value.split('|'); const a = D && D.alunos.find(x => String(x.n) === n && x.nome === nm.join('|'));
-    fNum.value = a ? a.n : '';
-    fRa.value = a && a.ra ? a.ra : '';
-    fRa.readOnly = !!(a && a.ra);
-    fRa.placeholder = a && !a.ra ? 'digite seu RA' : '—';
-    verAdaptada(fT.value, nm.join('|'));
-  };
+    desenhar();
+    verAdaptada(t.id, al.nome);
+  }
   /* Quem tem versão adaptada do Simulado (PEI) é levado para ela; ninguém vê lista nem motivo: o servidor só responde sim/não. */
   function verAdaptada(turma, nome){
     if (!turma || !nome || /Lydia/i.test(turma)) return;
-    fetch('/api/individual?' + new URLSearchParams({ acao: 'adaptada', modo: 'simulado', turma, nome }), { cache: 'no-store' }).then(r => r.json()).then(j => {
+    fetch('/api/individual?' + new URLSearchParams({ acao: 'adaptada', modo: 'simulado', turma, nome }), { cache: 'no-store', headers: { Authorization: 'Bearer ' + ((window.alunoAcesso && window.alunoAcesso.token()) || '') } }).then(r => r.json()).then(j => {
       if (!j || !j.adaptada || fN.value.split('|').slice(1).join('|') !== nome) return;
       const base = /^painel-prova-paulista/.test(location.hostname) ? '' : 'https://painel-prova-paulista-2026.vercel.app';
       location.href = base + '/atividade-individual/?' + new URLSearchParams({ modo: 'simulado', t: turma, n: nome });
@@ -231,6 +191,10 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
     }
     return;
   }
+  /* Entrada: RA + dígito + senha (mesma tela das outras atividades). Só depois mostra o simulado da turma do aluno. */
+  const aguardaAluno = () => window.alunoAcesso ? window.alunoAcesso.exigir() : new Promise(r => setTimeout(r, 50)).then(aguardaAluno);
+  limpar();
+  aguardaAluno().then(() => identificar(window.alunoAcesso.dados())).catch(() => {});
   $('#btn').onclick = () => {
     if (!fT.value || !fN.value || !D) return msg('Escolha a sua turma e o seu nome antes de enviar.', false);
     const falta = resp.map((r, i) => (r === null || r === '') ? i + 1 : 0).filter(Boolean);
@@ -244,6 +208,7 @@ const API = "https://script.google.com/macros/s/AKfycbwUe0WBN_I1u6wDN4OoYJdKuycu
   };
 })();
 </script>
+<script src="/aluno-acesso.js" defer></script>
 <script src="/sinais.js?v=1"></script>
 <script src="/voltar-painel.js" defer></script>
 </body>

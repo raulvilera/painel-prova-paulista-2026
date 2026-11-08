@@ -9,11 +9,11 @@ const { rest, sha } = require('./_aluno-sessao.js');
 
 const PADRAO = process.env.ALUNO_SENHA_PADRAO || '';
 const MAX_ERROS = 5, BLOQUEIO_MIN = 15, SESSAO_H = 12;
-const CAMPOS = 'nome,turma,chamada,email_institucional,escola';
+const CAMPOS = 'nome,turma,chamada,email_institucional,escola,ra,digito_ra';
 
 const normRa = v => String(v || '').replace(/\D/g, '');
 const normDig = v => String(v || '').trim().toUpperCase().slice(0, 2);
-const perfil = a => ({ nome: a.nome, turma: a.turma, chamada: a.chamada, email: a.email_institucional, escola: a.escola });
+const perfil = a => ({ nome: a.nome, turma: a.turma, chamada: a.chamada, email: a.email_institucional, escola: a.escola, ra: a.ra, digito: a.digito_ra });
 
 function hashSenha(senha, salt) { return crypto.scryptSync(String(senha), salt, 32).toString('hex'); }
 function iguais(a, b) {
