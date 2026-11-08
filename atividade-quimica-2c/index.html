@@ -196,17 +196,19 @@
     <div class="identificacao">
       <div>
         <label for="nome">Nome do aluno</label>
-        <select id="nome" disabled>
-          <option value="">Carregando lista…</option>
-        </select>
+        <input id="nome" type="text" readonly data-aluno="nome" placeholder="Entre com RA e senha">
       </div>
       <div>
         <label for="numero">Número</label>
-        <input id="numero" type="text" readonly placeholder="—">
+        <input id="numero" type="text" readonly data-aluno="chamada" placeholder="—">
       </div>
       <div>
         <label for="turma">Turma</label>
-        <input id="turma" type="text" value="2ª C" readonly>
+        <input id="turma" type="text" readonly data-aluno="turma" placeholder="—">
+      </div>
+      <div>
+        <label for="email">E-mail institucional</label>
+        <input id="email" type="text" readonly data-aluno="email" placeholder="—">
       </div>
       <div>
         <label for="data">Data</label>
@@ -456,54 +458,12 @@
 
 </main>
 
+<script src="/aluno-acesso.js" defer></script>
 <script>
   // ===== CONFIGURAÇÃO =====
   // Opcional: cole aqui a URL de um Google Apps Script publicado como Web App.
   // Se ficar vazio, a página apenas mostra e copia o resultado.
   const URL_PLANILHA = "";
-
-  // ===== NOMES DOS ALUNOS (banco do painel, via /api/atividade-quimica) =====
-  // O servidor lê a lista no banco e devolve só nome. Nenhum dado de aluno fica no arquivo.
-  const selNome = document.getElementById("nome");
-  const avisoLogin = document.getElementById("aviso-nome");
-
-  function mostrarAviso(msg) {
-    avisoLogin.textContent = msg;
-  }
-
-  function preencherNomes(lista) {
-    selNome.innerHTML = '<option value="">Selecione seu nome</option>';
-    for (const a of lista) {
-      const opt = document.createElement("option");
-      opt.value = a.nome;
-      opt.textContent = a.nome;
-      if (a.numero != null) opt.dataset.numero = a.numero;
-      selNome.appendChild(opt);
-    }
-    selNome.disabled = false;
-    document.getElementById("numero").value = "";
-  }
-
-  // Ao escolher o nome, mostra o número do aluno no campo ao lado (quando o banco tiver o número).
-  selNome.addEventListener("change", () => {
-    const op = selNome.selectedOptions[0];
-    document.getElementById("numero").value = op && op.dataset.numero ? op.dataset.numero : "";
-  });
-
-  async function carregarAlunos() {
-    selNome.disabled = true;
-    selNome.innerHTML = '<option value="">Carregando lista…</option>';
-    try {
-      const r = await fetch("/api/atividade-quimica?acao=nomes", { cache: "no-store" });
-      const j = await r.json();
-      if (!r.ok || !j.ok || !j.nomes || j.nomes.length === 0) throw new Error(j.erro || "lista vazia");
-      preencherNomes(j.nomes);
-      mostrarAviso("");
-    } catch (e) {
-      selNome.innerHTML = '<option value="">Não foi possível carregar</option>';
-      mostrarAviso("Não foi possível carregar a lista de alunos. " + (e && e.message ? e.message : ""));
-    }
-  }
 
   // Preenche a data com o dia de hoje (horário local).
   (function preencherData() {
@@ -511,9 +471,6 @@
     const local = new Date(agora.getTime() - agora.getTimezoneOffset() * 60000);
     document.getElementById("data").value = local.toISOString().slice(0, 10);
   })();
-
-  // Carrega a lista ao abrir a página.
-  carregarAlunos();
 
   const TOTAL = 10;
   const POR_AULA = { "Aula 1": [1, 2, 3], "Aula 2": [4, 5, 6], "Aula 3": [7, 8, 9, 10] };
@@ -572,7 +529,7 @@
     const aviso = document.getElementById("aviso-final");
     const avisoNome = document.getElementById("aviso-nome");
     if (!nomeValido()) {
-      avisoNome.textContent = "Selecione seu nome na lista para finalizar.";
+      avisoNome.textContent = "Entre com seu RA, dígito e senha para finalizar.";
       avisoNome.scrollIntoView({ behavior: "smooth", block: "center" });
       aviso.textContent = "";
       return;

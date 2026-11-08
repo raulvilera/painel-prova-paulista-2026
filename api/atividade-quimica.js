@@ -8,8 +8,8 @@ module.exports = async function atividadeQuimica(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   const ok = o => res.status(200).json(Object.assign({ ok: true }, o)), erro = (c, m) => res.status(c).json({ ok: false, erro: m });
   if (req.method !== 'GET') return erro(405, 'Método não permitido.');
-  const q = req.query || {};
-  if (q.acao !== 'nomes') return erro(400, 'Ação desconhecida.');
+  /* A lista pública de nomes foi desligada: o aluno entra com RA + dígito + senha (/api/aluno-login). */
+  return erro(410, 'Lista de nomes desativada. Entre com seu RA e senha.');
   if (!SB || !KEY) return erro(503, 'Servidor não configurado (SUPABASE_URL / SUPABASE_SERVICE_KEY).');
 
   try {
