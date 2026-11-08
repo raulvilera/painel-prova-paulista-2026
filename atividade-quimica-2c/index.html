@@ -136,9 +136,32 @@
     color: #ffffff;
     font-weight: 700;
   }
+  /* Ampliar imagem ao clicar: abre a versão em tamanho cheio, sem perder qualidade */
+  article.questao img { cursor: zoom-in; }
+  #zoom {
+    position: fixed; inset: 0; z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex; align-items: center; justify-content: center;
+    padding: 16px; box-sizing: border-box; cursor: zoom-out;
+  }
+  #zoom[hidden] { display: none; }
+  #zoom img {
+    max-width: 100%; max-height: 100%; width: auto; height: auto;
+    border-radius: 8px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  }
+  #zoom-fechar {
+    position: absolute; top: 12px; right: 12px;
+    width: 44px; height: 44px; border-radius: 50%; border: 0;
+    background: #ffffff; color: #04122e; font-size: 26px; line-height: 1; cursor: pointer;
+  }
 </style>
 </head>
 <body>
+<div id="zoom" hidden role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+  <img id="zoom-img" alt="">
+  <button id="zoom-fechar" type="button" aria-label="Fechar">×</button>
+</div>
+
 
 <header class="topo">
   <h1>Atividade de Química – 2ª Série C</h1>
@@ -593,6 +616,28 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   });
+</script>
+<script>
+  // Ampliar a imagem ao clicar: mostra a mesma imagem em tamanho maior, sem redimensionar com perda.
+  (function () {
+    const caixa = document.getElementById("zoom");
+    const alvo = document.getElementById("zoom-img");
+    function abrir(img) {
+      alvo.src = img.getAttribute("src");
+      alvo.alt = img.alt || "";
+      caixa.hidden = false;
+    }
+    function fechar() {
+      caixa.hidden = true;
+      alvo.removeAttribute("src");
+    }
+    document.querySelectorAll("article.questao img").forEach(img => {
+      img.addEventListener("click", () => abrir(img));
+    });
+    caixa.addEventListener("click", e => { if (e.target !== alvo) fechar(); });
+    document.getElementById("zoom-fechar").addEventListener("click", e => { e.stopPropagation(); fechar(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && !caixa.hidden) fechar(); });
+  })();
 </script>
 </body>
 </html>
