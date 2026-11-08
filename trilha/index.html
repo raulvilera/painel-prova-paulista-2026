@@ -159,6 +159,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
 
 <div id="qbox" role="dialog" aria-modal="true" aria-labelledby="qTit"><div class="qcard" id="qcard"></div></div>
 
+<script src="/aluno-acesso.js" defer></script>
 <script>
 (function(){
     const $ = id => document.getElementById(id);
@@ -176,7 +177,8 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
 
   const SBG = 'https://oxohpnappygkmwjyowvq.supabase.co', KEYG = 'sb_publishable_EjJenZkxMWv_I6vXWTz6aQ_iz9XEU4N';
   const rpc = (fn, b) => fetch(SBG + '/rest/v1/rpc/' + fn, { method: 'POST', headers: { apikey: KEYG, Authorization: 'Bearer ' + KEYG, 'Content-Type': 'application/json' }, body: JSON.stringify(b), keepalive: true }).catch(() => {});
-  function enviarProg() { if (!G || !G.eq[0] || !DADOS) return; const e = G.eq[0]; rpc('trilha_progresso', { p_turma: DADOS.turma, p_nome: e.nome, p_casa: e.pos, p_pontos: e.pts, p_acertos: e.acertos || 0, p_tent: e.tent || 0, p_fim: !!G.fim }); }
+  const tokenAluno = () => (window.alunoAcesso ? window.alunoAcesso.token() : '') || '';
+  function enviarProg() { if (!G || !G.eq[0] || !DADOS) return; const e = G.eq[0]; rpc('trilha_progresso_aluno', { p_token: tokenAluno(), p_casa: e.pos, p_pontos: e.pts, p_acertos: e.acertos || 0, p_tent: e.tent || 0, p_fim: !!G.fim }); }
   async function api(q) {
     const u = q.turma ? '?trilha=' + encodeURIComponent(q.turma) : '?foto=' + encodeURIComponent(q.img);
     const r = await fetch('/api/jogo' + u);
@@ -295,7 +297,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       e.pts += pts; if (!ok) e.pos = de;
       const h = G.hist[t.k] || (G.hist[t.k] = { a: 0, n: 0 }); h.n++; if (ok) h.a++;
       e.acertos = (e.acertos || 0) + (ok ? 1 : 0); e.tent = (e.tent || 0) + 1;
-      rpc('trilha_responder', { p_turma: DADOS.turma, p_nome: e.nome, p_ordem: e.tent, p_tema: t.k, p_hab: t.hab, p_bim: t.bim, p_desc: t.desc, p_correta: ok, p_marcada: i >= 0 ? LETRA[i] : '' });
+      rpc('trilha_responder_aluno', { p_token: tokenAluno(), p_ordem: e.tent, p_tema: t.k, p_hab: t.hab, p_bim: t.bim, p_desc: t.desc, p_correta: ok, p_marcada: i >= 0 ? LETRA[i] : '' });
       const b = $('bSeguir'); b.hidden = false; b.focus();
       guardar();
     };
@@ -434,7 +436,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       const nomes = [aluno];
       G = { casas: tr.casas, eq: nomes.map(nome => ({ nome, pos: 0, pts: 0, acertos: 0, tent: 0 })), vez: 0, usadas: {}, hist: {}, histC: {}, assocUsados: [], tempo: $('fTempo').value, fim: false };
       DADOS.temas.forEach(t => embaralhar(t.qs));
-      await rpc('trilha_iniciar', { p_turma: DADOS.turma, p_nome: aluno, p_total: G.casas.length });
+      await rpc('trilha_iniciar_aluno', { p_token: tokenAluno(), p_total: G.casas.length });
       iniciarTela(); guardar(); preCarregar();
       msg(`${DADOS.turma}: ${DADOS.temas.length} temas do SARESP do ${DADOS.serie}º ano, ${G.casas.length} casas.`);
     } catch (e) { msg(esc(e.message), true); }
@@ -455,7 +457,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
   async function iniciarFluxo() {
     const turma = $('fTurma').value, aluno = $('fAluno').value; if (!turma || !aluno) return;
     $('bComecar').disabled = true; msg('Verificando sua dupla…');
-    const d = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno });
+    const d = await rpcJ('trilha_dupla_estado_aluno', { p_token: tokenAluno() });
     $('bComecar').disabled = false;
     if (!d) return msg('Sem conexão. Tente de novo.', true);
     msg(''); seguir(turma, aluno, d);
@@ -473,9 +475,9 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
   }
   async function escolherParceiro(turma, aluno, erro) {
     painelD('Com quem você quer jogar?', 'Escolha um colega da sua turma. Vocês dois disputam a mesma trilha: <b>quem chegar primeiro vence</b>. Depois de formada, a dupla só joga entre si.', [], '<span class="muted">Carregando colegas…</span>');
-    const todos = [...$('fAluno').options].map(o => o.value).filter(v => v && v !== aluno);
+    const todos = (window.__colegas || []).filter(v => v && v !== aluno);
     const lista = oc => `<label>Colega<select id="fPar"><option value="">Selecione</option>${todos.map(n => oc.includes(n) ? `<option disabled>${esc(n)} · já está em dupla</option>` : `<option>${esc(n)}</option>`).join('')}</select></label>`;
-    const oc0 = (await rpcJ('trilha_ocupados', { p_turma: turma })) || [];
+    const oc0 = (await rpcJ('trilha_ocupados_aluno', { p_token: tokenAluno() })) || [];
     painelD('Com quem você quer jogar?', (erro ? `<span class="erro">${esc(erro)}</span><br>` : '') + 'Escolha um colega da sua turma. Vocês dois disputam a mesma trilha: <b>quem chegar primeiro vence</b>. Quem já está em uma dupla aparece bloqueado e não pode ser escolhido.', [
       { t: '⚔️ Convidar', f: () => { const v = $('fPar').value; if (v) convidar(turma, aluno, v); } },
       { t: 'Jogar sozinho', sec: 1, f: () => comecarSolo() },
@@ -483,7 +485,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
     ], lista(oc0));
     clearInterval(ESPERA);
     ESPERA = setInterval(async () => {   // a lista se atualiza sozinha: quem acabou de entrar em uma dupla fica bloqueado
-      const oc = await rpcJ('trilha_ocupados', { p_turma: turma }); const sel = $('fPar'); if (!oc || !sel) return;
+      const oc = await rpcJ('trilha_ocupados_aluno', { p_token: tokenAluno() }); const sel = $('fPar'); if (!oc || !sel) return;
       const atual = sel.value; $('dSel').innerHTML = lista(oc); if (oc.includes(atual)) { msg(atual + ' acabou de entrar em outra dupla. Escolha outro colega.', true); } else $('fPar').value = atual;
     }, 3000);
   }
@@ -492,26 +494,26 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
     try {
       DADOS = await api({ turma });
       const tr = montarTrilha(DADOS.temas, 'normal');
-      const r = await rpcJ('trilha_convidar', { p_turma: turma, p_a: aluno, p_b: par, p_casas: tr.casas, p_seed: Math.floor(Math.random() * 2000000000) });
+      const r = await rpcJ('trilha_convidar_aluno', { p_token: tokenAluno(), p_par: par, p_casas: tr.casas, p_seed: Math.floor(Math.random() * 2000000000) });
       if (!r) return escolherParceiro(turma, aluno, 'Sem conexão. Tente de novo.');
-      if (!r.ok) { const d = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno }); if (d && d.existe) return seguir(turma, aluno, d); return escolherParceiro(turma, aluno, r.erro); }
-      const d = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno }); seguir(turma, aluno, d);
+      if (!r.ok) { const d = await rpcJ('trilha_dupla_estado_aluno', { p_token: tokenAluno() }); if (d && d.existe) return seguir(turma, aluno, d); return escolherParceiro(turma, aluno, r.erro); }
+      const d = await rpcJ('trilha_dupla_estado_aluno', { p_token: tokenAluno() }); seguir(turma, aluno, d);
     } catch (e) { escolherParceiro(turma, aluno, e.message); }
   }
   function aguardando(turma, aluno, d) {
     painelD('Convite enviado', `Você escolheu <b>${esc(d.parceiro)}</b>. Peça para ele(a) abrir este mesmo link, escolher o próprio nome e entrar na dupla. O jogo começa sozinho assim que ele(a) entrar.`, [
-      { t: 'Cancelar convite', sec: 1, f: async () => { clearInterval(ESPERA); const r = await rpcJ('trilha_desfazer', { p_turma: turma, p_nome: aluno }); if (r && r.ok) voltarConfig(); else msg((r && r.erro) || 'Não foi possível cancelar.', true); } }
+      { t: 'Cancelar convite', sec: 1, f: async () => { clearInterval(ESPERA); const r = await rpcJ('trilha_desfazer_aluno', { p_token: tokenAluno() }); if (r && r.ok) voltarConfig(); else msg((r && r.erro) || 'Não foi possível cancelar.', true); } }
     ]);
     clearInterval(ESPERA);
-    ESPERA = setInterval(async () => { const e = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno }); if (!e) return; if (!e.existe) { clearInterval(ESPERA); voltarConfig(); } else if (e.aceita) { clearInterval(ESPERA); entrarDupla(turma, aluno, e); } }, 2000);
+    ESPERA = setInterval(async () => { const e = await rpcJ('trilha_dupla_estado_aluno', { p_token: tokenAluno() }); if (!e) return; if (!e.existe) { clearInterval(ESPERA); voltarConfig(); } else if (e.aceita) { clearInterval(ESPERA); entrarDupla(turma, aluno, e); } }, 2000);
   }
   function convite(turma, aluno, d) {
     painelD(esc(d.parceiro) + ' escolheu você!', `Vocês dois vão disputar a mesma trilha: <b>quem chegar primeiro vence</b>. Ao entrar, você só joga com <b>${esc(d.parceiro)}</b>.`, [
-      { t: '⚔️ Entrar na dupla', f: async () => { const r = await rpcJ('trilha_aceitar', { p_turma: turma, p_nome: aluno }); const e = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno }); if (r && r.ok && e && e.existe) entrarDupla(turma, aluno, e); else msg('Não foi possível entrar. Tente de novo.', true); } },
+      { t: '⚔️ Entrar na dupla', f: async () => { const r = await rpcJ('trilha_aceitar_aluno', { p_token: tokenAluno() }); const e = await rpcJ('trilha_dupla_estado_aluno', { p_token: tokenAluno() }); if (r && r.ok && e && e.existe) entrarDupla(turma, aluno, e); else msg('Não foi possível entrar. Tente de novo.', true); } },
       { t: 'Voltar', sec: 1, f: voltarConfig }
     ]);
     $('dTit').textContent = d.parceiro + ' escolheu você!';
-    ESPERA = setInterval(async () => { const e = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno }); if (e && !e.existe) { clearInterval(ESPERA); voltarConfig(); } }, 3000);
+    ESPERA = setInterval(async () => { const e = await rpcJ('trilha_dupla_estado_aluno', { p_token: tokenAluno() }); if (e && !e.existe) { clearInterval(ESPERA); voltarConfig(); } }, 3000);
   }
   function aplicarPar(p) { if (!p || !G || !G.eq[1]) return; const e = G.eq[1]; e.pos = p.casa; e.pts = p.pontos; e.acertos = p.acertos; e.tent = p.tentativas; }
   async function entrarDupla(turma, aluno, d) {
@@ -537,7 +539,7 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
     clearInterval(POLL);
     POLL = setInterval(async () => {
       if (!G || !G.dupla) return;
-      const d = await rpcJ('trilha_dupla_estado', { p_turma: G.dupla.turma, p_nome: G.eq[0].nome });
+      const d = await rpcJ('trilha_dupla_estado_aluno', { p_token: tokenAluno() });
       if (!d || !d.existe) return;
       if (d.rodada > G.rodada) { if (G.fim && $('bRev') && !G.novaRodada) { G.novaRodada = d; $('bRev').textContent = '⚔️ Entrar na nova rodada'; $('fimMsg').textContent = G.eq[1].nome + ' pediu revanche!'; } return; }
       if (G.fim) return;
@@ -551,13 +553,13 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
       let d = G.novaRodada;
       if (!d) {
         const tr = montarTrilha(DADOS.temas, 'normal');
-        await rpcJ('trilha_revanche', { p_turma: turma, p_nome: aluno, p_casas: tr.casas, p_seed: Math.floor(Math.random() * 2000000000) });
-        d = await rpcJ('trilha_dupla_estado', { p_turma: turma, p_nome: aluno });
+        await rpcJ('trilha_revanche_aluno', { p_token: tokenAluno(), p_casas: tr.casas, p_seed: Math.floor(Math.random() * 2000000000) });
+        d = await rpcJ('trilha_dupla_estado_aluno', { p_token: tokenAluno() });
       }
       if (d && d.existe && d.rodada > G.rodada) entrarDupla(turma, aluno, d); else $('fimMsg').textContent = 'Não foi possível iniciar a revanche agora.';
     };
     $('bDes').onclick = async () => {
-      const r = await rpcJ('trilha_desfazer', { p_turma: G.dupla.turma, p_nome: G.eq[0].nome });
+      const r = await rpcJ('trilha_desfazer_aluno', { p_token: tokenAluno() });
       if (!r || !r.ok) return ($('fimMsg').textContent = (r && r.erro) || 'Não foi possível desfazer.');
       clearInterval(POLL); apagarSalvo(); G = null; $('fim').classList.remove('on'); voltarConfig();
     };
@@ -607,21 +609,15 @@ table.rel th,table.rel td{border-bottom:1px solid var(--line);padding:6px 8px;te
   }
   fetch('/api/jogo?nomes=' + encodeURIComponent('9º Ano B')).catch(() => {}); fetch(API_PL + '?api=turmas', { redirect: 'follow', credentials: 'omit' }).catch(() => {});   // acorda a planilha enquanto o aluno escolhe a turma
   async function iniciar() {
-    const fixa = (new URLSearchParams(location.search).get('turma') || '').trim().toLowerCase(), uma = TURMAS.find(t => t.toLowerCase() === fixa);   // link por turma: /trilha/?turma=6º Ano A
-    $('fTurma').innerHTML = (uma ? '' : '<option value="">Selecione</option>') + (uma ? [uma] : TURMAS).map(t => `<option>${esc(t)}</option>`).join('');
-    $('fTurma').onchange = async () => {
-      const id = $('fTurma').value; $('bComecar').disabled = true; $('fAluno').disabled = true;
-      if (!id) { $('fAluno').innerHTML = '<option value="">Escolha a turma primeiro</option>'; return; }
-      $('fAluno').innerHTML = '<option value="">Carregando nomes…</option>'; msg('Carregando a lista de alunos…');
-      try {
-        const n = await alunosDe(id);
-        if (!n.length) { $('fAluno').innerHTML = '<option value="">—</option>'; return msg('Nenhum aluno encontrado nesta turma. Avise o professor.', true); }
-        $('fAluno').innerHTML = '<option value="">Selecione seu nome</option>' + n.map(x => `<option>${esc(x)}</option>`).join('');
-        $('fAluno').disabled = false; rpcJ('trilha_ocupados', { p_turma: id }).then(oc => { if (oc && oc.length) [...$('fAluno').options].forEach(o => { if (oc.includes(o.value)) { const v = o.value; o.value = v; o.textContent = v + ' · em dupla'; } }); }); msg('Escolha o seu nome e clique em Começar. Atalhos: espaço rola o dado; A, B, C, D marcam a resposta; Enter continua.');
-      } catch (e) { $('fAluno').innerHTML = '<option value="">—</option>'; msg(/carga|liber|bloque/i.test(e.message || '') ? 'A lista desta turma ainda não foi liberada. Avise o professor.' : 'Não consegui carregar os nomes (' + String((e && e.message) || e).slice(0, 80) + '). Toque na turma de novo para tentar outra vez.', true); }
-    };
-    $('fAluno').onchange = () => { $('bComecar').disabled = !$('fAluno').value; };
-    if (uma) { $('fTurma').disabled = true; $('fTurma').onchange(); } else msg('Escolha a sua turma e o seu nome.');
+    while (!window.alunoAcesso) await new Promise(r => setTimeout(r, 50));
+    await window.alunoAcesso.exigir();   // espera o RA + dígito + senha
+    const j = await rpcJ('trilha_colegas_aluno', { p_token: tokenAluno() });
+    if (!j || !j.ok) return msg((j && j.erro) || 'Entre com seu RA, dígito e senha.', true);
+    window.__colegas = j.colegas || [];
+    $('fTurma').innerHTML = `<option>${esc(j.turma)}</option>`; $('fTurma').value = j.turma; $('fTurma').disabled = true;
+    $('fAluno').innerHTML = `<option>${esc(j.nome)}</option>`; $('fAluno').value = j.nome; $('fAluno').disabled = true;
+    $('bComecar').disabled = false;
+    msg('Confirme e clique em Começar.');
   }
   iniciar();
 })();
