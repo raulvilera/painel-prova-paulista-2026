@@ -110,19 +110,42 @@
     setTimeout(() => document.getElementById('alunoRa').focus(), 50);
   }
 
+  let marcarPronto;
+  const pronto = new Promise(r => { marcarPronto = r; });
+
   async function iniciar() {
     const token = localStorage.getItem(CHAVE);
     if (token) {
       const { j } = await api({ acao: 'eu' }, token);
-      if (j.ok) { dados = j.aluno; montarTela(); document.getElementById('alunoLogin').hidden = true; preencher(j.aluno); return; }
+      if (j.ok) { dados = j.aluno; montarTela(); document.getElementById('alunoLogin').hidden = true; preencher(j.aluno); marcarPronto(); return; }
       localStorage.removeItem(CHAVE);
     }
     mostrarLogin();
+    marcarPronto();
   }
+
+  /* Espera o aluno entrar (abre a tela de login se preciso) e devolve o token. */
+  let esperando = [];
+  function exigir() {
+    return pronto.then(() => {
+      const t = localStorage.getItem(CHAVE);
+      if (t && dados) return t;
+      return new Promise(resolve => {
+        esperando.push(resolve);
+        const tela = document.getElementById('alunoLogin');
+        if (!tela || tela.hidden) mostrarLogin();
+      });
+    });
+  }
+  window.addEventListener('aluno:logado', () => {
+    const t = localStorage.getItem(CHAVE);
+    esperando.splice(0).forEach(r => r(t));
+  });
 
   window.alunoAcesso = {
     token: () => localStorage.getItem(CHAVE),
     dados: () => dados,
+    exigir,
     sair() { localStorage.removeItem(CHAVE); dados = null; mostrarLogin(); }
   };
 

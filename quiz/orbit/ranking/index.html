@@ -17,6 +17,7 @@ li .t{opacity:.7;font-size:.7em}li b{font-variant-numeric:tabular-nums}
 </style></head><body>
 <header><h1>🏆 Ranking Orbit Quiz</h1><select id="t"><option value="">Todas as turmas</option></select><button id="fs">⛶ Tela cheia</button></header>
 <div id="pod" class="pod"></div><ol id="lista"></ol><div class="st" id="st">Carregando…</div>
+<script src="/aluno-acesso.js" defer></script>
 <script>
 const SB='https://oxohpnappygkmwjyowvq.supabase.co',KEY='sb_publishable_EjJenZkxMWv_I6vXWTz6aQ_iz9XEU4N';
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -24,7 +25,8 @@ const med=n=>n===1?'🥇':n===2?'🥈':n===3?'🥉':n+'º';
 let dados=[],sel=document.getElementById('t');
 async function carregar(){
   try{
-    const r=await fetch(SB+'/rest/v1/rpc/orbit_ranking_todas',{method:'POST',headers:{apikey:KEY,Authorization:'Bearer '+KEY,'Content-Type':'application/json'},body:'{}'});
+    const tk=await window.alunoAcesso.exigir();   /* ranking só para aluno logado (RA + dígito + senha) */
+    const r=await fetch(SB+'/rest/v1/rpc/orbit_ranking_todas_aluno',{method:'POST',headers:{apikey:KEY,'Content-Type':'application/json'},body:JSON.stringify({p_token:tk})});
     if(!r.ok)throw 0;dados=await r.json();
     const turmas=[...new Set(dados.map(x=>x.turma))].sort((a,b)=>a.localeCompare(b,'pt')),atual=sel.value;
     sel.innerHTML='<option value="">Todas as turmas</option>'+turmas.map(t=>'<option'+(t===atual?' selected':'')+'>'+esc(t)+'</option>').join('');

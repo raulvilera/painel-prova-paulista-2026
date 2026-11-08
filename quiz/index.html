@@ -62,6 +62,7 @@ figure.ilus svg{display:block;width:100%;height:auto}
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="estadio3d.js?v=1"></script>
+<script src="/aluno-acesso.js" defer></script>
 <script>
 (function(){
   const SB = 'https://oxohpnappygkmwjyowvq.supabase.co', KEY = 'sb_publishable_EjJenZkxMWv_I6vXWTz6aQ_iz9XEU4N';
@@ -89,23 +90,14 @@ figure.ilus svg{display:block;width:100%;height:auto}
     $('bPin').onclick = () => { const p = $('pin').value.replace(/\D/g, ''); if (p.length === 6) telaNome(p); };
     $('pin').onkeydown = e => { if (e.key === 'Enter') $('bPin').click(); };
   }
+  /* O nome vem do login do aluno (RA + dígito + senha); a lista pública de nomes foi desligada. */
   async function telaNome(pin) {
+    tela('<div class="spin"></div><p class="centro muted">Confirmando o seu acesso…</p>');
+    const token = await window.alunoAcesso.exigir();
     tela('<div class="spin"></div><p class="centro muted">Procurando o jogo…</p>');
-    let j; try { j = await rpc('quiz_nomes', { p_pin: pin }); } catch (e) { return telaPin(e.message, pin); }
-    if (!j.ok) return telaPin(j.erro, pin);
-    tela(`<p class="muted sm">Turma: <b>${esc(j.turma)}</b></p><label for="nome">Seu nome</label>
-      <select id="nome"><option value="">Selecione</option>${j.nomes.map(n => `<option>${esc(n)}</option>`).join('')}</select>
-      <button class="btn" id="bEntrar">Entrar no jogo</button><div class="msg" id="m"></div>
-      <p class="muted sm">Não achou seu nome? Ele já pode estar no jogo; avise o professor.</p>`);
-    $('bEntrar').onclick = async () => {
-      const nome = $('nome').value; if (!nome) return;
-      $('bEntrar').disabled = true;
-      try {
-        const r = await rpc('quiz_entrar', { p_pin: pin, p_nome: nome });
-        if (!r.ok) { $('m').textContent = r.erro; $('bEntrar').disabled = false; return; }
-        EU = { pin, token: r.token, nome: r.nome }; gravar(EU); comecar();
-      } catch (e) { $('m').textContent = e.message; $('bEntrar').disabled = false; }
-    };
+    let r; try { r = await rpc('quiz_entrar_aluno', { p_pin: pin, p_token: token }); } catch (e) { return telaPin(e.message, pin); }
+    if (!r.ok) return telaPin(r.erro, pin);
+    EU = { pin, token: r.token, nome: r.nome }; gravar(EU); comecar();
   }
 
   /* ---------- jogo: depois que o professor libera, cada aluno avança no próprio ritmo ---------- */

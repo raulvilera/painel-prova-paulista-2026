@@ -63,7 +63,7 @@
   };
   async function ciclo() {
     const s = estado(); if (s && s.student && s.turma && (s.screen === 'quiz' || s.screen === 'results')) {
-      await enviar(s); const r = await rpc('orbit_ranking', { p_turma: s.turma }); if (Array.isArray(r)) lista = r;
+      await enviar(s); const r = await rpc('orbit_ranking_aluno', { p_token: (window.alunoAcesso && window.alunoAcesso.token()) || '' }); if (Array.isArray(r)) lista = r;
     }
     desenhar();
   }
