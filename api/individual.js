@@ -4,6 +4,7 @@ const CAT = require('./_catalogo-indiv.js');
 const PEI = require('./_pei.js');   // atividades adaptadas (PEI); só no servidor
 const AUTOIMG = require('./_img-auto.js');   // foto ligada ao enunciado (demais alunos)
 const ROSTER = require('./_roster.js');   // listas oficiais de turma
+const { alunoDaSessao } = require('./_aluno-sessao.js');   // login do aluno (RA + dígito + senha)
 const crypto = require('crypto');
 let BANCO = {}; try { BANCO = require('./_banco-indiv.js'); } catch (e) { BANCO = {}; }
 const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.env.SUPABASE_SERVICE_KEY || '', GKEY = process.env.GEMINI_API_KEY || '';
@@ -306,6 +307,16 @@ module.exports = async function individual(req, res) {
     if (!SB || !KEY) return erro(503, 'Servidor não configurado (SUPABASE_URL / SUPABASE_SERVICE_KEY).');
     const q = req.query || {}; let b = req.body; if (typeof b === 'string') { try { b = JSON.parse(b); } catch (e) { b = {}; } } b = b || {};
     const acao = String(q.acao || b.acao || '');
+
+    /* ----- aluno: turma e nome vêm do login (token), nunca do pedido ----- */
+    if (['atividade', 'enviar', 'adaptada'].includes(acao)) {
+      const id = await alunoDaSessao(req);
+      if (!id) return erro(401, 'Entre com seu RA, dígito e senha.');
+      const al = await rest('alunos?ra=eq.' + enc(id.ra) + '&digito_ra=eq.' + enc(id.digito) + '&select=nome,turma');
+      if (!al.length) return erro(401, 'Aluno não encontrado.');
+      q.turma = al[0].turma; q.nome = al[0].nome; b.turma = al[0].turma; b.nome = al[0].nome;
+    }
+    if ((req.method === 'GET' && (acao === 'turmas' || acao === 'nomes'))) return erro(410, 'Lista pública desativada. Entre com seu RA e senha.');
 
     /* ----- aluno ----- */
     if (req.method === 'GET' && acao === 'turmas') {

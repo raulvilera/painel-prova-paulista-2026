@@ -142,6 +142,7 @@
   <p class="sm" style="margin:10px 0;color:#5b6f74">Responda as questões escritas com as suas próprias palavras. O sistema registra se o texto foi colado e avisa o professor sobre possível uso de inteligência artificial.</p>
   <button class="enviar" id="btn" type="button" hidden>Enviar respostas</button>
 </div>
+<script src="/aluno-acesso.js" defer></script>
 <script>
 (function(){
   const $ = s => document.querySelector(s);
@@ -157,11 +158,13 @@
   /* o russo vale só para a aluna que o recebe: ao trocar de aluno na mesma página, recarrega em português (evita misturar idiomas) */
   const sairRusso = () => { if (LANG !== 'ru') return false; location.replace(location.pathname + (MODO ? '?modo=simulado' : '')); return true; };
   const espera = ms => new Promise(r => setTimeout(r, ms));
+  const tkA = () => (window.alunoAcesso && window.alunoAcesso.token()) || '';
   async function chama(opt, q){
     let ult;
     for (let k = 0; k < 3; k++) {
       try {
-        const r = opt ? await fetch('/api/individual', opt) : await fetch('/api/individual?' + new URLSearchParams(q), { cache: 'no-store' });
+        const hd = { Authorization: 'Bearer ' + tkA() };
+        const r = opt ? await fetch('/api/individual', Object.assign({}, opt, { headers: Object.assign({}, opt.headers, hd) })) : await fetch('/api/individual?' + new URLSearchParams(q), { cache: 'no-store', headers: hd });
         const j = await r.json(); if (!j.ok) throw Object.assign(new Error(j.erro || 'erro'), { srv: true }); return j;
       } catch (e) { ult = e; if (e.srv) throw e; await espera(1200 * (k + 1)); }
     }
@@ -172,10 +175,15 @@
   const falha = e => e && e.srv ? e.message : 'sem conexão. Verifique a internet e tente de novo';
   const msg = (t, ok) => { const m = $('#msg'); m.className = 'msg ' + (ok ? 'ok' : 'erro'); m.textContent = t; m.scrollIntoView({behavior:'smooth', block:'center'}); };
 
-  fT.innerHTML = '<option value="">Carregando…</option>'; fT.disabled = true;
-  get({ acao: 'turmas' }).then(d => { fT.disabled = false; fT.innerHTML = '<option value="">Selecione</option>' + d.turmas.map(t => `<option>${esc(t)}</option>`).join('');
-    const pt = URLP.get('t'); if (pt) { const kt = x => { const m = /(\d)\s*º?\s*ANO\s*([A-Z])\b/i.exec(String(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '')); return m ? m[1] + m[2].toUpperCase() : x; }; const o = [...fT.options].find(x => x.value && kt(x.value) === kt(pt)); if (o) { fT.value = o.value; fT.onchange(); } } })
-    .catch(e => { fT.innerHTML = '<option value="">Indisponível</option>'; msg('Não foi possível carregar as turmas: ' + falha(e) + '.', false); });
+  /* turma e nome vêm do login do aluno (RA + dígito + senha) */
+  (async () => {
+    while (!window.alunoAcesso) await espera(50);
+    await window.alunoAcesso.exigir();
+    const d = window.alunoAcesso.dados();
+    fT.innerHTML = `<option>${esc(d.turma)}</option>`; fT.value = d.turma; fT.disabled = true;
+    fN.innerHTML = `<option>${esc(d.nome)}</option>`; fN.value = d.nome; fN.disabled = true;
+    fN.onchange();
+  })();
   let AD = null, cur = 0, enviado = false;   // AD = opções de acessibilidade (só para quem tem atividade adaptada)
   function zerar(){ Q = []; resp = []; AD = null; cur = 0; enviado = false; falaParar(); Object.keys(pausaFeita).forEach(k => delete pausaFeita[k]); $('#qs').innerHTML = ''; $('#desc').hidden = true; $('#btn').hidden = true; $('#msg').className = 'msg';
     ['ajuda','gloss','agenda','pausa','nav'].forEach(i => $('#' + i).hidden = true); document.documentElement.style.fontSize = ''; document.body.classList.remove('adapt','gentil','desafio'); }
