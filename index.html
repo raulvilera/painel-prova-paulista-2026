@@ -346,6 +346,12 @@ footer{margin-top:18px}
       <button class="btn" id="bSalvar" type="submit">Salvar senha e entrar</button>
     </form>
 
+    <div id="fLock" hidden>
+      <p class="muted" style="margin:0">Confirme sua identidade para ver os dados dos alunos.</p>
+      <button class="btn" id="bDesbloquear" type="button">Desbloquear com biometria</button>
+      <button class="linkbtn" id="bUsarSenha" type="button">Usar senha neste aparelho</button>
+    </div>
+
     <p class="note" id="authLoading" hidden>Carregando…</p>
   </div>
 </div>
@@ -1248,8 +1254,9 @@ window.onTurnstileLoad=()=>{ if($("authView") && !$("authView").hidden) renderCa
 function resetCaptcha(){ if(window.turnstile && captchaWidget!==null) window.turnstile.reset(captchaWidget); captchaToken=null; }
 const $=id=>document.getElementById(id);
 function msg(t,kind){ const m=$("authMsg"); if(!t){ m.hidden=true; return; } m.textContent=t; m.className="msg "+(kind||"err"); m.hidden=false; }
-function showLogin(){ $("authView").hidden=false; $("appView").hidden=true; $("fLogin").hidden=false; setTimeout(renderCaptcha,0); $("fSenha").hidden=true; $("authTitle").textContent="Entrar no painel"; $("authLoading").hidden=true; }
-function showSetPassword(){ $("authView").hidden=false; $("appView").hidden=true; $("fLogin").hidden=true; $("fSenha").hidden=false; $("authTitle").textContent="Crie sua senha"; msg("E-mail confirmado. Agora defina sua senha.","ok"); $("nSenha").focus(); }
+function showLock(){ $("authView").hidden=false; $("appView").hidden=true; $("fLogin").hidden=true; $("fSenha").hidden=true; $("fLock").hidden=false; $("authTitle").textContent="Desbloquear painel"; msg(""); }
+function showLogin(){ $("authView").hidden=false; $("appView").hidden=true; $("fLock").hidden=true; $("fLogin").hidden=false; setTimeout(renderCaptcha,0); $("fSenha").hidden=true; $("authTitle").textContent="Entrar no painel"; $("authLoading").hidden=true; }
+function showSetPassword(){ $("authView").hidden=false; $("appView").hidden=true; $("fLock").hidden=true; $("fLogin").hidden=true; $("fSenha").hidden=false; $("authTitle").textContent="Crie sua senha"; msg("E-mail confirmado. Agora defina sua senha.","ok"); $("nSenha").focus(); }
 function decode(v){
   const C=["Ciências","Biologia","Química"], P=x=>x==null?null:x/1000;
   return { T:v.T,
@@ -1291,6 +1298,17 @@ $("bBiometria").addEventListener("click", async ()=>{
   if(data && data.user && data.user.email!==EMAIL_OK){ await sb.auth.signOut(); msg("Este painel é de uso restrito do e-mail "+EMAIL_OK+"."); return; }
   openApp(data.session);
 });
+$("bDesbloquear").addEventListener("click", async ()=>{
+  msg("");
+  if(!window.PublicKeyCredential){ msg("Este aparelho não tem suporte a biometria. Use a senha."); return; }
+  $("bDesbloquear").disabled=true;
+  const { data, error } = await sb.auth.signInWithPasskey();
+  $("bDesbloquear").disabled=false;
+  if(error){ msg("Não foi possível desbloquear: "+error.message+". Se a biometria não estiver cadastrada neste aparelho, use a senha."); return; }
+  if(data && data.user && data.user.email!==EMAIL_OK){ await sb.auth.signOut(); showLogin(); msg("Este painel é de uso restrito do e-mail "+EMAIL_OK+"."); return; }
+  openApp(data.session);
+});
+$("bUsarSenha").addEventListener("click", async ()=>{ await sb.auth.signOut(); DATA=null; showLogin(); });
 $("bBioCadastrar").addEventListener("click", async ()=>{
   const { error } = await sb.auth.registerPasskey();
   if(error){ alert("Não foi possível cadastrar a biometria: "+error.message); return; }
@@ -1336,7 +1354,10 @@ sb.auth.onAuthStateChange((ev, session)=>{ if(ev==="PASSWORD_RECOVERY" && sessio
   if(!sess){ const g=guardado(); if(g&&g.refresh_token){ try{ const r=await sb.auth.refreshSession({refresh_token:g.refresh_token}); sess=r&&r.data&&r.data.session; }catch(e){} } }
   $("authLoading").hidden=true;
   if(location.hash.includes("access_token")) history.replaceState(null,"",location.pathname);
-  if(sess) openApp(sess); else showLogin();
+  /* Sempre pede a biometria ao abrir o painel: a sessão guardada só mostra a tela de desbloqueio, sem dados */
+  if(sess && (sess.user.user_metadata||{}).senha_definida) showLock();
+  else if(sess) openApp(sess);   /* primeiro acesso por link: openApp leva para criar a senha */
+  else showLogin();
 })();
 </script>
 
