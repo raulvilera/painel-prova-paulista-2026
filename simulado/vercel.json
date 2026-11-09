@@ -52,6 +52,22 @@
     {
       "source": "/api/personalizada-em",
       "destination": "https://painel-prova-paulista-2026.vercel.app/api/personalizada-em"
+    },
+    {
+      "source": "/api/aluno-login",
+      "destination": "https://painel-prova-paulista-2026.vercel.app/api/aluno-login"
+    },
+    {
+      "source": "/aluno-acesso.js",
+      "destination": "https://painel-prova-paulista-2026.vercel.app/aluno-acesso.js"
+    },
+    {
+      "source": "/sinais.js",
+      "destination": "https://painel-prova-paulista-2026.vercel.app/sinais.js"
+    },
+    {
+      "source": "/voltar-painel.js",
+      "destination": "https://painel-prova-paulista-2026.vercel.app/voltar-painel.js"
     }
   ]
 }
