@@ -311,7 +311,8 @@ module.exports = async function individual(req, res) {
     const acao = String(q.acao || b.acao || '');
 
     /* ----- aluno: turma e nome vêm do login (token), nunca do pedido ----- */
-    if (['atividade', 'enviar', 'adaptada'].includes(acao)) {
+    const semLogin = acao === 'adaptada' && !/^Bearer .+/.test(req.headers.authorization || '');   // Simulado sem login: pergunta só sim/não (nada sobre o motivo)
+    if (['atividade', 'enviar', 'adaptada'].includes(acao) && !semLogin) {
       const id = await alunoDaSessao(req);
       if (!id) return erro(401, 'Entre com seu RA, dígito e senha.');
       const al = await rest('alunos?ra=eq.' + enc(id.ra) + '&digito_ra=eq.' + enc(id.digito) + '&select=nome,turma');
