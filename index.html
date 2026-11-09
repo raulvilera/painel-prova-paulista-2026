@@ -1377,7 +1377,7 @@ window.addEventListener("appinstalled",()=>{ bI.hidden=true; });
 (function(){
   const vw=document.getElementById("vw"),fr=document.getElementById("vwF"),tt=document.getElementById("vwT"),sel=document.getElementById("vwSel");
   let cur=null,open=false;
-  const interno=a=>{try{const u=new URL(a.href,location.href);return ((u.origin===location.origin&&u.pathname!=="/")||u.hostname==="simulado-saresp-ciencias-2026.vercel.app")&&!/\.(pdf|png|jpg|zip)$/i.test(u.pathname)}catch(e){return false}};
+  const interno=a=>{try{const u=new URL(a.href,location.href);return (u.origin===location.origin&&u.pathname!=="/")&&!/\.(pdf|png|jpg|zip)$/i.test(u.pathname)}catch(e){return false}};
   const nome=a=>(a.textContent||"").replace(/\s+/g," ").trim()||a.getAttribute("href");
   function lista(){const m=new Map();document.querySelectorAll("nav.relat a[href],a.sim-btn[href]").forEach(a=>{if(interno(a)&&!m.has(a.href))m.set(a.href,nome(a))});sel.innerHTML=[...m].map(([h,n])=>`<option value="${h}">${n.replace(/</g,"&lt;")}</option>`).join("")}
   function marca(){document.querySelectorAll("nav.relat a,a.sim-btn").forEach(a=>a.classList.toggle("on",open&&cur&&a.href===cur))}
