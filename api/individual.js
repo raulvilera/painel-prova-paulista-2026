@@ -301,6 +301,8 @@ async function montar(turma, nome, gerar, modo) {
 }
 
 module.exports = async function individual(req, res) {
+  /* /api/aluno-login passa por aqui (vercel.json): o plano gratuito da Vercel aceita no máximo 12 funções */
+  if ((req.query || {}).fn === 'aluno-login') return require('./_aluno-login.js')(req, res);
   res.setHeader('Cache-Control', 'no-store'); res.setHeader('Content-Type', 'application/json; charset=utf-8');
   const ok = o => res.status(200).json(Object.assign({ ok: true }, o)), erro = (c, m) => res.status(c).json({ ok: false, erro: m });
   try {
