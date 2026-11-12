@@ -250,12 +250,27 @@
   $('questoes').addEventListener('change', () => { atualizar(); gravarRasc(); });
   $('questoes').addEventListener('input', e => { if (e.target.tagName === 'TEXTAREA') { atualizar(); gravarRasc(); } });
 
+  /* registro técnico do preenchimento das dissertativas (colagens, digitação, saídas da página) */
+  let TEL = { q: {}, saidas: 0 };
+  const telQ = n => (TEL.q[n] = TEL.q[n] || { p: 0, pc: 0, t: 0, ms: 0, u: 0 });
+  const num = v => (Number.isFinite(Number(v)) ? Number(v) : 0);
+  $('questoes').addEventListener('paste', e => { if (e.target.tagName !== 'TEXTAREA') return; const o = telQ(e.target.dataset.n); o.p++; o.pc += ((e.clipboardData && e.clipboardData.getData('text')) || '').length; });
+  $('questoes').addEventListener('drop', e => { if (e.target.tagName === 'TEXTAREA') { const o = telQ(e.target.dataset.n); o.p++; o.pc += ((e.dataTransfer && e.dataTransfer.getData('text')) || '').length; } });
+  $('questoes').addEventListener('beforeinput', e => {
+    if (e.target.tagName !== 'TEXTAREA') return;
+    const o = telQ(e.target.dataset.n), agora = Date.now();
+    if (/^insert(Text|CompositionText|ReplacementText|LineBreak)$/.test(e.inputType)) o.t += (e.data || '\n').length;
+    if (o.u && agora - o.u < 30000) o.ms += agora - o.u;   // tempo ativo de digitação (pausas > 30 s não contam)
+    o.u = agora;
+  });
+  document.addEventListener('visibilitychange', () => { if (document.hidden) { TEL.saidas++; gravarRasc(); } });
   function coletar() {
-    return { n: $('nome').value ? Number($('nome').value) : null, respostas: OBJ.map(q => { const s = document.querySelector('input[name="q' + q.n + '"]:checked'); return s ? Number(s.value) : null; }), dissertativas: DIS.map(q => $('t' + q.n).value) };
+    return { tel: TEL, n: $('nome').value ? Number($('nome').value) : null, respostas: OBJ.map(q => { const s = document.querySelector('input[name="q' + q.n + '"]:checked'); return s ? Number(s.value) : null; }), dissertativas: DIS.map(q => $('t' + q.n).value) };
   }
   function restaurar() {
     const r = lerRasc();
     (r.respostas || []).forEach((v, i) => { if (Number.isInteger(v)) { const el = document.querySelector('input[name="q' + OBJ[i].n + '"][value="' + v + '"]'); if (el) el.checked = true; } });
+    if (r.tel && typeof r.tel === 'object') TEL = { q: r.tel.q || {}, saidas: num(r.tel.saidas) };
     (r.dissertativas || []).forEach((t, i) => { if (typeof t === 'string' && DIS[i]) $('t' + DIS[i].n).value = t; });
     return r.n;
   }
@@ -313,7 +328,7 @@
     abrirModal('Corrigindo…', '<div class="girando" aria-hidden="true"></div><p style="text-align:center">Corrigindo as objetivas e as dissertativas. Isso pode levar até 1 minuto: não feche a página.</p>', false);
     const d = coletar();
     try {
-      const r = await fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ acao: 'enviar', n: d.n, respostas: d.respostas, dissertativas: d.dissertativas }) });
+      const r = await fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ acao: 'enviar', n: d.n, respostas: d.respostas, dissertativas: d.dissertativas, telemetria: { saidas: num(d.tel.saidas), por: DIS.map(q => { const o = d.tel.q[q.n] || {}; return { p: num(o.p), pc: num(o.pc), t: num(o.t), ms: num(o.ms) }; }) } }) });
       const j = await r.json().catch(() => ({ ok: false, erro: 'Resposta inválida do servidor (HTTP ' + r.status + ').' }));
       if (!j.ok) { abrirModal(r.status === 409 ? 'Envio já realizado' : 'Não foi possível entregar', '<p>' + esc(j.erro || 'Erro.') + '</p><p class="muted">Suas respostas continuam salvas nesta página.</p>', false); setTimeout(fecharModal, 5000); return; }
       mostrarResultado(j); fecharModal();
