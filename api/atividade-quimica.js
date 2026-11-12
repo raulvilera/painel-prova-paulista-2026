@@ -2,12 +2,13 @@
    Lê a tabela alunos (chamada e nome) no servidor, com SUPABASE_URL e SUPABASE_SERVICE_KEY, e devolve só a turma pedida.
    Nenhum dado de aluno fica no HTML nem no repositório (LGPD). */
 const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.env.SUPABASE_SERVICE_KEY || '';
-const TURMA = '2ª Série C';
+const TURMAS = ['2ª Série C', '8º Ano A', '8º Ano B'];   // 2ª C: Química · 8º A e B: Missão Ciências
 
 module.exports = async function atividadeQuimica(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   const ok = o => res.status(200).json(Object.assign({ ok: true }, o)), erro = (c, m) => res.status(c).json({ ok: false, erro: m });
   if (req.method !== 'GET') return erro(405, 'Método não permitido.');
+  const TURMA = TURMAS.includes(String((req.query || {}).turma || '')) ? String(req.query.turma) : TURMAS[0];
   if (!SB || !KEY) return erro(503, 'Servidor não configurado (SUPABASE_URL / SUPABASE_SERVICE_KEY).');
 
   try {
