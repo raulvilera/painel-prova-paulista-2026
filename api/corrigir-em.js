@@ -469,6 +469,8 @@ async function gravarResultado(ident, id, q, respostas, acertos, notaObjetiva, d
 }
 
 module.exports = async function corrigirEM(req, res) {
+  /* /api/recuperacao-2ds passa por aqui (vercel.json): o plano gratuito da Vercel aceita no máximo 12 funções */
+  if ((req.query || {}).fn === 'recuperacao-2ds') return require('./_recuperacao-2ds.js')(req, res);
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('Content-Type', 'application/json; charset=utf-8');

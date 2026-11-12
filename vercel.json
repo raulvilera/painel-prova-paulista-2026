@@ -78,6 +78,10 @@
     {
       "source": "/api/aluno-login",
       "destination": "/api/individual?fn=aluno-login"
+    },
+    {
+      "source": "/api/recuperacao-2ds",
+      "destination": "/api/corrigir-em?fn=recuperacao-2ds"
     }
   ]
 }

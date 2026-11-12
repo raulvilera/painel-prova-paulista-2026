@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Recuperação Semestral de Biologia · 2ª Série A (DS) · E.E. Profª Wanda Mascagni de Sá</title>
+<style>
+  :root {
+    --tinta: #14213d; --azul: #1d4e89; --azul-claro: #e8f0fa; --verde: #1b7f4b; --verde-claro: #e6f5ec;
+    --vermelho: #b3261e; --vermelho-claro: #fbe9e7; --ambar: #b9770e; --ambar-claro: #fdf2e3;
+    --texto: #1f2328; --cinza: #5f6b76; --borda: #d5dde6; --papel: #ffffff; --fundo: #eef2f6;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--texto); background: var(--fundo); line-height: 1.6; }
+  .topo { background: var(--tinta); color: #fff; }
+  .topo .faixa { max-width: 900px; margin: 0 auto; padding: 22px 20px 20px; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; }
+  .selo { width: 64px; height: 64px; border-radius: 14px; background: #fff; color: var(--tinta); display: grid; place-items: center; font-weight: 900; font-size: 1.05rem; letter-spacing: .02em; }
+  .topo .gov { margin: 0; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; opacity: .75; }
+  .topo h1 { margin: 2px 0 2px; font-size: 1.55rem; line-height: 1.2; }
+  .topo .sub { margin: 0; opacity: .9; font-size: .98rem; }
+  .titulo-prova { background: var(--azul); color: #fff; }
+  .titulo-prova div { max-width: 900px; margin: 0 auto; padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between; font-weight: 700; }
+  .titulo-prova span.muted { font-weight: 500; opacity: .85; }
+  main { max-width: 900px; margin: 0 auto; padding: 20px 16px 120px; }
+  .cartao { background: var(--papel); border: 1px solid var(--borda); border-radius: 14px; padding: 20px; margin-bottom: 18px; }
+  .cartao h2 { margin: 0 0 12px; color: var(--azul); font-size: 1.15rem; }
+  .ident { display: grid; grid-template-columns: 2.2fr .7fr 1.8fr; gap: 12px; }
+  .ident .linha2 { grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 1fr; gap: 12px; }
+  .ident label { display: block; font-size: .85rem; color: var(--cinza); margin-bottom: 4px; font-weight: 600; }
+  .ident select, .ident input { width: 100%; min-height: 48px; padding: 10px 12px; font: inherit; border: 1px solid var(--borda); border-radius: 10px; background: #fff; color: var(--texto); }
+  .ident input[readonly] { background: #f5f7fa; }
+  .ident select:focus, .ident input:focus, textarea:focus { outline: 3px solid #9cc3f0; outline-offset: 1px; }
+  @media (max-width: 680px) { .ident, .ident .linha2 { grid-template-columns: 1fr; } }
+  .aviso { color: var(--vermelho); font-weight: 600; margin: 10px 0 0; min-height: 1em; }
+  .orient ul { margin: 6px 0; padding-left: 20px; }
+  .orient li { margin: 3px 0; }
+  table.tabela, table.tab { width: 100%; border-collapse: collapse; font-size: .93rem; margin: 10px 0; }
+  table.tabela th, table.tabela td, table.tab th, table.tab td { border: 1px solid var(--borda); padding: 7px 9px; text-align: left; vertical-align: top; }
+  table.tabela th, table.tab th { background: var(--azul-claro); }
+  .tabwrap { overflow-x: auto; }
+  h2.secao { margin: 30px 0 12px; color: var(--tinta); font-size: 1.2rem; border-left: 6px solid var(--azul); padding-left: 10px; }
+  article.questao { background: var(--papel); border: 1px solid var(--borda); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+  article.questao.respondida { border-left: 6px solid var(--azul); }
+  .qcab { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .qnum { background: var(--tinta); color: #fff; font-weight: 800; border-radius: 8px; padding: 3px 10px; }
+  .tag { font-size: .76rem; font-weight: 700; border-radius: 999px; padding: 2px 10px; background: var(--azul-claro); color: var(--azul); }
+  .tag.dis { background: var(--ambar-claro); color: var(--ambar); }
+  .texto p { margin: 0 0 10px; }
+  .figura { margin: 10px 0 14px; padding: 12px; border: 1px dashed var(--borda); border-radius: 12px; background: #fbfcfe; overflow-x: auto; }
+  .figura svg { width: 100%; height: auto; max-height: 230px; display: block; font-family: inherit; }
+  .figura .fonte { font-size: .8rem; color: var(--cinza); margin: 4px 0 0; }
+  .figura .seq { font-family: ui-monospace, Consolas, monospace; font-size: 1.02rem; font-weight: 700; background: var(--azul-claro); padding: 8px 10px; border-radius: 8px; margin: 0 0 8px; overflow-x: auto; white-space: nowrap; }
+  .comando { font-weight: 700; margin: 8px 0 12px; }
+  .comando ol { font-weight: 500; margin: 6px 0 0; padding-left: 22px; }
+  .alts { display: grid; gap: 8px; }
+  .alt { display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: start; border: 1px solid var(--borda); border-radius: 10px; padding: 10px 12px; cursor: pointer; background: #fff; transition: background .12s, border-color .12s; }
+  .alt:hover { background: #f6f9fd; }
+  .alt input { position: absolute; opacity: 0; pointer-events: none; }
+  .alt .letra { width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--azul); color: var(--azul); display: grid; place-items: center; font-weight: 800; }
+  .alt:has(input:checked) { border-color: var(--azul); background: var(--azul-claro); }
+  .alt:has(input:checked) .letra { background: var(--azul); color: #fff; }
+  .alt:has(input:focus-visible) { outline: 3px solid #9cc3f0; }
+  .alt.certa, .alt.certa:has(input:checked) { border-color: var(--verde); background: var(--verde-claro); }
+  .alt.certa .letra, .alt.certa:has(input:checked) .letra { border-color: var(--verde); background: var(--verde); color: #fff; }
+  .alt.errada, .alt.errada:has(input:checked) { border-color: var(--vermelho); background: var(--vermelho-claro); }
+  .alt.errada .letra, .alt.errada:has(input:checked) .letra { border-color: var(--vermelho); background: var(--vermelho); color: #fff; }
+  textarea { width: 100%; min-height: 190px; padding: 12px; font: inherit; border: 1px solid var(--borda); border-radius: 10px; resize: vertical; background: repeating-linear-gradient(#fff, #fff 31px, #edf1f6 32px); line-height: 32px; }
+  .contador { font-size: .8rem; color: var(--cinza); text-align: right; margin-top: 4px; }
+  .devol { margin-top: 12px; border-radius: 10px; padding: 10px 12px; font-size: .95rem; }
+  .devol.ok { background: var(--verde-claro); border: 1px solid #b9e2c9; }
+  .devol.erro { background: var(--vermelho-claro); border: 1px solid #f2c4bf; }
+  .devol.par { background: var(--ambar-claro); border: 1px solid #f0d6aa; }
+  .barra { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; border-top: 1px solid var(--borda); box-shadow: 0 -6px 18px rgba(20,33,61,.08); z-index: 20; }
+  .barra div.in { max-width: 900px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 14px; }
+  .prog { flex: 1; }
+  .prog .trilho { height: 10px; border-radius: 999px; background: #e4e9f0; overflow: hidden; }
+  .prog .cheio { height: 100%; width: 0; background: var(--azul); transition: width .25s; }
+  .prog small { color: var(--cinza); }
+  button.prim { font: inherit; font-weight: 800; border: 0; border-radius: 12px; padding: 12px 20px; background: var(--verde); color: #fff; cursor: pointer; }
+  button.prim:disabled { background: #9aa6b2; cursor: not-allowed; }
+  button.sec { font: inherit; font-weight: 700; border: 1px solid var(--borda); border-radius: 12px; padding: 10px 16px; background: #fff; color: var(--azul); cursor: pointer; }
+  .resultado { border: 2px solid var(--verde); }
+  .notas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 10px 0; }
+  .notas div { background: var(--azul-claro); border-radius: 12px; padding: 12px; text-align: center; }
+  .notas b { display: block; font-size: 1.7rem; color: var(--tinta); }
+  .notas .final { background: var(--tinta); color: #fff; }
+  .notas .final b { color: #fff; }
+  @media (max-width: 560px) { .notas { grid-template-columns: 1fr; } }
+  .modal { position: fixed; inset: 0; background: rgba(10,20,40,.55); display: grid; place-items: center; z-index: 50; padding: 16px; }
+  .modal[hidden] { display: none; }
+  .modal .caixa { background: #fff; border-radius: 16px; max-width: 460px; width: 100%; padding: 22px; }
+  .modal h3 { margin: 0 0 8px; color: var(--tinta); }
+  .modal .acoes { display: flex; gap: 10px; justify-content: flex-end; margin-top: 16px; flex-wrap: wrap; }
+  .girando { width: 38px; height: 38px; border: 4px solid #d6e2f0; border-top-color: var(--azul); border-radius: 50%; animation: gira 1s linear infinite; margin: 6px auto 10px; }
+  @keyframes gira { to { transform: rotate(360deg); } }
+  .rodape { text-align: center; color: var(--cinza); font-size: .82rem; margin-top: 24px; }
+  fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+  fieldset:disabled .alt { cursor: default; }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="faixa">
+    <div class="selo" aria-hidden="true">EE</div>
+    <div>
+      <p class="gov">Governo do Estado de São Paulo · Unidade Regional de Ensino Guarulhos Norte</p>
+      <h1>E.E. Profª Wanda Mascagni de Sá</h1>
+      <p class="sub">Biologia · Prof. Raul Pereira Vilera Junior</p>
+    </div>
+  </div>
+</header>
+<div class="titulo-prova"><div><span>Recuperação Semestral de Biologia · 2º semestre de 2026</span><span class="muted">2ª Série A · Desenvolvimento de Sistemas (manhã)</span></div></div>
+
+<main>
+  <section class="cartao" aria-labelledby="h-ident">
+    <h2 id="h-ident">Identificação</h2>
+    <div class="ident">
+      <div>
+        <label for="nome">Nome do(a) estudante</label>
+        <select id="nome" disabled><option value="">Carregando a lista da turma…</option></select>
+      </div>
+      <div>
+        <label for="numero">Nº de chamada</label>
+        <input id="numero" type="text" readonly placeholder="—" tabindex="-1">
+      </div>
+      <div>
+        <label for="email">E-mail institucional</label>
+        <input id="email" type="text" readonly placeholder="—" tabindex="-1">
+      </div>
+      <div class="linha2">
+        <div><label for="turma">Turma</label><input id="turma" type="text" readonly value="2ª Série A · Desenvolvimento de Sistemas (manhã)" tabindex="-1"></div>
+        <div><label for="data">Data</label><input id="data" type="date"></div>
+      </div>
+    </div>
+    <p class="aviso" id="aviso-nome" role="alert"></p>
+  </section>
+
+  <section class="cartao orient" aria-labelledby="h-orient">
+    <h2 id="h-orient">Orientações</h2>
+    <ul>
+      <li>Escolha o seu nome na lista: o número de chamada e o e-mail institucional são preenchidos automaticamente.</li>
+      <li>A atividade tem <strong>10 questões</strong> no estilo ENEM: <strong>5 objetivas</strong> (questões 1 a 5, com uma única alternativa correta) e <strong>5 dissertativas</strong> (questões 6 a 10). Cada questão vale até <strong>1 ponto</strong>.</li>
+      <li>Nas dissertativas, responda <strong>todos os itens (a, b, c)</strong> com as suas palavras, em frases completas.</li>
+      <li>As respostas ficam salvas neste aparelho enquanto você faz a atividade. <strong>Só é permitido um envio</strong>: confira tudo antes de entregar.</li>
+    </ul>
+    <div class="tabwrap"><table class="tabela" id="tab-conteudos"><thead><tr><th>Tema (Plano de Recuperação · 23/11 a 30/11)</th><th>Aprendizagem</th><th>Questões</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <div id="questoes"></div>
+
+  <section class="cartao resultado" id="resultado" hidden aria-live="polite">
+    <h2>Resultado</h2>
+    <p id="res-nome"></p>
+    <div class="notas">
+      <div><span>Objetivas</span><b id="res-obj">—</b><small>de 5 pontos</small></div>
+      <div><span>Dissertativas</span><b id="res-dis">—</b><small>de 5 pontos</small></div>
+      <div class="final"><span>Nota final</span><b id="res-final">—</b><small>de 10</small></div>
+    </div>
+    <p id="res-msg" class="muted"></p>
+    <p>Role a página para ver a correção de cada questão.</p>
+  </section>
+
+  <p class="rodape">E.E. Profª Wanda Mascagni de Sá · Plano de Recuperação e Aprofundamento · 2º semestre · Habilidades EM13CNT301, EM13CNT304 e EM13CNT207</p>
+</main>
+
+<div class="barra">
+  <div class="in">
+    <div class="prog"><div class="trilho"><div class="cheio" id="prog-cheio"></div></div><small id="prog-txt">0 de 10 questões respondidas</small></div>
+    <button class="prim" id="entregar" type="button">Entregar</button>
+  </div>
+</div>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+  <div class="caixa">
+    <h3 id="modal-titulo">Entregar a recuperação?</h3>
+    <div id="modal-corpo"></div>
+    <div class="acoes" id="modal-acoes">
+      <button class="sec" type="button" id="modal-voltar">Voltar e revisar</button>
+      <button class="prim" type="button" id="modal-ok">Entregar agora</button>
+    </div>
+  </div>
+</div>
+
+<script src="questoes.js?v=1"></script>
+<script>
+(function () {
+  'use strict';
+  const AV = window.REC2DS, API = '/api/recuperacao-2ds';
+  const OBJ = AV.questoes.filter(q => q.tipo === 'obj'), DIS = AV.questoes.filter(q => q.tipo === 'dis');
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  let ALUNOS = [], enviado = false;
+
+  /* ---------- armazenamento local (rascunho): pode falhar em alguns navegadores ---------- */
+  const CHAVE = 'rec2ds_rascunho_v1';
+  const lerRasc = () => { try { return JSON.parse(localStorage.getItem(CHAVE) || 'null') || {}; } catch (e) { return {}; } };
+  const gravarRasc = () => { try { localStorage.setItem(CHAVE, JSON.stringify(coletar())); } catch (e) { /* sem armazenamento: segue sem rascunho */ } };
+
+  /* ---------- data de hoje ---------- */
+  (function () { const d = new Date(); $('data').value = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10); })();
+
+  /* ---------- tabela de conteúdos ---------- */
+  $('tab-conteudos').querySelector('tbody').innerHTML = AV.blocos.map(b => '<tr><td>' + esc(b.titulo) + '</td><td>' + esc(b.ae) + '</td><td>' + b.questoes.join(', ') + '</td></tr>').join('');
+
+  /* ---------- questões ---------- */
+  function htmlQuestao(q) {
+    const cab = '<div class="qcab"><span class="qnum">Questão ' + q.n + '</span><span class="tag' + (q.tipo === 'dis' ? ' dis' : '') + '">' + (q.tipo === 'obj' ? 'Objetiva' : 'Dissertativa') + '</span><span class="tag">' + esc(q.ae) + ' · ' + esc(q.hab) + '</span></div>';
+    const base = '<div class="texto">' + q.texto + '</div>' + (q.figura ? '<div class="figura">' + q.figura + '</div>' : '') + '<div class="comando">' + q.comando + '</div>';
+    let corpo;
+    if (q.tipo === 'obj') {
+      corpo = '<fieldset><legend class="sr" style="position:absolute;left:-9999px">Alternativas da questão ' + q.n + '</legend><div class="alts">' + q.alts.map((a, i) =>
+        '<label class="alt" data-i="' + i + '"><input type="radio" name="q' + q.n + '" value="' + i + '"><span class="letra">' + 'ABCDE'[i] + '</span><span>' + esc(a) + '</span></label>').join('') + '</div></fieldset>';
+    } else {
+      corpo = '<label for="t' + q.n + '" style="position:absolute;left:-9999px">Resposta da questão ' + q.n + '</label><textarea id="t' + q.n + '" data-n="' + q.n + '" maxlength="3000" placeholder="Escreva aqui a sua resposta, item por item (a, b, c)…"></textarea><div class="contador" id="c' + q.n + '">0 / 3000 caracteres</div>';
+    }
+    return '<article class="questao" id="q' + q.n + '" data-n="' + q.n + '">' + cab + base + corpo + '<div class="devol" hidden></div></article>';
+  }
+  $('questoes').innerHTML = '<h2 class="secao">Questões objetivas (1 a 5)</h2>' + OBJ.map(htmlQuestao).join('') + '<h2 class="secao">Questões dissertativas (6 a 10)</h2>' + DIS.map(htmlQuestao).join('');
+
+  /* ---------- progresso ---------- */
+  function respondida(q) {
+    if (q.tipo === 'obj') return !!document.querySelector('input[name="q' + q.n + '"]:checked');
+    return $('t' + q.n).value.trim().length >= 3;
+  }
+  function atualizar() {
+    let k = 0;
+    AV.questoes.forEach(q => { const ok = respondida(q); if (ok) k++; $('q' + q.n).classList.toggle('respondida', ok); });
+    $('prog-cheio').style.width = (k * 10) + '%';
+    $('prog-txt').textContent = k + ' de 10 questões respondidas';
+    DIS.forEach(q => { $('c' + q.n).textContent = $('t' + q.n).value.length + ' / 3000 caracteres'; });
+  }
+  $('questoes').addEventListener('change', () => { atualizar(); gravarRasc(); });
+  $('questoes').addEventListener('input', e => { if (e.target.tagName === 'TEXTAREA') { atualizar(); gravarRasc(); } });
+
+  function coletar() {
+    return { n: $('nome').value ? Number($('nome').value) : null, respostas: OBJ.map(q => { const s = document.querySelector('input[name="q' + q.n + '"]:checked'); return s ? Number(s.value) : null; }), dissertativas: DIS.map(q => $('t' + q.n).value) };
+  }
+  function restaurar() {
+    const r = lerRasc();
+    (r.respostas || []).forEach((v, i) => { if (Number.isInteger(v)) { const el = document.querySelector('input[name="q' + OBJ[i].n + '"][value="' + v + '"]'); if (el) el.checked = true; } });
+    (r.dissertativas || []).forEach((t, i) => { if (typeof t === 'string' && DIS[i]) $('t' + DIS[i].n).value = t; });
+    return r.n;
+  }
+
+  /* ---------- lista da turma: nome → nº e e-mail ---------- */
+  function preencherAluno() {
+    const a = ALUNOS.find(x => String(x.n) === $('nome').value);
+    $('numero').value = a ? String(a.n).padStart(2, '0') : '';
+    $('email').value = a ? a.email : '';
+    if (a) $('aviso-nome').textContent = '';
+  }
+  $('nome').addEventListener('change', () => { preencherAluno(); gravarRasc(); });
+
+  const nRasc = restaurar(); atualizar();
+  fetch(API + '?acao=alunos', { cache: 'no-store' }).then(r => r.json()).then(j => {
+    if (!j.ok) throw new Error(j.erro || 'erro');
+    ALUNOS = j.alunos;
+    $('nome').innerHTML = '<option value="">Selecione o seu nome</option>' + ALUNOS.map(a => '<option value="' + a.n + '">' + esc(a.nome) + '</option>').join('');
+    $('nome').disabled = false;
+    if (nRasc != null && ALUNOS.some(a => a.n === nRasc)) { $('nome').value = String(nRasc); preencherAluno(); }
+  }).catch(e => {
+    $('nome').innerHTML = '<option value="">Lista indisponível</option>';
+    $('aviso-nome').textContent = 'Não foi possível carregar a lista da turma (' + e.message + '). Recarregue a página ou avise o professor.';
+  });
+
+  /* ---------- entrega ---------- */
+  const modal = $('modal');
+  function abrirModal(titulo, corpo, mostrarAcoes) {
+    $('modal-titulo').textContent = titulo; $('modal-corpo').innerHTML = corpo;
+    $('modal-acoes').hidden = !mostrarAcoes; modal.hidden = false;
+    if (mostrarAcoes) $('modal-voltar').focus();
+  }
+  const fecharModal = () => { modal.hidden = true; };
+  $('modal-voltar').addEventListener('click', fecharModal);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('modal-acoes').hidden) fecharModal(); });
+
+  $('entregar').addEventListener('click', () => {
+    if (enviado) return;
+    if (!$('nome').value) { $('aviso-nome').textContent = 'Escolha o seu nome na lista antes de entregar.'; $('nome').focus(); window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+    const falta = AV.questoes.filter(q => !respondida(q)).map(q => q.n);
+    if (falta.length) {
+      abrirModal('Ainda faltam questões', '<p>Responda todas as questões antes de entregar. Faltam: <strong>' + falta.join(', ') + '</strong>.</p>', false);
+      setTimeout(fecharModal, 2600); $('q' + falta[0]).scrollIntoView({ behavior: 'smooth', block: 'center' }); return;
+    }
+    const a = ALUNOS.find(x => String(x.n) === $('nome').value);
+    abrirModal('Entregar a recuperação?', '<p>Você está entregando como <strong>' + esc(a ? a.nome : '') + '</strong> (nº ' + esc($('numero').value) + ').</p><p>Depois de entregar, não será possível alterar as respostas.</p>', true);
+  });
+
+  $('modal-ok').addEventListener('click', async () => {
+    abrirModal('Corrigindo…', '<div class="girando" aria-hidden="true"></div><p style="text-align:center">Corrigindo as objetivas e as dissertativas. Isso pode levar até 1 minuto: não feche a página.</p>', false);
+    const d = coletar();
+    try {
+      const r = await fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ acao: 'enviar', n: d.n, respostas: d.respostas, dissertativas: d.dissertativas }) });
+      const j = await r.json().catch(() => ({ ok: false, erro: 'Resposta inválida do servidor (HTTP ' + r.status + ').' }));
+      if (!j.ok) { abrirModal(r.status === 409 ? 'Envio já realizado' : 'Não foi possível entregar', '<p>' + esc(j.erro || 'Erro.') + '</p><p class="muted">Suas respostas continuam salvas nesta página.</p>', false); setTimeout(fecharModal, 5000); return; }
+      mostrarResultado(j); fecharModal();
+    } catch (e) {
+      abrirModal('Sem conexão', '<p>Não foi possível enviar agora. Verifique a internet e tente de novo: suas respostas continuam salvas.</p>', false); setTimeout(fecharModal, 4000);
+    }
+  });
+
+  const nf = v => (Math.round(v * 10) / 10).toFixed(1).replace('.', ',');
+  function mostrarResultado(j) {
+    enviado = true;
+    try { localStorage.removeItem(CHAVE); } catch (e) { /* ignora */ }
+    document.querySelectorAll('#questoes fieldset').forEach(f => f.disabled = true);
+    document.querySelectorAll('#questoes textarea').forEach(t => t.readOnly = true);
+    $('nome').disabled = true; $('entregar').disabled = true; $('entregar').textContent = 'Entregue';
+    j.devolutiva.forEach(d => {
+      const art = $('q' + d.n);
+      art.querySelectorAll('.alt').forEach(l => { const i = Number(l.dataset.i); if (i === d.correta) l.classList.add('certa'); else if (i === d.marcada) l.classList.add('errada'); });
+      const dv = art.querySelector('.devol'); dv.hidden = false; dv.className = 'devol ' + (d.acertou ? 'ok' : 'erro');
+      dv.innerHTML = '<strong>' + (d.acertou ? '✓ Você acertou.' : '✗ Resposta correta: ' + 'ABCDE'[d.correta] + '.') + '</strong> ' + esc(d.justificativa);
+    });
+    let somaDis = 0;
+    j.dissertativas.forEach(d => {
+      somaDis += d.nota;
+      const dv = $('q' + d.n).querySelector('.devol'); dv.hidden = false; dv.className = 'devol ' + (d.nota >= 0.7 ? 'ok' : d.nota >= 0.4 ? 'par' : 'erro');
+      dv.innerHTML = '<strong>Nota: ' + nf(d.nota) + ' de 1.</strong> ' + esc(d.comentario);
+    });
+    $('res-nome').innerHTML = '<strong>' + esc(j.nome) + '</strong> · nº ' + esc($('numero').value) + ' · ' + esc($('email').value);
+    $('res-obj').textContent = j.acertos; $('res-dis').textContent = nf(somaDis); $('res-final').textContent = nf(j.notaFinal);
+    $('res-msg').textContent = j.mensagem || '';
+    $('resultado').hidden = false; $('resultado').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+})();
+</script>
+</body>
+</html>
