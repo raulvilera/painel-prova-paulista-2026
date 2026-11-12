@@ -40,7 +40,7 @@
         else itens.push({ v, q, ae: (m.hab ? m.hab + ' · ' : '') + (m.ae || '—'), desc: m.desc || '—', bim: m.bim || '', rot: m.desc });
       });
       const parcial = (r.itens || []).some(i => i.tipo === 'dis' && typeof i.nota !== 'number');
-      const rotAval = CFG.fonte === 'em' ? [r.componente, r.prova, (r.avaliacao.split('-')[1] || '') + 'ª série'].filter(Boolean).join(' · ') : (CFG.fonte === 'simulado' ? 'Simulado SARESP' : 'Atividade individual');
+      const rotAval = CFG.fonte === 'em' ? [r.componente, r.prova, (r.rot_serie || (r.avaliacao.split('-')[1] || '') + 'ª série')].filter(Boolean).join(' · ') : (CFG.fonte === 'simulado' ? 'Simulado SARESP' : 'Atividade individual');
       return { turma, aluno: r.nome, id: r.id, aval, rotAval, itens, parcial, raw: r, nota: itens.length ? media(itens.map(i => i.v)) * 10 : null, criado: r.criado };
     });
   }
@@ -369,14 +369,14 @@
     TOKEN = data.session.access_token;
     msg('Carregando os resultados…');
     try {
-      const r = await fetch('/api/resultados?fonte=' + CFG.fonte, { headers: { Authorization: 'Bearer ' + data.session.access_token } });
+      const r = await fetch('/api/resultados?fonte=' + (CFG.apiFonte || CFG.fonte), { headers: { Authorization: 'Bearer ' + data.session.access_token } });
       const j = await r.json().catch(() => ({ ok: false, erro: 'resposta inválida (HTTP ' + r.status + ')' }));
       if (!j.ok) return msg(esc(j.erro || 'Erro ao carregar.') + (r.status === 401 ? '<br><br><a href="/">Abrir o painel</a>' : ''));
       ROSTER = {};
       if (CFG.fonte === 'em') Object.values(j.roster || {}).forEach(t => ROSTER[t.turma] = t.alunos.map(a => a.nome));
       else ROSTER = j.roster || {};   // individual e simulado: {turma:[nomes]}
       TENT = norm(j);
-      if (CFG.fonte === 'em') { const av = new Map(); TENT.forEach(x => av.set(x.aval, x.rotAval)); if (!av.has('bio-2-recuperacao')) av.set('bio-2-recuperacao', 'Biologia · Recuperação semestral (2º semestre) · 2ª série'); opcoes($('fFiltro'), [...av.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR')), S.filtro, 'Todas as avaliações'); }
+      if (CFG.fonte === 'em') { const av = new Map(); TENT.forEach(x => av.set(x.aval, x.rotAval)); if (!CFG.apiFonte && !av.has('bio-2-recuperacao')) av.set('bio-2-recuperacao', 'Biologia · Recuperação semestral (2º semestre) · 2ª série'); opcoes($('fFiltro'), [...av.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR')), S.filtro, 'Todas as avaliações'); }
       else opcoes($('fFiltro'), [['1', '1º bimestre'], ['2', '2º bimestre'], ['3', '3º bimestre'], ['4', '4º bimestre (Saresp)']], S.filtro, 'Todos os bimestres');
       desenha();
     } catch (e) { msg('Não foi possível carregar: ' + esc(e.message)); }
