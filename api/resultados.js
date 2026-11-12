@@ -5,6 +5,7 @@ const CAT = require('./_catalogo-indiv.js');
 const META_EM = require('./_meta-em.js');
 const META_SIM = require('./_meta-simulado.js');
 const ALUNOS_EM = require('./_alunos-em.js');
+const META_C8 = require('./_meta-cien8.js');
 /* Recuperação semestral da 2ª DS: enunciado, habilidade e gabarito de cada questão para o relatório (o servidor já é do professor) */
 const REC2DS = require('../recuperacao-2ds/questoes.js'), REC2DS_GAB = require('./_recuperacao-2ds-gabarito.js');
 REC2DS.questoes.forEach(q => { META_EM[q.id] = { tipo: q.tipo, av: REC2DS.id, hab: q.hab, objeto: q.objeto, ae: q.ae, n: q.n,
@@ -64,6 +65,21 @@ module.exports = async function resultados(req, res) {
       const meta = {}; rows.forEach(r => (r.itens || []).forEach(i => { if (META_EM[i.id]) meta[i.id] = META_EM[i.id]; }));
       const roster = {}; Object.keys(ALUNOS_EM).forEach(t => { roster[t] = { turma: TURMAS_EM[t] || t, alunos: ALUNOS_EM[t].map(a => ({ n: a.n, nome: a.nome })) }; });
       return out(200, { ok: true, rows, meta, roster });
+    }
+    if (fonte === 'ciencias8') {   // Atividade de Ciências 8º ano (circuitos): reaproveita o formato do Ensino Médio
+      const rs = await rest('atividade_ciencias_respostas?select=id,criado_em,turma,chamada,nome,respostas,dissertativas,acertos,total_objetivas&order=criado_em.asc&limit=5000');
+      const rows = rs.map(r => {
+        const itens = Object.keys(META_C8).sort().map(id => {
+          const m = META_C8[id], resp = (r.respostas || {})[m.n] || '', dis = (r.dissertativas || {})[m.n] || '';
+          if (m.tipo === 'obj') return { id, tipo: 'obj', resp, acerto: resp === m.cor, correta: 'ABCDE'.indexOf(m.cor), alts: m.alts };
+          return { id, tipo: 'dis', resp: dis };
+        });
+        const tot = r.total_objetivas || 7;
+        return { envio_id: 'cien-8-' + r.id, id: r.id, criado: r.criado_em, avaliacao: 'cien-8-circuitos', turma_id: r.turma, turma: r.turma, componente: 'Ciências', prova: 'Circuitos elétricos (4º bimestre)', rot_serie: '8º ano', n: r.chamada, nome: r.nome, itens, acertos: r.acertos, total_obj: tot, nota_obj: Math.round((r.acertos || 0) / tot * 100) / 10, nota_final: null, status: 'objetivas corrigidas; dissertativas para correção do professor' };
+      });
+      const al = await rest('alunos?select=turma,chamada,nome&turma=in.(' + encodeURIComponent('"8º Ano A","8º Ano B"') + ')&order=chamada.asc&limit=200');
+      const roster = {}; al.forEach(a => { (roster[a.turma] = roster[a.turma] || { turma: a.turma, alunos: [] }).alunos.push({ n: a.chamada, nome: String(a.nome).trim() }); });
+      return out(200, { ok: true, rows, meta: META_C8, roster });
     }
     if (fonte === 'individual') {
       const rows = await rest('indiv_respostas?select=id,criado,turma,nome,itens,acertos,total_obj,nota,status&order=criado.asc&limit=5000');
