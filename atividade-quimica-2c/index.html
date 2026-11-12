@@ -196,19 +196,19 @@
     <div class="identificacao">
       <div>
         <label for="nome">Nome do aluno</label>
-        <input id="nome" type="text" readonly data-aluno="nome" placeholder="Entre com RA e senha">
+        <select id="nome"><option value="">Carregando a lista…</option></select>
       </div>
       <div>
         <label for="numero">Número</label>
-        <input id="numero" type="text" readonly data-aluno="chamada" placeholder="—">
+        <input id="numero" type="text" readonly placeholder="—">
       </div>
       <div>
         <label for="turma">Turma</label>
-        <input id="turma" type="text" readonly data-aluno="turma" placeholder="—">
+        <input id="turma" type="text" readonly value="2ª Série C">
       </div>
       <div>
         <label for="email">E-mail institucional</label>
-        <input id="email" type="text" readonly data-aluno="email" placeholder="—">
+        <input id="email" type="text" readonly placeholder="—">
       </div>
       <div>
         <label for="data">Data</label>
@@ -458,7 +458,6 @@
 
 </main>
 
-<script src="/aluno-acesso.js" defer></script>
 <script>
   // ===== CONFIGURAÇÃO =====
   // Opcional: cole aqui a URL de um Google Apps Script publicado como Web App.
@@ -488,6 +487,31 @@
   function nomeValido() {
     return document.getElementById("nome").value.trim().length >= 3;
   }
+
+  // Lista da turma: ao escolher o nome, preenche número e e-mail institucional.
+  (async function carregarAlunos() {
+    const sel = document.getElementById("nome"), av = document.getElementById("aviso-nome");
+    try {
+      const r = await fetch("/api/atividade-quimica", { cache: "no-store" });
+      const j = await r.json();
+      if (!j.ok) throw new Error(j.erro || "erro");
+      sel.innerHTML = '<option value="">Selecione o seu nome…</option>';
+      j.nomes.forEach(a => {
+        const o = document.createElement("option");
+        o.value = a.nome; o.textContent = a.nome; o.dataset.numero = a.numero == null ? "" : String(a.numero).padStart(2, "0"); o.dataset.email = a.email || "";
+        sel.appendChild(o);
+      });
+    } catch (e) {
+      sel.innerHTML = '<option value="">Não foi possível carregar a lista</option>';
+      av.textContent = "Não foi possível carregar a lista de alunos. Atualize a página.";
+    }
+    sel.addEventListener("change", () => {
+      const o = sel.options[sel.selectedIndex];
+      document.getElementById("numero").value = o && o.dataset.numero || "";
+      document.getElementById("email").value = o && o.dataset.email || "";
+      if (sel.value) av.textContent = "";
+    });
+  })();
 
   function calcularResultado() {
     let acertos = 0;
@@ -529,7 +553,7 @@
     const aviso = document.getElementById("aviso-final");
     const avisoNome = document.getElementById("aviso-nome");
     if (!nomeValido()) {
-      avisoNome.textContent = "Entre com seu RA, dígito e senha para finalizar.";
+      avisoNome.textContent = "Escolha o seu nome na lista para finalizar.";
       avisoNome.scrollIntoView({ behavior: "smooth", block: "center" });
       aviso.textContent = "";
       return;
