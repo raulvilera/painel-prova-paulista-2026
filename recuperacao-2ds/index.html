@@ -61,16 +61,19 @@
   .comando { font-weight: 700; margin: 8px 0 12px; }
   .comando ol { font-weight: 500; margin: 6px 0 0; padding-left: 22px; }
   .alts { display: grid; gap: 8px; }
-  .alt { display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: start; border: 1px solid var(--borda); border-radius: 10px; padding: 10px 12px; cursor: pointer; background: #fff; transition: background .12s, border-color .12s; }
-  .alt:hover { background: #f6f9fd; }
+  .alt { display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: start; border: 1px solid #c9d6e6; border-bottom-width: 3px; border-radius: 12px; padding: 10px 12px; cursor: pointer; background: linear-gradient(180deg, #fff 0%, #eef3fa 100%); box-shadow: 0 5px 0 #b7c6db, 0 8px 14px rgba(20,50,90,.18), inset 0 1px 0 #fff; transform: translateY(0); transition: transform .14s cubic-bezier(.34,1.8,.5,1), box-shadow .14s, background .14s; }
+  .alt:hover { background: linear-gradient(180deg, #fff 0%, #e4edf8 100%); }
+  .alt:active { transform: translateY(4px) scaleY(.97); box-shadow: 0 1px 0 #b7c6db, 0 2px 4px rgba(20,50,90,.2); }
   .alt input { position: absolute; opacity: 0; pointer-events: none; }
-  .alt .letra { width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--azul); color: var(--azul); display: grid; place-items: center; font-weight: 800; }
-  .alt:has(input:checked) { border-color: var(--azul); background: var(--azul-claro); }
-  .alt:has(input:checked) .letra { background: var(--azul); color: #fff; }
+  .alt .letra { width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--azul); color: var(--azul); display: grid; place-items: center; font-weight: 800; background: #fff; }
+  .alt:has(input:checked) { border-color: #0b2a5b; background: linear-gradient(135deg, #0b2a5b 0%, #1f5fb8 55%, #5aa9ee 100%); color: #fff; font-weight: 700; transform: translateY(5px); box-shadow: inset 0 3px 8px rgba(0,0,0,.45), 0 0 0 rgba(0,0,0,0); animation: mola .35s cubic-bezier(.34,1.8,.5,1); }
+  .alt:has(input:checked) * { color: #fff; font-weight: 700; }
+  .alt:has(input:checked) .letra { background: transparent; border-color: #fff; color: #fff; }
+  @keyframes mola { 0% { transform: translateY(0) scaleY(1); } 40% { transform: translateY(8px) scaleY(.94); } 100% { transform: translateY(5px) scaleY(1); } }
   .alt:has(input:focus-visible) { outline: 3px solid #9cc3f0; }
-  .alt.certa, .alt.certa:has(input:checked) { border-color: var(--verde); background: var(--verde-claro); }
+  .alt.certa, .alt.certa:has(input:checked) { animation: none; transform: none; box-shadow: none; color: #1b1b1b; font-weight: 400; border-color: var(--verde); background: var(--verde-claro); }
   .alt.certa .letra, .alt.certa:has(input:checked) .letra { border-color: var(--verde); background: var(--verde); color: #fff; }
-  .alt.errada, .alt.errada:has(input:checked) { border-color: var(--vermelho); background: var(--vermelho-claro); }
+  .alt.errada, .alt.errada:has(input:checked) { animation: none; transform: none; box-shadow: none; color: #1b1b1b; font-weight: 400; border-color: var(--vermelho); background: var(--vermelho-claro); }
   .alt.errada .letra, .alt.errada:has(input:checked) .letra { border-color: var(--vermelho); background: var(--vermelho); color: #fff; }
   textarea { width: 100%; min-height: 190px; padding: 12px; font: inherit; border: 1px solid var(--borda); border-radius: 10px; resize: vertical; background: repeating-linear-gradient(#fff, #fff 31px, #edf1f6 32px); line-height: 32px; }
   .contador { font-size: .8rem; color: var(--cinza); text-align: right; margin-top: 4px; }
@@ -104,6 +107,8 @@
   .rodape { text-align: center; color: var(--cinza); font-size: .82rem; margin-top: 24px; }
   fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
   fieldset:disabled .alt { cursor: default; }
+  .alt.certa *, .alt.errada * { color: inherit; font-weight: inherit; }
+  .alt.certa .letra, .alt.errada .letra { color: #fff; }
 </style>
 </head>
 <body>
