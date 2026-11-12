@@ -47,6 +47,13 @@
   .tag { font-size: .76rem; font-weight: 700; border-radius: 999px; padding: 2px 10px; background: var(--azul-claro); color: var(--azul); }
   .tag.dis { background: var(--ambar-claro); color: var(--ambar); }
   .texto p { margin: 0 0 10px; }
+  figure.foto { margin: 4px 0 14px; }
+  figure.foto img { display: block; width: 100%; aspect-ratio: 16 / 9; max-height: 340px; object-fit: cover; border-radius: 12px; border: 1px solid var(--borda); background: #e9eef4; cursor: zoom-in; }
+  figure.foto figcaption { font-size: .85rem; color: var(--cinza); margin-top: 6px; line-height: 1.4; }
+  figure.foto figcaption a { color: var(--cinza); }
+  #zoom { position: fixed; inset: 0; background: rgba(10,20,40,.85); display: grid; place-items: center; z-index: 60; padding: 12px; }
+  #zoom[hidden] { display: none; }
+  #zoom img { max-width: 100%; max-height: 92vh; border-radius: 10px; }
   .figura { margin: 10px 0 14px; padding: 12px; border: 1px dashed var(--borda); border-radius: 12px; background: #fbfcfe; overflow-x: auto; }
   .figura svg { width: 100%; height: auto; max-height: 230px; display: block; font-family: inherit; }
   .figura .fonte { font-size: .8rem; color: var(--cinza); margin: 4px 0 0; }
@@ -171,6 +178,8 @@
   </div>
 </div>
 
+<div id="zoom" hidden role="dialog" aria-label="Imagem ampliada"><img alt=""></div>
+
 <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
   <div class="caixa">
     <h3 id="modal-titulo">Entregar a recuperação?</h3>
@@ -182,7 +191,7 @@
   </div>
 </div>
 
-<script src="questoes.js?v=1"></script>
+<script src="questoes.js?v=2"></script>
 <script>
 (function () {
   'use strict';
@@ -206,7 +215,10 @@
   /* ---------- questões ---------- */
   function htmlQuestao(q) {
     const cab = '<div class="qcab"><span class="qnum">Questão ' + q.n + '</span><span class="tag' + (q.tipo === 'dis' ? ' dis' : '') + '">' + (q.tipo === 'obj' ? 'Objetiva' : 'Dissertativa') + '</span><span class="tag">' + esc(q.ae) + ' · ' + esc(q.hab) + '</span></div>';
-    const base = '<div class="texto">' + q.texto + '</div>' + (q.figura ? '<div class="figura">' + q.figura + '</div>' : '') + '<div class="comando">' + q.comando + '</div>';
+    const utm = '?utm_source=painel_prova_paulista&utm_medium=referral';
+    const foto = q.foto ? '<figure class="foto"><img src="' + esc(q.foto.src) + '" alt="' + esc(q.foto.legenda) + '" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><figcaption>' + esc(q.foto.legenda) +
+      ' <span>Foto: <a href="https://unsplash.com/@' + esc(q.foto.perfil) + utm + '" target="_blank" rel="noopener">' + esc(q.foto.autor) + '</a> / <a href="https://unsplash.com/' + utm + '" target="_blank" rel="noopener">Unsplash</a></span></figcaption></figure>' : '';
+    const base = '<div class="texto">' + q.texto + '</div>' + foto + (q.figura ? '<div class="figura">' + q.figura + '</div>' : '') + '<div class="comando">' + q.comando + '</div>';
     let corpo;
     if (q.tipo === 'obj') {
       corpo = '<fieldset><legend class="sr" style="position:absolute;left:-9999px">Alternativas da questão ' + q.n + '</legend><div class="alts">' + q.alts.map((a, i) =>
@@ -263,6 +275,11 @@
     $('nome').innerHTML = '<option value="">Lista indisponível</option>';
     $('aviso-nome').textContent = 'Não foi possível carregar a lista da turma (' + e.message + '). Recarregue a página ou avise o professor.';
   });
+
+  /* ---------- ampliar foto ---------- */
+  $('questoes').addEventListener('click', e => { if (e.target.matches('figure.foto img')) { const z = $('zoom'); z.querySelector('img').src = e.target.src.replace('w=900', 'w=1600'); z.querySelector('img').alt = e.target.alt; z.hidden = false; } });
+  $('zoom').addEventListener('click', () => { $('zoom').hidden = true; });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') $('zoom').hidden = true; });
 
   /* ---------- entrega ---------- */
   const modal = $('modal');
