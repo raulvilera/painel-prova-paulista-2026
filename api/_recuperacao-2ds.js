@@ -88,8 +88,9 @@ async function corrigirDissertativas(textos) {
 }
 
 /* TEMPORÁRIO: confere, com a IA de visão, se cada foto combina com o enunciado e a legenda. */
-async function verificarImagens() {
-  return Promise.all(AV.questoes.filter(q => q.foto).map(async q => {
+async function verificarImagens(so) {
+  const lista = AV.questoes.filter(q => q.foto && (!so || so.includes(q.n))), saida = [];
+  for (const q of lista) saida.push(await (async () => {
     try {
       const r = await fetch(q.foto.src.replace('w=900', 'w=640'));
       const b64 = Buffer.from(await r.arrayBuffer()).toString('base64');
@@ -98,9 +99,11 @@ async function verificarImagens() {
       const g = await fetch('https://generativelanguage.googleapis.com/v1beta/models/' + MODELO + ':generateContent?key=' + enc(GKEY), { method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ contents: [{ role: 'user', parts: [{ inline_data: { mime_type: 'image/jpeg', data: b64 } }, { text: pr }] }], generationConfig: { temperature: 0.1, responseMimeType: 'application/json' } }) });
       const j = await g.json();
+      if (!j.candidates || !j.candidates[0] || !j.candidates[0].content) return { n: q.n, erro: 'HTTP ' + g.status + ' ' + JSON.stringify(j.promptFeedback || j.error || j.candidates || {}).slice(0, 200), bytes: b64.length };
       return Object.assign({ n: q.n }, lerJSON(j.candidates[0].content.parts.map(x => x.text || '').join('')));
     } catch (e) { return { n: q.n, erro: String(e.message || e).slice(0, 120) }; }
-  }));
+  })());
+  return saida;
 }
 
 module.exports = async function recuperacao2ds(req, res) {
@@ -109,7 +112,7 @@ module.exports = async function recuperacao2ds(req, res) {
   try {
     if (!SB || !KEY) return erro(503, 'Servidor não configurado (SUPABASE_URL / SUPABASE_SERVICE_KEY).');
     const q = req.query || {};
-    if (req.method === 'GET' && q.acao === 'verificar-imagens') return out(200, { ok: true, imagens: await verificarImagens() });   // TEMPORÁRIO: conferência das fotos pela IA de visão
+    if (req.method === 'GET' && q.acao === 'verificar-imagens') return out(200, { ok: true, imagens: await verificarImagens(q.n ? String(q.n).split(',').map(Number) : null) });   // TEMPORÁRIO: conferência das fotos pela IA de visão
     if (req.method === 'GET') {
       if (q.acao !== 'alunos') return erro(400, 'Ação inválida.');
       const rows = await alunosDaTurma();

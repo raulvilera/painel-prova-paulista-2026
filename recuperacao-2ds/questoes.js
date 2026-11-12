@@ -21,7 +21,7 @@
     /* ======================= OBJETIVAS ======================= */
     {
       n: 1, id: 'bio-2-recuperacao-01',
-      foto: { unsplash: 'djo3iNJpaOE', src: 'https://images.unsplash.com/photo-1638271522560-a247d127deb8?ixlib=rb-4.1.0&fit=max&w=900&q=75', autor: 'Anirudh', perfil: 'lanirudhreddy', legenda: 'Representação em 3D de hemácias (glóbulos vermelhos) normais, com forma de disco.' }, tipo: 'obj', ae: 'AE7', hab: 'EM13CNT301',
+      foto: { unsplash: 'vTknj2OxDVg', src: 'https://images.unsplash.com/photo-1510154221590-ff63e90a136f?ixlib=rb-4.1.0&fit=max&w=900&q=75', autor: 'Omar Lopez', perfil: 'omarlopez1', legenda: 'Pés de um recém-nascido: é no Teste do Pezinho, feito nos primeiros dias de vida, que a anemia falciforme é investigada.' }, tipo: 'obj', ae: 'AE7', hab: 'EM13CNT301',
       objeto: 'Tradução, código genético e mutação (anemia falciforme)',
       texto: '<p>A anemia falciforme é uma das doenças hereditárias mais comuns no Brasil e faz parte do Teste do Pezinho oferecido pelo SUS. Nas pessoas afetadas, as hemácias assumem forma de foice quando há pouco oxigênio, o que dificulta a circulação e provoca crises de dor. A alteração está no gene da cadeia beta da hemoglobina. O quadro compara o mesmo trecho desse gene em uma pessoa sem a doença e em uma pessoa com anemia falciforme.</p>',
       figura: '<table class="tab"><thead><tr><th></th><th>Trecho da fita molde do DNA</th><th>Códon no RNAm</th><th>Aminoácido na posição 6</th></tr></thead><tbody><tr><td>Hemoglobina normal (HbA)</td><td>C T C</td><td>G A G</td><td>Ácido glutâmico</td></tr><tr><td>Hemoglobina S (HbS)</td><td>C A C</td><td>G U G</td><td>Valina</td></tr></tbody></table><p class="fonte">Quadro elaborado para fins didáticos.</p>',
