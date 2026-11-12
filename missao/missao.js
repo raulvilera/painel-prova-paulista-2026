@@ -46,8 +46,8 @@
   let tentativaId = '', fila = Promise.resolve();
   function salvarBanco(concluido) {
     if (!tentativaId) return Promise.resolve(false);
-    const corpo = JSON.stringify({ p_token: (window.alunoAcesso && window.alunoAcesso.token()) || '', p_id: tentativaId, p_pontuacao: estado.pontos, p_total: estado.maxPontos, p_concluido: !!concluido, p_acesso: estado.acesso ? estado.acesso.iso : null, p_respostas: estado.respostas });
-    const envia = async () => { for (let k = 0; k < 4; k++) { try { const r = await fetch(SBG + '/rest/v1/rpc/missao_registrar_aluno', { method: 'POST', headers: { apikey: KEYG, Authorization: 'Bearer ' + KEYG, 'Content-Type': 'application/json' }, body: corpo, keepalive: true }); if (r.ok) return true; } catch (e) {} await new Promise(x => setTimeout(x, 1200 * (k + 1))); } return false; };
+    const corpo = JSON.stringify({ p_id: tentativaId, p_turma: estado.turma, p_nome: estado.aluno, p_pontuacao: estado.pontos, p_total: estado.maxPontos, p_concluido: !!concluido, p_acesso: estado.acesso ? estado.acesso.iso : null, p_respostas: estado.respostas });
+    const envia = async () => { for (let k = 0; k < 4; k++) { try { const r = await fetch(SBG + '/rest/v1/rpc/missao_registrar', { method: 'POST', headers: { apikey: KEYG, Authorization: 'Bearer ' + KEYG, 'Content-Type': 'application/json' }, body: corpo, keepalive: true }); if (r.ok) return true; } catch (e) {} await new Promise(x => setTimeout(x, 1200 * (k + 1))); } return false; };
     fila = fila.then(envia); return fila;
   }
   /* Palavras-chave embaralhadas a cada tentativa, nunca na mesma posição da imagem correspondente. */
@@ -150,7 +150,7 @@
     }
     updateMeta();
   }
-  turmaEl.addEventListener('change',()=>{ estado.turma=turmaEl.value; estado.aluno=''; alunoEl.innerHTML='<option value="">Selecione seu nome</option>'; (alunosPorTurma[estado.turma]||[]).slice().sort((a,b)=>a.localeCompare(b,'pt')).forEach(nome=>{ const o=document.createElement('option'); o.value=nome; o.textContent=nome; alunoEl.appendChild(o); }); alunoEl.disabled=!estado.turma; el('btnIniciarMissao').disabled=true; updateMeta(); });
+  turmaEl.addEventListener('change',async()=>{ estado.turma=turmaEl.value; estado.aluno=''; alunoEl.innerHTML='<option value="">'+(estado.turma?'Carregando…':'Primeiro selecione a turma')+'</option>'; alunoEl.disabled=true; el('btnIniciarMissao').disabled=true; updateMeta(); if(!estado.turma) return; const turma=estado.turma; let nomes=[]; try{ const r=await fetch('/api/atividade-quimica?turma='+encodeURIComponent(turma),{cache:'no-store'}); const j=await r.json(); if(j.ok) nomes=j.nomes.map(a=>a.nome); }catch(e){} if(estado.turma!==turma) return; alunoEl.innerHTML='<option value="">'+(nomes.length?'Selecione seu nome':'Não foi possível carregar a lista')+'</option>'; nomes.sort((a,b)=>a.localeCompare(b,'pt')).forEach(nome=>{ const o=document.createElement('option'); o.value=nome; o.textContent=nome; alunoEl.appendChild(o); }); alunoEl.disabled=!nomes.length; updateMeta(); });
   alunoEl.addEventListener('change',()=>{ estado.aluno=alunoEl.value; aplicarIdioma(); el('btnIniciarMissao').disabled=!estado.aluno; updateMeta(); });
   function iniciarMissao(){ if(!estado.turma||!estado.aluno) return; estado.acesso=agoraLocal(); estado.pontos=0; estado.respostas=[]; estado.assocFeitos=new Set(); estado.roletaIndex=0; estado.roletaOrdem=embaralharRoleta(); estado.roletaAngulo=0; estado.roletaSorteada=false; estado.roletaRespondida=false; estado.milhaoIndex=0; estado.milhaoRespondida=false; estado.tremIndex=0; estado.tremEstourado=false; estado.tremRespondida=false; estado.cartaIdx=0; tentativaId=novoId(); embaralharTermos(); salvarBanco(false); updateMeta(); renderAssociacao(); }
   el('btnIniciarMissao').addEventListener('click',iniciarMissao);
@@ -271,18 +271,5 @@
     progressoEl.style.width='100%'; conteudoEl.innerHTML=`<div class="mission-result"><p>${gravadoBanco?t('Resultado registrado com sucesso no banco de dados.','Результат успешно записан в базу данных.'):t('Resultado calculado. O registro ficou pendente de conexão, mas uma cópia foi preservada neste dispositivo; avise o professor.','Результат подсчитан. Запись ожидает подключения, но копия сохранена на этом устройстве; сообщите учителю.')}</p><strong>${percentual}%</strong><p>${t('Nota','Оценка')}: ${nota} · ${esc(estado.turma)} · ${esc(estado.aluno)}<br>${t('Data','Дата')}: ${fim.data} · ${t('Horário','Время')}: ${fim.hora}</p><button type="button" class="mission-btn" id="btnNovaTentativa">${t('Fazer nova tentativa','Попробовать снова')}</button></div>`;
     el('btnNovaTentativa').addEventListener('click',()=>{ estado.pontos=0;estado.assocFeitos=new Set();estado.roletaIndex=0;estado.roletaOrdem=embaralharRoleta();estado.roletaAngulo=0;estado.roletaSorteada=false;estado.roletaRespondida=false;estado.milhaoIndex=0;estado.milhaoRespondida=false;estado.tremIndex=0;estado.tremEstourado=false;estado.tremRespondida=false;estado.cartaIdx=0;estado.respostas=[];estado.acesso=agoraLocal();tentativaId=novoId();embaralharTermos();salvarBanco(false);updateMeta();renderAssociacao(); });
   }
-  /* identidade pelo login do aluno (RA + dígito + senha); sem lista de nomes no código */
-  (async () => {
-    while (!window.alunoAcesso) await new Promise(r => setTimeout(r, 50));
-    await window.alunoAcesso.exigir();
-    const r = await fetch(SBG + '/rest/v1/rpc/trilha_colegas_aluno', { method: 'POST', headers: { apikey: KEYG, 'Content-Type': 'application/json' }, body: JSON.stringify({ p_token: window.alunoAcesso.token() }) });
-    const j = await r.json().catch(() => ({}));
-    if (!j.ok) return;
-    estado.turma = j.turma; estado.aluno = j.nome;
-    turmaEl.innerHTML = ''; const o1 = document.createElement('option'); o1.value = j.turma; o1.textContent = j.turma; o1.selected = true; turmaEl.appendChild(o1); turmaEl.disabled = true;
-    alunoEl.innerHTML = ''; const o2 = document.createElement('option'); o2.value = j.nome; o2.textContent = j.nome; o2.selected = true; alunoEl.appendChild(o2); alunoEl.disabled = true;
-    el('btnIniciarMissao').disabled = false;
-    updateMeta();
-  })();
   updateMeta();
 })();
