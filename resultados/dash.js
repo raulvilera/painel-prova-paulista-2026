@@ -276,17 +276,17 @@
     });
     return '<div class="plano"><h3>Plano de intervenção da turma — descritores prioritários (' + L.length + ')</h3><p class="muted sm">Ordenados pela parcela de alunos abaixo de 50%. Nomes por descritor para formar grupos e duplas de apoio.</p>' + cards.join('') + '</div>';
   }
-  const podeLiberar = () => CFG.fonte === 'individual' || CFG.fonte === 'simulado';
+  const podeLiberar = () => CFG.fonte === 'individual' || CFG.fonte === 'simulado' || (CFG.fonte === 'em' && /-recuperacao$/.test(S.filtro || ''));   // EM: só a recuperação (um envio por aluno), com ela escolhida no filtro
   let TOKEN = '';
   async function liberar(btn) {
     const t = btn.dataset.t, n = btn.dataset.a, id = btn.dataset.id;
     if (!confirm('Liberar novo envio para ' + n + ' (' + t + ')?\n\nO envio atual será APAGADO dos relatórios e o aluno poderá refazer a atividade. Isso não pode ser desfeito.')) return;
     btn.disabled = true; btn.textContent = 'Liberando…';
     try {
-      const r = await fetch('/api/resultados', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + TOKEN }, body: JSON.stringify({ acao: 'liberar', fonte: CFG.fonte, id: id ? Number(id) : undefined, turma: t, nome: n }) });
+      const r = await fetch('/api/resultados', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + TOKEN }, body: JSON.stringify({ acao: 'liberar', fonte: CFG.fonte, id: id ? Number(id) : undefined, turma: t, nome: n, aval: btn.dataset.av || undefined }) });
       const j = await r.json().catch(() => ({ ok: false, erro: 'resposta inválida (HTTP ' + r.status + ')' }));
       if (!j.ok) throw new Error(j.erro || 'Erro ao liberar.');
-      TENT = TENT.filter(x => !(x.turma === t && x.aluno === n));
+      TENT = TENT.filter(x => !(x.turma === t && x.aluno === n && (!btn.dataset.av || x.aval === btn.dataset.av)));
       alert(n + ' está liberado(a): já pode enviar de novo.'); desenha();
     } catch (e) { btn.disabled = false; btn.textContent = '🔓 Liberar novo envio'; alert('Não foi possível liberar: ' + e.message); }
   }
@@ -299,7 +299,7 @@
     const refAe = new Map(agrega(tm.itens, 'ae').map(x => [x.k, x.p])), refDs = new Map(agrega(tm.itens, 'desc').map(x => [x.k, x.p]));
     return (a.criado ? '<p class="muted sm" style="margin:0 0 8px">📅 Atividade realizada em <b>' + esc(fmtData(a.criado)) + '</b></p>' : '') +
       (CFG.fonte === 'simulado' && a.raw ? (REV[tm.t + '|' + a.n] = a.raw, '<p class="lib"><button class="revb" data-k="' + esc(tm.t + '|' + a.n) + '">📄 Ver a atividade como o aluno fez</button><span class="muted sm"> Abre a prova do jeito que o aluno viu, com as respostas dele marcadas.</span></p>') : '') +
-      (podeLiberar() ? '<p class="lib"><button class="libb" data-t="' + esc(tm.t) + '" data-a="' + esc(a.n) + '" data-id="' + esc(a.id == null ? '' : a.id) + '">🔓 Liberar novo envio</button><span class="muted sm"> Use se o aluno diz que não fez e aparece “já enviou”. O envio atual é apagado.</span></p>' : '') + questoes(a) + planoAluno(a, tm) + pizzasAluno(a) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
+      (podeLiberar() ? '<p class="lib"><button class="libb" data-t="' + esc(tm.t) + '" data-a="' + esc(a.n) + '" data-av="' + esc(CFG.fonte === 'em' ? S.filtro || '' : '') + '" data-id="' + esc(a.id == null ? '' : a.id) + '">🔓 Liberar novo envio</button><span class="muted sm"> Use se o aluno diz que não fez e aparece “já enviou”. O envio atual é apagado.</span></p>' : '') + questoes(a) + planoAluno(a, tm) + pizzasAluno(a) + '<div class="g2"><div><h3>Aprendizagens essenciais / habilidades</h3>' + dim('ae', refAe) + '</div><div><h3>Descritores' + (CFG.fonte === 'em' ? ' / objetos' : '') + '</h3>' + dim('desc', refDs) + '</div></div>' +
       '<p class="muted sm">Barra = aproveitamento do aluno; traço preto = média da turma. Atingido: aproveitamento a partir de 50% (Adequado ou Avançado).' + (a.parcial ? ' Nota parcial: dissertativa ainda em correção.' : '') + '</p>';
   }
   function corpoTurma(tm) {
@@ -312,7 +312,7 @@
     return vis + '<div class="alist">' + cab + (lin.length ? lin.map((a, i) => {
       const k = tm.t + '|' + a.n;
       return '<details class="al' + (a.feito ? '' : ' pendr') + '" data-k="' + esc(k) + '" data-t="' + esc(tm.t) + '" data-a="' + esc(a.n) + '"' + (S.open.has(k) ? ' open' : '') + '><summary class="arow"><span class="muted">' + (tm.alunos.indexOf(a) + 1) + '</span><span class="nmal">' + esc(a.n) + '</span>' +
-        '<span>' + (a.feito ? '<span class="st ok">✓ Realizou</span>' + (podeLiberar() ? '<br><button class="libb" style="margin-top:4px;font-size:.72rem;padding:2px 8px;cursor:pointer" title="Apaga o envio e deixa o aluno refazer" data-t="' + esc(tm.t) + '" data-a="' + esc(a.n) + '" data-id="' + esc(a.id == null ? '' : a.id) + '">🔓 Liberar</button>' : '') + (a.criado ? '<br><span class="muted dmob" style="font-size:.72rem">' + esc(fmtData(a.criado)) + '</span>' : '') : '<span class="st pend">Pendente</span>') + '</span>' +
+        '<span>' + (a.feito ? '<span class="st ok">✓ Realizou</span>' + (podeLiberar() ? '<br><button class="libb" style="margin-top:4px;font-size:.72rem;padding:2px 8px;cursor:pointer" title="Apaga o envio e deixa o aluno refazer" data-t="' + esc(tm.t) + '" data-a="' + esc(a.n) + '" data-av="' + esc(CFG.fonte === 'em' ? S.filtro || '' : '') + '" data-id="' + esc(a.id == null ? '' : a.id) + '">🔓 Liberar</button>' : '') + (a.criado ? '<br><span class="muted dmob" style="font-size:.72rem">' + esc(fmtData(a.criado)) + '</span>' : '') : '<span class="st pend">Pendente</span>') + '</span>' +
         '<span class="num">' + (a.nota === null ? '—' : '<b>' + nf(a.nota) + '</b>') + '</span><span>' + (a.nota === null ? '—' : chip(a.nota)) + '</span><span class="num">' + (a.apr === null ? '—' : pct(a.apr)) + '</span><span class="dcol">' + (a.criado ? esc(fmtData(a.criado)) : '—') + '</span></summary><div class="lz"></div></details>';
     }).join('') : '<p class="muted sm" style="padding:8px">Nenhum aluno para este filtro.</p>') + '</div>';
   }

@@ -5,6 +5,11 @@ const CAT = require('./_catalogo-indiv.js');
 const META_EM = require('./_meta-em.js');
 const META_SIM = require('./_meta-simulado.js');
 const ALUNOS_EM = require('./_alunos-em.js');
+/* Recuperação semestral da 2ª DS: enunciado, habilidade e gabarito de cada questão para o relatório (o servidor já é do professor) */
+const REC2DS = require('../recuperacao-2ds/questoes.js'), REC2DS_GAB = require('./_recuperacao-2ds-gabarito.js');
+REC2DS.questoes.forEach(q => { META_EM[q.id] = { tipo: q.tipo, av: REC2DS.id, hab: q.hab, objeto: q.objeto, ae: q.ae, n: q.n,
+  enun: (String(q.texto).replace(/<[^>]*>/g, ' ') + ' ' + String(q.comando).replace(/<[^>]*>/g, ' ')).replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 600),
+  cor: q.tipo === 'obj' ? 'ABCDE'[REC2DS_GAB.objetivas[q.id].correta] : '', serie: '2', comp: REC2DS.componente, prova: REC2DS.prova }; });
 const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.env.SUPABASE_SERVICE_KEY || '';
 const LOGIN_URL = process.env.PAINEL_SUPABASE_URL || 'https://ykrjfjepnqeoqlgupsbe.supabase.co', LOGIN_KEY = process.env.PAINEL_SUPABASE_KEY || 'sb_publishable_FbMU5x7WBpxzHmmVzOfh2g_0M1xxAh5';
 
@@ -45,6 +50,11 @@ module.exports = async function resultados(req, res) {
         const j = await r.json().catch(() => null);
         if (!j || !j.ok) return out(502, { ok: false, erro: String((j && j.erro) || 'A planilha não respondeu.') + (/ação desconhecida/.test(String(j && j.erro)) ? ' — cole o Codigo-completo.gs atualizado no Apps Script e crie uma nova versão da implantação.' : '') });
         return out(200, { ok: true, removidos: j.removidos });
+      }
+      if (b.fonte === 'em' && b.aval === REC2DS.id) {   // recuperação da 2ª DS: um envio por aluno; apaga o envio para o aluno refazer
+        const r = await fetch(SB + '/rest/v1/em_respostas?avaliacao=eq.' + encodeURIComponent(REC2DS.id) + '&turma=eq.' + encodeURIComponent(String(b.turma || '')) + '&nome=eq.' + encodeURIComponent(String(b.nome || '')), { method: 'DELETE', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, Prefer: 'return=representation' } });
+        const t = await r.text(); if (!r.ok) return out(502, { ok: false, erro: 'Supabase ' + r.status + ': ' + t.slice(0, 160) });
+        return out(200, { ok: true, removidos: (t ? JSON.parse(t) : []).length });
       }
       return out(400, { ok: false, erro: 'Esta avaliação não tem limite de envio.' });
     }
