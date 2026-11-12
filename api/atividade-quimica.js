@@ -8,12 +8,10 @@ module.exports = async function atividadeQuimica(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   const ok = o => res.status(200).json(Object.assign({ ok: true }, o)), erro = (c, m) => res.status(c).json({ ok: false, erro: m });
   if (req.method !== 'GET') return erro(405, 'Método não permitido.');
-  /* A lista pública de nomes foi desligada: o aluno entra com RA + dígito + senha (/api/aluno-login). */
-  return erro(410, 'Lista de nomes desativada. Entre com seu RA e senha.');
   if (!SB || !KEY) return erro(503, 'Servidor não configurado (SUPABASE_URL / SUPABASE_SERVICE_KEY).');
 
   try {
-    const url = SB + '/rest/v1/alunos?select=chamada,nome&turma=eq.' + encodeURIComponent(TURMA) + '&order=chamada.asc';
+    const url = SB + '/rest/v1/alunos?select=chamada,nome,email_institucional&turma=eq.' + encodeURIComponent(TURMA) + '&order=chamada.asc';
     const r = await fetch(url, { headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, Accept: 'application/json' } });
     if (!r.ok) {
       const corpo = (await r.text()).slice(0, 160).replace(/\s+/g, ' ');
@@ -22,7 +20,7 @@ module.exports = async function atividadeQuimica(req, res) {
     const linhas = await r.json();
     const nomes = (linhas || [])
       .filter(a => a && a.nome)
-      .map(a => ({ numero: a.chamada != null ? a.chamada : null, nome: String(a.nome).trim() }));
+      .map(a => ({ numero: a.chamada != null ? a.chamada : null, nome: String(a.nome).trim(), email: a.email_institucional || '' }));
     if (!nomes.length) return erro(404, 'Nenhum aluno encontrado para a turma ' + TURMA + '.');
     return ok({ nomes });
   } catch (e) {
