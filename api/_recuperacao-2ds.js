@@ -87,12 +87,29 @@ async function corrigirDissertativas(textos) {
   return feitas.map((v, k) => v || corrigirLocal(GAB.dissertativas[DIS[k].id], textos[k]));
 }
 
+/* TEMPORÁRIO: confere, com a IA de visão, se cada foto combina com o enunciado e a legenda. */
+async function verificarImagens() {
+  return Promise.all(AV.questoes.filter(q => q.foto).map(async q => {
+    try {
+      const r = await fetch(q.foto.src.replace('w=900', 'w=640'));
+      const b64 = Buffer.from(await r.arrayBuffer()).toString('base64');
+      const pr = 'Você é revisor pedagógico de Biologia (Ensino Médio). Veja a FOTO e responda com rigor.\nENUNCIADO DA QUESTÃO: ' + semHtml(q.texto) + '\nCOMANDO: ' + semHtml(q.comando) + '\nLEGENDA PROPOSTA: ' + q.foto.legenda +
+        '\nCritérios: (1) a foto mostra de fato o que a legenda diz? (2) a foto se relaciona ao tema do enunciado? (3) há erro científico, conteúdo inadequado para adolescentes, marca/propaganda visível, texto em outro idioma em destaque, ou algo que entregue a resposta? Responda APENAS em JSON: {"descricao":"o que a foto mostra, em 1 frase","legenda_confere":true/false,"relacionada":true/false,"problemas":"nenhum ou quais","aprovada":true/false}';
+      const g = await fetch('https://generativelanguage.googleapis.com/v1beta/models/' + MODELO + ':generateContent?key=' + enc(GKEY), { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contents: [{ role: 'user', parts: [{ inline_data: { mime_type: 'image/jpeg', data: b64 } }, { text: pr }] }], generationConfig: { temperature: 0.1, responseMimeType: 'application/json' } }) });
+      const j = await g.json();
+      return Object.assign({ n: q.n }, lerJSON(j.candidates[0].content.parts.map(x => x.text || '').join('')));
+    } catch (e) { return { n: q.n, erro: String(e.message || e).slice(0, 120) }; }
+  }));
+}
+
 module.exports = async function recuperacao2ds(req, res) {
   res.setHeader('Cache-Control', 'no-store'); res.setHeader('X-Content-Type-Options', 'nosniff'); res.setHeader('Content-Type', 'application/json; charset=utf-8');
   const out = (c, v) => res.status(c).json(v), erro = (c, m) => out(c, { ok: false, erro: m });
   try {
     if (!SB || !KEY) return erro(503, 'Servidor não configurado (SUPABASE_URL / SUPABASE_SERVICE_KEY).');
     const q = req.query || {};
+    if (req.method === 'GET' && q.acao === 'verificar-imagens') return out(200, { ok: true, imagens: await verificarImagens() });   // TEMPORÁRIO: conferência das fotos pela IA de visão
     if (req.method === 'GET') {
       if (q.acao !== 'alunos') return erro(400, 'Ação inválida.');
       const rows = await alunosDaTurma();
