@@ -652,7 +652,7 @@
     patente(x) { let p = PATENTES[0]; PATENTES.forEach(q => { if (x >= q[0]) p = q; }); return p; },
     ganhar(n, motivo) { const antes = this.patente(this.total); this.total += n; try { localStorage.setItem("ms3d_xp", this.total); } catch (e) { } this.mostrar(); const dep = this.patente(this.total);
       if (dep !== antes) avisar(`${dep[2]} Subiu de patente: ${dep[1]}! (${this.total} XP)`); else if (motivo) avisar(`+${n} XP · ${motivo}`); },
-    mostrar() { const p = this.patente(this.total), prox = PATENTES.find(q => q[0] > this.total); const el = $("#xpChip"); if (el) el.innerHTML = `${p[2]} <b>${p[1]}</b> · ${this.total} XP${prox ? ` <small>(faltam ${prox[0] - this.total} para ${prox[1]})</small>` : ""}`; }
+    mostrar() { const p = this.patente(this.total), prox = PATENTES.find(q => q[0] > this.total); const el = $("#xpChip"); if (el) { el.innerHTML = `<span>${p[2]}</span> <b class="xp-nome">${p[1]}</b><span class="xp-pts"> · ${this.total} XP</span>${prox ? ` <small>(faltam ${prox[0] - this.total} para ${prox[1]})</small>` : ""}`; el.title = `${p[1]} · ${this.total} XP`; } }
   };
 
   /* ------------------------------ DESAFIO ------------------------------ */
@@ -856,7 +856,8 @@
   function aplicarTurma() {
     const ano = anoAtual();
     if (["6", "7", "8", "9"].includes(ano)) { trilhaAno = ano; quizAno = ano; }
-    $("#btnAluno").textContent = ALUNO.dados ? `👤 ${ALUNO.dados.turma} · ${ALUNO.dados.nome.split(" ").slice(0, 2).join(" ")}` : "👤 Entrar";
+    $("#btnAluno").innerHTML = "👤<span class=\"al-txt\"> " + (ALUNO.dados ? `${ALUNO.dados.turma} · ${ALUNO.dados.nome.split(" ").slice(0, 2).join(" ")}` : "Entrar").replace(/</g, "") + "</span>";
+    $("#btnAluno").title = ALUNO.dados ? `${ALUNO.dados.turma} · ${ALUNO.dados.nome} (toque para trocar)` : "Escolher turma e nome";
     montarHabilidades(); montarQuiz(); montarTemasLateral();
   }
 
