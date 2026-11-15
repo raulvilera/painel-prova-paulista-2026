@@ -12,12 +12,14 @@
   /* ---------- utilitários ---------- */
   function mat(cor, o) {
     o = o || {};
-    const m = new T.MeshStandardMaterial({
-      color: cor, roughness: o.rough ?? 0.55, metalness: o.metal ?? 0.05,
+    const vidro = (o.op ?? 1) < 1;
+    const m = new (vidro ? T.MeshPhysicalMaterial : T.MeshStandardMaterial)({
+      color: cor, roughness: o.rough ?? (vidro ? 0.3 : 0.5), metalness: o.metal ?? 0.04,
       transparent: (o.op ?? 1) < 1, opacity: o.op ?? 1, side: o.side || T.FrontSide,
       emissive: o.emis || 0x000000, emissiveIntensity: o.ei ?? 1, flatShading: !!o.flat,
       depthWrite: o.dw ?? ((o.op ?? 1) >= 0.6)
     });
+    if (vidro) { m.clearcoat = 0.7; m.clearcoatRoughness = 0.25; m.sheen = 0.3; m.sheenColor = new T.Color(0xffffff); }
     m.userData.baseOp = o.op ?? 1;
     return m;
   }

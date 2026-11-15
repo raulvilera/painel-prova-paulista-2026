@@ -9,15 +9,26 @@
   /* ------------------------------ RENDERIZAÇÃO ------------------------------ */
   const palco = $("#palco");
   const renderer = new T.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
-  renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
+  /* qualidade: desenha acima da resolução da tela (supersampling) e reduz sozinho se o computador ficar lento */
+  const PR_MAX = Math.min(2, Math.max(1.5, window.devicePixelRatio || 1)), PR_MIN = Math.min(1, window.devicePixelRatio || 1);
+  let prAtual = PR_MAX; renderer.setPixelRatio(prAtual);
   renderer.outputEncoding = T.sRGBEncoding;
+  renderer.toneMapping = T.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
   renderer.localClippingEnabled = true;
   palco.appendChild(renderer.domElement);
   const cena = new T.Scene();
   const cam = new T.PerspectiveCamera(40, 1, 0.05, 600);
   cam.position.set(0, 2, 20);
-  cena.add(new T.HemisphereLight(0xe0f2fe, 0x0b1628, 0.95));
-  const sol = new T.DirectionalLight(0xffffff, 1.15); sol.position.set(8, 14, 10); cena.add(sol);
+  cena.add(new T.HemisphereLight(0xe0f2fe, 0x0b1628, 0.6));
+  /* ambiente de estúdio (reflexos suaves nos materiais), gerado por código */
+  try {
+    const pm = new T.PMREMGenerator(renderer), amb = new T.Scene();
+    amb.add(new T.Mesh(new T.BoxGeometry(30, 20, 30), new T.MeshBasicMaterial({ color: 0x3a4a63, side: T.BackSide })));
+    const luzAmb = (cor, x, y, z, w, h) => { const m = new T.Mesh(new T.PlaneGeometry(w, h), new T.MeshBasicMaterial({ color: cor, side: T.DoubleSide })); m.position.set(x, y, z); m.lookAt(0, 0, 0); amb.add(m); };
+    luzAmb(new T.Color(5, 5, 5.2), 0, 9.5, 0, 14, 8); luzAmb(new T.Color(2.2, 2.6, 3), -14, 3, 6, 6, 10); luzAmb(new T.Color(2.4, 2.2, 2), 14, 2, -6, 6, 10); luzAmb(new T.Color(1.2, 1.4, 1.6), 0, 2, 14, 12, 4);
+    cena.environment = pm.fromScene(amb, 0.04).texture; pm.dispose();
+  } catch (e) { }
+  const sol = new T.DirectionalLight(0xffffff, 1.0); sol.position.set(8, 14, 10); cena.add(sol);
   const contra = new T.DirectionalLight(0x5eead4, 0.55); contra.position.set(-10, -4, -8); cena.add(contra);
   const realce = new T.DirectionalLight(0xf472b6, 0.25); realce.position.set(10, -6, 4); cena.add(realce);
   const ctl = new T.OrbitControls(cam, renderer.domElement);
@@ -782,6 +793,10 @@
   /* ------------------------------ LAÇO ------------------------------ */
   const relogio = new T.Clock(); let tempo = 0;
   function laco() {
+    { const agora = performance.now(), dtq = agora - (laco._t || agora); laco._t = agora; laco._n = (laco._n || 0) + 1; laco._s = (laco._s || 0) + dtq;
+      if (laco._n >= 90) { const media = laco._s / laco._n; laco._n = 0; laco._s = 0;
+        if (media > 38 && prAtual > PR_MIN) { prAtual = Math.max(PR_MIN, prAtual - 0.5); renderer.setPixelRatio(prAtual); if (typeof redimensionar === "function") redimensionar(); }
+        else if (media < 20 && prAtual < PR_MAX && !document.hidden) { prAtual = Math.min(PR_MAX, prAtual + 0.25); renderer.setPixelRatio(prAtual); if (typeof redimensionar === "function") redimensionar(); } } }
     requestAnimationFrame(laco);
     const dt = Math.min(relogio.getDelta(), 0.05); tempo += dt;
     if (est.voo) {
@@ -842,7 +857,7 @@
     ALUNO.dados = { turma: sel.value, nome: selN.value, t: Date.now() };
     try { localStorage.setItem("ms3d_aluno", JSON.stringify(ALUNO.dados)); } catch (e) { }
     $("#entrada").hidden = true; aplicarTurma();
-    if (seqDeveAtivar()) { iniciarSeq(TEMA_LINK); if (innerWidth <= 900) abrirMeusTemas(); }
+    if (seqDeveAtivar()) iniciarSeq(TEMA_LINK);
     else if (TEMA_LINK) abrirTemaLink(); else { if (/Bem-vindo à Missão/.test(info.textContent)) mostrarBoasVindas(); abrirMeusTemas(); }
     avisar(`Bem-vindo(a), ${ALUNO.dados.nome.split(" ")[0]}! ${SEQ.ativo ? "Comece pela etapa " + (SEQ.i + 1) + ": use o simulador e responda às questões." : "Toque em um tema para começar."}`);
   };
@@ -975,7 +990,8 @@
     SEQ.i = k; seqSalvar(); const p = SEQ.passos[k], N = SEQ.passos.length;
     const feitos = Object.keys(SEQ.feitos).length, id = p.tipo === "simulado" ? "simulado" : p.h.cod;
     const nome = p.tipo === "simulado" ? "🏁 Simulado SARESP" : p.h.tema;
-    $("#seqTopo").innerHTML = `<div class="seq-topo"><span class="num">${k + 1}</span><div><small>Etapa ${k + 1} de ${N}${p.h ? " · " + p.h.sigla + " · " + (p.h.rec ? "♻️ recuperação" : "🎯 SARESP") : ""}</small><h2>${nome}</h2></div></div><div class="seq-barra"><span style="width:${Math.round(feitos / N * 100)}%"></span></div>`;
+    $("#seqTopo").innerHTML = `<div class="seq-topo"><span class="num">${k + 1}</span><div><small>Etapa ${k + 1} de ${N}${p.h ? " · " + p.h.sigla + " · " + (p.h.rec ? "♻️ recuperação" : "🎯 SARESP") : ""}</small><h2>${nome}</h2></div></div><div class="seq-dots">${SEQ.passos.map((pp, kk) => { const idd = pp.tipo === "simulado" ? "simulado" : pp.h.cod, nm = pp.tipo === "simulado" ? "Simulado SARESP" : pp.h.tema; return `<button class="${SEQ.feitos[idd] ? "feito" : ""} ${kk === k ? "atual" : ""}" data-ir="${kk}" title="${kk + 1}. ${nm}${SEQ.feitos[idd] ? " ✓" : ""}">${pp.tipo === "simulado" ? "🏁" : SEQ.feitos[idd] ? "✓" : kk + 1}</button>`; }).join("")}</div><div class="seq-barra"><span style="width:${Math.round(feitos / N * 100)}%"></span></div>`;
+    $("#seqTopo").querySelectorAll("[data-ir]").forEach(b => b.onclick = () => irPasso(+b.dataset.ir));
     const info0 = $("#info"); info0.innerHTML = ""; const velho = $("#seqConteudo #cartaoSim"); if (velho) velho.remove(); const extV = $("#seqConteudo #seqExt"); if (extV) extV.remove();
     $("#seqQuiz").innerHTML = "";
     if (p.tipo === "simulado") {
@@ -986,8 +1002,6 @@
       const r = p.h.r;
       if (r.sim) {
         abrirSim(r.sim); const c = $("#cartaoSim"); if (c) { const h3 = c.querySelector("h3"); if (h3) h3.insertAdjacentHTML("afterend", `<p class="mini-txt muted">Mexa no simulador e depois responda às questões abaixo.</p>`); $("#seqConteudo").appendChild(c); }
-        if (r.modelo) info0.innerHTML = `<p class="mini-txt"><button class="btn" id="seqVerModelo">🧊 Ver também o modelo 3D: ${nomeModelo(r.modelo)}</button></p>`;
-        const bm = $("#seqVerModelo"); if (bm) bm.onclick = () => { const c2 = $("#seqConteudo #cartaoSim"); if (c2) c2.remove(); carregarModelo(r.modelo); trocarAba("seq", true); };
       } else if (r.modelo) { carregarModelo(r.modelo); }
       else if (est.modo === "sim" || !est.atual) carregarModelo("sistema", true);
       if (r.ext) { const e = D.externos[r.ext]; $("#seqConteudo").insertAdjacentHTML("beforeend", `<div class="cartao" id="seqExt"><p>Este tema também tem um simulador próprio:</p><a class="btn prim" style="width:100%;justify-content:center" href="${e.url}" target="_blank" rel="noopener">↗ Abrir o ${e.nome}</a></div>`); }
