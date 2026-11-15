@@ -2,6 +2,7 @@
    GET  /api/quiz?turmas=1         → turmas do Fundamental
    GET  /api/quiz?historico=1      → partidas anteriores
    GET  /api/quiz?orbit=1          → jogadores e respostas do Orbit Quiz (relatório de Gamificação)
+   GET  /api/quiz?missao3d=1       → resultados da Missão SARESP 3D (relatório)
    GET  /api/quiz?sessao=<id>      → acompanhamento ao vivo: progresso de cada aluno, placar e acertos por tema
    POST {acao:'criar', turma, n, tempo}  → cria a partida e devolve o PIN (alunos entram e aguardam)
    POST {acao:'duplas', id}              → forma as duplas com níveis diferentes (quem está mais avançado com quem tem mais defasagem)
@@ -149,6 +150,10 @@ module.exports = async function quiz(req, res) {
       }
       if (q.missao) {   // resultados da Missão Ciências (8º A e B)
         const m = await rest('missao_resultado?oculto=eq.false&select=id,turma,nome,pontuacao,total,percentual,nota,concluido,acesso_em,concluido_em,respostas,atualizado&order=atualizado.desc&limit=3000');
+        return out(200, { ok: true, resultados: m || [] });
+      }
+      if (q.missao3d) {   // resultados da Missão SARESP 3D (6º ao 9º ano)
+        const m = await rest('missao3d_resultado?oculto=eq.false&select=id,turma,nome,atividade,tema,acertos,total,percentual,nota,concluido,respostas,iniciado_em,concluido_em,atualizado&order=atualizado.desc&limit=5000');
         return out(200, { ok: true, resultados: m || [] });
       }
       if (q.sessao) { const s = await sessao(String(q.sessao)); return s ? out(200, Object.assign({ ok: true }, s)) : out(404, { ok: false, erro: 'Partida não encontrada.' }); }

@@ -600,15 +600,17 @@
       <div class="linha-btn"><button class="btn prim" data-qm="simulado">🎯 Simulado SARESP (todos os bimestres)</button><button class="btn" data-qm="rec">♻️ Recuperação (3º e 4º bimestres)</button></div>
       <p class="mini-txt muted">Banco deste ano: ${n} questões. Cada acerto vale 10 XP.</p></div><div id="quizArea"></div>`;
     $$("#aba-quiz [data-qano]").forEach(b => b.onclick = () => { quizAno = b.dataset.qano; montarQuiz(); });
+    if (ALUNO.dados) $$("#aba-quiz [data-qano]").forEach(b => { if (b.dataset.qano !== quizAno) b.hidden = true; });
     $$("#aba-quiz [data-qm]").forEach(b => b.onclick = () => iniciarQuiz({ modo: b.dataset.qm }));
   }
   function iniciarQuiz(o) {
     const anos = (anosQuiz.find(x => x[0] === quizAno) || anosQuiz[0])[2];
     let pool;
-    if (o.ae) { pool = D.quiz.filter(q => q.ae === o.ae); quiz.modo = "tema"; if (pool.length < 3) pool = pool.concat(embaralhar(D.quiz.filter(q => q.a === o.ae.split("-")[0] && q.ae !== o.ae)).slice(0, 4 - pool.length)); }
+    if (o.ae) { pool = D.quiz.filter(q => q.ae === o.ae); quiz.modo = "Quiz do tema"; if (pool.length < 3) pool = pool.concat(embaralhar(D.quiz.filter(q => q.a === o.ae.split("-")[0] && q.ae !== o.ae)).slice(0, 4 - pool.length)); }
     else if (o.modo === "rec") { pool = D.quiz.filter(q => anos.includes(q.a) && q.b >= 3); quiz.modo = "Recuperação"; }
     else { pool = D.quiz.filter(q => anos.includes(q.a)); quiz.modo = "Simulado SARESP"; }
     quiz.lista = embaralhar(pool).slice(0, o.modo === "simulado" ? 12 : 10); quiz.i = 0; quiz.pontos = 0; quiz.erros = [];
+    quiz.id = novoId(); quiz.atividade = o.ae ? "tema" : o.modo === "rec" ? "recuperacao" : "simulado"; quiz.tema = o.ae || null; quiz.resp = [];
     questao(); setTimeout(() => { const a = $("#quizArea"); if (a) a.scrollIntoView({ behavior: "smooth" }); }, 50);
   }
   function rotuloAE(cod) { for (const t of D.trilha) { const h = t.itens.find(x => x.cod === cod); if (h) return `${t.titulo} · ${h.sigla}`; } return cod; }
@@ -620,7 +622,10 @@
       area.innerHTML = `<div class="cartao centro"><small class="muted">${quiz.modo}</small><h2>${p} / ${n}</h2><div class="barra"><span style="width:${pc}%"></span></div>
         <p><b style="color:${fx[1]}">${pc}% · ${fx[0]}</b></p><p class="mini-txt muted">Mesmas faixas do Painel: Abaixo do Básico (&lt;25%), Básico (25–49%), Adequado (50–74%), Avançado (≥75%).</p>
         ${rev.length ? `<h4>Revise na trilha:</h4><div class="chips" style="justify-content:center">${rev.map(c => `<button class="chip" data-hab="${c}">${rotuloAE(c)}</button>`).join("")}</div>` : "<p>🏆 Nenhum erro! Você pode ser Mentor da turma.</p>"}
-        <div class="linha-btn" style="justify-content:center"><button class="btn prim" id="qNovo">Fazer outro</button></div></div>`;
+        <p class="envio" id="qEnvio">${ALUNO.dados ? "⏳ Enviando para o professor…" : "⚠️ Resultado não enviado: entre com sua turma e seu nome para o professor ver suas atividades."}</p>
+        <div class="linha-btn" style="justify-content:center"><button class="btn prim" id="qNovo">Fazer outro</button>${ALUNO.dados ? "" : '<button class="btn" id="qEntrar">👤 Entrar com turma e nome</button>'}</div></div>`;
+      if ($("#qEntrar")) $("#qEntrar").onclick = abrirEntrada;
+      if (ALUNO.dados) ALUNO.fila.then(ok => { const e = $("#qEnvio"); if (e) e.innerHTML = ok ? `✅ Resultado enviado para o professor (${ALUNO.dados.turma} · ${ALUNO.dados.nome}).` : "⚠️ Não foi possível enviar agora. Verifique a internet e tente outro quiz."; });
       area.querySelectorAll("[data-hab]").forEach(b => b.onclick = () => { trocarAba("habilidades"); destacarHab(b.dataset.hab); });
       $("#qNovo").onclick = () => { montarQuiz(); };
       if (pc >= 75) XP.ganhar(20, "Bônus: faixa Avançado");
@@ -632,6 +637,8 @@
       <p class="pergunta">${q.p}</p><div class="opcoes">${ordem.map((o, k) => `<button class="opcao" data-i="${o.i}"><b>${"ABCD"[k]})</b> ${o.t}</button>`).join("")}</div><div id="qFeed"></div></div>`;
     area.querySelectorAll(".opcao").forEach(b => b.onclick = () => {
       const certo = +b.dataset.i === q.c; if (certo) { quiz.pontos++; XP.ganhar(10); } else quiz.erros.push(q.ae);
+      quiz.resp.push({ ae: q.ae, ok: certo, p: q.p.slice(0, 90), r: q.o[+b.dataset.i].slice(0, 60) });
+      enviarQuiz(quiz.i + 1 >= quiz.lista.length);
       area.querySelectorAll(".opcao").forEach(x => { if (+x.dataset.i === q.c) x.classList.add("certa"); else if (x === b) x.classList.add("errada"); x.disabled = true; });
       $("#qFeed").innerHTML = `<div class="destaque ${certo ? "saude" : "erro"}"><b>${certo ? "Correto! +10 XP" : "Não foi dessa vez."}</b> ${q.e}</div><button class="btn prim" id="qProx">${quiz.i + 1 < quiz.lista.length ? "Próxima" : "Ver resultado"}</button>`;
       $("#qProx").onclick = () => { quiz.i++; questao(); };
@@ -656,7 +663,7 @@
     $("#bIniDes").onclick = iniciarDesafio;
   }
   function iniciarDesafio() {
-    est.desafio = { fila: embaralhar(D.desafio).slice(0, 10), i: 0, pontos: 0, tent: 0, inicio: performance.now() };
+    est.desafio = { fila: embaralhar(D.desafio).slice(0, 10), i: 0, pontos: 0, tent: 0, inicio: performance.now(), id: novoId(), resp: [] };
     rodada();
   }
   function pararDesafio() { est.desafio = null; }
@@ -664,7 +671,8 @@
     const d = est.desafio, area = $("#desArea");
     if (d.i >= d.fila.length) {
       const seg = Math.round((performance.now() - d.inicio) / 1000);
-      area.innerHTML = `<div class="cartao centro"><h2>${d.pontos} / ${d.fila.length}</h2><p>Tempo total: ${seg} s</p><button class="btn prim" id="bDesNovo">Jogar de novo</button></div>`;
+      area.innerHTML = `<div class="cartao centro"><h2>${d.pontos} / ${d.fila.length}</h2><p>Tempo total: ${seg} s</p><p class="envio" id="dEnvio">${ALUNO.dados ? "⏳ Enviando para o professor…" : "⚠️ Entre com sua turma e seu nome para o professor ver este resultado."}</p><button class="btn prim" id="bDesNovo">Jogar de novo</button></div>`;
+      if (ALUNO.dados) registrar({ id: d.id, atividade: "desafio", tema: null, acertos: d.pontos, total: d.fila.length, concluido: true, respostas: d.resp }).then(ok => { const e = $("#dEnvio"); if (e) e.textContent = ok ? "✅ Resultado enviado para o professor." : "⚠️ Não foi possível enviar agora."; });
       $("#bDesNovo").onclick = iniciarDesafio; est.desafio = null; return;
     }
     const id = d.fila[d.i], f = D.fichas[id]; d.tent = 0;
@@ -674,12 +682,12 @@
     est.rotulos = false; $("#btnRotulos").classList.remove("ativo");
     area.innerHTML = `<div class="cartao centro alvo"><small>Rodada ${d.i + 1}/${d.fila.length} · Pontos: ${d.pontos}</small><h2>Clique em: <span>${f.nome}</span></h2>
       <p class="muted">Modelo: ${nomeModelo(f.modelo)} · Dica: use o corte e a transparência se a estrutura estiver escondida.</p><div id="desFeed"></div><button class="btn" id="bPular">Pular / mostrar</button></div>`;
-    $("#bPular").onclick = () => { realcar(id, 0xbef264, .8); focar(id); setTimeout(() => { limparRealce(id); d.i++; rodada(); }, 1800); };
+    $("#bPular").onclick = () => { d.resp.push({ p: f.nome.slice(0, 60), ok: false }); realcar(id, 0xbef264, .8); focar(id); setTimeout(() => { limparRealce(id); d.i++; rodada(); }, 1800); };
   }
   function responderDesafio(p) {
     const d = est.desafio, alvo = d.fila[d.i], fb = $("#desFeed");
     if (p === alvo) {
-      d.pontos += d.tent === 0 ? 1 : 0.5;
+      d.pontos += d.tent === 0 ? 1 : 0.5; d.resp.push({ p: D.fichas[alvo].nome.slice(0, 60), ok: d.tent === 0 });
       realcar(alvo, 0x22ff66, .7); setTimeout(() => limparRealce(alvo), 900);
       fb.innerHTML = `<div class="destaque saude">✔️ Isso mesmo! +5 XP. ${D.fichas[alvo].funcao}</div>`; XP.ganhar(5);
       d.i++; setTimeout(rodada, 1500);
@@ -769,10 +777,82 @@
 
   function forcarAtualizacao() { location.replace(location.pathname + "?v=" + Date.now()); }
 
+  /* ------------------------------ TURMA, ALUNO E ENVIO DOS RESULTADOS ------------------------------ */
+  const TURMAS = ["6º Ano A", "6º Ano B", "6º Ano C", "7º Ano A", "7º Ano B", "8º Ano A", "8º Ano B", "9º Ano A", "9º Ano B"];
+  const SBG = "https://oxohpnappygkmwjyowvq.supabase.co", KEYG = "sb_publishable_EjJenZkxMWv_I6vXWTz6aQ_iz9XEU4N";
+  function novoId() { return crypto.randomUUID ? crypto.randomUUID() : "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, c => { const r = Math.random() * 16 | 0; return (c === "x" ? r : (r & 3 | 8)).toString(16); }); }
+  const ALUNO = { dados: null, fila: Promise.resolve(true) };
+  try { const a = JSON.parse(localStorage.getItem("ms3d_aluno") || "null"); if (a && TURMAS.includes(a.turma) && a.nome && Date.now() - a.t < 12 * 3600e3) ALUNO.dados = a; } catch (e) { }
+  /* grava (ou atualiza) a tentativa no banco; repete se a rede falhar */
+  function registrar(r) {
+    if (!ALUNO.dados) return Promise.resolve(false);
+    const corpo = JSON.stringify({ p_id: r.id, p_turma: ALUNO.dados.turma, p_nome: ALUNO.dados.nome, p_atividade: r.atividade, p_tema: r.tema, p_acertos: r.acertos, p_total: r.total, p_concluido: !!r.concluido, p_respostas: r.respostas });
+    const envia = async () => { for (let k = 0; k < 4; k++) { try { const x = await fetch(SBG + "/rest/v1/rpc/missao3d_registrar", { method: "POST", headers: { apikey: KEYG, Authorization: "Bearer " + KEYG, "Content-Type": "application/json" }, body: corpo, keepalive: true }); if (x.ok) return true; if (x.status === 400) return false; } catch (e) { } await new Promise(z => setTimeout(z, 1200 * (k + 1))); } return false; };
+    ALUNO.fila = ALUNO.fila.then(envia, envia); return ALUNO.fila;
+  }
+  function enviarQuiz(fim) { return registrar({ id: quiz.id, atividade: quiz.atividade, tema: quiz.tema, acertos: quiz.pontos, total: quiz.lista.length, concluido: fim, respostas: quiz.resp }); }
+
+  const sel = $("#eTurma"), selN = $("#eNome");
+  sel.innerHTML = `<option value="">Selecione sua turma</option>` + TURMAS.map(t => `<option>${t}</option>`).join("");
+  sel.onchange = async () => {
+    const t = sel.value; selN.disabled = true; $("#eEntrar").disabled = true; $("#eMsg").textContent = "";
+    selN.innerHTML = `<option value="">${t ? "Carregando os nomes…" : "Primeiro selecione a turma"}</option>`; if (!t) return;
+    let nomes = [];
+    try { const r = await fetch("/api/atividade-quimica?turma=" + encodeURIComponent(t), { cache: "no-store" }); const j = await r.json(); if (j.ok) nomes = j.nomes.map(a => a.nome); } catch (e) { }
+    if (sel.value !== t) return;
+    nomes.sort((a, b) => a.localeCompare(b, "pt"));
+    selN.innerHTML = `<option value="">${nomes.length ? "Selecione seu nome" : "Não foi possível carregar a lista"}</option>` + nomes.map(n => `<option>${n.replace(/</g, "")}</option>`).join("");
+    selN.disabled = !nomes.length; if (!nomes.length) $("#eMsg").textContent = "Sem internet ou fora da plataforma: use “Só explorar”.";
+  };
+  selN.onchange = () => { $("#eEntrar").disabled = !selN.value; };
+  function abrirEntrada() { $("#entrada").hidden = false; if (ALUNO.dados) { sel.value = ALUNO.dados.turma; } setTimeout(() => sel.focus(), 50); }
+  $("#eEntrar").onclick = () => {
+    ALUNO.dados = { turma: sel.value, nome: selN.value, t: Date.now() };
+    try { localStorage.setItem("ms3d_aluno", JSON.stringify(ALUNO.dados)); } catch (e) { }
+    $("#entrada").hidden = true; aplicarTurma(); avisar(`Bem-vindo(a), ${ALUNO.dados.nome.split(" ")[0]}! Os temas do ${ALUNO.dados.turma} estão na lateral.`);
+  };
+  $("#eExplorar").onclick = () => { $("#entrada").hidden = true; try { sessionStorage.setItem("ms3d_explorar", "1"); } catch (e) { } };
+  $("#btnAluno").onclick = abrirEntrada;
+
+  /* abas verticais com os temas do ano da turma: SARESP e Recuperação semestral */
+  let temaAtivo = "";
+  function anoAtual() { return ALUNO.dados ? ALUNO.dados.turma[0] : (new URLSearchParams(location.search).get("ano") || ""); }
+  function montarTemasLateral() {
+    const ano = anoAtual(), t = D.trilha.find(x => x.ano === ano), box = $("#listaTemas");
+    $("#secTemas").hidden = !t; if (!t) return;
+    $("#temasTit").textContent = ALUNO.dados ? `Temas · ${ALUNO.dados.turma}` : `Temas · ${t.titulo}`;
+    const aba = h => { const fx = h.pct != null ? faixa(h.pct) : null;
+      let r = `<button class="aba-v ${h.cod === temaAtivo ? "ativo" : ""}" data-tema="${h.cod}" style="--c:${fx ? fx[1] : "var(--acento)"}"><span><b>${h.tema}</b><small>${h.sigla} · ${h.bim}</small></span>${fx ? `<span class="pct" title="Acerto da escola no Mapa SARESP">${String(h.pct).replace(".", ",")}%</span>` : ""}</button>`;
+      if (h.cod === temaAtivo) r += `<div class="recursos-v">${botoesRec(h.r).replace(/class="btn"/g, 'class="btn"').replace(/data-mod2=/g, "data-mod3=")}<button class="btn prim" data-qae2="${h.cod}">📝 Quiz deste tema</button><button class="btn" data-hab="${h.cod}">🗺️ Ver na trilha</button></div>`;
+      return r; };
+    const rec = t.itens.filter(h => h.rec), sar = t.itens.filter(h => !h.rec);
+    box.innerHTML = (sar.length ? `<div class="grupo">🎯 SARESP · 1º e 2º bimestres</div>` + sar.map(aba).join("") : "") +
+      (rec.length ? `<div class="grupo">♻️ Recuperação semestral · também cai no SARESP</div>` + rec.map(aba).join("") : "") +
+      `<div class="grupo">🏁 Treino geral</div><button class="aba-v" data-geral="simulado"><span><b>🎯 Simulado SARESP</b><small>12 questões de todos os temas</small></span></button><button class="aba-v" data-geral="rec"><span><b>♻️ Revisão da recuperação</b><small>3º e 4º bimestres</small></span></button>`;
+    box.querySelectorAll("[data-tema]").forEach(b => b.onclick = () => abrirTema(b.dataset.tema));
+    box.querySelectorAll("[data-mod3]").forEach(b => b.onclick = () => { carregarModelo(b.dataset.mod3); trocarAba("explorar", true); fecharLateralMovel(); });
+    box.querySelectorAll("[data-sim]").forEach(b => b.onclick = () => { abrirSim(b.dataset.sim); fecharLateralMovel(); });
+    box.querySelectorAll("[data-qae2]").forEach(b => b.onclick = () => { trocarAba("quiz"); iniciarQuiz({ ae: b.dataset.qae2 }); fecharLateralMovel(); });
+    box.querySelectorAll("[data-hab]").forEach(b => b.onclick = () => { trocarAba("habilidades"); destacarHab(b.dataset.hab); fecharLateralMovel(); });
+    box.querySelectorAll("[data-geral]").forEach(b => b.onclick = () => { trocarAba("quiz"); iniciarQuiz({ modo: b.dataset.geral }); fecharLateralMovel(); });
+  }
+  function abrirTema(cod) {
+    temaAtivo = temaAtivo === cod ? "" : cod; montarTemasLateral(); if (!temaAtivo) return;
+    let h = null; D.trilha.forEach(t => t.itens.forEach(x => { if (x.cod === cod) h = x; }));
+    if (h.r.sim) abrirSim(h.r.sim); else if (h.r.modelo) { carregarModelo(h.r.modelo); trocarAba("explorar", true); } else { trocarAba("habilidades"); destacarHab(cod); }
+  }
+  function aplicarTurma() {
+    const ano = anoAtual();
+    if (["6", "7", "8", "9"].includes(ano)) { trilhaAno = ano; quizAno = ano; }
+    $("#btnAluno").textContent = ALUNO.dados ? `👤 ${ALUNO.dados.turma} · ${ALUNO.dados.nome.split(" ").slice(0, 2).join(" ")}` : "👤 Entrar";
+    montarHabilidades(); montarQuiz(); montarTemasLateral();
+  }
+
   /* ------------------------------ INÍCIO ------------------------------ */
   montarSimular(); montarHabilidades(); montarQuiz(); montarDesafio(); montarSaiba();
   redimensionar();
-  carregarModelo("sistema", true); XP.mostrar();
+  carregarModelo("sistema", true); XP.mostrar(); aplicarTurma();
+  { let exp = false; try { exp = !!sessionStorage.getItem("ms3d_explorar"); } catch (e) { } if (!ALUNO.dados && !exp) abrirEntrada(); }
   mostrarBoasVindas();
   carga.style.setProperty("--p", 1);
   laco();

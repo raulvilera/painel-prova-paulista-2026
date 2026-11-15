@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Resultados · Missão SARESP 3D</title>
+<link rel="stylesheet" href="../dash.css?v=13">
+<style>
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi b{display:block;font-size:1.6rem}.kpi span{color:var(--muted);font-size:.8rem}
+tr.al{cursor:pointer}tr.al:hover td{background:var(--surface-2)}
+table{border-collapse:collapse}.turma-bloco{margin-top:26px;padding-top:6px;border-top:4px solid var(--accent)}.turma-tit{margin:12px 0 8px;font-size:1.5rem;color:var(--accent)}
+td,th{padding:7px 8px;border:1px solid rgba(148,163,184,.6);vertical-align:middle;text-align:center}th{background:var(--surface-2)}td.l{text-align:left}
+.det td{background:var(--surface-2);text-align:left}.nota{font-size:.82rem;color:var(--muted);margin:8px 0}
+.btn{font:inherit;font-weight:600;color:var(--accent);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
+.scroll{overflow-x:auto}input[type=search]{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px;min-width:210px}
+.nt{font-weight:800}.nt.b{color:var(--lv0)}.nt.m{color:var(--lv1)}.nt.a{color:var(--lv2)}.ok{color:var(--lv2);font-weight:700}.er{color:var(--lv0);font-weight:700}
+.tag{display:inline-block;font-size:.72rem;padding:1px 7px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--muted)}
+.tbar{height:10px;border-radius:99px;background:var(--surface-2);overflow:hidden;flex:1;min-width:80px;display:block}.tbar>b{display:block;height:100%}
+.faltam{display:flex;flex-wrap:wrap;gap:6px}.faltam span{font-size:.8rem;padding:2px 9px;border-radius:99px;border:1px solid var(--line);background:var(--surface)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div><h1>Resultados · Missão SARESP 3D</h1><div class="muted sm">Simulador de Ciências 6º ao 9º ano · quiz por tema, Simulado SARESP, revisão da recuperação e desafio · atualiza a cada 20 s</div></div>
+<nav><a href="/">← Painel</a><a href="/missao-saresp/" target="_blank" rel="noopener">Abrir o simulador →</a></nav></header>
+<div class="filters">
+<div class="field"><label for="fTurma">Turma</label><select id="fTurma"><option value="">Todas as turmas</option><option>6º Ano A</option><option>6º Ano B</option><option>6º Ano C</option><option>7º Ano A</option><option>7º Ano B</option><option>8º Ano A</option><option>8º Ano B</option><option>9º Ano A</option><option>9º Ano B</option></select></div>
+<div class="field"><label for="fAtiv">Atividade</label><select id="fAtiv"><option value="">Todas</option><option value="simulado">Simulado SARESP</option><option value="recuperacao">Recuperação</option><option value="tema">Quiz por tema</option><option value="desafio">Desafio</option></select></div>
+<div class="field"><label for="fAluno">Aluno</label><input id="fAluno" type="search" placeholder="Buscar pelo nome…" autocomplete="off"></div>
+<div class="field"><button class="btn" id="bCsv" type="button">Baixar CSV</button></div>
+<div class="field"><button class="btn" id="bAtu" type="button">Atualizar</button></div>
+</div>
+<div id="app"><div class="card muted">Carregando…</div></div>
+</div>
+<script>
+(function () {
+  const $ = s => document.querySelector(s), app = h => $('#app').innerHTML = h;
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const dt = s => { try { return new Date(s).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }); } catch (e) { return ''; } };
+  const norm = v => String(v || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const fm = n => Number(n).toFixed(1).replace('.', ',');
+  const nt = n => '<span class="nt ' + (n < 5 ? 'b' : n < 7 ? 'm' : 'a') + '">' + fm(n) + '</span>';
+  const FAIXA = p => p < 25 ? ['Abaixo do Básico', 'var(--lv0)'] : p < 50 ? ['Básico', 'var(--lv1)'] : p < 75 ? ['Adequado', 'var(--lv2)'] : ['Avançado', 'var(--lv3)'];
+  const TURMAS = ["6º Ano A", "6º Ano B", "6º Ano C", "7º Ano A", "7º Ano B", "8º Ano A", "8º Ano B", "9º Ano A", "9º Ano B"];
+  const TEMA = {"6-AE1": "Esferas e camadas da Terra", "6-AE2": "Sol, Terra e Lua", "6-AE3": "Rochas, solo e fósseis", "6-AE5": "Células", "6-AE6": "Níveis de organização", "6-AE7": "Sistema nervoso", "7-AE1": "Placas tectônicas", "7-AE2": "Atmosfera e qualidade do ar", "7-AE3": "Máquinas simples", "7-AE7": "Efeito estufa", "7-AE8": "Vírus, bactérias e fungos", "7-AE10": "Biomas brasileiros", "7-AE11": "Vacinas e indicadores de saúde", "8-AE3": "ISTs e prevenção", "8-AE5": "Digestão e respiração", "8-AE8": "Fases da Lua, eclipses e estações", "8-AE9": "Clima e previsão do tempo", "8-AE10": "Mudanças climáticas", "8-AE11": "Fontes e transformações de energia", "8-AE12": "Circuitos elétricos", "8-AE13": "Consumo de energia", "9-AE2": "Modelos atômicos", "9-AE9": "Lamarck e Darwin", "9-AE10": "Evolução e biodiversidade", "9-AE11": "Problemas ambientais e UCs", "9-AE12": "Sistema Solar", "9-AE13": "Vida fora da Terra"};
+  const ATIV = { simulado: 'Simulado SARESP', recuperacao: 'Recuperação', tema: 'Quiz do tema', desafio: 'Desafio' };
+  let TOKEN = '', D = [], aberto = ''; const ROSTER = {};
+  async function carregarRoster(t) { if (ROSTER[t]) return; try { const r = await fetch('/api/atividade-quimica?turma=' + encodeURIComponent(t), { cache: 'no-store' }); const j = await r.json(); ROSTER[t] = j.ok ? j.nomes.map(a => a.nome) : []; } catch (e) { ROSTER[t] = []; } }
+  async function carregar() {
+    const r = await fetch('/api/quiz?missao3d=1', { headers: { Authorization: 'Bearer ' + TOKEN }, cache: 'no-store' });
+    const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro'); D = j.resultados || [];
+    const t = $('#fTurma').value; await Promise.all((t ? [t] : TURMAS).map(carregarRoster)); desenhar();
+  }
+  function bloco(t, L) {
+    const por = {}; L.forEach(x => { (por[x.nome] = por[x.nome] || []).push(x); });
+    const conc = L.filter(x => x.concluido), media = conc.length ? conc.reduce((a, x) => a + Number(x.nota), 0) / conc.length : null;
+    const roster = ROSTER[t] || [], feitos = new Set(Object.keys(por).map(norm)), faltam = roster.filter(n => !feitos.has(norm(n)));
+    let h = '<div class="kpis"><div class="kpi"><b>' + Object.keys(por).length + (roster.length ? '<span style="font-size:1rem"> / ' + roster.length + '</span>' : '') + '</b><span>alunos que fizeram alguma atividade</span></div><div class="kpi"><b>' + conc.length + '</b><span>atividades concluídas</span></div><div class="kpi"><b>' + (media == null ? '–' : fm(media)) + '</b><span>média das concluídas</span></div><div class="kpi"><b>' + faltam.length + '</b><span>ainda não fizeram nada</span></div></div>';
+    // aproveitamento por tema (todas as respostas de quiz)
+    const T0 = {}; L.filter(x => x.atividade !== 'desafio').forEach(x => (x.respostas || []).forEach(r => { if (!r.ae) return; const o = T0[r.ae] = T0[r.ae] || { ok: 0, er: 0 }; o[r.ok ? 'ok' : 'er']++; }));
+    const temas = Object.keys(T0).sort((a, b) => T0[a].ok / (T0[a].ok + T0[a].er) - T0[b].ok / (T0[b].ok + T0[b].er));
+    h += '<div class="card"><h3>Aproveitamento por tema</h3><div class="nota">Acertos ÷ respostas de todos os alunos da turma, do tema mais frágil para o mais forte. Cores pelas faixas do painel.</div>' +
+      (temas.length ? temas.map(k => { const o = T0[k], p = Math.round(o.ok / (o.ok + o.er) * 100), f = FAIXA(p); return '<div style="display:flex;align-items:center;gap:10px;margin:6px 0"><span style="min-width:240px"><b>' + esc(TEMA[k] || k) + '</b> <span class="muted sm">' + esc(k.replace('-', 'º · ')) + '</span></span><span class="tbar"><b style="width:' + p + '%;background:' + f[1] + '"></b></span><span style="min-width:150px">' + p + '% · ' + f[0] + ' <span class="muted sm">(' + o.ok + '/' + (o.ok + o.er) + ')</span></span></div>'; }).join('') : '<p class="muted">Ainda sem respostas de quiz.</p>') + '</div>';
+    const alunos = Object.entries(por).map(([nome, tent]) => { tent.sort((a, b) => String(b.atualizado).localeCompare(String(a.atualizado)));
+      const melhor = tipo => { const c = tent.filter(x => x.concluido && x.atividade === tipo); return c.length ? Math.max(...c.map(x => Number(x.nota))) : null; };
+      return { nome, tent, sim: melhor('simulado'), rec: melhor('recuperacao'), temas: new Set(tent.filter(x => x.atividade === 'tema' && x.concluido).map(x => x.tema)).size, ult: tent[0] }; }).sort((a, b) => a.nome.localeCompare(b.nome, 'pt'));
+    const c = v => v == null ? '<span class="muted">–</span>' : nt(v);
+    h += '<div class="card" style="margin-top:14px"><h2>Alunos</h2><div class="nota">Clique no nome para ver cada atividade e as respostas. Simulado e Recuperação mostram a melhor nota concluída (0 a 10).</div><div class="scroll"><table><thead><tr><th>#</th><th>Aluno</th><th>Simulado SARESP</th><th>Recuperação</th><th>Temas concluídos</th><th>Atividades</th><th>Última</th></tr></thead><tbody>' +
+      (alunos.length ? alunos.map((a, i) => { const k = t + '|' + a.nome; let r = '<tr class="al" data-k="' + esc(k) + '"><td>' + (i + 1) + '</td><td class="l"><b>' + esc(a.nome) + '</b></td><td>' + c(a.sim) + '</td><td>' + c(a.rec) + '</td><td>' + a.temas + '</td><td>' + a.tent.length + '</td><td>' + dt(a.ult.atualizado) + '</td></tr>';
+        if (aberto === k) r += '<tr class="det"><td></td><td colspan="6">' + a.tent.map(x => '<div style="margin-bottom:10px"><b>' + esc(ATIV[x.atividade] || x.atividade) + (x.tema ? ' · ' + esc(TEMA[x.tema] || x.tema) : '') + '</b> · ' + dt(x.atualizado) + ' · ' + (x.concluido ? 'concluída' : '<span class="tag">incompleta</span>') + ' · ' + fm(x.acertos).replace(',0', '') + '/' + x.total + ' · nota ' + nt(Number(x.nota)) + ' · ' + FAIXA(x.percentual)[0] +
+          '<div class="sm" style="margin-top:4px">' + (x.respostas || []).map(r => '<span class="' + (r.ok ? 'ok' : 'er') + '">' + (r.ok ? '✔' : '✘') + '</span> ' + esc(r.p) + (r.r ? ' <span class="muted">→ ' + esc(r.r) + '</span>' : '')).join('<br>') + '</div></div>').join('') + '</td></tr>';
+        return r; }).join('') : '<tr><td colspan="7" class="muted">Nenhum resultado ainda.</td></tr>') + '</tbody></table></div></div>';
+    if (roster.length) h += '<div class="card" style="margin-top:14px"><h3>Ainda não fizeram nenhuma atividade (' + faltam.length + ')</h3>' + (faltam.length ? '<div class="faltam">' + faltam.map(n => '<span>' + esc(n) + '</span>').join('') + '</div>' : '<p class="ok">Toda a turma já participou!</p>') + '</div>';
+    return '<section class="turma-bloco"><h2 class="turma-tit">' + esc(t) + '</h2>' + h + '</section>';
+  }
+  function desenhar() {
+    const t = $('#fTurma').value, at = $('#fAtiv').value, q = norm($('#fAluno').value.trim());
+    const LL = D.filter(x => (!t || x.turma === t) && (!at || x.atividade === at) && (!q || norm(x.nome).includes(q)));
+    const turmas = t ? [t] : TURMAS.filter(tm => LL.some(x => x.turma === tm));
+    app(turmas.length ? turmas.map(tm => bloco(tm, LL.filter(x => x.turma === tm))).join('') : '<div class="card muted">Nenhum resultado ainda. Os alunos entram no simulador, escolhem a turma e o nome, e cada atividade aparece aqui.</div>');
+    document.querySelectorAll('tr.al').forEach(tr => tr.onclick = () => { aberto = aberto === tr.dataset.k ? '' : tr.dataset.k; desenhar(); });
+  }
+  function csv() {
+    const t = $('#fTurma').value, L = [['Turma', 'Aluno', 'Atividade', 'Tema', 'Concluída', 'Acertos', 'Total', 'Percentual', 'Nota', 'Faixa', 'Início', 'Atualizado']];
+    D.filter(x => !t || x.turma === t).forEach(x => L.push([x.turma, x.nome, ATIV[x.atividade] || x.atividade, x.tema ? (TEMA[x.tema] || x.tema) : '', x.concluido ? 'sim' : 'não', fm(x.acertos), x.total, x.percentual + '%', fm(x.nota), FAIXA(x.percentual)[0], dt(x.iniciado_em), dt(x.atualizado)]));
+    const txt = '﻿' + L.map(l => l.map(c => '"' + String(c == null ? '' : c).replace(/"/g, '""') + '"').join(';')).join('\n');
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/csv;charset=utf-8' })); a.download = 'missao-saresp-3d' + (t ? '-' + norm(t).replace(/\W+/g, '-') : '') + '.csv'; a.click();
+  }
+  $('#fTurma').onchange = () => { const t = $('#fTurma').value; (t ? carregarRoster(t) : Promise.resolve()).then(desenhar); };
+  $('#fAtiv').onchange = desenhar; $('#fAluno').oninput = desenhar; $('#bCsv').onclick = csv;
+  $('#bAtu').onclick = () => carregar().catch(e => app('<div class="card">' + esc(e.message) + '</div>'));
+  { const t = new URLSearchParams(location.search).get('turma'); if (t && TURMAS.includes(t)) $('#fTurma').value = t; }
+  function sessao() { try { const k = Object.keys(localStorage).find(x => /^sb-.*-auth-token$/.test(x)); if (!k) return null; const v = JSON.parse(localStorage.getItem(k) || 'null'); const s = v && (v.currentSession || v); return s && s.access_token ? s : null; } catch (e) { return null; } }
+  (async function () {
+    const ss = sessao();
+    if (!ss) return app('<div class="card">Entre primeiro no painel com o seu login de professor. <a href="/">Abrir o painel</a></div>');
+    if (ss.expires_at && ss.expires_at * 1000 < Date.now() + 30000) { app('<div class="card">Renovando o seu acesso…</div>'); return location.replace('/'); }
+    TOKEN = ss.access_token;
+    try { await carregar(); setInterval(() => { const n = sessao(); if (n) TOKEN = n.access_token; carregar().catch(() => {}); }, 20000); }
+    catch (e) { app('<div class="card">' + (/professor|login|401/i.test(e.message) ? 'Seu acesso expirou. <a href="/">Voltar ao painel</a>' : 'Não foi possível carregar: ' + esc(e.message)) + '</div>'); }
+  })();
+})();
+</script>
+<script src="/voltar-painel.js" data-sempre defer></script>
+</body></html>
