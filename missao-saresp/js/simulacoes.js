@@ -31,10 +31,28 @@
 
   const basico = (cor, op) => new T.MeshBasicMaterial({ color: cor, transparent: (op ?? 1) < 1, opacity: op ?? 1, side: T.DoubleSide, depthWrite: (op ?? 1) >= .6 });
   // esfera com metade clara voltada para +z (gire o grupo para apontar ao Sol)
-  function meiaLuz(r, corDia, corNoite, seg) {
+  // tex: "terra" ou "lua" → esfera com textura de alta qualidade e uma "capa de noite" no lado oposto ao Sol
+  function meiaLuz(r, corDia, corNoite, seg, tex) {
     const g = new T.Group();
+    if (tex) {
+      const tx = tex === "terra" ? TEX.terra() : TEX.lua();
+      const dia = new T.Mesh(new T.SphereGeometry(r, 96, 64), new T.MeshBasicMaterial({ map: tx.map, color: 0xffffff }));
+      g.add(dia);
+      g.add(new T.Mesh(new T.SphereGeometry(r * 1.006, 96, 64, Math.PI, Math.PI), new T.MeshBasicMaterial({ color: 0x020617, transparent: true, opacity: .8, depthWrite: false })));
+      if (tex === "terra") { const at = new T.Mesh(new T.SphereGeometry(r * 1.07, 64, 48), TEX.materialAtmosfera(0x60a5fa, 1)); g.add(at); }
+      return g;
+    }
     g.add(new T.Mesh(new T.SphereGeometry(r, seg || 40, 28, 0, Math.PI), basico(corDia)));
     g.add(new T.Mesh(new T.SphereGeometry(r * .998, seg || 40, 28, Math.PI, Math.PI), basico(corNoite)));
+    return g;
+  }
+  // Sol com textura e brilho
+  function solSim(r, pos) { const s = GEO.solHD(r); GEO.enfeitarSol(s, r, .8); if (pos) s.position.copy(pos); return s; }
+  function arvore(G, alt, cor) {
+    const g = new T.Group(), mt = G.mat(0x6b4423, { rough: .8 });
+    g.add(G.malha(new T.CylinderGeometry(alt * .05, alt * .08, alt * .5, 12), mt, V(0, alt * .25, 0)));
+    const mf = G.mat(cor || 0x2f7d32, { rough: .7 });
+    [[0, .62, 0, .32], [.14, .75, .08, .24], [-.13, .74, -.06, .25], [0, .9, 0, .2]].forEach(([x, y, z, r]) => g.add(G.malha(G.deformar(new T.SphereGeometry(alt * r, 40, 30), alt * r * .12, 3 / (alt * r)), mf, V(x * alt, y * alt, z * alt))));
     return g;
   }
   function pergunta(id, txt, ops, certa, explica) {
@@ -66,12 +84,12 @@
       ${pergunta("pF", "Em que fase da Lua pode acontecer um eclipse solar?", ["Lua cheia", "Lua nova", "Quarto crescente", "Em qualquer fase"], 1, "O eclipse solar exige a Lua entre o Sol e a Terra, o que só acontece na Lua nova.")}`,
     iniciar(ctx) {
       const G = ctx.G, raiz = new T.Group();
-      const sol = G.malha(new T.SphereGeometry(3, 32, 24), basico(0xfbbf24), V(-34, 0, 0)); raiz.add(sol); sol.userData.info = "Sol: ilumina sempre metade da Terra e metade da Lua.";
+      const sol = solSim(3, V(-34, 0, 0)); raiz.add(sol); sol.userData.info = "Sol: ilumina sempre metade da Terra e metade da Lua.";
       for (let i = -3; i <= 3; i++) { const r = G.malha(new T.CylinderGeometry(.04, .04, 22, 4), basico(0xfde68a, .35), V(-20, i * 1.4, 0), [0, 0, Math.PI / 2]); raiz.add(r); }
-      const terra = meiaLuz(1.6, 0x38bdf8, 0x0f172a); terra.rotation.y = -Math.PI / 2; raiz.add(terra); terra.children.forEach(c => c.userData.info = "Terra: metade de dia (voltada para o Sol) e metade de noite.");
+      const terra = meiaLuz(1.6, 0x38bdf8, 0x0f172a, 0, "terra"); terra.rotation.y = -Math.PI / 2; raiz.add(terra); terra.children.forEach(c => c.userData.info = "Terra: metade de dia (voltada para o Sol) e metade de noite.");
       const sombraT = G.malha(new T.CylinderGeometry(1.2, 1.6, 14, 32, 1, true), basico(0x000000, .35), V(7, 0, 0), [0, 0, Math.PI / 2]); raiz.add(sombraT); sombraT.userData.info = "Sombra da Terra: se a Lua entrar aqui, acontece um eclipse lunar.";
       const R = 7, orbita = new T.Mesh(new T.TorusGeometry(R, .03, 4, 160), basico(0xa78bfa, .7)); raiz.add(orbita);
-      const lua = meiaLuz(.55, 0xf8fafc, 0x334155); lua.rotation.y = -Math.PI / 2; raiz.add(lua); lua.children.forEach(c => c.userData.info = "Lua: a metade clara é a iluminada pelo Sol.");
+      const lua = meiaLuz(.55, 0xf8fafc, 0x334155, 0, "lua"); lua.rotation.y = -Math.PI / 2; raiz.add(lua); lua.children.forEach(c => c.userData.info = "Lua: a metade clara é a iluminada pelo Sol.");
       const sombraL = G.malha(new T.ConeGeometry(.55, 7.5, 24, 1, true), basico(0x000000, .4)); sombraL.rotation.z = Math.PI / 2; raiz.add(sombraL);
       const mancha = G.malha(new T.CircleGeometry(.35, 24), basico(0x000000, .85)); raiz.add(mancha); mancha.visible = false;
       let d = 0, no = 40 * DEG, auto = false;
@@ -128,13 +146,14 @@
       ${pergunta("pE", "Em janeiro a Terra está perto do ponto mais próximo do Sol. Por que é inverno no Hemisfério Norte?", ["Porque o Hemisfério Norte está inclinado para longe do Sol", "Porque o Sol esfria em janeiro", "Porque a Lua bloqueia o Sol", "Porque a Terra para de girar"], 0, "É a inclinação do eixo, e não a distância, que causa as estações.")}`,
     iniciar(ctx) {
       const G = ctx.G, raiz = new T.Group();
-      const sol = G.malha(new T.SphereGeometry(2.4, 40, 30), basico(0xfbbf24)); raiz.add(sol); sol.userData.info = "Sol";
+      const sol = solSim(2.4); raiz.add(sol); sol.userData.info = "Sol";
       const R = 12; raiz.add(new T.Mesh(new T.TorusGeometry(R, .03, 4, 200), basico(0x22d3ee, .6))).rotation.x = Math.PI / 2;
       const terraG = new T.Group(); raiz.add(terraG);
-      const luz = meiaLuz(1.5, 0x7dd3fc, 0x0b1a33); terraG.add(luz); luz.children.forEach(c => c.userData.info = "Metade iluminada (dia) e metade escura (noite).");
+      const luz = meiaLuz(1.5, 0x7dd3fc, 0x0b1a33, 0, "terra"); terraG.add(luz); luz.children.forEach(c => c.userData.info = "Metade iluminada (dia) e metade escura (noite).");
       const incl = new T.Group(); terraG.add(incl);
+      const globo = luz.children[0]; luz.remove(globo); incl.add(globo); // a Terra gira no próprio eixo inclinado; a "noite" fica sempre do lado oposto ao Sol
       incl.add(G.malha(new T.CylinderGeometry(.04, .04, 4.4, 6), basico(0xf472b6)));
-      const anel = (lat, cor) => { const r = 1.53 * Math.cos(lat * DEG); const a = new T.Mesh(new T.TorusGeometry(r, .03, 4, 64), basico(cor)); a.rotation.x = Math.PI / 2; a.position.y = 1.53 * Math.sin(lat * DEG); incl.add(a); return a; };
+      const anel = (lat, cor) => { const r = 1.53 * Math.cos(lat * DEG); const a = new T.Mesh(new T.TorusGeometry(r, .022, 8, 128), basico(cor)); a.rotation.x = Math.PI / 2; a.position.y = 1.53 * Math.sin(lat * DEG); incl.add(a); return a; };
       anel(0, 0xfacc15); anel(-23.4, 0xfb923c); anel(23.4, 0xfb923c);
       const sp = G.malha(new T.SphereGeometry(.12, 10, 8), basico(0xef4444)); incl.add(sp);
       const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
@@ -158,7 +177,7 @@
       ctx.rotulos([{ txt: "Sol", obj: sol, dy: 3.2, cor: "#fbbf24" }, { txt: "Terra", obj: terraG, dy: 2.6, cor: "#38bdf8" }, { txt: "Trópico de Capricórnio", obj: sp, dy: -.5, cor: "#fb923c" }]);
       atualizar();
       return { raiz, vistas: [["Órbita", [0, 26, 36], [0, 0, 0]], ["Perto da Terra", [20, 4, 10], [12, 0, 0]], ["De lado", [0, 2, 38], [0, 0, 0]]],
-        atualizar(dt) { girar += dt; incl.rotation.y = girar * .6; const lat = -23.55 * DEG; sp.position.set(1.55 * Math.cos(lat), 1.55 * Math.sin(lat), 0); } };
+        atualizar(dt) { girar += dt; globo.rotation.y = girar * .6; const lat = -23.55 * DEG; sp.position.set(1.55 * Math.cos(lat), 1.55 * Math.sin(lat), 0); } };
     }
   });
 
@@ -176,10 +195,14 @@
       ${pergunta("pS", "Por que a sombra muda de tamanho e de direção durante o dia?", ["Porque a Terra gira (rotação) e o Sol muda de posição no céu", "Porque o poste se move", "Porque a Lua passa na frente do Sol", "Porque o Sol se aproxima da Terra ao meio-dia"], 0, "O movimento do Sol no céu é aparente: quem gira é a Terra.")}`,
     iniciar(ctx) {
       const G = ctx.G, raiz = new T.Group();
-      raiz.add(chao(12, 0x3f6212, 1));
-      const poste = G.malha(new T.CylinderGeometry(.12, .15, 3, 12), G.mat(0xe5e7eb), V(0, 1.5, 0)); raiz.add(poste); poste.userData.info = "Poste de 3 m (gnômon).";
-      const somb = G.malha(new T.BoxGeometry(1, .02, .3), basico(0x020617, .75)); somb.geometry.translate(.5, 0, 0); somb.position.y = .03; raiz.add(somb);
-      const sol = G.malha(new T.SphereGeometry(.9, 24, 18), basico(0xfbbf24)); raiz.add(sol);
+      const piso = new T.Mesh(new T.CircleGeometry(12, 128), G.matT({ map: TEX.rosaVentos(), roughness: .95 })); piso.rotation.x = -Math.PI / 2; raiz.add(piso);
+      const borda = G.malha(new T.TorusGeometry(12, .12, 12, 160), G.mat(0x94a3b8, { rough: .5 }), null, [Math.PI / 2, 0, 0]); raiz.add(borda);
+      const poste = G.malha(new T.CylinderGeometry(.09, .12, 3, 32), G.mat(0xe5e7eb, { metal: .6, rough: .3 }), V(0, 1.5, 0)); raiz.add(poste); poste.userData.info = "Poste de 3 m (gnômon).";
+      raiz.add(G.malha(new T.CylinderGeometry(.45, .55, .12, 40), G.mat(0x64748b, { rough: .5 }), V(0, .06, 0)));
+      raiz.add(G.malha(new T.SphereGeometry(.14, 24, 18), G.mat(0xfacc15, { metal: .5, rough: .3 }), V(0, 3.05, 0)));
+      [[8.5, -6], [-8, -7.4], [9.6, 5.2], [-9.2, 5.8]].forEach(([x, z], i) => { const a = arvore(G, 3.2 + i * .4, [0x2f7d32, 0x3f8f3a, 0x2c6e2f, 0x4d9a3f][i]); a.position.set(x, 0, z); raiz.add(a); });
+      const somb = G.malha(new T.BoxGeometry(1, .02, .22), basico(0x020617, .6)); somb.geometry.translate(.5, 0, 0); somb.position.y = .03; raiz.add(somb);
+      const sol = solSim(.9); raiz.add(sol);
       const arco = new T.Line(new T.BufferGeometry(), new T.LineDashedMaterial({ color: 0xfde68a, dashSize: .4, gapSize: .3 })); raiz.add(arco);
       const rotPC = [["N", 0, -11], ["S", 0, 11], ["L (leste)", 11, 0], ["O (oeste)", -11, 0]].map(([t, x, z]) => ({ txt: t, pos: V(x, .3, z), cor: "#5eead4" }));
       let dec = 0, h = 8, auto = false; const sl = ctx.$("#sl"), fi = -23.55 * DEG;
@@ -218,14 +241,11 @@
       ${pergunta("pG", "Sobre o efeito estufa, o que é correto?", ["É natural e necessário, mas as atividades humanas o intensificam", "É sempre prejudicial e deveria acabar", "É causado pelo buraco na camada de ozônio", "Só existe dentro de estufas de plantas"], 0, "Sem ele a Terra teria cerca de −18 °C. O problema é o excesso de gases emitidos.")}`,
     iniciar(ctx) {
       const G = ctx.G, raiz = new T.Group();
-      const gT = new T.SphereGeometry(4, 64, 48), cT = [], pT = gT.attributes.position, vT = new T.Vector3();
-      for (let i = 0; i < pT.count; i++) { vT.fromBufferAttribute(pT, i); const n = G.ruido(vT, .55) + .4 * G.ruido(vT, 1.4); const c = Math.abs(vT.y) > 3.6 ? new T.Color(0xf1f5f9) : n > .08 ? new T.Color(0x4d7c0f) : new T.Color(0x1d4ed8); cT.push(c.r, c.g, c.b); }
-      gT.setAttribute("color", new T.Float32BufferAttribute(cT, 3)); const mT = G.mat(0xffffff, { rough: .6 }); mT.vertexColors = true;
-      const terra = G.malha(gT, mT); raiz.add(terra); terra.userData.info = "Superfície da Terra: absorve a luz do Sol e emite calor (radiação infravermelha).";
+      const terra = G.terraHD(4); raiz.add(terra); const nuvE = G.enfeitarTerra(terra, 4, .8); terra.userData.info = "Superfície da Terra: absorve a luz do Sol e emite calor (radiação infravermelha).";
       const atm = G.malha(new T.SphereGeometry(6, 48, 32), G.mat(0x7dd3fc, { op: .15, side: T.DoubleSide, dw: false })); raiz.add(atm); atm.userData.info = "Atmosfera: os gases de efeito estufa (gás carbônico, metano, vapor de água) seguram parte do calor.";
-      const sol = G.malha(new T.SphereGeometry(1.6, 24, 18), basico(0xfbbf24), V(-18, 8, 0)); raiz.add(sol);
-      const N = 60, raios = []; const gR = new T.SphereGeometry(.16, 8, 6), mA = basico(0xfde047), mV = basico(0xef4444);
-      for (let i = 0; i < N; i++) { const m = new T.Mesh(gR, mA); raiz.add(m); raios.push({ m, f: 0, t: Math.random(), alvo: V(0, 0, 0) }); }
+      const sol = solSim(1.6, V(-18, 8, 0)); raiz.add(sol);
+      const N = 60, raios = []; const gR = new T.SphereGeometry(.14, 16, 12), mA = basico(0xfde047), mV = basico(0xef4444);
+      for (let i = 0; i < N; i++) { const m = new T.Mesh(gR, mA); const b = G.brilhoSprite(0xffffff, .9, .7); m.add(b); raiz.add(m); raios.push({ m, f: 0, t: Math.random(), alvo: V(0, 0, 0) }); }
       let ppm = 420; const sl = ctx.$("#sl");
       const fr = () => ppm <= 0 ? 0 : Math.min(.85, .42 + .12 * Math.log2(ppm / 280));
       function atualizar() {
@@ -242,7 +262,7 @@
       atualizar();
       const novaDir = () => V(Math.random() - .5, Math.random() - .5, Math.random() - .5).normalize();
       return { raiz, vistas: [["Terra", [6, 4, 22], [-2, 1, 0]], ["Atmosfera", [0, 2, 13], [0, 3, 0]]],
-        atualizar(dt) { raios.forEach(r => { r.t += dt * .55;
+        atualizar(dt) { terra.rotation.y += dt * .05; raios.forEach(r => { r.t += dt * .55;
           if (r.f === 0) { const ini = sol.position, fim = r.alvo; if (!r.dir) { r.dir = novaDir(); r.dir.x = -Math.abs(r.dir.x) - .3; r.dir.normalize(); fim.copy(r.dir).multiplyScalar(4); } r.m.position.lerpVectors(ini, fim, Math.min(1, r.t)); if (r.t >= 1) { r.f = 1; r.t = 0; r.m.material = mV; r.out = fim.clone().normalize(); } }
           else if (r.f === 1) { r.m.position.copy(r.out).multiplyScalar(4 + r.t * 2); if (r.t >= 1) { if (Math.random() < fr()) { r.f = 2; r.t = 0; } else { r.f = 3; r.t = 0; } } }
           else if (r.f === 2) { r.m.position.copy(r.out).multiplyScalar(6 - r.t * 2); if (r.t >= 1) { r.f = 1; r.t = 0; r.out = novaDir(); } }
@@ -264,13 +284,23 @@
       ${pergunta("pN", "Como Darwin explicaria o aumento de mariposas escuras com o tronco escuro?", ["As escuras já existiam, foram menos caçadas e deixaram mais descendentes", "As mariposas escureceram de propósito para se esconder", "A fuligem pintou as mariposas e elas passaram a cor aos filhos", "Os pássaros ensinaram as mariposas a mudar de cor"], 0, "O ambiente seleciona variações que já existem. 'Mudar por necessidade' ou 'herdar o que se adquire' são ideias de Lamarck.")}`,
     iniciar(ctx) {
       const G = ctx.G, raiz = new T.Group(), Rn = Math.random;
-      const tronco = G.malha(new T.CylinderGeometry(3, 3.4, 16, 48), G.mat(0xd6d3d1, { rough: 1 }), V(0, 2, 0)); raiz.add(tronco); tronco.userData.info = "Tronco da árvore.";
-      raiz.add(chao(10, 0x365314));
+      const gTr = new T.CylinderGeometry(3, 3.4, 16, 128, 64, false), pTr = gTr.attributes.position, vTr = new T.Vector3();
+      for (let i = 0; i < pTr.count; i++) { vTr.fromBufferAttribute(pTr, i); const a = Math.atan2(vTr.z, vTr.x), k = 1 + .03 * TEX.fbm(Math.cos(a) * 2, Math.sin(a) * 2, vTr.y * .25, 4) + .015 * Math.sin(a * 26 + TEX.fbm(Math.cos(a), Math.sin(a), vTr.y * .2, 3) * 4); pTr.setXYZ(i, vTr.x * k, vTr.y, vTr.z * k); }
+      gTr.computeVertexNormals();
+      const cascaC = TEX.casca(false), cascaE = TEX.casca(true);
+      const mTr = G.matT({ map: cascaC.map, bumpMap: cascaC.bumpMap, bumpScale: .06, roughness: .95 });
+      const tronco = new T.Mesh(gTr, mTr); tronco.position.set(0, 2, 0); raiz.add(tronco); tronco.userData.info = "Tronco da árvore.";
+      [[1, 8.5, .4, 1.2], [-1, 7, -.6, 1], [.3, 9.6, -1, .8]].forEach(([dx, y, dz, r]) => { const fim = V(dx * 7, y + 4, dz * 6); const gal = G.tubo([V(dx * 2.6, y, dz * 2.2), V(dx * 4.5, y + 1.8, dz * 3.6), fim], r, mTr, false, 40); raiz.add(gal);
+        const copa = new T.Group(); copa.position.copy(fim); raiz.add(copa); const R2 = G.rng(y * 10 | 0);
+        for (let k = 0; k < 6; k++) copa.add(G.malha(G.deformar(new T.SphereGeometry(1.4 + R2() * .6, 40, 30), .25, 1.2), G.mat([0x3f7a2f, 0x4d8c36, 0x2f6b28][k % 3], { rough: .75 }), V((R2() - .5) * 3, (R2() - .5) * 1.6, (R2() - .5) * 3))); });
+      const chaoS = new T.Mesh(new T.CircleGeometry(10, 128), G.matT({ map: TEX.grama(), roughness: .95 })); chaoS.rotation.x = -Math.PI / 2; chaoS.position.y = -6; raiz.add(chaoS);
       const gA = new T.Shape(); gA.moveTo(0, 0); gA.bezierCurveTo(.5, .45, .9, .2, .8, -.3); gA.bezierCurveTo(.5, -.4, .2, -.2, 0, 0); const geoAsa = new T.ShapeGeometry(gA, 8);
       const corC = 0xf5f5f4, corE = 0x1c1917;
       let pop = [], ger = 0, hist = [], amb = "claro";
-      function mariposa(escura) { const g = new T.Group(), m = basico(escura ? corE : corC); [1, -1].forEach(s => { const a = new T.Mesh(geoAsa, m); a.scale.x = s; g.add(a); }); g.userData.escura = escura; g.userData.info = escura ? "Mariposa escura" : "Mariposa clara"; g.children.forEach(c => c.userData.info = g.userData.info); return g; }
-      function posicionar(g) { const a = Rn() * Math.PI * 2, y = -4 + Rn() * 13, r = 3.4 - (y + 6) / 16 * .4 + .08; g.position.set(Math.cos(a) * r, y, Math.sin(a) * r); g.lookAt(Math.cos(a) * 10, y, Math.sin(a) * 10); g.scale.setScalar(.9); }
+      const matAsa = { c: new T.MeshStandardMaterial({ map: TEX.asa(false), side: T.DoubleSide, roughness: .8 }), e: new T.MeshStandardMaterial({ map: TEX.asa(true), side: T.DoubleSide, roughness: .8 }) };
+      const geoCorpo = new T.CapsuleGeometry(.08, .55, 8, 16);
+      function mariposa(escura) { const g = new T.Group(), m = escura ? matAsa.e : matAsa.c; [1, -1].forEach(s => { const a = new T.Mesh(geoAsa, m); a.scale.x = s; a.rotation.y = s * .25; g.add(a); }); const cp = new T.Mesh(geoCorpo, escura ? matAsa.e : matAsa.c); cp.position.set(0, -.05, .05); g.add(cp); g.userData.escura = escura; g.userData.info = escura ? "Mariposa escura" : "Mariposa clara"; g.children.forEach(c => c.userData.info = g.userData.info); return g; }
+      function posicionar(g) { const a = Rn() * Math.PI * 2, y = -4 + Rn() * 13, r = 3.4 - (y + 6) / 16 * .4 + .2; g.position.set(Math.cos(a) * r, y, Math.sin(a) * r); g.lookAt(Math.cos(a) * 10, y, Math.sin(a) * 10); g.scale.setScalar(.9); }
       function montar(lista) { pop.forEach(p => raiz.remove(p)); pop = lista.map(e => { const g = mariposa(e); posicionar(g); raiz.add(g); return g; }); }
       function contagem() { const e = pop.filter(p => p.userData.escura).length; return [pop.length - e, e]; }
       function mostrar() { const [c, e] = contagem(); ctx.$("#mG").textContent = ger; ctx.$("#mC").textContent = c; ctx.$("#mE").textContent = e;
@@ -283,7 +313,7 @@
         montar(filhos); ger++; hist.push(contagem()); mostrar();
       }
       function reiniciar() { ger = 0; const ini = []; for (let i = 0; i < 40; i++) ini.push(i < 4); montar(ini); hist = [contagem()]; mostrar(); }
-      ctx.cartao.querySelectorAll("#amb [data-t]").forEach(b => b.onclick = () => { amb = b.dataset.t; tronco.material.color.setHex(amb === "claro" ? 0xd6d3d1 : 0x292524); ctx.cartao.querySelectorAll("#amb .chip").forEach(x => x.classList.toggle("ativo", x === b)); mostrar(); });
+      ctx.cartao.querySelectorAll("#amb [data-t]").forEach(b => b.onclick = () => { amb = b.dataset.t; { const cc = amb === "claro" ? cascaC : cascaE; tronco.material.map = cc.map; tronco.material.bumpMap = cc.bumpMap; tronco.material.needsUpdate = true; } ctx.cartao.querySelectorAll("#amb .chip").forEach(x => x.classList.toggle("ativo", x === b)); mostrar(); });
       ctx.$("#ger").onclick = geracao; ctx.$("#dez").onclick = () => { for (let i = 0; i < 10; i++) geracao(); }; ctx.$("#rei").onclick = reiniciar;
       ligarPergunta(ctx, "pN", 0, "O ambiente seleciona variações que já existem. 'Mudar por necessidade' ou 'herdar o que se adquire' são ideias de Lamarck.");
       reiniciar();
@@ -305,8 +335,9 @@
       const G = ctx.G, raiz = new T.Group();
       const ap = [["🚿 Chuveiro elétrico", 5500, .5, "elétrica → térmica"], ["❄️ Geladeira (média)", 60, 24, "elétrica → mecânica (motor) e térmica"], ["📺 TV LED", 100, 4, "elétrica → luminosa e sonora"], ["💡 Lâmpada LED", 9, 5, "elétrica → luminosa"], ["💡 Lâmpada incandescente", 60, 5, "elétrica → luminosa e muita térmica"], ["👕 Ferro de passar", 1000, .3, "elétrica → térmica"], ["🌀 Ventilador", 100, 6, "elétrica → mecânica"], ["📱 Carregador de celular", 10, 3, "elétrica → química (bateria)"]];
       const cores = [0xef4444, 0x38bdf8, 0xa78bfa, 0xfde047, 0xfb923c, 0xf472b6, 0x34d399, 0x94a3b8];
-      raiz.add(G.malha(new T.BoxGeometry(26, .3, 6), G.mat(0x1e293b), V(0, -.15, 0)));
-      const barras = ap.map((a, i) => { const b = G.malha(new T.BoxGeometry(2.2, 1, 2.2), G.mat(cores[i], { rough: .35 }), V(-11.2 + i * 3.2, 0, 0)); b.geometry.translate(0, .5, 0); b.userData.info = `${a[0]}: ${a[1]} W · ${a[3]}`; raiz.add(b); return b; });
+      raiz.add(G.malha(G.caixaRedonda(26.4, 6.4, .5, .2), G.mat(0x1e293b, { rough: .3, metal: .3 }), V(0, -.25, 0), [-Math.PI / 2, 0, 0]));
+      const matBarra = c => { const m = new T.MeshPhysicalMaterial({ color: c, roughness: .2, clearcoat: 1, clearcoatRoughness: .1, metalness: .05 }); m.userData.baseOp = 1; return m; };
+      const barras = ap.map((a, i) => { const b = G.malha(new T.CylinderGeometry(1.1, 1.1, 1, 64), matBarra(cores[i]), V(-11.2 + i * 3.2, 0, 0)); raiz.add(G.malha(new T.CylinderGeometry(1.25, 1.25, .12, 64), G.mat(0x334155, { metal: .6, rough: .3 }), V(-11.2 + i * 3.2, .06, 0))); b.geometry.translate(0, .5, 0); b.userData.info = `${a[0]}: ${a[1]} W · ${a[3]}`; raiz.add(b); return b; });
       const box = ctx.$("#lista");
       box.innerHTML = ap.map((a, i) => `<div style="margin:6px 0"><small><b>${a[0]}</b> · ${a[1]} W · <span class="muted">${a[3]}</span></small><div style="display:flex;gap:8px;align-items:center"><input type="range" min="0" max="24" step="0.1" value="${a[2]}" data-i="${i}" style="flex:1"><b id="h${i}" style="min-width:56px;text-align:right"></b></div></div>`).join("");
       const kwh = ap.map(a => a[1] / 1000 * a[2] * 30), alt = kwh.map(() => .05);
@@ -347,9 +378,22 @@
         { n: "Pampa", cor: 0x65a30d, chuva: 1400, temp: 18, area: 2.1, veg: "Campos com gramíneas, no extremo sul do país.", fauna: "veado-campeiro, ema, quero-quero", ameaca: "monoculturas e pastoreio excessivo", pista: "Sou formado por campos de vegetação rasteira, no Rio Grande do Sul, com invernos frios." }];
       const MAX = { chuva: 2400, temp: 30, area: 50 }, uni = { chuva: " mm", temp: " °C", area: "%" };
       let k = "chuva"; const alt = B.map(() => .1);
-      raiz.add(G.malha(new T.BoxGeometry(24, .3, 7), G.mat(0x1e293b), V(0, -.15, 0)));
-      const bar = B.map((b, i) => { const m = G.malha(new T.BoxGeometry(2.6, 1, 2.6), G.mat(b.cor, { rough: .5 }), V(-10 + i * 4, 0, 0)); m.geometry.translate(0, .5, 0); m.userData.info = b.n; m.userData.bioma = i; raiz.add(m);
-        const arv = G.malha(new T.ConeGeometry(.5, 1.2, 10), G.mat(0x14532d), V(-10 + i * 4, .6, 2.6)); raiz.add(arv); return m; });
+      raiz.add(G.malha(G.caixaRedonda(24.4, 7.4, .5, .2), G.mat(0x1e293b, { rough: .3, metal: .3 }), V(0, -.25, 0), [-Math.PI / 2, 0, 0]));
+      // mini paisagem de cada bioma na frente da barra
+      function paisagem(i, x) {
+        const g = new T.Group(); g.position.set(x, 0, 2.1);
+        const solo = [0x5b4630, 0xb08b57, 0x5b4630, 0xc2a172, 0x6b8e4e, 0x7aa35a][i];
+        g.add(G.malha(new T.CylinderGeometry(1.5, 1.6, .25, 48), G.mat(solo, { rough: .9 }), V(0, .12, 0)));
+        const Rr = G.rng(i * 31 + 7);
+        if (i === 0 || i === 2) for (let k = 0; k < (i ? 6 : 9); k++) { const a = arvore(G, (i ? 1.1 : 1.5) + Rr() * .6, i ? 0x3f8f3a : 0x1f6b2a); a.position.set((Rr() - .5) * 2.2, .25, (Rr() - .5) * 2.2); g.add(a); }
+        if (i === 1) for (let k = 0; k < 4; k++) { const t = new T.Group(); t.add(G.tubo([V(0, 0, 0), V(.12, .35, 0), V(-.05, .7, .05), V(.08, .95, 0)], .05, G.mat(0x5c4033, { rough: .9 }), false, 20)); t.add(G.malha(G.deformar(new T.IcosahedronGeometry(.32, 3), .05, 6), G.mat(0x6b8e23, { rough: .8 }), V(.08, 1.05, 0), null, [1.4, .6, 1.2])); t.position.set((Rr() - .5) * 2.2, .25, (Rr() - .5) * 2.2); g.add(t); }
+        if (i === 3) for (let k = 0; k < 4; k++) { const c = new T.Group(), mc = G.mat(0x4d7c3a, { rough: .6 }); c.add(G.malha(new T.CapsuleGeometry(.1, .7, 8, 16), mc, V(0, .45, 0))); c.add(G.malha(new T.CapsuleGeometry(.07, .3, 8, 16), mc, V(.16, .55, 0), [0, 0, -.9])); c.add(G.malha(new T.CapsuleGeometry(.07, .26, 8, 16), mc, V(-.15, .45, 0), [0, 0, .9])); c.position.set((Rr() - .5) * 2.2, .25, (Rr() - .5) * 2.2); g.add(c); }
+        if (i === 4) { g.add(G.malha(new T.CircleGeometry(.9, 48), G.mat(0x38bdf8, { rough: .08, metal: .1 }), V(.2, .26, .1), [-Math.PI / 2, 0, 0])); for (let k = 0; k < 3; k++) { const a = arvore(G, .9, 0x4d7c0f); a.position.set(-1 + k * .5, .25, -.9); g.add(a); } }
+        if (i >= 4) for (let k = 0; k < 26; k++) g.add(G.malha(new T.ConeGeometry(.05, .3, 5), G.mat(0x84cc16, { rough: .8 }), V((Rr() - .5) * 2.6, .4, (Rr() - .5) * 2.6)));
+        raiz.add(g);
+      }
+      const matB = c => { const m = new T.MeshPhysicalMaterial({ color: c, roughness: .25, clearcoat: .9, clearcoatRoughness: .15 }); m.userData.baseOp = 1; return m; };
+      const bar = B.map((b, i) => { const m = G.malha(new T.CylinderGeometry(1.25, 1.25, 1, 64), matB(b.cor), V(-10 + i * 4, 0, -.8)); m.geometry.translate(0, .5, 0); m.userData.info = b.n; m.userData.bioma = i; raiz.add(m); paisagem(i, -10 + i * 4); return m; });
       function ficha(i) { const b = B[i]; ctx.$("#ficha").innerHTML = `<b>${b.n}</b> · ${b.veg}<br><b>Fauna:</b> ${b.fauna}.<br><b>Ameaças:</b> ${b.ameaca}.`; bar.forEach((m, j) => m.material.emissive.setHex(j === i ? 0x334155 : 0)); }
       ctx.$("#nomes").innerHTML = B.map((b, i) => `<button class="chip" data-b="${i}">${b.n}</button>`).join("");
       ctx.cartao.querySelectorAll("[data-b]").forEach(x => x.onclick = () => ficha(+x.dataset.b));
