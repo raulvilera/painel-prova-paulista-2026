@@ -502,12 +502,17 @@
     ligarChips(info);
   }
   function mostrarBoasVindas() {
+    const meuAno = typeof anoAtual === "function" ? anoAtual() : "", minhaTurma = (ALUNO && ALUNO.dados && ALUNO.dados.turma) || (typeof TURMA_LINK !== "undefined" && TURMA_LINK) || (meuAno ? meuAno + "º ano" : "");
     info.innerHTML = `<div class="cartao"><h2>🚀 Bem-vindo à Missão SARESP!</h2>
-      <p>Revise em 3D os temas de Ciências que caem no SARESP e na recuperação do 2º semestre, do 6º ao 9º ano. Comece pela <b>Trilha</b> do seu ano ou escolha um modelo:</p>
-      <div class="linha-btn">${D.trilha.map(t => `<button class="btn" data-ano-ir="${t.ano}">${t.titulo}</button>`).join("")}</div>
+      ${meuAno ? `<p>Revise em 3D os temas de Ciências do <b>${minhaTurma}</b> que caem no SARESP e na recuperação do 2º semestre.</p>
+      <button class="btn prim" id="bMeusTemas" style="width:100%;justify-content:center;font-size:1rem;padding:12px">📚 Ver os temas da minha turma</button>
+      <p class="mini-txt muted">Os temas também ficam ${innerWidth <= 900 ? "no menu <b>☰</b>, no canto de cima" : "na coluna da esquerda"}. Toque em um tema para abrir o simulador dele. Você também pode explorar os modelos:</p>`
+      : `<p>Revise em 3D os temas de Ciências que caem no SARESP e na recuperação do 2º semestre, do 6º ao 9º ano. Comece pela <b>Trilha</b> do seu ano ou escolha um modelo:</p>
+      <div class="linha-btn">${D.trilha.map(t => `<button class="btn" data-ano-ir="${t.ano}">${t.titulo}</button>`).join("")}</div>`}
       <div class="grade-mod">${D.modelos.map(m => `<button data-mod="${m.id}"><span class="em">${m.em}</span><span>${m.nome}</span></button>`).join("")}</div></div>
       <div class="cartao pequeno"><h4 style="margin-top:0">Simulações em 3D</h4><div class="chips">${SIMULACOES.lista.map(s => `<button class="chip" data-sim="${s.id}">${s.em} ${s.titulo}</button>`).join("")}</div>
       <ul class="lista"><li>Na <b>Trilha</b>, veja o que é cobrado no seu ano e vá direto ao recurso.</li><li>Em <b>Quiz</b>, faça o <b>Simulado SARESP</b> ou a revisão da <b>Recuperação</b>.</li><li>Cada acerto vale <b>XP</b>: suba de Recruta a Mentor!</li></ul></div>`;
+    if ($("#bMeusTemas")) $("#bMeusTemas").onclick = abrirMeusTemas;
     ligarChips(info); info.querySelectorAll("[data-ano-ir]").forEach(b => b.onclick = () => { trilhaAno = b.dataset.anoIr; montarHabilidades(); trocarAba("habilidades"); });
   }
 
@@ -752,6 +757,10 @@
   $("#btnTema").onclick = () => { const t = document.documentElement.dataset.tema === "claro" ? "escuro" : "claro"; document.documentElement.dataset.tema = t; try { localStorage.setItem("ms3d_tema", t); } catch (e) { } };
   $("#btnLateral").onclick = () => document.body.classList.toggle("lateral-aberta");
   $("#btnFecharPainel").onclick = () => document.body.classList.add("painel-fechado");
+  function abrirMeusTemas() {
+    if (innerWidth <= 900) document.body.classList.add("lateral-aberta");
+    const sec = $("#secTemas"); if (sec) { sec.scrollIntoView({ behavior: "smooth", block: "start" }); sec.classList.add("piscar"); setTimeout(() => sec.classList.remove("piscar"), 1500); }
+  }
   function fecharLateralMovel() { document.body.classList.remove("lateral-aberta"); }
 
   // lista de modelos na lateral
@@ -820,7 +829,9 @@
   $("#eEntrar").onclick = () => {
     ALUNO.dados = { turma: sel.value, nome: selN.value, t: Date.now() };
     try { localStorage.setItem("ms3d_aluno", JSON.stringify(ALUNO.dados)); } catch (e) { }
-    $("#entrada").hidden = true; aplicarTurma(); abrirTemaLink(); avisar(`Bem-vindo(a), ${ALUNO.dados.nome.split(" ")[0]}! Os temas do ${ALUNO.dados.turma} estão na lateral.`);
+    $("#entrada").hidden = true; aplicarTurma();
+    if (TEMA_LINK) abrirTemaLink(); else { if (/Bem-vindo à Missão/.test(info.textContent)) mostrarBoasVindas(); abrirMeusTemas(); }
+    avisar(`Bem-vindo(a), ${ALUNO.dados.nome.split(" ")[0]}! Toque em um tema para começar.`);
   };
   $("#eExplorar").onclick = () => { $("#entrada").hidden = true; abrirTemaLink(); try { sessionStorage.setItem("ms3d_explorar", "1"); } catch (e) { } };
   $("#btnAluno").onclick = abrirEntrada;

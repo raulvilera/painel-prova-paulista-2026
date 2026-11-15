@@ -323,3 +323,4 @@ html, body { max-width: 100%; overflow-x: hidden; }
 }
 @media (max-width: 380px) { #btnTema { display: none; } }
 @media (max-width: 900px) { #btnAluno .al-txt { display: none; } #btnAluno { justify-content: center; } }
+#btnProf[hidden] { display: none !important; }
