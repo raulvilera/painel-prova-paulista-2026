@@ -337,3 +337,23 @@ html, body { max-width: 100%; overflow-x: hidden; }
 }
 @media (min-width: 901px) and (max-width: 1200px) { .busca-wrap { display: none; } }
 .ver-todos { width: 100%; justify-content: center; margin-top: 6px; font-size: .82rem; }
+/* ---------- modo sequência (link do aluno): só simuladores + questões, em ordem ---------- */
+body.seq .topo .abas, body.seq .busca-wrap, body.seq .abas-movel, body.seq #secModelos, body.seq #secPartes, body.seq #secCamadas { display: none !important; }
+body.seq #secTemas { display: block; }
+.seq-topo { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.seq-topo .num { flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-weight: 800; font-size: 1.1rem; background: var(--acento); color: #04211d; }
+.seq-topo h2 { margin: 0; font-size: 1.15rem; line-height: 1.2; }
+.seq-topo small { color: var(--muted); font-size: .76rem; }
+.seq-barra { height: 6px; border-radius: 99px; background: var(--card2); overflow: hidden; margin: 0 0 12px; }
+.seq-barra > span { display: block; height: 100%; background: var(--acento); transition: width .4s; }
+#seqConteudo #info .cartao:first-child { margin-top: 0; }
+.seq-q { border-top: 1px dashed var(--borda); padding-top: 12px; }
+.seq-nav { display: flex; gap: 8px; justify-content: space-between; margin: 12px 0 30px; }
+.seq-nav .btn { flex: 1; justify-content: center; padding: 11px; font-size: .95rem; }
+.passo { display: flex; gap: 10px; align-items: center; width: 100%; text-align: left; padding: 8px 10px; margin-bottom: 4px; border: 1px solid var(--borda-suave); border-radius: 10px; background: var(--card); color: var(--txt); font: inherit; cursor: pointer; }
+.passo:hover { border-color: var(--acento); }
+.passo .n { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-size: .78rem; font-weight: 800; border: 2px solid var(--borda); color: var(--muted); }
+.passo.feito .n { background: var(--ok); border-color: var(--ok); color: #04211d; }
+.passo.atual { border-color: var(--acento); background: color-mix(in srgb, var(--acento) 14%, var(--card)); }
+.passo.atual .n { border-color: var(--acento); color: var(--acento); }
+.passo b { display: block; font-size: .86rem; font-weight: 500; } .passo small { color: var(--muted); font-size: .7rem; }
