@@ -377,15 +377,84 @@
       <div class="opcoes" id="ops"><button class="opcao" data-t="pro">Procarionte (bactéria)</button><button class="opcao" data-t="ani">Eucarionte animal</button><button class="opcao" data-t="veg">Eucarionte vegetal</button></div>
       <div class="medidores">${medidor("mR", "Rodada", "1/8")}${medidor("mP", "Acertos", "0")}</div>
       <div class="linha-btn"><button class="btn" id="dica">💡 Dica</button><button class="btn" id="novo">↺ Recomeçar</button></div>
-      <details><summary>Como diferenciar</summary><ul class="lista"><li><b>Procarionte:</b> sem núcleo (DNA solto), pequena, pode ter flagelo.</li><li><b>Animal:</b> núcleo, formato arredondado, sem parede celular e sem cloroplastos.</li><li><b>Vegetal:</b> núcleo, parede celular rígida (formato de caixa), cloroplastos verdes e vacúolo grande.</li></ul></details>`,
+      <details><summary>Como diferenciar</summary><ul class="lista"><li><b>Procarionte:</b> sem núcleo (DNA solto), pequena, pode ter flagelo.</li><li><b>Animal:</b> núcleo, formato arredondado, sem parede celular e sem cloroplastos.</li><li><b>Vegetal:</b> núcleo, parede celular rígida (formato de caixa), cloroplastos verdes (com pilhas de tilacoides) e vacúolo central grande.</li></ul></details>`,
     iniciar(ctx) {
       const G = ctx.G, raiz = new T.Group(); let atual = null, tipo = "", rod = 0, pts = 0, fila = [];
+      /* caixa de cantos arredondados (parede celular vegetal) */
+      function caixaRedonda(w, h, d, r) {
+        const sh = new T.Shape(), x = -w / 2 + r, y = -h / 2 + r, W = w - 2 * r, H = h - 2 * r;
+        sh.moveTo(x, y - r); sh.lineTo(x + W, y - r); sh.quadraticCurveTo(x + W + r, y - r, x + W + r, y); sh.lineTo(x + W + r, y + H); sh.quadraticCurveTo(x + W + r, y + H + r, x + W, y + H + r);
+        sh.lineTo(x, y + H + r); sh.quadraticCurveTo(x - r, y + H + r, x - r, y + H); sh.lineTo(x - r, y); sh.quadraticCurveTo(x - r, y - r, x, y - r);
+        const g = new T.ExtrudeGeometry(sh, { depth: d - 2 * r, bevelEnabled: true, bevelThickness: r, bevelSize: r * .98, bevelSegments: 10, curveSegments: 18 });
+        g.translate(0, 0, -(d - 2 * r) / 2); g.computeVertexNormals(); return g;
+      }
+      /* ribossomos: centenas de pontinhos numa só malha (leve) */
+      function pontos(n, raio, cor, dentro) {
+        const im = new T.InstancedMesh(new T.SphereGeometry(raio, 8, 6), G.mat(cor, { rough: .6 }), n), d = new T.Object3D(), Rr = G.rng(n * 7 + 3);
+        for (let i = 0; i < n; i++) { d.position.copy(dentro(Rr)); d.updateMatrix(); im.setMatrixAt(i, d.matrix); }
+        return im;
+      }
+      function nucleo(g, pos, r, R) {
+        const n = new T.Group(); n.position.copy(pos);
+        n.add(G.malha(G.deformar(new T.SphereGeometry(r, 64, 48), r * .04, 2.2), G.mat(0xa78bfa, { op: .55, side: T.DoubleSide, dw: false })));
+        n.add(G.malha(new T.SphereGeometry(r * .38, 40, 30), G.mat(0x4c1d95, { rough: .4 }), V(r * .25, r * .15, 0)));
+        n.add(G.novelo(r * .75, 40, (R() * 1e5) | 0, r * .025, G.mat(0xe879f9, { rough: .45 })));
+        const poros = pontos(70, r * .035, 0x312e81, Rr => { const v = V(Rr() - .5, Rr() - .5, Rr() - .5).normalize(); return v.multiplyScalar(r * 1.0); }); n.add(poros);
+        g.add(n); return n;
+      }
+      function mitocondria(pos, rot, esc) {
+        const m = new T.Group(); m.position.copy(pos); m.rotation.set(rot[0], rot[1], rot[2]); m.scale.setScalar(esc);
+        m.add(G.malha(new T.CapsuleGeometry(.36, 1.0, 12, 24), G.mat(0xfb923c, { op: .7, dw: false })));
+        for (let k = -3; k <= 3; k++) m.add(G.malha(new T.TorusGeometry(.24, .045, 8, 24, Math.PI * 1.3), G.mat(0xc2410c, { rough: .45 }), V(0, k * .17, 0), [Math.PI / 2, 0, k % 2 ? 0 : Math.PI]));
+        return m;
+      }
+      function reticulo(g, centro, raio, R, cor) {
+        for (let k = 0; k < 4; k++) { const pts = []; for (let a = 0; a <= 10; a++) { const t = a / 10 * Math.PI * 1.1 + k * .5, rr = raio + k * .32 + Math.sin(a * 1.7) * .18; pts.push(V(centro.x + Math.cos(t) * rr, centro.y + Math.sin(t) * rr, centro.z + (R() - .5) * .8)); } g.add(G.tubo(pts, .09, G.mat(cor, { rough: .45 }), false, 80)); }
+      }
+      function golgi(pos, rot) {
+        const gg = new T.Group(); gg.position.copy(pos); gg.rotation.set(rot[0], rot[1], rot[2]);
+        for (let k = 0; k < 5; k++) gg.add(G.malha(new T.TorusGeometry(1.1 - k * .08, .1, 10, 40, Math.PI * .9), G.mat(0xfacc15, { rough: .4 }), V(0, k * .24, 0), [0, 0, Math.PI * .05], [1, 1, 1.8]));
+        for (let k = 0; k < 5; k++) gg.add(G.malha(new T.SphereGeometry(.12, 14, 10), G.mat(0xfde047), V(1.2 + k * .15, k * .2, (k % 2 - .5) * .4)));
+        return gg;
+      }
       function construir(t) {
         const g = new T.Group(), R = G.rng(Math.random() * 1e6 | 0);
-        if (t === "pro") { g.add(G.malha(new T.CapsuleGeometry(1.4, 3.6, 12, 24), G.mat(0x38bdf8, { op: .45, side: T.DoubleSide, dw: false }), null, [0, 0, Math.PI / 2])); const n = G.novelo(1, 30, 3, .07, G.mat(0xf472b6)); g.add(n); g.add(G.tubo([V(3.2, 0, 0), V(4.4, .6, 0), V(5.6, -.4, 0), V(6.6, .4, 0)], .06, G.mat(0x94a3b8))); g.scale.setScalar(.8); }
-        if (t === "ani") { g.add(G.malha(G.deformar(new T.SphereGeometry(4.5, 48, 36), .3, .5), G.mat(0xf9a8d4, { op: .35, side: T.DoubleSide, dw: false }))); g.add(G.malha(new T.SphereGeometry(1.4, 32, 24), G.mat(0x8b5cf6))); for (let i = 0; i < 5; i++) g.add(G.malha(new T.CapsuleGeometry(.35, .9, 6, 12), G.mat(0xf97316), V((R() - .5) * 6, (R() - .5) * 6, (R() - .5) * 4), [R() * 3, R() * 3, 0])); }
-        if (t === "veg") { g.add(G.malha(new T.BoxGeometry(9, 6, 5), G.mat(0x65a30d, { op: .35, side: T.DoubleSide, dw: false }))); g.add(G.malha(new T.SphereGeometry(2, 32, 24), G.mat(0x60a5fa, { op: .6 }), V(1, 0, 0), null, [1.4, 1, .8])); g.add(G.malha(new T.SphereGeometry(.9, 24, 18), G.mat(0x8b5cf6), V(-3, 1, 0))); for (let i = 0; i < 7; i++) g.add(G.malha(new T.SphereGeometry(.6, 16, 12), G.mat(0x22c55e), V((R() - .5) * 7.5, (R() - .5) * 4.5, (R() - .5) * 3), null, [1.2, .55, .8])); }
-        g.rotation.set(Math.random(), Math.random() * 3, 0); return g;
+        if (t === "pro") {
+          g.add(G.malha(new T.CapsuleGeometry(1.55, 3.8, 24, 48), G.mat(0x7dd3fc, { op: .22, side: T.DoubleSide, dw: false }), null, [0, 0, Math.PI / 2]));   // cápsula
+          g.add(G.malha(new T.CapsuleGeometry(1.35, 3.6, 24, 48), G.mat(0x38bdf8, { op: .35, side: T.DoubleSide, dw: false }), null, [0, 0, Math.PI / 2]));   // parede + membrana
+          g.add(G.novelo(1.0, 46, (R() * 1e5) | 0, .055, G.mat(0xf472b6, { rough: .4 })));                                                                     // nucleoide (DNA solto)
+          g.add(G.malha(new T.TorusGeometry(.32, .04, 10, 40), G.mat(0xfb7185), V(1.6, .5, .3), [1, .4, 0]));                                                 // plasmídeo
+          g.add(G.malha(new T.TorusGeometry(.22, .035, 10, 32), G.mat(0xfb7185), V(-1.9, -.4, -.2), [.3, 1, 0]));
+          g.add(pontos(260, .06, 0xfef3c7, Rr => { const x = (Rr() - .5) * 6.2, r = Math.sqrt(Rr()) * 1.15; const a = Rr() * 6.283; return V(x, Math.cos(a) * r, Math.sin(a) * r); }));
+          const fl = []; for (let k = 0; k <= 14; k++) fl.push(V(3.2 + k * .38, Math.sin(k * .9) * .35, Math.cos(k * .9) * .2)); g.add(G.tubo(fl, .045, G.mat(0xcbd5e1, { rough: .35 }), false, 120)); // flagelo
+          for (let k = 0; k < 18; k++) { const x = (R() - .5) * 5.6, a = R() * 6.283, n = V(0, Math.cos(a), Math.sin(a)); const base = V(x, n.y * 1.5, n.z * 1.5); g.add(G.tubo([base, base.clone().add(n.clone().multiplyScalar(.45))], .015, G.mat(0xbae6fd), false, 4)); } // pili
+          g.scale.setScalar(.85);
+        }
+        if (t === "ani") {
+          g.add(G.malha(G.deformar(new T.SphereGeometry(4.6, 96, 72), .28, .45), G.mat(0xf9a8d4, { op: .28, side: T.DoubleSide, dw: false })));
+          nucleo(g, V(-.4, .3, 0), 1.5, R);
+          reticulo(g, V(-.4, .3, 0), 1.9, R, 0x60a5fa);
+          g.add(golgi(V(1.9, -1.4, .6), [.4, .6, .3]));
+          for (let i = 0; i < 7; i++) { const p = V((R() - .5) * 6, (R() - .5) * 5.4, (R() - .5) * 4); if (p.length() < 2.4) p.setLength(2.8); g.add(mitocondria(p, [R() * 3, R() * 3, R() * 3], .9 + R() * .3)); }
+          for (let i = 0; i < 6; i++) { const p = V((R() - .5) * 6, (R() - .5) * 5, (R() - .5) * 4); if (p.length() < 2.4) p.setLength(3); g.add(G.malha(new T.SphereGeometry(.28, 20, 14), G.mat(0x34d399, { rough: .35 }), p)); } // lisossomos
+          const ce = new T.Group(); ce.position.set(1.2, 1.9, -.8); ce.add(G.malha(new T.CylinderGeometry(.12, .12, .6, 18), G.mat(0x94a3b8))); ce.add(G.malha(new T.CylinderGeometry(.12, .12, .6, 18), G.mat(0x94a3b8), V(.25, 0, 0), [0, 0, Math.PI / 2])); g.add(ce); // centríolos
+          g.add(pontos(420, .05, 0xfef9c3, Rr => { const v = V(Rr() - .5, Rr() - .5, Rr() - .5).normalize().multiplyScalar(2.2 + Rr() * 1.9); return v; }));
+        }
+        if (t === "veg") {
+          g.add(G.malha(caixaRedonda(9.4, 6.4, 5.2, .7), G.mat(0x84cc16, { op: .3, side: T.DoubleSide, dw: false, rough: .6 })));      // parede celular
+          g.add(G.malha(caixaRedonda(8.8, 5.8, 4.6, .6), G.mat(0xbef264, { op: .14, side: T.DoubleSide, dw: false })));                    // membrana
+          g.add(G.malha(G.deformar(new T.SphereGeometry(2.2, 72, 54), .12, .9), G.mat(0x7dd3fc, { op: .45, dw: false }), V(1, -.1, 0), null, [1.45, 1.05, .8])); // vacúolo central
+          nucleo(g, V(-3, 1.1, .4), .95, R);
+          for (let i = 0; i < 9; i++) {                                                                                                            // cloroplastos com tilacoides
+            const c = new T.Group(); c.position.set((R() - .5) * 7.4, (R() > .5 ? 1 : -1) * (1.6 + R() * .9), (R() - .5) * 3.2); c.rotation.set(R() * 3, R() * 3, R() * 3);
+            c.add(G.malha(new T.SphereGeometry(.62, 32, 24), G.mat(0x4ade80, { op: .6, dw: false }), null, null, [1.25, .55, .8]));
+            for (let k = 0; k < 4; k++) for (let h = 0; h < 4; h++) c.add(G.malha(new T.CylinderGeometry(.13, .13, .04, 18), G.mat(0x15803d, { rough: .4 }), V(-.5 + k * .33, -.12 + h * .07, 0)));
+            g.add(c);
+          }
+          for (let i = 0; i < 4; i++) g.add(mitocondria(V((R() - .5) * 7, (R() - .5) * 4.6, (R() - .5) * 3), [R() * 3, R() * 3, R() * 3], .7));
+          g.add(pontos(300, .045, 0xfef9c3, Rr => V((Rr() - .5) * 8.2, (Rr() > .5 ? 1 : -1) * (1.5 + Rr() * 1.2), (Rr() - .5) * 3.8)));
+        }
+        g.rotation.set(Math.random() * .8, Math.random() * 3, 0); return g;
       }
       function rodada() {
         if (atual) { raiz.remove(atual); }
@@ -401,7 +470,7 @@
       ctx.$("#dica").onclick = () => ctx.avisar(tipo === "pro" ? "Procure o núcleo... ele existe?" : tipo === "veg" ? "Repare no formato e nas estruturas verdes." : "Tem núcleo, mas tem parede rígida ou estruturas verdes?");
       ctx.$("#novo").onclick = novo;
       novo();
-      return { raiz, vistas: [["Microscópio", [0, 3, 18], [0, 0, 0]], ["Perto", [3, 2, 9], [0, 0, 0]]], atualizar(dt) { if (atual) atual.rotation.y += dt * .15; } };
+      return { raiz, vistas: [["Microscópio", [0, 3, 15], [0, 0, 0]], ["Perto", [3, 2, 9], [0, 0, 0]]], atualizar(dt) { if (atual) atual.rotation.y += dt * .15; } };
     }
   });
 

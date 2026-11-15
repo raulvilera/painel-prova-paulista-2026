@@ -357,3 +357,21 @@ body.seq #secTemas { display: block; }
 .passo.atual { border-color: var(--acento); background: color-mix(in srgb, var(--acento) 14%, var(--card)); }
 .passo.atual .n { border-color: var(--acento); color: var(--acento); }
 .passo b { display: block; font-size: .86rem; font-weight: 500; } .passo small { color: var(--muted); font-size: .7rem; }
+/* modo sequência sem barra lateral: só o simulador e, ao lado, as questões */
+body.seq .lateral, body.seq #btnLateral, body.seq .veu-lateral { display: none !important; }
+body.seq .layout { grid-template-columns: minmax(0, 1fr) 440px; }
+@media (max-width: 1100px) { body.seq .layout { grid-template-columns: minmax(0, 1fr) 380px; } }
+@media (max-width: 860px) { body.seq .layout { grid-template-columns: 1fr; } }
+.seq-dots { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 8px; }
+.seq-dots button { width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--borda); background: var(--card); color: var(--muted); font: inherit; font-size: .78rem; font-weight: 800; cursor: pointer; padding: 0; }
+.seq-dots button:hover { border-color: var(--acento); }
+.seq-dots button.feito { background: var(--ok); border-color: var(--ok); color: #04211d; }
+.seq-dots button.atual { border-color: var(--acento); color: var(--acento); box-shadow: 0 0 0 3px color-mix(in srgb, var(--acento) 30%, transparent); }
+.seq-dots button.feito.atual { color: #04211d; }
+@media (max-width: 860px) {
+  body.seq .layout { grid-template-rows: 44vh 1fr; height: calc(100% - var(--topo)); }
+  body.seq .palco-wrap { min-height: 0; }
+  body.seq .painel { max-height: none; overflow-y: auto; }
+  body.seq.painel-fechado .painel { display: block; }
+}
+body.seq .fechar-painel { display: none !important; }
