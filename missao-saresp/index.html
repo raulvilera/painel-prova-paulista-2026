@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Missão SARESP 3D — Ciências do 6º ao 9º ano</title>
+  <meta name="description" content="Simulador 3D de Ciências para preparação para o SARESP e recuperação semestral, do 6º ao 9º ano: Sol-Terra-Lua, células, microrganismos, sistema nervoso, energia, biomas, evolução e Sistema Solar.">
+  <meta name="theme-color" content="#0a1424">
+  <link rel="icon" type="image/svg+xml" href="icone.svg">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Missão SARESP 3D">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("ms3d_tema"); } catch (e) { }
+      if (t !== "claro" && t !== "escuro") t = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "claro" : "escuro";
+      document.documentElement.dataset.tema = t;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css?v=20261115b">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-logo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-lupa" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+      <symbol id="i-rotulo" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8L3 12z"/><circle cx="7.5" cy="7.5" r="1.2"/></symbol>
+      <symbol id="i-girar" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20 4v4.5h-4.5"/></symbol>
+      <symbol id="i-foto" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2.5h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+      <symbol id="i-tela" viewBox="0 0 24 24"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></symbol>
+      <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.6-5.9"/><path d="M4 4v4.5h4.5"/></symbol>
+      <symbol id="i-fechar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+      <symbol id="i-tema" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor"/></symbol>
+      <symbol id="i-baixar" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19h14"/></symbol>
+      <symbol id="i-olho" viewBox="0 0 24 24"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.8"/></symbol>
+    </defs>
+  </svg>
+
+  <div id="carregando">
+    <svg class="anel" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="22"/><g class="espinhos"><path d="M50 18v-8M50 82v8M18 50h-8M82 50h8M27 27l-6-6M73 73l6 6M27 73l-6 6M73 27l6-6"/></g></svg>
+    <p id="cargaTxt">Preparando a missão…</p>
+    <div class="carga-barra"><span></span></div>
+  </div>
+
+  <header class="topo">
+    <button class="icone so-movel" id="btnLateral" title="Modelos e partes" aria-label="Abrir lista de modelos"><svg class="ic"><use href="#i-menu"/></svg></button>
+    <div class="marca"><span class="logo"><svg class="ic"><use href="#i-logo"/></svg></span><div><h1>Missão SARESP 3D</h1><small>Ciências · SARESP e recuperação · 6º ao 9º ano</small></div></div>
+    <nav class="abas" role="tablist">
+      <button class="aba ativo" data-aba="explorar">Explorar</button>
+      <button class="aba" data-aba="simular">Simular</button>
+      <button class="aba" data-aba="habilidades">Trilha SARESP</button>
+      <button class="aba" data-aba="quiz">Quiz</button>
+      <button class="aba" data-aba="desafio">Desafio</button>
+      <button class="aba" data-aba="saiba">Saiba mais</button>
+    </nav>
+    <div class="busca-wrap">
+      <svg class="ic busca-ic"><use href="#i-lupa"/></svg>
+      <input id="busca" type="search" placeholder="Buscar tema ou estrutura" autocomplete="off" aria-label="Buscar estrutura">
+      <div id="sugestoes" hidden></div>
+    </div>
+    <span class="xp-chip" id="xpChip" title="Sua patente e seus pontos de experiência (XP)"></span>
+    <button class="icone" id="btnTema" title="Alternar tema claro/escuro" aria-label="Alternar tema"><svg class="ic"><use href="#i-tema"/></svg></button>
+  </header>
+
+  <main class="layout">
+    <aside class="lateral" id="lateral">
+      <section>
+        <h3>Modelos 3D</h3>
+        <div id="listaModelos" class="lista-modelos"></div>
+      </section>
+      <section id="secCamadas" hidden>
+        <h3>Camadas</h3>
+        <div id="listaCamadas" class="chips"></div>
+      </section>
+      <section id="secPartes">
+        <h3>Partes do modelo</h3>
+        <p class="muted mini-txt">Toque na cor para mostrar ou esconder. A barra ajusta a transparência.</p>
+        <div id="listaPartes"></div>
+      </section>
+      <section id="secCorte">
+        <h3>Corte</h3>
+        <label class="chk"><input type="checkbox" id="chkCorte"> Cortar o modelo ao meio</label>
+        <input type="range" id="corteVal" min="-100" max="100" value="0" aria-label="Posição do corte" disabled>
+        <p class="muted mini-txt">O corte mostra as estruturas internas, como o núcleo da Terra e as organelas das células.</p>
+      </section>
+    </aside>
+
+    <section class="palco-wrap">
+      <div class="ferramentas">
+        <div class="grupo-f" id="grupoVistas" role="group" aria-label="Vistas"></div>
+        <div class="grupo-f" role="group" aria-label="Ferramentas">
+          <button id="btnRotulos" class="ativo" title="Mostrar nomes"><svg class="ic"><use href="#i-rotulo"/></svg> Rótulos</button>
+          <button id="btnGirar" title="Girar automaticamente"><svg class="ic"><use href="#i-girar"/></svg> Girar</button>
+          <button id="btnFoto" title="Salvar imagem" aria-label="Salvar imagem"><svg class="ic"><use href="#i-foto"/></svg></button>
+          <button id="btnTela" title="Tela cheia" aria-label="Tela cheia"><svg class="ic"><use href="#i-tela"/></svg></button>
+          <button id="btnReset" title="Restaurar a visão" aria-label="Restaurar a visão"><svg class="ic"><use href="#i-reset"/></svg></button>
+        </div>
+      </div>
+      <div class="palco-area">
+        <div id="palco"></div>
+        <div id="rotulos"></div>
+        <nav id="legenda" hidden aria-label="Legenda das estruturas"></nav>
+        <div id="escalaInfo" hidden></div>
+        <div id="hud" hidden></div>
+      </div>
+      <div class="ajuda-gestos">Arraste para girar · roda ou pinça para aproximar · clique em uma estrutura para abrir a ficha</div>
+      <div id="aviso" hidden></div>
+    </section>
+
+    <aside class="painel" id="painel">
+      <button class="icone fechar-painel so-movel" id="btnFecharPainel" title="Fechar" aria-label="Fechar painel"><svg class="ic"><use href="#i-fechar"/></svg></button>
+      <div class="conteudo-aba" id="aba-explorar"><div id="info"></div></div>
+      <div class="conteudo-aba" id="aba-simular" hidden></div>
+      <div class="conteudo-aba" id="aba-habilidades" hidden></div>
+      <div class="conteudo-aba" id="aba-quiz" hidden></div>
+      <div class="conteudo-aba" id="aba-desafio" hidden></div>
+      <div class="conteudo-aba" id="aba-saiba" hidden></div>
+    </aside>
+  </main>
+
+  <nav class="abas-movel so-movel" aria-label="Seções">
+    <button data-aba="explorar" class="ativo">Explorar</button><button data-aba="simular">Simular</button><button data-aba="quiz">Quiz</button><button data-aba="habilidades">Trilha</button><button data-aba="desafio">Desafio</button>
+  </nav>
+
+  <script src="js/vendor/three.min.js?v=20261115b"></script>
+  <script src="js/vendor/OrbitControls.js?v=20261115b"></script>
+  <script src="js/dados.js?v=20261115b"></script>
+  <script src="js/modelos.js?v=20261115b"></script>
+  <script src="js/simulacoes.js?v=20261115b"></script>
+  <script src="js/app.js?v=20261115b"></script>
+  <script src="/voltar-painel.js"></script>
+</body>
+</html>

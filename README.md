@@ -54,3 +54,15 @@ Cada questão adaptada tem uma lista de artigos da Wikipédia (em `api/_pei.js`,
 - `api/_roster.js`: lista oficial (nº e nome) do 8º A, usada no menu de nomes da atividade individual; `simulado/index.html` tem a mesma lista (`R8A`).
 - Zlata: `api/_pei-ru.js` (atividade e Simulado em russo, cada questão com espelho em português `pt`), `atividade-individual/i18n-ru.js` (interface em russo). A IA corrige pelo espelho em português e o professor recebe a resposta traduzida + original em russo.
 - Simulado: o Apps Script (`apps-script/simulado/ARQUIVO-UNICO.gs`) também precisa da lista nova (reimplantar; se existir a aba `Alunos_Simulado`, atualizá-la).
+
+## Missão SARESP 3D (simulador)
+
+Pasta `missao-saresp/`, aberta pelo botão "🧊 Missão SARESP 3D" do menu de atividades. Simulador 3D de Ciências (6º ao 9º ano) no mesmo padrão do Microvida 3D, voltado à preparação para o SARESP e à recuperação do 2º semestre, com base no Guia do Currículo Priorizado 2026 e no Mapa SARESP da escola.
+
+- **Explorar:** 10 modelos 3D (Sol-Terra-Lua, camadas da Terra, célula animal, célula vegetal, microrganismos, níveis de organização, neurônio, circuito elétrico, Sistema Solar, modelo atômico).
+- **Simular:** fases da Lua e eclipses, estações do ano, movimento aparente do Sol e sombras, efeito estufa, seleção natural, consumo de energia, biomas brasileiros, classifique a célula.
+- **Trilha SARESP:** AEs/habilidades por ano, descritores "De olho no SARESP", % de acerto da escola e atalhos para modelos, simulações, quiz e os simuladores externos.
+- **Quiz:** Simulado SARESP (12 questões) e Recuperação (3º e 4º bimestres), com as faixas de desempenho do painel.
+- **XP e patentes** (Recruta, Explorador, Cientista, Mentor), salvos só no aparelho. Nenhum dado de aluno é enviado.
+
+Links úteis: `/missao-saresp/?ano=8` (trilha do 8º ano) e `/missao-saresp/?aba=quiz&ano=6` (simulado do 6º ano). Ao alterar os arquivos, troque o `?v=` em `missao-saresp/index.html`.
