@@ -18,7 +18,7 @@
   },
   "headers": [
     {
-      "source": "/(missao|aula30)/(.*)",
+      "source": "/(missao|aula30|missao-saresp)/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
