@@ -509,8 +509,8 @@
       <p class="mini-txt muted">Os temas também ficam ${innerWidth <= 900 ? "no menu <b>☰</b>, no canto de cima" : "na coluna da esquerda"}. Toque em um tema para abrir o simulador dele. Você também pode explorar os modelos:</p>`
       : `<p>Revise em 3D os temas de Ciências que caem no SARESP e na recuperação do 2º semestre, do 6º ao 9º ano. Comece pela <b>Trilha</b> do seu ano ou escolha um modelo:</p>
       <div class="linha-btn">${D.trilha.map(t => `<button class="btn" data-ano-ir="${t.ano}">${t.titulo}</button>`).join("")}</div>`}
-      <div class="grade-mod">${D.modelos.map(m => `<button data-mod="${m.id}"><span class="em">${m.em}</span><span>${m.nome}</span></button>`).join("")}</div></div>
-      <div class="cartao pequeno"><h4 style="margin-top:0">Simulações em 3D</h4><div class="chips">${SIMULACOES.lista.map(s => `<button class="chip" data-sim="${s.id}">${s.em} ${s.titulo}</button>`).join("")}</div>
+      <div class="grade-mod">${D.modelos.filter(m => !meuAno || new RegExp(meuAno + "º").test(m.aula)).map(m => `<button data-mod="${m.id}"><span class="em">${m.em}</span><span>${m.nome}</span></button>`).join("")}</div></div>
+      <div class="cartao pequeno"><h4 style="margin-top:0">Simulações em 3D</h4><div class="chips">${SIMULACOES.lista.filter(s => !meuAno || new RegExp(meuAno + "º").test(s.hab)).map(s => `<button class="chip" data-sim="${s.id}">${s.em} ${s.titulo}</button>`).join("")}</div>
       <ul class="lista"><li>Na <b>Trilha</b>, veja o que é cobrado no seu ano e vá direto ao recurso.</li><li>Em <b>Quiz</b>, faça o <b>Simulado SARESP</b> ou a revisão da <b>Recuperação</b>.</li><li>Cada acerto vale <b>XP</b>: suba de Recruta a Mentor!</li></ul></div>`;
     if ($("#bMeusTemas")) $("#bMeusTemas").onclick = abrirMeusTemas;
     ligarChips(info); info.querySelectorAll("[data-ano-ir]").forEach(b => b.onclick = () => { trilhaAno = b.dataset.anoIr; montarHabilidades(); trocarAba("habilidades"); });
@@ -527,10 +527,22 @@
   function avisar(t) { const a = $("#aviso"); a.textContent = t; a.hidden = false; clearTimeout(a._t); a._t = setTimeout(() => a.hidden = true, 5000); }
 
   /* ------------------------------ SIMULAÇÕES ------------------------------ */
+  let verTodos = false;
+  function anoFiltro() { return (!verTodos && typeof anoAtual === "function") ? anoAtual() : ""; }
+  function doAno(txt, ano) { return !ano || new RegExp(ano + "º").test(txt || ""); }
+  function botaoTodos(qtd) { const ano = typeof anoAtual === "function" ? anoAtual() : ""; if (!ano || (!qtd && !verTodos)) return ""; return `<button class="btn link ver-todos" data-ver-todos>${verTodos ? "➖ Mostrar só os do " + ano + "º ano" : "➕ Ver também os de outros anos (" + qtd + ")"}</button>`; }
+  function ligarVerTodos(box) { box.querySelectorAll("[data-ver-todos]").forEach(b => b.onclick = () => { verTodos = !verTodos; montarListaModelos(); montarSimular(); }); }
+  function montarListaModelos() {
+    const ano = anoFiltro(), lista = D.modelos.filter(m => doAno(m.aula, ano)), outros = D.modelos.length - lista.length;
+    $("#listaModelos").innerHTML = lista.map(m => `<button class="mod-btn" data-mod="${m.id}"><span class="em">${m.em}</span><span><b>${m.nome}</b><small>${m.sub}</small></span></button>`).join("") + botaoTodos(outros);
+    $$("#listaModelos .mod-btn").forEach(b => b.onclick = () => { if (est.desafio) { pararDesafio(); est.rotulos = true; $("#btnRotulos").classList.add("ativo"); } carregarModelo(b.dataset.mod); trocarAba("explorar", true); fecharLateralMovel(); });
+    ligarVerTodos($("#listaModelos"));
+  }
   function montarSimular() {
     const box = $("#aba-simular");
     box.innerHTML = `<div class="cartao"><h3>🧪 Simulações em 3D</h3><p class="muted">Escolha uma simulação. Ela aparece no palco 3D e os controles ficam aqui.</p></div>` +
-      SIMULACOES.lista.map(s => `<div class="cartao sim"><h3>${s.em} ${s.titulo} <span class="cod">${s.hab}</span></h3><p class="muted">${s.desc}</p><p class="mini-txt muted">${s.aulas}</p><button class="btn prim" data-sim="${s.id}">▶ Abrir no palco 3D</button></div>`).join("");
+      SIMULACOES.lista.filter(s => doAno(s.hab, anoFiltro())).map(s => `<div class="cartao sim"><h3>${s.em} ${s.titulo} <span class="cod">${s.hab}</span></h3><p class="muted">${s.desc}</p><p class="mini-txt muted">${s.aulas}</p><button class="btn prim" data-sim="${s.id}">▶ Abrir no palco 3D</button></div>`).join("");
+    box.insertAdjacentHTML("beforeend", botaoTodos(SIMULACOES.lista.length - SIMULACOES.lista.filter(x => doAno(x.hab, anoFiltro())).length)); ligarVerTodos(box);
     box.querySelectorAll("[data-sim]").forEach(b => b.onclick = () => abrirSim(b.dataset.sim));
   }
   function abrirSim(id) {
@@ -668,7 +680,8 @@
     $("#bIniDes").onclick = iniciarDesafio;
   }
   function iniciarDesafio() {
-    est.desafio = { fila: embaralhar(D.desafio).slice(0, 10), i: 0, pontos: 0, tent: 0, inicio: performance.now(), id: novoId(), resp: [] };
+    const anoD = typeof anoAtual === "function" ? anoAtual() : "", modsAno = D.modelos.filter(m => !anoD || new RegExp(anoD + "º").test(m.aula)).map(m => m.id);
+    est.desafio = { fila: embaralhar(D.desafio.filter(id => modsAno.includes(D.fichas[id].modelo))).slice(0, 10), i: 0, pontos: 0, tent: 0, inicio: performance.now(), id: novoId(), resp: [] };
     rodada();
   }
   function pararDesafio() { est.desafio = null; }
@@ -763,9 +776,7 @@
   }
   function fecharLateralMovel() { document.body.classList.remove("lateral-aberta"); }
 
-  // lista de modelos na lateral
-  $("#listaModelos").innerHTML = D.modelos.map(m => `<button class="mod-btn" data-mod="${m.id}"><span class="em">${m.em}</span><span><b>${m.nome}</b><small>${m.sub}</small></span></button>`).join("");
-  $$(".mod-btn").forEach(b => b.onclick = () => { if (est.desafio) { pararDesafio(); est.rotulos = true; $("#btnRotulos").classList.add("ativo"); } carregarModelo(b.dataset.mod); trocarAba("explorar", true); fecharLateralMovel(); });
+  // lista de modelos na lateral: montada em aplicarTurma() (só os do ano da turma, com opção de ver todos)
 
   /* ------------------------------ LAÇO ------------------------------ */
   const relogio = new T.Clock(); let tempo = 0;
@@ -869,7 +880,7 @@
     if (["6", "7", "8", "9"].includes(ano)) { trilhaAno = ano; quizAno = ano; }
     $("#btnAluno").innerHTML = "👤<span class=\"al-txt\"> " + (ALUNO.dados ? `${ALUNO.dados.turma} · ${ALUNO.dados.nome.split(" ").slice(0, 2).join(" ")}` : "Entrar").replace(/</g, "") + "</span>";
     $("#btnAluno").title = ALUNO.dados ? `${ALUNO.dados.turma} · ${ALUNO.dados.nome} (toque para trocar)` : "Escolher turma e nome";
-    montarHabilidades(); montarQuiz(); montarTemasLateral();
+    montarHabilidades(); montarQuiz(); montarTemasLateral(); montarListaModelos(); montarSimular();
   }
 
   /* ------------------------------ MEU RELATÓRIO (aluno, com RA e senha) E BOTÃO DO PROFESSOR ------------------------------ */
