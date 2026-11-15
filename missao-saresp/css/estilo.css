@@ -300,3 +300,26 @@ a.aluno-chip { text-decoration: none; }
   .busca-wrap input { width: 170px; }
 }
 @media (max-width: 1560px) { .xp-chip small { display: none; } }
+/* celular: o cabeçalho precisa caber na largura da tela */
+html, body { max-width: 100%; overflow-x: hidden; }
+.topo { max-width: 100vw; min-width: 0; }
+@media (max-width: 900px) {
+  .topo { gap: 6px; padding-left: 8px; padding-right: 8px; }
+  .marca { flex: 1 1 auto; min-width: 0; flex-shrink: 1; }
+  .marca > div { min-width: 0; }
+  .marca h1 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .marca small { display: none; }
+  #btnAluno { max-width: 40px; padding: 5px 9px; overflow: hidden; }
+  .xp-chip { padding: 4px 8px; gap: 3px; }
+  .xp-chip .xp-nome, .xp-chip small { display: none; }
+  .topo > * { flex-shrink: 0; }
+  .topo > .marca { flex-shrink: 1; }
+}
+@media (max-width: 480px) {
+  .marca h1 { font-size: .98rem; }
+  .marca .logo { width: 30px; height: 30px; }
+  #btnRel, #btnProf, #btnAluno, #btnTema, #btnLateral { width: 34px; height: 34px; padding: 0; justify-content: center; }
+  .xp-chip .xp-pts { font-size: .72rem; }
+}
+@media (max-width: 380px) { #btnTema { display: none; } }
+@media (max-width: 900px) { #btnAluno .al-txt { display: none; } #btnAluno { justify-content: center; } }
