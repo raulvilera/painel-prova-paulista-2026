@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Links por turma · Missão SARESP 3D</title>
+<link rel="icon" type="image/svg+xml" href="../icone.svg">
+<style>
+:root{--bg:#eef3f9;--card:#fff;--txt:#0d1f3a;--muted:#536a8c;--borda:#c8d6ea;--acento:#0f766e;--rec:#b45309;--sar:#1d4ed8}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.45}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 16px 60px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-end;margin-bottom:14px}
+h1{margin:0;font-size:1.6rem}.sub{color:var(--muted);font-size:.92rem}
+nav a{color:var(--acento);font-weight:600;text-decoration:none;margin-left:14px}
+.filtro{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 18px}
+.chip{border:1px solid var(--borda);background:var(--card);border-radius:99px;padding:6px 14px;font:inherit;font-size:.9rem;cursor:pointer;color:var(--txt)}
+.chip.ativo{background:var(--acento);border-color:var(--acento);color:#fff}
+.btn{border:1px solid var(--borda);background:var(--card);border-radius:9px;padding:7px 12px;font:inherit;font-size:.86rem;cursor:pointer;color:var(--txt);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{border-color:var(--acento)}.btn.prim{background:var(--acento);border-color:var(--acento);color:#fff}
+.turma{background:var(--card);border:1px solid var(--borda);border-radius:16px;padding:18px;margin-bottom:18px;box-shadow:0 8px 24px rgba(13,31,58,.07)}
+.topo{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start}
+.turma h2{margin:0 0 4px;font-size:1.45rem;color:var(--acento)}
+.link{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.link input{flex:1;min-width:240px;font:inherit;font-size:.9rem;padding:8px 10px;border:1px solid var(--borda);border-radius:9px;background:#f7faff;color:var(--txt)}
+.qr{width:150px;text-align:center;font-size:.72rem;color:var(--muted)}.qr img,.qr canvas{width:150px;height:150px;image-rendering:pixelated;border:1px solid var(--borda);border-radius:8px;background:#fff;padding:6px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
+.grupo h3{margin:6px 0 8px;font-size:1rem}.grupo.sar h3{color:var(--sar)}.grupo.rec h3{color:var(--rec)}
+.tema{border:1px solid var(--borda);border-left:5px solid var(--c);border-radius:10px;padding:9px 11px;margin-bottom:8px}
+.grupo.sar .tema{--c:var(--sar)}.grupo.rec .tema{--c:var(--rec)}
+.tema b{font-size:.95rem}.tema .cod{font-size:.72rem;font-weight:700;color:var(--muted);border:1px solid var(--borda);border-radius:99px;padding:0 7px;margin-left:4px}
+.tema ul{margin:5px 0 5px 18px;padding:0;font-size:.84rem}.tema .rec{font-size:.78rem;color:var(--muted)}
+.tema .acoes{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.tema .btn{font-size:.76rem;padding:4px 9px}
+.pct{font-size:.72rem;font-weight:700;color:#be123c;margin-left:6px}
+.aviso{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#0d1f3a;color:#fff;padding:10px 16px;border-radius:99px;font-size:.9rem;opacity:0;transition:.3s;pointer-events:none}.aviso.on{opacity:1}
+.dica{background:#fff;border:1px dashed var(--borda);border-radius:12px;padding:10px 14px;font-size:.88rem;color:var(--muted);margin-bottom:16px}
+@media (max-width:820px){.cols{grid-template-columns:1fr}.topo{grid-template-columns:1fr}.qr{margin:0 auto}}
+@media print{body{background:#fff}.wrap{padding:0}header nav,.filtro,.dica,.btn,.link button{display:none!important}.turma{box-shadow:none;break-after:page;border:0;padding:0}.link input{border:0;background:none;padding:0;font-weight:700}.tema{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div><h1>🔗 Links por turma · Missão SARESP 3D</h1><div class="sub">Cada link já abre o simulador com a turma escolhida: o aluno só seleciona o próprio nome. Os resultados vão para o relatório da turma.</div></div>
+<nav><a href="/">← Painel</a><a href="/resultados/missao-saresp/">📊 Relatório</a></nav></header>
+<div class="dica">💡 <b>Como usar:</b> copie o link ou a mensagem pronta da turma e envie no WhatsApp ou no Google Sala de Aula, ou projete o QR Code. Cada tema tem também um link direto, que já abre aquele conteúdo. Para imprimir uma folha por turma, use <b>Imprimir</b> (escolha a turma antes para imprimir só ela).</div>
+<div class="filtro" id="filtro"></div>
+<div id="lista"></div>
+</div>
+<div class="aviso" id="aviso"></div>
+<script src="../js/dados.js?v=20261115d"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script>
+(function () {
+  const D = window.DADOS, $ = s => document.querySelector(s);
+  const TURMAS = ["6º Ano A", "6º Ano B", "6º Ano C", "7º Ano A", "7º Ano B", "8º Ano A", "8º Ano B", "9º Ano A", "9º Ano B"];
+  const cod = t => t[0] + t.slice(-1);   // "7º Ano A" -> "7A"
+  const base = location.origin + "/missao-saresp/";
+  const linkT = t => base + "?turma=" + cod(t), linkTema = (t, c) => linkT(t) + "&tema=" + encodeURIComponent(c);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const SIMS = { fases: "Fases da Lua e eclipses", estacoes: "Estações do ano", sombras: "Sol e sombras", estufa: "Efeito estufa", selecao: "Seleção natural", energia: "Consumo de energia", biomas: "Biomas brasileiros", celulas: "Classifique a célula" };
+  const nomeMod = id => (D.modelos.find(m => m.id === id) || {}).nome || id;
+  function recursos(r) { const a = []; if (r.sim) a.push("Simulação: " + SIMS[r.sim]); if (r.modelo) a.push("Modelo 3D: " + nomeMod(r.modelo)); if (r.ext) a.push("+ " + D.externos[r.ext].nome); a.push("Quiz do tema"); return a.join(" · "); }
+  function avisar(t) { const a = $("#aviso"); a.textContent = t; a.classList.add("on"); clearTimeout(a._t); a._t = setTimeout(() => a.classList.remove("on"), 1800); }
+  async function copiar(txt, msg) { try { await navigator.clipboard.writeText(txt); avisar(msg || "Copiado!"); } catch (e) { prompt("Copie:", txt); } }
+  function mensagem(t, tr) {
+    const sar = tr.itens.filter(h => !h.rec), rec = tr.itens.filter(h => h.rec);
+    return `🚀 *Missão SARESP 3D · ${t}*\nEntre pelo link, escolha seu nome e estude os temas abaixo. Suas atividades chegam para o professor.\n👉 ${linkT(t)}\n\n` +
+      `🎯 *SARESP (revisão):*\n${sar.map(h => "• " + h.tema).join("\n")}\n\n♻️ *Recuperação semestral (também cai no SARESP):*\n${rec.map(h => "• " + h.tema).join("\n")}\n\nNo fim, faça o 🎯 *Simulado SARESP* dentro do simulador.`;
+  }
+  function tema(t, h) {
+    return `<div class="tema"><b>${esc(h.tema)}</b><span class="cod">${esc(h.sigla)}</span>${h.pct != null ? `<span class="pct" title="Acerto da escola no Mapa SARESP">${String(h.pct).replace(".", ",")}% de acerto</span>` : ""}
+      <div class="rec">${esc(h.bim)}</div><ul>${h.desc.map(d => `<li>${esc(d)}</li>`).join("")}</ul><div class="rec">${esc(recursos(h.r))}</div>
+      <div class="acoes"><button class="btn" data-copia="${esc(linkTema(t, h.cod))}">📋 Link deste tema</button><a class="btn" href="${esc(linkTema(t, h.cod))}" target="_blank" rel="noopener">Abrir</a></div></div>`;
+  }
+  function cartao(t) {
+    const tr = D.trilha.find(x => x.ano === t[0]); const sar = tr.itens.filter(h => !h.rec), rec = tr.itens.filter(h => h.rec);
+    return `<section class="turma" data-t="${esc(t)}"><div class="topo"><div><h2>${esc(t)}</h2><div class="sub">${sar.length + rec.length} temas · ${rec.length} da recuperação semestral</div>
+      <div class="link"><input readonly value="${esc(linkT(t))}" aria-label="Link da turma ${esc(t)}"><button class="btn prim" data-copia="${esc(linkT(t))}">📋 Copiar link</button><button class="btn" data-msg="${esc(t)}">💬 Copiar mensagem pronta</button><a class="btn" href="${esc(linkT(t))}" target="_blank" rel="noopener">Abrir como aluno</a><a class="btn" href="/resultados/missao-saresp/?turma=${encodeURIComponent(t)}">📊 Relatório</a></div></div>
+      <div class="qr"><div data-qr="${esc(linkT(t))}"></div>Aponte a câmera do celular</div></div>
+      <div class="cols"><div class="grupo sar"><h3>🎯 SARESP · revisão (1º e 2º bimestres)</h3>${sar.map(h => tema(t, h)).join("")}</div>
+      <div class="grupo rec"><h3>♻️ Recuperação semestral (3º e 4º bimestres)</h3>${rec.map(h => tema(t, h)).join("")}</div></div></section>`;
+  }
+  let filtro = new URLSearchParams(location.search).get("turma") || "";
+  function desenhar() {
+    $("#filtro").innerHTML = `<button class="chip ${filtro ? "" : "ativo"}" data-f="">Todas as turmas</button>` + TURMAS.map(t => `<button class="chip ${filtro === t ? "ativo" : ""}" data-f="${esc(t)}">${esc(t)}</button>`).join("") + `<button class="btn" id="bImp" style="margin-left:auto">🖨️ Imprimir</button>`;
+    $("#lista").innerHTML = (filtro ? [filtro] : TURMAS).map(cartao).join("");
+    document.querySelectorAll("[data-f]").forEach(b => b.onclick = () => { filtro = b.dataset.f; desenhar(); });
+    document.querySelectorAll("[data-copia]").forEach(b => b.onclick = () => copiar(b.dataset.copia, "Link copiado!"));
+    document.querySelectorAll("[data-msg]").forEach(b => b.onclick = () => { const t = b.dataset.msg; copiar(mensagem(t, D.trilha.find(x => x.ano === t[0])), "Mensagem copiada! Cole no WhatsApp ou no Classroom."); });
+    document.querySelectorAll("[data-qr]").forEach(el => { if (!window.qrcode) { el.textContent = ""; return; } const q = qrcode(0, "M"); q.addData(el.dataset.qr); q.make(); el.innerHTML = q.createImgTag(4, 0); });
+    $("#bImp").onclick = () => window.print();
+  }
+  desenhar();
+})();
+</script>
+<script src="/voltar-painel.js" data-sempre defer></script>
+</body>
+</html>

@@ -783,6 +783,11 @@
   function novoId() { return crypto.randomUUID ? crypto.randomUUID() : "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, c => { const r = Math.random() * 16 | 0; return (c === "x" ? r : (r & 3 | 8)).toString(16); }); }
   const ALUNO = { dados: null, fila: Promise.resolve(true) };
   try { const a = JSON.parse(localStorage.getItem("ms3d_aluno") || "null"); if (a && TURMAS.includes(a.turma) && a.nome && Date.now() - a.t < 12 * 3600e3) ALUNO.dados = a; } catch (e) { }
+  /* link da turma: ?turma=7A (opcional &tema=7-AE10) — a turma já vem escolhida e o aluno só seleciona o nome */
+  const PARAM = new URLSearchParams(location.search);
+  const TURMA_LINK = (() => { const m = /^([6-9])\s*º?\s*(?:ano)?\s*([A-C])$/i.exec((PARAM.get("turma") || "").trim()); const t = m ? `${m[1]}º Ano ${m[2].toUpperCase()}` : ""; return TURMAS.includes(t) ? t : ""; })();
+  const TEMA_LINK = (PARAM.get("tema") || "").trim();
+  if (TURMA_LINK && ALUNO.dados && ALUNO.dados.turma !== TURMA_LINK) ALUNO.dados = null;   // outra turma neste aparelho: pede o nome de novo
   /* grava (ou atualiza) a tentativa no banco; repete se a rede falhar */
   function registrar(r) {
     if (!ALUNO.dados) return Promise.resolve(false);
@@ -805,18 +810,24 @@
     selN.disabled = !nomes.length; if (!nomes.length) $("#eMsg").textContent = "Sem internet ou fora da plataforma: use “Só explorar”.";
   };
   selN.onchange = () => { $("#eEntrar").disabled = !selN.value; };
-  function abrirEntrada() { $("#entrada").hidden = false; if (ALUNO.dados) { sel.value = ALUNO.dados.turma; } setTimeout(() => sel.focus(), 50); }
+  function abrirEntrada() {
+    $("#entrada").hidden = false;
+    const t = TURMA_LINK || (ALUNO.dados && ALUNO.dados.turma) || "";
+    if (t && sel.value !== t) { sel.value = t; sel.onchange(); }
+    sel.disabled = !!TURMA_LINK; $("#eTit").textContent = TURMA_LINK ? `🚀 Missão SARESP 3D · ${TURMA_LINK}` : "🚀 Missão SARESP 3D";
+    setTimeout(() => (TURMA_LINK ? selN : sel).focus(), 80);
+  }
   $("#eEntrar").onclick = () => {
     ALUNO.dados = { turma: sel.value, nome: selN.value, t: Date.now() };
     try { localStorage.setItem("ms3d_aluno", JSON.stringify(ALUNO.dados)); } catch (e) { }
-    $("#entrada").hidden = true; aplicarTurma(); avisar(`Bem-vindo(a), ${ALUNO.dados.nome.split(" ")[0]}! Os temas do ${ALUNO.dados.turma} estão na lateral.`);
+    $("#entrada").hidden = true; aplicarTurma(); abrirTemaLink(); avisar(`Bem-vindo(a), ${ALUNO.dados.nome.split(" ")[0]}! Os temas do ${ALUNO.dados.turma} estão na lateral.`);
   };
-  $("#eExplorar").onclick = () => { $("#entrada").hidden = true; try { sessionStorage.setItem("ms3d_explorar", "1"); } catch (e) { } };
+  $("#eExplorar").onclick = () => { $("#entrada").hidden = true; abrirTemaLink(); try { sessionStorage.setItem("ms3d_explorar", "1"); } catch (e) { } };
   $("#btnAluno").onclick = abrirEntrada;
 
   /* abas verticais com os temas do ano da turma: SARESP e Recuperação semestral */
   let temaAtivo = "";
-  function anoAtual() { return ALUNO.dados ? ALUNO.dados.turma[0] : (new URLSearchParams(location.search).get("ano") || ""); }
+  function anoAtual() { return ALUNO.dados ? ALUNO.dados.turma[0] : TURMA_LINK ? TURMA_LINK[0] : (PARAM.get("ano") || ""); }
   function montarTemasLateral() {
     const ano = anoAtual(), t = D.trilha.find(x => x.ano === ano), box = $("#listaTemas");
     $("#secTemas").hidden = !t; if (!t) return;
@@ -841,6 +852,7 @@
     let h = null; D.trilha.forEach(t => t.itens.forEach(x => { if (x.cod === cod) h = x; }));
     if (h.r.sim) abrirSim(h.r.sim); else if (h.r.modelo) { carregarModelo(h.r.modelo); trocarAba("explorar", true); } else { trocarAba("habilidades"); destacarHab(cod); }
   }
+  function abrirTemaLink() { if (TEMA_LINK && D.trilha.some(t => t.itens.some(x => x.cod === TEMA_LINK)) && TEMA_LINK[0] === anoAtual() && temaAtivo !== TEMA_LINK) abrirTema(TEMA_LINK); }
   function aplicarTurma() {
     const ano = anoAtual();
     if (["6", "7", "8", "9"].includes(ano)) { trilhaAno = ano; quizAno = ano; }
@@ -852,7 +864,7 @@
   montarSimular(); montarHabilidades(); montarQuiz(); montarDesafio(); montarSaiba();
   redimensionar();
   carregarModelo("sistema", true); XP.mostrar(); aplicarTurma();
-  { let exp = false; try { exp = !!sessionStorage.getItem("ms3d_explorar"); } catch (e) { } if (!ALUNO.dados && !exp) abrirEntrada(); }
+  { let exp = false; try { exp = !!sessionStorage.getItem("ms3d_explorar"); } catch (e) { } if (!ALUNO.dados && (!exp || TURMA_LINK)) abrirEntrada(); else abrirTemaLink(); }
   mostrarBoasVindas();
   carga.style.setProperty("--p", 1);
   laco();
