@@ -280,3 +280,23 @@ a.btn { text-decoration: none; color: inherit; display: inline-flex; align-items
 .recursos-v .btn { justify-content: flex-start; text-align: left; font-size: .8rem; padding: 6px 10px; }
 .envio { font-size: .8rem; margin-top: 6px; }
 @media (max-width: 900px) { .aluno-chip { max-width: 130px; } }
+a.aluno-chip { text-decoration: none; }
+.aba-v .estrela { margin-left: 4px; }
+.plano-item { display: flex; gap: 8px; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--borda-suave); }
+.plano-item:last-child { border-bottom: 0; }
+.plano-item small { display: block; color: var(--muted); font-size: .74rem; }
+.q-sim { font-size: .84rem; margin: 5px 0; }
+.q-sim .ok { color: var(--ok); font-weight: 700; } .q-sim .er { color: var(--erro); font-weight: 700; }
+#alunoLogin .voltar-sim { margin-top: 10px; width: 100%; background: transparent; border: 1px dashed #6fc9ee66; color: #fff; padding: 10px; border-radius: 10px; font: inherit; cursor: pointer; }
+@media (max-width: 900px) { #btnRel { font-size: 0; padding: 5px 9px; } #btnRel::before { content: "📊"; font-size: .9rem; } }
+#alunoLogin[hidden] { display: none !important; }
+.marca { flex-shrink: 0; }
+#btnProf, #btnRel { flex-shrink: 0; }
+@media (max-width: 1560px) {
+  #btnRel, #btnProf { font-size: 0; padding: 5px 9px; gap: 0; }
+  #btnRel::before { content: "📊"; font-size: .95rem; }
+  #btnProf::before { content: "👩‍🏫"; font-size: .95rem; }
+  #btnAluno { max-width: 170px; }
+  .busca-wrap input { width: 170px; }
+}
+@media (max-width: 1560px) { .xp-chip small { display: none; } }
