@@ -833,7 +833,7 @@
     $("#secTemas").hidden = !t; if (!t) return;
     $("#temasTit").textContent = ALUNO.dados ? `Temas · ${ALUNO.dados.turma}` : `Temas · ${t.titulo}`;
     const aba = h => { const fx = h.pct != null ? faixa(h.pct) : null;
-      let r = `<button class="aba-v ${h.cod === temaAtivo ? "ativo" : ""}" data-tema="${h.cod}" style="--c:${fx ? fx[1] : "var(--acento)"}"><span><b>${h.tema}</b><small>${h.sigla} · ${h.bim}</small></span>${fx ? `<span class="pct" title="Acerto da escola no Mapa SARESP">${String(h.pct).replace(".", ",")}%</span>` : ""}</button>`;
+      let r = `<button class="aba-v ${h.cod === temaAtivo ? "ativo" : ""}" data-tema="${h.cod}" style="--c:${fx ? fx[1] : "var(--acento)"}"><span><b>${h.tema}${PLANO.has(h.cod) ? '<span class="estrela" title="No seu plano de estudo">⭐</span>' : ""}</b><small>${h.sigla} · ${h.bim}</small></span>${fx ? `<span class="pct" title="Acerto da escola no Mapa SARESP">${String(h.pct).replace(".", ",")}%</span>` : ""}</button>`;
       if (h.cod === temaAtivo) r += `<div class="recursos-v">${botoesRec(h.r).replace(/class="btn"/g, 'class="btn"').replace(/data-mod2=/g, "data-mod3=")}<button class="btn prim" data-qae2="${h.cod}">📝 Quiz deste tema</button><button class="btn" data-hab="${h.cod}">🗺️ Ver na trilha</button></div>`;
       return r; };
     const rec = t.itens.filter(h => h.rec), sar = t.itens.filter(h => !h.rec);
@@ -859,6 +859,55 @@
     $("#btnAluno").textContent = ALUNO.dados ? `👤 ${ALUNO.dados.turma} · ${ALUNO.dados.nome.split(" ").slice(0, 2).join(" ")}` : "👤 Entrar";
     montarHabilidades(); montarQuiz(); montarTemasLateral();
   }
+
+  /* ------------------------------ MEU RELATÓRIO (aluno, com RA e senha) E BOTÃO DO PROFESSOR ------------------------------ */
+  let PLANO = new Set(), RELAT = null;
+  try { if (Object.keys(localStorage).some(k => /^sb-ykrjfjepnqeoqlgupsbe-auth-token$/.test(k))) { const b = $("#btnProf"); b.hidden = false; b.onclick = e => { e.preventDefault(); location.href = "professor/" + (ALUNO.dados ? "?turma=" + encodeURIComponent(ALUNO.dados.turma) : ""); }; } } catch (e) { }
+  function carregarAcesso() {
+    if (window.alunoAcesso) return Promise.resolve(window.alunoAcesso);
+    return new Promise((ok, falha) => { const sc = document.createElement("script"); sc.src = "/aluno-acesso.js"; sc.onload = () => ok(window.alunoAcesso); sc.onerror = falha; document.head.appendChild(sc); });
+  }
+  function botaoVoltarLogin() {   // a tela de login da plataforma não tem "voltar": acrescenta um
+    const box = document.querySelector("#alunoLogin .box"); if (!box || box.querySelector(".voltar-sim")) return;
+    const b = document.createElement("button"); b.type = "button"; b.className = "voltar-sim"; b.textContent = "← Voltar ao simulador sem entrar";
+    b.onclick = () => { document.getElementById("alunoLogin").hidden = true; trocarAba("explorar"); }; box.appendChild(b);
+  }
+  async function abrirRelatorio() {
+    trocarAba("relatorio"); const box = $("#aba-relatorio");
+    box.innerHTML = `<div class="cartao"><h3>📊 Meu relatório</h3><p class="muted">Para ver suas notas, entre com seu <b>RA, dígito e senha</b> (os mesmos das outras atividades da plataforma). Assim só você vê o seu desempenho.</p><p class="muted mini-txt">Carregando…</p></div>`;
+    let acesso; try { acesso = await carregarAcesso(); } catch (e) { box.innerHTML = `<div class="cartao"><h3>📊 Meu relatório</h3><p>O relatório só funciona dentro da plataforma (Painel da escola).</p></div>`; return; }
+    const obs = setInterval(botaoVoltarLogin, 300); setTimeout(() => clearInterval(obs), 120000);
+    const token = await acesso.exigir(); clearInterval(obs);
+    let j; try { const r = await fetch("/api/individual?acao=missao3d", { headers: { Authorization: "Bearer " + token }, cache: "no-store" }); j = await r.json(); } catch (e) { j = { ok: false, erro: "Sem conexão." }; }
+    if (!j.ok) { box.innerHTML = `<div class="cartao"><h3>📊 Meu relatório</h3><p>${(j.erro || "Não foi possível carregar.").replace(/</g, "")}</p><button class="btn" id="rSair">Entrar com outro RA</button></div>`; $("#rSair").onclick = () => { acesso.sair(); abrirRelatorio(); }; return; }
+    RELAT = j;
+    if (TURMAS.includes(j.turma) && (!ALUNO.dados || ALUNO.dados.turma !== j.turma || ALUNO.dados.nome !== j.nome)) { ALUNO.dados = { turma: j.turma, nome: j.nome, t: Date.now() }; try { localStorage.setItem("ms3d_aluno", JSON.stringify(ALUNO.dados)); } catch (e) { } }
+    desenharRelatorio(); aplicarTurma();
+  }
+  function desenharRelatorio() {
+    const j = RELAT, box = $("#aba-relatorio"), Q = j.questoes || {}, ITEM = {}; D.trilha.forEach(t => t.itens.forEach(h => ITEM[h.cod] = h));
+    const tr = D.trilha.find(x => x.ano === String(j.turma)[0]);
+    const sim = j.simulado, val = sim ? sim.itens.filter(i => i.ok !== null) : [], ac = val.filter(i => i.ok).length, pc = val.length ? Math.round(ac / val.length * 100) : null;
+    const fracos = []; if (sim) sim.itens.forEach(i => { if (i.ok === false && Q[i.k] && !fracos.includes(Q[i.k].tema)) fracos.push(Q[i.k].tema); });
+    const rec = tr ? tr.itens.filter(h => h.rec && !fracos.includes(h.cod)).map(h => h.cod) : [];
+    PLANO = new Set(fracos.concat(rec));
+    const feito = c => (j.missao || []).some(x => x.atividade === "tema" && x.tema === c && x.concluido && Number(x.nota) >= 7);
+    const item = (c, cor) => `<div class="plano-item"><span><b>${feito(c) ? "✅" : cor} ${ITEM[c] ? ITEM[c].tema : c}</b><small>${ITEM[c] ? ITEM[c].sigla + " · " + ITEM[c].bim : ""}${feito(c) ? " · concluído na Missão" : ""}</small></span><button class="btn prim" data-estudar="${c}">Estudar</button></div>`;
+    const fx = pc == null ? null : faixa(pc), feitos = [...PLANO].filter(feito).length;
+    const ATV = { simulado: "Simulado SARESP 3D", recuperacao: "Revisão da recuperação", tema: "Quiz do tema", desafio: "Desafio" };
+    box.innerHTML = `<div class="cartao"><div class="etiqueta" style="--c:var(--acento)">${j.turma}</div><h2>📊 ${j.nome}</h2>
+      <div class="barra"><span style="width:${PLANO.size ? Math.round(feitos / PLANO.size * 100) : 0}%"></span></div><p class="mini-txt muted">Plano de estudo: ${feitos} de ${PLANO.size} temas concluídos (quiz do tema com nota 7 ou mais).</p></div>
+      <div class="cartao"><h3>🎯 Simulado SARESP</h3>${sim ? `<p><b style="font-size:1.4rem;color:${fx[1]}">${ac}/${val.length} · ${pc}%</b> · <b style="color:${fx[1]}">${fx[0]}</b></p>
+        <details><summary>Ver questão por questão</summary>${sim.itens.map(i => { const q = Q[i.k] || {}; return `<div class="q-sim">${i.ok === null ? "⏳" : i.ok ? '<span class="ok">✔</span>' : '<span class="er">✘</span>'} <b>Q${q.n}</b> · ${ITEM[q.tema] ? ITEM[q.tema].tema : ""}<br><small class="muted">${(q.desc || "").replace(/</g, "")}</small></div>`; }).join("")}</details>`
+        : `<p class="muted">${j.erroSimulado ? j.erroSimulado : "Você ainda não fez o Simulado SARESP da plataforma. Seu plano usa os temas da recuperação semestral."}</p>`}</div>
+      <div class="cartao"><h3>📚 Meu plano de estudo</h3>${fracos.length ? `<h4>🔴 Reforçar para o SARESP (errei no Simulado)</h4>${fracos.map(c => item(c, "🔴")).join("")}` : sim ? `<div class="destaque saude">🏆 Você acertou todos os temas do Simulado!</div>` : ""}
+        <h4>🟠 Recuperação semestral</h4>${rec.map(c => item(c, "🟠")).join("")}<p class="mini-txt muted">Os temas do plano também aparecem com ⭐ na lateral.</p></div>
+      <div class="cartao"><h3>🗂️ Minhas atividades na Missão</h3>${(j.missao || []).length ? (j.missao || []).slice(0, 30).map(x => { const f2 = faixa(x.total ? x.acertos / x.total * 100 : 0); return `<div class="plano-item"><span><b>${ATV[x.atividade] || x.atividade}${x.tema && ITEM[x.tema] ? " · " + ITEM[x.tema].tema : ""}</b><small>${new Date(x.atualizado).toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })} · ${x.concluido ? "concluída" : "incompleta"}</small></span><b style="color:${f2[1]}">${String(x.nota).replace(".", ",")}</b></div>`; }).join("") : `<p class="muted">Você ainda não fez atividades na Missão. Comece pelo primeiro tema do plano!</p>`}
+        <div class="linha-btn"><button class="btn" id="rAtu">↻ Atualizar</button><button class="btn" id="rSair2">Sair (RA)</button></div></div>`;
+    box.querySelectorAll("[data-estudar]").forEach(b => b.onclick = () => { temaAtivo = ""; abrirTema(b.dataset.estudar); });
+    $("#rAtu").onclick = abrirRelatorio; $("#rSair2").onclick = () => { if (window.alunoAcesso) window.alunoAcesso.sair(); };
+  }
+  $("#btnRel").onclick = abrirRelatorio;
 
   /* ------------------------------ INÍCIO ------------------------------ */
   montarSimular(); montarHabilidades(); montarQuiz(); montarDesafio(); montarSaiba();

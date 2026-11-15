@@ -5,6 +5,7 @@ const PEI = require('./_pei.js');   // atividades adaptadas (PEI); só no servid
 const AUTOIMG = require('./_img-auto.js');   // foto ligada ao enunciado (demais alunos)
 const ROSTER = require('./_roster.js');   // listas oficiais de turma
 const { alunoDaSessao } = require('./_aluno-sessao.js');   // login do aluno (RA + dígito + senha)
+const M3D = require('./_missao3d.js');   // Missão SARESP 3D: relatório do aluno
 const crypto = require('crypto');
 let BANCO = {}; try { BANCO = require('./_banco-indiv.js'); } catch (e) { BANCO = {}; }
 const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.env.SUPABASE_SERVICE_KEY || '', GKEY = process.env.GEMINI_API_KEY || '';
@@ -312,12 +313,20 @@ module.exports = async function individual(req, res) {
 
     /* ----- aluno: turma e nome vêm do login (token), nunca do pedido ----- */
     const semLogin = acao === 'adaptada' && !/^Bearer .+/.test(req.headers.authorization || '');   // Simulado sem login: pergunta só sim/não (nada sobre o motivo)
-    if (['atividade', 'enviar', 'adaptada'].includes(acao) && !semLogin) {
+    if (['atividade', 'enviar', 'adaptada', 'missao3d'].includes(acao) && !semLogin) {
       const id = await alunoDaSessao(req);
       if (!id) return erro(401, 'Entre com seu RA, dígito e senha.');
       const al = await rest('alunos?ra=eq.' + enc(id.ra) + '&digito_ra=eq.' + enc(id.digito) + '&select=nome,turma');
       if (!al.length) return erro(401, 'Aluno não encontrado.');
       q.turma = al[0].turma; q.nome = al[0].nome; b.turma = al[0].turma; b.nome = al[0].nome;
+    }
+    if (req.method === 'GET' && acao === 'missao3d') {   // Missão SARESP 3D: relatório do próprio aluno (Simulado SARESP + atividades)
+      const turma = String(q.turma || ''), nome = String(q.nome || ''), alvo = M3D.norm(nome);
+      let sim = null, erroSim = '';
+      try { const rs = (await M3D.simuladoEF()).filter(r => r.turma === turma && M3D.norm(r.nome) === alvo); sim = rs.sort((a, b) => String(b.criado).localeCompare(String(a.criado)))[0] || null; }
+      catch (e) { erroSim = 'Não foi possível ler o Simulado agora.'; }
+      const mi = await rest('missao3d_resultado?oculto=eq.false&turma=eq.' + enc(turma) + '&select=nome,atividade,tema,acertos,total,nota,concluido,atualizado&order=atualizado.desc&limit=300');
+      return ok({ turma, nome, simulado: sim, erroSimulado: erroSim, questoes: M3D.QUESTOES, missao: (mi || []).filter(x => M3D.norm(x.nome) === alvo) });
     }
     if ((req.method === 'GET' && (acao === 'turmas' || acao === 'nomes'))) return erro(410, 'Lista pública desativada. Entre com seu RA e senha.');
 

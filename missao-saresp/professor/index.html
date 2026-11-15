@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel do professor · Missão SARESP 3D</title>
+<link rel="icon" type="image/svg+xml" href="../icone.svg">
+<style>
+:root{--bg:#eef3f9;--card:#fff;--card2:#f4f8fd;--txt:#0d1f3a;--muted:#536a8c;--borda:#c8d6ea;--acento:#0f766e;--rec:#b45309;--sar:#1d4ed8;--lv0:#d64545;--lv1:#e8a23a;--lv2:#4f9a4a;--lv3:#2f6fb7}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.45}
+.wrap{max-width:1240px;margin:0 auto;padding:22px 16px 60px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-end;margin-bottom:12px}
+h1{margin:0;font-size:1.6rem}.sub{color:var(--muted);font-size:.9rem}
+nav a{color:var(--acento);font-weight:600;text-decoration:none;margin-left:14px}
+.filtro{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 16px;align-items:center}
+.chip{border:1px solid var(--borda);background:var(--card);border-radius:99px;padding:6px 14px;font:inherit;font-size:.9rem;cursor:pointer;color:var(--txt)}
+.chip.ativo{background:var(--acento);border-color:var(--acento);color:#fff}
+.btn{border:1px solid var(--borda);background:var(--card);border-radius:9px;padding:6px 11px;font:inherit;font-size:.82rem;cursor:pointer;color:var(--txt);text-decoration:none;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.btn:hover{border-color:var(--acento)}.btn.prim{background:var(--acento);border-color:var(--acento);color:#fff}
+.card{background:var(--card);border:1px solid var(--borda);border-radius:14px;padding:16px;margin-bottom:16px;box-shadow:0 6px 18px rgba(13,31,58,.06)}
+.card h2{margin:0 0 4px;font-size:1.2rem}.nota{font-size:.82rem;color:var(--muted);margin:4px 0 10px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--borda);border-radius:12px;padding:12px 14px}.kpi b{display:block;font-size:1.5rem}.kpi span{color:var(--muted);font-size:.8rem}
+.tema-l{display:grid;grid-template-columns:minmax(200px,280px) 1fr auto;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--card2)}
+.tbar{height:10px;border-radius:99px;background:var(--card2);overflow:hidden;display:block}.tbar>b{display:block;height:100%}
+.recs{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end}
+table{border-collapse:collapse;width:100%}td,th{padding:7px 8px;border:1px solid #dbe5f2;vertical-align:top;text-align:left;font-size:.88rem}th{background:var(--card2);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted)}
+.scroll{overflow-x:auto}tr.al{cursor:pointer}tr.al:hover td{background:var(--card2)}tr.det td{background:var(--card2)}
+.tg{display:inline-flex;align-items:center;gap:4px;font-size:.76rem;padding:2px 8px;border-radius:99px;border:1px solid var(--borda);margin:2px;background:#fff}
+.tg.fraco{border-color:var(--lv0);color:#9f1239}.tg.feito{border-color:var(--lv2);color:#166534;background:#ecfdf5}.tg.rec{border-color:var(--rec);color:var(--rec)}
+.fx{font-weight:800}.ok{color:var(--lv2);font-weight:700}.er{color:var(--lv0);font-weight:700}.muted{color:var(--muted)}
+.aviso{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#0d1f3a;color:#fff;padding:10px 16px;border-radius:99px;font-size:.9rem;opacity:0;transition:.3s;pointer-events:none}.aviso.on{opacity:1}
+.alerta{background:#fff7ed;border:1px solid #fdba74;border-radius:10px;padding:10px 12px;font-size:.88rem;margin-bottom:14px}
+.faltam span{display:inline-block;font-size:.8rem;padding:2px 9px;border-radius:99px;border:1px solid var(--borda);background:#fff;margin:2px}
+@media (max-width:760px){.tema-l{grid-template-columns:1fr}.recs{justify-content:flex-start}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div><h1>👩‍🏫 Painel do professor · Missão SARESP 3D</h1><div class="sub">O que cada aluno precisa estudar, a partir do <b>Simulado SARESP</b> que ele já fez, com os simuladores de cada tema e o progresso na Missão.</div></div>
+<nav><a href="/">← Painel</a><a href="../turmas/">🔗 Links por turma</a><a href="/resultados/missao-saresp/">📊 Relatório</a></nav></header>
+<div class="filtro" id="filtro"></div>
+<div id="app"><div class="card muted">Carregando…</div></div>
+</div>
+<div class="aviso" id="aviso"></div>
+<script src="../js/dados.js?v=20261115e"></script>
+<script>
+(function () {
+  const D = window.DADOS, $ = s => document.querySelector(s), app = h => $("#app").innerHTML = h;
+  const TURMAS = ["6º Ano A", "6º Ano B", "6º Ano C", "7º Ano A", "7º Ano B", "8º Ano A", "8º Ano B", "9º Ano A", "9º Ano B"];
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const norm = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, " ").trim().toUpperCase();
+  const FX = p => p < 25 ? ["Abaixo do Básico", "var(--lv0)"] : p < 50 ? ["Básico", "var(--lv1)"] : p < 75 ? ["Adequado", "var(--lv2)"] : ["Avançado", "var(--lv3)"];
+  const cod = t => t[0] + t.slice(-1), base = location.origin + "/missao-saresp/";
+  const linkTema = (t, c) => base + "?turma=" + cod(t) + "&tema=" + encodeURIComponent(c);
+  const SIMS = Object.fromEntries((window.DADOS_SIMS || [["fases", "🌗 Fases da Lua"], ["estacoes", "🌞 Estações"], ["sombras", "🕰️ Sol e sombras"], ["estufa", "🌡️ Efeito estufa"], ["selecao", "🦋 Seleção natural"], ["energia", "🔌 Energia"], ["biomas", "🌎 Biomas"], ["celulas", "🔬 Células"]]));
+  const ITEM = {}; D.trilha.forEach(t => t.itens.forEach(h => ITEM[h.cod] = h));
+  const nomeMod = id => { const m = D.modelos.find(x => x.id === id); return m ? m.em + " " + m.nome : id; };
+  function recursosBtns(t, c) {
+    const h = ITEM[c]; if (!h) return ""; const r = h.r, b = [];
+    if (r.sim) b.push(`<a class="btn" target="_blank" rel="noopener" href="${esc(linkTema(t, c))}">${esc(SIMS[r.sim] || r.sim)}</a>`);
+    if (r.modelo) b.push(`<a class="btn" target="_blank" rel="noopener" href="${esc(linkTema(t, c))}">🧊 ${esc(nomeMod(r.modelo).replace(/^\S+ /, ""))}</a>`);
+    if (r.ext) b.push(`<a class="btn" target="_blank" rel="noopener" href="${esc(D.externos[r.ext].url)}">↗ ${esc(D.externos[r.ext].nome)}</a>`);
+    if (!r.sim && !r.modelo) b.push(`<a class="btn" target="_blank" rel="noopener" href="${esc(linkTema(t, c))}">📝 Quiz e trilha</a>`);
+    return b.join("");
+  }
+  function avisar(t) { const a = $("#aviso"); a.textContent = t; a.classList.add("on"); clearTimeout(a._t); a._t = setTimeout(() => a.classList.remove("on"), 1800); }
+  async function copiar(txt, msg) { try { await navigator.clipboard.writeText(txt); avisar(msg || "Copiado!"); } catch (e) { prompt("Copie:", txt); } }
+
+  let TOKEN = "", DATA = null, turma = new URLSearchParams(location.search).get("turma") || TURMAS[0], aberto = ""; const ROSTER = {};
+  async function roster(t) { if (ROSTER[t]) return ROSTER[t]; try { const r = await fetch("/api/atividade-quimica?turma=" + encodeURIComponent(t), { cache: "no-store" }); const j = await r.json(); ROSTER[t] = j.ok ? j.nomes.map(a => a.nome) : []; } catch (e) { ROSTER[t] = []; } return ROSTER[t]; }
+  async function carregar() {
+    const r = await fetch("/api/quiz?missao3dplano=1", { headers: { Authorization: "Bearer " + TOKEN }, cache: "no-store" });
+    const j = await r.json(); if (!j.ok) throw new Error(j.erro || "erro"); DATA = j; await roster(turma); desenhar();
+  }
+  /* plano de um aluno: temas errados no Simulado (prioridade) + temas da recuperação semestral */
+  function plano(t, nome, sim) {
+    const ano = t[0], tr = D.trilha.find(x => x.ano === ano), Q = DATA.questoes;
+    const fracos = [], acertos = sim ? sim.itens.filter(i => i.ok === true).length : null, validas = sim ? sim.itens.filter(i => i.ok !== null).length : null;
+    if (sim) sim.itens.forEach(i => { if (i.ok === false && Q[i.k] && !fracos.includes(Q[i.k].tema)) fracos.push(Q[i.k].tema); });
+    const rec = tr.itens.filter(h => h.rec && !fracos.includes(h.cod)).map(h => h.cod);
+    const mi = DATA.missao.filter(x => x.turma === t && norm(x.nome) === norm(nome));
+    const feito = c => mi.some(x => x.atividade === "tema" && x.tema === c && x.concluido && Number(x.nota) >= 7);
+    return { fracos, rec, acertos, validas, mi, feito };
+  }
+  function mensagem(t, nome, p) {
+    const lin = c => "• " + (ITEM[c] ? ITEM[c].tema : c) + (p.feito(c) ? " ✅" : "") + "\n  " + linkTema(t, c);
+    return `📚 *Plano de estudo · ${nome.split(" ")[0]} (${t})*\n` + (p.fracos.length ? `\n🎯 *Reforçar para o SARESP* (você errou no Simulado):\n${p.fracos.map(lin).join("\n")}\n` : "") +
+      `\n♻️ *Recuperação semestral:*\n${p.rec.map(lin).join("\n")}\n\nEm cada tema, use o simulador e faça o *Quiz do tema*. Para ver seu relatório, toque em 📊 *Meu relatório* no simulador.`;
+  }
+  function desenhar() {
+    $("#filtro").innerHTML = TURMAS.map(t => `<button class="chip ${t === turma ? "ativo" : ""}" data-t="${esc(t)}">${esc(t)}</button>`).join("") + `<button class="btn" id="bCsv" style="margin-left:auto">⬇️ Baixar CSV</button><button class="btn" id="bAtu">↻ Atualizar</button>`;
+    document.querySelectorAll("[data-t]").forEach(b => b.onclick = async () => { turma = b.dataset.t; aberto = ""; history.replaceState(null, "", "?turma=" + encodeURIComponent(turma)); await roster(turma); desenhar(); });
+    $("#bAtu").onclick = () => carregar().catch(e => app(`<div class="card">${esc(e.message)}</div>`)); $("#bCsv").onclick = csv;
+    const t = turma, ano = t[0], Q = DATA.questoes;
+    const sims = DATA.simulado.filter(r => r.turma === t); const porNome = {}; sims.forEach(r => { const k = norm(r.nome); if (!porNome[k] || String(r.criado) > String(porNome[k].criado)) porNome[k] = r; });
+    const lista = Array.from(new Set((ROSTER[t] || []).concat(Object.values(porNome).map(r => r.nome)))).sort((a, b) => a.localeCompare(b, "pt"));
+    const linhas = lista.map(n => { const s = porNome[norm(n)] || null; return { nome: n, sim: s, p: plano(t, n, s) }; });
+    const fizeram = linhas.filter(l => l.sim), media = fizeram.length ? fizeram.reduce((a, l) => a + l.p.acertos / Math.max(1, l.p.validas), 0) / fizeram.length * 100 : null;
+    // temas da turma no simulado
+    const T0 = {}; fizeram.forEach(l => l.sim.itens.forEach(i => { if (i.ok === null || !Q[i.k]) return; const c = Q[i.k].tema, o = T0[c] = T0[c] || { ok: 0, er: 0, alunos: new Set() }; o[i.ok ? "ok" : "er"]++; if (!i.ok) o.alunos.add(l.nome); }));
+    const temas = Object.keys(T0).sort((a, b) => T0[a].ok / (T0[a].ok + T0[a].er) - T0[b].ok / (T0[b].ok + T0[b].er));
+    let h = (DATA.erroSimulado ? `<div class="alerta">⚠️ ${esc(DATA.erroSimulado)} Mostrando só as atividades da Missão.</div>` : "") +
+      `<div class="kpis"><div class="kpi"><b>${fizeram.length}<span style="font-size:1rem"> / ${lista.length}</span></b><span>fizeram o Simulado SARESP</span></div><div class="kpi"><b>${media == null ? "–" : Math.round(media) + "%"}</b><span>acerto médio no Simulado${media == null ? "" : " · " + FX(media)[0]}</span></div>` +
+      `<div class="kpi"><b>${new Set(DATA.missao.filter(x => x.turma === t).map(x => norm(x.nome))).size}</b><span>já usaram a Missão SARESP 3D</span></div><div class="kpi"><b>${temas.filter(c => T0[c].ok / (T0[c].ok + T0[c].er) < .5).length}</b><span>temas abaixo de 50% na turma</span></div></div>`;
+    h += `<div class="card"><h2>Temas que a turma precisa estudar (Simulado SARESP)</h2><div class="nota">Do mais frágil para o mais forte. Os botões abrem o simulador do tema já na turma ${esc(t)}: use em aula ou envie aos alunos.</div>` +
+      (temas.length ? temas.map(c => { const o = T0[c], p = Math.round(o.ok / (o.ok + o.er) * 100), f = FX(p), it = ITEM[c];
+        return `<div class="tema-l"><div><b>${esc(it ? it.tema : c)}</b> <span class="muted" style="font-size:.75rem">${esc(c.replace("-", "º · "))}${it && it.rec ? " · ♻️ recuperação" : ""}</span><div class="muted" style="font-size:.76rem">${o.alunos.size} aluno(s) erraram</div></div>
+          <div><span class="tbar"><b style="width:${p}%;background:${f[1]}"></b></span><span style="font-size:.8rem">${p}% · ${f[0]}</span></div><div class="recs">${recursosBtns(t, c)}</div></div>`; }).join("") : `<p class="muted">Nenhum aluno desta turma fez o Simulado SARESP ainda.</p>`) + `</div>`;
+    h += `<div class="card"><h2>Plano individual · ${esc(t)}</h2><div class="nota">🔴 tema errado no Simulado (prioridade para o SARESP) · 🟠 tema da recuperação semestral · ✅ já fez o quiz do tema na Missão com nota 7 ou mais. Clique no aluno para ver o Simulado questão por questão.</div><div class="scroll"><table><thead><tr><th>Aluno</th><th>Simulado SARESP</th><th>Reforçar para o SARESP</th><th>Recuperação semestral</th><th>Missão 3D</th><th></th></tr></thead><tbody>` +
+      linhas.map((l, i) => { const p = l.p, pc = l.sim ? Math.round(p.acertos / Math.max(1, p.validas) * 100) : null, f = pc == null ? null : FX(pc);
+        const tg = (c, cls) => `<span class="tg ${p.feito(c) ? "feito" : cls}" title="${esc(ITEM[c] ? ITEM[c].tema : c)}">${p.feito(c) ? "✅" : cls === "fraco" ? "🔴" : "🟠"} ${esc(ITEM[c] ? ITEM[c].tema : c)}</span>`;
+        let r = `<tr class="al" data-k="${esc(l.nome)}"><td><b>${esc(l.nome)}</b></td><td>${l.sim ? `<span class="fx" style="color:${f[1]}">${p.acertos}/${p.validas} · ${pc}%</span><br><span class="muted" style="font-size:.76rem">${f[0]}</span>` : `<span class="muted">não fez</span>`}</td>
+          <td>${l.sim ? (p.fracos.length ? p.fracos.map(c => tg(c, "fraco")).join("") : `<span class="ok">Acertou tudo!</span>`) : `<span class="muted">— (use a recuperação)</span>`}</td><td>${p.rec.map(c => tg(c, "rec")).join("")}</td>
+          <td>${p.mi.length ? `${p.mi.filter(x => x.concluido).length} concluída(s)<br><span class="muted" style="font-size:.76rem">${p.mi.filter(x => x.atividade === "simulado" && x.concluido).length ? "Simulado 3D: " + String(Math.max(...p.mi.filter(x => x.atividade === "simulado" && x.concluido).map(x => Number(x.nota)))).replace(".", ",") : ""}</span>` : `<span class="muted">ainda não usou</span>`}</td>
+          <td><button class="btn" data-msg="${esc(l.nome)}">💬 Copiar plano</button></td></tr>`;
+        if (aberto === l.nome) r += `<tr class="det"><td colspan="6">${l.sim ? l.sim.itens.map(it => { const q = Q[it.k] || {}; return `<div style="margin:4px 0">${it.ok === null ? "⏳" : it.ok ? '<span class="ok">✔</span>' : '<span class="er">✘</span>'} <b>Q${q.n}</b> · ${esc(ITEM[q.tema] ? ITEM[q.tema].tema : q.tema)} <span class="muted">(${esc(q.hab)})</span> — ${esc(q.desc)}${it.ok === false ? ` <span class="recs" style="display:inline-flex">${recursosBtns(t, q.tema)}</span>` : ""}</div>`; }).join("") : "Este aluno ainda não fez o Simulado SARESP. O plano dele usa os temas da recuperação semestral."}</td></tr>`;
+        return r; }).join("") + `</tbody></table></div></div>`;
+    app(h);
+    document.querySelectorAll("tr.al").forEach(tr => tr.onclick = e => { if (e.target.closest("button,a")) return; aberto = aberto === tr.dataset.k ? "" : tr.dataset.k; desenhar(); });
+    document.querySelectorAll("[data-msg]").forEach(b => b.onclick = e => { e.stopPropagation(); const l = linhas.find(x => x.nome === b.dataset.msg); copiar(mensagem(t, l.nome, l.p), "Plano copiado! Cole no WhatsApp ou no Classroom."); });
+  }
+  function csv() {
+    const t = turma, L = [["Turma", "Aluno", "Simulado: acertos", "Simulado: questões", "Simulado: %", "Faixa", "Reforçar (SARESP)", "Recuperação", "Temas já feitos na Missão"]];
+    const sims = DATA.simulado.filter(r => r.turma === t);
+    Array.from(new Set((ROSTER[t] || []).concat(sims.map(r => r.nome)))).sort((a, b) => a.localeCompare(b, "pt")).forEach(n => { const s = sims.filter(r => norm(r.nome) === norm(n)).sort((a, b) => String(b.criado).localeCompare(String(a.criado)))[0], p = plano(t, n, s), pc = s ? Math.round(p.acertos / Math.max(1, p.validas) * 100) : "";
+      L.push([t, n, s ? p.acertos : "", s ? p.validas : "", pc, s ? FX(pc)[0] : "não fez", p.fracos.map(c => ITEM[c] ? ITEM[c].tema : c).join(" | "), p.rec.map(c => ITEM[c] ? ITEM[c].tema : c).join(" | "), p.fracos.concat(p.rec).filter(p.feito).map(c => ITEM[c] ? ITEM[c].tema : c).join(" | ")]); });
+    const txt = "﻿" + L.map(l => l.map(c => '"' + String(c).replace(/"/g, '""') + '"').join(";")).join("\n");
+    const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([txt], { type: "text/csv;charset=utf-8" })); a.download = "plano-missao-saresp-" + cod(t) + ".csv"; a.click();
+  }
+  function sessao() { try { const k = Object.keys(localStorage).find(x => /^sb-.*-auth-token$/.test(x)); if (!k) return null; const v = JSON.parse(localStorage.getItem(k) || "null"); const s = v && (v.currentSession || v); return s && s.access_token ? s : null; } catch (e) { return null; } }
+  if (!TURMAS.includes(turma)) turma = TURMAS[0];
+  (async function () {
+    const ss = sessao();
+    if (!ss) return app('<div class="card">Entre primeiro no painel com o seu login de professor. <a href="/">Abrir o painel</a></div>');
+    if (ss.expires_at && ss.expires_at * 1000 < Date.now() + 30000) { app('<div class="card">Renovando o seu acesso…</div>'); return location.replace("/"); }
+    TOKEN = ss.access_token;
+    try { await carregar(); } catch (e) { app(`<div class="card">${/professor|login|401/i.test(e.message) ? 'Seu acesso expirou. <a href="/">Voltar ao painel</a>' : "Não foi possível carregar: " + esc(e.message)}</div>`); }
+  })();
+})();
+</script>
+<script src="/voltar-painel.js" data-sempre defer></script>
+</body>
+</html>

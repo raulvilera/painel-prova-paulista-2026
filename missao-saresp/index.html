@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/estilo.css?v=20261115d">
+  <link rel="stylesheet" href="css/estilo.css?v=20261115e">
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -77,6 +77,8 @@
       <input id="busca" type="search" placeholder="Buscar tema ou estrutura" autocomplete="off" aria-label="Buscar estrutura">
       <div id="sugestoes" hidden></div>
     </div>
+    <button class="aluno-chip" id="btnRel" title="Ver meu desempenho no Simulado SARESP e meu plano de estudo">📊 Meu relatório</button>
+    <a class="aluno-chip" id="btnProf" href="professor/" hidden title="Painel do professor (só aparece com o login do professor)">👩‍🏫 Professor</a>
     <button class="aluno-chip" id="btnAluno" title="Escolher ou trocar a turma e o aluno">👤 Entrar</button>
     <span class="xp-chip" id="xpChip" title="Sua patente e seus pontos de experiência (XP)"></span>
     <button class="icone" id="btnTema" title="Alternar tema claro/escuro" aria-label="Alternar tema"><svg class="ic"><use href="#i-tema"/></svg></button>
@@ -139,6 +141,7 @@
       <div class="conteudo-aba" id="aba-quiz" hidden></div>
       <div class="conteudo-aba" id="aba-desafio" hidden></div>
       <div class="conteudo-aba" id="aba-saiba" hidden></div>
+      <div class="conteudo-aba" id="aba-relatorio" hidden></div>
     </aside>
   </main>
 
@@ -146,12 +149,12 @@
     <button data-aba="explorar" class="ativo">Explorar</button><button data-aba="simular">Simular</button><button data-aba="quiz">Quiz</button><button data-aba="habilidades">Trilha</button><button data-aba="desafio">Desafio</button>
   </nav>
 
-  <script src="js/vendor/three.min.js?v=20261115d"></script>
-  <script src="js/vendor/OrbitControls.js?v=20261115d"></script>
-  <script src="js/dados.js?v=20261115d"></script>
-  <script src="js/modelos.js?v=20261115d"></script>
-  <script src="js/simulacoes.js?v=20261115d"></script>
-  <script src="js/app.js?v=20261115d"></script>
+  <script src="js/vendor/three.min.js?v=20261115e"></script>
+  <script src="js/vendor/OrbitControls.js?v=20261115e"></script>
+  <script src="js/dados.js?v=20261115e"></script>
+  <script src="js/modelos.js?v=20261115e"></script>
+  <script src="js/simulacoes.js?v=20261115e"></script>
+  <script src="js/app.js?v=20261115e"></script>
   <script src="/voltar-painel.js"></script>
 </body>
 </html>

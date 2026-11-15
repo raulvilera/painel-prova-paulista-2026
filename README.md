@@ -71,4 +71,7 @@ Pasta `missao-saresp/`, aberta pelo botão "🧊 Missão SARESP 3D" do menu de a
 
 - **Links por turma:** `/missao-saresp/turmas/` lista um link por turma (`/missao-saresp/?turma=7A`), com o conteúdo a estudar (SARESP e Recuperação), link direto de cada tema (`&tema=7-AE10`), mensagem pronta para WhatsApp/Classroom, QR Code e versão para imprimir. No link da turma, a turma já vem escolhida e o aluno só seleciona o nome.
 
+- **Painel do professor:** `/missao-saresp/professor/` (login do painel), via `GET /api/quiz?missao3dplano=1`. Cruza o **Simulado SARESP** de cada aluno (planilha do Apps Script) com os temas da Missão (`api/_missao3d.js`: cada questão do simulado → tema da trilha): temas mais frágeis da turma com os simuladores de cada um, plano individual (🔴 errou no Simulado, 🟠 recuperação, ✅ já fez o quiz do tema com nota ≥ 7), Simulado questão por questão, "Copiar plano" para enviar ao aluno e CSV.
+- **Meu relatório (aluno):** botão 📊 no simulador. Pede o login da plataforma (RA + dígito + senha, `aluno-acesso.js`) só nessa hora e lê `GET /api/individual?acao=missao3d`: nota e faixa no Simulado, questão por questão, plano de estudo com botões "Estudar" e histórico na Missão. Os temas do plano ganham ⭐ na lateral.
+
 Links úteis: `/missao-saresp/?ano=8` (trilha do 8º ano) e `/missao-saresp/?aba=quiz&ano=6` (simulado do 6º ano). Ao alterar os arquivos, troque o `?v=` em `missao-saresp/index.html`.
