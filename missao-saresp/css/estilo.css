@@ -257,3 +257,26 @@ dl.glossario dd { margin: 2px 0 0; color: var(--muted); font-size: .9rem; }
 a.btn { text-decoration: none; color: inherit; display: inline-flex; align-items: center; }
 @media (max-width: 900px) { .xp-chip small { display: none; } }
 @media (max-width: 560px) { .xp-chip { padding: 4px 8px; font-size: .72rem; } }
+/* entrada (turma e nome) */
+#entrada { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 16px; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(6px); }
+#entrada[hidden] { display: none; }
+.entrada-box { width: min(440px, 100%); background: var(--card); border: 1px solid var(--borda); border-radius: 16px; padding: 22px; box-shadow: var(--sombra); }
+.entrada-box h2 { margin: 0 0 6px; }
+.entrada-box label { display: block; font-size: .82rem; color: var(--muted); margin: 12px 0 4px; }
+.entrada-box select { width: 100%; font: inherit; padding: 9px 10px; border-radius: 10px; border: 1px solid var(--borda); background: var(--card2); color: var(--txt); }
+.aluno-chip { display: inline-flex; align-items: center; gap: 6px; max-width: 260px; padding: 5px 12px; border-radius: 99px; border: 1px solid var(--borda); background: var(--card2); color: var(--txt); font: inherit; font-size: .8rem; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.aluno-chip:hover { border-color: var(--acento); }
+/* abas verticais de temas */
+.abas-v { display: grid; gap: 4px; }
+.abas-v .grupo { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 10px 2px 2px; }
+.abas-v .grupo:first-child { margin-top: 0; }
+.aba-v { display: flex; gap: 8px; align-items: flex-start; width: 100%; text-align: left; padding: 8px 10px; border: 1px solid var(--borda-suave); border-left: 4px solid var(--c, var(--acento)); border-radius: 10px; background: var(--card); color: var(--txt); font: inherit; cursor: pointer; }
+.aba-v:hover { border-color: var(--acento); }
+.aba-v.ativo { background: color-mix(in srgb, var(--acento) 16%, var(--card)); border-color: var(--acento); }
+.aba-v b { display: block; font-size: .86rem; font-weight: 500; }
+.aba-v small { color: var(--muted); font-size: .7rem; }
+.aba-v .pct { margin-left: auto; font-size: .7rem; font-weight: 700; color: var(--c); white-space: nowrap; }
+.recursos-v { display: grid; gap: 4px; padding: 4px 0 8px 12px; }
+.recursos-v .btn { justify-content: flex-start; text-align: left; font-size: .8rem; padding: 6px 10px; }
+.envio { font-size: .8rem; margin-top: 6px; }
+@media (max-width: 900px) { .aluno-chip { max-width: 130px; } }

@@ -65,4 +65,8 @@ Pasta `missao-saresp/`, aberta pelo botão "🧊 Missão SARESP 3D" do menu de a
 - **Quiz:** Simulado SARESP (12 questões) e Recuperação (3º e 4º bimestres), com as faixas de desempenho do painel.
 - **XP e patentes** (Recruta, Explorador, Cientista, Mentor), salvos só no aparelho. Nenhum dado de aluno é enviado.
 
+- **Turma e aluno:** ao abrir, o aluno escolhe a turma (6º A a 9º B) e o nome numa lista (nomes vindos de `/api/atividade-quimica`, só nº e nome). A lateral passa a mostrar, em abas verticais, os temas do ano da turma em dois grupos: SARESP e Recuperação semestral, cada um com atalhos para os modelos, simulações, simuladores externos e o quiz do tema.
+- **Resultados:** cada quiz (por tema, Simulado SARESP, Recuperação) e o Desafio são gravados pela função `missao3d_registrar` do Supabase (tabela `missao3d_resultado`, RLS sem políticas: só o servidor lê). A função só aceita alunos que existem na turma escolhida.
+- **Relatório do professor:** `/resultados/missao-saresp/` (login do painel), lido por `GET /api/quiz?missao3d=1`. Mostra, por turma, quem fez, notas, faixas, aproveitamento por tema e quem ainda não fez nada; exporta CSV.
+
 Links úteis: `/missao-saresp/?ano=8` (trilha do 8º ano) e `/missao-saresp/?aba=quiz&ano=6` (simulado do 6º ano). Ao alterar os arquivos, troque o `?v=` em `missao-saresp/index.html`.
