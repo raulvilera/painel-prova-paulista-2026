@@ -324,3 +324,16 @@ html, body { max-width: 100%; overflow-x: hidden; }
 @media (max-width: 380px) { #btnTema { display: none; } }
 @media (max-width: 900px) { #btnAluno .al-txt { display: none; } #btnAluno { justify-content: center; } }
 #btnProf[hidden] { display: none !important; }
+/* notebook (até 1500 px): o topo precisa mostrar todas as abas */
+.topo .abas { min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.topo .abas::-webkit-scrollbar { display: none; }
+@media (min-width: 901px) and (max-width: 1500px) {
+  .topo { gap: 8px; }
+  .topo .aba { padding-left: 9px; padding-right: 9px; font-size: .88rem; }
+  .busca-wrap input { width: 130px; }
+  .marca small { display: none; }
+  #btnAluno { max-width: 130px; }
+  .xp-chip .xp-nome { display: none; }
+}
+@media (min-width: 901px) and (max-width: 1200px) { .busca-wrap { display: none; } }
+.ver-todos { width: 100%; justify-content: center; margin-top: 6px; font-size: .82rem; }
