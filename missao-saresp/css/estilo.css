@@ -377,3 +377,16 @@ body.seq .layout { grid-template-columns: minmax(0, 1fr) 440px; }
 body.seq .fechar-painel { display: none !important; }
 .tag-foco { display: inline-block; margin-top: 4px; padding: 2px 10px; border-radius: 999px; background: color-mix(in srgb, #f97316 18%, transparent); color: #c2410c; font-size: .78rem; font-weight: 800; }
 [data-tema="escuro"] .tag-foco { color: #fdba74; }
+/* ===== sequência contínua: todos os temas um embaixo do outro ===== */
+body.seq-continua #aba-seq { padding-bottom: 40vh; }
+.seq-cab { position: sticky; top: -1px; z-index: 3; background: var(--bg2); padding: 10px 2px 8px; margin: -12px 0 6px; border-bottom: 1px solid var(--borda); }
+.seq-cab b { display: block; font-family: "Space Grotesk", sans-serif; font-size: 1.05rem; }
+.seq-cab small { color: var(--muted); font-size: .8rem; }
+.bloco { padding: 14px 0 22px; border-bottom: 2px dashed var(--borda); scroll-margin-top: 70px; }
+.bloco-cab h2 { margin: 0; font-family: "Space Grotesk", sans-serif; font-size: 1.25rem; }
+.bloco-cab small { display: block; color: var(--muted); font-size: .8rem; margin: 2px 0 4px; }
+.bloco.ativo .bloco-cab h2 { color: var(--acento); }
+.bloco-sim { margin: 8px 0; }
+.bloco-espera { padding: 14px; border: 1px dashed var(--borda); border-radius: 12px; color: var(--muted); font-size: .85rem; text-align: center; }
+.bloco-q .seq-q { margin-bottom: 10px; }
+.seq-q.respondida .opcao { cursor: default; }
