@@ -530,6 +530,26 @@
       `<p class="pop-f">${f.funcao}</p>${listaPop("📋 Características", f.carac || [f.desc], "c")}${listaPop("🧑‍🔬 O que o ser humano faz aqui", f.acoes, "h")}${f.curiosidade ? `<p class="pop-cur">💡 ${f.curiosidade}</p>` : ""}
        <div class="pop-nav"><button class="btn" data-pp="${ant}">‹ ${D.fichas[ant].nome}</button><button class="btn" data-pp="${prox}">${D.fichas[prox].nome} ›</button></div>`);
   }
+  /* quadros de grupo: simuladores (D.especSim) e temas sem modelo próprio (D.especTema) */
+  function popGrupo(g, sel, extra) {
+    if (!g) return;
+    const its = g.itens, cur = its.find(x => x.id === sel);
+    const chips = `<div class="chips">${its.map(x => `<button class="chip ${cur && x.id === cur.id ? "ativo" : ""}" data-pg="${x.id}"><span class="pop-cor" style="background:${x.cor}"></span>${x.nome}</button>`).join("")}</div>`;
+    let corpo;
+    if (!cur) corpo = `<p class="pop-f">${g.intro || "Escolha um item para ver suas <b>especificidades</b>."}</p>${chips}${extra || ""}`;
+    else { const i = its.indexOf(cur), ant = its[(i - 1 + its.length) % its.length], prox = its[(i + 1) % its.length];
+      corpo = `<p class="pop-f">${cur.funcao}</p>${listaPop("📋 Características", cur.carac, "c")}${listaPop("🧑‍🔬 O que o ser humano faz", cur.acoes, "h")}${cur.cur ? `<p class="pop-cur">💡 ${cur.cur}</p>` : ""}
+        <div class="pop-nav"><button class="btn" data-pg="${ant.id}">‹ ${ant.nome}</button><button class="btn" data-pg="${prox.id}">${prox.nome} ›</button></div><button class="btn link pop-voltar" data-pg="">☰ Todos os itens</button>${extra || ""}`; }
+    popAbrir(`${g.em || ""} ${cur ? `<span class="pop-cor" style="background:${cur.color || cur.cor}"></span>${cur.nome}` : g.titulo}`, corpo);
+    POP.el.querySelectorAll("[data-pg]").forEach(b => b.onclick = () => popGrupo(g, b.dataset.pg, extra));
+    ligarExtra();
+  }
+  function ligarExtra() { const b = POP.el && POP.el.querySelector("[data-popsim]"); if (b) b.onclick = () => popSim(b.dataset.popsim); const t = POP.el && POP.el.querySelector("[data-poptema]"); if (t) t.onclick = () => popTema(t.dataset.poptema); }
+  function popSim(id, sel) { const g = D.especSim && D.especSim[id]; if (!g) return; const tema = SEQ && SEQ.ativo && SEQ.passos[SEQ.ativoK] && SEQ.passos[SEQ.ativoK].h ? SEQ.passos[SEQ.ativoK].h.cod : null;
+    popGrupo(g, sel, tema && D.especTema && D.especTema[tema] ? `<button class="btn pop-extra" data-poptema="${tema}">📚 Sobre o tema: ${D.especTema[tema].titulo}</button>` : ""); }
+  function popTema(cod, sel) { const g = D.especTema && D.especTema[cod]; if (!g) return false;
+    const simId = est.modo === "sim" && est.simId && D.especSim && D.especSim[est.simId] ? est.simId : null;
+    popGrupo(g, sel, simId ? `<button class="btn pop-extra" data-popsim="${simId}">🧊 Sobre o simulador: ${D.especSim[simId].titulo}</button>` : ""); return true; }
   function popModelo(id) {
     const m = D.modelos.find(x => x.id === id); if (!m) return popEsconder();
     const ps = Object.keys(D.fichas).filter(k => D.fichas[k].modelo === id); if (!ps.length) return popEsconder();
@@ -629,6 +649,7 @@
     cam.near = 0.05; cam.updateProjectionMatrix(); ctl.minDistance = 2; ctl.maxDistance = 140;
     const caixa = new T.Box3().setFromObject(s.raiz); est.raio = caixa.getSize(new T.Vector3()).length() / 2;
     montarVistas(s.vistas); vista(s.vistas[0]);
+    if (!est.desafio) popSim(id);
   }
 
   /* ------------------------------ HABILIDADES ------------------------------ */
@@ -940,6 +961,7 @@
     temaAtivo = temaAtivo === cod ? "" : cod; montarTemasLateral(); if (!temaAtivo) return;
     let h = null; D.trilha.forEach(t => t.itens.forEach(x => { if (x.cod === cod) h = x; }));
     if (h.r.sim) abrirSim(h.r.sim); else if (h.r.modelo) { carregarModelo(h.r.modelo); trocarAba("explorar", true); } else { trocarAba("habilidades"); destacarHab(cod); }
+    popTema(cod);
   }
   function abrirTemaLink() { if (TEMA_LINK && D.trilha.some(t => t.itens.some(x => x.cod === TEMA_LINK)) && TEMA_LINK[0] === anoAtual() && temaAtivo !== TEMA_LINK) abrirTema(TEMA_LINK); }
   function aplicarTurma() {
@@ -1089,6 +1111,7 @@
     const r = p.h.r;
     if (r.sim) { abrirSim(r.sim); const c = $("#cartaoSim"); if (c) slot.appendChild(c); }
     else { carregarModelo(r.modelo || "sistema"); info0.classList.add("bloco-info"); slot.appendChild(info0); }
+    popTema(p.h.cod);
     trocarAba("seq", true);
   }
   function irPasso(k) { const b = $(`#seqLista .bloco[data-k="${k}"]`); if (b) b.scrollIntoView({ behavior: "smooth", block: "start" }); }

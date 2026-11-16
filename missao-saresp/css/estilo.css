@@ -415,3 +415,6 @@ body.seq-continua #aba-seq { padding-bottom: 40vh; }
 .pop .chips .chip { font-size: .78rem; }
 .lista-esp { margin: 0 0 6px; padding-left: 18px; } .lista-esp li { margin: 3px 0; }
 @media (max-width: 860px) { .pop { width: calc(100% - 12px); max-height: 42%; font-size: .8rem; } .pop.min { width: 200px; } }
+.pop .chip.ativo { outline: 2px solid var(--acento); }
+.pop-voltar { width: 100%; justify-content: center; margin-top: 6px; font-size: .78rem; }
+.pop-extra { width: 100%; justify-content: center; margin-top: 8px; font-size: .78rem; white-space: normal; text-align: center; }
