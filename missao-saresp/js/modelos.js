@@ -581,6 +581,178 @@
     }
   };
 
+
+  /* =================== CORPO HUMANO (base translúcida para os sistemas) =================== */
+  function corpoBase(raiz) {
+    const mc = mat(0x93c5fd, { op: .16, rough: .3, dw: false, side: T.DoubleSide }), g = new T.Group();
+    const perfil = [[0, 2.2], [.95, 2.3], [1.15, 3.2], [1.0, 4.4], [.95, 5.3], [1.35, 6.8], [1.25, 7.3], [.45, 7.6], [.32, 7.9], [0, 7.95]].map(([x, y]) => new T.Vector2(x, y));
+    g.add(malha(new T.LatheGeometry(perfil, 64), mc, null, null, [1, 1, .55]));
+    g.add(malha(new T.SphereGeometry(.85, 40, 30), mc, V(0, 8.75, 0), null, [.88, 1.1, 1]));
+    [-1, 1].forEach(s => { g.add(malha(new T.CapsuleGeometry(.28, 3, 10, 20), mc, V(s * 1.6, 5.4, 0), [0, 0, s * .12])); g.add(malha(new T.CapsuleGeometry(.4, 3.4, 10, 20), mc, V(s * .52, .3, 0))); });
+    g.traverse(o => { if (o.isMesh) { o.userData.semCaixa = false; o.raycast = () => { }; } });
+    raiz.add(g); return g;
+  }
+  M.endocrino = {
+    vistas: [["Corpo inteiro", [0, 5.5, 15], [0, 5.4, 0]], ["Cabeça e pescoço", [0, 8.2, 5], [0, 8.1, 0]], ["Abdômen", [0, 4.4, 6], [0, 4.4, 0]]],
+    construir() {
+      const m = novoModelo(); corpoBase(m.raiz);
+      m.raiz.add(malha(deformar(new T.SphereGeometry(.68, 48, 36), .03, 6), mat(0xf9a8d4, { op: .35, dw: false }), V(0, 8.85, 0), null, [1, .8, 1.05]));   // encéfalo
+      [-1, 1].forEach(s => m.raiz.add(malha(deformar(new T.SphereGeometry(.26, 32, 24), .01, 8), mat(0x9f1239, { rough: .4 }), V(s * .62, 4.55, -.25), [0, 0, s * .3], [.7, 1.2, .6])));   // rins (referência)
+      m.parte("hipofise", malha(new T.SphereGeometry(.13, 32, 24), mat(0xa855f7, { emis: 0x7e22ce, ei: .5 }), V(0, 8.45, .12)), V(1.6, 9.3, 0));
+      const tir = new T.Group(), mt = mat(0x3b82f6, { rough: .35 }); [-1, 1].forEach(s => tir.add(malha(new T.SphereGeometry(.17, 32, 24), mt, V(s * .17, 7.55, .3), [0, 0, s * .4], [.75, 1.3, .6]))); tir.add(malha(new T.CapsuleGeometry(.06, .2, 8, 16), mt, V(0, 7.5, .33), [0, 0, Math.PI / 2]));
+      m.parte("tireoide", tir, V(1.8, 7.7, 0));
+      const sup = new T.Group(); [-1, 1].forEach(s => sup.add(malha(new T.ConeGeometry(.18, .28, 24), mat(0xf97316, { rough: .4 }), V(s * .6, 4.95, -.25), [0, 0, -s * .2])));
+      m.parte("suprarrenais", sup, V(-2.2, 5.3, 0));
+      m.parte("pancreas", malha(new T.CapsuleGeometry(.14, 1.0, 12, 24), mat(0xfacc15, { rough: .4 }), V(.15, 4.85, .15), [0, 0, Math.PI / 2 - .2]), V(2.3, 4.6, 0));
+      const gon = new T.Group(); [-1, 1].forEach(s => gon.add(malha(new T.SphereGeometry(.16, 32, 24), mat(0xef4444, { rough: .4 }), V(s * .5, 2.95, .15), null, [1.3, .9, .9])));
+      m.parte("gonadas", gon, V(-2.2, 2.7, 0));
+      return m;
+    }
+  };
+  M.digestorio = {
+    vistas: [["Tronco", [0, 5.3, 12], [0, 5.2, 0]], ["Pulmões", [0, 6.5, 6], [0, 6.4, 0]], ["Abdômen", [0, 4, 6], [0, 4, 0]]],
+    construir() {
+      const m = novoModelo(); corpoBase(m.raiz);
+      const pul = new T.Group(), mp = mat(0xf472b6, { op: .75, rough: .45 }); [-1, 1].forEach(s => pul.add(malha(deformar(new T.SphereGeometry(.62, 48, 36), .04, 4), mp, V(s * .68, 6.5, 0), null, [.95, 1.45, .7])));
+      m.parte("pulmoes", pul, V(-2.4, 6.9, 0));
+      const tra = new T.Group(), mtr = mat(0xe5e7eb, { rough: .35 }); tra.add(tubo([V(0, 8.0, .1), V(0, 7.3, .05), V(0, 6.95, 0)], .1, mtr, false, 20));
+      [-1, 1].forEach(s => { tra.add(tubo([V(0, 6.95, 0), V(s * .35, 6.7, 0), V(s * .6, 6.5, 0)], .07, mtr, false, 20)); for (let k = 0; k < 4; k++) tra.add(tubo([V(s * .6, 6.5, 0), V(s * (.7 + k * .05), 6.1 + k * .25, (k - 1.5) * .1)], .03, mtr, false, 8)); });
+      for (let k = 0; k < 6; k++) tra.add(malha(new T.TorusGeometry(.105, .02, 6, 24), mtr, V(0, 7.25 + k * .12, .05), [Math.PI / 2, 0, 0]));
+      m.parte("traqueia", tra, V(1.6, 7.6, 0));
+      const dia = malha(new T.SphereGeometry(1.15, 48, 16, 0, Math.PI * 2, 0, .9), mat(0xdc2626, { op: .6, side: T.DoubleSide, dw: false }), V(0, 4.95, 0), null, [1, .55, .6]); m.parte("diafragma", dia, V(-2.4, 5.5, 0));
+      m.parte("esofago", tubo([V(.02, 7.9, -.05), V(.05, 6.9, -.15), V(.15, 6.0, -.1), V(.3, 5.55, .05)], .07, mat(0xfda4af, { rough: .4 }), false, 40), V(1.8, 6.2, 0));
+      m.parte("figado", malha(deformar(new T.SphereGeometry(.6, 48, 36), .03, 4), mat(0x92400e, { rough: .4 }), V(-.45, 5.15, .2), [0, 0, -.25], [1.6, .65, .8]), V(-2.4, 4.6, 0));
+      m.parte("estomago", malha(deformar(new T.SphereGeometry(.45, 48, 36), .02, 5), mat(0xfb7185, { rough: .4 }), V(.55, 5.05, .25), [0, 0, .6], [1.25, .8, .7]), V(2.3, 5.1, 0));
+      m.parte("intestino_grosso", tubo([V(.6, 2.85, .2), V(-1.0, 2.95, .25), V(-1.05, 4.4, .25), V(0, 4.55, .3), V(1.05, 4.4, .25), V(1.05, 3.0, .25), V(.4, 2.6, .2), V(0, 2.35, .1)], .2, mat(0xd97706, { rough: .45 }), false, 160), V(2.4, 3.6, 0));
+      m.parte("intestino_delgado", novelo(.6, 70, 21, .09, mat(0xfda4af, { rough: .4 })), V(-2.3, 3.2, 0));
+      m.partes.intestino_delgado[0].position.set(0, 3.55, .35); m.partes.intestino_delgado[0].scale.set(1.1, .8, .5);
+      let t = 0;
+      return Object.assign(m, { atualizar(dt) { t += dt; const k = 1 + .06 * Math.sin(t * 1.6); pul.scale.set(k, k, k); dia.position.y = 4.95 - .12 * Math.sin(t * 1.6); } });
+    }
+  };
+  /* =================== MÁQUINAS SIMPLES =================== */
+  M.maquinas = {
+    vistas: [["Todas", [0, 9, 22], [1, 1, 0]], ["Alavanca e rampa", [-6, 4, 10], [-6, 1, 0]], ["Polia e roda", [7, 4, 10], [7, 1.5, 0]]],
+    construir() {
+      const m = novoModelo(), madeira = mat(0xb45309, { rough: .6 }), metal = mat(0x94a3b8, { metal: .85, rough: .25 }), pedra = mat(0x78716c, { rough: .9 });
+      const tMad = TX.madeira().clone(); tMad.needsUpdate = true; tMad.wrapS = tMad.wrapT = T.RepeatWrapping; tMad.repeat.set(1 / 26, 1 / 12); tMad.offset.set(.5, .5);
+      m.raiz.add(malha(caixaRedonda(26, 12, .5, .2), matT({ map: tMad, roughness: .6 }), V(1, -.3, 0), [-Math.PI / 2, 0, 0]));
+      // alavanca
+      const ala = new T.Group(); ala.position.set(-9, 0, -1.5);
+      ala.add(malha(new T.CylinderGeometry(.6, .6, 1, 3), mat(0x475569, { rough: .5 }), V(0, .45, 0), [Math.PI / 2, 0, Math.PI]));
+      const tabua = new T.Group(); tabua.position.set(0, 1, 0); ala.add(tabua);
+      tabua.add(malha(new T.BoxGeometry(6, .16, .7), madeira, V(.8, 0, 0)));
+      tabua.add(malha(deformar(new T.IcosahedronGeometry(.6, 3), .1, 2), pedra, V(-1.6, .55, 0)));
+      tabua.add(malha(new T.ConeGeometry(.25, .5, 16), mat(0xef4444), V(3.5, .45, 0), [Math.PI, 0, 0]));   // força aplicada
+      m.parte("alavanca", ala, V(-9, 3.4, -1.5));
+      // plano inclinado
+      const sh = new T.Shape(); sh.moveTo(0, 0); sh.lineTo(5, 0); sh.lineTo(5, 2); sh.closePath();
+      const rampa = new T.Group(); rampa.position.set(-4.5, 0, -1.5);
+      const gR = new T.ExtrudeGeometry(sh, { depth: 1.6, bevelEnabled: false }); gR.translate(0, 0, -.8); rampa.add(malha(gR, mat(0x65a30d, { rough: .6 })));
+      const caixa = malha(new T.BoxGeometry(.7, .7, .7), madeira); rampa.add(caixa);
+      m.parte("plano", rampa, V(-2, 3, -1.5));
+      // polia
+      const pol = new T.Group(); pol.position.set(4, 0, -1.5);
+      [-1, 1].forEach(s => pol.add(malha(new T.CylinderGeometry(.1, .1, 4.4, 16), metal, V(s * .9, 2.2, 0))));
+      pol.add(malha(new T.CylinderGeometry(.08, .08, 2, 16), metal, V(0, 4.3, 0), [0, 0, Math.PI / 2]));
+      const roldana = new T.Group(); roldana.position.set(0, 4.3, 0); pol.add(roldana);
+      roldana.add(malha(new T.TorusGeometry(.5, .1, 16, 48), mat(0xf59e0b, { metal: .6, rough: .3 })));
+      for (let k = 0; k < 4; k++) roldana.add(malha(new T.BoxGeometry(.06, .9, .06), metal, null, [0, 0, k * Math.PI / 4]));
+      const corda1 = malha(new T.CylinderGeometry(.03, .03, 1, 8), mat(0xfef3c7), null), corda2 = corda1.clone(); pol.add(corda1, corda2);
+      const peso = malha(new T.BoxGeometry(.7, .7, .7), mat(0x334155, { metal: .5, rough: .3 })); pol.add(peso);
+      const mao = malha(new T.SphereGeometry(.18, 16, 12), mat(0xf5d0a9)); pol.add(mao);
+      m.parte("polia", pol, V(4, 5.6, -1.5));
+      // roda e eixo
+      const roda = new T.Group(); roda.position.set(9.5, 0, -1.5);
+      roda.add(malha(new T.BoxGeometry(.3, 2.2, .3), madeira, V(-.9, 1.1, 0))); roda.add(malha(new T.BoxGeometry(.3, 2.2, .3), madeira, V(.9, 1.1, 0)));
+      const giro = new T.Group(); giro.position.set(0, 2.1, 0); roda.add(giro);
+      giro.add(malha(new T.CylinderGeometry(.12, .12, 2.4, 16), metal, null, [0, 0, Math.PI / 2]));
+      const aro = new T.Group(); aro.position.set(1.3, 0, 0); giro.add(aro);
+      aro.add(malha(new T.TorusGeometry(1.1, .09, 12, 64), mat(0x0ea5e9, { metal: .4, rough: .3 }), null, [0, Math.PI / 2, 0]));
+      for (let k = 0; k < 6; k++) aro.add(malha(new T.BoxGeometry(.05, 2.1, .05), metal, null, [k * Math.PI / 6, 0, 0]));
+      m.parte("roda", roda, V(10.5, 4.2, -1.5));
+      // cunha e parafuso (na frente)
+      const cun = new T.Group(); cun.position.set(-6, 0, 3);
+      cun.add(malha(new T.CylinderGeometry(.9, .9, 2.4, 32), madeira, V(0, .9, 0), [0, 0, Math.PI / 2]));
+      const shc = new T.Shape(); shc.moveTo(-.35, 0); shc.lineTo(.35, 0); shc.lineTo(0, -1.1); shc.closePath();
+      const gC = new T.ExtrudeGeometry(shc, { depth: .8, bevelEnabled: false }); gC.translate(0, 0, -.4); cun.add(malha(gC, metal, V(0, 2.4, 0)));
+      m.parte("cunha", cun, V(-7.5, 2.8, 3));
+      const par = new T.Group(); par.position.set(5, 0, 3); const rosca = new T.Group(); rosca.position.y = 1.2; par.add(rosca);
+      rosca.add(malha(new T.CylinderGeometry(.22, .22, 2.4, 24), metal)); rosca.add(malha(new T.CylinderGeometry(.5, .5, .2, 6), metal, V(0, 1.25, 0)));
+      { const pts = []; for (let i = 0; i <= 8 * 24; i++) { const a = i / 24 * Math.PI * 2; pts.push(V(Math.cos(a) * .27, -1.1 + i / (8 * 24) * 2.2, Math.sin(a) * .27)); } rosca.add(tubo(pts, .05, metal, false, 400)); }
+      m.parte("parafuso", par, V(6.6, 3, 3));
+      let t = 0;
+      return Object.assign(m, { atualizar(dt) { t += dt;
+        tabua.rotation.z = .18 * Math.sin(t * .9);
+        const p = (Math.sin(t * .6) + 1) / 2; caixa.position.set(.6 + p * 3.6, .35 + p * 1.45 + .02, 0); caixa.rotation.z = Math.atan2(2, 5);
+        roldana.rotation.z = -t * 1.2; const yP = .6 + 1.6 * p; peso.position.set(.5, yP, 0); corda1.position.set(.5, (yP + .35 + 4.3) / 2, 0); corda1.scale.y = 4.3 - yP - .35;
+        const yM = 3.6 - 1.6 * p; mao.position.set(-.5, yM, 0); corda2.position.set(-.5, (yM + 4.3) / 2, 0); corda2.scale.y = 4.3 - yM;
+        giro.rotation.x = t; rosca.rotation.y = t * 1.5; rosca.position.y = 1.2 - .25 * ((t * .2) % 1); } });
+    }
+  };
+  /* =================== VACINA E SISTEMA IMUNOLÓGICO =================== */
+  M.vacina = {
+    vistas: [["Geral", [0, 2, 20], [0, 1, 0]], ["Anticorpos", [1, 2, 8], [1, 1.5, 0]]],
+    construir() {
+      const m = novoModelo();
+      const ser = new T.Group(); ser.position.set(-7.5, 2.5, 0); ser.rotation.z = -.35;
+      ser.add(malha(new T.CylinderGeometry(.5, .5, 3.2, 40, 1, true), mat(0xe0f2fe, { op: .35, rough: .1, side: T.DoubleSide, dw: false }), null, [0, 0, Math.PI / 2]));
+      ser.add(malha(new T.CylinderGeometry(.44, .44, 1.9, 32), mat(0x7dd3fc, { op: .55, dw: false }), V(.55, 0, 0), [0, 0, Math.PI / 2]));
+      ser.add(malha(new T.CylinderGeometry(.46, .46, .15, 32), mat(0x334155), V(-.45, 0, 0), [0, 0, Math.PI / 2]));
+      ser.add(malha(new T.CylinderGeometry(.08, .08, 1.6, 12), mat(0xe5e7eb), V(-1.3, 0, 0), [0, 0, Math.PI / 2]));
+      ser.add(malha(new T.BoxGeometry(.1, .9, .9), mat(0xe5e7eb), V(-2.1, 0, 0)));
+      ser.add(malha(new T.CylinderGeometry(.03, .01, 1.4, 8), metal(), V(2.3, 0, 0), [0, 0, Math.PI / 2]));
+      [[.2, .1], [.8, -.12], [1.2, .15]].forEach(([x, y]) => { const v = vírusMini(.13, 0xa7f3d0); v.position.set(x, y, 0); ser.add(v); });
+      m.parte("vacina", ser, V(-8, 4.6, 0));
+      const ant = new T.Group(); [[-2.6, 3.4, .5], [-2, 1.4, -.6], [-3.4, 1.8, .8]].forEach(([x, y, z]) => { const v = vírusMini(.5, 0x86efac); v.position.set(x, y, z); ant.add(v); });
+      m.parte("antigeno", ant, V(-3.5, 4.9, 0));
+      const lin = celulaBola(1.5, 0xe2e8f0, 0x7c3aed, .95, V(.2, .1, .3), .6); lin.position.set(2, 1, 0); m.parte("linfocito", lin, V(3, 3.4, 0));
+      for (let i = 0; i < 40; i++) { const n = V(Math.random() - .5, Math.random() - .5, Math.random() - .5).normalize(); const b = malha(new T.SphereGeometry(.08, 8, 6), mat(0xcbd5e1), n.multiplyScalar(1.52)); lin.add(b); }
+      const acs = new T.Group(), mA = mat(0xfacc15, { rough: .35 }); const lista = [];
+      for (let i = 0; i < 7; i++) { const a = anticorpoGeo(.22, mA); const ang = i / 7 * Math.PI * 2; a.position.set(-.5 + Math.cos(ang) * 1.6, 2.2 + Math.sin(ang) * 1.3, Math.sin(ang * 2) * .6); a.rotation.z = ang; acs.add(a); lista.push(a); }
+      m.parte("anticorpos", acs, V(-.4, 4.4, 0));
+      const mem = celulaBola(.9, 0x5eead4, 0x0f766e, .55, V(.1, 0, .2), .7); mem.position.set(6, -1.2, 0); mem.add(brilhoSprite(0x5eead4, 4, .5)); m.parte("memoria", mem, V(7.4, .6, 0));
+      let t = 0;
+      return Object.assign(m, { atualizar(dt) { t += dt; ant.rotation.y += dt * .3; lista.forEach((a, i) => { a.rotation.y += dt * (.5 + i * .05); a.position.y += Math.sin(t * 1.4 + i) * .002; }); lin.rotation.y += dt * .15; } });
+      function metal() { return mat(0xcbd5e1, { metal: .9, rough: .2 }); }
+    }
+  };
+
+  /* =================== ESTADOS FÍSICOS DA MATÉRIA =================== */
+  M.estados = {
+    vistas: [["Os três estados", [0, 3, 17], [0, 1.2, 0]], ["Sólido", [-5.5, 2, 6], [-5.5, 1.2, 0]], ["Gasoso", [5.5, 2, 6], [5.5, 1.2, 0]]],
+    construir() {
+      const m = novoModelo(), R = rng(9), parts = [];
+      const caixa = (x, cor) => { const g = new T.Group(); g.position.set(x, 0, 0); g.add(malha(new T.BoxGeometry(3.2, 3.2, 3.2), mat(0xe0f2fe, { op: .12, side: T.DoubleSide, dw: false, rough: .1 }), V(0, 1.6, 0))); const ar = new T.LineSegments(new T.EdgesGeometry(new T.BoxGeometry(3.2, 3.2, 3.2)), new T.LineBasicMaterial({ color: cor })); ar.position.y = 1.6; g.add(ar); g.add(malha(new T.CylinderGeometry(1.4, 1.6, .25, 48), mat(0x334155, { metal: .4, rough: .4 }), V(0, -.13, 0))); return g; };
+      const geoP = new T.SphereGeometry(.2, 24, 18);
+      // sólido: rede organizada vibrando
+      const sol = caixa(-5.5, 0x3b82f6), mS = mat(0x3b82f6, { rough: .3 });
+      for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) for (let k = 0; k < 4; k++) { const b = malha(geoP, mS, V(-1.05 + i * .7, .45 + j * .7, -1.05 + k * .7)); b.userData.base = b.position.clone(); sol.add(b); parts.push({ b, tipo: 0 }); }
+      m.parte("solido", sol, V(-5.5, 4, 0));
+      // líquido: partículas juntas no fundo, deslizando
+      const liq = caixa(0, 0x0ea5e9), mL = mat(0x0ea5e9, { rough: .25 });
+      liq.add(malha(new T.BoxGeometry(3.1, 1.5, 3.1), mat(0x7dd3fc, { op: .25, dw: false }), V(0, .78, 0)));
+      for (let i = 0; i < 48; i++) { const b = malha(geoP, mL, V((R() - .5) * 2.6, .25 + R() * 1.2, (R() - .5) * 2.6)); liq.add(b); parts.push({ b, tipo: 1, v: V(R() - .5, 0, R() - .5).multiplyScalar(.8) }); }
+      m.parte("liquido", liq, V(0, 4, 0));
+      // gasoso: poucas partículas, rápidas, ocupando tudo
+      const gas = caixa(5.5, 0xa855f7), mG = mat(0xa855f7, { rough: .25, emis: 0x7e22ce, ei: .2 });
+      for (let i = 0; i < 18; i++) { const b = malha(geoP, mG, V((R() - .5) * 2.6, .3 + R() * 2.6, (R() - .5) * 2.6)); gas.add(b); parts.push({ b, tipo: 2, v: V(R() - .5, R() - .5, R() - .5).normalize().multiplyScalar(2.6) }); }
+      m.parte("gasoso", gas, V(5.5, 4, 0));
+      // setas das mudanças de estado
+      const seta = (x1, x2, y, cor) => { const g = new T.Group(); g.add(tubo([V(x1, y, 1.9), V((x1 + x2) / 2, y + .5, 1.9), V(x2, y, 1.9)], .06, mat(cor, { emis: cor, ei: .3 }), false, 30)); g.add(malha(new T.ConeGeometry(.18, .4, 16), mat(cor), V(x2, y, 1.9), [0, 0, x2 > x1 ? -Math.PI / 2 - .3 : Math.PI / 2 + .3])); return g; };
+      const mud = new T.Group(); mud.add(seta(-3.6, -1.9, 3.5, 0xef4444)); mud.add(seta(1.9, 3.6, 3.5, 0xef4444)); mud.add(seta(-1.9, -3.6, -.6, 0x3b82f6)); mud.add(seta(3.6, 1.9, -.6, 0x3b82f6));
+      m.parte("mudancas", mud, V(0, -1.3, 2));
+      let t = 0;
+      return Object.assign(m, { atualizar(dt) { t += dt; dt = Math.min(dt, .05);
+        parts.forEach((p, i) => { const b = p.b;
+          if (p.tipo === 0) b.position.set(b.userData.base.x + Math.sin(t * 18 + i) * .03, b.userData.base.y + Math.cos(t * 15 + i * 1.3) * .03, b.userData.base.z + Math.sin(t * 13 + i * .7) * .03);
+          else { b.position.addScaledVector(p.v, dt); const lim = 1.35, yMax = p.tipo === 1 ? 1.4 : 2.95;
+            ["x", "z"].forEach(e => { if (Math.abs(b.position[e]) > lim) { p.v[e] *= -1; b.position[e] = Math.sign(b.position[e]) * lim; } });
+            if (p.tipo === 1) { p.v.y = 0; b.position.y = Math.max(.22, Math.min(yMax, b.position.y + Math.sin(t * 3 + i) * .004)); if (Math.random() < .01) p.v.set(Math.random() - .5, 0, Math.random() - .5).multiplyScalar(.8); }
+            else if (b.position.y < .22 || b.position.y > yMax) { p.v.y *= -1; b.position.y = Math.max(.22, Math.min(yMax, b.position.y)); } } }); } });
+    }
+  };
+
   window.MODELOS = M;
   window.GEO = { mat, malha, rng, fibonacci, orientar, deformar, tubo, novelo, hélice, vírusMini, anticorpoGeo, celulaBola, ruido, V, matT, terraHD, enfeitarTerra, luaHD, solHD, enfeitarSol, brilhoSprite, planetaHD, anelSaturno, caixaRedonda, pontos, nucleoHD, mitocondriaHD, golgiHD, cloroplastoHD };
 })();
