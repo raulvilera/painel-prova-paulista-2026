@@ -17,6 +17,8 @@ Object.keys(MAPA).forEach(k => { const m = META_SIM[k] || {}; QUESTOES[k] = { te
 const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim().toUpperCase();
 /* "6º Ano A (Lydia)" -> "6º Ano A" (mesma turma no banco de alunos) */
 const turmaBase = t => String(t || '').replace(/\s*\(.*\)\s*$/, '').trim();
+/* rótulo com a escola: "6º Ano A (Lydia)" = E.E. Lydia Kitz Moreira; sem rótulo = E.E. Wanda */
+const rotulo = t => turmaBase(t) + (/lydia/i.test(String(t || '')) ? ' (Lydia)' : '');
 
 /* Lê as respostas do Simulado SARESP na planilha (Apps Script) e devolve só o necessário:
    [{ turma, nome, criado, itens: [{ k, ok }] }] — ok = true/false (dissertativa: nota ≥ 0,5; sem nota ainda = null). */
@@ -31,9 +33,9 @@ async function simuladoEF() {
   } finally { clearTimeout(t); }
   if (!j || !j.ok) throw new Error('A planilha do Simulado respondeu: ' + String((j && j.erro) || 'erro'));
   return (j.rows || []).map(r => ({
-    turma: turmaBase(r.turma), nome: String(r.nome || '').trim(), criado: r.criado || '',
+    turma: rotulo(r.turma), nome: String(r.nome || '').trim(), criado: r.criado || '',
     itens: (r.itens || []).filter(i => MAPA[i.k]).map(i => ({ k: i.k, ok: i.tipo === 'dis' ? (i.nota == null ? null : Number(i.nota) >= 0.5) : !!i.acerto }))
   }));
 }
 
-module.exports = { MAPA, QUESTOES, simuladoEF, norm, turmaBase };
+module.exports = { MAPA, QUESTOES, simuladoEF, norm, turmaBase, rotulo };

@@ -52,8 +52,8 @@ nav a{color:var(--acento);font-weight:600;text-decoration:none;margin-left:14px}
 <script>
 (function () {
   const D = window.DADOS, $ = s => document.querySelector(s);
-  const TURMAS = ["6º Ano A", "6º Ano B", "6º Ano C", "7º Ano A", "7º Ano B", "8º Ano A", "8º Ano B", "9º Ano A", "9º Ano B"];
-  const cod = t => t[0] + t.slice(-1);   // "7º Ano A" -> "7A"
+  const TURMAS = ["6º Ano A (Lydia)", "6º Ano B (Lydia)", "6º Ano C (Lydia)", "6º Ano A", "6º Ano C", "7º Ano A", "7º Ano B", "8º Ano A", "8º Ano B", "9º Ano A", "9º Ano B"];
+  const cod = t => t[0] + t.replace(/\s*\(Lydia\)\s*$/, "").slice(-1) + (/Lydia/.test(t) ? "L" : "");   // "7º Ano A" -> "7A" · "6º Ano A (Lydia)" -> "6AL"
   const base = location.origin + "/missao-saresp/";
   const linkT = t => base + "?turma=" + cod(t), linkTema = (t, c) => linkT(t) + "&tema=" + encodeURIComponent(c);
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -74,7 +74,7 @@ nav a{color:var(--acento);font-weight:600;text-decoration:none;margin-left:14px}
   }
   function cartao(t) {
     const tr = D.trilha.find(x => x.ano === t[0]); const sar = tr.itens.filter(h => !h.rec), rec = tr.itens.filter(h => h.rec);
-    return `<section class="turma" data-t="${esc(t)}"><div class="topo"><div><h2>${esc(t)}</h2><div class="sub">${sar.length + rec.length} temas · ${rec.length} da recuperação semestral</div>
+    return `<section class="turma" data-t="${esc(t)}"><div class="topo"><div><h2>${esc(t)}</h2><div class="sub">${/Lydia/.test(t) ? "E.E. Lydia Kitz Moreira · manhã · " : t[0] === "6" ? "E.E. Wanda Mascagni de Sá · tarde · " : ""}${sar.length + rec.length} temas · ${rec.length} da recuperação semestral</div>
       <div class="link"><input readonly value="${esc(linkT(t))}" aria-label="Link da turma ${esc(t)}"><button class="btn prim" data-copia="${esc(linkT(t))}">📋 Copiar link</button><button class="btn" data-msg="${esc(t)}">💬 Copiar mensagem pronta</button><a class="btn" href="${esc(linkT(t))}" target="_blank" rel="noopener">Abrir como aluno</a><a class="btn" href="/resultados/missao-saresp/?turma=${encodeURIComponent(t)}">📊 Relatório</a></div></div>
       <div class="qr"><div data-qr="${esc(linkT(t))}"></div>Aponte a câmera do celular</div></div>
       <div class="cols"><div class="grupo sar"><h3>🎯 SARESP · revisão (1º e 2º bimestres)</h3>${sar.map(h => tema(t, h)).join("")}</div>
