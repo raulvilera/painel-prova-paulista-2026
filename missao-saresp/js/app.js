@@ -67,7 +67,7 @@
     est.vistaAtual = v; est.usuarioMoveu = false;
     const a = new T.Vector3(...v[2]); let p = ajustar(a, new T.Vector3(...v[1]));
     // vista geral: afasta a câmera até o modelo inteiro caber (deixando margem para os rótulos)
-    if (est.modo === "modelo" && est.esfera && MODELOS[est.modeloId].vistas[0] === v && est.modeloId !== "escala") {
+    if (est.modo === "modelo" && est.esfera && MODELOS[est.modeloId].vistas[0] === v && est.modeloId !== "escala" && !MODELOS[est.modeloId].semAjuste) {
       const vf = T.MathUtils.degToRad(cam.fov) / 2, hf = Math.atan(Math.tan(vf) * cam.aspect);
       const precisa = (est.esfera.radius + est.esfera.center.distanceTo(a)) / Math.sin(Math.min(vf, hf)) * (ehEstreita() && MODELOS[est.modeloId].rotulosNumerados ? .8 : .98); // com números não precisa de margem para nomes
       const d = p.distanceTo(a); if (precisa > d) p = p.clone().sub(a).multiplyScalar(precisa / d).add(a);
@@ -96,7 +96,7 @@
     est.mats = {}; est.visivel = {}; est.opac = {};
     $("#rotulos").innerHTML = ""; est.rotEls = [];
     $("#hud").hidden = true; $("#escalaInfo").hidden = true;
-    definirCorte(false, true);
+    definirCorte(false, true); popEsconder();
   }
 
   /* ------------------------------ MODELOS ------------------------------ */
@@ -130,6 +130,7 @@
     if (def.camadas) aplicarCamada(def.camadaInicial || 0, true);
     $("#secCorte").hidden = false;
     if (!semInfo) mostrarModeloInfo(id);
+    if (!est.desafio) popModelo(id);
   }
   function listarPartes() {
     const box = $("#listaPartes");
@@ -462,6 +463,7 @@
   function nomeModelo(id) { return (D.modelos.find(m => m.id === id) || {}).nome || id; }
   function mostrarInfo(p) {
     if (est.desafio) return;
+    popParte(p);
     trocarAba("explorar", true);
     const f = D.fichas[p];
     info.innerHTML = `
@@ -470,6 +472,8 @@
         <h2>${f.nome}</h2>
         <h4>Função</h4><p>${f.funcao}</p>
         <h4>Como é</h4><p>${f.desc}</p>
+        ${f.carac ? `<h4>Características</h4><ul class="lista-esp">${f.carac.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}
+        ${f.acoes ? `<h4>O que o ser humano faz aqui</h4><ul class="lista-esp">${f.acoes.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}
         ${f.curiosidade ? `<div class="destaque curioso"><b>Você sabia?</b> ${f.curiosidade}</div>` : ""}
         ${f.saude ? `<div class="destaque saude"><b>Saúde e prevenção:</b> ${f.saude}</div>` : ""}
         <h4>Na trilha SARESP</h4><div class="chips">${f.hab.map(c => `<button class="chip" data-hab="${c}">${rotHab(c)}</button>`).join("")}</div>
@@ -486,6 +490,50 @@
     $("#bIsolar").onclick = () => { Object.keys(est.mats).forEach(x => { est.visivel[x] = x === p; aplicarParte(x); }); listarPartes(); };
     $("#bTudo").onclick = mostrarTudo;
     ligarChips(info);
+  }
+  /* ---------- POP-UP DE ESPECIFICIDADES dentro do palco ----------
+     Fica num canto do simulador, pode ser arrastado para qualquer lugar (a posição fica guardada),
+     minimizado ou fechado. Mostra características e ações humanas da estrutura escolhida. */
+  const POP = { el: null, fechado: false };
+  const listaPop = (t, arr, cls) => arr && arr.length ? `<h5 class="${cls}">${t}</h5><ul>${arr.map(x => `<li>${x}</li>`).join("")}</ul>` : "";
+  function popCriar() {
+    if (POP.el) return POP.el;
+    const el = document.createElement("div"); el.id = "popInfo"; el.className = "pop"; el.hidden = true;
+    el.innerHTML = `<div class="pop-barra" title="Arraste para mudar o quadro de lugar"><span class="pop-pega" aria-hidden="true">⠿</span><b class="pop-tit"></b><button class="pop-b" data-a="min" title="Minimizar" aria-label="Minimizar">–</button><button class="pop-b" data-a="x" title="Fechar" aria-label="Fechar">✕</button></div><div class="pop-corpo"></div>`;
+    $(".palco-area").appendChild(el); POP.el = el;
+    el.querySelector('[data-a="min"]').onclick = () => { el.classList.toggle("min"); el.querySelector('[data-a="min"]').textContent = el.classList.contains("min") ? "▢" : "–"; popPos(popLer()); };
+    el.querySelector('[data-a="x"]').onclick = () => { el.hidden = true; POP.fechado = true; };
+    const barra = el.querySelector(".pop-barra"); let arr = null;
+    barra.addEventListener("pointerdown", e => { if (e.target.closest("button")) return; e.preventDefault(); barra.setPointerCapture(e.pointerId); arr = { x: e.clientX - el.offsetLeft, y: e.clientY - el.offsetTop }; el.classList.add("arrastando"); });
+    barra.addEventListener("pointermove", e => { if (!arr) return; colocar(e.clientX - arr.x, e.clientY - arr.y); });
+    const fim = () => { if (!arr) return; arr = null; el.classList.remove("arrastando"); const pa = el.parentElement, W = pa.clientWidth - el.offsetWidth, H = pa.clientHeight - el.offsetHeight; try { localStorage.setItem("ms3d_pop" + (innerWidth <= 860 ? "_m" : ""), JSON.stringify({ x: W > 0 ? el.offsetLeft / W : 0, y: H > 0 ? el.offsetTop / H : 0 })); } catch (e) { } };
+    barra.addEventListener("pointerup", fim); barra.addEventListener("pointercancel", fim);
+    barra.addEventListener("dblclick", () => { try { localStorage.removeItem("ms3d_pop" + (innerWidth <= 860 ? "_m" : "")); } catch (e) { } popPos(null); });
+    window.addEventListener("resize", () => { if (!el.hidden) popPos(popLer()); });
+    return el;
+  }
+  function colocar(x, y) { const el = POP.el, pa = el.parentElement, W = pa.clientWidth, H = pa.clientHeight; el.style.left = Math.max(4, Math.min(W - el.offsetWidth - 4, x)) + "px"; el.style.top = Math.max(4, Math.min(H - el.offsetHeight - 4, y)) + "px"; }
+  function popLer() { try { return JSON.parse(localStorage.getItem("ms3d_pop" + (innerWidth <= 860 ? "_m" : "")) || "null"); } catch (e) { return null; } }
+  // posição padrão: canto superior direito (computador) ou embaixo (celular), longe do centro do modelo
+  function popPos(pos) { const el = POP.el, pa = el.parentElement; requestAnimationFrame(() => { const W = pa.clientWidth - el.offsetWidth, H = pa.clientHeight - el.offsetHeight; if (pos) colocar(pos.x * W, pos.y * H); else if (innerWidth <= 860) colocar(W / 2, H - 6); else colocar(W - 10, 58); }); }
+  function popAbrir(tit, html) {
+    const el = popCriar(); if (POP.fechado && !html.forcar) { }
+    el.querySelector(".pop-tit").innerHTML = tit; el.querySelector(".pop-corpo").innerHTML = html; el.hidden = false; POP.fechado = false;
+    el.querySelectorAll("[data-pp]").forEach(b => b.onclick = () => selecionar(b.dataset.pp, true));
+    el.querySelector(".pop-corpo").scrollTop = 0; popPos(popLer());
+  }
+  function popEsconder() { if (POP.el) POP.el.hidden = true; }
+  function popParte(p) {
+    const f = D.fichas[p]; if (!f) return;
+    const ps = Object.keys(D.fichas).filter(k => D.fichas[k].modelo === f.modelo), i = ps.indexOf(p), ant = ps[(i - 1 + ps.length) % ps.length], prox = ps[(i + 1) % ps.length];
+    popAbrir(`<span class="pop-cor" style="background:${f.cor}"></span>${f.nome}`,
+      `<p class="pop-f">${f.funcao}</p>${listaPop("📋 Características", f.carac || [f.desc], "c")}${listaPop("🧑‍🔬 O que o ser humano faz aqui", f.acoes, "h")}${f.curiosidade ? `<p class="pop-cur">💡 ${f.curiosidade}</p>` : ""}
+       <div class="pop-nav"><button class="btn" data-pp="${ant}">‹ ${D.fichas[ant].nome}</button><button class="btn" data-pp="${prox}">${D.fichas[prox].nome} ›</button></div>`);
+  }
+  function popModelo(id) {
+    const m = D.modelos.find(x => x.id === id); if (!m) return popEsconder();
+    const ps = Object.keys(D.fichas).filter(k => D.fichas[k].modelo === id); if (!ps.length) return popEsconder();
+    popAbrir(`${m.em} ${m.nome}`, `<p class="pop-f">Toque em uma parte no simulador ou escolha abaixo para ver suas <b>especificidades</b>.</p><div class="chips">${ps.map(k => `<button class="chip" data-pp="${k}"><span class="pop-cor" style="background:${D.fichas[k].cor}"></span>${D.fichas[k].nome}</button>`).join("")}</div>`);
   }
   function partesIrmas(modelo, atual) {
     const ps = Object.keys(D.fichas).filter(k => D.fichas[k].modelo === modelo);
@@ -691,6 +739,7 @@
     $("#bIniDes").onclick = iniciarDesafio;
   }
   function iniciarDesafio() {
+    popEsconder();
     const anoD = typeof anoAtual === "function" ? anoAtual() : "", modsAno = D.modelos.filter(m => !anoD || new RegExp(anoD + "º").test(m.aula)).map(m => m.id);
     est.desafio = { fila: embaralhar(D.desafio.filter(id => modsAno.includes(D.fichas[id].modelo))).slice(0, 10), i: 0, pontos: 0, tent: 0, inicio: performance.now(), id: novoId(), resp: [] };
     rodada();

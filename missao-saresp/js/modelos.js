@@ -234,6 +234,68 @@
     }
   };
 
+  /* =================== CAMADAS DA ATMOSFERA =================== */
+  M.atmosfera = {
+    semAjuste: true,
+    vistas: [["Todas as camadas", [5.5, 7.6, 36], [5.5, 7, 0]], ["Perto do solo", [1, 2.4, 13], [1, 1.8, 0]], ["Espaço", [3, 11.5, 15], [2, 10.8, 0]]],
+    construir() {
+      const m = novoModelo(), R = 40, A = .22, Z = .7, mesoObjs = [];
+      const surf = x => -R + Math.sqrt(R * R - x * x), P = (x, h) => V(x, surf(x) + h, Z);
+      // planeta (curvatura da superfície) com brilho da atmosfera
+      const terra = terraHD(R); terra.position.set(0, -R, 0); terra.rotation.set(.2, 2.2, 0); terra.userData.semCaixa = true; m.raiz.add(terra);
+      const bAt = new T.Mesh(new T.SphereGeometry(R * 1.02, 96, 64), TX.materialAtmosfera(0x60a5fa, .8)); bAt.userData.semCaixa = true; bAt.raycast = () => { }; terra.add(bAt);
+      // fatia das camadas (espessuras exageradas para caber na tela)
+      function setor(h1, h2, cor, op) {
+        const sh = new T.Shape(), r1 = R + h1, r2 = R + h2;
+        sh.absarc(0, -R, r2, Math.PI / 2 - A, Math.PI / 2 + A, false); sh.absarc(0, -R, r1, Math.PI / 2 + A, Math.PI / 2 - A, true);
+        const g = new T.ExtrudeGeometry(sh, { depth: 2.4, bevelEnabled: true, bevelThickness: .08, bevelSize: .06, bevelSegments: 3, curveSegments: 96 }); g.translate(0, 0, -2.4);
+        const me = new T.Mesh(g, mat(cor, { op: op ?? .55, rough: .35, dw: false, side: T.DoubleSide })); return me;
+      }
+      const H = [0, 2.4, 5.6, 8.2, 11.2, 14.4];
+      const tro = setor(H[0] + .02, H[1], 0x7dd3fc, .45); m.parte("troposfera", tro, V(8.3, surf(8.3) + 1.2, 1));
+      const est = new T.Group(); est.add(setor(H[1], 3.9, 0x60a5fa, .5)); est.add(setor(4.6, H[2], 0x60a5fa, .5)); m.parte("estratosfera", est, V(8.3, surf(8.3) + 5.1, 1));
+      m.parte("ozonio", setor(3.9, 4.6, 0xf59e0b, .75), V(8.3, surf(8.3) + 4.25, 1));
+      m.parte("mesosfera", setor(H[2], H[3], 0x818cf8, .52), V(8.3, surf(8.3) + 6.9, 1));
+      m.parte("termosfera", setor(H[3], H[4], 0x9333ea, .45), V(8.3, surf(8.3) + 9.7, 1));
+      m.parte("exosfera", setor(H[4], H[5], 0x312e81, .4), V(8.3, surf(8.3) + 12.8, 1));
+      // --- troposfera: nuvens, avião, montanha e cidade
+      const nuvem = (x, h, k) => { const g = new T.Group(), mn = mat(0xffffff, { rough: .9 }); [[0, 0, 0, .5], [.45, .1, 0, .38], [-.45, .05, 0, .36], [.15, .3, 0, .34]].forEach(([a, b, c, r]) => g.add(malha(new T.SphereGeometry(r * k, 24, 18), mn, V(a * k, b * k, c)))); g.position.copy(P(x, h)); return g; };
+      [[-6, 1.2, 1.2], [-1.5, 1.5, 1], [4, 1.0, 1.3], [7.2, 1.7, .8]].forEach(a => tro.add(nuvem(...a)));
+      const aviao = new T.Group(), mAv = mat(0xf8fafc, { rough: .3, metal: .2 });
+      aviao.add(malha(new T.CapsuleGeometry(.14, 1.2, 8, 16), mAv, null, [0, 0, Math.PI / 2])); aviao.add(malha(new T.BoxGeometry(.35, .03, 1.5), mAv, V(.05, 0, 0))); aviao.add(malha(new T.BoxGeometry(.2, .35, .03), mAv, V(-.6, .18, 0))); aviao.add(malha(new T.BoxGeometry(.2, .02, .55), mAv, V(-.6, .04, 0)));
+      aviao.position.copy(P(-4, 2.15)); aviao.rotation.set(.35, 0, .05); tro.add(aviao);
+      tro.add(malha(new T.ConeGeometry(1.6, 1.5, 5), mat(0x78716c, { rough: .9, flat: true }), P(7, .55)));
+      tro.add(malha(new T.ConeGeometry(.55, .4, 5), mat(0xf8fafc, { rough: .6 }), P(7, 1.15)));
+      for (let i = 0; i < 6; i++) tro.add(malha(new T.BoxGeometry(.3, .3 + (i % 3) * .25, .3), mat(0x94a3b8, { rough: .6 }), P(-8 + i * .4, .2 + (i % 3) * .12)));
+      tro.add(malha(new T.SphereGeometry(.5, 20, 14), mat(0x6b7280, { op: .35, dw: false }), P(-6.6, .9)));   // fumaça/poluição
+      // --- estratosfera: balão meteorológico e jato
+      const balao = new T.Group(); balao.add(malha(new T.SphereGeometry(.45, 32, 24), mat(0xf8fafc, { rough: .2, op: .9 }), V(0, .5, 0))); balao.add(tubo([V(0, .05, 0), V(0, -.6, 0)], .01, mat(0x94a3b8), false, 4)); balao.add(malha(new T.BoxGeometry(.18, .14, .14), mat(0xf97316), V(0, -.65, 0))); balao.position.copy(P(-2.5, 4.9)); est.add(balao);
+      const jato = aviao.clone(); jato.scale.setScalar(.7); jato.position.copy(P(3.5, 2.7)); jato.rotation.set(.35, Math.PI, 0); est.add(jato);
+      // --- mesosfera: meteoros queimando
+      [[-6, 7.8, -.5], [-1, 7.3, -.6], [4.5, 7.6, -.45]].forEach(([x, h, a]) => { const ini = P(x, h), fim = ini.clone().add(V(Math.cos(a) * 1.8, Math.sin(a) * 1.8, 0)); const g = new T.Group(); g.add(tubo([ini, fim], .05, mat(0xfde68a, { emis: 0xf59e0b, ei: 1.5 }), false, 6)); const c = malha(new T.SphereGeometry(.13, 16, 12), mat(0xffffff, { emis: 0xfde047, ei: 2 }), fim); c.add(brilhoSprite(0xfbbf24, 1.3, .9)); g.add(c); m.parte("mesosfera", g); mesoObjs.push(g); });
+      // --- termosfera: aurora e Estação Espacial Internacional
+      const cv = document.createElement("canvas"); cv.width = 4; cv.height = 128; const gc = cv.getContext("2d"), gr = gc.createLinearGradient(0, 128, 0, 0); gr.addColorStop(0, "rgba(74,222,128,0)"); gr.addColorStop(.25, "rgba(74,222,128,.95)"); gr.addColorStop(.7, "rgba(45,212,191,.5)"); gr.addColorStop(1, "rgba(168,85,247,0)"); gc.fillStyle = gr; gc.fillRect(0, 0, 4, 128);
+      const tAur = new T.CanvasTexture(cv); tAur.encoding = T.sRGBEncoding;
+      const gA = new T.PlaneGeometry(6, 2.4, 60, 1), pA = gA.attributes.position; for (let i = 0; i < pA.count; i++) pA.setZ(i, Math.sin(pA.getX(i) * 1.6) * .35);
+      const aur = new T.Mesh(gA, new T.MeshBasicMaterial({ map: tAur, transparent: true, depthWrite: false, side: T.DoubleSide, blending: T.AdditiveBlending })); aur.position.copy(P(-5.5, 9.4)); aur.userData.semCaixa = true; m.raiz.add(aur);
+      const iss = new T.Group(), mPain = mat(0x1e3a8a, { metal: .5, rough: .25 }), mMod = mat(0xe5e7eb, { metal: .4, rough: .3 });
+      iss.add(malha(new T.BoxGeometry(2.4, .06, .06), mMod)); [-1.1, -.7, .7, 1.1].forEach(x => iss.add(malha(new T.BoxGeometry(.32, .02, .9), mPain, V(x, 0, 0))));
+      iss.add(malha(new T.CylinderGeometry(.09, .09, .9, 16), mMod, V(0, -.05, 0), [0, 0, Math.PI / 2])); iss.add(malha(new T.CylinderGeometry(.08, .08, .5, 16), mMod, V(0, -.05, .15), [Math.PI / 2, 0, 0]));
+      iss.position.copy(P(4, 9.9)); iss.rotation.set(.5, .3, 0); m.parte("termosfera", iss);
+      // --- exosfera: satélites
+      const sat = (x, h, cor) => { const g = new T.Group(); g.add(malha(new T.BoxGeometry(.35, .35, .35), mat(cor, { metal: .7, rough: .25 }))); [-1, 1].forEach(sx => g.add(malha(new T.BoxGeometry(.7, .02, .3), mPain, V(sx * .55, 0, 0)))); g.add(malha(new T.ConeGeometry(.12, .2, 16), mat(0xe5e7eb), V(0, -.27, 0), [Math.PI, 0, 0])); g.position.copy(P(x, h)); g.rotation.set(.4, .5, .1); return g; };
+      m.parte("exosfera", sat(-3, 12.6, 0xd4a017)); m.parte("exosfera", sat(5.5, 13.3, 0xcbd5e1));
+      // --- curva da temperatura (à direita da fatia)
+      const xT = t => 11.6 + (t <= 50 ? t * .04 : 2 + Math.log10(t / 50) * 1.6);
+      const pts = [[0, 15], [2.4, -55], [3.2, -55], [5.6, 0], [8.2, -90], [9.2, 200], [11.2, 1000], [14.2, 1200]].map(([h, t]) => V(xT(t), surf(9.4) + h, Z));
+      const curva = tubo(pts, .07, mat(0xef4444, { emis: 0x991b1b, ei: .4 }), false, 160); m.parte("perfil_temp", curva, V(xT(1000) + .4, surf(9.4) + 11.2, 1));
+      m.parte("perfil_temp", tubo([V(xT(0), surf(9.4), Z), V(xT(0), surf(9.4) + 14.3, Z)], .02, mat(0x94a3b8), false, 2));
+      [H[1], H[2], H[3], H[4]].forEach(h => m.parte("perfil_temp", tubo([V(9.4, surf(9.4) + h, Z), V(15.2, surf(9.4) + h, Z)], .012, mat(0xcbd5e1, { op: .6 }), false, 2)));
+      let t0 = 0;
+      return Object.assign(m, { atualizar(dt) { t0 += dt; aur.material.opacity = .65 + .35 * Math.sin(t0 * 1.3); terra.rotation.y += dt * .01; mesoObjs.forEach((g, i) => { const k = (t0 * .35 + i * .33) % 1; g.position.set(-k * 1.2, -k * 1.2, 0); g.visible = k < .85; }); } });
+    }
+  };
+
   /* =================== CÉLULA ANIMAL =================== */
   M.animal = {
     vistas: [["Frente", [0, 6, 48], [0, 0, 0]], ["Por dentro", [5, 7, 22], [0, 0, 0], { corte: true }], ["Núcleo", [2, 3, 8], [0, .5, 0], { corte: true }]],
