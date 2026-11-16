@@ -502,7 +502,7 @@
     el.innerHTML = `<div class="pop-barra" title="Arraste para mudar o quadro de lugar"><span class="pop-pega" aria-hidden="true">⠿</span><b class="pop-tit"></b><button class="pop-b" data-a="min" title="Minimizar" aria-label="Minimizar">–</button><button class="pop-b" data-a="x" title="Fechar" aria-label="Fechar">✕</button></div><div class="pop-corpo"></div>`;
     // celular: vira uma "gaveta" presa à tela, por cima da área de texto (abaixo do simulador); computador: dentro do palco
     // celular: o quadro não flutua — entra na área de texto, logo abaixo do simulador (nunca cobre o 3D nem as questões)
-    POP.movel = innerWidth <= 860; if (POP.movel) el.classList.add("movel"); else $(".palco-area").appendChild(el); POP.el = el;
+    POP.movel = innerWidth <= 860 && !document.body.classList.contains("tela-cheia"); if (POP.movel) el.classList.add("movel"); else $(".palco-area").appendChild(el); POP.el = el;
     el.querySelector('[data-a="min"]').onclick = () => { el.classList.toggle("min"); el.querySelector('[data-a="min"]').textContent = el.classList.contains("min") ? "▢" : "–"; popPos(popLer()); };
     el.querySelector('[data-a="x"]').onclick = () => { el.hidden = true; POP.fechado = true; };
     const barra = el.querySelector(".pop-barra"); let arr = null;
@@ -533,13 +533,23 @@
   function popPos(pos) { const el = POP.el;
     if (POP.movel) { popLugarMovel(); return; }
     requestAnimationFrame(() => { const a = areaPop(), W = a.x1 - a.x0 - el.offsetWidth, H = a.y1 - a.y0 - el.offsetHeight;
-    if (pos) colocar(a.x0 + pos.x * W, a.y0 + pos.y * H); else if (POP.movel) colocar(a.x0, a.y1); else colocar(a.x1 - el.offsetWidth - 6, 58); }); }
+    if (pos) colocar(a.x0 + pos.x * W, a.y0 + pos.y * H); else if (POP.movel || (innerWidth <= 860 && document.body.classList.contains("tela-cheia"))) colocar(a.x0, a.y1); else colocar(a.x1 - el.offsetWidth - 6, 58); }); }
   function popAbrir(tit, html, minimo) {
     const el = popCriar();
     { const mn = !!minimo && !POP.movel; el.classList.toggle("min", mn); el.querySelector('[data-a="min"]').textContent = mn ? "▢" : "–"; el.querySelector('[data-a="min"]').title = mn ? "Abrir" : "Minimizar"; } if (POP.fechado && !html.forcar) { }
     el.querySelector(".pop-tit").innerHTML = tit; el.querySelector(".pop-corpo").innerHTML = html; el.hidden = false; POP.fechado = false;
     el.querySelectorAll("[data-pp]").forEach(b => b.onclick = () => selecionar(b.dataset.pp, true));
     el.querySelector(".pop-corpo").scrollTop = 0; popPos(popLer());
+  }
+  // ao entrar/sair da tela cheia no celular, o quadro passa a flutuar dentro do simulador (e volta para o texto ao sair)
+  function popModoTela() {
+    const el = POP.el; if (!el) return;
+    const movel = innerWidth <= 860 && !document.body.classList.contains("tela-cheia");
+    POP.movel = movel; el.classList.toggle("movel", movel);
+    if (!movel) { if (el.parentElement !== $(".palco-area")) $(".palco-area").appendChild(el); el.style.left = el.style.top = "";
+      if (innerWidth <= 860) { el.classList.add("min"); el.querySelector('[data-a="min"]').textContent = "▢"; } } // celular em tela cheia: começa minimizado, no rodapé
+    if (movel) { el.classList.remove("min"); el.querySelector('[data-a="min"]').textContent = "–"; }
+    if (!el.hidden) popPos(popLer()); else if (movel) popLugarMovel();
   }
   function popEsconder() { if (POP.el) POP.el.hidden = true; }
   function popParte(p) {
@@ -867,7 +877,39 @@
     renderer.render(cena, cam);
     const a = document.createElement("a"); a.href = renderer.domElement.toDataURL("image/png"); a.download = "missao-saresp-3d.png"; document.body.appendChild(a); a.click(); a.remove();
   };
-  $("#btnTela").onclick = () => { const el = $(".palco-wrap"); if (document.fullscreenElement) document.exitFullscreen(); else if (el.requestFullscreen) el.requestFullscreen().catch(() => avisar("Tela cheia indisponível aqui.")); };
+  /* tela cheia: usa a tela cheia do navegador quando existe e, sempre, um modo CSS que ocupa a tela toda
+     (funciona também no iPhone, onde o navegador não deixa um bloco entrar em tela cheia) */
+  function telaCheia(ligar) {
+    const b = document.body, ja = b.classList.contains("tela-cheia");
+    if (ligar === undefined) ligar = !ja; if (ligar === ja) return;
+    b.classList.toggle("tela-cheia", ligar);
+    $("#btnTela").classList.toggle("ativo", ligar); $("#btnTela").title = ligar ? "Sair da tela cheia" : "Tela cheia";
+    $("#btnTelaF").textContent = ligar ? "✕" : "⛶"; $("#btnTelaF").title = ligar ? "Sair da tela cheia" : "Tela cheia";
+    const de = document.documentElement;
+    try {
+      if (ligar && !document.fullscreenElement) { const f = de.requestFullscreen || de.webkitRequestFullscreen; if (f) { const r = f.call(de); if (r && r.catch) r.catch(() => { }); } }
+      if (!ligar && (document.fullscreenElement || document.webkitFullscreenElement)) { const f = document.exitFullscreen || document.webkitExitFullscreen; if (f) { const r = f.call(document); if (r && r.catch) r.catch(() => { }); } }
+    } catch (e) { }
+    popModoTela(); setTimeout(redimensionar, 60); setTimeout(redimensionar, 350);
+  }
+  const fsMudou = () => { if (!(document.fullscreenElement || document.webkitFullscreenElement) && document.body.classList.contains("tela-cheia")) telaCheia(false); };
+  document.addEventListener("fullscreenchange", fsMudou); document.addEventListener("webkitfullscreenchange", fsMudou);
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("tela-cheia")) telaCheia(false); });
+  $("#btnTela").onclick = () => telaCheia();
+  { // controles que ficam sobre o simulador: tela cheia e mover a cena para cima / para baixo
+    const caixa = document.createElement("div"); caixa.className = "mover-cena"; caixa.setAttribute("role", "group"); caixa.setAttribute("aria-label", "Mover a cena");
+    caixa.innerHTML = `<button id="btnTelaF" title="Tela cheia" aria-label="Tela cheia">⛶</button><button data-m="1" title="Mover para cima (segure)" aria-label="Mover para cima">▲</button><button data-m="0" title="Centralizar" aria-label="Centralizar">◎</button><button data-m="-1" title="Mover para baixo (segure)" aria-label="Mover para baixo">▼</button>`;
+    $(".palco-area").appendChild(caixa);
+    $("#btnTelaF").onclick = () => telaCheia();
+    caixa.querySelectorAll("[data-m]").forEach(b => {
+      const m = +b.dataset.m;
+      if (!m) { b.onclick = () => $("#btnReset").click(); return; }
+      const parar = () => { est.mover = 0; };
+      b.addEventListener("pointerdown", e => { e.preventDefault(); est.mover = m; est.usuarioMoveu = true; est.voo = null; ctl.autoRotate = false; $("#btnGirar").classList.remove("ativo"); try { b.setPointerCapture(e.pointerId); } catch (er) { } });
+      b.addEventListener("pointerup", parar); b.addEventListener("pointercancel", parar); b.addEventListener("lostpointercapture", parar);
+      b.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); est.passo = m; } });
+    });
+  }
   $("#btnTema").onclick = () => { const t = document.documentElement.dataset.tema === "claro" ? "escuro" : "claro"; document.documentElement.dataset.tema = t; try { localStorage.setItem("ms3d_tema", t); } catch (e) { } };
   $("#btnLateral").onclick = () => document.body.classList.toggle("lateral-aberta");
   $("#btnFecharPainel").onclick = () => document.body.classList.add("painel-fechado");
@@ -892,6 +934,11 @@
       const v = est.voo; v.t += dt / v.dur; const k = v.t >= 1 ? 1 : 1 - Math.pow(1 - v.t, 3);
       ctl.target.lerpVectors(v.a0, v.a1, k); cam.position.lerpVectors(v.p0, v.p1, k);
       if (v.t >= 1) est.voo = null;
+    }
+    if (est.mover || est.passo) { // ▲ / ▼: desloca câmera e alvo juntos, na vertical da tela
+      const up = new T.Vector3(0, 1, 0).applyQuaternion(cam.quaternion), dist = cam.position.distanceTo(ctl.target);
+      const d = est.passo ? est.passo * dist * 0.12 : est.mover * dist * 0.75 * dt; est.passo = 0;
+      up.multiplyScalar(-d); cam.position.add(up); ctl.target.add(up);
     }
     ctl.update();
     if (est.atual && est.atual.atualizar) est.atual.atualizar(dt, tempo);
