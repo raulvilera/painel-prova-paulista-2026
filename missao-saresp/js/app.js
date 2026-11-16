@@ -1094,10 +1094,13 @@
   /* ------------------------------ MODO SEQUÊNCIA (link do aluno) ------------------------------
      Cada tema do ano vira uma etapa: o simulador (ou modelo 3D) no palco e, no painel, as questões do tema.
      Termina com o Simulado SARESP. Desliga com ?livre=1. */
-  var SEQ = { ativo: false, passos: [], i: 0, feitos: {}, q: null };
+  var SEQ = { ativo: false, passos: [], i: 0, feitos: {}, q: null, estado: {} };
   function seqDeveAtivar() { return !PARAM.has("livre") && !!(TURMA_LINK || ALUNO.dados); }
   function seqChave() { return "ms3d_seq_" + (ALUNO.dados ? ALUNO.dados.turma + "|" + ALUNO.dados.nome : TURMA_LINK || anoAtual()); }
-  function seqSalvar() { try { localStorage.setItem(seqChave(), JSON.stringify({ i: SEQ.i, feitos: SEQ.feitos, foco: [...FOCO.temas], erros: FOCO.erros.slice(-200) })); } catch (e) { } }
+  /* salvamento automático: além do tema em que o aluno está e dos temas concluídos, guarda, para cada tema,
+     as questões sorteadas, a ordem das alternativas e cada resposta dada — assim ele continua exatamente de onde parou */
+  function seqSalvar() { try { localStorage.setItem(seqChave(), JSON.stringify({ i: SEQ.i, feitos: SEQ.feitos, foco: [...FOCO.temas], erros: FOCO.erros.slice(-200), estado: SEQ.estado, t: Date.now() })); seqMarcaSalvo(); } catch (e) { } }
+  function seqMarcaSalvo() { const e = $("#seqSalvo"); if (!e) return; e.classList.remove("pulsa"); void e.offsetWidth; e.classList.add("pulsa"); }
   /* ---- dificuldades individuais ----
      FOCO.temas: temas em que o aluno precisa de reforço — vêm (1) do link pessoal enviado pelo professor (&foco=),
      (2) do Simulado SARESP do próprio aluno quando ele entra com RA (Meu relatório) e (3) dos temas em que ele tirou menos de 7 aqui.
@@ -1140,7 +1143,7 @@
     focoCarregar(); SEQ.passos = seqMontarPassos(); if (!SEQ.passos.length) return;
     SEQ.ativo = true; document.body.classList.add("seq", "seq-continua");
     let salvo = {}; try { salvo = JSON.parse(localStorage.getItem(seqChave()) || "{}"); } catch (e) { }
-    SEQ.feitos = salvo.feitos || {}; SEQ.ativoK = -1; SEQ.blocos = [];
+    SEQ.feitos = salvo.feitos || {}; SEQ.estado = salvo.estado || {}; SEQ.ativoK = -1; SEQ.blocos = [];
     const box = $("#aba-seq"); box.innerHTML = `<div id="seqCab"></div><div id="seqLista"></div>`;
     const info0 = $("#info"); info0.innerHTML = "";
     $("#seqLista").innerHTML = SEQ.passos.map((p, k) => {
@@ -1160,12 +1163,20 @@
     trocarAba("seq", true);
     let ir = typeof salvo.i === "number" ? salvo.i : 0;
     if (irPara) { const k = SEQ.passos.findIndex(p => p.h && p.h.cod === irPara); if (k >= 0) ir = k; }
-    ativarBloco(Math.min(ir, SEQ.passos.length - 1)); if (ir > 0) setTimeout(() => irPasso(ir), 300);
+    ir = Math.min(ir, SEQ.passos.length - 1); ativarBloco(ir);
+    const voltou = !irPara && Object.values(SEQ.estado).some(e => e && e.r && Object.keys(e.r).length);
+    if (voltou) setTimeout(() => {   // de volta: vai direto à primeira questão que ainda falta neste tema
+      const b = $(`#seqLista .bloco[data-k="${ir}"]`), q = b && b.querySelector(".seq-q:not(.respondida)");
+      if (q) q.scrollIntoView({ behavior: "smooth", block: "center" }); else irPasso(ir);
+      const p = SEQ.passos[ir], nq = q ? +q.dataset.n + 1 : 0;
+      avisar(`👋 Bem-vindo(a) de volta! Continuando de onde você parou: ${p.tipo === "simulado" ? "Simulado SARESP" : p.h.tema}${nq ? ", questão " + nq : ""}.`);
+    }, 600);
+    else if (ir > 0) setTimeout(() => irPasso(ir), 300);
   }
   function seqCabecalho() {
     const N = SEQ.passos.length, feitos = SEQ.passos.filter(p => SEQ.feitos[p.tipo === "simulado" ? "simulado" : p.h.cod]).length;
     const c = $("#seqCab"); if (!c) return;
-    c.innerHTML = `<div class="seq-cab"><b>🚀 Missão ${ALUNO.dados ? ALUNO.dados.turma : (TURMA_LINK || anoAtual() + "º ano")}</b><small>${feitos} de ${N} temas concluídos · role para baixo para seguir</small><div class="seq-barra"><span style="width:${Math.round(feitos / N * 100)}%"></span></div></div>`;
+    c.innerHTML = `<div class="seq-cab"><b>🚀 Missão ${ALUNO.dados ? ALUNO.dados.turma : (TURMA_LINK || anoAtual() + "º ano")}</b><small>${feitos} de ${N} temas concluídos · role para baixo para seguir</small><small class="seq-salvo" id="seqSalvo">💾 Progresso salvo automaticamente: se sair, você continua daqui depois</small><div class="seq-barra"><span style="width:${Math.round(feitos / N * 100)}%"></span></div></div>`;
   }
   // leva o simulador (ou o modelo 3D) para o tema que está na tela
   function ativarBloco(k) {
@@ -1185,28 +1196,42 @@
   }
   function irPasso(k) { const b = $(`#seqLista .bloco[data-k="${k}"]`); if (b) b.scrollIntoView({ behavior: "smooth", block: "start" }); }
   // as 10 questões do tema, todas abertas na tela, uma embaixo da outra
-  function blocoQuiz(k) {
-    const p = SEQ.passos[k], simu = p.tipo === "simulado", tema = simu ? null : p.h.cod, atividade = simu ? "simulado" : "tema";
-    const lista = simu ? questoesSimulado() : questoesTema(tema), box = $(`#seqLista .bloco[data-k="${k}"] .bloco-q`);
-    const st = { lista, pontos: 0, feitas: 0, id: novoId(), resp: [] }; SEQ.blocos[k] = st;
+  function blocoQuiz(k, refazer) {
+    const p = SEQ.passos[k], simu = p.tipo === "simulado", tema = simu ? null : p.h.cod, atividade = simu ? "simulado" : "tema", idp = tema || "simulado";
+    const box = $(`#seqLista .bloco[data-k="${k}"] .bloco-q`);
+    // retoma as mesmas questões, na mesma ordem, se este tema já foi começado
+    let ev = refazer ? null : SEQ.estado[idp], lista = null;
+    if (ev && Array.isArray(ev.q)) { const mapa = new Map(D.quiz.map(q => [chaveQ(q), q])); lista = ev.q.map(c => mapa.get(c)); if (lista.some(x => !x)) { lista = null; ev = null; } } else ev = null;
+    if (!lista) { lista = simu ? questoesSimulado() : questoesTema(tema); ev = SEQ.estado[idp] = { id: novoId(), q: lista.map(chaveQ), o: lista.map(it => embaralhar(it.o.map((t, i) => i))), r: {} }; seqSalvar(); }
+    const st = { lista, pontos: 0, feitas: 0, id: ev.id, resp: [] }; SEQ.blocos[k] = st;
     const enviar = fim => registrar({ id: st.id, atividade, tema, acertos: st.pontos, total: lista.length, concluido: fim, respostas: st.resp });
-    box.innerHTML = lista.map((it, n) => { const ordem = embaralhar(it.o.map((t, i) => ({ t, i })));
+    box.innerHTML = lista.map((it, n) => { const ordem = (ev.o[n] && ev.o[n].length === it.o.length ? ev.o[n] : it.o.map((t, i) => i)).map(i => ({ t: it.o[i], i }));
       return `<div class="cartao seq-q" data-n="${n}"><div class="hab-top"><b>📝 Questão ${n + 1} de ${lista.length}</b>${simu ? `<span class="mini-txt muted">${rotuloAE(it.ae)}</span>` : ""}</div>
         <p class="pergunta">${it.p}</p><div class="opcoes">${ordem.map((o, j) => `<button class="opcao" data-i="${o.i}"><b>${"ABCD"[j]})</b> ${o.t}</button>`).join("")}</div><div class="feed"></div></div>`; }).join("") + `<div class="bloco-fim"></div>`;
+    // marca a questão como respondida (na hora ou ao restaurar o que já estava salvo)
+    const marcar = (card, it, b, ok, restaurando) => {
+      card.classList.add("respondida");
+      card.querySelectorAll(".opcao").forEach(x => { x.disabled = true; if (+x.dataset.i === it.c) x.classList.add("certa"); else if (x === b) x.classList.add("errada"); });
+      card.querySelector(".feed").innerHTML = `<div class="destaque ${ok ? "saude" : "erro"}"><b>${ok ? (restaurando ? "Correto!" : "Correto! +10 XP") : "Não foi dessa vez."}</b> ${it.e}</div>`;
+    };
     box.querySelectorAll(".seq-q").forEach(card => {
-      const it = lista[+card.dataset.n];
+      const n = +card.dataset.n, it = lista[n];
       card.querySelectorAll(".opcao").forEach(b => b.onclick = () => {
-        if (card.classList.contains("respondida")) return; card.classList.add("respondida");
+        if (card.classList.contains("respondida")) return;
         const ok = +b.dataset.i === it.c; if (ok) { st.pontos++; XP.ganhar(10); }
         { const kq = chaveQ(it), ix = FOCO.erros.indexOf(kq); if (!ok && ix < 0) FOCO.erros.push(kq); if (ok && ix >= 0) FOCO.erros.splice(ix, 1); }
-        st.feitas++; st.resp.push({ ae: it.ae, ok, p: it.p.slice(0, 90), r: it.o[+b.dataset.i].slice(0, 60) }); enviar(st.feitas >= lista.length);
-        card.querySelectorAll(".opcao").forEach(x => { x.disabled = true; if (+x.dataset.i === it.c) x.classList.add("certa"); else if (x === b) x.classList.add("errada"); });
-        card.querySelector(".feed").innerHTML = `<div class="destaque ${ok ? "saude" : "erro"}"><b>${ok ? "Correto! +10 XP" : "Não foi dessa vez."}</b> ${it.e}</div>`;
+        st.feitas++; st.resp.push({ ae: it.ae, ok, p: it.p.slice(0, 90), r: it.o[+b.dataset.i].slice(0, 60) });
+        ev.r[n] = +b.dataset.i; seqSalvar(); enviar(st.feitas >= lista.length);
+        marcar(card, it, b, ok);
         if (st.feitas >= lista.length) fimBloco(k);
       });
+      // resposta já dada antes de sair: volta marcada, sem contar XP de novo nem reenviar
+      if (ev.r[n] != null) { const i = +ev.r[n], b = card.querySelector(`.opcao[data-i="${i}"]`), ok = i === it.c;
+        if (ok) st.pontos++; st.feitas++; st.resp.push({ ae: it.ae, ok, p: it.p.slice(0, 90), r: (it.o[i] || "").slice(0, 60) }); marcar(card, it, b, ok, true); }
     });
+    if (st.feitas >= lista.length) fimBloco(k, true);
   }
-  function fimBloco(k) {
+  function fimBloco(k, restaurando) {
     const p = SEQ.passos[k], st = SEQ.blocos[k], simu = p.tipo === "simulado", tema = simu ? null : p.h.cod, N = st.lista.length;
     const pc = Math.round(st.pontos / N * 100), fx = faixa(pc), idp = tema || "simulado";
     if (tema && pc < 70) FOCO.temas.add(tema);
@@ -1214,12 +1239,12 @@
     SEQ.feitos[idp] = true; seqSalvar(); seqCabecalho();
     const ult = k >= SEQ.passos.length - 1, fim = $(`#seqLista .bloco[data-k="${k}"] .bloco-fim`);
     fim.innerHTML = `<div class="cartao seq-q centro"><h3>${pc >= 70 ? "🏆" : "📘"} ${st.pontos} de ${N} · <span style="color:${fx[1]}">${fx[0]}</span></h3>
-      <p class="envio">${ALUNO.dados ? "⏳ Enviando para o professor…" : "⚠️ Entre com seu nome (👤) para o professor ver seu resultado."}</p>
+      <p class="envio">${restaurando ? "✅ Atividade concluída e salva." : ALUNO.dados ? "⏳ Enviando para o professor…" : "⚠️ Entre com seu nome (👤) para o professor ver seu resultado."}</p>
       ${pc < 70 && tema ? `<p class="mini-txt">🎯 Este tema ficou como <b>reforço</b> para você. Use o simulador mais um pouco e tente de novo: as questões que você errou aparecem primeiro.</p><button class="btn" data-denovo>↺ Responder de novo</button>` : ""}
       ${ult ? `<p><b>🎉 Missão completa!</b> Veja seu desempenho em <b>📊 Meu relatório</b>.</p>` : `<p class="mini-txt muted">⬇️ Role para baixo para o próximo tema.</p>`}</div>`;
-    if (ALUNO.dados) ALUNO.fila.then(ok => { const e = fim.querySelector(".envio"); if (e) e.textContent = ok ? "✅ Resultado enviado para o professor." : "⚠️ Não foi possível enviar agora."; });
-    const dn = fim.querySelector("[data-denovo]"); if (dn) dn.onclick = () => { blocoQuiz(k); $(`#seqLista .bloco[data-k="${k}"] .bloco-q`).scrollIntoView({ behavior: "smooth", block: "start" }); };
-    if (pc >= 75) XP.ganhar(20, "Bônus: faixa Avançado");
+    if (ALUNO.dados && !restaurando) ALUNO.fila.then(ok => { const e = fim.querySelector(".envio"); if (e) e.textContent = ok ? "✅ Resultado enviado para o professor." : "⚠️ Não foi possível enviar agora."; });
+    const dn = fim.querySelector("[data-denovo]"); if (dn) dn.onclick = () => { blocoQuiz(k, true); $(`#seqLista .bloco[data-k="${k}"] .bloco-q`).scrollIntoView({ behavior: "smooth", block: "start" }); };
+    if (pc >= 75 && !restaurando) XP.ganhar(20, "Bônus: faixa Avançado");
   }
   function montarSeqLateral() { seqCabecalho(); }
   function seqQuiz(lista, atividade, tema) {

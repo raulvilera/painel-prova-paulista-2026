@@ -439,3 +439,8 @@ body.tela-cheia .pop { max-width: min(300px, calc(100% - 70px)); max-height: 48%
 #btnTelaF { background: var(--acento); color: var(--sobre-acento); font-weight: 800; margin-bottom: 4px; }
 @media (max-width: 860px) { .mover-cena { right: 6px; gap: 4px; } .mover-cena button { width: 38px; height: 38px; } }
 @media (max-height: 300px) { .mover-cena { top: 6px; transform: none; flex-direction: row; } }
+
+/* salvamento automático do progresso */
+.seq-salvo { display: block; margin-top: 3px; color: var(--saude, #16a34a); font-weight: 600; }
+.seq-salvo.pulsa { animation: salvoPulsa 1.2s ease; }
+@keyframes salvoPulsa { 0% { opacity: .35; } 40% { opacity: 1; } 100% { opacity: 1; } }
