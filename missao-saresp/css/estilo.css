@@ -414,7 +414,15 @@ body.seq-continua #aba-seq { padding-bottom: 40vh; }
 .pop-nav { display: flex; gap: 6px; margin-top: 10px; } .pop-nav .btn { flex: 1; font-size: .75rem; padding: 6px 8px; justify-content: center; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pop .chips .chip { font-size: .78rem; }
 .lista-esp { margin: 0 0 6px; padding-left: 18px; } .lista-esp li { margin: 3px 0; }
-@media (max-width: 860px) { .pop { width: calc(100% - 12px); max-height: 42%; font-size: .8rem; } .pop.min { width: 200px; } }
+/* celular: gaveta presa à tela, abaixo do simulador (arrastável para cima/baixo) */
+.pop.movel { position: fixed; z-index: 60; width: calc(100vw - 12px); max-width: none; max-height: 52vh; font-size: .9rem; border-radius: 16px; box-shadow: 0 -6px 26px rgba(2, 6, 23, .35); background: color-mix(in srgb, var(--card) 97%, transparent); }
+.pop.movel .pop-barra { padding: 10px 10px 10px 12px; }
+.pop.movel .pop-barra::before { content: ""; position: absolute; left: 50%; top: 4px; width: 38px; height: 4px; margin-left: -19px; border-radius: 4px; background: var(--borda); }
+.pop.movel .pop-barra { position: relative; }
+.pop.movel .pop-b { width: 34px; height: 34px; font-size: 1rem; }
+.pop.movel .pop-tit { font-size: 1rem; }
+.pop.movel.min { width: auto; max-width: calc(100vw - 12px); }
+.pop.movel .pop-nav .btn { font-size: .8rem; padding: 8px; }
 .pop .chip.ativo { outline: 2px solid var(--acento); }
 .pop-voltar { width: 100%; justify-content: center; margin-top: 6px; font-size: .78rem; }
 .pop-extra { width: 100%; justify-content: center; margin-top: 8px; font-size: .78rem; white-space: normal; text-align: center; }
