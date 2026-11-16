@@ -84,9 +84,11 @@ table{border-collapse:collapse;width:100%}td,th{padding:7px 8px;border:1px solid
     const feito = c => mi.some(x => x.atividade === "tema" && x.tema === c && x.concluido && Number(x.nota) >= 7);
     return { fracos, rec, acertos, validas, mi, feito };
   }
+  /* link pessoal: a missão da turma com os temas que o aluno errou no Simulado em destaque (🎯 primeiro, revisão das erradas, Simulado final focado neles) */
+  const linkAluno = (t, p) => base + "?turma=" + cod(t) + (p.fracos.length ? "&foco=" + p.fracos.join(".") : "");
   function mensagem(t, nome, p) {
     const lin = c => "• " + (ITEM[c] ? ITEM[c].tema : c) + (p.feito(c) ? " ✅" : "") + "\n  " + linkTema(t, c);
-    return `📚 *Plano de estudo · ${nome.split(" ")[0]} (${t})*\n` + (p.fracos.length ? `\n🎯 *Reforçar para o SARESP* (você errou no Simulado):\n${p.fracos.map(lin).join("\n")}\n` : "") +
+    return `📚 *Plano de estudo · ${nome.split(" ")[0]} (${t})*\n\n🚀 *Sua missão personalizada* (10 questões por tema, começando pelos seus temas de reforço):\n${linkAluno(t, p)}\n` + (p.fracos.length ? `\n🎯 *Reforçar para o SARESP* (você errou no Simulado):\n${p.fracos.map(lin).join("\n")}\n` : "") +
       `\n♻️ *Recuperação semestral:*\n${p.rec.map(lin).join("\n")}\n\nEm cada tema, use o simulador e faça o *Quiz do tema*. Para ver seu relatório, toque em 📊 *Meu relatório* no simulador.`;
   }
   function desenhar() {
@@ -114,11 +116,12 @@ table{border-collapse:collapse;width:100%}td,th{padding:7px 8px;border:1px solid
         let r = `<tr class="al" data-k="${esc(l.nome)}"><td><b>${esc(l.nome)}</b></td><td>${l.sim ? `<span class="fx" style="color:${f[1]}">${p.acertos}/${p.validas} · ${pc}%</span><br><span class="muted" style="font-size:.76rem">${f[0]}</span>` : `<span class="muted">não fez</span>`}</td>
           <td>${l.sim ? (p.fracos.length ? p.fracos.map(c => tg(c, "fraco")).join("") : `<span class="ok">Acertou tudo!</span>`) : `<span class="muted">— (use a recuperação)</span>`}</td><td>${p.rec.map(c => tg(c, "rec")).join("")}</td>
           <td>${p.mi.length ? `${p.mi.filter(x => x.concluido).length} concluída(s)<br><span class="muted" style="font-size:.76rem">${p.mi.filter(x => x.atividade === "simulado" && x.concluido).length ? "Simulado 3D: " + String(Math.max(...p.mi.filter(x => x.atividade === "simulado" && x.concluido).map(x => Number(x.nota)))).replace(".", ",") : ""}</span>` : `<span class="muted">ainda não usou</span>`}</td>
-          <td><button class="btn" data-msg="${esc(l.nome)}">💬 Copiar plano</button></td></tr>`;
+          <td><button class="btn" data-msg="${esc(l.nome)}">💬 Copiar plano</button> <button class="btn" data-lk="${esc(l.nome)}" title="Link da missão com os temas de reforço deste aluno em primeiro lugar">🔗 Link do aluno</button></td></tr>`;
         if (aberto === l.nome) r += `<tr class="det"><td colspan="6">${l.sim ? l.sim.itens.map(it => { const q = Q[it.k] || {}; return `<div style="margin:4px 0">${it.ok === null ? "⏳" : it.ok ? '<span class="ok">✔</span>' : '<span class="er">✘</span>'} <b>Q${q.n}</b> · ${esc(ITEM[q.tema] ? ITEM[q.tema].tema : q.tema)} <span class="muted">(${esc(q.hab)})</span> — ${esc(q.desc)}${it.ok === false ? ` <span class="recs" style="display:inline-flex">${recursosBtns(t, q.tema)}</span>` : ""}</div>`; }).join("") : "Este aluno ainda não fez o Simulado SARESP. O plano dele usa os temas da recuperação semestral."}</td></tr>`;
         return r; }).join("") + `</tbody></table></div></div>`;
     app(h);
     document.querySelectorAll("tr.al").forEach(tr => tr.onclick = e => { if (e.target.closest("button,a")) return; aberto = aberto === tr.dataset.k ? "" : tr.dataset.k; desenhar(); });
+    document.querySelectorAll("[data-lk]").forEach(b => b.onclick = e => { e.stopPropagation(); const l = linhas.find(x => x.nome === b.dataset.lk); copiar(linkAluno(t, l.p), "Link pessoal copiado! Envie só para este aluno."); });
     document.querySelectorAll("[data-msg]").forEach(b => b.onclick = e => { e.stopPropagation(); const l = linhas.find(x => x.nome === b.dataset.msg); copiar(mensagem(t, l.nome, l.p), "Plano copiado! Cole no WhatsApp ou no Classroom."); });
   }
   function csv() {
