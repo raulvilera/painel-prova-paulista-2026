@@ -501,11 +501,12 @@
     const el = document.createElement("div"); el.id = "popInfo"; el.className = "pop"; el.hidden = true;
     el.innerHTML = `<div class="pop-barra" title="Arraste para mudar o quadro de lugar"><span class="pop-pega" aria-hidden="true">⠿</span><b class="pop-tit"></b><button class="pop-b" data-a="min" title="Minimizar" aria-label="Minimizar">–</button><button class="pop-b" data-a="x" title="Fechar" aria-label="Fechar">✕</button></div><div class="pop-corpo"></div>`;
     // celular: vira uma "gaveta" presa à tela, por cima da área de texto (abaixo do simulador); computador: dentro do palco
-    POP.movel = innerWidth <= 860; if (POP.movel) { el.classList.add("movel"); document.body.appendChild(el); } else $(".palco-area").appendChild(el); POP.el = el;
+    // celular: o quadro não flutua — entra na área de texto, logo abaixo do simulador (nunca cobre o 3D nem as questões)
+    POP.movel = innerWidth <= 860; if (POP.movel) el.classList.add("movel"); else $(".palco-area").appendChild(el); POP.el = el;
     el.querySelector('[data-a="min"]').onclick = () => { el.classList.toggle("min"); el.querySelector('[data-a="min"]').textContent = el.classList.contains("min") ? "▢" : "–"; popPos(popLer()); };
     el.querySelector('[data-a="x"]').onclick = () => { el.hidden = true; POP.fechado = true; };
     const barra = el.querySelector(".pop-barra"); let arr = null;
-    barra.addEventListener("pointerdown", e => { if (e.target.closest("button")) return; e.preventDefault(); barra.setPointerCapture(e.pointerId); arr = { x: e.clientX - el.offsetLeft, y: e.clientY - el.offsetTop }; el.classList.add("arrastando"); });
+    barra.addEventListener("pointerdown", e => { if (POP.movel || e.target.closest("button")) return; e.preventDefault(); barra.setPointerCapture(e.pointerId); arr = { x: e.clientX - el.offsetLeft, y: e.clientY - el.offsetTop }; el.classList.add("arrastando"); });
     barra.addEventListener("pointermove", e => { if (!arr) return; colocar(e.clientX - arr.x, e.clientY - arr.y); });
     const fim = () => { if (!arr) return; arr = null; el.classList.remove("arrastando"); const a = areaPop(), W = a.x1 - a.x0 - el.offsetWidth, H = a.y1 - a.y0 - el.offsetHeight; try { localStorage.setItem("ms3d_pop" + (POP.movel ? "_m" : ""), JSON.stringify({ x: W > 0 ? (el.offsetLeft - a.x0) / W : 0, y: H > 0 ? (el.offsetTop - a.y0) / H : 0 })); } catch (e) { } };
     barra.addEventListener("pointerup", fim); barra.addEventListener("pointercancel", fim);
@@ -522,8 +523,15 @@
   function colocar(x, y) { const el = POP.el, a = areaPop(); el.style.left = Math.max(a.x0, Math.min(a.x1 - el.offsetWidth, x)) + "px"; el.style.top = Math.max(a.y0, Math.min(a.y1 - el.offsetHeight, y)) + "px"; }
   function popLer() { try { return JSON.parse(localStorage.getItem("ms3d_pop" + (POP.movel ? "_m" : "")) || "null"); } catch (e) { return null; } }
   // posição padrão: canto superior direito do palco (computador) ou rodapé da tela, abaixo do simulador (celular)
+  // celular: coloca o quadro no topo do conteúdo visível (na sequência, dentro do tema que está na tela)
+  function popLugarMovel() {
+    const el = POP.el; let alvo = null, antes = null;
+    if (SEQ && SEQ.ativo) { const b = document.querySelector("#seqLista .bloco.ativo"); if (b) { alvo = b; antes = b.querySelector(".bloco-sim"); } }
+    if (!alvo) { alvo = [...document.querySelectorAll(".conteudo-aba")].find(c => !c.hidden) || $("#painel"); antes = alvo.firstChild; }
+    if (el.parentElement !== alvo || el.nextSibling !== antes) alvo.insertBefore(el, antes);
+  }
   function popPos(pos) { const el = POP.el;
-    if (POP.movel) { const pw = $(".palco-wrap"), a0 = areaPop(), fundo = pw ? pw.getBoundingClientRect().bottom : innerHeight / 2; el.style.maxHeight = Math.max(230, Math.min(innerHeight * .6, a0.y1 - fundo - 4)) + "px"; }   // no celular, a gaveta ocupa a área abaixo do simulador
+    if (POP.movel) { popLugarMovel(); return; }
     requestAnimationFrame(() => { const a = areaPop(), W = a.x1 - a.x0 - el.offsetWidth, H = a.y1 - a.y0 - el.offsetHeight;
     if (pos) colocar(a.x0 + pos.x * W, a.y0 + pos.y * H); else if (POP.movel) colocar(a.x0, a.y1); else colocar(a.x1 - el.offsetWidth - 6, 58); }); }
   function popAbrir(tit, html) {
