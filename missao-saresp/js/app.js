@@ -884,14 +884,15 @@
   function forcarAtualizacao() { location.replace(location.pathname + "?v=" + Date.now()); }
 
   /* ------------------------------ TURMA, ALUNO E ENVIO DOS RESULTADOS ------------------------------ */
-  const TURMAS = ["6º Ano A", "6º Ano B", "6º Ano C", "7º Ano A", "7º Ano B", "8º Ano A", "8º Ano B", "9º Ano A", "9º Ano B"];
+  const TURMAS = ["6º Ano A (Lydia)", "6º Ano B (Lydia)", "6º Ano C (Lydia)", "6º Ano A", "6º Ano C", "7º Ano A", "7º Ano B", "8º Ano A", "8º Ano B", "9º Ano A", "9º Ano B"];
   const SBG = "https://oxohpnappygkmwjyowvq.supabase.co", KEYG = "sb_publishable_EjJenZkxMWv_I6vXWTz6aQ_iz9XEU4N";
   function novoId() { return crypto.randomUUID ? crypto.randomUUID() : "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, c => { const r = Math.random() * 16 | 0; return (c === "x" ? r : (r & 3 | 8)).toString(16); }); }
   const ALUNO = { dados: null, fila: Promise.resolve(true) };
-  try { const a = JSON.parse(localStorage.getItem("ms3d_aluno") || "null"); if (a && TURMAS.includes(a.turma) && a.nome && Date.now() - a.t < 12 * 3600e3) ALUNO.dados = a; } catch (e) { }
+  try { const a = JSON.parse(localStorage.getItem("ms3d_aluno") || "null"); if (a && TURMAS.includes(a.turma) && a.nome && Date.now() - a.t < 12 * 3600e3 && (a.v === 2 || a.turma[0] !== "6")) ALUNO.dados = a; /* v2: 6º anos separados por escola */ } catch (e) { }
   /* link da turma: ?turma=7A (opcional &tema=7-AE10) — a turma já vem escolhida e o aluno só seleciona o nome */
   const PARAM = new URLSearchParams(location.search);
-  const TURMA_LINK = (() => { const m = /^([6-9])\s*º?\s*(?:ano)?\s*([A-C])$/i.exec((PARAM.get("turma") || "").trim()); const t = m ? `${m[1]}º Ano ${m[2].toUpperCase()}` : ""; return TURMAS.includes(t) ? t : ""; })();
+  // ?turma=7A · 6º anos da E.E. Lydia Kitz Moreira: ?turma=6AL, 6BL, 6CL (o antigo 6B é da Lydia)
+  const TURMA_LINK = (() => { const m = /^([6-9])\s*º?\s*(?:ano)?\s*([A-C])\s*(L|LYDIA)?$/i.exec((PARAM.get("turma") || "").trim()); if (!m) return ""; const L = m[3] || (m[1] === "6" && /b/i.test(m[2])); const t = `${m[1]}º Ano ${m[2].toUpperCase()}${L ? " (Lydia)" : ""}`; return TURMAS.includes(t) ? t : ""; })();
   const TEMA_LINK = (PARAM.get("tema") || "").trim();
   if (TURMA_LINK && ALUNO.dados && ALUNO.dados.turma !== TURMA_LINK) ALUNO.dados = null;   // outra turma neste aparelho: pede o nome de novo
   /* grava (ou atualiza) a tentativa no banco; repete se a rede falhar */
@@ -920,11 +921,13 @@
     $("#entrada").hidden = false;
     const t = TURMA_LINK || (ALUNO.dados && ALUNO.dados.turma) || "";
     if (t && sel.value !== t) { sel.value = t; sel.onchange(); }
-    sel.disabled = !!TURMA_LINK; $("#eTit").textContent = TURMA_LINK ? `🚀 Missão SARESP 3D · ${TURMA_LINK}` : "🚀 Missão SARESP 3D";
+    sel.disabled = !!TURMA_LINK && !/^6º Ano [AC]$/.test(TURMA_LINK);   // links antigos de 6º A/C: deixa trocar para a turma da Lydia
+    if (/^6º Ano [AC]$/.test(t)) $("#eMsg").textContent = "Estuda na E.E. Lydia Kitz Moreira (manhã)? Escolha a turma com “(Lydia)”.";
+    $("#eTit").textContent = TURMA_LINK ? `🚀 Missão SARESP 3D · ${TURMA_LINK}` : "🚀 Missão SARESP 3D";
     setTimeout(() => (TURMA_LINK ? selN : sel).focus(), 80);
   }
   $("#eEntrar").onclick = () => {
-    ALUNO.dados = { turma: sel.value, nome: selN.value, t: Date.now() };
+    ALUNO.dados = { turma: sel.value, nome: selN.value, t: Date.now(), v: 2 };
     try { localStorage.setItem("ms3d_aluno", JSON.stringify(ALUNO.dados)); } catch (e) { }
     $("#entrada").hidden = true; aplicarTurma();
     if (seqDeveAtivar()) iniciarSeq(TEMA_LINK);
@@ -993,7 +996,7 @@
     let j; try { const r = await fetch("/api/individual?acao=missao3d", { headers: { Authorization: "Bearer " + token }, cache: "no-store" }); j = await r.json(); } catch (e) { j = { ok: false, erro: "Sem conexão." }; }
     if (!j.ok) { box.innerHTML = `<div class="cartao"><h3>📊 Meu relatório</h3><p>${(j.erro || "Não foi possível carregar.").replace(/</g, "")}</p><button class="btn" id="rSair">Entrar com outro RA</button></div>`; $("#rSair").onclick = () => { acesso.sair(); abrirRelatorio(); }; return; }
     RELAT = j;
-    if (TURMAS.includes(j.turma) && (!ALUNO.dados || ALUNO.dados.turma !== j.turma || ALUNO.dados.nome !== j.nome)) { ALUNO.dados = { turma: j.turma, nome: j.nome, t: Date.now() }; try { localStorage.setItem("ms3d_aluno", JSON.stringify(ALUNO.dados)); } catch (e) { } }
+    if (TURMAS.includes(j.turma) && (!ALUNO.dados || ALUNO.dados.turma !== j.turma || ALUNO.dados.nome !== j.nome)) { ALUNO.dados = { turma: j.turma, nome: j.nome, t: Date.now(), v: 2 }; try { localStorage.setItem("ms3d_aluno", JSON.stringify(ALUNO.dados)); } catch (e) { } }
     desenharRelatorio(); aplicarTurma();
   }
   function desenharRelatorio() {

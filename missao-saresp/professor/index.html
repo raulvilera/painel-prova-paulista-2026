@@ -48,11 +48,11 @@ table{border-collapse:collapse;width:100%}td,th{padding:7px 8px;border:1px solid
 <script>
 (function () {
   const D = window.DADOS, $ = s => document.querySelector(s), app = h => $("#app").innerHTML = h;
-  const TURMAS = ["6º Ano A", "6º Ano B", "6º Ano C", "7º Ano A", "7º Ano B", "8º Ano A", "8º Ano B", "9º Ano A", "9º Ano B"];
+  const TURMAS = ["6º Ano A (Lydia)", "6º Ano B (Lydia)", "6º Ano C (Lydia)", "6º Ano A", "6º Ano C", "7º Ano A", "7º Ano B", "8º Ano A", "8º Ano B", "9º Ano A", "9º Ano B"];
   const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const norm = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, " ").trim().toUpperCase();
   const FX = p => p < 25 ? ["Abaixo do Básico", "var(--lv0)"] : p < 50 ? ["Básico", "var(--lv1)"] : p < 75 ? ["Adequado", "var(--lv2)"] : ["Avançado", "var(--lv3)"];
-  const cod = t => t[0] + t.slice(-1), base = location.origin + "/missao-saresp/";
+  const cod = t => t[0] + t.replace(/\s*\(Lydia\)\s*$/, "").slice(-1) + (/Lydia/.test(t) ? "L" : ""), base = location.origin + "/missao-saresp/";
   const linkTema = (t, c) => base + "?turma=" + cod(t) + "&tema=" + encodeURIComponent(c);
   const SIMS = Object.fromEntries((window.DADOS_SIMS || [["fases", "🌗 Fases da Lua"], ["estacoes", "🌞 Estações"], ["sombras", "🕰️ Sol e sombras"], ["estufa", "🌡️ Efeito estufa"], ["selecao", "🦋 Seleção natural"], ["energia", "🔌 Energia"], ["biomas", "🌎 Biomas"], ["celulas", "🔬 Células"]]));
   const ITEM = {}; D.trilha.forEach(t => t.itens.forEach(h => ITEM[h.cod] = h));

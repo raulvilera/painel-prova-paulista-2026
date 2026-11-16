@@ -316,12 +316,12 @@ module.exports = async function individual(req, res) {
     if (['atividade', 'enviar', 'adaptada', 'missao3d'].includes(acao) && !semLogin) {
       const id = await alunoDaSessao(req);
       if (!id) return erro(401, 'Entre com seu RA, dígito e senha.');
-      const al = await rest('alunos?ra=eq.' + enc(id.ra) + '&digito_ra=eq.' + enc(id.digito) + '&select=nome,turma');
+      const al = await rest('alunos?ra=eq.' + enc(id.ra) + '&digito_ra=eq.' + enc(id.digito) + '&select=nome,turma,escola');
       if (!al.length) return erro(401, 'Aluno não encontrado.');
-      q.turma = al[0].turma; q.nome = al[0].nome; b.turma = al[0].turma; b.nome = al[0].nome;
+      q.turma = al[0].turma; q.nome = al[0].nome; b.turma = al[0].turma; b.nome = al[0].nome; q.escola = al[0].escola || '';
     }
     if (req.method === 'GET' && acao === 'missao3d') {   // Missão SARESP 3D: relatório do próprio aluno (Simulado SARESP + atividades)
-      const turma = String(q.turma || ''), nome = String(q.nome || ''), alvo = M3D.norm(nome);
+      const turma = M3D.turmaBase(String(q.turma || '')) + (q.escola === 'Lydia' && /^6/.test(String(q.turma || '')) ? ' (Lydia)' : ''), nome = String(q.nome || ''), alvo = M3D.norm(nome);   // 6º ano da Lydia: "6º Ano A (Lydia)"
       let sim = null, erroSim = '';
       try { const rs = (await M3D.simuladoEF()).filter(r => r.turma === turma && M3D.norm(r.nome) === alvo); sim = rs.sort((a, b) => String(b.criado).localeCompare(String(a.criado)))[0] || null; }
       catch (e) { erroSim = 'Não foi possível ler o Simulado agora.'; }
