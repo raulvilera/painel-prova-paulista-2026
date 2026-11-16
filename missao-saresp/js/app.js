@@ -932,6 +932,7 @@
     const fracos = []; if (sim) sim.itens.forEach(i => { if (i.ok === false && Q[i.k] && !fracos.includes(Q[i.k].tema)) fracos.push(Q[i.k].tema); });
     const rec = tr ? tr.itens.filter(h => h.rec && !fracos.includes(h.cod)).map(h => h.cod) : [];
     PLANO = new Set(fracos.concat(rec));
+    fracos.forEach(c => FOCO.temas.add(c)); if (SEQ && SEQ.ativo) { seqSalvar(); montarSeqLateral(); }
     const feito = c => (j.missao || []).some(x => x.atividade === "tema" && x.tema === c && x.concluido && Number(x.nota) >= 7);
     const item = (c, cor) => `<div class="plano-item"><span><b>${feito(c) ? "✅" : cor} ${ITEM[c] ? ITEM[c].tema : c}</b><small>${ITEM[c] ? ITEM[c].sigla + " · " + ITEM[c].bim : ""}${feito(c) ? " · concluído na Missão" : ""}</small></span><button class="btn prim" data-estudar="${c}">Estudar</button></div>`;
     const fx = pc == null ? null : faixa(pc), feitos = [...PLANO].filter(feito).length;
@@ -956,15 +957,45 @@
   var SEQ = { ativo: false, passos: [], i: 0, feitos: {}, q: null };
   function seqDeveAtivar() { return !PARAM.has("livre") && !!(TURMA_LINK || ALUNO.dados); }
   function seqChave() { return "ms3d_seq_" + (ALUNO.dados ? ALUNO.dados.turma + "|" + ALUNO.dados.nome : TURMA_LINK || anoAtual()); }
-  function seqSalvar() { try { localStorage.setItem(seqChave(), JSON.stringify({ i: SEQ.i, feitos: SEQ.feitos })); } catch (e) { } }
+  function seqSalvar() { try { localStorage.setItem(seqChave(), JSON.stringify({ i: SEQ.i, feitos: SEQ.feitos, foco: [...FOCO.temas], erros: FOCO.erros.slice(-200) })); } catch (e) { } }
+  /* ---- dificuldades individuais ----
+     FOCO.temas: temas em que o aluno precisa de reforço — vêm (1) do link pessoal enviado pelo professor (&foco=),
+     (2) do Simulado SARESP do próprio aluno quando ele entra com RA (Meu relatório) e (3) dos temas em que ele tirou menos de 7 aqui.
+     FOCO.erros: questões que o aluno errou (voltam primeiro quando ele refaz). */
+  var FOCO = { temas: new Set(), erros: [] };
+  const N_QUESTOES = 10;
+  const chaveQ = q => q.ae + "|" + q.p.slice(0, 60);
+  function focoCarregar() {
+    let sv = {}; try { sv = JSON.parse(localStorage.getItem(seqChave()) || "{}"); } catch (e) { }
+    (sv.foco || []).forEach(c => FOCO.temas.add(c)); FOCO.erros = sv.erros || [];
+    (PARAM.get("foco") || "").split(/[.,\s]+/).forEach(c => { if (/^\d-AE\d+$/.test(c)) FOCO.temas.add(c); });
+    if (RELAT && RELAT.simulado) { const Q = RELAT.questoes || {}; RELAT.simulado.itens.forEach(i => { if (i.ok === false && Q[i.k]) FOCO.temas.add(Q[i.k].tema); }); }
+  }
+  // 10 questões do tema: num tema de reforço, as que o aluno já errou vêm primeiro
+  function questoesTema(cod, n) {
+    const todas = embaralhar(D.quiz.filter(q => q.ae === cod));
+    const err = new Set(FOCO.erros);
+    todas.sort((a, b) => (err.has(chaveQ(b)) ? 1 : 0) - (err.has(chaveQ(a)) ? 1 : 0));
+    return todas.slice(0, n || N_QUESTOES);
+  }
+  // Simulado final com 10 questões: cerca de 6 dos temas de reforço do aluno (uma de cada vez, em rodízio) e o resto dos outros temas do ano
+  function questoesSimulado() {
+    const ano = anoAtual(), pool = embaralhar(D.quiz.filter(q => q.a === ano)), foco = [...FOCO.temas].filter(c => c[0] === ano);
+    const out = [], usa = q => { if (!out.includes(q)) out.push(q); };
+    if (foco.length) { const filas = foco.map(c => pool.filter(q => q.ae === c)); for (let r = 0; out.length < 6 && filas.some(f => f.length); r++) filas.forEach(f => { if (out.length < 6 && f.length) usa(f.shift()); }); }
+    const porTema = {}; pool.forEach(q => { if (!out.includes(q)) (porTema[q.ae] = porTema[q.ae] || []).push(q); });
+    const filas = embaralhar(Object.values(porTema)); while (out.length < N_QUESTOES && filas.some(f => f.length)) filas.forEach(f => { if (out.length < N_QUESTOES && f.length) usa(f.shift()); });
+    return embaralhar(out);
+  }
   function seqMontarPassos() {
     const t = D.trilha.find(x => x.ano === anoAtual()); if (!t) return [];
     const usa = h => h.r && (h.r.sim || h.r.modelo || h.r.ext);
-    const ordem = t.itens.filter(h => !h.rec && usa(h)).concat(t.itens.filter(h => h.rec && usa(h)));
+    const foco = h => FOCO.temas.has(h.cod) ? 0 : 1, pri = (a, b) => foco(a) - foco(b);
+    const ordem = t.itens.filter(h => !h.rec && usa(h)).sort(pri).concat(t.itens.filter(h => h.rec && usa(h)).sort(pri));
     return ordem.map(h => ({ tipo: "tema", h })).concat([{ tipo: "simulado" }]);
   }
   function iniciarSeq(irPara) {
-    SEQ.passos = seqMontarPassos(); if (!SEQ.passos.length) return;
+    focoCarregar(); SEQ.passos = seqMontarPassos(); if (!SEQ.passos.length) return;
     SEQ.ativo = true; document.body.classList.add("seq");
     const info0 = $("#info"); $("#seqConteudo").appendChild(info0);
     let salvo = {}; try { salvo = JSON.parse(localStorage.getItem(seqChave()) || "{}"); } catch (e) { }
@@ -980,7 +1011,7 @@
     box.innerHTML = SEQ.passos.map((p, k) => {
       const g = p.tipo === "simulado" ? "🏁 Final" : p.h.rec ? "♻️ Recuperação semestral" : "🎯 SARESP";
       const cab = g !== grupo ? `<div class="grupo">${g}</div>` : ""; grupo = g;
-      const nome = p.tipo === "simulado" ? "Simulado SARESP" : p.h.tema, sub = p.tipo === "simulado" ? "12 questões de todos os temas" : p.h.sigla + (PLANO.has(p.h.cod) ? " · ⭐ no seu plano" : "");
+      const nome = p.tipo === "simulado" ? "Simulado SARESP" : p.h.tema, sub = p.tipo === "simulado" ? N_QUESTOES + " questões, com foco nas suas dificuldades" : p.h.sigla + (FOCO.temas.has(p.h.cod) ? " · 🎯 reforço para você" : PLANO.has(p.h.cod) ? " · ⭐ no seu plano" : "");
       const id = p.tipo === "simulado" ? "simulado" : p.h.cod;
       return cab + `<button class="passo ${SEQ.feitos[id] ? "feito" : ""} ${k === SEQ.i ? "atual" : ""}" data-passo="${k}"><span class="n">${SEQ.feitos[id] ? "✓" : k + 1}</span><span><b>${nome}</b><small>${sub}</small></span></button>`;
     }).join("");
@@ -990,14 +1021,15 @@
     SEQ.i = k; seqSalvar(); const p = SEQ.passos[k], N = SEQ.passos.length;
     const feitos = Object.keys(SEQ.feitos).length, id = p.tipo === "simulado" ? "simulado" : p.h.cod;
     const nome = p.tipo === "simulado" ? "🏁 Simulado SARESP" : p.h.tema;
-    $("#seqTopo").innerHTML = `<div class="seq-topo"><span class="num">${k + 1}</span><div><small>Etapa ${k + 1} de ${N}${p.h ? " · " + p.h.sigla + " · " + (p.h.rec ? "♻️ recuperação" : "🎯 SARESP") : ""}</small><h2>${nome}</h2></div></div><div class="seq-dots">${SEQ.passos.map((pp, kk) => { const idd = pp.tipo === "simulado" ? "simulado" : pp.h.cod, nm = pp.tipo === "simulado" ? "Simulado SARESP" : pp.h.tema; return `<button class="${SEQ.feitos[idd] ? "feito" : ""} ${kk === k ? "atual" : ""}" data-ir="${kk}" title="${kk + 1}. ${nm}${SEQ.feitos[idd] ? " ✓" : ""}">${pp.tipo === "simulado" ? "🏁" : SEQ.feitos[idd] ? "✓" : kk + 1}</button>`; }).join("")}</div><div class="seq-barra"><span style="width:${Math.round(feitos / N * 100)}%"></span></div>`;
+    $("#seqTopo").innerHTML = `<div class="seq-topo"><span class="num">${k + 1}</span><div><small>Etapa ${k + 1} de ${N}${p.h ? " · " + p.h.sigla + " · " + (p.h.rec ? "♻️ recuperação" : "🎯 SARESP") : ""}</small><h2>${nome}</h2>${p.h && FOCO.temas.has(p.h.cod) ? `<span class="tag-foco">🎯 Tema de reforço para você</span>` : ""}</div></div><div class="seq-dots">${SEQ.passos.map((pp, kk) => { const idd = pp.tipo === "simulado" ? "simulado" : pp.h.cod, nm = pp.tipo === "simulado" ? "Simulado SARESP" : pp.h.tema; return `<button class="${SEQ.feitos[idd] ? "feito" : ""} ${kk === k ? "atual" : ""}" data-ir="${kk}" title="${kk + 1}. ${nm}${SEQ.feitos[idd] ? " ✓" : ""}">${pp.tipo === "simulado" ? "🏁" : SEQ.feitos[idd] ? "✓" : kk + 1}</button>`; }).join("")}</div><div class="seq-barra"><span style="width:${Math.round(feitos / N * 100)}%"></span></div>`;
     $("#seqTopo").querySelectorAll("[data-ir]").forEach(b => b.onclick = () => irPasso(+b.dataset.ir));
     const info0 = $("#info"); info0.innerHTML = ""; const velho = $("#seqConteudo #cartaoSim"); if (velho) velho.remove(); const extV = $("#seqConteudo #seqExt"); if (extV) extV.remove();
     $("#seqQuiz").innerHTML = "";
     if (p.tipo === "simulado") {
       if (est.modo === "sim" || est.atual == null) carregarModelo("sistema", true);
-      info0.innerHTML = `<div class="cartao"><p>Você chegou ao fim da trilha! Agora faça o <b>Simulado SARESP</b>: 12 questões de todos os temas do ${anoAtual()}º ano, no formato da prova.</p></div>`;
-      seqQuiz(embaralhar(D.quiz.filter(q => q.a === anoAtual())).slice(0, 12), "simulado", null);
+      const fz = [...FOCO.temas].filter(c => c[0] === anoAtual()).length;
+      info0.innerHTML = `<div class="cartao"><p>Você chegou ao fim da trilha! Agora faça o <b>Simulado SARESP</b>: ${N_QUESTOES} questões do ${anoAtual()}º ano, no formato da prova${fz ? `, com mais questões dos <b>seus temas de reforço</b> 🎯` : ""}.</p></div>`;
+      seqQuiz(questoesSimulado(), "simulado", null);
     } else {
       const r = p.h.r;
       if (r.sim) {
@@ -1005,7 +1037,7 @@
       } else if (r.modelo) { carregarModelo(r.modelo); }
       else if (est.modo === "sim" || !est.atual) carregarModelo("sistema", true);
       if (r.ext) { const e = D.externos[r.ext]; $("#seqConteudo").insertAdjacentHTML("beforeend", `<div class="cartao" id="seqExt"><p>Este tema também tem um simulador próprio:</p><a class="btn prim" style="width:100%;justify-content:center" href="${e.url}" target="_blank" rel="noopener">↗ Abrir o ${e.nome}</a></div>`); }
-      seqQuiz(D.quiz.filter(q => q.ae === p.h.cod), "tema", p.h.cod);
+      seqQuiz(questoesTema(p.h.cod), "tema", p.h.cod);
     }
     $("#seqNav").innerHTML = `<div class="seq-nav">${k > 0 ? `<button class="btn" id="seqAnt">← Anterior</button>` : "<span></span>"}${k < N - 1 ? `<button class="btn ${SEQ.feitos[id] ? "prim" : ""}" id="seqProx">${SEQ.feitos[id] ? "Próximo tema ▶" : "Pular para o próximo ▶"}</button>` : ""}</div>`;
     if ($("#seqAnt")) $("#seqAnt").onclick = () => irPasso(k - 1);
@@ -1022,14 +1054,16 @@
       if (SEQ.q !== st) return;
       if (st.i >= lista.length) {
         const pc = Math.round(st.pontos / lista.length * 100), fx = faixa(pc), idp = tema || "simulado";
+        if (tema && pc < 70) FOCO.temas.add(tema);
+        if (!tema) st.resp.forEach(r => { if (!r.ok && r.ae) FOCO.temas.add(r.ae); });
         SEQ.feitos[idp] = true; seqSalvar(); montarSeqLateral();
         const ult = SEQ.i >= SEQ.passos.length - 1;
         box.innerHTML = `<div class="cartao seq-q centro"><h3>${pc >= 70 ? "🏆" : "📘"} ${st.pontos} de ${lista.length} · <span style="color:${fx[1]}">${fx[0]}</span></h3>
           <p class="envio" id="sqEnvio">${ALUNO.dados ? "⏳ Enviando para o professor…" : "⚠️ Entre com seu nome (👤) para o professor ver seu resultado."}</p>
-          ${pc < 70 && tema ? `<p class="mini-txt">Dica: use o simulador mais um pouco e tente de novo.</p><button class="btn" id="sqDeNovo">↺ Responder de novo</button>` : ""}
+          ${pc < 70 && tema ? `<p class="mini-txt">🎯 Este tema ficou como <b>reforço</b> para você. Use o simulador mais um pouco e tente de novo: as questões que você errou aparecem primeiro.</p><button class="btn" id="sqDeNovo">↺ Responder de novo</button>` : ""}
           ${ult ? `<p><b>🎉 Missão completa!</b> Veja seu desempenho em <b>📊 Meu relatório</b>.</p>` : ""}</div>`;
         if (ALUNO.dados) ALUNO.fila.then(ok => { const e = $("#sqEnvio"); if (e) e.textContent = ok ? "✅ Resultado enviado para o professor." : "⚠️ Não foi possível enviar agora."; });
-        if ($("#sqDeNovo")) $("#sqDeNovo").onclick = () => seqQuiz(embaralhar(lista), atividade, tema);
+        if ($("#sqDeNovo")) $("#sqDeNovo").onclick = () => seqQuiz(tema ? questoesTema(tema) : embaralhar(lista), atividade, tema);
         const bp = $("#seqProx"); if (bp) { bp.classList.add("prim"); bp.textContent = "Próximo tema ▶"; }
         if (pc >= 75) XP.ganhar(20, "Bônus: faixa Avançado");
         return;
@@ -1039,6 +1073,7 @@
         <p class="pergunta">${it.p}</p><div class="opcoes">${ordem.map((o, k) => `<button class="opcao" data-i="${o.i}"><b>${"ABCD"[k]})</b> ${o.t}</button>`).join("")}</div><div id="sqFeed"></div></div>`;
       box.querySelectorAll(".opcao").forEach(b => b.onclick = () => {
         const ok = +b.dataset.i === it.c; if (ok) { st.pontos++; XP.ganhar(10); }
+        { const kq = chaveQ(it), ix = FOCO.erros.indexOf(kq); if (!ok && ix < 0) FOCO.erros.push(kq); if (ok && ix >= 0) FOCO.erros.splice(ix, 1); }
         st.resp.push({ ae: it.ae, ok, p: it.p.slice(0, 90), r: it.o[+b.dataset.i].slice(0, 60) }); enviar(st.i + 1 >= lista.length);
         box.querySelectorAll(".opcao").forEach(x => { x.disabled = true; if (+x.dataset.i === it.c) x.classList.add("certa"); else if (x === b) x.classList.add("errada"); });
         $("#sqFeed").innerHTML = `<div class="destaque ${ok ? "saude" : "erro"}"><b>${ok ? "Correto! +10 XP" : "Não foi dessa vez."}</b> ${it.e}</div><button class="btn prim" id="sqProx">${st.i + 1 < lista.length ? "Próxima questão" : "Ver resultado"}</button>`;
@@ -1059,5 +1094,5 @@
   setTimeout(() => carga.classList.add("some"), 400);
   { const aba = new URLSearchParams(location.search).get("aba"); if (["simular", "quiz", "desafio", "habilidades", "saiba"].includes(aba)) trocarAba(aba); else if (new URLSearchParams(location.search).get("ano")) trocarAba("habilidades"); }
   setTimeout(() => $(".ajuda-gestos").classList.add("some"), 9000);
-  window.APP = { est, carregarModelo, abrirSim, selecionar, trocarAba, cam, ctl, cena };
+  window.APP = { est, carregarModelo, abrirSim, selecionar, trocarAba, cam, ctl, cena, SEQ, FOCO };
 })();
