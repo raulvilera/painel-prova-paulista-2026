@@ -754,5 +754,5 @@
   };
 
   window.MODELOS = M;
-  window.GEO = { mat, malha, rng, fibonacci, orientar, deformar, tubo, novelo, hélice, vírusMini, anticorpoGeo, celulaBola, ruido, V, matT, terraHD, enfeitarTerra, luaHD, solHD, enfeitarSol, brilhoSprite, planetaHD, anelSaturno, caixaRedonda, pontos, nucleoHD, mitocondriaHD, golgiHD, cloroplastoHD };
+  window.GEO = { novoModelo, mat, malha, rng, fibonacci, orientar, deformar, tubo, novelo, hélice, vírusMini, anticorpoGeo, celulaBola, ruido, V, matT, terraHD, enfeitarTerra, luaHD, solHD, enfeitarSol, brilhoSprite, planetaHD, anelSaturno, caixaRedonda, pontos, nucleoHD, mitocondriaHD, golgiHD, cloroplastoHD };
 })();
