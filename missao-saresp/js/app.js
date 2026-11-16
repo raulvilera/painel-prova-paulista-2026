@@ -534,8 +534,9 @@
     if (POP.movel) { popLugarMovel(); return; }
     requestAnimationFrame(() => { const a = areaPop(), W = a.x1 - a.x0 - el.offsetWidth, H = a.y1 - a.y0 - el.offsetHeight;
     if (pos) colocar(a.x0 + pos.x * W, a.y0 + pos.y * H); else if (POP.movel) colocar(a.x0, a.y1); else colocar(a.x1 - el.offsetWidth - 6, 58); }); }
-  function popAbrir(tit, html) {
-    const el = popCriar(); if (POP.fechado && !html.forcar) { }
+  function popAbrir(tit, html, minimo) {
+    const el = popCriar();
+    { const mn = !!minimo && !POP.movel; el.classList.toggle("min", mn); el.querySelector('[data-a="min"]').textContent = mn ? "▢" : "–"; el.querySelector('[data-a="min"]').title = mn ? "Abrir" : "Minimizar"; } if (POP.fechado && !html.forcar) { }
     el.querySelector(".pop-tit").innerHTML = tit; el.querySelector(".pop-corpo").innerHTML = html; el.hidden = false; POP.fechado = false;
     el.querySelectorAll("[data-pp]").forEach(b => b.onclick = () => selecionar(b.dataset.pp, true));
     el.querySelector(".pop-corpo").scrollTop = 0; popPos(popLer());
@@ -558,7 +559,7 @@
     else { const i = its.indexOf(cur), ant = its[(i - 1 + its.length) % its.length], prox = its[(i + 1) % its.length];
       corpo = `<p class="pop-f">${cur.funcao}</p>${listaPop("📋 Características", cur.carac, "c")}${listaPop("🧑‍🔬 O que o ser humano faz", cur.acoes, "h")}${cur.cur ? `<p class="pop-cur">💡 ${cur.cur}</p>` : ""}
         <div class="pop-nav"><button class="btn" data-pg="${ant.id}">‹ ${ant.nome}</button><button class="btn" data-pg="${prox.id}">${prox.nome} ›</button></div><button class="btn link pop-voltar" data-pg="">☰ Todos os itens</button>${extra || ""}`; }
-    popAbrir(`${g.em || ""} ${cur ? `<span class="pop-cor" style="background:${cur.color || cur.cor}"></span>${cur.nome}` : g.titulo}`, corpo);
+    popAbrir(`${g.em || ""} ${cur ? `<span class="pop-cor" style="background:${cur.color || cur.cor}"></span>${cur.nome}` : g.titulo}`, corpo, !cur);
     POP.el.querySelectorAll("[data-pg]").forEach(b => b.onclick = () => popGrupo(g, b.dataset.pg, extra));
     ligarExtra();
   }
@@ -571,7 +572,7 @@
   function popModelo(id) {
     const m = D.modelos.find(x => x.id === id); if (!m) return popEsconder();
     const ps = Object.keys(D.fichas).filter(k => D.fichas[k].modelo === id); if (!ps.length) return popEsconder();
-    popAbrir(`${m.em} ${m.nome}`, `<p class="pop-f">Toque em uma parte no simulador ou escolha abaixo para ver suas <b>especificidades</b>.</p><div class="chips">${ps.map(k => `<button class="chip" data-pp="${k}"><span class="pop-cor" style="background:${D.fichas[k].cor}"></span>${D.fichas[k].nome}</button>`).join("")}</div>`);
+    popAbrir(`${m.em} ${m.nome}`, `<p class="pop-f">Toque em uma parte no simulador ou escolha abaixo para ver suas <b>especificidades</b>.</p><div class="chips">${ps.map(k => `<button class="chip" data-pp="${k}"><span class="pop-cor" style="background:${D.fichas[k].cor}"></span>${D.fichas[k].nome}</button>`).join("")}</div>`, true);
   }
   function partesIrmas(modelo, atual) {
     const ps = Object.keys(D.fichas).filter(k => D.fichas[k].modelo === modelo);
