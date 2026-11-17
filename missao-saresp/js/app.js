@@ -1190,17 +1190,36 @@
   // leva o simulador (ou o modelo 3D) para o tema que está na tela
   function ativarBloco(k) {
     if (k === SEQ.ativoK || !SEQ.passos[k]) return;
-    SEQ.ativoK = k; SEQ.i = k; seqSalvar();
+    SEQ.ativoK = k; SEQ.i = k; seqSalvar(); limparCtlSimu();
     { const info0 = $("#info"), casa = $("#aba-explorar"); if (info0 && casa && info0.parentElement !== casa) casa.appendChild(info0); }
     $$("#seqLista .bloco").forEach(b => b.classList.toggle("ativo", +b.dataset.k === k));
     $$("#seqLista .bloco-sim").forEach((d, kk) => { if (kk !== k && !d.querySelector(".bloco-espera")) d.innerHTML = `<div class="bloco-espera">🧊 O simulador deste tema aparece aqui quando você volta para ele.</div>`; });
     const p = SEQ.passos[k], slot = $(`#seqLista .bloco[data-k="${k}"] .bloco-sim`); slot.innerHTML = "";
     const info0 = $("#info");
-    if (p.tipo === "simulado") { if (est.modo === "sim" || est.atual == null) carregarModelo("sistema", true); slot.innerHTML = `<p class="mini-txt muted">Você chegou ao fim da trilha! Faça o Simulado final abaixo${[...FOCO.temas].some(c => c[0] === anoAtual()) ? ", com mais questões dos seus temas de reforço 🎯" : ""}.</p>`; trocarAba("seq", true); return; }
+    if (p.tipo === "simulado") { slot.innerHTML = `<p class="mini-txt muted">Você chegou ao fim da trilha! Faça o Simulado final abaixo${[...FOCO.temas].some(c => c[0] === anoAtual()) ? ", com mais questões dos seus temas de reforço 🎯" : ""}. <b>🧊 O simulador muda a cada questão</b>, mostrando o tema dela.</p>`;
+      SEQ.simu3d = null; const pend = document.querySelector(`#seqLista .bloco[data-k="${k}"] .seq-q:not(.respondida)`); simuladoMostrar(k, pend ? +pend.dataset.n : 0); trocarAba("seq", true); return; }
     const r = p.h.r;
     if (r.sim) { abrirSim(r.sim); const c = $("#cartaoSim"); if (c) slot.appendChild(c); }
     else { carregarModelo(r.modelo || "sistema"); info0.classList.add("bloco-info"); slot.appendChild(info0); }
     popTema(p.h.cod);
+    trocarAba("seq", true);
+  }
+  /* ---- Simulado SARESP: cada questão abre o simulador (ou o modelo 3D) do tema dela ---- */
+  function temaDe(ae) { for (const t of D.trilha) for (const h of t.itens) if (h.cod === ae) return h; return null; }
+  function limparCtlSimu() { $$("#seqLista .q-ctl").forEach(d => { d.hidden = true; const c = d.querySelector("#cartaoSim"); if (c) c.remove(); }); $$("#seqLista .seq-q.q-ativa").forEach(c => c.classList.remove("q-ativa")); }
+  function simuladoMostrar(k, n) {
+    const st = SEQ.blocos[k], card = $(`#seqLista .bloco[data-k="${k}"] .seq-q[data-n="${n}"]`); if (!st || !card || SEQ.ativoK !== k) return;
+    const h = temaDe(st.lista[n].ae), r = h && h.r; if (!r) return;
+    const tipo = r.sim ? "sim:" + r.sim : "mod:" + (r.modelo || "sistema"), chave = tipo + "|" + n;
+    if (SEQ.simu3d === chave) return; const mesmo = !!SEQ.simu3d && SEQ.simu3d.split("|")[0] === tipo; SEQ.simu3d = chave;
+    const ctlAntigo = document.querySelector("#seqLista .q-ctl #cartaoSim");
+    if (ctlAntigo && mesmo) ctlAntigo.remove();
+    limparCtlSimu(); card.classList.add("q-ativa");
+    if (r.sim) {
+      if (!mesmo || !ctlAntigo) abrirSim(r.sim);
+      const c = mesmo && ctlAntigo ? ctlAntigo : $("#cartaoSim"), d = card.querySelector(".q-ctl"); if (c && d) { d.appendChild(c); d.hidden = false; }
+    } else if (!mesmo) carregarModelo(r.modelo || "sistema", true);
+    if (!mesmo) popTema(h.cod) || (r.modelo && popModelo(r.modelo));
     trocarAba("seq", true);
   }
   function irPasso(k) { const b = $(`#seqLista .bloco[data-k="${k}"]`); if (b) b.scrollIntoView({ behavior: "smooth", block: "start" }); }
@@ -1216,6 +1235,7 @@
     const enviar = fim => registrar({ id: st.id, atividade, tema, acertos: st.pontos, total: lista.length, concluido: fim, respostas: st.resp });
     box.innerHTML = lista.map((it, n) => { const ordem = (ev.o[n] && ev.o[n].length === it.o.length ? ev.o[n] : it.o.map((t, i) => i)).map(i => ({ t: it.o[i], i }));
       return `<div class="cartao seq-q" data-n="${n}"><div class="hab-top"><b>📝 Questão ${n + 1} de ${lista.length}</b>${simu ? `<span class="mini-txt muted">${rotuloAE(it.ae)}</span>` : ""}</div>
+        ${simu ? (() => { const th = temaDe(it.ae); return th ? `<div class="q-3d">🧊 No simulador: <b>${th.tema}</b></div><details class="q-ctl" hidden><summary>🎛️ Controles do simulador</summary></details>` : ""; })() : ""}
         <p class="pergunta">${it.p}</p><div class="opcoes">${ordem.map((o, j) => `<button class="opcao" data-i="${o.i}"><b>${"ABCD"[j]})</b> ${o.t}</button>`).join("")}</div><div class="feed"></div></div>`; }).join("") + `<div class="bloco-fim"></div>`;
     // marca a questão como respondida (na hora ou ao restaurar o que já estava salvo)
     const marcar = (card, it, b, ok, restaurando) => {
@@ -1239,6 +1259,11 @@
         if (ok) st.pontos++; st.feitas++; st.resp.push({ ae: it.ae, ok, p: it.p.slice(0, 90), r: (it.o[i] || "").slice(0, 60) }); marcar(card, it, b, ok, true); }
     });
     if (st.feitas >= lista.length) fimBloco(k, true);
+    if (simu) { // troca o 3D quando a questão chega ao meio da tela (ou quando o aluno toca nela)
+      if (SEQ.obsSimu) SEQ.obsSimu.disconnect();
+      SEQ.obsSimu = new IntersectionObserver(ents => ents.forEach(e => { if (e.isIntersecting) simuladoMostrar(k, +e.target.dataset.n); }), { root: $("#painel"), rootMargin: "-30% 0px -60% 0px" });
+      box.querySelectorAll(".seq-q").forEach(c => { SEQ.obsSimu.observe(c); c.addEventListener("pointerdown", ev => { if (!ev.target.closest(".q-ctl")) simuladoMostrar(k, +c.dataset.n); }); });
+    }
   }
   function fimBloco(k, restaurando) {
     const p = SEQ.passos[k], st = SEQ.blocos[k], simu = p.tipo === "simulado", tema = simu ? null : p.h.cod, N = st.lista.length;

@@ -444,3 +444,10 @@ body.tela-cheia .pop { max-width: min(300px, calc(100% - 70px)); max-height: 48%
 .seq-salvo { display: block; margin-top: 3px; color: var(--saude, #16a34a); font-weight: 600; }
 .seq-salvo.pulsa { animation: salvoPulsa 1.2s ease; }
 @keyframes salvoPulsa { 0% { opacity: .35; } 40% { opacity: 1; } 100% { opacity: 1; } }
+
+/* Simulado SARESP: 3D por questão */
+.q-3d { font-size: .8rem; margin: 2px 0 6px; padding: 4px 10px; border-radius: 999px; background: color-mix(in srgb, var(--acento) 14%, transparent); display: inline-block; }
+.seq-q.q-ativa { outline: 2px solid var(--acento); outline-offset: 2px; }
+.q-ctl { margin: 4px 0 8px; border: 1px dashed var(--borda-suave); border-radius: 12px; padding: 6px 10px; }
+.q-ctl > summary { cursor: pointer; font-weight: 700; font-size: .85rem; }
+.q-ctl #cartaoSim { margin-top: 8px; box-shadow: none; }
