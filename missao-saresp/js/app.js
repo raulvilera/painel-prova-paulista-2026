@@ -289,7 +289,14 @@
       return;
     }
     box.classList.remove("movendo");
-    layoutLivre(cand, w, h, [], []);
+    layoutLivre(cand, w, h, areasReservadas(), []);
+  }
+  // áreas do palco cobertas por botões e pelo quadro de informações: os nomes não ficam embaixo delas
+  function areasReservadas() {
+    const pr = palco.getBoundingClientRect(), out = [];
+    ["#palco ~ .mover-cena", ".palco-area .mover-cena", ".palco-area > .pop:not([hidden])"].forEach(sel => document.querySelectorAll(sel).forEach(el => {
+      const r = el.getBoundingClientRect(); if (!r.width) return; out.push([r.left - pr.left - 6, r.top - pr.top - 6, r.right - pr.left + 6, r.bottom - pr.top + 6]); }));
+    return out;
   }
   function medir(c) { if (!c.r.tam || !c.r.tam[0]) c.r.tam = [c.r.el.offsetWidth, c.r.el.offsetHeight]; c.cw = c.r.tam[0]; c.ch = c.r.tam[1]; }
 
@@ -341,6 +348,8 @@
       const { ax, ay, cw, ch } = c, up = ay - 14 - ch, st = ch + 5;
       const tent = [[ax - cw / 2, up], [ax - cw / 2, up - st], [ax + 12, ay - ch / 2], [ax - cw - 12, ay - ch / 2], [ax - cw / 2, ay + 14],
         [ax - cw / 2, up - 2 * st], [ax + 12, up], [ax - cw - 12, up], [ax + 12, ay + 14], [ax - cw - 12, ay + 14], [ax - cw / 2, ay + 14 + st]];
+      // se os lugares de perto estão ocupados, procura mais longe (com linha ligando o nome à estrutura) em vez de esconder o nome
+      for (const d of [46, 80, 118, 160, 210, 270]) for (let k = 0; k < 12; k++) { const a = k / 12 * Math.PI * 2 + (d / 46) * .3; tent.push([ax + Math.cos(a) * d - cw / 2, ay + Math.sin(a) * d * .8 - ch / 2]); }
       if (c.r.off) tent.unshift([ax + c.r.off[0], ay + c.r.off[1]]); // mantém o lugar anterior se ainda estiver livre (evita pulos)
       for (let [x, y] of tent) { x = Math.max(2, Math.min(w - cw - 2, x)); y = Math.max(2, Math.min(h - ch - 2, y)); if (!bate(x, y, cw, ch)) { ocup.push([x, y, x + cw, y + ch]); c.x = x; c.y = y; c.lado = "livre"; c.r.off = [x - ax, y - ay]; return; } }
       if (c.r.parte === est.selecionado) { c.x = Math.max(2, Math.min(w - cw - 2, ax - cw / 2)); c.y = Math.max(2, up); c.lado = "livre"; return; }
