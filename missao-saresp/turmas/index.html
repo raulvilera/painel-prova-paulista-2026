@@ -48,6 +48,7 @@ nav a{color:var(--acento);font-weight:600;text-decoration:none;margin-left:14px}
 </div>
 <div class="aviso" id="aviso"></div>
 <script src="../js/dados.js?v=20261115d"></script>
+<script src="../js/especificidades4.js?v=20261117c"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
 <script>
 (function () {
@@ -57,7 +58,7 @@ nav a{color:var(--acento);font-weight:600;text-decoration:none;margin-left:14px}
   const base = location.origin + "/missao-saresp/";
   const linkT = t => base + "?turma=" + cod(t), linkTema = (t, c) => linkT(t) + "&tema=" + encodeURIComponent(c);
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const SIMS = { fases: "Fases da Lua e eclipses", estacoes: "Estações do ano", sombras: "Sol e sombras", estufa: "Efeito estufa", selecao: "Seleção natural", energia: "Consumo de energia", biomas: "Biomas brasileiros", celulas: "Classifique a célula" };
+  const SIMS = { fases: "Fases da Lua e eclipses", estacoes: "Estações do ano", sombras: "Sol e sombras", estufa: "Efeito estufa", selecao: "Seleção natural", energia: "Consumo de energia", biomas: "Biomas brasileiros", celulas: "Classifique a célula", invertebrados: "Classifique o invertebrado" };
   const nomeMod = id => (D.modelos.find(m => m.id === id) || {}).nome || id;
   function recursos(r) { const a = []; if (r.sim) a.push("Simulação: " + SIMS[r.sim]); if (r.modelo) a.push("Modelo 3D: " + nomeMod(r.modelo)); if (r.ext) a.push("+ " + D.externos[r.ext].nome); a.push("Quiz do tema"); return a.join(" · "); }
   function avisar(t) { const a = $("#aviso"); a.textContent = t; a.classList.add("on"); clearTimeout(a._t); a._t = setTimeout(() => a.classList.remove("on"), 1800); }

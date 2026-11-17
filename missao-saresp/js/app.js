@@ -1120,7 +1120,7 @@
   function focoCarregar() {
     let sv = {}; try { sv = JSON.parse(localStorage.getItem(seqChave()) || "{}"); } catch (e) { }
     (sv.foco || []).forEach(c => FOCO.temas.add(c)); FOCO.erros = sv.erros || [];
-    (PARAM.get("foco") || "").split(/[.,\s]+/).forEach(c => { if (/^\d-AE\d+$/.test(c)) FOCO.temas.add(c); });
+    (PARAM.get("foco") || "").split(/[.,\s]+/).forEach(c => { if (/^\d-[A-Za-z0-9]+$/.test(c)) FOCO.temas.add(c); });
     if (RELAT && RELAT.simulado) { const Q = RELAT.questoes || {}; RELAT.simulado.itens.forEach(i => { if (i.ok === false && Q[i.k]) FOCO.temas.add(Q[i.k].tema); }); }
   }
   // 10 questões do tema: num tema de reforço, as que o aluno já errou vêm primeiro
@@ -1152,7 +1152,7 @@
     focoCarregar(); SEQ.passos = seqMontarPassos(); if (!SEQ.passos.length) return;
     SEQ.ativo = true; document.body.classList.add("seq", "seq-continua");
     let salvo = {}; try { salvo = JSON.parse(localStorage.getItem(seqChave()) || "{}"); } catch (e) { }
-    SEQ.feitos = salvo.feitos || {}; SEQ.estado = salvo.estado || {}; SEQ.ativoK = -1; SEQ.blocos = [];
+    SEQ.feitos = salvo.feitos || {}; SEQ.estado = salvo.estado || {}; SEQ.ativoK = -1; SEQ.blocos = []; SEQ.usados3d = new Set(); SEQ.obsQ = [];
     const box = $("#aba-seq"); box.innerHTML = `<div id="seqCab"></div><div id="seqLista"></div>`;
     const info0 = $("#info"); info0.innerHTML = "";
     $("#seqLista").innerHTML = SEQ.passos.map((p, k) => {
@@ -1190,7 +1190,7 @@
   // leva o simulador (ou o modelo 3D) para o tema que está na tela
   function ativarBloco(k) {
     if (k === SEQ.ativoK || !SEQ.passos[k]) return;
-    SEQ.ativoK = k; SEQ.i = k; seqSalvar(); limparCtlSimu();
+    SEQ.ativoK = k; SEQ.i = k; SEQ.cena3d = null; seqSalvar(); limparCtlSimu();
     { const info0 = $("#info"), casa = $("#aba-explorar"); if (info0 && casa && info0.parentElement !== casa) casa.appendChild(info0); }
     $$("#seqLista .bloco").forEach(b => b.classList.toggle("ativo", +b.dataset.k === k));
     $$("#seqLista .bloco-sim").forEach((d, kk) => { if (kk !== k && !d.querySelector(".bloco-espera")) d.innerHTML = `<div class="bloco-espera">🧊 O simulador deste tema aparece aqui quando você volta para ele.</div>`; });
@@ -1199,9 +1199,81 @@
     if (p.tipo === "simulado") { slot.innerHTML = `<p class="mini-txt muted">Você chegou ao fim da trilha! Faça o Simulado final abaixo${[...FOCO.temas].some(c => c[0] === anoAtual()) ? ", com mais questões dos seus temas de reforço 🎯" : ""}. <b>🧊 O simulador muda a cada questão</b>, mostrando o tema dela.</p>`;
       SEQ.simu3d = null; const pend = document.querySelector(`#seqLista .bloco[data-k="${k}"] .seq-q:not(.respondida)`); simuladoMostrar(k, pend ? +pend.dataset.n : 0); trocarAba("seq", true); return; }
     const r = p.h.r;
-    if (r.sim) { abrirSim(r.sim); const c = $("#cartaoSim"); if (c) slot.appendChild(c); }
-    else { carregarModelo(r.modelo || "sistema"); info0.classList.add("bloco-info"); slot.appendChild(info0); }
+    $$("#seqLista #cartaoSim").forEach(c => c.remove());
+    if (r.sim) abrirSim(r.sim); else carregarModelo(r.modelo || "sistema", true);
+    slot.innerHTML = `<p class="mini-txt muted">🧊 <b>O simulador muda a cada questão</b>: role ou toque em uma questão para ver a estrutura de que ela fala.${r.sim ? " Os controles do simulador aparecem dentro da questão." : ""}</p>`;
+    setTimeout(() => { if (SEQ.ativoK !== k) return; const bx = $(`#seqLista .bloco[data-k="${k}"] .bloco-q`), n = bx && questaoNoMeio(bx); if (n != null) mostrarCena(k, n); }, 60);
     popTema(p.h.cod);
+    trocarAba("seq", true);
+  }
+  /* ---- Temas: um 3D diferente para cada questão ----
+     Procura, nos modelos do ano, a estrutura de que a questão fala (nome no enunciado, na resposta certa ou na explicação);
+     sem correspondência, usa o simulador do tema ou outra estrutura do modelo do tema. Estruturas já usadas (no tema e
+     nos outros temas da turma) não se repetem enquanto houver outra opção. */
+  const normTx = t => " " + (t || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim() + " ";
+  const PAL_VAGAS = new Set(["sistema", "camada", "camadas", "celula", "celulas", "energia", "estrutura", "animal", "animais", "planeta", "planetas", "artropodes", "grupo", "forma", "corpo", "parte", "partes", "tempo", "terra", "luz", "vida", "linha", "linhas"]);
+  const PARADA = new Set("como para pela pelo pelas pelos entre quando qual quais esta este essa esse isso sobre mais menos muito muita tambem porque sendo seres outro outra outros outras partes parte corpo forma formas tipo tipos todos todas cada onde seus suas dele dela pode podem fazer faz meio maior menor principal principalmente exemplo chamado chamada chamados estrutura estruturas modelo simulador questao aluno alunos ocorre acontece".split(" "));
+  // singular simples do português (fósseis→fóssil, órgãos→órgão, animais→animal, flores→flor) e raiz de até 6 letras
+  const singular = w => /eis$/.test(w) ? w.slice(0, -3) + "il" : /[oa]es$/.test(w) ? w.slice(0, -3) + "ao" : /ais$|ois$|uis$/.test(w) ? w.slice(0, -2) + "l" : /(r|z|s)es$/.test(w) ? w.slice(0, -2) : /s$/.test(w) && !/ss$/.test(w) ? w.slice(0, -1) : w;
+  const raizes = t => { const out = new Set(); normTx(t).trim().split(" ").forEach(w0 => { if (w0.length < 4 || PARADA.has(w0)) return; const w = singular(w0); if (w.length < 4 || PARADA.has(w)) return; out.add(w.slice(0, 6)); }); return out; };
+  let CHAVES3D = null;
+  function chaves3d() {
+    if (CHAVES3D) return CHAVES3D;
+    CHAVES3D = Object.keys(D.fichas).filter(k => MODELOS[D.fichas[k].modelo]).map(k => { const f = D.fichas[k];
+      return { k, m: f.modelo, hab: f.hab || [], nome: raizes(f.nome.replace(/·/g, " ")), resto: raizes([f.funcao, f.desc, (f.carac || []).join(" ")].join(" ")) }; });
+    return CHAVES3D;
+  }
+  // pontua o quanto a questão fala da estrutura: palavra do nome vale 3 (palavras comuns a quase todas as estruturas do tema valem pouco),
+  // palavra da ficha vale 1
+  function pontoCena(c, q, comum) { let s = 0, nome = 0; q.forEach(w => { if (c.nome.has(w)) { if (comum.has(w)) s += .5; else { s += 3; nome++; } } else if (c.resto.has(w)) s += 1; }); return nome ? s : (s >= 5 ? s * .6 : 0); }
+  function cenasDoTema(h, lista, usados) {
+    const proprio = h.r.modelo, ch = chaves3d().filter(c => c.hab.includes(h.cod) || c.m === proprio), local = new Set();
+    const df = {}; ch.forEach(c => c.nome.forEach(w => df[w] = (df[w] || 0) + 1));
+    const comum = new Set(Object.keys(df).filter(w => ch.length >= 3 && df[w] / ch.length >= .4));
+    const vistas = proprio && MODELOS[proprio] ? (MODELOS[proprio].vistas || []).map((v, i) => i) : [];
+    let simUsado = false, iv = 0;
+    return lista.map(it => {
+      const q = raizes(it.p + " " + (it.o[it.c] || "") + " " + (it.e || ""));
+      const cand = ch.map(c => ({ c, s: pontoCena(c, q, comum) + (c.m === proprio ? .5 : 0) })).filter(x => x.s >= 3).sort((a, b) => b.s - a.s);
+      if (cand.length) {
+        // outra estrutura só se ela também for uma boa resposta; senão repete a certa (nunca mostra uma que não tem a ver)
+        const best = cand[0], livre = cand.find(x => !local.has(x.c.k) && !usados.has(x.c.k) && x.s >= best.s * .75);
+        if (!livre && local.has(best.c.k) && h.r.sim && !simUsado) { simUsado = true; return { sim: h.r.sim }; }   // a certa já apareceu: usa o simulador do tema
+        const esc = livre || best; local.add(esc.c.k); usados.add(esc.c.k); return { modelo: esc.c.m, parte: esc.c.k };
+      }
+      // sem estrutura certa para a questão: simulador do tema ou uma vista do modelo do tema
+      if (h.r.sim && (!simUsado || !proprio)) { const c = { sim: h.r.sim }; if (simUsado) c.vista = iv++; simUsado = true; return c; }
+      return { modelo: proprio || "sistema", vista: vistas.length ? vistas[iv++ % vistas.length] : 0 };
+    });
+  }
+  function nomeCena(c) {
+    if (c.parte) { const f = D.fichas[c.parte], m = D.modelos.find(x => x.id === c.modelo); return `${f.nome}${m ? ` <span class="muted">(${m.nome})</span>` : ""}`; }
+    if (c.sim) { const s = SIMULACOES.lista.find(x => x.id === c.sim); return s ? s.titulo : c.sim; }
+    const m = D.modelos.find(x => x.id === c.modelo), v = MODELOS[c.modelo] && (MODELOS[c.modelo].vistas || [])[c.vista || 0];
+    return (m ? m.nome : c.modelo) + (v ? ` <span class="muted">· ${v[0]}</span>` : "");
+  }
+  // a questão mais próxima da linha de leitura (35% da altura do painel) é a que manda no 3D
+  function questaoNoMeio(box) {
+    const pr = $("#painel").getBoundingClientRect(), y = pr.top + pr.height * .35; let best = null, bd = 1e9;
+    box.querySelectorAll(".seq-q").forEach(c => { const r = c.getBoundingClientRect(); if (r.bottom < pr.top || r.top > pr.bottom) return; const d = y < r.top ? r.top - y : y > r.bottom ? y - r.bottom : 0; if (d < bd) { bd = d; best = +c.dataset.n; } });
+    return best;
+  }
+  function mostrarCena(k, n) {
+    const st = SEQ.blocos[k], c = st && st.cenas && st.cenas[n], card = $(`#seqLista .bloco[data-k="${k}"] .seq-q[data-n="${n}"]`);
+    if (!c || !card || SEQ.ativoK !== k) return;
+    const chave = k + "|" + n; if (SEQ.cena3d === chave) return; SEQ.cena3d = chave;
+    $$("#seqLista .seq-q.q-ativa").forEach(x => x.classList.remove("q-ativa")); card.classList.add("q-ativa");
+    $$("#seqLista .q-ctl").forEach(d => d.hidden = true);
+    if (c.sim) {
+      let cs = document.querySelector("#seqLista #cartaoSim");
+      if (!(est.modo === "sim" && est.simId === c.sim && cs)) { $$("#seqLista #cartaoSim").forEach(x => x.remove()); abrirSim(c.sim); cs = $("#cartaoSim"); }
+      const d = card.querySelector(".q-ctl"); if (cs && d) { d.appendChild(cs); d.hidden = false; }
+      if (c.vista != null && est.sim && est.sim.vistas && est.sim.vistas.length) vista(est.sim.vistas[c.vista % est.sim.vistas.length]);
+    } else {
+      if (!(est.modo === "modelo" && est.modeloId === c.modelo)) carregarModelo(c.modelo, true);
+      if (c.parte) selecionar(c.parte, true);
+      else { if (est.selecionado) { limparRealce(est.selecionado); est.selecionado = null; } const vs = MODELOS[c.modelo].vistas || []; if (vs.length) vista(vs[(c.vista || 0) % vs.length]); popModelo(c.modelo); }
+    }
     trocarAba("seq", true);
   }
   /* ---- Simulado SARESP: cada questão abre o simulador (ou o modelo 3D) do tema dela ---- */
@@ -1231,12 +1303,14 @@
     let ev = refazer ? null : SEQ.estado[idp], lista = null;
     if (ev && Array.isArray(ev.q)) { const mapa = new Map(D.quiz.map(q => [chaveQ(q), q])); lista = ev.q.map(c => mapa.get(c)); if (lista.some(x => !x)) { lista = null; ev = null; } } else ev = null;
     if (!lista) { lista = simu ? questoesSimulado() : questoesTema(tema); ev = SEQ.estado[idp] = { id: novoId(), q: lista.map(chaveQ), o: lista.map(it => embaralhar(it.o.map((t, i) => i))), r: {} }; seqSalvar(); }
-    const st = { lista, pontos: 0, feitas: 0, id: ev.id, resp: [] }; SEQ.blocos[k] = st;
+    let cenas = null;
+    if (!simu) { const ant = SEQ.blocos[k] && SEQ.blocos[k].cenas; if (ant) ant.forEach(c => c.parte && SEQ.usados3d.delete(c.parte)); cenas = cenasDoTema(p.h, lista, SEQ.usados3d || (SEQ.usados3d = new Set())); }
+    const st = { lista, pontos: 0, feitas: 0, id: ev.id, resp: [], cenas }; SEQ.blocos[k] = st;
     const enviar = fim => registrar({ id: st.id, atividade, tema, acertos: st.pontos, total: lista.length, concluido: fim, respostas: st.resp });
     box.innerHTML = lista.map((it, n) => { const ordem = (ev.o[n] && ev.o[n].length === it.o.length ? ev.o[n] : it.o.map((t, i) => i)).map(i => ({ t: it.o[i], i }));
       return `<div class="cartao seq-q" data-n="${n}"><div class="hab-top"><b>📝 Questão ${n + 1} de ${lista.length}</b>${simu ? `<span class="mini-txt muted">${rotuloAE(it.ae)}</span>` : ""}</div>
-        ${simu ? (() => { const th = temaDe(it.ae); return th ? `<div class="q-3d">🧊 No simulador: <b>${th.tema}</b></div><details class="q-ctl" hidden><summary>🎛️ Controles do simulador</summary></details>` : ""; })() : ""}
-        <p class="pergunta">${it.p}</p><div class="opcoes">${ordem.map((o, j) => `<button class="opcao" data-i="${o.i}"><b>${"ABCD"[j]})</b> ${o.t}</button>`).join("")}</div><div class="feed"></div></div>`; }).join("") + `<div class="bloco-fim"></div>`;
+        ${simu ? (() => { const th = temaDe(it.ae); return th ? `<div class="q-3d">🧊 No simulador: <b>${th.tema}</b></div>` : ""; })() : `<div class="q-3d">🧊 No simulador: <b>${nomeCena(cenas[n])}</b></div>`}
+        <p class="pergunta">${it.p}</p><div class="opcoes">${ordem.map((o, j) => `<button class="opcao" data-i="${o.i}"><b>${"ABCD"[j]})</b> ${o.t}</button>`).join("")}</div><div class="feed"></div><details class="q-ctl" hidden><summary>🎛️ Controles do simulador</summary></details></div>`; }).join("") + `<div class="bloco-fim"></div>`;
     // marca a questão como respondida (na hora ou ao restaurar o que já estava salvo)
     const marcar = (card, it, b, ok, restaurando) => {
       card.classList.add("respondida");
@@ -1259,10 +1333,15 @@
         if (ok) st.pontos++; st.feitas++; st.resp.push({ ae: it.ae, ok, p: it.p.slice(0, 90), r: (it.o[i] || "").slice(0, 60) }); marcar(card, it, b, ok, true); }
     });
     if (st.feitas >= lista.length) fimBloco(k, true);
+    if (!simu) { // cada questão do tema: troca o 3D quando ela chega ao meio da tela (ou quando o aluno toca nela)
+      if (SEQ.obsQ[k]) SEQ.obsQ[k].disconnect();
+      SEQ.obsQ[k] = new IntersectionObserver(ents => { if (ents.some(e => e.isIntersecting)) { const n = questaoNoMeio(box); if (n != null) mostrarCena(k, n); } }, { root: $("#painel"), rootMargin: "-30% 0px -60% 0px" });
+      box.querySelectorAll(".seq-q").forEach(c => { SEQ.obsQ[k].observe(c); c.addEventListener("click", ev => { if (!ev.target.closest(".q-ctl")) setTimeout(() => mostrarCena(k, +c.dataset.n), 0); }); });
+    }
     if (simu) { // troca o 3D quando a questão chega ao meio da tela (ou quando o aluno toca nela)
       if (SEQ.obsSimu) SEQ.obsSimu.disconnect();
-      SEQ.obsSimu = new IntersectionObserver(ents => ents.forEach(e => { if (e.isIntersecting) simuladoMostrar(k, +e.target.dataset.n); }), { root: $("#painel"), rootMargin: "-30% 0px -60% 0px" });
-      box.querySelectorAll(".seq-q").forEach(c => { SEQ.obsSimu.observe(c); c.addEventListener("pointerdown", ev => { if (!ev.target.closest(".q-ctl")) simuladoMostrar(k, +c.dataset.n); }); });
+      SEQ.obsSimu = new IntersectionObserver(ents => { if (ents.some(e => e.isIntersecting)) { const n = questaoNoMeio(box); if (n != null) simuladoMostrar(k, n); } }, { root: $("#painel"), rootMargin: "-30% 0px -60% 0px" });
+      box.querySelectorAll(".seq-q").forEach(c => { SEQ.obsSimu.observe(c); c.addEventListener("click", ev => { if (!ev.target.closest(".q-ctl")) setTimeout(() => simuladoMostrar(k, +c.dataset.n), 0); }); });
     }
   }
   function fimBloco(k, restaurando) {

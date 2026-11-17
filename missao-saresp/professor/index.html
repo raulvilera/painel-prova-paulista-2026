@@ -45,6 +45,7 @@ table{border-collapse:collapse;width:100%}td,th{padding:7px 8px;border:1px solid
 </div>
 <div class="aviso" id="aviso"></div>
 <script src="../js/dados.js?v=20261115e"></script>
+<script src="../js/especificidades4.js?v=20261117c"></script>
 <script>
 (function () {
   const D = window.DADOS, $ = s => document.querySelector(s), app = h => $("#app").innerHTML = h;
@@ -54,7 +55,7 @@ table{border-collapse:collapse;width:100%}td,th{padding:7px 8px;border:1px solid
   const FX = p => p < 25 ? ["Abaixo do Básico", "var(--lv0)"] : p < 50 ? ["Básico", "var(--lv1)"] : p < 75 ? ["Adequado", "var(--lv2)"] : ["Avançado", "var(--lv3)"];
   const cod = t => t[0] + t.replace(/\s*\(Lydia\)\s*$/, "").slice(-1) + (/Lydia/.test(t) ? "L" : ""), base = location.origin + "/missao-saresp/";
   const linkTema = (t, c) => base + "?turma=" + cod(t) + "&tema=" + encodeURIComponent(c);
-  const SIMS = Object.fromEntries((window.DADOS_SIMS || [["fases", "🌗 Fases da Lua"], ["estacoes", "🌞 Estações"], ["sombras", "🕰️ Sol e sombras"], ["estufa", "🌡️ Efeito estufa"], ["selecao", "🦋 Seleção natural"], ["energia", "🔌 Energia"], ["biomas", "🌎 Biomas"], ["celulas", "🔬 Células"]]));
+  const SIMS = Object.fromEntries((window.DADOS_SIMS || [["fases", "🌗 Fases da Lua"], ["estacoes", "🌞 Estações"], ["sombras", "🕰️ Sol e sombras"], ["estufa", "🌡️ Efeito estufa"], ["selecao", "🦋 Seleção natural"], ["energia", "🔌 Energia"], ["biomas", "🌎 Biomas"], ["celulas", "🔬 Células"], ["invertebrados", "🐌 Classifique o invertebrado"]]));
   const ITEM = {}; D.trilha.forEach(t => t.itens.forEach(h => ITEM[h.cod] = h));
   const nomeMod = id => { const m = D.modelos.find(x => x.id === id); return m ? m.em + " " + m.nome : id; };
   function recursosBtns(t, c) {
