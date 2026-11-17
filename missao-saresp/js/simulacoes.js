@@ -174,7 +174,10 @@
       }
       sl.oninput = atualizar; ctx.$("#semIncl").onchange = atualizar;
       ligarPergunta(ctx, "pE", 0, "É a inclinação do eixo, e não a distância, que causa as estações.");
-      ctx.rotulos([{ txt: "Sol", obj: sol, dy: 3.2, cor: "#fbbf24" }, { txt: "Terra", obj: terraG, dy: 2.6, cor: "#38bdf8" }, { txt: "Trópico de Capricórnio", obj: sp, dy: -.5, cor: "#fb923c" }]);
+      const pto = (p) => { const o = new T.Object3D(); o.position.copy(p); incl.add(o); return o; }, la = 23.4 * DEG;
+      ctx.rotulos([{ txt: "Sol", obj: sol, dy: 3.2, cor: "#fbbf24" }, { txt: "Terra", obj: terraG, dy: 2.6, cor: "#38bdf8" }, { txt: "Trópico de Capricórnio", obj: sp, dy: -.5, cor: "#fb923c" },
+        { txt: "Eixo de rotação (inclinado 23,5°)", obj: pto(V(0, 2.2, 0)), cor: "#f472b6" }, { txt: "Linha do Equador", obj: pto(V(1.53, 0, 0)), cor: "#facc15" },
+        { txt: "Trópico de Câncer", obj: pto(V(1.53 * Math.cos(la), 1.53 * Math.sin(la), 0)), cor: "#fb923c" }, { txt: "Órbita da Terra", pos: V(R * .71, 0, R * .71), cor: "#22d3ee" }]);
       atualizar();
       return { raiz, vistas: [["Órbita", [0, 26, 36], [0, 0, 0]], ["Perto da Terra", [20, 4, 10], [12, 0, 0]], ["De lado", [0, 2, 38], [0, 0, 0]]],
         atualizar(dt) { girar += dt; globo.rotation.y = girar * .6; const lat = -23.55 * DEG; sp.position.set(1.55 * Math.cos(lat), 1.55 * Math.sin(lat), 0); } };
@@ -220,7 +223,10 @@
       ctx.cartao.querySelectorAll("#est [data-dec]").forEach(b => b.onclick = () => { dec = +b.dataset.dec; ctx.cartao.querySelectorAll("#est .chip").forEach(x => x.classList.toggle("ativo", x === b)); atualizar(); });
       ctx.$("#auto").onclick = () => auto = !auto;
       ligarPergunta(ctx, "pS", 0, "O movimento do Sol no céu é aparente: quem gira é a Terra.");
-      ctx.rotulos(rotPC.concat([{ txt: "Sol", obj: sol, dy: 1.4, cor: "#fbbf24" }]));
+      const pSomb = new T.Object3D(); pSomb.position.x = .75; somb.add(pSomb);
+      const rSomb = { txt: "Sombra do poste", obj: pSomb, cor: "#94a3b8" }, rArco = { txt: "Caminho aparente do Sol", pos: V(0, 14, 0), cor: "#fde68a" };
+      const atualizar0 = atualizar; atualizar = function () { atualizar0(); rSomb.oculto = !somb.visible; const n = arco.geometry.attributes.position; if (n && n.count) { const k = n.count * .25 | 0; rArco.pos = V(n.getX(k), n.getY(k), n.getZ(k)); rArco.oculto = false; } else rArco.oculto = true; };
+      ctx.rotulos(rotPC.concat([{ txt: "Sol", obj: sol, dy: 1.4, cor: "#fbbf24" }, { txt: "Poste (gnômon)", obj: poste, dy: 1.9, cor: "#e5e7eb" }, rSomb, rArco, { txt: "Árvores", pos: V(8.5, 5, -6), cor: "#4ade80" }]));
       atualizar();
       return { raiz, vistas: [["Pátio", [4, 13, 30], [0, 4, 0]], ["De cima", [0, 34, .1], [0, 0, 0]]],
         atualizar(dt) { if (auto) { h += dt * .9; if (h > 18.5) h = 5.5; sl.value = h; atualizar(); } } };
@@ -258,7 +264,8 @@
       ctx.cartao.querySelectorAll("[data-v]").forEach(b => b.onclick = () => { ppm = +b.dataset.v; sl.value = ppm; atualizar(); });
       ctx.cartao.querySelectorAll("#acoes [data-a]").forEach(b => b.onclick = () => { ppm = Math.max(280, Math.min(1000, ppm + +b.dataset.a)); sl.value = ppm; atualizar(); ctx.avisar(+b.dataset.a > 0 ? "Mais emissões: o gás carbônico aumentou." : "Menos emissões ou mais captura de carbono: o gás carbônico diminuiu."); });
       ligarPergunta(ctx, "pG", 0, "Sem ele a Terra teria cerca de −18 °C. O problema é o excesso de gases emitidos.");
-      ctx.rotulos([{ txt: "Luz do Sol", obj: sol, dy: 2.2, cor: "#fde047" }, { txt: "Atmosfera", pos: V(0, 6.6, 0), cor: "#7dd3fc" }, { txt: "Calor (infravermelho)", pos: V(6.6, -4, 0), cor: "#ef4444" }]);
+      ctx.rotulos([{ txt: "Luz do Sol", obj: sol, dy: 2.2, cor: "#fde047" }, { txt: "Atmosfera", pos: V(0, 6.6, 0), cor: "#7dd3fc" }, { txt: "Calor (infravermelho)", pos: V(6.6, -4, 0), cor: "#ef4444" },
+        { txt: "Gases de efeito estufa (CO₂, metano, vapor d'água)", pos: V(-4.4, 4.4, 1), cor: "#fca5a5" }, { txt: "Superfície terrestre", pos: V(-2.4, -3.2, 2), cor: "#4ade80" }, { txt: "Nuvens", pos: V(2.8, 2.9, 1.2), cor: "#e2e8f0" }]);
       atualizar();
       const novaDir = () => V(Math.random() - .5, Math.random() - .5, Math.random() - .5).normalize();
       return { raiz, vistas: [["Terra", [6, 4, 22], [-2, 1, 0]], ["Atmosfera", [0, 2, 13], [0, 3, 0]]],
@@ -301,7 +308,11 @@
       const geoCorpo = new T.CapsuleGeometry(.08, .55, 8, 16);
       function mariposa(escura) { const g = new T.Group(), m = escura ? matAsa.e : matAsa.c; [1, -1].forEach(s => { const a = new T.Mesh(geoAsa, m); a.scale.x = s; a.rotation.y = s * .25; g.add(a); }); const cp = new T.Mesh(geoCorpo, escura ? matAsa.e : matAsa.c); cp.position.set(0, -.05, .05); g.add(cp); g.userData.escura = escura; g.userData.info = escura ? "Mariposa escura" : "Mariposa clara"; g.children.forEach(c => c.userData.info = g.userData.info); return g; }
       function posicionar(g) { const a = Rn() * Math.PI * 2, y = -4 + Rn() * 13, r = 3.4 - (y + 6) / 16 * .4 + .2; g.position.set(Math.cos(a) * r, y, Math.sin(a) * r); g.lookAt(Math.cos(a) * 10, y, Math.sin(a) * 10); g.scale.setScalar(.9); }
-      function montar(lista) { pop.forEach(p => raiz.remove(p)); pop = lista.map(e => { const g = mariposa(e); posicionar(g); raiz.add(g); return g; }); }
+      const rotC = { txt: "Mariposa clara", cor: "#f5f5f4" }, rotE = { txt: "Mariposa escura", cor: "#a8a29e" };
+      // o nome aponta para uma mariposa de cada cor que esteja do lado de frente da árvore
+      const frente = (cor) => pop.filter(p => p.userData.escura === cor).sort((a, b) => b.position.z - a.position.z)[0];
+      function montar(lista) { pop.forEach(p => raiz.remove(p)); pop = lista.map(e => { const g = mariposa(e); posicionar(g); raiz.add(g); return g; });
+        [[rotC, false], [rotE, true]].forEach(([r, e]) => { const m = frente(e); r.obj = m || tronco; r.oculto = !m; r.dy = m ? .45 : 0; }); }
       function contagem() { const e = pop.filter(p => p.userData.escura).length; return [pop.length - e, e]; }
       function mostrar() { const [c, e] = contagem(); ctx.$("#mG").textContent = ger; ctx.$("#mC").textContent = c; ctx.$("#mE").textContent = e;
         ctx.grafico(ctx.$("#graf"), [{ d: hist.map(h => h[1]), cor: "#a8a29e" }, { d: hist.map(h => h[0]), cor: "#f5f5f4" }], { max: 40, minN: 20, rotX: "gerações" });
@@ -317,6 +328,7 @@
       ctx.$("#ger").onclick = geracao; ctx.$("#dez").onclick = () => { for (let i = 0; i < 10; i++) geracao(); }; ctx.$("#rei").onclick = reiniciar;
       ligarPergunta(ctx, "pN", 0, "O ambiente seleciona variações que já existem. 'Mudar por necessidade' ou 'herdar o que se adquire' são ideias de Lamarck.");
       reiniciar();
+      ctx.rotulos([{ txt: "Tronco (cor do ambiente)", pos: V(-3.3, 8.5, 1.4), cor: "#d6d3d1" }, { txt: "Copa da árvore", pos: V(-7, 12.5, -5.2), cor: "#4ade80" }, rotC, rotE, { txt: "Solo", pos: V(6, -5.8, 5), cor: "#84cc16" }]);
       return { raiz, vistas: [["Árvore", [0, 5, 26], [0, 3, 0]], ["Perto", [4, 3, 7], [0, 2, 0]]], atualizar() { } };
     }
   });
@@ -349,7 +361,7 @@
       box.querySelectorAll("input").forEach(inp => inp.oninput = () => { ap[+inp.dataset.i][2] = +inp.value; atualizar(); });
       ligarPergunta(ctx, "pC", 0, "1 kW × 0,5 h × 30 dias = 15 kWh.");
       const topo = barras.map(b => b.position.clone());
-      ctx.rotulos(barras.map((b, i) => ({ txt: "", pos: topo[i], cor: "#" + cores[i].toString(16).padStart(6, "0"), atualizarTxt: () => fmt(kwh[i].toFixed(0)) + " kWh" })).concat(ap.map((a, i) => ({ txt: a[0].split(" ")[0], pos: V(-11.2 + i * 3.2, -.4, 3.4), cor: "#94a3b8" }))));
+      ctx.rotulos(barras.map((b, i) => ({ txt: "", pos: topo[i], cor: "#" + cores[i].toString(16).padStart(6, "0"), atualizarTxt: () => fmt(kwh[i].toFixed(0)) + " kWh" })).concat(ap.map((a, i) => ({ txt: ["Chuveiro", "Geladeira", "TV", "Lâmpada LED", "Incandescente", "Ferro", "Ventilador", "Carregador"][i] || a[0].replace(/^\S+\s/, ""), pos: V(-11.2 + i * 3.2, -.4, 3.4), cor: "#94a3b8" }))));
       atualizar();
       return { raiz, vistas: [["Painel", [0, 14, 42], [0, 5, 0]], ["De lado", [-30, 10, 22], [0, 5, 0]]],
         atualizar(dt) { barras.forEach((b, i) => { alt[i] = lerp(alt[i], Math.max(.05, kwh[i] / 6), Math.min(1, dt * 4)); b.scale.y = alt[i]; topo[i].y = alt[i] + .7; }); } };
@@ -420,10 +432,13 @@
     html: `<div class="destaque" id="txt">Observe a célula e escolha a classificação correta.</div>
       <div class="opcoes" id="ops"><button class="opcao" data-t="pro">Procarionte (bactéria)</button><button class="opcao" data-t="ani">Eucarionte animal</button><button class="opcao" data-t="veg">Eucarionte vegetal</button></div>
       <div class="medidores">${medidor("mR", "Rodada", "1/8")}${medidor("mP", "Acertos", "0")}</div>
-      <div class="linha-btn"><button class="btn" id="dica">💡 Dica</button><button class="btn" id="novo">↺ Recomeçar</button></div>
+      <div class="linha-btn"><button class="btn prim" id="prox" hidden>▶ Próxima célula</button><button class="btn" id="dica">💡 Dica</button><button class="btn" id="novo">↺ Recomeçar</button></div>
+      <p class="mini-txt muted" id="rotAviso">🏷️ Os nomes das estruturas aparecem depois que você responde.</p>
       <details><summary>Como diferenciar</summary><ul class="lista"><li><b>Procarionte:</b> sem núcleo (DNA solto), pequena, pode ter flagelo.</li><li><b>Animal:</b> núcleo, formato arredondado, sem parede celular e sem cloroplastos.</li><li><b>Vegetal:</b> núcleo, parede celular rígida (formato de caixa), cloroplastos verdes (com pilhas de tilacoides) e vacúolo central grande.</li></ul></details>`,
     iniciar(ctx) {
-      const G = ctx.G, raiz = new T.Group(); let atual = null, tipo = "", rod = 0, pts = 0, fila = [];
+      const G = ctx.G, raiz = new T.Group(); let atual = null, tipo = "", rod = 0, pts = 0, fila = [], rot = [];
+      // marca um ponto da estrutura para o nome (o ponto gira junto com a célula)
+      const marca = (g, pos, txt, cor) => { const o = new T.Object3D(); o.position.copy(pos); g.add(o); rot.push({ txt, obj: o, cor, oculto: true }); return o; };
       /* caixa de cantos arredondados (parede celular vegetal) */
       function caixaRedonda(w, h, d, r) {
         const sh = new T.Shape(), x = -w / 2 + r, y = -h / 2 + r, W = w - 2 * r, H = h - 2 * r;
@@ -462,7 +477,7 @@
         return gg;
       }
       function construir(t) {
-        const g = new T.Group(), R = G.rng(Math.random() * 1e6 | 0);
+        const g = new T.Group(), R = G.rng(Math.random() * 1e6 | 0); rot = [];
         if (t === "pro") {
           g.add(G.malha(new T.CapsuleGeometry(1.55, 3.8, 24, 48), G.mat(0x7dd3fc, { op: .22, side: T.DoubleSide, dw: false }), null, [0, 0, Math.PI / 2]));   // cápsula
           g.add(G.malha(new T.CapsuleGeometry(1.35, 3.6, 24, 48), G.mat(0x38bdf8, { op: .35, side: T.DoubleSide, dw: false }), null, [0, 0, Math.PI / 2]));   // parede + membrana
@@ -472,6 +487,9 @@
           g.add(pontos(260, .06, 0xfef3c7, Rr => { const x = (Rr() - .5) * 6.2, r = Math.sqrt(Rr()) * 1.15; const a = Rr() * 6.283; return V(x, Math.cos(a) * r, Math.sin(a) * r); }));
           const fl = []; for (let k = 0; k <= 14; k++) fl.push(V(3.2 + k * .38, Math.sin(k * .9) * .35, Math.cos(k * .9) * .2)); g.add(G.tubo(fl, .045, G.mat(0xcbd5e1, { rough: .35 }), false, 120)); // flagelo
           for (let k = 0; k < 18; k++) { const x = (R() - .5) * 5.6, a = R() * 6.283, n = V(0, Math.cos(a), Math.sin(a)); const base = V(x, n.y * 1.5, n.z * 1.5); g.add(G.tubo([base, base.clone().add(n.clone().multiplyScalar(.45))], .015, G.mat(0xbae6fd), false, 4)); } // pili
+          marca(g, V(-1.2, 1.55, .6), "Cápsula", "#7dd3fc"); marca(g, V(.6, -1.35, .3), "Parede celular e membrana", "#38bdf8");
+          marca(g, V(0, .2, .4), "Nucleoide (DNA solto, sem núcleo)", "#f472b6"); marca(g, V(1.6, .5, .3), "Plasmídeo", "#fb7185");
+          marca(g, V(-1.6, -.6, .7), "Ribossomos", "#fef3c7"); marca(g, V(7.4, 0, 0), "Flagelo", "#cbd5e1"); marca(g, V(-2.2, 1.7, -.4), "Pili (fímbrias)", "#bae6fd");
           g.scale.setScalar(.85);
         }
         if (t === "ani") {
@@ -479,38 +497,49 @@
           nucleo(g, V(-.4, .3, 0), 1.5, R);
           reticulo(g, V(-.4, .3, 0), 1.9, R, 0x60a5fa);
           g.add(golgi(V(1.9, -1.4, .6), [.4, .6, .3]));
-          for (let i = 0; i < 7; i++) { const p = V((R() - .5) * 6, (R() - .5) * 5.4, (R() - .5) * 4); if (p.length() < 2.4) p.setLength(2.8); g.add(mitocondria(p, [R() * 3, R() * 3, R() * 3], .9 + R() * .3)); }
-          for (let i = 0; i < 6; i++) { const p = V((R() - .5) * 6, (R() - .5) * 5, (R() - .5) * 4); if (p.length() < 2.4) p.setLength(3); g.add(G.malha(new T.SphereGeometry(.28, 20, 14), G.mat(0x34d399, { rough: .35 }), p)); } // lisossomos
+          const mitos = [], lisos = [];
+          for (let i = 0; i < 7; i++) { const p = V((R() - .5) * 6, (R() - .5) * 5.4, (R() - .5) * 4); if (p.length() < 2.4) p.setLength(2.8); mitos.push(p); g.add(mitocondria(p, [R() * 3, R() * 3, R() * 3], .9 + R() * .3)); }
+          for (let i = 0; i < 6; i++) { const p = V((R() - .5) * 6, (R() - .5) * 5, (R() - .5) * 4); if (p.length() < 2.4) p.setLength(3); lisos.push(p); g.add(G.malha(new T.SphereGeometry(.28, 20, 14), G.mat(0x34d399, { rough: .35 }), p)); } // lisossomos
           const ce = new T.Group(); ce.position.set(1.2, 1.9, -.8); ce.add(G.malha(new T.CylinderGeometry(.12, .12, .6, 18), G.mat(0x94a3b8))); ce.add(G.malha(new T.CylinderGeometry(.12, .12, .6, 18), G.mat(0x94a3b8), V(.25, 0, 0), [0, 0, Math.PI / 2])); g.add(ce); // centríolos
           g.add(pontos(420, .05, 0xfef9c3, Rr => { const v = V(Rr() - .5, Rr() - .5, Rr() - .5).normalize().multiplyScalar(2.2 + Rr() * 1.9); return v; }));
+          marca(g, V(-.4, .3, 1.5), "Núcleo", "#a78bfa"); marca(g, V(-.02, .52, .3), "Nucléolo", "#7c3aed"); marca(g, V(-2.3, -.6, .2), "Retículo endoplasmático", "#60a5fa");
+          marca(g, V(1.9, -1.2, .6), "Complexo golgiense", "#facc15"); marca(g, mitos[0], "Mitocôndria", "#fb923c"); marca(g, lisos[0], "Lisossomo", "#34d399");
+          marca(g, V(1.3, 1.9, -.8), "Centríolos", "#94a3b8"); marca(g, V(0, 4.55, 0), "Membrana plasmática", "#f9a8d4"); marca(g, V(2.6, 2.4, 1.2), "Citoplasma e ribossomos", "#fef9c3");
         }
         if (t === "veg") {
           g.add(G.malha(caixaRedonda(9.4, 6.4, 5.2, .7), G.mat(0x84cc16, { op: .3, side: T.DoubleSide, dw: false, rough: .6 })));      // parede celular
           g.add(G.malha(caixaRedonda(8.8, 5.8, 4.6, .6), G.mat(0xbef264, { op: .14, side: T.DoubleSide, dw: false })));                    // membrana
           g.add(G.malha(G.deformar(new T.SphereGeometry(2.2, 72, 54), .12, .9), G.mat(0x7dd3fc, { op: .45, dw: false }), V(1, -.1, 0), null, [1.45, 1.05, .8])); // vacúolo central
           nucleo(g, V(-3, 1.1, .4), .95, R);
+          const clor = [];
           for (let i = 0; i < 9; i++) {                                                                                                            // cloroplastos com tilacoides
-            const c = new T.Group(); c.position.set((R() - .5) * 7.4, (R() > .5 ? 1 : -1) * (1.6 + R() * .9), (R() - .5) * 3.2); c.rotation.set(R() * 3, R() * 3, R() * 3);
+            const c = new T.Group(); clor.push(c); c.position.set((R() - .5) * 7.4, (R() > .5 ? 1 : -1) * (1.6 + R() * .9), (R() - .5) * 3.2); c.rotation.set(R() * 3, R() * 3, R() * 3);
             c.add(G.malha(new T.SphereGeometry(.62, 32, 24), G.mat(0x4ade80, { op: .6, dw: false }), null, null, [1.25, .55, .8]));
             for (let k = 0; k < 4; k++) for (let h = 0; h < 4; h++) c.add(G.malha(new T.CylinderGeometry(.13, .13, .04, 18), G.mat(0x15803d, { rough: .4 }), V(-.5 + k * .33, -.12 + h * .07, 0)));
             g.add(c);
           }
-          for (let i = 0; i < 4; i++) g.add(mitocondria(V((R() - .5) * 7, (R() - .5) * 4.6, (R() - .5) * 3), [R() * 3, R() * 3, R() * 3], .7));
+          const mv = V((R() - .5) * 7, (R() - .5) * 4.6, (R() - .5) * 3);
+          for (let i = 0; i < 4; i++) g.add(mitocondria(i ? V((R() - .5) * 7, (R() - .5) * 4.6, (R() - .5) * 3) : mv, [R() * 3, R() * 3, R() * 3], .7));
           g.add(pontos(300, .045, 0xfef9c3, Rr => V((Rr() - .5) * 8.2, (Rr() > .5 ? 1 : -1) * (1.5 + Rr() * 1.2), (Rr() - .5) * 3.8)));
+          marca(g, V(-2.2, -3.25, 1.6), "Parede celular", "#84cc16"); marca(g, V(4.4, 2.6, 2.1), "Membrana plasmática", "#bef264");
+          marca(g, V(1, -.1, 1.75), "Vacúolo", "#7dd3fc"); marca(g, V(-3, 1.1, 1.35), "Núcleo", "#a78bfa");
+          marca(g, clor[0].position, "Cloroplasto", "#4ade80"); marca(g, mv, "Mitocôndria", "#fb923c"); marca(g, V(-1.5, -2.2, 1.6), "Citoplasma e ribossomos", "#fef9c3");
         }
         g.rotation.set(Math.random() * .8, Math.random() * 3, 0); return g;
       }
       function rodada() {
         if (atual) { raiz.remove(atual); }
-        if (rod >= 8) { ctx.$("#txt").innerHTML = `<b>Fim!</b> Você acertou ${pts} de 8.`; if (window.XP) window.XP.ganhar(pts * 3, "Classifique a célula"); return; }
-        tipo = fila[rod]; atual = construir(tipo); raiz.add(atual); ctx.$("#mR").textContent = (rod + 1) + "/8"; ctx.$("#txt").textContent = "Observe a célula e escolha a classificação correta.";
+        if (rod >= 8) { ctx.$("#prox").hidden = true; rot.forEach(r => r.oculto = false); ctx.$("#txt").innerHTML = `<b>Fim!</b> Você acertou ${pts} de 8.`; if (window.XP) window.XP.ganhar(pts * 3, "Classifique a célula"); return; }
+        tipo = fila[rod]; atual = construir(tipo); raiz.add(atual); ctx.rotulos(rot); ctx.$("#prox").hidden = true; ctx.$("#mR").textContent = (rod + 1) + "/8"; ctx.$("#txt").textContent = "Observe a célula e escolha a classificação correta.";
         ctx.cartao.querySelectorAll("#ops .opcao").forEach(b => { b.disabled = false; b.classList.remove("certa", "errada"); });
       }
       function novo() { rod = 0; pts = 0; ctx.$("#mP").textContent = 0; fila = []; for (let i = 0; i < 8; i++) fila.push(["pro", "ani", "veg"][Math.random() * 3 | 0]); rodada(); }
       const nomes = { pro: "procarionte (bactéria): não tem núcleo, o DNA fica solto no citoplasma", ani: "eucarionte animal: tem núcleo, não tem parede celular nem cloroplastos", veg: "eucarionte vegetal: tem núcleo, parede celular, cloroplastos e vacúolo grande" };
       ctx.cartao.querySelectorAll("#ops .opcao").forEach(b => b.onclick = () => { const ok = b.dataset.t === tipo; if (ok) pts++; ctx.$("#mP").textContent = pts;
         ctx.cartao.querySelectorAll("#ops .opcao").forEach(x => { x.disabled = true; if (x.dataset.t === tipo) x.classList.add("certa"); else if (x === b) x.classList.add("errada"); });
-        ctx.$("#txt").innerHTML = (ok ? "✔️ Certo! " : "✖️ Não. ") + "Esta é uma célula " + nomes[tipo] + "."; rod++; setTimeout(rodada, 2200); });
+        ctx.$("#txt").innerHTML = (ok ? "✔️ Certo! " : "✖️ Não. ") + "Esta é uma célula " + nomes[tipo] + ". <b>Veja os nomes das estruturas</b> e toque em Próxima célula.";
+        rot.forEach(r => r.oculto = false); rod++; const px = ctx.$("#prox"); px.hidden = false; px.textContent = rod >= 8 ? "🏁 Ver resultado" : "▶ Próxima célula"; });
+      ctx.$("#prox").onclick = rodada;
       ctx.$("#dica").onclick = () => ctx.avisar(tipo === "pro" ? "Procure o núcleo... ele existe?" : tipo === "veg" ? "Repare no formato e nas estruturas verdes." : "Tem núcleo, mas tem parede rígida ou estruturas verdes?");
       ctx.$("#novo").onclick = novo;
       novo();
