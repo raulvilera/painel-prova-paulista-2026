@@ -1108,14 +1108,26 @@
   function seqChave() { return "ms3d_seq_" + (ALUNO.dados ? ALUNO.dados.turma + "|" + ALUNO.dados.nome : TURMA_LINK || anoAtual()); }
   /* salvamento automático: além do tema em que o aluno está e dos temas concluídos, guarda, para cada tema,
      as questões sorteadas, a ordem das alternativas e cada resposta dada — assim ele continua exatamente de onde parou */
-  function seqSalvar() { try { localStorage.setItem(seqChave(), JSON.stringify({ i: SEQ.i, feitos: SEQ.feitos, foco: [...FOCO.temas], erros: FOCO.erros.slice(-200), estado: SEQ.estado, t: Date.now() })); seqMarcaSalvo(); } catch (e) { } }
+  function seqSalvar() { try { localStorage.setItem(seqChave(), JSON.stringify({ i: SEQ.i, feitos: SEQ.feitos, foco: [...FOCO.temas], erros: FOCO.erros.slice(-200), estado: SEQ.estado, rodada: SEQ.rodada || 1, vistas: (SEQ.vistas || []).slice(-600), t: Date.now() })); seqMarcaSalvo(); } catch (e) { } }
   function seqMarcaSalvo() { const e = $("#seqSalvo"); if (!e) return; e.classList.remove("pulsa"); void e.offsetWidth; e.classList.add("pulsa"); }
   /* ---- dificuldades individuais ----
      FOCO.temas: temas em que o aluno precisa de reforço — vêm (1) do link pessoal enviado pelo professor (&foco=),
      (2) do Simulado SARESP do próprio aluno quando ele entra com RA (Meu relatório) e (3) dos temas em que ele tirou menos de 7 aqui.
      FOCO.erros: questões que o aluno errou (voltam primeiro quando ele refaz). */
   var FOCO = { temas: new Set(), erros: [] };
-  const N_QUESTOES = 10;
+  const N_QUESTOES = 10;          // Simulado SARESP final
+  const N_TRILHA = 25;            // questões da trilha inteira (somando todos os temas); o resto do banco vai sendo trocado a cada acesso
+  // divide as 25 questões entre os temas: todos com a mesma base e as que sobram vão primeiro para os temas de reforço do aluno
+  function cotasTemas(passos) {
+    const temas = passos.filter(p => p.tipo === "tema"), n = temas.length, out = {}; if (!n) return out;
+    const base = Math.floor(N_TRILHA / n); let resto = N_TRILHA - base * n;
+    temas.forEach(p => out[p.h.cod] = base);
+    temas.filter(p => FOCO.temas.has(p.h.cod)).concat(temas.filter(p => !FOCO.temas.has(p.h.cod))).forEach(p => { if (resto > 0) { out[p.h.cod]++; resto--; } });
+    return out;
+  }
+  // banco de questões: as que o aluno ainda não viu vêm antes das que ele já respondeu (e, entre estas, as vistas há mais tempo)
+  const visto = q => SEQ.vistas ? SEQ.vistas.indexOf(chaveQ(q)) : -1;
+  function ordemBanco(lista) { const nov = embaralhar(lista.filter(q => visto(q) < 0)), ja = lista.filter(q => visto(q) >= 0).sort((a, b) => visto(a) - visto(b)); return nov.concat(ja); }
   const chaveQ = q => q.ae + "|" + q.p.slice(0, 60);
   function focoCarregar() {
     let sv = {}; try { sv = JSON.parse(localStorage.getItem(seqChave()) || "{}"); } catch (e) { }
@@ -1125,14 +1137,17 @@
   }
   // 10 questões do tema: num tema de reforço, as que o aluno já errou vêm primeiro
   function questoesTema(cod, n) {
-    const todas = embaralhar(D.quiz.filter(q => q.ae === cod));
-    const err = new Set(FOCO.erros);
-    todas.sort((a, b) => (err.has(chaveQ(b)) ? 1 : 0) - (err.has(chaveQ(a)) ? 1 : 0));
-    return todas.slice(0, n || N_QUESTOES);
+    n = n || (SEQ.cotas && SEQ.cotas[cod]) || N_QUESTOES;
+    // até 1/3 (no mínimo 1) das questões são revisão do que o aluno errou; o resto vem do banco, primeiro as que ele ainda não viu
+    const pool = D.quiz.filter(q => q.ae === cod), err = new Set(FOCO.erros);
+    const revisao = embaralhar(pool.filter(q => err.has(chaveQ(q)))).slice(0, Math.max(1, Math.floor(n / 3)));
+    return revisao.concat(ordemBanco(pool.filter(q => !revisao.includes(q)))).slice(0, n);
   }
+
   // Simulado final com 10 questões: cerca de 6 dos temas de reforço do aluno (uma de cada vez, em rodízio) e o resto dos outros temas do ano
   function questoesSimulado() {
-    const ano = anoAtual(), pool = embaralhar(D.quiz.filter(q => q.a === ano)), foco = [...FOCO.temas].filter(c => c[0] === ano);
+    const ano = anoAtual(), noTrilha = new Set((SEQ.blocos || []).filter(Boolean).flatMap(b => b.lista || []).map(chaveQ)),
+      pool = ordemBanco(D.quiz.filter(q => q.a === ano && !noTrilha.has(chaveQ(q)))), foco = [...FOCO.temas].filter(c => c[0] === ano);
     const out = [], usa = q => { if (!out.includes(q)) out.push(q); };
     if (foco.length) { const filas = foco.map(c => pool.filter(q => q.ae === c)); for (let r = 0; out.length < 6 && filas.some(f => f.length); r++) filas.forEach(f => { if (out.length < 6 && f.length) usa(f.shift()); }); }
     const porTema = {}; pool.forEach(q => { if (!out.includes(q)) (porTema[q.ae] = porTema[q.ae] || []).push(q); });
@@ -1153,11 +1168,15 @@
     SEQ.ativo = true; document.body.classList.add("seq", "seq-continua");
     let salvo = {}; try { salvo = JSON.parse(localStorage.getItem(seqChave()) || "{}"); } catch (e) { }
     SEQ.feitos = salvo.feitos || {}; SEQ.estado = salvo.estado || {}; SEQ.ativoK = -1; SEQ.blocos = []; SEQ.usados3d = new Set(); SEQ.obsQ = [];
+    SEQ.rodada = salvo.rodada || 1; SEQ.vistas = salvo.vistas || []; SEQ.novaRodada = false;
+    // trilha concluída num acesso anterior: este acesso começa uma rodada nova, com outras questões do banco
+    if (SEQ.passos.every(p => SEQ.feitos[p.tipo === "simulado" ? "simulado" : p.h.cod])) { SEQ.rodada++; SEQ.feitos = {}; SEQ.estado = {}; salvo.i = 0; SEQ.novaRodada = true; }
+    SEQ.cotas = cotasTemas(SEQ.passos);
     const box = $("#aba-seq"); box.innerHTML = `<div id="seqCab"></div><div id="seqLista"></div>`;
     const info0 = $("#info"); info0.innerHTML = "";
     $("#seqLista").innerHTML = SEQ.passos.map((p, k) => {
       const simu = p.tipo === "simulado", nome = simu ? "🏁 Simulado SARESP" : p.h.tema, foco = !simu && FOCO.temas.has(p.h.cod);
-      return `<section class="bloco" data-k="${k}"><div class="bloco-cab"><h2>${nome}</h2><small>${simu ? `${N_QUESTOES} questões do ${anoAtual()}º ano, no formato da prova` : p.h.sigla + " · " + (p.h.rec ? "♻️ recuperação" : "🎯 SARESP")}</small>${foco ? `<span class="tag-foco">🎯 Tema de reforço para você</span>` : ""}</div>
+      return `<section class="bloco" data-k="${k}"><div class="bloco-cab"><h2>${nome}</h2><small>${simu ? `${N_QUESTOES} questões do ${anoAtual()}º ano, no formato da prova` : (SEQ.cotas[p.h.cod] || N_QUESTOES) + " questões · " + p.h.sigla + " · " + (p.h.rec ? "♻️ recuperação" : "🎯 SARESP")}</small>${foco ? `<span class="tag-foco">🎯 Tema de reforço para você</span>` : ""}</div>
         <div class="bloco-sim"><div class="bloco-espera">🧊 O simulador deste tema aparece aqui quando você chega nele.</div></div>
         ${!simu && p.h.r.ext ? `<a class="btn" style="width:100%;justify-content:center;margin:6px 0" href="${D.externos[p.h.r.ext].url}" target="_blank" rel="noopener">↗ Abrir também o ${D.externos[p.h.r.ext].nome}</a>` : ""}
         <div class="bloco-q"></div></section>`;
@@ -1181,11 +1200,12 @@
       avisar(`👋 Bem-vindo(a) de volta! Continuando de onde você parou: ${p.tipo === "simulado" ? "Simulado SARESP" : p.h.tema}${nq ? ", questão " + nq : ""}.`);
     }, 600);
     else if (ir > 0) setTimeout(() => irPasso(ir), 300);
+    if (SEQ.novaRodada) setTimeout(() => avisar(`🔄 Rodada ${SEQ.rodada}: você já completou a Missão, então agora as questões são outras, tiradas do banco da turma.`), 700);
   }
   function seqCabecalho() {
     const N = SEQ.passos.length, feitos = SEQ.passos.filter(p => SEQ.feitos[p.tipo === "simulado" ? "simulado" : p.h.cod]).length;
     const c = $("#seqCab"); if (!c) return;
-    c.innerHTML = `<div class="seq-cab"><b>🚀 Missão ${ALUNO.dados ? ALUNO.dados.turma : (TURMA_LINK || anoAtual() + "º ano")}</b><small>${feitos} de ${N} temas concluídos · role para baixo para seguir</small><small class="seq-salvo" id="seqSalvo">💾 Progresso salvo automaticamente: se sair, você continua daqui depois</small><div class="seq-barra"><span style="width:${Math.round(feitos / N * 100)}%"></span></div></div>`;
+    c.innerHTML = `<div class="seq-cab"><b>🚀 Missão ${ALUNO.dados ? ALUNO.dados.turma : (TURMA_LINK || anoAtual() + "º ano")}</b><small>${SEQ.rodada > 1 ? `Rodada ${SEQ.rodada} · ` : ""}${N_TRILHA} questões nos temas + Simulado · ${feitos} de ${N} etapas concluídas · role para baixo para seguir</small><small class="seq-salvo" id="seqSalvo">💾 Progresso salvo automaticamente: se sair, você continua daqui depois</small><div class="seq-barra"><span style="width:${Math.round(feitos / N * 100)}%"></span></div></div>`;
   }
   // leva o simulador (ou o modelo 3D) para o tema que está na tela
   function ativarBloco(k) {
@@ -1324,7 +1344,7 @@
         const ok = +b.dataset.i === it.c; if (ok) { st.pontos++; XP.ganhar(10); }
         { const kq = chaveQ(it), ix = FOCO.erros.indexOf(kq); if (!ok && ix < 0) FOCO.erros.push(kq); if (ok && ix >= 0) FOCO.erros.splice(ix, 1); }
         st.feitas++; st.resp.push({ ae: it.ae, ok, p: it.p.slice(0, 90), r: it.o[+b.dataset.i].slice(0, 60) });
-        ev.r[n] = +b.dataset.i; seqSalvar(); enviar(st.feitas >= lista.length);
+        ev.r[n] = +b.dataset.i; { const kq = chaveQ(it), ix = SEQ.vistas.indexOf(kq); if (ix >= 0) SEQ.vistas.splice(ix, 1); SEQ.vistas.push(kq); } seqSalvar(); enviar(st.feitas >= lista.length);
         marcar(card, it, b, ok);
         if (st.feitas >= lista.length) fimBloco(k);
       });
@@ -1354,8 +1374,9 @@
     fim.innerHTML = `<div class="cartao seq-q centro"><h3>${pc >= 70 ? "🏆" : "📘"} ${st.pontos} de ${N} · <span style="color:${fx[1]}">${fx[0]}</span></h3>
       <p class="envio">${restaurando ? "✅ Atividade concluída e salva." : ALUNO.dados ? "⏳ Enviando para o professor…" : "⚠️ Entre com seu nome (👤) para o professor ver seu resultado."}</p>
       ${pc < 70 && tema ? `<p class="mini-txt">🎯 Este tema ficou como <b>reforço</b> para você. Use o simulador mais um pouco e tente de novo: as questões que você errou aparecem primeiro.</p><button class="btn" data-denovo>↺ Responder de novo</button>` : ""}
-      ${ult ? `<p><b>🎉 Missão completa!</b> Veja seu desempenho em <b>📊 Meu relatório</b>.</p>` : `<p class="mini-txt muted">⬇️ Role para baixo para o próximo tema.</p>`}</div>`;
+      ${ult ? `<p><b>🎉 Missão completa!</b> Veja seu desempenho em <b>📊 Meu relatório</b>.</p><p class="mini-txt">🔄 Na próxima vez que você entrar, a Missão começa uma <b>nova rodada com outras questões</b> do banco.</p><button class="btn" data-rodada>🔄 Começar nova rodada agora</button>` : `<p class="mini-txt muted">⬇️ Role para baixo para o próximo tema.</p>`}</div>`;
     if (ALUNO.dados && !restaurando) ALUNO.fila.then(ok => { const e = fim.querySelector(".envio"); if (e) e.textContent = ok ? "✅ Resultado enviado para o professor." : "⚠️ Não foi possível enviar agora."; });
+    const nr = fim.querySelector("[data-rodada]"); if (nr) nr.onclick = () => { seqSalvar(); iniciarSeq(); $("#painel").scrollTop = 0; };
     const dn = fim.querySelector("[data-denovo]"); if (dn) dn.onclick = () => { blocoQuiz(k, true); $(`#seqLista .bloco[data-k="${k}"] .bloco-q`).scrollIntoView({ behavior: "smooth", block: "start" }); };
     if (pc >= 75 && !restaurando) XP.ganhar(20, "Bônus: faixa Avançado");
   }
