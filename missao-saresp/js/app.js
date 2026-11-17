@@ -47,7 +47,7 @@
     renderer.setSize(w, h, false); cam.aspect = w / h; ajustarCentro();
     // se a área 3D mudou de tamanho (ex.: painel fechado no celular) e o usuário não mexeu na câmera, reenquadra
     const ant = est.tamPalco; est.tamPalco = [w, h];
-    if (ant && (Math.abs(ant[0] - w) > 40 || Math.abs(ant[1] - h) > 40) && est.vistaAtual && !est.usuarioMoveu) vista(est.vistaAtual, .35);
+    if (ant && (Math.abs(ant[0] - w) > 40 || Math.abs(ant[1] - h) > 40) && est.vistaAtual && !est.usuarioMoveu) vista(est.vistaAtual, 0);
   }
   function ajustarCentro() {
     const w = palco.clientWidth, h = palco.clientHeight, d = est && est.deslLeg || 0;
@@ -58,6 +58,7 @@
 
   /* ------------------------------ CÂMERA ------------------------------ */
   function voarPara(alvo, pos, dur) {
+    if (dur === 0) { est.voo = null; ctl.target.copy(alvo); cam.position.copy(pos); ctl.update(); return; }   // sem animação (sem zoom)
     est.voo = { t: 0, dur: dur ?? 0.9, a0: ctl.target.clone(), p0: cam.position.clone(), a1: alvo.clone(), p1: pos.clone() };
   }
   // afasta a câmera quando o palco é estreito (celular em pé, painel aberto)
@@ -73,7 +74,7 @@
       const d = p.distanceTo(a); if (precisa > d) p = p.clone().sub(a).multiplyScalar(precisa / d).add(a);
       const af = cam.aspect < .8 ? (MODELOS[est.modeloId].afastarCelular || 1) : 1; if (af !== 1) p = p.clone().sub(a).multiplyScalar(af).add(a);
     }
-    voarPara(a, p);
+    voarPara(a, p, dur);
     if (v[3] && v[3].corte !== undefined) definirCorte(v[3].corte);
   }
   function montarVistas(lista) {
@@ -121,7 +122,7 @@
     const caixa = new T.Box3().setFromObject(md.raiz); est.raio = caixa.getSize(new T.Vector3()).length() / 2;
     cam.near = def.near || 0.05; cam.updateProjectionMatrix();
     ctl.minDistance = def.near ? 0.08 : 2; ctl.maxDistance = Math.max(80, est.raio * 6);
-    montarVistas(def.vistas); vista(def.vistas[0]);
+    montarVistas(def.vistas); vista(def.vistas[0], 0);
     $$(".mod-btn").forEach(b => b.classList.toggle("ativo", b.dataset.mod === id));
     listarPartes();
     criarRotulos(Object.keys(md.ancoras).map(p => ({ parte: p, txt: D.fichas[p] ? D.fichas[p].nome : p, cor: D.fichas[p] ? D.fichas[p].cor : "#fff", local: md.ancoras[p] })));
@@ -686,7 +687,7 @@
     cena.add(s.raiz);
     cam.near = 0.05; cam.updateProjectionMatrix(); ctl.minDistance = 2; ctl.maxDistance = 140;
     const caixa = new T.Box3().setFromObject(s.raiz); est.raio = caixa.getSize(new T.Vector3()).length() / 2;
-    montarVistas(s.vistas); vista(s.vistas[0]);
+    montarVistas(s.vistas); vista(s.vistas[0], 0);
     if (!est.desafio) popSim(id);
   }
 
@@ -1196,7 +1197,7 @@
     if (voltou) setTimeout(() => {   // de volta: vai direto à primeira questão que ainda falta neste tema
       const b = $(`#seqLista .bloco[data-k="${ir}"]`), q = b && b.querySelector(".seq-q:not(.respondida)");
       if (q) q.scrollIntoView({ behavior: "smooth", block: "center" }); else irPasso(ir);
-      const p = SEQ.passos[ir], nq = q ? +q.dataset.n + 1 : 0;
+      const p = SEQ.passos[ir], nq = q ? +q.dataset.num : 0;
       avisar(`👋 Bem-vindo(a) de volta! Continuando de onde você parou: ${p.tipo === "simulado" ? "Simulado SARESP" : p.h.tema}${nq ? ", questão " + nq : ""}.`);
     }, 600);
     else if (ir > 0) setTimeout(() => irPasso(ir), 300);
@@ -1269,8 +1270,7 @@
   function nomeCena(c) {
     if (c.parte) { const f = D.fichas[c.parte], m = D.modelos.find(x => x.id === c.modelo); return `${f.nome}${m ? ` <span class="muted">(${m.nome})</span>` : ""}`; }
     if (c.sim) { const s = SIMULACOES.lista.find(x => x.id === c.sim); return s ? s.titulo : c.sim; }
-    const m = D.modelos.find(x => x.id === c.modelo), v = MODELOS[c.modelo] && (MODELOS[c.modelo].vistas || [])[c.vista || 0];
-    return (m ? m.nome : c.modelo) + (v ? ` <span class="muted">· ${v[0]}</span>` : "");
+    const m = D.modelos.find(x => x.id === c.modelo); return m ? m.nome : c.modelo;
   }
   // a questão mais próxima da linha de leitura (35% da altura do painel) é a que manda no 3D
   function questaoNoMeio(box) {
@@ -1288,11 +1288,11 @@
       let cs = document.querySelector("#seqLista #cartaoSim");
       if (!(est.modo === "sim" && est.simId === c.sim && cs)) { $$("#seqLista #cartaoSim").forEach(x => x.remove()); abrirSim(c.sim); cs = $("#cartaoSim"); }
       const d = card.querySelector(".q-ctl"); if (cs && d) { d.appendChild(cs); d.hidden = false; }
-      if (c.vista != null && est.sim && est.sim.vistas && est.sim.vistas.length) vista(est.sim.vistas[c.vista % est.sim.vistas.length]);
+
     } else {
       if (!(est.modo === "modelo" && est.modeloId === c.modelo)) carregarModelo(c.modelo, true);
-      if (c.parte) selecionar(c.parte, true);
-      else { if (est.selecionado) { limparRealce(est.selecionado); est.selecionado = null; } const vs = MODELOS[c.modelo].vistas || []; if (vs.length) vista(vs[(c.vista || 0) % vs.length]); popModelo(c.modelo); }
+      if (c.parte) selecionar(c.parte, false);   // destaca a estrutura e abre a ficha, sem aproximar a câmera
+      else { if (est.selecionado) { limparRealce(est.selecionado); est.selecionado = null; } popModelo(c.modelo); }
     }
     trocarAba("seq", true);
   }
@@ -1323,12 +1323,17 @@
     let ev = refazer ? null : SEQ.estado[idp], lista = null;
     if (ev && Array.isArray(ev.q)) { const mapa = new Map(D.quiz.map(q => [chaveQ(q), q])); lista = ev.q.map(c => mapa.get(c)); if (lista.some(x => !x)) { lista = null; ev = null; } } else ev = null;
     if (!lista) { lista = simu ? questoesSimulado() : questoesTema(tema); ev = SEQ.estado[idp] = { id: novoId(), q: lista.map(chaveQ), o: lista.map(it => embaralhar(it.o.map((t, i) => i))), r: {} }; seqSalvar(); }
+    // trilha numerada de 1 a 25, seguindo de um tema para o outro
+    const tamBloco = j => { const pj = SEQ.passos[j], id = pj.tipo === "simulado" ? "simulado" : pj.h.cod, e = SEQ.estado[id];
+      return pj.tipo === "simulado" ? 0 : (SEQ.blocos[j] && SEQ.blocos[j].lista ? SEQ.blocos[j].lista.length : e && e.q ? e.q.length : (SEQ.cotas[pj.h.cod] || N_QUESTOES)); };
+    let numIni = 1; for (let j = 0; j < k; j++) numIni += tamBloco(j);
+    let numTot = 0; SEQ.passos.forEach((pj, j) => numTot += j === k ? lista.length : tamBloco(j));
     let cenas = null;
     if (!simu) { const ant = SEQ.blocos[k] && SEQ.blocos[k].cenas; if (ant) ant.forEach(c => c.parte && SEQ.usados3d.delete(c.parte)); cenas = cenasDoTema(p.h, lista, SEQ.usados3d || (SEQ.usados3d = new Set())); }
     const st = { lista, pontos: 0, feitas: 0, id: ev.id, resp: [], cenas }; SEQ.blocos[k] = st;
     const enviar = fim => registrar({ id: st.id, atividade, tema, acertos: st.pontos, total: lista.length, concluido: fim, respostas: st.resp });
     box.innerHTML = lista.map((it, n) => { const ordem = (ev.o[n] && ev.o[n].length === it.o.length ? ev.o[n] : it.o.map((t, i) => i)).map(i => ({ t: it.o[i], i }));
-      return `<div class="cartao seq-q" data-n="${n}"><div class="hab-top"><b>📝 Questão ${n + 1} de ${lista.length}</b>${simu ? `<span class="mini-txt muted">${rotuloAE(it.ae)}</span>` : ""}</div>
+      return `<div class="cartao seq-q" data-n="${n}" data-num="${simu ? n + 1 : numIni + n}"><div class="hab-top"><b>${simu ? `📝 Simulado · questão ${n + 1} de ${lista.length}` : `📝 Questão ${numIni + n} de ${numTot}`}</b>${simu ? `<span class="mini-txt muted">${rotuloAE(it.ae)}</span>` : ""}</div>
         ${simu ? (() => { const th = temaDe(it.ae); return th ? `<div class="q-3d">🧊 No simulador: <b>${th.tema}</b></div>` : ""; })() : `<div class="q-3d">🧊 No simulador: <b>${nomeCena(cenas[n])}</b></div>`}
         <p class="pergunta">${it.p}</p><div class="opcoes">${ordem.map((o, j) => `<button class="opcao" data-i="${o.i}"><b>${"ABCD"[j]})</b> ${o.t}</button>`).join("")}</div><div class="feed"></div><details class="q-ctl" hidden><summary>🎛️ Controles do simulador</summary></details></div>`; }).join("") + `<div class="bloco-fim"></div>`;
     // marca a questão como respondida (na hora ou ao restaurar o que já estava salvo)
