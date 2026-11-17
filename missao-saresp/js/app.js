@@ -635,7 +635,11 @@
   }
 
   /* ------------------------------ VOZ ------------------------------ */
+  // modo russo (só para a aluna indicada em js/ru.js): textos de exibição das questões e voz em russo
+  const TQ = it => (window.RU && RU.ativo && RU.q(it)) || it;
+  const LETRAS = () => window.RU && RU.ativo ? "АБВГ" : "ABCD";
   function falar(txt) {
+    if (window.RU && RU.ativo) return RU.falar(txt);
     if (!("speechSynthesis" in window)) return avisar("Seu navegador não tem leitura em voz alta.");
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(txt); u.lang = "pt-BR"; u.rate = 1;
@@ -1165,6 +1169,7 @@
   /* Sequência contínua: todos os temas um embaixo do outro, cada um com o seu simulador e as suas 10 questões.
      Ao rolar até um tema, o palco 3D troca sozinho para o simulador dele. */
   function iniciarSeq(irPara) {
+    if (window.RU) RU.verificar(ALUNO.dados);
     focoCarregar(); SEQ.passos = seqMontarPassos(); if (!SEQ.passos.length) return;
     SEQ.ativo = true; document.body.classList.add("seq", "seq-continua");
     let salvo = {}; try { salvo = JSON.parse(localStorage.getItem(seqChave()) || "{}"); } catch (e) { }
@@ -1332,15 +1337,15 @@
     if (!simu) { const ant = SEQ.blocos[k] && SEQ.blocos[k].cenas; if (ant) ant.forEach(c => c.parte && SEQ.usados3d.delete(c.parte)); cenas = cenasDoTema(p.h, lista, SEQ.usados3d || (SEQ.usados3d = new Set())); }
     const st = { lista, pontos: 0, feitas: 0, id: ev.id, resp: [], cenas }; SEQ.blocos[k] = st;
     const enviar = fim => registrar({ id: st.id, atividade, tema, acertos: st.pontos, total: lista.length, concluido: fim, respostas: st.resp });
-    box.innerHTML = lista.map((it, n) => { const ordem = (ev.o[n] && ev.o[n].length === it.o.length ? ev.o[n] : it.o.map((t, i) => i)).map(i => ({ t: it.o[i], i }));
+    box.innerHTML = lista.map((it, n) => { const tx = TQ(it), ordem = (ev.o[n] && ev.o[n].length === it.o.length ? ev.o[n] : it.o.map((t, i) => i)).map(i => ({ t: tx.o[i], i }));
       return `<div class="cartao seq-q" data-n="${n}" data-num="${simu ? n + 1 : numIni + n}"><div class="hab-top"><b>${simu ? `📝 Simulado · questão ${n + 1} de ${lista.length}` : `📝 Questão ${numIni + n} de ${numTot}`}</b>${simu ? `<span class="mini-txt muted">${rotuloAE(it.ae)}</span>` : ""}</div>
         ${simu ? (() => { const th = temaDe(it.ae); return th ? `<div class="q-3d">🧊 No simulador: <b>${th.tema}</b></div>` : ""; })() : `<div class="q-3d">🧊 No simulador: <b>${nomeCena(cenas[n])}</b></div>`}
-        <p class="pergunta">${it.p}</p><div class="opcoes">${ordem.map((o, j) => `<button class="opcao" data-i="${o.i}"><b>${"ABCD"[j]})</b> ${o.t}</button>`).join("")}</div><div class="feed"></div><details class="q-ctl" hidden><summary>🎛️ Controles do simulador</summary></details></div>`; }).join("") + `<div class="bloco-fim"></div>`;
+        <p class="pergunta">${tx.p}</p><div class="opcoes">${ordem.map((o, j) => `<button class="opcao" data-i="${o.i}"><b>${LETRAS()[j]})</b> ${o.t}</button>`).join("")}</div><div class="feed"></div><details class="q-ctl" hidden><summary>🎛️ Controles do simulador</summary></details></div>`; }).join("") + `<div class="bloco-fim"></div>`;
     // marca a questão como respondida (na hora ou ao restaurar o que já estava salvo)
     const marcar = (card, it, b, ok, restaurando) => {
       card.classList.add("respondida");
       card.querySelectorAll(".opcao").forEach(x => { x.disabled = true; if (+x.dataset.i === it.c) x.classList.add("certa"); else if (x === b) x.classList.add("errada"); });
-      card.querySelector(".feed").innerHTML = `<div class="destaque ${ok ? "saude" : "erro"}"><b>${ok ? (restaurando ? "Correto!" : "Correto! +10 XP") : "Não foi dessa vez."}</b> ${it.e}</div>`;
+      card.querySelector(".feed").innerHTML = `<div class="destaque ${ok ? "saude" : "erro"}"><b>${ok ? (restaurando ? "Correto!" : "Correto! +10 XP") : "Não foi dessa vez."}</b> ${TQ(it).e}</div>`;
     };
     box.querySelectorAll(".seq-q").forEach(card => {
       const n = +card.dataset.n, it = lista[n];
