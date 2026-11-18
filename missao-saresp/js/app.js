@@ -746,10 +746,10 @@
   function iniciarQuiz(o) {
     const anos = (anosQuiz.find(x => x[0] === quizAno) || anosQuiz[0])[2];
     let pool;
-    if (o.ae) { pool = D.quiz.filter(q => q.ae === o.ae); quiz.modo = "Quiz do tema"; if (pool.length < 3) pool = pool.concat(embaralhar(D.quiz.filter(q => q.a === o.ae.split("-")[0] && q.ae !== o.ae)).slice(0, 4 - pool.length)); }
-    else if (o.modo === "rec") { pool = D.quiz.filter(q => anos.includes(q.a) && q.b >= 3); quiz.modo = "Recuperação"; }
-    else { pool = D.quiz.filter(q => anos.includes(q.a)); quiz.modo = "Simulado SARESP"; }
-    quiz.lista = embaralhar(pool).slice(0, o.modo === "simulado" ? 12 : 10); quiz.i = 0; quiz.pontos = 0; quiz.erros = [];
+    if (o.ae) { pool = D.quiz.filter(q => !q.antiga && q.ae === o.ae); quiz.modo = "Quiz do tema"; if (pool.length < 3) pool = pool.concat(embaralhar(D.quiz.filter(q => !q.antiga && q.a === o.ae.split("-")[0] && q.ae !== o.ae)).slice(0, 4 - pool.length)); }
+    else if (o.modo === "rec") { pool = D.quiz.filter(q => !q.antiga && anos.includes(q.a) && q.b >= 3); quiz.modo = "Recuperação"; }
+    else { pool = D.quiz.filter(q => !q.antiga && anos.includes(q.a)); quiz.modo = "Simulado SARESP"; }
+    quiz.lista = porNivel(embaralhar(pool).slice(0, o.modo === "simulado" ? 12 : 10)); quiz.i = 0; quiz.pontos = 0; quiz.erros = [];
     quiz.id = novoId(); quiz.atividade = o.ae ? "tema" : o.modo === "rec" ? "recuperacao" : "simulado"; quiz.tema = o.ae || null; quiz.resp = [];
     questao(); setTimeout(() => { const a = $("#quizArea"); if (a) a.scrollIntoView({ behavior: "smooth" }); }, 50);
   }
@@ -774,10 +774,10 @@
     const q = quiz.lista[quiz.i], ordem = embaralhar(q.o.map((t, i) => ({ t, i })));
     area.innerHTML = `<div class="cartao"><div class="hab-top"><span class="muted">${quiz.modo} · questão ${quiz.i + 1} de ${quiz.lista.length}</span><span class="codigo">${rotuloAE(q.ae)}</span></div>
       <div class="barra"><span style="width:${quiz.i / quiz.lista.length * 100}%"></span></div>
-      <p class="pergunta">${q.p}</p><div class="opcoes">${ordem.map((o, k) => `<button class="opcao" data-i="${o.i}"><b>${"ABCD"[k]})</b> ${o.t}</button>`).join("")}</div><div id="qFeed"></div></div>`;
+      ${extrasQ(q)}<p class="pergunta">${q.p}</p><div class="opcoes">${ordem.map((o, k) => `<button class="opcao" data-i="${o.i}"><b>${"ABCD"[k]})</b> ${o.t}</button>`).join("")}</div><div id="qFeed"></div></div>`;
     area.querySelectorAll(".opcao").forEach(b => b.onclick = () => {
       const certo = +b.dataset.i === q.c; if (certo) { quiz.pontos++; XP.ganhar(10); } else quiz.erros.push(q.ae);
-      quiz.resp.push({ ae: q.ae, ok: certo, p: q.p.slice(0, 90), r: q.o[+b.dataset.i].slice(0, 60) });
+      quiz.resp.push({ ae: q.ae, ok: certo, p: resumoQ(q), r: q.o[+b.dataset.i].slice(0, 60) });
       enviarQuiz(quiz.i + 1 >= quiz.lista.length);
       area.querySelectorAll(".opcao").forEach(x => { if (+x.dataset.i === q.c) x.classList.add("certa"); else if (x === b) x.classList.add("errada"); x.disabled = true; });
       $("#qFeed").innerHTML = `<div class="destaque ${certo ? "saude" : "erro"}"><b>${certo ? "Correto! +10 XP" : "Não foi dessa vez."}</b> ${q.e}</div><button class="btn prim" id="qProx">${quiz.i + 1 < quiz.lista.length ? "Próxima" : "Ver resultado"}</button>`;
@@ -1134,6 +1134,12 @@
   const visto = q => SEQ.vistas ? SEQ.vistas.indexOf(chaveQ(q)) : -1;
   function ordemBanco(lista) { const nov = embaralhar(lista.filter(q => visto(q) < 0)), ja = lista.filter(q => visto(q) >= 0).sort((a, b) => visto(a) - visto(b)); return nov.concat(ja); }
   const chaveQ = q => q.ae + "|" + q.p.slice(0, 60);
+  // ordem gradativa de complexidade (só para questões com nível; as demais mantêm a ordem)
+  function porNivel(l) { return l.some(q => q.n) ? l.slice().sort((a, b) => (a.n || 2) - (b.n || 2)) : l; }
+  // texto-base, nível e componentes relacionados (banco do 9º ano)
+  function extrasQ(it, tx) { const NIV = ["", "Nível 1 · básico", "Nível 2 · intermediário", "Nível 3 · avançado"];
+    return (it.n || (it.d && it.d.length) ? `<div class="q-meta">${it.n ? `<span class="q-niv n${it.n}">${NIV[it.n]}</span>` : ""}${(it.d || []).map(d => `<span class="q-disc">${d}</span>`).join("")}</div>` : "") + (it.t ? `<div class="texto-base">${(tx && tx.t) || it.t}</div>` : ""); }
+  function resumoQ(it) { return ((it.t ? it.t.slice(0, 70) + "… → " : "") + it.p).slice(0, 170); }
   function focoCarregar() {
     let sv = {}; try { sv = JSON.parse(localStorage.getItem(seqChave()) || "{}"); } catch (e) { }
     (sv.foco || []).forEach(c => FOCO.temas.add(c)); FOCO.erros = sv.erros || [];
@@ -1144,20 +1150,25 @@
   function questoesTema(cod, n) {
     n = n || (SEQ.cotas && SEQ.cotas[cod]) || N_QUESTOES;
     // até 1/3 (no mínimo 1) das questões são revisão do que o aluno errou; o resto vem do banco, primeiro as que ele ainda não viu
-    const pool = D.quiz.filter(q => q.ae === cod), err = new Set(FOCO.erros);
+    const pool = D.quiz.filter(q => q.ae === cod && !q.antiga), err = new Set(FOCO.erros);
     const revisao = embaralhar(pool.filter(q => err.has(chaveQ(q)))).slice(0, Math.max(1, Math.floor(n / 3)));
-    return revisao.concat(ordemBanco(pool.filter(q => !revisao.includes(q)))).slice(0, n);
+    const resto = ordemBanco(pool.filter(q => !revisao.includes(q)));
+    if (!pool.some(q => q.n)) return revisao.concat(resto).slice(0, n);
+    // banco com níveis (9º ano): alterna intermediário, básico e avançado e apresenta do mais simples para o mais complexo
+    const pega = revisao.slice(0, n), ordNiv = [2, 1, 3]; let r = 0;
+    while (pega.length < n && resto.length) { const k = resto.findIndex(q => (q.n || 2) === ordNiv[r % 3]); r++; if (k >= 0) pega.push(resto.splice(k, 1)[0]); else if (r > 3 && !resto.some(q => ordNiv.includes(q.n || 2))) pega.push(resto.shift()); }
+    return porNivel(pega);
   }
 
   // Simulado final com 10 questões: cerca de 6 dos temas de reforço do aluno (uma de cada vez, em rodízio) e o resto dos outros temas do ano
   function questoesSimulado() {
     const ano = anoAtual(), noTrilha = new Set((SEQ.blocos || []).filter(Boolean).flatMap(b => b.lista || []).map(chaveQ)),
-      pool = ordemBanco(D.quiz.filter(q => q.a === ano && !noTrilha.has(chaveQ(q)))), foco = [...FOCO.temas].filter(c => c[0] === ano);
+      pool = ordemBanco(D.quiz.filter(q => q.a === ano && !q.antiga && !noTrilha.has(chaveQ(q)))), foco = [...FOCO.temas].filter(c => c[0] === ano);
     const out = [], usa = q => { if (!out.includes(q)) out.push(q); };
     if (foco.length) { const filas = foco.map(c => pool.filter(q => q.ae === c)); for (let r = 0; out.length < 6 && filas.some(f => f.length); r++) filas.forEach(f => { if (out.length < 6 && f.length) usa(f.shift()); }); }
     const porTema = {}; pool.forEach(q => { if (!out.includes(q)) (porTema[q.ae] = porTema[q.ae] || []).push(q); });
     const filas = embaralhar(Object.values(porTema)); while (out.length < N_QUESTOES && filas.some(f => f.length)) filas.forEach(f => { if (out.length < N_QUESTOES && f.length) usa(f.shift()); });
-    return embaralhar(out);
+    return porNivel(embaralhar(out));
   }
   function seqMontarPassos() {
     const t = D.trilha.find(x => x.ano === anoAtual()); if (!t) return [];
@@ -1259,7 +1270,7 @@
     const vistas = proprio && MODELOS[proprio] ? (MODELOS[proprio].vistas || []).map((v, i) => i) : [];
     let simUsado = false, iv = 0;
     return lista.map(it => {
-      const q = raizes(it.p + " " + (it.o[it.c] || "") + " " + (it.e || ""));
+      const q = raizes((it.t || "") + " " + it.p + " " + (it.o[it.c] || "") + " " + (it.e || ""));
       const cand = ch.map(c => ({ c, s: pontoCena(c, q, comum) + (c.m === proprio ? .5 : 0) })).filter(x => x.s >= 3).sort((a, b) => b.s - a.s);
       if (cand.length) {
         // outra estrutura só se ela também for uma boa resposta; senão repete a certa (nunca mostra uma que não tem a ver)
@@ -1340,7 +1351,7 @@
     box.innerHTML = lista.map((it, n) => { const tx = TQ(it), ordem = (ev.o[n] && ev.o[n].length === it.o.length ? ev.o[n] : it.o.map((t, i) => i)).map(i => ({ t: tx.o[i], i }));
       return `<div class="cartao seq-q" data-n="${n}" data-num="${simu ? n + 1 : numIni + n}"><div class="hab-top"><b>${simu ? `📝 Simulado · questão ${n + 1} de ${lista.length}` : `📝 Questão ${numIni + n} de ${numTot}`}</b>${simu ? `<span class="mini-txt muted">${rotuloAE(it.ae)}</span>` : ""}</div>
         ${simu ? (() => { const th = temaDe(it.ae); return th ? `<div class="q-3d">🧊 No simulador: <b>${th.tema}</b></div>` : ""; })() : `<div class="q-3d">🧊 No simulador: <b>${nomeCena(cenas[n])}</b></div>`}
-        <p class="pergunta">${tx.p}</p><div class="opcoes">${ordem.map((o, j) => `<button class="opcao" data-i="${o.i}"><b>${LETRAS()[j]})</b> ${o.t}</button>`).join("")}</div><div class="feed"></div><details class="q-ctl" hidden><summary>🎛️ Controles do simulador</summary></details></div>`; }).join("") + `<div class="bloco-fim"></div>`;
+        ${extrasQ(it, tx)}<p class="pergunta">${tx.p}</p><div class="opcoes">${ordem.map((o, j) => `<button class="opcao" data-i="${o.i}"><b>${LETRAS()[j]})</b> ${o.t}</button>`).join("")}</div><div class="feed"></div><details class="q-ctl" hidden><summary>🎛️ Controles do simulador</summary></details></div>`; }).join("") + `<div class="bloco-fim"></div>`;
     // marca a questão como respondida (na hora ou ao restaurar o que já estava salvo)
     const marcar = (card, it, b, ok, restaurando) => {
       card.classList.add("respondida");
@@ -1353,14 +1364,14 @@
         if (card.classList.contains("respondida")) return;
         const ok = +b.dataset.i === it.c; if (ok) { st.pontos++; XP.ganhar(10); }
         { const kq = chaveQ(it), ix = FOCO.erros.indexOf(kq); if (!ok && ix < 0) FOCO.erros.push(kq); if (ok && ix >= 0) FOCO.erros.splice(ix, 1); }
-        st.feitas++; st.resp.push({ ae: it.ae, ok, p: it.p.slice(0, 90), r: it.o[+b.dataset.i].slice(0, 60) });
+        st.feitas++; st.resp.push({ ae: it.ae, ok, p: resumoQ(it), r: it.o[+b.dataset.i].slice(0, 60) });
         ev.r[n] = +b.dataset.i; { const kq = chaveQ(it), ix = SEQ.vistas.indexOf(kq); if (ix >= 0) SEQ.vistas.splice(ix, 1); SEQ.vistas.push(kq); } seqSalvar(); enviar(st.feitas >= lista.length);
         marcar(card, it, b, ok);
         if (st.feitas >= lista.length) fimBloco(k);
       });
       // resposta já dada antes de sair: volta marcada, sem contar XP de novo nem reenviar
       if (ev.r[n] != null) { const i = +ev.r[n], b = card.querySelector(`.opcao[data-i="${i}"]`), ok = i === it.c;
-        if (ok) st.pontos++; st.feitas++; st.resp.push({ ae: it.ae, ok, p: it.p.slice(0, 90), r: (it.o[i] || "").slice(0, 60) }); marcar(card, it, b, ok, true); }
+        if (ok) st.pontos++; st.feitas++; st.resp.push({ ae: it.ae, ok, p: resumoQ(it), r: (it.o[i] || "").slice(0, 60) }); marcar(card, it, b, ok, true); }
     });
     if (st.feitas >= lista.length) fimBloco(k, true);
     if (!simu) { // cada questão do tema: troca o 3D quando ela chega ao meio da tela (ou quando o aluno toca nela)
@@ -1419,7 +1430,7 @@
       box.querySelectorAll(".opcao").forEach(b => b.onclick = () => {
         const ok = +b.dataset.i === it.c; if (ok) { st.pontos++; XP.ganhar(10); }
         { const kq = chaveQ(it), ix = FOCO.erros.indexOf(kq); if (!ok && ix < 0) FOCO.erros.push(kq); if (ok && ix >= 0) FOCO.erros.splice(ix, 1); }
-        st.resp.push({ ae: it.ae, ok, p: it.p.slice(0, 90), r: it.o[+b.dataset.i].slice(0, 60) }); enviar(st.i + 1 >= lista.length);
+        st.resp.push({ ae: it.ae, ok, p: resumoQ(it), r: it.o[+b.dataset.i].slice(0, 60) }); enviar(st.i + 1 >= lista.length);
         box.querySelectorAll(".opcao").forEach(x => { x.disabled = true; if (+x.dataset.i === it.c) x.classList.add("certa"); else if (x === b) x.classList.add("errada"); });
         $("#sqFeed").innerHTML = `<div class="destaque ${ok ? "saude" : "erro"}"><b>${ok ? "Correto! +10 XP" : "Não foi dessa vez."}</b> ${it.e}</div><button class="btn prim" id="sqProx">${st.i + 1 < lista.length ? "Próxima questão" : "Ver resultado"}</button>`;
         $("#sqProx").onclick = () => { st.i++; q(); };
