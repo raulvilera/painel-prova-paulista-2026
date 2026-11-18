@@ -1263,6 +1263,13 @@
   // pontua o quanto a questão fala da estrutura: palavra do nome vale 3 (palavras comuns a quase todas as estruturas do tema valem pouco),
   // palavra da ficha vale 1
   function pontoCena(c, q, comum) { let s = 0, nome = 0; q.forEach(w => { if (c.nome.has(w)) { if (comum.has(w)) s += .5; else { s += 3; nome++; } } else if (c.resto.has(w)) s += 1; }); return nome ? s : (s >= 5 ? s * .6 : 0); }
+  // cenário 3D definido na própria questão ("modelo:estrutura", "modelo" ou "sim:id"); null se não houver ou se não existir
+  function cenaDe(it) {
+    if (!it || !it.cena) return null; const [a, b] = it.cena.split(":");
+    if (a === "sim") return SIMULACOES.lista.some(x => x.id === b) ? { sim: b } : null;
+    if (!MODELOS[a]) return null; if (b && !(D.fichas[b] && D.fichas[b].modelo === a)) return { modelo: a };
+    return b ? { modelo: a, parte: b } : { modelo: a };
+  }
   function cenasDoTema(h, lista, usados) {
     const proprio = h.r.modelo, ch = chaves3d().filter(c => c.hab.includes(h.cod) || c.m === proprio), local = new Set();
     const df = {}; ch.forEach(c => c.nome.forEach(w => df[w] = (df[w] || 0) + 1));
@@ -1270,6 +1277,7 @@
     const vistas = proprio && MODELOS[proprio] ? (MODELOS[proprio].vistas || []).map((v, i) => i) : [];
     let simUsado = false, iv = 0;
     return lista.map(it => {
+      const fx = cenaDe(it); if (fx) { if (fx.parte) { local.add(fx.parte); usados.add(fx.parte); } return fx; }
       const q = raizes((it.t || "") + " " + it.p + " " + (it.o[it.c] || "") + " " + (it.e || ""));
       const cand = ch.map(c => ({ c, s: pontoCena(c, q, comum) + (c.m === proprio ? .5 : 0) })).filter(x => x.s >= 3).sort((a, b) => b.s - a.s);
       if (cand.length) {
@@ -1317,6 +1325,7 @@
   function limparCtlSimu() { $$("#seqLista .q-ctl").forEach(d => { d.hidden = true; const c = d.querySelector("#cartaoSim"); if (c) c.remove(); }); $$("#seqLista .seq-q.q-ativa").forEach(c => c.classList.remove("q-ativa")); }
   function simuladoMostrar(k, n) {
     const st = SEQ.blocos[k], card = $(`#seqLista .bloco[data-k="${k}"] .seq-q[data-n="${n}"]`); if (!st || !card || SEQ.ativoK !== k) return;
+    if (st.cenas && st.cenas[n]) { SEQ.simu3d = ""; return mostrarCena(k, n); }   // questão com cenário 3D próprio
     const h = temaDe(st.lista[n].ae), r = h && h.r; if (!r) return;
     const tipo = r.sim ? "sim:" + r.sim : "mod:" + (r.modelo || "sistema"), chave = tipo + "|" + n;
     if (SEQ.simu3d === chave) return; const mesmo = !!SEQ.simu3d && SEQ.simu3d.split("|")[0] === tipo; SEQ.simu3d = chave;
@@ -1345,12 +1354,13 @@
     let numIni = 1; for (let j = 0; j < k; j++) numIni += tamBloco(j);
     let numTot = 0; SEQ.passos.forEach((pj, j) => numTot += j === k ? lista.length : tamBloco(j));
     let cenas = null;
-    if (!simu) { const ant = SEQ.blocos[k] && SEQ.blocos[k].cenas; if (ant) ant.forEach(c => c.parte && SEQ.usados3d.delete(c.parte)); cenas = cenasDoTema(p.h, lista, SEQ.usados3d || (SEQ.usados3d = new Set())); }
+    if (simu) { const cs = lista.map(cenaDe); if (cs.some(Boolean)) cenas = cs; }
+    else { const ant = SEQ.blocos[k] && SEQ.blocos[k].cenas; if (ant) ant.forEach(c => c.parte && SEQ.usados3d.delete(c.parte)); cenas = cenasDoTema(p.h, lista, SEQ.usados3d || (SEQ.usados3d = new Set())); }
     const st = { lista, pontos: 0, feitas: 0, id: ev.id, resp: [], cenas }; SEQ.blocos[k] = st;
     const enviar = fim => registrar({ id: st.id, atividade, tema, acertos: st.pontos, total: lista.length, concluido: fim, respostas: st.resp });
     box.innerHTML = lista.map((it, n) => { const tx = TQ(it), ordem = (ev.o[n] && ev.o[n].length === it.o.length ? ev.o[n] : it.o.map((t, i) => i)).map(i => ({ t: tx.o[i], i }));
       return `<div class="cartao seq-q" data-n="${n}" data-num="${simu ? n + 1 : numIni + n}"><div class="hab-top"><b>${simu ? `📝 Simulado · questão ${n + 1} de ${lista.length}` : `📝 Questão ${numIni + n} de ${numTot}`}</b>${simu ? `<span class="mini-txt muted">${rotuloAE(it.ae)}</span>` : ""}</div>
-        ${simu ? (() => { const th = temaDe(it.ae); return th ? `<div class="q-3d">🧊 No simulador: <b>${th.tema}</b></div>` : ""; })() : `<div class="q-3d">🧊 No simulador: <b>${nomeCena(cenas[n])}</b></div>`}
+        ${simu && !(cenas && cenas[n]) ? (() => { const th = temaDe(it.ae); return th ? `<div class="q-3d">🧊 No simulador: <b>${th.tema}</b></div>` : ""; })() : `<div class="q-3d">🧊 No simulador: <b>${nomeCena(cenas[n])}</b></div>`}
         ${extrasQ(it, tx)}<p class="pergunta">${tx.p}</p><div class="opcoes">${ordem.map((o, j) => `<button class="opcao" data-i="${o.i}"><b>${LETRAS()[j]})</b> ${o.t}</button>`).join("")}</div><div class="feed"></div><details class="q-ctl" hidden><summary>🎛️ Controles do simulador</summary></details></div>`; }).join("") + `<div class="bloco-fim"></div>`;
     // marca a questão como respondida (na hora ou ao restaurar o que já estava salvo)
     const marcar = (card, it, b, ok, restaurando) => {
