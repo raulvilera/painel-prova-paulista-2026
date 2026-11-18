@@ -555,5 +555,22 @@
     "Os extremófilos ampliam o conceito de \"habitável\". Ainda não há evidência de vida em Europa: é uma hipótese a ser investigada.",
     ["9-AE10"]);
 
+  /* um cenário 3D próprio para cada questão (na ordem em que as questões aparecem acima, tema a tema):
+     "modelo:estrutura" destaca a estrutura no modelo 3D; "modelo" mostra o modelo inteiro; "sim:id" abre o simulador */
+  const CENA = {
+    "9-AE2": ["atomo", "atomo:eletrons", "atomo:protons", "atomo:neutrons", "cores:co_prisma", "atomo:eletrosfera"],
+    "9-AE3": ["tempo:t_nuvem", "estados:gasoso", "calor:c_termometro", "tempo:t_barometro", "estados:liquido", "misturas:m_destilacao"],
+    "9-AE4": ["reacao:q_produtos", "misturas:m_transformacao", "reacao:q_balanca", "reacao:q_equacao", "usinas:u_termeletrica", "reacao:q_reagentes"],
+    "9-AE5": ["espectro:e_micro", "espectro:e_uv", "espectro", "espectro:e_infra", "espectro:e_raiox", "atmosfera:ozonio"],
+    "9-AE6": ["cores:co_rgb", "vegetal:cloroplasto", "cores:co_objeto", "espectro:e_radio", "atmosfera:troposfera", "reproducao:rp_polinizacao"],
+    "9-AE8": ["mendel:g_cromossomo", "niveis:n_tecido", "mendel:g_punnett", "mendel:g_pais", "mendel:g_proporcao", "mendel:g_gametas"],
+    "9-AE9": ["evolucao:ev_arvore", "evolucao:ev_variacao", "micro:nucleoide", "sim:selecao", "invertebrados:iv_inseto", "animal:nucleo_a"],
+    "9-AE10": ["placas:p_divergente", "evolucao:ev_fosseis", "evolucao", "rochas:r_fossil", "evolucao:ev_tentilhoes", "sim:biomas"],
+    "9-AE11": ["terra:hidrosfera", "sim:estufa", "sim:energia", "usinas:u_hidreletrica", "micro:bacteria", "rochas:r_solo"],
+    "9-AE12": ["solar:terra_s", "sistema:sol", "solar:netuno", "solar", "habitavel:h_estrela", "solar:sol_s"],
+    "9-AE13": ["habitavel:h_zona", "habitavel:h_marte", "habitavel:h_terra", "habitavel:h_quente", "estados:mudancas", "habitavel:h_gelado"]
+  };
+  const pos = {}; L.forEach(q => { const i = pos[q.ae] = (pos[q.ae] || 0); pos[q.ae]++; if (CENA[q.ae] && CENA[q.ae][i]) q.cena = CENA[q.ae][i]; });
+
   D.quiz.push(...L);
 })();
