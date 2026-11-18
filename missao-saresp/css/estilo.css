@@ -451,3 +451,12 @@ body.tela-cheia .pop { max-width: min(300px, calc(100% - 70px)); max-height: 48%
 .q-ctl { margin: 4px 0 8px; border: 1px dashed var(--borda-suave); border-radius: 12px; padding: 6px 10px; }
 .q-ctl > summary { cursor: pointer; font-weight: 700; font-size: .85rem; }
 .q-ctl #cartaoSim { margin-top: 8px; box-shadow: none; }
+/* banco do 9º ano: texto-base, nível de complexidade e componentes relacionados */
+.q-meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 4px; }
+.q-niv, .q-disc { font-size: .72rem; padding: 2px 9px; border-radius: 99px; border: 1px solid var(--borda); color: var(--muted); }
+.q-niv { font-weight: 700; }
+.q-niv.n1 { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 45%, transparent); }
+.q-niv.n2 { color: var(--aviso); border-color: color-mix(in srgb, var(--aviso) 45%, transparent); }
+.q-niv.n3 { color: var(--erro); border-color: color-mix(in srgb, var(--erro) 45%, transparent); }
+.q-disc::before { content: "🔗 "; }
+.texto-base { font-size: .9rem; line-height: 1.5; background: var(--card2); border-left: 3px solid var(--acento); border-radius: 8px; padding: 9px 12px; margin: 8px 0 4px; }
