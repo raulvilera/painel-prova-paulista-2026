@@ -10,11 +10,12 @@ let QIMG = {}; try { QIMG = require('./_aula30-qimg.js'); } catch (e) { QIMG = {
 const crypto = require('crypto');
 const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.env.SUPABASE_SERVICE_KEY || '';
 const LOGIN_URL = process.env.PAINEL_SUPABASE_URL || 'https://ykrjfjepnqeoqlgupsbe.supabase.co', LOGIN_KEY = process.env.PAINEL_SUPABASE_KEY || 'sb_publishable_FbMU5x7WBpxzHmmVzOfh2g_0M1xxAh5';
-async function rest(path, opt) {
+async function restUma(path, opt) {
   const r = await fetch(SB + '/rest/v1/' + path, Object.assign({ headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' } }, opt || {}));
   const t = await r.text(); if (!r.ok) throw new Error('Supabase ' + r.status + ': ' + t.slice(0, 160));
   return t ? JSON.parse(t) : [];
 }
+const rest = require('./_paginar')(restUma);   // leituras sem o corte de 1000 linhas do Supabase
 async function professor(req) {
   const m = /^Bearer (.+)$/.exec(req.headers.authorization || ''); if (!m) return false;
   const r = await fetch(LOGIN_URL + '/auth/v1/user', { headers: { apikey: LOGIN_KEY, Authorization: 'Bearer ' + m[1] } });

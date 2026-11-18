@@ -18,7 +18,7 @@ const enc = encodeURIComponent;
 const semHtml = h => String(h || '').replace(/<li>/gi, '\n- ').replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/[ \t]+/g, ' ').trim();
 const limpar = (t, max) => String(t == null ? '' : t).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '').replace(/\r\n?/g, '\n').trim().slice(0, max);
 
-async function rest(path, opt) {
+async function restUma(path, opt) {
   opt = opt || {};
   const r = await fetch(SB + '/rest/v1/' + path, { method: opt.method || 'GET',
     headers: Object.assign({ apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json' }, opt.prefer ? { Prefer: opt.prefer } : {}),
@@ -26,6 +26,7 @@ async function rest(path, opt) {
   const t = await r.text(); if (!r.ok) throw new Error('Supabase ' + r.status + ': ' + t.slice(0, 160));
   return t ? JSON.parse(t) : [];
 }
+const rest = require('./_paginar')(restUma);   // leituras sem o corte de 1000 linhas do Supabase
 
 const alunosDaTurma = () => rest('alunos?select=chamada,nome,email_institucional&turma=eq.' + enc(AV.turmaBanco) + '&order=chamada.asc');
 

@@ -27,12 +27,13 @@ function achaNome(turma, nome) {
   return (NOMES[turma] || []).find(n => semAcento(n) === alvo) || null;
 }
 
-async function rest(path) {
+async function restUma(path) {
   const r = await fetch(SB + '/rest/v1/' + path, { headers: { apikey: KEY, Authorization: 'Bearer ' + KEY } });
   const t = await r.text();
   if (!r.ok) throw new Error('Banco ' + r.status);
   return t ? JSON.parse(t) : [];
 }
+const rest = require('./_paginar')(restUma);   // leituras sem o corte de 1000 linhas do Supabase
 
 /* Identidade do aluno logado: { turma, nome } na grafia da atividade, ou null. */
 async function alunoLogado(req) {

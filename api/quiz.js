@@ -25,20 +25,6 @@ async function professor(req) {
   const r = await fetch(LOGIN_URL + '/auth/v1/user', { headers: { apikey: LOGIN_KEY, Authorization: 'Bearer ' + m[1] } });
   return r.ok;
 }
-// O Supabase devolve no máximo 1000 linhas por consulta. Leitura (GET) com limit maior que 1000 é buscada em páginas
-// de 1000 até completar, senão as linhas mais antigas (ou mais novas) ficavam de fora dos relatórios.
-async function rest(path, opt) {
-  const lim = /[?&]limit=(\d+)/.exec(path);
-  if (!opt && lim && +lim[1] > 1000) {
-    const total = +lim[1], base = path.replace(/([?&])limit=\d+(&|$)/, (m, a, b) => b ? a : '').replace(/[?&]$/, ''), sep = base.includes('?') ? '&' : '?', out = [];
-    for (let off = 0; off < total; off += 1000) {
-      const n = Math.min(1000, total - off), pg = await restUma(base + sep + 'limit=' + n + '&offset=' + off);
-      if (!Array.isArray(pg)) return pg; out.push(...pg); if (pg.length < n) break;
-    }
-    return out;
-  }
-  return restUma(path, opt);
-}
 async function restUma(path, opt) {
   const o = Object.assign({}, opt || {});
   o.headers = Object.assign({ apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'return=representation' }, o.headers || {});
@@ -46,6 +32,7 @@ async function restUma(path, opt) {
   const t = await r.text(); if (!r.ok) throw new Error('Supabase ' + r.status + ': ' + t.slice(0, 160));
   return t ? JSON.parse(t) : null;
 }
+const rest = require('./_paginar')(restUma);   // leituras sem o corte de 1000 linhas do Supabase
 const embaralhar = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 /* nível do aluno pelo painel: média dos níveis (0 a 3) nos descritores do plano dele; sem dado = mediana da turma */
 function niveis(turma, nomes) {
@@ -171,12 +158,24 @@ module.exports = async function quiz(req, res) {
       if (q.missao3dplano) {   // painel do professor da Missão SARESP 3D: Simulado SARESP (planilha) + atividades da Missão
         let sim = [], erroSim = '';
         try { sim = await M3D.simuladoEF(); } catch (e) { erroSim = String(e.message || e).slice(0, 200); }
-        const m = await rest('missao3d_resultado?oculto=eq.false&select=turma,nome,atividade,tema,acertos,total,nota,concluido,respostas,atualizado&order=atualizado.desc,id.desc&limit=20000');
+        // resumo por aluno e seção (o tamanho não cresce com o número de tentativas)
+        const sec = await rest('missao3d_secao?select=turma,nome,atividade,tema,n_tent,n_conc,melhor,ult&order=turma,nome,atividade,tema');
+        const m = (sec || []).map(x => ({ turma: x.turma, nome: x.nome, atividade: x.atividade, tema: x.tema, concluido: x.n_conc > 0, nota: x.melhor, n_conc: x.n_conc, n_tent: x.n_tent, atualizado: x.ult }));
         return out(200, { ok: true, simulado: sim, erroSimulado: erroSim, questoes: M3D.QUESTOES, missao: m || [] });
       }
       if (q.missao3d) {   // resultados da Missão SARESP 3D (6º ao 9º ano)
-        const m = await rest('missao3d_resultado?oculto=eq.false&select=id,turma,nome,atividade,tema,acertos,total,percentual,nota,concluido,respostas,iniciado_em,concluido_em,atualizado&order=atualizado.desc,id.desc&limit=20000');
-        return out(200, { ok: true, resultados: m || [] });
+        if (q.aluno) {    // todas as tentativas (com as respostas) de um aluno: carregado só quando o professor abre o nome
+          // filtra no banco só pelo nome (a turma tem parênteses, caractere especial nos filtros) e separa a turma aqui
+          const m = await rest('missao3d_resultado?oculto=eq.false&nome=eq.' + encodeURIComponent(String(q.aluno)) + '&select=id,turma,nome,atividade,tema,acertos,total,percentual,nota,concluido,respostas,iniciado_em,concluido_em,atualizado&order=atualizado.desc,id.desc');
+          return out(200, { ok: true, tentativas: (m || []).filter(x => !q.turma || x.turma === String(q.turma)) });
+        }
+        if (q.csv) {      // planilha: uma linha por tentativa, sem as respostas
+          const f = q.turma ? '&turma=like.' + encodeURIComponent(String(q.turma).replace(/[()]/g, '_')) : '';   // "_" casa com os parênteses
+          const m = await rest('missao3d_resultado?oculto=eq.false' + f + '&select=turma,nome,atividade,tema,acertos,total,percentual,nota,concluido,iniciado_em,atualizado&order=turma,nome,atualizado.desc,id.desc');
+          return out(200, { ok: true, tentativas: (m || []).filter(x => !q.turma || x.turma === String(q.turma)) });
+        }
+        const m = await rest('missao3d_secao?select=turma,nome,atividade,tema,n_tent,n_conc,melhor,soma_conc,ult,aes,rapido&order=turma,nome,atividade,tema');
+        return out(200, { ok: true, secoes: m || [] });
       }
       if (q.sessao) { const s = await sessao(String(q.sessao)); return s ? out(200, Object.assign({ ok: true }, s)) : out(404, { ok: false, erro: 'Partida não encontrada.' }); }
       return out(400, { ok: false, erro: 'Pedido inválido.' });

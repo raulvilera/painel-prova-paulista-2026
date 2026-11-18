@@ -13,11 +13,12 @@ const CONCEITOS = require('./_conceitos-jogo.js');
 const { wikiImagem } = require('./_wiki-img.js');
 /* fotos dos conceitos ficam guardadas no mesmo Supabase da atividade individual (tabela indiv_banco, chave jogoimg:<id>) */
 const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), SKEY = process.env.SUPABASE_SERVICE_KEY || '';
-async function rest(path, opt) {
+async function restUma(path, opt) {
   const r = await fetch(SB + '/rest/v1/' + path, Object.assign({ headers: { apikey: SKEY, Authorization: 'Bearer ' + SKEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' } }, opt || {}));
   const t = await r.text(); if (!r.ok) throw new Error('Supabase ' + r.status);
   return t ? JSON.parse(t) : null;
 }
+const rest = require('./_paginar')(restUma);   // leituras sem o corte de 1000 linhas do Supabase
 const FOTOS = {};   // cache em memória enquanto a função estiver quente
 async function fotoConceito(id) {
   const cc = CONCEITOS.find(x => x.id === id); if (!cc) return null;

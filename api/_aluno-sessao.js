@@ -5,7 +5,7 @@ const SB = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), KEY = process.en
 
 const sha = s => crypto.createHash('sha256').update(String(s)).digest('hex');
 
-async function rest(path, opts = {}) {
+async function restUma(path, opts = {}) {
   const r = await fetch(SB + '/rest/v1/' + path, {
     method: opts.method || 'GET',
     headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', ...(opts.prefer ? { Prefer: opts.prefer } : {}) },
@@ -15,6 +15,7 @@ async function rest(path, opts = {}) {
   if (!r.ok) throw new Error('Banco ' + r.status + ': ' + t.slice(0, 160));
   return t ? JSON.parse(t) : [];
 }
+const rest = require('./_paginar')(restUma);   // leituras sem o corte de 1000 linhas do Supabase
 
 /* Devolve { ra, digito } se o Bearer token for uma sessão válida; senão null. */
 async function alunoDaSessao(req) {

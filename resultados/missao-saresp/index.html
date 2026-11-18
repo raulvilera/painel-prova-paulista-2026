@@ -49,33 +49,46 @@ td,th{padding:7px 8px;border:1px solid rgba(148,163,184,.6);vertical-align:middl
   const ATIV = { simulado: 'Simulado SARESP', recuperacao: 'Recuperação', tema: 'Quiz do tema', desafio: 'Desafio' };
   let TOKEN = '', D = [], aberto = ''; const ROSTER = {};
   async function carregarRoster(t) { if (ROSTER[t]) return; try { const r = await fetch('/api/atividade-quimica?turma=' + encodeURIComponent(t), { cache: 'no-store' }); const j = await r.json(); ROSTER[t] = j.ok ? j.nomes.map(a => a.nome) : []; } catch (e) { ROSTER[t] = []; } }
+  // D = resumo por aluno e seção (vem pronto do banco; não cresce com o número de tentativas). DET = tentativas de um aluno, carregadas ao abrir o nome.
+  const DET = {};
   async function carregar() {
     const r = await fetch('/api/quiz?missao3d=1', { headers: { Authorization: 'Bearer ' + TOKEN }, cache: 'no-store' });
-    const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro'); D = j.resultados || [];
+    const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro'); D = j.secoes || []; for (const k in DET) delete DET[k];
     const t = $('#fTurma').value; await Promise.all((t ? [t] : TURMAS).map(carregarRoster)); desenhar();
+  }
+  async function carregarAluno(t, nome) {
+    const k = t + '|' + nome; if (DET[k]) return;
+    DET[k] = 'carregando';
+    try { const r = await fetch('/api/quiz?missao3d=1&turma=' + encodeURIComponent(t) + '&aluno=' + encodeURIComponent(nome), { headers: { Authorization: 'Bearer ' + TOKEN }, cache: 'no-store' });
+      const j = await r.json(); DET[k] = j.ok ? j.tentativas : 'erro'; } catch (e) { DET[k] = 'erro'; }
+    desenhar();
   }
   function bloco(t, L) {
     const por = {}; L.forEach(x => { (por[x.nome] = por[x.nome] || []).push(x); });
-    const conc = L.filter(x => x.concluido), media = conc.length ? conc.reduce((a, x) => a + Number(x.nota), 0) / conc.length : null;
+    const nConc = L.reduce((a, x) => a + x.n_conc, 0), soma = L.reduce((a, x) => a + Number(x.soma_conc || 0), 0), media = nConc ? soma / nConc : null;
     const roster = ROSTER[t] || [], feitos = new Set(Object.keys(por).map(norm)), faltam = roster.filter(n => !feitos.has(norm(n)));
-    let h = '<div class="kpis"><div class="kpi"><b>' + Object.keys(por).length + (roster.length ? '<span style="font-size:1rem"> / ' + roster.length + '</span>' : '') + '</b><span>alunos que fizeram alguma atividade</span></div><div class="kpi"><b>' + conc.length + '</b><span>atividades concluídas</span></div><div class="kpi"><b>' + (media == null ? '–' : fm(media)) + '</b><span>média das concluídas</span></div><div class="kpi"><b>' + faltam.length + '</b><span>ainda não fizeram nada</span></div></div>';
+    let h = '<div class="kpis"><div class="kpi"><b>' + Object.keys(por).length + (roster.length ? '<span style="font-size:1rem"> / ' + roster.length + '</span>' : '') + '</b><span>alunos que fizeram alguma atividade</span></div><div class="kpi"><b>' + nConc + '</b><span>atividades concluídas</span></div><div class="kpi"><b>' + (media == null ? '–' : fm(media)) + '</b><span>média das concluídas</span></div><div class="kpi"><b>' + faltam.length + '</b><span>ainda não fizeram nada</span></div></div>';
     // aproveitamento por tema (todas as respostas de quiz)
-    const T0 = {}; L.filter(x => x.atividade !== 'desafio').forEach(x => (x.respostas || []).forEach(r => { if (!r.ae) return; const o = T0[r.ae] = T0[r.ae] || { ok: 0, er: 0 }; o[r.ok ? 'ok' : 'er']++; }));
-    const temas = Object.keys(T0).sort((a, b) => T0[a].ok / (T0[a].ok + T0[a].er) - T0[b].ok / (T0[b].ok + T0[b].er));
+    const T0 = {}; L.filter(x => x.atividade !== 'desafio').forEach(x => Object.entries(x.aes || {}).forEach(([ae, v]) => { const o = T0[ae] = T0[ae] || { ok: 0, er: 0 }; o.ok += v[0]; o.er += v[1]; }));
+    const temas = Object.keys(T0).filter(k => T0[k].ok + T0[k].er).sort((a, b) => T0[a].ok / (T0[a].ok + T0[a].er) - T0[b].ok / (T0[b].ok + T0[b].er));
     h += '<div class="card"><h3>Aproveitamento por tema</h3><div class="nota">Acertos ÷ respostas de todos os alunos da turma, do tema mais frágil para o mais forte. Cores pelas faixas do painel.</div>' +
       (temas.length ? temas.map(k => { const o = T0[k], p = Math.round(o.ok / (o.ok + o.er) * 100), f = FAIXA(p); return '<div style="display:flex;align-items:center;gap:10px;margin:6px 0"><span style="min-width:240px"><b>' + esc(TEMA[k] || k) + '</b> <span class="muted sm">' + esc(k.replace('-', 'º · ')) + '</span></span><span class="tbar"><b style="width:' + p + '%;background:' + f[1] + '"></b></span><span style="min-width:150px">' + p + '% · ' + f[0] + ' <span class="muted sm">(' + o.ok + '/' + (o.ok + o.er) + ')</span></span></div>'; }).join('') : '<p class="muted">Ainda sem respostas de quiz.</p>') + '</div>';
-    const alunos = Object.entries(por).map(([nome, tent]) => { tent.sort((a, b) => String(b.atualizado).localeCompare(String(a.atualizado)));
-      const melhor = tipo => { const c = tent.filter(x => x.concluido && x.atividade === tipo); return c.length ? Math.max(...c.map(x => Number(x.nota))) : null; };
-      const secoes = {}; tent.filter(x => x.concluido && (x.atividade === 'tema' || x.atividade === 'simulado')).forEach(x => { const k = x.atividade === 'tema' ? x.tema : 'simulado'; secoes[k] = Math.max(secoes[k] ?? 0, Number(x.nota)); });
-      const ns = Object.values(secoes), mediaMissao = ns.length ? ns.reduce((a, b) => a + b, 0) / ns.length : null;
-      const simC = tent.filter(x => x.concluido && x.atividade === 'simulado').sort((a, b) => Number(b.nota) - Number(a.nota))[0];
-      const rapido = simC && simC.iniciado_em && simC.atualizado && (new Date(simC.atualizado) - new Date(simC.iniciado_em)) / 1000 / Math.max(1, simC.total) < 8;
-      return { nome, tent, media: mediaMissao, nsec: ns.length, rapido, sim: melhor('simulado'), rec: melhor('recuperacao'), temas: new Set(tent.filter(x => x.atividade === 'tema' && x.concluido).map(x => x.tema)).size, ult: tent[0] }; }).sort((a, b) => a.nome.localeCompare(b.nome, 'pt'));
+    const alunos = Object.entries(por).map(([nome, sec]) => {
+      const de = tipo => sec.find(x => x.atividade === tipo && x.n_conc > 0);
+      const ns = sec.filter(x => x.n_conc > 0 && (x.atividade === 'tema' || x.atividade === 'simulado')).map(x => Number(x.melhor));
+      const sim = de('simulado'), rec = de('recuperacao');
+      return { nome, media: ns.length ? ns.reduce((a, b) => a + b, 0) / ns.length : null, nsec: ns.length, rapido: !!(sim && sim.rapido), sim: sim ? Number(sim.melhor) : null, rec: rec ? Number(rec.melhor) : null,
+        temas: sec.filter(x => x.atividade === 'tema' && x.n_conc > 0).length, n: sec.reduce((a, x) => a + x.n_tent, 0), ult: sec.map(x => x.ult).sort().pop() }; }).sort((a, b) => a.nome.localeCompare(b.nome, 'pt'));
     const c = v => v == null ? '<span class="muted">–</span>' : nt(v);
+    const detalhe = (t, a) => { const k = t + '|' + a.nome, d = DET[k];
+      if (!d || d === 'carregando') { if (!d) carregarAluno(t, a.nome); return '<span class="muted">Carregando as atividades…</span>'; }
+      if (d === 'erro') return '<span class="muted">Não foi possível carregar agora. Clique de novo no nome.</span>';
+      const at = $('#fAtiv').value;
+      return d.filter(x => !at || x.atividade === at).map(x => '<div style="margin-bottom:10px"><b>' + esc(ATIV[x.atividade] || x.atividade) + (x.tema ? ' · ' + esc(TEMA[x.tema] || x.tema) : '') + '</b> · ' + dt(x.atualizado) + ' · ' + (x.concluido ? 'concluída · ' + fm(x.acertos).replace(',0', '') + '/' + x.total + ' · nota ' + nt(Number(x.nota)) + ' · ' + FAIXA(x.percentual)[0] : '<span class="tag">incompleta</span> · ' + (x.respostas || []).length + ' de ' + x.total + ' respondidas · ' + (x.respostas || []).filter(r => r.ok).length + ' certas (sem nota até concluir)') + (x.concluido && x.iniciado_em ? ' · ' + Math.round((new Date(x.atualizado) - new Date(x.iniciado_em)) / 1000) + ' s' : '') +
+        '<div class="sm" style="margin-top:4px">' + (x.respostas || []).map(r => '<span class="' + (r.ok ? 'ok' : 'er') + '">' + (r.ok ? '✔' : '✘') + '</span> ' + esc(r.p) + (r.r ? ' <span class="muted">→ ' + esc(r.r) + '</span>' : '')).join('<br>') + '</div></div>').join('') || '<span class="muted">Nenhuma atividade deste tipo.</span>'; };
     h += '<div class="card" style="margin-top:14px"><h2>Alunos</h2><div class="nota">Clique no nome para ver cada atividade e as respostas. <b>Média da Missão</b> = média da melhor nota de cada seção concluída (cada tema e o Simulado final). Simulado e Recuperação mostram a melhor nota concluída (0 a 10). ⚡ = Simulado respondido rápido demais (menos de 8 s por questão): provável chute.</div><div class="scroll"><table><thead><tr><th>#</th><th>Aluno</th><th>Média da Missão</th><th>Simulado SARESP</th><th>Recuperação</th><th>Temas concluídos</th><th>Atividades</th><th>Última</th></tr></thead><tbody>' +
-      (alunos.length ? alunos.map((a, i) => { const k = t + '|' + a.nome; let r = '<tr class="al" data-k="' + esc(k) + '"><td>' + (i + 1) + '</td><td class="l"><b>' + esc(a.nome) + '</b></td><td>' + c(a.media) + (a.nsec ? ' <span class="muted sm">(' + a.nsec + ' seç.)</span>' : '') + '</td><td>' + c(a.sim) + (a.rapido ? ' <span title="Respondido rápido demais: menos de 8 segundos por questão">⚡</span>' : '') + '</td><td>' + c(a.rec) + '</td><td>' + a.temas + '</td><td>' + a.tent.length + '</td><td>' + dt(a.ult.atualizado) + '</td></tr>';
-        if (aberto === k) r += '<tr class="det"><td></td><td colspan="7">' + a.tent.map(x => '<div style="margin-bottom:10px"><b>' + esc(ATIV[x.atividade] || x.atividade) + (x.tema ? ' · ' + esc(TEMA[x.tema] || x.tema) : '') + '</b> · ' + dt(x.atualizado) + ' · ' + (x.concluido ? 'concluída · ' + fm(x.acertos).replace(',0', '') + '/' + x.total + ' · nota ' + nt(Number(x.nota)) + ' · ' + FAIXA(x.percentual)[0] : '<span class="tag">incompleta</span> · ' + (x.respostas || []).length + ' de ' + x.total + ' respondidas · ' + (x.respostas || []).filter(r => r.ok).length + ' certas (sem nota até concluir)') + (x.concluido && x.iniciado_em ? ' · ' + Math.round((new Date(x.atualizado) - new Date(x.iniciado_em)) / 1000) + ' s' : '') +
-          '<div class="sm" style="margin-top:4px">' + (x.respostas || []).map(r => '<span class="' + (r.ok ? 'ok' : 'er') + '">' + (r.ok ? '✔' : '✘') + '</span> ' + esc(r.p) + (r.r ? ' <span class="muted">→ ' + esc(r.r) + '</span>' : '')).join('<br>') + '</div></div>').join('') + '</td></tr>';
+      (alunos.length ? alunos.map((a, i) => { const k = t + '|' + a.nome; let r = '<tr class="al" data-k="' + esc(k) + '"><td>' + (i + 1) + '</td><td class="l"><b>' + esc(a.nome) + '</b></td><td>' + c(a.media) + (a.nsec ? ' <span class="muted sm">(' + a.nsec + ' seç.)</span>' : '') + '</td><td>' + c(a.sim) + (a.rapido ? ' <span title="Respondido rápido demais: menos de 8 segundos por questão">⚡</span>' : '') + '</td><td>' + c(a.rec) + '</td><td>' + a.temas + '</td><td>' + a.n + '</td><td>' + dt(a.ult) + '</td></tr>';
+        if (aberto === k) r += '<tr class="det"><td></td><td colspan="7">' + detalhe(t, a) + '</td></tr>';
         return r; }).join('') : '<tr><td colspan="8" class="muted">Nenhum resultado ainda.</td></tr>') + '</tbody></table></div></div>';
     if (roster.length) h += '<div class="card" style="margin-top:14px"><h3>Ainda não fizeram nenhuma atividade (' + faltam.length + ')</h3>' + (faltam.length ? '<div class="faltam">' + faltam.map(n => '<span>' + esc(n) + '</span>').join('') + '</div>' : '<p class="ok">Toda a turma já participou!</p>') + '</div>';
     return '<section class="turma-bloco"><h2 class="turma-tit">' + esc(t) + '</h2>' + h + '</section>';
@@ -85,13 +98,20 @@ td,th{padding:7px 8px;border:1px solid rgba(148,163,184,.6);vertical-align:middl
     const LL = D.filter(x => (!t || x.turma === t) && (!at || x.atividade === at) && (!q || norm(x.nome).includes(q)));
     const turmas = t ? [t] : TURMAS.filter(tm => LL.some(x => x.turma === tm));
     app(turmas.length ? turmas.map(tm => bloco(tm, LL.filter(x => x.turma === tm))).join('') : '<div class="card muted">Nenhum resultado ainda. Os alunos entram no simulador, escolhem a turma e o nome, e cada atividade aparece aqui.</div>');
-    document.querySelectorAll('tr.al').forEach(tr => tr.onclick = () => { aberto = aberto === tr.dataset.k ? '' : tr.dataset.k; desenhar(); });
+    document.querySelectorAll('tr.al').forEach(tr => tr.onclick = () => { aberto = aberto === tr.dataset.k ? '' : tr.dataset.k; if (aberto && DET[aberto] === 'erro') delete DET[aberto]; desenhar(); });
   }
-  function csv() {
-    const t = $('#fTurma').value, L = [['Turma', 'Aluno', 'Atividade', 'Tema', 'Concluída', 'Acertos', 'Total', 'Percentual', 'Nota', 'Faixa', 'Início', 'Atualizado']];
-    D.filter(x => !t || x.turma === t).forEach(x => L.push([x.turma, x.nome, ATIV[x.atividade] || x.atividade, x.tema ? (TEMA[x.tema] || x.tema) : '', x.concluido ? 'sim' : 'não', fm(x.acertos), x.total, x.percentual + '%', fm(x.nota), FAIXA(x.percentual)[0], dt(x.iniciado_em), dt(x.atualizado)]));
-    const txt = '﻿' + L.map(l => l.map(c => '"' + String(c == null ? '' : c).replace(/"/g, '""') + '"').join(';')).join('\n');
-    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/csv;charset=utf-8' })); a.download = 'missao-saresp-3d' + (t ? '-' + norm(t).replace(/\W+/g, '-') : '') + '.csv'; a.click();
+  // planilha: uma linha por tentativa; busca turma por turma para cada resposta continuar pequena
+  async function csv() {
+    const t = $('#fTurma').value, b = $('#bCsv'), rot = b.textContent; b.disabled = true; b.textContent = 'Gerando…';
+    try {
+      const L = [['Turma', 'Aluno', 'Atividade', 'Tema', 'Concluída', 'Acertos', 'Total', 'Percentual', 'Nota', 'Faixa', 'Início', 'Atualizado']];
+      for (const tm of (t ? [t] : TURMAS)) {
+        const r = await fetch('/api/quiz?missao3d=1&csv=1&turma=' + encodeURIComponent(tm), { headers: { Authorization: 'Bearer ' + TOKEN }, cache: 'no-store' }); const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro');
+        j.tentativas.forEach(x => L.push([x.turma, x.nome, ATIV[x.atividade] || x.atividade, x.tema ? (TEMA[x.tema] || x.tema) : '', x.concluido ? 'sim' : 'não', fm(x.acertos), x.total, x.percentual + '%', fm(x.nota), FAIXA(x.percentual)[0], dt(x.iniciado_em), dt(x.atualizado)]));
+      }
+      const txt = '﻿' + L.map(l => l.map(c => '"' + String(c == null ? '' : c).replace(/"/g, '""') + '"').join(';')).join('\n');
+      const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/csv;charset=utf-8' })); a.download = 'missao-saresp-3d' + (t ? '-' + norm(t).replace(/\W+/g, '-') : '') + '.csv'; a.click();
+    } catch (e) { alert('Não foi possível gerar a planilha: ' + e.message); } finally { b.disabled = false; b.textContent = rot; }
   }
   $('#fTurma').onchange = () => { const t = $('#fTurma').value; (t ? carregarRoster(t) : Promise.resolve()).then(desenhar); };
   $('#fAtiv').onchange = desenhar; $('#fAluno').oninput = desenhar; $('#bCsv').onclick = csv;
