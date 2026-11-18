@@ -25,7 +25,21 @@ async function professor(req) {
   const r = await fetch(LOGIN_URL + '/auth/v1/user', { headers: { apikey: LOGIN_KEY, Authorization: 'Bearer ' + m[1] } });
   return r.ok;
 }
+// O Supabase devolve no máximo 1000 linhas por consulta. Leitura (GET) com limit maior que 1000 é buscada em páginas
+// de 1000 até completar, senão as linhas mais antigas (ou mais novas) ficavam de fora dos relatórios.
 async function rest(path, opt) {
+  const lim = /[?&]limit=(\d+)/.exec(path);
+  if (!opt && lim && +lim[1] > 1000) {
+    const total = +lim[1], base = path.replace(/([?&])limit=\d+(&|$)/, (m, a, b) => b ? a : '').replace(/[?&]$/, ''), sep = base.includes('?') ? '&' : '?', out = [];
+    for (let off = 0; off < total; off += 1000) {
+      const n = Math.min(1000, total - off), pg = await restUma(base + sep + 'limit=' + n + '&offset=' + off);
+      if (!Array.isArray(pg)) return pg; out.push(...pg); if (pg.length < n) break;
+    }
+    return out;
+  }
+  return restUma(path, opt);
+}
+async function restUma(path, opt) {
   const o = Object.assign({}, opt || {});
   o.headers = Object.assign({ apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'return=representation' }, o.headers || {});
   const r = await fetch(SB + '/rest/v1/' + path, o);
@@ -157,11 +171,11 @@ module.exports = async function quiz(req, res) {
       if (q.missao3dplano) {   // painel do professor da Missão SARESP 3D: Simulado SARESP (planilha) + atividades da Missão
         let sim = [], erroSim = '';
         try { sim = await M3D.simuladoEF(); } catch (e) { erroSim = String(e.message || e).slice(0, 200); }
-        const m = await rest('missao3d_resultado?oculto=eq.false&select=turma,nome,atividade,tema,acertos,total,nota,concluido,respostas,atualizado&order=atualizado.desc&limit=5000');
+        const m = await rest('missao3d_resultado?oculto=eq.false&select=turma,nome,atividade,tema,acertos,total,nota,concluido,respostas,atualizado&order=atualizado.desc,id.desc&limit=20000');
         return out(200, { ok: true, simulado: sim, erroSimulado: erroSim, questoes: M3D.QUESTOES, missao: m || [] });
       }
       if (q.missao3d) {   // resultados da Missão SARESP 3D (6º ao 9º ano)
-        const m = await rest('missao3d_resultado?oculto=eq.false&select=id,turma,nome,atividade,tema,acertos,total,percentual,nota,concluido,respostas,iniciado_em,concluido_em,atualizado&order=atualizado.desc&limit=5000');
+        const m = await rest('missao3d_resultado?oculto=eq.false&select=id,turma,nome,atividade,tema,acertos,total,percentual,nota,concluido,respostas,iniciado_em,concluido_em,atualizado&order=atualizado.desc,id.desc&limit=20000');
         return out(200, { ok: true, resultados: m || [] });
       }
       if (q.sessao) { const s = await sessao(String(q.sessao)); return s ? out(200, Object.assign({ ok: true }, s)) : out(404, { ok: false, erro: 'Partida não encontrada.' }); }
