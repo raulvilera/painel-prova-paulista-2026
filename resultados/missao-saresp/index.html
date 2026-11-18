@@ -30,7 +30,8 @@ td,th{padding:7px 8px;border:1px solid rgba(148,163,184,.6);vertical-align:middl
 <div class="field"><label for="fTurma">Turma</label><select id="fTurma"><option value="">Todas as turmas</option><option>6º Ano A (Lydia)</option><option>6º Ano B (Lydia)</option><option>6º Ano C (Lydia)</option><option>6º Ano A</option><option>6º Ano C</option><option>7º Ano A</option><option>7º Ano B</option><option>8º Ano A</option><option>8º Ano B</option><option>9º Ano A</option><option>9º Ano B</option></select></div>
 <div class="field"><label for="fAtiv">Atividade</label><select id="fAtiv"><option value="">Todas</option><option value="simulado">Simulado SARESP</option><option value="recuperacao">Recuperação</option><option value="tema">Quiz por tema</option><option value="desafio">Desafio</option></select></div>
 <div class="field"><label for="fAluno">Aluno</label><input id="fAluno" type="search" placeholder="Buscar pelo nome…" autocomplete="off"></div>
-<div class="field"><button class="btn" id="bCsv" type="button">Baixar CSV</button></div>
+<div class="field"><button class="btn" id="bNotas" type="button">Baixar notas finais</button></div>
+<div class="field"><button class="btn" id="bCsv" type="button">Baixar CSV (tentativas)</button></div>
 <div class="field"><button class="btn" id="bAtu" type="button">Atualizar</button></div>
 </div>
 <div id="app"><div class="card muted">Carregando…</div></div>
@@ -51,6 +52,24 @@ td,th{padding:7px 8px;border:1px solid rgba(148,163,184,.6);vertical-align:middl
   async function carregarRoster(t) { if (ROSTER[t]) return; try { const r = await fetch('/api/atividade-quimica?turma=' + encodeURIComponent(t), { cache: 'no-store' }); const j = await r.json(); ROSTER[t] = j.ok ? j.nomes.map(a => a.nome) : []; } catch (e) { ROSTER[t] = []; } }
   // D = resumo por aluno e seção (vem pronto do banco; não cresce com o número de tentativas). DET = tentativas de um aluno, carregadas ao abrir o nome.
   const DET = {};
+  // seções da Missão por ano (os temas da trilha de cada ano + o Simulado final), na mesma ordem do link do aluno
+  const SECOES = {
+    6: ['6-AE1', '6-AE2', '6-AE3', '6-AE4', '6-AE5', '6-AE6', '6-AE7'],
+    7: ['7-AE1', '7-AE2', '7-AE3', '7-AE4', '7-AE7', '7-INV', '7-AE8', '7-AE10', '7-AE11'],
+    8: ['8-AE1', '8-AE2', '8-AE3', '8-AE5', '8-AE8', '8-AE9', '8-AE10', '8-AE11', '8-AE12', '8-AE13'],
+    9: ['9-AE2', '9-AE3', '9-AE4', '9-AE5', '9-AE6', '9-AE8', '9-AE9', '9-AE10', '9-AE11', '9-AE12', '9-AE13']
+  };
+  TEMA['7-INV'] = TEMA['7-INV'] || 'Grupos de invertebrados';
+  const nSecoes = t => (SECOES[String(t)[0]] || []).length + 1;
+  // Nota final = soma da melhor nota de cada seção da Missão ÷ total de seções do ano (seção não feita conta 0).
+  // Usa sempre todas as atividades do aluno, mesmo com o filtro de Atividade ligado.
+  function notaFinal(t, nome) {
+    const lista = SECOES[String(t)[0]] || [], sec = D.filter(x => x.turma === t && norm(x.nome) === norm(nome) && x.n_conc > 0);
+    let soma = 0, feitas = 0;
+    lista.forEach(c => { const x = sec.find(y => y.atividade === 'tema' && y.tema === c); if (x) { soma += Number(x.melhor); feitas++; } });
+    const s = sec.find(y => y.atividade === 'simulado'); if (s) { soma += Number(s.melhor); feitas++; }
+    return { nota: soma / nSecoes(t), feitas, total: nSecoes(t) };
+  }
   async function carregar() {
     const r = await fetch('/api/quiz?missao3d=1', { headers: { Authorization: 'Bearer ' + TOKEN }, cache: 'no-store' });
     const j = await r.json(); if (!j.ok) throw new Error(j.erro || 'erro'); D = j.secoes || []; for (const k in DET) delete DET[k];
@@ -63,7 +82,7 @@ td,th{padding:7px 8px;border:1px solid rgba(148,163,184,.6);vertical-align:middl
       const j = await r.json(); DET[k] = j.ok ? j.tentativas : 'erro'; } catch (e) { DET[k] = 'erro'; }
     desenhar();
   }
-  function bloco(t, L) {
+  function bloco(t, L, qAluno) {
     const por = {}; L.forEach(x => { (por[x.nome] = por[x.nome] || []).push(x); });
     const nConc = L.reduce((a, x) => a + x.n_conc, 0), soma = L.reduce((a, x) => a + Number(x.soma_conc || 0), 0), media = nConc ? soma / nConc : null;
     const roster = ROSTER[t] || [], feitos = new Set(Object.keys(por).map(norm)), faltam = roster.filter(n => !feitos.has(norm(n)));
@@ -78,7 +97,9 @@ td,th{padding:7px 8px;border:1px solid rgba(148,163,184,.6);vertical-align:middl
       const ns = sec.filter(x => x.n_conc > 0 && (x.atividade === 'tema' || x.atividade === 'simulado')).map(x => Number(x.melhor));
       const sim = de('simulado'), rec = de('recuperacao');
       return { nome, media: ns.length ? ns.reduce((a, b) => a + b, 0) / ns.length : null, nsec: ns.length, rapido: !!(sim && sim.rapido), sim: sim ? Number(sim.melhor) : null, rec: rec ? Number(rec.melhor) : null,
-        temas: sec.filter(x => x.atividade === 'tema' && x.n_conc > 0).length, n: sec.reduce((a, x) => a + x.n_tent, 0), ult: sec.map(x => x.ult).sort().pop() }; }).sort((a, b) => a.nome.localeCompare(b.nome, 'pt'));
+        temas: sec.filter(x => x.atividade === 'tema' && x.n_conc > 0).length, n: sec.reduce((a, x) => a + x.n_tent, 0), ult: sec.map(x => x.ult).sort().pop(), fin: notaFinal(t, nome) }; })
+      .concat(faltam.filter(n => !qAluno || norm(n).includes(qAluno)).map(nome => ({ nome, nada: true, media: null, nsec: 0, sim: null, rec: null, temas: 0, n: 0, ult: null, fin: { nota: 0, feitas: 0, total: nSecoes(t) } })))
+      .sort((a, b) => a.nome.localeCompare(b.nome, 'pt'));
     const c = v => v == null ? '<span class="muted">–</span>' : nt(v);
     const detalhe = (t, a) => { const k = t + '|' + a.nome, d = DET[k];
       if (!d || d === 'carregando') { if (!d) carregarAluno(t, a.nome); return '<span class="muted">Carregando as atividades…</span>'; }
@@ -86,18 +107,19 @@ td,th{padding:7px 8px;border:1px solid rgba(148,163,184,.6);vertical-align:middl
       const at = $('#fAtiv').value;
       return d.filter(x => !at || x.atividade === at).map(x => '<div style="margin-bottom:10px"><b>' + esc(ATIV[x.atividade] || x.atividade) + (x.tema ? ' · ' + esc(TEMA[x.tema] || x.tema) : '') + '</b> · ' + dt(x.atualizado) + ' · ' + (x.concluido ? 'concluída · ' + fm(x.acertos).replace(',0', '') + '/' + x.total + ' · nota ' + nt(Number(x.nota)) + ' · ' + FAIXA(x.percentual)[0] : '<span class="tag">incompleta</span> · ' + (x.respostas || []).length + ' de ' + x.total + ' respondidas · ' + (x.respostas || []).filter(r => r.ok).length + ' certas (sem nota até concluir)') + (x.concluido && x.iniciado_em ? ' · ' + Math.round((new Date(x.atualizado) - new Date(x.iniciado_em)) / 1000) + ' s' : '') +
         '<div class="sm" style="margin-top:4px">' + (x.respostas || []).map(r => '<span class="' + (r.ok ? 'ok' : 'er') + '">' + (r.ok ? '✔' : '✘') + '</span> ' + esc(r.p) + (r.r ? ' <span class="muted">→ ' + esc(r.r) + '</span>' : '')).join('<br>') + '</div></div>').join('') || '<span class="muted">Nenhuma atividade deste tipo.</span>'; };
-    h += '<div class="card" style="margin-top:14px"><h2>Alunos</h2><div class="nota">Clique no nome para ver cada atividade e as respostas. <b>Média da Missão</b> = média da melhor nota de cada seção concluída (cada tema e o Simulado final). Simulado e Recuperação mostram a melhor nota concluída (0 a 10). ⚡ = Simulado respondido rápido demais (menos de 8 s por questão): provável chute.</div><div class="scroll"><table><thead><tr><th>#</th><th>Aluno</th><th>Média da Missão</th><th>Simulado SARESP</th><th>Recuperação</th><th>Temas concluídos</th><th>Atividades</th><th>Última</th></tr></thead><tbody>' +
-      (alunos.length ? alunos.map((a, i) => { const k = t + '|' + a.nome; let r = '<tr class="al" data-k="' + esc(k) + '"><td>' + (i + 1) + '</td><td class="l"><b>' + esc(a.nome) + '</b></td><td>' + c(a.media) + (a.nsec ? ' <span class="muted sm">(' + a.nsec + ' seç.)</span>' : '') + '</td><td>' + c(a.sim) + (a.rapido ? ' <span title="Respondido rápido demais: menos de 8 segundos por questão">⚡</span>' : '') + '</td><td>' + c(a.rec) + '</td><td>' + a.temas + '</td><td>' + a.n + '</td><td>' + dt(a.ult) + '</td></tr>';
-        if (aberto === k) r += '<tr class="det"><td></td><td colspan="7">' + detalhe(t, a) + '</td></tr>';
-        return r; }).join('') : '<tr><td colspan="8" class="muted">Nenhum resultado ainda.</td></tr>') + '</tbody></table></div></div>';
+    h += '<div class="card" style="margin-top:14px"><h2>Alunos</h2><div class="nota">Clique no nome para ver cada atividade e as respostas. <b>Média da Missão</b> = média da melhor nota de cada seção concluída (cada tema e o Simulado final). <b>Nota final</b> = soma da melhor nota de cada seção ÷ total de seções do ano (' + nSecoes(t) + ' no ' + esc(String(t)[0]) + 'º ano: ' + (nSecoes(t) - 1) + ' temas + Simulado); seção não feita conta 0. Simulado e Recuperação mostram a melhor nota concluída (0 a 10). ⚡ = Simulado respondido rápido demais (menos de 8 s por questão): provável chute.</div><div class="scroll"><table><thead><tr><th>#</th><th>Aluno</th><th>Média da Missão</th><th>Nota final</th><th>Simulado SARESP</th><th>Recuperação</th><th>Temas concluídos</th><th>Atividades</th><th>Última</th></tr></thead><tbody>' +
+      (alunos.length ? alunos.map((a, i) => { const k = t + '|' + a.nome; let r = '<tr class="al" data-k="' + esc(k) + '"><td>' + (i + 1) + '</td><td class="l"><b>' + esc(a.nome) + '</b>' + (a.nada ? ' <span class="tag">não fez</span>' : '') + '</td><td>' + c(a.media) + (a.nsec ? ' <span class="muted sm">(' + a.nsec + ' seç.)</span>' : '') + '</td><td>' + nt(a.fin.nota) + ' <span class="muted sm">(' + a.fin.feitas + '/' + a.fin.total + ')</span></td><td>' + c(a.sim) + (a.rapido ? ' <span title="Respondido rápido demais: menos de 8 segundos por questão">⚡</span>' : '') + '</td><td>' + c(a.rec) + '</td><td>' + a.temas + '</td><td>' + a.n + '</td><td>' + (a.ult ? dt(a.ult) : '<span class="muted">–</span>') + '</td></tr>';
+        if (aberto === k && !a.nada) r += '<tr class="det"><td></td><td colspan="8">' + detalhe(t, a) + '</td></tr>';
+        return r; }).join('') : '<tr><td colspan="9" class="muted">Nenhum aluno encontrado.</td></tr>') + '</tbody></table></div></div>';
     if (roster.length) h += '<div class="card" style="margin-top:14px"><h3>Ainda não fizeram nenhuma atividade (' + faltam.length + ')</h3>' + (faltam.length ? '<div class="faltam">' + faltam.map(n => '<span>' + esc(n) + '</span>').join('') + '</div>' : '<p class="ok">Toda a turma já participou!</p>') + '</div>';
     return '<section class="turma-bloco"><h2 class="turma-tit">' + esc(t) + '</h2>' + h + '</section>';
   }
   function desenhar() {
     const t = $('#fTurma').value, at = $('#fAtiv').value, q = norm($('#fAluno').value.trim());
     const LL = D.filter(x => (!t || x.turma === t) && (!at || x.atividade === at) && (!q || norm(x.nome).includes(q)));
-    const turmas = t ? [t] : TURMAS.filter(tm => LL.some(x => x.turma === tm));
-    app(turmas.length ? turmas.map(tm => bloco(tm, LL.filter(x => x.turma === tm))).join('') : '<div class="card muted">Nenhum resultado ainda. Os alunos entram no simulador, escolhem a turma e o nome, e cada atividade aparece aqui.</div>');
+    // sem filtro de atividade/aluno, todas as turmas aparecem — inclusive as que ainda não fizeram nada (todos com nota final 0)
+    const turmas = t ? [t] : TURMAS.filter(tm => (!at && !q) || LL.some(x => x.turma === tm));
+    app(turmas.length ? turmas.map(tm => bloco(tm, LL.filter(x => x.turma === tm), q)).join('') : '<div class="card muted">Nenhum resultado ainda. Os alunos entram no simulador, escolhem a turma e o nome, e cada atividade aparece aqui.</div>');
     document.querySelectorAll('tr.al').forEach(tr => tr.onclick = () => { aberto = aberto === tr.dataset.k ? '' : tr.dataset.k; if (aberto && DET[aberto] === 'erro') delete DET[aberto]; desenhar(); });
   }
   // planilha: uma linha por tentativa; busca turma por turma para cada resposta continuar pequena
@@ -114,6 +136,21 @@ td,th{padding:7px 8px;border:1px solid rgba(148,163,184,.6);vertical-align:middl
     } catch (e) { alert('Não foi possível gerar a planilha: ' + e.message); } finally { b.disabled = false; b.textContent = rot; }
   }
   $('#fTurma').onchange = () => { const t = $('#fTurma').value; (t ? carregarRoster(t) : Promise.resolve()).then(desenhar); };
+  // planilha de notas: uma linha por aluno (lista da turma + quem aparece nos resultados), já com a nota final
+  function csvNotas() {
+    const t = $('#fTurma').value, L = [['Turma', 'Aluno', 'Nota final', 'Seções concluídas', 'Seções da Missão', 'Média da Missão', 'Simulado SARESP', 'Simulado rápido demais', 'Recuperação', 'Situação']];
+    for (const tm of (t ? [t] : TURMAS)) {
+      const nomes = new Map(); (ROSTER[tm] || []).forEach(n => nomes.set(norm(n), n)); D.filter(x => x.turma === tm).forEach(x => { if (!nomes.has(norm(x.nome))) nomes.set(norm(x.nome), x.nome); });
+      [...nomes.values()].sort((a, b) => a.localeCompare(b, 'pt')).forEach(nome => {
+        const sec = D.filter(x => x.turma === tm && norm(x.nome) === norm(nome)), f = notaFinal(tm, nome), conc = sec.filter(x => x.n_conc > 0 && (x.atividade === 'tema' || x.atividade === 'simulado')).map(x => Number(x.melhor));
+        const sim = sec.find(x => x.atividade === 'simulado' && x.n_conc > 0), rec = sec.find(x => x.atividade === 'recuperacao' && x.n_conc > 0);
+        L.push([tm, nome, fm(f.nota), f.feitas, f.total, conc.length ? fm(conc.reduce((a, b) => a + b, 0) / conc.length) : '', sim ? fm(sim.melhor) : '', sim && sim.rapido ? 'sim' : '', rec ? fm(rec.melhor) : '', !sec.length ? 'não fez' : f.feitas < f.total ? 'incompleta' : 'completa']);
+      });
+    }
+    const txt = '\ufeff' + L.map(l => l.map(c => '"' + String(c == null ? '' : c).replace(/"/g, '""') + '"').join(';')).join('\n');
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/csv;charset=utf-8' })); a.download = 'missao-saresp-3d-notas' + (t ? '-' + norm(t).replace(/\W+/g, '-') : '') + '.csv'; a.click();
+  }
+  $('#bNotas').onclick = csvNotas;
   $('#fAtiv').onchange = desenhar; $('#fAluno').oninput = desenhar; $('#bCsv').onclick = csv;
   $('#bAtu').onclick = () => carregar().catch(e => app('<div class="card">' + esc(e.message) + '</div>'));
   { const t = new URLSearchParams(location.search).get('turma'); if (t && TURMAS.includes(t)) $('#fTurma').value = t; }
