@@ -6,14 +6,14 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Atividade personalizada · Ensino Médio</title>
 <style>
-  :root { --bg:#f5f7f9; --card:#ffffff; --txt:#1d2a33; --muted:#5b6b75; --acc:#145a32; --borda:#d6dde3; --ok:#c9ddf7; --erro:#f6c6c6; }
+  :root { --bg:#f5f7f9; --card:#ffffff; --txt:#1d2a33; --muted:#5b6b75; --acc:#145a32; --borda:#d6dde3; --ok:#c9ddf7; --erro:#f6c6c6; --relevo:#a9b6bf; }
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) { --bg:#101820; --card:#1a2630; --txt:#e8eef2; --muted:#9fb0bb; --acc:#4fb37a; --borda:#2c3d49; --ok:#1d3c63; --erro:#5a2424; }
+    :root:not([data-theme="light"]) { --bg:#101820; --card:#1a2630; --txt:#e8eef2; --muted:#9fb0bb; --acc:#4fb37a; --borda:#2c3d49; --ok:#1d3c63; --erro:#5a2424; --relevo:#0a1117; }
   }
-  :root[data-theme="dark"] { --bg:#101820; --card:#1a2630; --txt:#e8eef2; --muted:#9fb0bb; --acc:#4fb37a; --borda:#2c3d49; --ok:#1d3c63; --erro:#5a2424; }
+  :root[data-theme="dark"] { --bg:#101820; --card:#1a2630; --txt:#e8eef2; --muted:#9fb0bb; --acc:#4fb37a; --borda:#2c3d49; --ok:#1d3c63; --erro:#5a2424; --relevo:#0a1117; }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--txt); font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.45; }
-  main { max-width: 760px; margin: 0 auto; padding: 16px; }
+  main { max-width: 1180px; margin: 0 auto; padding: 16px 24px; }
   h1 { font-size: 1.35rem; margin: 8px 0 4px; color: var(--acc); }
   p.sub { margin: 0 0 16px; color: var(--muted); }
   .card { background: var(--card); border:1px solid var(--borda); border-radius: 12px; padding: 16px; margin-bottom: 14px; }
@@ -23,9 +23,17 @@
   .q:first-child { border-top:none; padding-top: 0; }
   .q h3 { font-size: 1rem; margin: 0 0 8px; }
   .enun { white-space: pre-line; margin: 0 0 10px; }
-  .alt { display:flex; gap:10px; align-items:flex-start; padding: 6px 8px; border-radius:8px; cursor:pointer; }
-  .alt:hover { background: var(--bg); }
-  .alt input { margin-top: 4px; }
+  /* alternativas em alto relevo; a marcada "afunda" e fica verde-escura com letras brancas em negrito */
+  .alt { position: relative; display:flex; gap:10px; align-items:flex-start; padding: 11px 14px; margin: 0 0 10px; border-radius: 10px; cursor:pointer;
+    background: linear-gradient(180deg, var(--card), var(--bg)); border: 1px solid var(--borda);
+    box-shadow: 0 4px 0 var(--relevo), 0 6px 10px rgba(0,0,0,.18); transform: translateY(0);
+    transition: transform .08s ease, box-shadow .08s ease, background .12s ease, color .12s ease; user-select: none; }
+  .alt:hover { filter: brightness(1.04); }
+  .alt:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--relevo), 0 3px 6px rgba(0,0,0,.18); }
+  .alt input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+  .alt:has(input:focus-visible) { outline: 3px solid #f2c94c; outline-offset: 2px; }
+  .alt:has(input:checked), .alt.marcada { background: #0f4a2a; border-color: #0a3520; color: #fff; font-weight: 700;
+    transform: translateY(4px); box-shadow: inset 0 3px 6px rgba(0,0,0,.45), 0 0 0 var(--borda); }
   .msg { padding: 12px; border-radius: 8px; margin-top: 12px; }
   .msg.erro { background: var(--erro); }
   .msg.ok { background: var(--ok); }
@@ -37,7 +45,7 @@
   .base { background: var(--bg); border:1px solid var(--borda); border-left: 4px solid var(--acc); border-radius: 10px; padding: 12px; margin: 0 0 12px; }
   .base .rot { font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--acc); margin: 0 0 8px; }
   .base figure { margin: 0 0 10px; }
-  .base figure img { display:block; width:100%; max-height: 300px; object-fit: contain; background: #fff; border-radius: 8px; }
+  .base figure img { display:block; width:100%; max-height: 420px; object-fit: contain; background: #fff; border-radius: 8px; }
   .base figure.carregando img { min-height: 160px; background: linear-gradient(90deg, var(--card), var(--borda), var(--card)); background-size: 200% 100%; animation: brilho 1.4s infinite; }
   @keyframes brilho { from { background-position: 100% 0; } to { background-position: -100% 0; } }
   .base figcaption { font-size: .85rem; color: var(--muted); margin-top: 6px; }
@@ -150,6 +158,7 @@
         var lab = document.createElement('label'); lab.className = 'alt';
         var inp = document.createElement('input'); inp.type = 'radio'; inp.name = 'q' + i; inp.value = String(k);
         var span = document.createElement('span'); span.textContent = 'ABCDE'.charAt(k) + ') ' + txt;
+        inp.addEventListener('change', function () { box.querySelectorAll('.alt').forEach(function (l) { l.classList.toggle('marcada', l.querySelector('input').checked); }); });
         lab.appendChild(inp); lab.appendChild(span); box.appendChild(lab);
       });
       formEl.appendChild(box);
