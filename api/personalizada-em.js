@@ -67,15 +67,15 @@ const LICENCA = { 'Public domain': 'Domínio público', 'No restrictions': 'Sem 
 
 async function imagemCommons(busca) {
   if (IMG_CACHE.has(busca)) return IMG_CACHE.get(busca);
-  const u = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams({
-    action: 'query', format: 'json', generator: 'search', gsrsearch: busca, gsrnamespace: '6', gsrlimit: '10',
-    prop: 'imageinfo', iiprop: 'url|mime|size|extmetadata', iiurlwidth: '720', iiextmetadatafilter: 'Artist|LicenseShortName'
-  });
+  const fixo = /^File:/.test(busca);   // arquivo escolhido e conferido: vai direto, sem busca
+  const u = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams(Object.assign({
+    action: 'query', format: 'json', prop: 'imageinfo', iiprop: 'url|mime|size|extmetadata', iiurlwidth: '720', iiextmetadatafilter: 'Artist|LicenseShortName'
+  }, fixo ? { titles: busca } : { generator: 'search', gsrsearch: busca, gsrnamespace: '6', gsrlimit: '10' }));
   const r = await fetch(u, { headers: { 'User-Agent': 'PainelProvaPaulista/1.0 (https://painel-prova-paulista-2026.vercel.app; atividade escolar)' } });
   if (!r.ok) throw new Error('Commons ' + r.status);
   const j = await r.json();
-  const pags = Object.values((j.query && j.query.pages) || {}).sort((a, b) => a.index - b.index);
-  const boa = pags.find(p => { const i = p.imageinfo && p.imageinfo[0]; return i && /image\/(jpeg|png|svg\+xml)/.test(i.mime) && i.width >= 300 && i.height >= 180 && i.thumburl && semTextoEstrangeiro(p.title); });
+  const pags = Object.values((j.query && j.query.pages) || {}).sort((a, b) => (a.index || 0) - (b.index || 0));
+  const boa = pags.find(p => { const i = p.imageinfo && p.imageinfo[0]; return i && /image\/(jpeg|png|svg\+xml)/.test(i.mime) && i.width >= 300 && i.height >= 180 && i.thumburl && (fixo || semTextoEstrangeiro(p.title)); });
   let res = null;
   if (boa) {
     const i = boa.imageinfo[0], m = i.extmetadata || {};
@@ -134,6 +134,28 @@ module.exports = async function personalizadaEM(req, res) {
       res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=2592000, stale-while-revalidate=604800');
       return res.status(200).json({ ok: true, imagem: im });
     } catch (e) { return res.status(502).json({ ok: false, erro: 'Imagem indisponível.' }); }
+  }
+
+  /* temporário: revisão das imagens (descrição e categorias no Commons) */
+  if (req.method === 'GET' && (q.meta || q.procura)) {
+    const UA = { 'User-Agent': 'PainelProvaPaulista/1.0 (https://painel-prova-paulista-2026.vercel.app; atividade escolar)' };
+    const curto = x => semTags(x).slice(0, 170);
+    const info = async params => {
+      const u = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams(Object.assign({ action: 'query', format: 'json', prop: 'imageinfo|categories', iiprop: 'mime|size|extmetadata', iiextmetadatafilter: 'ImageDescription', cllimit: '30', clshow: '!hidden' }, params));
+      const r = await fetch(u, { headers: UA }); const j = await r.json();
+      return Object.values((j.query && j.query.pages) || {}).sort((a, b) => (a.index || 0) - (b.index || 0)).map(p => {
+        const i = (p.imageinfo || [])[0] || {}, m = i.extmetadata || {};
+        return { t: (p.title || '').replace(/^File:/, ''), ok: !!(i.mime && /image\/(jpeg|png|svg\+xml)/.test(i.mime) && i.width >= 300 && semTextoEstrangeiro(p.title)), d: curto(m.ImageDescription && m.ImageDescription.value), c: (p.categories || []).map(c => c.title.replace(/^Category:/, '')).slice(0, 6).join('; ') };
+      });
+    };
+    if (q.procura) {
+      const out = {};
+      for (const b of String(q.procura).split('|').slice(0, 8)) { try { out[b] = (await info({ generator: 'search', gsrsearch: b, gsrnamespace: '6', gsrlimit: '10' })).filter(x => x.ok).slice(0, 5).map(x => x.t + ' — ' + x.d.slice(0, 100)); } catch (e) { out[b] = 'ERRO'; } }
+      return res.status(200).json(out);
+    }
+    const fatia = BUSCAS.slice(+q.de || 0, (+q.de || 0) + 30), out = {}; let i = 0;
+    await Promise.all(Array.from({ length: 6 }, async () => { while (i < fatia.length) { const b = fatia[i++]; try { const im = await imagemCommons(b); if (!im) { out[b] = null; continue; } const x = (await info({ titles: 'File:' + decodeURIComponent(im.pagina.split('/File:')[1]).replace(/_/g, ' ') }))[0] || {}; out[b] = x.t + ' | ' + x.d + ' | ' + x.c; } catch (e) { out[b] = 'ERRO'; } } }));
+    return res.status(200).json(out);
   }
 
   if (req.method === 'GET' || req.method === 'POST') {
