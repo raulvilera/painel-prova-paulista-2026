@@ -313,7 +313,7 @@ module.exports = async function individual(req, res) {
     const acao = String(q.acao || b.acao || '');
 
     /* ----- aluno: turma e nome vêm do login (token), nunca do pedido ----- */
-    const semLogin = acao === 'adaptada' && !/^Bearer .+/.test(req.headers.authorization || '');   // Simulado sem login: pergunta só sim/não (nada sobre o motivo)
+    const semLogin = ['atividade', 'enviar', 'adaptada'].includes(acao) && !/^Bearer .+/.test(req.headers.authorization || '');   // Atividade individual e Simulado sem login: o aluno escolhe turma e nome na lista
     if (['atividade', 'enviar', 'adaptada', 'missao3d'].includes(acao) && !semLogin) {
       const id = await alunoDaSessao(req);
       if (!id) return erro(401, 'Entre com seu RA, dígito e senha.');
@@ -329,8 +329,6 @@ module.exports = async function individual(req, res) {
       const mi = await rest('missao3d_resultado?oculto=eq.false&turma=eq.' + enc(turma) + '&select=nome,atividade,tema,acertos,total,nota,concluido,atualizado&order=atualizado.desc&limit=300');
       return ok({ turma, nome, simulado: sim, erroSimulado: erroSim, questoes: M3D.QUESTOES, missao: (mi || []).filter(x => M3D.norm(x.nome) === alvo) });
     }
-    if ((req.method === 'GET' && (acao === 'turmas' || acao === 'nomes'))) return erro(410, 'Lista pública desativada. Entre com seu RA e senha.');
-
     /* ----- aluno ----- */
     if (req.method === 'GET' && acao === 'turmas') {
       const r = await rest('indiv_plano?select=turma'); const t = [...new Set((r || []).map(x => x.turma))]; const cobertas = new Set(t.map(painelTurma).filter(Boolean));
