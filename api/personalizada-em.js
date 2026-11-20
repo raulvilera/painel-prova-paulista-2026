@@ -136,28 +136,6 @@ module.exports = async function personalizadaEM(req, res) {
     } catch (e) { return res.status(502).json({ ok: false, erro: 'Imagem indisponível.' }); }
   }
 
-  /* temporário: revisão das imagens (descrição e categorias no Commons) */
-  if (req.method === 'GET' && (q.meta || q.procura)) {
-    const UA = { 'User-Agent': 'PainelProvaPaulista/1.0 (https://painel-prova-paulista-2026.vercel.app; atividade escolar)' };
-    const curto = x => semTags(x).slice(0, 170);
-    const info = async params => {
-      const u = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams(Object.assign({ action: 'query', format: 'json', prop: 'imageinfo|categories', iiprop: 'mime|size|extmetadata', iiextmetadatafilter: 'ImageDescription', cllimit: '30', clshow: '!hidden' }, params));
-      const r = await fetch(u, { headers: UA }); const j = await r.json();
-      return Object.values((j.query && j.query.pages) || {}).sort((a, b) => (a.index || 0) - (b.index || 0)).map(p => {
-        const i = (p.imageinfo || [])[0] || {}, m = i.extmetadata || {};
-        return { t: (p.title || '').replace(/^File:/, ''), ok: !!(i.mime && /image\/(jpeg|png|svg\+xml)/.test(i.mime) && i.width >= 300 && semTextoEstrangeiro(p.title)), d: curto(m.ImageDescription && m.ImageDescription.value), c: (p.categories || []).map(c => c.title.replace(/^Category:/, '')).slice(0, 6).join('; ') };
-      });
-    };
-    if (q.procura) {
-      const out = {};
-      for (const b of String(q.procura).split('|').slice(0, 8)) { try { out[b] = (await info({ generator: 'search', gsrsearch: b, gsrnamespace: '6', gsrlimit: '10' })).filter(x => x.ok).slice(0, 5).map(x => x.t + ' — ' + x.d.slice(0, 100)); } catch (e) { out[b] = 'ERRO'; } }
-      return res.status(200).json(out);
-    }
-    const fatia = BUSCAS.slice(+q.de || 0, (+q.de || 0) + 30), out = {}; let i = 0;
-    await Promise.all(Array.from({ length: 6 }, async () => { while (i < fatia.length) { const b = fatia[i++]; try { const im = await imagemCommons(b); if (!im) { out[b] = null; continue; } const x = (await info({ titles: 'File:' + decodeURIComponent(im.pagina.split('/File:')[1]).replace(/_/g, ' ') }))[0] || {}; out[b] = x.t + ' | ' + x.d + ' | ' + x.c; } catch (e) { out[b] = 'ERRO'; } } }));
-    return res.status(200).json(out);
-  }
-
   if (req.method === 'GET' || req.method === 'POST') {
     let quem = null;
     if (/^Bearer .+/.test(req.headers.authorization || '')) {   // com login (RA + dígito + senha): continua valendo
