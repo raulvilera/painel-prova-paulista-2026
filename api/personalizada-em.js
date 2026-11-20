@@ -80,7 +80,7 @@ async function imagemCommons(busca) {
   if (boa) {
     const i = boa.imageinfo[0], m = i.extmetadata || {};
     res = { src: i.thumburl, pagina: i.descriptionurl, titulo: boa.title.replace(/^File:/, '').replace(/\.[a-z]+$/i, ''),
-      autor: semTags(m.Artist && m.Artist.value).slice(0, 120), licenca: (l => LICENCA[l] || l)(semTags(m.LicenseShortName && m.LicenseShortName.value)) };
+      autor: semTags(m.Artist && m.Artist.value).replace(/\(\s*(talk|contribs|discussão)\s*\)/gi, '').replace(/\b(Unknown author|Unknown)\b/gi, 'Autor desconhecido').trim().slice(0, 120), licenca: (l => LICENCA[l] || l)(semTags(m.LicenseShortName && m.LicenseShortName.value)) };
   }
   IMG_CACHE.set(busca, res);
   return res;
