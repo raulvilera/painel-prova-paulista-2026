@@ -132,13 +132,12 @@
     cabecEl.appendChild(h); cabecEl.appendChild(p);
 
     formEl.innerHTML = '';
-    var vistos = {};   // texto-base já mostrado → número da questão (não repete o mesmo texto)
     d.questoes.forEach(function (q, i) {
       var box = document.createElement('div'); box.className = 'q';
       var t = document.createElement('h3'); t.textContent = 'Questão ' + (i + 1);
       var e = document.createElement('p'); e.className = 'enun'; e.textContent = q.enunciado;
       box.appendChild(t);
-      if (q.ctx) { box.appendChild(textoBase(q.ctx, vistos[q.ctx.texto])); if (!vistos[q.ctx.texto]) vistos[q.ctx.texto] = i + 1; }
+      if (q.ctx && q.ctx.texto) box.appendChild(textoBase(q.ctx));
       box.appendChild(e);
       q.alts.forEach(function (txt, k) {
         var lab = document.createElement('label'); lab.className = 'alt';
@@ -155,7 +154,7 @@
   }
 
   // Texto-base: contexto da situação + imagem buscada no Wikimedia Commons (pela API do painel, com cache)
-  function textoBase(c, jaNa) {
+  function textoBase(c) {
     var d = document.createElement('div'); d.className = 'base';
     var r = document.createElement('p'); r.className = 'rot'; r.textContent = 'Texto-base'; d.appendChild(r);
     var fig = document.createElement('figure'); fig.className = 'carregando';
@@ -163,7 +162,7 @@
     var cap = document.createElement('figcaption');
     fig.appendChild(img); fig.appendChild(cap); d.appendChild(fig);
     var tx = document.createElement('p'); tx.className = 'txt';
-    tx.textContent = jaNa ? 'Releia o texto-base da questão ' + jaNa + '.' : c.texto;
+    tx.textContent = c.texto;
     d.appendChild(tx);
     fetch(API + '?img=' + encodeURIComponent(c.img)).then(function (r) { return r.json(); }).then(function (j) {
       var im = j && j.ok && j.imagem;
