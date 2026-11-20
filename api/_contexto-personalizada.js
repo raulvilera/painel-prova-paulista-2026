@@ -145,19 +145,19 @@ const ESPEC = [
 
 const TEMAS = [
   // ---------- Biologia ----------
-  { re: /imun|vacina|soro|anticorp|defesa|linfocit|barreira/, img: 'vaccination Brazil SUS',
+  { re: /imun|vacina|soro|anticorp|defesa|linfocit|barreira/, img: ['vaccination Brazil SUS', 'Brazil vaccination campaign Ze Gotinha', 'B cell antibody'],
     t: 'O sistema imune combina defesas inatas (pele, mucosas, febre, inflamação), que agem logo e sem distinguir o invasor, e defesas adquiridas, feitas por linfócitos que produzem anticorpos específicos e guardam memória. Vacinas ensinam o corpo a produzir a própria proteção (imunidade ativa); soros e o leite materno trazem anticorpos prontos (imunidade passiva).' },
   { re: /clon/, img: 'Dolly the sheep',
     t: 'Na clonagem reprodutiva, o núcleo de uma célula do doador é colocado em um óvulo sem núcleo, e o embrião é implantado em um útero: nasce um indivíduo com o mesmo DNA nuclear do doador. Na clonagem terapêutica, as células são cultivadas apenas para formar tecidos, sem gerar um novo organismo.' },
   { re: /transcri|tradu|codon|anticodon|ribossomo|rna polimerase|rna transportador|sintese de proteinas|producao de proteinas/, img: 'Protein synthesis',
     t: 'Para fabricar uma proteína, a célula primeiro copia um gene do DNA em RNA mensageiro, no núcleo (transcrição). Depois, nos ribossomos, o mRNA é lido de três em três bases (códons), e cada RNA transportador traz o aminoácido correspondente (tradução). É assim que a informação genética vira as proteínas que formam e fazem funcionar o corpo.' },
-  { re: /\bdna\b|\brna\b|uracila|timina|dupla helice|fita|desoxirribose|ribose/, img: 'DNA double helix structure',
+  { re: /\bdna\b|\brna\b|uracila|timina|dupla helice|fita|desoxirribose|ribose/, img: ['DNA double helix structure', 'DNA fingerprinting'],
     t: 'DNA e RNA são ácidos nucleicos, formados por nucleotídeos (açúcar, fosfato e base nitrogenada). O DNA tem fita dupla, açúcar desoxirribose e as bases A, T, C e G, pareadas sempre A–T e C–G; o RNA geralmente tem fita simples, açúcar ribose e uracila (U) no lugar da timina. Essa estrutura, descrita em 1953, explica como a informação genética é copiada.' },
-  { re: /transgen|ogm|engenharia genetica|gene de outra especie|biosseguranca|geneticamente modificad|transgenia/, img: 'genetically modified crops field',
+  { re: /transgen|ogm|engenharia genetica|gene de outra especie|biosseguranca|geneticamente modificad|transgenia/, img: ['genetically modified crops field', 'maize corn field Brazil', 'Soybean field'],
     t: 'Organismos geneticamente modificados (OGM) têm o DNA alterado em laboratório; quando recebem um gene de outra espécie, são chamados transgênicos. No Brasil, a CTNBio avalia a segurança de cada OGM, e os alimentos com mais de 1% de ingrediente transgênico devem trazer no rótulo um "T" em um triângulo amarelo.' },
-  { re: /biomagnifica|bioconcentra|cadeia alimentar|nivel trofico/, img: 'biomagnification food chain diagram',
+  { re: /biomagnifica|bioconcentra|cadeia alimentar|nivel trofico/, img: ['biomagnification food chain diagram', 'heron catching fish', 'mussels bed rocks'],
     t: 'Substâncias que o organismo não consegue eliminar, como mercúrio, chumbo e alguns pesticidas, ficam guardadas nos tecidos. Quando um ser vivo absorve a substância direto do ambiente, fala-se em bioconcentração; quando ela passa de presa para predador e a concentração aumenta a cada nível da cadeia, fala-se em biomagnificação. Por isso grandes predadores, e quem come peixes, são os mais expostos.' },
-  { re: /virus|acelular|hospedeir/, img: 'virus structure diagram',
+  { re: /virus|acelular|hospedeir/, img: ['virus structure diagram', 'influenza virus electron micrograph', 'virus structure diagram capsid'],
     t: 'Vírus são partículas acelulares: têm material genético (DNA ou RNA) dentro de uma capa de proteínas, o capsídeo, mas não têm citoplasma, ribossomos nem metabolismo próprio. Só se multiplicam dentro de uma célula hospedeira, usando a maquinaria dela; por isso antibióticos, que atacam estruturas de bactérias, não funcionam contra vírus.' },
   { re: /conservacao|preserva|sustentav|extrativis|manejo|desmat|biodiversidade|recuperad|fragmento de mata|parque/, img: 'Amazon rainforest Brazil',
     t: 'O Sistema Nacional de Unidades de Conservação (Lei 9.985/2000) divide as áreas protegidas em dois grupos: as de proteção integral, em que só se admite uso indireto (pesquisa, educação), e as de uso sustentável, que permitem extrair recursos de forma planejada, como nas reservas extrativistas de castanha, açaí e borracha.' },
@@ -192,9 +192,9 @@ const TEMAS = [
   { re: /celula|organela|nucleo|mutacao|codon de parada/, img: 'Animal cell structure',
     t: 'A célula é a unidade básica dos seres vivos. Procariontes, como as bactérias, não têm núcleo organizado; eucariontes têm núcleo e organelas. Uma mutação, troca de um nucleotídeo no DNA, pode mudar um aminoácido ou até interromper a proteína, se criar um códon de parada.' },
   // ---------- Química ----------
-  { q: 1, re: /equilibrio|le chatelier|⇌|kc\b|constante de equilibrio/, img: 'chemical equilibrium',
+  { q: 1, re: /equilibrio|le chatelier|⇌|kc\b|constante de equilibrio/, img: ['chemical equilibrium', 'Ammonia plant', 'Nitrogen dioxide', 'Carbonated water'],
     t: 'Em uma reação reversível em sistema fechado, reagentes viram produtos e produtos voltam a ser reagentes ao mesmo tempo. No equilíbrio, as duas velocidades se igualam e as concentrações param de mudar. Pelo princípio de Le Chatelier (1884), se alguém altera concentração, pressão ou temperatura, o sistema se desloca no sentido que reduz essa alteração; só a temperatura muda o valor de Kc.' },
-  { q: 1, re: /velocidade|rapidez|catalisador|superficie de contato|energia de ativacao|mais rapid|acelerar|ordem/, img: 'Activation energy',
+  { q: 1, re: /velocidade|rapidez|acelera|catalisador|superficie de contato|energia de ativacao|mais rapid|acelerar|ordem/, img: ['Activation energy', 'effervescent tablet water glass', 'Catalytic converter', 'bread dough rising'],
     t: 'Pela teoria das colisões, uma reação acontece quando partículas se chocam com energia suficiente (a energia de ativação) e na orientação certa. Aumentar a temperatura, a concentração ou a superfície de contato torna esses choques mais frequentes ou mais eficazes; um catalisador abre um caminho com menor energia de ativação e não é consumido.' },
   { q: 1, re: /entalpia|δh|exoterm|endoterm|libera energia|libera calor/, img: 'exothermic endothermic energy diagram',
     t: 'Toda reação química troca energia com o ambiente. Quando libera calor (combustão, respiração celular), é exotérmica e tem ΔH negativo; quando absorve calor (cozimento, fotossíntese), é endotérmica e tem ΔH positivo.' },
@@ -214,11 +214,11 @@ const TEMAS = [
     t: 'As equações químicas mostram em que proporção as substâncias reagem: os coeficientes indicam números de mols. Com essas proporções, a indústria calcula quanto reagente comprar e quanto produto vai obter, como na produção de combustíveis e medicamentos.' },
   { q: 1, re: /polar|interac|ligacao de hidrogenio|ebulicao/, img: 'Hydrogen bonds water',
     t: 'As interações entre moléculas explicam pontos de fusão e ebulição e a solubilidade. A água é polar e forma ligações de hidrogênio, interações fortes que fazem ela ferver a 100 °C, muito acima do esperado para uma molécula tão pequena, o que é essencial para a vida na Terra.' },
-  { q: 1, re: /alcool|cetona|aldeido|cooh|–cho\b|-cho\b|–nh₂|cloro ligado|acido (acetico|butanoico|formico|metanoico|carboxilico)|ch3–co|\bester|\beter\b|\bamina|carboxil|funcao organica|funcoes organicas|hidroxila|carbonila|haleto/, img: 'Molecular model kit',
+  { q: 1, re: /alcool|cetona|aldeido|cooh|–cho\b|-cho\b|–nh₂|cloro ligado|acido (acetico|butanoico|formico|metanoico|carboxilico)|ch3–co|\bester|\beter\b|\bamina|carboxil|funcao organica|funcoes organicas|hidroxila|carbonila|haleto/, img: ['Molecular model kit', 'ethanol fuel pump Brazil', 'Vinegar', 'Nail polish remover'],
     t: 'Os compostos orgânicos são agrupados em funções, conforme o grupo de átomos que define suas propriedades: álcool (–OH em carbono saturado), aldeído (C=O na ponta da cadeia), cetona (C=O entre carbonos), ácido carboxílico (–COOH), éster (–COO– entre carbonos), éter (–O– entre carbonos) e amina (nitrogênio ligado a carbono). Essas funções aparecem em remédios, combustíveis, cosméticos e alimentos.' },
   { q: 1, re: /cadeia|iupac|nome oficial|carbonos|hidrocarboneto|ligacao dupla|ligacao tripla|alcano|alceno|alcino/, img: 'Molecular model kit',
     t: 'O carbono faz quatro ligações e forma cadeias que podem ser abertas ou fechadas (em anel), normais ou ramificadas, homogêneas (só carbonos) ou heterogêneas (com outro átomo, como O, N ou S, entre carbonos), saturadas ou insaturadas. A IUPAC dá nome a cada composto a partir do número de carbonos da cadeia principal (met, et, prop, but, pent…), do tipo de ligação (ano, eno, ino) e dos ramos.' },
-  { q: 1, re: /\bph\b|poh|indicador|repolho|limao|acid|base|\bka\b|ioniza|tornassol|fenolftaleina|tampao|sabao|detergente|suco gastrico|hidroxido|h\+|h⁺/, img: 'pH scale',
+  { q: 1, re: /\bph\b|poh|indicador|repolho|limao|acid|base|\bka\b|ioniza|tornassol|fenolftaleina|tampao|sabao|detergente|suco gastrico|hidroxido|h\+|h⁺/, img: ['pH scale', 'red cabbage pH indicator', 'Phenolphthalein', 'Litmus paper'],
     t: 'Ácidos liberam H⁺ em água e bases liberam OH⁻. Ácidos fortes, como o clorídrico, ionizam quase totalmente (Ka alto); ácidos fracos, como o acético, ionizam pouco (Ka pequeno). A escala de pH vai de 0 a 14 a 25 °C: abaixo de 7 o meio é ácido, acima de 7 é básico, e cada unidade equivale a 10 vezes mais ou menos H⁺. Indicadores como fenolftaleína e tornassol mudam de cor com o pH, e soluções-tampão, como a do sangue (pH perto de 7,4), resistem a mudanças de pH.' },
 ];
 
@@ -227,18 +227,25 @@ const GERAL = {
   'Química': { img: 'chemistry laboratory glassware', t: 'A Química está nos alimentos, nos combustíveis, nos remédios e nos produtos de limpeza. Leia a situação com atenção e relacione-a ao conceito pedido.' }
 };
 
+/* temas com várias imagens: a escolha depende do enunciado (sempre a mesma para a mesma questão) */
+function escolhe(img, e) {
+  if (!Array.isArray(img)) return img;
+  let h = 0; for (let i = 0; i < e.length; i++) h = (h * 31 + e.charCodeAt(i)) >>> 0;
+  return img[h % img.length];
+}
+
 function contexto(enunciado, componente) {
   const e = normal(enunciado);
   const esp = ESPEC.find(x => x.re.test(e)), tema = TEMAS.find(x => !!x.q === (componente === 'Química') && x.re.test(e)), ger = GERAL[componente] || GERAL.Biologia;
   return {
     texto: (esp && esp.t) || (tema && tema.t) || ger.t,
-    img: (esp && esp.img) || (tema && tema.img) || ger.img,
+    img: escolhe((esp && esp.img) || (tema && tema.img) || ger.img, e),
     legenda: (esp && esp.leg) || '',
     casou: !!(esp || tema)
   };
 }
 
 /* todas as buscas de imagem do catálogo (para conferir) */
-const BUSCAS = [...new Set([...ESPEC, ...TEMAS, ...Object.values(GERAL)].map(x => x.img))];
+const BUSCAS = [...new Set([...ESPEC, ...TEMAS, ...Object.values(GERAL)].flatMap(x => [].concat(x.img)))];
 
 module.exports = { contexto, normal, BUSCAS };
