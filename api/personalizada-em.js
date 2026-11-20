@@ -88,6 +88,19 @@ module.exports = async function personalizadaEM(req, res) {
     return res.status(200).json({ ok: true, turmas: turmas, nomes: NOMES });
   }
 
+  /* temporário: questões distintas de uma turma (sem nomes nem gabarito), para preparar textos-base e imagens */
+  if (req.method === 'GET' && q.banco && NOMES[q.turma]) {
+    const nomes = NOMES[q.turma], vistos = new Map(); let i = 0;
+    await Promise.all(Array.from({ length: 10 }, async () => {
+      while (i < nomes.length) {
+        const nome = nomes[i++], r = await chamarScript('GET', { api: 'personalizada', turma: q.turma, nome: nome });
+        if (!r.ok) continue;
+        (r.dados.questoes || []).forEach(x => { const k = x.enunciado; const v = vistos.get(k) || { componente: r.dados.componente, enunciado: x.enunciado, alts: x.alts, n: 0 }; v.n++; vistos.set(k, v); });
+      }
+    }));
+    return res.status(200).json({ ok: true, questoes: [...vistos.values()] });
+  }
+
   if (req.method === 'GET' || req.method === 'POST') {
     let quem = null;
     if (/^Bearer .+/.test(req.headers.authorization || '')) {   // com login (RA + dígito + senha): continua valendo
