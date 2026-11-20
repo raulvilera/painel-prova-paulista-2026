@@ -13,17 +13,18 @@ const ESPEC = [
   { re: /cachorro|pet shop|animais de estimacao/, img: 'Intracytoplasmic sperm injection', leg: 'Micromanipulação de óvulos: técnica usada na transferência de núcleo da clonagem.' },
   { re: /cobra|antiofidico|veneno/, img: 'snake venom extraction', leg: 'Extração de veneno de serpente no Instituto Butantan, etapa da produção do soro antiofídico.',
     t: 'O Instituto Butantan, em São Paulo, produz soros desde 1901. Pequenas doses de veneno são injetadas em cavalos, que produzem anticorpos; esses anticorpos são purificados do sangue do animal e viram o soro aplicado em quem foi picado. O soro age na hora, mas a proteção dura pouco, porque o organismo não produziu os próprios anticorpos.' },
-  { re: /antitetanico|tetano/, img: 'Nurse giving vaccine', leg: 'Aplicação de soro ou vacina: o soro antitetânico traz anticorpos prontos, de ação imediata e passageira.' },
+  { re: /antitetanico|tetano/, img: 'File:Rusty scraps of iron.jpg', leg: 'Aplicação de soro ou vacina: o soro antitetânico traz anticorpos prontos, de ação imediata e passageira.' },
   { re: /leite materno|amamenta/, img: 'Breastfeeding baby', leg: 'O leite materno transfere anticorpos da mãe para o bebê.',
     t: 'O leite materno, especialmente o colostro dos primeiros dias, é rico em anticorpos (IgA). Por isso o Ministério da Saúde recomenda amamentação exclusiva até os 6 meses: o bebê recebe proteção pronta enquanto o próprio sistema imune ainda amadurece.' },
   { re: /hpv/, img: 'Vaccine syringe', leg: 'Vacinação contra o HPV, oferecida pelo SUS a meninas e meninos de 9 a 14 anos.' },
-  { re: /sarampo/, img: 'Oral polio vaccine drops', leg: 'Vacinação infantil: a tríplice viral protege contra sarampo, caxumba e rubéola.' },
+  { re: /sarampo/, img: 'File:Child vaccine.jpg', leg: 'Vacinação infantil: a tríplice viral protege contra sarampo, caxumba e rubéola.' },
   { re: /catapora/, img: 'chickenpox varicella child', leg: 'Catapora (varicela): quem teve a doença costuma ficar protegido pela memória imunológica.' },
   { re: /febre/, img: 'clinical thermometer fever', leg: 'A febre é uma resposta inespecífica do organismo a infecções.' },
   { re: /corte na mao|ralar o joelho|ferimento|coagula/, img: 'scraped knee', leg: 'A pele íntegra e a coagulação são as primeiras barreiras contra micro-organismos.' },
-  { re: /pele e as mucosas|barreiras fisicas|a pele e as mucosas/, img: 'Layers of epidermis no labels', leg: 'Camadas da pele: uma barreira física da imunidade inata.' },
+  { re: /pele e as mucosas|barreiras fisicas|a pele e as mucosas/, img: 'File:Histology of thin skin.jpg', leg: 'Camadas da pele: uma barreira física da imunidade inata.' },
   { re: /linfocitos? b|anticorpos especificos/, img: 'Blood smear', leg: 'Esfregaço de sangue ao microscópio: os glóbulos brancos incluem os linfócitos B, que produzem anticorpos.' },
-  { re: /vacinas? de mrna|covid/, img: 'Syringe needle', leg: 'Frascos de vacina: as vacinas de mRNA levam a "receita" de uma proteína do vírus, não o vírus.' },
+  { re: /vacinas? de mrna|covid/, img: 'File:Comirnaty (2021) D.jpg', leg: 'Vacinação contra a covid-19 em Olinda (PE) com vacina de mRNA.',
+    t: 'As vacinas de mRNA usadas contra a covid-19 levam às células uma molécula de RNA mensageiro com a "receita" de uma proteína do vírus; a célula fabrica essa proteína e o sistema imune aprende a reconhecê-la. Esse RNA tem fita simples, açúcar ribose e uracila no lugar da timina, enquanto o DNA tem fita dupla, desoxirribose e timina. O mRNA da vacina não entra no núcleo e é degradado em poucos dias.' },
   { re: /vacina/, img: 'Brazil vaccination campaign Ze Gotinha', leg: 'Campanha de vacinação do SUS: o Programa Nacional de Imunizações existe desde 1973.' },
   { re: /celulas-tronco|celula-tronco/, img: 'Human embryonic stem cells', leg: 'Colônia de células-tronco vista ao microscópio.',
     t: 'Células-tronco podem se dividir muitas vezes e se transformar em diferentes tipos de células. Na clonagem terapêutica, elas são cultivadas para formar tecidos (pele para queimados, músculo cardíaco para testes de remédios), sem que nenhum embrião seja implantado em um útero. No Brasil, a Lei de Biossegurança (2005) regula essas pesquisas.' },
@@ -42,15 +43,15 @@ const ESPEC = [
   { re: /pesticida|inseticida|corante|metal pesado/, img: 'pesticide spraying crop field', leg: 'Pulverização de agrotóxicos: parte da substância chega a rios e lagos.' },
   { re: /dengue/, img: 'Aedes aegypti mosquito', leg: 'O mosquito Aedes aegypti transmite o vírus da dengue.' },
   { re: /hiv/, img: 'HIV budding lymphocyte electron micrograph', leg: 'Micrografia eletrônica: partículas de HIV saindo de um linfócito.' },
-  { re: /antibiotico/, img: 'Amoxicillin capsules', leg: 'Antibióticos atacam estruturas de bactérias, que os vírus não têm.' },
+  { re: /antibiotico/, img: 'File:A course of green cefalexin pills.jpg', leg: 'Antibióticos atacam estruturas de bactérias, que os vírus não têm.' },
   { re: /gripe|influenza/, img: 'influenza virus electron micrograph', leg: 'Vírus da gripe (influenza) vistos ao microscópio eletrônico.' },
   { re: /capsideo|ilustracao de um virus|desenha um virus/, img: 'Bacteriophage electron micrograph', leg: 'Vírus vistos ao microscópio eletrônico: material genético dentro de uma capa de proteínas (capsídeo).' },
-  { re: /contem ogm|rotulo de um pacote/, img: 'Golden rice', leg: 'O "T" amarelo indica, no rótulo, alimento com ingrediente transgênico.' },
+  { re: /contem ogm|rotulo de um pacote/, img: 'File:Soybean.USDA.jpg', leg: 'O "T" amarelo indica, no rótulo, alimento com ingrediente transgênico.' },
   { re: /algodao/, img: 'cotton field boll', leg: 'Lavoura de algodão: no Brasil há variedades transgênicas resistentes a lagartas.' },
   { re: /\bmilho\b/, img: 'maize corn field Brazil', leg: 'Lavoura de milho: grande parte do milho plantado no Brasil é transgênico.' },
-  { re: /\bsoja\b/, img: 'Soybean field', leg: 'Plantação de soja: o Brasil é o maior produtor mundial do grão.' },
-  { re: /castanha/, img: 'Brazil nut', leg: 'Coleta de castanha-do-pará na Amazônia, exemplo de extrativismo sustentável.' },
-  { re: /\bacai\b/, img: 'Acai palm', leg: 'Coleta de açaí: o manejo mantém as palmeiras produzindo por anos.' },
+  { re: /\bsoja\b/, img: 'File:Na estrada , On the road - Flickr - Jeff Belmonte.jpg', leg: 'Plantação de soja: o Brasil é o maior produtor mundial do grão.' },
+  { re: /castanha/, img: 'File:Bertholletia excelsa fruit and seeds.jpg', leg: 'Coleta de castanha-do-pará na Amazônia, exemplo de extrativismo sustentável.' },
+  { re: /\bacai\b/, img: 'File:Fruto do açaí.jpg', leg: 'Coleta de açaí: o manejo mantém as palmeiras produzindo por anos.' },
   { re: /defeso|pescadores/, img: 'Artisanal fishing Brazil', leg: 'Pesca artesanal: o defeso protege a reprodução dos peixes.' },
   { re: /mata atlantica/, img: 'Atlantic Forest Brazil Serra do Mar', leg: 'Mata Atlântica na Serra do Mar: restam cerca de 12% da cobertura original.' },
   { re: /parque estadual|protecao integral|proibe visitas|sem visitacao/, img: 'Itatiaia National Park', leg: 'Unidades de proteção integral preservam a natureza com o mínimo de interferência humana.' },
@@ -82,25 +83,25 @@ const ESPEC = [
   { re: /pragas|elimina os predadores/, img: 'Ladybird eating aphids', leg: 'Joaninha comendo pulgões: predadores naturais controlam pragas nas lavouras.' },
   { re: /fitoplancton/, img: 'Diatoms', leg: 'Fitoplâncton: algas microscópicas que produzem matéria orgânica pela fotossíntese.' },
   // ---------- Química ----------
-  { re: /alcool 70|higieniza as maos/, img: 'Hand sanitizing', leg: 'Álcool 70%: o etanol desnatura proteínas de micro-organismos.' },
+  { re: /alcool 70|higieniza as maos/, img: 'File:Álcool em gel (49673619151).jpg', leg: 'Álcool 70%: o etanol desnatura proteínas de micro-organismos.' },
   { re: /removedor de esmalte|acetona/, img: 'Nail polish', leg: 'Esmaltes: a acetona (propanona) dos removedores dissolve a película do esmalte.' },
   { re: /odor de peixe|metilamina/, img: 'Fish on ice', leg: 'O cheiro de peixe deteriorado vem de aminas, como a metilamina.' },
   { re: /removedor de tinta|diclorometano/, img: 'paint stripper', leg: 'Removedores de tinta podem conter solventes clorados, como o diclorometano.' },
   { re: /botijao|gas de cozinha/, img: 'LPG cylinder', leg: 'Botijão de GLP: mistura de propano e butano.' },
   { re: /isqueiro/, img: 'butane lighter', leg: 'Isqueiros usam butano liquefeito sob pressão.' },
-  { re: /amadurecer frutas|ch2=ch2/, img: 'bananas ripening', leg: 'O eteno (etileno) é um hormônio vegetal que acelera o amadurecimento.' },
+  { re: /amadurecer frutas|ch2=ch2/, img: 'File:Ripe bananas from the farm.jpg', leg: 'O eteno (etileno) é um hormônio vegetal que acelera o amadurecimento.' },
   { re: /polipropileno|propeno|produzao de plasticos|producao de plasticos/, img: 'Polypropylene pellets', leg: 'Grânulos de polipropileno, matéria-prima de potes e embalagens, feito a partir do propeno.' },
   { re: /polietileno/, img: 'Plastic bags', leg: 'Sacolas plásticas de polietileno, polímero formado a partir do eteno.' },
   { re: /cicloexano/, img: 'cyclohexane chair conformation 3D', leg: 'Modelo 3D do cicloexano: seis carbonos em anel.' },
   { re: /benzeno/, img: 'benzene 3D ball model', leg: 'Modelo da molécula de benzeno, com anel de seis carbonos.' },
   { re: /dietil-eter|anestesico/, img: 'Ether Day', leg: 'Em 1846, o éter foi usado como anestésico em uma cirurgia pública em Boston.' },
-  { re: /acetileno|soldas/, img: 'Oxyacetylene', leg: 'Maçarico oxiacetilênico: a chama do acetileno passa de 3000 °C.' },
-  { re: /vinagre|acido acetico|ch3–cooh|ch3-cooh/, img: 'Vinegar cruet', leg: 'O vinagre é uma solução de ácido acético (4% a 6%).' },
-  { re: /formol|metanal/, img: 'biological specimens jars formalin museum', leg: 'Peças conservadas em formol, solução aquosa de metanal.' },
+  { re: /acetileno|soldas/, img: 'File:Oxy-fuel welding - flame1.jpg', leg: 'Maçarico oxiacetilênico: a chama do acetileno passa de 3000 °C.' },
+  { re: /vinagre|acido acetico|ch3–cooh|ch3-cooh/, img: 'File:Vinegar infused with oregano.jpg', leg: 'O vinagre é uma solução de ácido acético (4% a 6%).' },
+  { re: /formol|metanal/, img: 'File:Wet-preserved embryological specimens 3.jpg', leg: 'Peças conservadas em formol, solução aquosa de metanal.' },
   { re: /manteiga ranc|butanoico/, img: 'butter block', leg: 'A manteiga rançosa libera ácido butanoico, de cheiro forte.' },
   { re: /formiga|acido formico|metanoico/, img: 'ant macro formica', leg: 'Formigas injetam ácido metanoico (fórmico) na picada.' },
   { re: /banana artificial|aroma de frutas|aromas de frutas/, img: 'Isoamyl acetate', leg: 'Ésteres dão aroma a frutas e a essências artificiais.' },
-  { re: /acetato de etila|colas e tintas/, img: 'Gluing wood', leg: 'O acetato de etila é solvente de colas, tintas e removedores.' },
+  { re: /acetato de etila|colas e tintas/, img: 'File:Ethyl-acetate-3D-balls.png', leg: 'O acetato de etila é solvente de colas, tintas e removedores.' },
   { re: /metanol/, img: 'Methanol 3D', leg: 'Modelo da molécula de metanol: combustível e solvente, tóxico se ingerido.' },
   { re: /butanal|aromatizantes/, img: 'Butyraldehyde', leg: 'Aldeídos estão entre as moléculas usadas em aromatizantes.' },
   { re: /etanol/, img: 'ethanol fuel pump Brazil', leg: 'Bomba de etanol: o Brasil produz o álcool combustível a partir da cana.' },
@@ -108,15 +109,15 @@ const ESPEC = [
     t: 'Cerca de metade dos alimentos produzidos no mundo depende de fertilizantes nitrogenados feitos a partir da amônia. No processo Haber-Bosch, N₂ do ar e H₂ reagem a cerca de 450 °C e 200 atm, com catalisador de ferro. Como a reação é reversível, a indústria escolhe pressão e temperatura para obter o máximo de amônia no menor tempo.' },
   { re: /refrigerante|co2\(g\)|co₂\(g\)/, img: 'Carbonated water', leg: 'Ao abrir a garrafa, a pressão cai e o CO₂ escapa em bolhas.' },
   { re: /n2o4|n₂o₄|no2|no₂/, img: 'Nitrogen dioxide', leg: 'NO₂ (castanho) e N₂O₄ (incolor): a cor muda com a temperatura.' },
-  { re: /conversores? catalitico/, img: 'Catalytic converter', leg: 'Corte de um conversor catalítico: metais como platina e paládio aceleram as reações.' },
+  { re: /conversores? catalitico/, img: 'File:Catalytic converter 20230510.jpg', leg: 'Corte de um conversor catalítico: metais como platina e paládio aceleram as reações.' },
   { re: /antiacido|efervescente/, img: 'effervescent tablet water glass', leg: 'Comprimido efervescente reagindo na água.' },
   { re: /padaria|fermenta/, img: 'bread dough rising', leg: 'Massa de pão crescendo: enzimas do fermento aceleram as reações.' },
   { re: /agua oxigenada/, img: 'Elephant toothpaste', leg: 'Decomposição acelerada da água oxigenada: o catalisador libera oxigênio e forma espuma.' },
   { re: /zinco/, img: 'Zinc hydrochloric acid', leg: 'Zinco reagindo com ácido clorídrico e liberando gás hidrogênio.' },
-  { re: /agua quente|amolecimento de alimentos/, img: 'Water boiling in a pot', leg: 'Em água quente, as moléculas se movem mais e reagem mais depressa.' },
+  { re: /agua quente|amolecimento de alimentos/, img: 'File:Boiling water.jpg', leg: 'Em água quente, as moléculas se movem mais e reagem mais depressa.' },
   { re: /sulfato de bario|baso4|baso₄|radiografia/, img: 'barium swallow X-ray', leg: 'Radiografia com contraste de sulfato de bário.' },
   { re: /repolho roxo/, img: 'red cabbage pH indicator', leg: 'Extrato de repolho roxo muda de cor conforme o pH.' },
-  { re: /limao/, img: 'lemon slices', leg: 'O suco de limão é ácido por causa do ácido cítrico.' },
+  { re: /limao/, img: 'File:Yellow lemon cut in half.jpg', leg: 'O suco de limão é ácido por causa do ácido cítrico.' },
   { re: /produto de limpeza|ceramica/, img: 'Dish soap', leg: 'Detergentes têm caráter levemente básico e removem gordura.' },
   { re: /meia-vida|radioativ|particula alfa|isotopo/, img: 'PET-CT scanner', leg: 'Aparelho de PET-CT: a medicina nuclear usa radioisótopos de meia-vida curta.' },
   { re: /\bpilha|eletrodo|anodo|catodo/, img: 'Daniell cell', leg: 'Pilha de Daniell: oxidação no ânodo (zinco) e redução no cátodo (cobre).' },
@@ -127,19 +128,19 @@ const ESPEC = [
   { re: /transporte publico|veiculos eletricos/, img: 'Electric bus Sao Paulo', leg: 'Ônibus elétrico em São Paulo: menos queima de diesel e menos poluição local.' },
   { re: /carvao mineral/, img: 'Anthracite coal', leg: 'Carvão mineral: combustível fóssil de alto teor de carbono.' },
   { re: /gas natural/, img: 'Natural gas flame', leg: 'Chama de gás natural (metano), combustível fóssil que emite menos CO₂ que o carvão.' },
-  { re: /petroleo|gasolina/, img: 'Oil refinery', leg: 'Refinaria de petróleo: a destilação fracionada separa gasolina, diesel e outros derivados.' },
+  { re: /petroleo|gasolina/, img: 'File:Refinaria Petrobras - panoramio.jpg', leg: 'Refinaria de petróleo: a destilação fracionada separa gasolina, diesel e outros derivados.' },
   { re: /poder calorifico|renovavel|efeito estufa|aquecimento global/, img: 'Brazil sugarcane ethanol', leg: 'Canavial: o etanol de cana é um combustível renovável.' },
   { re: /dureza|ca²⁺ e mg²⁺|ca2\+/, img: 'Limescale', leg: 'Calcário depositado por água dura, rica em íons cálcio e magnésio.' },
   { re: /areia, sal e agua|filtracao|evapora/, img: 'Filtration', leg: 'Filtração separa o sólido não dissolvido; a evaporação recupera o sal dissolvido.' },
   { re: /2 h₂ \+ o₂|2 h2 \+ o2|mols de agua/, img: 'Space Shuttle main engine', leg: 'Os motores do ônibus espacial queimavam hidrogênio e oxigênio, formando água.' },
-  { re: /\bpolar\b|ponto de ebulicao|ligacao de hidrogenio|ponte de hidrogenio/, img: 'Hydrogen bonds water', leg: 'Ligações de hidrogênio entre moléculas de água.' },
-  { re: /fenolftaleina/, img: 'Phenolphthalein', leg: 'A fenolftaleína fica incolor em meio ácido ou neutro e rosa em meio básico.' },
+  { re: /\bpolar\b|ponto de ebulicao|ligacao de hidrogenio|ponte de hidrogenio/, img: 'File:Water Molecule 3D X.jpg', leg: 'Ligações de hidrogênio entre moléculas de água.' },
+  { re: /fenolftaleina/, img: 'File:Phenolphthalein in Flask.jpg', leg: 'A fenolftaleína fica incolor em meio ácido ou neutro e rosa em meio básico.' },
   { re: /tornassol/, img: 'Litmus paper', leg: 'Papel de tornassol: azul em meio básico, vermelho em meio ácido.' },
   { re: /suco gastrico/, img: 'Endoscopy stomach', leg: 'O estômago produz suco gástrico com ácido clorídrico (pH perto de 2).' },
   { re: /sabao|detergente/, img: 'Soap bar', leg: 'Sabões e detergentes têm caráter básico e removem gordura.' },
   { re: /hidroxido de sodio|hidroxido de potassio/, img: 'Sodium hydroxide pellets', leg: 'Hidróxido de sódio (soda cáustica), base forte usada em desentupidores e na fabricação de sabão.' },
   { re: /tampao|bicarbonato no sangue/, img: 'Blood sample tubes', leg: 'O sangue é tamponado: seu pH fica perto de 7,4.' },
-  { re: /acido cloridrico/, img: 'Hydrochloric acid', leg: 'Ácido clorídrico, ácido forte presente também no suco gástrico.' },
+  { re: /acido cloridrico/, img: 'File:Ammonia smoke.JPG', leg: 'Ácido clorídrico, ácido forte presente também no suco gástrico.' },
   { re: /suco de laranja/, img: 'Orange juice', leg: 'Sucos de frutas cítricas são ácidos.' }
 ];
 
@@ -163,7 +164,7 @@ const TEMAS = [
     V('Intracytoplasmic sperm injection', 'Micromanipulação de óvulos: técnica usada na transferência de núcleo.', 'A transferência de núcleo é feita com agulhas finíssimas, sob o microscópio: retira-se o núcleo do óvulo e coloca-se o núcleo de uma célula do doador. A diferença entre clonagem reprodutiva e terapêutica está no destino: gerar um organismo inteiro ou apenas células e tecidos.')
   ] },
   { re: /transcri|tradu|codon|anticodon|ribossomo|rna polimerase|rna transportador|sintese de proteinas|producao de proteinas|expressao/, v: [
-    V('Insulin pen', 'Caneta de insulina: desde 1982 a insulina humana é produzida por bactérias modificadas.', 'Para fabricar uma proteína, a célula copia o gene do DNA em RNA mensageiro (transcrição) e depois o ribossomo lê esse RNA de três em três bases, os códons, encadeando aminoácidos (tradução). Bactérias que recebem o gene humano da insulina fazem exatamente isso e hoje produzem a insulina usada por milhões de pessoas com diabetes.', /insulina|bacteria|transcricao seguida|ordem correta/),
+    V('File:Subcutaneous injection with insulin needle.jpg', 'Caneta de insulina: desde 1982 a insulina humana é produzida por bactérias modificadas.', 'Para fabricar uma proteína, a célula copia o gene do DNA em RNA mensageiro (transcrição) e depois o ribossomo lê esse RNA de três em três bases, os códons, encadeando aminoácidos (tradução). Bactérias que recebem o gene humano da insulina fazem exatamente isso e hoje produzem a insulina usada por milhões de pessoas com diabetes.', /insulina|bacteria|transcricao seguida|ordem correta/),
     V('Ribosome ribbon', 'Modelo de um ribossomo, a estrutura que lê o RNA mensageiro e monta a proteína.', 'O ribossomo percorre o RNA mensageiro e, a cada códon, um RNA transportador traz o aminoácido correspondente, encaixando seu anticódon no códon. A sequência de bases do gene determina, assim, a sequência de aminoácidos da proteína; uma única troca de base pode mudar um aminoácido ou criar um códon de parada.', /codon|anticodon|trna|transportador|traducao|ribossomo|trincas/),
     V('Silkworm cocoon', 'Casulo do bicho-da-seda: a seda é uma proteína (fibroína) fabricada a partir de um gene.', 'Cabelo, seda, enzimas digestivas e anticorpos são proteínas, e todas são montadas a partir das instruções de genes. No núcleo, o gene é transcrito em RNA mensageiro pela enzima RNA polimerase; no citoplasma, os ribossomos traduzem esse RNA em proteína.', /rna polimerase|transcri|nucleo|molde|enzima/),
     V('Rough endoplasmic reticulum TEM', 'Retículo endoplasmático com ribossomos, visto ao microscópio eletrônico.', 'Células que produzem muitas proteínas, como as do pâncreas, são repletas de ribossomos. Todas as células do corpo têm o mesmo DNA, mas cada tipo celular transcreve e traduz só uma parte dos genes: é a expressão gênica que torna um neurônio diferente de uma célula do fígado.', /expressao|figado|cerebro|tipo celular|mesmo dna/)
@@ -176,8 +177,8 @@ const TEMAS = [
   ] },
   { re: /transgen|ogm|engenharia genetica|biosseguranca|geneticamente modificad|transgenia|gene de outra especie/, v: [
     V('maize corn field Brazil', 'Lavoura de milho: a maior parte do milho plantado no Brasil é transgênica.', 'Organismos geneticamente modificados (OGM) têm o DNA alterado em laboratório; os transgênicos são os OGM que receberam um gene de outra espécie. O milho Bt, por exemplo, recebeu um gene de bactéria que produz uma proteína tóxica para lagartas que atacam a lavoura.', /milho|lagarta|bacteria|algodao/),
-    V('Soybean field', 'Plantação de soja: o Brasil é o maior produtor mundial do grão.', 'No Brasil, a CTNBio (Comissão Técnica Nacional de Biossegurança) avalia cada OGM antes de liberar seu cultivo, considerando riscos à saúde e ao ambiente. Alimentos com mais de 1% de ingrediente transgênico precisam trazer no rótulo um "T" dentro de um triângulo amarelo.', /rotulo|ogm|soja|consumidor/),
-    V('Golden rice', 'Arrozal: o arroz dourado é uma variedade transgênica que produz betacaroteno (pró-vitamina A).', 'O arroz dourado recebeu genes de outras espécies para produzir betacaroteno nos grãos, com o objetivo de combater a falta de vitamina A em países pobres. O caso mostra o potencial da transgenia e também os debates sobre biossegurança, patentes e acesso dos agricultores às sementes.', /definicao|termo|inserir|insercao|processo/),
+    V('File:Na estrada , On the road - Flickr - Jeff Belmonte.jpg', 'Plantação de soja: o Brasil é o maior produtor mundial do grão.', 'No Brasil, a CTNBio (Comissão Técnica Nacional de Biossegurança) avalia cada OGM antes de liberar seu cultivo, considerando riscos à saúde e ao ambiente. Alimentos com mais de 1% de ingrediente transgênico precisam trazer no rótulo um "T" dentro de um triângulo amarelo.', /rotulo|ogm|soja|consumidor/),
+    V('File:Golden Rice.jpg', 'Arrozal: o arroz dourado é uma variedade transgênica que produz betacaroteno (pró-vitamina A).', 'O arroz dourado recebeu genes de outras espécies para produzir betacaroteno nos grãos, com o objetivo de combater a falta de vitamina A em países pobres. O caso mostra o potencial da transgenia e também os debates sobre biossegurança, patentes e acesso dos agricultores às sementes.', /definicao|termo|inserir|insercao|processo/),
     V('cotton field boll', 'Algodão: no Brasil há variedades transgênicas resistentes a lagartas.', 'A biossegurança reúne normas para que pesquisas e cultivos de organismos modificados não tragam riscos às pessoas e ao ambiente, como o cruzamento com espécies nativas ou o surgimento de pragas resistentes. A Lei de Biossegurança brasileira é de 2005.', /biosseguranca|norma|risco|fiscaliza/)
   ] },
   { re: /biomagnifica|bioconcentra|cadeia alimentar|nivel trofico|contaminante|poluente/, v: [
@@ -194,10 +195,10 @@ const TEMAS = [
   ] },
   { re: /conservacao|preserva|sustentav|extrativis|manejo|desmat|biodiversidade|recuperad|fragmento de mata|parque|unidade de|reserva/, v: [
     V('Atlantic Forest Brazil Serra do Mar', 'Mata Atlântica na Serra do Mar: restam cerca de 12% da cobertura original.', 'O Sistema Nacional de Unidades de Conservação (Lei 9.985/2000) divide as áreas protegidas em dois grupos: proteção integral, que só admite usos indiretos como pesquisa e educação, e uso sustentável, que permite explorar recursos de forma planejada.'),
-    V('Brazil nut', 'Castanha-do-pará: coletada de árvores nativas sem derrubar a floresta.', 'Nas reservas extrativistas, criadas após a luta dos seringueiros liderados por Chico Mendes, as comunidades coletam castanha, látex e frutos mantendo a floresta em pé. É um exemplo de uso sustentável: a extração respeita o ritmo de reposição da natureza.'),
+    V('File:Bertholletia excelsa fruit and seeds.jpg', 'Castanha-do-pará: coletada de árvores nativas sem derrubar a floresta.', 'Nas reservas extrativistas, criadas após a luta dos seringueiros liderados por Chico Mendes, as comunidades coletam castanha, látex e frutos mantendo a floresta em pé. É um exemplo de uso sustentável: a extração respeita o ritmo de reposição da natureza.'),
     V('Amazon rainforest Brazil', 'Floresta Amazônica: a maior floresta tropical do mundo.', 'A biodiversidade brasileira é uma das maiores do planeta. Preservar significa proteger áreas sem exploração; conservar com uso sustentável significa usar os recursos sem esgotá-los; recuperar significa replantar espécies nativas em áreas degradadas.'),
     V('Itatiaia National Park', 'Parque Nacional do Itatiaia (RJ/MG), o primeiro parque nacional do Brasil, criado em 1937.', 'Parques nacionais e estaduais são unidades de proteção integral: protegem fauna, flora e nascentes, e permitem visitação controlada e pesquisa, mas não a extração de recursos. Já as reservas de desenvolvimento sustentável conciliam conservação e sustento das comunidades locais.'),
-    V('Acai palm', 'Açaizeiro: o manejo mantém as palmeiras produzindo por anos.', 'O manejo sustentável planeja a coleta para que a população de plantas ou animais se mantenha: respeitar o período de defeso da pesca, o tamanho mínimo dos peixes e a quantidade colhida de frutos garante renda hoje sem esgotar o recurso amanhã.')
+    V('File:Fruto do açaí.jpg', 'Açaizeiro: o manejo mantém as palmeiras produzindo por anos.', 'O manejo sustentável planeja a coleta para que a população de plantas ou animais se mantenha: respeitar o período de defeso da pesca, o tamanho mínimo dos peixes e a quantidade colhida de frutos garante renda hoje sem esgotar o recurso amanhã.')
   ] },
   { re: /origem da vida|biogenese|abiogenese|panspermia|evolucao quimica|materia inanimada|primeiras moleculas|geracao espontanea/, v: [
     V('Pasteur swan neck flask', 'Frasco "pescoço de cisne", usado por Pasteur contra a geração espontânea.', 'Por séculos se acreditou que seres vivos surgiam da matéria inanimada (abiogênese). Em 1862, Louis Pasteur ferveu caldo nutritivo em frascos com gargalo curvo: o ar entrava, mas os micróbios ficavam presos no gargalo, e o caldo não estragava. A conclusão foi a biogênese: todo ser vivo vem de outro ser vivo.'),
@@ -218,7 +219,7 @@ const TEMAS = [
   { re: /meiose|mitose|divisao celular|regenera/, v: [
     V('Onion root tip mitosis', 'Ponta de raiz de cebola: células em diferentes fases da mitose.', 'Na mitose, uma célula duplica seu DNA e se divide em duas células-filhas idênticas. É ela que permite o crescimento, a cicatrização de ferimentos e a renovação constante da pele e do sangue.'),
     V('Human karyotype', 'Cromossomos humanos organizados em pares: na meiose, cada gameta recebe um de cada par.', 'Na meiose, uma célula diploide passa por duas divisões e origina quatro células haploides, com metade dos cromossomos e geneticamente diferentes. É assim que se formam os gametas; a troca de trechos entre cromossomos (crossing-over) aumenta a variabilidade dos descendentes.'),
-    V('Scab on knee', 'Cicatrização: a mitose repõe as células perdidas no ferimento.', 'Tecidos se regeneram graças à mitose das células vizinhas à lesão. Algumas células se dividem muito (pele, medula óssea), outras quase nunca (neurônios), o que explica por que certos tecidos se recuperam melhor que outros.')
+    V('File:Scab.jpg', 'Cicatrização: a mitose repõe as células perdidas no ferimento.', 'Tecidos se regeneram graças à mitose das células vizinhas à lesão. Algumas células se dividem muito (pele, medula óssea), outras quase nunca (neurônios), o que explica por que certos tecidos se recuperam melhor que outros.')
   ] },
   { re: /radioterapia|radiacao|tumor|cancer/, v: [
     V('Radiation therapy', 'Radioterapia: feixes de radiação direcionados ao tumor.', 'Radiações ionizantes têm energia para danificar o DNA. Células de tumor se dividem muito e são mais sensíveis a esse dano; por isso a radioterapia, com doses planejadas e feixes direcionados, destrói o tumor poupando o máximo possível dos tecidos saudáveis.'),
@@ -227,7 +228,7 @@ const TEMAS = [
   { re: /chagas|protozo|parasit|vetor|giardi|ameb|saneamento|esgoto|agua tratada/, v: [
     V('Wastewater treatment plant', 'Estação de tratamento de esgoto.', 'Segundo o Instituto Trata Brasil, cerca de 90 milhões de brasileiros não têm coleta de esgoto. Doenças de transmissão fecal-oral, como giardíase, amebíase e hepatite A, são mais comuns onde falta água tratada e esgoto: saneamento é uma das medidas de saúde mais eficientes.'),
     V('Triatoma infestans', 'O barbeiro, inseto que transmite o protozoário da doença de Chagas.', 'Descrita em 1909 pelo brasileiro Carlos Chagas, a doença é causada pelo Trypanosoma cruzi. O barbeiro vive em frestas de casas de pau a pique e, ao picar, elimina fezes com o parasita; melhorar as moradias e controlar o vetor reduziu muito os casos.'),
-    V('Clay water filter', 'Filtro de barro: tecnologia brasileira simples que melhora a qualidade da água.', 'Protozoários como a Giardia e a ameba formam cistos resistentes que contaminam água e alimentos. Filtrar e ferver a água, lavar bem os alimentos e lavar as mãos são medidas individuais; rede de água tratada e esgoto são as medidas coletivas.')
+    V('File:RDIC ceramic water filter pots.jpg', 'Filtro de barro: tecnologia brasileira simples que melhora a qualidade da água.', 'Protozoários como a Giardia e a ameba formam cistos resistentes que contaminam água e alimentos. Filtrar e ferver a água, lavar bem os alimentos e lavar as mãos são medidas individuais; rede de água tratada e esgoto são as medidas coletivas.')
   ] },
   { re: /selecao natural|evolu|ancestral|clado|especiacao|mariposa/, v: [
     V('Biston betularia', 'Mariposa Biston betularia: a forma escura predominou na Inglaterra industrial.', 'Indivíduos com características mais vantajosas em um ambiente sobrevivem e se reproduzem mais: é a seleção natural, proposta por Darwin e Wallace em 1858. Na Inglaterra industrial, mariposas escuras ficaram camufladas nos troncos sujos de fuligem e passaram a predominar.'),
@@ -278,7 +279,7 @@ const TEMAS = [
   { q: 1, re: /velocidade|rapidez|acelera|catalisador|superficie de contato|energia de ativacao|mais rapid|ordem|mais lent/, v: [
     V('effervescent tablet water glass', 'Comprimido efervescente: inteiro ou triturado, quente ou frio, a rapidez muda.', 'Pela teoria das colisões, uma reação ocorre quando partículas se chocam com energia suficiente (a energia de ativação) e na orientação certa. Triturar um comprimido aumenta a superfície de contato; aquecer a água aumenta a energia das partículas; nos dois casos a reação fica mais rápida.', /comprimido|antiacido|superficie|triturad|efervesc|po\b|pedaco/),
     V('Refrigerator food', 'Geladeira: a baixa temperatura deixa mais lentas as reações que estragam os alimentos.', 'Guardar alimentos na geladeira diminui a velocidade das reações químicas e da ação de micro-organismos. Em temperatura menor, menos partículas têm energia para superar a energia de ativação, e as colisões efetivas ficam mais raras.', /temperatura diminui|resfri|reduz|lent|diminui/),
-    V('Catalytic converter', 'Conversores catalíticos: metais como platina e paládio aceleram reações dos gases do escapamento.', 'Catalisadores oferecem um caminho de reação com menor energia de ativação e não são consumidos. Nos carros, transformam CO, NO e hidrocarbonetos em CO₂, N₂ e água. Em um equilíbrio, o catalisador acelera ida e volta igualmente: o equilíbrio é atingido antes, sem se deslocar.', /catalisador|energia de ativacao/),
+    V('File:Catalytic converter 20230510.jpg', 'Conversores catalíticos: metais como platina e paládio aceleram reações dos gases do escapamento.', 'Catalisadores oferecem um caminho de reação com menor energia de ativação e não são consumidos. Nos carros, transformam CO, NO e hidrocarbonetos em CO₂, N₂ e água. Em um equilíbrio, o catalisador acelera ida e volta igualmente: o equilíbrio é atingido antes, sem se deslocar.', /catalisador|energia de ativacao/),
     V('bread dough rising', 'Massa de pão crescendo: as enzimas do fermento são catalisadores biológicos.', 'Enzimas são catalisadores das reações dos seres vivos, como as do fermento que produzem gás e fazem a massa crescer. A velocidade de uma reação depende da concentração dos reagentes; na lei de velocidade v = k[A]ⁿ, o expoente n é a ordem da reação.', /ordem|v = k|enzima|fermento|lei de velocidade/),
     V('Rusty iron', 'Ferro enferrujado: a corrosão é uma reação lenta, que leva meses.', 'Há reações lentíssimas, como a ferrugem, e rapidíssimas, como uma explosão. Em uma reação de primeira ordem, dobrar a concentração dobra a velocidade; em segunda ordem, quadruplica; em ordem zero, a velocidade não depende da concentração.', /ordem zero|primeira ordem|segunda ordem|dobr|quadrupl|triplic|\[a\]/),
     V('Fireworks', 'Fogos de artifício: reações muito rápidas que liberam energia, luz e cor.', 'A velocidade de uma reação aumenta com a temperatura, a concentração dos reagentes, a superfície de contato e a presença de catalisador. Em fogos de artifício, pós finos misturados (grande superfície de contato) reagem quase instantaneamente.', /concentracao|aumenta|temperatura aumenta|mais rapid/)
@@ -289,31 +290,31 @@ const TEMAS = [
   ] },
   { q: 1, re: /combustive|petroleo|carvao|gas natural|poder calorifico|renovavel|efeito estufa|chuva acida|energia/, v: [
     V('Brazil sugarcane ethanol', 'Colheita de cana em Piracicaba (SP): matéria-prima do etanol.', 'Quase metade da energia usada no Brasil vem de fontes renováveis, bem acima da média mundial de cerca de 15%. O etanol de cana é renovável: o CO₂ liberado na queima é reabsorvido pela próxima safra na fotossíntese.'),
-    V('Oil refinery', 'Refinaria: a destilação fracionada separa gasolina, diesel e outros derivados.', 'Petróleo, carvão e gás natural são combustíveis fósseis: levaram milhões de anos para se formar e não se repõem na escala da vida humana. Ao queimar, liberam CO₂ que estava guardado no subsolo, intensificando o efeito estufa.'),
+    V('File:Refinaria Petrobras - panoramio.jpg', 'Refinaria: a destilação fracionada separa gasolina, diesel e outros derivados.', 'Petróleo, carvão e gás natural são combustíveis fósseis: levaram milhões de anos para se formar e não se repõem na escala da vida humana. Ao queimar, liberam CO₂ que estava guardado no subsolo, intensificando o efeito estufa.'),
     V('Anthracite coal', 'Carvão mineral: combustível fóssil rico em carbono e, muitas vezes, em enxofre.', 'O poder calorífico indica quanta energia um combustível libera por quilograma queimado. O carvão libera muita energia, mas também mais CO₂ por unidade de energia, além de óxidos de enxofre que formam a chuva ácida.'),
-    V('Parque eólico', 'Parque eólico: o Brasil produz muita energia eólica, principalmente no Nordeste.', 'O Brasil é um dos maiores produtores de energia eólica do mundo, com parques concentrados no Nordeste. Trocar combustíveis fósseis por fontes renováveis e por transporte público e elétrico reduz a emissão de gases de efeito estufa e a poluição das cidades.'),
+    V('File:Parque Eólico Arizona I, Rio do Fogo (RN).jpg', 'Parque eólico: o Brasil produz muita energia eólica, principalmente no Nordeste.', 'O Brasil é um dos maiores produtores de energia eólica do mundo, com parques concentrados no Nordeste. Trocar combustíveis fósseis por fontes renováveis e por transporte público e elétrico reduz a emissão de gases de efeito estufa e a poluição das cidades.'),
     V('Natural gas flame', 'Chama de gás natural (metano).', 'Entre os fósseis, o gás natural emite menos CO₂ e quase nenhum enxofre por unidade de energia, por isso é chamado de combustível de transição. Ainda assim, não é renovável.')
   ] },
   { q: 1, re: /mistura|filtracao|evapora|dureza|separa|destila|decanta/, v: [
     V('Filtration', 'Filtração: o papel retém o sólido não dissolvido.', 'Para separar misturas, aproveitam-se diferenças entre os componentes: tamanho das partículas (filtração), solubilidade (dissolução), ponto de ebulição (evaporação e destilação), densidade (decantação).'),
-    V('Salt evaporation ponds', 'Salinas: a água do mar evapora ao sol e o sal fica.', 'Nas salinas do Rio Grande do Norte, responsável por mais de 90% do sal brasileiro, a água do mar é levada a tanques rasos; o sol evapora a água e o sal cristaliza. É a mesma ideia de separar o sal da água aquecendo a solução.'),
+    V('File:Salinas do Corregó - Grossos - panoramio.jpg', 'Salinas: a água do mar evapora ao sol e o sal fica.', 'Nas salinas do Rio Grande do Norte, responsável por mais de 90% do sal brasileiro, a água do mar é levada a tanques rasos; o sol evapora a água e o sal cristaliza. É a mesma ideia de separar o sal da água aquecendo a solução.'),
     V('Limescale', 'Crosta de calcário deixada por água dura em uma chaleira.', 'Água dura tem muitos íons cálcio e magnésio, que formam crostas em chaleiras e canos e atrapalham a ação do sabão. Eles podem ser removidos por resinas de troca iônica ou por precipitação.')
   ] },
   { q: 1, re: /\bmols?\b|estequiometr|rendimento|massa molar/, v: [
     V('Space Shuttle main engine', 'Motor do ônibus espacial: queimava hidrogênio e oxigênio líquidos, formando água.', 'As equações químicas mostram em que proporção as substâncias reagem: em 2 H₂ + O₂ → 2 H₂O, 2 mols de hidrogênio formam 2 mols de água. Com essas proporções, a indústria calcula quanto reagente usar e quanto produto vai obter.'),
-    V('Cake ingredients', 'Bolo: a receita usa ingredientes em proporções certas, como uma reação química.', 'Assim como uma receita, uma reação usa os reagentes em proporções fixas. Se um reagente sobra (excesso), o outro limita a quantidade de produto; o rendimento compara o produto obtido com o teoricamente esperado.')
+    V('File:Sponge cake (bizcochuelo o bizcocho) ← eggs, sugar and wheat flour.jpg', 'Bolo: a receita usa ingredientes em proporções certas, como uma reação química.', 'Assim como uma receita, uma reação usa os reagentes em proporções fixas. Se um reagente sobra (excesso), o outro limita a quantidade de produto; o rendimento compara o produto obtido com o teoricamente esperado.')
   ] },
   { q: 1, re: /polar|interac|ligacao de hidrogenio|ebulicao/, v: [
-    V('Hydrogen bonds water', 'Modelo de moléculas de água unidas por ligações de hidrogênio.', 'A água é polar e forma ligações de hidrogênio, interações fortes entre as moléculas. Por isso ferve a 100 °C, muito acima do esperado para uma molécula tão pequena, e é líquida na maior parte da Terra.'),
+    V('File:Water Molecule 3D X.jpg', 'Modelo de moléculas de água unidas por ligações de hidrogênio.', 'A água é polar e forma ligações de hidrogênio, interações fortes entre as moléculas. Por isso ferve a 100 °C, muito acima do esperado para uma molécula tão pequena, e é líquida na maior parte da Terra.'),
     V('Water strider', 'Inseto caminhando sobre a água: a tensão superficial vem das ligações de hidrogênio.', 'As interações entre moléculas explicam pontos de fusão e ebulição, solubilidade e tensão superficial. Substâncias polares tendem a se dissolver em solventes polares, como a água; apolares, em apolares, como a gasolina.')
   ] },
   { q: 1, re: /kps|solubilidade|saturada|ion comum|pouco soluvel|limite de dissolucao/, v: [
     V('barium swallow X-ray', 'Radiografia com contraste de sulfato de bário.', 'O sulfato de bário é tóxico se dissolvido, mas é tão pouco solúvel que pode ser engolido como contraste em radiografias. O produto de solubilidade (Kps) mede essa solubilidade; adicionar um íon que já existe na solução diminui ainda mais a dissolução (efeito do íon comum).'),
-    V('Kidney stones', 'Cálculos renais: sais pouco solúveis que precipitam na urina.', 'Pedras nos rins se formam quando sais pouco solúveis, como o oxalato de cálcio, ultrapassam o limite de solubilidade e precipitam. Beber água dilui a urina e reduz esse risco.')
+    V('File:Kidney stones.jpg', 'Cálculos renais: sais pouco solúveis que precipitam na urina.', 'Pedras nos rins se formam quando sais pouco solúveis, como o oxalato de cálcio, ultrapassam o limite de solubilidade e precipitam. Beber água dilui a urina e reduz esse risco.')
   ] },
   { q: 1, re: /radioativ|meia-vida|alfa|beta|isotopo|nuclear/, v: [
     V('PET-CT scanner', 'Aparelho de PET-CT: a medicina nuclear usa radioisótopos de meia-vida curta.', 'Núcleos instáveis emitem radiação até se tornarem estáveis. A meia-vida é o tempo para metade da amostra se desintegrar: depois de duas meias-vidas resta 1/4; depois de três, 1/8. Radioisótopos de meia-vida curta são usados em exames porque deixam o corpo rapidamente.'),
-    V('Geiger counter', 'Contador Geiger: detecta e mede a radiação.', 'Na emissão alfa, o núcleo perde 2 prótons e 2 nêutrons: o número atômico cai 2 e o de massa cai 4. Em 1987, em Goiânia, uma cápsula de césio-137 abandonada causou o maior acidente radiológico do Brasil, o que mostra a importância do descarte correto.'),
+    V('File:Geiger counter.jpg', 'Contador Geiger: detecta e mede a radiação.', 'Na emissão alfa, o núcleo perde 2 prótons e 2 nêutrons: o número atômico cai 2 e o de massa cai 4. Em 1987, em Goiânia, uma cápsula de césio-137 abandonada causou o maior acidente radiológico do Brasil, o que mostra a importância do descarte correto.'),
     V('Angra nuclear power plant', 'Usinas nucleares de Angra dos Reis (RJ).', 'Nas usinas nucleares, a fissão do urânio libera energia sem emitir CO₂, mas gera rejeitos radioativos de meia-vida longa, que precisam ficar isolados por muito tempo. O carbono-14, com meia-vida de cerca de 5.730 anos, é usado para datar fósseis e objetos arqueológicos.')
   ] },
   { q: 1, re: /pilha|oxidacao|reducao|eletrodo|anodo|catodo/, v: [
@@ -321,31 +322,31 @@ const TEMAS = [
     V('Lemon battery', 'Pilha de limão: dois metais diferentes e uma solução ácida geram corrente.', 'Com um limão, uma placa de zinco e outra de cobre é possível montar uma pilha. Celulares e carros elétricos usam baterias de lítio, e as pilhas usadas devem ir para pontos de coleta, pois contêm metais que contaminam o solo.')
   ] },
   { q: 1, re: /polimer|monomero|plastic|proteina|condensacao/, v: [
-    V('Plastic recycling', 'Reciclagem de plásticos: polímeros sintéticos levam séculos para se decompor.', 'Polímeros são moléculas gigantes formadas por muitas unidades repetidas, os monômeros. O polietileno das sacolas vem do eteno, por polimerização por adição; o PET das garrafas e o náilon se formam por condensação, liberando água a cada ligação.'),
-    V('Natural rubber latex', 'Extração de látex da seringueira: a borracha natural é um polímero.', 'A borracha natural, extraída da seringueira, foi a base do ciclo da borracha na Amazônia (1879–1912). Proteínas, amido e celulose também são polímeros naturais: as proteínas, por exemplo, são cadeias de aminoácidos.')
+    V('File:Bales of PET bottles closeup.jpg', 'Reciclagem de plásticos: polímeros sintéticos levam séculos para se decompor.', 'Polímeros são moléculas gigantes formadas por muitas unidades repetidas, os monômeros. O polietileno das sacolas vem do eteno, por polimerização por adição; o PET das garrafas e o náilon se formam por condensação, liberando água a cada ligação.'),
+    V('File:Rubber tapping (76655).jpg', 'Extração de látex da seringueira: a borracha natural é um polímero.', 'A borracha natural, extraída da seringueira, foi a base do ciclo da borracha na Amazônia (1879–1912). Proteínas, amido e celulose também são polímeros naturais: as proteínas, por exemplo, são cadeias de aminoácidos.')
   ] },
   { q: 1, re: /alcool|cetona|aldeido|cooh|–cho\b|-cho\b|–nh₂|cloro ligado|acido carboxilico|ch3–co|\bester|\beter\b|\bamina|carboxil|funcao organica|funcoes organicas|hidroxila|carbonila|haleto/, v: [
     V('ethanol fuel pump Brazil', 'Bomba de etanol: o Brasil produz álcool combustível a partir da cana.', 'Os compostos orgânicos são agrupados em funções conforme o grupo de átomos que define suas propriedades. Nos álcoois, como o etanol, há um –OH ligado a carbono saturado; nos ácidos carboxílicos, como o acético do vinagre, há o grupo –COOH.', /alcool|etanol|metanol|hidroxila|–oh\b|-oh\b|carboxil|cooh|acido/),
     V('Isoamyl acetate', 'Modelo do acetato de isoamila, o éster com aroma de banana.', 'Ésteres, com o grupo –COO– entre carbonos, dão aroma a frutas e essências artificiais. Éteres têm um oxigênio entre dois carbonos (–O–); aminas têm nitrogênio ligado a carbono, como as que dão o cheiro de peixe.', /amina|nh₂|nitrogenio|\beter\b|\bester|acetato|oxigenio entre/),
     V('Nail polish', 'Esmaltes: a acetona dos removedores é uma cetona.', 'Na carbonila (C=O), a posição define a função: entre dois carbonos, é uma cetona, como a propanona (acetona); na ponta da cadeia, ligada a um hidrogênio, é um aldeído, como o metanal (formol).', /carbonila|cetona|aldeido|acetona|propanona|metanal|formol|butanal|cho\b/),
     V('Pineapple', 'Abacaxi: seu aroma vem de ésteres naturais.', 'Muitos aromas de frutas são ésteres, formados pela reação entre um ácido carboxílico e um álcool. A química orgânica está nos alimentos, nos perfumes, nos remédios e nos combustíveis.', /aroma|fruta|banana/),
-    V('Perfume', 'Perfumes: misturas de ésteres, álcoois, aldeídos e cetonas.', 'Perfumes combinam substâncias de várias funções orgânicas: álcoois (–OH), aldeídos (–CHO na ponta), cetonas (C=O no meio da cadeia) e ésteres (–COO–). Haletos orgânicos, com cloro ou bromo ligado a carbono, aparecem em solventes e, no passado, nos gases que destruíam a camada de ozônio.', /haleto|cloro|bromo|clorad/)
+    V('File:Glass perfume bottle MET DP108895.jpg', 'Perfumes: misturas de ésteres, álcoois, aldeídos e cetonas.', 'Perfumes combinam substâncias de várias funções orgânicas: álcoois (–OH), aldeídos (–CHO na ponta), cetonas (C=O no meio da cadeia) e ésteres (–COO–). Haletos orgânicos, com cloro ou bromo ligado a carbono, aparecem em solventes e, no passado, nos gases que destruíam a camada de ozônio.', /haleto|cloro|bromo|clorad/)
   ] },
   { q: 1, re: /cadeia|iupac|nome oficial|carbonos|hidrocarboneto|ligacao dupla|ligacao tripla|alcano|alceno|alcino|anel/, v: [
     V('LPG cylinder', 'Botijão de gás de cozinha (GLP): propano e butano.', 'O carbono faz quatro ligações e forma cadeias abertas ou fechadas, normais ou ramificadas, homogêneas (só carbonos) ou heterogêneas (com O, N ou S entre carbonos), saturadas ou insaturadas. O propano e o butano do gás de cozinha são alcanos de cadeia aberta e saturada.', /botijao|propano|butano|saturad|aberta|heterogen|homogen/),
     V('benzene 3D ball model', 'Modelo da molécula de benzeno: seis carbonos em anel.', 'A IUPAC dá nome aos compostos pelo número de carbonos da cadeia principal (met, et, prop, but, pent…), pelo tipo de ligação (ano para simples, eno para dupla, ino para tripla) e pelos ramos. O benzeno forma uma cadeia fechada e homogênea, chamada aromática.', /iupac|nome oficial|benzeno|aromat|anel|fechad|cicl/),
-    V('bananas ripening', 'Bananas amadurecendo: o eteno é um hormônio vegetal.', 'O eteno (CH₂=CH₂), o alceno mais simples, é liberado pelas próprias frutas e acelera o amadurecimento; centros de distribuição o usam para amadurecer bananas. Também é a matéria-prima do polietileno.', /eteno|ch₂=ch|amadurec|dupla/),
+    V('File:Ripe bananas from the farm.jpg', 'Bananas amadurecendo: o eteno é um hormônio vegetal.', 'O eteno (CH₂=CH₂), o alceno mais simples, é liberado pelas próprias frutas e acelera o amadurecimento; centros de distribuição o usam para amadurecer bananas. Também é a matéria-prima do polietileno.', /eteno|ch₂=ch|amadurec|dupla/),
     V('butane lighter', 'Isqueiro: butano liquefeito sob pressão.', 'Para nomear uma cadeia ramificada, escolhe-se a cadeia principal mais longa e numeram-se os carbonos a partir da ponta mais próxima do ramo: CH₃–CH(CH₃)–CH₃ é o 2-metilpropano, isômero do butano.', /ramific|ramo|metil|isqueiro|normal|linear/),
     V('Diethyl-ether-3D-balls', 'Modelo do éter dietílico: um oxigênio entre dois grupos de carbono.', 'Quando um átomo diferente do carbono, como oxigênio, nitrogênio ou enxofre, fica entre dois carbonos, a cadeia é heterogênea. O éter dietílico (CH₃–CH₂–O–CH₂–CH₃), usado no passado como anestésico, tem cadeia aberta, saturada e heterogênea.', /heterogen|oxigenio entre|enxofre|\beter\b|nitrogenio entre/),
     V('Cyclopentane 3D', 'Modelo de uma molécula em anel: cadeia fechada.', 'Cadeias fechadas, ou cíclicas, formam anéis. O cicloexano (C₆H₁₂), solvente industrial, tem seis carbonos em anel só com ligações simples: cadeia fechada, homogênea e saturada. Se o anel tiver um oxigênio, como no tetra-hidrofurano, a cadeia fechada passa a ser heterogênea.', /anel|fechad|cicl/),
-    V('Oxyacetylene', 'Maçarico de acetileno: a chama passa de 3.000 °C.', 'O acetileno (etino, C₂H₂) tem uma ligação tripla entre os carbonos e é um alcino. Cadeias com ligações duplas ou triplas são insaturadas; cadeias só com ligações simples são saturadas.', /tripla|acetileno|etino|insatur|alcino/)
+    V('File:Oxy-fuel welding - flame1.jpg', 'Maçarico de acetileno: a chama passa de 3.000 °C.', 'O acetileno (etino, C₂H₂) tem uma ligação tripla entre os carbonos e é um alcino. Cadeias com ligações duplas ou triplas são insaturadas; cadeias só com ligações simples são saturadas.', /tripla|acetileno|etino|insatur|alcino/)
   ] },
   { q: 1, re: /\bph\b|poh|indicador|repolho|limao|acid|base|\bka\b|ioniza|tornassol|fenolftaleina|tampao|sabao|detergente|suco gastrico|hidroxido|h\+|h⁺/, v: [
     V('red cabbage pH indicator', 'Extrato de repolho roxo: muda de cor conforme o pH.', 'A escala de pH vai de 0 a 14 a 25 °C: abaixo de 7 é ácido, 7 é neutro, acima de 7 é básico. Cada unidade equivale a 10 vezes mais ou menos íons H⁺: uma solução de pH 2 tem 100 vezes mais H⁺ que uma de pH 4.', /ph \d|escala|repolho|mais acid|menos acid|mais basic|ph menor|ph maior/),
     V('Litmus paper', 'Papel de tornassol: azul em meio básico, vermelho em meio ácido.', 'Indicadores ácido-base mudam de cor conforme o pH. O tornassol fica vermelho em meio ácido e azul em meio básico; a fenolftaleína fica incolor em meio ácido ou neutro e rosa em meio básico.', /tornassol|fenolftaleina|indicador/),
-    V('lemon slices', 'Limões: o suco é ácido por causa do ácido cítrico.', 'Ácidos liberam H⁺ em água. Os fortes, como o clorídrico, ionizam quase totalmente e têm Ka alto; os fracos, como o acético e o cítrico, ionizam pouco e têm Ka pequeno. Por isso, na mesma concentração, o ácido forte tem pH menor.', /forte|fraco|forca|\bka\b|ioniza|limao|cloridrico/),
+    V('File:Yellow lemon cut in half.jpg', 'Limões: o suco é ácido por causa do ácido cítrico.', 'Ácidos liberam H⁺ em água. Os fortes, como o clorídrico, ionizam quase totalmente e têm Ka alto; os fracos, como o acético e o cítrico, ionizam pouco e têm Ka pequeno. Por isso, na mesma concentração, o ácido forte tem pH menor.', /forte|fraco|forca|\bka\b|ioniza|limao|cloridrico/),
     V('Blood sample tubes', 'Amostras de sangue: o pH do sangue fica perto de 7,4.', 'Soluções-tampão resistem a mudanças de pH quando recebem pequenas quantidades de ácido ou base. O sangue é tamponado pelo par ácido carbônico/bicarbonato; uma variação de poucos décimos no pH já é grave para o organismo.', /tampao|sangue|bicarbonato/),
-    V('Hydrangea flowers', 'Hortênsias: a cor das flores depende do pH do solo.', 'Na agricultura, o pH do solo decide quais nutrientes as plantas absorvem; solos ácidos, comuns no Cerrado, são corrigidos com calcário (calagem). As hortênsias dão flores azuis em solo ácido e rosadas em solo básico.', /solo|agricult|calcario/),
+    V('File:Hydrangea macrophylla - blue.jpg', 'Hortênsias: a cor das flores depende do pH do solo.', 'Na agricultura, o pH do solo decide quais nutrientes as plantas absorvem; solos ácidos, comuns no Cerrado, são corrigidos com calcário (calagem). As hortênsias dão flores azuis em solo ácido e rosadas em solo básico.', /solo|agricult|calcario/),
     V('Soap bar', 'Sabões e detergentes: produtos de caráter básico.', 'Bases liberam OH⁻ em água; as fortes, como o hidróxido de sódio, dissociam-se totalmente. Produtos de limpeza costumam ser básicos (pH acima de 7), enquanto o suco gástrico é fortemente ácido (pH perto de 2). Ácido e base reagem formando sal e água: é a neutralização.', /base|hidroxido|sabao|detergente|neutraliz|suco gastrico/)
   ] }
 ];
@@ -358,11 +359,121 @@ const GERAL = {
   ],
   'Química': [
     V('chemistry laboratory glassware', 'Vidrarias de laboratório de química.', 'A Química está nos alimentos, nos combustíveis, nos remédios e nos produtos de limpeza. Leia a situação com atenção e relacione-a ao conceito pedido.'),
-    V('Water treatment plant', 'Estação de tratamento de água: coagulação, decantação, filtração e cloração.', 'No tratamento da água que chega às casas, a química está em cada etapa: substâncias que agrupam a sujeira, decantação, filtração, cloro para eliminar micróbios e ajuste do pH. Muitos conceitos de Química aparecem nesse processo.'),
+    V('File:ETA Amaro Lanari, Coronel Fabriciano MG.JPG', 'Estação de tratamento de água: coagulação, decantação, filtração e cloração.', 'No tratamento da água que chega às casas, a química está em cada etapa: substâncias que agrupam a sujeira, decantação, filtração, cloro para eliminar micróbios e ajuste do pH. Muitos conceitos de Química aparecem nesse processo.'),
     V('Fertilizer granules', 'Fertilizantes: a química garante nutrientes para as lavouras.', 'A agricultura brasileira depende da química: fertilizantes repõem nitrogênio, fósforo e potássio do solo, e o calcário corrige a acidez. Usar a dose certa evita desperdício e a contaminação de rios.'),
     V('Kitchen cooking', 'Cozinhar é fazer química: o calor transforma as substâncias dos alimentos.', 'Ao cozinhar, o calor acelera reações que mudam cor, sabor e textura dos alimentos; o fermento libera gás, o vinagre e o limão mudam o pH. Muitos conceitos de Química aparecem na cozinha.'),
     V('Pills tablets', 'Comprimidos: cada remédio é uma substância química com dose e reação controladas.', 'Os medicamentos são resultado da química: sua estrutura define como agem no corpo, sua estabilidade define o prazo de validade e sua reação com o organismo define a dose.')
   ]
+};
+
+/* legenda de cada imagem, descrevendo o que aparece nela (vale em todas as questões que a usam) */
+const LEGENDA = {
+ "Nurse giving vaccine": "Bebê sendo vacinado: a vacina estimula o corpo a produzir anticorpos e células de memória.",
+ "Vaccine syringe": "Seringas com vacina prontas para aplicação: a vacina contra o HPV é oferecida pelo SUS a adolescentes.",
+ "File:Child vaccine.jpg": "Criança sendo vacinada contra o sarampo.",
+ "File:Comirnaty (2021) D.jpg": "Vacinação contra a covid-19 em Olinda (PE) com vacina de mRNA.",
+ "File:Histology of thin skin.jpg": "Corte da pele ao microscópio: a epiderme, camada mais externa, é uma barreira física.",
+ "scraped knee": "Ferimento na pele da mão: quando a barreira é rompida, a defesa inata entra em ação.",
+ "clinical thermometer fever": "Termômetro clínico de vidro: a febre é uma defesa inespecífica do corpo.",
+ "Blood smear": "Lâminas com esfregaço de sangue corado, preparadas para observar células de defesa ao microscópio.",
+ "Laboratory micropipette": "Pipeta de laboratório: usada para transferir pequenas quantidades de líquido, como amostras de DNA.",
+ "Glucometer": "Ilustração de um glicosímetro, aparelho que mede a glicose no sangue.",
+ "Gold mining Amazon": "Garimpo de ouro às margens de um rio amazônico: o mercúrio usado no garimpo contamina rios e peixes.",
+ "mussels bed rocks": "Mexilhões no fundo de um rio: filtram grandes volumes de água e acumulam o que há nela.",
+ "eutrophication algal bloom lake": "Imagem de satélite de uma floração de algas em um lago: sinal de excesso de nutrientes (eutrofização).",
+ "pesticide spraying crop field": "Aplicação de agrotóxico em lavoura: parte do produto chega a rios e lagos.",
+ "HIV budding lymphocyte electron micrograph": "Micrografia eletrônica de um linfócito T infectado pelo HIV.",
+ "influenza virus electron micrograph": "Partículas do vírus da gripe (influenza) ao microscópio eletrônico, coloridas artificialmente.",
+ "Bacteriophage electron micrograph": "Bacteriófagos, vírus que infectam bactérias, ao microscópio eletrônico.",
+ "File:A course of green cefalexin pills.jpg": "Cápsulas de antibiótico: agem em estruturas de bactérias que os vírus não têm.",
+ "File:Golden Rice.jpg": "Grãos de arroz dourado (transgênico, rico em betacaroteno) ao lado de grãos de arroz comum.",
+ "File:Soybean.USDA.jpg": "Grãos de soja: no Brasil, alimentos com ingrediente transgênico trazem um \"T\" no rótulo.",
+ "File:Na estrada , On the road - Flickr - Jeff Belmonte.jpg": "Plantação de soja no Cerrado de Mato Grosso.",
+ "maize corn field Brazil": "Milharal em Extrema (MG).",
+ "File:Bertholletia excelsa fruit and seeds.jpg": "Fruto (ouriço) e sementes da castanheira-do-pará, árvore nativa da Amazônia.",
+ "File:Fruto do açaí.jpg": "Frutos de açaí colhidos por comunidades ribeirinhas do Amazonas.",
+ "Artisanal fishing Brazil": "Barcos de pesca artesanal em Saubara (BA): o defeso protege a reprodução dos peixes.",
+ "Itatiaia National Park": "Parque Nacional do Itatiaia (RJ/MG), o primeiro parque nacional do Brasil.",
+ "Atlantic Forest Brazil Serra do Mar": "Mata Atlântica na Serra do Mar, em São Sebastião (SP).",
+ "Red fox": "Raposa-vermelha: um predador que se alimenta de outros animais.",
+ "Rabbits": "Coelho: sem predadores, populações de coelhos crescem muito rápido.",
+ "Capybaras grazing": "Capivaras pastando no Pantanal: herbívoros aproveitam só cerca de 10% da energia das plantas.",
+ "Human brain model": "Modelo do encéfalo humano: neurônios e células do fígado têm o mesmo DNA, mas ativam genes diferentes.",
+ "Biston betularia": "Mariposa Biston betularia: na Inglaterra industrial, a forma escura dessa espécie passou a predominar.",
+ "Red tide": "Maré vermelha em um porto do Japão: proliferação de algas microscópicas.",
+ "Triatoma infestans": "Exemplar de barbeiro (Triatoma infestans), inseto que transmite o protozoário da doença de Chagas.",
+ "Pasteur swan neck flask": "Réplica do frasco de \"pescoço de cisne\" usado por Pasteur.",
+ "Petri dish bacteria": "Ilustração de uma placa de Petri com colônias de bactérias.",
+ "Coal power plant": "Pátio de carvão de uma usina termelétrica: a queima devolve à atmosfera carbono guardado há milhões de anos.",
+ "Fossil fish": "Fósseis de peixes e de uma lagosta de cerca de 95 milhões de anos.",
+ "File:Álcool em gel (49673619151).jpg": "Álcool em gel: o etanol a 70% desnatura proteínas de micro-organismos.",
+ "File:Oxy-fuel welding - flame1.jpg": "Chama de um maçarico de acetileno, que passa de 3.000 °C.",
+ "File:Vinegar infused with oregano.jpg": "Vinagre: solução de ácido acético (4% a 6%).",
+ "File:Wet-preserved embryological specimens 3.jpg": "Peças biológicas conservadas em formol (solução de metanal).",
+ "File:Ethyl-acetate-3D-balls.png": "Modelo da molécula de acetato de etila, solvente de colas, tintas e removedores.",
+ "File:Ripe bananas from the farm.jpg": "Bananas maduras: o eteno (etileno), hormônio vegetal, acelera o amadurecimento.",
+ "Ammonia production plant": "Maquete de uma fábrica de amônia, base da produção de fertilizantes.",
+ "Carbonated water": "Copo de água com gás: o CO₂ dissolvido escapa em bolhas quando a pressão diminui.",
+ "File:Catalytic converter 20230510.jpg": "Conversor catalítico de automóvel: metais como platina e paládio aceleram as reações dos gases.",
+ "File:Yellow lemon cut in half.jpg": "Limão cortado: o suco é ácido por causa do ácido cítrico.",
+ "File:Water Molecule 3D X.jpg": "Modelo da molécula de água: o oxigênio atrai os elétrons e torna a molécula polar.",
+ "File:Phenolphthalein in Flask.jpg": "Fenolftaleína em uma titulação: a solução fica rosa quando o meio se torna básico.",
+ "Dish soap": "Sabão em barra: sabões e detergentes têm caráter básico.",
+ "Soap bar": "Sabão artesanal em barra, produto de caráter básico.",
+ "File:Boiling water.jpg": "Água fervendo: em temperatura maior, as moléculas se movem mais e reagem mais depressa.",
+ "File:Scab.jpg": "Casca de ferida no joelho: a cicatrização depende da mitose das células da pele.",
+ "File:RDIC ceramic water filter pots.jpg": "Filtros de água de cerâmica: filtrar a água retém cistos de protozoários.",
+ "Laboratory experiment students": "Estudantes em um laboratório de ciências: registrar e repetir os experimentos faz parte do método científico.",
+ "Amazon deforestation fire": "Imagem de satélite de Rondônia: as áreas claras foram desmatadas.",
+ "Glass gem corn": "Espiga de milho com grãos de várias cores: cada cor resulta da combinação de genes.",
+ "DNA sculpture": "Escultura em Londres que representa a dupla hélice do DNA.",
+ "File:Subcutaneous injection with insulin needle.jpg": "Aplicação de insulina: desde 1982 a insulina humana é produzida por bactérias modificadas.",
+ "File:Ammonia smoke.JPG": "Fumaça branca de cloreto de amônio, formada pela reação de ácido clorídrico com amônia.",
+ "Blood sample tubes": "Cientista examinando uma amostra de sangue: o pH do sangue fica perto de 7,4.",
+ "Mountain climbers altitude": "Vilarejo a mais de 4.300 m de altitude no Nepal: lá o ar tem menos oxigênio.",
+ "File:Parque Eólico Arizona I, Rio do Fogo (RN).jpg": "Parque eólico em Rio do Fogo (RN).",
+ "File:Refinaria Petrobras - panoramio.jpg": "Refinaria da Petrobras: a destilação fracionada separa gasolina, diesel e outros derivados.",
+ "File:Salinas do Corregó - Grossos - panoramio.jpg": "Salinas em Grossos (RN): a água do mar evapora ao sol e o sal fica.",
+ "File:Sponge cake (bizcochuelo o bizcocho) ← eggs, sugar and wheat flour.jpg": "Bolo feito com ovos, açúcar e farinha em proporções certas, como em uma reação química.",
+ "File:Bales of PET bottles closeup.jpg": "Fardo de garrafas PET prensadas para reciclagem.",
+ "File:Glass perfume bottle MET DP108895.jpg": "Frasco de perfume de vidro da Roma Antiga: perfumes são misturas de substâncias orgânicas.",
+ "File:Hydrangea macrophylla - blue.jpg": "Hortênsias azuis: a cor das flores depende do pH do solo.",
+ "File:Kidney stones.jpg": "Cálculos renais: sais pouco solúveis que precipitam na urina.",
+ "File:ETA Amaro Lanari, Coronel Fabriciano MG.JPG": "Estação de tratamento de água em Coronel Fabriciano (MG).",
+ "File:Rubber tapping (76655).jpg": "Extração de látex da seringueira: a borracha natural é um polímero.",
+ "File:Geiger counter.jpg": "Contador Geiger: detecta e mede a radiação.",
+ "File:Rusty scraps of iron.jpg": "Metal enferrujado: ferimentos com objetos sujos podem transmitir o tétano; o soro antitetânico traz anticorpos prontos.",
+ "Fertilizer granules": "Grânulos de fertilizante (fosfato de amônio).",
+ "Kitchen cooking": "Preparo de alimentos em uma cozinha tradicional: o calor transforma as substâncias dos alimentos.",
+ "Microscope": "Microscópio óptico de 1914.",
+ "Pills tablets": "Comprimidos de vários medicamentos.",
+ "Ice pack injury": "Ilustração de bolsa de gelo aplicada sobre uma lesão na perna.",
+ "Human karyotype": "Cariótipo humano: os 23 pares de cromossomos; na meiose, cada gameta recebe um de cada par.",
+ "Endoscopy stomach": "Imagem de endoscopia do interior do estômago, que produz suco gástrico ácido.",
+ "Sodium hydroxide pellets": "Pastilhas de hidróxido de sódio (soda cáustica), uma base forte.",
+ "Brain MRI": "Imagem de ressonância magnética do encéfalo.",
+ "X-ray hand": "Uma das primeiras radiografias, feita por Röntgen em 1895: os ossos e o anel barram os raios X.",
+ "Galapagos finches": "Ilustração dos tentilhões de Darwin: bicos diferentes para alimentos diferentes.",
+ "Wastewater treatment plant": "Biodigestores de uma estação de tratamento de esgoto.",
+ "Plant growth experiment": "Rabanetes de um experimento na Estação Espacial Internacional: só as condições testadas mudam entre os grupos.",
+ "Silkworm cocoon": "Ilustração do casulo do bicho-da-seda: a seda é uma proteína.",
+ "Daniell cell": "Montagem da pilha de Daniell (zinco e cobre) ligada a um voltímetro.",
+ "protein structure ribbon": "Desenho da estrutura 3D de uma proteína: uma longa cadeia de aminoácidos dobrada.",
+ "nylon rope": "Síntese do náilon em laboratório: um polímero de condensação.",
+ "Acid rain damage": "Gárgula de pedra calcária desgastada pela chuva ácida.",
+ "Filtration": "Filtração em laboratório: o papel retém o sólido não dissolvido.",
+ "Space Shuttle main engine": "Teste do motor do ônibus espacial, que queimava hidrogênio e oxigênio formando água.",
+ "barium swallow X-ray": "Radiografia com contraste de sulfato de bário.",
+ "bread dough rising": "Massa de pão descansando antes de assar: as enzimas do fermento aceleram as reações.",
+ "ethanol fuel pump Brazil": "Bombas de etanol e gasolina em um posto brasileiro.",
+ "butter block": "Manteiga: quando rançosa, libera ácido butanoico, de cheiro forte.",
+ "Plastic bags": "Sacolas plásticas presas em um arbusto: o polietileno leva séculos para se decompor.",
+ "paint stripper": "Aplicação de removedor de tinta, que pode conter solventes clorados como o diclorometano.",
+ "Radiation therapy": "Sala de radioterapia: o feixe de radiação é direcionado ao tumor.",
+ "Pineapple": "Abacaxi no pé: seu aroma vem de ésteres naturais.",
+ "chemistry laboratory glassware": "Provetas graduadas, vidrarias de laboratório.",
+ "Brazil vaccination campaign Ze Gotinha": "Zé Gotinha, símbolo das campanhas de vacinação do SUS.",
+ "snake venom extraction": "Extração de veneno de serpente, primeiro passo para produzir o soro antiofídico."
 };
 
 const hash = e => { let h = 0; for (let i = 0; i < e.length; i++) h = (h * 31 + e.charCodeAt(i)) >>> 0; return h; };
@@ -395,7 +506,7 @@ function candidatos(enunciado, componente) {
 function contextosAtividade(questoes, componente) {
   const usT = new Set(), usI = new Set(), cands = questoes.map(q => candidatos(q.enunciado, componente)), res = [];
   const livre = c => !usT.has(c.t) && !usI.has(c.img);
-  const usa = (k, c) => { res[k] = { texto: c.t, img: c.img, legenda: c.leg, casou: cands[k].casou }; if (c.t) usT.add(c.t); if (c.img) usI.add(c.img); };
+  const usa = (k, c) => { res[k] = { texto: c.t, img: c.img, legenda: LEGENDA[c.img] || c.leg, casou: cands[k].casou }; if (c.t) usT.add(c.t); if (c.img) usI.add(c.img); };
   // 1) primeiro os encaixes mais fortes (situação citada no enunciado, palavras-chave), de qualquer questão
   const pares = [];
   cands.forEach((c, k) => c.lista.forEach((x, j) => { if ((x.n || 0) > 0) pares.push({ k, j, x }); }));
