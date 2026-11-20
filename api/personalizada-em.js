@@ -6,6 +6,7 @@
    Turma e nome vêm do login (se houver) ou da escolha do aluno na lista (GET ?lista=1).
    Variáveis da Vercel: EM_APPS_SCRIPT_URL (mesma do simulado), SUPABASE_URL, SUPABASE_SERVICE_KEY. */
 const NOMES = require('./_personalizada-em.js');
+const { contexto, BUSCAS } = require('./_contexto-personalizada.js');
 const { alunoDaSessao } = require('./_aluno-sessao.js');
 
 const TEMPO_MS = 25000;
@@ -48,6 +49,31 @@ async function alunoLogado(req) {
   return nome ? { turma: turma, nome: nome } : null;
 }
 
+/* Imagem do Wikimedia Commons para uma busca do catálogo (texto-base das questões).
+   Escolhe o primeiro resultado em JPG/PNG/SVG de tamanho razoável e devolve a miniatura, o autor e a licença. */
+const IMG_CACHE = new Map();
+const semTags = s => String(s || '').replace(/<[^>]*>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+async function imagemCommons(busca) {
+  if (IMG_CACHE.has(busca)) return IMG_CACHE.get(busca);
+  const u = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams({
+    action: 'query', format: 'json', generator: 'search', gsrsearch: busca, gsrnamespace: '6', gsrlimit: '10',
+    prop: 'imageinfo', iiprop: 'url|mime|size|extmetadata', iiurlwidth: '720', iiextmetadatafilter: 'Artist|LicenseShortName'
+  });
+  const r = await fetch(u, { headers: { 'User-Agent': 'PainelProvaPaulista/1.0 (https://painel-prova-paulista-2026.vercel.app; atividade escolar)' } });
+  if (!r.ok) throw new Error('Commons ' + r.status);
+  const j = await r.json();
+  const pags = Object.values((j.query && j.query.pages) || {}).sort((a, b) => a.index - b.index);
+  const boa = pags.find(p => { const i = p.imageinfo && p.imageinfo[0]; return i && /image\/(jpeg|png|svg\+xml)/.test(i.mime) && i.width >= 300 && i.height >= 180 && i.thumburl; });
+  let res = null;
+  if (boa) {
+    const i = boa.imageinfo[0], m = i.extmetadata || {};
+    res = { src: i.thumburl, pagina: i.descriptionurl, titulo: boa.title.replace(/^File:/, '').replace(/\.[a-z]+$/i, ''),
+      autor: semTags(m.Artist && m.Artist.value).slice(0, 120), licenca: semTags(m.LicenseShortName && m.LicenseShortName.value) };
+  }
+  IMG_CACHE.set(busca, res);
+  return res;
+}
+
 async function chamarScript(metodo, query, corpo) {
   const url = process.env.EM_APPS_SCRIPT_URL || '';
   if (!url) return { ok: false, status: 500, erro: 'Planilha não configurada na Vercel (EM_APPS_SCRIPT_URL).' };
@@ -88,6 +114,22 @@ module.exports = async function personalizadaEM(req, res) {
     return res.status(200).json({ ok: true, turmas: turmas, nomes: NOMES });
   }
 
+  /* imagem do texto-base (só buscas do catálogo); a CDN guarda a resposta por 30 dias */
+  if (req.method === 'GET' && typeof q.img === 'string') {
+    if (!BUSCAS.includes(q.img)) return res.status(400).json({ ok: false, erro: 'Busca desconhecida.' });
+    try {
+      const im = await imagemCommons(q.img);
+      res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=2592000, stale-while-revalidate=604800');
+      return res.status(200).json({ ok: true, imagem: im });
+    } catch (e) { return res.status(502).json({ ok: false, erro: 'Imagem indisponível.' }); }
+  }
+  /* temporário: conferência das imagens escolhidas para cada busca do catálogo */
+  if (req.method === 'GET' && q.imgs) {
+    const fatia = BUSCAS.slice(+q.de || 0, (+q.de || 0) + 40), out = {}; let i = 0;
+    await Promise.all(Array.from({ length: 8 }, async () => { while (i < fatia.length) { const b = fatia[i++]; try { const im = await imagemCommons(b); out[b] = im ? im.titulo : null; } catch (e) { out[b] = 'ERRO'; } } }));
+    return res.status(200).json({ ok: true, total: BUSCAS.length, imagens: out });
+  }
+
   /* temporário: questões distintas de uma turma (sem nomes nem gabarito), para preparar textos-base e imagens */
   if (req.method === 'GET' && q.banco && NOMES[q.turma]) {
     const nomes = NOMES[q.turma], vistos = new Map(); let i = 0;
@@ -95,10 +137,11 @@ module.exports = async function personalizadaEM(req, res) {
       while (i < nomes.length) {
         const nome = nomes[i++], r = await chamarScript('GET', { api: 'personalizada', turma: q.turma, nome: nome });
         if (!r.ok) continue;
-        (r.dados.questoes || []).forEach(x => { const k = x.enunciado; const v = vistos.get(k) || { componente: r.dados.componente, enunciado: x.enunciado, alts: x.alts, n: 0 }; v.n++; vistos.set(k, v); });
+        (r.dados.questoes || []).forEach(x => { const k = x.enunciado; const v = vistos.get(k) || { componente: r.dados.componente, enunciado: x.enunciado, n: 0 }; v.n++; vistos.set(k, v); });
       }
     }));
-    return res.status(200).json({ ok: true, questoes: [...vistos.values()] });
+    const lista = [...vistos.values()].map(v => ({ c: v.componente, e: v.enunciado, x: contexto(v.enunciado, v.componente) }));
+    return res.status(200).json({ ok: true, total: lista.length, semTema: lista.filter(v => !v.x.casou).map(v => v.c + ' | ' + v.e), semImagemPropria: lista.filter(v => !v.x.legenda).map(v => v.c + ' | ' + v.e.slice(0, 90)) });
   }
 
   if (req.method === 'GET' || req.method === 'POST') {
@@ -116,7 +159,8 @@ module.exports = async function personalizadaEM(req, res) {
     if (req.method === 'GET') {
       const r = await chamarScript('GET', { api: 'personalizada', turma: quem.turma, nome: quem.nome });
       if (!r.ok) return res.status(r.status).json({ ok: false, erro: r.erro });
-      return res.status(200).json({ ok: true, turma: quem.turma, nome: r.dados.nome, componente: r.dados.componente, questoes: r.dados.questoes });
+      const questoes = (r.dados.questoes || []).map(x => Object.assign({}, x, { ctx: contexto(x.enunciado, r.dados.componente) }));
+      return res.status(200).json({ ok: true, turma: quem.turma, nome: r.dados.nome, componente: r.dados.componente, questoes: questoes });
     }
 
     const b = req.body && typeof req.body === 'object' ? req.body : {};

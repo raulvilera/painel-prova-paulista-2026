@@ -33,6 +33,16 @@
   .hidden { display:none; }
   label.campo { display:block; font-weight:600; margin: 8px 0 4px; }
   select { width:100%; font: inherit; padding: 9px 10px; border-radius: 8px; border:1px solid var(--borda); background: var(--card); color: var(--txt); }
+  .base { background: var(--bg); border:1px solid var(--borda); border-left: 4px solid var(--acc); border-radius: 10px; padding: 12px; margin: 0 0 12px; }
+  .base .rot { font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--acc); margin: 0 0 8px; }
+  .base figure { margin: 0 0 10px; }
+  .base figure img { display:block; width:100%; max-height: 300px; object-fit: contain; background: #fff; border-radius: 8px; }
+  .base figure.carregando img { min-height: 160px; background: linear-gradient(90deg, var(--card), var(--borda), var(--card)); background-size: 200% 100%; animation: brilho 1.4s infinite; }
+  @keyframes brilho { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+  .base figcaption { font-size: .85rem; color: var(--muted); margin-top: 6px; }
+  .base figcaption small { display:block; font-size: .72rem; margin-top: 2px; }
+  .base figcaption a { color: inherit; }
+  .base .txt { margin: 0; font-size: .95rem; }
 </style>
 </head>
 <body>
@@ -126,7 +136,9 @@
       var box = document.createElement('div'); box.className = 'q';
       var t = document.createElement('h3'); t.textContent = 'Questão ' + (i + 1);
       var e = document.createElement('p'); e.className = 'enun'; e.textContent = q.enunciado;
-      box.appendChild(t); box.appendChild(e);
+      box.appendChild(t);
+      if (q.ctx) box.appendChild(textoBase(q.ctx));
+      box.appendChild(e);
       q.alts.forEach(function (txt, k) {
         var lab = document.createElement('label'); lab.className = 'alt';
         var inp = document.createElement('input'); inp.type = 'radio'; inp.name = 'q' + i; inp.value = String(k);
@@ -139,6 +151,30 @@
     enviarEl.disabled = false;
     resEl.classList.add('hidden');
     atividadeEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Texto-base: contexto da situação + imagem buscada no Wikimedia Commons (pela API do painel, com cache)
+  function textoBase(c) {
+    var d = document.createElement('div'); d.className = 'base';
+    var r = document.createElement('p'); r.className = 'rot'; r.textContent = 'Texto-base'; d.appendChild(r);
+    var fig = document.createElement('figure'); fig.className = 'carregando';
+    var img = document.createElement('img'); img.alt = c.legenda || 'Imagem relacionada à questão'; img.loading = 'lazy'; img.decoding = 'async';
+    var cap = document.createElement('figcaption');
+    fig.appendChild(img); fig.appendChild(cap); d.appendChild(fig);
+    var tx = document.createElement('p'); tx.className = 'txt'; tx.textContent = c.texto; d.appendChild(tx);
+    fetch(API + '?img=' + encodeURIComponent(c.img)).then(function (r) { return r.json(); }).then(function (j) {
+      var im = j && j.ok && j.imagem;
+      if (!im) { fig.remove(); return; }
+      img.onload = function () { fig.classList.remove('carregando'); };
+      img.onerror = function () { fig.remove(); };
+      img.src = im.src;
+      cap.textContent = c.legenda || im.titulo;
+      var cr = document.createElement('small'), a = document.createElement('a');
+      a.href = im.pagina; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Wikimedia Commons';
+      cr.appendChild(document.createTextNode('Imagem: ' + (im.autor ? im.autor + ' · ' : '') + (im.licenca ? im.licenca + ' · ' : '')));
+      cr.appendChild(a); cap.appendChild(cr);
+    }).catch(function () { fig.remove(); });
+    return d;
   }
 
   // 3) Envia as respostas (uma vez só)
