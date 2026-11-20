@@ -6,7 +6,7 @@
    Turma e nome vêm do login (se houver) ou da escolha do aluno na lista (GET ?lista=1).
    Variáveis da Vercel: EM_APPS_SCRIPT_URL (mesma do simulado), SUPABASE_URL, SUPABASE_SERVICE_KEY. */
 const NOMES = require('./_personalizada-em.js');
-const { contexto, BUSCAS } = require('./_contexto-personalizada.js');
+const { contextosAtividade, BUSCAS } = require('./_contexto-personalizada.js');
 const { alunoDaSessao } = require('./_aluno-sessao.js');
 
 const TEMPO_MS = 25000;
@@ -53,6 +53,18 @@ async function alunoLogado(req) {
    Escolhe o primeiro resultado em JPG/PNG/SVG de tamanho razoável e devolve a miniatura, o autor e a licença. */
 const IMG_CACHE = new Map();
 const semTags = s => String(s || '').replace(/<[^>]*>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+/* Só imagens sem texto em outra língua: descarta arquivos marcados com idioma que não seja o português
+   e esquemas/gráficos/mapas (que costumam ter rótulos), a menos que estejam em português. */
+const IDIOMA = /[-_ (.](en|es|fr|de|it|tr|ku|ro|pl|ru|ja|zh|ar|eu|ca|nl|sv|uk|he|fa|cs|hu|el|ko|vi|id|fi|da|no|nb)([-_ ).]|$)/i;
+const ESQUEMA = /diagram|schema|scheme|chart|graph|\bmap\b|infographic|poster|label|logo|flowchart|\bcycle\b|stages|\bstructure\b|table|catalog|text|sign|cover|page|book|\bad\b|advert|newspaper|leaflet|slide/i;
+const PT = /[-_ (]pt([-_ ).]|$)|pt-br|portugu|\b(esquema|diagrama|ciclo|estrutura)\b/i;
+function semTextoEstrangeiro(titulo) {
+  const t = String(titulo || '').replace(/^File:/, '');
+  if (PT.test(t)) return true;
+  return !IDIOMA.test(t) && !ESQUEMA.test(t);
+}
+const LICENCA = { 'Public domain': 'Domínio público', 'No restrictions': 'Sem restrições', 'Attribution': 'Atribuição' };
+
 async function imagemCommons(busca) {
   if (IMG_CACHE.has(busca)) return IMG_CACHE.get(busca);
   const u = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams({
@@ -63,12 +75,12 @@ async function imagemCommons(busca) {
   if (!r.ok) throw new Error('Commons ' + r.status);
   const j = await r.json();
   const pags = Object.values((j.query && j.query.pages) || {}).sort((a, b) => a.index - b.index);
-  const boa = pags.find(p => { const i = p.imageinfo && p.imageinfo[0]; return i && /image\/(jpeg|png|svg\+xml)/.test(i.mime) && i.width >= 300 && i.height >= 180 && i.thumburl; });
+  const boa = pags.find(p => { const i = p.imageinfo && p.imageinfo[0]; return i && /image\/(jpeg|png|svg\+xml)/.test(i.mime) && i.width >= 300 && i.height >= 180 && i.thumburl && semTextoEstrangeiro(p.title); });
   let res = null;
   if (boa) {
     const i = boa.imageinfo[0], m = i.extmetadata || {};
     res = { src: i.thumburl, pagina: i.descriptionurl, titulo: boa.title.replace(/^File:/, '').replace(/\.[a-z]+$/i, ''),
-      autor: semTags(m.Artist && m.Artist.value).slice(0, 120), licenca: semTags(m.LicenseShortName && m.LicenseShortName.value) };
+      autor: semTags(m.Artist && m.Artist.value).slice(0, 120), licenca: (l => LICENCA[l] || l)(semTags(m.LicenseShortName && m.LicenseShortName.value)) };
   }
   IMG_CACHE.set(busca, res);
   return res;
@@ -124,6 +136,27 @@ module.exports = async function personalizadaEM(req, res) {
     } catch (e) { return res.status(502).json({ ok: false, erro: 'Imagem indisponível.' }); }
   }
 
+  /* temporário: conferência (imagens escolhidas; repetições por aluno) */
+  if (req.method === 'GET' && q.imgs) {
+    const fatia = BUSCAS.slice(+q.de || 0, (+q.de || 0) + 45), out = {}; let i = 0;
+    await Promise.all(Array.from({ length: 8 }, async () => { while (i < fatia.length) { const b = fatia[i++]; try { const im = await imagemCommons(b); out[b] = im ? im.titulo : null; } catch (e) { out[b] = 'ERRO'; } } }));
+    return res.status(200).json({ ok: true, total: BUSCAS.length, imagens: out });
+  }
+  if (req.method === 'GET' && q.conferir && NOMES[q.turma]) {
+    const nomes = NOMES[q.turma], rel = []; let i = 0;
+    await Promise.all(Array.from({ length: 10 }, async () => {
+      while (i < nomes.length) {
+        const k = i++, r = await chamarScript('GET', { api: 'personalizada', turma: q.turma, nome: nomes[k] });
+        if (!r.ok) { rel.push({ a: k, erro: 1 }); continue; }
+        const c = contextosAtividade(r.dados.questoes || [], r.dados.componente);
+        const t = c.map(x => x.texto), im = c.map(x => x.img);
+        rel.push({ a: k, n: c.length, repT: t.length - new Set(t).size, repI: im.length - new Set(im).size, semT: t.filter(x => !x).length, semI: im.filter(x => !x).length, geral: c.filter(x => !x.casou).length });
+      }
+    }));
+    const soma = f => rel.reduce((a, x) => a + (x[f] || 0), 0);
+    return res.status(200).json({ ok: true, alunos: rel.length, erros: soma('erro'), repeticoesTexto: soma('repT'), repeticoesImagem: soma('repI'), semTexto: soma('semT'), semImagem: soma('semI'), semTema: soma('geral') });
+  }
+
   if (req.method === 'GET' || req.method === 'POST') {
     let quem = null;
     if (/^Bearer .+/.test(req.headers.authorization || '')) {   // com login (RA + dígito + senha): continua valendo
@@ -139,7 +172,8 @@ module.exports = async function personalizadaEM(req, res) {
     if (req.method === 'GET') {
       const r = await chamarScript('GET', { api: 'personalizada', turma: quem.turma, nome: quem.nome });
       if (!r.ok) return res.status(r.status).json({ ok: false, erro: r.erro });
-      const questoes = (r.dados.questoes || []).map(x => Object.assign({}, x, { ctx: contexto(x.enunciado, r.dados.componente) }));
+      const qs = r.dados.questoes || [], ctxs = contextosAtividade(qs, r.dados.componente);
+      const questoes = qs.map((x, i) => Object.assign({}, x, { ctx: ctxs[i] }));
       return res.status(200).json({ ok: true, turma: quem.turma, nome: r.dados.nome, componente: r.dados.componente, questoes: questoes });
     }
 
