@@ -23,7 +23,7 @@ const ESPEC = [
   { re: /corte na mao|ralar o joelho|ferimento|coagula/, img: 'scraped knee', leg: 'A pele íntegra e a coagulação são as primeiras barreiras contra micro-organismos.' },
   { re: /pele e as mucosas|barreiras fisicas|a pele e as mucosas/, img: 'Layers of epidermis no labels', leg: 'Camadas da pele: uma barreira física da imunidade inata.' },
   { re: /linfocitos? b|anticorpos especificos/, img: 'Blood smear', leg: 'Esfregaço de sangue ao microscópio: os glóbulos brancos incluem os linfócitos B, que produzem anticorpos.' },
-  { re: /mrna|covid/, img: 'Syringe needle', leg: 'Frascos de vacina: as vacinas de mRNA levam a "receita" de uma proteína do vírus, não o vírus.' },
+  { re: /vacinas? de mrna|covid/, img: 'Syringe needle', leg: 'Frascos de vacina: as vacinas de mRNA levam a "receita" de uma proteína do vírus, não o vírus.' },
   { re: /vacina/, img: 'Brazil vaccination campaign Ze Gotinha', leg: 'Campanha de vacinação do SUS: o Programa Nacional de Imunizações existe desde 1973.' },
   { re: /celulas-tronco|celula-tronco/, img: 'Human embryonic stem cells', leg: 'Colônia de células-tronco vista ao microscópio.',
     t: 'Células-tronco podem se dividir muitas vezes e se transformar em diferentes tipos de células. Na clonagem terapêutica, elas são cultivadas para formar tecidos (pele para queimados, músculo cardíaco para testes de remédios), sem que nenhum embrião seja implantado em um útero. No Brasil, a Lei de Biossegurança (2005) regula essas pesquisas.' },
@@ -246,10 +246,11 @@ const TEMAS = [
   ] },
   { re: /alelo|heterozigot|homozigot|genotip|fenotip|cruzamento|dominante|recessiv|diibrid/, v: [
     V('Pisum sativum flowers', 'Flores de ervilha: foi com essa planta que Mendel descobriu as leis da herança.', 'Gregor Mendel cruzou ervilhas por oito anos e publicou em 1865 que cada característica depende de um par de fatores (hoje, alelos), um de cada genitor. Do cruzamento de dois heterozigotos (Aa × Aa) espera-se 1/4 AA, 1/2 Aa e 1/4 aa, ou seja, 3 dominantes para 1 recessivo.'),
+    V('Indian corn', 'Espiga de milho com grãos de cores diferentes: resultado de vários genes combinados.', 'A segunda lei de Mendel diz que genes em cromossomos diferentes se separam de forma independente. No cruzamento AaBb × AaBb, cada gene dá 1/4 de chance para o recessivo, e as chances se multiplicam: aabb aparece em 1/4 × 1/4 = 1/16 dos descendentes, e a proporção dos fenótipos é 9:3:3:1.', /diibrid|aabb|bb|9 ?: ?3|dois genes|segunda lei/),
     V('Human eye', 'Íris humana: a cor dos olhos é um exemplo usado em exercícios de herança.', 'Em exercícios de genética, usa-se o modelo simplificado em que um alelo dominante (A) se manifesta mesmo em dose única, e o recessivo (a) só aparece em homozigose (aa). As probabilidades de eventos independentes se multiplicam: a chance de dois filhos aa seguidos é 1/4 × 1/4.')
   ] },
   { re: /droga|sistema nervoso|neuro|doses cada vez maiores|substancia psico|ansiedade/, v: [
-    V('Neurons micrograph', 'Neurônios: as drogas agem nas sinapses, os pontos de comunicação entre eles.', 'Os neurônios se comunicam nas sinapses por meio de neurotransmissores, como a dopamina e a serotonina. Drogas psicoativas aumentam, imitam ou bloqueiam esses sinais; com o uso repetido, os receptores se ajustam (neuroadaptação), surge a tolerância e são necessárias doses cada vez maiores.'),
+    V('Neurons micrograph', 'Neurônios: as drogas agem nas sinapses, os pontos de comunicação entre eles.', 'Os neurônios se comunicam nas sinapses por meio de neurotransmissores, como a dopamina e a serotonina. Drogas psicoativas aumentam, imitam ou bloqueiam esses sinais; com o uso repetido, os receptores se ajustam (neuroadaptação), surge a tolerância e são necessárias doses cada vez maiores.', /toleranc|doses|neuroadapta|receptor|sinapse|uso continuo|cada vez maiores/),
     V('Brain MRI', 'Ressonância magnética do encéfalo.', 'Medicamentos que agem no sistema nervoso, como ansiolíticos, precisam de receita controlada porque podem causar tolerância e dependência. A dependência envolve mudanças no circuito de recompensa do cérebro e é tratada pelo SUS nos Centros de Atenção Psicossocial (CAPS).')
   ] },
   { re: /glicose|glicemia|insulina|diabetes/, v: [
