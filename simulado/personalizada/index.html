@@ -29,6 +29,7 @@
   .msg { padding: 12px; border-radius: 8px; margin-top: 12px; }
   .msg.erro { background: var(--erro); }
   .msg.ok { background: var(--ok); }
+  .msg:not(.erro):not(.ok) { border: 1px solid var(--borda); }
   .res { font-size: 1.1rem; font-weight: 700; }
   .hidden { display:none; }
   label.campo { display:block; font-weight:600; margin: 8px 0 4px; }
@@ -108,20 +109,25 @@
     nomes.forEach(function (n) { selNome.appendChild(opcao(n, n)); });
     selNome.disabled = false; abrirEl.disabled = true;
   });
-  selNome.addEventListener('change', function () { abrirEl.disabled = !selNome.value; atividadeEl.classList.add('hidden'); atual = null; });
+  // ao escolher o nome, a atividade inteira já carrega (questões, textos-base e imagens)
+  selNome.addEventListener('change', function () { atividadeEl.classList.add('hidden'); atual = null; abrirEl.disabled = !selNome.value; if (selNome.value) abrir(); });
   abrirEl.addEventListener('click', abrir);
+  abrirEl.style.display = 'none';
 
   // 2) Abre a atividade do aluno escolhido
   function abrir() {
     if (!selTurma.value || !selNome.value) return;
     esconderAviso(); resEl.classList.add('hidden');
     abrirEl.disabled = true; abrirEl.textContent = 'Abrindo…';
+    var pedido = selTurma.value + '|' + selNome.value; abrir.ultimo = pedido;
+    mostrarCarregando('Carregando a sua atividade…');
     pedir(API + '?' + new URLSearchParams({ turma: selTurma.value, nome: selNome.value })).then(function (r) {
+      if (abrir.ultimo !== pedido) return;   // o aluno trocou de nome no meio do carregamento
       abrirEl.disabled = false; abrirEl.textContent = 'Abrir minha atividade';
-      if (!r.dados.ok) { mostrarAviso(r.dados.erro || 'Não foi possível abrir a atividade.'); return; }
+      if (!r.dados.ok) { esconderCarregando(); abrirEl.style.display = ''; mostrarAviso(r.dados.erro || 'Não foi possível abrir a atividade.'); return; }
       atual = { turma: r.dados.turma, nome: r.dados.nome, questoes: r.dados.questoes };
       montar(r.dados);
-    }).catch(function () { abrirEl.disabled = false; abrirEl.textContent = 'Abrir minha atividade'; mostrarAviso('Falha de conexão. Tente de novo.'); });
+    }).catch(function () { esconderCarregando(); abrirEl.disabled = false; abrirEl.textContent = 'Tentar de novo'; abrirEl.style.display = ''; mostrarAviso('Falha de conexão. Tente de novo.'); });
   }
 
   function montar(d) {
@@ -132,12 +138,13 @@
     cabecEl.appendChild(h); cabecEl.appendChild(p);
 
     formEl.innerHTML = '';
+    var imagens = [];
     d.questoes.forEach(function (q, i) {
       var box = document.createElement('div'); box.className = 'q';
       var t = document.createElement('h3'); t.textContent = 'Questão ' + (i + 1);
       var e = document.createElement('p'); e.className = 'enun'; e.textContent = q.enunciado;
       box.appendChild(t);
-      if (q.ctx && q.ctx.texto) box.appendChild(textoBase(q.ctx));
+      if (q.ctx && q.ctx.texto) { var tb = textoBase(q.ctx); box.appendChild(tb.el); imagens.push(tb.pronto); }
       box.appendChild(e);
       q.alts.forEach(function (txt, k) {
         var lab = document.createElement('label'); lab.className = 'alt';
@@ -147,10 +154,19 @@
       });
       formEl.appendChild(box);
     });
-    atividadeEl.classList.remove('hidden');
-    enviarEl.disabled = false;
-    resEl.classList.add('hidden');
-    atividadeEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // mostra a atividade quando todas as imagens chegarem (ou depois de 12 s, para não travar em conexão lenta)
+    var total = imagens.length, feitas = 0;
+    imagens.forEach(function (p) { p.then(function () { feitas++; if (total) mostrarCarregando('Carregando a sua atividade… imagens ' + feitas + ' de ' + total); }); });
+    var mostrou = false, pedidoAtual = abrir.ultimo;
+    function mostrar() {
+      if (mostrou || abrir.ultimo !== pedidoAtual) return; mostrou = true;
+      esconderCarregando();
+      atividadeEl.classList.remove('hidden');
+      enviarEl.disabled = false;
+      resEl.classList.add('hidden');
+      atividadeEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    Promise.all(imagens).then(mostrar); setTimeout(mostrar, 12000);
   }
 
   // Texto-base: contexto da situação + imagem buscada no Wikimedia Commons (pela API do painel, com cache)
@@ -158,7 +174,8 @@
     var d = document.createElement('div'); d.className = 'base';
     var r = document.createElement('p'); r.className = 'rot'; r.textContent = 'Texto-base'; d.appendChild(r);
     var fig = document.createElement('figure'); fig.className = 'carregando';
-    var img = document.createElement('img'); img.alt = c.legenda || 'Imagem relacionada à questão'; img.loading = 'lazy'; img.decoding = 'async';
+    var img = document.createElement('img'); img.alt = c.legenda || 'Imagem relacionada à questão'; img.loading = 'eager'; img.decoding = 'async';
+    var fim, pronto = new Promise(function (ok) { fim = ok; });
     var cap = document.createElement('figcaption');
     fig.appendChild(img); fig.appendChild(cap); d.appendChild(fig);
     var tx = document.createElement('p'); tx.className = 'txt';
@@ -166,18 +183,24 @@
     d.appendChild(tx);
     fetch(API + '?v=3&img=' + encodeURIComponent(c.img)).then(function (r) { return r.json(); }).then(function (j) {
       var im = j && j.ok && j.imagem;
-      if (!im) { fig.remove(); return; }
-      img.onload = function () { fig.classList.remove('carregando'); };
-      img.onerror = function () { fig.remove(); };
+      if (!im) { fig.remove(); fim(); return; }
+      img.onload = function () { fig.classList.remove('carregando'); fim(); };
+      img.onerror = function () { fig.remove(); fim(); };
       img.src = im.src;
       cap.textContent = c.legenda || '';
       var cr = document.createElement('small'), a = document.createElement('a');
       a.href = im.pagina; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Wikimedia Commons';
       cr.appendChild(document.createTextNode('Imagem: ' + (im.autor ? im.autor + ' · ' : '') + (im.licenca ? im.licenca + ' · ' : '')));
       cr.appendChild(a); cap.appendChild(cr);
-    }).catch(function () { fig.remove(); });
-    return d;
+    }).catch(function () { fig.remove(); fim(); });
+    return { el: d, pronto: pronto };
   }
+
+  // aviso de carregamento (usa a mesma caixa de mensagens da página)
+  var carregEl = document.createElement('div'); carregEl.className = 'msg hidden'; carregEl.setAttribute('role', 'status');
+  abrirEl.parentNode.insertBefore(carregEl, abrirEl.nextSibling);
+  function mostrarCarregando(t) { carregEl.textContent = t; carregEl.classList.remove('hidden'); }
+  function esconderCarregando() { carregEl.classList.add('hidden'); }
 
   // 3) Envia as respostas (uma vez só)
   enviarEl.addEventListener('click', function () {
