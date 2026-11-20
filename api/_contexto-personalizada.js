@@ -380,6 +380,8 @@ function candidatos(enunciado, componente) {
   }
   varTema.forEach(v => lista.push(v));
   ger.forEach(v => lista.push(v));
+  // último recurso: contextos de outros temas do mesmo componente (nunca repetir texto ou imagem)
+  gira(TEMAS.filter(x => !!x.q === qui && !temas.includes(x)).flatMap(t => t.v), h).forEach(v => lista.push(v));
   return { lista, casou: !!(esp || temas.length) };
 }
 

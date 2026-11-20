@@ -136,27 +136,6 @@ module.exports = async function personalizadaEM(req, res) {
     } catch (e) { return res.status(502).json({ ok: false, erro: 'Imagem indisponível.' }); }
   }
 
-  /* temporário: conferência (imagens escolhidas; repetições por aluno) */
-  if (req.method === 'GET' && q.imgs) {
-    const fatia = BUSCAS.slice(+q.de || 0, (+q.de || 0) + 45), out = {}; let i = 0;
-    await Promise.all(Array.from({ length: 8 }, async () => { while (i < fatia.length) { const b = fatia[i++]; try { const im = await imagemCommons(b); out[b] = im ? im.titulo : null; } catch (e) { out[b] = 'ERRO'; } } }));
-    return res.status(200).json({ ok: true, total: BUSCAS.length, imagens: out });
-  }
-  if (req.method === 'GET' && q.conferir && NOMES[q.turma]) {
-    const nomes = NOMES[q.turma], rel = []; let i = 0;
-    await Promise.all(Array.from({ length: 10 }, async () => {
-      while (i < nomes.length) {
-        const k = i++, r = await chamarScript('GET', { api: 'personalizada', turma: q.turma, nome: nomes[k] });
-        if (!r.ok) { rel.push({ a: k, erro: 1 }); continue; }
-        const c = contextosAtividade(r.dados.questoes || [], r.dados.componente);
-        const t = c.map(x => x.texto), im = c.map(x => x.img);
-        rel.push({ a: k, n: c.length, repT: t.length - new Set(t).size, repI: im.length - new Set(im).size, semT: t.filter(x => !x).length, semI: im.filter(x => !x).length, geral: c.filter(x => !x.casou).length });
-      }
-    }));
-    const soma = f => rel.reduce((a, x) => a + (x[f] || 0), 0);
-    return res.status(200).json({ ok: true, alunos: rel.length, erros: soma('erro'), repeticoesTexto: soma('repT'), repeticoesImagem: soma('repI'), semTexto: soma('semT'), semImagem: soma('semI'), semTema: soma('geral') });
-  }
-
   if (req.method === 'GET' || req.method === 'POST') {
     let quem = null;
     if (/^Bearer .+/.test(req.headers.authorization || '')) {   // com login (RA + dígito + senha): continua valendo
