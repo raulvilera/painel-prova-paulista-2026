@@ -10,7 +10,7 @@ const ESPEC = [
   // ---------- Biologia ----------
   { re: /dolly/, img: 'Dolly the sheep National Museum of Scotland', leg: 'Dolly, a ovelha clonada em 1996, exposta no Museu Nacional da Escócia.',
     t: 'Em 1996, no Instituto Roslin (Escócia), nasceu Dolly: o núcleo de uma célula da glândula mamária de uma ovelha adulta foi transferido para um óvulo sem núcleo, e o embrião foi implantado em uma "mãe de aluguel". Foi a primeira vez que um mamífero foi clonado a partir de uma célula adulta, o que abriu um grande debate científico e ético.' },
-  { re: /cachorro|pet shop|animais de estimacao/, img: 'Snuppy', leg: 'Cães clonados: a clonagem reprodutiva gera um animal inteiro, com o mesmo DNA nuclear do doador.' },
+  { re: /cachorro|pet shop|animais de estimacao/, img: 'Somatic cell nuclear transfer', leg: 'Cães clonados: a clonagem reprodutiva gera um animal inteiro, com o mesmo DNA nuclear do doador.' },
   { re: /cobra|antiofidico|veneno/, img: 'snake venom extraction', leg: 'Extração de veneno de serpente no Instituto Butantan, etapa da produção do soro antiofídico.',
     t: 'O Instituto Butantan, em São Paulo, produz soros desde 1901. Pequenas doses de veneno são injetadas em cavalos, que produzem anticorpos; esses anticorpos são purificados do sangue do animal e viram o soro aplicado em quem foi picado. O soro age na hora, mas a proteção dura pouco, porque o organismo não produziu os próprios anticorpos.' },
   { re: /antitetanico|tetano/, img: 'tetanus antitoxin vial', leg: 'Frasco de soro antitetânico: anticorpos prontos, de ação imediata e passageira.' },
@@ -45,7 +45,7 @@ const ESPEC = [
   { re: /antibiotico/, img: 'Amoxicillin capsules', leg: 'Antibióticos atacam estruturas de bactérias, que os vírus não têm.' },
   { re: /gripe|influenza/, img: 'influenza virus electron micrograph', leg: 'Vírus da gripe (influenza) vistos ao microscópio eletrônico.' },
   { re: /capsideo|ilustracao de um virus|desenha um virus/, img: 'virus structure diagram capsid', leg: 'Estrutura de um vírus: capsídeo de proteínas envolvendo o material genético.' },
-  { re: /contem ogm|rotulo de um pacote/, img: 'Genetically modified food', leg: 'O "T" amarelo indica, no rótulo, alimento com ingrediente transgênico.' },
+  { re: /contem ogm|rotulo de um pacote/, img: 'Golden rice', leg: 'O "T" amarelo indica, no rótulo, alimento com ingrediente transgênico.' },
   { re: /algodao/, img: 'cotton field boll', leg: 'Lavoura de algodão: no Brasil há variedades transgênicas resistentes a lagartas.' },
   { re: /milho/, img: 'maize corn field Brazil', leg: 'Lavoura de milho: grande parte do milho plantado no Brasil é transgênico.' },
   { re: /soja/, img: 'Soybean field', leg: 'Plantação de soja: o Brasil é o maior produtor mundial do grão.' },
@@ -78,9 +78,9 @@ const ESPEC = [
   { re: /meiose/, img: 'Meiosis', leg: 'Meiose: uma célula diploide origina quatro células haploides, diferentes entre si.' },
   { re: /mitose|regenera|divisao de suas celulas/, img: 'Mitosis', leg: 'Mitose: uma célula origina duas células-filhas idênticas.' },
   { re: /sem nucleo organizado|procariont/, img: 'Prokaryote cell', leg: 'Célula procarionte (bactéria): DNA disperso no citoplasma, sem envoltório nuclear.' },
-  { re: /olhos/, img: 'Human eye colors', leg: 'A cor dos olhos depende de vários genes; em exercícios, usa-se o modelo simplificado de um gene.' },
+  { re: /olhos/, img: 'Human eye', leg: 'A cor dos olhos depende de vários genes; em exercícios, usa-se o modelo simplificado de um gene.' },
   { re: /pragas|elimina os predadores/, img: 'Ladybird eating aphids', leg: 'Joaninha comendo pulgões: predadores naturais controlam pragas nas lavouras.' },
-  { re: /fitoplancton/, img: 'Phytoplankton', leg: 'Fitoplâncton: algas microscópicas que produzem matéria orgânica pela fotossíntese.' },
+  { re: /fitoplancton/, img: 'Diatoms', leg: 'Fitoplâncton: algas microscópicas que produzem matéria orgânica pela fotossíntese.' },
   // ---------- Química ----------
   { re: /alcool 70|higieniza as maos/, img: 'hand sanitizer alcohol gel', leg: 'Álcool 70%: o etanol desnatura proteínas de micro-organismos.' },
   { re: /removedor de esmalte|acetona/, img: 'Nail polish remover', leg: 'Removedor de esmalte à base de acetona (propanona).' },
@@ -94,7 +94,7 @@ const ESPEC = [
   { re: /cicloexano/, img: 'cyclohexane chair conformation 3D', leg: 'Modelo 3D do cicloexano: seis carbonos em anel.' },
   { re: /benzeno/, img: 'benzene 3D ball model', leg: 'Modelo da molécula de benzeno, com anel de seis carbonos.' },
   { re: /dietil-eter|anestesico/, img: 'Ether Day', leg: 'Em 1846, o éter foi usado como anestésico em uma cirurgia pública em Boston.' },
-  { re: /acetileno|soldas/, img: 'Acetylene torch', leg: 'Maçarico oxiacetilênico: a chama do acetileno passa de 3000 °C.' },
+  { re: /acetileno|soldas/, img: 'Oxyacetylene', leg: 'Maçarico oxiacetilênico: a chama do acetileno passa de 3000 °C.' },
   { re: /vinagre|acido acetico|ch3–cooh|ch3-cooh/, img: 'Vinegar', leg: 'O vinagre é uma solução de ácido acético (4% a 6%).' },
   { re: /formol|metanal/, img: 'biological specimens jars formalin museum', leg: 'Peças conservadas em formol, solução aquosa de metanal.' },
   { re: /manteiga ranc|butanoico/, img: 'butter block', leg: 'A manteiga rançosa libera ácido butanoico, de cheiro forte.' },
@@ -113,11 +113,11 @@ const ESPEC = [
   { re: /padaria|fermenta/, img: 'bread dough rising', leg: 'Massa de pão crescendo: enzimas do fermento aceleram as reações.' },
   { re: /agua oxigenada/, img: 'hydrogen peroxide bottle', leg: 'Água oxigenada (H₂O₂) se decompõe em água e oxigênio.' },
   { re: /zinco/, img: 'Zinc hydrochloric acid', leg: 'Zinco reagindo com ácido clorídrico e liberando gás hidrogênio.' },
-  { re: /agua quente|amolecimento de alimentos/, img: 'Boiling', leg: 'Em água quente, as moléculas se movem mais e reagem mais depressa.' },
+  { re: /agua quente|amolecimento de alimentos/, img: 'Water boiling in a pot', leg: 'Em água quente, as moléculas se movem mais e reagem mais depressa.' },
   { re: /sulfato de bario|baso4|baso₄|radiografia/, img: 'barium swallow X-ray', leg: 'Radiografia com contraste de sulfato de bário.' },
   { re: /repolho roxo/, img: 'red cabbage pH indicator', leg: 'Extrato de repolho roxo muda de cor conforme o pH.' },
   { re: /limao/, img: 'lemon slices', leg: 'O suco de limão é ácido por causa do ácido cítrico.' },
-  { re: /produto de limpeza|ceramica/, img: 'Household cleaning products', leg: 'Produtos de limpeza costumam ser básicos (pH acima de 7).' },
+  { re: /produto de limpeza|ceramica/, img: 'Detergent bottles', leg: 'Produtos de limpeza costumam ser básicos (pH acima de 7).' },
   { re: /meia-vida|radioativ|particula alfa|isotopo/, img: 'PET scan', leg: 'Na medicina nuclear, a meia-vida dos radioisótopos define doses e exames.' },
   { re: /pilha|eletrodo|anodo|catodo/, img: 'Daniell cell', leg: 'Pilha de Daniell: oxidação no ânodo (zinco) e redução no cátodo (cobre).' },
   { re: /combustao|combustivel libera/, img: 'gas stove flame', leg: 'A combustão libera energia em forma de calor e luz.' },
@@ -125,7 +125,7 @@ const ESPEC = [
   { re: /condensacao/, img: 'nylon rope', leg: 'Náilon e PET são polímeros de condensação.' },
   { re: /chuva acida|enxofre/, img: 'Acid rain damage', leg: 'Estátua corroída pela chuva ácida, formada por óxidos de enxofre e de nitrogênio.' },
   { re: /transporte publico|veiculos eletricos/, img: 'Electric bus Sao Paulo', leg: 'Ônibus elétrico em São Paulo: menos queima de diesel e menos poluição local.' },
-  { re: /carvao mineral/, img: 'Coal', leg: 'Carvão mineral: combustível fóssil de alto teor de carbono.' },
+  { re: /carvao mineral/, img: 'Anthracite coal', leg: 'Carvão mineral: combustível fóssil de alto teor de carbono.' },
   { re: /gas natural/, img: 'Natural gas flame', leg: 'Chama de gás natural (metano), combustível fóssil que emite menos CO₂ que o carvão.' },
   { re: /petroleo|gasolina/, img: 'Oil refinery', leg: 'Refinaria de petróleo: a destilação fracionada separa gasolina, diesel e outros derivados.' },
   { re: /poder calorifico|renovavel|efeito estufa|aquecimento global/, img: 'Brazil sugarcane ethanol', leg: 'Canavial: o etanol de cana é um combustível renovável.' },
@@ -135,7 +135,7 @@ const ESPEC = [
   { re: /polar|ponto de ebulicao|ligacao de hidrogenio|ponte de hidrogenio/, img: 'Hydrogen bonds water', leg: 'Ligações de hidrogênio entre moléculas de água.' },
   { re: /fenolftaleina/, img: 'Phenolphthalein', leg: 'A fenolftaleína fica incolor em meio ácido ou neutro e rosa em meio básico.' },
   { re: /tornassol/, img: 'Litmus paper', leg: 'Papel de tornassol: azul em meio básico, vermelho em meio ácido.' },
-  { re: /suco gastrico/, img: 'Stomach anatomy', leg: 'O estômago produz suco gástrico com ácido clorídrico (pH perto de 2).' },
+  { re: /suco gastrico/, img: 'Stomach diagram', leg: 'O estômago produz suco gástrico com ácido clorídrico (pH perto de 2).' },
   { re: /sabao|detergente/, img: 'Soap bar', leg: 'Sabões e detergentes têm caráter básico e removem gordura.' },
   { re: /hidroxido de sodio|hidroxido de potassio/, img: 'Sodium hydroxide', leg: 'Hidróxido de sódio (soda cáustica), base forte usada em desentupidores e na fabricação de sabão.' },
   { re: /tampao|bicarbonato no sangue/, img: 'Blood sample tubes', leg: 'O sangue é tamponado: seu pH fica perto de 7,4.' },
@@ -223,7 +223,7 @@ const TEMAS = [
 ];
 
 const GERAL = {
-  Biologia: { img: 'biology laboratory microscope students', t: 'A Biologia ajuda a entender a saúde, os alimentos, o ambiente e as tecnologias do dia a dia. Leia a situação com atenção e relacione-a ao conceito pedido.' },
+  Biologia: { img: 'Microscope', t: 'A Biologia ajuda a entender a saúde, os alimentos, o ambiente e as tecnologias do dia a dia. Leia a situação com atenção e relacione-a ao conceito pedido.' },
   'Química': { img: 'chemistry laboratory glassware', t: 'A Química está nos alimentos, nos combustíveis, nos remédios e nos produtos de limpeza. Leia a situação com atenção e relacione-a ao conceito pedido.' }
 };
 
