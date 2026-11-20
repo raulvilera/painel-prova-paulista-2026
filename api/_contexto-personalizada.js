@@ -22,7 +22,7 @@ const ESPEC = [
   { re: /febre/, img: 'clinical thermometer fever', leg: 'A febre é uma resposta inespecífica do organismo a infecções.' },
   { re: /corte na mao|ralar o joelho|ferimento|coagula/, img: 'scraped knee', leg: 'A pele íntegra e a coagulação são as primeiras barreiras contra micro-organismos.' },
   { re: /pele e as mucosas|barreiras fisicas|a pele e as mucosas/, img: 'Layers of epidermis no labels', leg: 'Camadas da pele: uma barreira física da imunidade inata.' },
-  { re: /linfocitos? b|anticorpos especificos/, img: 'Lymphocyte blood smear', leg: 'Linfócito ao microscópio: os linfócitos B produzem anticorpos específicos.' },
+  { re: /linfocitos? b|anticorpos especificos/, img: 'Blood smear', leg: 'Esfregaço de sangue ao microscópio: os glóbulos brancos incluem os linfócitos B, que produzem anticorpos.' },
   { re: /mrna|covid/, img: 'Syringe needle', leg: 'Frascos de vacina: as vacinas de mRNA levam a "receita" de uma proteína do vírus, não o vírus.' },
   { re: /vacina/, img: 'Brazil vaccination campaign Ze Gotinha', leg: 'Campanha de vacinação do SUS: o Programa Nacional de Imunizações existe desde 1973.' },
   { re: /celulas-tronco|celula-tronco/, img: 'Human embryonic stem cells', leg: 'Colônia de células-tronco vista ao microscópio.',
@@ -59,7 +59,7 @@ const ESPEC = [
   { re: /capacidade de suporte|logistic/, img: 'Rabbits', leg: 'Coelhos: a população cresce rápido até esbarrar no limite de alimento e espaço do ambiente.' },
   { re: /produtividade primaria|10% dessa energia|10% de transferencia|fixam 10/, img: 'Capybaras grazing', leg: 'Capivaras pastando: herbívoros aproveitam só cerca de 10% da energia das plantas que comem.' },
   { re: /heterozigot|cruzamento|diibrid/, img: 'Pisum sativum flowers', leg: 'Flores de ervilha: foi com essa planta que Gregor Mendel descobriu as leis da herança (1865).' },
-  { re: /figado e do cerebro|expressao genica/, img: 'Erythrocytes SEM', leg: 'Células do sangue ao microscópio: todas têm o mesmo DNA, mas cada tipo ativa genes diferentes.' },
+  { re: /figado e do cerebro|expressao genica/, img: 'Human brain model', leg: 'O cérebro e o fígado têm o mesmo DNA, mas cada órgão ativa genes diferentes.' },
   { re: /mariposa/, img: 'Biston betularia', leg: 'Mariposas Biston betularia clara e escura: na Inglaterra industrial, a forma escura passou a predominar.',
     t: 'Durante a Revolução Industrial, a fuligem escureceu os troncos das árvores perto de Manchester. As mariposas claras ficaram visíveis para as aves e eram mais caçadas, enquanto as escuras sobreviviam e deixavam mais descendentes. Com o controle da poluição no século XX, a forma clara voltou a ser comum: um exemplo clássico de seleção natural observada.' },
   { re: /mare vermelha/, img: 'Red tide', leg: 'Maré vermelha: proliferação de algas microscópicas (dinoflagelados) que pode produzir toxinas.',
@@ -73,9 +73,9 @@ const ESPEC = [
   { re: /ciclo do carbono|combustiveis fosseis libera co/, img: 'Coal power plant', leg: 'Usina termelétrica a carvão: a queima devolve à atmosfera carbono guardado há milhões de anos.' },
   { re: /ciclo do nitrogenio/, img: 'Root nodules', leg: 'Nódulos nas raízes de leguminosas: bactérias que vivem ali fixam o nitrogênio do ar.' },
   { re: /ancestral comum|clado/, img: 'Fossil fish', leg: 'Peixe fóssil: os fósseis ajudam a reconstruir os ancestrais comuns dos grupos atuais.' },
-  { re: /coracao|veia pulmonar|atrio|ventriculo/, img: 'Heart anatomical model', leg: 'Modelo do coração humano: o sangue oxigenado dos pulmões chega ao átrio esquerdo.' },
+  { re: /coracao|veia pulmonar|atrio|ventriculo/, img: 'Plastic heart model', leg: 'Modelo do coração humano: o sangue oxigenado dos pulmões chega ao átrio esquerdo.' },
   { re: /radioterapia|radiacao ionizante|tumor/, img: 'Radiation therapy', leg: 'Radioterapia: feixes de radiação atingem o tumor, cujas células se dividem rapidamente.' },
-  { re: /meiose/, img: 'Chromosomes micrograph', leg: 'Células em meiose ao microscópio: cada célula-mãe origina quatro células haploides.' },
+  { re: /meiose/, img: 'Human karyotype', leg: 'Cromossomos humanos organizados em pares: na meiose, cada gameta recebe um de cada par.' },
   { re: /mitose|regenera|divisao de suas celulas/, img: 'Onion root tip mitosis', leg: 'Ponta de raiz de cebola ao microscópio: várias células em diferentes fases da mitose.' },
   { re: /sem nucleo organizado|procariont/, img: 'Escherichia coli', leg: 'Bactéria Escherichia coli ao microscópio eletrônico: célula procarionte, sem núcleo organizado.' },
   { re: /olhos/, img: 'Human eye', leg: 'A cor dos olhos depende de vários genes; em exercícios, usa-se o modelo simplificado de um gene.' },
@@ -89,7 +89,7 @@ const ESPEC = [
   { re: /botijao|gas de cozinha/, img: 'LPG cylinder', leg: 'Botijão de GLP: mistura de propano e butano.' },
   { re: /isqueiro/, img: 'butane lighter', leg: 'Isqueiros usam butano liquefeito sob pressão.' },
   { re: /amadurecer frutas|ch2=ch2/, img: 'bananas ripening', leg: 'O eteno (etileno) é um hormônio vegetal que acelera o amadurecimento.' },
-  { re: /polipropileno|propeno|produzao de plasticos|producao de plasticos/, img: 'Food storage containers', leg: 'Potes plásticos: muitos são de polipropileno, polímero feito a partir do propeno.' },
+  { re: /polipropileno|propeno|produzao de plasticos|producao de plasticos/, img: 'Plastic food container', leg: 'Potes plásticos: muitos são de polipropileno, polímero feito a partir do propeno.' },
   { re: /polietileno/, img: 'Plastic bags', leg: 'Sacolas plásticas de polietileno, polímero formado a partir do eteno.' },
   { re: /cicloexano/, img: 'cyclohexane chair conformation 3D', leg: 'Modelo 3D do cicloexano: seis carbonos em anel.' },
   { re: /benzeno/, img: 'benzene 3D ball model', leg: 'Modelo da molécula de benzeno, com anel de seis carbonos.' },
@@ -154,7 +154,7 @@ const TEMAS = [
     V('snake venom extraction', 'Extração de veneno de serpente: o primeiro passo para produzir soro antiofídico.', 'O Instituto Butantan produz soros desde 1901: o veneno é aplicado em pequenas doses em cavalos, que fabricam anticorpos; esses anticorpos, purificados, formam o soro. Quem recebe o soro ganha anticorpos prontos, com efeito imediato, mas a proteção some em semanas, porque o próprio corpo não aprendeu a produzi-los (imunidade passiva).'),
     V('Breastfeeding infant', 'O leite materno transfere anticorpos da mãe para o bebê.', 'Durante a gestação, anticorpos da mãe atravessam a placenta, e depois do parto chegam ao bebê pelo leite, especialmente pelo colostro. É uma imunidade passiva natural: protege o recém-nascido enquanto o seu sistema imune amadurece. Por isso o Ministério da Saúde recomenda amamentação exclusiva até os 6 meses.'),
     V('clinical thermometer fever', 'Termômetro clínico: a febre é uma resposta de defesa inespecífica.', 'A primeira linha de defesa do corpo não escolhe o invasor: pele, mucosas, saliva, lágrimas, a inflamação e a febre agem do mesmo jeito contra qualquer agente. Essa é a imunidade inata, presente desde o nascimento e sem memória. Já a imunidade adquirida reconhece cada invasor de forma específica e guarda memória.'),
-    V('Lymphocyte blood smear', 'Linfócito ao microscópio: célula responsável pela defesa específica.', 'Os linfócitos B produzem anticorpos que se encaixam em um antígeno específico, como uma chave na fechadura; os linfócitos T coordenam a resposta e destroem células infectadas. Depois da primeira infecção, algumas dessas células viram células de memória, que explicam por que muitas doenças, como a catapora, não se repetem.'),
+    V('Blood smear', 'Esfregaço de sangue ao microscópio: os glóbulos brancos incluem os linfócitos.', 'Os linfócitos B produzem anticorpos que se encaixam em um antígeno específico, como uma chave na fechadura; os linfócitos T coordenam a resposta e destroem células infectadas. Depois da primeira infecção, algumas dessas células viram células de memória, que explicam por que muitas doenças, como a catapora, não se repetem.'),
     V('scraped knee', 'Ferimento na pele: a barreira foi rompida e a defesa inata entra em ação.', 'Quando a pele se rompe, a coagulação fecha o ferimento e células de defesa chegam pelo sangue, causando vermelhidão, calor e inchaço: é a inflamação. Esses mecanismos agem em minutos e da mesma forma contra qualquer micróbio; se não bastarem, entra em cena a imunidade adquirida, mais lenta na primeira vez, mas específica.')
   ] },
   { re: /clon|celulas-tronco/, v: [
@@ -208,7 +208,7 @@ const TEMAS = [
   { re: /experimento|grupo controle|variavel|hipotese|metodo cientifico/, v: [
     V('Petri dish bacteria', 'Placas de Petri: o grupo controle permite comparar os resultados.', 'Em 1928, Alexander Fleming notou que um fungo impedia o crescimento de bactérias em uma placa: dali surgiu a penicilina. A ciência avança assim: observação, pergunta, hipótese testável, experimento e conclusão.'),
     V('Plant growth experiment', 'Experimento com plantas: só uma condição muda entre os grupos.', 'Em um experimento controlado, só uma variável é alterada (variável independente) e mede-se o efeito sobre outra (variável dependente). O grupo controle recebe o mesmo tratamento, menos a alteração; sem ele, não dá para saber se o resultado foi causado pela variável testada.'),
-    V('Scientist laboratory', 'Caderno de laboratório: registrar tudo permite repetir e conferir o experimento.', 'Uma investigação científica começa com a observação de um problema e a formulação de uma hipótese, uma explicação provisória que possa ser testada. Os resultados precisam ser registrados e repetidos por outros pesquisadores para serem aceitos.')
+    V('Lab bench experiment', 'Caderno de laboratório: registrar tudo permite repetir e conferir o experimento.', 'Uma investigação científica começa com a observação de um problema e a formulação de uma hipótese, uma explicação provisória que possa ser testada. Os resultados precisam ser registrados e repetidos por outros pesquisadores para serem aceitos.')
   ] },
   { re: /ciclo do carbono|ciclo do nitrogenio|combustiveis fosseis|ciclos? biogeoquimic/, v: [
     V('Coal power plant', 'Usina termelétrica a carvão: a queima devolve carbono fóssil à atmosfera.', 'No ciclo do carbono, a fotossíntese retira CO₂ do ar e a respiração e a decomposição o devolvem. Queimar petróleo, carvão e gás libera carbono que estava guardado há milhões de anos, aumentando o CO₂ no ar e intensificando o efeito estufa.'),
@@ -217,7 +217,7 @@ const TEMAS = [
   ] },
   { re: /meiose|mitose|divisao celular|regenera/, v: [
     V('Onion root tip mitosis', 'Ponta de raiz de cebola: células em diferentes fases da mitose.', 'Na mitose, uma célula duplica seu DNA e se divide em duas células-filhas idênticas. É ela que permite o crescimento, a cicatrização de ferimentos e a renovação constante da pele e do sangue.'),
-    V('Chromosomes micrograph', 'Células em meiose: cada célula-mãe origina quatro células haploides.', 'Na meiose, uma célula diploide passa por duas divisões e origina quatro células haploides, com metade dos cromossomos e geneticamente diferentes. É assim que se formam os gametas; a troca de trechos entre cromossomos (crossing-over) aumenta a variabilidade dos descendentes.'),
+    V('Human karyotype', 'Cromossomos humanos organizados em pares: na meiose, cada gameta recebe um de cada par.', 'Na meiose, uma célula diploide passa por duas divisões e origina quatro células haploides, com metade dos cromossomos e geneticamente diferentes. É assim que se formam os gametas; a troca de trechos entre cromossomos (crossing-over) aumenta a variabilidade dos descendentes.'),
     V('Scab on knee', 'Cicatrização: a mitose repõe as células perdidas no ferimento.', 'Tecidos se regeneram graças à mitose das células vizinhas à lesão. Algumas células se dividem muito (pele, medula óssea), outras quase nunca (neurônios), o que explica por que certos tecidos se recuperam melhor que outros.')
   ] },
   { re: /radioterapia|radiacao|tumor|cancer/, v: [
@@ -235,7 +235,7 @@ const TEMAS = [
     V('Galapagos finches', 'Tentilhões das Galápagos: bicos diferentes para alimentos diferentes.', 'Darwin observou nas Ilhas Galápagos tentilhões com bicos adaptados a sementes, insetos ou flores. Populações isoladas em ambientes diferentes acumulam diferenças até formarem novas espécies: é a especiação.')
   ] },
   { re: /coracao|circulacao|veia|arteria|atrio|ventriculo/, v: [
-    V('Heart anatomical model', 'Modelo do coração humano, com quatro cavidades.', 'Nos mamíferos, a circulação é dupla e completa: o lado direito do coração envia sangue pobre em oxigênio aos pulmões; o sangue oxigenado volta pelas veias pulmonares ao átrio esquerdo e sai pelo ventrículo esquerdo para todo o corpo, sem mistura entre os dois lados.'),
+    V('Plastic heart model', 'Modelo do coração humano, com quatro cavidades.', 'Nos mamíferos, a circulação é dupla e completa: o lado direito do coração envia sangue pobre em oxigênio aos pulmões; o sangue oxigenado volta pelas veias pulmonares ao átrio esquerdo e sai pelo ventrículo esquerdo para todo o corpo, sem mistura entre os dois lados.'),
     V('Stethoscope', 'Estetoscópio: os sons do coração vêm do fechamento das válvulas.', 'As válvulas do coração impedem o refluxo do sangue entre átrios e ventrículos. O coração bate cerca de 100 mil vezes por dia, e doenças cardiovasculares são a principal causa de morte no Brasil, ligadas a sedentarismo, tabagismo e má alimentação.')
   ] },
   { re: /populacao|competicao|predad|ecossistema|ecologic|fitoplancton|praga|produtor|consumidor/, v: [
@@ -270,7 +270,7 @@ const TEMAS = [
     V('Ammonia production plant', 'Fábrica de amônia: a base da produção de fertilizantes nitrogenados.', 'No processo Haber-Bosch, N₂ e H₂ reagem formando amônia em uma reação reversível e exotérmica. Pelo princípio de Le Chatelier, alta pressão favorece a amônia (lado com menos mols de gás) e temperatura baixa também, mas deixaria a reação lenta; a indústria usa cerca de 450 °C, 200 atm e catalisador de ferro.'),
     V('Carbonated water', 'Água com gás: o CO₂ dissolvido sai em bolhas quando a pressão cai.', 'Em um refrigerante fechado, o CO₂ dissolvido e o CO₂ gasoso estão em equilíbrio. Ao abrir a garrafa, a pressão cai e o sistema se desloca no sentido de liberar gás. Pelo princípio de Le Chatelier, todo sistema em equilíbrio perturbado se desloca para reduzir a perturbação.'),
     V('Nitrogen dioxide', 'Dióxido de nitrogênio (NO₂), gás castanho em equilíbrio com o N₂O₄, incolor.', 'O equilíbrio 2 NO₂ ⇌ N₂O₄ muda de cor com a temperatura: aquecido, fica mais castanho; resfriado, mais claro. Só a temperatura altera o valor da constante Kc; mudanças de concentração e pressão deslocam o equilíbrio, mas o Kc continua o mesmo.'),
-    V('Stalactites', 'Estalactites: formadas por um equilíbrio entre calcário, água e gás carbônico.', 'Nas cavernas, água com CO₂ dissolve o calcário; quando a gota pinga e perde CO₂ para o ar, o equilíbrio se desloca e o carbonato de cálcio volta a se depositar, formando estalactites ao longo de milhares de anos. Em equilíbrio, as reações direta e inversa continuam ocorrendo, com a mesma velocidade.'),
+    V('Caverna estalactites', 'Estalactites: formadas por um equilíbrio entre calcário, água e gás carbônico.', 'Nas cavernas, água com CO₂ dissolve o calcário; quando a gota pinga e perde CO₂ para o ar, o equilíbrio se desloca e o carbonato de cálcio volta a se depositar, formando estalactites ao longo de milhares de anos. Em equilíbrio, as reações direta e inversa continuam ocorrendo, com a mesma velocidade.'),
     V('Coral reef', 'Recife de coral: o aumento de CO₂ no mar desloca equilíbrios e dificulta a formação do esqueleto.', 'Os oceanos absorvem parte do CO₂ emitido; o gás reage com a água e desloca equilíbrios que reduzem os íons carbonato disponíveis para corais e conchas. Um Kc grande indica equilíbrio com muito produto; um Kc pequeno, com predominância de reagentes.'),
     V('Mountain climbers altitude', 'Em grandes altitudes há menos oxigênio, e o equilíbrio hemoglobina–O₂ se desloca.', 'No sangue, a hemoglobina se liga ao oxigênio em um equilíbrio. Em grandes altitudes, a pressão de O₂ é menor, o equilíbrio se desloca e menos oxigênio chega aos tecidos; com o tempo, o corpo produz mais hemácias. Aumentar a concentração de um reagente desloca o equilíbrio para os produtos, e vice-versa.')
   ] },
@@ -356,7 +356,7 @@ const GERAL = {
   'Química': [
     V('chemistry laboratory glassware', 'Vidrarias de laboratório de química.', 'A Química está nos alimentos, nos combustíveis, nos remédios e nos produtos de limpeza. Leia a situação com atenção e relacione-a ao conceito pedido.'),
     V('Water treatment plant', 'Estação de tratamento de água: coagulação, decantação, filtração e cloração.', 'No tratamento da água que chega às casas, a química está em cada etapa: substâncias que agrupam a sujeira, decantação, filtração, cloro para eliminar micróbios e ajuste do pH. Muitos conceitos de Química aparecem nesse processo.'),
-    V('Fertilizer spreading field', 'Fertilizantes: a química garante nutrientes para as lavouras.', 'A agricultura brasileira depende da química: fertilizantes repõem nitrogênio, fósforo e potássio do solo, e o calcário corrige a acidez. Usar a dose certa evita desperdício e a contaminação de rios.'),
+    V('Fertilizer granules', 'Fertilizantes: a química garante nutrientes para as lavouras.', 'A agricultura brasileira depende da química: fertilizantes repõem nitrogênio, fósforo e potássio do solo, e o calcário corrige a acidez. Usar a dose certa evita desperdício e a contaminação de rios.'),
     V('Kitchen cooking', 'Cozinhar é fazer química: o calor transforma as substâncias dos alimentos.', 'Ao cozinhar, o calor acelera reações que mudam cor, sabor e textura dos alimentos; o fermento libera gás, o vinagre e o limão mudam o pH. Muitos conceitos de Química aparecem na cozinha.'),
     V('Pills tablets', 'Comprimidos: cada remédio é uma substância química com dose e reação controladas.', 'Os medicamentos são resultado da química: sua estrutura define como agem no corpo, sua estabilidade define o prazo de validade e sua reação com o organismo define a dose.')
   ]
