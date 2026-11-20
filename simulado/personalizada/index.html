@@ -31,15 +31,21 @@
   .msg.ok { background: var(--ok); }
   .res { font-size: 1.1rem; font-weight: 700; }
   .hidden { display:none; }
+  label.campo { display:block; font-weight:600; margin: 8px 0 4px; }
+  select { width:100%; font: inherit; padding: 9px 10px; border-radius: 8px; border:1px solid var(--borda); background: var(--card); color: var(--txt); }
 </style>
 </head>
 <body>
 <main>
   <h1>Atividade personalizada</h1>
-  <p class="sub">Entre com seu RA, dígito e senha. A atividade tem 10 questões, feitas a partir das suas dificuldades.</p>
+  <p class="sub">Escolha a sua turma e o seu nome. A atividade tem 10 questões, feitas a partir das suas dificuldades.</p>
 
   <section class="card">
-    <div id="ident">Entrando…</div>
+    <label class="campo" for="selTurma">Turma</label>
+    <select id="selTurma"><option value="">Carregando…</option></select>
+    <label class="campo" for="selNome">Seu nome</label>
+    <select id="selNome" disabled><option value="">Escolha a turma primeiro</option></select>
+    <button id="abrir" type="button" disabled>Abrir minha atividade</button>
     <div id="aviso" class="msg erro hidden" role="alert"></div>
   </section>
 
@@ -51,7 +57,6 @@
   </section>
 </main>
 
-<script src="/aluno-acesso.js" defer></script>
 <script>
 (function () {
   'use strict';
@@ -60,17 +65,14 @@
   var atual = null;   // { turma, nome, questoes }
 
   var $ = function (id) { return document.getElementById(id); };
-  var identEl = $('ident'), avisoEl = $('aviso');
+  var selTurma = $('selTurma'), selNome = $('selNome'), abrirEl = $('abrir'), avisoEl = $('aviso');
   var atividadeEl = $('atividade'), cabecEl = $('cabec'), formEl = $('form'), enviarEl = $('enviar'), resEl = $('resultado');
 
   function mostrarAviso(texto) { avisoEl.textContent = texto; avisoEl.classList.remove('hidden'); }
   function esconderAviso() { avisoEl.classList.add('hidden'); avisoEl.textContent = ''; }
 
-  function token() { return (window.alunoAcesso && window.alunoAcesso.token()) || ''; }
-
   function pedir(url, opcoes) {
     opcoes = opcoes || {};
-    opcoes.headers = Object.assign({ Authorization: 'Bearer ' + token() }, opcoes.headers || {});
     opcoes.credentials = 'same-origin';
     return fetch(url, opcoes).then(function (r) {
       return r.json().catch(function () { return { ok: false, erro: 'Resposta inesperada do servidor.' }; })
@@ -78,26 +80,38 @@
     });
   }
 
-  // 1) Entrada pelo login do aluno; depois abre a atividade dele automaticamente
-  function aguardaAluno() { return window.alunoAcesso ? window.alunoAcesso.exigir() : new Promise(function (r) { setTimeout(r, 50); }).then(aguardaAluno); }
+  // 1) Sem login: o aluno escolhe a turma e o nome na lista
+  var LISTA = {};
+  function opcao(v, t) { var o = document.createElement('option'); o.value = v; o.textContent = t; return o; }
+  pedir(API + '?lista=1').then(function (r) {
+    if (!r.dados.ok) { selTurma.innerHTML = ''; selTurma.appendChild(opcao('', 'Indisponível')); mostrarAviso(r.dados.erro || 'Não foi possível carregar as turmas.'); return; }
+    LISTA = r.dados.nomes || {};
+    selTurma.innerHTML = ''; selTurma.appendChild(opcao('', 'Selecione'));
+    (r.dados.turmas || []).forEach(function (t) { selTurma.appendChild(opcao(t, t)); });
+  }).catch(function () { mostrarAviso('Falha de conexão. Recarregue a página para tentar de novo.'); });
 
-  aguardaAluno().then(function () {
-    var al = window.alunoAcesso.dados() || {};
-    identEl.innerHTML = '';
-    var b = document.createElement('strong'); b.textContent = al.nome || '';
-    var s = document.createElement('span'); s.textContent = ' · ' + (al.turma || '') + (al.chamada ? ' · nº ' + al.chamada : '');
-    identEl.appendChild(b); identEl.appendChild(s);
-    abrir();
-  }).catch(function () { identEl.textContent = 'Não foi possível entrar. Recarregue a página.'; });
+  selTurma.addEventListener('change', function () {
+    selNome.innerHTML = ''; atividadeEl.classList.add('hidden'); atual = null; esconderAviso();
+    var nomes = LISTA[selTurma.value] || [];
+    if (!selTurma.value) { selNome.appendChild(opcao('', 'Escolha a turma primeiro')); selNome.disabled = true; abrirEl.disabled = true; return; }
+    selNome.appendChild(opcao('', 'Selecione o seu nome'));
+    nomes.forEach(function (n) { selNome.appendChild(opcao(n, n)); });
+    selNome.disabled = false; abrirEl.disabled = true;
+  });
+  selNome.addEventListener('change', function () { abrirEl.disabled = !selNome.value; atividadeEl.classList.add('hidden'); atual = null; });
+  abrirEl.addEventListener('click', abrir);
 
-  // 2) Abre a atividade do aluno logado (turma e nome vêm do servidor, a partir do login)
+  // 2) Abre a atividade do aluno escolhido
   function abrir() {
+    if (!selTurma.value || !selNome.value) return;
     esconderAviso(); resEl.classList.add('hidden');
-    pedir(API).then(function (r) {
+    abrirEl.disabled = true; abrirEl.textContent = 'Abrindo…';
+    pedir(API + '?' + new URLSearchParams({ turma: selTurma.value, nome: selNome.value })).then(function (r) {
+      abrirEl.disabled = false; abrirEl.textContent = 'Abrir minha atividade';
       if (!r.dados.ok) { mostrarAviso(r.dados.erro || 'Não foi possível abrir a atividade.'); return; }
       atual = { turma: r.dados.turma, nome: r.dados.nome, questoes: r.dados.questoes };
       montar(r.dados);
-    }).catch(function () { mostrarAviso('Falha de conexão. Recarregue a página para tentar de novo.'); });
+    }).catch(function () { abrirEl.disabled = false; abrirEl.textContent = 'Abrir minha atividade'; mostrarAviso('Falha de conexão. Tente de novo.'); });
   }
 
   function montar(d) {
@@ -142,7 +156,7 @@
     pedir(API, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ respostas: respostas })
+      body: JSON.stringify({ turma: atual.turma, nome: atual.nome, respostas: respostas })
     }).then(function (r) {
         var d = r.dados;
         enviarEl.textContent = 'Enviar respostas';

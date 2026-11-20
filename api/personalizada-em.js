@@ -3,7 +3,7 @@
    Exige o login do aluno (RA + dígito + senha): envie "Authorization: Bearer <token>".
      GET  → as 10 questões do próprio aluno (sem gabarito)
      POST {respostas} → corrige no Apps Script e grava na aba "Personalizada · <turma>"
-   Turma e nome vêm sempre do login, nunca do corpo ou da URL; não há mais lista pública de nomes.
+   Turma e nome vêm do login (se houver) ou da escolha do aluno na lista (GET ?lista=1).
    Variáveis da Vercel: EM_APPS_SCRIPT_URL (mesma do simulado), SUPABASE_URL, SUPABASE_SERVICE_KEY. */
 const NOMES = require('./_personalizada-em.js');
 const { alunoDaSessao } = require('./_aluno-sessao.js');
@@ -81,10 +81,24 @@ module.exports = async function personalizadaEM(req, res) {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
 
+  const q = req.query || {};
+  /* sem login: lista de turmas e nomes para o aluno escolher */
+  if (req.method === 'GET' && q.lista) {
+    const turmas = Object.keys(NOMES).sort((a, b) => a.localeCompare(b, 'pt'));
+    return res.status(200).json({ ok: true, turmas: turmas, nomes: NOMES });
+  }
+
   if (req.method === 'GET' || req.method === 'POST') {
     let quem = null;
-    try { quem = await alunoLogado(req); } catch (e) { return res.status(502).json({ ok: false, erro: 'Não foi possível confirmar o seu acesso. Tente de novo.' }); }
-    if (!quem) return res.status(401).json({ ok: false, erro: 'Entre com seu RA, dígito e senha.' });
+    if (/^Bearer .+/.test(req.headers.authorization || '')) {   // com login (RA + dígito + senha): continua valendo
+      try { quem = await alunoLogado(req); } catch (e) { return res.status(502).json({ ok: false, erro: 'Não foi possível confirmar o seu acesso. Tente de novo.' }); }
+      if (!quem) return res.status(401).json({ ok: false, erro: 'Entre com seu RA, dígito e senha.' });
+    } else {   // sem login: turma e nome escolhidos na lista (só nomes que existem na atividade)
+      const src = req.method === 'GET' ? q : (req.body && typeof req.body === 'object' ? req.body : {});
+      const turma = String(src.turma || ''), nome = NOMES[turma] ? achaNome(turma, String(src.nome || '')) : null;
+      if (!nome) return res.status(400).json({ ok: false, erro: 'Escolha a sua turma e o seu nome na lista.' });
+      quem = { turma: turma, nome: nome };
+    }
 
     if (req.method === 'GET') {
       const r = await chamarScript('GET', { api: 'personalizada', turma: quem.turma, nome: quem.nome });
