@@ -164,7 +164,7 @@
     var tx = document.createElement('p'); tx.className = 'txt';
     tx.textContent = c.texto;
     d.appendChild(tx);
-    fetch(API + '?img=' + encodeURIComponent(c.img)).then(function (r) { return r.json(); }).then(function (j) {
+    fetch(API + '?v=3&img=' + encodeURIComponent(c.img)).then(function (r) { return r.json(); }).then(function (j) {
       var im = j && j.ok && j.imagem;
       if (!im) { fig.remove(); return; }
       img.onload = function () { fig.classList.remove('carregando'); };
