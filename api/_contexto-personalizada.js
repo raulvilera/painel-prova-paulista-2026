@@ -10,20 +10,20 @@ const ESPEC = [
   // ---------- Biologia ----------
   { re: /dolly/, img: 'Dolly the sheep National Museum of Scotland', leg: 'Dolly, a ovelha clonada em 1996, exposta no Museu Nacional da Escócia.',
     t: 'Em 1996, no Instituto Roslin (Escócia), nasceu Dolly: o núcleo de uma célula da glândula mamária de uma ovelha adulta foi transferido para um óvulo sem núcleo, e o embrião foi implantado em uma "mãe de aluguel". Foi a primeira vez que um mamífero foi clonado a partir de uma célula adulta, o que abriu um grande debate científico e ético.' },
-  { re: /cachorro|pet shop|animais de estimacao/, img: 'Micromanipulator', leg: 'Micromanipulação de óvulos: técnica usada na transferência de núcleo da clonagem.' },
+  { re: /cachorro|pet shop|animais de estimacao/, img: 'Intracytoplasmic sperm injection', leg: 'Micromanipulação de óvulos: técnica usada na transferência de núcleo da clonagem.' },
   { re: /cobra|antiofidico|veneno/, img: 'snake venom extraction', leg: 'Extração de veneno de serpente no Instituto Butantan, etapa da produção do soro antiofídico.',
     t: 'O Instituto Butantan, em São Paulo, produz soros desde 1901. Pequenas doses de veneno são injetadas em cavalos, que produzem anticorpos; esses anticorpos são purificados do sangue do animal e viram o soro aplicado em quem foi picado. O soro age na hora, mas a proteção dura pouco, porque o organismo não produziu os próprios anticorpos.' },
-  { re: /antitetanico|tetano/, img: 'Intramuscular injection', leg: 'Aplicação de soro ou vacina: o soro antitetânico traz anticorpos prontos, de ação imediata e passageira.' },
+  { re: /antitetanico|tetano/, img: 'Vaccination arm', leg: 'Aplicação de soro ou vacina: o soro antitetânico traz anticorpos prontos, de ação imediata e passageira.' },
   { re: /leite materno|amamenta/, img: 'Breastfeeding baby', leg: 'O leite materno transfere anticorpos da mãe para o bebê.',
     t: 'O leite materno, especialmente o colostro dos primeiros dias, é rico em anticorpos (IgA). Por isso o Ministério da Saúde recomenda amamentação exclusiva até os 6 meses: o bebê recebe proteção pronta enquanto o próprio sistema imune ainda amadurece.' },
   { re: /hpv/, img: 'Vaccine syringe', leg: 'Vacinação contra o HPV, oferecida pelo SUS a meninas e meninos de 9 a 14 anos.' },
-  { re: /sarampo/, img: 'Child vaccination', leg: 'Vacinação infantil: a tríplice viral protege contra sarampo, caxumba e rubéola.' },
+  { re: /sarampo/, img: 'Vacinação de criança', leg: 'Vacinação infantil: a tríplice viral protege contra sarampo, caxumba e rubéola.' },
   { re: /catapora/, img: 'chickenpox varicella child', leg: 'Catapora (varicela): quem teve a doença costuma ficar protegido pela memória imunológica.' },
   { re: /febre/, img: 'clinical thermometer fever', leg: 'A febre é uma resposta inespecífica do organismo a infecções.' },
   { re: /corte na mao|ralar o joelho|ferimento|coagula/, img: 'scraped knee', leg: 'A pele íntegra e a coagulação são as primeiras barreiras contra micro-organismos.' },
-  { re: /pele e as mucosas|barreiras fisicas|a pele e as mucosas/, img: 'Skin layers', leg: 'Camadas da pele: uma barreira física da imunidade inata.' },
-  { re: /linfocitos? b|anticorpos especificos/, img: 'Lymphocyte micrograph', leg: 'Linfócito ao microscópio: os linfócitos B produzem anticorpos específicos.' },
-  { re: /mrna|covid/, img: 'Vaccine vials', leg: 'Frascos de vacina: as vacinas de mRNA levam a "receita" de uma proteína do vírus, não o vírus.' },
+  { re: /pele e as mucosas|barreiras fisicas|a pele e as mucosas/, img: 'Layers of epidermis no labels', leg: 'Camadas da pele: uma barreira física da imunidade inata.' },
+  { re: /linfocitos? b|anticorpos especificos/, img: 'Lymphocyte', leg: 'Linfócito ao microscópio: os linfócitos B produzem anticorpos específicos.' },
+  { re: /mrna|covid/, img: 'Vacinação', leg: 'Frascos de vacina: as vacinas de mRNA levam a "receita" de uma proteína do vírus, não o vírus.' },
   { re: /vacina/, img: 'Brazil vaccination campaign Ze Gotinha', leg: 'Campanha de vacinação do SUS: o Programa Nacional de Imunizações existe desde 1973.' },
   { re: /celulas-tronco|celula-tronco/, img: 'Human embryonic stem cells', leg: 'Colônia de células-tronco vista ao microscópio.',
     t: 'Células-tronco podem se dividir muitas vezes e se transformar em diferentes tipos de células. Na clonagem terapêutica, elas são cultivadas para formar tecidos (pele para queimados, músculo cardíaco para testes de remédios), sem que nenhum embrião seja implantado em um útero. No Brasil, a Lei de Biossegurança (2005) regula essas pesquisas.' },
@@ -33,7 +33,7 @@ const ESPEC = [
   { re: /insulina|glicemia|glicose|diabetes/, img: 'Glucometer', leg: 'Glicosímetro: aparelho que mede a glicose no sangue, usado no acompanhamento do diabetes.' },
   { re: /droga|neuroadapta/, img: 'Neurons micrograph', leg: 'Neurônios ao microscópio: as drogas agem nas sinapses, os pontos de comunicação entre eles.' },
   { re: /giardiase|amebiase/, img: 'Giardia lamblia microscope', leg: 'Giardia lamblia ao microscópio: transmitida por água e alimentos contaminados.' },
-  { re: /atum|aves marinhas|mercurio/, img: 'Gold mining Amazon', leg: 'Garimpo na Amazônia: o mercúrio usado para separar o ouro contamina rios e peixes.' },
+  { re: /atum|aves marinhas|mercurio/, img: 'Gold mining Amazon', leg: 'Garimpo de ouro: o mercúrio usado para separar o ouro contamina rios e peixes.' },
   { re: /garca|garcas/, img: 'heron catching fish', leg: 'Garças e outras aves predadoras ficam no topo das cadeias aquáticas.' },
   { re: /ostra|mexilh|molusco/, img: 'mussels bed rocks', leg: 'Mexilhões e ostras filtram grandes volumes de água e acumulam o que há nela.' },
   { re: /alga de um|uma alga/, img: 'green algae microscope', leg: 'Algas absorvem substâncias da água e podem acumulá-las.' },
@@ -58,8 +58,8 @@ const ESPEC = [
   { re: /disputam a mesma luz|competicao/, img: 'forest canopy competition light', leg: 'No dossel da floresta, as plantas competem por luz.' },
   { re: /capacidade de suporte|logistic/, img: 'Rabbits', leg: 'Coelhos: a população cresce rápido até esbarrar no limite de alimento e espaço do ambiente.' },
   { re: /produtividade primaria|10% dessa energia|10% de transferencia|fixam 10/, img: 'Capybaras grazing', leg: 'Capivaras pastando: herbívoros aproveitam só cerca de 10% da energia das plantas que comem.' },
-  { re: /heterozigot|cruzamento|diibrid/, img: 'Pea plant flowers', leg: 'Flores de ervilha: foi com essa planta que Gregor Mendel descobriu as leis da herança (1865).' },
-  { re: /figado e do cerebro|expressao genica/, img: 'Blood cells micrograph', leg: 'Células do sangue ao microscópio: todas têm o mesmo DNA, mas cada tipo ativa genes diferentes.' },
+  { re: /heterozigot|cruzamento|diibrid/, img: 'Pisum sativum flowers', leg: 'Flores de ervilha: foi com essa planta que Gregor Mendel descobriu as leis da herança (1865).' },
+  { re: /figado e do cerebro|expressao genica/, img: 'Red blood cells', leg: 'Células do sangue ao microscópio: todas têm o mesmo DNA, mas cada tipo ativa genes diferentes.' },
   { re: /mariposa/, img: 'Biston betularia', leg: 'Mariposas Biston betularia clara e escura: na Inglaterra industrial, a forma escura passou a predominar.',
     t: 'Durante a Revolução Industrial, a fuligem escureceu os troncos das árvores perto de Manchester. As mariposas claras ficaram visíveis para as aves e eram mais caçadas, enquanto as escuras sobreviviam e deixavam mais descendentes. Com o controle da poluição no século XX, a forma clara voltou a ser comum: um exemplo clássico de seleção natural observada.' },
   { re: /mare vermelha/, img: 'Red tide', leg: 'Maré vermelha: proliferação de algas microscópicas (dinoflagelados) que pode produzir toxinas.',
@@ -69,27 +69,27 @@ const ESPEC = [
   { re: /panspermia|meteorito|vindos do espaco/, img: 'Murchison meteorite', leg: 'Fragmento do meteorito Murchison, que contém aminoácidos formados no espaço.' },
   { re: /biogenese|abiogenese|materia inanimada|geracao espontanea/, img: 'Pasteur swan neck flask', leg: 'Frasco "pescoço de cisne" usado por Pasteur para derrubar a ideia de geração espontânea.' },
   { re: /evolucao quimica|condicoes primitivas|primeiras moleculas organicas/, img: 'Hydrothermal vent', leg: 'Fonte hidrotermal no fundo do mar: ambiente onde as primeiras moléculas orgânicas podem ter se formado.' },
-  { re: /grupo controle|variavel|hipotese|metodo cientifico|primeira etapa do metodo/, img: 'Petri dishes', leg: 'Placas de Petri em laboratório: experimentos comparam o grupo testado com um grupo controle.' },
+  { re: /grupo controle|variavel|hipotese|metodo cientifico|primeira etapa do metodo/, img: 'Petri dish bacteria', leg: 'Placas de Petri em laboratório: experimentos comparam o grupo testado com um grupo controle.' },
   { re: /ciclo do carbono|combustiveis fosseis libera co/, img: 'Coal power plant', leg: 'Usina termelétrica a carvão: a queima devolve à atmosfera carbono guardado há milhões de anos.' },
   { re: /ciclo do nitrogenio/, img: 'Root nodules', leg: 'Nódulos nas raízes de leguminosas: bactérias que vivem ali fixam o nitrogênio do ar.' },
   { re: /ancestral comum|clado/, img: 'Fossil fish', leg: 'Peixe fóssil: os fósseis ajudam a reconstruir os ancestrais comuns dos grupos atuais.' },
-  { re: /coracao|veia pulmonar|atrio|ventriculo/, img: 'Human heart model', leg: 'Modelo do coração humano: o sangue oxigenado dos pulmões chega ao átrio esquerdo.' },
+  { re: /coracao|veia pulmonar|atrio|ventriculo/, img: 'Anatomical heart model', leg: 'Modelo do coração humano: o sangue oxigenado dos pulmões chega ao átrio esquerdo.' },
   { re: /radioterapia|radiacao ionizante|tumor/, img: 'Radiation therapy', leg: 'Radioterapia: feixes de radiação atingem o tumor, cujas células se dividem rapidamente.' },
-  { re: /meiose/, img: 'Lily anther meiosis', leg: 'Células em meiose ao microscópio: cada célula-mãe origina quatro células haploides.' },
+  { re: /meiose/, img: 'Meiosis micrograph', leg: 'Células em meiose ao microscópio: cada célula-mãe origina quatro células haploides.' },
   { re: /mitose|regenera|divisao de suas celulas/, img: 'Onion root tip mitosis', leg: 'Ponta de raiz de cebola ao microscópio: várias células em diferentes fases da mitose.' },
   { re: /sem nucleo organizado|procariont/, img: 'Escherichia coli', leg: 'Bactéria Escherichia coli ao microscópio eletrônico: célula procarionte, sem núcleo organizado.' },
   { re: /olhos/, img: 'Human eye', leg: 'A cor dos olhos depende de vários genes; em exercícios, usa-se o modelo simplificado de um gene.' },
   { re: /pragas|elimina os predadores/, img: 'Ladybird eating aphids', leg: 'Joaninha comendo pulgões: predadores naturais controlam pragas nas lavouras.' },
   { re: /fitoplancton/, img: 'Diatoms', leg: 'Fitoplâncton: algas microscópicas que produzem matéria orgânica pela fotossíntese.' },
   // ---------- Química ----------
-  { re: /alcool 70|higieniza as maos/, img: 'Hand sanitizer gel', leg: 'Álcool 70%: o etanol desnatura proteínas de micro-organismos.' },
+  { re: /alcool 70|higieniza as maos/, img: 'Hand sanitizer', leg: 'Álcool 70%: o etanol desnatura proteínas de micro-organismos.' },
   { re: /removedor de esmalte|acetona/, img: 'Nail polish', leg: 'Esmaltes: a acetona (propanona) dos removedores dissolve a película do esmalte.' },
-  { re: /odor de peixe|metilamina/, img: 'Fresh fish', leg: 'O cheiro de peixe deteriorado vem de aminas, como a metilamina.' },
+  { re: /odor de peixe|metilamina/, img: 'Fish on ice', leg: 'O cheiro de peixe deteriorado vem de aminas, como a metilamina.' },
   { re: /removedor de tinta|diclorometano/, img: 'paint stripper', leg: 'Removedores de tinta podem conter solventes clorados, como o diclorometano.' },
   { re: /botijao|gas de cozinha/, img: 'LPG cylinder', leg: 'Botijão de GLP: mistura de propano e butano.' },
   { re: /isqueiro/, img: 'butane lighter', leg: 'Isqueiros usam butano liquefeito sob pressão.' },
   { re: /amadurecer frutas|ch2=ch2/, img: 'bananas ripening', leg: 'O eteno (etileno) é um hormônio vegetal que acelera o amadurecimento.' },
-  { re: /polipropileno|propeno|produzao de plasticos|producao de plasticos/, img: 'Plastic containers', leg: 'Potes plásticos: muitos são de polipropileno, polímero feito a partir do propeno.' },
+  { re: /polipropileno|propeno|produzao de plasticos|producao de plasticos/, img: 'Tupperware', leg: 'Potes plásticos: muitos são de polipropileno, polímero feito a partir do propeno.' },
   { re: /polietileno/, img: 'Plastic bags', leg: 'Sacolas plásticas de polietileno, polímero formado a partir do eteno.' },
   { re: /cicloexano/, img: 'cyclohexane chair conformation 3D', leg: 'Modelo 3D do cicloexano: seis carbonos em anel.' },
   { re: /benzeno/, img: 'benzene 3D ball model', leg: 'Modelo da molécula de benzeno, com anel de seis carbonos.' },
@@ -100,11 +100,11 @@ const ESPEC = [
   { re: /manteiga ranc|butanoico/, img: 'butter block', leg: 'A manteiga rançosa libera ácido butanoico, de cheiro forte.' },
   { re: /formiga|acido formico|metanoico/, img: 'ant macro formica', leg: 'Formigas injetam ácido metanoico (fórmico) na picada.' },
   { re: /banana artificial|aroma de frutas|aromas de frutas/, img: 'Isoamyl acetate', leg: 'Ésteres dão aroma a frutas e a essências artificiais.' },
-  { re: /acetato de etila|colas e tintas/, img: 'Glue', leg: 'O acetato de etila é solvente de colas, tintas e removedores.' },
+  { re: /acetato de etila|colas e tintas/, img: 'Gluing wood', leg: 'O acetato de etila é solvente de colas, tintas e removedores.' },
   { re: /metanol/, img: 'Methanol 3D', leg: 'Modelo da molécula de metanol: combustível e solvente, tóxico se ingerido.' },
   { re: /butanal|aromatizantes/, img: 'Butyraldehyde', leg: 'Aldeídos estão entre as moléculas usadas em aromatizantes.' },
   { re: /etanol/, img: 'ethanol fuel pump Brazil', leg: 'Bomba de etanol: o Brasil produz o álcool combustível a partir da cana.' },
-  { re: /amonia|fertilizante|n2 \+ 3 h2|haber/, img: 'Ammonia plant', leg: 'Fábrica de amônia: o processo Haber-Bosch abastece a produção de fertilizantes.',
+  { re: /amonia|fertilizante|n2 \+ 3 h2|haber/, img: 'Ammonia production plant', leg: 'Fábrica de amônia: o processo Haber-Bosch abastece a produção de fertilizantes.',
     t: 'Cerca de metade dos alimentos produzidos no mundo depende de fertilizantes nitrogenados feitos a partir da amônia. No processo Haber-Bosch, N₂ do ar e H₂ reagem a cerca de 450 °C e 200 atm, com catalisador de ferro. Como a reação é reversível, a indústria escolhe pressão e temperatura para obter o máximo de amônia no menor tempo.' },
   { re: /refrigerante|co2\(g\)|co₂\(g\)/, img: 'Carbonated water', leg: 'Ao abrir a garrafa, a pressão cai e o CO₂ escapa em bolhas.' },
   { re: /n2o4|n₂o₄|no2|no₂/, img: 'Nitrogen dioxide', leg: 'NO₂ (castanho) e N₂O₄ (incolor): a cor muda com a temperatura.' },
@@ -135,7 +135,7 @@ const ESPEC = [
   { re: /polar|ponto de ebulicao|ligacao de hidrogenio|ponte de hidrogenio/, img: 'Hydrogen bonds water', leg: 'Ligações de hidrogênio entre moléculas de água.' },
   { re: /fenolftaleina/, img: 'Phenolphthalein', leg: 'A fenolftaleína fica incolor em meio ácido ou neutro e rosa em meio básico.' },
   { re: /tornassol/, img: 'Litmus paper', leg: 'Papel de tornassol: azul em meio básico, vermelho em meio ácido.' },
-  { re: /suco gastrico/, img: 'Human stomach model', leg: 'O estômago produz suco gástrico com ácido clorídrico (pH perto de 2).' },
+  { re: /suco gastrico/, img: 'Stomach model', leg: 'O estômago produz suco gástrico com ácido clorídrico (pH perto de 2).' },
   { re: /sabao|detergente/, img: 'Soap bar', leg: 'Sabões e detergentes têm caráter básico e removem gordura.' },
   { re: /hidroxido de sodio|hidroxido de potassio/, img: 'Sodium hydroxide pellets', leg: 'Hidróxido de sódio (soda cáustica), base forte usada em desentupidores e na fabricação de sabão.' },
   { re: /tampao|bicarbonato no sangue/, img: 'Blood sample tubes', leg: 'O sangue é tamponado: seu pH fica perto de 7,4.' },
@@ -154,19 +154,19 @@ const TEMAS = [
     V('snake venom extraction', 'Extração de veneno de serpente: o primeiro passo para produzir soro antiofídico.', 'O Instituto Butantan produz soros desde 1901: o veneno é aplicado em pequenas doses em cavalos, que fabricam anticorpos; esses anticorpos, purificados, formam o soro. Quem recebe o soro ganha anticorpos prontos, com efeito imediato, mas a proteção some em semanas, porque o próprio corpo não aprendeu a produzi-los (imunidade passiva).'),
     V('Breastfeeding infant', 'O leite materno transfere anticorpos da mãe para o bebê.', 'Durante a gestação, anticorpos da mãe atravessam a placenta, e depois do parto chegam ao bebê pelo leite, especialmente pelo colostro. É uma imunidade passiva natural: protege o recém-nascido enquanto o seu sistema imune amadurece. Por isso o Ministério da Saúde recomenda amamentação exclusiva até os 6 meses.'),
     V('clinical thermometer fever', 'Termômetro clínico: a febre é uma resposta de defesa inespecífica.', 'A primeira linha de defesa do corpo não escolhe o invasor: pele, mucosas, saliva, lágrimas, a inflamação e a febre agem do mesmo jeito contra qualquer agente. Essa é a imunidade inata, presente desde o nascimento e sem memória. Já a imunidade adquirida reconhece cada invasor de forma específica e guarda memória.'),
-    V('Lymphocyte micrograph', 'Linfócito ao microscópio: célula responsável pela defesa específica.', 'Os linfócitos B produzem anticorpos que se encaixam em um antígeno específico, como uma chave na fechadura; os linfócitos T coordenam a resposta e destroem células infectadas. Depois da primeira infecção, algumas dessas células viram células de memória, que explicam por que muitas doenças, como a catapora, não se repetem.'),
+    V('Lymphocyte', 'Linfócito ao microscópio: célula responsável pela defesa específica.', 'Os linfócitos B produzem anticorpos que se encaixam em um antígeno específico, como uma chave na fechadura; os linfócitos T coordenam a resposta e destroem células infectadas. Depois da primeira infecção, algumas dessas células viram células de memória, que explicam por que muitas doenças, como a catapora, não se repetem.'),
     V('scraped knee', 'Ferimento na pele: a barreira foi rompida e a defesa inata entra em ação.', 'Quando a pele se rompe, a coagulação fecha o ferimento e células de defesa chegam pelo sangue, causando vermelhidão, calor e inchaço: é a inflamação. Esses mecanismos agem em minutos e da mesma forma contra qualquer micróbio; se não bastarem, entra em cena a imunidade adquirida, mais lenta na primeira vez, mas específica.')
   ] },
   { re: /clon|celulas-tronco/, v: [
     V('Dolly the sheep National Museum of Scotland', 'Dolly, a ovelha clonada em 1996, exposta no Museu Nacional da Escócia.', 'Na clonagem reprodutiva, o núcleo de uma célula do doador é colocado em um óvulo sem núcleo; o embrião formado é implantado em um útero e nasce um indivíduo com o mesmo DNA nuclear do doador. Foi assim que nasceu Dolly, em 1996, na Escócia.'),
     V('Human embryonic stem cells', 'Colônia de células-tronco vista ao microscópio.', 'Na clonagem terapêutica, as células obtidas são cultivadas em laboratório para formar tecidos, como pele para queimados ou músculo cardíaco para testes de remédios, sem que nenhum embrião seja implantado em um útero. No Brasil, a Lei de Biossegurança (2005) regula essas pesquisas.'),
-    V('Micromanipulator', 'Micromanipulação de óvulos: técnica usada na transferência de núcleo.', 'A transferência de núcleo é feita com agulhas finíssimas, sob o microscópio: retira-se o núcleo do óvulo e coloca-se o núcleo de uma célula do doador. A diferença entre clonagem reprodutiva e terapêutica está no destino: gerar um organismo inteiro ou apenas células e tecidos.')
+    V('Intracytoplasmic sperm injection', 'Micromanipulação de óvulos: técnica usada na transferência de núcleo.', 'A transferência de núcleo é feita com agulhas finíssimas, sob o microscópio: retira-se o núcleo do óvulo e coloca-se o núcleo de uma célula do doador. A diferença entre clonagem reprodutiva e terapêutica está no destino: gerar um organismo inteiro ou apenas células e tecidos.')
   ] },
   { re: /transcri|tradu|codon|anticodon|ribossomo|rna polimerase|rna transportador|sintese de proteinas|producao de proteinas|expressao/, v: [
     V('Insulin pen', 'Caneta de insulina: desde 1982 a insulina humana é produzida por bactérias modificadas.', 'Para fabricar uma proteína, a célula copia o gene do DNA em RNA mensageiro (transcrição) e depois o ribossomo lê esse RNA de três em três bases, os códons, encadeando aminoácidos (tradução). Bactérias que recebem o gene humano da insulina fazem exatamente isso e hoje produzem a insulina usada por milhões de pessoas com diabetes.'),
-    V('Ribosome', 'Modelo de um ribossomo, a estrutura que lê o RNA mensageiro e monta a proteína.', 'O ribossomo percorre o RNA mensageiro e, a cada códon, um RNA transportador traz o aminoácido correspondente, encaixando seu anticódon no códon. A sequência de bases do gene determina, assim, a sequência de aminoácidos da proteína; uma única troca de base pode mudar um aminoácido ou criar um códon de parada.'),
+    V('Ribosome 3D model', 'Modelo de um ribossomo, a estrutura que lê o RNA mensageiro e monta a proteína.', 'O ribossomo percorre o RNA mensageiro e, a cada códon, um RNA transportador traz o aminoácido correspondente, encaixando seu anticódon no códon. A sequência de bases do gene determina, assim, a sequência de aminoácidos da proteína; uma única troca de base pode mudar um aminoácido ou criar um códon de parada.'),
     V('Silkworm cocoon', 'Casulo do bicho-da-seda: a seda é uma proteína (fibroína) fabricada a partir de um gene.', 'Cabelo, seda, enzimas digestivas e anticorpos são proteínas, e todas são montadas a partir das instruções de genes. No núcleo, o gene é transcrito em RNA mensageiro pela enzima RNA polimerase; no citoplasma, os ribossomos traduzem esse RNA em proteína.'),
-    V('Rough endoplasmic reticulum micrograph', 'Retículo endoplasmático com ribossomos, visto ao microscópio eletrônico.', 'Células que produzem muitas proteínas, como as do pâncreas, são repletas de ribossomos. Todas as células do corpo têm o mesmo DNA, mas cada tipo celular transcreve e traduz só uma parte dos genes: é a expressão gênica que torna um neurônio diferente de uma célula do fígado.')
+    V('Rough endoplasmic reticulum TEM', 'Retículo endoplasmático com ribossomos, visto ao microscópio eletrônico.', 'Células que produzem muitas proteínas, como as do pâncreas, são repletas de ribossomos. Todas as células do corpo têm o mesmo DNA, mas cada tipo celular transcreve e traduz só uma parte dos genes: é a expressão gênica que torna um neurônio diferente de uma célula do fígado.')
   ] },
   { re: /\bdna\b|\brna\b|uracila|timina|dupla helice|fita|desoxirribose|ribose|nucleotideo/, v: [
     V('DNA sculpture', 'Escultura da dupla hélice do DNA: duas fitas enroladas, ligadas pelas bases.', 'O DNA é formado por duas fitas de nucleotídeos (açúcar desoxirribose, fosfato e base) enroladas em dupla hélice. As bases pareiam sempre do mesmo jeito: adenina com timina e citosina com guanina. Por isso, conhecendo uma fita, é possível escrever a fita complementar, e a célula consegue copiar seu DNA antes de se dividir.'),
@@ -177,13 +177,13 @@ const TEMAS = [
   { re: /transgen|ogm|engenharia genetica|biosseguranca|geneticamente modificad|transgenia|gene de outra especie/, v: [
     V('maize corn field Brazil', 'Lavoura de milho: a maior parte do milho plantado no Brasil é transgênica.', 'Organismos geneticamente modificados (OGM) têm o DNA alterado em laboratório; os transgênicos são os OGM que receberam um gene de outra espécie. O milho Bt, por exemplo, recebeu um gene de bactéria que produz uma proteína tóxica para lagartas que atacam a lavoura.'),
     V('Soybean field', 'Plantação de soja: o Brasil é o maior produtor mundial do grão.', 'No Brasil, a CTNBio (Comissão Técnica Nacional de Biossegurança) avalia cada OGM antes de liberar seu cultivo, considerando riscos à saúde e ao ambiente. Alimentos com mais de 1% de ingrediente transgênico precisam trazer no rótulo um "T" dentro de um triângulo amarelo.'),
-    V('Golden rice', 'Arroz dourado: grãos transgênicos que produzem betacaroteno (pró-vitamina A).', 'O arroz dourado recebeu genes de outras espécies para produzir betacaroteno nos grãos, com o objetivo de combater a falta de vitamina A em países pobres. O caso mostra o potencial da transgenia e também os debates sobre biossegurança, patentes e acesso dos agricultores às sementes.'),
+    V('Golden rice', 'Arrozal: o arroz dourado é uma variedade transgênica que produz betacaroteno (pró-vitamina A).', 'O arroz dourado recebeu genes de outras espécies para produzir betacaroteno nos grãos, com o objetivo de combater a falta de vitamina A em países pobres. O caso mostra o potencial da transgenia e também os debates sobre biossegurança, patentes e acesso dos agricultores às sementes.'),
     V('cotton field boll', 'Algodão: no Brasil há variedades transgênicas resistentes a lagartas.', 'A biossegurança reúne normas para que pesquisas e cultivos de organismos modificados não tragam riscos às pessoas e ao ambiente, como o cruzamento com espécies nativas ou o surgimento de pragas resistentes. A Lei de Biossegurança brasileira é de 2005.')
   ] },
   { re: /biomagnifica|bioconcentra|cadeia alimentar|nivel trofico|contaminante|poluente/, v: [
     V('heron catching fish', 'Garça capturando peixe: predadores do topo acumulam mais contaminantes.', 'Substâncias que o organismo não elimina, como mercúrio e alguns pesticidas, ficam guardadas na gordura e nos tecidos. Quando passam de presa para predador, a concentração aumenta a cada nível da cadeia alimentar: é a biomagnificação. Por isso aves e peixes predadores têm níveis muito maiores que o plâncton.'),
     V('mussels bed rocks', 'Mexilhões filtram grandes volumes de água e acumulam o que há nela.', 'Quando um organismo absorve uma substância direto da água, em concentração maior que a do meio, sem tê-la recebido pela alimentação, ocorre a bioconcentração. Mexilhões e ostras são usados para monitorar a poluição de baías justamente por isso.'),
-    V('Gold mining Amazon', 'Garimpo na Amazônia: o mercúrio usado para separar o ouro contamina rios e peixes.', 'No garimpo, o mercúrio se liga ao ouro e depois é evaporado, contaminando o ar, os rios e os peixes. Estudos da Fiocruz encontraram níveis altos de mercúrio em povos indígenas que comem peixes predadores, um exemplo de como a biomagnificação afeta a saúde humana.'),
+    V('Gold mining Amazon', 'Garimpo de ouro: o mercúrio usado para separar o ouro contamina rios e peixes.', 'No garimpo, o mercúrio se liga ao ouro e depois é evaporado, contaminando o ar, os rios e os peixes. Estudos da Fiocruz encontraram níveis altos de mercúrio em povos indígenas que comem peixes predadores, um exemplo de como a biomagnificação afeta a saúde humana.'),
     V('pesticide spraying crop field', 'Pulverização de agrotóxicos: parte da substância chega a rios e lagos.', 'O Brasil está entre os maiores consumidores de agrotóxicos do mundo. Parte deles escorre para rios e lagos, onde é absorvida por algas e pequenos animais e passa pelas cadeias alimentares, acumulando-se nos animais do topo.')
   ] },
   { re: /virus|acelular|hospedeir/, v: [
@@ -206,7 +206,7 @@ const TEMAS = [
     V('Stromatolites', 'Estromatólitos: estruturas formadas por bactérias, com registros de mais de 3 bilhões de anos.', 'Os registros mais antigos de vida são de micro-organismos de cerca de 3,5 bilhões de anos. As hipóteses sobre a origem da vida (evolução química, panspermia) tentam explicar como se passou de moléculas simples às primeiras células, enquanto a biogênese explica como a vida se mantém.')
   ] },
   { re: /experimento|grupo controle|variavel|hipotese|metodo cientifico/, v: [
-    V('Petri dishes', 'Placas de Petri: o grupo controle permite comparar os resultados.', 'Em 1928, Alexander Fleming notou que um fungo impedia o crescimento de bactérias em uma placa: dali surgiu a penicilina. A ciência avança assim: observação, pergunta, hipótese testável, experimento e conclusão.'),
+    V('Petri dish bacteria', 'Placas de Petri: o grupo controle permite comparar os resultados.', 'Em 1928, Alexander Fleming notou que um fungo impedia o crescimento de bactérias em uma placa: dali surgiu a penicilina. A ciência avança assim: observação, pergunta, hipótese testável, experimento e conclusão.'),
     V('Plant growth experiment', 'Experimento com plantas: só uma condição muda entre os grupos.', 'Em um experimento controlado, só uma variável é alterada (variável independente) e mede-se o efeito sobre outra (variável dependente). O grupo controle recebe o mesmo tratamento, menos a alteração; sem ele, não dá para saber se o resultado foi causado pela variável testada.'),
     V('Laboratory notebook', 'Caderno de laboratório: registrar tudo permite repetir e conferir o experimento.', 'Uma investigação científica começa com a observação de um problema e a formulação de uma hipótese, uma explicação provisória que possa ser testada. Os resultados precisam ser registrados e repetidos por outros pesquisadores para serem aceitos.')
   ] },
@@ -217,8 +217,8 @@ const TEMAS = [
   ] },
   { re: /meiose|mitose|divisao celular|regenera/, v: [
     V('Onion root tip mitosis', 'Ponta de raiz de cebola: células em diferentes fases da mitose.', 'Na mitose, uma célula duplica seu DNA e se divide em duas células-filhas idênticas. É ela que permite o crescimento, a cicatrização de ferimentos e a renovação constante da pele e do sangue.'),
-    V('Lily anther meiosis', 'Células em meiose: cada célula-mãe origina quatro células haploides.', 'Na meiose, uma célula diploide passa por duas divisões e origina quatro células haploides, com metade dos cromossomos e geneticamente diferentes. É assim que se formam os gametas; a troca de trechos entre cromossomos (crossing-over) aumenta a variabilidade dos descendentes.'),
-    V('Skin wound healing', 'Cicatrização: a mitose repõe as células perdidas no ferimento.', 'Tecidos se regeneram graças à mitose das células vizinhas à lesão. Algumas células se dividem muito (pele, medula óssea), outras quase nunca (neurônios), o que explica por que certos tecidos se recuperam melhor que outros.')
+    V('Meiosis micrograph', 'Células em meiose: cada célula-mãe origina quatro células haploides.', 'Na meiose, uma célula diploide passa por duas divisões e origina quatro células haploides, com metade dos cromossomos e geneticamente diferentes. É assim que se formam os gametas; a troca de trechos entre cromossomos (crossing-over) aumenta a variabilidade dos descendentes.'),
+    V('Scab on knee', 'Cicatrização: a mitose repõe as células perdidas no ferimento.', 'Tecidos se regeneram graças à mitose das células vizinhas à lesão. Algumas células se dividem muito (pele, medula óssea), outras quase nunca (neurônios), o que explica por que certos tecidos se recuperam melhor que outros.')
   ] },
   { re: /radioterapia|radiacao|tumor|cancer/, v: [
     V('Radiation therapy', 'Radioterapia: feixes de radiação direcionados ao tumor.', 'Radiações ionizantes têm energia para danificar o DNA. Células de tumor se dividem muito e são mais sensíveis a esse dano; por isso a radioterapia, com doses planejadas e feixes direcionados, destrói o tumor poupando o máximo possível dos tecidos saudáveis.'),
@@ -235,7 +235,7 @@ const TEMAS = [
     V('Galapagos finches', 'Tentilhões das Galápagos: bicos diferentes para alimentos diferentes.', 'Darwin observou nas Ilhas Galápagos tentilhões com bicos adaptados a sementes, insetos ou flores. Populações isoladas em ambientes diferentes acumulam diferenças até formarem novas espécies: é a especiação.')
   ] },
   { re: /coracao|circulacao|veia|arteria|atrio|ventriculo/, v: [
-    V('Human heart model', 'Modelo do coração humano, com quatro cavidades.', 'Nos mamíferos, a circulação é dupla e completa: o lado direito do coração envia sangue pobre em oxigênio aos pulmões; o sangue oxigenado volta pelas veias pulmonares ao átrio esquerdo e sai pelo ventrículo esquerdo para todo o corpo, sem mistura entre os dois lados.'),
+    V('Anatomical heart model', 'Modelo do coração humano, com quatro cavidades.', 'Nos mamíferos, a circulação é dupla e completa: o lado direito do coração envia sangue pobre em oxigênio aos pulmões; o sangue oxigenado volta pelas veias pulmonares ao átrio esquerdo e sai pelo ventrículo esquerdo para todo o corpo, sem mistura entre os dois lados.'),
     V('Stethoscope', 'Estetoscópio: os sons do coração vêm do fechamento das válvulas.', 'As válvulas do coração impedem o refluxo do sangue entre átrios e ventrículos. O coração bate cerca de 100 mil vezes por dia, e doenças cardiovasculares são a principal causa de morte no Brasil, ligadas a sedentarismo, tabagismo e má alimentação.')
   ] },
   { re: /populacao|competicao|predad|ecossistema|ecologic|fitoplancton|praga|produtor|consumidor/, v: [
@@ -245,7 +245,7 @@ const TEMAS = [
     V('Ladybird eating aphids', 'Joaninha comendo pulgões: controle biológico de pragas.', 'Predadores mantêm as populações de suas presas sob controle. Quando um agricultor elimina os predadores, as pragas podem explodir; o controle biológico usa justamente inimigos naturais, como joaninhas e vespas, no lugar de agrotóxicos.')
   ] },
   { re: /alelo|heterozigot|homozigot|genotip|fenotip|cruzamento|dominante|recessiv|diibrid/, v: [
-    V('Pea plant flowers', 'Flores de ervilha: foi com essa planta que Mendel descobriu as leis da herança.', 'Gregor Mendel cruzou ervilhas por oito anos e publicou em 1865 que cada característica depende de um par de fatores (hoje, alelos), um de cada genitor. Do cruzamento de dois heterozigotos (Aa × Aa) espera-se 1/4 AA, 1/2 Aa e 1/4 aa, ou seja, 3 dominantes para 1 recessivo.'),
+    V('Pisum sativum flowers', 'Flores de ervilha: foi com essa planta que Mendel descobriu as leis da herança.', 'Gregor Mendel cruzou ervilhas por oito anos e publicou em 1865 que cada característica depende de um par de fatores (hoje, alelos), um de cada genitor. Do cruzamento de dois heterozigotos (Aa × Aa) espera-se 1/4 AA, 1/2 Aa e 1/4 aa, ou seja, 3 dominantes para 1 recessivo.'),
     V('Human eye', 'Íris humana: a cor dos olhos é um exemplo usado em exercícios de herança.', 'Em exercícios de genética, usa-se o modelo simplificado em que um alelo dominante (A) se manifesta mesmo em dose única, e o recessivo (a) só aparece em homozigose (aa). As probabilidades de eventos independentes se multiplicam: a chance de dois filhos aa seguidos é 1/4 × 1/4.')
   ] },
   { re: /droga|sistema nervoso|neuro|doses cada vez maiores|substancia psico|ansiedade/, v: [
@@ -267,7 +267,7 @@ const TEMAS = [
   ] },
   // ---------- Química ----------
   { q: 1, re: /equilibrio|le chatelier|⇌|kc\b|constante de equilibrio|quociente/, v: [
-    V('Ammonia plant', 'Fábrica de amônia: a base da produção de fertilizantes nitrogenados.', 'No processo Haber-Bosch, N₂ e H₂ reagem formando amônia em uma reação reversível e exotérmica. Pelo princípio de Le Chatelier, alta pressão favorece a amônia (lado com menos mols de gás) e temperatura baixa também, mas deixaria a reação lenta; a indústria usa cerca de 450 °C, 200 atm e catalisador de ferro.'),
+    V('Ammonia production plant', 'Fábrica de amônia: a base da produção de fertilizantes nitrogenados.', 'No processo Haber-Bosch, N₂ e H₂ reagem formando amônia em uma reação reversível e exotérmica. Pelo princípio de Le Chatelier, alta pressão favorece a amônia (lado com menos mols de gás) e temperatura baixa também, mas deixaria a reação lenta; a indústria usa cerca de 450 °C, 200 atm e catalisador de ferro.'),
     V('Carbonated water', 'Água com gás: o CO₂ dissolvido sai em bolhas quando a pressão cai.', 'Em um refrigerante fechado, o CO₂ dissolvido e o CO₂ gasoso estão em equilíbrio. Ao abrir a garrafa, a pressão cai e o sistema se desloca no sentido de liberar gás. Pelo princípio de Le Chatelier, todo sistema em equilíbrio perturbado se desloca para reduzir a perturbação.'),
     V('Nitrogen dioxide', 'Dióxido de nitrogênio (NO₂), gás castanho em equilíbrio com o N₂O₄, incolor.', 'O equilíbrio 2 NO₂ ⇌ N₂O₄ muda de cor com a temperatura: aquecido, fica mais castanho; resfriado, mais claro. Só a temperatura altera o valor da constante Kc; mudanças de concentração e pressão deslocam o equilíbrio, mas o Kc continua o mesmo.'),
     V('Cave stalactites', 'Estalactites: formadas por um equilíbrio entre calcário, água e gás carbônico.', 'Nas cavernas, água com CO₂ dissolve o calcário; quando a gota pinga e perde CO₂ para o ar, o equilíbrio se desloca e o carbonato de cálcio volta a se depositar, formando estalactites ao longo de milhares de anos. Em equilíbrio, as reações direta e inversa continuam ocorrendo, com a mesma velocidade.'),
@@ -284,13 +284,13 @@ const TEMAS = [
   ] },
   { q: 1, re: /entalpia|δh|exoterm|endoterm|libera energia|libera calor|absorve calor/, v: [
     V('gas stove flame', 'Chama do fogão: a combustão é um processo exotérmico.', 'Toda reação troca energia com o ambiente. Quando libera calor, como na combustão, é exotérmica e tem ΔH negativo; quando absorve calor, como no cozimento dos alimentos ou na fotossíntese, é endotérmica e tem ΔH positivo.'),
-    V('Instant cold pack', 'Bolsa de gelo instantâneo: a dissolução do sal absorve calor do ambiente.', 'Bolsas térmicas usadas em lesões esportivas funcionam com processos endotérmicos: ao romper o lacre, um sal se dissolve na água e absorve calor, esfriando a bolsa. As bolsas quentes usam o processo inverso, exotérmico.')
+    V('Ice pack injury', 'Bolsa de gelo instantâneo: a dissolução do sal absorve calor do ambiente.', 'Bolsas térmicas usadas em lesões esportivas funcionam com processos endotérmicos: ao romper o lacre, um sal se dissolve na água e absorve calor, esfriando a bolsa. As bolsas quentes usam o processo inverso, exotérmico.')
   ] },
   { q: 1, re: /combustive|petroleo|carvao|gas natural|poder calorifico|renovavel|efeito estufa|chuva acida|energia/, v: [
     V('Brazil sugarcane ethanol', 'Colheita de cana em Piracicaba (SP): matéria-prima do etanol.', 'Quase metade da energia usada no Brasil vem de fontes renováveis, bem acima da média mundial de cerca de 15%. O etanol de cana é renovável: o CO₂ liberado na queima é reabsorvido pela próxima safra na fotossíntese.'),
     V('Oil refinery', 'Refinaria: a destilação fracionada separa gasolina, diesel e outros derivados.', 'Petróleo, carvão e gás natural são combustíveis fósseis: levaram milhões de anos para se formar e não se repõem na escala da vida humana. Ao queimar, liberam CO₂ que estava guardado no subsolo, intensificando o efeito estufa.'),
     V('Anthracite coal', 'Carvão mineral: combustível fóssil rico em carbono e, muitas vezes, em enxofre.', 'O poder calorífico indica quanta energia um combustível libera por quilograma queimado. O carvão libera muita energia, mas também mais CO₂ por unidade de energia, além de óxidos de enxofre que formam a chuva ácida.'),
-    V('Wind farm Brazil', 'Parque eólico no Nordeste brasileiro.', 'O Brasil é um dos maiores produtores de energia eólica do mundo, com parques concentrados no Nordeste. Trocar combustíveis fósseis por fontes renováveis e por transporte público e elétrico reduz a emissão de gases de efeito estufa e a poluição das cidades.'),
+    V('Parque eólico', 'Parque eólico no Nordeste brasileiro.', 'O Brasil é um dos maiores produtores de energia eólica do mundo, com parques concentrados no Nordeste. Trocar combustíveis fósseis por fontes renováveis e por transporte público e elétrico reduz a emissão de gases de efeito estufa e a poluição das cidades.'),
     V('Natural gas flame', 'Chama de gás natural (metano).', 'Entre os fósseis, o gás natural emite menos CO₂ e quase nenhum enxofre por unidade de energia, por isso é chamado de combustível de transição. Ainda assim, não é renovável.')
   ] },
   { q: 1, re: /mistura|filtracao|evapora|dureza|separa|destila|decanta/, v: [
@@ -300,7 +300,7 @@ const TEMAS = [
   ] },
   { q: 1, re: /\bmols?\b|estequiometr|rendimento|massa molar/, v: [
     V('Space Shuttle main engine', 'Motor do ônibus espacial: queimava hidrogênio e oxigênio líquidos, formando água.', 'As equações químicas mostram em que proporção as substâncias reagem: em 2 H₂ + O₂ → 2 H₂O, 2 mols de hidrogênio formam 2 mols de água. Com essas proporções, a indústria calcula quanto reagente usar e quanto produto vai obter.'),
-    V('Baking ingredients', 'Ingredientes medidos para uma receita: na química, as proporções também importam.', 'Assim como uma receita, uma reação usa os reagentes em proporções fixas. Se um reagente sobra (excesso), o outro limita a quantidade de produto; o rendimento compara o produto obtido com o teoricamente esperado.')
+    V('Cake ingredients', 'Ingredientes medidos para uma receita: na química, as proporções também importam.', 'Assim como uma receita, uma reação usa os reagentes em proporções fixas. Se um reagente sobra (excesso), o outro limita a quantidade de produto; o rendimento compara o produto obtido com o teoricamente esperado.')
   ] },
   { q: 1, re: /polar|interac|ligacao de hidrogenio|ebulicao/, v: [
     V('Hydrogen bonds water', 'Modelo de moléculas de água unidas por ligações de hidrogênio.', 'A água é polar e forma ligações de hidrogênio, interações fortes entre as moléculas. Por isso ferve a 100 °C, muito acima do esperado para uma molécula tão pequena, e é líquida na maior parte da Terra.'),
@@ -328,7 +328,7 @@ const TEMAS = [
     V('Isoamyl acetate', 'Modelo do acetato de isoamila, o éster com aroma de banana.', 'Ésteres, com o grupo –COO– entre carbonos, dão aroma a frutas e essências artificiais. Éteres têm um oxigênio entre dois carbonos (–O–); aminas têm nitrogênio ligado a carbono, como as que dão o cheiro de peixe.'),
     V('Nail polish', 'Esmaltes: a acetona dos removedores é uma cetona.', 'Na carbonila (C=O), a posição define a função: entre dois carbonos, é uma cetona, como a propanona (acetona); na ponta da cadeia, ligada a um hidrogênio, é um aldeído, como o metanal (formol).'),
     V('Pineapple', 'Abacaxi: seu aroma vem de ésteres naturais.', 'Muitos aromas de frutas são ésteres, formados pela reação entre um ácido carboxílico e um álcool. A química orgânica está nos alimentos, nos perfumes, nos remédios e nos combustíveis.'),
-    V('Perfume bottles', 'Perfumes: misturas de ésteres, álcoois, aldeídos e cetonas.', 'Perfumes combinam substâncias de várias funções orgânicas: álcoois (–OH), aldeídos (–CHO na ponta), cetonas (C=O no meio da cadeia) e ésteres (–COO–). Haletos orgânicos, com cloro ou bromo ligado a carbono, aparecem em solventes e, no passado, nos gases que destruíam a camada de ozônio.')
+    V('Perfume', 'Perfumes: misturas de ésteres, álcoois, aldeídos e cetonas.', 'Perfumes combinam substâncias de várias funções orgânicas: álcoois (–OH), aldeídos (–CHO na ponta), cetonas (C=O no meio da cadeia) e ésteres (–COO–). Haletos orgânicos, com cloro ou bromo ligado a carbono, aparecem em solventes e, no passado, nos gases que destruíam a camada de ozônio.')
   ] },
   { q: 1, re: /cadeia|iupac|nome oficial|carbonos|hidrocarboneto|ligacao dupla|ligacao tripla|alcano|alceno|alcino|anel/, v: [
     V('LPG cylinder', 'Botijão de gás de cozinha (GLP): propano e butano.', 'O carbono faz quatro ligações e forma cadeias abertas ou fechadas, normais ou ramificadas, homogêneas (só carbonos) ou heterogêneas (com O, N ou S entre carbonos), saturadas ou insaturadas. O propano e o butano do gás de cozinha são alcanos de cadeia aberta e saturada.'),
@@ -356,7 +356,9 @@ const GERAL = {
   'Química': [
     V('chemistry laboratory glassware', 'Vidrarias de laboratório de química.', 'A Química está nos alimentos, nos combustíveis, nos remédios e nos produtos de limpeza. Leia a situação com atenção e relacione-a ao conceito pedido.'),
     V('Water treatment plant', 'Estação de tratamento de água: coagulação, decantação, filtração e cloração.', 'No tratamento da água que chega às casas, a química está em cada etapa: substâncias que agrupam a sujeira, decantação, filtração, cloro para eliminar micróbios e ajuste do pH. Muitos conceitos de Química aparecem nesse processo.'),
-    V('Medicine tablets', 'Comprimidos: cada remédio é uma substância química com dose e reação controladas.', 'Os medicamentos são resultado da química: sua estrutura define como agem no corpo, sua estabilidade define o prazo de validade e sua reação com o organismo define a dose.')
+    V('Fertilizer', 'Fertilizantes: a química garante nutrientes para as lavouras.', 'A agricultura brasileira depende da química: fertilizantes repõem nitrogênio, fósforo e potássio do solo, e o calcário corrige a acidez. Usar a dose certa evita desperdício e a contaminação de rios.'),
+    V('Kitchen cooking', 'Cozinhar é fazer química: o calor transforma as substâncias dos alimentos.', 'Ao cozinhar, o calor acelera reações que mudam cor, sabor e textura dos alimentos; o fermento libera gás, o vinagre e o limão mudam o pH. Muitos conceitos de Química aparecem na cozinha.'),
+    V('Pills', 'Comprimidos: cada remédio é uma substância química com dose e reação controladas.', 'Os medicamentos são resultado da química: sua estrutura define como agem no corpo, sua estabilidade define o prazo de validade e sua reação com o organismo define a dose.')
   ]
 };
 

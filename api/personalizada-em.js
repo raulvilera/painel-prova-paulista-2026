@@ -55,8 +55,8 @@ const IMG_CACHE = new Map();
 const semTags = s => String(s || '').replace(/<[^>]*>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 /* Só imagens sem texto em outra língua: descarta arquivos marcados com idioma que não seja o português
    e esquemas/gráficos/mapas (que costumam ter rótulos), a menos que estejam em português. */
-const IDIOMA = /[-_ (.](en|es|fr|de|it|tr|ku|ro|pl|ru|ja|zh|ar|eu|ca|nl|sv|uk|he|fa|cs|hu|el|ko|vi|id|fi|da|no|nb)([-_ ).]|$)/i;
-const ESQUEMA = /diagram|schema|scheme|chart|graph|\bmap\b|infographic|poster|label|logo|flowchart|\bcycle\b|stages|\bstructure\b|table|catalog|text|sign|cover|page|book|\bad\b|advert|newspaper|leaflet|slide/i;
+const IDIOMA = /[-_ (.](en|es|fr|de|it|tr|ku|ro|pl|ru|ja|zh|ar|eu|ca|nl|sv|uk|he|fa|cs|hu|el|ko|vi|id|fi|da|no|nb|ta|hi|bn|ml|te|kn|th|sr|bg|hr|sk|sl|lt|lv|et|gl|ast|oc|af|sw|ms|tl|hy|ka|az|be|mk|sq|is|ga|cy|ur|mr|gu|pa)([-_ ).]|$)/i;
+const ESQUEMA = /diagram|schema|scheme|chart|graph|\bmaps?\b|infographic|poster|\blabel|annot|logo|flowchart|\bcycle\b|stages|\bstructure\b|\btable\b|catalog|\btext\b|\bsign\b|\bcover\b|\bpage\b|\bbook\b|\bad\b|advert|newspaper|leaflet|\bslide|banner|capacity|statistic|accumulated|installed|worldwide|\bvs\b|comparison|infograf|\bopenstax\b|^\d{4} /i;
 const PT = /[-_ (]pt([-_ ).]|$)|pt-br|portugu|\b(esquema|diagrama|ciclo|estrutura)\b/i;
 function semTextoEstrangeiro(titulo) {
   const t = String(titulo || '').replace(/^File:/, '');
