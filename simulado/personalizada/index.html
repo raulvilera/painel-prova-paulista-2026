@@ -19,12 +19,13 @@
   .card { background: var(--card); border:1px solid var(--borda); border-radius: 12px; padding: 16px; margin-bottom: 14px; }
   button { width:100%; font: inherit; padding: 10px 12px; border-radius: 8px; border:none; background: var(--acc); color:#fff; font-weight:700; cursor:pointer; margin-top: 12px; }
   button:disabled { opacity:.5; cursor:not-allowed; }
+  #enviar { display:block; width: auto; margin: 18px auto 4px; padding: 11px 32px; }
   .q { border-top:1px solid var(--borda); padding: 14px 0 6px; }
   .q:first-child { border-top:none; padding-top: 0; }
   .q h3 { font-size: 1rem; margin: 0 0 8px; }
   .enun { white-space: pre-line; margin: 0 0 10px; }
   /* alternativas em alto relevo; a marcada "afunda" e fica verde-escura com letras brancas em negrito */
-  .alt { position: relative; display:flex; gap:10px; align-items:flex-start; padding: 11px 14px; margin: 0 0 10px; border-radius: 10px; cursor:pointer;
+  .alt { position: relative; display:flex; width: fit-content; max-width: 100%; gap:10px; align-items:flex-start; padding: 11px 14px; margin: 0 0 10px; border-radius: 10px; cursor:pointer;
     background: linear-gradient(180deg, var(--card), var(--bg)); border: 1px solid var(--borda);
     box-shadow: 0 4px 0 var(--relevo), 0 6px 10px rgba(0,0,0,.18); transform: translateY(0);
     transition: transform .08s ease, box-shadow .08s ease, background .12s ease, color .12s ease; user-select: none; }
