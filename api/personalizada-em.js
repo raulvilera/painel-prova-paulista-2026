@@ -123,26 +123,6 @@ module.exports = async function personalizadaEM(req, res) {
       return res.status(200).json({ ok: true, imagem: im });
     } catch (e) { return res.status(502).json({ ok: false, erro: 'Imagem indisponível.' }); }
   }
-  /* temporário: conferência das imagens escolhidas para cada busca do catálogo */
-  if (req.method === 'GET' && q.imgs) {
-    const fatia = BUSCAS.slice(+q.de || 0, (+q.de || 0) + 40), out = {}; let i = 0;
-    await Promise.all(Array.from({ length: 8 }, async () => { while (i < fatia.length) { const b = fatia[i++]; try { const im = await imagemCommons(b); out[b] = im ? im.titulo : null; } catch (e) { out[b] = 'ERRO'; } } }));
-    return res.status(200).json({ ok: true, total: BUSCAS.length, imagens: out });
-  }
-
-  /* temporário: questões distintas de uma turma (sem nomes nem gabarito), para preparar textos-base e imagens */
-  if (req.method === 'GET' && q.banco && NOMES[q.turma]) {
-    const nomes = NOMES[q.turma], vistos = new Map(); let i = 0;
-    await Promise.all(Array.from({ length: 10 }, async () => {
-      while (i < nomes.length) {
-        const nome = nomes[i++], r = await chamarScript('GET', { api: 'personalizada', turma: q.turma, nome: nome });
-        if (!r.ok) continue;
-        (r.dados.questoes || []).forEach(x => { const k = x.enunciado; const v = vistos.get(k) || { componente: r.dados.componente, enunciado: x.enunciado, n: 0 }; v.n++; vistos.set(k, v); });
-      }
-    }));
-    const lista = [...vistos.values()].map(v => ({ c: v.componente, e: v.enunciado, x: contexto(v.enunciado, v.componente) }));
-    return res.status(200).json({ ok: true, total: lista.length, semTema: lista.filter(v => !v.x.casou).map(v => v.c + ' | ' + v.e), semImagemPropria: lista.filter(v => !v.x.legenda).map(v => v.c + ' | ' + v.e.slice(0, 90)) });
-  }
 
   if (req.method === 'GET' || req.method === 'POST') {
     let quem = null;
