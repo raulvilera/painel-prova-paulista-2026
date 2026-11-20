@@ -73,7 +73,7 @@ const ESPEC = [
   { re: /ciclo do carbono|combustiveis fosseis libera co/, img: 'Coal power plant', leg: 'Usina termelétrica a carvão: a queima devolve à atmosfera carbono guardado há milhões de anos.' },
   { re: /ciclo do nitrogenio/, img: 'Root nodules', leg: 'Nódulos nas raízes de leguminosas: bactérias que vivem ali fixam o nitrogênio do ar.' },
   { re: /ancestral comum|clado/, img: 'Fossil fish', leg: 'Peixe fóssil: os fósseis ajudam a reconstruir os ancestrais comuns dos grupos atuais.' },
-  { re: /coracao|veia pulmonar|atrio|ventriculo/, img: 'Plastic heart model', leg: 'Modelo do coração humano: o sangue oxigenado dos pulmões chega ao átrio esquerdo.' },
+  { re: /coracao|veia pulmonar|atrio|ventriculo/, img: 'Pig heart', leg: 'Coração de porco, muito parecido com o humano: quatro cavidades e duas circulações.' },
   { re: /radioterapia|radiacao ionizante|tumor/, img: 'Radiation therapy', leg: 'Radioterapia: feixes de radiação atingem o tumor, cujas células se dividem rapidamente.' },
   { re: /meiose/, img: 'Human karyotype', leg: 'Cromossomos humanos organizados em pares: na meiose, cada gameta recebe um de cada par.' },
   { re: /mitose|regenera|divisao de suas celulas/, img: 'Onion root tip mitosis', leg: 'Ponta de raiz de cebola ao microscópio: várias células em diferentes fases da mitose.' },
@@ -89,7 +89,7 @@ const ESPEC = [
   { re: /botijao|gas de cozinha/, img: 'LPG cylinder', leg: 'Botijão de GLP: mistura de propano e butano.' },
   { re: /isqueiro/, img: 'butane lighter', leg: 'Isqueiros usam butano liquefeito sob pressão.' },
   { re: /amadurecer frutas|ch2=ch2/, img: 'bananas ripening', leg: 'O eteno (etileno) é um hormônio vegetal que acelera o amadurecimento.' },
-  { re: /polipropileno|propeno|produzao de plasticos|producao de plasticos/, img: 'Plastic food container', leg: 'Potes plásticos: muitos são de polipropileno, polímero feito a partir do propeno.' },
+  { re: /polipropileno|propeno|produzao de plasticos|producao de plasticos/, img: 'Polypropylene pellets', leg: 'Grânulos de polipropileno, matéria-prima de potes e embalagens, feito a partir do propeno.' },
   { re: /polietileno/, img: 'Plastic bags', leg: 'Sacolas plásticas de polietileno, polímero formado a partir do eteno.' },
   { re: /cicloexano/, img: 'cyclohexane chair conformation 3D', leg: 'Modelo 3D do cicloexano: seis carbonos em anel.' },
   { re: /benzeno/, img: 'benzene 3D ball model', leg: 'Modelo da molécula de benzeno, com anel de seis carbonos.' },
@@ -208,7 +208,7 @@ const TEMAS = [
   { re: /experimento|grupo controle|variavel|hipotese|metodo cientifico/, v: [
     V('Petri dish bacteria', 'Placas de Petri: o grupo controle permite comparar os resultados.', 'Em 1928, Alexander Fleming notou que um fungo impedia o crescimento de bactérias em uma placa: dali surgiu a penicilina. A ciência avança assim: observação, pergunta, hipótese testável, experimento e conclusão.'),
     V('Plant growth experiment', 'Experimento com plantas: só uma condição muda entre os grupos.', 'Em um experimento controlado, só uma variável é alterada (variável independente) e mede-se o efeito sobre outra (variável dependente). O grupo controle recebe o mesmo tratamento, menos a alteração; sem ele, não dá para saber se o resultado foi causado pela variável testada.'),
-    V('Lab bench experiment', 'Caderno de laboratório: registrar tudo permite repetir e conferir o experimento.', 'Uma investigação científica começa com a observação de um problema e a formulação de uma hipótese, uma explicação provisória que possa ser testada. Os resultados precisam ser registrados e repetidos por outros pesquisadores para serem aceitos.')
+    V('Laboratory experiment students', 'Caderno de laboratório: registrar tudo permite repetir e conferir o experimento.', 'Uma investigação científica começa com a observação de um problema e a formulação de uma hipótese, uma explicação provisória que possa ser testada. Os resultados precisam ser registrados e repetidos por outros pesquisadores para serem aceitos.')
   ] },
   { re: /ciclo do carbono|ciclo do nitrogenio|combustiveis fosseis|ciclos? biogeoquimic/, v: [
     V('Coal power plant', 'Usina termelétrica a carvão: a queima devolve carbono fóssil à atmosfera.', 'No ciclo do carbono, a fotossíntese retira CO₂ do ar e a respiração e a decomposição o devolvem. Queimar petróleo, carvão e gás libera carbono que estava guardado há milhões de anos, aumentando o CO₂ no ar e intensificando o efeito estufa.'),
@@ -235,7 +235,7 @@ const TEMAS = [
     V('Galapagos finches', 'Tentilhões das Galápagos: bicos diferentes para alimentos diferentes.', 'Darwin observou nas Ilhas Galápagos tentilhões com bicos adaptados a sementes, insetos ou flores. Populações isoladas em ambientes diferentes acumulam diferenças até formarem novas espécies: é a especiação.')
   ] },
   { re: /coracao|circulacao|veia|arteria|atrio|ventriculo/, v: [
-    V('Plastic heart model', 'Modelo do coração humano, com quatro cavidades.', 'Nos mamíferos, a circulação é dupla e completa: o lado direito do coração envia sangue pobre em oxigênio aos pulmões; o sangue oxigenado volta pelas veias pulmonares ao átrio esquerdo e sai pelo ventrículo esquerdo para todo o corpo, sem mistura entre os dois lados.'),
+    V('Pig heart', 'Coração de porco, muito parecido com o humano: quatro cavidades e duas circulações.', 'Nos mamíferos, a circulação é dupla e completa: o lado direito do coração envia sangue pobre em oxigênio aos pulmões; o sangue oxigenado volta pelas veias pulmonares ao átrio esquerdo e sai pelo ventrículo esquerdo para todo o corpo, sem mistura entre os dois lados.'),
     V('Stethoscope', 'Estetoscópio: os sons do coração vêm do fechamento das válvulas.', 'As válvulas do coração impedem o refluxo do sangue entre átrios e ventrículos. O coração bate cerca de 100 mil vezes por dia, e doenças cardiovasculares são a principal causa de morte no Brasil, ligadas a sedentarismo, tabagismo e má alimentação.')
   ] },
   { re: /populacao|competicao|predad|ecossistema|ecologic|fitoplancton|praga|produtor|consumidor/, v: [
@@ -270,7 +270,7 @@ const TEMAS = [
     V('Ammonia production plant', 'Fábrica de amônia: a base da produção de fertilizantes nitrogenados.', 'No processo Haber-Bosch, N₂ e H₂ reagem formando amônia em uma reação reversível e exotérmica. Pelo princípio de Le Chatelier, alta pressão favorece a amônia (lado com menos mols de gás) e temperatura baixa também, mas deixaria a reação lenta; a indústria usa cerca de 450 °C, 200 atm e catalisador de ferro.'),
     V('Carbonated water', 'Água com gás: o CO₂ dissolvido sai em bolhas quando a pressão cai.', 'Em um refrigerante fechado, o CO₂ dissolvido e o CO₂ gasoso estão em equilíbrio. Ao abrir a garrafa, a pressão cai e o sistema se desloca no sentido de liberar gás. Pelo princípio de Le Chatelier, todo sistema em equilíbrio perturbado se desloca para reduzir a perturbação.'),
     V('Nitrogen dioxide', 'Dióxido de nitrogênio (NO₂), gás castanho em equilíbrio com o N₂O₄, incolor.', 'O equilíbrio 2 NO₂ ⇌ N₂O₄ muda de cor com a temperatura: aquecido, fica mais castanho; resfriado, mais claro. Só a temperatura altera o valor da constante Kc; mudanças de concentração e pressão deslocam o equilíbrio, mas o Kc continua o mesmo.'),
-    V('Caverna estalactites', 'Estalactites: formadas por um equilíbrio entre calcário, água e gás carbônico.', 'Nas cavernas, água com CO₂ dissolve o calcário; quando a gota pinga e perde CO₂ para o ar, o equilíbrio se desloca e o carbonato de cálcio volta a se depositar, formando estalactites ao longo de milhares de anos. Em equilíbrio, as reações direta e inversa continuam ocorrendo, com a mesma velocidade.'),
+    V('Gruta do Lago Azul', 'Gruta do Lago Azul, em Bonito (MS): estalactites formadas por equilíbrios do carbonato de cálcio.', 'Nas cavernas, água com CO₂ dissolve o calcário; quando a gota pinga e perde CO₂ para o ar, o equilíbrio se desloca e o carbonato de cálcio volta a se depositar, formando estalactites ao longo de milhares de anos. Em equilíbrio, as reações direta e inversa continuam ocorrendo, com a mesma velocidade.'),
     V('Coral reef', 'Recife de coral: o aumento de CO₂ no mar desloca equilíbrios e dificulta a formação do esqueleto.', 'Os oceanos absorvem parte do CO₂ emitido; o gás reage com a água e desloca equilíbrios que reduzem os íons carbonato disponíveis para corais e conchas. Um Kc grande indica equilíbrio com muito produto; um Kc pequeno, com predominância de reagentes.'),
     V('Mountain climbers altitude', 'Em grandes altitudes há menos oxigênio, e o equilíbrio hemoglobina–O₂ se desloca.', 'No sangue, a hemoglobina se liga ao oxigênio em um equilíbrio. Em grandes altitudes, a pressão de O₂ é menor, o equilíbrio se desloca e menos oxigênio chega aos tecidos; com o tempo, o corpo produz mais hemácias. Aumentar a concentração de um reagente desloca o equilíbrio para os produtos, e vice-versa.')
   ] },
