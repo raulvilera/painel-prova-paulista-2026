@@ -340,9 +340,9 @@ const TEMAS = [
     V('Oxyacetylene', 'Maçarico de acetileno: a chama passa de 3.000 °C.', 'O acetileno (etino, C₂H₂) tem uma ligação tripla entre os carbonos e é um alcino. Cadeias com ligações duplas ou triplas são insaturadas; cadeias só com ligações simples são saturadas.', /tripla|acetileno|etino|insatur|alcino/)
   ] },
   { q: 1, re: /\bph\b|poh|indicador|repolho|limao|acid|base|\bka\b|ioniza|tornassol|fenolftaleina|tampao|sabao|detergente|suco gastrico|hidroxido|h\+|h⁺/, v: [
-    V('red cabbage pH indicator', 'Extrato de repolho roxo: muda de cor conforme o pH.', 'A escala de pH vai de 0 a 14 a 25 °C: abaixo de 7 é ácido, 7 é neutro, acima de 7 é básico. Cada unidade equivale a 10 vezes mais ou menos íons H⁺: uma solução de pH 2 tem 100 vezes mais H⁺ que uma de pH 4.', /ph \d|escala|repolho|mais acid|menos acid|mais basic|classific/),
+    V('red cabbage pH indicator', 'Extrato de repolho roxo: muda de cor conforme o pH.', 'A escala de pH vai de 0 a 14 a 25 °C: abaixo de 7 é ácido, 7 é neutro, acima de 7 é básico. Cada unidade equivale a 10 vezes mais ou menos íons H⁺: uma solução de pH 2 tem 100 vezes mais H⁺ que uma de pH 4.', /ph \d|escala|repolho|mais acid|menos acid|mais basic|ph menor|ph maior/),
     V('Litmus paper', 'Papel de tornassol: azul em meio básico, vermelho em meio ácido.', 'Indicadores ácido-base mudam de cor conforme o pH. O tornassol fica vermelho em meio ácido e azul em meio básico; a fenolftaleína fica incolor em meio ácido ou neutro e rosa em meio básico.', /tornassol|fenolftaleina|indicador/),
-    V('lemon slices', 'Limões: o suco é ácido por causa do ácido cítrico.', 'Ácidos liberam H⁺ em água. Os fortes, como o clorídrico, ionizam quase totalmente e têm Ka alto; os fracos, como o acético e o cítrico, ionizam pouco e têm Ka pequeno. Por isso, na mesma concentração, o ácido forte tem pH menor.', /forte|fraco|\bka\b|ioniza|limao|cloridrico/),
+    V('lemon slices', 'Limões: o suco é ácido por causa do ácido cítrico.', 'Ácidos liberam H⁺ em água. Os fortes, como o clorídrico, ionizam quase totalmente e têm Ka alto; os fracos, como o acético e o cítrico, ionizam pouco e têm Ka pequeno. Por isso, na mesma concentração, o ácido forte tem pH menor.', /forte|fraco|forca|\bka\b|ioniza|limao|cloridrico/),
     V('Blood sample tubes', 'Amostras de sangue: o pH do sangue fica perto de 7,4.', 'Soluções-tampão resistem a mudanças de pH quando recebem pequenas quantidades de ácido ou base. O sangue é tamponado pelo par ácido carbônico/bicarbonato; uma variação de poucos décimos no pH já é grave para o organismo.', /tampao|sangue|bicarbonato/),
     V('Hydrangea flowers', 'Hortênsias: a cor das flores depende do pH do solo.', 'Na agricultura, o pH do solo decide quais nutrientes as plantas absorvem; solos ácidos, comuns no Cerrado, são corrigidos com calcário (calagem). As hortênsias dão flores azuis em solo ácido e rosadas em solo básico.', /solo|agricult|calcario/),
     V('Soap bar', 'Sabões e detergentes: produtos de caráter básico.', 'Bases liberam OH⁻ em água; as fortes, como o hidróxido de sódio, dissociam-se totalmente. Produtos de limpeza costumam ser básicos (pH acima de 7), enquanto o suco gástrico é fortemente ácido (pH perto de 2). Ácido e base reagem formando sal e água: é a neutralização.', /base|hidroxido|sabao|detergente|neutraliz|suco gastrico/)
@@ -375,12 +375,12 @@ function candidatos(enunciado, componente) {
   // primeiro os textos que mais se parecem com o enunciado (radicais de 5 letras); empates: ordem do tema, variando por questão
   const rad = x => new Set((normal(x).match(/[a-z]{5,}/g) || []).map(w => w.slice(0, 5)));
   const pal = rad(e), nota = v => (v.k && v.k.test(e) ? 10 : 0) + [...rad(v.t)].reduce((a, w) => a + (pal.has(w) ? 1 : 0), 0);
-  const varTema = temas.flatMap((t, k) => gira(t.v, k === 0 ? h : 0)).map((v, i) => ({ v, i, n: nota(v) })).sort((a, b) => b.n - a.n || a.i - b.i).map(x => x.v);
+  const varTema = temas.flatMap((t, k) => gira(t.v, k === 0 ? h : 0)).map((v, i) => ({ v, i, n: nota(v) })).sort((a, b) => b.n - a.n || a.i - b.i).map(x => Object.assign({ n: x.n }, x.v));
   const ger = gira(GERAL[componente] || GERAL.Biologia, h);
   const lista = [];
   if (esp) {
-    if (esp.t) lista.push({ t: esp.t, img: esp.img, leg: esp.leg });
-    varTema.forEach(v => lista.push({ t: v.t, img: esp.img, leg: esp.leg }));
+    if (esp.t) lista.push({ t: esp.t, img: esp.img, leg: esp.leg, n: 30 });
+    varTema.forEach(v => lista.push({ t: v.t, img: esp.img, leg: esp.leg, n: (v.n || 0) + 1 }));
     if (!varTema.length && !esp.t) ger.forEach(v => lista.push({ t: v.t, img: esp.img, leg: esp.leg }));
   }
   varTema.forEach(v => lista.push(v));
@@ -392,19 +392,22 @@ function candidatos(enunciado, componente) {
 
 /* Contextos de uma atividade inteira: nenhum texto-base e nenhuma imagem se repetem */
 function contextosAtividade(questoes, componente) {
-  const usT = new Set(), usI = new Set();
-  return questoes.map(q => {
-    const { lista, casou } = candidatos(q.enunciado, componente);
-    let c = lista.find(x => !usT.has(x.t) && !usI.has(x.img));
-    if (!c) {   // sem par livre: texto livre com qualquer imagem livre
-      const t = lista.find(x => !usT.has(x.t));
-      const i = lista.find(x => !usI.has(x.img));
-      c = { t: t ? t.t : '', img: i ? i.img : null, leg: i ? i.leg : '' };
-    }
-    if (c.t) usT.add(c.t);
-    if (c.img) usI.add(c.img);
-    return { texto: c.t, img: c.img, legenda: c.leg, casou: casou };
+  const usT = new Set(), usI = new Set(), cands = questoes.map(q => candidatos(q.enunciado, componente)), res = [];
+  const livre = c => !usT.has(c.t) && !usI.has(c.img);
+  const usa = (k, c) => { res[k] = { texto: c.t, img: c.img, legenda: c.leg, casou: cands[k].casou }; if (c.t) usT.add(c.t); if (c.img) usI.add(c.img); };
+  // 1) primeiro os encaixes mais fortes (situação citada no enunciado, palavras-chave), de qualquer questão
+  const pares = [];
+  cands.forEach((c, k) => c.lista.forEach((x, j) => { if ((x.n || 0) > 0) pares.push({ k, j, x }); }));
+  pares.sort((a, b) => b.x.n - a.x.n || a.j - b.j || a.k - b.k);
+  pares.forEach(p => { if (!res[p.k] && livre(p.x)) usa(p.k, p.x); });
+  // 2) o resto, na ordem dos candidatos (tema, gerais, outros temas), sem repetir texto nem imagem
+  cands.forEach((c, k) => {
+    if (res[k]) return;
+    let x = c.lista.find(livre);
+    if (!x) { const t = c.lista.find(y => !usT.has(y.t)), i = c.lista.find(y => !usI.has(y.img)); x = { t: t ? t.t : '', img: i ? i.img : null, leg: i ? i.leg : '' }; }
+    usa(k, x);
   });
+  return res;
 }
 
 /* compatibilidade: contexto de uma questão isolada */
