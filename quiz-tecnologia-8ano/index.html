@@ -18,6 +18,11 @@ body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-s
 .cab .lin label.serie{flex:0 1 260px}
 .cab select{flex:1;min-width:0;font:inherit;font-weight:600;padding:6px 8px;border:none;border-bottom:2px solid var(--tinta);border-radius:0;background:#fff}
 .cab select:disabled{color:#94a3b8;border-bottom-style:dashed}
+.cab .passo{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#1e3a8a;color:#fff;font-size:.78rem;flex:none}
+#selNome option{padding:5px 8px;color:#0f172a}
+#selNome option.par{background:#dbeafe}
+#selNome option.impar{background:#ffffff}
+#selNome option:checked{background:#1d4ed8;color:#fff}
 .cab .data span{display:inline-block;min-width:34px;border-bottom:2px solid var(--tinta);text-align:center;font-weight:600}
 .cab h1{margin:16px 0 2px;text-align:center;font-size:1.35rem;letter-spacing:.04em}
 .cab .sub{text-align:center;color:var(--cinza);font-size:.92rem}
@@ -86,11 +91,11 @@ textarea:focus{outline:none;border-color:var(--azul2)}
   <header class="cab" aria-label="Cabeçalho da atividade">
     <div class="esc">E.E. PROFª WANDA MASCAGNI DE SÁ</div>
     <div class="lin">
-      <label>NOME:
-        <select id="selNome" disabled aria-label="Seu nome"><option value="">Primeiro escolha a série</option></select>
-      </label>
-      <label class="serie">SÉRIE:
+      <label class="serie"><span class="passo">1</span>SÉRIE:
         <select id="selTurma" aria-label="Sua série e turma"><option value="">Escolha</option><option>8º Ano A</option><option>8º Ano B</option></select>
+      </label>
+      <label><span class="passo">2</span>NOME:
+        <select id="selNome" disabled aria-label="Seu nome"><option value="">Primeiro escolha a série</option></select>
       </label>
     </div>
     <div class="lin data">DATA:&nbsp;<span id="dd">____</span>/<span id="mm">______</span>/<span id="aa">_______</span></div>
@@ -177,7 +182,12 @@ $("selTurma").addEventListener("change", () => {
   const t = $("selTurma").value, s = $("selNome");
   s.innerHTML = "";
   s.add(new Option(t ? "Selecione o seu nome" : "Primeiro escolha a série", ""));
-  (TURMAS[t] || []).slice().sort((a, b) => a[1].localeCompare(b[1], "pt-BR")).forEach(([c, n]) => { const o = new Option(n, n); o.dataset.c = c; s.add(o); });
+  (TURMAS[t] || []).slice().sort((a, b) => a[1].localeCompare(b[1], "pt-BR")).forEach(([c, n], i) => {
+    const o = new Option(n, n); o.dataset.c = c;
+    o.className = i % 2 ? "par" : "impar";   // listra: linhas alternadas em branco e azul-claro
+    o.style.backgroundColor = i % 2 ? "#dbeafe" : "#ffffff";
+    s.add(o);
+  });
   s.disabled = !t;
 });
 
