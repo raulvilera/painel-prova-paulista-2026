@@ -14,10 +14,12 @@ body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-s
 .cab{background:#fff;border:2px solid var(--tinta);border-radius:6px;padding:14px 18px 12px}
 .cab .esc{text-align:center;font-weight:800;font-size:1.15rem;letter-spacing:.02em}
 .cab .lin{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin-top:12px;font-weight:700}
-.cab .lin label{display:flex;align-items:center;gap:8px;flex:1 1 300px}
+.cab .lin label{display:flex;align-items:center;gap:8px;flex:1 1 300px;min-width:0;max-width:100%}
 .cab .lin label.serie{flex:0 1 260px}
-.cab select{flex:1;min-width:0;font:inherit;font-weight:600;padding:6px 8px;border:none;border-bottom:2px solid var(--tinta);border-radius:0;background:#fff}
+.cab select{flex:1 1 0;width:100%;min-width:0;max-width:100%;text-overflow:ellipsis;overflow:hidden;font:inherit;font-weight:600;padding:6px 8px;border:none;border-bottom:2px solid var(--tinta);border-radius:0;background:#fff}
 .cab select:disabled{color:#94a3b8;border-bottom-style:dashed}
+@media (max-width:600px){.cab{padding:12px 12px 10px}.cab .esc{font-size:1rem}.cab .lin{gap:10px}.cab .lin label,.cab .lin label.serie{flex:1 1 100%}.cab select{font-size:.95rem}.cab h1{font-size:1.1rem}.q{padding:12px}.wrap{padding:12px 10px 50px}}
+html,body{max-width:100%;overflow-x:hidden}
 .cab .passo{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#1e3a8a;color:#fff;font-size:.78rem;flex:none}
 #selNome option{padding:5px 8px;color:#0f172a}
 #selNome option.par{background:#dbeafe}
