@@ -11,6 +11,7 @@ function lerCorpo(req) {
 }
 
 module.exports = async function handler(req, res) {
+  if (req.query && req.query.fn === 'quiz-tecnologia') return require('./_quiz-tec8.js').handler(req, res, SB, KEY);   // Quiz de Tecnologia 8º ano (grafos)
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   if (req.method !== 'POST') { res.statusCode = 405; return res.end(JSON.stringify({ ok: false, erro: 'método não permitido' })); }
   const d = lerCorpo(req);

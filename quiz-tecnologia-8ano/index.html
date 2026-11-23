@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Quiz de Tecnologia · Grafos · 8º ano (4º bimestre)</title>
+<style>
+:root{--azul:#1e3a8a;--azul2:#2563eb;--ciano:#0891b2;--verde:#16a34a;--verm:#dc2626;--amar:#f59e0b;--tinta:#0f172a;--cinza:#64748b;--linha:#e2e8f0;--fundo:#f1f5f9}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--fundo);color:var(--tinta);line-height:1.45}
+.wrap{max-width:1180px;margin:0 auto;padding:18px 14px 60px}
+/* Cabeçalho no modelo da folha da escola */
+.cab{background:#fff;border:2px solid var(--tinta);border-radius:6px;padding:14px 18px 12px}
+.cab .esc{text-align:center;font-weight:800;font-size:1.15rem;letter-spacing:.02em}
+.cab .lin{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin-top:12px;font-weight:700}
+.cab .lin label{display:flex;align-items:center;gap:8px;flex:1 1 300px}
+.cab .lin label.serie{flex:0 1 260px}
+.cab select{flex:1;min-width:0;font:inherit;font-weight:600;padding:6px 8px;border:none;border-bottom:2px solid var(--tinta);border-radius:0;background:#fff}
+.cab select:disabled{color:#94a3b8;border-bottom-style:dashed}
+.cab .data span{display:inline-block;min-width:34px;border-bottom:2px solid var(--tinta);text-align:center;font-weight:600}
+.cab h1{margin:16px 0 2px;text-align:center;font-size:1.35rem;letter-spacing:.04em}
+.cab .sub{text-align:center;color:var(--cinza);font-size:.92rem}
+.aviso{background:#eff6ff;border:1px solid #bfdbfe;color:#1e3a8a;border-radius:10px;padding:10px 14px;margin:14px 0;font-size:.93rem}
+.prog{position:sticky;top:0;z-index:5;background:var(--fundo);padding:8px 0}
+.prog .bar{height:10px;background:#cbd5e1;border-radius:9px;overflow:hidden}
+.prog .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ciano),var(--azul2));transition:width .3s}
+.prog small{color:var(--cinza)}
+/* Questão: enunciado à esquerda, simulador ao lado */
+.q{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:16px;background:#fff;border:1px solid var(--linha);border-radius:14px;padding:16px;margin:16px 0;box-shadow:0 1px 2px rgba(15,23,42,.05)}
+@media (max-width:860px){.q{grid-template-columns:1fr}}
+.q h2{margin:0 0 6px;font-size:1rem;color:var(--azul)}
+.q h2 .tag{font-size:.72rem;font-weight:700;background:#e0e7ff;color:#3730a3;border-radius:20px;padding:2px 8px;margin-left:6px;vertical-align:2px}
+.q .enun{margin:0 0 10px}
+.q .con{font-size:.84rem;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:8px;padding:6px 9px;color:#334155;margin-bottom:10px}
+.alts{list-style:none;margin:0;padding:0}
+.alts li{margin:6px 0}
+.alts label{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--linha);border-radius:10px;padding:8px 10px;cursor:pointer;transition:.15s}
+.alts label:hover{border-color:#93c5fd;background:#f8fbff}
+.alts input{margin-top:3px;accent-color:var(--azul2)}
+.alts b{min-width:20px}
+.alts label.sel{border-color:var(--azul2);background:#eff6ff}
+.alts label.ok{border-color:var(--verde);background:#f0fdf4}
+.alts label.err{border-color:var(--verm);background:#fef2f2}
+textarea{width:100%;min-height:130px;font:inherit;padding:10px;border:2px solid var(--linha);border-radius:10px}
+textarea:focus{outline:none;border-color:var(--azul2)}
+.fb{margin-top:10px;border-radius:10px;padding:9px 12px;font-size:.9rem;display:none}
+.fb.ok{display:block;background:#f0fdf4;border:1px solid #86efac}
+.fb.err{display:block;background:#fef2f2;border:1px solid #fca5a5}
+.fb.dis{display:block;background:#fffbeb;border:1px solid #fcd34d}
+/* Simulador */
+.sim{border:1px solid #c7d2fe;background:linear-gradient(180deg,#f8faff,#eef2ff);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px}
+.sim .tit{font-weight:800;font-size:.85rem;color:#3730a3;display:flex;justify-content:space-between;align-items:center;gap:6px;flex-wrap:wrap}
+.sim .tit small{font-weight:600;color:var(--cinza)}
+.tools{display:flex;flex-wrap:wrap;gap:6px}
+.tools button{font:inherit;font-size:.8rem;font-weight:700;border:1px solid #a5b4fc;background:#fff;color:#3730a3;border-radius:20px;padding:4px 10px;cursor:pointer}
+.tools button.on{background:#4338ca;color:#fff;border-color:#4338ca}
+.tools label{font-size:.8rem;display:flex;align-items:center;gap:4px;color:#3730a3;font-weight:600}
+.sim svg{width:100%;height:auto;background:#fff;border-radius:10px;border:1px solid #e0e7ff;touch-action:none;user-select:none}
+.sim .info{font-size:.85rem;background:#fff;border-radius:8px;padding:7px 9px;border-left:4px solid #6366f1;min-height:2.6em}
+.sim .stats{font-size:.78rem;color:var(--cinza)}
+.v circle{fill:#fff;stroke:#4338ca;stroke-width:2.5;cursor:pointer}
+.v text{font-size:12px;font-weight:700;fill:#1e1b4b;pointer-events:none;text-anchor:middle}
+.v .grau{font-size:11px;fill:#fff;font-weight:800}
+.v .gb{fill:#f59e0b;stroke:none}
+.v.foco circle{fill:#fde68a;stroke:#b45309}
+.v.viz circle{fill:#dcfce7;stroke:#16a34a}
+.v.cam circle{fill:#bfdbfe;stroke:#1d4ed8}
+.v.sel circle{stroke-dasharray:4 3;stroke:#db2777}
+.e line{stroke:#94a3b8;stroke-width:3;cursor:pointer}
+.e .hit{stroke:transparent;stroke-width:14}
+.e.foco line.vis{stroke:#f59e0b;stroke-width:5}
+.e.cam line.vis{stroke:#2563eb;stroke-width:5}
+.e.bad line.vis{stroke:#dc2626;stroke-width:4;stroke-dasharray:6 4}
+.e .peso{font-size:12px;font-weight:800;fill:#b45309;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:4px;pointer-events:none}
+.enviar{display:block;margin:26px auto 8px;font:inherit;font-size:1.05rem;font-weight:800;color:#fff;background:linear-gradient(90deg,var(--azul),var(--azul2));border:none;border-radius:12px;padding:13px 34px;cursor:pointer}
+.enviar:disabled{opacity:.6;cursor:not-allowed}
+#msg{text-align:center;font-weight:600;margin-top:8px}
+#msg.err{color:var(--verm)}
+.res{background:#fff;border:2px solid var(--verde);border-radius:14px;padding:16px;margin:18px 0;text-align:center}
+.res .nota{font-size:2.4rem;font-weight:900;color:var(--azul)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="cab" aria-label="Cabeçalho da atividade">
+    <div class="esc">E.E. PROFª WANDA MASCAGNI DE SÁ</div>
+    <div class="lin">
+      <label>NOME:
+        <select id="selNome" disabled aria-label="Seu nome"><option value="">Primeiro escolha a série</option></select>
+      </label>
+      <label class="serie">SÉRIE:
+        <select id="selTurma" aria-label="Sua série e turma"><option value="">Escolha</option><option>8º Ano A</option><option>8º Ano B</option></select>
+      </label>
+    </div>
+    <div class="lin data">DATA:&nbsp;<span id="dd">____</span>/<span id="mm">______</span>/<span id="aa">_______</span></div>
+    <h1>QUIZ DE TECNOLOGIA (4º Bimestre)</h1>
+    <div class="sub">Grafos · 14 questões (13 de escolha e 1 discursiva)</div>
+  </header>
+
+  <div class="aviso"><b>Como fazer:</b> escolha a sua série e o seu nome no cabeçalho. Em cada questão, use o <b>simulador</b> ao lado para explorar o grafo: <b>🔍 Explorar</b> mostra as ligações diretas e o grau de um vértice; <b>🧭 Caminho</b> testa um percurso, passo a passo; <b>✏️ Construir</b> liga ou desliga arestas. Você pode arrastar os vértices. No final, clique em <b>Enviar respostas</b>.</div>
+
+  <div class="prog"><div class="bar"><i id="pbar"></i></div><small id="ptxt">0 de 14 respondidas</small></div>
+
+  <div id="questoes"></div>
+  <div id="resultado"></div>
+  <button id="btnEnviar" class="enviar" type="button">Enviar respostas</button>
+  <div id="msg" role="status"></div>
+</div>
+
+<script>
+"use strict";
+const URL_ENVIO = "/api/quiz-tecnologia";
+
+/* Alunos por turma (nº de chamada e nome), da lista oficial usada nas outras atividades do 8º ano. */
+const TURMAS = {
+  "8º Ano A": [[1,"ALICE CARDOSO DE ALCANTARA"],[3,"ANA LUIZA VALENCA PAIVA"],[5,"BRYAN DINIZ SILVA"],[6,"CARLOS EDUARDO MENEZES MACHADO"],[7,"EVANDRO CUTOLO TEIXEIRA"],[9,"GABRIELA SANTOS COSTA"],[11,"GUILHERME CARMO RODRIGUES"],[12,"GUSTAVO HENRIQUE DA SILVA"],[13,"ISAAC FERNANDES DE ANDRADE"],[15,"KELVIN DUARTE GONCALVES"],[16,"LAURA VITÓRIA ROCHA"],[18,"LETICIA CUSTÓDIO LIMA"],[19,"LUCAS EDUARDO DA SILVA SANTANA"],[20,"MATHEUS KAUÃ DOS SANTOS NASCIMENTO"],[21,"MAYARA CAETANO DE OLIVEIRA PINA"],[22,"MIGUEL LIMA DE MESQUITA"],[24,"NICOLAS ROCHA SILVA"],[25,"PAOLLA MICHELLINE DOS SANTOS MARQUES"],[27,"PEDRO HENRIQUE CORREA DE BRITO"],[28,"PEDRO LEONARDO DE ANDRADE MARQUES"],[29,"RAFAEL HENRIQUE SIQUEIRA BERNARDES ZIA"],[30,"RAPHAEL MATHIAS NUNES MIRANDA"],[34,"SAMUEL ALVES DA COSTA"],[35,"SOFIA AZEREDO CUBAS"],[36,"SOPHIA LACERDA ANDRADE"],[37,"THAYLLA DUANNY VENANCIO SCAQUITO"],[38,"THAYS RODRIGUES DA SILVA"],[40,"MANOELLA DOS ANJOS SANTOS"],[41,"MARIANA CHARRUA GAIA MION SILVA"],[42,"DIOGO DA SILVA VELOSO"],[43,"QUÉZIA DO ESPIRITO SANTO ROBERTI"],[44,"KEMILLYN ANDRADE DE SOUZA SILVA"],[45,"KAUAN HENRIQUE DE ARAUJO SILVA"],[46,"ZLATA EVGENIEVNA SAFOROVA"]],
+  "8º Ano B": [[1,"ANGELLO GABRIEL CUTOLO TEIXEIRA"],[2,"ARTHUR HENRIQUE MARQUES ENDRES"],[5,"BRAYAN DA SILVA FERREIRA"],[6,"BRAYAN DUARTE DA SILVA"],[7,"BRUNO LUIZ NASCIMENTO DA SILVA"],[8,"CRISTIANO MARQUES BATISTA DE SOUZA"],[9,"DANIEL RODRIGUES SANTOS DIAS"],[10,"DIEGO BARRIO NOVO AMARAL DE ANDRADE"],[11,"ESTER CODINA DE JESUS"],[12,"FABRICIO LORENZO PARMA"],[13,"GABRIELA PAULINA FERREIRA MARTINS"],[14,"HYLLARY VICTORIA NERCIR DE FRANÇA"],[15,"ISAAC BONFIM VIDOTTO"],[16,"JHONAS KEYRRISON TROCATIS DA SILVA"],[17,"JULIA VITORIA SEVERA LINS"],[19,"KESIA DOS SANTOS SOSTE"],[20,"KHIARA DE OLIVEIRA SILVA"],[21,"LAURA BORGES AZEVEDO"],[23,"LUAN DANTAS NICOLUCCI"],[24,"LUAN RIBEIRO SILVA"],[25,"MANUELA ANGELICA TRIANA DA SILVA"],[26,"MARCELO GOMES THOMAZ"],[27,"MARCOS CÉLIO DE JESUS"],[29,"MATEUS DE JESUS JACINTO DOS SANTOS"],[31,"PABLO HENRIQUE DUARTE DA SILVA"],[32,"PAULO CÉSAR LAMBERT GONÇALVES"],[34,"PIETRO MARTINS NOBRE"],[36,"SOPHIA FRANÇA DE CARVALHO"],[40,"WALLIF LEANDRO DE JESUS LESSA"],[41,"BERNARDO GONCALVES JANELLI"],[43,"ISABELLY FERREIRA DE OLIVEIRA"],[44,"GUILHERME ALVES MIRANDA BRANDINO"],[45,"MANUELLA LORENNA CAETANO DIAS TEODORO"]]
+};
+
+/* Grafos de cada questão: vértices [nome, x, y] (0–100) e arestas [a, b, peso?]. O gabarito fica no servidor. */
+const VF = ["Verdadeira.", "Falsa."];
+const QUESTOES = [
+  { n:1, enun:"Marina montou um grafo sobre as mensagens trocadas para um passeio escolar. Cada aresta indica que dois estudantes trocaram mensagens diretamente. Com quem Joana trocou mensagens diretamente?",
+    alts:["Marina e Rafael.","Marina e Pedro.","Lucas e Rafael.","Lucas e Pedro."],
+    g:{v:[["Marina",8,50],["Lucas",38,15],["Rafael",80,15],["Pedro",88,78],["Joana",42,85]], e:[["Lucas","Marina"],["Lucas","Joana"],["Lucas","Rafael"],["Rafael","Pedro"],["Pedro","Joana"]]}, dica:"Clique em Joana no modo 🔍 Explorar." },
+  { n:2, enun:"Gabriel montou um grafo para trocas de livros. Sofia percebe que não há aresta entre ela e Gabriel. O que essa ausência indica?",
+    alts:["Não há troca direta, mas Luana ou Enzo podem intermediar.","Não existe nenhum caminho entre os dois estudantes.","Há troca direta porque ambos estão ligados a Luana e a Enzo.","Gabriel e Sofia não pertencem ao mesmo grafo."],
+    g:{v:[["Gabriel",10,50],["Luana",50,10],["Enzo",50,90],["Sofia",90,50]], e:[["Gabriel","Luana"],["Gabriel","Enzo"],["Luana","Sofia"],["Sofia","Enzo"]]}, dica:"No modo 🧭 Caminho, tente ir de Gabriel direto para Sofia." },
+  { n:3, enun:"Isabela registrou em uma tabela as conexões diretas entre terminais de ônibus. Como essas conexões devem ser representadas no grafo?",
+    alts:["Por arestas que conectem somente os pares de terminais com ligação registrada na tabela.","Por arestas que liguem exclusivamente os terminais da coluna de origem.","Por vértices que representem cada conexão registrada.","Por vértices que representem os terminais e as conexões entre eles."],
+    g:{v:[["Central",50,50],["Norte",15,10],["Sul",10,85],["Oeste",85,90],["Leste",88,12]], e:[["Central","Norte"],["Central","Sul"],["Central","Leste"],["Central","Oeste"],["Norte","Sul"],["Sul","Oeste"],["Oeste","Leste"]]}, dica:"Clique em uma linha (aresta) para ver qual par de terminais ela liga." },
+  { n:4, enun:"Yasmin vai mapear passagens entre cinco espaços da mostra (Artes, Ciências, Música, Literatura e Tecnologia) e afirma: “Cada espaço deve ser representado por um vértice, e uma aresta deve ligar os espaços entre os quais existe uma passagem direta.” A afirmação é verdadeira ou falsa?",
+    alts:VF, construir:true,
+    g:{v:[["Artes",50,8],["Ciências",92,40],["Música",75,90],["Literatura",25,90],["Tecnologia",8,40]], e:[]}, dica:"Use ✏️ Construir: clique em dois espaços para criar uma passagem direta entre eles." },
+  { n:5, enun:"Mateus está no Palco Sol e quer chegar ao Palco Terra. Qual percurso ele pode fazer?",
+    alts:["Sol → Lua → Céu → Terra.","Sol → Lua → Mar → Terra.","Sol → Mar → Céu → Terra.","Sol → Terra → Céu → Lua."],
+    g:{v:[["Sol",6,50],["Lua",32,10],["Céu",68,10],["Terra",94,50],["Mar",50,90]], e:[["Sol","Lua"],["Sol","Mar"],["Lua","Céu"],["Céu","Terra"],["Terra","Mar"]]}, dica:"No modo 🧭 Caminho, clique nos palcos na ordem de cada alternativa." },
+  { n:6, enun:"Bianca criou um grafo direcionado com pesos: o número sobre cada seta é a quantidade de caixas transportadas. A seta entre Praça e Escola parte da Praça e tem o número 6. O que isso representa?",
+    alts:["Seis caixas foram transportadas da Praça para a Escola.","Seis caixas foram transportadas da Escola para a Praça.","A Praça tem conexão direta com seis pontos de coleta.","Existem seis caminhos diferentes entre a Praça e a Escola."],
+    dir:true, g:{v:[["Mercado",8,50],["Escola",45,8],["Praça",48,52],["Centro Comunitário",22,92],["Hospital",90,22],["Depósito",85,88]], e:[["Mercado","Escola",5],["Mercado","Praça",7],["Mercado","Centro Comunitário",3],["Centro Comunitário","Praça",1],["Praça","Escola",6],["Escola","Hospital",4],["Praça","Hospital",2],["Praça","Depósito",9],["Depósito","Hospital",3],["Depósito","Centro Comunitário",6]]}, dica:"Clique na seta entre Praça e Escola para ver o sentido e o peso." },
+  { n:7, enun:"Natália fez um grafo em que cada aresta indica que dois estudantes já compartilharam um equipamento, e o peso é quantas vezes isso ocorreu. Qual conclusão Ícaro pode obter comparando grau dos vértices e peso das arestas?",
+    alts:["Rafael tem o vértice de maior grau e participa da aresta de maior peso.","Clara tem o vértice de maior grau, mas a aresta de maior peso liga Beatriz e João.","Laura e Mateus têm os vértices de menor grau e formam a aresta de maior peso.","Beatriz e João têm os vértices de maior grau porque a aresta entre eles tem o maior peso."],
+    g:{v:[["Rafael",10,18],["Laura",50,6],["Mateus",90,22],["Clara",50,50],["Beatriz",10,85],["João",90,85]], e:[["Rafael","Laura",3],["Laura","Mateus",2],["Laura","Clara",1],["Rafael","Clara",4],["Clara","Mateus",5],["Rafael","Beatriz",2],["Beatriz","Clara",7],["Clara","João",6],["Mateus","João",3],["Beatriz","João",9]]}, dica:"Marque “Mostrar grau” e compare com o maior número das arestas." },
+  { n:8, enun:"Miguel representou as conexões entre Miguel, Helena, Caio e Luna. Helena afirma: “Cada perfil está conectado diretamente a todos os outros perfis.” Verdadeira ou falsa?",
+    alts:VF, g:{v:[["Miguel",15,15],["Helena",85,15],["Caio",85,85],["Luna",15,85]], e:[["Miguel","Helena"],["Miguel","Caio"],["Miguel","Luna"],["Helena","Caio"],["Helena","Luna"],["Caio","Luna"]]}, dica:"Explore cada perfil: o grau de todos é 3?" },
+  { n:9, enun:"Marina tem uma tabela de oficinas por tema (A Criação de jogos, C Programação de aplicativos e E Robótica: Tecnologia; B Produção de vídeos e D Jornalismo digital: Comunicação). Lucas afirma que ela pode usar um vértice por oficina e ligar com arestas as que têm o mesmo tema, como A, C e E. Verdadeira ou falsa?",
+    alts:VF, construir:true,
+    g:{v:[["A · Jogos",50,8,"#2563eb"],["B · Vídeos",92,40,"#ea580c"],["C · Apps",75,90,"#2563eb"],["D · Jornalismo",25,90,"#ea580c"],["E · Robótica",8,40,"#2563eb"]], e:[]}, dica:"Azul = Tecnologia, laranja = Comunicação. Use ✏️ Construir e ligue as oficinas de mesmo tema." },
+  { n:10, enun:"Camila publicou um vídeo que chegou ao perfil de Ravi passando por outros perfis. Qual caminho ele pode ter percorrido?",
+    alts:["Camila → Bia → Leo → Ravi.","Camila → Leo → Bia → Ravi.","Camila → Bia → Nina → Ravi.","Camila → Nina → Maya → Ravi."],
+    g:{v:[["Camila",6,45],["Bia",28,8],["Theo",62,6],["Nina",45,48],["Leo",18,88],["Ravi",55,92],["Lucas",92,94],["Maya",88,30],["Davi",82,64]], e:[["Bia","Camila"],["Bia","Nina"],["Bia","Theo"],["Camila","Leo"],["Camila","Nina"],["Leo","Nina"],["Leo","Ravi"],["Leo","Lucas"],["Theo","Nina"],["Theo","Maya"],["Nina","Ravi"],["Nina","Maya"],["Nina","Davi"],["Ravi","Davi"],["Maya","Davi"],["Davi","Lucas"]]}, dica:"Teste cada alternativa no modo 🧭 Caminho." },
+  { n:11, enun:"Cinco amigos registraram em um grafo com quem combinaram atividades. Um colega afirma: “Maya está diretamente conectada a Lucas e Pedro.” Verdadeira ou falsa?",
+    alts:VF, g:{v:[["Lucas",12,12],["Maya",88,12],["Pedro",12,88],["Enzo",88,88],["Júlia",50,50]], e:[["Lucas","Maya"],["Lucas","Pedro"],["Maya","Enzo"],["Pedro","Enzo"],["Júlia","Lucas"],["Júlia","Maya"],["Júlia","Pedro"],["Júlia","Enzo"]]}, dica:"Clique em Maya no modo 🔍 Explorar." },
+  { n:12, enun:"Em um grafo de participantes de um campeonato, um colega afirma: “Bianca é representada por um vértice, enquanto a ligação entre Bianca e Otávio é representada por uma aresta.” Verdadeira ou falsa?",
+    alts:VF, g:{v:[["Otávio",10,20],["Bianca",45,50],["Murilo",15,88],["Helena",80,10],["Yasmin",85,82]], e:[["Otávio","Bianca"],["Otávio","Murilo"],["Bianca","Helena"],["Bianca","Murilo"],["Bianca","Yasmin"],["Helena","Yasmin"],["Murilo","Yasmin"]]}, dica:"Clique no círculo de Bianca e depois na linha Bianca – Otávio." },
+  { n:13, enun:"Rafaela criou um grafo de trocas de livros. Uma colega afirma: “Rafaela e Diego possuem uma conexão direta porque existe um caminho entre eles passando por Bruno.” Verdadeira ou falsa?",
+    alts:VF, g:{v:[["Bruno",50,8],["Rafaela",10,50],["Camila",40,45],["Diego",90,50],["Elisa",50,92]], e:[["Bruno","Rafaela"],["Bruno","Camila"],["Bruno","Diego"],["Rafaela","Camila"],["Rafaela","Elisa"],["Diego","Elisa"]]}, dica:"No modo 🧭 Caminho, compare Rafaela → Diego com Rafaela → Bruno → Diego." },
+  { n:14, dis:true, enun:"Gabriel representou ciclovias em um grafo (vértices são locais, arestas são ciclovias). Compare o número de arestas ligadas à Praça e ao Parque e explique o que a diferença indica sobre deslocamentos diretos.",
+    g:{v:[["Praça",8,30],["Biblioteca",48,6],["Parque",50,52],["Escola",15,88],["Museu",82,88],["Centro esportivo",88,28]], e:[["Praça","Biblioteca"],["Praça","Parque"],["Praça","Escola"],["Biblioteca","Parque"],["Biblioteca","Centro esportivo"],["Parque","Escola"],["Parque","Museu"],["Escola","Museu"],["Centro esportivo","Museu"]]}, dica:"Explore a Praça e o Parque e compare o grau dos dois." }
+];
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const SVGNS = "http://www.w3.org/2000/svg";
+const W = 420, H = 300, PAD = 34;
+let ENVIADO = false;
+
+/* ---------------- Cabeçalho: data e seleção em cascata ---------------- */
+(function () {
+  const d = new Date();
+  $("dd").textContent = String(d.getDate()).padStart(2, "0");
+  $("mm").textContent = String(d.getMonth() + 1).padStart(2, "0");
+  $("aa").textContent = d.getFullYear();
+})();
+$("selTurma").addEventListener("change", () => {
+  const t = $("selTurma").value, s = $("selNome");
+  s.innerHTML = "";
+  s.add(new Option(t ? "Selecione o seu nome" : "Primeiro escolha a série", ""));
+  (TURMAS[t] || []).slice().sort((a, b) => a[1].localeCompare(b[1], "pt-BR")).forEach(([c, n]) => { const o = new Option(n, n); o.dataset.c = c; s.add(o); });
+  s.disabled = !t;
+});
+
+/* ---------------- Simulador de grafos ---------------- */
+function Simulador(box, q) {
+  const g = q.g, dir = !!q.dir, peso = g.e.some(e => e.length > 2);
+  const V = g.v.map(([nome, x, y, cor]) => ({ nome, x: PAD + x / 100 * (W - 2 * PAD), y: PAD + y / 100 * (H - 2 * PAD), cor }));
+  const original = g.e.map(e => e.slice());
+  let E = original.map(e => e.slice());
+  let modo = "explorar", foco = null, caminho = [], selConstr = null, mostrarGrau = false;
+
+  box.innerHTML =
+    '<div class="tit">🧪 Simulador de grafos <small>' + (dir ? "direcionado · " : "") + (peso ? "com pesos" : "sem pesos") + '</small></div>' +
+    '<div class="tools">' +
+      '<button data-m="explorar" class="on" type="button">🔍 Explorar</button>' +
+      '<button data-m="caminho" type="button">🧭 Caminho</button>' +
+      (q.construir ? '<button data-m="construir" type="button">✏️ Construir</button>' : '') +
+      '<button data-a="reset" type="button">↺ Restaurar</button>' +
+      '<label><input type="checkbox" data-a="grau"> Mostrar grau</label>' +
+    '</div>' +
+    '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Grafo da questão ' + q.n + '"><defs>' +
+      '<marker id="seta' + q.n + '" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs><g class="ge"></g><g class="gv"></g></svg>' +
+    '<div class="info"></div><div class="stats"></div>';
+  const svg = box.querySelector("svg"), ge = box.querySelector(".ge"), gv = box.querySelector(".gv"), info = box.querySelector(".info"), stats = box.querySelector(".stats");
+  const vert = n => V.find(v => v.nome === n);
+  const temAresta = (a, b) => E.find(e => (e[0] === a && e[1] === b) || (!dir && e[0] === b && e[1] === a));
+  const grau = n => E.filter(e => e[0] === n || e[1] === n).length;
+  const vizinhos = n => E.filter(e => e[0] === n || e[1] === n).map(e => e[0] === n ? e[1] : e[0]);
+  const lista = a => a.length ? a.join(", ") : "nenhum";
+  const dica = () => { info.innerHTML = q.dica ? "💡 " + esc(q.dica) : "Clique em um vértice."; };
+
+  function desenha() {
+    ge.innerHTML = ""; gv.innerHTML = "";
+    const camArestas = new Set(), camRuins = [];
+    for (let i = 1; i < caminho.length; i++) {
+      const e = temAresta(caminho[i - 1], caminho[i]);
+      if (e) camArestas.add(e); else camRuins.push([caminho[i - 1], caminho[i]]);
+    }
+    const linha = (a, b, cls, w, e) => {
+      const A = vert(a), B = vert(b), grp = document.createElementNS(SVGNS, "g");
+      grp.setAttribute("class", "e " + cls);
+      let x1 = A.x, y1 = A.y, x2 = B.x, y2 = B.y;
+      if (dir && e) { const dx = x2 - x1, dy = y2 - y1, L = Math.hypot(dx, dy) || 1; const ra = raio(A) + 2, rb = raio(B) + 3; x2 -= dx / L * rb; y2 -= dy / L * rb; x1 += dx / L * ra; y1 += dy / L * ra; }
+      grp.innerHTML = '<line class="hit" x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '"/>' +
+        '<line class="vis" x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '"' + (dir && e ? ' marker-end="url(#seta' + q.n + ')"' : '') + '/>' +
+        (w != null ? '<text class="peso" x="' + ((A.x + B.x) / 2) + '" y="' + ((A.y + B.y) / 2 + 4) + '">' + w + '</text>' : '');
+      if (e) grp.addEventListener("click", ev => { ev.stopPropagation(); clicaAresta(e); });
+      ge.appendChild(grp);
+    };
+    E.forEach(e => {
+      let cls = "";
+      if (camArestas.has(e)) cls = "cam";
+      else if (modo === "explorar" && foco && (e === foco || (typeof foco === "string" && (e[0] === foco || e[1] === foco)))) cls = "foco";
+      linha(e[0], e[1], cls, e[2], e);
+    });
+    camRuins.forEach(([a, b]) => linha(a, b, "bad", null, null));
+    const viz = typeof foco === "string" ? vizinhos(foco) : [];
+    V.forEach(v => {
+      const grp = document.createElementNS(SVGNS, "g");
+      let cls = "v";
+      if (modo === "caminho" && caminho.includes(v.nome)) cls += " cam";
+      else if (modo === "explorar" && foco === v.nome) cls += " foco";
+      else if (modo === "explorar" && viz.includes(v.nome)) cls += " viz";
+      if (selConstr === v.nome) cls += " sel";
+      grp.setAttribute("class", cls);
+      const r = raio(v);
+      grp.innerHTML = '<circle cx="' + v.x + '" cy="' + v.y + '" r="' + r + '"' + (v.cor ? ' style="stroke:' + v.cor + '"' : '') + '/>' +
+        nomeSvg(v, r) +
+        (mostrarGrau ? '<circle class="gb" cx="' + (v.x + r * .78) + '" cy="' + (v.y - r * .78) + '" r="10"/><text class="grau" x="' + (v.x + r * .78) + '" y="' + (v.y - r * .78 + 4) + '">' + grau(v.nome) + '</text>' : '');
+      arrastavel(grp, v);
+      gv.appendChild(grp);
+    });
+    const maxG = Math.max(0, ...V.map(v => grau(v.nome)));
+    stats.textContent = "Vértices: " + V.length + " · Arestas: " + E.length + (modo === "construir" ? " · clique em dois vértices para ligar/desligar" : "") + (mostrarGrau ? " · maior grau: " + maxG : "");
+  }
+  function raio(v) { return Math.max(18, Math.min(30, v.nome.length * 3.4)); }
+  function nomeSvg(v, r) {
+    const partes = v.nome.length > 10 && v.nome.includes(" ") ? [v.nome.slice(0, v.nome.indexOf(" ")), v.nome.slice(v.nome.indexOf(" ") + 1)] : [v.nome];
+    if (partes.length === 1) return '<text x="' + v.x + '" y="' + (v.y + 4) + '">' + esc(v.nome) + '</text>';
+    return '<text x="' + v.x + '" y="' + (v.y - 2) + '" style="font-size:10px">' + esc(partes[0]) + '</text><text x="' + v.x + '" y="' + (v.y + 10) + '" style="font-size:10px">' + esc(partes[1]) + '</text>';
+  }
+  function clicaVertice(n) {
+    if (modo === "explorar") {
+      foco = n;
+      if (dir) {
+        const sai = E.filter(e => e[0] === n).map(e => e[1] + (e[2] != null ? " (" + e[2] + ")" : "")), chega = E.filter(e => e[1] === n).map(e => e[0] + (e[2] != null ? " (" + e[2] + ")" : ""));
+        info.innerHTML = "<b>" + esc(n) + "</b> · setas que saem para: " + esc(lista(sai)) + " · setas que chegam de: " + esc(lista(chega)) + ".";
+      } else {
+        info.innerHTML = "<b>" + esc(n) + "</b> é um <b>vértice</b> · grau " + grau(n) + " · ligações diretas: " + esc(lista(vizinhos(n))) + ".";
+      }
+    } else if (modo === "caminho") {
+      if (caminho[caminho.length - 1] === n) return;
+      caminho.push(n);
+      const ruins = [];
+      for (let i = 1; i < caminho.length; i++) if (!temAresta(caminho[i - 1], caminho[i])) ruins.push(caminho[i - 1] + (dir ? " → " : " – ") + caminho[i]);
+      info.innerHTML = "Percurso: <b>" + esc(caminho.join(" → ")) + "</b>" + (caminho.length > 1 ? " · " + (caminho.length - 1) + " passo(s)<br>" +
+        (ruins.length ? "❌ Não existe aresta " + esc(ruins.join(", ")) + ". Esse percurso não é válido." : "✅ Todos os passos são arestas do grafo: percurso válido.") : "<br>Agora clique no próximo vértice.") +
+        ' <button type="button" class="limpa" style="font:inherit;font-size:.78rem;margin-left:4px">limpar percurso</button>';
+      info.querySelector(".limpa").onclick = () => { caminho = []; info.innerHTML = "Clique nos vértices na ordem do percurso."; desenha(); };
+    } else if (modo === "construir") {
+      if (!selConstr) { selConstr = n; info.innerHTML = "Escolheu <b>" + esc(n) + "</b>. Clique em outro vértice para ligar ou desligar."; }
+      else if (selConstr === n) { selConstr = null; info.innerHTML = "Seleção cancelada."; }
+      else {
+        const e = temAresta(selConstr, n);
+        if (e) { E = E.filter(x => x !== e); info.innerHTML = "Aresta <b>" + esc(selConstr) + " – " + esc(n) + "</b> removida."; }
+        else { E.push([selConstr, n]); info.innerHTML = "Aresta <b>" + esc(selConstr) + " – " + esc(n) + "</b> criada: os dois agora têm ligação direta."; }
+        selConstr = null;
+      }
+    }
+    desenha();
+  }
+  function clicaAresta(e) {
+    if (modo === "construir") { E = E.filter(x => x !== e); info.innerHTML = "Aresta <b>" + esc(e[0]) + " – " + esc(e[1]) + "</b> removida."; desenha(); return; }
+    if (modo !== "explorar") return;
+    foco = e;
+    info.innerHTML = "Isto é uma <b>aresta</b>: " + (dir ? "seta de <b>" + esc(e[0]) + "</b> para <b>" + esc(e[1]) + "</b>" : "ligação direta entre <b>" + esc(e[0]) + "</b> e <b>" + esc(e[1]) + "</b>") +
+      (e[2] != null ? " · peso <b>" + e[2] + "</b>" : "") + ".";
+    desenha();
+  }
+  function ponto(ev) { const p = svg.createSVGPoint(); p.x = ev.clientX; p.y = ev.clientY; return p.matrixTransform(svg.getScreenCTM().inverse()); }
+  function arrastavel(grp, v) {
+    grp.addEventListener("pointerdown", ev => {
+      ev.preventDefault();
+      const ini = ponto(ev), ox = v.x, oy = v.y; let moveu = false;
+      const mv = e2 => { const p = ponto(e2); if (Math.hypot(p.x - ini.x, p.y - ini.y) > 5) moveu = true; if (moveu) { v.x = Math.max(20, Math.min(W - 20, ox + p.x - ini.x)); v.y = Math.max(20, Math.min(H - 20, oy + p.y - ini.y)); desenha(); } };
+      const up = () => { window.removeEventListener("pointermove", mv); window.removeEventListener("pointerup", up); if (!moveu) clicaVertice(v.nome); };
+      window.addEventListener("pointermove", mv); window.addEventListener("pointerup", up);
+    });
+  }
+  box.querySelectorAll("[data-m]").forEach(b => b.addEventListener("click", () => {
+    modo = b.dataset.m; foco = null; caminho = []; selConstr = null;
+    box.querySelectorAll("[data-m]").forEach(x => x.classList.toggle("on", x === b));
+    info.innerHTML = modo === "explorar" ? "Clique em um vértice ou em uma aresta." : modo === "caminho" ? "Clique nos vértices na ordem do percurso." : "Clique em dois vértices para criar ou apagar a aresta entre eles.";
+    desenha();
+  }));
+  box.querySelector('[data-a="reset"]').addEventListener("click", () => {
+    E = original.map(e => e.slice()); foco = null; caminho = []; selConstr = null;
+    g.v.forEach(([n, x, y], i) => { V[i].x = PAD + x / 100 * (W - 2 * PAD); V[i].y = PAD + y / 100 * (H - 2 * PAD); });
+    dica(); desenha();
+  });
+  box.querySelector('[data-a="grau"]').addEventListener("change", ev => { mostrarGrau = ev.target.checked; desenha(); });
+  dica(); desenha();
+}
+
+/* ---------------- Questões ---------------- */
+function monta() {
+  const raiz = $("questoes");
+  QUESTOES.forEach(q => {
+    const el = document.createElement("section");
+    el.className = "q"; el.id = "q" + q.n;
+    const con = q.g.e.length ? '<div class="con"><b>Conexões do grafo:</b> ' + esc(q.g.e.map(e => e[0] + (q.dir ? " → " : " – ") + e[1] + (e[2] != null ? ": " + e[2] : "")).join(" | ")) + '</div>' : "";
+    let corpo;
+    if (q.dis) corpo = '<textarea id="dis" placeholder="Escreva a sua resposta: quantas arestas tem cada local e o que isso indica." aria-label="Resposta da questão 14"></textarea>';
+    else corpo = '<ul class="alts">' + q.alts.map((a, i) => {
+      const L = "ABCD"[i], rot = q.alts === VF ? "( )" : L + ")";
+      return '<li><label><input type="radio" name="r' + q.n + '" value="' + L + '"><b>' + rot + '</b><span>' + esc(a) + '</span></label></li>';
+    }).join("") + '</ul>';
+    el.innerHTML = '<div><h2>Questão ' + q.n + '<span class="tag">' + (q.dis ? "Discursiva" : (q.alts === VF ? "Verdadeiro ou falso" : "Múltipla escolha")) + '</span></h2>' +
+      '<p class="enun">' + esc(q.enun) + '</p>' + con + corpo + '<div class="fb"></div></div><div class="sim"></div>';
+    raiz.appendChild(el);
+    Simulador(el.querySelector(".sim"), q);
+  });
+  raiz.addEventListener("change", ev => {
+    if (ev.target.type === "radio") ev.target.closest(".alts").querySelectorAll("label").forEach(l => l.classList.toggle("sel", l.contains(ev.target) && ev.target.checked));
+    progresso();
+  });
+  raiz.addEventListener("input", progresso);
+}
+function respostas() {
+  const r = {};
+  QUESTOES.filter(q => !q.dis).forEach(q => { const m = document.querySelector('input[name="r' + q.n + '"]:checked'); r[q.n] = m ? m.value : ""; });
+  return r;
+}
+function progresso() {
+  const r = respostas(), n = Object.values(r).filter(Boolean).length + ($("dis").value.trim().length > 10 ? 1 : 0);
+  $("pbar").style.width = (n / 14 * 100) + "%";
+  $("ptxt").textContent = n + " de 14 respondidas";
+  return n;
+}
+
+/* ---------------- Envio e devolutiva ---------------- */
+$("btnEnviar").addEventListener("click", async () => {
+  if (ENVIADO) return;
+  const msg = $("msg"); msg.className = ""; msg.textContent = "";
+  const turma = $("selTurma").value, opt = $("selNome").selectedOptions[0];
+  if (!turma || !opt || !opt.value) { msg.className = "err"; msg.textContent = "Escolha a sua série e o seu nome no cabeçalho."; window.scrollTo({ top: 0, behavior: "smooth" }); return; }
+  const r = respostas(), faltam = Object.keys(r).filter(k => !r[k]);
+  if (faltam.length && !confirm("Ainda faltam as questões " + faltam.join(", ") + ". Enviar mesmo assim?")) return;
+  const btn = $("btnEnviar"); btn.disabled = true; btn.textContent = "Enviando…";
+  try {
+    const resp = await fetch(URL_ENVIO, { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ turma, nome: opt.value, chamada: Number(opt.dataset.c), respostas: r, dissertativa: $("dis").value }) });
+    const j = await resp.json().catch(() => ({ ok: false, erro: "O servidor não respondeu." }));
+    if (!j.ok) throw new Error(j.erro || "Erro ao enviar.");
+    ENVIADO = true; mostraResultado(j);
+    btn.textContent = "Respostas enviadas ✓";
+  } catch (e) {
+    btn.disabled = false; btn.textContent = "Enviar respostas";
+    msg.className = "err"; msg.textContent = "Não foi possível enviar: " + e.message;
+  }
+});
+function mostraResultado(j) {
+  document.querySelectorAll(".alts input, #dis, #selTurma, #selNome").forEach(x => x.disabled = true);
+  (j.devolutiva || []).forEach(d => {
+    const sec = $("q" + d.n), fb = sec.querySelector(".fb");
+    if (d.dis) { fb.className = "fb dis"; fb.innerHTML = "<b>Discursiva:</b> " + esc(d.comentario) + " O professor vai revisar a sua resposta.<br><b>Resposta esperada:</b> " + esc(d.esperado.replace(/^Resposta esperada:\s*/, "")); return; }
+    sec.querySelectorAll(".alts label").forEach(l => {
+      const v = l.querySelector("input").value;
+      if (v === d.correta) l.classList.add("ok"); else if (v === d.marcada) l.classList.add("err");
+    });
+    fb.className = "fb " + (d.acertou ? "ok" : "err");
+    fb.innerHTML = (d.acertou ? "✅ <b>Correto!</b> " : "❌ <b>" + (d.marcada ? "Não foi dessa vez." : "Sem resposta.") + "</b> ") + esc(d.comentario);
+  });
+  $("resultado").innerHTML = '<div class="res"><div>Respostas registradas para o professor.</div><div class="nota">' + j.acertos + ' / ' + j.totalObj + '</div><div>acertos nas questões de escolha · nota ' + String(j.notaObj).replace(".", ",") + '</div><div class="muted" style="margin-top:6px;color:#64748b">Role a página para ver o comentário de cada questão.</div></div>';
+  $("resultado").scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+monta();
+</script>
+<script src="/voltar-painel.js" defer></script>
+</body>
+</html>

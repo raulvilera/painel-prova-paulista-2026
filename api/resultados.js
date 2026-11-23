@@ -6,6 +6,7 @@ const META_EM = require('./_meta-em.js');
 const META_SIM = require('./_meta-simulado.js');
 const ALUNOS_EM = require('./_alunos-em.js');
 const META_C8 = require('./_meta-cien8.js');
+const TEC8 = require('./_quiz-tec8.js');
 /* Recuperação semestral da 2ª DS: enunciado, habilidade e gabarito de cada questão para o relatório (o servidor já é do professor) */
 const REC2DS = require('../recuperacao-2ds/questoes.js'), REC2DS_GAB = require('./_recuperacao-2ds-gabarito.js');
 REC2DS.questoes.forEach(q => { META_EM[q.id] = { tipo: q.tipo, av: REC2DS.id, hab: q.hab, objeto: q.objeto, ae: q.ae, n: q.n,
@@ -53,7 +54,7 @@ module.exports = async function resultados(req, res) {
         if (!j || !j.ok) return out(502, { ok: false, erro: String((j && j.erro) || 'A planilha não respondeu.') + (/ação desconhecida/.test(String(j && j.erro)) ? ' — cole o Codigo-completo.gs atualizado no Apps Script e crie uma nova versão da implantação.' : '') });
         return out(200, { ok: true, removidos: j.removidos });
       }
-      if (b.fonte === 'em' && b.aval === REC2DS.id) {   // recuperação da 2ª DS: um envio por aluno; apaga o envio para o aluno refazer
+      if (b.fonte === 'em' && (b.aval === REC2DS.id || b.aval === TEC8.AV)) {   // recuperação da 2ª DS: um envio por aluno; apaga o envio para o aluno refazer
         const r = await fetch(SB + '/rest/v1/em_respostas?avaliacao=eq.' + encodeURIComponent(REC2DS.id) + '&turma=eq.' + encodeURIComponent(String(b.turma || '')) + '&nome=eq.' + encodeURIComponent(String(b.nome || '')), { method: 'DELETE', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, Prefer: 'return=representation' } });
         const t = await r.text(); if (!r.ok) return out(502, { ok: false, erro: 'Supabase ' + r.status + ': ' + t.slice(0, 160) });
         return out(200, { ok: true, removidos: (t ? JSON.parse(t) : []).length });
@@ -62,10 +63,17 @@ module.exports = async function resultados(req, res) {
     }
     const fonte = String((req.query && req.query.fonte) || '');
     if (fonte === 'em') {
-      const rows = await rest('em_respostas?select=envio_id,criado,avaliacao,turma_id,turma,componente,prova,n,nome,itens,acertos,total_obj,nota_obj,nota_final,status&order=criado.asc&limit=5000');
+      const rows = await rest('em_respostas?select=envio_id,criado,avaliacao,turma_id,turma,componente,prova,n,nome,itens,acertos,total_obj,nota_obj,nota_final,status&avaliacao=neq.' + TEC8.AV + '&order=criado.asc&limit=5000');
       const meta = {}; rows.forEach(r => (r.itens || []).forEach(i => { if (META_EM[i.id]) meta[i.id] = META_EM[i.id]; }));
       const roster = {}; Object.keys(ALUNOS_EM).forEach(t => { roster[t] = { turma: TURMAS_EM[t] || t, alunos: ALUNOS_EM[t].map(a => ({ n: a.n, nome: a.nome })) }; });
       return out(200, { ok: true, rows, meta, roster });
+    }
+    if (fonte === 'tecnologia8') {   // Quiz de Tecnologia 8º ano (grafos): mesmo formato do Ensino Médio
+      const rows = await rest('em_respostas?select=envio_id,criado,avaliacao,turma_id,turma,componente,prova,n,nome,itens,acertos,total_obj,nota_obj,nota_final,status&avaliacao=eq.' + TEC8.AV + '&order=criado.asc&limit=5000');
+      rows.forEach(r => { r.rot_serie = '8º ano'; });
+      const al = await rest('alunos?select=turma,chamada,nome&turma=in.(' + encodeURIComponent('"8º Ano A","8º Ano B"') + ')&order=chamada.asc&limit=200');
+      const roster = {}; al.forEach(a => { (roster[a.turma] = roster[a.turma] || { turma: a.turma, alunos: [] }).alunos.push({ n: a.chamada, nome: String(a.nome).trim() }); });
+      return out(200, { ok: true, rows, meta: TEC8.META, roster });
     }
     if (fonte === 'ciencias8') {   // Atividade de Ciências 8º ano (circuitos): reaproveita o formato do Ensino Médio
       const rs = await rest('atividade_ciencias_respostas?select=id,criado_em,turma,chamada,nome,respostas,dissertativas,acertos,total_objetivas&order=criado_em.asc&limit=5000');

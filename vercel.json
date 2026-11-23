@@ -80,6 +80,10 @@
       "destination": "/api/individual?fn=aluno-login"
     },
     {
+      "source": "/api/quiz-tecnologia",
+      "destination": "/api/atividade-ciencias?fn=quiz-tecnologia"
+    },
+    {
       "source": "/api/recuperacao-2ds",
       "destination": "/api/corrigir-em?fn=recuperacao-2ds"
     }
