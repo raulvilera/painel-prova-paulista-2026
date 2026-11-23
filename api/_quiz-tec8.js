@@ -66,6 +66,29 @@ function corrigeDiscursiva(txt) {
 const META = {};
 Q.forEach(q => { META[id(q.n)] = { tipo: q.dis ? 'dis' : 'obj', av: AV, hab: '', ae: q.ae, objeto: q.objeto, n: q.n, enun: q.enun, cor: q.dis ? '' : q.cor, alts: q.alts || null, serie: '8', comp: 'Tecnologia' }; });
 
+/* Também grava no relatório do app Quiz (quiz-alura), tabela quiz_attempts do Supabase do login (insert liberado para anon por RLS). */
+const APP_URL = (process.env.PAINEL_SUPABASE_URL || 'https://ykrjfjepnqeoqlgupsbe.supabase.co').replace(/\/$/, '');
+const APP_KEY = process.env.PAINEL_SUPABASE_KEY || 'sb_publishable_FbMU5x7WBpxzHmmVzOfh2g_0M1xxAh5';
+const TRILHA = 'Grafos (simulador)';
+async function gravaNoApp(d, turma, nome, itens, acertos, notaFinal) {
+  const alura = d.alura && typeof d.alura === 'object' ? d.alura : {};
+  const turmaApp = /^8º ANO [AB] TARDE$/.test(String(alura.turma || '')) ? alura.turma : turma.replace('8º Ano ', '8º ANO ') + ' TARDE';
+  const nomeApp = String(alura.nome || '').trim().slice(0, 120) || nome;
+  const agora = new Date(), ini = new Date(String(d.inicio || ''));
+  const inicio = !isNaN(ini) && agora - ini >= 0 && agora - ini < 6 * 3600e3 ? ini.toISOString() : agora.toISOString();
+  const certas = itens.map(i => i.tipo === 'obj' ? i.acerto : i.nota >= 0.67);
+  const n = certas.filter(Boolean).length;
+  const row = { student_name: nomeApp, class_name: turmaApp, score: n * 1000, total_questions: itens.length, correct_answers: n,
+    percentage: Math.max(0, Math.min(100, Math.round(notaFinal * 10))), started_at: inicio, finished_at: agora.toISOString(),
+    answers: itens.map((i, k) => ({ question_id: 1001 + k, category: TRILHA, correct: certas[k], timed_out: false, answered_at: k === 0 ? inicio : agora.toISOString() })) };
+  const H = { apikey: APP_KEY, Authorization: 'Bearer ' + APP_KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' };
+  try {
+    let r = await fetch(APP_URL + '/rest/v1/quiz_attempts', { method: 'POST', headers: H, body: JSON.stringify(row) });
+    if (!r.ok) { delete row.started_at; delete row.finished_at; r = await fetch(APP_URL + '/rest/v1/quiz_attempts', { method: 'POST', headers: H, body: JSON.stringify(row) }); }
+    return r.ok;
+  } catch (e) { return false; }
+}
+
 async function handler(req, res, SB, KEY) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8'); res.setHeader('Cache-Control', 'no-store');
   const out = (c, v) => { res.statusCode = c; res.end(JSON.stringify(v)); };
@@ -107,7 +130,8 @@ async function handler(req, res, SB, KEY) {
     });
     if (!r.ok) return out(502, { ok: false, erro: 'Não foi possível gravar agora (' + r.status + '). Tente de novo.' });
   } catch (e) { return out(502, { ok: false, erro: 'Falha de conexão com o banco. Tente de novo.' }); }
-  return out(200, { ok: true, escola: ESCOLA, acertos, totalObj: OBJ.length, notaObj, notaFinal, devolutiva });
+  const noApp = await gravaNoApp(d, turma, nome, itens, acertos, notaFinal);
+  return out(200, { ok: true, noApp, escola: ESCOLA, acertos, totalObj: OBJ.length, notaObj, notaFinal, devolutiva });
 }
 
 module.exports = { AV, META, handler };

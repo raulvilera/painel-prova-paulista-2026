@@ -83,6 +83,7 @@ textarea:focus{outline:none;border-color:var(--azul2)}
 #msg{text-align:center;font-weight:600;margin-top:8px}
 #msg.err{color:var(--verm)}
 .res{background:#fff;border:2px solid var(--verde);border-radius:14px;padding:16px;margin:18px 0;text-align:center}
+.voltar-app{display:inline-block;margin-top:12px;font-weight:800;color:#fff;background:#1e3a8a;border-radius:10px;padding:9px 18px;text-decoration:none}
 .res .nota{font-size:2.4rem;font-weight:900;color:var(--azul)}
 </style>
 </head>
@@ -103,6 +104,7 @@ textarea:focus{outline:none;border-color:var(--azul2)}
     <div class="sub">Grafos · 14 questões (13 de escolha e 1 discursiva)</div>
   </header>
 
+  <div class="aviso" id="origem" hidden>✅ Você veio do <b>app do Quiz</b>: a sua série e o seu nome já foram preenchidos. Confira e comece!</div>
   <div class="aviso"><b>Como fazer:</b> escolha a sua série e o seu nome no cabeçalho. Em cada questão, use o <b>simulador</b> ao lado para explorar o grafo: <b>🔍 Explorar</b> mostra as ligações diretas e o grau de um vértice; <b>🧭 Caminho</b> testa um percurso, passo a passo; <b>✏️ Construir</b> liga ou desliga arestas. Você pode arrastar os vértices. No final, clique em <b>Enviar respostas</b>.</div>
 
   <div class="prog"><div class="bar"><i id="pbar"></i></div><small id="ptxt">0 de 14 respondidas</small></div>
@@ -190,6 +192,25 @@ $("selTurma").addEventListener("change", () => {
   });
   s.disabled = !t;
 });
+
+/* ---------------- Vindo do app Quiz (quiz-alura): turma e nome já escolhidos lá ---------------- */
+const INICIO = new Date().toISOString();
+const PARAMS = new URLSearchParams(location.search);
+const norm = x => String(x || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().replace(/\s+/g, " ").trim();
+const VOLTAR = /^https:\/\/quiz-alura[a-z0-9-]*\.vercel\.app\//.test(PARAMS.get("voltar") || "") ? PARAMS.get("voltar") : "";
+let ALURA = null;   // {nome, turma} como estão no app do Quiz, para a tentativa aparecer no relatório de lá
+(function () {
+  const pt = norm(PARAMS.get("turma")), pn = PARAMS.get("nome") || "";
+  const m = /8.?\s*ANO\s*([AB])\b/.exec(pt);
+  if (!m) return;
+  const turma = "8º Ano " + m[1];
+  $("selTurma").value = turma; $("selTurma").dispatchEvent(new Event("change"));
+  const alvo = norm(pn), opt = [...$("selNome").options].find(o => o.value && norm(o.value) === alvo);
+  if (opt) { $("selNome").value = opt.value; ALURA = { nome: pn.trim(), turma: PARAMS.get("turma"), painel: opt.value }; }
+  if (PARAMS.get("origem") === "quiz-alura") $("origem").hidden = false;
+})();
+$("selNome").addEventListener("change", () => { if (ALURA && $("selNome").value !== ALURA.painel) ALURA = null; });
+$("selTurma").addEventListener("change", () => { if (ALURA && $("selTurma").value !== "8º Ano " + (/([AB])\b/.exec(norm(ALURA.turma)) || [])[1]) ALURA = null; });
 
 /* ---------------- Simulador de grafos ---------------- */
 function Simulador(box, q) {
@@ -379,7 +400,7 @@ $("btnEnviar").addEventListener("click", async () => {
   const btn = $("btnEnviar"); btn.disabled = true; btn.textContent = "Enviando…";
   try {
     const resp = await fetch(URL_ENVIO, { method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ turma, nome: opt.value, chamada: Number(opt.dataset.c), respostas: r, dissertativa: $("dis").value }) });
+      body: JSON.stringify({ turma, nome: opt.value, chamada: Number(opt.dataset.c), respostas: r, dissertativa: $("dis").value, inicio: INICIO, alura: ALURA ? { nome: ALURA.nome, turma: ALURA.turma } : null }) });
     const j = await resp.json().catch(() => ({ ok: false, erro: "O servidor não respondeu." }));
     if (!j.ok) throw new Error(j.erro || "Erro ao enviar.");
     ENVIADO = true; mostraResultado(j);
@@ -401,7 +422,7 @@ function mostraResultado(j) {
     fb.className = "fb " + (d.acertou ? "ok" : "err");
     fb.innerHTML = (d.acertou ? "✅ <b>Correto!</b> " : "❌ <b>" + (d.marcada ? "Não foi dessa vez." : "Sem resposta.") + "</b> ") + esc(d.comentario);
   });
-  $("resultado").innerHTML = '<div class="res"><div>Respostas registradas para o professor.</div><div class="nota">' + j.acertos + ' / ' + j.totalObj + '</div><div>acertos nas questões de escolha · nota ' + String(j.notaObj).replace(".", ",") + '</div><div class="muted" style="margin-top:6px;color:#64748b">Role a página para ver o comentário de cada questão.</div></div>';
+  $("resultado").innerHTML = '<div class="res"><div>Respostas registradas para o professor.</div><div class="nota">' + j.acertos + ' / ' + j.totalObj + '</div><div>acertos nas questões de escolha · nota ' + String(j.notaObj).replace(".", ",") + '</div><div class="muted" style="margin-top:6px;color:#64748b">Role a página para ver o comentário de cada questão.</div>' + (VOLTAR ? '<a class="voltar-app" href="' + esc(VOLTAR) + '">← Voltar ao app do Quiz</a>' : '') + '</div>';
   $("resultado").scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
