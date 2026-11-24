@@ -475,6 +475,20 @@ module.exports = async function corrigirEM(req, res) {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   const reply = (status, value) => res.status(status).json(value);
+  /* Aviso (não bloqueia): GET ?acao=verificar&avaliacao=&turma=&aluno=<nº> → { ja, quando } se o aluno já entregou esta avaliação. */
+  if (req.method === 'GET' && (req.query || {}).acao === 'verificar') {
+    const q = req.query, av = String(q.avaliacao || ''), turma = String(q.turma || ''), n = Number(q.aluno);
+    if (!Object.prototype.hasOwnProperty.call(GABARITO, av) || !Object.prototype.hasOwnProperty.call(TURMAS, turma) || !Number.isInteger(n) || n <= 0) return reply(400, {ok:false, erro:'Dados inválidos.'});
+    const base = (process.env.SUPABASE_URL || '').replace(/\/$/, ''), chave = process.env.SUPABASE_SERVICE_KEY || '';
+    if (!base || !chave) return reply(200, {ok:true, ja:false, quando:null});
+    try {
+      const r = await fetch(base + '/rest/v1/em_respostas?select=criado&avaliacao=eq.' + encodeURIComponent(av) + '&turma_id=eq.' + encodeURIComponent(turma) + '&n=eq.' + n + '&order=criado.desc&limit=1',
+        { headers: { apikey: chave, Authorization: 'Bearer ' + chave } });
+      if (!r.ok) return reply(502, {ok:false, erro:'Falha ao consultar.'});
+      const l = await r.json();
+      return reply(200, {ok:true, ja:l.length > 0, quando:l.length ? l[0].criado : null});
+    } catch (e) { return reply(502, {ok:false, erro:'Falha de conexão.'}); }
+  }
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return reply(405, {ok:false, erro:'Use POST para entregar a avaliação.'});

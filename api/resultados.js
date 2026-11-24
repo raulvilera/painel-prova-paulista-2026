@@ -54,8 +54,8 @@ module.exports = async function resultados(req, res) {
         if (!j || !j.ok) return out(502, { ok: false, erro: String((j && j.erro) || 'A planilha não respondeu.') + (/ação desconhecida/.test(String(j && j.erro)) ? ' — cole o Codigo-completo.gs atualizado no Apps Script e crie uma nova versão da implantação.' : '') });
         return out(200, { ok: true, removidos: j.removidos });
       }
-      if (b.fonte === 'em' && (b.aval === REC2DS.id || b.aval === TEC8.AV)) {   // recuperação da 2ª DS: um envio por aluno; apaga o envio para o aluno refazer
-        const r = await fetch(SB + '/rest/v1/em_respostas?avaliacao=eq.' + encodeURIComponent(REC2DS.id) + '&turma=eq.' + encodeURIComponent(String(b.turma || '')) + '&nome=eq.' + encodeURIComponent(String(b.nome || '')), { method: 'DELETE', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, Prefer: 'return=representation' } });
+      if (b.fonte === 'em' && (b.aval === REC2DS.id || b.aval === TEC8.AV)) {   // recuperação da 2ª DS e quiz de Tecnologia do 8º: um envio por aluno; apaga o envio para o aluno refazer
+        const r = await fetch(SB + '/rest/v1/em_respostas?avaliacao=eq.' + encodeURIComponent(b.aval) + '&turma=eq.' + encodeURIComponent(String(b.turma || '')) + '&nome=eq.' + encodeURIComponent(String(b.nome || '')), { method: 'DELETE', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, Prefer: 'return=representation' } });
         const t = await r.text(); if (!r.ok) return out(502, { ok: false, erro: 'Supabase ' + r.status + ': ' + t.slice(0, 160) });
         return out(200, { ok: true, removidos: (t ? JSON.parse(t) : []).length });
       }

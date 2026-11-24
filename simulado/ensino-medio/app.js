@@ -895,6 +895,26 @@
   refs.componente.addEventListener('change', onComponenteChange);
   refs.prova.addEventListener('change', onProvaChange);
   /* Começa sozinho: assim que turma, componente, prova e nome estão escolhidos (o nome é obrigatório para registrar na planilha). */
+  /* Aviso para quem já entregou esta avaliação (só avisa; a entrega continua liberada). */
+  const avisoJa = $('aviso-ja');
+  let verificacaoJa = 0;
+  function esconderAvisoJa() { verificacaoJa++; if (avisoJa) { avisoJa.hidden = true; text(avisoJa, ''); } }
+  function verificarJaRealizou() {
+    esconderAvisoJa();
+    const minha = verificacaoJa, id = assessmentId(), n = alunoEscolhido(), turma = refs.turma.value;
+    if (!avisoJa || !id || !n || !turma) return;
+    fetch('/api/corrigir-em?acao=verificar&avaliacao=' + encodeURIComponent(id) + '&turma=' + encodeURIComponent(turma) + '&aluno=' + n, { cache: 'no-store', credentials: 'same-origin' })
+      .then((r) => r.json())
+      .then((d) => {
+        if (minha !== verificacaoJa || !d || !d.ok || !d.ja) return;
+        let quando = '';
+        if (d.quando) { const dt = new Date(d.quando); if (!isNaN(dt)) quando = ' em ' + dt.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }); }
+        text(avisoJa, '⚠️ Você já realizou esta avaliação' + quando + '. Só entregue de novo se o professor pediu.');
+        avisoJa.hidden = false;
+      })
+      .catch(() => { /* sem aviso se a consulta falhar */ });
+  }
+
   function autoIniciar() {
     if (state.started || state.submitting) return;
     const assessment = selectedAssessment();
@@ -905,8 +925,10 @@
     }
     startTraining({ preventDefault: function () {} });
   }
-  refs.prova.addEventListener('change', function () { setTimeout(autoIniciar, 0); });
-  refs.nome.addEventListener('change', function () { hideMessage(); autoIniciar(); });
+  refs.prova.addEventListener('change', function () { verificarJaRealizou(); setTimeout(autoIniciar, 0); });
+  refs.nome.addEventListener('change', function () { hideMessage(); verificarJaRealizou(); autoIniciar(); });
+  refs.turma.addEventListener('change', esconderAvisoJa);
+  refs.componente.addEventListener('change', esconderAvisoJa);
   refs.form.addEventListener('submit', startTraining);
   refs.enviar.addEventListener('click', sendAnswers);
   refs.mudar.addEventListener('click', changeAssessment);

@@ -13,6 +13,19 @@ function lerCorpo(req) {
 module.exports = async function handler(req, res) {
   if (req.query && req.query.fn === 'quiz-tecnologia') return require('./_quiz-tec8.js').handler(req, res, SB, KEY);   // Quiz de Tecnologia 8º ano (grafos)
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
+  /* Aviso (não bloqueia): GET ?acao=verificar&turma=&nome= → { ja, quando } se o aluno já enviou esta atividade. */
+  if (req.method === 'GET' && req.query && req.query.acao === 'verificar') {
+    res.setHeader('Cache-Control', 'no-store');
+    const turma = String(req.query.turma || ''), nome = String(req.query.nome || '').trim().slice(0, 120);
+    if (!TURMAS.includes(turma) || !nome) { res.statusCode = 400; return res.end(JSON.stringify({ ok: false, erro: 'turma ou nome inválidos' })); }
+    try {
+      const r = await fetch(SB + '/rest/v1/atividade_ciencias_respostas?select=criado_em&turma=eq.' + encodeURIComponent(turma) + '&nome=eq.' + encodeURIComponent(nome) + '&order=criado_em.desc&limit=1',
+        { headers: { apikey: KEY, Authorization: 'Bearer ' + KEY } });
+      if (!r.ok) { res.statusCode = 502; return res.end(JSON.stringify({ ok: false, erro: 'falha ao consultar' })); }
+      const l = await r.json();
+      return res.end(JSON.stringify({ ok: true, ja: l.length > 0, quando: l.length ? l[0].criado_em : null }));
+    } catch (e) { res.statusCode = 502; return res.end(JSON.stringify({ ok: false, erro: 'falha de conexão' })); }
+  }
   if (req.method !== 'POST') { res.statusCode = 405; return res.end(JSON.stringify({ ok: false, erro: 'método não permitido' })); }
   const d = lerCorpo(req);
   if (!d) { res.statusCode = 400; return res.end(JSON.stringify({ ok: false, erro: 'corpo inválido' })); }

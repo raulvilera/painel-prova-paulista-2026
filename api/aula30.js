@@ -100,6 +100,14 @@ module.exports = async function aula30(req, res) {
       const roster = {}; Object.keys(PAINEL).forEach(t => { roster[t] = Object.keys(PAINEL[t]); });
       return ok({ rows, roster });
     }
+    if (acao === 'verificar') {   // aviso (não bloqueia): o aluno já concluiu esta aula antes?
+      if (!SB || !KEY) return er(503, 'Banco não configurado.');
+      const t = String(q.turma || ''), n = String(q.nome || ''); if (!PAINEL[t] || !n) return er(400, 'Informe turma e nome.');
+      const al = achaAluno(t, n), ro = ROSTER.da(t);
+      const nome = al ? al.nome : ((ro || []).find(x => norm(x.nome) === norm(n)) || {}).nome || n;   // o mesmo nome que o envio grava
+      const l = await restUma('aula30_resultados?select=criado&turma=eq.' + encodeURIComponent(t) + '&nome=eq.' + encodeURIComponent(nome) + '&order=criado.desc&limit=1');
+      return ok({ ja: l.length > 0, quando: l.length ? l[0].criado : null });
+    }
     if (acao === 'turmas') {
       const a = String(q.ano || ''); const t = Object.keys(PAINEL).filter(x => serie(x) === a).sort((x, y) => x.localeCompare(y, 'pt'));
       return ok({ turmas: t });
