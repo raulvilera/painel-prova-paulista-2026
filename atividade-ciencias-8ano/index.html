@@ -29,6 +29,7 @@
   textarea{width:100%;min-height:120px;padding:10px;border:1px solid #bbb;border-radius:6px;font-size:1rem;box-sizing:border-box;font-family:inherit;margin-top:6px}
   .enviar{display:block;width:100%;max-width:320px;margin:24px auto 8px;padding:14px;background:#1f3b57;color:#fff;border:0;border-radius:8px;font-size:1rem;font-weight:bold;cursor:pointer}
   .enviar:disabled{opacity:.6;cursor:default}
+  .aviso-ja{display:none;background:#fff3cd;color:#7a5a00;border:1px solid #f1d37a;border-radius:8px;padding:12px 14px;margin:0 0 16px;font-weight:bold;line-height:1.4}
   #msg{text-align:center;font-weight:bold;margin:8px 0 32px;min-height:1.2em}
 </style>
 </head>
@@ -56,6 +57,8 @@
       <input id="data" type="text" readonly>
     </div>
   </section>
+
+  <div id="avisoJa" class="aviso-ja" role="status" aria-live="polite"></div>
 
   <div id="questoes"></div>
 
@@ -289,6 +292,7 @@ const I18N = {
     calcPh: "Escreva aqui as contas que você fizer...", enviar: "Enviar respostas",
     msgSel: "Selecione a sua turma e o seu nome antes de enviar.", msgEnv: "Enviando...",
     msgOk: "Respostas enviadas. Obrigado!", msgErr: "Não foi possível enviar. Verifique a conexão e tente de novo.",
+    avisoJa: "⚠️ Você já realizou esta atividade{q}. Só envie de novo se o professor pediu.", avisoEm: " em ",
     locale: "pt-BR"
   },
   ru: {
@@ -300,6 +304,7 @@ const I18N = {
     calcPh: "Запишите здесь все вычисления...", enviar: "Отправить ответы",
     msgSel: "Выберите класс и имя перед отправкой.", msgEnv: "Отправка...",
     msgOk: "Ответы отправлены. Спасибо!", msgErr: "Не удалось отправить. Проверьте соединение и попробуйте снова.",
+    avisoJa: "⚠️ Вы уже выполнили это задание{q}. Отправляйте ещё раз, только если учитель попросил.", avisoEm: " ",
     locale: "ru-RU"
   }
 };
@@ -437,6 +442,26 @@ const inputData = document.getElementById("data");
 
 function limparCampos() {
   inputChamada.value = "";
+  esconderAvisoJa();
+}
+
+// Aviso para quem já enviou esta atividade (só avisa; o envio continua liberado)
+const avisoJa = document.getElementById("avisoJa");
+let verificacaoAtual = 0;
+function esconderAvisoJa() { verificacaoAtual++; avisoJa.style.display = "none"; avisoJa.textContent = ""; }
+function verificarJaRealizou(turma, nome) {
+  esconderAvisoJa();
+  const minha = verificacaoAtual;
+  fetch(URL_ENVIO + "?acao=verificar&turma=" + encodeURIComponent(turma) + "&nome=" + encodeURIComponent(nome), { cache: "no-store" })
+    .then(r => r.json())
+    .then(d => {
+      if (minha !== verificacaoAtual || !d || !d.ok || !d.ja) return;
+      let q = "";
+      if (d.quando) { const dt = new Date(d.quando); if (!isNaN(dt)) q = T("avisoEm") + dt.toLocaleString(T("locale"), { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }); }
+      avisoJa.textContent = T("avisoJa").replace("{q}", q);
+      avisoJa.style.display = "block";
+    })
+    .catch(() => { /* sem aviso se a consulta falhar */ });
 }
 
 function iniciarIdentificacao() {
@@ -460,6 +485,7 @@ function iniciarIdentificacao() {
     inputChamada.value = aluno.c;
     const russo = selTurma.value === ALUNA_RUSSO.turma && aluno.n === ALUNA_RUSSO.nome;
     setIdioma(russo ? "ru" : "pt");
+    verificarJaRealizou(selTurma.value, aluno.n);
   });
 }
 

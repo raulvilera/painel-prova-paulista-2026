@@ -22,6 +22,24 @@
   function pararSom() { try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) { /* */ } }
 
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  /* Aviso para quem já fez esta aula (só avisa; a aula continua liberada) */
+  RUD['⚠️ Você já fez esta aula'] = '⚠️ Вы уже прошли этот урок';
+  RUD['. Pode fazer de novo se o professor pediu.'] = '. Можно пройти ещё раз, если учитель попросил.';
+  var jaFez = { k: '', quando: null, ok: false }, verif = 0;
+  function textoJa() {
+    if (!jaFez.ok || jaFez.k !== S.turma + '|' + S.nome) return '';
+    var q = ''; if (jaFez.quando) { var d = new Date(jaFez.quando); if (!isNaN(d)) q = ' (' + d.toLocaleString(ru() ? 'ru-RU' : 'pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }) + ')'; }
+    return T('⚠️ Você já fez esta aula') + q + T('. Pode fazer de novo se o professor pediu.');
+  }
+  function mostrarJa() { var a = document.getElementById('avisoJa'); if (!a) return; var t = textoJa(); a.textContent = t; a.hidden = !t; }
+  function verificarJa() {
+    var k = S.turma + '|' + S.nome, minha = ++verif; jaFez = { k: '', quando: null, ok: false }; mostrarJa();
+    if (!S.turma || !S.nome) return;
+    api('acao=verificar&turma=' + encodeURIComponent(S.turma) + '&nome=' + encodeURIComponent(S.nome)).then(function (r) {
+      if (minha !== verif || !r || !r.ok || !r.ja) return;
+      jaFez = { k: k, quando: r.quando, ok: true }; mostrarJa();
+    }).catch(function () { /* sem aviso se a consulta falhar */ });
+  }
   function api(qs) { return fetch('/api/aula30?' + qs, { cache: 'no-store' }).then(function (r) { return r.json(); }); }
   function setLang(l) { S.lang = l; try { sessionStorage.setItem('a30lang', l); } catch (e) { /* */ } }
   function cab() { return '<p class="escola">' + T('Ciências · SARESP') + '</p>'; }
@@ -51,14 +69,15 @@
     if (S.turma) {
       h += '<div class="card"><h2>' + T('3. Seu nome') + '</h2>';
       if (!S.nomes.length) h += '<p class="muted">' + T('Carregando…') + '</p>';
-      else h += '<select id="nome"><option value="">' + T('Selecione seu nome…') + '</option>' + S.nomes.map(function (n) { return '<option' + (S.nome === n ? ' selected' : '') + '>' + esc(n) + '</option>'; }).join('') + '</select><button class="btn" id="ir"' + (S.nome ? '' : ' disabled') + '>' + T('Ver meu plano de aula') + '</button>';
+      else h += '<select id="nome"><option value="">' + T('Selecione seu nome…') + '</option>' + S.nomes.map(function (n) { return '<option' + (S.nome === n ? ' selected' : '') + '>' + esc(n) + '</option>'; }).join('') + '</select><p class="aviso-ja" id="avisoJa" role="status" aria-live="polite" hidden></p><button class="btn" id="ir"' + (S.nome ? '' : ' disabled') + '>' + T('Ver meu plano de aula') + '</button>';
       h += '</div>';
     }
     app.innerHTML = h;
     Array.prototype.forEach.call(app.querySelectorAll('[data-ano]'), function (b) { b.onclick = function () { S.ano = b.dataset.ano; S.turma = ''; S.nome = ''; S.turmas = []; S.nomes = []; escolha(); api('acao=turmas&ano=' + S.ano).then(function (r) { S.turmas = r.turmas || []; escolha(); }); }; });
     Array.prototype.forEach.call(app.querySelectorAll('[data-turma]'), function (b) { b.onclick = function () { S.turma = b.dataset.turma; S.nome = ''; S.nomes = []; escolha(); api('acao=nomes&turma=' + encodeURIComponent(S.turma)).then(function (r) { S.nomes = r.nomes || []; escolha(); }); }; });
     Array.prototype.forEach.call(app.querySelectorAll('[data-lang]'), function (b) { b.onclick = function () { setLang(b.dataset.lang); escolha(); }; });
-    var sel = document.getElementById('nome'); if (sel) sel.onchange = function () { S.nome = sel.value; if (/SAFOROVA/i.test(S.nome) && !ru()) { setLang('ru'); escolha(); return; } document.getElementById('ir').disabled = !S.nome; };
+    var sel = document.getElementById('nome'); if (sel) sel.onchange = function () { S.nome = sel.value; verificarJa(); if (/SAFOROVA/i.test(S.nome) && !ru()) { setLang('ru'); escolha(); return; } document.getElementById('ir').disabled = !S.nome; };
+    mostrarJa();
     var ir = document.getElementById('ir'); if (ir) ir.onclick = carregar;
   }
 

@@ -893,3 +893,18 @@ th {
   #secao-prova, .devolutiva { display: none !important; }
   .resultado { page-break-before: auto; }
 }
+
+.aviso-ja {
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  border: 1px solid #f1d37a;
+  border-radius: 10px;
+  background: #fff3cd;
+  color: #7a5a00;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.aviso-ja[hidden] {
+  display: none;
+}
