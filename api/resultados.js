@@ -30,6 +30,75 @@ async function professor(req) {
 const rotuloTurma = t => { const m = /^(\d)º\s*ANO\s*([A-Z])\s*(MANHÃ|MANHA|TARDE)$/i.exec(String(t || '').trim()); return m ? m[1] + 'º Ano ' + m[2] + (/^M/i.test(m[3]) ? ' (Lydia)' : '') : t; };
 const TURMAS_EM = { '2a-manha': '2ª Série A Manhã (Des. Sistemas)', '2c-noite': '2ª Série C Noite', '3f-noite': '3ª Série F Noite' };
 
+/* Quadro de entregas: junta, de todas as fontes, quem fez cada atividade (turma + nome + data), sem notas nem respostas.
+   Cada fonte é lida à parte: se uma falhar, o quadro sai com as outras e um aviso. */
+const normNome = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim().toUpperCase();
+async function quadro() {
+  const ent = new Map(), ativ = {}, avisos = [];
+  const add = (a, rotulo, grupo, turma, nome, quando, parcial) => {
+    if (!turma || !String(nome || '').trim()) return;
+    if (!ativ[a]) ativ[a] = { rotulo, grupo };
+    const k = a + '|' + turma + '|' + normNome(nome), d = quando ? String(quando) : '';
+    const e = ent.get(k) || { a, t: turma, nome: String(nome).trim(), n: 0, pri: '', ult: '', parcial: true };
+    e.n++; if (!parcial) e.parcial = false;
+    if (d && (!e.pri || d < e.pri)) e.pri = d; if (d && d > e.ult) e.ult = d;
+    ent.set(k, e);
+  };
+  const fonte = async (nome, fn) => { try { await fn(); } catch (e) { avisos.push(nome + ': ' + String(e.message || e).slice(0, 120)); } };
+  const turmaEM = r => TURMAS_EM[r.turma_id] || r.turma;
+  const roster = {};
+  await Promise.all([
+    fonte('Listas de chamada', async () => {
+      const al = await rest('alunos?select=turma,chamada,nome,escola&order=turma.asc,chamada.asc&limit=5000');
+      al.forEach(a => { if (!/º\s*Ano/i.test(a.turma || '') || !a.nome) return;
+        const t = String(a.turma).trim() + (/^6/.test(a.turma) && /lydia/i.test(a.escola || '') ? ' (Lydia)' : '');
+        (roster[t] = roster[t] || []).push({ n: a.chamada, nome: String(a.nome).trim() }); });
+      Object.keys(ALUNOS_EM).forEach(id => { roster[TURMAS_EM[id] || id] = ALUNOS_EM[id].map(a => ({ n: a.n, nome: a.nome })); });
+    }),
+    fonte('Ensino Médio, Recuperação 2ª DS e Quiz de Tecnologia', async () => {
+      (await rest('em_respostas?select=avaliacao,turma_id,turma,componente,prova,nome,criado&order=criado.asc&limit=20000'))
+        .forEach(r => add(r.avaliacao, (r.componente ? r.componente + ' · ' : '') + (r.prova || r.avaliacao), r.avaliacao === TEC8.AV ? 'Quiz' : 'Avaliação', turmaEM(r), r.nome, r.criado));
+    }),
+    fonte('Ciências 8º ano', async () => {
+      (await rest('atividade_ciencias_respostas?select=turma,nome,criado_em&order=criado_em.asc&limit=5000'))
+        .forEach(r => add('cien-8-circuitos', 'Ciências · Circuitos elétricos (4º bim.)', 'Atividade', r.turma, r.nome, r.criado_em));
+    }),
+    fonte('Atividade individual', async () => {
+      (await rest('indiv_respostas?select=turma,nome,criado,status&order=criado.asc&limit=10000'))
+        .forEach(r => /simulado adaptado/i.test(r.status || '') ? add('indiv-simulado', 'Simulado SARESP adaptado (PEI)', 'Avaliação', rotuloTurma(r.turma), r.nome, r.criado)
+          : add('individual', 'Atividade individual', 'Atividade', rotuloTurma(r.turma), r.nome, r.criado));
+    }),
+    fonte('Aula online de 30 min', async () => {
+      (await rest('aula30_resultados?select=turma,nome,criado&order=criado.asc&limit=10000'))
+        .forEach(r => add('aula30', 'Aula online · 30 min', 'Aula', rotuloTurma(r.turma), r.nome, r.criado));
+    }),
+    fonte('Missão Ciências', async () => {
+      (await rest('missao_resultado?oculto=eq.false&select=turma,nome,concluido,atualizado&limit=10000'))
+        .forEach(r => add('missao', 'Missão Ciências', 'Jogo', rotuloTurma(r.turma), r.nome, r.atualizado, !r.concluido));
+    }),
+    fonte('Missão SARESP 3D', async () => {
+      (await rest('missao3d_secao?select=turma,nome,n_tent,n_conc,ult&limit=20000'))
+        .forEach(r => add('missao3d', 'Missão SARESP 3D', 'Jogo', rotuloTurma(r.turma), r.nome, r.ult, !(Number(r.n_conc) > 0)));
+    }),
+    fonte('Orbit Quiz', async () => {
+      (await rest('orbit_placar?select=turma,nome,respondidas,atualizado&limit=5000'))
+        .forEach(r => { if (Number(r.respondidas) > 0) add('orbit', 'Orbit Quiz (gamificação)', 'Jogo', rotuloTurma(r.turma), r.nome, r.atualizado); });
+    }),
+    fonte('Simulado SARESP (planilha)', async () => {
+      const url = process.env.EM_APPS_SCRIPT_URL || '', segredo = process.env.EM_SEGREDO || '';
+      if (!url || !segredo) throw new Error('planilha não configurada');
+      const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 22000);
+      try {
+        const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ acao: 'resultadosEF', segredo }), redirect: 'follow', signal: ctl.signal });
+        const j = await r.json(); if (!j || !j.ok) throw new Error(String((j && j.erro) || 'sem resposta'));
+        (j.rows || []).forEach(x => add('simulado-ef', 'Simulado SARESP', 'Avaliação', x.turma, x.nome, x.criado));
+      } catch (e) { throw new Error(e.name === 'AbortError' ? 'a planilha demorou para responder; recarregue em instantes' : e.message); }
+      finally { clearTimeout(t); }
+    })
+  ]);
+  return { ok: true, atividades: ativ, entregas: [...ent.values()], roster, avisos };
+}
+
 module.exports = async function resultados(req, res) {
   res.setHeader('Cache-Control', 'no-store'); res.setHeader('Content-Type', 'application/json; charset=utf-8');
   const out = (c, v) => res.status(c).json(v);
@@ -90,6 +159,7 @@ module.exports = async function resultados(req, res) {
       const roster = {}; al.forEach(a => { (roster[a.turma] = roster[a.turma] || { turma: a.turma, alunos: [] }).alunos.push({ n: a.chamada, nome: String(a.nome).trim() }); });
       return out(200, { ok: true, rows, meta: META_C8, roster });
     }
+    if (fonte === 'quadro') return out(200, await quadro());   // Quadro de entregas: todas as atividades × alunos, por turma
     if (fonte === 'individual') {
       const rows = await rest('indiv_respostas?select=id,criado,turma,nome,itens,acertos,total_obj,nota,status&order=criado.asc&limit=5000');
       rows.forEach(r => { r.turma = rotuloTurma(r.turma); });   // "6º ANO C TARDE" e "6º Ano C" são a mesma turma
