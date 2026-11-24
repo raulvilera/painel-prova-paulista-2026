@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Quadro de entregas · atividades por turma</title>
+<link rel="stylesheet" href="../dash.css?v=13">
+<style>
+.wrap{max-width:1400px}
+.qwrap{overflow:auto;max-height:75vh;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table.qd{border-collapse:separate;border-spacing:0;width:max-content;min-width:100%}
+table.qd th,table.qd td{border-bottom:1px solid var(--line);padding:6px 8px;white-space:nowrap}
+table.qd thead th{position:sticky;top:0;background:var(--surface-2);z-index:2;vertical-align:bottom;text-transform:none;letter-spacing:0;font-size:.74rem;color:var(--fg)}
+table.qd thead th.at{max-width:130px;min-width:96px;white-space:normal;text-align:center;line-height:1.2}
+table.qd thead th.at small{display:block;color:var(--muted);font-weight:600;margin-top:3px}
+table.qd thead th.at .g{display:block;font-size:.64rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:2px}
+table.qd .fx{position:sticky;left:0;background:var(--surface);z-index:1}
+table.qd .fx2{position:sticky;left:38px;background:var(--surface);z-index:1;min-width:210px;max-width:280px;overflow:hidden;text-overflow:ellipsis}
+table.qd thead .fx,table.qd thead .fx2{z-index:3;background:var(--surface-2)}
+table.qd td.c{text-align:center;font-size:.8rem}
+td.c.ok{background:var(--lv2-soft);color:#2e7d32;font-weight:700}
+td.c.par{background:var(--lv1-soft);color:#8a5a00;font-weight:700}
+td.c.pen{color:var(--muted)}
+@media (prefers-color-scheme:dark){td.c.ok{color:#7ad07a}td.c.par{color:#f0c060}}
+td.tot{font-variant-numeric:tabular-nums;text-align:right;font-weight:700}
+tr.extra td.fx2{font-style:italic}
+tr:hover td{filter:brightness(.97)}
+.leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.82rem;margin:4px 0 12px}
+.leg span{display:inline-flex;align-items:center;gap:6px}.leg b{display:inline-block;min-width:22px;text-align:center;border-radius:5px;padding:0 4px}
+.tg>summary .cont{color:var(--muted);font-size:.85rem;margin-left:8px}
+details.tg>summary{display:flex;align-items:center;gap:10px}
+details.tg[open]>summary .seta{transform:rotate(90deg)}
+.qbody{padding:10px}
+.aviso{background:var(--lv1-soft);border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin-bottom:12px;font-size:.85rem}
+button.bt{font:inherit;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;padding:7px 12px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div><h1>Quadro de entregas</h1><div class="muted sm">Todas as atividades aplicadas em cada turma e quem já realizou cada uma</div></div>
+<nav><a href="/">← Painel</a><a href="../">Resultados →</a></nav></header>
+<div class="filters">
+<div class="field"><label for="fTurma">Turma</label><select id="fTurma"><option value="">Carregando…</option></select></div>
+<div class="field"><label for="fAtiv">Atividade</label><select id="fAtiv"><option value="">Todas as atividades</option></select></div>
+<div class="field"><label for="fSit">Situação</label><select id="fSit"><option value="">Todos os alunos</option><option value="pend">Com alguma pendência</option><option value="ok">Fizeram todas</option><option value="nada">Não fizeram nenhuma</option></select></div>
+<div class="field"><label for="fBusca">Buscar aluno</label><input id="fBusca" type="search" placeholder="Digite o nome" autocomplete="off"></div>
+<div class="field"><button class="bt" id="bCsv" type="button">Baixar CSV</button></div>
+</div>
+<div class="leg"><span><b class="st ok">✓</b> realizou (data do envio)</span><span><b class="st" style="background:var(--lv1-soft)">…</b> iniciou e não concluiu</span><span><b class="st pend">—</b> não realizou</span><span class="muted">Colunas: só as atividades que a turma já recebeu (pelo menos um aluno enviou).</span></div>
+<main id="app"><div class="card msg">Carregando…</div></main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+(function () {
+  'use strict';
+  const SB_URL = 'https://ykrjfjepnqeoqlgupsbe.supabase.co', SB_KEY = 'sb_publishable_FbMU5x7WBpxzHmmVzOfh2g_0M1xxAh5';
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim().toUpperCase();
+  const dt = (s, longa) => { if (!s) return ''; const d = new Date(s); if (isNaN(d)) return ''; return longa ? d.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' }); };
+  const guarda = (k, v) => { try { localStorage.setItem('quadro_' + k, v); } catch (e) { /* */ } };
+  const lido = k => { try { return localStorage.getItem('quadro_' + k) || ''; } catch (e) { return ''; } };
+  const msg = h => { $('app').innerHTML = '<div class="card msg">' + h + '</div>'; };
+  let D = null, TURMAS = [];   // TURMAS: [{ t, alunos:[{n,nome,extra}], ativ:[ids], ent: Map(ativ|NOME -> entrega) }]
+  const abertas = new Set();
+
+  function montar(j) {
+    const porT = {};
+    const T = t => (porT[t] = porT[t] || { t, alunos: [], ativ: new Set(), ent: new Map() });
+    Object.keys(j.roster || {}).forEach(t => { const x = T(t); (j.roster[t] || []).forEach(a => x.alunos.push({ n: a.n, nome: a.nome })); });
+    (j.entregas || []).forEach(e => {
+      const x = T(e.t); x.ativ.add(e.a); x.ent.set(e.a + '|' + norm(e.nome), e);
+      if (!x.alunos.some(a => norm(a.nome) === norm(e.nome))) x.alunos.push({ n: null, nome: e.nome, extra: true });
+    });
+    const pri = {}; (j.entregas || []).forEach(e => { if (e.pri && (!pri[e.a] || e.pri < pri[e.a])) pri[e.a] = e.pri; });
+    TURMAS = Object.values(porT).filter(x => x.ativ.size || x.alunos.length).map(x => {
+      x.alunos.sort((a, b) => (a.n == null) - (b.n == null) || (a.n || 0) - (b.n || 0) || a.nome.localeCompare(b.nome, 'pt'));
+      x.ativ = [...x.ativ].sort((a, b) => String(pri[a] || '').localeCompare(String(pri[b] || '')) || a.localeCompare(b));
+      return x;
+    }).sort((a, b) => a.t.localeCompare(b.t, 'pt', { numeric: true }));
+  }
+
+  function filtros() {
+    const fT = $('fTurma'), sel = fT.value || lido('turma');
+    fT.innerHTML = '<option value="*">Todas as turmas</option>' + TURMAS.map(x => '<option value="' + esc(x.t) + '">' + esc(x.t) + ' (' + x.ativ.length + ' ativ.)</option>').join('');
+    fT.value = TURMAS.some(x => x.t === sel) || sel === '*' ? sel : (TURMAS[0] ? TURMAS[0].t : '*');
+    opcoesAtiv();
+  }
+  function opcoesAtiv() {
+    const fA = $('fAtiv'), sel = fA.value, t = $('fTurma').value;
+    const ids = t === '*' ? [...new Set(TURMAS.flatMap(x => x.ativ))] : ((TURMAS.find(x => x.t === t) || {}).ativ || []);
+    fA.innerHTML = '<option value="">Todas as atividades</option>' + ids.map(a => '<option value="' + esc(a) + '">' + esc((D.atividades[a] || {}).rotulo || a) + '</option>').join('');
+    fA.value = ids.includes(sel) ? sel : '';
+  }
+
+  /* Linhas visíveis de uma turma, conforme busca e situação */
+  function linhas(x, cols) {
+    const b = norm($('fBusca').value), sit = $('fSit').value;
+    return x.alunos.map(a => {
+      const cel = cols.map(c => x.ent.get(c + '|' + norm(a.nome)) || null);
+      const feitas = cel.filter(e => e && !e.parcial).length;
+      return { a, cel, feitas };
+    }).filter(r => (!b || norm(r.a.nome).includes(b)) &&
+      (!sit || (sit === 'pend' && r.feitas < cols.length) || (sit === 'ok' && cols.length && r.feitas === cols.length) || (sit === 'nada' && r.feitas === 0)));
+  }
+
+  function tabela(x, cols, L) {
+    const tot = cols.map(c => x.alunos.filter(a => { const e = x.ent.get(c + '|' + norm(a.nome)); return e && !e.parcial; }).length);
+    let h = '<div class="qwrap"><table class="qd"><thead><tr><th class="fx">Nº</th><th class="fx2">Aluno</th>';
+    cols.forEach((c, i) => { const m = D.atividades[c] || {}; h += '<th class="at" title="' + esc(m.rotulo || c) + '"><span class="g">' + esc(m.grupo || '') + '</span>' + esc(m.rotulo || c) + '<small>' + tot[i] + '/' + x.alunos.length + ' fizeram</small></th>'; });
+    h += '<th class="num">Feitas</th></tr></thead><tbody>';
+    L.forEach(r => {
+      h += '<tr' + (r.a.extra ? ' class="extra" title="Nome que não está na lista de chamada"' : '') + '><td class="fx muted">' + (r.a.n == null ? '' : esc(r.a.n)) + '</td><td class="fx2" title="' + esc(r.a.nome) + '">' + esc(r.a.nome) + '</td>';
+      r.cel.forEach((e, i) => {
+        const rot = (D.atividades[cols[i]] || {}).rotulo || cols[i];
+        if (!e) h += '<td class="c pen" title="' + esc(rot) + ': não realizou">—</td>';
+        else if (e.parcial) h += '<td class="c par" title="' + esc(rot) + ': iniciou e não concluiu' + (e.ult ? ' · último acesso ' + esc(dt(e.ult, true)) : '') + '">… ' + esc(dt(e.ult)) + '</td>';
+        else h += '<td class="c ok" title="' + esc(rot) + ': realizou' + (e.pri ? ' em ' + esc(dt(e.pri, true)) : '') + (e.n > 1 ? ' · ' + e.n + ' envios (último ' + esc(dt(e.ult, true)) + ')' : '') + '">✓ ' + esc(dt(e.pri)) + (e.n > 1 ? ' ×' + e.n : '') + '</td>';
+      });
+      h += '<td class="tot">' + r.feitas + '/' + cols.length + '</td></tr>';
+    });
+    if (!L.length) h += '<tr><td colspan="' + (cols.length + 3) + '" class="muted" style="text-align:center;padding:14px">Nenhum aluno com esse filtro.</td></tr>';
+    return h + '</tbody></table></div>';
+  }
+
+  function desenha() {
+    const t = $('fTurma').value, fa = $('fAtiv').value, busca = norm($('fBusca').value);
+    guarda('turma', t);
+    let h = (D.avisos || []).length ? '<div class="aviso">⚠️ Algumas fontes não puderam ser lidas agora (as demais aparecem normalmente): ' + D.avisos.map(esc).join(' · ') + '</div>' : '';
+    const lista = t === '*' ? TURMAS : TURMAS.filter(x => x.t === t);
+    let algum = false;
+    lista.forEach(x => {
+      const cols = fa ? x.ativ.filter(c => c === fa) : x.ativ;
+      if (fa && !cols.length) return;
+      const L = linhas(x, cols);
+      if (t === '*' && (busca || $('fSit').value) && !L.length) return;
+      algum = true;
+      const sem = !cols.length ? '<p class="muted" style="padding:6px 4px">Nenhuma atividade registrada para esta turma ainda.</p>' : tabela(x, cols, L);
+      if (t !== '*') { h += '<div class="card"><div class="tools"><h2>' + esc(x.t) + '</h2><span class="muted sm">' + x.alunos.length + ' alunos · ' + cols.length + ' atividade(s)</span></div>' + sem + '</div>'; return; }
+      const aberta = busca || abertas.has(x.t);
+      h += '<details class="tg" data-t="' + esc(x.t) + '"' + (aberta ? ' open' : '') + '><summary><span class="seta"></span><b>' + esc(x.t) + '</b><span class="cont">' + x.alunos.length + ' alunos · ' + cols.length + ' atividade(s)' + (busca ? ' · ' + L.length + ' encontrado(s)' : '') + '</span></summary><div class="qbody">' + sem + '</div></details>';
+    });
+    if (!algum) h += '<div class="card msg">Nada encontrado com esses filtros.</div>';
+    $('app').innerHTML = h;
+  }
+
+  function csv() {
+    const t = $('fTurma').value, fa = $('fAtiv').value, out = [['Turma', 'Nº', 'Aluno', 'Atividade', 'Situação', 'Data do envio', 'Envios']];
+    (t === '*' ? TURMAS : TURMAS.filter(x => x.t === t)).forEach(x => {
+      const cols = fa ? x.ativ.filter(c => c === fa) : x.ativ;
+      linhas(x, cols).forEach(r => r.cel.forEach((e, i) => out.push([x.t, r.a.n == null ? '' : r.a.n, r.a.nome, (D.atividades[cols[i]] || {}).rotulo || cols[i],
+        !e ? 'Não realizou' : e.parcial ? 'Iniciou, não concluiu' : 'Realizou', e ? dt(e.pri || e.ult, true) : '', e ? e.n : 0])));
+    });
+    const txt = '﻿' + out.map(l => l.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(';')).join('\r\n');
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/csv;charset=utf-8' }));
+    a.download = 'quadro-de-entregas' + (t && t !== '*' ? '-' + t.replace(/[^\wºª]+/g, '-') : '') + '.csv'; document.body.appendChild(a); a.click(); a.remove();
+  }
+
+  async function iniciar() {
+    $('fTurma').onchange = () => { opcoesAtiv(); desenha(); };
+    $('fAtiv').onchange = desenha; $('fSit').onchange = desenha;
+    let tm; $('fBusca').oninput = () => { clearTimeout(tm); tm = setTimeout(desenha, 150); };
+    $('bCsv').onclick = () => D && csv();
+    $('app').addEventListener('toggle', e => { const d = e.target; if (d.dataset && d.dataset.t) { if (d.open) abertas.add(d.dataset.t); else abertas.delete(d.dataset.t); } }, true);
+    if (!window.supabase) return msg('Não foi possível carregar o login. Atualize a página.');
+    const sb = window.supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, detectSessionInUrl: false, flowType: 'implicit' } });
+    const { data } = await sb.auth.getSession();
+    if (!data || !data.session) return msg('Para ver o quadro, entre primeiro no painel com o seu login de professor.<br><br><a href="/">Abrir o painel</a>');
+    msg('Juntando as entregas de todas as atividades… (pode levar alguns segundos)');
+    try {
+      const r = await fetch('/api/resultados?fonte=quadro', { headers: { Authorization: 'Bearer ' + data.session.access_token }, cache: 'no-store' });
+      const j = await r.json().catch(() => ({ ok: false, erro: 'resposta inválida (HTTP ' + r.status + ')' }));
+      if (!j.ok) return msg(esc(j.erro || 'Erro ao carregar.') + (r.status === 401 ? '<br><br><a href="/">Abrir o painel</a>' : ''));
+      D = j; montar(j); filtros(); desenha();
+    } catch (e) { msg('Não foi possível carregar: ' + esc(e.message)); }
+  }
+  window.QUADRO = { montar: j => { D = j; montar(j); return TURMAS; }, linhas };
+  document.addEventListener('DOMContentLoaded', iniciar);
+})();
+</script>
+<script src="/voltar-painel.js" data-sempre defer></script>
+</body>
+</html>
