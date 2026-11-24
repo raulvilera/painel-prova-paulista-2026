@@ -22,6 +22,11 @@ table.qd td.c{text-align:center;font-size:.8rem}
 td.c.ok{background:var(--lv2-soft);color:#2e7d32;font-weight:700}
 td.c.par{background:var(--lv1-soft);color:#8a5a00;font-weight:700}
 td.c.pen{color:var(--muted)}
+td.c b{display:block;font-size:.95rem;font-variant-numeric:tabular-nums}
+td.c small{display:block;font-size:.68rem;font-weight:600;opacity:.8}
+td.c.n0{background:var(--lv0-soft);color:#b42323}td.c.n1{background:var(--lv1-soft);color:#8a5a00}td.c.n2{background:var(--lv2-soft);color:#2e7d32}td.c.n3{background:var(--lv3-soft);color:#1f5a9e}
+@media (prefers-color-scheme:dark){td.c.n0{color:#ff8a8a}td.c.n1{color:#f0c060}td.c.n2{color:#7ad07a}td.c.n3{color:#8cbcf0}}
+td.tot small{display:block;font-weight:600;color:var(--muted);font-size:.7rem}
 @media (prefers-color-scheme:dark){td.c.ok{color:#7ad07a}td.c.par{color:#f0c060}}
 td.tot{font-variant-numeric:tabular-nums;text-align:right;font-weight:700}
 tr.extra td.fx2{font-style:italic}
@@ -47,7 +52,7 @@ button.bt{font:inherit;border:1px solid var(--line);background:var(--surface);co
 <div class="field"><label for="fBusca">Buscar aluno</label><input id="fBusca" type="search" placeholder="Digite o nome" autocomplete="off"></div>
 <div class="field"><button class="bt" id="bCsv" type="button">Baixar CSV</button></div>
 </div>
-<div class="leg"><span><b class="st ok">✓</b> realizou (data do envio)</span><span><b class="st" style="background:var(--lv1-soft)">…</b> iniciou e não concluiu</span><span><b class="st pend">—</b> não realizou</span><span class="muted">Colunas: só as atividades que a turma já recebeu (pelo menos um aluno enviou).</span></div>
+<div class="leg"><span>Nota de 0 a 10 e data do envio:</span><span><b class="st" style="background:var(--lv0-soft)">&lt; 2,5</b></span><span><b class="st" style="background:var(--lv1-soft)">2,5 a 4,9</b></span><span><b class="st" style="background:var(--lv2-soft)">5 a 7,4</b></span><span><b class="st" style="background:var(--lv3-soft)">7,5 ou mais</b></span><span><b class="st pend">*</b> nota provisória (falta corrigir dissertativas)</span><span><b class="st ok">✓</b> realizou, sem nota</span><span><b class="st" style="background:var(--lv1-soft)">…</b> iniciou e não concluiu</span><span><b class="st pend">—</b> não realizou</span><span class="muted">Colunas: só as atividades que a turma já recebeu. Com mais de um envio, vale a nota do último.</span></div>
 <main id="app"><div class="card msg">Carregando…</div></main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
@@ -59,6 +64,10 @@ button.bt{font:inherit;border:1px solid var(--line);background:var(--surface);co
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim().toUpperCase();
   const dt = (s, longa) => { if (!s) return ''; const d = new Date(s); if (isNaN(d)) return ''; return longa ? d.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' }); };
+  const fn = v => v == null ? '' : (Math.round(v * 10) / 10).toFixed(1).replace('.', ',');
+  const nivel = v => v < 2.5 ? 0 : v < 5 ? 1 : v < 7.5 ? 2 : 3;
+  const med = l => l.length ? l.reduce((a, b) => a + b, 0) / l.length : null;
+  const NOTA_INFO = { 'cien-8-circuitos': 'só objetivas; dissertativas com o professor', aula30: 'acertos nas questões da aula', orbit: '% de acertos no jogo', missao3d: 'média das seções concluídas' };
   const guarda = (k, v) => { try { localStorage.setItem('quadro_' + k, v); } catch (e) { /* */ } };
   const lido = k => { try { return localStorage.getItem('quadro_' + k) || ''; } catch (e) { return ''; } };
   const msg = h => { $('app').innerHTML = '<div class="card msg">' + h + '</div>'; };
@@ -100,25 +109,31 @@ button.bt{font:inherit;border:1px solid var(--line);background:var(--surface);co
     return x.alunos.map(a => {
       const cel = cols.map(c => x.ent.get(c + '|' + norm(a.nome)) || null);
       const feitas = cel.filter(e => e && !e.parcial).length;
-      return { a, cel, feitas };
+      return { a, cel, feitas, media: med(cel.filter(e => e && !e.parcial && e.nota != null).map(e => e.nota)) };
     }).filter(r => (!b || norm(r.a.nome).includes(b)) &&
       (!sit || (sit === 'pend' && r.feitas < cols.length) || (sit === 'ok' && cols.length && r.feitas === cols.length) || (sit === 'nada' && r.feitas === 0)));
   }
 
   function tabela(x, cols, L) {
-    const tot = cols.map(c => x.alunos.filter(a => { const e = x.ent.get(c + '|' + norm(a.nome)); return e && !e.parcial; }).length);
+    const feitos = c => x.alunos.map(a => x.ent.get(c + '|' + norm(a.nome))).filter(e => e && !e.parcial);
+    const tot = cols.map(c => feitos(c).length), medc = cols.map(c => med(feitos(c).filter(e => e.nota != null).map(e => e.nota)));
     let h = '<div class="qwrap"><table class="qd"><thead><tr><th class="fx">Nº</th><th class="fx2">Aluno</th>';
-    cols.forEach((c, i) => { const m = D.atividades[c] || {}; h += '<th class="at" title="' + esc(m.rotulo || c) + '"><span class="g">' + esc(m.grupo || '') + '</span>' + esc(m.rotulo || c) + '<small>' + tot[i] + '/' + x.alunos.length + ' fizeram</small></th>'; });
-    h += '<th class="num">Feitas</th></tr></thead><tbody>';
+    cols.forEach((c, i) => { const m = D.atividades[c] || {}; h += '<th class="at" title="' + esc(m.rotulo || c) + '"><span class="g">' + esc(m.grupo || '') + '</span>' + esc(m.rotulo || c) + '<small>' + tot[i] + '/' + x.alunos.length + ' fizeram' + (medc[i] != null ? ' · média ' + fn(medc[i]) : '') + '</small></th>'; });
+    h += '<th class="num">Feitas<br>· média</th></tr></thead><tbody>';
     L.forEach(r => {
       h += '<tr' + (r.a.extra ? ' class="extra" title="Nome que não está na lista de chamada"' : '') + '><td class="fx muted">' + (r.a.n == null ? '' : esc(r.a.n)) + '</td><td class="fx2" title="' + esc(r.a.nome) + '">' + esc(r.a.nome) + '</td>';
       r.cel.forEach((e, i) => {
         const rot = (D.atividades[cols[i]] || {}).rotulo || cols[i];
         if (!e) h += '<td class="c pen" title="' + esc(rot) + ': não realizou">—</td>';
         else if (e.parcial) h += '<td class="c par" title="' + esc(rot) + ': iniciou e não concluiu' + (e.ult ? ' · último acesso ' + esc(dt(e.ult, true)) : '') + '">… ' + esc(dt(e.ult)) + '</td>';
-        else h += '<td class="c ok" title="' + esc(rot) + ': realizou' + (e.pri ? ' em ' + esc(dt(e.pri, true)) : '') + (e.n > 1 ? ' · ' + e.n + ' envios (último ' + esc(dt(e.ult, true)) + ')' : '') + '">✓ ' + esc(dt(e.pri)) + (e.n > 1 ? ' ×' + e.n : '') + '</td>';
+        else {
+          const info = NOTA_INFO[cols[i]], tit = rot + ': realizou' + (e.pri ? ' em ' + dt(e.pri, true) : '') + (e.n > 1 ? ' · ' + e.n + ' envios (último ' + dt(e.ult, true) + ')' : '') +
+            (e.nota != null ? ' · nota ' + fn(e.nota) + (e.pend ? ' (provisória: falta corrigir as dissertativas)' : '') + (e.n > 1 && e.melhor != null && e.melhor !== e.nota ? ' · melhor nota ' + fn(e.melhor) : '') + (info ? ' · ' + info : '') : ' · sem nota');
+          h += e.nota != null ? '<td class="c n' + nivel(e.nota) + '" title="' + esc(tit) + '"><b>' + fn(e.nota) + (e.pend ? '*' : '') + '</b><small>' + esc(dt(e.ult || e.pri)) + (e.n > 1 ? ' ×' + e.n : '') + '</small></td>'
+            : '<td class="c ok" title="' + esc(tit) + '"><b>✓</b><small>' + esc(dt(e.pri)) + (e.n > 1 ? ' ×' + e.n : '') + '</small></td>';
+        }
       });
-      h += '<td class="tot">' + r.feitas + '/' + cols.length + '</td></tr>';
+      h += '<td class="tot">' + r.feitas + '/' + cols.length + (r.media != null ? '<small>média ' + fn(r.media) + '</small>' : '') + '</td></tr>';
     });
     if (!L.length) h += '<tr><td colspan="' + (cols.length + 3) + '" class="muted" style="text-align:center;padding:14px">Nenhum aluno com esse filtro.</td></tr>';
     return h + '</tbody></table></div>';
@@ -146,11 +161,12 @@ button.bt{font:inherit;border:1px solid var(--line);background:var(--surface);co
   }
 
   function csv() {
-    const t = $('fTurma').value, fa = $('fAtiv').value, out = [['Turma', 'Nº', 'Aluno', 'Atividade', 'Situação', 'Data do envio', 'Envios']];
+    const t = $('fTurma').value, fa = $('fAtiv').value, out = [['Turma', 'Nº', 'Aluno', 'Atividade', 'Situação', 'Data do envio', 'Envios', 'Nota (0 a 10)', 'Nota provisória', 'Melhor nota']];
     (t === '*' ? TURMAS : TURMAS.filter(x => x.t === t)).forEach(x => {
       const cols = fa ? x.ativ.filter(c => c === fa) : x.ativ;
       linhas(x, cols).forEach(r => r.cel.forEach((e, i) => out.push([x.t, r.a.n == null ? '' : r.a.n, r.a.nome, (D.atividades[cols[i]] || {}).rotulo || cols[i],
-        !e ? 'Não realizou' : e.parcial ? 'Iniciou, não concluiu' : 'Realizou', e ? dt(e.pri || e.ult, true) : '', e ? e.n : 0])));
+        !e ? 'Não realizou' : e.parcial ? 'Iniciou, não concluiu' : 'Realizou', e ? dt(e.pri || e.ult, true) : '', e ? e.n : 0,
+        e && e.nota != null ? fn(e.nota) : '', e && e.nota != null ? (e.pend ? 'sim' : 'não') : '', e && e.melhor != null ? fn(e.melhor) : ''])));
     });
     const txt = '﻿' + out.map(l => l.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(';')).join('\r\n');
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/csv;charset=utf-8' }));
