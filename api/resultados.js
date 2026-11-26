@@ -29,6 +29,7 @@ async function professor(req) {
 /* Nome único da turma: "6º ANO C TARDE" (painel) = "6º Ano C" (E.E. Wanda); "6º ANO C MANHÃ" = "6º Ano C (Lydia)" */
 const rotuloTurma = t => { const m = /^(\d)º\s*ANO\s*([A-Z])\s*(MANHÃ|MANHA|TARDE)$/i.exec(String(t || '').trim()); return m ? m[1] + 'º Ano ' + m[2] + (/^M/i.test(m[3]) ? ' (Lydia)' : '') : t; };
 const TURMAS_EM = { '2a-manha': '2ª Série A Manhã (Des. Sistemas)', '2c-noite': '2ª Série C Noite', '3f-noite': '3ª Série F Noite' };
+const PERS_NOMES = require('./_personalizada-em.js');   // alunos com atividade personalizada, por turma
 const TURMA_PERS = { '2ª SÉRIE A MANHÃ (Des. Sistemas)': TURMAS_EM['2a-manha'], '2ª SÉRIE C NOITE': TURMAS_EM['2c-noite'], '3ª SÉRIE F NOITE': TURMAS_EM['3f-noite'] };   // turma da atividade personalizada → turma do quadro
 
 /* Quadro de entregas: junta, de todas as fontes, quem fez cada atividade (turma + nome + data), sem notas nem respostas.
@@ -102,16 +103,39 @@ async function quadro() {
         .forEach(r => { if (Number(r.respondidas) > 0) add('orbit', 'Orbit Quiz (gamificação)', 'Jogo', rotuloTurma(r.turma), r.nome, r.atualizado, false, (Number(r.acertos) || 0) / Number(r.respondidas) * 10); });   // % de acertos no jogo
     }),
     fonte('Atividade personalizada (planilha)', async () => {
+      /* 1º tenta a rota em lote (resultadosPers); se o Apps Script publicado não a tiver, usa a rota já existente
+         do painel (atividadeProf), aluno por aluno, com várias consultas ao mesmo tempo. */
       const url = process.env.EM_APPS_SCRIPT_URL || '', segredo = process.env.EM_SEGREDO || '';
       if (!url || !segredo) throw new Error('planilha não configurada');
-      const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 22000);
-      try {
-        const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ acao: 'resultadosPers', segredo }), redirect: 'follow', signal: ctl.signal });
-        const j = await r.json(); if (!j || !j.ok) throw new Error(String((j && j.erro) || 'sem resposta'));
-        (j.rows || []).forEach(x => add('personalizada-em', 'Atividade personalizada', 'Atividade', TURMA_PERS[x.turma] || x.turma, x.nome, x.criado, false,
-          x.acertos != null ? Number(x.acertos) / (Number(x.total) || 10) * 10 : null));   // 10 objetivas: nota = acertos
-      } catch (e) { throw new Error(e.name === 'AbortError' ? 'a planilha demorou para responder; recarregue em instantes' : e.message); }
-      finally { clearTimeout(t); }
+      const pede = async (corpo, ms) => {
+        const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), ms);
+        try {
+          const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(Object.assign({ segredo }, corpo)), redirect: 'follow', signal: ctl.signal });
+          return await r.json();
+        } finally { clearTimeout(t); }
+      };
+      const lanca = x => add('personalizada-em', 'Atividade personalizada', 'Atividade', TURMA_PERS[x.turma] || x.turma, x.nome, x.criado, false,
+        x.acertos != null ? Number(x.acertos) / (Number(x.total) || 10) * 10 : null);   // 10 objetivas: nota = acertos
+      let lote = null;
+      try { lote = await pede({ acao: 'resultadosPers' }, 15000); } catch (e) { lote = null; }
+      if (lote && lote.ok) { (lote.rows || []).forEach(lanca); return; }
+      const fila = [];
+      Object.keys(PERS_NOMES).forEach(turma => PERS_NOMES[turma].forEach(nome => fila.push({ turma, nome })));
+      const fim = Date.now() + 40000; let falhas = 0;
+      const trabalha = async () => {
+        while (fila.length && Date.now() < fim) {
+          const a = fila.shift();
+          try {
+            const j = await pede({ acao: 'atividadeProf', turma: a.turma, nome: a.nome }, Math.max(3000, fim - Date.now()));
+            if (!j || !j.ok) { falhas++; continue; }
+            if (!j.enviado) continue;
+            const qs = j.questoes || [];
+            lanca({ turma: a.turma, nome: j.nome || a.nome, criado: String(j.enviado), acertos: qs.filter(q => q.situacao === 'Certo').length, total: qs.length || 10 });
+          } catch (e) { falhas++; }
+        }
+      };
+      await Promise.all(Array.from({ length: 15 }, trabalha));
+      if (fila.length || falhas) throw new Error((fila.length + falhas) + ' aluno(s) não puderam ser lidos agora; recarregue em instantes');
     }),
     fonte('Simulado SARESP (planilha)', async () => {
       const url = process.env.EM_APPS_SCRIPT_URL || '', segredo = process.env.EM_SEGREDO || '';
