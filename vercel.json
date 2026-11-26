@@ -10,7 +10,7 @@
       "maxDuration": 60
     },
     "api/resultados.js": {
-      "maxDuration": 30
+      "maxDuration": 60
     },
     "api/jogo.js": {
       "maxDuration": 30
