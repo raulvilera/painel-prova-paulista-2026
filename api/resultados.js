@@ -29,6 +29,7 @@ async function professor(req) {
 /* Nome único da turma: "6º ANO C TARDE" (painel) = "6º Ano C" (E.E. Wanda); "6º ANO C MANHÃ" = "6º Ano C (Lydia)" */
 const rotuloTurma = t => { const m = /^(\d)º\s*ANO\s*([A-Z])\s*(MANHÃ|MANHA|TARDE)$/i.exec(String(t || '').trim()); return m ? m[1] + 'º Ano ' + m[2] + (/^M/i.test(m[3]) ? ' (Lydia)' : '') : t; };
 const TURMAS_EM = { '2a-manha': '2ª Série A Manhã (Des. Sistemas)', '2c-noite': '2ª Série C Noite', '3f-noite': '3ª Série F Noite' };
+const TURMA_PERS = { '2ª SÉRIE A MANHÃ (Des. Sistemas)': TURMAS_EM['2a-manha'], '2ª SÉRIE C NOITE': TURMAS_EM['2c-noite'], '3ª SÉRIE F NOITE': TURMAS_EM['3f-noite'] };   // turma da atividade personalizada → turma do quadro
 
 /* Quadro de entregas: junta, de todas as fontes, quem fez cada atividade (turma + nome + data), sem notas nem respostas.
    Cada fonte é lida à parte: se uma falhar, o quadro sai com as outras e um aviso. */
@@ -64,6 +65,7 @@ async function quadro() {
     }),
     fonte('Ensino Médio, Recuperação 2ª DS e Quiz de Tecnologia', async () => {
       (await rest('em_respostas?select=avaliacao,turma_id,turma,componente,prova,nome,criado,nota_obj,nota_final&order=criado.asc&limit=20000'))
+        .filter(r => r.avaliacao !== 'bio-2-paulista')   // Biologia · Prova Paulista: substituída no quadro pela Atividade personalizada
         .forEach(r => add(r.avaliacao, (r.componente ? r.componente + ' · ' : '') + (r.prova || r.avaliacao), r.avaliacao === TEC8.AV ? 'Quiz' : 'Avaliação', turmaEM(r), r.nome, r.criado, false,
           r.nota_final != null ? Number(r.nota_final) : r.nota_obj != null ? Number(r.nota_obj) : null, r.nota_final == null && r.nota_obj != null));
     }),
@@ -98,6 +100,18 @@ async function quadro() {
     fonte('Orbit Quiz', async () => {
       (await rest('orbit_placar?select=turma,nome,respondidas,acertos,atualizado&limit=5000'))
         .forEach(r => { if (Number(r.respondidas) > 0) add('orbit', 'Orbit Quiz (gamificação)', 'Jogo', rotuloTurma(r.turma), r.nome, r.atualizado, false, (Number(r.acertos) || 0) / Number(r.respondidas) * 10); });   // % de acertos no jogo
+    }),
+    fonte('Atividade personalizada (planilha)', async () => {
+      const url = process.env.EM_APPS_SCRIPT_URL || '', segredo = process.env.EM_SEGREDO || '';
+      if (!url || !segredo) throw new Error('planilha não configurada');
+      const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 22000);
+      try {
+        const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ acao: 'resultadosPers', segredo }), redirect: 'follow', signal: ctl.signal });
+        const j = await r.json(); if (!j || !j.ok) throw new Error(String((j && j.erro) || 'sem resposta'));
+        (j.rows || []).forEach(x => add('personalizada-em', 'Atividade personalizada', 'Atividade', TURMA_PERS[x.turma] || x.turma, x.nome, x.criado, false,
+          x.acertos != null ? Number(x.acertos) / (Number(x.total) || 10) * 10 : null));   // 10 objetivas: nota = acertos
+      } catch (e) { throw new Error(e.name === 'AbortError' ? 'a planilha demorou para responder; recarregue em instantes' : e.message); }
+      finally { clearTimeout(t); }
     }),
     fonte('Simulado SARESP (planilha)', async () => {
       const url = process.env.EM_APPS_SCRIPT_URL || '', segredo = process.env.EM_SEGREDO || '';
