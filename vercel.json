@@ -14,6 +14,9 @@
     },
     "api/jogo.js": {
       "maxDuration": 30
+    },
+    "api/atividade-ciencias.js": {
+      "maxDuration": 60
     }
   },
   "headers": [
@@ -78,6 +81,10 @@
     {
       "source": "/api/aluno-login",
       "destination": "/api/individual?fn=aluno-login"
+    },
+    {
+      "source": "/api/saresp2-8",
+      "destination": "/api/atividade-ciencias?fn=saresp2-8"
     },
     {
       "source": "/api/quiz-tecnologia",

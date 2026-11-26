@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revisão SARESP 2026 · Ciências · 8º Ano</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root{
+    --verde:#145A32; --verde-claro:#1E8449; --fundo:#EEF2EF; --papel:#FFFFFF;
+    --tinta:#1B2631; --cinza:#5D6D7E; --borda:#D5DBDB; --azul:#1F4E79;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI",Roboto,Arial,sans-serif;background:var(--fundo);color:var(--tinta);line-height:1.5}
+  .wrap{max-width:860px;margin:0 auto;padding:20px 14px 60px}
+  header.cab{background:var(--verde);color:#fff;border-radius:14px;padding:18px 22px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+  header.cab h1{margin:0;font-size:1.35rem;letter-spacing:.5px}
+  header.cab p{margin:4px 0 0;font-size:.95rem;opacity:.92}
+  .ident{background:var(--papel);border-radius:14px;padding:18px 22px;margin-top:14px;box-shadow:0 2px 8px rgba(0,0,0,.08);
+         display:grid;grid-template-columns:1fr 2fr 1fr;gap:12px}
+  .ident label{display:block;font-size:.8rem;font-weight:700;color:var(--cinza);text-transform:uppercase;margin-bottom:4px}
+  .ident select,.ident input{width:100%;padding:10px;border:1.5px solid var(--borda);border-radius:8px;font-size:1rem;background:#fff}
+  .ident input[readonly]{background:#F4F6F6}
+  .ident select:disabled{background:#F4F6F6;color:#999}
+  @media (max-width:640px){.ident{grid-template-columns:1fr}}
+  .instr{background:#FEF9E7;border-left:5px solid #F1C40F;border-radius:8px;padding:12px 16px;margin-top:14px;font-size:.93rem}
+  .q{background:var(--papel);border-radius:14px;padding:20px 22px;margin-top:18px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+  .q .tag{display:inline-block;background:var(--verde);color:#fff;font-weight:700;border-radius:6px;padding:2px 10px;font-size:.85rem}
+  .q .tipo{display:inline-block;margin-left:6px;font-size:.78rem;color:var(--cinza);font-weight:600;text-transform:uppercase}
+  .q .enun{margin:10px 0 6px}
+  .q .cmd{font-weight:700;margin:10px 0}
+  .fig{margin:12px 0 14px;border:1px solid var(--borda);border-radius:10px;padding:8px;background:#FBFCFC}
+  .fig svg{width:100%;height:auto;display:block}
+  .fig figcaption{font-size:.78rem;color:var(--cinza);text-align:center;margin-top:4px}
+  .alts{display:flex;flex-direction:column;gap:10px}
+  .alternativa{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:10px;background:#F8F9F9;border:1px solid #E5E8E8;
+    box-shadow:4px 4px 8px rgba(0,0,0,0.3),-2px -2px 6px rgba(255,255,255,0.6);transition:all .15s ease-in-out;cursor:pointer;user-select:none}
+  .alternativa:hover{background:#F0F3F4}
+  .alternativa .letra{flex:0 0 28px;height:28px;border-radius:50%;background:#fff;border:2px solid var(--verde);color:var(--verde);
+    font-weight:800;display:flex;align-items:center;justify-content:center}
+  .alternativa.selecionada{box-shadow:inset 3px 3px 6px rgba(0,0,0,0.4);transform:translateY(2px);background-color:#145A32;color:#FFFFFF;font-weight:bold;border-color:#0E3F23}
+  .alternativa.selecionada .letra{background:#fff;color:#145A32;border-color:#fff}
+  textarea{width:100%;min-height:150px;padding:12px;border:1.5px solid var(--borda);border-radius:10px;font-size:1rem;font-family:inherit;resize:vertical}
+  textarea:focus,select:focus{outline:3px solid rgba(30,132,73,.35);border-color:var(--verde-claro)}
+  .cont{font-size:.78rem;color:var(--cinza);text-align:right}
+  .enviar{display:block;width:100%;margin-top:24px;padding:16px;font-size:1.1rem;font-weight:800;color:#fff;background:var(--verde);border:none;border-radius:12px;
+    cursor:pointer;box-shadow:4px 4px 10px rgba(0,0,0,.3)}
+  .enviar:active{transform:translateY(2px);box-shadow:inset 3px 3px 6px rgba(0,0,0,.4)}
+  .enviar:disabled{background:#7F8C8D;cursor:not-allowed}
+  .msg{margin-top:14px;padding:14px 16px;border-radius:10px;display:none;font-weight:600}
+  .msg.ok{display:block;background:#D6EAF8;color:#1B4F72;border-left:5px solid #2E86C1}
+  .msg.erro{display:block;background:#FADBD8;color:#78281F;border-left:5px solid #C0392B}
+  .pend{outline:3px solid #E74C3C;outline-offset:3px}
+  small.fonte{display:block;font-size:.75rem;color:var(--cinza);margin-top:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="cab">
+  <h1>E.E. PROFª WANDA MASCAGNI DE SÁ</h1>
+  <p>Ciências · 8º Ano · Revisão SARESP 2026 (Guia Priorizado – Mapa SARESP 8º ano)</p>
+</header>
+
+<section class="ident">
+  <div>
+    <label for="turma">Turma</label>
+    <select id="turma"><option value="">Selecione…</option></select>
+  </div>
+  <div>
+    <label for="nome">Nome</label>
+    <select id="nome" disabled><option value="">Selecione a turma primeiro</option></select>
+  </div>
+  <div>
+    <label for="numero">Nº de chamada</label>
+    <input id="numero" readonly placeholder="automático">
+  </div>
+</section>
+
+<div class="instr">
+  <b>Instruções:</b> a atividade tem 10 questões. Nas questões 1 a 5, clique na alternativa correta (apenas uma).
+  Nas questões 6 a 10, escreva sua resposta com suas palavras, usando os dados da imagem. Observe cada imagem com atenção: ela traz informações necessárias para responder.
+</div>
+
+<!-- ===================== QUESTÃO 1 ===================== -->
+<article class="q" data-q="1" data-tipo="obj">
+  <span class="tag">Questão 1</span><span class="tipo">Múltipla escolha</span>
+  <p class="enun">Para economizar na conta de luz, a família de Júlia fez uma lista dos aparelhos elétricos da casa. Todos recebem <b>energia elétrica</b> da tomada, mas cada um a transforma, principalmente, em um tipo diferente de energia.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 680 230" role="img" aria-label="Quatro aparelhos: chuveiro, liquidificador, rádio e lâmpada, cada um recebendo energia elétrica e transformando em um tipo de energia a descobrir">
+      <defs><marker id="ar1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#145A32"/></marker></defs>
+      <rect x="0" y="0" width="680" height="34" rx="8" fill="#F9E79F"/>
+      <text x="340" y="23" text-anchor="middle" font-size="16" font-weight="700" fill="#7D6608">⚡ ENERGIA ELÉTRICA (tomada)</text>
+      <g font-family="Arial" font-size="14" text-anchor="middle">
+        <!-- chuveiro -->
+        <g transform="translate(85,0)">
+          <line x1="0" y1="36" x2="0" y2="60" stroke="#145A32" stroke-width="3" marker-end="url(#ar1)"/>
+          <rect x="-60" y="66" width="120" height="110" rx="10" fill="#fff" stroke="#AAB7B8"/>
+          <path d="M-25 82 h35 v12" stroke="#5D6D7E" stroke-width="5" fill="none"/>
+          <path d="M-5 94 h40 l-8 14 h-24 z" fill="#85929E"/>
+          <g stroke="#3498DB" stroke-width="2"><line x1="-2" y1="114" x2="-6" y2="134"/><line x1="10" y1="114" x2="8" y2="138"/><line x1="22" y1="114" x2="24" y2="134"/></g>
+          <path d="M-40 140 q5 -10 0 -20 M-30 145 q5 -10 0 -20" stroke="#E74C3C" stroke-width="2" fill="none"/>
+          <text x="0" y="168" font-weight="700">Chuveiro</text>
+          <text x="0" y="205" font-size="22" font-weight="700" fill="#145A32">?</text>
+        </g>
+        <!-- liquidificador -->
+        <g transform="translate(255,0)">
+          <line x1="0" y1="36" x2="0" y2="60" stroke="#145A32" stroke-width="3" marker-end="url(#ar1)"/>
+          <rect x="-60" y="66" width="120" height="110" rx="10" fill="#fff" stroke="#AAB7B8"/>
+          <path d="M-20 78 h40 l-6 50 h-28 z" fill="#D6EAF8" stroke="#5D6D7E"/>
+          <path d="M-12 112 l24 -6 M-12 106 l24 6" stroke="#5D6D7E" stroke-width="3"/>
+          <path d="M-18 104 a20 8 0 0 1 36 0" stroke="#145A32" stroke-width="2" fill="none" stroke-dasharray="3 3"/>
+          <rect x="-24" y="128" width="48" height="18" rx="4" fill="#5D6D7E"/>
+          <text x="0" y="168" font-weight="700">Liquidificador</text>
+          <text x="0" y="205" font-size="22" font-weight="700" fill="#145A32">?</text>
+        </g>
+        <!-- radio -->
+        <g transform="translate(425,0)">
+          <line x1="0" y1="36" x2="0" y2="60" stroke="#145A32" stroke-width="3" marker-end="url(#ar1)"/>
+          <rect x="-60" y="66" width="120" height="110" rx="10" fill="#fff" stroke="#AAB7B8"/>
+          <line x1="20" y1="96" x2="38" y2="74" stroke="#5D6D7E" stroke-width="3"/>
+          <rect x="-34" y="96" width="68" height="44" rx="6" fill="#A04000"/>
+          <circle cx="-14" cy="118" r="13" fill="#6E2C00" stroke="#F5CBA7"/>
+          <rect x="6" y="106" width="22" height="8" fill="#F5CBA7"/>
+          <path d="M40 108 q8 10 0 20 M48 102 q12 16 0 32" stroke="#145A32" stroke-width="2" fill="none"/>
+          <text x="0" y="168" font-weight="700">Rádio</text>
+          <text x="0" y="205" font-size="22" font-weight="700" fill="#145A32">?</text>
+        </g>
+        <!-- lampada -->
+        <g transform="translate(595,0)">
+          <line x1="0" y1="36" x2="0" y2="60" stroke="#145A32" stroke-width="3" marker-end="url(#ar1)"/>
+          <rect x="-60" y="66" width="120" height="110" rx="10" fill="#fff" stroke="#AAB7B8"/>
+          <circle cx="0" cy="104" r="20" fill="#FCF3CF" stroke="#B7950B" stroke-width="2"/>
+          <rect x="-9" y="122" width="18" height="16" fill="#909497"/>
+          <g stroke="#F4D03F" stroke-width="3"><line x1="-34" y1="104" x2="-26" y2="104"/><line x1="26" y1="104" x2="34" y2="104"/><line x1="-24" y1="80" x2="-18" y2="86"/><line x1="24" y1="80" x2="18" y2="86"/></g>
+          <text x="0" y="168" font-weight="700">Lâmpada</text>
+          <text x="0" y="205" font-size="22" font-weight="700" fill="#145A32">?</text>
+        </g>
+      </g>
+    </svg>
+    <figcaption>Esquema: energia elétrica recebida e a principal forma de energia produzida por cada aparelho (?).</figcaption>
+  </figure>
+  <p class="cmd">Qual alternativa indica corretamente a principal transformação de energia que ocorre em cada aparelho?</p>
+  <div class="alts">
+    <div class="alternativa" data-v="A"><span class="letra">A</span><span>Chuveiro: elétrica → luminosa; liquidificador: elétrica → térmica; rádio: elétrica → mecânica; lâmpada: elétrica → sonora.</span></div>
+    <div class="alternativa" data-v="B"><span class="letra">B</span><span>Chuveiro: elétrica → térmica; liquidificador: elétrica → mecânica (movimento); rádio: elétrica → sonora; lâmpada: elétrica → luminosa.</span></div>
+    <div class="alternativa" data-v="C"><span class="letra">C</span><span>Chuveiro: elétrica → mecânica; liquidificador: elétrica → sonora; rádio: elétrica → luminosa; lâmpada: elétrica → térmica.</span></div>
+    <div class="alternativa" data-v="D"><span class="letra">D</span><span>Chuveiro: elétrica → térmica; liquidificador: elétrica → sonora, pois faz muito barulho; rádio: elétrica → sonora; lâmpada: elétrica → térmica, pois esquenta.</span></div>
+    <div class="alternativa" data-v="E"><span class="letra">E</span><span>Os quatro aparelhos transformam energia térmica em energia elétrica, que depois é devolvida à tomada.</span></div>
+  </div>
+</article>
+
+<!-- ===================== QUESTÃO 2 ===================== -->
+<article class="q" data-q="2" data-tipo="obj">
+  <span class="tag">Questão 2</span><span class="tipo">Múltipla escolha</span>
+  <p class="enun">Um telejornal anunciou que, em uma madrugada, poderá ser visto um <b>eclipse lunar total</b> em todo o Brasil. Para entender o fenômeno, a turma do 8º ano montou o modelo abaixo, que mostra a Lua em quatro posições da sua órbita ao redor da Terra.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 680 330" role="img" aria-label="Sol à esquerda, Terra no centro com sua sombra para a direita, e a Lua em quatro posições numeradas da órbita">
+      <defs>
+        <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5D6D7E"/></marker>
+        <marker id="ar2b" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#F39C12"/></marker>
+      </defs>
+      <rect width="680" height="330" fill="#0B1D35" rx="8"/>
+      <circle cx="40" cy="165" r="70" fill="#F7DC6F"/>
+      <text x="40" y="170" text-anchor="middle" font-size="16" font-weight="700" fill="#7D6608">SOL</text>
+      <g stroke="#F39C12" stroke-width="2" marker-end="url(#ar2b)"><line x1="120" y1="80" x2="210" y2="80"/><line x1="120" y1="250" x2="210" y2="250"/></g>
+      <text x="165" y="70" text-anchor="middle" font-size="12" fill="#F8C471">luz solar</text>
+      <polygon points="390,140 650,150 650,180 390,190" fill="#000" opacity="0.55"/>
+      <text x="600" y="205" text-anchor="middle" font-size="12" fill="#AEB6BF">sombra da Terra</text>
+      <ellipse cx="390" cy="165" rx="160" ry="120" fill="none" stroke="#85929E" stroke-dasharray="6 6"/>
+      <path d="M 295 262 A 160 120 0 0 0 345 280" fill="none" stroke="#5D6D7E" stroke-width="0"/>
+      <path d="M 262 230 A 160 120 0 0 0 330 276" fill="none" stroke="#AEB6BF" stroke-width="2.5" marker-end="url(#ar2)"/>
+      <text x="150" y="312" font-size="12" fill="#D5DBDB">seta curva: sentido do movimento da Lua</text>
+      <circle cx="390" cy="165" r="26" fill="#2E86C1"/>
+      <path d="M390 139 A26 26 0 0 1 390 191 z" fill="#0B1D35" opacity="0.65"/>
+      <text x="390" y="215" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">TERRA</text>
+      <g font-size="15" font-weight="800" fill="#fff" text-anchor="middle">
+        <g transform="translate(230,165)"><circle r="13" fill="#D5D8DC"/><path d="M0 -13 A13 13 0 0 1 0 13 z" fill="#2C3E50"/><text y="-20">1</text></g>
+        <g transform="translate(390,285)"><circle r="13" fill="#D5D8DC"/><path d="M0 -13 A13 13 0 0 1 0 13 z" fill="#2C3E50"/><text x="24" y="5">2</text></g>
+        <g transform="translate(550,165)"><circle r="13" fill="#D5D8DC"/><path d="M0 -13 A13 13 0 0 1 0 13 z" fill="#2C3E50"/><text y="-20">3</text></g>
+        <g transform="translate(390,45)"><circle r="13" fill="#D5D8DC"/><path d="M0 -13 A13 13 0 0 1 0 13 z" fill="#2C3E50"/><text x="24" y="5">4</text></g>
+      </g>
+      <text x="670" y="320" text-anchor="end" font-size="11" fill="#AEB6BF">Representação fora de escala (tamanhos e distâncias)</text>
+    </svg>
+    <figcaption>Modelo Sol–Terra–Lua visto “de cima” do polo norte. A metade clara de cada astro é a iluminada pelo Sol.</figcaption>
+  </figure>
+  <p class="cmd">De acordo com o modelo, o eclipse lunar pode ocorrer quando a Lua estiver na posição:</p>
+  <div class="alts">
+    <div class="alternativa" data-v="A"><span class="letra">A</span><span>1, na fase de lua nova, pois a Lua fica entre o Sol e a Terra e bloqueia a luz solar.</span></div>
+    <div class="alternativa" data-v="B"><span class="letra">B</span><span>2, na fase de quarto crescente, pois metade da Lua fica escura para quem a observa da Terra.</span></div>
+    <div class="alternativa" data-v="C"><span class="letra">C</span><span>1, na fase de lua cheia, pois a Lua fica mais próxima do Sol e recebe mais luz.</span></div>
+    <div class="alternativa" data-v="D"><span class="letra">D</span><span>3, na fase de lua cheia, pois a Terra fica entre o Sol e a Lua, e a sombra da Terra é projetada sobre a Lua.</span></div>
+    <div class="alternativa" data-v="E"><span class="letra">E</span><span>3, na fase de lua nova, pois a Lua fica do lado oposto ao Sol e deixa de ser iluminada.</span></div>
+  </div>
+</article>
+
+<!-- ===================== QUESTÃO 3 ===================== -->
+<article class="q" data-q="3" data-tipo="obj">
+  <span class="tag">Questão 3</span><span class="tipo">Múltipla escolha</span>
+  <p class="enun">Pedro anotou a potência que aparece na etiqueta de três aparelhos da sua casa e o tempo médio que cada um fica funcionando por dia. Ele quer descobrir qual aparelho mais pesa na conta de luz em um mês de <b>30 dias</b>.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 680 250" role="img" aria-label="Tabela com potência e tempo de uso diário de chuveiro, televisor e geladeira, e etiqueta do chuveiro">
+      <rect x="0" y="0" width="680" height="250" fill="#fff"/>
+      <g font-family="Arial" font-size="15">
+        <rect x="10" y="20" width="460" height="40" fill="#145A32"/>
+        <text x="25" y="46" fill="#fff" font-weight="700">Aparelho</text>
+        <text x="200" y="46" fill="#fff" font-weight="700">Potência (kW)</text>
+        <text x="335" y="46" fill="#fff" font-weight="700">Uso por dia (h)</text>
+        <rect x="10" y="60" width="460" height="44" fill="#EAFAF1"/>
+        <text x="25" y="88">Chuveiro elétrico</text><text x="240" y="88">5,5</text><text x="385" y="88">1</text>
+        <rect x="10" y="104" width="460" height="44" fill="#fff"/>
+        <text x="25" y="132">Televisor</text><text x="240" y="132">0,1</text><text x="385" y="132">6</text>
+        <rect x="10" y="148" width="460" height="44" fill="#EAFAF1"/>
+        <text x="25" y="176">Geladeira*</text><text x="240" y="176">0,2</text><text x="380" y="176">10</text>
+        <rect x="10" y="20" width="460" height="172" fill="none" stroke="#AAB7B8"/>
+        <text x="10" y="222" font-size="12" fill="#5D6D7E">*tempo em que o motor da geladeira fica realmente ligado por dia</text>
+      </g>
+      <g transform="translate(500,20)" font-family="Arial">
+        <rect width="165" height="200" rx="8" fill="#F8F9F9" stroke="#5D6D7E" stroke-width="2"/>
+        <text x="82" y="26" text-anchor="middle" font-size="13" font-weight="700">ETIQUETA</text>
+        <text x="82" y="44" text-anchor="middle" font-size="12">Chuveiro elétrico</text>
+        <line x1="12" y1="54" x2="153" y2="54" stroke="#AAB7B8"/>
+        <text x="14" y="78" font-size="12">Tensão: 220 V</text>
+        <rect x="8" y="88" width="149" height="30" fill="#F9E79F"/>
+        <text x="14" y="108" font-size="13" font-weight="700">Potência: 5,5 kW</text>
+        <text x="14" y="140" font-size="12">Posição: inverno</text>
+        <text x="14" y="164" font-size="11" fill="#5D6D7E">Uso da família:</text>
+        <text x="14" y="182" font-size="11" fill="#5D6D7E">1 hora por dia (total)</text>
+      </g>
+    </svg>
+    <figcaption>Dados anotados por Pedro. O consumo de energia elétrica é medido em quilowatt-hora (kWh).</figcaption>
+  </figure>
+  <p class="cmd">Qual aparelho tem o maior consumo mensal e qual é esse consumo?</p>
+  <div class="alts">
+    <div class="alternativa" data-v="A"><span class="letra">A</span><span>O televisor, com 18 kWh, pois é o aparelho que fica mais horas ligado por dia.</span></div>
+    <div class="alternativa" data-v="B"><span class="letra">B</span><span>A geladeira, com 60 kWh, pois funciona todos os dias e por mais tempo que o chuveiro.</span></div>
+    <div class="alternativa" data-v="C"><span class="letra">C</span><span>O chuveiro, com 5,5 kWh, pois é o aparelho de maior potência.</span></div>
+    <div class="alternativa" data-v="D"><span class="letra">D</span><span>O chuveiro, com 35,5 kWh, somando a potência aos 30 dias do mês.</span></div>
+    <div class="alternativa" data-v="E"><span class="letra">E</span><span>O chuveiro, com 165 kWh, pois, mesmo sendo usado por pouco tempo, tem potência muito maior que os outros aparelhos.</span></div>
+  </div>
+</article>
+
+<!-- ===================== QUESTÃO 4 ===================== -->
+<article class="q" data-q="4" data-tipo="obj">
+  <span class="tag">Questão 4</span><span class="tipo">Múltipla escolha</span>
+  <p class="enun">Em uma campanha de saúde, a Unidade Básica de Saúde (UBS) do bairro afixou o cartaz abaixo. Na mesma semana, um jovem adulto procurou a UBS contando que teve uma <b>ferida que não doía, na região genital, e que sumiu sozinha</b> depois de algumas semanas. Por isso, achou que não precisava mais se preocupar.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 680 300" role="img" aria-label="Cartaz da UBS com informações sobre sífilis, HPV e HIV/aids">
+      <rect width="680" height="300" rx="10" fill="#FDEDEC"/>
+      <text x="340" y="30" text-anchor="middle" font-size="18" font-weight="800" fill="#922B21">PREVENÇÃO ÀS INFECÇÕES SEXUALMENTE TRANSMISSÍVEIS (IST)</text>
+      <g font-family="Arial" font-size="12.5">
+        <g transform="translate(15,45)">
+          <rect width="205" height="215" rx="8" fill="#fff" stroke="#E6B0AA"/>
+          <rect width="205" height="30" rx="8" fill="#C0392B"/><text x="102" y="21" text-anchor="middle" fill="#fff" font-weight="800" font-size="15">SÍFILIS</text>
+          <text x="10" y="52" font-weight="700">Causa:</text><text x="58" y="52">bactéria</text>
+          <text x="10" y="78" font-weight="700">Primeiro sinal:</text>
+          <text x="10" y="96">ferida (cancro) sem dor</text><text x="10" y="112">nos genitais, que pode</text><text x="10" y="128">sumir sozinha. A doença</text><text x="10" y="144">continua e pode avançar.</text>
+          <text x="10" y="172" font-weight="700">Tratamento:</text>
+          <text x="10" y="190">antibiótico (penicilina),</text><text x="10" y="206">gratuito no SUS.</text>
+        </g>
+        <g transform="translate(237,45)">
+          <rect width="205" height="215" rx="8" fill="#fff" stroke="#E6B0AA"/>
+          <rect width="205" height="30" rx="8" fill="#884EA0"/><text x="102" y="21" text-anchor="middle" fill="#fff" font-weight="800" font-size="15">HPV</text>
+          <text x="10" y="52" font-weight="700">Causa:</text><text x="58" y="52">vírus</text>
+          <text x="10" y="78" font-weight="700">Sinais:</text>
+          <text x="10" y="96">verrugas genitais; muitas</text><text x="10" y="112">vezes não há sintomas.</text><text x="10" y="128">Pode levar ao câncer</text><text x="10" y="144">do colo do útero.</text>
+          <text x="10" y="172" font-weight="700">Prevenção:</text>
+          <text x="10" y="190">vacina (9 a 14 anos)</text><text x="10" y="206">e preservativo.</text>
+        </g>
+        <g transform="translate(459,45)">
+          <rect width="205" height="215" rx="8" fill="#fff" stroke="#E6B0AA"/>
+          <rect width="205" height="30" rx="8" fill="#2471A3"/><text x="102" y="21" text-anchor="middle" fill="#fff" font-weight="800" font-size="15">HIV / AIDS</text>
+          <text x="10" y="52" font-weight="700">Causa:</text><text x="58" y="52">vírus (HIV)</text>
+          <text x="10" y="78" font-weight="700">Sinais:</text>
+          <text x="10" y="96">pode ficar anos sem</text><text x="10" y="112">sintomas; ataca as células</text><text x="10" y="128">de defesa do organismo.</text>
+          <text x="10" y="172" font-weight="700">Tratamento:</text>
+          <text x="10" y="190">antirretrovirais: controlam</text><text x="10" y="206">o vírus, mas não curam.</text>
+        </g>
+      </g>
+      <text x="340" y="285" text-anchor="middle" font-size="14" font-weight="700" fill="#922B21">Preservativo e teste rápido: gratuitos na UBS. Na dúvida, faça o teste!</text>
+    </svg>
+    <figcaption>Cartaz da campanha da UBS (informações simplificadas).</figcaption>
+  </figure>
+  <p class="cmd">Com base no cartaz, qual é a IST mais provável nesse caso e qual é a conduta adequada?</p>
+  <div class="alts">
+    <div class="alternativa" data-v="A"><span class="letra">A</span><span>Sífilis; mesmo com o desaparecimento da ferida, a bactéria continua no organismo, por isso ele deve fazer o teste e o tratamento com antibiótico, assim como sua parceria.</span></div>
+    <div class="alternativa" data-v="B"><span class="letra">B</span><span>HPV; como a ferida sumiu, o organismo já eliminou o vírus e não há necessidade de procurar tratamento.</span></div>
+    <div class="alternativa" data-v="C"><span class="letra">C</span><span>HIV/aids; o tratamento com antibiótico elimina totalmente o vírus em poucas semanas.</span></div>
+    <div class="alternativa" data-v="D"><span class="letra">D</span><span>Sífilis; por ser causada por vírus, o tratamento indicado é tomar a vacina contra a doença.</span></div>
+    <div class="alternativa" data-v="E"><span class="letra">E</span><span>HPV; o uso da pílula anticoncepcional teria evitado essa infecção.</span></div>
+  </div>
+</article>
+
+<!-- ===================== QUESTÃO 5 ===================== -->
+<article class="q" data-q="5" data-tipo="obj">
+  <span class="tag">Questão 5</span><span class="tipo">Múltipla escolha</span>
+  <p class="enun">Em dezembro, Lucas, que mora em São Paulo, passou as férias na praia sob muito calor. Na mesma época, sua prima, que mora em Portugal, enfrentou dias frios e curtos. Lucas pensou: “Deve ser porque, em dezembro, a Terra fica mais perto do Sol”.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 680 300" role="img" aria-label="Órbita da Terra ao redor do Sol com a Terra em dezembro e em junho, eixo inclinado">
+      <defs><marker id="ar5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#F39C12"/></marker></defs>
+      <rect width="680" height="300" fill="#0B1D35" rx="8"/>
+      <ellipse cx="340" cy="150" rx="250" ry="80" fill="none" stroke="#85929E" stroke-dasharray="6 6"/>
+      <circle cx="340" cy="150" r="42" fill="#F7DC6F"/><text x="340" y="155" text-anchor="middle" font-weight="800" fill="#7D6608">SOL</text>
+      <g stroke="#F39C12" stroke-width="2" marker-end="url(#ar5)"><line x1="292" y1="140" x2="160" y2="140"/><line x1="292" y1="162" x2="160" y2="162"/><line x1="388" y1="140" x2="520" y2="140"/><line x1="388" y1="162" x2="520" y2="162"/></g>
+      <!-- Terra dezembro (esquerda) -->
+      <g transform="translate(110,150)">
+        <circle r="40" fill="#2E86C1"/>
+        <path d="M0 -40 A40 40 0 0 0 0 40 z" fill="#000" opacity="0.55"/>
+        <g transform="rotate(-23.5)">
+          <line x1="0" y1="-58" x2="0" y2="58" stroke="#fff" stroke-width="2"/>
+          <line x1="-40" y1="0" x2="40" y2="0" stroke="#F5B7B1" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="0" y="-62" text-anchor="middle" font-size="11" fill="#fff">N</text>
+          <text x="0" y="72" text-anchor="middle" font-size="11" fill="#fff">S</text>
+        </g>
+        <circle cx="26" cy="-26" r="4" fill="#E74C3C"/><text x="-8" y="-50" font-size="11" fill="#F5B7B1" text-anchor="end">Portugal</text>
+        <line x1="24" y1="-29" x2="-6" y2="-48" stroke="#F5B7B1" stroke-width="1"/>
+        <circle cx="36" cy="10" r="4" fill="#F4D03F"/><text x="48" y="40" font-size="11" fill="#F9E79F">São Paulo</text>
+        <line x1="38" y1="13" x2="48" y2="30" stroke="#F9E79F" stroke-width="1"/>
+        <text x="0" y="98" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">DEZEMBRO</text>
+      </g>
+      <!-- Terra junho (direita) -->
+      <g transform="translate(570,150)">
+        <circle r="40" fill="#2E86C1"/>
+        <path d="M0 -40 A40 40 0 0 1 0 40 z" fill="#000" opacity="0.55"/>
+        <g transform="rotate(-23.5)">
+          <line x1="0" y1="-58" x2="0" y2="58" stroke="#fff" stroke-width="2"/>
+          <line x1="-40" y1="0" x2="40" y2="0" stroke="#F5B7B1" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="0" y="-62" text-anchor="middle" font-size="11" fill="#fff">N</text>
+          <text x="0" y="72" text-anchor="middle" font-size="11" fill="#fff">S</text>
+        </g>
+        <text x="0" y="98" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">JUNHO</text>
+      </g>
+      <text x="340" y="268" text-anchor="middle" font-size="12" fill="#D5DBDB">Dado real: a Terra fica um pouco mais próxima do Sol no início de janeiro e um pouco mais distante no início de julho</text>
+      <text x="340" y="286" text-anchor="middle" font-size="12" fill="#D5DBDB">(diferença de apenas cerca de 3% da distância). Eixo inclinado cerca de 23,5°. Fora de escala.</text>
+    </svg>
+    <figcaption>Posições da Terra em dezembro e em junho. A linha tracejada rosa sobre a Terra é a linha do Equador.</figcaption>
+  </figure>
+  <p class="cmd">Considerando o modelo e o dado apresentado, a explicação correta para a diferença de temperatura entre São Paulo e Portugal em dezembro é:</p>
+  <div class="alts">
+    <div class="alternativa" data-v="A"><span class="letra">A</span><span>A explicação de Lucas está correta: em dezembro a Terra está mais próxima do Sol, por isso todo o planeta fica mais quente.</span></div>
+    <div class="alternativa" data-v="B"><span class="letra">B</span><span>O movimento de rotação faz com que o hemisfério sul fique mais horas voltado para o Sol durante o ano inteiro.</span></div>
+    <div class="alternativa" data-v="C"><span class="letra">C</span><span>Por causa da inclinação do eixo da Terra, em dezembro o hemisfério sul recebe os raios solares de forma mais direta e tem dias mais longos, enquanto o hemisfério norte recebe raios mais inclinados.</span></div>
+    <div class="alternativa" data-v="D"><span class="letra">D</span><span>Portugal fica mais ao norte e, por isso, está alguns milhares de quilômetros mais longe do Sol que São Paulo.</span></div>
+    <div class="alternativa" data-v="E"><span class="letra">E</span><span>O hemisfério norte tem mais oceanos, que esfriam o ar em dezembro, enquanto o hemisfério sul tem mais continentes.</span></div>
+  </div>
+</article>
+
+<!-- ===================== QUESTÃO 6 ===================== -->
+<article class="q" data-q="6" data-tipo="diss">
+  <span class="tag">Questão 6</span><span class="tipo">Dissertativa</span>
+  <p class="enun">Ana vai participar de uma corrida de rua. No almoço do dia anterior, comeu arroz, feijão e salada. Durante a prova, as células dos músculos das suas pernas precisam de muita energia, que é liberada na respiração celular a partir da glicose e do gás oxigênio.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 680 320" role="img" aria-label="Esquema com sistema digestório, sistema respiratório, coração e vasos sanguíneos e uma célula muscular, ligados por setas com interrogação">
+      <defs><marker id="ar6" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#5D6D7E"/></marker></defs>
+      <rect width="680" height="320" fill="#fff"/>
+      <g font-family="Arial" font-size="13">
+        <!-- digestorio -->
+        <rect x="10" y="10" width="200" height="200" rx="10" fill="#FEF5E7" stroke="#E59866"/>
+        <text x="110" y="32" text-anchor="middle" font-weight="800" fill="#A04000">SISTEMA DIGESTÓRIO</text>
+        <text x="30" y="60">boca</text><text x="30" y="84">esôfago</text><text x="30" y="108">estômago</text><text x="30" y="132">intestino delgado</text><text x="30" y="156">intestino grosso</text>
+        <path d="M150 52 v28 q0 18 18 22 q14 4 4 18 q-14 16 6 22 q20 8 -6 18 q-20 8 0 20" stroke="#DC7633" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <text x="110" y="196" text-anchor="middle" font-size="12" fill="#A04000">alimentos: arroz, feijão, salada</text>
+        <!-- respiratorio -->
+        <rect x="470" y="10" width="200" height="200" rx="10" fill="#EBF5FB" stroke="#5DADE2"/>
+        <text x="570" y="32" text-anchor="middle" font-weight="800" fill="#1B4F72">SISTEMA RESPIRATÓRIO</text>
+        <text x="490" y="60">nariz</text><text x="490" y="84">faringe e laringe</text><text x="490" y="108">traqueia</text><text x="490" y="132">brônquios</text><text x="490" y="156">pulmões (alvéolos)</text>
+        <path d="M630 50 v40" stroke="#5D6D7E" stroke-width="5"/>
+        <ellipse cx="612" cy="130" rx="16" ry="34" fill="#F1948A"/><ellipse cx="648" cy="130" rx="16" ry="34" fill="#F1948A"/>
+        <path d="M630 90 l-14 18 M630 90 l14 18" stroke="#5D6D7E" stroke-width="4"/>
+        <text x="570" y="196" text-anchor="middle" font-size="12" fill="#1B4F72">ar que Ana inspira e expira</text>
+        <!-- circulatorio -->
+        <rect x="240" y="40" width="200" height="140" rx="10" fill="#FDEDEC" stroke="#EC7063"/>
+        <text x="340" y="62" text-anchor="middle" font-weight="800" fill="#922B21">SISTEMA CIRCULATÓRIO</text>
+        <path d="M340 140 c-40 -26 -40 -56 -18 -60 c10 -2 18 6 18 14 c0 -8 8 -16 18 -14 c22 4 22 34 -18 60 z" fill="#E74C3C"/>
+        <text x="340" y="165" text-anchor="middle" font-size="12">coração e vasos sanguíneos</text>
+        <!-- celula -->
+        <ellipse cx="340" cy="268" rx="120" ry="40" fill="#E8F8F5" stroke="#16A085" stroke-width="2"/>
+        <circle cx="248" cy="268" r="9" fill="#76D7C4"/>
+        <text x="350" y="262" text-anchor="middle" font-weight="800" fill="#0E6655">CÉLULA DO MÚSCULO</text>
+        <text x="350" y="280" text-anchor="middle" fill="#0E6655">DA PERNA → ENERGIA</text>
+        <!-- setas -->
+        <g stroke="#5D6D7E" stroke-width="2.5" fill="none" marker-end="url(#ar6)">
+          <path d="M210 120 h28"/><path d="M470 110 h-28"/><path d="M442 135 h26"/><path d="M340 182 v42"/><path d="M300 226 q-60 -10 -60 -40"/>
+        </g>
+        <g font-size="18" font-weight="800" fill="#C0392B" text-anchor="middle">
+          <text x="224" y="112">?</text><text x="456" y="102">?</text><text x="456" y="152">?</text><text x="356" y="206">?</text><text x="252" y="216">?</text>
+        </g>
+      </g>
+    </svg>
+    <figcaption>Esquema simplificado (fora de escala). As setas com “?” indicam o que é transportado entre os sistemas e a célula.</figcaption>
+  </figure>
+  <p class="cmd">Explique como os sistemas digestório, respiratório e circulatório trabalham juntos para que a célula do músculo da perna de Ana receba glicose e gás oxigênio. Explique também o caminho do gás carbônico produzido pela célula até sair do corpo.</p>
+  <textarea name="q6" maxlength="1500" placeholder="Escreva sua resposta aqui…"></textarea><div class="cont"><span>0</span>/1500</div>
+</article>
+
+<!-- ===================== QUESTÃO 7 ===================== -->
+<article class="q" data-q="7" data-tipo="diss">
+  <span class="tag">Questão 7</span><span class="tipo">Dissertativa</span>
+  <p class="enun">Para a sessão de cinema da escola, a turma precisa escolher entre dois tipos de pipoca. Observe os rótulos dos dois produtos.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 680 360" role="img" aria-label="Dois rótulos: milho de pipoca e pipoca de micro-ondas sabor manteiga, com ingredientes e tabela nutricional">
+      <rect width="680" height="360" fill="#fff"/>
+      <g font-family="Arial" font-size="12.5">
+        <g transform="translate(10,10)">
+          <rect width="320" height="340" rx="10" fill="#FEF9E7" stroke="#B7950B" stroke-width="2"/>
+          <text x="160" y="28" text-anchor="middle" font-size="16" font-weight="800">PRODUTO A</text>
+          <text x="160" y="46" text-anchor="middle">Milho de pipoca (grãos) – pacote 500 g</text>
+          <text x="14" y="74" font-weight="700">INGREDIENTES:</text><text x="118" y="74">milho de pipoca.</text>
+          <rect x="14" y="90" width="292" height="26" fill="#000"/><text x="22" y="108" fill="#fff" font-weight="700">INFORMAÇÃO NUTRICIONAL – porção 30 g</text>
+          <g><text x="22" y="138">Valor energético</text><text x="290" y="138" text-anchor="end">110 kcal</text>
+          <text x="22" y="162">Carboidratos</text><text x="290" y="162" text-anchor="end">22 g</text>
+          <text x="22" y="186">Proteínas</text><text x="290" y="186" text-anchor="end">3 g</text>
+          <text x="22" y="210">Gorduras totais</text><text x="290" y="210" text-anchor="end">1 g</text>
+          <text x="34" y="234">Gorduras saturadas</text><text x="290" y="234" text-anchor="end">0 g</text>
+          <text x="22" y="258">Fibras alimentares</text><text x="290" y="258" text-anchor="end">4 g</text>
+          <text x="22" y="282">Sódio</text><text x="290" y="282" text-anchor="end">0 mg</text></g>
+          <g stroke="#D5DBDB"><line x1="14" y1="146" x2="306" y2="146"/><line x1="14" y1="170" x2="306" y2="170"/><line x1="14" y1="194" x2="306" y2="194"/><line x1="14" y1="218" x2="306" y2="218"/><line x1="14" y1="242" x2="306" y2="242"/><line x1="14" y1="266" x2="306" y2="266"/><line x1="14" y1="290" x2="306" y2="290"/></g>
+          <text x="14" y="318" font-size="11" fill="#5D6D7E">Preparo: estourar na panela com um fio de óleo e pouco sal.</text>
+        </g>
+        <g transform="translate(350,10)">
+          <rect width="320" height="340" rx="10" fill="#FDEDEC" stroke="#C0392B" stroke-width="2"/>
+          <text x="160" y="28" text-anchor="middle" font-size="16" font-weight="800">PRODUTO B</text>
+          <text x="160" y="46" text-anchor="middle">Pipoca de micro-ondas sabor manteiga – 100 g</text>
+          <text x="14" y="70" font-weight="700">INGREDIENTES:</text>
+          <text x="14" y="86" font-size="11.5">milho de pipoca, gordura vegetal de palma, sal,</text>
+          <text x="14" y="100" font-size="11.5">aromatizante artificial de manteiga, corante</text>
+          <text x="14" y="114" font-size="11.5">natural de urucum, realçador de sabor e antioxidante.</text>
+          <rect x="14" y="124" width="292" height="26" fill="#000"/><text x="22" y="142" fill="#fff" font-weight="700">INFORMAÇÃO NUTRICIONAL – porção 30 g</text>
+          <text x="22" y="170">Valor energético</text><text x="290" y="170" text-anchor="end">150 kcal</text>
+          <text x="22" y="192">Carboidratos</text><text x="290" y="192" text-anchor="end">16 g</text>
+          <text x="22" y="214">Proteínas</text><text x="290" y="214" text-anchor="end">2 g</text>
+          <text x="22" y="236">Gorduras totais</text><text x="290" y="236" text-anchor="end">9 g</text>
+          <text x="34" y="258">Gorduras saturadas</text><text x="290" y="258" text-anchor="end">5 g</text>
+          <text x="22" y="280">Fibras alimentares</text><text x="290" y="280" text-anchor="end">3 g</text>
+          <text x="22" y="302">Sódio</text><text x="290" y="302" text-anchor="end">380 mg</text>
+          <g stroke="#E6B0AA"><line x1="14" y1="178" x2="306" y2="178"/><line x1="14" y1="200" x2="306" y2="200"/><line x1="14" y1="222" x2="306" y2="222"/><line x1="14" y1="244" x2="306" y2="244"/><line x1="14" y1="266" x2="306" y2="266"/><line x1="14" y1="288" x2="306" y2="288"/></g>
+          <g transform="translate(176,308)"><rect width="134" height="28" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="14" cy="14" r="7" fill="none" stroke="#000" stroke-width="2"/><line x1="19" y1="19" x2="24" y2="24" stroke="#000" stroke-width="2"/>
+          <text x="30" y="11" font-size="8.5" font-weight="800">ALTO EM GORDURA</text><text x="30" y="23" font-size="8.5" font-weight="800">SATURADA E SÓDIO</text></g>
+        </g>
+      </g>
+    </svg>
+    <figcaption>Rótulos simplificados, no padrão da rotulagem brasileira (a lupa na frente da embalagem indica excesso de nutrientes).</figcaption>
+  </figure>
+  <p class="cmd">a) Classifique cada produto como <i>in natura/minimamente processado</i> ou <i>ultraprocessado</i>, justificando com informações dos rótulos.<br>b) Indique a principal função dos carboidratos no organismo e explique, com base nos dados, por que o produto B não deve ser consumido com frequência.</p>
+  <textarea name="q7" maxlength="1500" placeholder="Escreva sua resposta aqui (a e b)…"></textarea><div class="cont"><span>0</span>/1500</div>
+</article>
+
+<!-- ===================== QUESTÃO 8 ===================== -->
+<article class="q" data-q="8" data-tipo="diss">
+  <span class="tag">Questão 8</span><span class="tipo">Dissertativa</span>
+  <p class="enun">Nas plantações comerciais, as bananeiras costumam ser obtidas a partir de <b>mudas</b> (brotos) retiradas de uma bananeira-mãe, sem formação de sementes. No século XX, um fungo de solo causou a doença chamada <b>mal-do-panamá</b> e destruiu plantações inteiras da variedade de banana mais vendida no mundo na época. Já em áreas naturais da Ásia, existem bananeiras silvestres que se reproduzem por <b>sementes</b>, formadas após a polinização das flores.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 680 300" role="img" aria-label="Comparação entre plantação de bananeiras idênticas obtidas por mudas, todas atingidas pelo fungo, e bananeiras silvestres diferentes, obtidas por sementes, com algumas resistentes">
+      <rect width="680" height="300" fill="#fff"/>
+      <defs>
+        <g id="bananeira">
+          <rect x="-5" y="-10" width="10" height="70" fill="#7D6608"/>
+          <path d="M0 -8 q-18 -22 -30 6 q12 -14 30 -2z M0 -8 q18 -22 30 6 q-12 -14 -30 -2z M0 -12 q-16 -30 -8 -46 q6 22 8 42z M0 -12 q16 -30 8 -46 q-6 22 -8 42z"/>
+        </g>
+      </defs>
+      <g font-family="Arial">
+        <rect x="8" y="8" width="326" height="252" rx="10" fill="#FDF2E9" stroke="#DC7633"/>
+        <text x="171" y="32" text-anchor="middle" font-weight="800" font-size="14">ÁREA 1 – Plantação comercial</text>
+        <text x="171" y="50" text-anchor="middle" font-size="12">bananeiras obtidas por mudas da mesma planta-mãe</text>
+        <g fill="#A9A9A9">
+          <use href="#bananeira" x="55" y="140" fill="#9A7D0A"/><use href="#bananeira" x="115" y="140" fill="#9A7D0A"/><use href="#bananeira" x="175" y="140" fill="#9A7D0A"/><use href="#bananeira" x="235" y="140" fill="#9A7D0A"/><use href="#bananeira" x="290" y="140" fill="#9A7D0A"/>
+        </g>
+        <g stroke="#C0392B" stroke-width="4"><path d="M45 100 l20 20 M65 100 l-20 20"/><path d="M105 100 l20 20 M125 100 l-20 20"/><path d="M165 100 l20 20 M185 100 l-20 20"/><path d="M225 100 l20 20 M245 100 l-20 20"/><path d="M280 100 l20 20 M300 100 l-20 20"/></g>
+        <rect x="20" y="206" width="302" height="3" fill="#6E2C00"/>
+        <text x="171" y="236" text-anchor="middle" font-size="13" font-weight="700" fill="#922B21">5 de 5 plantas doentes</text>
+
+        <rect x="346" y="8" width="326" height="252" rx="10" fill="#EAFAF1" stroke="#27AE60"/>
+        <text x="509" y="32" text-anchor="middle" font-weight="800" font-size="14">ÁREA 2 – Bananeiras silvestres</text>
+        <text x="509" y="50" text-anchor="middle" font-size="12">plantas originadas de sementes (polinização)</text>
+        <use href="#bananeira" x="392" y="150" fill="#1E8449" transform="translate(392,150) scale(0.85) translate(-392,-150)"/>
+        <use href="#bananeira" x="452" y="140" fill="#9A7D0A"/>
+        <use href="#bananeira" x="512" y="146" fill="#28B463" transform="translate(512,146) scale(1.1) translate(-512,-146)"/>
+        <use href="#bananeira" x="572" y="140" fill="#9A7D0A" transform="translate(572,140) scale(0.9) translate(-572,-140)"/>
+        <use href="#bananeira" x="630" y="146" fill="#145A32"/>
+        <g stroke="#C0392B" stroke-width="4"><path d="M442 100 l20 20 M462 100 l-20 20"/><path d="M562 104 l20 20 M582 104 l-20 20"/></g>
+        <g fill="#27AE60" font-size="20" font-weight="800" text-anchor="middle"><text x="392" y="94">✓</text><text x="512" y="80">✓</text><text x="630" y="94">✓</text></g>
+        <rect x="358" y="206" width="302" height="3" fill="#6E2C00"/>
+        <text x="509" y="236" text-anchor="middle" font-size="13" font-weight="700" fill="#145A32">2 de 5 plantas doentes</text>
+        <text x="340" y="285" text-anchor="middle" font-size="12.5" fill="#5D6D7E">O fungo causador do mal-do-panamá estava presente no solo das duas áreas. ✗ = planta doente  ✓ = planta resistente</text>
+      </g>
+    </svg>
+    <figcaption>Situação hipotética baseada em um caso real. Cores e tamanhos diferentes representam plantas com características diferentes.</figcaption>
+  </figure>
+  <p class="cmd">Analise por que o fungo atingiu todas as plantas da Área 1, mas não todas da Área 2, relacionando sua resposta ao tipo de reprodução de cada grupo. Em seguida, cite uma vantagem da reprodução por mudas para o agricultor.</p>
+  <textarea name="q8" maxlength="1500" placeholder="Escreva sua resposta aqui…"></textarea><div class="cont"><span>0</span>/1500</div>
+</article>
+
+<!-- ===================== QUESTÃO 9 ===================== -->
+<article class="q" data-q="9" data-tipo="diss">
+  <span class="tag">Questão 9</span><span class="tipo">Dissertativa</span>
+  <p class="enun">A escola instalou uma pequena estação meteorológica e os alunos registraram os dados de três dias seguidos, sempre às 8 horas da manhã. A turma planejou uma gincana <b>ao ar livre</b> para a tarde do Dia 3.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 680 290" role="img" aria-label="Tabela da estação meteorológica: temperatura, umidade do ar e pressão atmosférica em três dias, com gráfico de pressão caindo">
+      <rect width="680" height="290" fill="#fff"/>
+      <g font-family="Arial" font-size="14">
+        <rect x="10" y="12" width="400" height="38" fill="#1F4E79"/>
+        <text x="20" y="37" fill="#fff" font-weight="700">Variável (8h)</text><text x="230" y="37" fill="#fff" font-weight="700">Dia 1</text><text x="290" y="37" fill="#fff" font-weight="700">Dia 2</text><text x="350" y="37" fill="#fff" font-weight="700">Dia 3</text>
+        <rect x="10" y="50" width="400" height="40" fill="#EBF5FB"/>
+        <text x="20" y="76">Temperatura do ar (°C)</text><text x="236" y="76">24</text><text x="296" y="76">26</text><text x="356" y="76">23</text>
+        <text x="20" y="116">Umidade relativa do ar (%)</text><text x="236" y="116">45</text><text x="296" y="116">62</text><text x="356" y="116">88</text>
+        <rect x="10" y="130" width="400" height="40" fill="#EBF5FB"/>
+        <text x="20" y="156">Pressão atmosférica (hPa)</text><text x="230" y="156">1018</text><text x="290" y="156">1011</text><text x="350" y="156">1003</text>
+        <text x="20" y="196">Céu</text>
+        <g transform="translate(244,190)"><circle r="12" fill="#F4D03F"/></g>
+        <g transform="translate(304,190)"><circle cx="-6" cy="-4" r="10" fill="#F4D03F"/><ellipse cx="4" cy="4" rx="16" ry="9" fill="#D5DBDB"/></g>
+        <g transform="translate(364,190)"><ellipse cx="0" cy="0" rx="20" ry="11" fill="#7F8C8D"/><ellipse cx="-8" cy="-6" rx="10" ry="8" fill="#7F8C8D"/></g>
+        <rect x="10" y="12" width="400" height="200" fill="none" stroke="#AAB7B8"/>
+        <text x="10" y="236" font-size="12" fill="#5D6D7E">hPa (hectopascal) = unidade de pressão atmosférica.</text>
+        <text x="10" y="254" font-size="12" fill="#5D6D7E">Referência: pressão média ao nível do mar ≈ 1013 hPa.</text>
+      </g>
+      <g transform="translate(440,20)" font-family="Arial" font-size="12">
+        <text x="110" y="0" text-anchor="middle" font-weight="700">Pressão atmosférica (hPa)</text>
+        <line x1="30" y1="20" x2="30" y2="200" stroke="#5D6D7E"/><line x1="30" y1="200" x2="220" y2="200" stroke="#5D6D7E"/>
+        <text x="24" y="44" text-anchor="end">1020</text><text x="24" y="124" text-anchor="end">1010</text><text x="24" y="200" text-anchor="end">1000</text>
+        <g stroke="#EAEDED"><line x1="30" y1="40" x2="220" y2="40"/><line x1="30" y1="120" x2="220" y2="120"/></g>
+        <polyline points="65,56 125,112 185,176" fill="none" stroke="#C0392B" stroke-width="3"/>
+        <g fill="#C0392B"><circle cx="65" cy="56" r="5"/><circle cx="125" cy="112" r="5"/><circle cx="185" cy="176" r="5"/></g>
+        <text x="65" y="218" text-anchor="middle">Dia 1</text><text x="125" y="218" text-anchor="middle">Dia 2</text><text x="185" y="218" text-anchor="middle">Dia 3</text>
+      </g>
+    </svg>
+    <figcaption>Dados registrados pela estação meteorológica da escola.</figcaption>
+  </figure>
+  <p class="cmd">A turma deve manter a gincana ao ar livre na tarde do Dia 3? Analise os dados, indique qual é a previsão do tempo mais provável e justifique usando pelo menos <b>duas</b> variáveis da tabela. Cite também o instrumento usado para medir cada variável que você utilizou.</p>
+  <textarea name="q9" maxlength="1500" placeholder="Escreva sua resposta aqui…"></textarea><div class="cont"><span>0</span>/1500</div>
+</article>
+
+<!-- ===================== QUESTÃO 10 ===================== -->
+<article class="q" data-q="10" data-tipo="diss">
+  <span class="tag">Questão 10</span><span class="tipo">Dissertativa</span>
+  <p class="enun">Na feira de Ciências, Rafael montou o circuito da <b>Situação A</b>, mas a lâmpada não acendeu. Na mesma semana, em sua casa, ele percebeu a <b>Situação B</b>: o fio do “benjamim” (adaptador “T”) estava quente e com a capa escurecida.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 680 300" role="img" aria-label="Situação A: circuito com pilha, fios, interruptor aberto e lâmpada numerados de 1 a 4. Situação B: tomada com adaptador T ligando ferro, aquecedor e micro-ondas, com fio aquecido">
+      <rect width="680" height="300" fill="#fff"/>
+      <g font-family="Arial">
+        <rect x="8" y="8" width="320" height="284" rx="10" fill="#F4F6F6" stroke="#AAB7B8"/>
+        <text x="168" y="32" text-anchor="middle" font-weight="800">SITUAÇÃO A – feira de Ciências</text>
+        <!-- circuito -->
+        <path d="M70 230 V80 H150" stroke="#B9770E" stroke-width="4" fill="none"/>
+        <path d="M190 80 H270 V140" stroke="#B9770E" stroke-width="4" fill="none"/>
+        <path d="M270 190 V230 H110" stroke="#B9770E" stroke-width="4" fill="none"/>
+        <!-- pilha -->
+        <g transform="translate(90,230)"><rect x="-22" y="-14" width="44" height="28" rx="4" fill="#2C3E50"/><rect x="22" y="-6" width="6" height="12" fill="#2C3E50"/><text x="0" y="5" text-anchor="middle" fill="#fff" font-size="11">1,5 V</text></g>
+        <!-- lampada -->
+        <g transform="translate(170,80)"><circle r="18" fill="#FBFCFC" stroke="#7F8C8D" stroke-width="2"/><path d="M-8 4 q8 -16 16 0" stroke="#7F8C8D" fill="none"/></g>
+        <!-- interruptor aberto -->
+        <circle cx="270" cy="140" r="4" fill="#2C3E50"/><circle cx="270" cy="190" r="4" fill="#2C3E50"/>
+        <line x1="270" y1="190" x2="298" y2="152" stroke="#2C3E50" stroke-width="4"/>
+        <g font-size="16" font-weight="800" fill="#fff">
+          <circle cx="90" cy="268" r="13" fill="#145A32"/><text x="90" y="274" text-anchor="middle">1</text>
+          <circle cx="40" cy="150" r="13" fill="#145A32"/><text x="40" y="156" text-anchor="middle">2</text>
+          <circle cx="170" cy="45" r="0"/><circle cx="208" cy="56" r="13" fill="#145A32"/><text x="208" y="62" text-anchor="middle">3</text>
+          <circle cx="306" cy="190" r="13" fill="#145A32"/><text x="306" y="196" text-anchor="middle">4</text>
+        </g>
+
+        <rect x="344" y="8" width="328" height="284" rx="10" fill="#FDEDEC" stroke="#E6B0AA"/>
+        <text x="508" y="32" text-anchor="middle" font-weight="800">SITUAÇÃO B – casa de Rafael</text>
+        <rect x="372" y="120" width="46" height="66" rx="6" fill="#fff" stroke="#5D6D7E" stroke-width="2"/>
+        <circle cx="388" cy="153" r="3" fill="#5D6D7E"/><circle cx="402" cy="153" r="3" fill="#5D6D7E"/>
+        <path d="M418 153 h22" stroke="#5D6D7E" stroke-width="8"/>
+        <rect x="440" y="128" width="40" height="50" rx="6" fill="#ECF0F1" stroke="#5D6D7E" stroke-width="2"/>
+        <text x="460" y="192" text-anchor="middle" font-size="10">benjamim</text>
+        <path d="M434 136 q4 -10 0 -20 M444 132 q4 -10 0 -20 M454 128 q4 -10 0 -20" stroke="#E74C3C" stroke-width="2.5" fill="none"/>
+        <path d="M480 140 C520 140 520 70 560 70" stroke="#17202A" stroke-width="4" fill="none"/>
+        <path d="M480 153 C530 153 530 153 560 153" stroke="#17202A" stroke-width="4" fill="none"/>
+        <path d="M480 166 C520 166 520 236 560 236" stroke="#17202A" stroke-width="4" fill="none"/>
+        <g font-size="12">
+          <rect x="560" y="52" width="104" height="36" rx="6" fill="#fff" stroke="#AAB7B8"/><text x="612" y="67" text-anchor="middle" font-weight="700">Ferro de passar</text><text x="612" y="82" text-anchor="middle">1 000 W</text>
+          <rect x="560" y="135" width="104" height="36" rx="6" fill="#fff" stroke="#AAB7B8"/><text x="612" y="150" text-anchor="middle" font-weight="700">Aquecedor</text><text x="612" y="165" text-anchor="middle">2 000 W</text>
+          <rect x="560" y="218" width="104" height="36" rx="6" fill="#fff" stroke="#AAB7B8"/><text x="612" y="233" text-anchor="middle" font-weight="700">Micro-ondas</text><text x="612" y="248" text-anchor="middle">1 200 W</text>
+        </g>
+        <text x="395" y="110" text-anchor="middle" font-size="11">tomada</text>
+        <text x="508" y="282" text-anchor="middle" font-size="12" fill="#922B21" font-weight="700">os três aparelhos ligados ao mesmo tempo</text>
+      </g>
+    </svg>
+    <figcaption>Situação A: componentes numerados de 1 a 4. Situação B: potência de cada aparelho.</figcaption>
+  </figure>
+  <p class="cmd">a) Identifique os componentes 1, 2, 3 e 4 do circuito da Situação A, a função de cada um, e explique por que a lâmpada não acendeu.<br>b) Explique o risco da Situação B e proponha uma forma segura de usar esses aparelhos.</p>
+  <textarea name="q10" maxlength="1500" placeholder="Escreva sua resposta aqui (a e b)…"></textarea><div class="cont"><span>0</span>/1500</div>
+</article>
+
+<button class="enviar" id="btnEnviar">ENVIAR RESPOSTAS</button>
+<div id="msg" class="msg"></div>
+<div id="devol"></div>
+<small class="fonte">Questões elaboradas com base no Guia do Currículo Priorizado de Ciências 2026 (SEDUC-SP) – Mapa SARESP 8º ano.</small>
+</div>
+
+<script>
+"use strict";
+/* Respostas gravadas pelo servidor da plataforma (api/_saresp2-8.js). O gabarito fica só no servidor. */
+const URL_ENVIO = "/api/saresp2-8";
+
+/* Alunos por turma (nº de chamada e nome), da lista oficial usada nas outras atividades do 8º ano. */
+const TURMAS = {
+  "8º Ano A": [[1,"ALICE CARDOSO DE ALCANTARA"],[3,"ANA LUIZA VALENCA PAIVA"],[5,"BRYAN DINIZ SILVA"],[6,"CARLOS EDUARDO MENEZES MACHADO"],[7,"EVANDRO CUTOLO TEIXEIRA"],[9,"GABRIELA SANTOS COSTA"],[11,"GUILHERME CARMO RODRIGUES"],[12,"GUSTAVO HENRIQUE DA SILVA"],[13,"ISAAC FERNANDES DE ANDRADE"],[15,"KELVIN DUARTE GONCALVES"],[16,"LAURA VITÓRIA ROCHA"],[18,"LETICIA CUSTÓDIO LIMA"],[19,"LUCAS EDUARDO DA SILVA SANTANA"],[20,"MATHEUS KAUÃ DOS SANTOS NASCIMENTO"],[21,"MAYARA CAETANO DE OLIVEIRA PINA"],[22,"MIGUEL LIMA DE MESQUITA"],[24,"NICOLAS ROCHA SILVA"],[25,"PAOLLA MICHELLINE DOS SANTOS MARQUES"],[27,"PEDRO HENRIQUE CORREA DE BRITO"],[28,"PEDRO LEONARDO DE ANDRADE MARQUES"],[29,"RAFAEL HENRIQUE SIQUEIRA BERNARDES ZIA"],[30,"RAPHAEL MATHIAS NUNES MIRANDA"],[34,"SAMUEL ALVES DA COSTA"],[35,"SOFIA AZEREDO CUBAS"],[36,"SOPHIA LACERDA ANDRADE"],[37,"THAYLLA DUANNY VENANCIO SCAQUITO"],[38,"THAYS RODRIGUES DA SILVA"],[40,"MANOELLA DOS ANJOS SANTOS"],[41,"MARIANA CHARRUA GAIA MION SILVA"],[42,"DIOGO DA SILVA VELOSO"],[43,"QUÉZIA DO ESPIRITO SANTO ROBERTI"],[44,"KEMILLYN ANDRADE DE SOUZA SILVA"],[45,"KAUAN HENRIQUE DE ARAUJO SILVA"],[46,"ZLATA EVGENIEVNA SAFOROVA"]],
+  "8º Ano B": [[1,"ANGELLO GABRIEL CUTOLO TEIXEIRA"],[2,"ARTHUR HENRIQUE MARQUES ENDRES"],[5,"BRAYAN DA SILVA FERREIRA"],[6,"BRAYAN DUARTE DA SILVA"],[7,"BRUNO LUIZ NASCIMENTO DA SILVA"],[8,"CRISTIANO MARQUES BATISTA DE SOUZA"],[9,"DANIEL RODRIGUES SANTOS DIAS"],[10,"DIEGO BARRIO NOVO AMARAL DE ANDRADE"],[11,"ESTER CODINA DE JESUS"],[12,"FABRICIO LORENZO PARMA"],[13,"GABRIELA PAULINA FERREIRA MARTINS"],[14,"HYLLARY VICTORIA NERCIR DE FRANÇA"],[15,"ISAAC BONFIM VIDOTTO"],[16,"JHONAS KEYRRISON TROCATIS DA SILVA"],[17,"JULIA VITORIA SEVERA LINS"],[19,"KESIA DOS SANTOS SOSTE"],[20,"KHIARA DE OLIVEIRA SILVA"],[21,"LAURA BORGES AZEVEDO"],[23,"LUAN DANTAS NICOLUCCI"],[24,"LUAN RIBEIRO SILVA"],[25,"MANUELA ANGELICA TRIANA DA SILVA"],[26,"MARCELO GOMES THOMAZ"],[27,"MARCOS CÉLIO DE JESUS"],[29,"MATEUS DE JESUS JACINTO DOS SANTOS"],[31,"PABLO HENRIQUE DUARTE DA SILVA"],[32,"PAULO CÉSAR LAMBERT GONÇALVES"],[34,"PIETRO MARTINS NOBRE"],[36,"SOPHIA FRANÇA DE CARVALHO"],[40,"WALLIF LEANDRO DE JESUS LESSA"],[41,"BERNARDO GONCALVES JANELLI"],[43,"ISABELLY FERREIRA DE OLIVEIRA"],[44,"GUILHERME ALVES MIRANDA BRANDINO"],[45,"MANUELLA LORENNA CAETANO DIAS TEODORO"]]
+};
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const selTurma = $("turma"), selNome = $("nome"), inpNum = $("numero");
+
+/* ============ CABEÇALHO EM CASCATA: Turma → Nome → Nº ============ */
+const pTurma = new URLSearchParams(location.search).get("turma");
+Object.keys(TURMAS).forEach(t => selTurma.add(new Option(t, t)));
+function carregaNomes() {
+  selNome.innerHTML = ""; inpNum.value = "";
+  const lista = TURMAS[selTurma.value];
+  if (!lista) { selNome.add(new Option("Selecione a turma primeiro", "")); selNome.disabled = true; return; }
+  selNome.add(new Option("Selecione seu nome…", ""));
+  lista.slice().sort((x, y) => x[1].localeCompare(y[1], "pt-BR")).forEach(([n, nome]) => { const o = new Option(nome, nome); o.dataset.c = n; selNome.add(o); });
+  selNome.disabled = false;
+}
+selTurma.addEventListener("change", carregaNomes);
+if (pTurma) { const t = Object.keys(TURMAS).find(x => x.replace(/\D/g, "") + x.slice(-1) === pTurma.toUpperCase() || x === pTurma); if (t) { selTurma.value = t; carregaNomes(); } }
+selNome.addEventListener("change", async () => {
+  const o = selNome.selectedOptions[0];
+  inpNum.value = o && o.dataset.c ? o.dataset.c : "";
+  msg.className = "msg";
+  if (!inpNum.value) return;
+  try {
+    const r = await fetch(URL_ENVIO + "?acao=verificar&turma=" + encodeURIComponent(selTurma.value) + "&chamada=" + inpNum.value);
+    const j = await r.json();
+    if (j.ok && j.ja) aviso("Você já enviou esta atividade. Se precisar refazer, peça ao professor para liberar um novo envio.", "erro");
+  } catch (e) { /* aviso opcional */ }
+});
+
+/* ============ ALTERNATIVAS (alto relevo / afundar) ============ */
+const respostas = {};
+document.querySelectorAll('.q[data-tipo="obj"]').forEach(q => {
+  const n = q.dataset.q;
+  q.querySelectorAll(".alternativa").forEach(alt => {
+    alt.setAttribute("tabindex", "0"); alt.setAttribute("role", "radio");
+    const escolher = () => {
+      q.querySelectorAll(".alternativa").forEach(x => { x.classList.remove("selecionada"); x.setAttribute("aria-checked", "false"); });
+      alt.classList.add("selecionada"); alt.setAttribute("aria-checked", "true");
+      respostas[n] = alt.dataset.v; q.classList.remove("pend");
+    };
+    alt.addEventListener("click", escolher);
+    alt.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); escolher(); } });
+  });
+});
+document.querySelectorAll("textarea").forEach(t => {
+  const c = t.nextElementSibling.querySelector("span");
+  t.addEventListener("input", () => { c.textContent = t.value.length; t.closest(".q").classList.remove("pend"); });
+});
+
+/* ============ ENVIO ============ */
+const btn = $("btnEnviar"), msg = $("msg");
+function aviso(texto, tipo) { msg.className = "msg " + tipo; msg.innerHTML = texto; msg.scrollIntoView({ behavior: "smooth", block: "center" }); }
+
+btn.addEventListener("click", async () => {
+  if (!selTurma.value || !selNome.value) { aviso("Selecione sua <b>turma</b> e seu <b>nome</b> no topo da página.", "erro"); return; }
+  const faltando = [];
+  document.querySelectorAll(".q").forEach(q => {
+    const n = q.dataset.q;
+    const ok = q.dataset.tipo === "obj" ? !!respostas[n] : q.querySelector("textarea").value.trim().length > 0;
+    if (!ok) { faltando.push(n); q.classList.add("pend"); }
+  });
+  if (faltando.length) { aviso("Ainda faltam as questões: <b>" + faltando.join(", ") + "</b>.", "erro"); return; }
+  if (!confirm("Confirma o envio? Depois de enviar não será possível alterar as respostas.")) return;
+
+  const dissertativas = {};
+  for (let i = 6; i <= 10; i++) dissertativas[i] = document.querySelector('textarea[name="q' + i + '"]').value.trim();
+  const corpo = { turma: selTurma.value, nome: selNome.value, chamada: Number(inpNum.value), respostas, dissertativas };
+
+  btn.disabled = true; btn.textContent = "ENVIANDO E CORRIGINDO… (pode levar até 1 minuto)";
+  let j = null;
+  try {
+    const r = await fetch(URL_ENVIO, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(corpo) });
+    j = await r.json();
+  } catch (e) { j = null; }
+  if (!j || !j.ok) {
+    btn.disabled = !!(j && j.jaEnviou); btn.textContent = j && j.jaEnviou ? "ATIVIDADE JÁ ENVIADA" : "ENVIAR RESPOSTAS";
+    aviso((j && j.erro) || "Não foi possível enviar agora. Verifique a internet e tente novamente.", "erro"); return;
+  }
+  btn.textContent = "RESPOSTAS ENVIADAS ✓";
+  document.querySelectorAll(".alternativa, textarea, select").forEach(el => { el.style.pointerEvents = "none"; if (el.tagName !== "DIV") el.disabled = true; });
+  aviso("Respostas enviadas, <b>" + esc(corpo.nome) + "</b>! Objetivas: <b>" + j.acertos + " de " + j.totalObj + "</b>. Nota da atividade: <b>" + String(j.notaFinal).replace(".", ",") + "</b> (as dissertativas ainda serão revisadas pelo professor).", "ok");
+  $("devol").innerHTML = '<section class="q"><span class="tag">Sua devolutiva</span>' + j.devolutiva.map(d => d.dis
+    ? '<p><b>Questão ' + d.n + '</b> · nota ' + String(d.nota).replace(".", ",") + ' de 1 — ' + esc(d.comentario) + '</p>'
+    : '<p><b>Questão ' + d.n + '</b> · ' + (d.acertou ? '✅ acertou' : '❌ marcou ' + esc(d.marcada || '—') + ', correta: ' + d.correta) + ' — ' + esc(d.comentario) + '</p>').join("") + '</section>';
+});
+</script>
+<script src="/voltar-painel.js" defer></script>
+</body>
+</html>

@@ -11,6 +11,7 @@ function lerCorpo(req) {
 }
 
 module.exports = async function handler(req, res) {
+  if (req.query && req.query.fn === 'saresp2-8') return require('./_saresp2-8.js').handler(req, res, SB, KEY);   // Revisão SARESP 2026 · Ciências 8º ano (2ª revisão)
   if (req.query && req.query.fn === 'quiz-tecnologia') return require('./_quiz-tec8.js').handler(req, res, SB, KEY);   // Quiz de Tecnologia 8º ano (grafos)
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   /* Aviso (não bloqueia): GET ?acao=verificar&turma=&nome= → { ja, quando } se o aluno já enviou esta atividade. */
