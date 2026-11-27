@@ -45,7 +45,7 @@
   ];
 
   /* Encerramento (a verificação definitiva é feita no servidor): 3ª Série F Noite, a partir das 23h de 03/11/2026 (Brasília). */
-  const ENCERRA = { '3f-noite': Date.parse('2026-11-03T23:00:00-03:00') };
+  const ENCERRA = {};   // 3ª Série F Noite reaberta em 27/11/2026
   const MSG_ENCERRADA = 'Esta atividade foi encerrada para a 3ª Série F às 23h de 03/11/2026.';
   function encerrada(valor) { const t = ENCERRA[String(valor || '')]; return typeof t === 'number' && Date.now() >= t; }
 
